@@ -23,8 +23,6 @@ const pages = {
     description:
       "Steakhouse kitchen setup: reference proforma 2018-199-3 table (63 items), dry-age, grilling, refrigeration and warewashing. Quote via Project Factory.",
     h1: "Steakhouse kitchen setup",
-    lead:
-      "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The list below is the reference proforma 2018-199-3 equipment schedule.",
     tableRef: "geo/steakhouse-2018-199-3-table.json",
     skipBudget: true,
     body:
@@ -56,8 +54,6 @@ const pages = {
     description:
       "Fish restaurant kitchen project and required equipment: storage, prep, cooking, display and warewashing lines. Reference list 02-BALIKÇI (52 items).",
     h1: "Fish Restaurant Kitchen Project And Required Equipment",
-    lead:
-      "Opening a fish restaurant requires kitchen planning that combines cold chain, prep and display lines on one plan. Sections and the reference equipment list are below.",
     tableRef: "geo/balikci-02-table.json",
     skipBudget: true,
     body:
@@ -192,11 +188,11 @@ const pages = {
       "All day casual cafe kitchen setup: reference proforma 19-THE HOUSE CAFE (48 items), cooking, bar, refrigeration and warewashing.",
     h1: "All day casual cafe setup",
     lead:
-      "Coffee, food and bar service run all day in one kitchen plan. The list below is the reference proforma 19-THE HOUSE CAFE equipment schedule.",
+      "The list below is the reference proforma 19-THE HOUSE CAFE equipment schedule.",
     tableRef: "geo/house-cafe-19-table.json",
     skipBudget: true,
     body:
-      "<p>All day casual cafe concepts combine breakfast-to-dinner menus, espresso bar and hot kitchen production on one plan. This guide summarises zones from reference proforma 19-THE HOUSE CAFE. Use Project Factory cafe or all day dining concept for a priced list.</p><p>Cold room and freezer panels cover daily supply; upright and under-counter refrigeration spread across service zones. Cooking line includes combi oven, proofer, range, griddle, fryer and pasta cooker.</p><p>Bar equipment covers ice machine, glasswasher, juicers and bar fridges. Hood-type dishwasher with inlet/outlet benches completes warewashing. The table below lists 48 reference items without prices.</p>",
+      "<p>Kitchen equipment requirements for an all day casual cafe are listed below.</p><p>Infrastructure investment and choosing the right location are also important considerations alongside the equipment schedule.</p>",
     faq: [
       [
         "What is included in an all day casual cafe kitchen?",
