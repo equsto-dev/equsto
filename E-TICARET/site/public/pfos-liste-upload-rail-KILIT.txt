@@ -1,0 +1,55 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — PFOS sağ panel liste yükleme (sürükle-bırak rail)
+Onay: 2026-06-13 · Commit referans: 2b4c804c (Başlayalım üst hizası · dropzone 2×)
+İlgili commitler: 3143c352 · 0df8d1ea · 2269d353 · f5006630
+═══════════════════════════════════════════════════════════════════════════
+
+PFOS sihirbazında Excel/PDF liste yükleme ayrı sekme değil — sağ sütunda
+sihirbazla birlikte görünür. Üst hizası «Başlayalım» ilerleme kutusu; alt hizası
+meslek paneli (s1) alt kenarı. Dropzone yüksekliği önceki sürümün 2 katı.
+
+── 1. Yerleşim ────────────────────────────────────────────────────────────
+  • Tek sayfa /pfos — ayrı «Listeni yükle» mod sekmesi YOK
+  • Sağ sütun: PfosListeUploadRail (üst) + referans / motor meta (alt)
+  • Grid: minmax(280px, 3fr) | minmax(0, 2.8fr) — sağ panel geniş (%40 büyütme)
+
+── 2. Dikey hizalama (PfosPublicWizard) ───────────────────────────────────
+  • #pfos-progress — «Başlayalım» ilerleme çubuğu + ipucu kutusu
+  • #pfos-sec-s1 — meslek paneli (alt hizalama referansı)
+  • uploadAlign: { marginTop, height } — ResizeObserver ile ölçüm
+  • marginTop = progressTop − leftColTop (üst = Başlayalım)
+  • height = meslekBottom − progressTop (alt = meslek paneli)
+  • fillHeight + uploadRailFill: dropzone altta, kalan alanı doldurur
+
+── 3. Dropzone boyutu (pfos-public.module.css) ───────────────────────────
+  .listeDropZoneRail
+    padding: 3.2rem 1.05rem
+    min-height: 17.5rem   (önceki 8.75rem × 2)
+
+  .uploadRailFill .listeDropZoneRail
+    flex: 1 1 auto
+    min-height: 17.5rem
+    margin-top: auto
+    display: flex · center içerik
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/pfos/public/PfosPublicWizard.tsx
+  components/pfos/public/PfosListeUploadRail.tsx
+  components/pfos/public/usePfosListeUpload.ts
+  components/pfos/public/pfos-public.module.css
+
+YASAK (onay olmadan):
+  • Liste yüklemeyi ayrı sayfa/sekme/mod'a geri taşımak
+  • Sağ sütunu daraltmak (2.8fr → 2fr) veya dropzone min-height'ı 8.75rem'e düşürmek
+  • Üst hizayı karşılama metnine geri almak (progress yerine colTop)
+  • uploadAlign / pfos-progress / ResizeObserver hizalama mantığını kaldırmak
+  • fillHeight + uploadRailFill dropzone esnetmesini devre dışı bırakmak
+
+── İlgili kilit ────────────────────────────────────────────────────────────
+  PFOS üye kapısı · PDF teslim: pfos-uye-auth-KILIT.txt
+
+── Doğrulama ─────────────────────────────────────────────────────────────
+  npm run verify:pfos-liste-upload-rail-kilit
+  Vercel prebuild: zorunlu
+
+═══════════════════════════════════════════════════════════════════════════

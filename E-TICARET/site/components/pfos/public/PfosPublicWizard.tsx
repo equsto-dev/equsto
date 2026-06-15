@@ -215,6 +215,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     return Math.max(0, panels.length - 1);
   }, [panels, questions, answers, m2Touched]);
 
+  /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — üst=Başlayalım, alt=meslek s1 */
   useLayoutEffect(() => {
     if (wizardListeMode || !memberLoggedIn) {
       setUploadAlign(null);

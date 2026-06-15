@@ -203,6 +203,18 @@ if (fs.existsSync(verifyPfosUyeAuth)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyPfosListeUploadRail = path.join(
+  siteDir,
+  "scripts/verify-pfos-liste-upload-rail-kilit.mjs",
+);
+if (fs.existsSync(verifyPfosListeUploadRail)) {
+  const r = spawnSync(process.execPath, [verifyPfosListeUploadRail], {
+    cwd: siteDir,
+    stdio: "inherit",
+  });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const verifyInoksanIstif = path.join(siteDir, "scripts/verify-inoksan-istif-images-kilit.mjs");
 if (fs.existsSync(verifyInoksanIstif)) {
   const r = spawnSync(process.execPath, [verifyInoksanIstif], { cwd: siteDir, stdio: "inherit" });

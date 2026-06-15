@@ -109,6 +109,7 @@
   line-height: 1.5;
 }
 
+/* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — dropzone 2× (17.5rem) */
 .listeDropZoneRail {
   margin-top: 0.7rem;
   padding: 3.2rem 1.05rem;
@@ -645,7 +646,7 @@
   color: #001e50;
 }
 
-/* ── pfos.html legacy layout ── */
+/* ── pfos.html legacy layout — KİLİT: public/pfos-liste-upload-rail-KILIT.txt (2.8fr sağ) ── */
 .layout {
   display: grid;
   grid-template-columns: minmax(280px, 3fr) minmax(0, 2.8fr);
