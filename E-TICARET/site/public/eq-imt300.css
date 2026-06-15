@@ -2,6 +2,8 @@
 body.eq-imt-page {
   font-size: 13px;
   line-height: 1.6;
+  --imt-content-max: 1180px;
+  --imt-content-pad-x: 20px;
 }
 
 body.eq-imt-page {
@@ -58,18 +60,22 @@ body.eq-imt-page .imt-page-main {
 .imt-hero {
   background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
   color: var(--bes-ink, #f2f2f7);
-  padding: 48px 20px 56px;
+  padding: 48px var(--imt-content-pad-x, 20px) 40px;
   overflow: hidden;
   border-bottom: 1px solid var(--bes-rule, rgba(255, 255, 255, 0.12));
 }
 
 .imt-hero-grid {
-  max-width: 1180px;
+  max-width: var(--imt-content-max, 1180px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.imt-hero-grid > div:first-child {
+  max-width: min(640px, 100%);
 }
 
 .imt-kicker {
@@ -161,7 +167,7 @@ body.eq-imt-page .imt-page-main {
 }
 
 .imt-manual-wrap {
-  max-width: 1100px;
+  max-width: var(--imt-content-max, 1180px);
   margin: 0 auto;
   border: 1px solid var(--eq-border);
   border-radius: 8px;
@@ -196,6 +202,9 @@ body.eq-imt-page .imt-page-main {
 
 .imt-hero-visual {
   position: relative;
+  width: 100%;
+  max-width: var(--imt-content-max, 1180px);
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   background: var(--eq-surface-2);
@@ -240,7 +249,7 @@ body.eq-imt-page .imt-page-main {
 }
 
 .imt-sec {
-  padding: 56px 20px;
+  padding: 56px var(--imt-content-pad-x, 20px);
   background: #0a0a0a;
 }
 
@@ -249,7 +258,7 @@ body.eq-imt-page .imt-page-main {
 }
 
 .imt-inner {
-  max-width: 1100px;
+  max-width: var(--imt-content-max, 1180px);
   margin: 0 auto;
 }
 
@@ -536,12 +545,12 @@ body.eq-imt-page .imt-fmt-cap span {
 }
 
 .imt-video-sec {
-  padding: 0 20px 48px;
-  background: var(--eq-surface);
+  padding: 0 var(--imt-content-pad-x, 20px) 48px;
+  background: #000;
 }
 
 .imt-video-wrap {
-  max-width: 1100px;
+  max-width: var(--imt-content-max, 1180px);
   margin: 0 auto;
   border: 1px solid var(--eq-border);
   border-radius: 8px;
@@ -563,7 +572,7 @@ body.eq-imt-page .imt-fmt-cap span {
 }
 
 .imt-video-cap {
-  max-width: 1100px;
+  max-width: var(--imt-content-max, 1180px);
   margin: 10px auto 0;
   font-size: 12px;
   color: var(--eq-text-muted);
@@ -572,10 +581,6 @@ body.eq-imt-page .imt-fmt-cap span {
 
 @media (max-width: 800px) {
   .imt-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .imt-hero-grid {
     grid-template-columns: 1fr;
   }
 }

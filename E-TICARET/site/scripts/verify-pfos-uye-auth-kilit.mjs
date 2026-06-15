@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260612-pdp-mobile-buybar-v2";
+const SHOP_ASSET_V = "20260612-imt300-hero-align-v1";
 const WA_MODAL_BUILD = 25;
 let err = 0;
 
