@@ -1,0 +1,612 @@
+{
+  "proformaNo": "2018-199-3",
+  "label": "Steakhouse referans proforma (2018-199-3)",
+  "kaynakDosya": "2018-199-3.xlsx",
+  "yukleme": "2026-06-15T05:31:51.000Z",
+  "zones": [
+    {
+      "zone": "Mutfak",
+      "items": [
+        {
+          "ad": "GAZLI VE ODUNLU DÖNER TABANLI PİZZA FIRINI",
+          "olcu": "127*175*160",
+          "adet": 1,
+          "listeBirimEur": 2500.0,
+          "listeTutarEur": 2500.0,
+          "satisBirimEur": 11940.0,
+          "satisTutarEur": 11940.0
+        },
+        {
+          "ad": "SERVİS ÜNİTESİ DOLAPLI  ARA RAFLI",
+          "olcu": "200*70*85",
+          "adet": 1,
+          "listeBirimEur": 850.0,
+          "listeTutarEur": 850.0,
+          "satisBirimEur": 4060.0,
+          "satisTutarEur": 4060.0
+        },
+        {
+          "ad": "ET TEŞHİR DOLABI",
+          "olcu": "200*110*130",
+          "adet": 1,
+          "listeBirimEur": 3000.0,
+          "listeTutarEur": 3000.0,
+          "satisBirimEur": 14335.0,
+          "satisTutarEur": 14335.0
+        },
+        {
+          "ad": "ET TEŞHİR DOLABI",
+          "olcu": "291*110*130",
+          "adet": 1,
+          "listeBirimEur": 4000.0,
+          "listeTutarEur": 4000.0,
+          "satisBirimEur": 19110.0,
+          "satisTutarEur": 19110.0
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "60*70*85",
+          "adet": 1,
+          "listeBirimEur": 50.0,
+          "listeTutarEur": 50.0,
+          "satisBirimEur": 240.0,
+          "satisTutarEur": 240.0
+        },
+        {
+          "ad": "DUVAR TİP DAVLUMBAZ FİLİTRELİ  TAZE HAVA ÜFLEME KANALLI",
+          "olcu": "380*95*50",
+          "adet": 1,
+          "listeBirimEur": 1495.0,
+          "listeTutarEur": 1495.0,
+          "satisBirimEur": 7145.0,
+          "satisTutarEur": 7145.0
+        },
+        {
+          "ad": "ARA ÇALIŞMA TEZGAHI DOLAPLI",
+          "olcu": "40*70*85",
+          "adet": 1,
+          "listeBirimEur": 241.0,
+          "listeTutarEur": 241.0,
+          "satisBirimEur": 1150.0,
+          "satisTutarEur": 1150.0
+        },
+        {
+          "ad": "SOSBAINMARIE, dOLAPLI",
+          "olcu": "40*70*85",
+          "adet": 1,
+          "listeBirimEur": 350.0,
+          "listeTutarEur": 350.0,
+          "satisBirimEur": 1675.0,
+          "satisTutarEur": 1675.0
+        },
+        {
+          "ad": "ELEKTRİKLİ 4'LÜ OCAK DOLAPLI",
+          "olcu": "80*70*85",
+          "adet": 1,
+          "listeBirimEur": 551.0,
+          "listeTutarEur": 551.0,
+          "satisBirimEur": 2630.0,
+          "satisTutarEur": 2630.0
+        },
+        {
+          "ad": "SALAMANDER  ELEKTİRİKLİ",
+          "olcu": "60*60*60",
+          "adet": 1,
+          "listeBirimEur": 419.0,
+          "listeTutarEur": 419.0,
+          "satisBirimEur": 2000.0,
+          "satisTutarEur": 2000.0
+        },
+        {
+          "ad": "ÇİFT SEPETLİ FRİTÖZ  ELEKTİRİKLİ",
+          "olcu": "80*70*85",
+          "adet": 1,
+          "listeBirimEur": 1033.0,
+          "listeTutarEur": 1033.0,
+          "satisBirimEur": 4935.0,
+          "satisTutarEur": 4935.0
+        },
+        {
+          "ad": "PATATES DİNLENDİRME  ELEKTİRİKLİ",
+          "olcu": "40*70*85",
+          "adet": 1,
+          "listeBirimEur": 363.0,
+          "listeTutarEur": 363.0,
+          "satisBirimEur": 1735.0,
+          "satisTutarEur": 1735.0
+        },
+        {
+          "ad": "FIRIN ALT TEZGAHI  TEPSİ RAFLI",
+          "olcu": "100*90*85",
+          "adet": 1,
+          "listeBirimEur": 384.0,
+          "listeTutarEur": 384.0,
+          "satisBirimEur": 1835.0,
+          "satisTutarEur": 1835.0
+        },
+        {
+          "ad": "RASYONEL FIRIN  10 TEPSİ KAPASİTELİ ELEKTİRİKLİ",
+          "olcu": "SCCWE101E",
+          "adet": 1,
+          "listeBirimEur": 10968.0,
+          "listeTutarEur": 10968.0,
+          "satisBirimEur": 52000.0,
+          "satisTutarEur": 52000.0
+        },
+        {
+          "ad": "TEZGAH TİPİ BUZDOLABI",
+          "olcu": "186*70*85",
+          "adet": 1,
+          "listeBirimEur": 1155.0,
+          "listeTutarEur": 1155.0,
+          "satisBirimEur": 5520.0,
+          "satisTutarEur": 5520.0
+        },
+        {
+          "ad": "ET KEMİK TESTERESİ",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1100.0,
+          "listeTutarEur": 1100.0,
+          "satisBirimEur": 5255.0,
+          "satisTutarEur": 5255.0
+        },
+        {
+          "ad": "ET KIYMA MAK.",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1686.0,
+          "listeTutarEur": 1686.0,
+          "satisBirimEur": 7200.0,
+          "satisTutarEur": 7200.0
+        },
+        {
+          "ad": "VAKUM MAK.",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 960.0,
+          "listeTutarEur": 960.0,
+          "satisBirimEur": 4590.0,
+          "satisTutarEur": 4590.0
+        },
+        {
+          "ad": "STRETCH MAK.",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 295.0,
+          "listeTutarEur": 295.0,
+          "satisBirimEur": 1410.0,
+          "satisTutarEur": 1410.0
+        },
+        {
+          "ad": "ORTA TİP DAVLUMBAZ FİLTRELİ  TAZE HAVA ÜFLEME KANALL",
+          "olcu": "230*150*50",
+          "adet": 1,
+          "listeBirimEur": 1495.0,
+          "listeTutarEur": 1495.0,
+          "satisBirimEur": 7150.0,
+          "satisTutarEur": 7150.0
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+          "olcu": "200*120*85",
+          "adet": 1,
+          "listeBirimEur": 878.0,
+          "listeTutarEur": 878.0,
+          "satisBirimEur": 4195.0,
+          "satisTutarEur": 4195.0
+        },
+        {
+          "ad": "KÖMÜRLÜ IZGARA",
+          "olcu": "200*80*30",
+          "adet": 1,
+          "listeBirimEur": 1900.0,
+          "listeTutarEur": 1900.0,
+          "satisBirimEur": 9080.0,
+          "satisTutarEur": 9080.0
+        },
+        {
+          "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+          "olcu": "186*70*85",
+          "adet": 1,
+          "listeBirimEur": 1526.0,
+          "listeTutarEur": 1526.0,
+          "satisBirimEur": 7300.0,
+          "satisTutarEur": 7300.0
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "olcu": "140*70*95",
+          "adet": 1,
+          "listeBirimEur": 208.0,
+          "listeTutarEur": 208.0,
+          "satisBirimEur": 995.0,
+          "satisTutarEur": 995.0
+        },
+        {
+          "ad": "OTOMATİK PORTAKAL SIKMA MAK.",
+          "adet": 1,
+          "listeBirimEur": 1300.0,
+          "listeTutarEur": 1300.0,
+          "satisBirimEur": 6210.0,
+          "satisTutarEur": 6210.0
+        },
+        {
+          "ad": "SET ALTI ŞİŞE SOĞUTUCU 2 KAPILI",
+          "olcu": "92*50*87",
+          "adet": 1,
+          "listeBirimEur": 708.0,
+          "listeTutarEur": 708.0,
+          "satisBirimEur": 3380.0,
+          "satisTutarEur": 3380.0
+        },
+        {
+          "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "170*70*95",
+          "adet": 1,
+          "listeBirimEur": 319.0,
+          "listeTutarEur": 319.0,
+          "satisBirimEur": 1524.0,
+          "satisTutarEur": 1524.0
+        },
+        {
+          "ad": "SET ALTI BUZ MAK.",
+          "adet": 1,
+          "listeBirimEur": 1298.0,
+          "listeTutarEur": 1298.0,
+          "satisBirimEur": 5900.0,
+          "satisTutarEur": 5900.0
+        },
+        {
+          "ad": "SET ALTI BULAŞIK YIKAMA MAK.",
+          "olcu": "500TB/S",
+          "adet": 1,
+          "listeBirimEur": 1239.0,
+          "listeTutarEur": 1239.0,
+          "satisBirimEur": 5920.0,
+          "satisTutarEur": 5920.0
+        },
+        {
+          "ad": "ÇAY OCAĞI  ELEKTİRİLİ  3 DEMLİK, BAKIR - BAKIR DAVLUMBAZLI",
+          "adet": 1,
+          "listeBirimEur": 350.0,
+          "listeTutarEur": 350.0,
+          "satisBirimEur": 1670.0,
+          "satisTutarEur": 1670.0
+        },
+        {
+          "ad": "YÜKSEK MAKEUP ÜNİTESİ, MERMER TABLALI",
+          "olcu": "186*70*85/135",
+          "adet": 1,
+          "listeBirimEur": 1900.0,
+          "listeTutarEur": 1900.0,
+          "satisBirimEur": 9180.0,
+          "satisTutarEur": 9180.0
+        },
+        {
+          "ad": "ÇİFT SIRA DUVAR RAFI",
+          "olcu": "200*30*3",
+          "adet": 2,
+          "listeBirimEur": 85.0,
+          "listeTutarEur": 170.0,
+          "satisBirimEur": 415.0,
+          "satisTutarEur": 830.0
+        },
+        {
+          "ad": "ÇİFT SIRA DUVAR RAFI",
+          "olcu": "130*30*3",
+          "adet": 2,
+          "listeBirimEur": 59.0,
+          "listeTutarEur": 118.0,
+          "satisBirimEur": 280.0,
+          "satisTutarEur": 560.0
+        },
+        {
+          "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "130*70*85",
+          "adet": 1,
+          "listeBirimEur": 312.0,
+          "listeTutarEur": 312.0,
+          "satisBirimEur": 1490.0,
+          "satisTutarEur": 1490.0
+        }
+      ]
+    },
+    {
+      "zone": "Bulaşıkhane",
+      "items": [
+        {
+          "ad": "BULAŞIK ALMA TEZGAHI SIYIRMA HUNİLİ",
+          "olcu": "100*70*85",
+          "adet": 1,
+          "listeBirimEur": 260.0,
+          "listeTutarEur": 260.0,
+          "satisBirimEur": 1240.0,
+          "satisTutarEur": 1240.0
+        },
+        {
+          "ad": "ÇÖP ARABASI",
+          "olcu": "40*50",
+          "adet": 2,
+          "listeBirimEur": 100.0,
+          "listeTutarEur": 200.0,
+          "satisBirimEur": 480.0,
+          "satisTutarEur": 960.0
+        },
+        {
+          "ad": "ÇİFT EVİYELİ - SIYIRMA HUNİLİ BYM GİRİŞ TEZGAHI",
+          "olcu": "230*75*85",
+          "adet": 1,
+          "listeBirimEur": 520.0,
+          "listeTutarEur": 520.0,
+          "satisBirimEur": 2480.0,
+          "satisTutarEur": 2480.0
+        },
+        {
+          "ad": "SPREY UNİTESİ",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 100.0,
+          "listeTutarEur": 100.0,
+          "satisBirimEur": 480.0,
+          "satisTutarEur": 480.0
+        },
+        {
+          "ad": "BYM DAVLUMBAZI",
+          "olcu": "100*100*50",
+          "adet": 1,
+          "listeBirimEur": 163.0,
+          "listeTutarEur": 163.0,
+          "satisBirimEur": 780.0,
+          "satisTutarEur": 780.0
+        },
+        {
+          "ad": "GİYOTİN TİP BYM",
+          "olcu": "1000TB/S",
+          "adet": 1,
+          "listeBirimEur": 1475.0,
+          "listeTutarEur": 1475.0,
+          "satisBirimEur": 7050.0,
+          "satisTutarEur": 7050.0
+        },
+        {
+          "ad": "BYM ÇIKIŞ TEZGAHI",
+          "olcu": "150*75*85",
+          "adet": 1,
+          "listeBirimEur": 228.0,
+          "listeTutarEur": 228.0,
+          "satisBirimEur": 1090.0,
+          "satisTutarEur": 1090.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "122*46*160",
+          "adet": 2,
+          "listeBirimEur": 25.0,
+          "listeTutarEur": 50.0,
+          "satisBirimEur": 130.0,
+          "satisTutarEur": 260.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "91*53*160",
+          "adet": 1,
+          "listeBirimEur": 25.0,
+          "listeTutarEur": 25.0,
+          "satisBirimEur": 130.0,
+          "satisTutarEur": 130.0
+        },
+        {
+          "ad": "YER IZGARASI",
+          "olcu": "95*30*14",
+          "adet": 5,
+          "listeBirimEur": 168.0,
+          "listeTutarEur": 840.0,
+          "satisBirimEur": 800.0,
+          "satisTutarEur": 4000.0
+        },
+        {
+          "ad": "DRY AGED DOLABI",
+          "olcu": "200*90*220",
+          "adet": 1,
+          "listeBirimEur": 7000.0,
+          "listeTutarEur": 7000.0,
+          "satisBirimEur": 33650.0,
+          "satisTutarEur": 33650.0
+        },
+        {
+          "ad": "KASALAMA",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1000.0,
+          "listeTutarEur": 1000.0,
+          "satisBirimEur": 4980.0,
+          "satisTutarEur": 4980.0
+        }
+      ]
+    },
+    {
+      "zone": "Sebze soğuk oda",
+      "items": [
+        {
+          "ad": "PANEL TİP SOĞUK ODA, ZEMİNSİZ",
+          "olcu": "255*175*240",
+          "adet": 1,
+          "listeBirimEur": 4100.0,
+          "listeTutarEur": 4100.0,
+          "satisBirimEur": 19750.0,
+          "satisTutarEur": 19750.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "107*46*160",
+          "adet": 2,
+          "listeBirimEur": 230.0,
+          "listeTutarEur": 460.0,
+          "satisBirimEur": 1100.0,
+          "satisTutarEur": 2200.0
+        }
+      ]
+    },
+    {
+      "zone": "Et soğuk oda",
+      "items": [
+        {
+          "ad": "PANEL TİP SOĞUK ODA, ZEMİNSİZ",
+          "olcu": "240*180*240",
+          "adet": 1,
+          "listeBirimEur": 4100.0,
+          "listeTutarEur": 4100.0,
+          "satisBirimEur": 19590.0,
+          "satisTutarEur": 19590.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "107*46*160",
+          "adet": 2,
+          "listeBirimEur": 230.0,
+          "listeTutarEur": 460.0,
+          "satisBirimEur": 1150.0,
+          "satisTutarEur": 2300.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "122*46*160",
+          "adet": 1,
+          "listeBirimEur": 260.0,
+          "listeTutarEur": 260.0,
+          "satisBirimEur": 1245.0,
+          "satisTutarEur": 1245.0
+        }
+      ]
+    },
+    {
+      "zone": "Et derin dondurucu oda",
+      "items": [
+        {
+          "ad": "PANEL TİP DERİN DONDURUCU ODA, ZEMİNSİZ",
+          "olcu": "280*245*240",
+          "adet": 1,
+          "listeBirimEur": 4400.0,
+          "listeTutarEur": 4400.0,
+          "satisBirimEur": 21015.0,
+          "satisTutarEur": 21015.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "122*46*160",
+          "adet": 3,
+          "listeBirimEur": 260.0,
+          "listeTutarEur": 780.0,
+          "satisBirimEur": 1350.0,
+          "satisTutarEur": 4050.0
+        }
+      ]
+    },
+    {
+      "zone": "Hazırlık & kuru depo",
+      "items": [
+        {
+          "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, KIRMIZI",
+          "olcu": "110*60*85",
+          "adet": 1,
+          "listeBirimEur": 290.0,
+          "listeTutarEur": 290.0,
+          "satisBirimEur": 1385.0,
+          "satisTutarEur": 1385.0
+        },
+        {
+          "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, YEŞİL, TABAN RAFLI",
+          "olcu": "110*60*85",
+          "adet": 1,
+          "listeBirimEur": 360.0,
+          "listeTutarEur": 360.0,
+          "satisBirimEur": 1720.0,
+          "satisTutarEur": 1720.0
+        },
+        {
+          "ad": "KLASİK HAMUR (KÖFTE) YOĞURMA MAKİNASI",
+          "olcu": "20 kg/sefer",
+          "adet": 1,
+          "listeBirimEur": 540.0,
+          "listeTutarEur": 540.0,
+          "satisBirimEur": 2580.0,
+          "satisTutarEur": 2580.0
+        },
+        {
+          "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "100*60*85",
+          "adet": 1,
+          "listeBirimEur": 300.0,
+          "listeTutarEur": 300.0,
+          "satisBirimEur": 1435.0,
+          "satisTutarEur": 1435.0
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "122*46*160",
+          "adet": 1,
+          "listeBirimEur": 260.0,
+          "listeTutarEur": 260.0,
+          "satisBirimEur": 1250.0,
+          "satisTutarEur": 1250.0
+        },
+        {
+          "ad": "YER IZGARASI",
+          "olcu": "30*30*14",
+          "adet": 1,
+          "listeBirimEur": 80.0,
+          "listeTutarEur": 80.0,
+          "satisBirimEur": 380.0,
+          "satisTutarEur": 380.0
+        }
+      ]
+    },
+    {
+      "zone": "Ek kalemler",
+      "items": [
+        {
+          "ad": "TEŞHİR DOLAPLARI SARI PASLANMAZ KAPLANMASI",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1600.0,
+          "listeTutarEur": 1600.0,
+          "satisBirimEur": 7650.0,
+          "satisTutarEur": 7650.0
+        },
+        {
+          "ad": "POZ C11 EVYE GÖZÜ FARKI (ÇİFT EVYE OLACAK)",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1.0,
+          "listeTutarEur": 1.0,
+          "satisBirimEur": 5.0,
+          "satisTutarEur": 5.0
+        },
+        {
+          "ad": "YEDEK HELEZON (1 ad) VE TESTERE BIÇAĞI (3 ad.)",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 1.0,
+          "listeTutarEur": 1.0,
+          "satisBirimEur": 5.0,
+          "satisTutarEur": 5.0
+        },
+        {
+          "ad": "BÜRO TİPİ DERİN DONDURUCU",
+          "olcu": "-",
+          "adet": 1,
+          "listeBirimEur": 350.0,
+          "listeTutarEur": 350.0,
+          "satisBirimEur": 1675.0,
+          "satisTutarEur": 1675.0
+        }
+      ]
+    }
+  ],
+  "ozet": {
+    "kalemSayisi": 63,
+    "listeToplamEur": 75324.0,
+    "satisToplamEur": 359484.0
+  }
+}

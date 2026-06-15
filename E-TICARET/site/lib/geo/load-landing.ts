@@ -13,6 +13,8 @@ export type GeoLandingRecord = {
   faq?: GeoFaqItem[];
   profile?: string;
   lang?: string;
+  /** public/data/{tableRef} — ör. geo/steakhouse-2018-199-3-table.json */
+  tableRef?: string;
 };
 
 export type GeoRouteKind = "root" | "rehber" | "guides";
