@@ -24,7 +24,7 @@ const pages = {
       "Steakhouse kitchen setup: reference proforma 2018-199-3 table (63 items), dry-age, grilling, refrigeration and warewashing. Quote via Project Factory.",
     h1: "Steakhouse kitchen setup",
     lead:
-      "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The table below is reference proforma 2018-199-3; the Excel file is attached.",
+      "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The list below is the reference proforma 2018-199-3 equipment schedule.",
     tableRef: "geo/steakhouse-2018-199-3-table.json",
     skipBudget: true,
     body:
