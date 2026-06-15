@@ -60,18 +60,6 @@ type ShopTypeRow = {
   };
 };
 
-type ReferansOnizleme = {
-  bant: { id: string; label: string; referansM2: number; listeDosya: string };
-  listeDosya: string;
-  kaynakDosya?: string;
-  kalemSayisi: number;
-  planPdf?: string;
-  bantKurali: string;
-  listeYolu?: string;
-  kalemlerOzet: { poz: string; ad: string }[];
-  motorSlug: string;
-};
-
 type Props = {
   initialQuestions?: WizardQuestion[];
 };
@@ -86,7 +74,6 @@ function formatM2Preset(n: number) {
 const PFOS_PANEL_FADE_MS = 580;
 const PFOS_PANEL_REVEAL_DELAY_MS = 120;
 const PFOS_RESULT_FADE_MS = 580;
-const PFOS_RAIL_FADE_MS = 580;
 
 function formatTry(n: number) {
   return new Intl.NumberFormat("tr-TR", {
@@ -135,13 +122,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [animatingPanelReveal, setAnimatingPanelReveal] = useState(false);
   const [resultEntering, setResultEntering] = useState(false);
   const [resultReveal, setResultReveal] = useState(false);
-  const [railEntering, setRailEntering] = useState(false);
-  const [railReveal, setRailReveal] = useState(false);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
-  const [referansOnizleme, setReferansOnizleme] =
-    useState<ReferansOnizleme | null>(null);
-  const [referansYukleniyor, setReferansYukleniyor] = useState(false);
   const [memberReady, setMemberReady] = useState(false);
   const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [loginHref, setLoginHref] = useState("/login");
@@ -361,25 +343,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     };
   }, [finished, sonuc, teklifV14, scheduleReveal]);
 
-  useLayoutEffect(() => {
-    if (!referansOnizleme || referansYukleniyor) {
-      setRailEntering(false);
-      setRailReveal(false);
-      return;
-    }
-    setRailEntering(true);
-    setRailReveal(false);
-    const cleanup = scheduleReveal(setRailReveal);
-    const t = window.setTimeout(() => {
-      setRailEntering(false);
-      setRailReveal(false);
-    }, PFOS_RAIL_FADE_MS + 80);
-    return () => {
-      cleanup();
-      window.clearTimeout(t);
-    };
-  }, [referansOnizleme, referansYukleniyor, scheduleReveal]);
-
   const motorGirdi = useMemo(
     () => soruCevaplarindanMotorGirdi(answers),
     [answers],
@@ -389,55 +352,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [motorGirdi.dukkanSecim, shopTypes],
   );
   const konsept = parseKonsept(motorSlug ?? motorGirdi.dukkanSecim);
-
-  useEffect(() => {
-    const dukkan = motorGirdi.dukkanSecim?.trim();
-    if (!dukkan) {
-      setReferansOnizleme(null);
-      return;
-    }
-    const m2 = motorGirdi.m2 >= 8 ? motorGirdi.m2 : 80;
-    let cancelled = false;
-    setReferansYukleniyor(true);
-    void (async () => {
-      try {
-        const res = await fetch("/api/pfos/referans-onizleme", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            dukkanSecim: dukkan,
-            m2,
-            altTip: motorGirdi.altTip,
-          }),
-        });
-        const json = await readFetchJson<{
-          success?: boolean;
-          data?: ReferansOnizleme;
-        }>(
-          res,
-          t("Referans önizlemesi alınamadı."),
-          t("Referans önizlemesi geçersiz yanıt."),
-        );
-        if (cancelled) return;
-        if (res.ok && json.success && json.data) {
-          setReferansOnizleme(json.data);
-        } else {
-          setReferansOnizleme(null);
-        }
-      } catch {
-        if (!cancelled) setReferansOnizleme(null);
-      } finally {
-        if (!cancelled) setReferansYukleniyor(false);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [
-    motorGirdi.dukkanSecim,
-    motorGirdi.m2,
-    motorGirdi.altTip,
-  ]);
 
   const hint = useMemo(() => {
     const h = wizardHint(panels, donePanelIds, openPanelId);
@@ -932,103 +846,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderReferansMotorPanels() {
-    return (
-      <div className={styles.leftMetaStack}>
-        <section className={styles.railSection}>
-          <span className={styles.railKicker}>{t("Referans listesi")}</span>
-          <span className={styles.railTitle}>
-            {t("Kayıtlı proforma dosyası")}
-          </span>
-          {!motorGirdi.dukkanSecim ? (
-            <p className={styles.railPlaceholder}>
-              <b>{t("Henüz dükkan türü seçilmedi.")}</b>{" "}
-              {t(
-                "Dükkan türünü seçince proje-akis shopTypes kurallarına göre m² bandı ve referans JSON yüklenir.",
-              )}
-            </p>
-          ) : referansYukleniyor ? (
-            <p className={styles.railPlaceholder}>
-              {t("Referans dosyası aranıyor…")}
-            </p>
-          ) : referansOnizleme ? (
-            <div
-              className={`${styles.railReferans}${railEntering ? ` ${styles.secPending}` : ""}${railReveal ? ` ${styles.secReveal}` : ""}`}
-            >
-              <p className={styles.railReferansMeta}>
-                <b>{t(motorGirdi.dukkanSecim)}</b>
-                {" · "}
-                {referansOnizleme.bant.label} ({referansOnizleme.bant.referansM2}{" "}
-                m² ref.)
-              </p>
-              <p className={styles.railReferansDosya}>
-                {t("Liste")}: <code>{referansOnizleme.listeDosya}</code>
-              </p>
-              {referansOnizleme.kaynakDosya ? (
-                <p className={styles.railReferansDosya}>
-                  {t("Kaynak")}: {referansOnizleme.kaynakDosya}
-                </p>
-              ) : null}
-              {referansOnizleme.listeYolu ? (
-                <p className={styles.railReferansHint}>
-                  {referansOnizleme.listeYolu}
-                </p>
-              ) : null}
-              <p className={styles.railReferansKalem}>
-                {referansOnizleme.kalemSayisi}{" "}
-                {t("kalem (referans dosyasından)")}
-              </p>
-              <ul className={styles.railReferansList}>
-                {referansOnizleme.kalemlerOzet.map((k) => (
-                  <li key={`${k.poz}-${k.ad}`}>
-                    {k.poz ? `${k.poz} · ` : ""}
-                    {k.ad}
-                  </li>
-                ))}
-              </ul>
-              {referansOnizleme.kalemSayisi >
-              referansOnizleme.kalemlerOzet.length ? (
-                <p className={styles.railReferansHint}>
-                  +
-                  {referansOnizleme.kalemSayisi -
-                    referansOnizleme.kalemlerOzet.length}{" "}
-                  {t("kalem daha")}
-                </p>
-              ) : null}
-            </div>
-          ) : (
-            <p className={styles.railPlaceholder}>
-              <b>{t(motorGirdi.dukkanSecim)}</b>
-              {t(
-                " için kayıtlı referans listesi bulunamadı — yönetim panelinden shopTypes / bant tanımını kontrol edin.",
-              )}
-            </p>
-          )}
-        </section>
-        <section className={styles.railSection}>
-          <span className={styles.railKicker}>{t("Teklif motoru")}</span>
-          <span className={styles.railTitle}>{t("Bağlantı durumu")}</span>
-          <dl className={styles.railMeta}>
-            <dt>{t("Konsept")}</dt>
-            <dd>{motorGirdi.dukkanSecim ? t(motorGirdi.dukkanSecim) : "—"}</dd>
-            <dt>{t("Motor")}</dt>
-            <dd>{motorSlug || t("planlanan")}</dd>
-            <dt>{t("Alan")}</dt>
-            <dd>{motorGirdi.m2 ? `${motorGirdi.m2} m²` : "—"}</dd>
-            <dt>{t("Lokasyon")}</dt>
-            <dd>{motorGirdi.lokasyon || "—"}</dd>
-            {referansOnizleme?.bantKurali ? (
-              <>
-                <dt>{t("Bant kuralı")}</dt>
-                <dd>{referansOnizleme.bantKurali}</dd>
-              </>
-            ) : null}
-          </dl>
-        </section>
-      </div>
-    );
-  }
-
   function renderRightRail(alignUpload = false) {
     return (
       <aside className={styles.rightCol} aria-label={t("Liste yükleme")}>
@@ -1159,8 +976,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         </div>
 
         <div id="secs">{panels.map(renderPanel)}</div>
-
-        {renderReferansMotorPanels()}
 
         {error ? <div className={styles.error}>{error}</div> : null}
 

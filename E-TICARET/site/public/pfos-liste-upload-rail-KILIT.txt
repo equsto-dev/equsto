@@ -10,7 +10,7 @@ meslek paneli (s1) alt kenarı. Dropzone yüksekliği önceki sürümün 2 katı
 
 ── 1. Yerleşim ────────────────────────────────────────────────────────────
   • Tek sayfa /pfos — ayrı «Listeni yükle» mod sekmesi YOK
-  • Sağ sütun: PfosListeUploadRail (üst) + referans / motor meta (alt)
+  • Sağ sütun: PfosListeUploadRail + liste proforması (yükleme sonrası)
   • Grid: minmax(280px, 3fr) | minmax(0, 2.8fr) — sağ panel geniş (%40 büyütme)
 
 ── 2. Dikey hizalama (PfosPublicWizard) ───────────────────────────────────
