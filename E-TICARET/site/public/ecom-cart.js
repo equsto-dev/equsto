@@ -1714,13 +1714,10 @@
   }
 
   function pairCreateCode() {
-    var qrImg = document.getElementById('eq-cart-pair-qr-img');
-    var waBtn = document.getElementById('eq-cart-pair-wa-btn');
-    if (!qrImg && !waBtn) return;
-
-    if (window._eqCartCodeGenerated) return;
-    window._eqCartCodeGenerated = true;
-
+    var btn = document.getElementById('eq-cart-pair-gen-btn');
+    var disp = document.getElementById('eq-cart-pair-code-display');
+    var valEl = document.getElementById('eq-cart-pair-code-val');
+    if (btn) btn.disabled = true;
     var payload = shopCartPayload({ action: 'create' });
     fetch('/api/shop/cart/link', {
       method: 'POST',
@@ -1730,25 +1727,38 @@
       .then(function (r) { return r.json(); })
       .then(function (j) {
         if (j && j.success && j.code) {
-          var syncUrl = location.origin + '/sepet?sync=' + j.code;
-          if (qrImg) {
-            qrImg.src = 'https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=' + encodeURIComponent(syncUrl);
-            qrImg.style.display = 'block';
-          }
-          if (waBtn) {
-            waBtn.href = 'https://wa.me/?text=' + encodeURIComponent('Equsto sepetimi bu cihazla eşleştirmek için tıklayın: ' + syncUrl);
+          if (disp && valEl) {
+            valEl.textContent = j.code;
+            disp.style.display = 'inline-block';
+            disp.removeAttribute('hidden');
+
+            var syncUrl = location.origin + '/sepet?sync=' + j.code;
+            var qrImg = document.getElementById('eq-cart-pair-qr-img');
+            if (qrImg) {
+              qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(syncUrl);
+              qrImg.style.display = 'block';
+            }
+            var waBtn = document.getElementById('eq-cart-pair-wa-btn');
+            if (waBtn) {
+              waBtn.href = 'https://wa.me/?text=' + encodeURIComponent('Equsto sepetimi bu cihazla eşleştirmek için tıklayın: ' + syncUrl);
+            }
           }
         } else {
-          console.error('Kod oluşturulamadı: ' + (j && j.error || 'Bilinmeyen hata'));
+          alert('Kod oluşturulamadı: ' + (j && j.error || 'Bilinmeyen hata'));
         }
       })
-      .catch(function (err) {
-        console.error('Sunucu hatası:', err);
+      .catch(function () {
+        alert('Sunucu hatası, lütfen tekrar deneyin.');
+      })
+      .finally(function () {
+        if (btn) btn.disabled = false;
       });
   }
 
   function pairJoinCode(code) {
+    var btn = document.getElementById('eq-cart-pair-join-btn');
     var statusEl = document.getElementById('eq-cart-pair-status');
+    if (btn) btn.disabled = true;
     if (statusEl) {
       statusEl.textContent = 'Eşleştiriliyor...';
       statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--ok';
@@ -1788,6 +1798,9 @@
           statusEl.textContent = 'Bağlantı hatası, tekrar deneyin.';
           statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--err';
         }
+      })
+      .finally(function () {
+        if (btn) btn.disabled = false;
       });
   }
 
@@ -1816,9 +1829,23 @@
       ordBtn.dataset.eqCartBound = '1';
       ordBtn.addEventListener('click', submitOrder);
     }
-
-    if (document.getElementById('eq-cart-pair-qr-img') || document.getElementById('eq-cart-pair-wa-btn')) {
-      pairCreateCode();
+    var genBtn = document.getElementById('eq-cart-pair-gen-btn');
+    if (genBtn && genBtn.dataset.eqCartBound !== '1') {
+      genBtn.dataset.eqCartBound = '1';
+      genBtn.addEventListener('click', pairCreateCode);
+    }
+    var joinBtn = document.getElementById('eq-cart-pair-join-btn');
+    if (joinBtn && joinBtn.dataset.eqCartBound !== '1') {
+      joinBtn.dataset.eqCartBound = '1';
+      joinBtn.addEventListener('click', function () {
+        var inp = document.getElementById('eq-cart-pair-input');
+        var val = inp ? inp.value.trim().toUpperCase() : '';
+        if (val.length < 6) {
+          alert('Lütfen 6 haneli eşleştirme kodunu girin.');
+          return;
+        }
+        pairJoinCode(val);
+      });
     }
 
     if (window.URLSearchParams) {
