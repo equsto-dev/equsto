@@ -17,7 +17,6 @@ import {
 } from "../core/ozti-pisirme-spec";
 import { resolveTipKodu } from "../core/tip-kodu";
 import { isSenoxMikrodalgaReferansIsim } from "../core/senox-marka";
-import { resolveTipKodu } from "../core/tip-kodu";
 import { referansKatalogCeliski } from "./referans-nitelikleri";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
@@ -351,10 +350,7 @@ export async function matchPisirmeByReferans(
   urunTipi?: string | null,
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
-  if (
-    isSenoxMikrodalgaReferansIsim(isim, urunTipi) ||
-    resolveTipKodu(String(urunTipi ?? "").trim()) === "mikrodalga_firin"
-  ) {
+  if (isSenoxMikrodalgaReferansIsim(isim, urunTipi)) {
     return null;
   }
   if (isKombiKonveksiyonReferans(isim, urunTipi)) return null;
