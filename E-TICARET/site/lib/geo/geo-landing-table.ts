@@ -1,4 +1,6 @@
 import steakhouse2018 from "../../public/data/geo/steakhouse-2018-199-3-table.json";
+import balikci02 from "../../public/data/geo/balikci-02-table.json";
+import houseCafe19 from "../../public/data/geo/house-cafe-19-table.json";
 
 export type GeoLandingTableItem = {
   ad: string;
@@ -30,6 +32,8 @@ export type GeoLandingTableData = {
 
 const TABLES: Record<string, GeoLandingTableData> = {
   "geo/steakhouse-2018-199-3-table.json": steakhouse2018 as GeoLandingTableData,
+  "geo/balikci-02-table.json": balikci02 as GeoLandingTableData,
+  "geo/house-cafe-19-table.json": houseCafe19 as GeoLandingTableData,
 };
 
 export function getGeoLandingTable(ref?: string): GeoLandingTableData | null {

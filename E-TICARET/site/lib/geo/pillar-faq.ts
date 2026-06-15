@@ -52,6 +52,18 @@ export const PILLAR_FAQ: Record<string, GeoFaqItem[]> = {
       "equsto.com/steakhouse-kurulumu rehberi ve equsto.com/pfos steakhouse konsepti dry-age, ızgara, soğutma ve yıkama hatlarını modeller.",
     ],
   ],
+  "all-day-casual-cafe-kurulumu": [
+    [
+      "All day casual cafe ekipman listesi nasıl oluşturulur?",
+      "equsto.com/all-day-casual-cafe-kurulumu rehberi ve equsto.com/pfos cafe konsepti gün boyu pişirme, bar ve soğutma hatlarını modeller.",
+    ],
+  ],
+  "balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar": [
+    [
+      "Balık restoranı mutfak ekipman listesi nasıl oluşturulur?",
+      "equsto.com/balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar rehberi ve equsto.com/pfos balıkçı konsepti soğuk zincir, teşhir, hazırlık ve pişirme hatlarını modeller.",
+    ],
+  ],
   "en/industrial-kitchen-supplier-turkey": [
     [
       "Industrial kitchen supplier Turkey?",

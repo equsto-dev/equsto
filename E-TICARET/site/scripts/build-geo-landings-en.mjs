@@ -49,6 +49,35 @@ const pages = {
       { label: "Reference projects", href: "/en/projects" },
     ],
   },
+  "en/fish-restaurant-kitchen-project-and-equipment": {
+    lang: "en",
+    profile: "balikci",
+    title: "Fish Restaurant Kitchen Project And Required Equipment | Equsto",
+    description:
+      "Fish restaurant kitchen project and required equipment: storage, prep, cooking, display and warewashing lines. Reference list 02-BALIKÇI (52 items).",
+    h1: "Fish Restaurant Kitchen Project And Required Equipment",
+    lead:
+      "Opening a fish restaurant requires kitchen planning that combines cold chain, prep and display lines on one plan. Sections and the reference equipment list are below.",
+    tableRef: "geo/balikci-02-table.json",
+    skipBudget: true,
+    body:
+      "<p>When opening a fish restaurant, kitchen project planning sits alongside concept and service flow. This guide covers kitchen zones and the reference equipment from proforma 02-BALIKÇI. For a priced quote use <a href=\"/en/pfos\">Project Factory</a> (seafood concept) or the <a href=\"/en/restaurant-kitchen-quote\">restaurant kitchen quote</a> guide.</p><h2>How a fish restaurant kitchen should be laid out</h2><p>Main zones: storage (dry, cold room, deep-freeze), fish prep, cooking, cold prep and service, front-of-house display, and warewashing.</p><h2>Storage</h2><p>Walk-in cold rooms and deep-freeze capacity follow daily supply and menu depth; stacking racks carry dry goods. Cold-chain continuity is a compliance focus.</p><h2>Prep units</h2><p>Filleting benches, hand-wash stations and knife sterilisers form the HACCP backbone between receiving and cooking.</p><h2>Cooking line</h2><p>Combi oven, gas range, fryer and lava-stone grill are sized to the menu; hood capacity scales with open-flame stations.</p><h2>Display and pass</h2><p>Fish showcase, salad-meze and dessert units align with guest flow; ice machine and glasswasher support service pace.</p><h2>Warewashing</h2><p>Machine throughput, grease trap and floor drains must carry peak covers. The table below lists 52 reference items without prices.</p>",
+    faq: [
+      [
+        "Which equipment is core for a fish restaurant kitchen?",
+        "Cold chain, fish prep and display, cooking line, warewashing and hood extraction form the core package.",
+      ],
+      [
+        "How do I request a quote?",
+        "Open Project Factory, choose the Seafood / fish restaurant concept, or contact us with floor area and menu details.",
+      ],
+    ],
+    related: [
+      { label: "Steakhouse guide", href: "/en/steakhouse-kitchen-setup" },
+      { label: "Restaurant kitchen quote", href: "/en/restaurant-kitchen-quote" },
+      { label: "Project Factory", href: "/pfos" },
+    ],
+  },
   "en/cloud-kitchen-setup": {
     lang: "en",
     profile: "bulut",
@@ -154,6 +183,35 @@ const pages = {
       "<p>All day dining and hotel kitchens run breakfast, lunch and dinner on the same equipment at shifting loads. Coffee, hot lines and cold storage operate in parallel all day; banqueting spikes capacity briefly.</p><p>Meal profile sets refrigeration depth and wash speed. Room service and buffet service can add peaks in the same footprint.</p><p>The table shows sample modules. Enter guest count and hotel segment in Project Factory to complete the list.</p>",
     faq: [["Same as hotel kitchen?", "PFOS uses similar lines for hotel and all day dining concepts."]],
     related: [{ label: "Catering guide", href: "/en/catering-kitchen" }],
+  },
+  "en/all-day-casual-cafe-setup": {
+    lang: "en",
+    profile: "houseCafe",
+    title: "All day casual cafe setup guide | Equsto",
+    description:
+      "All day casual cafe kitchen setup: reference proforma 19-THE HOUSE CAFE (48 items), cooking, bar, refrigeration and warewashing.",
+    h1: "All day casual cafe setup",
+    lead:
+      "Coffee, food and bar service run all day in one kitchen plan. The list below is the reference proforma 19-THE HOUSE CAFE equipment schedule.",
+    tableRef: "geo/house-cafe-19-table.json",
+    skipBudget: true,
+    body:
+      "<p>All day casual cafe concepts combine breakfast-to-dinner menus, espresso bar and hot kitchen production on one plan. This guide summarises zones from reference proforma 19-THE HOUSE CAFE. Use Project Factory cafe or all day dining concept for a priced list.</p><p>Cold room and freezer panels cover daily supply; upright and under-counter refrigeration spread across service zones. Cooking line includes combi oven, proofer, range, griddle, fryer and pasta cooker.</p><p>Bar equipment covers ice machine, glasswasher, juicers and bar fridges. Hood-type dishwasher with inlet/outlet benches completes warewashing. The table below lists 48 reference items without prices.</p>",
+    faq: [
+      [
+        "What is included in an all day casual cafe kitchen?",
+        "Cooking, prep machines, bar line, refrigeration, counters and warewashing form the core package.",
+      ],
+      [
+        "How do I request a quote?",
+        "Open Project Factory with cafe or all day dining concept, or contact us with floor area and menu details.",
+      ],
+    ],
+    related: [
+      { label: "Cafe setup", href: "/en/cafe-setup" },
+      { label: "All day dining", href: "/en/all-day-dining-kitchen-setup" },
+      { label: "Project Factory", href: "/pfos" },
+    ],
   },
   "en/market-butcher-deli-setup": {
     lang: "en",
@@ -566,12 +624,14 @@ const pages = {
         title: "Concept setup guides",
         links: [
           { label: "Steakhouse kitchen setup", href: "/en/steakhouse-kitchen-setup" },
+          { label: "Fish restaurant kitchen project", href: "/en/fish-restaurant-kitchen-project-and-equipment" },
           { label: "Cloud kitchen setup", href: "/en/cloud-kitchen-setup" },
           { label: "Cafe setup", href: "/en/cafe-setup" },
           { label: "Catering kitchen", href: "/en/catering-kitchen" },
           { label: "Fast food setup", href: "/en/fast-food-kitchen-setup" },
           { label: "Fine dining setup", href: "/en/fine-dining-kitchen-setup" },
           { label: "All day dining / hotel", href: "/en/all-day-dining-kitchen-setup" },
+          { label: "All day casual cafe", href: "/en/all-day-casual-cafe-setup" },
           { label: "Market, butcher & deli", href: "/en/market-butcher-deli-setup" },
         ],
       },

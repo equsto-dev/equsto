@@ -1,0 +1,314 @@
+{
+  "proformaNo": "02-balikci",
+  "label": "Balık restoranı referans proforma (02- BALIKÇI)",
+  "kaynakDosya": "02-balikci.xlsx",
+  "yukleme": "2026-06-15T06:26:51.000Z",
+  "zones": [
+    {
+      "zone": "Kuru depo",
+      "items": [
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "152*46*160",
+          "adet": 2
+        }
+      ]
+    },
+    {
+      "zone": "Soğuk oda",
+      "items": [
+        {
+          "ad": "PANEL TİP SOĞUK ODA",
+          "olcu": "250*190*240",
+          "adet": 1
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "152*46*160",
+          "adet": 2
+        }
+      ]
+    },
+    {
+      "zone": "Deepfreeze depo",
+      "items": [
+        {
+          "ad": "PANEL TİP SOĞUK ODA",
+          "olcu": "250*190*240",
+          "adet": 1
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "137*46*160",
+          "adet": 3
+        }
+      ]
+    },
+    {
+      "zone": "Balık hazırlık",
+      "items": [
+        {
+          "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+          "olcu": "150*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "olcu": "Ø40*50",
+          "adet": 1
+        },
+        {
+          "ad": "BALIK AYIKLAMA TEZGAHI",
+          "olcu": "188*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "olcu": "188*30*3",
+          "adet": 1
+        },
+        {
+          "ad": "ÇÖP ARABASI",
+          "olcu": "Ø40*50",
+          "adet": 1
+        },
+        {
+          "ad": "BIÇAK STERİL DOLABI",
+          "olcu": "10 BIÇAKLIK",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Pişirme",
+      "items": [
+        {
+          "ad": "KONVEKSİYONLU FIRIN, ELK., RATIONAL SCC61E",
+          "olcu": "6 GN 1/1",
+          "adet": 1
+        },
+        {
+          "ad": "FIRIN TEZGAHI, TABAN RAFLI",
+          "olcu": "85*75*85",
+          "adet": 1
+        },
+        {
+          "ad": "6 AÇIK ALEVLİ KUZİNE, GAZLI, MARENO",
+          "olcu": "120*90*85",
+          "adet": 1
+        },
+        {
+          "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ, MARENO FQE61L",
+          "olcu": "60*65*29",
+          "adet": 1
+        },
+        {
+          "ad": "LAVTAŞLI IZGARA, GAZLI, SETÜSTÜ, GPL 68G",
+          "olcu": "80*65*29",
+          "adet": 1
+        },
+        {
+          "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+          "olcu": "40*65*29",
+          "adet": 1
+        },
+        {
+          "ad": "TEZGAH ALTI BUZDOLABI, 3 KAPILI",
+          "olcu": "180*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "70*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "TOST MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "SALAMANDER, ELK., BERTO'S SA/E 60",
+          "adet": 1
+        },
+        {
+          "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI, SICAK DOLAPLI",
+          "olcu": "170*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "SERVİS TEZGAHI",
+          "olcu": "170*40*45",
+          "adet": 1
+        },
+        {
+          "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+          "olcu": "480*117*50",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Soğuk hazırlık",
+      "items": [
+        {
+          "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "190*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "olcu": "140*30*3",
+          "adet": 1
+        },
+        {
+          "ad": "ÇÖP ARABASI",
+          "olcu": "Ø40*50",
+          "adet": 1
+        },
+        {
+          "ad": "BIÇAK STERİL DOLABI",
+          "olcu": "10 BIÇAKLIK",
+          "adet": 1
+        },
+        {
+          "ad": "MAKE-UP ÜNİTESİ, 3 KAPILI",
+          "olcu": "180*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "70*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "KARBUZ MAKİNASI, BREMA G250",
+          "olcu": "250 kg/gün",
+          "adet": 1
+        },
+        {
+          "ad": "SİNEK ÖLDÜRÜCÜ",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Ön mutfak - bar",
+      "items": [
+        {
+          "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "165*60*85",
+          "adet": 1
+        },
+        {
+          "ad": "BUZ MAKİNASI, BREMA CB416",
+          "olcu": "42 kg/gün",
+          "adet": 1
+        },
+        {
+          "ad": "BARDAK YIKAMA MAKİNASI, NEO DW53E",
+          "olcu": "60*60*85",
+          "adet": 1
+        },
+        {
+          "ad": "ÇAY OTOMATI",
+          "olcu": "23 lt.",
+          "adet": 1
+        },
+        {
+          "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+          "olcu": "188*60*85",
+          "adet": 2
+        },
+        {
+          "ad": "KASA BANKOSU",
+          "olcu": "110*100*85",
+          "adet": 1
+        },
+        {
+          "ad": "BALIK TEŞHİR ÜNİTESİ",
+          "olcu": "200*75*125",
+          "adet": 1
+        },
+        {
+          "ad": "SALATA MEZE TEŞHİR ÜNİTESİ",
+          "olcu": "190*75*125",
+          "adet": 1
+        },
+        {
+          "ad": "TATLI TEŞHİR ÜNİTESİ",
+          "olcu": "150*75*125",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Bulaşıkhane",
+      "items": [
+        {
+          "ad": "BULAŞIK SIYIRMA TEZGAHI",
+          "olcu": "200*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "BASKET RAFI",
+          "olcu": "200*40*45",
+          "adet": 1
+        },
+        {
+          "ad": "ÇÖP ARABASI",
+          "olcu": "Ø40*50",
+          "adet": 1
+        },
+        {
+          "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "230*70*85",
+          "adet": 1
+        },
+        {
+          "ad": "BULAŞIK YIKAMA MAKİNASI",
+          "olcu": "500 Tb/saat",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "olcu": "230*30*3",
+          "adet": 1
+        },
+        {
+          "ad": "YAĞ TUTUCU",
+          "olcu": "1,6 lt/sn",
+          "adet": 1
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "olcu": "152*46*160",
+          "adet": 3
+        }
+      ]
+    },
+    {
+      "zone": "Yer ızgarası",
+      "items": [
+        {
+          "ad": "YER IZGARASI",
+          "olcu": "30*30*14",
+          "adet": 2
+        },
+        {
+          "ad": "YER IZGARASI",
+          "olcu": "95*30*14",
+          "adet": 4
+        }
+      ]
+    }
+  ],
+  "ozet": {
+    "kalemSayisi": 52,
+    "listeToplamEur": 0,
+    "satisToplamEur": 0
+  }
+}

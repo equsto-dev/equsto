@@ -1,0 +1,252 @@
+{
+  "proformaNo": "19-house-cafe",
+  "label": "All day casual cafe referans proforma (19- THE HOUSE CAFE)",
+  "kaynakDosya": "19-house-cafe.xlsx",
+  "yukleme": "2026-06-15T06:45:27.000Z",
+  "zones": [
+    {
+      "zone": "Özel üretim",
+      "items": [
+        {
+          "ad": "PASLANMAZ TEZGAH",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Soğuk oda",
+      "items": [
+        {
+          "ad": "PANEL SOĞUK ODA",
+          "olcu": "250*200*220",
+          "adet": 1
+        },
+        {
+          "ad": "PANEL BUZ ODASI",
+          "olcu": "200*150*220",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Pişirici ekipmanlar",
+      "items": [
+        {
+          "ad": "KONVEKSİYONLU FIRIN",
+          "adet": 1
+        },
+        {
+          "ad": "MAYALAMA KABİNİ",
+          "adet": 1
+        },
+        {
+          "ad": "4 BRÜLÖRLÜ KUZİNE",
+          "adet": 1
+        },
+        {
+          "ad": "IZGARA (PLEYT)",
+          "adet": 1
+        },
+        {
+          "ad": "FRİTÖZ (2X10 LT)",
+          "adet": 1
+        },
+        {
+          "ad": "MAKARNA HAŞLAMA",
+          "adet": 1
+        },
+        {
+          "ad": "DAVLUMBAZ",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Hazırlık ekipmanları",
+      "items": [
+        {
+          "ad": "HAMUR YOĞURMA MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "SEBZE DOĞRAMA MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "ET KIYMA MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "EL BLENDERI",
+          "adet": 1
+        },
+        {
+          "ad": "TERAZİ (30 KG)",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Bulaşıkhane",
+      "items": [
+        {
+          "ad": "BULAŞIK MAKİNASI (GİYOTİN TİP)",
+          "adet": 1
+        },
+        {
+          "ad": "BULAŞIK MAKİNASI GİRİŞ TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "BULAŞIK MAKİNASI ÇIKIŞ TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "ÖN YIKAMA DUŞU",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "adet": 1
+        },
+        {
+          "ad": "EVYE",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Bar ekipmanları",
+      "items": [
+        {
+          "ad": "BARDAK YIKAMA MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "BUZ MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "PORTAKAL SIKMA MAKİNASI",
+          "adet": 1
+        },
+        {
+          "ad": "KATI MEYVE SIKACAĞI",
+          "adet": 1
+        },
+        {
+          "ad": "BLENDER",
+          "adet": 1
+        },
+        {
+          "ad": "BAR BUZDOLABI",
+          "adet": 1
+        },
+        {
+          "ad": "BAR BUZDOLABI",
+          "adet": 1
+        },
+        {
+          "ad": "BAR BUZDOLABI",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Soğutucular",
+      "items": [
+        {
+          "ad": "DİK TİP BUZDOLABI (TEK KAPILI)",
+          "adet": 1
+        },
+        {
+          "ad": "DİK TİP DONDURUCU (TEK KAPILI)",
+          "adet": 1
+        },
+        {
+          "ad": "TEZGAH ALTI BUZDOLABI (2 KAPILI)",
+          "adet": 1
+        },
+        {
+          "ad": "TEZGAH ALTI BUZDOLABI (3 KAPILI)",
+          "adet": 1
+        },
+        {
+          "ad": "SALATA HAZIRLIK BUZDOLABI",
+          "adet": 1
+        },
+        {
+          "ad": "PİZZA HAZIRLIK BUZDOLABI",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Tezgahlar",
+      "items": [
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "ÇALIŞMA TEZGAHI",
+          "adet": 1
+        },
+        {
+          "ad": "EVYELİ TEZGAH",
+          "adet": 1
+        },
+        {
+          "ad": "EVYELİ TEZGAH",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "adet": 1
+        },
+        {
+          "ad": "DUVAR RAFI",
+          "adet": 1
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "adet": 1
+        },
+        {
+          "ad": "İSTİF RAFI",
+          "adet": 1
+        }
+      ]
+    },
+    {
+      "zone": "Diğer ekipmanlar",
+      "items": [
+        {
+          "ad": "SİNEK ÖLDÜRÜCÜ",
+          "adet": 1
+        },
+        {
+          "ad": "ÇÖP KOVASI",
+          "adet": 1
+        }
+      ]
+    }
+  ],
+  "ozet": {
+    "kalemSayisi": 48,
+    "listeToplamEur": 0,
+    "satisToplamEur": 0
+  }
+}

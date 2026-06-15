@@ -1,11 +1,13 @@
 /** SEO geo / rehber slug listesi — next.config ile senkron tutulmalı */
 export const GEO_TR_SLUGS = [
   "steakhouse-kurulumu",
+  "balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar",
   "bulut-mutfak-kurulumu",
   "cafe-kurulumu",
   "catering-mutfagi",
   "fine-dining-kurulumu",
   "all-day-dining-kurulumu",
+  "all-day-casual-cafe-kurulumu",
   "fast-food-kurulumu",
   "market-kasap-sarkuteri-kurulumu",
   "endustriyel-mutfak-ekipmani-turkiye",
@@ -22,12 +24,14 @@ export const GEO_TR_SLUGS = [
 
 export const GEO_EN_SLUGS = [
   "steakhouse-kitchen-setup",
+  "fish-restaurant-kitchen-project-and-equipment",
   "cloud-kitchen-setup",
   "cafe-setup",
   "catering-kitchen",
   "fast-food-kitchen-setup",
   "fine-dining-kitchen-setup",
   "all-day-dining-kitchen-setup",
+  "all-day-casual-cafe-setup",
   "market-butcher-deli-setup",
   "industrial-kitchen-equipment-turkey",
   "industrial-kitchen-supplier-turkey",

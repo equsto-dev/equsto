@@ -225,6 +225,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/contact", destination: "/iletisim", permanent: true },
+      { source: "/balik-restorani-kurulumu", destination: "/balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar", permanent: true },
+      { source: "/en/fish-restaurant-kitchen-setup", destination: "/en/fish-restaurant-kitchen-project-and-equipment", permanent: true },
       { source: "/en/contact", destination: "/en/iletisim", permanent: true },
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/admin", destination: "/admin.html", permanent: false },

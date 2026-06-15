@@ -114,6 +114,8 @@ export const GEO_PAGE_CSS = `
 .eq-geo-body{font-size:14px;line-height:1.75;color:var(--eq-text);}
 .eq-geo-body h2{font-size:1.05rem;margin:22px 0 10px;color:var(--eq-text);}
 .eq-geo-body p{margin:0 0 14px;}
+.eq-geo-body ul{margin:0 0 14px 1.25rem;padding:0;}
+.eq-geo-body li{margin:0 0 6px;}
 .eq-geo-proforma{margin:20px 0 28px;font-size:14px;line-height:1.65;color:var(--eq-text);}
 .eq-geo-proforma h2{font-size:1.05rem;margin:0 0 8px;color:var(--eq-text);}
 .eq-geo-proforma-meta{font-size:13px;color:var(--eq-text-secondary);margin:0 0 18px;line-height:1.55;}
