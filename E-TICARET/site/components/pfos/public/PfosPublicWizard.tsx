@@ -884,47 +884,42 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderListeProformaLeft() {
+  function renderListeProformaRail() {
     if (!listeUpload.sonuc || !listeUpload.teklifV14) return null;
 
     return (
       <>
-        <section className={`${styles.sec} ${styles.secVis} ${styles.secDone}`}>
-          <div className={styles.secHd}>
-            <span className={styles.secNum}>✓</span>
-            <span className={styles.secInfo}>
-              <span className={styles.secTitle}>
-                {t("Listeniz fiyatlandırıldı")}
-              </span>
-              <span className={styles.secSub}>
-                {listeUpload.sonuc.konseptLabel} ·{" "}
-                {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
-                {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
-              </span>
-              <span className={styles.teklifTotalInline}>
-                {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-                <small>({t("tahmini, KDV hariç")})</small>
-              </span>
-            </span>
-          </div>
-          <div className={styles.secBd}>
-            {listeUpload.sonuc.uyarilar?.length ? (
-              <ul className={styles.listeUyarilar}>
-                {listeUpload.sonuc.uyarilar.map((u) => (
-                  <li key={u}>{u}</li>
-                ))}
-              </ul>
-            ) : null}
-            <button
-              type="button"
-              className={`${styles.btn} ${styles.btnGhost}`}
-              onClick={listeUpload.reset}
-            >
-              {t("Yeni liste yükle")}
-            </button>
-          </div>
+        <section
+          className={`${styles.railSection} ${styles.railSectionListeSonuc}`}
+          aria-label={t("Liste fiyatlandırma sonucu")}
+        >
+          <span className={styles.railKicker}>{t("Liste yükleme")}</span>
+          <span className={styles.railTitle}>{t("Listeniz fiyatlandırıldı")}</span>
+          <p className={styles.railPlaceholder}>
+            {listeUpload.sonuc.konseptLabel} ·{" "}
+            {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
+            {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
+          </p>
+          <p className={styles.railListeToplam}>
+            {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+            <small>({t("tahmini, KDV hariç")})</small>
+          </p>
+          {listeUpload.sonuc.uyarilar?.length ? (
+            <ul className={styles.listeUyarilar}>
+              {listeUpload.sonuc.uyarilar.map((u) => (
+                <li key={u}>{u}</li>
+              ))}
+            </ul>
+          ) : null}
+          <button
+            type="button"
+            className={`${styles.btn} ${styles.btnGhost} ${styles.railListeReset}`}
+            onClick={listeUpload.reset}
+          >
+            {t("Yeni liste yükle")}
+          </button>
         </section>
-        <div className={styles.proformaWrap}>
+        <div className={styles.proformaWrapRail}>
           <TeklifV14Proforma
             model={listeUpload.teklifV14}
             deliveryOnly
@@ -934,34 +929,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderRightRail(alignUpload = false) {
+  function renderReferansMotorPanels() {
     return (
-      <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
-        <div
-          className={alignUpload ? styles.uploadRailAlign : undefined}
-          style={
-            alignUpload && uploadAlign != null
-              ? {
-                  marginTop: uploadAlign.marginTop,
-                  height: uploadAlign.height,
-                }
-              : undefined
-          }
-        >
-          <PfosListeUploadRail
-            fillHeight={alignUpload && uploadAlign != null}
-            inputRef={listeUpload.inputRef}
-          drag={listeUpload.drag}
-          setDrag={listeUpload.setDrag}
-          file={listeUpload.file}
-          loadingKind={listeUpload.loadingKind}
-          error={listeUpload.error}
-          memberReady={listeUpload.memberReady}
-          memberLoggedIn={listeUpload.memberLoggedIn}
-          loginHref={listeUpload.loginHref}
-          onPick={listeUpload.onPick}
-        />
-        </div>
+      <div className={styles.leftMetaStack}>
         <section className={styles.railSection}>
           <span className={styles.railKicker}>{t("Referans listesi")}</span>
           <span className={styles.railTitle}>
@@ -1052,6 +1022,39 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             ) : null}
           </dl>
         </section>
+      </div>
+    );
+  }
+
+  function renderRightRail(alignUpload = false) {
+    return (
+      <aside className={styles.rightCol} aria-label={t("Liste yükleme")}>
+        <div
+          className={alignUpload ? styles.uploadRailAlign : undefined}
+          style={
+            alignUpload && uploadAlign != null
+              ? {
+                  marginTop: uploadAlign.marginTop,
+                  height: uploadAlign.height,
+                }
+              : undefined
+          }
+        >
+          <PfosListeUploadRail
+            fillHeight={alignUpload && uploadAlign != null}
+            inputRef={listeUpload.inputRef}
+          drag={listeUpload.drag}
+          setDrag={listeUpload.setDrag}
+          file={listeUpload.file}
+          loadingKind={listeUpload.loadingKind}
+          error={listeUpload.error}
+          memberReady={listeUpload.memberReady}
+          memberLoggedIn={listeUpload.memberLoggedIn}
+          loginHref={listeUpload.loginHref}
+          onPick={listeUpload.onPick}
+        />
+        </div>
+        {renderListeProformaRail()}
       </aside>
     );
   }
@@ -1154,6 +1157,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
         <div id="secs">{panels.map(renderPanel)}</div>
 
+        {renderReferansMotorPanels()}
+
         {error ? <div className={styles.error}>{error}</div> : null}
 
         {finished && sonuc && teklifV14 ? (
@@ -1194,8 +1199,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </div>
           </>
         ) : null}
-
-        {renderListeProformaLeft()}
       </div>
 
       {renderRightRail(!wizardListeMode)}
