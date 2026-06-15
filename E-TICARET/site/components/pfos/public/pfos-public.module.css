@@ -161,6 +161,26 @@
   padding: 0.63rem 0.84rem;
 }
 
+.uploadRailAlign {
+  margin-bottom: 0.75rem;
+}
+
+.uploadRailFill {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.uploadRailFill .listeDropZoneRail {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.uploadRailFill .railError {
+  flex-shrink: 0;
+}
+
 .listeDropZoneBusy {
   opacity: 0.88;
   cursor: wait;

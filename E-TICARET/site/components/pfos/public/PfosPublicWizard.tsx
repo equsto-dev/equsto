@@ -144,6 +144,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const prevOpenPanelIdRef = useRef("s1");
   const enterTimerRef = useRef<number | null>(null);
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const [uploadAlignPx, setUploadAlignPx] = useState<number | null>(null);
 
   useEffect(() => {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
@@ -192,6 +194,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [questions, answers],
   );
 
+  const wizardListeMode = !!(listeUpload.sonuc && listeUpload.teklifV14);
+
   const openPanelIndex = useMemo(() => {
     for (let i = 0; i < panels.length; i++) {
       const panel = panels[i];
@@ -203,6 +207,46 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     }
     return Math.max(0, panels.length - 1);
   }, [panels, questions, answers, m2Touched]);
+
+  useLayoutEffect(() => {
+    if (wizardListeMode || !memberLoggedIn) {
+      setUploadAlignPx(null);
+      return;
+    }
+
+    const leftCol = leftColRef.current;
+    const meslek = document.getElementById("pfos-sec-s1");
+    if (!leftCol || !meslek) {
+      setUploadAlignPx(null);
+      return;
+    }
+
+    const measure = () => {
+      const colTop = leftCol.getBoundingClientRect().top;
+      const meslekBottom = meslek.getBoundingClientRect().bottom;
+      const h = Math.round(meslekBottom - colTop);
+      setUploadAlignPx(h > 120 ? h : null);
+    };
+
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(leftCol);
+    ro.observe(meslek);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [
+    wizardListeMode,
+    memberLoggedIn,
+    openPanelIndex,
+    panels.length,
+    animatingPanelId,
+    animatingPanelReveal,
+    adresListOpen,
+    answers.q_meslek,
+  ]);
 
   const openPanelId = panels[openPanelIndex]?.id ?? "s1";
 
@@ -820,11 +864,20 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderRightRail() {
+  function renderRightRail(alignUpload = false) {
     return (
       <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
-        <PfosListeUploadRail
-          inputRef={listeUpload.inputRef}
+        <div
+          className={alignUpload ? styles.uploadRailAlign : undefined}
+          style={
+            alignUpload && uploadAlignPx != null
+              ? { height: uploadAlignPx }
+              : undefined
+          }
+        >
+          <PfosListeUploadRail
+            fillHeight={alignUpload && uploadAlignPx != null}
+            inputRef={listeUpload.inputRef}
           drag={listeUpload.drag}
           setDrag={listeUpload.setDrag}
           file={listeUpload.file}
@@ -835,6 +888,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           loginHref={listeUpload.loginHref}
           onPick={listeUpload.onPick}
         />
+        </div>
         <section className={styles.railSection}>
           <span className={styles.railKicker}>{t("Referans listesi")}</span>
           <span className={styles.railTitle}>
@@ -1004,7 +1058,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   return (
     <div className={styles.layout}>
-      <div className={styles.leftCol}>
+      <div className={styles.leftCol} ref={leftColRef}>
         {listeUpload.sonuc && listeUpload.teklifV14 ? (
           <>
             <section
@@ -1120,7 +1174,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         )}
       </div>
 
-      {renderRightRail()}
+      {renderRightRail(!wizardListeMode)}
     </div>
   );
 }
