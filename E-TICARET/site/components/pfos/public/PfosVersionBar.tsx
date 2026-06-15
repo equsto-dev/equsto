@@ -15,7 +15,7 @@ export default function PfosVersionBar() {
           {t("Versiyon")} {PFOS_PUBLIC_VERSION}
         </span>
         <span className={styles.versionBarSep} aria-hidden="true">
-          {" | "}
+          {"|"}
         </span>
         <span className={styles.versionBarDisclaimer}>
           {t("Equsto.com yapay zekadan yardım alır, hata yapabilir.")}{" "}
