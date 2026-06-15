@@ -884,42 +884,47 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderListeProformaRail() {
+  function renderListeProformaLeft() {
     if (!listeUpload.sonuc || !listeUpload.teklifV14) return null;
 
     return (
       <>
-        <section
-          className={`${styles.railSection} ${styles.railSectionListeSonuc}`}
-          aria-label={t("Liste fiyatlandırma sonucu")}
-        >
-          <span className={styles.railKicker}>{t("Liste yükleme")}</span>
-          <span className={styles.railTitle}>{t("Listeniz fiyatlandırıldı")}</span>
-          <p className={styles.railPlaceholder}>
-            {listeUpload.sonuc.konseptLabel} ·{" "}
-            {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
-            {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
-          </p>
-          <p className={styles.railListeToplam}>
-            {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-            <small>({t("tahmini, KDV hariç")})</small>
-          </p>
-          {listeUpload.sonuc.uyarilar?.length ? (
-            <ul className={styles.listeUyarilar}>
-              {listeUpload.sonuc.uyarilar.map((u) => (
-                <li key={u}>{u}</li>
-              ))}
-            </ul>
-          ) : null}
-          <button
-            type="button"
-            className={`${styles.btn} ${styles.btnGhost} ${styles.railListeReset}`}
-            onClick={listeUpload.reset}
-          >
-            {t("Yeni liste yükle")}
-          </button>
+        <section className={`${styles.sec} ${styles.secVis} ${styles.secDone}`}>
+          <div className={styles.secHd}>
+            <span className={styles.secNum}>✓</span>
+            <span className={styles.secInfo}>
+              <span className={styles.secTitle}>
+                {t("Listeniz fiyatlandırıldı")}
+              </span>
+              <span className={styles.secSub}>
+                {listeUpload.sonuc.konseptLabel} ·{" "}
+                {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
+                {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
+              </span>
+              <span className={styles.teklifTotalInline}>
+                {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+                <small>({t("tahmini, KDV hariç")})</small>
+              </span>
+            </span>
+          </div>
+          <div className={styles.secBd}>
+            {listeUpload.sonuc.uyarilar?.length ? (
+              <ul className={styles.listeUyarilar}>
+                {listeUpload.sonuc.uyarilar.map((u) => (
+                  <li key={u}>{u}</li>
+                ))}
+              </ul>
+            ) : null}
+            <button
+              type="button"
+              className={`${styles.btn} ${styles.btnGhost}`}
+              onClick={listeUpload.reset}
+            >
+              {t("Yeni liste yükle")}
+            </button>
+          </div>
         </section>
-        <div className={styles.proformaWrapRail}>
+        <div className={styles.proformaWrap}>
           <TeklifV14Proforma
             model={listeUpload.teklifV14}
             deliveryOnly
@@ -957,7 +962,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           onPick={listeUpload.onPick}
         />
         </div>
-        {renderListeProformaRail()}
         <section className={styles.railSection}>
           <span className={styles.railKicker}>{t("Referans listesi")}</span>
           <span className={styles.railTitle}>
@@ -1190,6 +1194,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </div>
           </>
         ) : null}
+
+        {renderListeProformaLeft()}
       </div>
 
       {renderRightRail(!wizardListeMode)}
