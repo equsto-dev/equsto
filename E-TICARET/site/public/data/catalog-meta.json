@@ -1,8 +1,8 @@
 {
-  "version": "2026-06-14T18-08-38",
-  "rebuiltAt": "2026-06-14T18:08:38.610Z",
-  "ekipmanlar": 9363,
-  "withImage": 9361,
+  "version": "2026-06-15T11-12-18",
+  "rebuiltAt": "2026-06-15T11:12:18.198Z",
+  "ekipmanlar": 9339,
+  "withImage": 9337,
   "brands": 19,
   "deptCounts": {
     "araba": 92,
@@ -12,7 +12,7 @@
     "icecek": 149,
     "istif": 276,
     "kahve": 145,
-    "market-reyon": 2009,
+    "market-reyon": 1985,
     "pisirme": 2125,
     "servis": 55,
     "set-ustu-mutfak": 968,
@@ -24,6 +24,6 @@
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
-  "productsEnCount": 10501,
+  "productsEnCount": 9339,
   "productsEnStale": 0
 }
