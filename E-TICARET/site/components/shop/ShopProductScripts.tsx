@@ -15,7 +15,16 @@ export default function ShopProductScripts() {
           __html: `(function(){try{if(document.querySelector('link[data-eq-pdp-page-css]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/eq-product-page.css?v=${v}';l.setAttribute('data-eq-pdp-page-css','1');document.head.appendChild(l);}catch(e){}})();`,
         }}
       />
+      <Script
+        id="eq-pdp-page-body-class"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html:
+            '(function(){function a(){if(document.body){document.body.classList.add("eq-pdp-page");return!0}return!1}if(!a()){var n=0,t=setInterval(function(){if(a()||++n>200)clearInterval(t)},10)}})();',
+        }}
+      />
       <Script src="/ecom-data.js" strategy="beforeInteractive" />
+      <Script src={`/ecom-cart.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-competitor-redirects.js?v=${v}`} strategy="afterInteractive" />

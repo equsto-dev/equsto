@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { mountEqShopChromeLayout } from "@/lib/shop/sync-shop-chrome";
 
 /** Legacy eq-dept-plp.js body class + data-eq-dept attribute */
@@ -11,7 +11,7 @@ export default function ShopBodyClass({
   className: string;
   dataDept?: string;
 }) {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const prevDept = document.body.getAttribute("data-eq-dept");
     const classes = className.split(/\s+/).filter(Boolean);
     for (const c of classes) document.body.classList.add(c);
