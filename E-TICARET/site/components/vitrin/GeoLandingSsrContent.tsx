@@ -1,4 +1,6 @@
+import GeoLandingEquipmentTable from "@/components/vitrin/GeoLandingEquipmentTable";
 import type { GeoRouteKind } from "@/lib/geo/load-landing";
+import { getGeoLandingTable } from "@/lib/geo/geo-landing-table";
 import {
   geoCanonicalPath,
   getGeoLanding,
@@ -39,6 +41,7 @@ export default function GeoLandingSsrContent({
   const page = getGeoLanding(slug, lang, kind);
   if (!page?.h1) return null;
 
+  const table = getGeoLandingTable(page.tableRef);
   const u = UI[lang];
   const homeHref = lang === "en" ? "/en" : "/";
   const pfosHref = lang === "en" ? "/en/pfos" : "/pfos";
@@ -60,6 +63,7 @@ export default function GeoLandingSsrContent({
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
         ) : null}
+        {table ? <GeoLandingEquipmentTable table={table} lang={lang} /> : null}
         {page.faq?.length ? (
           <section className="eq-geo-faq" aria-label={u.faqH2}>
             <h2>{u.faqH2}</h2>
