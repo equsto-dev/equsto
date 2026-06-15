@@ -27,7 +27,6 @@ export const PFOS_Q_UST_SEGMENT = [
   "Catering",
   "Bulut Mutfak",
   "Üretim / Fabrika",
-  "Bilmiyorum",
 ] as const;
 
 /** Üst segment → dükkan türü dalları (yalnızca durum=aktif paketler) */
