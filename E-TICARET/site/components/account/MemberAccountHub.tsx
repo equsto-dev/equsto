@@ -264,18 +264,9 @@ export default function MemberAccountHub() {
   return (
     <main className={styles.page}>
       <header className={styles.head}>
-        <div className={styles.headRow}>
-          <div>
-            <h1 className={styles.title}>Hesabım</h1>
-            <p className={styles.greeting}>Merhaba, {displayName}</p>
-          </div>
-          <button
-            type="button"
-            className={styles.headLogoutBtn}
-            onClick={() => void onLogout()}
-          >
-            Çıkış yap
-          </button>
+        <div>
+          <h1 className={styles.title}>Hesabım</h1>
+          <p className={styles.greeting}>Merhaba, {displayName}</p>
         </div>
         {phoneMissing ? (
           <div className={styles.phoneRequiredBanner} role="alert">
@@ -306,7 +297,16 @@ export default function MemberAccountHub() {
       </div>
 
       <section className={styles.section} id="guvenlik">
-        <h2 className={styles.sectionTitle}>Giriş ve güvenlik</h2>
+        <div className={styles.sectionHead}>
+          <h2 className={styles.sectionTitle}>Giriş ve güvenlik</h2>
+          <button
+            type="button"
+            className={styles.logoutBtn}
+            onClick={() => void onLogout()}
+          >
+            Çıkış yap
+          </button>
+        </div>
         <div className={styles.profileGrid}>
           <div>
             <span className={styles.profileLabel}>Ad Soyad</span>
@@ -383,9 +383,6 @@ export default function MemberAccountHub() {
             </span>
           </div>
         </div>
-        <button type="button" className={styles.logoutBtn} onClick={() => void onLogout()}>
-          Çıkış yap
-        </button>
       </section>
 
       <MemberAddressSection
