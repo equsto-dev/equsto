@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Script from "next/script";
 import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
@@ -35,6 +36,10 @@ function refreshCartUi() {
 }
 
 export default function ShopCartScripts() {
+  useEffect(() => {
+    refreshCartUi();
+  }, []);
+
   return (
     <>
       <AssetCdnConfigScript />

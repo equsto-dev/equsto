@@ -1249,10 +1249,6 @@
   }
 
   function changeLineQty(id, delta) {
-    if (delta < 0) {
-      removeLine(id);
-      return;
-    }
     var arr = load();
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
