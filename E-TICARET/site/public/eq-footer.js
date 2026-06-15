@@ -347,7 +347,7 @@
 
             { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
 
-            { key: "footer.link_allday", label: "All day dining kurulumu", href: "/all-day-dining-kurulumu" },
+            { key: "footer.link_italyan", label: "İtalyan restoran kurulumu", href: "/italyan-restoran-kurulumu" },
 
             { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
 
