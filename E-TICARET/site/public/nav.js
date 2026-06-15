@@ -1288,6 +1288,11 @@
       if (!window.matchMedia("(max-width: 768px)").matches) return;
       var b = document.body;
       if (!b || b.classList.contains("admin-app")) return;
+      if (document.getElementById("eq-pdp-mobile-buybar")) {
+        var tabbar = document.getElementById("eq-bottom-tabbar");
+        if (tabbar) tabbar.style.setProperty("display", "none", "important");
+        return;
+      }
       if (!b.classList.contains("eq-shop") || b.classList.contains("bd-page") || b.classList.contains("eq-pfos")) return;
       if (typeof window.equstoMountContactFabInTabbar === "function") {
         window.equstoMountContactFabInTabbar();

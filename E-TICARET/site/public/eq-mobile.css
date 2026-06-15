@@ -409,20 +409,20 @@ nav.topnav {
 
 /* Sticky Bottom Buybox / CTA on PDP — #eq-pdp-mobile-buybar (body düzeyi) */
 @media (max-width: 768px) {
-  body.eq-shop.eq-pdp-mobile-buybar-on #eq-bottom-tabbar {
+  body:has(#eq-pdp-mobile-buybar) #eq-bottom-tabbar {
     display: none !important;
   }
 
-  body.eq-shop.eq-pdp-mobile-buybar-on {
+  body:has(#eq-pdp-mobile-buybar) {
     padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  body.eq-shop.eq-pdp-mobile-buybar-on #equsto-contact-fab,
-  body.eq-shop.eq-pdp-mobile-buybar-on .equsto-contact-fab {
+  body:has(#eq-pdp-mobile-buybar) #equsto-contact-fab,
+  body:has(#eq-pdp-mobile-buybar) .equsto-contact-fab {
     bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  body.eq-shop.eq-pdp-mobile-buybar-on .eq-epdp-hero .eq-cmf-buybox {
+  body:has(#eq-pdp-mobile-buybar) .eq-epdp-hero .eq-cmf-buybox {
     display: none !important;
   }
 
@@ -435,7 +435,7 @@ nav.topnav {
     background: #ffffff !important;
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1) !important;
     border-top: 1px solid #e5e7eb !important;
-    padding: 10px 16px !important;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
     margin: 0 !important;
     border-radius: 0 !important;
     box-sizing: border-box;

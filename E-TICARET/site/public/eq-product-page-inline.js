@@ -3869,14 +3869,88 @@ window.searchFilter = window.searchFilter || function () {};
       if (bar) bar.remove();
       try {
         document.body.classList.remove("eq-pdp-mobile-buybar-on");
+        var tb = document.getElementById("eq-bottom-tabbar");
+        if (tb) tb.style.removeProperty("display");
+        if (typeof window.eqSyncMobileChrome === "function") window.eqSyncMobileChrome();
       } catch (_) {}
+    }
+
+    function epdpViewportWidth() {
+      try {
+        if (window.visualViewport && window.visualViewport.width > 0) {
+          return window.visualViewport.width;
+        }
+      } catch (_) {}
+      return window.innerWidth || 0;
     }
 
     function isEpdpMobileBuybarViewport() {
       try {
+        if (epdpViewportWidth() <= 768) return true;
         return window.matchMedia("(max-width: 768px)").matches;
       } catch (_) {
-        return false;
+        return epdpViewportWidth() <= 768;
+      }
+    }
+
+    function applyEpdpMobileBuybarInlineStyles(bar) {
+      if (!bar) return;
+      bar.style.setProperty("position", "fixed", "important");
+      bar.style.setProperty("bottom", "0", "important");
+      bar.style.setProperty("left", "0", "important");
+      bar.style.setProperty("right", "0", "important");
+      bar.style.setProperty("z-index", "500", "important");
+      bar.style.setProperty("background", "#ffffff", "important");
+      bar.style.setProperty("box-shadow", "0 -4px 16px rgba(0, 0, 0, 0.1)", "important");
+      bar.style.setProperty("border-top", "1px solid #e5e7eb", "important");
+      bar.style.setProperty(
+        "padding",
+        "10px 16px calc(10px + env(safe-area-inset-bottom, 0px))",
+        "important"
+      );
+      bar.style.setProperty("margin", "0", "important");
+      bar.style.setProperty("box-sizing", "border-box", "important");
+      var inner = bar.querySelector(".eq-pdp-mobile-buybar__inner");
+      if (inner) {
+        inner.style.setProperty("display", "flex", "important");
+        inner.style.setProperty("align-items", "center", "important");
+        inner.style.setProperty("justify-content", "space-between", "important");
+        inner.style.setProperty("gap", "8px", "important");
+        inner.style.setProperty("width", "100%", "important");
+      }
+      var actions = bar.querySelector(".eq-pdp-mobile-buybar__actions");
+      if (actions) {
+        actions.style.setProperty("display", "flex", "important");
+        actions.style.setProperty("align-items", "center", "important");
+        actions.style.setProperty("gap", "8px", "important");
+        actions.style.setProperty("flex", "1 1 auto", "important");
+        actions.style.setProperty("justify-content", "flex-end", "important");
+        actions.style.setProperty("min-width", "0", "important");
+      }
+    }
+
+    function hideEpdpTabbarForBuybar() {
+      try {
+        var tb = document.getElementById("eq-bottom-tabbar");
+        if (tb) tb.style.setProperty("display", "none", "important");
+      } catch (_) {}
+    }
+
+    function scheduleEpdpMobileBuybarRetry(cartU) {
+      if (!cartU) return;
+      var delays = [80, 250, 700, 1800];
+      for (var i = 0; i < delays.length; i++) {
+        (function (delay) {
+          setTimeout(function () {
+            if (!isEpdpMobileBuybarViewport()) return;
+            if (document.getElementById("eq-pdp-mobile-buybar")) return;
+            var heroBox =
+              document.querySelector(".eq-epdp-hero .eq-cmf-buybox") ||
+              document.querySelector(".eq-cmf-buybox");
+            if (!heroBox) return;
+            mountEpdpMobileBuybar(heroBox, window.__eqEpdpLastCartU || cartU);
+          }, delay);
+        })(delays[i]);
       }
     }
 
@@ -3914,8 +3988,12 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function mountEpdpMobileBuybar(box, cartU) {
-      clearEpdpMobileBuybar();
-      if (!box || !cartU || !isEpdpMobileBuybarViewport()) return;
+      if (!box || !cartU || !isEpdpMobileBuybarViewport()) {
+        clearEpdpMobileBuybar();
+        return;
+      }
+      var existing = document.getElementById("eq-pdp-mobile-buybar");
+      if (existing) existing.remove();
       var priceEl = box.querySelector(".eq-cmf-price");
       var priceHtml = priceEl ? priceEl.outerHTML : "";
       var bar = document.createElement("div");
@@ -3944,8 +4022,10 @@ window.searchFilter = window.searchFilter || function () {};
         '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
         epdpCartAddButtonHtml(cartU) +
         "</div></div></div>";
+      applyEpdpMobileBuybarInlineStyles(bar);
       document.body.appendChild(bar);
       document.body.classList.add("eq-pdp-mobile-buybar-on");
+      hideEpdpTabbarForBuybar();
       var inlineVal = box.querySelector(".eq-cmf-qty__val");
       var barVal = bar.querySelector(".eq-cmf-qty__val");
       if (inlineVal && barVal) barVal.textContent = inlineVal.textContent;
@@ -3961,6 +4041,30 @@ window.searchFilter = window.searchFilter || function () {};
             mountEpdpMobileBuybar(heroBox, lastU);
           } else {
             clearEpdpMobileBuybar();
+          }
+        });
+        try {
+          if (window.visualViewport) {
+            window.visualViewport.addEventListener("resize", function () {
+              var heroBox =
+                document.querySelector(".eq-epdp-hero .eq-cmf-buybox") ||
+                document.querySelector(".eq-cmf-buybox");
+              var lastU = window.__eqEpdpLastCartU;
+              if (heroBox && lastU && isEpdpMobileBuybarViewport()) {
+                mountEpdpMobileBuybar(heroBox, lastU);
+              } else if (!isEpdpMobileBuybarViewport()) {
+                clearEpdpMobileBuybar();
+              }
+            });
+          }
+        } catch (_) {}
+        window.addEventListener("pageshow", function () {
+          var heroBox =
+            document.querySelector(".eq-epdp-hero .eq-cmf-buybox") ||
+            document.querySelector(".eq-cmf-buybox");
+          var lastU = window.__eqEpdpLastCartU;
+          if (heroBox && lastU && isEpdpMobileBuybarViewport()) {
+            mountEpdpMobileBuybar(heroBox, lastU);
           }
         });
       }
@@ -4077,6 +4181,7 @@ window.searchFilter = window.searchFilter || function () {};
       hydrateEpdpBuyboxCartBtn(cartU);
       bindEpdpQtyControls(box);
       mountEpdpMobileBuybar(box, cartU);
+      scheduleEpdpMobileBuybarRetry(cartU);
       var payBtn = box.querySelector(".eq-cmf-btn--pay");
       var payPanel = box.querySelector(".eq-cmf-pay-panel");
       if (payBtn && payPanel) {
