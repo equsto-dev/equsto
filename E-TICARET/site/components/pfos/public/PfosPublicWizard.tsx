@@ -884,6 +884,51 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
+  function renderListeProformaRail() {
+    if (!listeUpload.sonuc || !listeUpload.teklifV14) return null;
+
+    return (
+      <>
+        <section
+          className={`${styles.railSection} ${styles.railSectionListeSonuc}`}
+          aria-label={t("Liste fiyatlandırma sonucu")}
+        >
+          <span className={styles.railKicker}>{t("Liste yükleme")}</span>
+          <span className={styles.railTitle}>{t("Listeniz fiyatlandırıldı")}</span>
+          <p className={styles.railPlaceholder}>
+            {listeUpload.sonuc.konseptLabel} ·{" "}
+            {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
+            {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
+          </p>
+          <p className={styles.railListeToplam}>
+            {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+            <small>({t("tahmini, KDV hariç")})</small>
+          </p>
+          {listeUpload.sonuc.uyarilar?.length ? (
+            <ul className={styles.listeUyarilar}>
+              {listeUpload.sonuc.uyarilar.map((u) => (
+                <li key={u}>{u}</li>
+              ))}
+            </ul>
+          ) : null}
+          <button
+            type="button"
+            className={`${styles.btn} ${styles.btnGhost} ${styles.railListeReset}`}
+            onClick={listeUpload.reset}
+          >
+            {t("Yeni liste yükle")}
+          </button>
+        </section>
+        <div className={styles.proformaWrapRail}>
+          <TeklifV14Proforma
+            model={listeUpload.teklifV14}
+            deliveryOnly
+          />
+        </div>
+      </>
+    );
+  }
+
   function renderRightRail(alignUpload = false) {
     return (
       <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
@@ -912,6 +957,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           onPick={listeUpload.onPick}
         />
         </div>
+        {renderListeProformaRail()}
         <section className={styles.railSection}>
           <span className={styles.railKicker}>{t("Referans listesi")}</span>
           <span className={styles.railTitle}>
@@ -1082,119 +1128,68 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   return (
     <div className={styles.layout}>
       <div className={styles.leftCol} ref={leftColRef}>
-        {listeUpload.sonuc && listeUpload.teklifV14 ? (
+        <p className={styles.mreGreeting}>
+          {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
+        </p>
+        <p className={styles.mreMotto}>
+          {t("Beş dakikada yapılır, hemen teslim edilir.")}
+        </p>
+
+        <div id="pfos-progress" className={styles.pfProgress}>
+          <div className={styles.pfProgressTrack}>
+            <div
+              className={styles.pfProgressFill}
+              style={{ width: `${hint.pct}%` }}
+            />
+          </div>
+          <div className={styles.pfStepHint}>
+            <b>{hint.title}</b>
+            <small>{hint.sub}</small>
+          </div>
+        </div>
+
+        <div id="secs">{panels.map(renderPanel)}</div>
+
+        {error ? <div className={styles.error}>{error}</div> : null}
+
+        {finished && sonuc && teklifV14 ? (
           <>
             <section
-              className={`${styles.sec} ${styles.secVis} ${styles.secDone}`}
+              className={`${styles.sec} ${styles.secVis} ${styles.secDone}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
             >
               <div className={styles.secHd}>
                 <span className={styles.secNum}>✓</span>
                 <span className={styles.secInfo}>
                   <span className={styles.secTitle}>
-                    {t("Listeniz fiyatlandırıldı")}
+                    {t("Örnek listeniz hazır")}
                   </span>
                   <span className={styles.secSub}>
-                    {listeUpload.sonuc.konseptLabel} ·{" "}
-                    {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
-                    {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0}{" "}
-                    {t("eşleşme")}
+                    {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
+                    {sonuc.kalemler?.length ?? 0} {t("kalem")}
                   </span>
                   <span className={styles.teklifTotalInline}>
-                    {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+                    {formatTry(sonuc.ozet?.toplamFiyat ?? 0)}{" "}
                     <small>({t("tahmini, KDV hariç")})</small>
                   </span>
                 </span>
               </div>
               <div className={styles.secBd}>
-                {listeUpload.sonuc.uyarilar?.length ? (
-                  <ul className={styles.listeUyarilar}>
-                    {listeUpload.sonuc.uyarilar.map((u) => (
-                      <li key={u}>{u}</li>
-                    ))}
-                  </ul>
-                ) : null}
                 <button
                   type="button"
                   className={`${styles.btn} ${styles.btnGhost}`}
-                  onClick={listeUpload.reset}
+                  onClick={resetWizard}
                 >
-                  {t("Yeni liste yükle")}
+                  {t("Yeni proje")}
                 </button>
               </div>
             </section>
-            <div className={styles.proformaWrap}>
-              <TeklifV14Proforma
-                model={listeUpload.teklifV14}
-                deliveryOnly
-              />
+            <div
+              className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
+            >
+              <TeklifV14Proforma model={teklifV14} deliveryOnly />
             </div>
           </>
-        ) : (
-          <>
-            <p className={styles.mreGreeting}>
-              {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
-            </p>
-            <p className={styles.mreMotto}>
-              {t("Beş dakikada yapılır, hemen teslim edilir.")}
-            </p>
-
-            <div id="pfos-progress" className={styles.pfProgress}>
-              <div className={styles.pfProgressTrack}>
-                <div
-                  className={styles.pfProgressFill}
-                  style={{ width: `${hint.pct}%` }}
-                />
-              </div>
-              <div className={styles.pfStepHint}>
-                <b>{hint.title}</b>
-                <small>{hint.sub}</small>
-              </div>
-            </div>
-
-            <div id="secs">{panels.map(renderPanel)}</div>
-
-            {error ? <div className={styles.error}>{error}</div> : null}
-
-            {finished && sonuc && teklifV14 ? (
-              <>
-                <section
-                  className={`${styles.sec} ${styles.secVis} ${styles.secDone}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
-                >
-                  <div className={styles.secHd}>
-                    <span className={styles.secNum}>✓</span>
-                    <span className={styles.secInfo}>
-                      <span className={styles.secTitle}>
-                        Örnek listeniz hazır
-                      </span>
-                      <span className={styles.secSub}>
-                        {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
-                        {sonuc.kalemler?.length ?? 0} kalem
-                      </span>
-                      <span className={styles.teklifTotalInline}>
-                        {formatTry(sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-                        <small>(tahmini, KDV hariç)</small>
-                      </span>
-                    </span>
-                  </div>
-                  <div className={styles.secBd}>
-                    <button
-                      type="button"
-                      className={`${styles.btn} ${styles.btnGhost}`}
-                      onClick={resetWizard}
-                    >
-                      {t("Yeni proje")}
-                    </button>
-                  </div>
-                </section>
-                <div
-                  className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
-                >
-                  <TeklifV14Proforma model={teklifV14} deliveryOnly />
-                </div>
-              </>
-            ) : null}
-          </>
-        )}
+        ) : null}
       </div>
 
       {renderRightRail(!wizardListeMode)}
