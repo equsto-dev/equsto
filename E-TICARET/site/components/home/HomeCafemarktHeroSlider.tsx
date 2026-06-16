@@ -6,6 +6,11 @@ import { publicAssetUrl } from "@/lib/public-asset-url";
 
 const AUTO_MS = 6000;
 
+function isDirectProductHref(href: string): boolean {
+  const path = href.split("?")[0].replace(/\/$/, "");
+  return /^\/shop\/[^/]+\/.+/.test(path);
+}
+
 function goLink(
   e: React.MouseEvent,
   card: { href: string; legacyGo?: string; dept?: string },
@@ -17,6 +22,10 @@ function goLink(
   };
   if (card.legacyGo && typeof w.eqGo === "function") {
     w.eqGo(card.legacyGo);
+    return;
+  }
+  if (isDirectProductHref(card.href)) {
+    window.location.href = card.href;
     return;
   }
   if (card.dept && typeof w.eqDeptGo === "function") {
