@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Pimak katalog s.188-197 (mutfak ekipmanları) → Equsto markalı tezgah dept
+ * Pimak katalog s.188-197 (mutfak ekipmanları) → tezgah: Pimak marka + PIMAK kodları
+ * davlumbaz: Equsto marka (aynı PDF s.195–196)
  * Kaynak: PFOS/veri/pimak/p188-197-products.json + PDF görselleri
  *
  *   node scripts/import-equsto-p188-197.mjs
@@ -20,10 +21,13 @@ const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const OUT_IMG = path.join(ROOT, "public/images/catalog/equsto");
 const MANIFEST = path.join(ROOT, "public/data/equsto/manifest.json");
 
-const BRAND = "Equsto";
-const BRAND_ID = "equsto";
-const KAYNAK = "equsto-katalog-pdf";
-const LEGACY_KAYNAK = "equsto-pimak-pdf";
+const TEZGAH_BRAND = "Pimak";
+const TEZGAH_BRAND_ID = "pimak";
+const TEZGAH_KAYNAK = "pimak-katalog-pdf";
+const DAVLUMBAZ_BRAND = "Equsto";
+const DAVLUMBAZ_BRAND_ID = "equsto";
+const DAVLUMBAZ_KAYNAK = "equsto-katalog-pdf";
+const LEGACY_KAYNAKLAR = new Set(["equsto-katalog-pdf", "equsto-pimak-pdf", "pimak-katalog-pdf"]);
 const DEFAULT_DEPT = "tezgah";
 const BAYI_ISKONTO = 0.47;
 const ODEME_CARPANI = 0.53;
@@ -131,23 +135,39 @@ function copyImage(p, slug) {
   return [`images/catalog/equsto/${slug}/${fileName}`];
 }
 
-function equstoSku(kod) {
+function pimakSku(kod) {
   return String(kod || "")
     .trim()
-    .replace(/^PIMAK\./i, "EQUSTO.");
+    .toUpperCase();
+}
+
+function equstoSku(kod) {
+  return pimakSku(kod).replace(/^PIMAK\./i, "EQUSTO.");
+}
+
+function pimakSlug(kod) {
+  const sku = pimakSku(kod);
+  if (/^PIMAK\./i.test(sku)) {
+    const tail = sku.replace(/^PIMAK\./i, "").replace(/\./g, "-").toLowerCase();
+    return tail ? `pimak-${tail}` : slugify("pimak-urun");
+  }
+  return `pimak-${slugify(sku)}`;
 }
 
 function equstoSlug(kod) {
-  const tail = String(kod || "")
-    .trim()
+  const tail = pimakSku(kod)
     .replace(/^PIMAK\./i, "")
     .replace(/\./g, "-")
     .toLowerCase();
   return tail ? `equsto-${tail}` : slugify("equsto-urun");
 }
 
-function formatSpecs(p, px) {
-  const sku = equstoSku(p.urun_kodu);
+/** Görsel klasörü — mevcut public/images/catalog/equsto/equsto-* yolları korunur */
+function imageStorageSlug(kod) {
+  return equstoSlug(kod);
+}
+
+function formatSpecs(p, px, { brand, sku, kaynakLabel }) {
   const lines = [
     p.baslik,
     "",
@@ -167,7 +187,7 @@ function formatSpecs(p, px) {
       `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
     );
   }
-  lines.push("", `Kaynak: Equsto katalog 2026 s.${p.pdf_page}`, "Marka: Equsto");
+  lines.push("", `Kaynak: ${kaynakLabel} s.${p.pdf_page}`, `Marka: ${brand}`);
   return lines.join("\n");
 }
 
@@ -188,33 +208,38 @@ function deptFor(p) {
 }
 
 function isDavlumbazRow(r) {
-  if (!isEqustoRow(r)) return false;
   return (
-    r.pdf_page === 195 ||
-    r.pdf_page === 196 ||
-    String(r.category || "").includes("davlumbaz") ||
-    /davlumbaz/i.test(String(r.name || ""))
+    r?.pdf_page === 195 ||
+    r?.pdf_page === 196 ||
+    String(r?.category || "").includes("davlumbaz") ||
+    /davlumbaz/i.test(String(r?.name || ""))
   );
 }
 
 function toRow(p, kur) {
-  const sku = equstoSku(p.urun_kodu);
-  const slug = equstoSlug(p.urun_kodu);
+  const dept = deptFor(p);
+  const isTezgah = dept === DEFAULT_DEPT;
+  const brand = isTezgah ? TEZGAH_BRAND : DAVLUMBAZ_BRAND;
+  const brandId = isTezgah ? TEZGAH_BRAND_ID : DAVLUMBAZ_BRAND_ID;
+  const sku = isTezgah ? pimakSku(p.urun_kodu) : equstoSku(p.urun_kodu);
+  const slug = isTezgah ? pimakSlug(p.urun_kodu) : equstoSlug(p.urun_kodu);
+  const kaynak = isTezgah ? TEZGAH_KAYNAK : DAVLUMBAZ_KAYNAK;
+  const kaynakLabel = isTezgah ? "Pimak katalog 2026" : "Equsto katalog 2026";
   const liste = Number(p.liste_fiyati_eur) || 0;
   const px = liste > 0 ? pricingFromListe(liste, kur) : null;
-  const images = copyImage(p, slug);
-  const id = `${BRAND_ID}__${slug}`;
-  const dept = deptFor(p);
+  const images = copyImage(p, imageStorageSlug(p.urun_kodu));
+  const id = `${brandId}__${slug}`;
 
   return {
     id,
     dept,
     category: p.category || "calisma-tezgahi",
-    brand: BRAND,
+    brand,
+    oem_brand: isTezgah ? "Pimak" : undefined,
     name: p.baslik,
     price: px?.price || "Teklif için iletişim",
     fiyat_bekleniyor: !px,
-    specs: formatSpecs(p, px),
+    specs: formatSpecs(p, px, { brand, sku, kaynakLabel }),
     aciklama: (p.temel_ozellikler || []).join("\n"),
     teknik_ozellikler: [
       ...(p.temel_ozellikler || []),
@@ -227,20 +252,24 @@ function toRow(p, kur) {
     sku,
     model: sku,
     urun_kodu: sku,
-    kaynak: KAYNAK,
+    kaynak,
     kaynak_url: "",
     pdf_page: p.pdf_page,
     linkKaynak: "",
     ...(px || {}),
-    kaynak_fiyat_listesi: px ? "equsto-katalog-pdf" : undefined,
+    kaynak_fiyat_listesi: px ? kaynak : undefined,
+    ...(isTezgah && /^PIMAK\./i.test(sku)
+      ? { marka_kodu: "PIMAK", marka_urun_kodu: sku.replace(/^PIMAK\./i, "") }
+      : {}),
   };
 }
 
-function isEqustoRow(r) {
+function isP188197ImportRow(r) {
   const k = String(r?.kaynak || "");
-  if (k === KAYNAK || k === LEGACY_KAYNAK) return true;
-  if (r?.brand === BRAND && r?.oem_brand === "Pimak") return true;
-  if (r?.brand === BRAND && String(r?.id || "").includes("equsto-pimak")) return true;
+  if (LEGACY_KAYNAKLAR.has(k)) return true;
+  if (String(r?.id || "").startsWith("equsto__equsto-")) return true;
+  if (String(r?.id || "").startsWith("pimak__pimak-")) return true;
+  if (r?.brand === DAVLUMBAZ_BRAND && String(r?.id || "").includes("equsto-pimak")) return true;
   return false;
 }
 
@@ -268,7 +297,7 @@ async function main() {
     let kept = [];
     if (fs.existsSync(file)) {
       kept = JSON.parse(fs.readFileSync(file, "utf8")).filter(
-        (r) => !isEqustoRow(r) && !(dept === DEFAULT_DEPT && isDavlumbazRow(r)),
+        (r) => !isP188197ImportRow(r) && !(dept === DEFAULT_DEPT && isDavlumbazRow(r)),
       );
     }
     const add = byDept[dept] || [];
@@ -287,8 +316,8 @@ async function main() {
       JSON.stringify(
         {
           generated: new Date().toISOString(),
-          brand: BRAND,
-          kaynak: KAYNAK,
+          brand: TEZGAH_BRAND,
+          kaynak: TEZGAH_KAYNAK,
           pdf_pages: "188-197",
           imported: rows.length,
           priced,
