@@ -135,6 +135,9 @@ if (!content.includes("ozti-79e3-37nmv-03-cutout.png")) {
 if (!content.includes('id: "proso-tiger-wfg"')) {
   fail("home-cafemarkt-content.ts: proso tiger wfg slaytı yok");
 }
+if (!content.includes('id: "ozti-soguk-oda-cr4020"')) {
+  fail("home-cafemarkt-content.ts: ozti soguk oda cr4020 slaytı yok");
+}
 if (!content.includes('id: "senox-dt-12"')) {
   fail("home-cafemarkt-content.ts: senox dt-12 slaytı yok");
 }
