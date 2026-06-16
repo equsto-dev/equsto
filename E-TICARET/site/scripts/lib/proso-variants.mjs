@@ -16,6 +16,7 @@ import {
 import { extractProsoPdfVariants } from "./proso-pdf-variants.mjs";
 import { expandVariantsFromSlugExcel } from "./proso-expand-variants.mjs";
 import { resolveSlugMap } from "./proso-prosogutma-slug-map.mjs";
+import { applyProsoModelKodDims } from "./proso-model-dims.mjs";
 
 export {
   eqBrandName,
@@ -43,10 +44,10 @@ export function extractProsoVariants(urun, options = {}) {
       urun.baslik || urun.title || urun.slug,
       modelOverride
     );
-    if (fromPdf.length) return fromPdf;
+    if (fromPdf.length) return fromPdf.map(applyProsoModelKodDims);
   }
   if (options.excelIndex) {
-    return expandVariantsFromSlugExcel(urun, options.excelIndex);
+    return expandVariantsFromSlugExcel(urun, options.excelIndex).map(applyProsoModelKodDims);
   }
   return [];
 }

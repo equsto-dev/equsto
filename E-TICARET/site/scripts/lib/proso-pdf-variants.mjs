@@ -2,6 +2,7 @@
  * Proso katalog PDF metninden model kodları ve ölçü varyantları.
  * Çağlayan import ile uyumlu: genislik_mm (uzunluk), derinlik_mm, yukseklik_mm.
  */
+import { applyProsoModelKodDims } from "./proso-model-dims.mjs";
 
 const LENGTH_HDR = /Length\s*\/\s*Uzunluk/i;
 const MODEL_LINE_RE =
@@ -157,7 +158,7 @@ export function extractProsoPdfVariants(text, baslik = "", modelKodOverride = ""
     for (const g of allLengths) {
       base.push({ modelKod: modelKodOverride, genislik_mm: g, derinlik_mm: 0, yukseklik_mm: 0 });
     }
-    return dedupe(base);
+    return dedupe(base.map(applyProsoModelKodDims));
   }
 
   if (!base.length) return [];
@@ -174,5 +175,5 @@ export function extractProsoPdfVariants(text, baslik = "", modelKodOverride = ""
       });
     }
   }
-  return dedupe(variants);
+  return dedupe(variants.map(applyProsoModelKodDims));
 }
