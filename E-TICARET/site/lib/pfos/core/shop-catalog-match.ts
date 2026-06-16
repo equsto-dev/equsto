@@ -51,10 +51,7 @@ import { isSenoxVakumTipKodu } from "./senox-marka";
 import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
-import {
-  isEqustoFiyatListesiSku,
-  isEqustoFiyatListesiRow,
-} from "./equsto-fiyat-listesi-pfos";
+import { isEqustoFiyatListesiSku } from "./equsto-fiyat-sku";
 import {
   normalizeTipKodu,
   resolveTipKodu,
@@ -469,7 +466,7 @@ function scoreCandidate(
     }
     if (isEqustoFiyatListesiSku(row.sku)) score += 800;
     else if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
-    else if (!isEqustoFiyatListesiRow(row)) return -9999;
+    else if (!isEqustoFiyatListesiSku(row.sku)) return -9999;
   }
 
   if (

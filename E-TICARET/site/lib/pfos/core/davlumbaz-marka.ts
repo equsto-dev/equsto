@@ -1,4 +1,4 @@
-import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-listesi-pfos";
+import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-sku";
 
 /** PFOS davlumbaz — EQUSTO Fiyat Listesi 2026 */
 export const DAVLUMBAZ_MARKA = "Equsto";
