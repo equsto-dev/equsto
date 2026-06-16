@@ -1,0 +1,213 @@
+{
+  "kategoriId": "coffee-shop",
+  "bantId": "ikinciplan",
+  "label": "İKİNCİPLAN Kafe · Coffee Shop",
+  "referansM2": 100,
+  "kaynakDosya": "2024-054 İKİNCİPLAN/2024-054.xlsx",
+  "not": "İKİNCİPLAN Kafe · pasta/içecek dolabı · espresso · filtre kahve · jet fırın · depo · yer ızgarası",
+  "yukleme": "2026-06-16T06:23:29.341Z",
+  "kalemSayisi": 25,
+  "toplamAdet": 29,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A1",
+      "ad": "PASTA VE İÇECEK DOLABI",
+      "olcu": "180×70×145",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A2",
+      "ad": "KASA TEZGAHI, MOBİLYA",
+      "olcu": "100×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A3",
+      "ad": "KAHVE ÇEKMECELİ ÇALIŞMA TEZGAHI",
+      "olcu": "55×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A4",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "çift gruplu",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A5",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A6",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A7",
+      "ad": "ÇALIŞMA TEZGAHI (ÇÖP İÇİN)",
+      "olcu": "55×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A8",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50×50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A9",
+      "ad": "ÇALIŞMA TEZGAHI (ÇÖP İÇİN)",
+      "olcu": "55×60×92",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A10",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50×50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A11",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A12",
+      "ad": "ÇALIŞMA TEZGAHI EVYE ALTI",
+      "olcu": "80×60×92",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A13",
+      "ad": "EVYE GÖZÜ",
+      "olcu": "40×40×25",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A14",
+      "ad": "DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "103 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A15",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "85 KG/GÜN",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A16",
+      "ad": "ÇAY OCAĞI, ELEKTRİKLİ, PORSELEN DEMLİKLER DAHİL",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A17",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A18",
+      "ad": "BAR BLENDER, KABİNLİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A19",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A20",
+      "ad": "JET FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "CAFE",
+      "poz": "A21",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "187×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "DEPO",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "152×53×160",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "DEPO",
+      "poz": "B3",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70×85×205",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "DEPO",
+      "poz": "B4",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70×85×205",
+      "adet": 2
+    },
+    {
+      "bolum": "?",
+      "bolumAd": "yer ızgarası",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30×30×14",
+      "adet": 2
+    }
+  ]
+}

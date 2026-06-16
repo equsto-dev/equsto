@@ -245,8 +245,10 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     id: "kebap-ortadogu",
     label: "Kebap & Ortadoğu Mutfağı",
     ustKategori: "Restaurant",
-    planNot: "Zone şablonu (CZN Burak referansı)",
+    planNot: "2025-016 MEFTECH Orhangazi · 200-400 referans; >400 zone şablonu",
     bantlar: [
+      { id: "80-200", label: "80–200 m²", referansM2: 140 },
+      { id: "200-400", label: "200–400 m²", referansM2: 300 },
       { id: "300-500", label: "300–500 m²", referansM2: 400 },
     ],
   },
@@ -256,6 +258,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ustKategori: "Restoran",
     planNot: "kosk-kanat-2024-107.xlsx · KÖŞK KANAT Fenerbahçe",
     bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
+  },
+  {
+    id: "patisserie-yemek",
+    label: "Patisserie + Yemek",
+    ustKategori: "Restoran",
+    planNot: "hamour-acarkent-2024-032.xlsx · HAMOUR Acarkent",
+    bantlar: [{ id: "200-400", label: "200–400 m²", referansM2: 300 }],
   },
 ];
 

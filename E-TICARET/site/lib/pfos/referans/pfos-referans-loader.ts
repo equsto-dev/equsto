@@ -79,6 +79,13 @@ export function pickKahveDuragiListe(m2: number): "100-200" | "150-200" {
   return m2 < 150 ? "100-200" : "150-200";
 }
 
+/** Kebapçı: ≤200 → 80-200; ≤400 → 200-400 MEFTECH referans; >400 zone şablonu */
+export function pickKebapOrtadoguListe(m2: number): "80-200" | "200-400" | "300-500" {
+  if (m2 <= 200) return "80-200";
+  if (m2 <= 400) return "200-400";
+  return "300-500";
+}
+
 /** Balıkçı: mahalle alt tipi veya m² bandı */
 export function pickBalikciListe(
   m2: number,
@@ -244,6 +251,7 @@ export async function loadReferansProfil(
     | "hotdog-kiosk"
     | "tavukcu"
     | "kanatci-kebapci"
+    | "patisserie-yemek"
     | "all-day-dining-cafe"
     | "restoran"
     | "kokteyl-kahve"
@@ -291,6 +299,8 @@ export async function loadReferansProfil(
                       ? "80-150"
                       : kategoriId === "kanatci-kebapci"
                         ? "100-250"
+                        : kategoriId === "patisserie-yemek"
+                          ? "200-400"
                       : kategoriId === "italyan"
                         ? pickItalyanListe(m2)
                         : kategoriId === "all-day-dining-cafe"

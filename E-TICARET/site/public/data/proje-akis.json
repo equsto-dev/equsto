@@ -52,7 +52,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -107,6 +107,7 @@
             "Şarküteri Kiosk",
             "Kebapçı",
             "Kanatçı-Kebapçı",
+            "Patisserie + Yemek",
             "Pizzacı",
             "Türk / Esnaf lokanta",
             "All Dining Cafe",
@@ -506,16 +507,29 @@
         "id": "restaurant_kebap",
         "name": "Kebap & Ortadoğu",
         "parent": "Restoran",
-        "desc": "Kebap / ocakbaşı · 300–500 m² zone şablonu · motor: kebap-ortadogu",
+        "desc": "Kebap / ocakbaşı · 80–200 & 200–400 m² MEFTECH Orhangazi referans (2025-016) · >400 m² zone şablonu · motor: kebap-ortadogu",
         "pfos": {
           "motorSlug": "kebap-ortadogu",
           "dukkanSecim": "Kebapçı",
-          "m2Min": 300,
+          "m2Min": 80,
           "m2Max": 500,
-          "bantKurali": "Zone şablonu (300–500 m²); m² ile ekipman adetleri ölçeklenir",
-          "teklifKaynagi": "motor-sablon",
+          "bantKurali": "m² ≤200 → 80-200 referans (016-4); ≤400 → 200-400 referans (016-3); >400 → 300-500 zone şablonu",
+          "listeYolu": "2025-016 MEFTECH ORHANGAZİ KADER",
+          "teklifKaynagi": "referans-json",
           "durum": "aktif",
           "bantlar": [
+            {
+              "id": "80-200",
+              "label": "80–200 m²",
+              "referansM2": 140,
+              "listeDosya": "pfos-referans/kebap-ortadogu-80-200.json"
+            },
+            {
+              "id": "200-400",
+              "label": "200–400 m²",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/kebap-ortadogu-200-400.json"
+            },
             {
               "id": "300-500",
               "label": "300–500 m²",
@@ -546,6 +560,31 @@
               "label": "100–250 m²",
               "referansM2": 175,
               "listeDosya": "pfos-referans/kanatci-kebapci-100-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_patisserie_yemek",
+        "name": "Patisserie + Yemek",
+        "parent": "Restoran",
+        "desc": "Patisserie + sıcak mutfak · 200–400 m² referans (HAMOUR Acarkent) · motor: patisserie-yemek",
+        "pfos": {
+          "motorSlug": "patisserie-yemek",
+          "dukkanSecim": "Patisserie + Yemek",
+          "m2Min": 200,
+          "m2Max": 400,
+          "bantKurali": "Tek referans liste (200–400 m²); m² ile adet ölçeklenir",
+          "listeYolu": "hamour-acarkent-2024-032.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "200-400",
+              "label": "200–400 m²",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/patisserie-yemek-200-400.json"
             }
           ]
         },
@@ -62230,6 +62269,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T06:09:00.980Z"
+    "updated_at": "2026-06-16T06:29:49.673Z"
   }
 }

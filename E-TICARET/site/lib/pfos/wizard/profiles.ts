@@ -221,6 +221,13 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
     /** KÖŞK KANAT referans şablonu — zone katalog eklemez */
     pfosZones: [],
   },
+  "patisserie-yemek": {
+    konsept: "patisserie-yemek",
+    konseptUst: "Restoran",
+    dukkan: "Patisserie + Yemek",
+    /** HAMOUR Acarkent referans şablonu — zone katalog eklemez */
+    pfosZones: [],
+  },
   restoran: {
     konsept: "restoran",
     konseptUst: "Restoran",

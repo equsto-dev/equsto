@@ -116,6 +116,15 @@ const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
     "Izgara yedek seti",
     "Fritöz (yedek)",
   ],
+  "Patisserie + Yemek": [
+    "Spiral hamur yoğurma",
+    "Konveksiyon fırın (yedek)",
+    "Soğuk teşhir vitrini",
+    "Vakum makinası",
+    "Tartı seti",
+    "Planet mikser",
+    "Buz makinası",
+  ],
   Catering: [
     "Taşıma arabaları",
     "Thermobox seti",

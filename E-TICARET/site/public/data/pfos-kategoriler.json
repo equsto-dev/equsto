@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T06:09:42.857Z",
+  "updated_at": "2026-06-16T06:30:11.686Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -91,6 +91,18 @@
             "toplamAdet": 22,
             "kaynakDosya": "2016-114 ESPRESOLAB WATERGARDEN/2016-114-1.xlsx",
             "yukleme": "2026-05-31T02:59:34.639Z"
+          }
+        },
+        {
+          "id": "ikinciplan",
+          "label": "İKİNCİPLAN Kafe (2024-054)",
+          "referansM2": 100,
+          "meta": {
+            "listeDosya": "coffee-shop-ikinciplan.json",
+            "kalemSayisi": 25,
+            "toplamAdet": 29,
+            "kaynakDosya": "2024-054 İKİNCİPLAN/2024-054.xlsx",
+            "yukleme": "2026-06-16T06:23:29.341Z"
           }
         }
       ]
@@ -811,6 +823,56 @@
             "toplamAdet": 72,
             "kaynakDosya": "2024-107 KÖŞK KANAT/2024-107.XLSX",
             "yukleme": "2026-06-16T06:09:42.839Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kebap-ortadogu",
+      "label": "Kebap & Ortadoğu Mutfağı",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "80-200",
+          "label": "80–200 m²",
+          "referansM2": 140,
+          "meta": {
+            "listeDosya": "kebap-ortadogu-80-200.json",
+            "kalemSayisi": 51,
+            "toplamAdet": 53,
+            "kaynakDosya": "2025-016 MEFTECH ORHANGAZİ KADER/2025-016-4.xlsx",
+            "yukleme": "2026-06-16T06:23:49.520Z"
+          }
+        },
+        {
+          "id": "200-400",
+          "label": "200–400 m²",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "kebap-ortadogu-200-400.json",
+            "kalemSayisi": 51,
+            "toplamAdet": 57,
+            "kaynakDosya": "2025-016 MEFTECH ORHANGAZİ KADER/2025-016-3.xlsx",
+            "yukleme": "2026-06-16T06:14:32.096Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patisserie-yemek",
+      "label": "Patisserie + Yemek",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "200-400",
+          "label": "200–400 m²",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "patisserie-yemek-200-400.json",
+            "kalemSayisi": 94,
+            "toplamAdet": 113,
+            "kaynakDosya": "2024-032 HAMOUR ACARKENT/2024-032.xlsx",
+            "yukleme": "2026-06-16T06:30:11.674Z"
           }
         }
       ]

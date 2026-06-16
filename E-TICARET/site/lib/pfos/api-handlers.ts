@@ -15,7 +15,7 @@ import {
 
 const M2_RANGES: Record<string, { min: number; max: number }> = {
   "all-day-dining-cafe": { min: 150, max: 400 },
-  "kebap-ortadogu": { min: 300, max: 500 },
+  "kebap-ortadogu": { min: 80, max: 500 },
   pizzaci: { min: 80, max: 500 },
   meyhane: { min: 100, max: 500 },
   "turk-restoran": { min: 150, max: 5000 },
@@ -32,6 +32,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "hotdog-kiosk": { min: 25, max: 60 },
   tavukcu: { min: 80, max: 150 },
   "kanatci-kebapci": { min: 100, max: 250 },
+  "patisserie-yemek": { min: 200, max: 400 },
   restoran: { min: 500, max: 1000 },
   "kokteyl-kahve": { min: 30, max: 50 },
   "kahve-atolyesi": { min: 80, max: 150 },
