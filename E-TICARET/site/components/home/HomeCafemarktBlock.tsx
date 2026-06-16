@@ -5,12 +5,13 @@
 import {
   cafemarktBentoTiles,
   cafemarktCategories,
-  cafemarktHeroMain,
+  cafemarktHeroMainSlides,
   cafemarktHeroSide,
   type CafemarktBentoTile,
   type CafemarktPromoCard,
 } from "@/lib/home-cafemarkt-content";
 import { HomeCafemarktCategoriesSlider } from "@/components/home/HomeCafemarktCategoriesSlider";
+import { HomeCafemarktHeroSlider } from "@/components/home/HomeCafemarktHeroSlider";
 import { publicAssetUrl } from "@/lib/public-asset-url";
 
 function goLink(
@@ -95,7 +96,7 @@ function SplitPromoCard({
         <img
           className="eq-cmkt-promo__media-img"
           src={publicAssetUrl(card.image)}
-          alt="Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"
+          alt={card.imageAlt ?? "Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"}
           loading="lazy"
           decoding="async"
         />
@@ -202,11 +203,7 @@ export function HomeCafemarktBlock() {
     <section className="eq-cmkt" aria-label="Equsto vitrin">
       <div className="eq-cmkt-inner">
         <div className="eq-cmkt-hero-grid">
-          {isSplitPromo(cafemarktHeroMain) ? (
-            <SplitPromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
-          ) : (
-            <PromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
-          )}
+          <HomeCafemarktHeroSlider slides={cafemarktHeroMainSlides} />
           <div className="eq-cmkt-hero-side">
             {cafemarktHeroSide.map((c) => (
               <PromoCard key={c.id} card={c} className="eq-cmkt-promo--compact" />

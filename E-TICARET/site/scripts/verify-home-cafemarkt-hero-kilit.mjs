@@ -64,6 +64,9 @@ if (!heroGridBlock.includes("margin-bottom: 17px")) {
 if (!css.includes("grid-row: 1 / span 2")) {
   fail("eq-home-cafemarkt.css: sol kutu span 2 kilidi yok");
 }
+if (!css.includes(".eq-cmkt-hero-main-wrap")) {
+  fail("eq-home-cafemarkt.css: hero main slider wrap yok");
+}
 if (!/\.eq-cmkt-hero-side\s*\{[\s\S]*?grid-row:\s*1\s*\/\s*span\s*2;[\s\S]*?grid-template-columns:\s*1fr\s+1fr;[\s\S]*?grid-template-rows:\s*1fr\s+1fr;/.test(css)) {
   fail("eq-home-cafemarkt.css: hero-side 2x2 grid yok");
 }
@@ -94,10 +97,22 @@ if (!block.includes("publicAssetUrl(")) {
 }
 if (!block.includes("eq-cmkt-hero-grid")) fail("HomeCafemarktBlock.tsx: hero grid yok");
 if (!block.includes("eq-cmkt-hero-side")) fail("HomeCafemarktBlock.tsx: hero side yok");
-if (!block.includes("eq-cmkt-promo--main")) fail("HomeCafemarktBlock.tsx: main promo yok");
 if (!block.includes("eq-cmkt-promo--compact")) fail("HomeCafemarktBlock.tsx: compact promo yok");
-if (!block.includes("SplitPromoCard")) fail("HomeCafemarktBlock.tsx: SplitPromoCard yok");
+if (!block.includes("HomeCafemarktHeroSlider")) {
+  fail("HomeCafemarktBlock.tsx: hero slider yok");
+}
+if (!block.includes("cafemarktHeroMainSlides")) {
+  fail("HomeCafemarktBlock.tsx: cafemarktHeroMainSlides yok");
+}
 if (!block.includes("cafemarktHeroSide")) fail("HomeCafemarktBlock.tsx: hero side map yok");
+
+const heroSlider = read("components/home/HomeCafemarktHeroSlider.tsx");
+if (!heroSlider.includes("eq-cmkt-promo--main")) {
+  fail("HomeCafemarktHeroSlider.tsx: main promo sınıfı yok");
+}
+if (!heroSlider.includes("eq-cmkt-hero-main-wrap")) {
+  fail("HomeCafemarktHeroSlider.tsx: hero wrap yok");
+}
 
 const mount = read("components/home/HomeCafemarktMount.tsx");
 if (!mount.includes("eq-home-cafemarkt-mount")) fail("HomeCafemarktMount.tsx: mount id yok");
@@ -110,6 +125,12 @@ const content = read("lib/home-cafemarkt-content.ts");
 if (!content.includes('layout: "split"')) fail("home-cafemarkt-content.ts: split layout yok");
 if (!content.includes("ozti-79e3-37nmv-03-cutout.png")) {
   fail("home-cafemarkt-content.ts: buzdolabı cutout yolu değişmiş");
+}
+if (!content.includes('id: "proso-tiger-wfg"')) {
+  fail("home-cafemarkt-content.ts: proso tiger wfg slaytı yok");
+}
+if (!content.includes("export const cafemarktHeroMainSlides")) {
+  fail("home-cafemarkt-content.ts: cafemarktHeroMainSlides yok");
 }
 if (!content.includes('id: "kahve"')) fail("home-cafemarkt-content.ts: kahve kartı yok");
 if (!content.includes('id: "yikama"')) fail("home-cafemarkt-content.ts: yikama kartı yok");

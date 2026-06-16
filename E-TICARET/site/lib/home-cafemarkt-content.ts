@@ -20,29 +20,54 @@ export type CafemarktPromoCard = {
   cta?: string;
   href: string;
   legacyGo?: string;
+  dept?: string;
   image?: string;
+  imageAlt?: string;
   /** Tek görsel konumu (varsayılan: sağ alt) */
   imageAnchor?: "bottom-right" | "top-right";
   bg: string;
   textLight?: boolean;
 };
 
-/** Öztiryakiler 79E3.37NMV.03 — oztiryakiler.com.tr ürün sayfası teknik tablosu */
-export const cafemarktHeroMain: CafemarktPromoCard = {
-  id: "ozti-dual",
-  layout: "split",
-  promoKicker: "Öztiryakiler · tezgah tipi soğutma · TAG 370 NMV",
-  title: "9 Çekmeceli",
-  titleEm: "Yatay Tip Buzdolabı",
-  promoLead:
-    "GN 1/1 uyumlu dokuz çekmeceli tezgah tipi buzdolabı — profesyonel mutfaklarda erişilebilir soğutma, HACCP dijital kontrol ve yüksek verimli monoblok soğutma sistemi.",
-  promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
-  cta: "Ürün sayfasına git →",
-  href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
-  image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03-cutout.png",
-  bg: "#001e50",
-  textLight: true,
-};
+/** Sol hero split slaytları — Öztiryakiler + Proso Tiger WFG EQ1 */
+export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
+  {
+    id: "ozti-dual",
+    layout: "split",
+    promoKicker: "Öztiryakiler · tezgah tipi soğutma · TAG 370 NMV",
+    title: "9 Çekmeceli",
+    titleEm: "Yatay Tip Buzdolabı",
+    promoLead:
+      "GN 1/1 uyumlu dokuz çekmeceli tezgah tipi buzdolabı — profesyonel mutfaklarda erişilebilir soğutma, HACCP dijital kontrol ve yüksek verimli monoblok soğutma sistemi.",
+    promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
+    cta: "Ürün sayfasına git →",
+    href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
+    image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03-cutout.png",
+    imageAlt: "Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı",
+    bg: "#001e50",
+    textLight: true,
+  },
+  {
+    id: "proso-tiger-wfg",
+    layout: "split",
+    promoKicker: "Proso Profesyonel Soğutma · şarküteri reyonu · Tiger WFG EQ1",
+    title: "Menteşeli Düz Camlı",
+    titleEm: "Şarküteri Reyonu",
+    promoLead:
+      "Et ve süt ürünleri teşhirinde menteşeli düz camlı Tiger WFG — modüler uzunluk seçenekleri, 0/+5 °C çalışma, kolay yükleme ve hijyenik temizlik.",
+    promoBadges: ["TIGER 800 WFG/CB", "937 mm", "0/+5 °C", "Remote", "LED aydınlatma"],
+    cta: "Ürün sayfasına git →",
+    href: "/shop/market-reyonlari/eq-tiger-wfg-eq1",
+    dept: "market-reyon",
+    image: "/data/prosogutma-market/tiger-wfg/tigerwfgon.png",
+    imageAlt: "Proso Tiger WFG EQ1 — menteşeli düz camlı şarküteri reyonu",
+    bg: "#0a2e3a",
+    textLight: true,
+  },
+];
+
+/** İlk slayt — geriye dönük referanslar */
+export const cafemarktHeroMain = cafemarktHeroMainSlides[0];
 
 export const cafemarktHeroSide: CafemarktPromoCard[] = [
   {
