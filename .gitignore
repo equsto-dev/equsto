@@ -49,6 +49,22 @@ dist/
 # Cursor / IDE
 .cursor/
 
+# Agent / lokal otomasyon
+_agent-*.bat
+_agent-*.txt
+_agent-readout.txt
+
+# İç içe workspace kopyası
+EQUSTO-WORK/EQUSTO-WORK/
+
+# PFOS lokal scrape / probe çıktıları
+PFOS/veri/pimak/__pycache__/
+PFOS/veri/pimak/_page-*.txt
+PFOS/veri/pimak/_pdf-*.txt
+PFOS/veri/pimak/scrape-checkpoint.json
+PFOS/veri/pimak/urun-sayfalari/
+PFOS/veri/pimak/media/
+
 .vercel
 .env*.local
 node_modules
