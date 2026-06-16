@@ -1,0 +1,741 @@
+{
+  "kategoriId": "sehir-otel",
+  "bantId": "500-2000-arnavutkoy",
+  "label": "Şehir Oteli (Business) 500–2000 m² (Sheraton Arnavutköy)",
+  "referansM2": 1000,
+  "kaynakDosya": "2024-122 SHERATON ARNAVUTKÖY/2024-122-1.XLSX",
+  "not": "Sheraton Arnavutköy · ana mutfak · bulaşıkhane · soğuk hava · show mutfağı · açık büfe · bar",
+  "yukleme": "2026-06-16T06:01:29.183Z",
+  "kalemSayisi": 91,
+  "toplamAdet": 120,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A1",
+      "ad": "DUVAR TİP DAVLUMBAZ - FİLTRELİ",
+      "olcu": "430x100x50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A2",
+      "ad": "RATİONAL KOMBİ FIRIN - ELEKTRİKLİ",
+      "olcu": "6 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A3",
+      "ad": "FIRIN ALT STANDI - TABAN RAFLI",
+      "olcu": "80x85x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A4",
+      "ad": "DAVLUMBAZ ALT RAFI - IZGARA TABLALI",
+      "olcu": "320x50x35",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A5",
+      "ad": "CİHAZALTI BUZDOLABI - 4 ÇEKMECELİ +4",
+      "olcu": "160x70x55",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A6",
+      "ad": "SETÜSTÜ ARA TEZGAH - NÖTR",
+      "olcu": "40x75x30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A7",
+      "ad": "SETÜSTÜ FRİTÖZ - ÇİFT SEPETLİ - ELEKTRİKLİ",
+      "olcu": "80x75x30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A8",
+      "ad": "SETÜSTÜ YARI OLUKLU IZGARA - ELEKTRİKLİ",
+      "olcu": "80x75x30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A9",
+      "ad": "SETÜSTÜ DÖRTLÜ OCAK - GAZLI",
+      "olcu": "80x75x30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A10",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN VE ARA RAFLI",
+      "olcu": "160x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A11",
+      "ad": "DUVAR RAFI - TEK SIRA DÜZ TABLALI",
+      "olcu": "160x30x4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A12",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A13",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI - RAFSIZ",
+      "olcu": "120x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A14",
+      "ad": "DUŞ SPREY ÜNİTESİ - TEZGAHA MONTE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A15",
+      "ad": "ÇÖP KOVASI - TEKERLEKLİ",
+      "olcu": "40x50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A16",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN VE ARA RAFLI",
+      "olcu": "135x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A17",
+      "ad": "DUVAR RAFI - TEK SIRA DÜZ TABLALI",
+      "olcu": "135x30x4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A18",
+      "ad": "TEZGAH TİP BUZDOLABI - 3 KAPILI - MAKE UP ÜNİTELİ",
+      "olcu": "190x70x85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A19",
+      "ad": "DİK TİP BUZDOLABI - 2 KAPILI +4",
+      "olcu": "140x83x210",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A20",
+      "ad": "SERVİS ARABASI - 3 KATLI",
+      "olcu": "90x55x90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A21",
+      "ad": "YER IZGARASI",
+      "olcu": "94x30",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A22",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN VE ARA RAFLI",
+      "olcu": "175x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A23",
+      "ad": "DUVAR RAFI - TEK SIRA DÜZ TABLALI",
+      "olcu": "175x30x4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A24",
+      "ad": "GIDA DİLİMLEME MAKİNESİ",
+      "olcu": "Ø30 CM",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A25",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI - RAFSIZ",
+      "olcu": "120x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A26",
+      "ad": "DUŞ SPREY ÜNİTESİ - TEZGAHA MONTE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A27",
+      "ad": "ÇÖP KOVASI - TEKERLEKLİ",
+      "olcu": "40x50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A28",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN VE ARA RAFLI",
+      "olcu": "145x70x85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A29",
+      "ad": "DUVAR RAFI - TEK SIRA DÜZ TABLALI",
+      "olcu": "145x30x4",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A30",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN VE ARA RAFLI",
+      "olcu": "180x70x85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ANA MUTFAK",
+      "poz": "A31",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA DÜZ TABLALI",
+      "olcu": "183x53x183",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B1",
+      "ad": "BULAŞIK TOPLAMA TEZGAHI - SIYIRMA HUNİLİ",
+      "olcu": "175x70x85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B2",
+      "ad": "SETALTI BULAŞIK YIKAMA MAKİNESİ",
+      "olcu": "500 Tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B3",
+      "ad": "ÇÖP KOVASI - TEKERLEKLİ",
+      "olcu": "40x50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B4",
+      "ad": "TEK EVYELİ MAKİNE GİRİŞ TEZGAHI - RAFSIZ",
+      "olcu": "100x75x85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B5",
+      "ad": "DUŞ SPREY ÜNİTESİ - TEZGAHA MONTE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B6",
+      "ad": "DUVAR TİP DAVLUMBAZ - FİLTRESİZ",
+      "olcu": "100x100x50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B7",
+      "ad": "GİYOTİN TİP BULAŞIK YIKAMA MAKİNESİ",
+      "olcu": "1000 Tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B8",
+      "ad": "MAKİNE ÇIKIŞ TEZGAHI - RAFSIZ",
+      "olcu": "70x75x85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B9",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA TEL RAF",
+      "olcu": "137x46x183",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B10",
+      "ad": "DUVAR TİP KUTU DAVLUMBAZ - FİLTRESİZ",
+      "olcu": "110x100x50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B11",
+      "ad": "DUŞ SPREY ÜNİTESİ - TEZGAHA MONTE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B12",
+      "ad": "KAZAN YIKAMA EVYESİ",
+      "olcu": "100x80x85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B13",
+      "ad": "YER IZGARASI",
+      "olcu": "94x30",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B14",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA TEL RAF",
+      "olcu": "152x53x183",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIKHANE",
+      "poz": "B15",
+      "ad": "HAVUZLU BULAŞIK TOPLAMA ARABASI- 2 KATLI",
+      "olcu": "90x50x90",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C1",
+      "ad": "KASA TAŞIMA ARABASI",
+      "olcu": "100x65x85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C2",
+      "ad": "KANTAR - DİJİTAL EKRAN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C3",
+      "ad": "YER IZGARASI",
+      "olcu": "94x30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C4",
+      "ad": "PANEL TİP BLOK SOĞUK HAVA DEPOSU (+4 / -18 )",
+      "olcu": "485x305x240",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C5",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA TEL RAF",
+      "olcu": "122x53x160",
+      "adet": 4
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C6",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA TEL RAF",
+      "olcu": "137x53x160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK HAVA DEPOSU",
+      "poz": "C7",
+      "ad": "DEMONTE İSTİF RAFI - 4 SIRA TEL RAF",
+      "olcu": "152x53x160",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D1",
+      "ad": "ORTA TİP KUTU DAVLUMBAZ - FİLTRELİ",
+      "olcu": "300x100x50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D2",
+      "ad": "CİHAZALT TEZGAHI - TABAN RAFLI",
+      "olcu": "140x70x55",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D3",
+      "ad": "SETÜSTÜ İKİLİ OCAK - GAZLI",
+      "olcu": "40x60x30",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D4",
+      "ad": "SETÜSTÜ ARA TEZGAH - NÖTR",
+      "olcu": "60x60x30",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D5",
+      "ad": "SETÜSTÜ WOK OCAK - GAZLI",
+      "olcu": "40x60x30",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D6",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI - ÇARPMA KAPILI - RAFSIZ",
+      "olcu": "60x60x85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D7",
+      "ad": "DUVAR RAFI - TEK SIRA DÜZ TABLALI",
+      "olcu": "125x30x4",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D8",
+      "ad": "TEZGAH TİP BUZDOLABI - 3 KAPILI +4",
+      "olcu": "190x60x85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D9",
+      "ad": "YER IZGARASI",
+      "olcu": "94x30",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D10",
+      "ad": "ŞARAP BUZDOLABI",
+      "olcu": "66x66x126",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- SHOW MUTFAĞI",
+      "poz": "D11",
+      "ad": "BREMA BUZ KÜP MAKİNESİ - CB 640",
+      "olcu": "73.8x60x92",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E1",
+      "ad": "NÖTR SERVİS TEZGAHI",
+      "olcu": "230x80x85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E2",
+      "ad": "EKMEK KIZARTMA MAKİNESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E3",
+      "ad": "ÇORBA POTU",
+      "olcu": "Ø30 CM",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E4",
+      "ad": "NÖTR SERVİS TEZGAHI",
+      "olcu": "620x80x85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E5",
+      "ad": "ÖKSÜRÜK PERDESİ",
+      "olcu": "240 CM",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E6",
+      "ad": "CHAFING DISH",
+      "olcu": "—",
+      "adet": 6
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E7",
+      "ad": "SOĞUK SERVİS ÜNİTESİ",
+      "olcu": "300x90x85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E8",
+      "ad": "NÖTR SERVİS TEZGAHI",
+      "olcu": "270x60x85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E9",
+      "ad": "CORNFLAKES",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E10",
+      "ad": "ŞERBETLİK - SOĞUTMALI",
+      "olcu": "2×20 LİTRE",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E11",
+      "ad": "FİLTRE KAHVE MAKİNESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E12",
+      "ad": "SÜT SOĞUTUCU",
+      "olcu": "24x26x34",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- AÇIK BÜFE ALANI",
+      "poz": "E13",
+      "ad": "FULL OTOMATİK ESPRESSO KAHVE MAKİNESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F1",
+      "ad": "BAR TİPİ ŞİŞE SOĞUTUCU - 3 KAPILI",
+      "olcu": "135×50×87",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F2",
+      "ad": "BAR TİPİ ŞİŞE SOĞURUCU - 2 KAPILI",
+      "olcu": "90×50×87",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F3",
+      "ad": "BUZ KÜP MAKİNESİ",
+      "olcu": "44 KG",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F4",
+      "ad": "ÇAY OCAĞI -ELK.Lİ GAZLI",
+      "olcu": "3 DEMLİKLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F5",
+      "ad": "TÜRK KAHVE MAKİNESİ",
+      "olcu": "2 GRUPLU",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F6",
+      "ad": "FİLTRE KAHVE MAKİNESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F7",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F8",
+      "ad": "ESPRESSO KAHVE MAKİNESİ",
+      "olcu": "2 GRUPLU",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI - BYM UYUMLU",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F10",
+      "ad": "SETALTI BULAŞIK YIKAMA MAKİNESİ",
+      "olcu": "500 Tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F11",
+      "ad": "ÇALIŞMA TEZGAHI - RAFSIZ",
+      "olcu": "110×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F12",
+      "ad": "PORTAKAL SIKMA MAKİNESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F13",
+      "ad": "BAR BLENDER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- BAR ALANI",
+      "poz": "F14",
+      "ad": "ÇÖP KOVASI - TEKERLEKLİ",
+      "olcu": "40×50",
+      "adet": 1
+    }
+  ]
+}

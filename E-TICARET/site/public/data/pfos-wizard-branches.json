@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T04:54:26.053Z",
-  "aktifPaketSayisi": 46,
+  "updated_at": "2026-06-16T06:09:01.102Z",
+  "aktifPaketSayisi": 48,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -71,6 +71,7 @@
       "Tavukçu",
       "Şarküteri Kiosk",
       "Kebapçı",
+      "Kanatçı-Kebapçı",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
@@ -79,8 +80,7 @@
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
-      "Kasap + Şarküteri",
-      "Bilmiyorum"
+      "Kasap + Şarküteri"
     ],
     "Kafe / Coffee Shop": [
       "Kahve Atölyesi",
@@ -90,14 +90,12 @@
       "All Sport Cafe",
       "Kahve Durağı — Pastane & Kahvaltı",
       "Kahve & Tatlı",
-      "Coffee Shop",
-      "Bilmiyorum"
+      "Coffee Shop"
     ],
     "Pastane & Fırın": [
       "Pastane",
       "Güneli Fırın",
-      "Pastane & Yerel",
-      "Bilmiyorum"
+      "Pastane & Yerel"
     ],
     "Fast Food / QSR": [
       "Türk Mutfağı",
@@ -106,30 +104,26 @@
       "Food Court",
       "Hamburger Kiosk",
       "Hotdog Kiosk",
-      "Fried Chicken",
-      "Bilmiyorum"
+      "Fried Chicken"
     ],
     "Bar & Lounge": [
       "Birahane",
       "Kokteyl + Kahve",
       "Kokteyl Bar",
-      "Mixology Bar",
-      "Bilmiyorum"
+      "Mixology Bar"
     ],
     "Otel F&B": [
       "Şehir Oteli (Business)",
-      "Resort Otel",
-      "Bilmiyorum"
+      "Resort Otel"
     ],
     "Catering": [
       "Büyük Yemekhane (Catering)",
       "Okul Yemekhanesi",
-      "Yerinde Üretim",
-      "Bilmiyorum"
+      "Üretim Fabrikası",
+      "Yerinde Üretim"
     ],
     "Üretim / Fabrika": [
-      "Fabrika Yemekhanesi",
-      "Bilmiyorum"
+      "Fabrika Yemekhanesi"
     ],
     "Franchise": [
       "Steakhouse",
@@ -141,6 +135,7 @@
       "Tavukçu",
       "Şarküteri Kiosk",
       "Kebapçı",
+      "Kanatçı-Kebapçı",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
@@ -149,8 +144,7 @@
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
-      "Kasap + Şarküteri",
-      "Bilmiyorum"
+      "Kasap + Şarküteri"
     ]
   },
   "legacyKonsept": {
@@ -210,6 +204,11 @@
       "min": 300,
       "max": 500,
       "slug": "kebap-ortadogu"
+    },
+    "Kanatçı-Kebapçı": {
+      "min": 100,
+      "max": 250,
+      "slug": "kanatci-kebapci"
     },
     "Pizzacı": {
       "min": 80,
@@ -389,6 +388,11 @@
     "Okul Yemekhanesi": {
       "min": 2000,
       "max": 3500,
+      "slug": "buyuk-yemekhane"
+    },
+    "Üretim Fabrikası": {
+      "min": 1500,
+      "max": 2500,
       "slug": "buyuk-yemekhane"
     },
     "Yerinde Üretim": {

@@ -107,6 +107,15 @@ const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
     "Salamander",
     "Izgara yedek seti",
   ],
+  "Kanatçı-Kebapçı": [
+    "Piliç çevirme makinesi (yedek)",
+    "Tartı seti",
+    "Vakum makinası",
+    "Mutfak arabası",
+    "Salamander",
+    "Izgara yedek seti",
+    "Fritöz (yedek)",
+  ],
   Catering: [
     "Taşıma arabaları",
     "Thermobox seti",

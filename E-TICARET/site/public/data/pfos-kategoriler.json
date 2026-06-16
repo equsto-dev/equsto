@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T04:34:18.393Z",
+  "updated_at": "2026-06-16T06:09:42.857Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -503,6 +503,18 @@
             "kaynakDosya": "2017-050 DOUBLETREE HILTON TOPKAPI/2017-050.xlsx",
             "yukleme": "2026-05-31T15:34:37.309Z"
           }
+        },
+        {
+          "id": "500-2000-arnavutkoy",
+          "label": "500–2000 m² (Sheraton Arnavutköy · 2024-122)",
+          "referansM2": 1000,
+          "meta": {
+            "listeDosya": "sehir-otel-500-2000-arnavutkoy.json",
+            "kalemSayisi": 91,
+            "toplamAdet": 120,
+            "kaynakDosya": "2024-122 SHERATON ARNAVUTKÖY/2024-122-1.XLSX",
+            "yukleme": "2026-06-16T06:01:29.183Z"
+          }
         }
       ]
     },
@@ -761,6 +773,44 @@
             "toplamAdet": 49,
             "kaynakDosya": "2017-026 BEYKENT ŞİFA CAFE/2017-026.xlsx",
             "yukleme": "2026-05-31T13:58:42.688Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "catering-uretim",
+      "label": "Üretim Fabrikası (Catering)",
+      "ustKategori": "Catering / Kurumsal",
+      "bantlar": [
+        {
+          "id": "1500-2500",
+          "label": "1500–2500 m² · 15–30 bin yemek/gün",
+          "referansM2": 2000,
+          "meta": {
+            "listeDosya": "catering-uretim-1500-2500.json",
+            "kalemSayisi": 181,
+            "toplamAdet": 515,
+            "kaynakDosya": "2025-080 AKADEMİ CATERING FABRİKA/2025-080-2.xlsx",
+            "yukleme": "2026-06-16T05:54:05.085Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kanatci-kebapci",
+      "label": "Kanatçı-Kebapçı",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m²",
+          "referansM2": 175,
+          "meta": {
+            "listeDosya": "kanatci-kebapci-100-250.json",
+            "kalemSayisi": 56,
+            "toplamAdet": 72,
+            "kaynakDosya": "2024-107 KÖŞK KANAT/2024-107.XLSX",
+            "yukleme": "2026-06-16T06:09:42.839Z"
           }
         }
       ]

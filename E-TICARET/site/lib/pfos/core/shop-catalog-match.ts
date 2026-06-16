@@ -149,6 +149,13 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     /firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name) ||
     (/konveksiyonlu\s*firin\s*stand|setustu\s*konveksiyonlu\s*firin\s*stand/.test(name) &&
       /tepsi|istif|raf/.test(name)),
+  tezgah_rafli_dol: (name) =>
+    /taban\s*ve\s*ara\s*rafl/.test(name) &&
+    /dolap/.test(name) &&
+    (/calisma|çalışma|tezgah/.test(name)),
+  balik_hazirlik_tezgah: (name) =>
+    (/balik|balık/.test(name) && /hazirlik|hazırlık|tezgah/.test(name)) ||
+    /balik\s*hazirlik|balık\s*hazırlık/.test(name),
   davlumbaz_dekoratif: (name) =>
     /firin\s*davlumbaz|fırın\s*davlumbaz/.test(name) ||
     (name.includes("davlumbaz") && name.includes("dekoratif")),

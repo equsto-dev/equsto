@@ -57,7 +57,7 @@ function main() {
   for (const t of shopTypes) {
     const pf = t.pfos || {};
     if (pf.durum !== "aktif") continue;
-    const parent = String(t.parent || "Bilmiyorum").trim();
+    const parent = String(t.parent || "Restoran").trim();
     const sel = String(pf.dukkanSecim || t.name || "").trim();
     if (!sel) continue;
     if (!dukkanBySegment[parent]) dukkanBySegment[parent] = [];
@@ -66,14 +66,9 @@ function main() {
       m2ByDukkan[sel] = { min: pf.m2Min || 20, max: pf.m2Max || 500, slug: pf.motorSlug || "" };
     }
   }
-  for (const parent of Object.keys(dukkanBySegment)) {
-    if (!dukkanBySegment[parent].includes("Bilmiyorum")) {
-      dukkanBySegment[parent].push("Bilmiyorum");
-    }
-  }
   dukkanBySegment.Franchise = dukkanBySegment.Restoran
     ? [...dukkanBySegment.Restoran]
-    : ["Bilmiyorum"];
+    : [];
 
   const konseptRows = segmentOrder.map((seg) => ({
     v: seg,

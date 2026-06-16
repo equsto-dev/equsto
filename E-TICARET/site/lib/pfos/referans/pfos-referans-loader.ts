@@ -41,10 +41,12 @@ export type ReferansListeId =
   | "80-150"
   | "50-150"
   | "2000-3500"
+  | "1500-2500"
   | "200-400"
   | "500-2000"
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
+  | "500-2000-arnavutkoy"
   | "200-500"
   | "200-5000";
 
@@ -241,6 +243,7 @@ export async function loadReferansProfil(
     | "hamburger-kiosk"
     | "hotdog-kiosk"
     | "tavukcu"
+    | "kanatci-kebapci"
     | "all-day-dining-cafe"
     | "restoran"
     | "kokteyl-kahve"
@@ -286,6 +289,8 @@ export async function loadReferansProfil(
                     ? "kiosk"
                     : kategoriId === "tavukcu"
                       ? "80-150"
+                      : kategoriId === "kanatci-kebapci"
+                        ? "100-250"
                       : kategoriId === "italyan"
                         ? pickItalyanListe(m2)
                         : kategoriId === "all-day-dining-cafe"
@@ -307,7 +312,7 @@ export async function loadReferansProfil(
                                       : kategoriId === "guneli-pastane"
                                         ? "200-400"
                                         : kategoriId === "sehir-otel"
-                                          ? "500-2000"
+                                          ? "500-2000-arnavutkoy"
                                           : kategoriId === "resort-otel"
                                             ? "200-500"
                                           : kategoriId === "kiremit-akasya"

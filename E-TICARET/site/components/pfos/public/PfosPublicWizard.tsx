@@ -43,10 +43,6 @@ import {
   bulutMutfakKompaktMi,
   BULUT_KOMPAKT_M2_MAX,
 } from "@/lib/pfos/wizard/bulut-mutfak-kompakt";
-import {
-  PFOS_ELK_GAZ_SECENEKLERI,
-  yardimciEkipmanForKonsept,
-} from "@/lib/pfos/wizard/yardimci-ekipman";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import {
   memberLoggedInNow,
@@ -128,14 +124,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [resultReveal, setResultReveal] = useState(false);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
-  const [detayPanelOpen, setDetayPanelOpen] = useState(false);
-  const [yardimciSecim, setYardimciSecim] = useState<string[]>([]);
-  const [elkGazSecim, setElkGazSecim] = useState<string[]>([]);
   const [memberReady, setMemberReady] = useState(false);
   const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [loginHref, setLoginHref] = useState("/login");
   const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const prevOpenPanelIdRef = useRef("s1");
+  const teklifRequestedRef = useRef(false);
   const enterTimerRef = useRef<number | null>(null);
   const leftColRef = useRef<HTMLDivElement>(null);
   const [uploadAlign, setUploadAlign] = useState<{
@@ -203,6 +197,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     }
     return Math.max(0, panels.length - 1);
   }, [panels, questions, answers, m2Touched]);
+
+  const allWizardComplete = useMemo(
+    () =>
+      panels.length > 0 &&
+      panels.every((p) => isLegacyPanelComplete(p, questions, answers)),
+    [panels, questions, answers],
+  );
 
   /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — üst=Başlayalım, alt=meslek s1 */
   useLayoutEffect(() => {
@@ -378,15 +379,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   );
   const konsept = parseKonsept(motorSlug ?? motorGirdi.dukkanSecim);
 
-  const yardimciOneriler = useMemo(
-    () =>
-      yardimciEkipmanForKonsept(
-        String(answers.q_dukkan_turu ?? ""),
-        String(answers.q_ust_segment ?? ""),
-      ),
-    [answers.q_dukkan_turu, answers.q_ust_segment],
-  );
-
   const hint = useMemo(() => {
     const h = wizardHint(panels, donePanelIds, openPanelId);
     return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
@@ -419,6 +411,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const setM2Value = useCallback((value: string) => {
     setM2Touched(true);
+    teklifRequestedRef.current = false;
     setAnswers((prev) => {
       let merged = clearDownstreamAnswers({ ...prev, q_m2: value }, "q_m2");
       if (!bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)) {
@@ -438,6 +431,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       value: string | string[],
       _panel?: LegacyPanelDef,
     ) => {
+      teklifRequestedRef.current = false;
       setAnswers((prev) => {
         let merged = clearDownstreamAnswers({ ...prev, [id]: value }, id);
         if (
@@ -473,13 +467,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setTeklifV14(null);
   };
 
-  async function finalize(kararOpt?: string) {
-    const karar = kararOpt ?? String(answers.q_karar ?? "");
-    if (karar.includes("detaylandır")) {
-      setFinished(true);
-      return;
-    }
-
+  async function finalize() {
     if (!konsept) {
       setError(
         motorGirdi.dukkanSecim
@@ -557,61 +545,24 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     }
   }
 
-  function openDetayPanel() {
-    setYardimciSecim(yardimciOneriler);
-    setElkGazSecim([]);
-    setDetayPanelOpen(true);
-    setFinished(false);
-    setSonuc(null);
-    setTeklifV14(null);
-  }
-
-  function toggleYardimci(item: string) {
-    setYardimciSecim((prev) => {
-      const i = prev.indexOf(item);
-      if (i >= 0) return prev.filter((x) => x !== item);
-      return [...prev, item];
-    });
-  }
-
-  function toggleElkGaz(item: string) {
-    setElkGazSecim((prev) => {
-      const i = prev.indexOf(item);
-      if (i >= 0) return prev.filter((x) => x !== item);
-      return [...prev, item];
-    });
-  }
-
-  function detayTamamla() {
-    setAnswers((prev) => ({
-      ...prev,
-      q_yardimci_ekipman: yardimciSecim,
-      q_elektrik_gaz: elkGazSecim,
-    }));
-    setDetayPanelOpen(false);
-    setFinished(true);
-  }
-
-  function onKararSelect(opt: string) {
-    setAnswers((prev) => ({ ...prev, q_karar: opt }));
-    setError(null);
-    if (opt.includes("detaylandır")) {
-      openDetayPanel();
+  useEffect(() => {
+    if (
+      !memberLoggedIn ||
+      !allWizardComplete ||
+      teklifV14 ||
+      loading ||
+      teklifRequestedRef.current
+    ) {
       return;
     }
-    setDetayPanelOpen(false);
-    if (opt.includes("Teklifi al") || opt.includes("PDF")) {
-      setLoading(true);
-      void finalize(opt);
-    }
-  }
+    teklifRequestedRef.current = true;
+    void finalize();
+  }, [memberLoggedIn, allWizardComplete, teklifV14, loading]);
 
   function resetWizard() {
     setAnswers({});
     setM2Touched(false);
-    setDetayPanelOpen(false);
-    setYardimciSecim([]);
-    setElkGazSecim([]);
+    teklifRequestedRef.current = false;
     prevOpenPanelIdRef.current = "s1";
     openPanelIndexRef.current = -1;
     clearEnterTimer();
@@ -675,103 +626,16 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     if (q.id === "q_m2") return renderM2Field(panel);
 
-    if (q.id === "q_karar") {
-      const val = String(answers[id] ?? "");
-      const opts = ((q.options as string[]) ?? []).filter(
-        (o) => o !== "Bilmiyorum",
-      );
-      const konseptLabel =
-        motorGirdi.dukkanSecim || String(answers.q_ust_segment ?? "");
-      return (
-        <>
-          <div className={styles.options}>
-            {opts.map((opt) => (
-              <button
-                key={opt}
-                type="button"
-                className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
-                disabled={loading}
-                onClick={() => onKararSelect(opt)}
-              >
-                {t(opt)}
-              </button>
-            ))}
-          </div>
-          {detayPanelOpen && val.includes("detaylandır") ? (
-            <div className={styles.detayPanel} role="region" aria-label={t("Proje detayı")}>
-              <p className={styles.detayPanelLead}>
-                {konseptLabel ? (
-                  <>
-                    <b>{t(konseptLabel)}</b>
-                    {" · "}
-                  </>
-                ) : null}
-                {t(
-                  "konseptiniz için önerilen opsiyonel yardımcı ekipman — istemediklerinizi kaldırabilirsiniz.",
-                )}
-              </p>
-              <div className={styles.detayChipGrid}>
-                {yardimciOneriler.map((item) => {
-                  const sel = yardimciSecim.includes(item);
-                  return (
-                    <button
-                      key={item}
-                      type="button"
-                      className={`${styles.detayChip}${sel ? ` ${styles.detayChipSelected}` : ""}`}
-                      onClick={() => toggleYardimci(item)}
-                    >
-                      <span className={styles.detayChipMark} aria-hidden="true">
-                        {sel ? "✓" : ""}
-                      </span>
-                      {t(item)}
-                    </button>
-                  );
-                })}
-              </div>
-              <p className={styles.detayPanelSub}>{t("Altyapı ve bağlantı")}</p>
-              <div className={styles.detayCheckGrid}>
-                {PFOS_ELK_GAZ_SECENEKLERI.map((item) => {
-                  const sel = elkGazSecim.includes(item);
-                  return (
-                    <label
-                      key={item}
-                      className={`${styles.detayCheck}${sel ? ` ${styles.detayCheckSelected}` : ""}`}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={sel}
-                        onChange={() => toggleElkGaz(item)}
-                      />
-                      {t(item)}
-                    </label>
-                  );
-                })}
-              </div>
-              <button
-                type="button"
-                className={`${styles.btn} ${styles.btnPrimary} ${styles.detayPanelBtn}`}
-                onClick={detayTamamla}
-              >
-                {t("Tercihleri kaydet")}
-              </button>
-            </div>
-          ) : null}
-          {loading ? (
-            <PfosTeklifLoading label={t("Teklif hesaplanıyor…")} />
-          ) : null}
-        </>
-      );
-    }
-
     if (q.type === "select" || q.type === "select_conditional") {
       const rawOpts =
         q.type === "select_conditional"
           ? dukkanSecenekleri(q, answers, m2ByDukkan)
           : ((q.options as string[]) ?? []);
-      const opts =
-        q.id === "q_ust_segment"
-          ? rawOpts.filter((o) => o !== "Bilmiyorum")
-          : rawOpts;
+      const hideBilmiyorum =
+        q.id === "q_ust_segment" || q.id === "q_dukkan_turu";
+      const opts = hideBilmiyorum
+        ? rawOpts.filter((o) => o !== "Bilmiyorum")
+        : rawOpts;
       const val = String(answers[id] ?? "");
       const twoCol = opts.length > 6;
       const bulutKompakt =
@@ -1143,6 +1007,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
         {error ? <div className={styles.error}>{error}</div> : null}
 
+        {loading && allWizardComplete && !teklifV14 ? (
+          <PfosTeklifLoading label={t("Teklif hesaplanıyor…")} />
+        ) : null}
+
         {finished && sonuc && teklifV14 ? (
           <>
             <section
@@ -1177,7 +1045,14 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             <div
               className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
             >
-              <TeklifV14Proforma model={teklifV14} deliveryOnly />
+              <TeklifV14Proforma
+                model={teklifV14}
+                deliveryOnly
+                postQuoteKarar={{
+                  dukkanTuru: String(answers.q_dukkan_turu ?? ""),
+                  ustSegment: String(answers.q_ust_segment ?? ""),
+                }}
+              />
             </div>
           </>
         ) : null}

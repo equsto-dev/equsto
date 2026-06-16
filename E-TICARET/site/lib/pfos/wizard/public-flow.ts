@@ -86,7 +86,7 @@ export function filtreDukkanSecenekleriM2(
     return opts;
   }
   const filtered = opts.filter((opt) => {
-    if (opt === "Bilmiyorum") return true;
+    if (opt === "Bilmiyorum") return false;
     const band =
       m2ByDukkan[opt] ??
       (opt === "Restoran" ? m2ByDukkan["Büyük Restoran"] : undefined);
@@ -104,11 +104,12 @@ export function dukkanSecenekleri(
   if (q.type === "select_conditional" && q.branches) {
     const seg = String(answers.q_ust_segment ?? "");
     const branches = q.branches as Record<string, string[]>;
-    const opts = branches[seg] ?? branches.Bilmiyorum ?? [];
+    const opts = (branches[seg] ?? []).filter((o) => o !== "Bilmiyorum");
     const bulut = filtreBulutDukkanSecenekleri(opts, answers);
-    return m2ByDukkan
+    const filtered = m2ByDukkan
       ? filtreDukkanSecenekleriM2(bulut, answers, m2ByDukkan)
       : bulut;
+    return filtered.filter((o) => o !== "Bilmiyorum");
   }
   return (q.options as string[]) ?? [];
 }
@@ -139,7 +140,27 @@ export function defaultPublicQuestions(): WizardQuestion[] {
 /** API’den gelen eksik/bozuk soru setine karşı — zorunlu PFOS adımları korunur */
 const BILMIYORUM_KALDIR_IDS = new Set(["q_karar", "q_ust_segment"]);
 
+function stripBilmiyorumBranches(
+  branches: Record<string, string[]>,
+): Record<string, string[]> {
+  const out: Record<string, string[]> = {};
+  for (const [k, vals] of Object.entries(branches)) {
+    if (k === "Bilmiyorum") continue;
+    const filtered = vals.filter((o) => o !== "Bilmiyorum");
+    if (filtered.length) out[k] = filtered;
+  }
+  return out;
+}
+
 function stripBilmiyorum(q: WizardQuestion): WizardQuestion {
+  if (q.id === "q_dukkan_turu" && q.branches) {
+    return {
+      ...q,
+      branches: stripBilmiyorumBranches(
+        q.branches as Record<string, string[]>,
+      ),
+    };
+  }
   if (!BILMIYORUM_KALDIR_IDS.has(q.id) || !Array.isArray(q.options)) return q;
   return {
     ...q,

@@ -8,10 +8,11 @@ export async function buildSehirOtelTemplate(m2: number): Promise<ConceptTemplat
     konsept: "sehir-otel",
     label: "Şehir Oteli (Business)",
     ornekler: [
+      "Sheraton Arnavutköy (2024-122)",
       "Hampton By Hilton Bolu",
       "Hilton Kocaeli şehir oteli",
       "DoubleTree Hilton Topkapı (140 oda)",
-      "Ana mutfak · büfe · banquet",
+      "Ana mutfak · açık büfe · show mutfağı · bar",
     ],
     segmentBasis: "m2",
     seatDensity: 0.8,

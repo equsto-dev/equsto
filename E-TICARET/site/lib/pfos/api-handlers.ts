@@ -31,6 +31,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "hamburger-kiosk": { min: 60, max: 100 },
   "hotdog-kiosk": { min: 25, max: 60 },
   tavukcu: { min: 80, max: 150 },
+  "kanatci-kebapci": { min: 100, max: 250 },
   restoran: { min: 500, max: 1000 },
   "kokteyl-kahve": { min: 30, max: 50 },
   "kahve-atolyesi": { min: 80, max: 150 },

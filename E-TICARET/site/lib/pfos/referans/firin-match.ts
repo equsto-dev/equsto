@@ -34,9 +34,11 @@ export function isKombiKonveksiyonReferans(
   urunTipi?: string | null,
 ): boolean {
   const tip = resolveTipKodu(String(urunTipi ?? "").trim());
+  if (tip === "davlumbaz_dekoratif") return false;
   if (tip === "kombi_firin_6t") return true;
   const n = norm(`${isim} ${urunTipi ?? ""}`);
   if (!n) return false;
+  if (/firin\s*davlumbaz|fırın\s*davlumbaz/.test(n)) return false;
   if (/setalt|set alt|tezgah alt|mikrodalga|pizza|blender|robot coupe/.test(n)) {
     return false;
   }
