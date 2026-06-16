@@ -110,6 +110,13 @@ export function preferredOztiPisirmeSkus(
     const wantsSetUstu = /set\s*ustu|setüstü/.test(blob) || (w >= 75 && is730);
     const wantsGaz = /gazli|gazlı|\bgaz\b/.test(blob);
 
+    if (/dolap/.test(blob) && is900) {
+      if (w >= 75) {
+        return wantsGaz ? ["7856.N1.80908.14"] : ["7856.N1.80908.02"];
+      }
+      return wantsGaz ? ["7856.N1.40908.04"] : ["7856.N1.40908.02"];
+    }
+
     if (wantsCift && wantsSetUstu) {
       if (w >= 75 && is730) {
         return wantsGaz ? ["7856.N1.80703.13"] : ["7856.N1.80703.11"];

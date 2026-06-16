@@ -213,9 +213,9 @@
     },
     {
       "tip_kodu": "davlumbaz_dekoratif",
-      "aciklama": "Fırın davlumbazı, dekoratif",
-      "kategori": "diger",
-      "alt_kategori": null,
+      "aciklama": "davlumbaz · fırın davlumbazı · dekoratif",
+      "kategori": "tezgah_davlumbaz",
+      "alt_kategori": "firin-davlumbazi",
       "kaynak": "P1+P2",
       "frekans": 0
     },
@@ -500,9 +500,25 @@
       "frekans": 0
     },
     {
+      "tip_kodu": "fritoz_dolapli_elk",
+      "aciklama": "900 seri fritöz dolaplı elektrikli 40×90×85",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "fritoz_dolapli_gaz",
+      "aciklama": "900 seri fritöz dolaplı gazlı 40×90×85",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
       "tip_kodu": "fritoz_tek",
-      "aciklama": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300",
-      "kategori": "diger",
+      "aciklama": "Fritöz GN 1/2 elektrikli set üstü 8 LT",
+      "kategori": "pisirme",
       "alt_kategori": null,
       "kaynak": "motor",
       "frekans": 248
@@ -869,10 +885,10 @@
     },
     {
       "tip_kodu": "servis_rafi",
-      "aciklama": "servis arab · servis raf",
-      "kategori": "diger",
-      "alt_kategori": null,
-      "kaynak": "motor",
+      "aciklama": "Paslanmaz çelik servis rafı, bombe camlı (öksürük perdeli)",
+      "kategori": "servis",
+      "alt_kategori": "servis-uniteleri",
+      "kaynak": "P1",
       "frekans": 132
     },
     {

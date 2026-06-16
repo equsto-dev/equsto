@@ -92,6 +92,10 @@ import {
   isDuvarRafiReferans,
   matchDuvarRafiByReferans,
 } from "./duvar-raf-match";
+import {
+  isServisRafiReferans,
+  matchServisRafiByReferans,
+} from "./servis-raf-match";
 import { matchSenoxByReferans } from "./senox-vakum-match";
 import { isSenoxPfosKalem } from "../core/senox-marka";
 import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
@@ -1304,6 +1308,16 @@ export async function matchReferansKalem(
       input.fiyatStratejisi,
     );
     if (duvarRaf) return duvarRaf;
+  }
+
+  if (isServisRafiReferans(input.isim)) {
+    const servisRaf = await matchServisRafiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (servisRaf) return servisRaf;
   }
 
   if (isKokteylIstasyonReferansIsim(input.isim)) {

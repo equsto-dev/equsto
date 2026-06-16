@@ -5,6 +5,8 @@ export const ATALAY_MARKA = "Atalay";
 
 export const PISIRME_TIP_KODLARI = new Set([
   "fritoz_tek",
+  "fritoz_dolapli_elk",
+  "fritoz_dolapli_gaz",
   "fritoz_cift_hazne_elk",
   "char_broil",
   "dokum_izgara_gaz",

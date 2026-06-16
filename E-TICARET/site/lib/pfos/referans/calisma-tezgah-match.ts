@@ -14,7 +14,7 @@ import {
   isEqustoTezgahRow,
   isBulasikSiyirmaTezgahReferans,
 } from "../core/calisma-tezgah";
-import { findClosestEqustoTezgahPriceRow } from "../core/ozel-imalat-yakin-olcu";
+import { findClosestEqustoTezgahPriceRow, findClosestEqustoTezgahImageRow } from "../core/ozel-imalat-yakin-olcu";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -111,25 +111,44 @@ async function fallbackImageRow(
   generatedSku: string,
 ): Promise<AdminUrunRow | null> {
   const prefix = equstoTezgahSizePrefix(olcu);
-  if (!prefix) return null;
-  const rows = (await loadLegacyCatalogRows()).filter(
-    (r) =>
-      r.durum === "aktif" &&
-      isEqustoTezgahRow(r.sku, r.ad) &&
-      r.sku?.includes(`.${prefix}.`) &&
-      r.gorsel_url,
+  const wantSuffix = inferEqustoTezgahVariantSuffix(isim);
+  if (prefix) {
+    const rows = (await loadLegacyCatalogRows()).filter(
+      (r) =>
+        r.durum === "aktif" &&
+        isEqustoTezgahRow(r.sku, r.ad) &&
+        r.sku?.includes(`.${prefix}.`) &&
+        r.gorsel_url,
+    );
+    if (rows.length) {
+      const exactSuffix = rows.filter((r) =>
+        r.sku?.endsWith(`.${wantSuffix}`),
+      );
+      if (exactSuffix.length) {
+        return exactSuffix[0] ?? null;
+      }
+
+      if (!wantSuffix) {
+        const scored = rows
+          .map((row) => ({
+            row,
+            score: scoreEqustoTezgahRow(row, isim, olcu, generatedSku),
+          }))
+          .filter((x) => x.score >= 200)
+          .sort((a, b) => b.score - a.score);
+
+        if (scored[0]?.row) return scored[0].row;
+      }
+    }
+  }
+
+  const catalogRows = await loadLegacyCatalogRows();
+  return findClosestEqustoTezgahImageRow(
+    catalogRows,
+    isim,
+    olcu,
+    generatedSku,
   );
-  if (!rows.length) return null;
-
-  const scored = rows
-    .map((row) => ({
-      row,
-      score: scoreEqustoTezgahRow(row, isim, olcu, generatedSku),
-    }))
-    .filter((x) => x.score >= 200)
-    .sort((a, b) => b.score - a.score);
-
-  return scored[0]?.row ?? rows.find((r) => r.gorsel_url) ?? null;
 }
 
 function buildGeneratedEqustoTezgah(
@@ -245,9 +264,11 @@ export async function matchCalismaTezgahiByReferans(
       .filter((x) => x.score >= 280)
       .sort((a, b) => b.score - a.score);
 
-    if (scored.length > 0) {
-      const pick = scored[0].row;
-      return katalogRowToEslesmis(pick, {
+    const exactScored = scored.find(
+      (x) => norm(x.row.sku ?? "") === norm(generatedSku),
+    );
+    if (exactScored) {
+      return katalogRowToEslesmis(exactScored.row, {
         linkMarka: CALISMA_TEZGAH_MARKA,
         sablonIsim: isim,
         urunTipi: tip,

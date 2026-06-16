@@ -69,6 +69,7 @@ export function isCalismaTezgahiReferansIsim(
     return true;
   }
   if (/^tezgah,|^tezgah\s+dolapli|calisma\s*tezgahi/i.test(n)) return true;
+  if (/kasa\s*tezgah/.test(n) && !/siyirma|mobilya/.test(n)) return true;
   if (isBulasikSiyirmaTezgahReferans(isim, notlar)) return true;
   return false;
 }

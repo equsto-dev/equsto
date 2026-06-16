@@ -380,8 +380,21 @@ const TIP_RULES: TipRule[] = [
       !n.includes("cihazalti"),
   },
   {
+    tip: "servis-rafi",
+    test: (n) =>
+      (n.includes("servis rafi") || n.includes("servis rafı")) &&
+      !n.includes("arab") &&
+      !n.includes("banko") &&
+      !n.includes("unite") &&
+      !n.includes("ünite"),
+  },
+  {
     tip: "istif-rafi",
     test: (n) => n.includes("istif raf"),
+  },
+  {
+    tip: "firin-davlumbazi-dekoratif",
+    test: (n) => /firin\s*davlumbaz|fırın\s*davlumbaz/.test(n),
   },
   {
     tip: "kombi-firin-6t",
@@ -393,6 +406,7 @@ const TIP_RULES: TipRule[] = [
         !n.includes("tas") &&
         !n.includes("taş") &&
         !/firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah|firin\s*stand|fırın\s*stand/.test(n) &&
+        !/firin\s*davlumbaz|fırın\s*davlumbaz/.test(n) &&
         n.length > 12),
   },
   {
@@ -451,7 +465,23 @@ const TIP_RULES: TipRule[] = [
   },
   {
     tip: "davlumbaz-duvar",
-    test: (n) => n.includes("davlumbaz"),
+    test: (n) =>
+      n.includes("davlumbaz") && !/firin\s*davlumbaz|fırın\s*davlumbaz/.test(n),
+  },
+  {
+    tip: "fritoz-dolapli-elk",
+    test: (n) =>
+      (n.includes("fritoz") || n.includes("fritöz")) &&
+      n.includes("dolap") &&
+      (/elektrik|elk\.|\belk\b|elek/.test(n)) &&
+      !/gazli|gazlı|\bgaz\b/.test(n),
+  },
+  {
+    tip: "fritoz-dolapli-gaz",
+    test: (n) =>
+      (n.includes("fritoz") || n.includes("fritöz")) &&
+      n.includes("dolap") &&
+      (/gazli|gazlı|\bgaz\b/.test(n)),
   },
   {
     tip: "fritoz-cift-hazne-elk",
