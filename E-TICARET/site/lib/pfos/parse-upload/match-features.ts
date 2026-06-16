@@ -25,6 +25,9 @@ export function extractFeatureSearchTerms(tanim: string): string[] {
   }
   if (/\bgn\s*\d|2\s*\/\s*1\b/.test(f)) terms.push("GN tepsi");
   if (/un\s*seker|un-seker|un\s*şeker/.test(f)) terms.push("un şeker arabası", "FC-100");
+  if (/firin\s*davlumbaz|fırın\s*davlumbaz/.test(f)) {
+    terms.push("davlumbaz", "fırın davlumbazı", "firin davlumbazı");
+  }
   return [...new Set(terms)];
 }
 

@@ -12,11 +12,19 @@ import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
 import { normalizeTeklifAciklamaText } from "@/lib/pfos/teklif/catalog-teklif-aciklama";
 import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
+import PfosTeklifKararBlock, {
+  type TeklifKarar,
+} from "@/components/pfos/PfosTeklifKararBlock";
 
 type Props = {
   model: TeklifModelV14;
   /** Halk PFOS: yalnızca e-posta / WhatsApp ile PDF; indirme yok */
   deliveryOnly?: boolean;
+  /** Teklif tablosundan sonra “yeterli mi / detaylandır” sorusu */
+  postQuoteKarar?: {
+    dukkanTuru: string;
+    ustSegment?: string;
+  };
 };
 
 type SendKanal = "email" | "whatsapp";
@@ -88,8 +96,13 @@ type EqustoMemberWindow = Window & {
   equstoTrackEvent?: (name: string, params?: Record<string, unknown>) => void;
 };
 
-export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props) {
+export default function TeklifV14Proforma({
+  model,
+  deliveryOnly = false,
+  postQuoteKarar,
+}: Props) {
   const [exporting, setExporting] = useState(false);
+  const [teklifKarar, setTeklifKarar] = useState<TeklifKarar>("idle");
   const [sendingKanal, setSendingKanal] = useState<SendKanal | null>(null);
   const [sendResult, setSendResult] = useState<
     DeliveryResult | { kind: "err"; message: string } | null
@@ -546,83 +559,94 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
       </div>
 
       {deliveryOnly ? (
-        <div
-          style={{
-            marginTop: 20,
-            padding: 16,
-            border: "1px solid #d9f7be",
-            borderRadius: 8,
-            background: "#f6ffed",
-          }}
-        >
-          <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
-            Teklifinizi alın
-          </Typography.Title>
-          <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-            PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
-          </Typography.Paragraph>
-          <Form form={form} layout="vertical">
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Button
-                type="primary"
-                icon={<MailOutlined />}
-                loading={sendingKanal === "email"}
-                disabled={sendingKanal === "whatsapp"}
-                onClick={() => void handleSend("email")}
-              >
-                E-postama gönder (PDF)
-              </Button>
-              <Button
-                style={{
-                  background: "#25D366",
-                  borderColor: "#25D366",
-                  color: "#fff",
-                }}
-                loading={sendingKanal === "whatsapp"}
-                disabled={sendingKanal === "email"}
-                onClick={() => void handleSend("whatsapp")}
-              >
-                WhatsApp&apos;ıma gönder (PDF)
-              </Button>
-            </div>
+        <>
+          {postQuoteKarar ? (
+            <PfosTeklifKararBlock
+              dukkanTuru={postQuoteKarar.dukkanTuru}
+              ustSegment={postQuoteKarar.ustSegment}
+              onKarar={setTeklifKarar}
+            />
+          ) : null}
+          {!postQuoteKarar || teklifKarar === "yeterli" ? (
             <div
               style={{
-                marginTop: 14,
-                paddingTop: 14,
-                borderTop: "1px solid #d9f7be",
+                marginTop: 20,
+                padding: 16,
+                border: "1px solid #d9f7be",
+                borderRadius: 8,
+                background: "#f6ffed",
               }}
             >
-              <Typography.Text
-                type="secondary"
-                style={{ display: "block", marginBottom: 8, fontSize: 13 }}
-              >
-                Bu teklif size yardımcı oldu mu?
-              </Typography.Text>
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-                <Button
-                  icon={<LikeOutlined />}
-                  type={teklifFeedback === "up" ? "primary" : "default"}
-                  onClick={() => submitTeklifFeedback("up")}
-                  disabled={teklifFeedback !== null}
-                  aria-label="Beğendim"
-                />
-                <Button
-                  icon={<DislikeOutlined />}
-                  danger={teklifFeedback === "down"}
-                  type={teklifFeedback === "down" ? "primary" : "default"}
-                  onClick={() => submitTeklifFeedback("down")}
-                  disabled={teklifFeedback !== null}
-                  aria-label="Beğenmedim"
-                />
-                {teklifFeedback ? (
-                  <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-                    Teşekkürler — geri bildiriminiz kaydedildi.
+              <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
+                Teklifinizi alın
+              </Typography.Title>
+              <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+                PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
+              </Typography.Paragraph>
+              <Form form={form} layout="vertical">
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                  <Button
+                    type="primary"
+                    icon={<MailOutlined />}
+                    loading={sendingKanal === "email"}
+                    disabled={sendingKanal === "whatsapp"}
+                    onClick={() => void handleSend("email")}
+                  >
+                    E-postama gönder (PDF)
+                  </Button>
+                  <Button
+                    style={{
+                      background: "#25D366",
+                      borderColor: "#25D366",
+                      color: "#fff",
+                    }}
+                    loading={sendingKanal === "whatsapp"}
+                    disabled={sendingKanal === "email"}
+                    onClick={() => void handleSend("whatsapp")}
+                  >
+                    WhatsApp&apos;ıma gönder (PDF)
+                  </Button>
+                </div>
+                <div
+                  style={{
+                    marginTop: 14,
+                    paddingTop: 14,
+                    borderTop: "1px solid #d9f7be",
+                  }}
+                >
+                  <Typography.Text
+                    type="secondary"
+                    style={{ display: "block", marginBottom: 8, fontSize: 13 }}
+                  >
+                    Bu teklif size yardımcı oldu mu?
                   </Typography.Text>
-                ) : null}
-              </div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                    <Button
+                      icon={<LikeOutlined />}
+                      type={teklifFeedback === "up" ? "primary" : "default"}
+                      onClick={() => submitTeklifFeedback("up")}
+                      disabled={teklifFeedback !== null}
+                      aria-label="Beğendim"
+                    />
+                    <Button
+                      icon={<DislikeOutlined />}
+                      danger={teklifFeedback === "down"}
+                      type={teklifFeedback === "down" ? "primary" : "default"}
+                      onClick={() => submitTeklifFeedback("down")}
+                      disabled={teklifFeedback !== null}
+                      aria-label="Beğenmedim"
+                    />
+                    {teklifFeedback ? (
+                      <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                        Teşekkürler — geri bildiriminiz kaydedildi.
+                      </Typography.Text>
+                    ) : null}
+                  </div>
+                </div>
+              </Form>
             </div>
-          </Form>
-        </div>
+          ) : null}
+        </>
       ) : (
         <div
           style={{

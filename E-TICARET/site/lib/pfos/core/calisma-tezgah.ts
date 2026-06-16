@@ -13,6 +13,8 @@ export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "tezgah_evyeli",
   "evye_tezgah_dolap",
   "tezgah_taban_rafli",
+  "tezgah_rafli_dol",
+  "balik_hazirlik_tezgah",
 ]);
 
 /** Bulaşık sıyırma / hunili alma tezgahı — bulaşık yıkama makinesi değil */
@@ -133,7 +135,8 @@ export function inferEqustoTezgahVariantSuffix(isim: string): string {
   if (/tek\s*evyeli|\b1\s*evye/.test(n)) return "11";
   if (/hareketli/.test(n) && /taban\s*ve\s*ara\s*rafl/.test(n)) return "15";
   if (/hareketli/.test(n) && /taban\s*rafl/.test(n)) return "70";
-  if (/dolap/.test(n) && /cekmeceli|çekmeceli|blok/.test(n)) return "56";
+  if (/dolap/i.test(n) && /cekmeceli|çekmeceli|blok/.test(n)) return "56";
+  if (/dolap/i.test(n) && /taban\s*ve\s*ara\s*rafl/.test(n)) return "13";
   if (/dolap/.test(n)) return "13";
   if (/taban\s*ve\s*ara\s*rafl/.test(n)) return "04";
   if (/taban\s*rafl/.test(n)) return "08";

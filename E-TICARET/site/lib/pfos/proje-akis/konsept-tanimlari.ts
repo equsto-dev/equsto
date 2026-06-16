@@ -27,10 +27,12 @@ export type ListeBantId =
   | "80-150"
   | "50-150"
   | "2000-3500"
+  | "1500-2500"
   | "200-400"
   | "500-2000"
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
+  | "500-2000-arnavutkoy"
   | "200-500"
   | "20-60"
   | "200-5000";
@@ -308,6 +310,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       bantlar: [
         liste("300-500", "300–500 m²", 400, "kebap-ortadogu"),
       ],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_kanatci_kebapci",
+    name: "Kanatçı-Kebapçı",
+    parent: "Restoran",
+    desc: "Kanat & kebap / ızgara odaklı · 100–250 m² referans · motor: kanatci-kebapci",
+    pfos: {
+      motorSlug: "kanatci-kebapci",
+      dukkanSecim: "Kanatçı-Kebapçı",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+      listeYolu: "kosk-kanat-2024-107.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-250", "100–250 m²", 175, "kanatci-kebapci")],
     },
     questions: [],
   },
@@ -976,18 +996,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "otel_sehir",
     name: "Şehir Oteli (Business)",
     parent: "Otel F&B",
-    desc: "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı 140 oda (2017-050) · motor: sehir-otel",
+    desc: "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı (2017-050) · Sheraton Arnavutköy (2024-122) · motor: sehir-otel",
     pfos: {
       motorSlug: "sehir-otel",
       dukkanSecim: "Şehir Oteli (Business)",
       m2Min: 500,
       m2Max: 2000,
-      bantKurali: "Varsayılan Hampton Bolu; Kocaeli ve DoubleTree Topkapı (140 oda) ayrı bantlar",
+      bantKurali: "Varsayılan Sheraton Arnavutköy; Hampton, Kocaeli ve DoubleTree Topkapı ayrı bantlar",
       listeYolu:
-        "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx",
+        "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx · veri/sheraton-arnavutkoy-2024-122.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
+        liste("500-2000-arnavutkoy", "500–2000 m² (Sheraton Arnavutköy)", 1000, "sehir-otel"),
         liste("500-2000", "500–2000 m² (Hampton Bolu)", 1000, "sehir-otel"),
         liste("500-2000-kocaeli", "500–2000 m² (Kocaeli)", 1000, "sehir-otel"),
         liste("500-2000-topkapi", "500–2000 m² (DoubleTree Topkapı · 140 oda)", 1000, "sehir-otel"),
@@ -1077,14 +1098,28 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     },
     questions: [],
   },
-  konseptPlanlanan(
-    "catering_uretim",
-    "Üretim Fabrikası",
-    "Catering",
-    "Üretim Fabrikası",
-    200,
-    3000,
-  ),
+  {
+    id: "catering_uretim",
+    name: "Üretim Fabrikası",
+    parent: "Catering",
+    desc:
+      "Catering üretim fabrikası · 1500–2500 m² · 15.000–30.000 yemek/gün · Akademi 2025-080 referans · motor: buyuk-yemekhane",
+    pfos: {
+      motorSlug: "buyuk-yemekhane",
+      dukkanSecim: "Üretim Fabrikası",
+      m2Min: 1500,
+      m2Max: 2500,
+      bantKurali:
+        "1500–2500 m² bandı; 15–30 bin yemek/gün kapasite seçimi ile uyumlu · referans Akademi 2025-080",
+      listeYolu: "2025-080 AKADEMİ CATERING FABRİKA/2025-080-2.xlsx",
+      teklifKaynagi: "referans-json",
+      durum: "aktif",
+      bantlar: [
+        liste("1500-2500", "1500–2500 m² · 15–30 bin yemek/gün", 2000, "catering-uretim"),
+      ],
+    },
+    questions: [],
+  },
   {
     id: "catering_yerinde",
     name: "Yerinde Üretim",
@@ -1192,32 +1227,21 @@ export function buildDukkanBranchesFromKonseptler(
   const branches: Record<string, string[]> = {};
   for (const t of shopTypes) {
     if (t.pfos.durum !== "aktif") continue;
-    const parent = (t.parent || "Bilmiyorum").trim();
+    const parent = (t.parent || "Restoran").trim();
     const sel = (t.pfos.dukkanSecim || t.name || "").trim();
     if (!sel) continue;
     if (!branches[parent]) branches[parent] = [];
     if (!branches[parent].includes(sel)) branches[parent].push(sel);
-  }
-  for (const parent of Object.keys(branches)) {
-    if (!branches[parent].includes("Bilmiyorum")) {
-      branches[parent].push("Bilmiyorum");
-    }
   }
   if (!branches.Catering) {
     branches.Catering = [
       "Üretim Fabrikası",
       "Yerinde Üretim",
       "Taşıma Yemek (Servis & Yıkama)",
-      "Bilmiyorum",
     ];
   } else if (!branches.Catering.includes("Yerinde Üretim")) {
-    branches.Catering.splice(
-      Math.max(0, branches.Catering.length - 1),
-      0,
-      "Yerinde Üretim",
-    );
+    branches.Catering.push("Yerinde Üretim");
   }
-  if (!branches.Bilmiyorum) branches.Bilmiyorum = ["Bilmiyorum"];
   return branches;
 }
 

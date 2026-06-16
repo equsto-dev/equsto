@@ -52,7 +52,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -106,6 +106,7 @@
             "Tavukçu",
             "Şarküteri Kiosk",
             "Kebapçı",
+            "Kanatçı-Kebapçı",
             "Pizzacı",
             "Türk / Esnaf lokanta",
             "All Dining Cafe",
@@ -114,8 +115,7 @@
             "Fine Dining",
             "Dünya Mutfağı",
             "Kasap",
-            "Kasap + Şarküteri",
-            "Bilmiyorum"
+            "Kasap + Şarküteri"
           ],
           "Kafe / Coffee Shop": [
             "Kahve Atölyesi",
@@ -125,14 +125,12 @@
             "All Sport Cafe",
             "Kahve Durağı — Pastane & Kahvaltı",
             "Kahve & Tatlı",
-            "Coffee Shop",
-            "Bilmiyorum"
+            "Coffee Shop"
           ],
           "Pastane & Fırın": [
             "Pastane",
             "Güneli Fırın",
-            "Pastane & Yerel",
-            "Bilmiyorum"
+            "Pastane & Yerel"
           ],
           "Fast Food / QSR": [
             "Türk Mutfağı",
@@ -141,33 +139,26 @@
             "Food Court",
             "Hamburger Kiosk",
             "Hotdog Kiosk",
-            "Fried Chicken",
-            "Bilmiyorum"
+            "Fried Chicken"
           ],
           "Bar & Lounge": [
             "Birahane",
             "Kokteyl + Kahve",
             "Kokteyl Bar",
-            "Mixology Bar",
-            "Bilmiyorum"
+            "Mixology Bar"
           ],
           "Otel F&B": [
             "Şehir Oteli (Business)",
-            "Resort Otel",
-            "Bilmiyorum"
+            "Resort Otel"
           ],
           "Catering": [
             "Büyük Yemekhane (Catering)",
             "Okul Yemekhanesi",
-            "Yerinde Üretim",
-            "Bilmiyorum"
+            "Üretim Fabrikası",
+            "Yerinde Üretim"
           ],
           "Üretim / Fabrika": [
-            "Fabrika Yemekhanesi",
-            "Bilmiyorum"
-          ],
-          "Bilmiyorum": [
-            "Bilmiyorum"
+            "Fabrika Yemekhanesi"
           ]
         },
         "gosterIf": "q_ust_segment",
@@ -530,6 +521,31 @@
               "label": "300–500 m²",
               "referansM2": 400,
               "listeDosya": "pfos-referans/kebap-ortadogu-300-500.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_kanatci_kebapci",
+        "name": "Kanatçı-Kebapçı",
+        "parent": "Restoran",
+        "desc": "Kanat & kebap / ızgara odaklı · 100–250 m² referans · motor: kanatci-kebapci",
+        "pfos": {
+          "motorSlug": "kanatci-kebapci",
+          "dukkanSecim": "Kanatçı-Kebapçı",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "kosk-kanat-2024-107.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/kanatci-kebapci-100-250.json"
             }
           ]
         },
@@ -1542,17 +1558,23 @@
         "id": "otel_sehir",
         "name": "Şehir Oteli (Business)",
         "parent": "Otel F&B",
-        "desc": "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı 140 oda (2017-050) · motor: sehir-otel",
+        "desc": "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı (2017-050) · Sheraton Arnavutköy (2024-122) · motor: sehir-otel",
         "pfos": {
           "motorSlug": "sehir-otel",
           "dukkanSecim": "Şehir Oteli (Business)",
           "m2Min": 500,
           "m2Max": 2000,
-          "bantKurali": "Varsayılan Hampton Bolu; Kocaeli ve DoubleTree Topkapı (140 oda) ayrı bantlar",
-          "listeYolu": "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx",
+          "bantKurali": "Varsayılan Sheraton Arnavutköy; Hampton, Kocaeli ve DoubleTree Topkapı ayrı bantlar",
+          "listeYolu": "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx · veri/sheraton-arnavutkoy-2024-122.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
+            {
+              "id": "500-2000-arnavutkoy",
+              "label": "500–2000 m² (Sheraton Arnavutköy)",
+              "referansM2": 1000,
+              "listeDosya": "pfos-referans/sehir-otel-500-2000-arnavutkoy.json"
+            },
             {
               "id": "500-2000",
               "label": "500–2000 m² (Hampton Bolu)",
@@ -1713,16 +1735,24 @@
         "id": "catering_uretim",
         "name": "Üretim Fabrikası",
         "parent": "Catering",
-        "desc": "Üretim Fabrikası · liste hazırlanıyor — genel şablon",
+        "desc": "Catering üretim fabrikası · 1500–2500 m² · 15.000–30.000 yemek/gün · Akademi 2025-080 referans · motor: buyuk-yemekhane",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "buyuk-yemekhane",
           "dukkanSecim": "Üretim Fabrikası",
-          "m2Min": 200,
-          "m2Max": 3000,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Min": 1500,
+          "m2Max": 2500,
+          "bantKurali": "1500–2500 m² bandı; 15–30 bin yemek/gün kapasite seçimi ile uyumlu · referans Akademi 2025-080",
+          "listeYolu": "2025-080 AKADEMİ CATERING FABRİKA/2025-080-2.xlsx",
+          "teklifKaynagi": "referans-json",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "1500-2500",
+              "label": "1500–2500 m² · 15–30 bin yemek/gün",
+              "referansM2": 2000,
+              "listeDosya": "pfos-referans/catering-uretim-1500-2500.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -62200,6 +62230,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T04:54:25.030Z"
+    "updated_at": "2026-06-16T06:09:00.980Z"
   }
 }

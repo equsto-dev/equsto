@@ -89,6 +89,8 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "calisma-tezgahi-taban-ara-90": "calisma_tezgahi",
   "calisma-tezgahi-taban-ara-dolapli-90": "calisma_tezgahi",
   "calisma-tezgahi-dolapli-2": "calisma_tezgahi_dolap",
+  "tezgah-rafli-dolapli": "tezgah_rafli_dol",
+  "balik-hazirlik-tezgah": "balik_hazirlik_tezgah",
   "firin-standi-taban-rafli": "tezgah_taban_rafli",
   "firin-davlumbazi-dekoratif": "davlumbaz_dekoratif",
   "firin-davlumbazi": "davlumbaz_dekoratif",
@@ -144,6 +146,17 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
   ocak_4gz: ["4", "gözlü", "gozlu", "ocak", "alevli"],
   tezgah_alti_buz_cek: ["cihazaltı", "cihaz alti", "tezgah altı", "tezgahalti", "setaltı buzdolab"],
   calisma_tezgahi: ["çalışma tezgah", "calisma tezgah"],
+  tezgah_rafli_dol: [
+    "çalışma tezgah",
+    "taban ve ara raflı",
+    "taban raflı dolaplı",
+    "dolaplı çalışma tezgah",
+  ],
+  balik_hazirlik_tezgah: [
+    "balık hazırlık tezgah",
+    "balik hazirlik tezgah",
+    "balık hazırlama",
+  ],
   tezgah_taban_rafli: [
     "firin stand",
     "fırın stand",
@@ -307,6 +320,8 @@ export const TIP_SHOP_CATS: Record<string, string[]> = {
   patates_soyma: ["hazirlik", "sebze"],
   makarna_pisirici_elk: ["makarna", "pisir", "pişir", "fritoz"],
   tezgah_taban_rafli: ["tezgah", "pisirme", "set-ustu-mutfak"],
+  tezgah_rafli_dol: ["tezgah"],
+  balik_hazirlik_tezgah: ["tezgah", "hazirlik"],
   davlumbaz_dekoratif: ["davlumbaz", "tezgah"],
   davlumbaz_duvar: ["davlumbaz", "tezgah"],
 };

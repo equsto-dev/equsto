@@ -77,13 +77,6 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     questionIds: ["q_balik_alt", "q_fast_alt"],
     skipIfEmpty: true,
   },
-  {
-    id: "s6",
-    num: "06",
-    title: "Tahmini tutar",
-    sub: "Teklifi oluşturun veya projeyi detaylandırın.",
-    questionIds: ["q_karar"],
-  },
 ];
 
 export function panelQuestions(
@@ -181,8 +174,6 @@ export function panelAnswerSummary(
       return String(answers.q_dukkan_turu ?? "");
     case "s4b":
       return String(answers.q_balik_alt ?? answers.q_fast_alt ?? "");
-    case "s6":
-      return String(answers.q_karar ?? "");
     default:
       return "";
   }
@@ -246,11 +237,11 @@ export function wizardHint(
     Math.round(12 + (doneCount / Math.max(panels.length, 1)) * 88),
   );
 
-  if (doneIds.has("s6")) {
+  if (doneIds.size >= panels.length && panels.length > 0) {
     return {
       pct: 100,
       title: "Tebrikler",
-      sub: "Teklif özetiniz hazır. Aşağıdan inceleyebilir veya Excel indirebilirsiniz.",
+      sub: "Teklif özetiniz hazır — aşağıdan inceleyin.",
     };
   }
   if (activeId === "s1") {
@@ -279,13 +270,6 @@ export function wizardHint(
       pct,
       title: "Konsept seçimi",
       sub: "Dükkan türü ve varsa ek soruları tamamlayın.",
-    };
-  }
-  if (activeId === "s6") {
-    return {
-      pct,
-      title: "Son adım",
-      sub: "Teklifi alın veya detaylandırma tercihinizi seçin.",
     };
   }
   return {

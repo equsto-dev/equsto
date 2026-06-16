@@ -80,6 +80,9 @@ function scoreEqustoTezgahRow(
   if (/mermer/i.test(n) && /mermer/i.test(ad)) score += 80;
   if (/polietilen/i.test(n) && /polietilen/i.test(ad)) score += 80;
   if (/hareketli/i.test(n) && /hareketli/i.test(ad)) score += 80;
+  if (/balik|balık/.test(ad) && !/balik|balık/.test(n)) score -= 8000;
+  if (/dolap/i.test(n) && /\.25$/i.test(String(row.sku ?? ""))) score -= 8000;
+  if (/cekmeceli|çekmeceli|blok/.test(n) && /\.13$/i.test(String(row.sku ?? ""))) score -= 200;
   if (/cekmeceli|çekmeceli/i.test(n) && /cekmeceli|çekmeceli|blok/.test(ad)) score += 60;
 
   if (isBulasikSiyirmaTezgahReferans(isim)) {

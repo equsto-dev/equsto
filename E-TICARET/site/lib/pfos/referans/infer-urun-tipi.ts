@@ -200,6 +200,21 @@ const TIP_RULES: TipRule[] = [
       (n.includes("kasa") || n.includes("kahve cekmece")),
   },
   {
+    tip: "tezgah-rafli-dolapli",
+    test: (n) =>
+      /taban\s*ve\s*ara\s*rafl/.test(n) &&
+      /dolap/.test(n) &&
+      (n.includes("calisma tezgah") ||
+        n.includes("çalışma tezgah") ||
+        n.includes("tezgah")),
+  },
+  {
+    tip: "balik-hazirlik-tezgah",
+    test: (n) =>
+      (/balik|balık/.test(n) && /hazirlik|hazırlık|tezgah/.test(n)) ||
+      /balik\s*hazirlik\s*tezgah|balık\s*hazırlık\s*tezgah/.test(n),
+  },
+  {
     tip: "calisma-tezgahi-dolapli",
     test: (n) => n.includes("calisma tezgah") && n.includes("dolap"),
   },

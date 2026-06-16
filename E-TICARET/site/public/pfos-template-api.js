@@ -122,6 +122,12 @@
       return "buyuk-yemekhane";
     }
     if (
+      d === "Üretim Fabrikası" ||
+      /üretim\s*fabrikası|uretim\s*fabrikasi/i.test(d)
+    ) {
+      return "buyuk-yemekhane";
+    }
+    if (
       d === "Güneli Fırın" ||
       d === "Pastane & Yerel" ||
       /güneli\s*fırın|guneli\s*firin/i.test(d) ||
@@ -327,6 +333,7 @@
       bolumM2: opts.bolumM2 || undefined,
       teslimatAdresi: opts.teslimatAdresi || undefined,
       altTip: opts.altTip || undefined,
+      dukkanSecim: opts.dukkanSecim || opts.dukkan || undefined,
     };
     if (!body.konsept) throw new Error("konsept zorunlu");
     var r = await fetch(API_QUOTE, {

@@ -1,11 +1,7 @@
 import type { SoruCevapHaritasi } from "@/lib/pfos/proje-akis/soru-motor-mapping";
 
 /** Bulut mutfak ≤15 m² — yalnızca kompakt alt-konseptler (SEO GEO notu) */
-export const BULUT_KOMPAKT_DUKKAN = new Set([
-  "Grab&Go",
-  "Coffee Counter",
-  "Bilmiyorum",
-]);
+export const BULUT_KOMPAKT_DUKKAN = new Set(["Grab&Go", "Coffee Counter"]);
 
 export const BULUT_KOMPAKT_M2_MAX = 15;
 

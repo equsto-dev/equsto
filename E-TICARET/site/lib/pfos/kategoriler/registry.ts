@@ -59,6 +59,19 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "2000-3500", label: "2000–3500 kişi/gün", referansM2: 2750 }],
   },
   {
+    id: "catering-uretim",
+    label: "Üretim Fabrikası (Catering)",
+    ustKategori: "Catering / Kurumsal",
+    planNot: "2025-080 AKADEMİ CATERING FABRİKA/2025-080-2.xlsx",
+    bantlar: [
+      {
+        id: "1500-2500",
+        label: "1500–2500 m² · 15–30 bin yemek/gün",
+        referansM2: 2000,
+      },
+    ],
+  },
+  {
     id: "guneli-pastane",
     label: "Güneli Fırın",
     ustKategori: "Pastane & Fırın",
@@ -236,6 +249,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [
       { id: "300-500", label: "300–500 m²", referansM2: 400 },
     ],
+  },
+  {
+    id: "kanatci-kebapci",
+    label: "Kanatçı-Kebapçı",
+    ustKategori: "Restoran",
+    planNot: "kosk-kanat-2024-107.xlsx · KÖŞK KANAT Fenerbahçe",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
   },
 ];
 

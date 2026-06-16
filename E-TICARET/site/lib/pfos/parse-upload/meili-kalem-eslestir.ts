@@ -127,6 +127,13 @@ function categoryMismatchPenalty(item: ParsedItem, hit: CatalogSearchHit): numbe
   if (/firin|konveksiyon/.test(q) && /kuzine|ocak/.test(hay) && !/firin/.test(hay)) {
     penalty += 80;
   }
+  if (
+    /firin\s*davlumbaz|fırın\s*davlumbaz/.test(q) &&
+    /konveksiyon|combi|kombi|decktop|unox\s*firin|deck\s*top/.test(hay) &&
+    !/davlumbaz/.test(hay)
+  ) {
+    penalty += 350;
+  }
   return penalty;
 }
 
@@ -153,6 +160,9 @@ function guessEqustoTezgahSkuFromOlcu(
   if (/siyirma|sıyırma|hunili|bulasik\s*siyirma|bulaşık\s*sıyır/.test(q)) {
     return `${base}.31`;
   }
+  if (/balik|balık/.test(q) && /hazirlik|hazırlık|tezgah/.test(q)) return `${base}.25`;
+  if (/dolap/.test(q) && !/cekmeceli|çekmeceli|blok/.test(q)) return `${base}.13`;
+  if (/dolap/.test(q) && /cekmeceli|çekmeceli|blok/.test(q)) return `${base}.56`;
   if (/taban\s*(ve\s*)?ara|ara\s*raf|rfli/.test(q)) return `${base}.04`;
   if (/taban\s*raf/.test(q)) return `${base}.08`;
   if (/rafl|rafli|rfli/.test(q)) return `${base}.04`;

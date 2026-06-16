@@ -214,6 +214,13 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "kuru_depo",
     ],
   },
+  "kanatci-kebapci": {
+    konsept: "kanatci-kebapci",
+    konseptUst: "Restoran",
+    dukkan: "Kanatçı-Kebapçı",
+    /** KÖŞK KANAT referans şablonu — zone katalog eklemez */
+    pfosZones: [],
+  },
   restoran: {
     konsept: "restoran",
     konseptUst: "Restoran",
