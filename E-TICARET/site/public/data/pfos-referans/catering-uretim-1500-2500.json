@@ -1,0 +1,1643 @@
+{
+  "kategoriId": "catering-uretim",
+  "bantId": "1500-2500",
+  "label": "Üretim Fabrikası 1500–2500 m²",
+  "referansM2": 2000,
+  "referansKapasiteGun": 22500,
+  "kaynakDosya": "2025-080 AKADEMİ CATERING FABRİKA/2025-080-2.xlsx",
+  "not": "Akademi Catering fabrika · 15.000–30.000 yemek/gün · 1500–2500 m² referans",
+  "yukleme": "2026-06-16T05:54:05.085Z",
+  "kalemSayisi": 181,
+  "toplamAdet": 515,
+  "kalemler": [
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "a- kuru depo",
+      "poz": "A1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "a- kuru depo",
+      "poz": "A2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "a- kuru depo",
+      "poz": "A3",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 20
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "a- kuru depo",
+      "poz": "A4",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "a- kuru depo",
+      "poz": "A5",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 5
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "b- kuru depo",
+      "poz": "B1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "b- kuru depo",
+      "poz": "B2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "b- kuru depo",
+      "poz": "B3",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 8
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "b- kuru depo",
+      "poz": "B4",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "b- kuru depo",
+      "poz": "B5",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C2",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C3",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "90*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C4",
+      "ad": "ÇÖP KOVASI, ARABALI, hi-pas",
+      "olcu": "100 lt.",
+      "adet": 7
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C5",
+      "ad": "SEBZE YIKAMA MAKİNASI, nilsen makine",
+      "olcu": "390 cm",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C6",
+      "ad": "ÇÖP ARABASI, hi-pas",
+      "olcu": "400 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C7",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 5
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C9",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 8
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C10",
+      "ad": "SEBZE KURUTMA MAKİNASI, empero",
+      "olcu": "60 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C11",
+      "ad": "SEBZE YIKAMA EVYESİ, sktürk",
+      "olcu": "140*70*85",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C12",
+      "ad": "SEBZE BASMA ARABASI, sktürk",
+      "olcu": "70*65*70",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C13",
+      "ad": "SERVİS ARABASI, TABAN RAFLI, sktürk",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C14",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C15",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZ., TABAN RAFLI, TEK ÇEKMECELİ, sktürk",
+      "olcu": "160*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C16",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C17",
+      "ad": "SEBZE DOĞRAMA MAKİNASI, robot coupe",
+      "olcu": "CL50 ULTRA",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C18",
+      "ad": "CL50 DİSK SETİ, robot coupe",
+      "olcu": "8'Lİ",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C19",
+      "ad": "SEBZE DOĞRAMA MAKİNASI, CL60 ÇALIŞMA İSTASYONU, robot coupe",
+      "olcu": "CL60",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C21",
+      "ad": "BIÇAK STERİL DOLABI, atalay",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C22",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "70*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C23",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C24",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "c- sebze yıkama & hazırlık",
+      "poz": "C25",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 6
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "d- sebze soğuk oda",
+      "poz": "D1",
+      "ad": "PANEL TİP SOĞUK ODA, ZEMİNSİZ, -",
+      "olcu": "560*1225*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "d- sebze soğuk oda",
+      "poz": "D2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "d- sebze soğuk oda",
+      "poz": "D3",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 6
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "d- sebze soğuk oda",
+      "poz": "D4",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "e- sebze derin dondurucu oda",
+      "poz": "E1",
+      "ad": "PANEL TİP DERİN DONDURUCU, ZEMİNSİZ, -",
+      "olcu": "560*365*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "e- sebze derin dondurucu oda",
+      "poz": "E2",
+      "ad": "İSTİF RAFI, 4 KATLI, özel ölçü",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F2",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F3",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "90*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F4",
+      "ad": "ÇÖP KOVASI, ARABALI, hi-pas",
+      "olcu": "100 lt.",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F5",
+      "ad": "BIÇAK STERİL DOLABI, atalay",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F6",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "160*70*85",
+      "adet": 7
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F7",
+      "ad": "DUVAR RAFI, sktürk",
+      "olcu": "160*30*4",
+      "adet": 7
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F8",
+      "ad": "SEBZE DOĞRAMA MAKİNASI, robot coupe",
+      "olcu": "CL50 ULTRA",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F9",
+      "ad": "CL50 DİSK SETİ, robot coupe",
+      "olcu": "8'Lİ",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F10",
+      "ad": "GIDA DİLİMLEME MAKİNASI, lavion",
+      "olcu": "Q300",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F11",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F12",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "f- kahvaltı & kumanya hazırlık",
+      "poz": "F13",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "g- süt ürünleri & şarküteri soğuk oda",
+      "poz": "G1",
+      "ad": "PANEL TİP SOĞUK ODASI, ZEMİNSİZ, -",
+      "olcu": "560*645*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "g- süt ürünleri & şarküteri soğuk oda",
+      "poz": "G2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "g- süt ürünleri & şarküteri soğuk oda",
+      "poz": "G3",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H2",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H3",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "90*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H4",
+      "ad": "ÇÖP KOVASI, ARABALI, hi-pas",
+      "olcu": "100 lt.",
+      "adet": 6
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H5",
+      "ad": "ET-KIYMA TAŞIMA ARABASI, GN 1/1, MT128X, sktürk",
+      "olcu": "80*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H6",
+      "ad": "GIDA DİLİMLEME MAKİNASI, lavion",
+      "olcu": "Q300",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H7",
+      "ad": "ET KÜTÜĞÜ, POLİETİLEN, KIRMIZI, sktürk",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H8",
+      "ad": "POLİETİLEN TAB. ÇAL. TEZ., TABAN RAF, TEK ÇEK. KIRMIZI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H9",
+      "ad": "ET KIYMA MAKİNASI, SOĞUTMALI, boğaziçi",
+      "olcu": "NO: 32",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H9A",
+      "ad": "ET KIYMA MAKİNASI, AYAKLI, arı makine",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H10",
+      "ad": "BIÇAK STERİLİZASYON DOLABI, atalay",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H11",
+      "ad": "HAMUR YOĞURMA MAKİNASI (KÖFTE İÇİN), bosfor",
+      "olcu": "USH-50T",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H12",
+      "ad": "KÖFTE ŞEKİLLENDİRME MAKİNASI, artvinli makine",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H13",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H14",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZ., TABAN RAFLI, KIRMIZI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H15",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 7
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H16",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "70*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H17",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "130*70*85",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H18",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZ., TABAN RAFLI, SARI, sktürk",
+      "olcu": "160*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H19",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H20",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "h- et & tavuk hazırlık",
+      "poz": "H21",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "ı- tavuk soğuk oda",
+      "poz": "I1",
+      "ad": "PANEL TİP SOĞUK ODASI, ZEMİNSİZ, -",
+      "olcu": "560*420*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "ı- tavuk soğuk oda",
+      "poz": "I2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "ı- tavuk soğuk oda",
+      "poz": "I3",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "i- et soğuk oda",
+      "poz": "İ1",
+      "ad": "PANEL TİP SOĞUK ODASI, ZEMİNSİZ, -",
+      "olcu": "560*560*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "i- et soğuk oda",
+      "poz": "İ2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "i- et soğuk oda",
+      "poz": "İ3",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "i- et soğuk oda",
+      "poz": "İ4",
+      "ad": "ET ASKI ARABASI, sktürk",
+      "olcu": "150*55*170",
+      "adet": 5
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "j- et derin dondurucu oda",
+      "poz": "J1",
+      "ad": "PANEL TİP DERİN DONDURUCU, ZEMİNSİZ, sktürk",
+      "olcu": "560*340*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "j- et derin dondurucu oda",
+      "poz": "J2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "j- et derin dondurucu oda",
+      "poz": "J3",
+      "ad": "ET ASKI ARABASI, sktürk",
+      "olcu": "150*55*170",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K2",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K3",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "90*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K4",
+      "ad": "ÇÖP KOVASI, ARABALI, hi-pas",
+      "olcu": "100 lt.",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K5",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, ARA RAFLI, BLOK ÇEK., sktürk",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K6",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "190*80*85",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K7",
+      "ad": "UN-ŞEKER ARABASI, tribeca",
+      "olcu": "103 lt.",
+      "adet": 9
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K8",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K9",
+      "ad": "PATISERRIE TEPSİ TAŞIMA ARABASI, 40*60, sktürk",
+      "olcu": "59*66*170",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K10",
+      "ad": "YER OCAĞI, t-rex",
+      "olcu": "125*80*50",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K11",
+      "ad": "TAŞ TABANLI FIRIN, SEHPALI, 3 KATLI, fimak",
+      "olcu": "156*131*205",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K12",
+      "ad": "FIRIN, GAZLI- MEVCUT, inoksan",
+      "olcu": "20 GN 2/1",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K13",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, AYDINLATMALI, sktürk",
+      "olcu": "600*140*50",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K14",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K15",
+      "ad": "PLANET MİKSER, 2-3 DEVİRLİ, boğaziçi",
+      "olcu": "60 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K16",
+      "ad": "SPİRAL HAMUR YOĞURMA MAKİNASI, 50 kg un/ 75 kg hamur, boğaziçi",
+      "olcu": "USH-50T",
+      "adet": 2
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K17",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K18",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 3
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "k- patiserrie",
+      "poz": "K19",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "l- patiserrie soğuk oda",
+      "poz": "L1",
+      "ad": "PANEL TİP SOĞUK ODASI, ZEMİNSİZ, -",
+      "olcu": "560*520*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "l- patiserrie soğuk oda",
+      "poz": "L2",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "özel ölçü",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "l- patiserrie soğuk oda",
+      "poz": "L3",
+      "ad": "PATISERRIE TEPSİ TAŞIMA ARABASI, 40*60, sktürk",
+      "olcu": "59*66*170",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "m- koridor",
+      "poz": "M1",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "m- koridor",
+      "poz": "M2",
+      "ad": "BONE GALOŞLUK, sktürk",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "m- koridor",
+      "poz": "M3",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "m- koridor",
+      "poz": "M4",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 5
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N1",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N2",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N3",
+      "ad": "TARTI, GÖMME TİP, DARBE EMİCİLİ, 3 TON KAPASİTELİ, yıldırım",
+      "olcu": "150*150",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N4",
+      "ad": "KASA TAŞIMA ARABASI, sktürk",
+      "olcu": "60*90*85",
+      "adet": 4
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N5",
+      "ad": "HİJYEN BARİYERİ, protek",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N6",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "n- mal kabül",
+      "poz": "N7",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "o- çöp soğuk odası",
+      "poz": "O1",
+      "ad": "PANEL TİP SOĞUK ODASI, ZEMİNSİZ, -",
+      "olcu": "560*300*270",
+      "adet": 1
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "o- çöp soğuk odası",
+      "poz": "O2",
+      "ad": "ÇÖP ARABASI, hi-pas",
+      "olcu": "400 lt.",
+      "adet": 16
+    },
+    {
+      "bolum": "__0_00_BODRUM_KAT_PLANI",
+      "bolumAd": "± 0.00 BODRUM KAT PLANI",
+      "zone": "o- çöp soğuk odası",
+      "poz": "O3",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P1",
+      "ad": "YER OCAĞI, t-rex",
+      "olcu": "125*80*50",
+      "adet": 20
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P2",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, AYDINLATMALI, sktürk",
+      "olcu": "1030*180*50",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P3",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, AYDINLATMALI, sktürk",
+      "olcu": "1330*180*50",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P4",
+      "ad": "RATIONAL YEMEK FIRINI, GAZLI, rational",
+      "olcu": "20 GN2/1",
+      "adet": 8
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P5",
+      "ad": "ÇORBA PİŞİRME MAKİNASI, SM-2500, nilsen makine",
+      "olcu": "190*190*160",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P6",
+      "ad": "PİLAV PİŞİRME MAKİNASI, RM80, nilsen makine",
+      "olcu": "190*190*160",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P7",
+      "ad": "KAYNATMA KAZANI, -",
+      "olcu": "400 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P8",
+      "ad": "IVARIO, rational",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P9",
+      "ad": "DÖNER ROBOTU, GAZLI, ADR-14G-GK., atalay",
+      "olcu": "93*96*186",
+      "adet": 5
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P10",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, AYDINLATMALI, sktürk",
+      "olcu": "1720*220*50",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P11",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, AYDINLATMALI, sktürk",
+      "olcu": "1510*180*50",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P12",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 12
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P13",
+      "ad": "ÇÖP KOVASI, ARABALI, hi-pas",
+      "olcu": "100 lt.",
+      "adet": 3
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P14",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P15",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 20
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P16",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 9
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P17",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P18",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "180*70*85",
+      "adet": 6
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P19",
+      "ad": "HİJYEN BARİYERİ, protek",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P20",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 7
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P21",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "p- sıcak mutfak",
+      "poz": "P22",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 20
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "t- sevkiyat alanı",
+      "poz": "T1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "t- sevkiyat alanı",
+      "poz": "T2",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU, atalay",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "t- sevkiyat alanı",
+      "poz": "T3",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 8
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "t- sevkiyat alanı",
+      "poz": "T4",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "t- sevkiyat alanı",
+      "poz": "T5",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U1",
+      "ad": "YER YIKAMA HORTUMU, cancan",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U2",
+      "ad": "SU KAZANI, ISITMALI, sktürk",
+      "olcu": "180*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U3",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U4",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, KONVEYÖRLÜ, meiko",
+      "olcu": "980 cm",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U5",
+      "ad": "DAVLUMBAZ, ORTA TİP, sktürk",
+      "olcu": "120*120*50",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U6",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U7",
+      "ad": "PALET, hi-pas",
+      "olcu": "120*80*15",
+      "adet": 27
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U8",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 3
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "u- bulaşık yıkama alanı & temiz takım deposu",
+      "poz": "U9",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 7
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y1",
+      "ad": "ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "65*80*57/91",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y2",
+      "ad": "ÇALIŞMA TEZGAHI, sktürk",
+      "olcu": "130*80*57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y3",
+      "ad": "KAZAN YIKAMA EVYESİ, sktürk",
+      "olcu": "140*80*57/91",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y4",
+      "ad": "ÖN YIKAMA DUŞU, DUVARA MONTE, cancan",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y5",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, sktürk",
+      "olcu": "500*130*50",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y6",
+      "ad": "İSTİF RAFI, 4 KATLI, cambro",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y7",
+      "ad": "KEPÇE ASKI DOLABI, sktürk",
+      "olcu": "120*60*160",
+      "adet": 2
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y8",
+      "ad": "GASTRONOM TEPSİ TAŞIMA ARABASI, GN 2/1, sktürk",
+      "olcu": "44*63*172",
+      "adet": 4
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y9",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "y- kazan yıkama",
+      "poz": "Y10",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "165*30*15",
+      "adet": 4
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V1",
+      "ad": "KUVER ÜNİTESİ, KAYDIRMA STANDLI, MOBİLYALI",
+      "olcu": "70*70*85/160",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V2",
+      "ad": "BAINMARIE, 4 GN 1/1, KAYDIRMA ST. MOBİLYALI, sktürk",
+      "olcu": "150*70*85/140",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V3",
+      "ad": "KULE TİPİ SOĞUK DOLAP, KAYDIRMA ST. MOBİLYALI, sktürk",
+      "olcu": "160*70*160",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V4",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI, sktürk",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V5",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI, inoksan",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V6",
+      "ad": "DUVAR DOLABI, sktürk",
+      "olcu": "140*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI, sktürk",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V8",
+      "ad": "DUVAR DOLABI, sktürk",
+      "olcu": "160*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V9",
+      "ad": "DİK TİP BUZDOLABI, TEK KAPILI, sktürk",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V10",
+      "ad": "TEPSİ TOPLAMA ARABASI , 37*53, sktürk",
+      "olcu": "15+15",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V11",
+      "ad": "SİNEK ÖLDÜRÜCÜ, PASLANMAZ, yiber",
+      "olcu": "100 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "___4_50_ZEMİN_KAT_PLANI",
+      "bolumAd": ".+ 4.50 ZEMİN KAT PLANI",
+      "zone": "v- personel yemekhanesi",
+      "poz": "V12",
+      "ad": "YER IZGARASI, İZOLASYONLU, nova",
+      "olcu": "30*30*15",
+      "adet": 1
+    }
+  ]
+}
