@@ -358,7 +358,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const out: Record<string, { min: number; max: number }> = {};
     for (const t of shopTypes) {
       const pf = t.pfos;
-      const sel = pf?.dukkanSecim?.trim();
+      if (!pf) continue;
+      const sel = pf.dukkanSecim?.trim();
       if (!sel) continue;
       const min = Number(pf.m2Min) || 0;
       const max = Number(pf.m2Max) || 0;
