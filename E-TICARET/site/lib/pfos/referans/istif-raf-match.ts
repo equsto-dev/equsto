@@ -16,11 +16,12 @@ import {
   isPortashelfSku,
 } from "../core/portashelf-marka";
 import {
-  findPortashelfInox201ByOlcu,
+  findPortashelfByOlcu,
   PORTASHELF_304_GORSEL_REL,
   portashelfBySku,
   portashelfDisplayName,
   portashelfGorselRelFromSku,
+  portashelfOlcuDisplayCm,
   portashelfSatisEurFromListe,
   type PortashelfKatliRafRow,
 } from "../core/portashelf-fiyat";
@@ -42,6 +43,24 @@ let portashelfCatalogCache: PortashelfProduct[] | null = null;
 
 export function isIstifRafiReferans(isim: string): boolean {
   return isIstifRafiReferansIsim(isim);
+}
+
+/** Referans adı / notlar / ölçü — istif raf ölçü metni (notlar öncelikli) */
+function extractIstifOlcuFromReferans(
+  isim: string,
+  olcu: string,
+  notlar: string | null | undefined,
+): string {
+  const fromNotlar =
+    extractOlcuFromNotlar(notlar) ||
+    String(notlar ?? "")
+      .replace(/^ölçü:\s*/i, "")
+      .trim();
+  if (fromNotlar && /\d/.test(fromNotlar)) return fromNotlar;
+  if (olcu.trim()) return olcu.trim();
+  const nameHit = isim.match(/(\d+)\s*[x×X*]\s*(\d+)\s*[x×X*]\s*(\d+)/i);
+  if (nameHit) return `${nameHit[1]}×${nameHit[2]}×${nameHit[3]}`;
+  return "";
 }
 
 async function loadPortashelfCatalog(): Promise<PortashelfProduct[]> {
@@ -155,17 +174,17 @@ export async function matchIstifRafiByReferans(
   notlar: string | null | undefined,
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
-  const olcuText =
-    olcu.trim() ||
-    extractOlcuFromNotlar(notlar) ||
-    String(notlar ?? "")
-      .replace(/^ölçü:\s*/i, "")
-      .trim();
+  const olcuText = extractIstifOlcuFromReferans(isim, olcu, notlar);
+  const variantHint = `${isim} ${notlar ?? ""}`;
 
-  const inoxMatch = olcuText ? findPortashelfInox201ByOlcu(olcuText) : null;
+  const inoxMatch = olcuText ? findPortashelfByOlcu(olcuText, variantHint) : null;
   if (inoxMatch) {
     const row = await findPortashelfEkipmanRow(inoxMatch.sku);
-    const olcuDisplay = `${inoxMatch.depthCm}×${inoxMatch.widthCm}×${inoxMatch.heightCm} cm`;
+    const olcuDisplay = portashelfOlcuDisplayCm(
+      inoxMatch.depthCm,
+      inoxMatch.widthCm,
+      inoxMatch.heightCm,
+    );
     return portashelfToEslesmis(
       isim,
       inoxMatch.sku,
@@ -224,7 +243,11 @@ export async function matchIstifRafiByReferans(
         best.inox.sku,
         best.inox.satisEur,
         row,
-        olcuText,
+        portashelfOlcuDisplayCm(
+          best.inox.depthCm,
+          best.inox.widthCm,
+          best.inox.heightCm,
+        ),
       );
     }
   }
@@ -242,7 +265,7 @@ export async function matchIstifRafiByReferans(
       fiyat: 0,
       fiyatEur: null,
       doviz: "TRY",
-      gorselUrl: null,
+      gorselUrl: normalizePfosGorselUrl(PORTASHELF_304_GORSEL_REL),
     };
   }
 

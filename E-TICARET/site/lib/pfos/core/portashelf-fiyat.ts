@@ -195,10 +195,56 @@ export function portashelfGorselRelFromSku(
   return PORTASHELF_304_GORSEL_REL;
 }
 
+/** PFOS referansında 160 / 180 cm yazılsa da katalog yüksekliği 183 cm */
+const PORTASHELF_HEIGHT_ALIASES_CM = new Set([160, 180, 183]);
+
+function snapPortashelfHeightCm(h: number): number {
+  const r = Math.round(h);
+  if (PORTASHELF_HEIGHT_ALIASES_CM.has(r)) return 183;
+  return h;
+}
+
+/** mm (460×1220×1800) veya cm — derinlik×genişlik×yükseklik */
+export function olcuNumsToPortashelfCm(nums: number[]): [number, number, number] | null {
+  if (nums.length < 3) return null;
+  let [a, b, c] = nums.slice(0, 3);
+  if (Math.max(a, b, c) >= 400) {
+    a = Math.round(a / 10);
+    b = Math.round(b / 10);
+    c = Math.round(c / 10);
+  }
+  const triple: [number, number, number] = [a, b, c];
+  const heightIdx = triple.indexOf(Math.max(...triple));
+  triple[heightIdx] = snapPortashelfHeightCm(triple[heightIdx]);
+  return triple;
+}
+
+export function portashelfOlcuDisplayCm(
+  depthCm: number,
+  widthCm: number,
+  heightCm: number,
+): string {
+  return `${depthCm}×${widthCm}×${heightCm} cm`;
+}
+
+export function inferPortashelfVariantFromText(
+  text: string,
+): PortashelfVariantKey {
+  const n = String(text ?? "").toLowerCase();
+  if (/inox\s*304\s*light|304\s*l\b|304l/.test(n)) return "304L";
+  if (/inox\s*304|\b304\b/.test(n)) return "304";
+  if (/inox\s*201\s*light|201\s*l\b|201l/.test(n)) return "201L";
+  if (/inox\s*201\b/.test(n)) return "201";
+  if (/bulasikhane|bulaşıkhane/.test(n)) return "201L";
+  return "201L";
+}
+
 function olcuNums(olcu: string): number[] {
-  return [...String(olcu).matchAll(/(\d+(?:[.,]\d+)?)/g)]
+  const raw = [...String(olcu).matchAll(/(\d+(?:[.,]\d+)?)/g)]
     .map((m) => Number(m[1].replace(",", ".")))
     .filter((n) => Number.isFinite(n) && n >= 8);
+  const triple = olcuNumsToPortashelfCm(raw);
+  return triple ? [...triple] : raw;
 }
 
 function dimDistance(a: [number, number, number], b: [number, number, number]): number {
@@ -254,11 +300,20 @@ function findPortashelfByOlcuInTable(
   };
 }
 
+/** Referans ölçüsü + malzeme ipucu → Portashelf 4 katlı raf */
+export function findPortashelfByOlcu(
+  olcu: string,
+  variantHint = "",
+): (PortashelfKatliRafRow & { sku: string; satisEur: number }) | null {
+  const variant = inferPortashelfVariantFromText(`${olcu} ${variantHint}`);
+  return findPortashelfByOlcuInTable(olcu, tableForVariant(variant), variant);
+}
+
 /** Referans ölçüsüne en yakın INOX 201 LIGHT 4 katlı raf (PFOS varsayılan) */
 export function findPortashelfInox201ByOlcu(
   olcu: string,
 ): (PortashelfKatliRafRow & { sku: string; satisEur: number }) | null {
-  return findPortashelfByOlcuInTable(olcu, PORTASHELF_INOX201L_4KAT, "201L");
+  return findPortashelfByOlcu(olcu);
 }
 
 export function portashelfBySku(
