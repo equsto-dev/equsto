@@ -68,6 +68,25 @@ yarn-error.log*
 # vercel
 .vercel
 
+# scratch / geçici (agent, probe, deneme)
+/scratch/
+/tmp-*
+/temp-*.js
+/scripts/__pycache__/
+/scripts/_*
+/scripts/tmp-*
+/scripts/out/
+/scripts/scratch-*
+/scripts/data/trial/
+/public/trial-*.html
+/public/data/scratch-test.json
+/public/data/*.bak
+/public/data/**/*.backup-*
+/public/data/pfos-referans/backup-*/
+
+# Hetzner merge çıktısı (secret içerebilir)
+.env.production.hetzner
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
