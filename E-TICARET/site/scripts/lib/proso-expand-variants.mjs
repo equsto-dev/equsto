@@ -3,6 +3,7 @@
  * (PDF/tablo boş kaldığında devreye girer)
  */
 import { resolveSlugMap } from "./proso-prosogutma-slug-map.mjs";
+import { applyProsoModelKodDims } from "./proso-model-dims.mjs";
 
 function normFam(s) {
   return String(s || "")
@@ -42,10 +43,12 @@ export function expandVariantsFromSlugExcel(product, index) {
   if (!widths.length && map.defaultWidth) widths.push(map.defaultWidth);
   if (!widths.length) return [];
 
-  return widths.map((genislik_mm) => ({
-    modelKod: map.modelKod,
-    genislik_mm,
-    derinlik_mm: 0,
-    yukseklik_mm: 0,
-  }));
+  return widths.map((genislik_mm) =>
+    applyProsoModelKodDims({
+      modelKod: map.modelKod,
+      genislik_mm,
+      derinlik_mm: 0,
+      yukseklik_mm: 0,
+    })
+  );
 }
