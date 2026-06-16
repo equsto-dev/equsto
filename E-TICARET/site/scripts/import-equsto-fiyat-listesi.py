@@ -29,8 +29,57 @@ ISKONTO = 0.10
 KDV = 0.20
 ETICARET_DERINLIK_CM = 70
 ETICARET_EN_EXTRA = (120, 140, 160, 190)
-DUVAR_ETIC_OLCU = {(100, 100), (100, 120), (200, 100), (200, 120), (300, 100), (300, 120)}
-ORTA_ETIC_OLCU = {(200, 200), (300, 200), (400, 200), (500, 200)}
+# Davlumbaz e-ticaret vitrin — 4 seri × 10 ölçü = 40 ürün (ara genişlik/derinlikler dahil)
+DAVLUMBAZ_ETIC_VITRIN: dict[str, tuple[tuple[int, int], ...]] = {
+    "KDAVDT01": (
+        (100, 100),
+        (100, 120),
+        (125, 100),
+        (150, 120),
+        (175, 100),
+        (200, 100),
+        (200, 120),
+        (250, 100),
+        (275, 120),
+        (300, 100),
+    ),
+    "KDAVDTF02": (
+        (100, 120),
+        (110, 90),
+        (125, 120),
+        (150, 90),
+        (175, 120),
+        (200, 90),
+        (200, 120),
+        (225, 90),
+        (250, 120),
+        (300, 90),
+    ),
+    "KDAVOT01": (
+        (100, 200),
+        (125, 150),
+        (150, 200),
+        (175, 250),
+        (200, 100),
+        (200, 200),
+        (225, 250),
+        (250, 200),
+        (275, 150),
+        (300, 100),
+    ),
+    "KDAVOTF02": (
+        (100, 200),
+        (110, 250),
+        (125, 200),
+        (150, 250),
+        (175, 200),
+        (200, 200),
+        (225, 250),
+        (250, 200),
+        (275, 250),
+        (300, 150),
+    ),
+}
 MALZEME = "AISI 18/10 (304 kalite) paslanmaz çelik mamül"
 KAYNAK = "equsto-fiyat-listesi-2026"
 SKU_PREFIX = "EQ"
@@ -138,7 +187,9 @@ def is_davlumbaz_orta(kod: str) -> bool:
 
 def eticaret_filter(rows: list[dict], kod: str) -> list[dict]:
     if is_davlumbaz_duvar(kod) or is_davlumbaz_orta(kod):
-        wanted = DUVAR_ETIC_OLCU if is_davlumbaz_duvar(kod) else ORTA_ETIC_OLCU
+        wanted = set(DAVLUMBAZ_ETIC_VITRIN.get(kod, ()))
+        if not wanted:
+            return []
         return [r for r in rows if (r["en_cm"], r["derinlik_cm"]) in wanted]
     depth70 = [x for x in rows if x["derinlik_cm"] == ETICARET_DERINLIK_CM]
     if not depth70:

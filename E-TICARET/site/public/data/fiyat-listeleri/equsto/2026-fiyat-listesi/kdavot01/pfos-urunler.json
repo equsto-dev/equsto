@@ -131,7 +131,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -481,7 +481,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -731,7 +731,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -981,7 +981,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -1031,7 +1031,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -1381,7 +1381,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -1531,7 +1531,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -1681,7 +1681,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
@@ -1831,7 +1831,7 @@
     "iskonto_oran": 10,
     "kur_eur_try": 53.7848,
     "fiyat_bekleniyor": false,
-    "eticaret": false,
+    "eticaret": true,
     "pfos": true,
     "images": [
       "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png"
