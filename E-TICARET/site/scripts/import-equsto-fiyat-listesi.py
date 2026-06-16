@@ -33,6 +33,7 @@ DUVAR_ETIC_OLCU = {(100, 100), (100, 120), (200, 100), (200, 120), (300, 100), (
 ORTA_ETIC_OLCU = {(200, 200), (300, 200), (400, 200), (500, 200)}
 MALZEME = "AISI 18/10 (304 kalite) paslanmaz çelik mamül"
 KAYNAK = "equsto-fiyat-listesi-2026"
+SKU_PREFIX = "EQ"
 
 
 def fetch_eur_try() -> tuple[float, str, bool]:
@@ -148,9 +149,9 @@ def eticaret_filter(rows: list[dict], kod: str) -> list[dict]:
 
 
 def sku_for(en: int, derinlik: int, kod: str) -> str:
-    """Benzersiz stok kodu — tam seri kodu + ölçü (KCT02 ≠ KHCT02)."""
+    """Benzersiz stok kodu — EQ.{seri}.{ölçü} örn. EQ.KCEVD01.09070"""
     k = norm_tr(kod)
-    return f"EQUSTO.{k}.{en:03d}{derinlik:02d}"
+    return f"{SKU_PREFIX}.{k}.{en:03d}{derinlik:02d}"
 
 
 def slug_for(en: int, derinlik: int, kod: str) -> str:
