@@ -21,10 +21,11 @@ import {
   unSekerFeatureScore,
 } from "./match-features";
 import {
-  generateEqustoTezgahSku,
   isCalismaTezgahiReferansIsim,
   isBulasikSiyirmaTezgahReferans,
 } from "../core/calisma-tezgah";
+import { matchCalismaTezgahiByReferans } from "../referans/calisma-tezgah-match";
+import { matchDavlumbazByReferans } from "../referans/davlumbaz-match";
 import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
 import { matchIstifRafiByReferans } from "../referans/istif-raf-match";
 import {
@@ -462,6 +463,33 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
     }
   }
 
+  if (
+    isCalismaTezgahiReferansIsim(item.tanim, item.olcu) ||
+    isBulasikSiyirmaTezgahReferans(item.tanim, item.olcu)
+  ) {
+    const tezgah = await matchCalismaTezgahiByReferans(
+      item.tanim,
+      item.olcu ?? "",
+      refNotlar,
+      refInput.urunTipi,
+    );
+    if (tezgah?.sku) {
+      return refMatchToResult(item, tezgah, 0.93);
+    }
+  }
+
+  if (/davlumbaz/i.test(item.tanim)) {
+    const dav = await matchDavlumbazByReferans(
+      item.tanim,
+      item.olcu ?? "",
+      refNotlar,
+      refInput.urunTipi,
+    );
+    if (dav?.sku) {
+      return refMatchToResult(item, dav, 0.93);
+    }
+  }
+
   const duvarRaf = await matchDuvarRafiByReferans(
     item.tanim,
     item.olcu ?? "",
@@ -486,40 +514,7 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
     }
   }
 
-  if (isCalismaTezgahiReferansIsim(item.tanim, item.olcu)) {
-    const equstoSku = generateEqustoTezgahSku(item.tanim, item.olcu);
-    if (equstoSku) {
-      const skuHits = await searchCatalogForProforma(equstoSku, 6);
-      const pimakSku = equstoSku.replace(/^EQUSTO\./i, "PIMAK.");
-      const pimakHits = await searchCatalogForProforma(pimakSku, 4);
-      const oztiSku = `7911.${equstoSku.replace(/^EQUSTO\./i, "")}`;
-      const oztiHits = await searchCatalogForProforma(oztiSku, 4);
-      const seen = new Set(hits.map((h) => h.id));
-      for (const h of [...skuHits, ...pimakHits, ...oztiHits]) {
-        if (h.id && !seen.has(h.id)) {
-          hits.push(h);
-          seen.add(h.id);
-        }
-      }
-      if (!skuHits.some((h) => normSku(h.sku) === normSku(equstoSku))) {
-        hits.unshift({
-          id: `equsto-tezgah-${equstoSku.toLowerCase()}`,
-          name: cleanProformaTanim(item.tanim),
-          sku: equstoSku,
-          brand: "Pimak",
-          category: "tezgah",
-          dept: "tezgah",
-          specs: item.tanim,
-          image: "",
-          slug: "",
-          satis_eur_indirimli: 0,
-          liste_fiyati_eur: 0,
-        } as CatalogSearchHit);
-      }
-    }
-  }
-
-  if (!requiresShelvedTezgah(item.tanim)) {
+  if (!requiresShelvedTezgah(item.tanim) && !isCalismaTezgahiReferansIsim(item.tanim, item.olcu)) {
     const oztiSku = guessOztiSkuFromOlcu(item.olcu);
     if (oztiSku) {
       const skuHits = await searchCatalogForProforma(oztiSku, 4);
@@ -589,19 +584,6 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   const { hit: best, guven } = pickBestHit(item, hits);
 
   let bestHit = best;
-  const equstoTezgahSku = isCalismaTezgahiReferansIsim(item.tanim, item.olcu)
-    ? generateEqustoTezgahSku(item.tanim, item.olcu)
-    : isBulasikSiyirmaTezgahReferans(item.tanim, item.olcu)
-      ? generateEqustoTezgahSku(item.tanim, item.olcu)
-      : null;
-  if (bestHit && equstoTezgahSku) {
-    bestHit = {
-      ...bestHit,
-      sku: equstoTezgahSku,
-      brand: "Pimak",
-      name: cleanProformaTanim(item.tanim) || bestHit.name,
-    };
-  }
 
   if (!bestHit) {
     return {

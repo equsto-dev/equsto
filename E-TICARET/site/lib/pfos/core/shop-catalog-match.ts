@@ -52,6 +52,10 @@ import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
 import {
+  isEqustoFiyatListesiSku,
+  isEqustoFiyatListesiRow,
+} from "./equsto-fiyat-listesi-pfos";
+import {
   normalizeTipKodu,
   resolveTipKodu,
   TIP_SEARCH_TERMS,
@@ -460,10 +464,12 @@ function scoreCandidate(
     if (/electrolux|^132\d{3,6}$|371\d|^7711\.|^7897\.|^7911\./.test(skuN) || /electrolux/.test(normName(row.marka_ad))) {
       return -9999;
     }
-    if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
     if (isOztiKatalogMarka(row.marka_ad) && /7911\.n1\./.test(skuN)) {
       return -9999;
     }
+    if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    else if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
+    else if (!isEqustoFiyatListesiRow(row)) return -9999;
   }
 
   if (
@@ -479,7 +485,9 @@ function scoreCandidate(
     if (isOztiDavlumbazSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /7885\./.test(normName(row.sku ?? "")))) {
       return -9999;
     }
-    if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
+    if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    else if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
+    else return -9999;
   }
 
   if (isBuzdolabiTipKodu(tip)) {

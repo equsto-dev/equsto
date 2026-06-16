@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { olcuMmFromSku } from "../teklif/olcu-mm";
 import { matchCatalogFallback, matchOzelImalatForSablon } from "./catalog-fallback";
+import { invalidateEqustoFiyatListesiPfosCache } from "./equsto-fiyat-listesi-pfos";
 import { isOzelImalatMotor } from "./ozel-imalat";
 
 let dbPfosSeeded: boolean | null = null;
@@ -169,4 +170,5 @@ export async function matchProductForMotor(
 export function clearMatchProductCache(): void {
   matchCache.clear();
   dbPfosSeeded = null;
+  invalidateEqustoFiyatListesiPfosCache();
 }
