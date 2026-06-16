@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import {
-  findShopTypeByDukkanSecim,
+  findShopTypeForQuote,
   loadProjeAkisShopTypes,
 } from "@/lib/pfos/proje-akis/load-shop-types";
 import { resolveReferansBaglam } from "@/lib/pfos/proje-akis/shop-type-referans";
@@ -29,7 +29,12 @@ export async function POST(req: NextRequest) {
     }
 
     const shopTypes = await loadProjeAkisShopTypes();
-    const shopType = findShopTypeByDukkanSecim(shopTypes, dukkanSecim);
+    const shopType = findShopTypeForQuote(
+      shopTypes,
+      dukkanSecim,
+      undefined,
+      body.altTip ?? null,
+    );
     if (!shopType) {
       return NextResponse.json(
         { error: "Dükkan türü shopTypes içinde bulunamadı", dukkanSecim },

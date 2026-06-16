@@ -3,6 +3,7 @@ import {
   enrichShopTypesFromFile,
   type ShopTypeKayit,
 } from "@/lib/pfos/proje-akis/konsept-tanimlari";
+import { kiremitDukkanFromRestoranAlt } from "@/lib/pfos/proje-akis/soru-motor-mapping";
 import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
 
 let cache: ShopTypeKayit[] | null = null;
@@ -34,4 +35,20 @@ export function findShopTypeByDukkanSecim(
     return shopTypes.find((t) => t.pfos.motorSlug === slug) ?? null;
   }
   return null;
+}
+
+/** Teklif API — esnaf lokanta alt tipi ile Kiremit shop type çözümü */
+export function findShopTypeForQuote(
+  shopTypes: ShopTypeKayit[],
+  dukkanSecim: string,
+  motorSlug?: string | null,
+  altTip?: string | null,
+): ShopTypeKayit | null {
+  const d = dukkanSecim.trim();
+  const kiremitDukkan = kiremitDukkanFromRestoranAlt(altTip);
+  if (kiremitDukkan) {
+    const hit = shopTypes.find((t) => t.pfos.dukkanSecim === kiremitDukkan);
+    if (hit) return hit;
+  }
+  return findShopTypeByDukkanSecim(shopTypes, d, motorSlug);
 }

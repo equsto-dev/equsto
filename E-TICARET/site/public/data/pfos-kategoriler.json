@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T06:30:11.686Z",
+  "updated_at": "2026-06-16T08:08:47.267Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -71,7 +71,7 @@
             "kalemSayisi": 56,
             "toplamAdet": 68,
             "kaynakDosya": "2016-094 UÇAN BALIK/2016-094.xlsx",
-            "yukleme": "2026-05-31T02:25:09.103Z"
+            "yukleme": "2026-06-16T06:55:26.018Z"
           }
         }
       ]
@@ -329,6 +329,18 @@
       "ustKategori": "Restoran",
       "bantlar": [
         {
+          "id": "100-200",
+          "label": "100–200 m² (Smyrna Boyoz)",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "all-day-dining-cafe-100-200.json",
+            "kalemSayisi": 24,
+            "toplamAdet": 25,
+            "kaynakDosya": "2016-134 SMYRNA BOYOZ LAINOX/2016-134.xlsx",
+            "yukleme": "2026-06-16T07:19:10.147Z"
+          }
+        },
+        {
           "id": "150-300",
           "label": "150–300 m²",
           "referansM2": 225,
@@ -481,15 +493,28 @@
       "ustKategori": "Otel F&B",
       "bantlar": [
         {
+          "id": "50-80-oda",
+          "label": "50–80 oda (Zigana Alaçatı)",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "sehir-otel-50-80-oda.json",
+            "kalemSayisi": 64,
+            "toplamAdet": 82,
+            "kaynakDosya": "2016-159 ZİGANA OTEL LAINOX/MUTFAK MALZEME zigana resort hotel alaçatı - LAINOX FİYAT TEKLİFİ YERLİ EKİPMAN.xls",
+            "yukleme": "2026-06-16T07:28:50.060Z",
+            "konseptSinif": "sehir-otel-oda-50-80"
+          }
+        },
+        {
           "id": "500-2000",
           "label": "500–2000 m² (Hampton Bolu)",
           "referansM2": 1000,
           "meta": {
             "listeDosya": "sehir-otel-500-2000.json",
             "kalemSayisi": 186,
-            "toplamAdet": 288,
-            "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/Hampton By Hilton.xls",
-            "yukleme": "2026-05-31T02:13:59.546Z"
+            "toplamAdet": 286,
+            "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/hilton bolu teklif .xls",
+            "yukleme": "2026-06-16T06:47:16.827Z"
           }
         },
         {
@@ -541,10 +566,10 @@
           "referansM2": 175,
           "meta": {
             "listeDosya": "kiremit-akasya-100-250.json",
-            "kalemSayisi": 30,
-            "toplamAdet": 30,
-            "kaynakDosya": "2016-085 KİREMİT AKASYA MEFFTECH/2016-085.xlsx",
-            "yukleme": "2026-05-31T01:50:19.554Z"
+            "kalemSayisi": 26,
+            "toplamAdet": 26,
+            "kaynakDosya": "2016-085 KİREMİT AKASYA MEFFTECH/kiremit-akasya-2016-085.xlsx",
+            "yukleme": "2026-06-16T07:13:43.294Z"
           }
         }
       ]
@@ -608,20 +633,19 @@
     },
     {
       "id": "mus-selinoz-turk",
-      "label": "Muş Selinöz Türk mutfağı (101)",
-      "ustKategori": "Türk mutfağı · planlanan",
+      "label": "Türk Mutfağı — Lokanta",
+      "ustKategori": "Fast Food / QSR",
       "bantlar": [
         {
           "id": "100-250",
-          "label": "100–250 m² (taslak referans m²)",
+          "label": "100–250 m² (Muş Selinöz 2016-101)",
           "referansM2": 200,
           "meta": {
             "listeDosya": "mus-selinoz-turk-100-250.json",
             "kalemSayisi": 89,
             "toplamAdet": 100,
             "kaynakDosya": "2016-101 MUŞ SELİNÖZ MİMARLIK/2016-101.xlsx",
-            "yukleme": "2026-05-31T02:33:20.890Z",
-            "durum": "planlanan"
+            "yukleme": "2026-06-16T07:06:59.811Z"
           }
         }
       ]
@@ -873,6 +897,98 @@
             "toplamAdet": 113,
             "kaynakDosya": "2024-032 HAMOUR ACARKENT/2024-032.xlsx",
             "yukleme": "2026-06-16T06:30:11.674Z"
+          }
+        },
+        {
+          "id": "referans",
+          "label": "Referans liste (2017)",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "patisserie-yemek-referans.json",
+            "kalemSayisi": 84,
+            "toplamAdet": 98,
+            "kaynakDosya": "2017-090 ARDİYE RESTAURANT/2017-090.1 mutfak.xlsx",
+            "yukleme": "2026-06-16T07:40:57.411Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boyoz-pastane",
+      "label": "Pastane Cafe (Boyoz)",
+      "ustKategori": "Pastane & Fırın",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m² (Smyrna Boyoz)",
+          "referansM2": 175,
+          "meta": {
+            "listeDosya": "boyoz-pastane-100-250.json",
+            "kalemSayisi": 24,
+            "toplamAdet": 25,
+            "kaynakDosya": "2016-134 SMYRNA BOYOZ LAINOX/2016-134.xlsx",
+            "yukleme": "2026-06-16T07:13:47.233Z",
+            "konseptSinif": "pastane-cafe-boyoz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tatil-otel",
+      "label": "Tatil Oteli",
+      "ustKategori": "Otel F&B",
+      "bantlar": [
+        {
+          "id": "800-1500",
+          "label": "800–1500 m² (Wyndham 2016-194)",
+          "referansM2": 1000,
+          "meta": {
+            "listeDosya": "tatil-otel-800-1500.json",
+            "kalemSayisi": 469,
+            "toplamAdet": 825,
+            "kaynakDosya": "2016-170 NOYAN OTELCİLİK LAINOX/2016-194R1_WYNDAM HOTEL_2042017.xlsx",
+            "yukleme": "2026-06-16T07:43:45.388Z",
+            "konseptSinif": "tatil-otel-wyndham-2016-194"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ekmek-kruvasan",
+      "label": "Ekmek + Kruvasan (İmalathane)",
+      "ustKategori": "Üretim / Fabrika",
+      "bantlar": [
+        {
+          "id": "150-400",
+          "label": "150–400 m² (Hakan İnan 093)",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "ekmek-kruvasan-150-400.json",
+            "kalemSayisi": 35,
+            "toplamAdet": 105,
+            "kaynakDosya": "2017-093 HAKAN İNAN İMALATHANE/2017-093.xlsx",
+            "yukleme": "2026-06-16T07:52:30Z",
+            "konseptSinif": "ekmek-kruvasan-imalathane"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meyhane",
+      "label": "Meyhane",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "200-350",
+          "label": "200–350 m² (Dersaadet 2017-098)",
+          "referansM2": 275,
+          "meta": {
+            "listeDosya": "meyhane-200-350.json",
+            "kalemSayisi": 63,
+            "toplamAdet": 78,
+            "kaynakDosya": "2017-098 DERSAADET KARAKÖY/2017-098-1.xlsx",
+            "yukleme": "2026-06-16T08:08:47.262Z",
+            "konseptSinif": "meyhane-dersaadet"
           }
         }
       ]

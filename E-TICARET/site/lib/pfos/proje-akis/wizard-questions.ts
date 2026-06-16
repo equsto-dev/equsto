@@ -38,7 +38,6 @@ export const PFOS_Q_BALIK_ALT = [
   "Balık Restaurant",
   "Balık lokantası",
   "Seafood bistro",
-  "Bilmiyorum",
 ] as const;
 
 export const PFOS_Q_FAST_ALT = [
@@ -48,6 +47,13 @@ export const PFOS_Q_FAST_ALT = [
   "Pide / Lahmacun",
   "Pizza (paket)",
   "Hot Dog / Snack",
+] as const;
+
+/** Türk / esnaf lokanta — self servis & food court → Kiremit Akasya referansı */
+export const PFOS_Q_RESTORAN_ALT = [
+  "Self servis",
+  "Food Court",
+  "Masaya servis",
   "Bilmiyorum",
 ] as const;
 
@@ -68,7 +74,6 @@ export const PFOS_Q_NE_PISIR = [
   "Meze",
   "Açık Büfe",
   "Diğer",
-  "Bilmiyorum",
 ] as const;
 
 export const PFOS_Q_KARAR = [
@@ -81,7 +86,6 @@ export const PFOS_Q_SERVIS = [
   "Self servis / kiosk",
   "Paket ve delivery ağırlıklı",
   "Karışık",
-  "Bilmiyorum",
 ] as const;
 
 /** Proje akışı (A) — müşteri sihirbazı soru kartları (12 adet, sıralı) */
@@ -129,7 +133,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining ≤200→100-200, 200–300→150-300, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); ekmek-kruvasan → 150-400; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; tatil-otel → 800-1500; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; boyoz-pastane → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {
@@ -206,6 +210,20 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     mapsTo: "fast_food.altTip",
     motorEtkisi: "planlanan — genel şablon",
     note: "Burger, FC, döner vb. — liste motoru planlanan.",
+  },
+  {
+    id: "q_restoran_alt",
+    step: "04",
+    panel: "C3",
+    text: "Restoran alt tip",
+    type: "select",
+    required: "true",
+    options: [...PFOS_Q_RESTORAN_ALT],
+    gosterIf: "q_dukkan_turu=Türk / Esnaf lokanta",
+    mapsTo: "turk_restoran.altTip",
+    motorEtkisi:
+      "self servis / food court → kiremit-akasya 100–250; masaya servis → turk-restoran",
+    note: "2016-085 Kiremit Akasya · self servis & food court aynı referans.",
   },
   {
     id: "q_ne_pisireceksin",
