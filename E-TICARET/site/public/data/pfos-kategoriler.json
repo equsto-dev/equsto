@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T09:38:42.277Z",
+  "updated_at": "2026-06-16T10:05:51.488Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -135,6 +135,18 @@
             "toplamAdet": 104,
             "kaynakDosya": "03-italyan 100-300 m2.xlsx",
             "yukleme": "2026-06-16T04:34:18.389Z"
+          }
+        },
+        {
+          "id": "150-300",
+          "label": "150–300 m² (Havelka)",
+          "referansM2": 225,
+          "meta": {
+            "listeDosya": "italyan-150-300.json",
+            "kalemSayisi": 47,
+            "toplamAdet": 51,
+            "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
+            "yukleme": "2026-06-16T10:05:51.486Z"
           }
         }
       ]
@@ -355,14 +367,14 @@
         },
         {
           "id": "150-300",
-          "label": "150–300 m²",
+          "label": "150–300 m² (Havelka)",
           "referansM2": 225,
           "meta": {
             "listeDosya": "all-day-dining-cafe-150-300.json",
-            "kalemSayisi": 89,
-            "toplamAdet": 103,
-            "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
-            "yukleme": "2026-05-30T23:38:31.704Z"
+            "kalemSayisi": 47,
+            "toplamAdet": 51,
+            "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
+            "yukleme": "2026-06-16T10:05:51.463Z"
           }
         }
       ]
@@ -1022,6 +1034,25 @@
             "kaynakDosya": "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
             "yukleme": "2026-06-16T09:25:05.178Z",
             "konseptSinif": "personel-yemekhane-laguna"
+          }
+        }
+      ]
+    },
+    {
+      "id": "uka-akasya",
+      "label": "UKA Akasya",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "500-1000",
+          "label": "500–1000 m²",
+          "referansM2": 500,
+          "meta": {
+            "listeDosya": "uka-akasya-500-1000.json",
+            "kalemSayisi": 0,
+            "toplamAdet": 0,
+            "kaynakDosya": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
+            "yukleme": "2026-06-16T09:59:42.105Z"
           }
         }
       ]

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T07:52:30.468Z",
-  "konseptSayisi": 58,
-  "bolumSayisi": 180,
+  "updated_at": "2026-06-16T10:05:51.585Z",
+  "konseptSayisi": 64,
+  "bolumSayisi": 191,
   "konseptler": [
     {
       "motorSlug": "all-day-dining-cafe",
@@ -43,35 +43,89 @@
       "ustSegment": "Restoran",
       "dukkanSecim": "All Dining Cafe",
       "desc": "All day dining · 100–200 m² Smyrna Boyoz (2016-134) · 150–300 m² The House · >300 m² THC proforma",
-      "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
+      "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
       "bantId": "150-300",
-      "kalemSayisi": 89,
+      "kalemSayisi": 47,
       "bolumler": [
         {
-          "bolum": "GENEL",
-          "kalemSayisi": 89,
-          "toplamAdet": 104,
+          "bolum": "MUTFAK",
+          "kalemSayisi": 31,
+          "toplamAdet": 32,
           "ekipmanTipleri": [
-            "bar",
             "buzdolabi",
             "davlumbaz",
             "diger",
             "firin",
             "hamur",
             "izgara",
-            "kesim",
             "ocak",
             "raf",
-            "soguk_oda",
             "tezgah"
           ],
           "ornekKalemler": [
-            "İSTİF RAFI",
-            "İSTİF RAFI",
+            "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "MAKE-UP DOLABI, MERMER TABLALI",
+            "PİZZA FIRINI, ÇİFT KATLI",
+            "FIRIN TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 10,
+          "toplamAdet": 10,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP"
+          ]
+        },
+        {
+          "bolum": "DERİN DONDURUCU ODA",
+          "kalemSayisi": 3,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
             "PANEL TİP SOĞUK ODA",
             "İSTİF RAFI",
-            "İSTİF RAFI",
-            "PANEL TİP DERİN DONDURUCU DEPO"
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "SOĞUK ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 3,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "KURU DEPO",
+          "kalemSayisi": 1,
+          "toplamAdet": 2,
+          "ekipmanTipleri": [
+            "raf"
+          ],
+          "ornekKalemler": [
+            "İSTİF RAFI"
           ]
         }
       ]
@@ -135,7 +189,7 @@
       "label": "Balıkçı / Balık restoran",
       "ustSegment": "Restoran",
       "dukkanSecim": "Balık Restaurant",
-      "desc": "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+      "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
       "kaynakDosya": "150-250 m2 BALIKCI-ekipman-listesi.xlsx",
       "bantId": "150-250",
       "kalemSayisi": 52,
@@ -170,7 +224,7 @@
       "label": "Balıkçı / Balık restoran",
       "ustSegment": "Restoran",
       "dukkanSecim": "Balık Restaurant",
-      "desc": "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+      "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
       "kaynakDosya": "2016-094 UÇAN BALIK/2016-094.xlsx",
       "bantId": "150-250",
       "kalemSayisi": 56,
@@ -191,7 +245,7 @@
             "DEPO TİPİ BUZDOLABI, TEK KAPILI (fagor)",
             "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
             "DUVAR RAFI",
-            "ÇÖP ARABASI (portashelf)",
+            "ÇÖP ARABASI",
             "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
             "MAKE-UP BUZDOLABI, 3 KAPILI (fagor)"
           ]
@@ -228,7 +282,7 @@
           "ornekKalemler": [
             "BULAŞIK SIYIRMA TEZGAHI",
             "BASKET RAFI",
-            "ÇÖP ARABASI (portashelf)",
+            "ÇÖP ARABASI",
             "TEK EVYELİ BYM GİRİŞ TEZGAHI",
             "ÖN YIKAMA DUŞU (cancan)",
             "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP (gürçelik)"
@@ -248,7 +302,7 @@
             "ÇALIŞMA TEZGAHI, TABAN RAFLI",
             "BALIK HAZIRLAMA TEZGAHI",
             "DUVAR RAFI",
-            "ÇÖP ARABASI (portashelf)"
+            "ÇÖP ARABASI"
           ]
         },
         {
@@ -261,8 +315,8 @@
           ],
           "ornekKalemler": [
             "PANEL TİP SOĞUK ODA (rota grup)",
-            "İSTİF RAFI, 4 KATLI (portashelf)",
-            "İSTİF RAFI, 4 KATLI (portashelf)"
+            "İSTİF RAFI, 4 KATLI",
+            "İSTİF RAFI, 4 KATLI"
           ]
         },
         {
@@ -275,8 +329,8 @@
           ],
           "ornekKalemler": [
             "PANEL TİP SOĞUK ODA (rota grup)",
-            "İSTİF RAFI, 4 KATLI (portashelf)",
-            "İSTİF RAFI, 4 KATLI (portashelf)"
+            "İSTİF RAFI, 4 KATLI",
+            "İSTİF RAFI, 4 KATLI"
           ]
         },
         {
@@ -289,7 +343,7 @@
           ],
           "ornekKalemler": [
             "PANEL TİP DERİN DONDURUCU (rota grup)",
-            "İSTİF RAFI, 4 KATLI (portashelf)"
+            "İSTİF RAFI, 4 KATLI"
           ]
         },
         {
@@ -300,8 +354,8 @@
             "izgara"
           ],
           "ornekKalemler": [
-            "YER IZGARASI (portashelf)",
-            "YER IZGARASI (portashelf)"
+            "YER IZGARASI",
+            "YER IZGARASI"
           ]
         },
         {
@@ -312,7 +366,7 @@
             "raf"
           ],
           "ornekKalemler": [
-            "İSTİF RAFI, 4 KATLI (portashelf)"
+            "İSTİF RAFI, 4 KATLI"
           ]
         }
       ]
@@ -322,7 +376,43 @@
       "label": "Balıkçı / Balık restoran",
       "ustSegment": "Restoran",
       "dukkanSecim": "Balık Restaurant",
-      "desc": "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+      "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
+      "kaynakDosya": "2017-191 DUDAK PAYI WATERGARDEN/2017-191-2.xlsx",
+      "bantId": "350-600",
+      "kalemSayisi": 70,
+      "bolumler": [
+        {
+          "bolum": "MUTFAK",
+          "kalemSayisi": 70,
+          "toplamAdet": 99,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "izgara",
+            "kesim",
+            "ocak",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "ISITICI LAMBA",
+            "SERVİS RAFI TEK SIRA",
+            "SETÜSTÜ NÖTR ARA TEZGAH",
+            "GAZLI SULU SİSTEM IZGARA",
+            "ELEKTRİKLİ  FRİTÖZ",
+            "TEZGAH TİPİ G SERİSİ DERİN DONDURUCU"
+          ]
+        }
+      ]
+    },
+    {
+      "motorSlug": "balikci",
+      "label": "Balıkçı / Balık restoran",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Balık Restaurant",
+      "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
       "kaynakDosya": "80-150 m2 BALIKCI-ekipman-listesi.xlsx",
       "bantId": "80-150",
       "kalemSayisi": 42,
@@ -376,7 +466,7 @@
       "label": "Balıkçı / Balık restoran",
       "ustSegment": "Restoran",
       "dukkanSecim": "Balık Restaurant",
-      "desc": "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+      "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
       "kaynakDosya": "MAHALLE BALIKCI-ekipman-listesi.xlsx",
       "bantId": "mahalle",
       "kalemSayisi": 32,
@@ -696,6 +786,179 @@
       ]
     },
     {
+      "motorSlug": "donerci",
+      "label": "donerci",
+      "ustSegment": "",
+      "dukkanSecim": "donerci",
+      "desc": "",
+      "kaynakDosya": "2017-112 DÖNERCİ CELAL USTA/2017-112-2.xlsx",
+      "bantId": "350-500",
+      "kalemSayisi": 82,
+      "bolumler": [
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 21,
+          "toplamAdet": 25,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "BULAŞIK ALMA TEZGAHI",
+            "BASKET RAFI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "DÖNER PİŞİRME",
+          "kalemSayisi": 20,
+          "toplamAdet": 26,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "hamur",
+            "pasta",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "TANDIR OCAĞI",
+            "MERMER TABLALI ÇALIŞMA TEZGAHI",
+            "HAMUR AÇMA MAKİNASI",
+            "TABDIR OCAĞI DAVLUMBAZI",
+            "ÇORBA PİLAV BAINMARIE"
+          ]
+        },
+        {
+          "bolum": "İÇECEK & SALATA & TATLI BÖLÜMÜ",
+          "kalemSayisi": 10,
+          "toplamAdet": 11,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "pasta",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "BARDAK YIKAMA MAKİNASI",
+            "ÇALIŞMA TEZGAHI, DOLAPLI",
+            "ÇAY OCAĞI",
+            "DAVLUMBAZ, DUVAR TİPİ",
+            "ÇALIŞMA TEZGAHI, DOLAPLI"
+          ]
+        },
+        {
+          "bolum": "SEBZE HAZIRLIK",
+          "kalemSayisi": 7,
+          "toplamAdet": 7,
+          "ekipmanTipleri": [
+            "diger",
+            "kesim",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "PATATES SOYMA MAKİNASI",
+            "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+            "ÇÖP ARABASI",
+            "ÖN YIKAMA DUŞU",
+            "BIÇAK STERİL DOLABI",
+            "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "HAMUR HAZIRLIK",
+          "kalemSayisi": 7,
+          "toplamAdet": 9,
+          "ekipmanTipleri": [
+            "diger",
+            "hamur",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "SPİRAL HAMUR YOĞURMA MAKİNASI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "UN ŞEKER ARABASI",
+            "ÇALIŞMA TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "FIRIN",
+          "kalemSayisi": 6,
+          "toplamAdet": 6,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "firin",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "FIRIN",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, MERMER TABLALI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "MERMER TABLALI ÇALIŞMA TEZGAHI",
+            "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+            "MERMER TEZGAH BANKO"
+          ]
+        },
+        {
+          "bolum": "MUTFAK",
+          "kalemSayisi": 6,
+          "toplamAdet": 10,
+          "ekipmanTipleri": [
+            "diger",
+            "ocak",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "4 AÇIK ALEVLİ OCAK, GAZLI, DOLAPLI",
+            "YER OCAĞI, ÇİFT YANIŞLI, CE'Lİ",
+            "[object Object]",
+            "ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "HAREKETLİ ÇALIŞMA TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "YER IZGARASI",
+          "kalemSayisi": 3,
+          "toplamAdet": 9,
+          "ekipmanTipleri": [
+            "diger",
+            "izgara"
+          ],
+          "ornekKalemler": [
+            "YER IZGARASI",
+            "YER IZGARASI",
+            "YAĞ AYIRICI"
+          ]
+        },
+        {
+          "bolum": "TEMİZLİK ODASI",
+          "kalemSayisi": 2,
+          "toplamAdet": 3,
+          "ekipmanTipleri": [
+            "diger"
+          ],
+          "ornekKalemler": [
+            "MOB YIKAMA EVYESİ",
+            "ÇAMAŞIR MAKİNASI"
+          ]
+        }
+      ]
+    },
+    {
       "motorSlug": "restoran",
       "label": "Dünya Mutfağı",
       "ustSegment": "Restoran",
@@ -736,10 +999,10 @@
     },
     {
       "motorSlug": "ekmek-kruvasan",
-      "label": "Ekmek + Kruvasan (İmalathane)",
+      "label": "Ekmek + Kruvasan",
       "ustSegment": "Üretim / Fabrika",
-      "dukkanSecim": "Ekmek + Kruvasan (İmalathane)",
-      "desc": "",
+      "dukkanSecim": "Ekmek + Kruvasan",
+      "desc": "Ekmek + kruvasan imalathane · soğuk oda · şoklama · fırın hattı · 150–400 m² · Hakan İnan 2017-093 · motor: ekmek-kruvasan",
       "kaynakDosya": "2017-093 HAKAN İNAN İMALATHANE/2017-093.xlsx",
       "bantId": "150-400",
       "kalemSayisi": 35,
@@ -1453,35 +1716,89 @@
       "ustSegment": "Restoran",
       "dukkanSecim": "İtalyan Restoran",
       "desc": "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
-      "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
+      "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
       "bantId": "150-300",
-      "kalemSayisi": 89,
+      "kalemSayisi": 47,
       "bolumler": [
         {
-          "bolum": "GENEL",
-          "kalemSayisi": 89,
-          "toplamAdet": 104,
+          "bolum": "MUTFAK",
+          "kalemSayisi": 31,
+          "toplamAdet": 32,
           "ekipmanTipleri": [
-            "bar",
             "buzdolabi",
             "davlumbaz",
             "diger",
             "firin",
             "hamur",
             "izgara",
-            "kesim",
             "ocak",
             "raf",
-            "soguk_oda",
             "tezgah"
           ],
           "ornekKalemler": [
-            "İSTİF RAFI",
-            "İSTİF RAFI",
+            "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "MAKE-UP DOLABI, MERMER TABLALI",
+            "PİZZA FIRINI, ÇİFT KATLI",
+            "FIRIN TEZGAHI"
+          ]
+        },
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 10,
+          "toplamAdet": 10,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP"
+          ]
+        },
+        {
+          "bolum": "DERİN DONDURUCU ODA",
+          "kalemSayisi": 3,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
             "PANEL TİP SOĞUK ODA",
             "İSTİF RAFI",
-            "İSTİF RAFI",
-            "PANEL TİP DERİN DONDURUCU DEPO"
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "SOĞUK ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 3,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "KURU DEPO",
+          "kalemSayisi": 1,
+          "toplamAdet": 2,
+          "ekipmanTipleri": [
+            "raf"
+          ],
+          "ornekKalemler": [
+            "İSTİF RAFI"
           ]
         }
       ]
@@ -2547,6 +2864,137 @@
       ]
     },
     {
+      "motorSlug": "meyhane",
+      "label": "Meyhane / Mezeli",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Meyhane",
+      "desc": "Meze / meyhane · teklif motoru: meyhane",
+      "kaynakDosya": "2017-098 DERSAADET KARAKÖY/2017-098-1.xlsx",
+      "bantId": "200-350",
+      "kalemSayisi": 63,
+      "bolumler": [
+        {
+          "bolum": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "kalemSayisi": 18,
+          "toplamAdet": 20,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "izgara",
+            "ocak",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "MAKE-UP BUZDOLABI, 2 KAPILI",
+            "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "FIRIN TEZGAHI",
+            "FIRIN",
+            "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI"
+          ]
+        },
+        {
+          "bolum": "İÇKİ BAR",
+          "kalemSayisi": 15,
+          "toplamAdet": 16,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "MEZE TEŞHİR DOLABI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "BARDAK YIKAMA MAKİNASI",
+            "BUZ MAKİNASI",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+            "ÇAY OCAĞI"
+          ]
+        },
+        {
+          "bolum": "MUTFAK",
+          "kalemSayisi": 14,
+          "toplamAdet": 14,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+            "BALIK AYIKLAMA TEZGAHI",
+            "DUVAR RAFI",
+            "ÇÖP ARABASI",
+            "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI"
+          ]
+        },
+        {
+          "bolum": "BULAŞIKHANE",
+          "kalemSayisi": 9,
+          "toplamAdet": 10,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "BULAŞIK YIKAMA MAKİNASI"
+          ]
+        },
+        {
+          "bolum": "DERİN DONDURUCU",
+          "kalemSayisi": 3,
+          "toplamAdet": 5,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "raf"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP DERİN DONDURUCU",
+            "İSTİF RAFI",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "SOĞUK ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA, MEVCUT MONTAJ",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "YER IZGARASI",
+          "kalemSayisi": 2,
+          "toplamAdet": 9,
+          "ekipmanTipleri": [
+            "izgara"
+          ],
+          "ornekKalemler": [
+            "YER IZGARASI",
+            "YER IZGARASI"
+          ]
+        }
+      ]
+    },
+    {
       "motorSlug": "kokteyl-kahve",
       "label": "Mixology Bar",
       "ustSegment": "Bar & Lounge",
@@ -2989,6 +3437,68 @@
             "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
             "EVYE GÖZÜ",
             "BULAŞIK MAKİNASI, SETALTI, İTALYAN"
+          ]
+        }
+      ]
+    },
+    {
+      "motorSlug": "personel-yemekhane",
+      "label": "Personel Yemekhanesi",
+      "ustSegment": "Catering",
+      "dukkanSecim": "Personel Yemekhanesi",
+      "desc": "Personel yemekhanesi · ~200 kişi · Laguna Thermal 2017-058 referans · motor: personel-yemekhane",
+      "kaynakDosya": "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
+      "bantId": "150-250",
+      "kalemSayisi": 21,
+      "bolumler": [
+        {
+          "bolum": "SICAK MUTFAK",
+          "kalemSayisi": 11,
+          "toplamAdet": 13,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "firin",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "YER OCAĞI, ARABALI",
+            "FIRINI TEZGAHI",
+            "COMBI FIRIN (2. EL)",
+            "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+            "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "DUVAR RAFI"
+          ]
+        },
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 8,
+          "toplamAdet": 9,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ MAKİNE GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞ BATARYASI",
+            "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP (2. EL)",
+            "DAVLUMBAZ, DUVAR TİPİ"
+          ]
+        },
+        {
+          "bolum": "YER IZGARASI",
+          "kalemSayisi": 2,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "izgara"
+          ],
+          "ornekKalemler": [
+            "YER IZGARASI, YANDAN ÇIKIŞLI, ALTDAN\nSİFONLU",
+            "YER IZGARASI, YANDAN ÇIKIŞLI, ALTDAN\nSİFONLU"
           ]
         }
       ]
@@ -4154,14 +4664,14 @@
       "ustSegment": "Otel F&B",
       "dukkanSecim": "Şehir Oteli (Business)",
       "desc": "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı (2017-050) · Sheraton Arnavutköy (2024-122) · motor: sehir-otel",
-      "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/hilton bolu teklif .xls",
+      "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/Hampton By Hilton.xls",
       "bantId": "500-2000",
       "kalemSayisi": 186,
       "bolumler": [
         {
           "bolum": "S I C A K M U T F A K",
           "kalemSayisi": 35,
-          "toplamAdet": 48,
+          "toplamAdet": 50,
           "ekipmanTipleri": [
             "buzdolabi",
             "davlumbaz",
@@ -4174,16 +4684,16 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "Izgara, Perfect 900seri, 1/2M, gazlı, düz, setüstü (OLIS - 0782879)",
+            "Izgara, Perfect 900seri, 1/2M, gazlı, düz, setüstü (OLIS)",
             "Dolap, Perfect 900seri, 1/2modül, kapılı (OLIS)",
-            "Fritöz, Perfect 900seri, 1/2M, elektrikli (OLIS - 0781949)",
-            "Ara tezgah, Perfect 900seri, 1/2modül, setüstü (OLIS - 0783229)",
-            "Kuzine, Perfect 900seri, 1M, gazlı, 4 açık ocak, setüstü (OLIS - 0782779)",
+            "Fritöz, Perfect 900seri, 1/2M, elektrikli, setüstü (OLIS)",
+            "Ara tezgah, Perfect 900seri, 1/2modül, setüstü (OLIS)",
+            "Kuzine, Perfect 900seri, 1M, gazlı, 4 açık ocak, setüstü (OLIS)",
             "Dolap, Perfect 900seri, 1modül, kapılı (OLIS)"
           ]
         },
         {
-          "bolum": "S E R V İ S B A R",
+          "bolum": "SERVIS B A R",
           "kalemSayisi": 22,
           "toplamAdet": 23,
           "ekipmanTipleri": [
@@ -4196,15 +4706,15 @@
           ],
           "ornekKalemler": [
             "Tezgah tipi buzdolabı, 2 kapılı, poliüretan gövdeli (FRENOX)",
-            "Yatay Buzd. Ada Serisi 2+2 Cam kapılı, -2/+8 C° , 281 lt. 0,45 KW 140*70*85 CM. (FRENOX)",
-            "Çalışma tezgahı, Premium seri (PORTASHELF)",
-            "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCHILIO)",
-            "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarı otomatik 110V/230V - 50/60 Hz,öğütme çapı:64mm (CUNILL)",
-            "Kokteyl tezgahı (PORTASHELF)"
+            "Yatay Buzd. Ada Serisi 2+2 Cam kapılı, -2/+8 Cü , 281 lt. 0,45 KW 140*70*85 CM. (FRENOX)",
+            "çalışma tezgahı, Premium seri",
+            "Espresso kahve makinesi,yarü otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+            "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarü otomatik 110V/230V - 50/60 Hz,ısıtme şapı:64mm (CUNILL)",
+            "Kokteyl tezgahı"
           ]
         },
         {
-          "bolum": "S E R V İ S B U L A Ş I K",
+          "bolum": "SERVIS BULAŞIK",
           "kalemSayisi": 21,
           "toplamAdet": 26,
           "ekipmanTipleri": [
@@ -4215,12 +4725,12 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "Makina giriş-çıkış tezgahı (PORTASHELF)",
-            "Bulaşık yıkama makinası, 1080 Tb/h (DIHR - HT 11 T)",
-            "Davlumbaz, Duvar tipi, filtresiz (PORTASHELF)",
-            "Ön yıkama duşu tezgaha monte (CANCAN)",
-            "Makina giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, sağ (PORTASHELF)",
-            "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli (PORTASHELF)"
+            "Makine giriş-çıkış tezgahı",
+            "Bulaşık yıkama makinası, 1080 Tb/h (DIHR)",
+            "Davlumbaz, Duvar tipi, filtresiz",
+            "ön yıkama duşu tezgaha monte (CANCAN)",
+            "Makine giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, saç",
+            "çöp kazanı kapaklı Ø400 AISI304, 4 tekerlekli"
           ]
         },
         {
@@ -4235,11 +4745,11 @@
           ],
           "ornekKalemler": [
             "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli (FRENOX)",
-            "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-            "Polietilen tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-            "Çalışma tezgahı, Premium seri, Hareketli, alt tablalı (PORTASHELF)",
-            "Tel Raf-4 Katlı- ınox304-46*122*183 (PORTASHELF)",
-            "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)"
+            "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+            "Polietilen tablalı tezgah, Premium seri, Alt tablalı",
+            "çalışma tezgahı, Premium seri, Hareketli, alt tablalı",
+            "Tel Raf-4 Katl- inox304-46*122*183",
+            "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı"
           ]
         },
         {
@@ -4251,16 +4761,16 @@
             "raf"
           ],
           "ornekKalemler": [
-            "El yıkama eviyesi, Dizden kumandalı, çift su girişli (PORTASHELF)",
-            "Geri toplamalı ön yıkama duşu,  15 mt. (CANCAN)",
-            "Plastik Çöp Konteyneri - 770 LT.- Yeşil, 4 TEKERLEKLİ (UZAY)",
-            "Plastil Çöp Konteyneri , 240 lt. , yeşil, 2 tekerlekli (UZAY)",
-            "Tel Raf-4 Katlı- ınox304-53*122*183 (PORTASHELF)",
-            "Tartım baskülü,  300  LCD ekran, 70*80 cm ptatform. otomatik sıfırlama (TEM)"
+            "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
+            "Geri toplamalı ön yıkama duşu, 15 mt. (CANCAN)",
+            "Plastik çöp Konteyneri - 770 LT.- Yeşil, 4 TEKERLEKLİ (UZAY)",
+            "Plastil çöp Konteyneri , 240 lt. , yeşil, 2 tekerlekli (UZAY)",
+            "Tel Raf-4 Katl- inox304-53*122*183",
+            "Tartım baskılı, 300 LCD ekran, 70*80 cm ptatform. otomatik süfrlama (TEM)"
           ]
         },
         {
-          "bolum": "S O Ğ U K M U T F A K",
+          "bolum": "S O I U K M U T F A K",
           "kalemSayisi": 14,
           "toplamAdet": 17,
           "ekipmanTipleri": [
@@ -4270,16 +4780,16 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı (PORTASHELF)",
-            "Duvar rafı (PORTASHELF)",
-            "Salam dilimleme makinesi, ekonomik model,çap: 300 mm (İTHAL)",
-            "Çalışma tezgahı, Premium seri (PORTASHELF)",
-            "Pizza hazırlık ünitesi, Paslanmaz tablalı, yüksek garnitür üniteli (FRENOX)",
+            "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı",
+            "Duvar rafı",
+            "Salam dilimleme makinesi, ekonomik model, çap: 300 mm",
+            "çalışma tezgahı, Premium seri",
+            "Pizza hazırlık ünitesi, Paslanmaz tablalı, yüksek garnitürlü üniteli (FRENOX)",
             "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli (FRENOX)"
           ]
         },
         {
-          "bolum": "P A T İ S E R İ",
+          "bolum": "P A T I S E R I",
           "kalemSayisi": 12,
           "toplamAdet": 15,
           "ekipmanTipleri": [
@@ -4293,10 +4803,10 @@
           "ornekKalemler": [
             "Tezgah tipi buzdolabı, Mermer tablalı, 2 kapılı, poliüretan gövdeli (FRENOX)",
             "Malzeme (erzak) arabası , Plastik , 102 lt., Beyaz renk (UZAY)",
-            "Mermer tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-            "Duvar dolabı, Kapılı (PORTASHELF)",
-            "Çalışma tezgahı, Premium seri, Alt tablalı (PORTASHELF)",
-            "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı (PORTASHELF)"
+            "Mermer tablalı tezgah, Premium seri, Alt tablalı",
+            "Duvar dolabı, Kapılı",
+            "çalışma tezgahı, Premium seri, Alt tablalı",
+            "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı"
           ]
         },
         {
@@ -4310,12 +4820,12 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-            "Polietilen tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-            "Duvar rafı (PORTASHELF)",
-            "Çalışma tezgahı, Premium seri, Alt tablalı (PORTASHELF)",
-            "Kıyma Mak. K.Paslanmaz  Soğutmalı-32 no- 380 V, saat kg.  600 (BOSFOR)",
-            "Et kütüğü, Polietilen tablalı (PORTASHELF)"
+            "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+            "Polietilen tablalı tezgah, Premium seri, Alt tablalı",
+            "Duvar rafı",
+            "çalışma tezgahı, Premium seri, Alt tablalı",
+            "Kıyma Mak. K.Paslanmaz Soğutmalı-32 no- 380 V, saat kg. 600 (BOSFOR)",
+            "Et kütüşı, Polietilen tablalı"
           ]
         },
         {
@@ -4327,15 +4837,15 @@
           ],
           "ornekKalemler": [
             "Soğuk Oda, Alarm sistemli (ROTA)",
-            "Çöp Soğuk Oda (ROTA)",
-            "Çöp Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-            "Patiseri  Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-            "Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-            "Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)"
+            "çöp Soğuk Oda (ROTA)",
+            "çöp Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+            "Patiseri Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+            "Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+            "Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)"
           ]
         },
         {
-          "bolum": "S E R V İ S O F İ S İ",
+          "bolum": "SERVIS O F I S I",
           "kalemSayisi": 8,
           "toplamAdet": 21,
           "ekipmanTipleri": [
@@ -4344,11 +4854,11 @@
           ],
           "ornekKalemler": [
             "Filtre kahve makinesi,224 fincan (18ltr), 2 cam potlu, 2x1.8 ltr, 2 hot plate li, (ANIMO)",
-            "Çay otomatı Master 2000, 23 lt.CC-23 (REMTA)",
-            "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCHILIO)",
-            "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarı otomatik 110V/230V - 50/60 Hz,öğütme çapı:64mm (CUNILL)",
-            "Bar Buzdolabı, tek kapılı,  +2/+12 c , 217 W (FRENOX)",
-            "İndüksiyonlu sıcak tutma ünitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz (SCHOLL)"
+            "çay otomatı Master 2000, 23 lt.CC-23 (REMTA)",
+            "Espresso kahve makinesi,yarü otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+            "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarü otomatik 110V/230V - 50/60 Hz,ısıtme şapı:64mm (CUNILL)",
+            "Bar Buzdolabı, tek kapılı, +2/+12 c , 217 W (FRENOX)",
+            "ındüksiyonlu sıcak tutma ünitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz (SCHOLL)"
           ]
         },
         {
@@ -4359,16 +4869,16 @@
             "diger"
           ],
           "ornekKalemler": [
-            "Yer ızgarası, tavalı,yatay  çıkışlı, eğimsiz, 300*300*122  mm  DN 70 PVC(Ø75mm), SIĞ TİP (PORTASHELF)",
-            "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip (PORTASHELF)",
-            "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip (PORTASHELF)",
-            "Yer ızgarası, tavalı,yatay  çıkışlı, eğimsiz, 300*300*122  mm  DN 70 PVC(Ø75mm), SIĞ TİP (PORTASHELF)",
-            "Yer ızgarası, tavalı, yatay  çıkışlı,orta eğimli, Sığ tip, 400*1384*145  mm  DN 70 PVC(Ø75mm) (PORTASHELF)",
-            "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,  300*941*145  mm  DN 70 PVC(Ø75mm) (PORTASHELF)"
+            "Yer üzgarası, tavalı,yatay ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), SIKI TİP",
+            "Yer üzgarası, tavalı, alttan ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), Sıı tip",
+            "Yer üzgarası, tavalı, alttan ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), Sıı tip",
+            "Yer üzgarası, tavalı,yatay ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), SIKI TİP",
+            "Yer üzgarası, tavalı, yatay ııkışlı,orta eğimli, Sıı tip, 400*1384*145 mm DN 70 PVC(Ø75mm)",
+            "Yer üzgarası, tavalı, alttan ııkışlı,orta eğimli, Sıı tip, 300*941*145 mm DN 70 PVC(Ø75mm)"
           ]
         },
         {
-          "bolum": "BANQUET MUTFAĞI TOPLAM",
+          "bolum": "BANQUET MUTFAII TOPLAM",
           "kalemSayisi": 7,
           "toplamAdet": 7,
           "ekipmanTipleri": [
@@ -4377,16 +4887,16 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "Kuver ünitesi, GN1/4*3ad., GN1/1*1ad. (PORTASHELF)",
-            "Sıcak servis ünitesi, Elektrikli, GN1/1*4 (PORTASHELF)",
-            "Servis rafı, Tek sıra (PORTASHELF)",
-            "Tepsi standı,, Cr-Ni boru (PORTASHELF)",
-            "Vitrin, Soğutmalı, buzdolaplı (PORTASHELF)",
-            "Tepsi standı, Cr-Ni boru (PORTASHELF)"
+            "Kuver ünitesi, GN1/4*3ad., GN1/1*1ad.",
+            "Sıcak servis ünitesi, Elektrikli, GN1/1*4",
+            "Servis rafı, Tek sıra",
+            "Tepsi standı, Cr-Ni boru",
+            "Vitrin, Soğutmalı, buzdolaplı",
+            "Tepsi standı, Cr-Ni boru"
           ]
         },
         {
-          "bolum": "M U T F A K B U L A Ş I K",
+          "bolum": "M U T F A K BULAŞIK",
           "kalemSayisi": 6,
           "toplamAdet": 7,
           "ekipmanTipleri": [
@@ -4396,16 +4906,16 @@
             "tezgah"
           ],
           "ornekKalemler": [
-            "Kazan yıkama eviyesi, Izgara tablalı (PORTASHELF)",
-            "Ön Yıkama Duşu - Duvara monte, Tek gövde duvara monte bataryalı (CANCAN)",
-            "Çalışma tezgahı, Premium seri (PORTASHELF)",
-            "Kepçe askı borusu, 1000mm (PORTASHELF)",
-            "Demonte istif rafı, Kazan/tencere (PORTASHELF)",
-            "Demonte istif rafı, Kazan/tencere (PORTASHELF)"
+            "Kazan yıkama eviyesi, Izgara tablalı",
+            "ön yıkama Duşu - Duvara monte, Tek gövde duvara monte bataryalı (CANCAN)",
+            "çalışma tezgahı, Premium seri",
+            "Kepçe askı borusu, 1000mm",
+            "Demonte istif rafı, Kazan/tencere",
+            "Demonte istif rafı, Kazan/tencere"
           ]
         },
         {
-          "bolum": "G A R S O N H O L Ü",
+          "bolum": "G A R S O N H O L I",
           "kalemSayisi": 2,
           "toplamAdet": 8,
           "ekipmanTipleri": [
@@ -4413,7 +4923,7 @@
           ],
           "ornekKalemler": [
             "Soğuk banket arabası +2 / +10, 7 adet GN 2/1 kapasite (FRENOX)",
-            "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli (PORTASHELF)"
+            "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli"
           ]
         }
       ]
@@ -5135,6 +5645,355 @@
       ]
     },
     {
+      "motorSlug": "turk-restoran",
+      "label": "Türk Restoranı",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Türk / Esnaf lokanta",
+      "desc": "Türk / esnaf lokanta · S13-388 (150–300) + Sütiş 2017-006 (200–5000) · motor: turk-restoran",
+      "kaynakDosya": "2017-106 SÜTİŞ KOŞUYOLU/2017-106.xlsx",
+      "bantId": "250-500",
+      "kalemSayisi": 81,
+      "bolumler": [
+        {
+          "bolum": "SERVİS MUTFAĞI",
+          "kalemSayisi": 24,
+          "toplamAdet": 24,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "izgara",
+            "ocak",
+            "pasta",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+            "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "ÇORBA BAINMARIE",
+            "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+            "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI"
+          ]
+        },
+        {
+          "bolum": "BAR",
+          "kalemSayisi": 16,
+          "toplamAdet": 19,
+          "ekipmanTipleri": [
+            "bar",
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "BULAŞIK YIKAMA MAKİNASI",
+            "BUZ MAKİNASI",
+            "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+            "TAM OTOMATİK PORTAKAL SIKMA MAKİNASI",
+            "BAR BLENDER"
+          ]
+        },
+        {
+          "bolum": "HAZIRLIK MUTFAĞI",
+          "kalemSayisi": 16,
+          "toplamAdet": 18,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "hamur",
+            "ocak",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "FIRIN TEZGAHI",
+            "FIRIN",
+            "2 AÇIK ALEVLİ OCAK, DOLAPLI, GAZLI",
+            "YER OCAĞI, ÇİFT YANIŞLI, GAZLI",
+            "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+            "ÇALIŞMA TEZGAHI, TABAN RAFLI"
+          ]
+        },
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 11,
+          "toplamAdet": 13,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA EZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP"
+          ]
+        },
+        {
+          "bolum": "SERVİS TEŞHİR",
+          "kalemSayisi": 6,
+          "toplamAdet": 6,
+          "ekipmanTipleri": [
+            "diger",
+            "pasta"
+          ],
+          "ornekKalemler": [
+            "DONDURMA DOLABI",
+            "KAHVALTI DOLABI",
+            "BÖREK DOLABI",
+            "TATLI DOLABI",
+            "ET TEŞHİR DOLABI",
+            "PASTA TEŞHİR DOLABI"
+          ]
+        },
+        {
+          "bolum": "SOĞUK ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "DERİN DONDURUCU ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 4,
+          "ekipmanTipleri": [
+            "diger",
+            "raf"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP DERİNDONDURUCU ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "YER IZGARASI",
+          "kalemSayisi": 2,
+          "toplamAdet": 12,
+          "ekipmanTipleri": [
+            "izgara"
+          ],
+          "ornekKalemler": [
+            "YER IZGARASI",
+            "YER IZGARASI"
+          ]
+        },
+        {
+          "bolum": "KURU DEPO",
+          "kalemSayisi": 1,
+          "toplamAdet": 3,
+          "ekipmanTipleri": [
+            "raf"
+          ],
+          "ornekKalemler": [
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "ÇÖP SOĞUK ODA",
+          "kalemSayisi": 1,
+          "toplamAdet": 1,
+          "ekipmanTipleri": [
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA"
+          ]
+        }
+      ]
+    },
+    {
+      "motorSlug": "turk-restoran",
+      "label": "Türk Restoranı",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Türk / Esnaf lokanta",
+      "desc": "Türk / esnaf lokanta · S13-388 (150–300) + Sütiş 2017-006 (200–5000) · motor: turk-restoran",
+      "kaynakDosya": "2017-120 SÜTİŞ MERSİN/2017-120.xlsx",
+      "bantId": "sutis-mersin",
+      "kalemSayisi": 116,
+      "bolumler": [
+        {
+          "bolum": "HAZIRLIK MUTFAĞI",
+          "kalemSayisi": 48,
+          "toplamAdet": 61,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "hamur",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+            "SİNEKLİK",
+            "SERVİS ARABASI",
+            "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+            "YER YIKAMA HORTUMU",
+            "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ"
+          ]
+        },
+        {
+          "bolum": "SERVİS MUTFAĞI",
+          "kalemSayisi": 25,
+          "toplamAdet": 27,
+          "ekipmanTipleri": [
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "firin",
+            "izgara",
+            "pasta",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "TEK EVYELİ ÇALIŞMA TEZGAH",
+            "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+            "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+            "IZGARA, GAZLI,DOLAPLI",
+            "YUMURTA OCAĞI"
+          ]
+        },
+        {
+          "bolum": "BAR",
+          "kalemSayisi": 18,
+          "toplamAdet": 23,
+          "ekipmanTipleri": [
+            "bar",
+            "buzdolabi",
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "BULAŞIK YIKAMA MAKİNASI",
+            "BUZ MAKİNASI",
+            "BASKET RAFI",
+            "PORTAKAL SIKMA MAKİNASI",
+            "ŞERETLİK"
+          ]
+        },
+        {
+          "bolum": "BULAŞIK YIKAMA",
+          "kalemSayisi": 9,
+          "toplamAdet": 11,
+          "ekipmanTipleri": [
+            "davlumbaz",
+            "diger",
+            "raf",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "BULAŞIK SIYIRMA EZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "ÇİFT EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "BULAŞIK YIKAMA MAKİNASI, KONVEYÖRLÜ"
+          ]
+        },
+        {
+          "bolum": "SERVİS TEŞHİR",
+          "kalemSayisi": 7,
+          "toplamAdet": 7,
+          "ekipmanTipleri": [
+            "diger",
+            "tezgah"
+          ],
+          "ornekKalemler": [
+            "ÇİKOLATA DOLABI",
+            "DONDURMA DOLABI",
+            "SÜTLÜ TATLI DOLABI",
+            "KAHVALTI DOLABI",
+            "SERVİS TEZGAHI",
+            "BÖREK DOLABI"
+          ]
+        },
+        {
+          "bolum": "SOĞUK ODA",
+          "kalemSayisi": 3,
+          "toplamAdet": 11,
+          "ekipmanTipleri": [
+            "diger",
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA",
+            "TEPSİ TAŞIMA ARABASI",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "DERİN DONDURUCU ODA",
+          "kalemSayisi": 2,
+          "toplamAdet": 8,
+          "ekipmanTipleri": [
+            "raf",
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "YER IZGARASI",
+          "kalemSayisi": 2,
+          "toplamAdet": 18,
+          "ekipmanTipleri": [
+            "izgara"
+          ],
+          "ornekKalemler": [
+            "YER IZGARASI",
+            "YER IZGARASI"
+          ]
+        },
+        {
+          "bolum": "KURU DEPO",
+          "kalemSayisi": 1,
+          "toplamAdet": 10,
+          "ekipmanTipleri": [
+            "raf"
+          ],
+          "ornekKalemler": [
+            "İSTİF RAFI"
+          ]
+        },
+        {
+          "bolum": "ÇÖP SOĞUK ODA",
+          "kalemSayisi": 1,
+          "toplamAdet": 1,
+          "ekipmanTipleri": [
+            "soguk_oda"
+          ],
+          "ornekKalemler": [
+            "PANEL TİP SOĞUK ODA"
+          ]
+        }
+      ]
+    },
+    {
       "motorSlug": "buyuk-yemekhane",
       "label": "Üretim Fabrikası",
       "ustSegment": "Catering",
@@ -5672,7 +6531,6 @@
     {
       "bolum": "GENEL",
       "konseptler": [
-        "all-day-dining-cafe",
         "balikci",
         "birahane",
         "coffee-shop",
@@ -5703,14 +6561,46 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "İSTİF RAFI",
-        "İSTİF RAFI",
+        "İSTİP RAFI",
         "PANEL TİP SOĞUK ODA",
-        "İSTİF RAFI",
-        "İSTİF RAFI",
-        "PANEL TİP DERİN DONDURUCU DEPO",
-        "İSTİF RAFI",
-        "DEPO TİPİ BUZDOLABI, TEK KAPILI"
+        "İSTİP RAFI",
+        "PANEL TİP SOĞUK ODA",
+        "İSTİP RAFI",
+        "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+        "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+        "DUVAR RAFI"
+      ]
+    },
+    {
+      "bolum": "YER IZGARASI",
+      "konseptler": [
+        "coffee-shop",
+        "donerci",
+        "ekmek-kruvasan",
+        "kahve-duragi-pastane",
+        "kanatci-kebapci",
+        "kasap",
+        "kasap-sarkuteri",
+        "meyhane",
+        "mus-selinoz-turk",
+        "personel-yemekhane",
+        "sehir-otel",
+        "turk-restoran",
+        "yerinde-uretim"
+      ],
+      "ekipmanTipleri": [
+        "diger",
+        "izgara"
+      ],
+      "ornekKalemler": [
+        "YER IZGARASI",
+        "YER IZGARASI",
+        "YER IZGARASI",
+        "YAĞ AYIRICI",
+        "YER IZGARASI",
+        "HİJYEN PASPASI",
+        "YER IZGARASI",
+        "YER IZGARASI"
       ]
     },
     {
@@ -5731,8 +6621,8 @@
         "izgara"
       ],
       "ornekKalemler": [
-        "YER IZGARASI (portashelf)",
-        "YER IZGARASI (portashelf)",
+        "YER IZGARASI",
+        "YER IZGARASI",
         "YER IZGARASI",
         "YER IZGARASI",
         "YER IZGARASI",
@@ -5742,31 +6632,38 @@
       ]
     },
     {
-      "bolum": "YER IZGARASI",
+      "bolum": "MUTFAK",
       "konseptler": [
-        "coffee-shop",
-        "ekmek-kruvasan",
+        "all-day-dining-cafe",
+        "balikci",
+        "buyuk-yemekhane",
+        "donerci",
+        "italyan",
         "kahve-duragi-pastane",
-        "kanatci-kebapci",
-        "kasap",
-        "kasap-sarkuteri",
-        "mus-selinoz-turk",
-        "sehir-otel",
+        "meyhane",
         "yerinde-uretim"
       ],
       "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
         "diger",
-        "izgara"
+        "firin",
+        "hamur",
+        "izgara",
+        "kesim",
+        "ocak",
+        "raf",
+        "tezgah"
       ],
       "ornekKalemler": [
-        "YER IZGARASI",
-        "YER IZGARASI",
-        "HİJYEN PASPASI",
-        "YER IZGARASI",
-        "YER IZGARASI",
-        "YER IZGARASI, TAVALI",
-        "YER IZGARASI, TAVALI",
-        "YER IZGARASI, TAVALI"
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "DUVAR RAFI",
+        "MAKE-UP DOLABI, MERMER TABLALI",
+        "PİZZA FIRINI, ÇİFT KATLI",
+        "FIRIN TEZGAHI",
+        "FIRIN DAVLUMBAZI",
+        "6 AÇIK ALEVLİ OCAK, GAZLI, DOLAPLI"
       ]
     },
     {
@@ -5801,6 +6698,83 @@
         "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
         "DÖKÜM IZGARA, GAZLI, SETÜSTÜ",
         "SALAMANDER, ELK."
+      ]
+    },
+    {
+      "bolum": "SOĞUK ODA",
+      "konseptler": [
+        "all-day-dining-cafe",
+        "buyuk-yemekhane",
+        "ekmek-kruvasan",
+        "italyan",
+        "meyhane",
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "diger",
+        "raf",
+        "soguk_oda"
+      ],
+      "ornekKalemler": [
+        "PANEL TİP SOĞUK ODA",
+        "İSTİF RAFI",
+        "SOGUK ODA, CANTEK",
+        "GN ARABA, MT162X",
+        "İSTİF ETAJERİ, 304K PASLANMAZ",
+        "İSTİF ETAJERİ, 304K PASLANMAZ",
+        "PANEL TİP SOĞUK ODA",
+        "PANEL TİP SOĞUK ODA"
+      ]
+    },
+    {
+      "bolum": "BULAŞIK YIKAMA",
+      "konseptler": [
+        "all-day-dining-cafe",
+        "donerci",
+        "italyan",
+        "kanatci-kebapci",
+        "personel-yemekhane",
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "davlumbaz",
+        "diger",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "BULAŞIK SIYIRMA TEZGAHI",
+        "BASKET RAFI",
+        "ÇÖP ARABASI",
+        "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+        "ÖN YIKAMA DUŞU",
+        "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
+        "DAVLUMBAZ, DUVAR TİPİ",
+        "BYM ÇIKIŞ TEZGAHI"
+      ]
+    },
+    {
+      "bolum": "KURU DEPO",
+      "konseptler": [
+        "all-day-dining-cafe",
+        "italyan",
+        "mus-selinoz-turk",
+        "turk-restoran",
+        "yerinde-uretim"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "raf"
+      ],
+      "ornekKalemler": [
+        "İSTİF RAFI",
+        "İSTİF RAFI",
+        "İSTİF RAFI, 4 KATLI, DEMONTE",
+        "İSTİF RAFI",
+        "İSTİF RAFI",
+        "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
+        "İSTİF RAFI, 4 KATLI, DEMONTE",
+        "İSTİF RAFI, 4 KATLI, DEMONTE"
       ]
     },
     {
@@ -5856,6 +6830,31 @@
       ]
     },
     {
+      "bolum": "DERİN DONDURUCU ODA",
+      "konseptler": [
+        "all-day-dining-cafe",
+        "ekmek-kruvasan",
+        "italyan",
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "diger",
+        "raf",
+        "soguk_oda"
+      ],
+      "ornekKalemler": [
+        "PANEL TİP SOĞUK ODA",
+        "İSTİF RAFI",
+        "İSTİF RAFI",
+        "PANEL TİP DERİN DONDURUCU ODA",
+        "PANEL TİP SOĞUK ODA",
+        "İSTİF RAFI",
+        "İSTİF RAFI",
+        "PANEL TİP DERİNDONDURUCU ODA"
+      ]
+    },
+    {
       "bolum": "K- KURU DEPO",
       "konseptler": [
         "balikci",
@@ -5867,7 +6866,7 @@
         "raf"
       ],
       "ornekKalemler": [
-        "İSTİF RAFI, 4 KATLI (portashelf)",
+        "İSTİF RAFI, 4 KATLI",
         "İSTİF RAFI, DEMONTE, 4 KATLI",
         "İSTİF RAFI, DEMONTE, 4 KATLI",
         "İSTİF RAFI, 4 KATLI, DEMONTE",
@@ -5875,6 +6874,31 @@
         "İSTİF RAFI, 4 KATLI, DEMONTE",
         "İSTİF RAFI, 4 KATLI, DEMONTE",
         "İSTİF RAFI, 4 KATLI, DEMONTE"
+      ]
+    },
+    {
+      "bolum": "BULAŞIKHANE",
+      "konseptler": [
+        "ekmek-kruvasan",
+        "meyhane",
+        "mus-selinoz-turk",
+        "sehir-otel"
+      ],
+      "ekipmanTipleri": [
+        "davlumbaz",
+        "diger",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "SIYIRMA TEZGAHI, ETRAFI KAPALI",
+        "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+        "ÖN YIKAMA DUŞU",
+        "ÇALIŞMA TEZGAHI, RAFLI",
+        "ÇÖP ARABASI",
+        "İSTİF RAFI",
+        "BULAŞIK SIYIRMA TEZGAHI",
+        "BASKET RAFI"
       ]
     },
     {
@@ -5925,7 +6949,7 @@
         "YER IZGARASI, B2 SIĞ TİP",
         "YER IZGARASI, B2 SIĞ TİP",
         "YER IZGARASI, B2 SIĞ TİP",
-        "Yer ızgarası, tavalı,yatay  çıkışlı, eğimsiz, 300*300*122  mm  DN 70 PVC(Ø75mm), SIĞ TİP (PORTASHELF)"
+        "Yer üzgarası, tavalı,yatay ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), SIKI TİP"
       ]
     },
     {
@@ -5955,55 +6979,59 @@
       ]
     },
     {
-      "bolum": "MUTFAK",
+      "bolum": "SICAK MUTFAK",
       "konseptler": [
         "buyuk-yemekhane",
-        "kahve-duragi-pastane",
-        "yerinde-uretim"
+        "personel-yemekhane",
+        "tatil-otel"
       ],
       "ekipmanTipleri": [
+        "bulasik",
         "buzdolabi",
         "davlumbaz",
         "diger",
         "firin",
+        "fritoz",
         "izgara",
+        "kesim",
         "ocak",
         "raf",
         "tezgah"
       ],
       "ornekKalemler": [
-        "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+        "EL YIKAMA EVYESI, BİLGE",
+        "YER YIKAMA HORTUMU, M.TEMİNİ",
         "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
         "DUVAR RAFI, YÜKSEL",
+        "TEZGAH TIP BUZDOLABI, MAKPA-FR, CGN3",
+        "DUVAR RAFI, YÜKSEL",
         "EVIYELI CALISMA TEZGAHI, YÜKSEL",
-        "EL YIKAMA EVYESI, BİLGE",
-        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
-        "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
-        "İSTİF RAFI, 4 KATLI, DEMONTE"
+        "ÇÖP ARABASI, MB126X"
       ]
     },
     {
-      "bolum": "BULAŞIKHANE",
+      "bolum": "SEBZE HAZIRLIK",
       "konseptler": [
-        "ekmek-kruvasan",
+        "donerci",
         "mus-selinoz-turk",
-        "sehir-otel"
+        "tatil-otel"
       ],
       "ekipmanTipleri": [
-        "davlumbaz",
+        "buzdolabi",
         "diger",
+        "kesim",
         "raf",
         "tezgah"
       ],
       "ornekKalemler": [
-        "SIYIRMA TEZGAHI, ETRAFI KAPALI",
+        "PATATES SOYMA MAKİNASI",
         "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
-        "ÖN YIKAMA DUŞU",
-        "ÇALIŞMA TEZGAHI, RAFLI",
         "ÇÖP ARABASI",
-        "İSTİF RAFI",
-        "BULAŞIK SIYIRMA TEZGAHI",
-        "BASKET RAFI"
+        "ÖN YIKAMA DUŞU",
+        "BIÇAK STERİL DOLABI",
+        "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI",
+        "SEBZE DOĞRAMA MAKİNASI",
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI"
       ]
     },
     {
@@ -6054,6 +7082,33 @@
       ]
     },
     {
+      "bolum": "BAR",
+      "konseptler": [
+        "kahve-duragi-pastane",
+        "kanatci-kebapci",
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "bar",
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "pasta",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "KASA TEZGAHI",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, KAHVE ÇEKMECELİ",
+        "ESPRESSO KAHVE MAKİNASI",
+        "KAHVE DEĞİRMENİ",
+        "PASTA DOLABI",
+        "ÇİKOLATA DOLABI",
+        "TEZGAH T İPİ BUZDOLABI, 2 KAPILI"
+      ]
+    },
+    {
       "bolum": "D- BULAŞIKHANE",
       "konseptler": [
         "balikci",
@@ -6068,31 +7123,12 @@
       "ornekKalemler": [
         "BULAŞIK SIYIRMA TEZGAHI",
         "BASKET RAFI",
-        "ÇÖP ARABASI (portashelf)",
+        "ÇÖP ARABASI",
         "TEK EVYELİ BYM GİRİŞ TEZGAHI",
         "ÖN YIKAMA DUŞU (cancan)",
         "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP (gürçelik)",
         "DAVLUMBAZ, DUVAR TİPİ",
         "BYM ÇIKIŞ TEZGAHI"
-      ]
-    },
-    {
-      "bolum": "SOĞUK ODA",
-      "konseptler": [
-        "buyuk-yemekhane",
-        "ekmek-kruvasan"
-      ],
-      "ekipmanTipleri": [
-        "diger",
-        "raf",
-        "soguk_oda"
-      ],
-      "ornekKalemler": [
-        "SOGUK ODA, CANTEK",
-        "GN ARABA, MT162X",
-        "İSTİF ETAJERİ, 304K PASLANMAZ",
-        "İSTİF ETAJERİ, 304K PASLANMAZ",
-        "PANEL TİP SOĞUK ODA"
       ]
     },
     {
@@ -6119,33 +7155,26 @@
       ]
     },
     {
-      "bolum": "SICAK MUTFAK",
+      "bolum": "HAMUR HAZIRLIK",
       "konseptler": [
-        "buyuk-yemekhane",
-        "tatil-otel"
+        "donerci",
+        "mus-selinoz-turk"
       ],
       "ekipmanTipleri": [
-        "bulasik",
-        "buzdolabi",
-        "davlumbaz",
         "diger",
-        "firin",
-        "fritoz",
-        "izgara",
-        "kesim",
-        "ocak",
+        "hamur",
         "raf",
         "tezgah"
       ],
       "ornekKalemler": [
-        "EL YIKAMA EVYESI, BİLGE",
-        "YER YIKAMA HORTUMU, M.TEMİNİ",
-        "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
-        "DUVAR RAFI, YÜKSEL",
-        "TEZGAH TIP BUZDOLABI, MAKPA-FR, CGN3",
-        "DUVAR RAFI, YÜKSEL",
-        "EVIYELI CALISMA TEZGAHI, YÜKSEL",
-        "ÇÖP ARABASI, MB126X"
+        "SPİRAL HAMUR YOĞURMA MAKİNASI",
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "ÇALIŞMA TEZGAHI",
+        "DUVAR RAFI",
+        "UN ŞEKER ARABASI",
+        "ÇALIŞMA TEZGAHI",
+        "PASLANMAZ VE POLİETİLEN HAREKETLİ PALET",
+        "TEK EVYELİ ÇALIŞMA TEZGAHI"
       ]
     },
     {
@@ -6170,31 +7199,6 @@
         "BULAŞIK YIKAMA MAKİNASI",
         "TEL RAF 4 KATLI",
         "KASET RAFI"
-      ]
-    },
-    {
-      "bolum": "BAR",
-      "konseptler": [
-        "kahve-duragi-pastane",
-        "kanatci-kebapci"
-      ],
-      "ekipmanTipleri": [
-        "bar",
-        "buzdolabi",
-        "davlumbaz",
-        "diger",
-        "pasta",
-        "tezgah"
-      ],
-      "ornekKalemler": [
-        "KASA TEZGAHI",
-        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
-        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, KAHVE ÇEKMECELİ",
-        "ESPRESSO KAHVE MAKİNASI",
-        "KAHVE DEĞİRMENİ",
-        "PASTA DOLABI",
-        "ÇİKOLATA DOLABI",
-        "TEZGAH T İPİ BUZDOLABI, 2 KAPILI"
       ]
     },
     {
@@ -6324,47 +7328,6 @@
       ]
     },
     {
-      "bolum": "KURU DEPO",
-      "konseptler": [
-        "mus-selinoz-turk",
-        "yerinde-uretim"
-      ],
-      "ekipmanTipleri": [
-        "buzdolabi",
-        "raf"
-      ],
-      "ornekKalemler": [
-        "İSTİF RAFI, 4 KATLI, DEMONTE",
-        "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
-        "İSTİF RAFI, 4 KATLI, DEMONTE",
-        "İSTİF RAFI, 4 KATLI, DEMONTE"
-      ]
-    },
-    {
-      "bolum": "SEBZE HAZIRLIK",
-      "konseptler": [
-        "mus-selinoz-turk",
-        "tatil-otel"
-      ],
-      "ekipmanTipleri": [
-        "buzdolabi",
-        "diger",
-        "kesim",
-        "raf",
-        "tezgah"
-      ],
-      "ornekKalemler": [
-        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
-        "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
-        "ÇÖP ARABASI",
-        "SEBZE BASMA TEZGAHI",
-        "ÇALIŞMA TEZGAHI, TABAN RAFLI",
-        "POLİETİLEN TABLALI ÇALIŞMA TEZ., TABAN RAFLI, TEK ÇEKMECELİ",
-        "ÇALIŞMA TEZGAHI, TABAN RAFLI",
-        "DUVAR RAFI"
-      ]
-    },
-    {
       "bolum": "D- BULAŞIK YIKAMA",
       "konseptler": [
         "patisserie-yemek",
@@ -6479,8 +7442,8 @@
       ],
       "ornekKalemler": [
         "PANEL TİP SOĞUK ODA (rota grup)",
-        "İSTİF RAFI, 4 KATLI (portashelf)",
-        "İSTİF RAFI, 4 KATLI (portashelf)"
+        "İSTİF RAFI, 4 KATLI",
+        "İSTİF RAFI, 4 KATLI"
       ]
     },
     {
@@ -6494,8 +7457,8 @@
       ],
       "ornekKalemler": [
         "PANEL TİP SOĞUK ODA (rota grup)",
-        "İSTİF RAFI, 4 KATLI (portashelf)",
-        "İSTİF RAFI, 4 KATLI (portashelf)"
+        "İSTİF RAFI, 4 KATLI",
+        "İSTİF RAFI, 4 KATLI"
       ]
     },
     {
@@ -6509,7 +7472,7 @@
       ],
       "ornekKalemler": [
         "PANEL TİP DERİN DONDURUCU (rota grup)",
-        "İSTİF RAFI, 4 KATLI (portashelf)"
+        "İSTİF RAFI, 4 KATLI"
       ]
     },
     {
@@ -6527,7 +7490,7 @@
         "ÇALIŞMA TEZGAHI, TABAN RAFLI",
         "BALIK HAZIRLAMA TEZGAHI",
         "DUVAR RAFI",
-        "ÇÖP ARABASI (portashelf)"
+        "ÇÖP ARABASI"
       ]
     },
     {
@@ -7041,6 +8004,86 @@
       ]
     },
     {
+      "bolum": "FIRIN",
+      "konseptler": [
+        "donerci"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "firin",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "FIRIN",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, MERMER TABLALI",
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "MERMER TABLALI ÇALIŞMA TEZGAHI",
+        "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+        "MERMER TEZGAH BANKO"
+      ]
+    },
+    {
+      "bolum": "DÖNER PİŞİRME",
+      "konseptler": [
+        "donerci"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "hamur",
+        "pasta",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+        "TANDIR OCAĞI",
+        "MERMER TABLALI ÇALIŞMA TEZGAHI",
+        "HAMUR AÇMA MAKİNASI",
+        "TABDIR OCAĞI DAVLUMBAZI",
+        "ÇORBA PİLAV BAINMARIE",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, SICAKLIK DOLAPLI",
+        "TABAK ISITICI RAF"
+      ]
+    },
+    {
+      "bolum": "İÇECEK & SALATA & TATLI BÖLÜMÜ",
+      "konseptler": [
+        "donerci"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "pasta",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "BARDAK YIKAMA MAKİNASI",
+        "ÇALIŞMA TEZGAHI, DOLAPLI",
+        "ÇAY OCAĞI",
+        "DAVLUMBAZ, DUVAR TİPİ",
+        "ÇALIŞMA TEZGAHI, DOLAPLI",
+        "ŞİŞE SOĞUTUCU",
+        "PASTA TATLI TEŞHİR DOLABI"
+      ]
+    },
+    {
+      "bolum": "TEMİZLİK ODASI",
+      "konseptler": [
+        "donerci"
+      ],
+      "ekipmanTipleri": [
+        "diger"
+      ],
+      "ornekKalemler": [
+        "MOB YIKAMA EVYESİ",
+        "ÇAMAŞIR MAKİNASI"
+      ]
+    },
+    {
       "bolum": "KURU DEPOLAR",
       "konseptler": [
         "ekmek-kruvasan"
@@ -7065,18 +8108,6 @@
       "ornekKalemler": [
         "PANEL TİP ŞOKLAMA ODASI",
         "TAVA ARABASI"
-      ]
-    },
-    {
-      "bolum": "DERİN DONDURUCU ODA",
-      "konseptler": [
-        "ekmek-kruvasan"
-      ],
-      "ekipmanTipleri": [
-        "buzdolabi"
-      ],
-      "ornekKalemler": [
-        "PANEL TİP DERİN DONDURUCU ODA"
       ]
     },
     {
@@ -7434,23 +8465,6 @@
       ]
     },
     {
-      "bolum": "BULAŞIK YIKAMA",
-      "konseptler": [
-        "kanatci-kebapci"
-      ],
-      "ekipmanTipleri": [
-        "diger",
-        "raf",
-        "tezgah"
-      ],
-      "ornekKalemler": [
-        "TEK EVYELİ ÇALIŞMA TEZGAHI",
-        "BULAŞIK YIKAMA MAKİNASI, SETALTI",
-        "DUVAR RAFI",
-        "ÇÖP ARABASI"
-      ]
-    },
-    {
       "bolum": "S- SEBZE HAZIRLIK",
       "konseptler": [
         "kebap-ortadogu"
@@ -7781,6 +8795,69 @@
       ]
     },
     {
+      "bolum": "DERİN DONDURUCU",
+      "konseptler": [
+        "meyhane"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "raf"
+      ],
+      "ornekKalemler": [
+        "PANEL TİP DERİN DONDURUCU",
+        "İSTİF RAFI",
+        "İSTİF RAFI"
+      ]
+    },
+    {
+      "bolum": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "konseptler": [
+        "meyhane"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "firin",
+        "izgara",
+        "ocak",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "MAKE-UP BUZDOLABI, 2 KAPILI",
+        "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+        "FIRIN TEZGAHI",
+        "FIRIN",
+        "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+        "FRİTÖZ, TEK SEPETLİ",
+        "FRİTÖZ, ÇİFT SEPETLİ"
+      ]
+    },
+    {
+      "bolum": "İÇKİ BAR",
+      "konseptler": [
+        "meyhane"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "MEZE TEŞHİR DOLABI",
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "BARDAK YIKAMA MAKİNASI",
+        "BUZ MAKİNASI",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+        "ÇAY OCAĞI",
+        "ÇAY OCAĞI DAVLUMBAZI",
+        "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI"
+      ]
+    },
+    {
       "bolum": "SOĞAN HAZIRLIK",
       "konseptler": [
         "mus-selinoz-turk"
@@ -7793,24 +8870,6 @@
         "TEK EVYELİ ÇALIŞMA TEZGAHI",
         "ÇALIŞMA TEZGAHI, TABAN VE RAFLI, TEK ÇEKMECELİ",
         "SEBZE DOĞRAMA MAKİNASI, 8'li BIÇAK SETİ DAHİLDİR."
-      ]
-    },
-    {
-      "bolum": "HAMUR HAZIRLIK",
-      "konseptler": [
-        "mus-selinoz-turk"
-      ],
-      "ekipmanTipleri": [
-        "diger",
-        "hamur",
-        "tezgah"
-      ],
-      "ornekKalemler": [
-        "TEK EVYELİ ÇALIŞMA TEZGAHI",
-        "MERMER TABLALI ÇALIŞMA TEZGAHI, TEK ÇEKMECELİ",
-        "DUVAR DOLABI",
-        "HAMUR YOĞURMA MAKİNASI",
-        "UN ŞEKER ARABASI, POLYCARBON"
       ]
     },
     {
@@ -8724,18 +9783,18 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "Izgara, Perfect 900seri, 1/2M, gazlı, düz, setüstü (OLIS - 0782879)",
+        "Izgara, Perfect 900seri, 1/2M, gazlı, düz, setüstü (OLIS)",
         "Dolap, Perfect 900seri, 1/2modül, kapılı (OLIS)",
-        "Fritöz, Perfect 900seri, 1/2M, elektrikli (OLIS - 0781949)",
-        "Ara tezgah, Perfect 900seri, 1/2modül, setüstü (OLIS - 0783229)",
-        "Kuzine, Perfect 900seri, 1M, gazlı, 4 açık ocak, setüstü (OLIS - 0782779)",
+        "Fritöz, Perfect 900seri, 1/2M, elektrikli, setüstü (OLIS)",
+        "Ara tezgah, Perfect 900seri, 1/2modül, setüstü (OLIS)",
+        "Kuzine, Perfect 900seri, 1M, gazlı, 4 açık ocak, setüstü (OLIS)",
         "Dolap, Perfect 900seri, 1modül, kapılı (OLIS)",
-        "Buharlı fırın, otomatik yıkamalı, Gazlı, 10GN 2/1 (LAINOX - NAGV102)",
-        "Fırın standı (LAINOX)"
+        "Buharlı fırın, otomatik yıkamalı, Gazlı, 20GN1/1 (LAINOX)",
+        "Fırın standı"
       ]
     },
     {
-      "bolum": "S O Ğ U K M U T F A K",
+      "bolum": "S O I U K M U T F A K",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8746,18 +9805,18 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı (PORTASHELF)",
-        "Duvar rafı (PORTASHELF)",
-        "Salam dilimleme makinesi, ekonomik model,çap: 300 mm (İTHAL)",
-        "Çalışma tezgahı, Premium seri (PORTASHELF)",
-        "Pizza hazırlık ünitesi, Paslanmaz tablalı, yüksek garnitür üniteli (FRENOX)",
+        "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı",
+        "Duvar rafı",
+        "Salam dilimleme makinesi, ekonomik model, çap: 300 mm",
+        "çalışma tezgahı, Premium seri",
+        "Pizza hazırlık ünitesi, Paslanmaz tablalı, yüksek garnitürlü üniteli (FRENOX)",
         "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli (FRENOX)",
-        "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-        "Bıçak sterilizatörü, 10 bıçaklık (PORTASHELF)"
+        "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+        "Bıçak sterilizatırı, 10 bıçaklık"
       ]
     },
     {
-      "bolum": "S E R V İ S B U L A Ş I K",
+      "bolum": "SERVIS BULAŞIK",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8769,14 +9828,14 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "Makina giriş-çıkış tezgahı (PORTASHELF)",
-        "Bulaşık yıkama makinası, 1080 Tb/h (DIHR - HT 11 T)",
-        "Davlumbaz, Duvar tipi, filtresiz (PORTASHELF)",
-        "Ön yıkama duşu tezgaha monte (CANCAN)",
-        "Makina giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, sağ (PORTASHELF)",
-        "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli (PORTASHELF)",
-        "Bulaşık alma tezgahı (PORTASHELF)",
-        "Kaset rafı, Tezgaha monte (PORTASHELF)"
+        "Makine giriş-çıkış tezgahı",
+        "Bulaşık yıkama makinası, 1080 Tb/h (DIHR)",
+        "Davlumbaz, Duvar tipi, filtresiz",
+        "ön yıkama duşu tezgaha monte (CANCAN)",
+        "Makine giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, saç",
+        "çöp kazanı kapaklı Ø400 AISI304, 4 tekerlekli",
+        "Bulaşık alma tezgahı",
+        "Kaset rafı, Tezgaha monte"
       ]
     },
     {
@@ -8792,17 +9851,17 @@
       ],
       "ornekKalemler": [
         "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli (FRENOX)",
-        "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-        "Polietilen tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-        "Çalışma tezgahı, Premium seri, Hareketli, alt tablalı (PORTASHELF)",
-        "Tel Raf-4 Katlı- ınox304-46*122*183 (PORTASHELF)",
-        "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-        "Ön yıkama duşu tezgaha monte (CANCAN)",
-        "Çöp kazanı kapaklı Ø500  AISI304, 4 tekerlekli (PORTASHELF)"
+        "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+        "Polietilen tablalı tezgah, Premium seri, Alt tablalı",
+        "çalışma tezgahı, Premium seri, Hareketli, alt tablalı",
+        "Tel Raf-4 Katl- inox304-46*122*183",
+        "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+        "ön yıkama duşu tezgaha monte (CANCAN)",
+        "çöp kazanı kapaklı Ø500 AISI304, 4 tekerlekli"
       ]
     },
     {
-      "bolum": "S E R V İ S B A R",
+      "bolum": "SERVIS B A R",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8816,12 +9875,12 @@
       ],
       "ornekKalemler": [
         "Tezgah tipi buzdolabı, 2 kapılı, poliüretan gövdeli (FRENOX)",
-        "Yatay Buzd. Ada Serisi 2+2 Cam kapılı, -2/+8 C° , 281 lt. 0,45 KW 140*70*85 CM. (FRENOX)",
-        "Çalışma tezgahı, Premium seri (PORTASHELF)",
-        "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCHILIO)",
-        "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarı otomatik 110V/230V - 50/60 Hz,öğütme çapı:64mm (CUNILL)",
-        "Kokteyl tezgahı (PORTASHELF)",
-        "Çalışma tezgahı, Premium seri (PORTASHELF)",
+        "Yatay Buzd. Ada Serisi 2+2 Cam kapılı, -2/+8 Cü , 281 lt. 0,45 KW 140*70*85 CM. (FRENOX)",
+        "çalışma tezgahı, Premium seri",
+        "Espresso kahve makinesi,yarü otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+        "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarü otomatik 110V/230V - 50/60 Hz,ısıtme şapı:64mm (CUNILL)",
+        "Kokteyl tezgahı",
+        "çalışma tezgahı, Premium seri",
         "Bar blender, 1.25 lt.polikarbonat konteynerli, boyalı bazalı (SANTOS)"
       ]
     },
@@ -8835,18 +9894,18 @@
         "raf"
       ],
       "ornekKalemler": [
-        "El yıkama eviyesi, Dizden kumandalı, çift su girişli (PORTASHELF)",
-        "Geri toplamalı ön yıkama duşu,  15 mt. (CANCAN)",
-        "Plastik Çöp Konteyneri - 770 LT.- Yeşil, 4 TEKERLEKLİ (UZAY)",
-        "Plastil Çöp Konteyneri , 240 lt. , yeşil, 2 tekerlekli (UZAY)",
-        "Tel Raf-4 Katlı- ınox304-53*122*183 (PORTASHELF)",
-        "Tartım baskülü,  300  LCD ekran, 70*80 cm ptatform. otomatik sıfırlama (TEM)",
-        "El yıkama eviyesi, Dizden kumandalı, çift su girişli (PORTASHELF)",
-        "Geri toplamalı ön yıkama duşu,  15 mt. (CANCAN)"
+        "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
+        "Geri toplamalı ön yıkama duşu, 15 mt. (CANCAN)",
+        "Plastik çöp Konteyneri - 770 LT.- Yeşil, 4 TEKERLEKLİ (UZAY)",
+        "Plastil çöp Konteyneri , 240 lt. , yeşil, 2 tekerlekli (UZAY)",
+        "Tel Raf-4 Katl- inox304-53*122*183",
+        "Tartım baskılı, 300 LCD ekran, 70*80 cm ptatform. otomatik süfrlama (TEM)",
+        "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
+        "Geri toplamalı ön yıkama duşu, 15 mt. (CANCAN)"
       ]
     },
     {
-      "bolum": "S E R V İ S O F İ S İ",
+      "bolum": "SERVIS O F I S I",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8856,13 +9915,13 @@
       ],
       "ornekKalemler": [
         "Filtre kahve makinesi,224 fincan (18ltr), 2 cam potlu, 2x1.8 ltr, 2 hot plate li, (ANIMO)",
-        "Çay otomatı Master 2000, 23 lt.CC-23 (REMTA)",
-        "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCHILIO)",
-        "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarı otomatik 110V/230V - 50/60 Hz,öğütme çapı:64mm (CUNILL)",
-        "Bar Buzdolabı, tek kapılı,  +2/+12 c , 217 W (FRENOX)",
-        "İndüksiyonlu sıcak tutma ünitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz (SCHOLL)",
-        "Induction Chafing Dish, Dış Ø 39 cm. Hepp (SCHOLL)",
-        "Porselen içlik, Ø 30 cm. 3 lt. Hepp"
+        "çay otomatı Master 2000, 23 lt.CC-23 (REMTA)",
+        "Espresso kahve makinesi,yarü otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+        "Kahve değirmeni, kapasite:7-9 kg/saat, Kahve konteynır kap: 1,3kg, yarü otomatik 110V/230V - 50/60 Hz,ısıtme şapı:64mm (CUNILL)",
+        "Bar Buzdolabı, tek kapılı, +2/+12 c , 217 W (FRENOX)",
+        "ındüksiyonlu sıcak tutma ünitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz (SCHOLL)",
+        "Induction Chafing Dish, Dış ü 39 cm. Hepp (SCHOLL)",
+        "Porselen işlik, Ø 30 cm. 3 lt. Hepp"
       ]
     },
     {
@@ -8875,17 +9934,17 @@
       ],
       "ornekKalemler": [
         "Soğuk Oda, Alarm sistemli (ROTA)",
-        "Çöp Soğuk Oda (ROTA)",
-        "Çöp Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-        "Patiseri  Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-        "Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-        "Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-        "Soğuk Mutfak Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)",
-        "Sebze Soğuk Oda, 0-10 m3  arası soğuk oda (ROTA)"
+        "çöp Soğuk Oda (ROTA)",
+        "çöp Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+        "Patiseri Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+        "Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+        "Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+        "Soğuk Mutfak Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)",
+        "Sebze Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)"
       ]
     },
     {
-      "bolum": "M U T F A K B U L A Ş I K",
+      "bolum": "M U T F A K BULAŞIK",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8896,12 +9955,12 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "Kazan yıkama eviyesi, Izgara tablalı (PORTASHELF)",
-        "Ön Yıkama Duşu - Duvara monte, Tek gövde duvara monte bataryalı (CANCAN)",
-        "Çalışma tezgahı, Premium seri (PORTASHELF)",
-        "Kepçe askı borusu, 1000mm (PORTASHELF)",
-        "Demonte istif rafı, Kazan/tencere (PORTASHELF)",
-        "Demonte istif rafı, Kazan/tencere (PORTASHELF)"
+        "Kazan yıkama eviyesi, Izgara tablalı",
+        "ön yıkama Duşu - Duvara monte, Tek gövde duvara monte bataryalı (CANCAN)",
+        "çalışma tezgahı, Premium seri",
+        "Kepçe askı borusu, 1000mm",
+        "Demonte istif rafı, Kazan/tencere",
+        "Demonte istif rafı, Kazan/tencere"
       ]
     },
     {
@@ -8916,18 +9975,18 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı (PORTASHELF)",
-        "Polietilen tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-        "Duvar rafı (PORTASHELF)",
-        "Çalışma tezgahı, Premium seri, Alt tablalı (PORTASHELF)",
-        "Kıyma Mak. K.Paslanmaz  Soğutmalı-32 no- 380 V, saat kg.  600 (BOSFOR)",
-        "Et kütüğü, Polietilen tablalı (PORTASHELF)",
-        "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli (PORTASHELF)",
-        "Polietilen tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)"
+        "çki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+        "Polietilen tablalı tezgah, Premium seri, Alt tablalı",
+        "Duvar rafı",
+        "çalışma tezgahı, Premium seri, Alt tablalı",
+        "Kıyma Mak. K.Paslanmaz Soğutmalı-32 no- 380 V, saat kg. 600 (BOSFOR)",
+        "Et kütüşı, Polietilen tablalı",
+        "çöp kazanı kapaklı Ø400 AISI304, 4 tekerlekli",
+        "Polietilen tablalı tezgah, Premium seri, Alt tablalı"
       ]
     },
     {
-      "bolum": "P A T İ S E R İ",
+      "bolum": "P A T I S E R I",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8942,16 +10001,16 @@
       "ornekKalemler": [
         "Tezgah tipi buzdolabı, Mermer tablalı, 2 kapılı, poliüretan gövdeli (FRENOX)",
         "Malzeme (erzak) arabası , Plastik , 102 lt., Beyaz renk (UZAY)",
-        "Mermer tablalı tezgah, Premium seri, Alt tablalı (PORTASHELF)",
-        "Duvar dolabı, Kapılı (PORTASHELF)",
-        "Çalışma tezgahı, Premium seri, Alt tablalı (PORTASHELF)",
-        "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı (PORTASHELF)",
-        "Hamur yoğurma mak.Spiral 75  lt.kazanlı, çift  devirli 380 V  25 kg un kapasiteli (BOSFOR)",
+        "Mermer tablalı tezgah, Premium seri, Alt tablalı",
+        "Duvar dolabı, Kapılı",
+        "çalışma tezgahı, Premium seri, Alt tablalı",
+        "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı",
+        "Hamur yoğurma mak.Spiral 75 lt.kazanlı, çift devirli 380 V 25 kg un kapasiteli (BOSFOR)",
         "Planet mikser,Kapasite:60lt,Koruma kalkanlı, 380V-50HZ-3PH, 3hızlı (BOSFOR)"
       ]
     },
     {
-      "bolum": "G A R S O N H O L Ü",
+      "bolum": "G A R S O N H O L I",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8960,11 +10019,11 @@
       ],
       "ornekKalemler": [
         "Soğuk banket arabası +2 / +10, 7 adet GN 2/1 kapasite (FRENOX)",
-        "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli (PORTASHELF)"
+        "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli"
       ]
     },
     {
-      "bolum": "BANQUET MUTFAĞI TOPLAM",
+      "bolum": "BANQUET MUTFAII TOPLAM",
       "konseptler": [
         "sehir-otel"
       ],
@@ -8974,13 +10033,13 @@
         "tezgah"
       ],
       "ornekKalemler": [
-        "Kuver ünitesi, GN1/4*3ad., GN1/1*1ad. (PORTASHELF)",
-        "Sıcak servis ünitesi, Elektrikli, GN1/1*4 (PORTASHELF)",
-        "Servis rafı, Tek sıra (PORTASHELF)",
-        "Tepsi standı,, Cr-Ni boru (PORTASHELF)",
-        "Vitrin, Soğutmalı, buzdolaplı (PORTASHELF)",
-        "Tepsi standı, Cr-Ni boru (PORTASHELF)",
-        "Tek küvetli tezgah, 50*50*30 küvetli(sol), damlalıklı (PORTASHELF)"
+        "Kuver ünitesi, GN1/4*3ad., GN1/1*1ad.",
+        "Sıcak servis ünitesi, Elektrikli, GN1/1*4",
+        "Servis rafı, Tek sıra",
+        "Tepsi standı, Cr-Ni boru",
+        "Vitrin, Soğutmalı, buzdolaplı",
+        "Tepsi standı, Cr-Ni boru",
+        "Tek küvetli tezgah, 50*50*30 küvetli(sol), damlalıklı"
       ]
     },
     {
@@ -9407,6 +10466,92 @@
       ],
       "ornekKalemler": [
         "PASTA TEŞHİR ÜNİTESİ (KAPLAMALAR MİMARİ GRUBA AİTTİR.)"
+      ]
+    },
+    {
+      "bolum": "SERVİS TEŞHİR",
+      "konseptler": [
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "diger",
+        "pasta",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "DONDURMA DOLABI",
+        "KAHVALTI DOLABI",
+        "BÖREK DOLABI",
+        "TATLI DOLABI",
+        "ET TEŞHİR DOLABI",
+        "PASTA TEŞHİR DOLABI",
+        "ÇİKOLATA DOLABI",
+        "DONDURMA DOLABI"
+      ]
+    },
+    {
+      "bolum": "SERVİS MUTFAĞI",
+      "konseptler": [
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "firin",
+        "izgara",
+        "ocak",
+        "pasta",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "TEK EVYELİ ÇALIŞMA TEZGAHI",
+        "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+        "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN RAFLI",
+        "ÇORBA BAINMARIE",
+        "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+        "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+        "2 AÇIK ALEVLİ OCAK, DOLAPLI, GAZLI",
+        "FRİTÖZ, TEK SEPETLİ, DOLAPLI, ELK."
+      ]
+    },
+    {
+      "bolum": "HAZIRLIK MUTFAĞI",
+      "konseptler": [
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "buzdolabi",
+        "davlumbaz",
+        "diger",
+        "firin",
+        "hamur",
+        "ocak",
+        "raf",
+        "tezgah"
+      ],
+      "ornekKalemler": [
+        "FIRIN TEZGAHI",
+        "FIRIN",
+        "2 AÇIK ALEVLİ OCAK, DOLAPLI, GAZLI",
+        "YER OCAĞI, ÇİFT YANIŞLI, GAZLI",
+        "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+        "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+        "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+        "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI"
+      ]
+    },
+    {
+      "bolum": "ÇÖP SOĞUK ODA",
+      "konseptler": [
+        "turk-restoran"
+      ],
+      "ekipmanTipleri": [
+        "soguk_oda"
+      ],
+      "ornekKalemler": [
+        "PANEL TİP SOĞUK ODA",
+        "PANEL TİP SOĞUK ODA"
       ]
     }
   ]
