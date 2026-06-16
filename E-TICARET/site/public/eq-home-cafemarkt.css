@@ -59,6 +59,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 /* Sol split — sağdaki iki satırın toplam yüksekliğine uzanır */
+.eq-cmkt-hero-grid > .eq-cmkt-hero-main-wrap,
 .eq-cmkt-hero-grid > .eq-cmkt-promo--main {
   grid-column: 1;
   grid-row: 1 / span 2;
@@ -66,6 +67,64 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   min-height: 0;
   height: 100%;
   max-height: 100%;
+}
+
+.eq-cmkt-hero-main-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.eq-cmkt-hero-main-slider {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.eq-cmkt-hero-main-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.eq-cmkt-hero-main-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.eq-cmkt-hero-main-slide .eq-cmkt-promo--main {
+  height: 100%;
+  max-height: 100%;
+}
+
+.eq-cmkt-hero-main-dots {
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+  z-index: 3;
+  display: flex;
+  gap: 5px;
+  pointer-events: auto;
+}
+
+.eq-cmkt-hero-main-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.eq-cmkt-hero-main-dot.is-active {
+  background: #fff;
+  border-color: #fff;
 }
 
 .eq-cmkt-hero-side {
@@ -1037,6 +1096,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
     margin-bottom: 28px;
   }
 
+  .eq-cmkt-hero-grid > .eq-cmkt-hero-main-wrap,
   .eq-cmkt-hero-grid > .eq-cmkt-promo--main {
     grid-column: 1;
     grid-row: auto;

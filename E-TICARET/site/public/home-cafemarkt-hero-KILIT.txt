@@ -43,11 +43,13 @@ ayrı kilit: public/home-pop-cats-KILIT.txt · Bento şeridi ayrı (değiştiril
     split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0; buzdolabı img 125%
 
 ── Kilitli içerik (lib/home-cafemarkt-content.ts) ─────────────────────────
-  cafemarktHeroMain: layout split · ozti-79e3-37nmv-03-cutout.png · #001e50
+  cafemarktHeroMainSlides: 2 slayt (split) — ozti-dual · proso-tiger-wfg
+  cafemarktHeroMain: ilk slayt (Öztiryakiler) — ozti-79e3-37nmv-03-cutout.png · #001e50
   cafemarktHeroSide: kahve · yikama · pisirme-ocak · pisirme-firin
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   components/home/HomeCafemarktBlock.tsx   — eq-cmkt-hero-grid yapısı
+  components/home/HomeCafemarktHeroSlider.tsx — sol split slayt döngüsü
   components/home/HomeCafemarktMount.tsx   — #eq-home-cafemarkt-mount portal
   components/home/HomeVitrinPortals.tsx
   lib/home-cafemarkt-content.ts            — hero kart sabitleri (üst bölüm)
