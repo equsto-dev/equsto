@@ -29,7 +29,7 @@ export type CafemarktPromoCard = {
   textLight?: boolean;
 };
 
-/** Sol hero split slaytları — Öztiryakiler · Proso Tiger WFG · Şenox DT-12 */
+/** Sol hero split slaytları — Öztiryakiler · Proso · Soğuk oda · Şenox DT-12 */
 export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
   {
     id: "ozti-dual",
@@ -59,6 +59,21 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     image: "/data/prosogutma-market/tiger-wfg/tigerwfgon.png",
     imageAlt: "Proso Tiger WFG EQ1 — menteşeli düz camlı şarküteri reyonu",
     bg: "#0a2e3a",
+    textLight: true,
+  },
+  {
+    id: "ozti-soguk-oda-cr4020",
+    layout: "split",
+    promoKicker: "Öztiryakiler · soğuk oda · panel-split tip · 7919.CR4020",
+    title: "Panel-Split Tip",
+    titleEm: "Soğuk Oda",
+    promoLead:
+      "0/+5 °C çalışma sıcaklığında panel-split soğuk oda — modüler ölçü seçenekleri, hijyenik panel yapı ve split ünite ile restoran, otel ve depo uygulamaları.",
+    promoBadges: ["7919.CR4020", "4000×2000 mm", "0/+5 °C", "Panel-split", "Split ünite"],
+    href: "/shop/sogutma/7919-cr4020-00",
+    image: "/images/catalog/soguk-oda/soguk-oda-vitrin.png",
+    imageAlt: "Öztiryakiler soğuk oda panel-split tip 0/+5 °C — 7919.CR4020",
+    bg: "#0c2340",
     textLight: true,
   },
   {
