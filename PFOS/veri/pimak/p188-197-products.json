@@ -3192,196 +3192,6 @@
     }
   },
   {
-    "urun_kodu": "PIMAK.12060.17",
-    "slug": "equsto-pimak-12060-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1200×600×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 710.0,
-    "ebat_mm": "1200x600x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1200×600×850 mm",
-    "olculer": {
-      "genislik_mm": 1200,
-      "derinlik_mm": 600,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.14060.17",
-    "slug": "equsto-pimak-14060-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1400×600×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 750.0,
-    "ebat_mm": "1400x600x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1400×600×850 mm",
-    "olculer": {
-      "genislik_mm": 1400,
-      "derinlik_mm": 600,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.16060.17",
-    "slug": "equsto-pimak-16060-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1600×600×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 790.0,
-    "ebat_mm": "1600x600x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1600×600×850 mm",
-    "olculer": {
-      "genislik_mm": 1600,
-      "derinlik_mm": 600,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.18060.17",
-    "slug": "equsto-pimak-18060-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1800×600×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 820.0,
-    "ebat_mm": "1800x600x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1800×600×850 mm",
-    "olculer": {
-      "genislik_mm": 1800,
-      "derinlik_mm": 600,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.20060.17",
-    "slug": "equsto-pimak-20060-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 2000×600×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 860.0,
-    "ebat_mm": "2000x600x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "2000×600×850 mm",
-    "olculer": {
-      "genislik_mm": 2000,
-      "derinlik_mm": 600,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.12070.17",
-    "slug": "equsto-pimak-12070-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1200×700×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 740.0,
-    "ebat_mm": "1200x700x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1200×700×850 mm",
-    "olculer": {
-      "genislik_mm": 1200,
-      "derinlik_mm": 700,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.14070.17",
-    "slug": "equsto-pimak-14070-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1400×700×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 780.0,
-    "ebat_mm": "1400x700x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1400×700×850 mm",
-    "olculer": {
-      "genislik_mm": 1400,
-      "derinlik_mm": 700,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.16070.17",
-    "slug": "equsto-pimak-16070-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1600×700×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 840.0,
-    "ebat_mm": "1600x700x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1600×700×850 mm",
-    "olculer": {
-      "genislik_mm": 1600,
-      "derinlik_mm": 700,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.18070.17",
-    "slug": "equsto-pimak-18070-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 1800×700×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 890.0,
-    "ebat_mm": "1800x700x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "1800×700×850 mm",
-    "olculer": {
-      "genislik_mm": 1800,
-      "derinlik_mm": 700,
-      "yukseklik_mm": 850
-    }
-  },
-  {
-    "urun_kodu": "PIMAK.20070.17",
-    "slug": "equsto-pimak-20070-17",
-    "baslik": "Üç Evyeli Taban Rafsız Tezgah 2000×700×850 mm",
-    "aile": "Üç Evyeli Taban Rafsız Tezgah",
-    "aile_slug": "uc-evyeli-taban-rafsiz-tezgah",
-    "category": "evyeler",
-    "pdf_page": 194,
-    "liste_fiyati_eur": 930.0,
-    "ebat_mm": "2000x700x850",
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p194-prod02.jpeg",
-    "olcu_etiket": "2000×700×850 mm",
-    "olculer": {
-      "genislik_mm": 2000,
-      "derinlik_mm": 700,
-      "yukseklik_mm": 850
-    }
-  },
-  {
     "urun_kodu": "PIMAK.15155.10",
     "slug": "equsto-pimak-15155-10",
     "baslik": "Orta Tip Filtreli Davlumbaz 1500×1500×500 mm",
@@ -5664,5 +5474,385 @@
       "derinlik_mm": 1600,
       "yukseklik_mm": 70
     }
+  },
+  {
+    "urun_kodu": "PIMAK.12060.12",
+    "slug": "equsto-pimak-12060-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1200×600×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 310.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.12",
+    "slug": "equsto-pimak-14060-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1400×600×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 320.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.12",
+    "slug": "equsto-pimak-16060-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1600×600×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 340.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.18060.12",
+    "slug": "equsto-pimak-18060-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1800×600×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 360.0,
+    "ebat_mm": "1800x600x850",
+    "olcu_etiket": "1800×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20060.12",
+    "slug": "equsto-pimak-20060-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 2000×600×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 380.0,
+    "ebat_mm": "2000x600x850",
+    "olcu_etiket": "2000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.12",
+    "slug": "equsto-pimak-12070-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1200×700×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 320.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.12",
+    "slug": "equsto-pimak-14070-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1400×700×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 340.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.12",
+    "slug": "equsto-pimak-16070-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1600×700×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 360.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.18070.12",
+    "slug": "equsto-pimak-18070-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 1800×700×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 380.0,
+    "ebat_mm": "1800x700x850",
+    "olcu_etiket": "1800×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20070.12",
+    "slug": "equsto-pimak-20070-12",
+    "baslik": "Çift Evyeli Taban Rafsız Tezgah 2000×700×850 mm",
+    "aile": "Çift Evyeli Taban Rafsız Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafsiz-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 410.0,
+    "ebat_mm": "2000x700x850",
+    "olcu_etiket": "2000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.14",
+    "slug": "equsto-pimak-12060-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1200×600×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 620.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.14",
+    "slug": "equsto-pimak-14060-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1400×600×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 640.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.14",
+    "slug": "equsto-pimak-16060-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1600×600×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.18060.14",
+    "slug": "equsto-pimak-18060-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1800×600×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 680.0,
+    "ebat_mm": "1800x600x850",
+    "olcu_etiket": "1800×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20060.14",
+    "slug": "equsto-pimak-20060-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 2000×600×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 700.0,
+    "ebat_mm": "2000x600x850",
+    "olcu_etiket": "2000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.14",
+    "slug": "equsto-pimak-12070-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1200×700×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 640.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.14",
+    "slug": "equsto-pimak-14070-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1400×700×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.14",
+    "slug": "equsto-pimak-16070-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1600×700×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 700.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.18070.14",
+    "slug": "equsto-pimak-18070-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 1800×700×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "1800x700x850",
+    "olcu_etiket": "1800×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20070.14",
+    "slug": "equsto-pimak-20070-14",
+    "baslik": "Çift Evyeli Taban Raflı Tezgah 2000×700×850 mm",
+    "aile": "Çift Evyeli Taban Raflı Tezgah",
+    "aile_slug": "cift-evyeli-taban-rafli-tezgah",
+    "category": "evyeler",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "2000x700x850",
+    "olcu_etiket": "2000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod01.jpeg"
   }
 ]

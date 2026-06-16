@@ -17,8 +17,8 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.resolve(ROOT, "../../PFOS/veri/pimak/p188-197-products.json");
 const SRC_IMG = path.resolve(ROOT, "../../PFOS/veri/pimak/media/pdf-p188-197");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
-const OUT_IMG = path.join(ROOT, "public/images/catalog/equsto");
-const MANIFEST = path.join(ROOT, "public/data/equsto/manifest.json");
+const OUT_IMG = path.join(ROOT, "public/images/catalog/pimak");
+const MANIFEST = path.join(ROOT, "public/data/pimak/manifest.json");
 
 const PIMAK_BRAND = "Pimak";
 const PIMAK_BRAND_ID = "pimak";
@@ -50,7 +50,7 @@ function pricingFromListe(listeEur, kur) {
     satis_eur_indirimli: satis,
     iskonto_oran: Math.round(BAYI_ISKONTO * 100),
     odeme_carpani: ODEME_CARPANI,
-    equsto_kar_oran: KAR_ORAN,
+    satis_kar_oran: KAR_ORAN,
     kur_eur_try: kur,
     fiyat_tl: Math.round(kdvDahil),
     fiyat_tl_net: Math.round(netTry),
@@ -61,14 +61,14 @@ function pricingFromListe(listeEur, kur) {
 
 /** s.195 kutu tip orta tip — kullanıcı onaylı PNG (beyaz arka plan). */
 const ORTA_KUTU_IMG_SRC = path.resolve(ROOT, "../../PFOS/veri/pimak/media/manual/davlumbaz-orta-tip-kutu.png");
-const ORTA_KUTU_IMG_REL = "images/catalog/equsto/davlumbaz-orta-tip-kutu.png";
+const ORTA_KUTU_IMG_REL = "images/catalog/pimak/davlumbaz-orta-tip-kutu.png";
 const ORTA_FILTRESIZ_IMG_SRC = path.resolve(SRC_IMG, "p195-prod01.jpeg");
-const ORTA_FILTRESIZ_IMG_REL = "images/catalog/equsto/davlumbaz-orta-tip-filtresiz.jpeg";
+const ORTA_FILTRESIZ_IMG_REL = "images/catalog/pimak/davlumbaz-orta-tip-filtresiz.jpeg";
 /** s.196 duvar tipi — kullanıcı onaylı manuel PNG. */
 const DUVAR_FILTRELI_IMG_SRC = path.resolve(ROOT, "../../PFOS/veri/pimak/media/manual/davlumbaz-filtreli.png");
-const DUVAR_FILTRELI_IMG_REL = "images/catalog/equsto/davlumbaz-filtreli.png";
+const DUVAR_FILTRELI_IMG_REL = "images/catalog/pimak/davlumbaz-filtreli.png";
 const DUVAR_FILTRESIZ_IMG_SRC = path.resolve(ROOT, "../../PFOS/veri/pimak/media/manual/davlumbaz-filtresiz.png");
-const DUVAR_FILTRESIZ_IMG_REL = "images/catalog/equsto/davlumbaz-filtresiz.png";
+const DUVAR_FILTRESIZ_IMG_REL = "images/catalog/pimak/davlumbaz-filtresiz.png";
 
 function isOrtaTipDavlumbaz(p) {
   const cat = String(p.category || "");
@@ -128,17 +128,13 @@ function copyImage(p, slug) {
     fs.mkdirSync(destDir, { recursive: true });
     fs.copyFileSync(src, dest);
   }
-  return [`images/catalog/equsto/${slug}/${fileName}`];
+  return [`images/catalog/pimak/${slug}/${fileName}`];
 }
 
 function pimakSku(kod) {
   return String(kod || "")
     .trim()
     .toUpperCase();
-}
-
-function equstoSku(kod) {
-  return pimakSku(kod).replace(/^PIMAK\./i, "EQUSTO.");
 }
 
 function pimakSlug(kod) {
@@ -150,17 +146,8 @@ function pimakSlug(kod) {
   return `pimak-${slugify(sku)}`;
 }
 
-function equstoSlug(kod) {
-  const tail = pimakSku(kod)
-    .replace(/^PIMAK\./i, "")
-    .replace(/\./g, "-")
-    .toLowerCase();
-  return tail ? `equsto-${tail}` : slugify("equsto-urun");
-}
-
-/** Görsel klasörü — mevcut public/images/catalog/equsto/equsto-* yolları korunur */
 function imageStorageSlug(kod) {
-  return equstoSlug(kod);
+  return pimakSlug(kod);
 }
 
 function formatSpecs(p, px, { brand, sku, kaynakLabel }) {
@@ -179,7 +166,7 @@ function formatSpecs(p, px, { brand, sku, kaynakLabel }) {
       "",
       `Liste fiyatı (EUR): ${px.liste_fiyati_eur}`,
       `Bayi iskonto: %${px.iskonto_oran}`,
-      `Equsto satış (EUR): ${px.satis_fiyati_eur} (+%${Math.round(KAR_ORAN * 100)} kar)`,
+      `Satış (EUR): ${px.satis_fiyati_eur} (+%${Math.round(KAR_ORAN * 100)} kar)`,
       `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
     );
   }
@@ -261,6 +248,7 @@ function toRow(p, kur) {
 
 function isP188197ImportRow(r) {
   const k = String(r?.kaynak || "");
+  if (k === "equsto-fiyat-listesi-2026") return false;
   if (LEGACY_KAYNAKLAR.has(k)) return true;
   if (String(r?.id || "").startsWith("equsto__equsto-")) return true;
   if (String(r?.id || "").startsWith("pimak__pimak-")) return true;
@@ -328,7 +316,7 @@ async function main() {
     );
   }
 
-  console.log("[equsto-p188-197]", dryRun ? "DRY-RUN" : "OK", rows.length, "ürün");
+  console.log("[pimak-p188-197]", dryRun ? "DRY-RUN" : "OK", rows.length, "ürün");
   console.log("  fiyatlı:", priced, "| görselli:", imgOk);
   for (const [d, list] of Object.entries(byDept)) {
     console.log(`  ${d}: +${list.length} (toplam ${deptTotals[d]})`);

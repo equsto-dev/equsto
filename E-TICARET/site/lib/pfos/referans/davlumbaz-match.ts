@@ -1,5 +1,9 @@
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
-import { DAVLUMBAZ_MARKA } from "../core/davlumbaz-marka";
+import {
+  DAVLUMBAZ_MARKA,
+  isPimakDavlumbazSku,
+  PIMAK_DAVLUMBAZ_MARKA,
+} from "../core/davlumbaz-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
@@ -37,20 +41,21 @@ export async function matchDavlumbazByReferans(
     urunTipi ?? undefined,
   );
   if (matched) {
+    const marka = isPimakDavlumbazSku(matched.sku) ? PIMAK_DAVLUMBAZ_MARKA : DAVLUMBAZ_MARKA;
     return {
       ...matched,
       ad: displayIsimFromSablon(isim),
-      marka: DAVLUMBAZ_MARKA,
+      marka,
       olcu: olcuDisplay,
     };
   }
 
   if (isDavlumbazReferans(isim)) {
     return {
-      id: `equsto-davlumbaz-ozel`,
+      id: `pimak-davlumbaz-ozel`,
       sku: "",
       ad: displayIsimFromSablon(isim),
-      marka: DAVLUMBAZ_MARKA,
+      marka: PIMAK_DAVLUMBAZ_MARKA,
       model: null,
       olcu: olcuDisplay,
       elektrikGucuKw: null,

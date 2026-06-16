@@ -1,7 +1,7 @@
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import {
-  CALISMA_TEZGAH_MARKA,
   isCalismaTezgahiReferansIsim,
+  PIMAK_TEZGAH_MARKA,
 } from "../core/calisma-tezgah";
 import { matchEqustoFiyatListesiTezgah } from "../core/equsto-fiyat-listesi-pfos";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -40,10 +40,10 @@ export async function matchCalismaTezgahiByReferans(
 
   if (isCalismaTezgahiReferansIsim(isim, notlar)) {
     return {
-      id: `equsto-tezgah-ozel-${urunTipi ?? "calisma_tezgahi"}`,
+      id: `pimak-tezgah-ozel-${urunTipi ?? "calisma_tezgahi"}`,
       sku: "",
       ad: isim.trim(),
-      marka: CALISMA_TEZGAH_MARKA,
+      marka: PIMAK_TEZGAH_MARKA,
       model: null,
       olcu: olcuText || null,
       elektrikGucuKw: null,

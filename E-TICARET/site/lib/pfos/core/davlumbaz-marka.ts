@@ -1,7 +1,12 @@
 import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-sku";
 
-/** PFOS davlumbaz — EQUSTO Fiyat Listesi 2026 */
+/** PFOS davlumbaz — Pimak katalog (PIMAK.*) + Equsto fiyat listesi (EQ.KDAV*) */
 export const DAVLUMBAZ_MARKA = "Equsto";
+export const PIMAK_DAVLUMBAZ_MARKA = "Pimak";
+
+export function isPimakDavlumbazSku(sku: string | null | undefined): boolean {
+  return /^PIMAK\.\d{5}\./i.test(String(sku ?? "").trim());
+}
 
 /** EQUSTO katalog derinlikleri (cm) */
 export const EQUSTO_DAVLUMBAZ_DEPTHS_CM = [100, 120, 150, 200, 250] as const;
