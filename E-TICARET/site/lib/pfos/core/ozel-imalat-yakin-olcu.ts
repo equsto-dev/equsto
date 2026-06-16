@@ -20,6 +20,16 @@ import {
 export function parseEqustoSkuDims(
   sku: string | null | undefined,
 ): { widthCm: number; depthCm: number; suffix: string } | null {
+  const eq = String(sku ?? "")
+    .trim()
+    .match(/^EQ\.[A-Z0-9]+\.(\d{3})(\d{2})$/i);
+  if (eq) {
+    return {
+      widthCm: Number(eq[1]),
+      depthCm: Number(eq[2]),
+      suffix: "",
+    };
+  }
   const m = String(sku ?? "")
     .trim()
     .match(/^EQUSTO\.(\d{3})(\d{2})\.(\d{2})$/i);

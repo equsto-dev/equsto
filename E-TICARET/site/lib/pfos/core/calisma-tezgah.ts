@@ -1,8 +1,8 @@
 import { resolveTipKodu } from "./tip-kodu";
-import { isEqustoDavlumbazRow } from "./davlumbaz-marka";
+import { isEqustoFiyatListesiSku } from "./equsto-fiyat-listesi-pfos";
 
-/** Yer tezgahları — Pimak imalat (EQUSTO / PIMAK SKU) */
-export const CALISMA_TEZGAH_MARKA = "Pimak";
+/** Yer tezgahları — EQUSTO Fiyat Listesi 2026 */
+export const CALISMA_TEZGAH_MARKA = "Equsto";
 
 export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "calisma_tezgahi",
@@ -103,8 +103,13 @@ export function isSetUstuAraTezgahKatalog(ad: string, sku?: string | null): bool
 
 export function isEqustoTezgahRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
+  if (isEqustoFiyatListesiSku(s)) {
+    const kod = s.match(/^EQ\.([A-Z0-9]+)\./i)?.[1] ?? "";
+    if (kod.startsWith("KDAV")) return false;
+    if (ad && /davlumbaz/i.test(ad)) return false;
+    return true;
+  }
   if (!/^EQUSTO\.\d{4,5}\./i.test(s)) return false;
-  if (isEqustoDavlumbazRow(s, ad)) return false;
   if (ad && /davlumbaz/i.test(ad)) return false;
   return true;
 }

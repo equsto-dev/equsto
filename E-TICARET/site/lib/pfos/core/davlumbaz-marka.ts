@@ -1,13 +1,12 @@
-/** PFOS davlumbaz — teklif markası ve Pimak (eski EQUSTO) SKU üretimi */
-export const DAVLUMBAZ_MARKA = "Pimak";
+import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-listesi-pfos";
+
+/** PFOS davlumbaz — EQUSTO Fiyat Listesi 2026 */
+export const DAVLUMBAZ_MARKA = "Equsto";
 
 /** EQUSTO katalog derinlikleri (cm) */
 export const EQUSTO_DAVLUMBAZ_DEPTHS_CM = [100, 120, 150, 200, 250] as const;
 
-/**
- * EQUSTO 5 haneli orta blok: davlumbaz 200×150→20155; tezgah 130×70→13070 (son hane 70/85).
- * @see scripts/_compare-davlumbaz-cafemarkt.mjs
- */
+/** Eski PIMAK/EQUSTO 5 haneli orta blok (geriye dönük). */
 export function isEqustoDavlumbazMiddleBlock(mid: string): boolean {
   if (!/^\d{5}$/.test(mid)) return false;
   const tail = Number(mid.slice(3));
@@ -21,6 +20,11 @@ export function isEqustoDavlumbazMiddleBlock(mid: string): boolean {
 
 export function isEqustoDavlumbazRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
+  if (isEqustoFiyatListesiSku(s)) {
+    const kod = parseEqSku(s)?.kod ?? "";
+    if (kod.startsWith("KDAV")) return true;
+    return false;
+  }
   const mid = s.match(/^(?:EQUSTO|PIMAK)\.(\d{5})\./i)?.[1];
   if (!mid) return false;
   if (ad && /tezgah|sehpa|evye|calisma|çalışma/i.test(ad) && !/davlumbaz/i.test(ad)) {
