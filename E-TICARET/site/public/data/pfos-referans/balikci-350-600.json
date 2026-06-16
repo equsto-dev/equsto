@@ -1,0 +1,644 @@
+{
+  "kategoriId": "balikci",
+  "bantId": "350-600",
+  "label": "Balık Restaurant 350–600 m² (Dudak Payı)",
+  "referansM2": 475,
+  "kaynakDosya": "2017-191 DUDAK PAYI WATERGARDEN/2017-191-2.xlsx",
+  "not": "Dudak Payı Watergarden · balık restoran · 350–600 m² bandı · 2017-191",
+  "konseptSinif": "balikci-dudakpayi",
+  "yukleme": "2026-06-16T09:38:42.271Z",
+  "kalemSayisi": 70,
+  "toplamAdet": 99,
+  "kalemler": [
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.01",
+      "ad": "ISITICI LAMBA",
+      "marka": "makpa",
+      "olcu": "—",
+      "adet": 4
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.01",
+      "ad": "SERVİS RAFI TEK SIRA",
+      "marka": "imalat",
+      "olcu": "2400x300x450",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.02",
+      "ad": "SETÜSTÜ NÖTR ARA TEZGAH",
+      "marka": "ATALAY",
+      "olcu": "400x900x280",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.03",
+      "ad": "GAZLI SULU SİSTEM IZGARA",
+      "marka": "ATALAY",
+      "olcu": "800x900x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.04",
+      "ad": "ELEKTRİKLİ  FRİTÖZ",
+      "marka": "ATALAY",
+      "olcu": "800x900x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.05",
+      "ad": "TEZGAH TİPİ G SERİSİ DERİN DONDURUCU",
+      "marka": "fagor",
+      "olcu": "1350x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.06",
+      "ad": "GAZLI SETÜSTÜ 4 LÜ OCAK",
+      "marka": "ATALAY",
+      "olcu": "800x900x280",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.07",
+      "ad": "GAZLI KAPALI  ATEŞ OCAK",
+      "marka": "ATALAY",
+      "olcu": "800x900x280",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.08",
+      "ad": "P.ALTI G SERİSİ BUZDOLABI",
+      "marka": "fagor",
+      "olcu": "1600x700x585",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.09",
+      "ad": "SALAMANDER ELEKTRİKLİ ASANSÖRLÜ - ASM 65",
+      "marka": "atalay",
+      "olcu": "650x450x500",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.10",
+      "ad": "DİK TİP G SERİSİ BUZDOLABI",
+      "marka": "fagor",
+      "olcu": "695x825x2010",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.11",
+      "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "900x800x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.12",
+      "ad": "MP250 COMBI EL MİKSERİ PAR+ÇIRP.",
+      "marka": "robot coupe",
+      "olcu": "250 mm.",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.13",
+      "ad": "ÖZEL ÜST TABLA",
+      "marka": "imalat",
+      "olcu": "1500x900x40",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.14",
+      "ad": "ÖZEL ÜST TABLA",
+      "marka": "imalat",
+      "olcu": "1700x900x40",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.15",
+      "ad": "DUVAR TİPİ DAVLUMBAZ FİLTRELİ",
+      "marka": "imalat",
+      "olcu": "6000x1170x500",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.16",
+      "ad": "ÖZEL ÜST TABLA",
+      "marka": "imalat",
+      "olcu": "1400x900x40",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.17",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI  TABAN VE ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.18",
+      "ad": "SICAKLIK DOLABI",
+      "marka": "imalat",
+      "olcu": "1900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.19",
+      "ad": "TEZGAH TİPİ G SERİSİ ÇEKMECELİ BUZDOLAB",
+      "marka": "fagor",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.20",
+      "ad": "EVYELİ TEZGAH ORTA",
+      "marka": "imalat",
+      "olcu": "600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.21",
+      "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.22",
+      "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.23",
+      "ad": "UN ŞEKER ARABASI POLİETİLEN",
+      "marka": "bora",
+      "olcu": "420x750x710",
+      "adet": 3
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.24",
+      "ad": "MERMER TABLALI TEZGAH",
+      "marka": "imalat",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.25",
+      "ad": "ÇİFT EVYELİ TEZGAH ORTA",
+      "marka": "imalat",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.26",
+      "ad": "MAKE UP G SERİSİ BUZDOLABI",
+      "marka": "fagor",
+      "olcu": "1800x700x1390",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.27",
+      "ad": "SICAKLIK DOLABI",
+      "marka": "imalat",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.28",
+      "ad": "APE-061 ELEK 6 TEPSİLİ TOUCH SCREEN KON.FIRIN",
+      "marka": "fagor",
+      "olcu": "790x945x770",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.29",
+      "ad": "MKY400UT PLANET MİKSER 40L 103122 3HIZLI TRİFAZE",
+      "marka": "bosfor",
+      "olcu": "40 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.30",
+      "ad": "DUVAR RAFI",
+      "marka": "imalat",
+      "olcu": "1600x300x30",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.31",
+      "ad": "TAVA ASKI RAFI",
+      "marka": "imalat",
+      "olcu": "6000x400x400",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.32",
+      "ad": "SEBZE DOĞRAMA MAKİNESİ 220V",
+      "marka": "robot coupe",
+      "olcu": "389x405x544",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.32",
+      "ad": "5 Lİ DISK TAKIMI",
+      "marka": "robot coupe",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "A.33",
+      "ad": "300MM GIDA DİLİMLEME MAKİNESİ STANDART",
+      "marka": "fimar",
+      "olcu": "630x530x460",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.01",
+      "ad": "BUZ MAKİNESİ 90KG/GÜN",
+      "marka": "fagor",
+      "olcu": "700x580x995",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.02",
+      "ad": "KARBUZ MAKİNESİ - HAZNELİ",
+      "marka": "brema",
+      "olcu": "496x660x685",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.03",
+      "ad": "2 KAPILI BAR BUZDOLABI",
+      "marka": "jp",
+      "olcu": "920x500x910",
+      "adet": 3
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.04",
+      "ad": "CHROMAT KLASİK FULL OTOMATİK 3 DEMLİKLİ",
+      "marka": "meşale",
+      "olcu": "945x380x630",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.05",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "marka": "imalat",
+      "olcu": "1200x600x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.06",
+      "ad": "TEZGAH ALTI BULAŞIK YIKAMA MAKİNASI",
+      "marka": "EMPERO",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.07",
+      "ad": "EVYELİ TEZGAH",
+      "marka": "imalat",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.08",
+      "ad": "TEZGAH TİP G SERİSİ CAM KAPILI BUZDOLAB",
+      "marka": "fagor",
+      "olcu": "1350x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.09",
+      "ad": "ÖZEL YUVARLAK FORMLU ÇAY OCAĞI DAVLUMBAZI",
+      "marka": "imalat",
+      "olcu": "1000x500x500",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.10",
+      "ad": "ÖZEL ÜST TABLA",
+      "marka": "imalat",
+      "olcu": "1400x600x40",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.11",
+      "ad": "ÖZEL ÜST TABLA",
+      "marka": "imalat",
+      "olcu": "1500x600x40",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "B.12",
+      "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "1100x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "C.03",
+      "ad": "İSTİF RAFI TEL RAFLI 4 KAT INOX 304 46X122X180",
+      "marka": "portashelf",
+      "olcu": "460x1220x1800",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "C.04",
+      "ad": "İSTİF RAFI TEL RAFLI  4 KAT INOX 304 46x137x180",
+      "marka": "portashelf",
+      "olcu": "460x1370x1800",
+      "adet": 5
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "C.05",
+      "ad": "İSTİF RAFI TEL RAFLI 4 KAT INOX 304 46x107x180",
+      "marka": "portashelf",
+      "olcu": "460x1070x1800",
+      "adet": 2
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.01",
+      "ad": "SIYIRMA HUNİLİ TEZGAH",
+      "marka": "imalat",
+      "olcu": "2200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.02",
+      "ad": "ÇÖP ÜNİTESİ HAREKETLİ",
+      "marka": "portashelf",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.03",
+      "ad": "ÇİFT EVYELİ BYM GİRİŞ TEZGAHI",
+      "marka": "imalat",
+      "olcu": "1400x750x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.04",
+      "ad": "SPREY ÜNİTESİ TEZGAHA MONTE MT 001",
+      "marka": "cancan",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.05",
+      "ad": "KEPÇE ASKI BORUSU KAB100",
+      "marka": "imalat",
+      "olcu": "1000 mm.",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.06",
+      "ad": "FAST 180 GİYOTİN TİP BULAŞIK YIKAMA MAKİNASI",
+      "marka": "EMPERO",
+      "olcu": "635x735x1480",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.07",
+      "ad": "DUVAR TİPİ DAVLUMBAZ FİLTRESİZ",
+      "marka": "imalat",
+      "olcu": "1000x970x500",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.08",
+      "ad": "BULAŞIK MAKİNESİ ÇIKIŞ TEZGAHI",
+      "marka": "imalat",
+      "olcu": "800x750x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "D.09",
+      "ad": "BULAŞIKHANE İSTİF RAFLARI",
+      "marka": "portashelf",
+      "olcu": "137*53*180",
+      "adet": 5
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "E.01",
+      "ad": "İSTİF RAFI TEL RAFLI 4 KAT INOX 304",
+      "marka": "portashelf",
+      "olcu": "460x1070x1800",
+      "adet": 4
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "E.02",
+      "ad": "İSTİF RAFI TEL RAFLI 4 KAT INOX 304",
+      "marka": "portashelf",
+      "olcu": "460x1520x1800",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "F.01",
+      "ad": "AKEK-01 KONVEYÖRLÜ EKMEK KIZARTMA",
+      "marka": "atalay",
+      "olcu": "480x440x440",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "F.02",
+      "ad": "DOLAPLI TEZGAH ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "F.03",
+      "ad": "TEZGAH TİPİ G SERİSİ BUZDOLABI",
+      "marka": "fagor",
+      "olcu": "1350x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "F.04",
+      "ad": "EVYELİ TEZGAH ORTA",
+      "marka": "imalat",
+      "olcu": "600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "F.05",
+      "ad": "DOLAPLI TEZGAH ARA RAFLI",
+      "marka": "imalat",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "G.01",
+      "ad": "TEPSİ TAŞIMA YÜKSEK-İKİLİ GN 2/1",
+      "marka": "imalat",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "H.01",
+      "ad": "DUVAR TİPİ DAVLUMBAZ FİLTRESİZ",
+      "marka": "imalat",
+      "olcu": "3500x970x500",
+      "adet": 1
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "Y.01",
+      "ad": "ALTTAN ÇIKIŞLI ORTADAN SİFONLU",
+      "marka": "portashelf",
+      "olcu": "300x300x150",
+      "adet": 4
+    },
+    {
+      "bolum": "mutfak",
+      "bolumAd": "MUTFAK",
+      "poz": "Y.02",
+      "ad": "ALTTAN ÇIKIŞLI ORTADAN SİFONLU",
+      "marka": "portashelf",
+      "olcu": "300x1180x150",
+      "adet": 3
+    }
+  ]
+}

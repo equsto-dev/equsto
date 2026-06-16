@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T08:09:52.331Z",
-  "aktifPaketSayisi": 52,
+  "updated_at": "2026-06-16T09:38:43.064Z",
+  "aktifPaketSayisi": 53,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -125,7 +125,8 @@
       "Büyük Yemekhane (Catering)",
       "Okul Yemekhanesi",
       "Üretim Fabrikası",
-      "Yerinde Üretim"
+      "Yerinde Üretim",
+      "Personel Yemekhanesi"
     ],
     "Üretim / Fabrika": [
       "Fabrika Yemekhanesi",
@@ -176,7 +177,7 @@
     },
     "Balık Restaurant": {
       "min": 80,
-      "max": 250,
+      "max": 600,
       "slug": "balikci"
     },
     "İtalyan Restoran": {
@@ -428,6 +429,11 @@
       "min": 20,
       "max": 60,
       "slug": "yerinde-uretim"
+    },
+    "Personel Yemekhanesi": {
+      "min": 150,
+      "max": 250,
+      "slug": "personel-yemekhane"
     }
   }
 }

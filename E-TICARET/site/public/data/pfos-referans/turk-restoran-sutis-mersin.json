@@ -1,0 +1,942 @@
+{
+  "kategoriId": "turk-restoran",
+  "bantId": "sutis-mersin",
+  "label": "Türk restoranı (Sütiş Mersin) — kahvaltı + öğle/akşam",
+  "referansM2": 450,
+  "kaynakDosya": "2017-120 SÜTİŞ MERSİN/2017-120.xlsx",
+  "not": "Sütiş Mersin · kahvaltı - öğle ve akşam yemekleri · Türk mutfağı referansı · 2017-120",
+  "konseptSinif": "turk-restoran-sutis-mersin",
+  "yukleme": "2026-06-16T08:57:08.760Z",
+  "kalemSayisi": 116,
+  "toplamAdet": 177,
+  "kalemler": [
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S1",
+      "ad": "ÇİKOLATA DOLABI",
+      "olcu": "240*60*200",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S2",
+      "ad": "DONDURMA DOLABI",
+      "olcu": "120*85*130",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S3",
+      "ad": "SÜTLÜ TATLI DOLABI",
+      "olcu": "300*85*130",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S4",
+      "ad": "KAHVALTI DOLABI",
+      "olcu": "150*85*130",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S5",
+      "ad": "SERVİS TEZGAHI",
+      "olcu": "100*85*90",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S6",
+      "ad": "BÖREK DOLABI",
+      "olcu": "120*85*90",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-teşhi̇r",
+      "bolumAd": "SERVİS TEŞHİR",
+      "poz": "S7",
+      "ad": "ET TEŞHİR DOLABI",
+      "olcu": "150*85*130",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAH",
+      "olcu": "60*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M2",
+      "ad": "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "186*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M4",
+      "ad": "MAKE-UP DOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "140*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M5",
+      "ad": "IZGARA, GAZLI,DOLAPLI",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M6",
+      "ad": "YUMURTA OCAĞI",
+      "olcu": "120*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M7",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "140*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M8",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "140*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M9",
+      "ad": "İSKENDER OCAĞI",
+      "olcu": "100*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M10",
+      "ad": "DÖNER OCAĞI",
+      "olcu": "4 RADYANLI",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M11",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M12",
+      "ad": "DİNLENDİRME ÜNİTESİ, ELK., DOLAPLI",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M13",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., DOLAPLI",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M14",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M15",
+      "ad": "KÖMÜRLÜ IZGARA",
+      "olcu": "150*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M16",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M17",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİTRELİ",
+      "olcu": "1170*117*50",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M18",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAH",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M19",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M20",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M21",
+      "ad": "ÇORBA BAINMARIE",
+      "olcu": "150*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M22",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "125*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M23",
+      "ad": "MAKE-UP DOLABI, 2 KAPILI",
+      "olcu": "140*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M24",
+      "ad": "PİDE FIRINI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "servi̇s-mutfaği",
+      "bolumAd": "SERVİS MUTFAĞI",
+      "poz": "M25",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "200*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B2",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B3",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "65 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B4",
+      "ad": "BASKET RAFI",
+      "olcu": "140*70*94",
+      "adet": 2
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B5",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B6",
+      "ad": "ŞERETLİK",
+      "olcu": "ÇİFTLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B7",
+      "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "180*60*94",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B8",
+      "ad": "ÇÖP ÇEKMECESİ",
+      "olcu": "40*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B9",
+      "ad": "ŞİŞE SOĞUTUCU",
+      "olcu": "138*50*90",
+      "adet": 3
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B10",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "150*60*94",
+      "adet": 3
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B11",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B12",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B13",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B14",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B15",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "235*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B16",
+      "ad": "ÇAY OCAĞI",
+      "olcu": "4 DEMLİKLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B17",
+      "ad": "BAR SÜZGEÇ",
+      "olcu": "100*30*6",
+      "adet": 1
+    },
+    {
+      "bolum": "bar",
+      "bolumAd": "BAR",
+      "poz": "B18",
+      "ad": "ÇAY OCAĞI DAVLUMBAZI",
+      "olcu": "150*60*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D1",
+      "ad": "BULAŞIK SIYIRMA EZGAHI",
+      "olcu": "200*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D2",
+      "ad": "BASKET RAFI",
+      "olcu": "200*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D3",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D4",
+      "ad": "ÇİFT EVYELİ BYM GİRİŞ TEZGAHI",
+      "olcu": "200*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D5",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D6",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, KONVEYÖRLÜ",
+      "olcu": "2000 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D7",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "250*117*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D8",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "110*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "D9",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*61*160",
+      "adet": 3
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E1",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E2",
+      "ad": "SİNEKLİK",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E3",
+      "ad": "SERVİS ARABASI",
+      "olcu": "60*90*60",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E4",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E5",
+      "ad": "YER YIKAMA HORTUMU",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E6",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "130*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E8",
+      "ad": "MİKSER SETÜSTÜ",
+      "olcu": "4,7 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E9",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "NO: 11",
+      "adet": 2
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E10",
+      "ad": "ÇİFT EVYELİ BYM GİRİŞ TEZGAHI",
+      "olcu": "140*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "130*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E12",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E13",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E14",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E15",
+      "ad": "GIDA DİLİMLEME MAKİNASI",
+      "olcu": "Q300",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E16",
+      "ad": "MERMER TABLALI TEZGAH TİPİ BUZDOLABI",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E17",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "120*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E18",
+      "ad": "MERMER TABLALI TEZGAH TİPİ BUZDOLABI",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E19",
+      "ad": "TARTI",
+      "olcu": "15 KG.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E20",
+      "ad": "SERVİS ARABASI",
+      "olcu": "60*90*60",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E21",
+      "ad": "MERMER TABLALI TEZGAH TİPİ BUZDOLABI",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E22",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "120*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E23",
+      "ad": "UN ŞEKER ARABASI",
+      "olcu": "103 lt.",
+      "adet": 5
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E24",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E25",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E26",
+      "ad": "ET KIYMA MAKİNASI, SOĞUTMALI",
+      "olcu": "NO: 32",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E27",
+      "ad": "DUVAR DOLABI",
+      "olcu": "186*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E28",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E29",
+      "ad": "YER YIKAMA HORTUMU",
+      "olcu": "10 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E30",
+      "ad": "DEPO TİPİ BUZDOLABI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E31",
+      "ad": "SPİRAL HAMUR YOĞURMA MAKİNASI",
+      "olcu": "50 KG",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E32",
+      "ad": "DUVAR DOLABI",
+      "olcu": "180*40*60",
+      "adet": 3
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E33",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "90 KG",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E34",
+      "ad": "SPİRAL HAMUR YOĞURMA MAKİNASI",
+      "olcu": "50 KG",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E35",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "80*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E36",
+      "ad": "PLANET MİKSER",
+      "olcu": "60 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E37",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E38",
+      "ad": "UN ŞEKER ARABASI",
+      "olcu": "103 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E39",
+      "ad": "TARTI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E40",
+      "ad": "SETÜSTÜ MİKSER",
+      "olcu": "4.7 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E41",
+      "ad": "DUVAR RAFI",
+      "olcu": "100*30*4",
+      "adet": 3
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E42",
+      "ad": "TEPSİ TAŞIMA ARABASI",
+      "olcu": "15 KATLI",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E43",
+      "ad": "TAŞ TABANLI FIRIN 3 KATLI",
+      "olcu": "120*80",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E44",
+      "ad": "COMBI FIRIN",
+      "olcu": "8 TEPSİLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E45",
+      "ad": "YER OCAĞI",
+      "olcu": "60*60*50",
+      "adet": 3
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E46",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "630*180*50",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E47",
+      "ad": "KAZAN YIKAMA EVYESİ",
+      "olcu": "120*80*57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "hazirlik-mutfaği",
+      "bolumAd": "HAZIRLIK MUTFAĞI",
+      "poz": "E48",
+      "ad": "ÖN YIKAMA DUŞU, DUVARA MONTE",
+      "olcu": "100*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "kuru-depo",
+      "bolumAd": "KURU DEPO",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 10
+    },
+    {
+      "bolum": "soğuk-oda",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "640*365*240",
+      "adet": 1
+    },
+    {
+      "bolum": "soğuk-oda",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "C2",
+      "ad": "TEPSİ TAŞIMA ARABASI",
+      "olcu": "15 KATLI",
+      "adet": 3
+    },
+    {
+      "bolum": "soğuk-oda",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "C3",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 7
+    },
+    {
+      "bolum": "deri̇n-dondurucu-oda",
+      "bolumAd": "DERİN DONDURUCU ODA",
+      "poz": "F1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "640*210*240",
+      "adet": 1
+    },
+    {
+      "bolum": "deri̇n-dondurucu-oda",
+      "bolumAd": "DERİN DONDURUCU ODA",
+      "poz": "F2",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 7
+    },
+    {
+      "bolum": "çöp-soğuk-oda",
+      "bolumAd": "ÇÖP SOĞUK ODA",
+      "poz": "F1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 7
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 11
+    }
+  ]
+}

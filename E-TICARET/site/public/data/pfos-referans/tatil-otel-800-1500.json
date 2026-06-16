@@ -1,0 +1,3766 @@
+{
+  "kategoriId": "tatil-otel",
+  "bantId": "800-1500",
+  "label": "Tatil Oteli 800–1500 m² (Wyndham)",
+  "referansM2": 1000,
+  "kaynakDosya": "2016-170 NOYAN OTELCİLİK LAINOX/2016-194R1_WYNDAM HOTEL_2042017.xlsx",
+  "not": "Wyndham Hotel · tatil oteli referansı · 1000 m² hedef",
+  "konseptSinif": "tatil-otel-wyndham-2016-194",
+  "yukleme": "2026-06-16T07:43:45.388Z",
+  "kalemSayisi": 469,
+  "toplamAdet": 825,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.01",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.02",
+      "ad": "Buharlı kombi fırın (NABOO NAGB202)",
+      "olcu": "LAINOX ITALY",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.03",
+      "ad": "Tepsi taşıma arabası, GN 2/1 (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.04",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "300 × 150 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.05",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.06",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 7
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.07",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 10
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.08",
+      "ad": "Cihaz altı dolap (İMALAT)",
+      "olcu": "80 × 90 × 60",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.09",
+      "ad": "Kaynatma tenceresi, gazlı, 100 lt. - OLIS ITALY CR0991089 (DIAMENTE)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.10",
+      "ad": "Kuzine - 4 Gözlü Ocak - Gazlı - OLIS ITALY CR0995129 (DIAMENTE)",
+      "olcu": "80 × 90 × 84/90",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.11",
+      "ad": "Cihaz altı dolap (DIAMENTE)",
+      "olcu": "40 × 90 × 62",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.12",
+      "ad": "Yer ocağı (İMALAT)",
+      "olcu": "60 × 60 × 50",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.13",
+      "ad": "Davlumbaz, orta tip, filtreli (İMALAT)",
+      "olcu": "500 × 250 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.14",
+      "ad": "Ara tezgah - OLIS ITALY CR0996919 (DIAMENTE)",
+      "olcu": "40 × 90 × 87",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.15",
+      "ad": "Devrilir tava Elektrikli - 80 lt - OLIS ITALY CR1139499 (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.16",
+      "ad": "Servis tezgahı, ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.17",
+      "ad": "Servis tezgahı, ara raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.18",
+      "ad": "Bıçak sterilizatörü (PORTASHELF)",
+      "olcu": "10 BIÇAKLI",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.19",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.20",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.21",
+      "ad": "Fritöz, Elektrikli - 2x22 lt- OLIS ITALY CR1138949 (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.22",
+      "ad": "Sosbenmari, Elektrikli - OLIS ITALY DT94/10 CBE (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.23",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.01",
+      "ad": "Çalışma tezgahı, hareketli, taban raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.02",
+      "ad": "Davlumbaz, duvar tipi, filtreli (İMALAT)",
+      "olcu": "150 × 150 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.03",
+      "ad": "Gıda dilimleme makinası (CLASSIC)",
+      "olcu": "[object Object]",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.04",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.05",
+      "ad": "Buharlı kombi fırın (SAPIENS SAEV102)",
+      "olcu": "LAINOX ITALY",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.06",
+      "ad": "El yıkama evyesi, dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.07",
+      "ad": "Tepsi taşıma arabası, GN 2/1 (İMALAT)",
+      "olcu": "43 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.08",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 5
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.09",
+      "ad": "2 küvetli tezgah (İMALAT)",
+      "olcu": "180 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.10",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 4
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.11",
+      "ad": "Cihaz altı dolap (DIAMENTE)",
+      "olcu": "40 × 73 × 62",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.12",
+      "ad": "Cihaz altı dolap (DIAMENTE)",
+      "olcu": "80 × 73 × 62",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.13",
+      "ad": "Ara tezgah - OLIS ITALY CR0995029 (DIAMENTE)",
+      "olcu": "40 × 73 × 87",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.14",
+      "ad": "Kuzine, 4 açık alevli, gazlı - OLIS ITALY CR0993559 (DIAMENTE)",
+      "olcu": "80 × 73 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.15",
+      "ad": "Fritöz Elektrikli- 2x15 lt - OLIS ITALY CR0994879 (DIAMENTE)",
+      "olcu": "80 × 73 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "SOĞUK MUTFAK",
+      "poz": "B.16",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.01",
+      "ad": "Kaset rafı (İMALAT)",
+      "olcu": "160 × 40 × 60",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.02",
+      "ad": "Bulaşık alma tezgahı (İMALAT)",
+      "olcu": "160 × 110 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.03",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40 × 50",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.04",
+      "ad": "Bulaşık alma tezgahı (İMALAT)",
+      "olcu": "100 × 80 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.05",
+      "ad": "Makine giriş eviyesi (İMALAT)",
+      "olcu": "140 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.06",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "450 × 120 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.07",
+      "ad": "Sprey ünitesi tezgaha monte (CAN CAN)",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.08",
+      "ad": "Makine giriş-çıkış tezgahı (İMALAT)",
+      "olcu": "160 × 56 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.09",
+      "ad": "Kurutma tüneli (DIHR ITALY)",
+      "olcu": "70 cm",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.10",
+      "ad": "Bulaşık yıkama makinesi (DIHR ITALY)",
+      "olcu": "AX 310 3600 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.11",
+      "ad": "Makine giriş-çıkış tezgahı (İMALAT)",
+      "olcu": "120 × 56 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.12",
+      "ad": "Makine giriş-çıkış tezgahı (İMALAT)",
+      "olcu": "60 × 56 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.13",
+      "ad": "Makine giriş eviyesi (İMALAT)",
+      "olcu": "70 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.14",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "100 × 97 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.15",
+      "ad": "Bulaşık yıkama makinesi 1.000tb./h (DIHR ITALY)",
+      "olcu": "HT 11T",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.16",
+      "ad": "Bulaşık toplama arabası (İMALAT)",
+      "olcu": "50 × 90 × 90",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.17",
+      "ad": "Tepsi taşıma arabası (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.18",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 9
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.01",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.02",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 3
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.03",
+      "ad": "Sprey ünitesi duvara monte (CAN CAN)",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.04",
+      "ad": "istif tablası (PORTASHELF)",
+      "olcu": "137 × 61 × 25",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.05",
+      "ad": "Kazan yıkama eviyesi (İMALAT)",
+      "olcu": "120 × 80 × 57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.06",
+      "ad": "Derin çift küvetli tezgah (İMALAT)",
+      "olcu": "160 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "MUTFAK BULAŞIK",
+      "poz": "D.07",
+      "ad": "Süzme tezgahı, derin havuzlu (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.01",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "120 × 30 × 4",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.02",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.03",
+      "ad": "Bıçak sterilizatörü (ATALAY)",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.04",
+      "ad": "Polietilen tablalı tezgah, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 6
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.05",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.06",
+      "ad": "Kıyma makinası, soğutmalı 32 (BOSFOR)",
+      "olcu": "NO: 32",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.07",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.08",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.09",
+      "ad": "Et kütüğü (İMALAT)",
+      "olcu": "70 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.10",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.11",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40 × 50",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.12",
+      "ad": "Et askı arabası (PORTASHELF)",
+      "olcu": "120 × 55 × 160",
+      "adet": 3
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "E.13",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 14
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.01",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.02",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 4
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.03",
+      "ad": "Sebze doğrama makinası (ROBOT COUPE)",
+      "olcu": "CL 50",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.04",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.05",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.06",
+      "ad": "Sebze basma arabası, derin havuzlu, süzme tablalı (İMALAT)",
+      "olcu": "60 × 60 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.07",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "120 × 30 × 4",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.08",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.09",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.10",
+      "ad": "Süzme havuzlu tezgah, derin havuzlu, süzme tablalı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.11",
+      "ad": "Derin çift küvetli tezgah (İMALAT)",
+      "olcu": "160 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.12",
+      "ad": "İstif tablası (PORTASHELF)",
+      "olcu": "122 × 53 × 25",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.13",
+      "ad": "istif tablası (PORTASHELF)",
+      "olcu": "137 × 53 × 25",
+      "adet": 4
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.14",
+      "ad": "Patates soyma makinası (BOSFOR)",
+      "olcu": "30 kg SEFER",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.15",
+      "ad": "Demonte istif rafı (PORTA SHELF)",
+      "olcu": "91 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "SEBZE HAZIRLIK",
+      "poz": "G.16",
+      "ad": "Demonte istif rafı (PORTA SHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 5
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.01",
+      "ad": "Mermer tablalı tezgah (İMALAT)",
+      "olcu": "190 × 80 × 85",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.02",
+      "ad": "Tepsi taşıma arabası (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.03",
+      "ad": "Malzeme arabası, policarbon (İMALAT)",
+      "olcu": "103 lt",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.04",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "450 × 150 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.05",
+      "ad": "Yer ocağı (İMALAT)",
+      "olcu": "60 × 60 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.06",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "122 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.07",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.08",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.09",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.10",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "160 × 30 × 4",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.11",
+      "ad": "Konveksiyonlu fırın arabası (AROMA AREN154)",
+      "olcu": "44 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.12",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "160 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.13",
+      "ad": "Pasta pizza fırını (SAL - EMD3112)",
+      "olcu": "SALVA",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.14",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.15",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.16",
+      "ad": "Buharlı kombi fırın (AROMA AREN154)",
+      "olcu": "LAINOX ITALY",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.17",
+      "ad": "İki küvetli tezgah (İMALAT)",
+      "olcu": "160 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.18",
+      "ad": "Planet mikser, emniyet kalkanlı (BOSFOR)",
+      "olcu": "60 lt",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.19",
+      "ad": "Hamur yoğurma, spiral 75lt. (BOSFOR)",
+      "olcu": "75 kg",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.20",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.21",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.22",
+      "ad": "Kirli tepsi arabası (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.23",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "PATİSERİ",
+      "poz": "H.24",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.01",
+      "ad": "Servis tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.02",
+      "ad": "Servis tezgahı , taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.03",
+      "ad": "Depo tipi buzdolabı, çift cam kapılı (FRENOX)",
+      "olcu": "140 × 70 × 205",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.04",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137 × 53 × 160",
+      "adet": 4
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.05",
+      "ad": "Bar buzdolabı, 3 kapılı (FRENOX)",
+      "olcu": "135 × 52 × 92",
+      "adet": 5
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.01",
+      "ad": "Kasa taşıma arabası (İMALAT)",
+      "olcu": "60 × 80 × 25/110",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.02",
+      "ad": "Kantar 150 kg. (TEM)",
+      "olcu": "150 kg",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.03",
+      "ad": "Temizlik hortumu, ithal (CAN CAN)",
+      "olcu": "15 mt.",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.04",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.05",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "GARSON HOLÜ",
+      "poz": "L.06",
+      "ad": "Bone-galoş dolabı (İMALAT)",
+      "olcu": "50 × 25 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.01",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 3
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.02",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 18
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.03",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 3
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.04",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "122 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.05",
+      "ad": "Çöp konteyneri (UÇAK PLASTİK)",
+      "olcu": "400 lt",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "DEPOLAR",
+      "poz": "M.06",
+      "ad": "Çöp konteyneri (UÇAK PLASTİK)",
+      "olcu": "200 lt",
+      "adet": 9
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.01",
+      "ad": "Nötr servis ünitesi, taban ve ara raflı, granit tablalı- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "160 × 80 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.02",
+      "ad": "Nötr servis ünitesi, taban ve ara raflı, granit tablalı- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 80 × 90",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.01",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "74 × 30 × 14",
+      "adet": 7
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "30 × 30 × 14",
+      "adet": 8
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.03",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "95 × 30 × 14",
+      "adet": 3
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.04",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "138 × 30 × 14",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.05",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "118 × 30 × 14",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.06",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "118 × 30 × 14",
+      "adet": 2
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.01",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "350 × 255 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.02",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "360 × 285 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.03",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "450 × 285 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.04",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "430 × 280 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.05",
+      "ad": "Derin dondurucu (ROTA)",
+      "olcu": "430 × 230 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.07",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "480 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.08",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "480 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.09",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "350 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.10",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "480 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.11",
+      "ad": "Derin dondurucu (ROTA)",
+      "olcu": "350 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.12",
+      "ad": "Derin dondurucu (ROTA)",
+      "olcu": "350 × 300 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.01",
+      "ad": "Bulaşık sıyırma tezgahı (İMALAT)",
+      "olcu": "100 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.02",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.03",
+      "ad": "Makine giriş evyesi (İMALAT)",
+      "olcu": "100 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.04",
+      "ad": "Sprey Ünitesi tezgaha monte (CAN CAN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.05",
+      "ad": "Bulaşık yıkama makinası (DIHR ITALY)",
+      "olcu": "1000 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.06",
+      "ad": "Makine giriş-çıkış evyesi (İMALAT)",
+      "olcu": "70 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.07",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "100 × 97 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C.08",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.01",
+      "ad": "Kuver ünitesi (İMALAT)",
+      "olcu": "70 × 70 × 135",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.02",
+      "ad": "Tepsi standı (İMALAT)",
+      "olcu": "70 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.03",
+      "ad": "Servis rafı (İMALAT)",
+      "olcu": "70 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.04",
+      "ad": "Sıcak servis ünitesi (İMALAT)",
+      "olcu": "150 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.05",
+      "ad": "Tepsi standı (İMALAT)",
+      "olcu": "150 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.06",
+      "ad": "Servis rafı (İMALAT)",
+      "olcu": "150 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.07",
+      "ad": "Servis buzdolabı (İMALAT)",
+      "olcu": "143 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.08",
+      "ad": "Tepsi standı (İMALAT)",
+      "olcu": "143 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.09",
+      "ad": "Servis rafı (İMALAT)",
+      "olcu": "143 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.10",
+      "ad": "Servis tezgahı (İMALAT)",
+      "olcu": "100 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.11",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.12",
+      "ad": "Çalışma tezgahı, dolaplı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.13",
+      "ad": "Kirli tepsi arabası (PORTASHELF)",
+      "olcu": "15 tepsili",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "S.01",
+      "ad": "Yer ızgarası (PORTASHELF)",
+      "olcu": "30 × 30 × 14",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.01",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "140*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.02",
+      "ad": "Bar buzdolabı, 3 kapılı (FRENOX)",
+      "olcu": "135*52*91",
+      "adet": 6
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.03",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "190*60*85",
+      "adet": 3
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.04",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "190*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.05",
+      "ad": "Kahve öğütücü (CUNILL)",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.06",
+      "ad": "Espresso kahve makinası, çift gruplu (RANCILIO)",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.07",
+      "ad": "Portakal sıkma makinası (SANTOS)",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.08",
+      "ad": "Filtre kahve makinası (BUNN)",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.09",
+      "ad": "Çay ocağı davlumbazı (İMALAT)",
+      "olcu": "100*60*40",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.10",
+      "ad": "Kahve ocağı otomatik (MEŞALE)",
+      "olcu": "3 DEMLİKLİ",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.11",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "125*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.12",
+      "ad": "Bar tezgahı (İMALAT)",
+      "olcu": "80*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.13",
+      "ad": "Buz makinası (ICEMATIC)",
+      "olcu": "42 kg/gün",
+      "adet": 3
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.14",
+      "ad": "Tezgah tipi buzdolabı, 2 kapılı (FRENOX)",
+      "olcu": "143*60*85",
+      "adet": 8
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.15",
+      "ad": "Kokteyl tezgahı (İMALAT)",
+      "olcu": "50*60*85",
+      "adet": 4
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.16",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "130*60*85",
+      "adet": 5
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.17",
+      "ad": "Bulaşık yıkama makinası (DIHR ITALY)",
+      "olcu": "500 tb/s",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- SERVİS OFİSİ",
+      "poz": "I.18",
+      "ad": "Bar tezgahı (İMALAT)",
+      "olcu": "60*60*85",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.01",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (ATALAY)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.02",
+      "ad": "Davlumbaz, duvar tipi, filtreli (İMALAT)",
+      "olcu": "500*117*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.03",
+      "ad": "Salamander (ATALAY)",
+      "olcu": "60*60*60",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.04",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.05",
+      "ad": "Fırın standı, tepsi istifli (İMALAT)",
+      "olcu": "90*90*70",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.06",
+      "ad": "Buharlı kombi fırın (LAINOX)",
+      "olcu": "10 GN 1/1",
+      "adet": 4
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.07",
+      "ad": "Cihazlatı dolap",
+      "olcu": "40*70*60",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.08",
+      "ad": "Cihazaltı dolap",
+      "olcu": "80*70*60",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.10",
+      "ad": "Fritöz",
+      "olcu": "40*70*30",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.11",
+      "ad": "Izgara",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.12",
+      "ad": "Kuzine",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.13",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.14",
+      "ad": "Bulaşık sıyırma tezgahı (İMALAT)",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.15",
+      "ad": "Makine giriş-çıkış evyesi (İMALAT)",
+      "olcu": "70*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.16",
+      "ad": "Makine giriş evyesi (İMALAT)",
+      "olcu": "120*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.17",
+      "ad": "Sprey ünitesi (CAN CAN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.18",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.19",
+      "ad": "Davlumbaz (İMALAT)",
+      "olcu": "100*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.20",
+      "ad": "Bulaşık yıkama makinası (DIHR ITALY)",
+      "olcu": "1000 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.21",
+      "ad": "Gıda dilimleme makinası (CLASSEQ)",
+      "olcu": "Q300",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.23",
+      "ad": "Garnitür üniteli buzdolabı, 3 kapılı (FRENOX)",
+      "olcu": "188*70*85/105",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.24",
+      "ad": "Depo tipi buzdolabı (FRENOX)",
+      "olcu": "140*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.26",
+      "ad": "Mikrodalga fırın (GALANZ)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.27",
+      "ad": "Sebze doğrama makinası (ROBOT COUPE)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.28",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "140*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.29",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.30",
+      "ad": "Polietilen tablalı tezgah, taban raflı (İMALAT)",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.31",
+      "ad": "Servis arabası, 2 katlı (İMALAT)",
+      "olcu": "60*90*90",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "K- SNACK MUTFAĞI",
+      "poz": "K.32",
+      "ad": "Pizza fırını çift katlı, elektrikli (ATALAY)",
+      "olcu": "6262DE",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.01",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "74*30*14",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "30*30*14",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.1",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.2",
+      "ad": "Bone-galoş dolabı (İMALAT)",
+      "olcu": "50 × 25 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.3",
+      "ad": "Servis arabası, 2 katlı (İMALAT)",
+      "olcu": "90 × 60 × 90",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.4",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.5",
+      "ad": "Bıçak sterilizatörü (PORTASHELF)",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.6",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.7",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "60 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.8",
+      "ad": "Garnitür üniteli buzdolabı, 3 kapılı (FRENOX)",
+      "olcu": "190 × 70 × 85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.9",
+      "ad": "Davlumbaz, duvar tipi, filtreli (İMALAT)",
+      "olcu": "450 × 150 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.10",
+      "ad": "Yer ocağı (İMALAT)",
+      "olcu": "60 × 60 × 50",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.11",
+      "ad": "Buharlı kombi fırın (NABOO NAGB202)",
+      "olcu": "LAINOX ITALY",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.12",
+      "ad": "Davlumbaz, orta tip, filtreli (İMALAT)",
+      "olcu": "350 × 250 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.13",
+      "ad": "Cihaz altı dolap - OLIS ITALY (DIAMENTE TOUCH)",
+      "olcu": "40 × 90 × 62",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.14",
+      "ad": "Cihaz altı dolap - OLIS ITALY (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 62",
+      "adet": 5
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.15",
+      "ad": "Ara tezgah - OLIS ITALY CR0996919 (DIAMENTE TOUCH)",
+      "olcu": "40 × 90 × 87",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.16",
+      "ad": "Fritöz, Elektrikli 2x23 lt - OLIS ITALY CR1138949 (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.17",
+      "ad": "Izgara, gazlı, Nervürlü - OLIS ITALY CR0995779 (DİAMENTE)",
+      "olcu": "40 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.18",
+      "ad": "Izgara, gazlı, Düz - OLIS ITALY CR0995769 (DIAMENTE)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.19",
+      "ad": "Kuzine, 4 açık alevli, gazlı, OLIS ITALY CR0995129 (DIAMENTE)",
+      "olcu": "80 × 90 × 87",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.20",
+      "ad": "Sosbenmari, Elektrikli, - OLIS ITALY DT94/10 CBE (DIAMENTE TOUCH)",
+      "olcu": "80 × 90 × 87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.21",
+      "ad": "Çalışma tezgahı, hareketli, taban raflı (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.22",
+      "ad": "Servis rafı, tek katlı (İMALAT)",
+      "olcu": "190 × 40 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.23",
+      "ad": "Servis tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.24",
+      "ad": "Tepsi taşıma arabası, GN 2/1 (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.25",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.26",
+      "ad": "Sebze doğrama makinası (ROBOT COUPE)",
+      "olcu": "CL 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.27",
+      "ad": "Süzme havuzlu tezgah, süzme tablalı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.28",
+      "ad": "İki küvetli tezgah (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.29",
+      "ad": "Çalışma tezgahı, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.30",
+      "ad": "Kıyma makinası, soğutmalı 32 (BOSFOR)",
+      "olcu": "NO: 32",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.31",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.32",
+      "ad": "Et kütüğü (İMALAT)",
+      "olcu": "70 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.33",
+      "ad": "Polietilen tablalı tezgah, taban raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.34",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "140 × 30 × 4",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.35",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.36",
+      "ad": "Demonte istif rafı (İMALAT)",
+      "olcu": "152 × 61 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.37",
+      "ad": "Sprey ünitesi duvara monte (CAN CAN)",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.38",
+      "ad": "Kazan yıkama eviyesi (İMALAT)",
+      "olcu": "70 × 70 × 57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.39",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.40",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.41",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.01",
+      "ad": "Kaset rafı (İMALAT)",
+      "olcu": "140 × 40 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.02",
+      "ad": "Kaset rafı (İMALAT)",
+      "olcu": "140 × 40 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.03",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.04",
+      "ad": "Bulaşık alma tezgahı, etrafı kapalı (İMALAT)",
+      "olcu": "140 × 80 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.05",
+      "ad": "Bulaşık alma tezgahı, etrafı kapalı (İMALAT)",
+      "olcu": "140 × 80 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.06",
+      "ad": "Sprey ünitesi tezgaha monte (CAN CAN)",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.07",
+      "ad": "Davlumbaz (Bulaşık makinesi tipi), duvar tipi (İMALAT)",
+      "olcu": "450 × 120 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.08",
+      "ad": "Makine giriş eviyesi (İMALAT)",
+      "olcu": "140 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.09",
+      "ad": "Makine giriş - çıkış tezgahı (İMALAT)",
+      "olcu": "160 × 75 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.10",
+      "ad": "Kurutma tüneli (DIHR ITALY)",
+      "olcu": "70 cm",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.11",
+      "ad": "Bulaşık yıkama makinesi konveyörlü (DIHR ITALY)",
+      "olcu": "3600 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.12",
+      "ad": "Tabak arabası, policarbon (İMALAT)",
+      "olcu": "4 Bölmeli",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.13",
+      "ad": "Kaset taşıma arabası (İMALAT)",
+      "olcu": "60 × 60 × 25/90",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.14",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "100 × 97 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.15",
+      "ad": "Makine giriş - çıkış tezgahı (İMALAT)",
+      "olcu": "140 × 75 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.16",
+      "ad": "Bulaşık yıkama makinesi, giyotin tip (DIHR ITALY)",
+      "olcu": "1000 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.17",
+      "ad": "Küvetli tezgah sırt parçası (İMALAT)",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.18",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SERVİS BULAŞIK",
+      "poz": "C.19",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 6
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.01",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.02",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "120 × 30 × 4",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.03",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.04",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "140 × 30 × 4",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.05",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.06",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.07",
+      "ad": "Buz makinesi (BREMA)",
+      "olcu": "90 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.08",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.09",
+      "ad": "Duvar dolabı, 2 katlı, sürgü kapılı (İMALAT)",
+      "olcu": "190 × 40 × 60",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.10",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.01",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "50 × 43 × 33",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.02",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 4
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.03",
+      "ad": "Tepsi taşıma arabası, GN 2/1 (İMALAT)",
+      "olcu": "44 × 63 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.04",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "190 × 30 × 4",
+      "adet": 4
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.05",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "60 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.06",
+      "ad": "Çalışma tezgahı, taban raflı, hareketli (İMALAT)",
+      "olcu": "140 × 70 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.07",
+      "ad": "Servis rafı (İMALAT)",
+      "olcu": "190 × 40 × 60",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.08",
+      "ad": "Servis tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.09",
+      "ad": "Banket arabası (İMALAT)",
+      "olcu": "12 GN 2/1",
+      "adet": 3
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.10",
+      "ad": "Ordövr tabak arabası (ORMEL)",
+      "olcu": "100 Tb",
+      "adet": 9
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.11",
+      "ad": "Servis arabası, 2 katlı (İMALAT)",
+      "olcu": "60 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.12",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.13",
+      "ad": "Buz makinası deposu (BREMA)",
+      "olcu": "1100 kg",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.14",
+      "ad": "Modüler buz makinesi (BREMA)",
+      "olcu": "300 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.15",
+      "ad": "Çalışma tezgahı, dolaplı, taban ve ara raflı (İMALAT)",
+      "olcu": "165 × 70 × 85",
+      "adet": 3
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.16",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "122 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "N",
+      "bolumAd": "DİYET MUTFAĞI",
+      "poz": "N.17",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152 × 53 × 160",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.01",
+      "ad": "Nötr servis ünitesi - Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "100 × 90 × 90",
+      "adet": 6
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.02",
+      "ad": "Soğuk servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 5
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.03",
+      "ad": "Ekmek servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.04",
+      "ad": "Çorba servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.05",
+      "ad": "Tabak servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.06",
+      "ad": "Sıcak servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 3
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.07",
+      "ad": "Davlumbaz (İMALAT)",
+      "olcu": "350 × 120 × 50",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.08",
+      "ad": "Show servis ünitesi (İMALAT)",
+      "olcu": "150 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.09",
+      "ad": "Show servis ünitesi (İMALAT)",
+      "olcu": "200 × 90 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.10",
+      "ad": "Tezgah tipi buzdolabı (FRENOX)",
+      "olcu": "140 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.11",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "140 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.12",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "60 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.13",
+      "ad": "Depo tipi buzdolabı (FRENOX)",
+      "olcu": "70 × 70 × 205",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.01",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "30 × 30 × 14",
+      "adet": 10
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "74 × 30 × 14",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.03",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "118 × 30 × 14",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.04",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "135 × 30 × 14",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.05",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "94 × 30 × 14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.06",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "160 × 30 × 14",
+      "adet": 2
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.01",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "250 × 415 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.02",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "295 × 415 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.03",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "360 × 265 × 240",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "C.01",
+      "ad": "Tabak arabası (TRIBECA)",
+      "olcu": "4 BÖLMELİ",
+      "adet": 3
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "C.02",
+      "ad": "Bulaşık alma tezgahı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "C.03",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "C.04",
+      "ad": "Bulaşık alma tezgahı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "C.05",
+      "ad": "Kaset rafı (İMALAT)",
+      "olcu": "180*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.01",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.02",
+      "ad": "Bar tezgahı (İMALAT)",
+      "olcu": "60*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.03",
+      "ad": "Buz makinası (ICEMATIC)",
+      "olcu": "42 KG/GÜN",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.04",
+      "ad": "Bulaşık yıkama makinası (DIHR ITALY)",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.05",
+      "ad": "Tek küvetli tegah (İMALAT)",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.06",
+      "ad": "Bar köşe tablası (İMALAT)",
+      "olcu": "30*60*4",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.07",
+      "ad": "Bar köşe tablası (İMALAT)",
+      "olcu": "30*60*4",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.08",
+      "ad": "Kokteyl tezgahı (İMALAT)",
+      "olcu": "70*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.09",
+      "ad": "Katı meyve/ sebze suyu sıkma (SANTOS)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.10",
+      "ad": "Portakal sıkma makinası (SANTOS)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "I.11",
+      "ad": "Bar blender (SANTOS)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.01",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.02",
+      "ad": "Buz makinası deposu (ICEMATIC)",
+      "olcu": "1200 kg kapasite",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.03",
+      "ad": "Modüler buz makinası (ICEMATIC)",
+      "olcu": "300 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.04",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 3
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.05",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "60*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.06",
+      "ad": "Ordövr tabak arabası (ORMEL)",
+      "olcu": "100 tb/s",
+      "adet": 3
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.07",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "122*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.08",
+      "ad": "Servis rafı (İMALAT)",
+      "olcu": "180*40*60",
+      "adet": 4
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.09",
+      "ad": "Servis tezgahı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 4
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.10",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.11",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.12",
+      "ad": "Banket arabası (ATALAY)",
+      "olcu": "12 GN 2/1",
+      "adet": 2
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.13",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "130*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "S.14",
+      "ad": "Çalışma tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "130*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Y.01",
+      "ad": "Yer ızgarası (PORTASHELF)",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası (PORTASHELF)",
+      "olcu": "50*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası (PORTASHELF)",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "SOĞUK DEPOLAR",
+      "poz": "Z.01",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "280*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.01",
+      "ad": "El yıkama eviyesi, Dizden kumandalı (BY KITCHEN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.02",
+      "ad": "Setaltı buzdolabı (FRENOX)",
+      "olcu": "188*70*60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.03",
+      "ad": "Setaltı buzdolabı (FRENOX)",
+      "olcu": "143*70*60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.04",
+      "ad": "Davlumbaz, duvar tipi, filtreli (İMALAT)",
+      "olcu": "500*125*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.05",
+      "ad": "Davlumbaz, duvar tipi (İMALAT)",
+      "olcu": "150*150*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.06",
+      "ad": "Izgara, Lavtaşlı (OLIS)",
+      "olcu": "40*70*30",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.07",
+      "ad": "Kuzine, 4 açık alevli (OLIS)",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.08",
+      "ad": "Pizza fırın standı (İMALAT)",
+      "olcu": "80*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.09",
+      "ad": "Pizza Fırını, çift katlı, elk. (ATALAY)",
+      "olcu": "6262DE",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.10",
+      "ad": "Makarna pişirici (OLIS)",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.11",
+      "ad": "Garnitür üniteli buzdolabı (FRENOX)",
+      "olcu": "188*70*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.12",
+      "ad": "Cihazaltı dolap, kapalı (OLIS)",
+      "olcu": "40*70*60",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.13",
+      "ad": "Ara tezgah (OLIS)",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.14",
+      "ad": "Fırın standı, tepsi istifli (İMALAT)",
+      "olcu": "120*90*70",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.15",
+      "ad": "Buharlı kombi fırın (LAINOX)",
+      "olcu": "10 GN 2/1",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.16",
+      "ad": "Fritöz (OLIS)",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.17",
+      "ad": "Izgara, gazlı (OLIS)",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.18",
+      "ad": "Soğuk garnitür ünitesi (FRENOX)",
+      "olcu": "150*40*40",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.19",
+      "ad": "Servis tezgahı, taban ve ara raflı, dolaplı (İMALAT)",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.20",
+      "ad": "Garson bankosu (İMALAT)",
+      "olcu": "190*40*60",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.21",
+      "ad": "Servis tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.22",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.23",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "140*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.24",
+      "ad": "Servis arabası, 2 katlı (İMALAT)",
+      "olcu": "90*60*90",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.25",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "140*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.26",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.27",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "115*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.28",
+      "ad": "Polietilen tablalı tezgah, tek çekmeceli, taban raflı (İMALAT)",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.29",
+      "ad": "Çalışma tezgahı, taban raflı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.30",
+      "ad": "Depo tipi derin dondurucu, tek kapılı (FRENOX)",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A.31",
+      "ad": "Depo tipi buzdolabı, tek kapılı (FRENOX)",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.01",
+      "ad": "Çalışma tezgahı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.02",
+      "ad": "Servis arabası (İMALAT)",
+      "olcu": "190*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.03",
+      "ad": "Garson bankosu (İMALAT)",
+      "olcu": "190*40*60",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.04",
+      "ad": "Servis tezgahı (İMALAT)",
+      "olcu": "190*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.05",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.06",
+      "ad": "Gıda dilimleme makinası (CLASSEQ)",
+      "olcu": "Q300",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.07",
+      "ad": "Garnitür üniteli buzdolabı (FRENOX)",
+      "olcu": "188*70*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.08",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.09",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.10",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.11",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "122*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.12",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*53*160",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "B.13",
+      "ad": "İstif tablası (PORTASHELF)",
+      "olcu": "183*61*15",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.01",
+      "ad": "Makine giriş eviyesi (İMALAT)",
+      "olcu": "120*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.02",
+      "ad": "Kaset rafı (İMALAT)",
+      "olcu": "160*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.03",
+      "ad": "Bulaşık alma tezgahı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.04",
+      "ad": "Davlumbaz (İMALAT)",
+      "olcu": "100*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.05",
+      "ad": "Sprey ünitesi tezgaha monte (CAN CAN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.06",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "91*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.07",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.08",
+      "ad": "Bulaşık yıkama makinası (DIHR ITALY)",
+      "olcu": "1000 TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.09",
+      "ad": "Makine giriş-çıkış tezgahı (İMALAT)",
+      "olcu": "70*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "C.10",
+      "ad": "Çöp arabası (PORTASHELF)",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.01",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.02",
+      "ad": "Demonte istif rafı (PORTASHELF)",
+      "olcu": "152*61*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.03",
+      "ad": "İstif tablası (PORTASHELF)",
+      "olcu": "91*61*15",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.04",
+      "ad": "Kepçe askı borusu (İMALAT)",
+      "olcu": "100 cm.",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.05",
+      "ad": "Sprey ünitesi duvara monte (CAN CAN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "D.06",
+      "ad": "Kazan yıkama evyesi (İMALAT)",
+      "olcu": "100*80*57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.01",
+      "ad": "Tezgah tipi buzdolabı, 2 kapılı (FRENOX)",
+      "olcu": "140 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.02",
+      "ad": "Bar tezgahı, dolaplı, taban ve ara raflı (İMALAT)",
+      "olcu": "100 × 60 × 85",
+      "adet": 2
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.03",
+      "ad": "Bardak yıkama makinesi, setaltı (DIHR ITALY)",
+      "olcu": "60 × 60 × 82",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.05",
+      "ad": "Tezgah tipi buzdolabı - 2 kapılı (FRENOX)",
+      "olcu": "140 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.06",
+      "ad": "Kokteyl tezgahı (İMALAT)",
+      "olcu": "50 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.07",
+      "ad": "Tek küvetli tezgah, taban raflı, dolaplı (İMALAT)",
+      "olcu": "120 × 60 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.08",
+      "ad": "Çalışma tezgahı, taban ve ara raflı, dolaplı (İMALAT)",
+      "olcu": "160 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.09",
+      "ad": "Katı meyve / sebze suyu sıkma (SANTOS)",
+      "olcu": "NO: 28",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.10",
+      "ad": "Bar blender (SANTOS)",
+      "olcu": "NO: 33",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.11",
+      "ad": "Portakal sıkma makinesi (SANTOS)",
+      "olcu": "NO:11",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.12",
+      "ad": "Çay ocağı davlumbazı (İMALAT)",
+      "olcu": "110 × 60 × 40",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.13",
+      "ad": "Kahveci ocağı otomatik (MEŞALE)",
+      "olcu": "3 DEMLİKLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.14",
+      "ad": "Tek küvetli tezgah dolaplı (İMALAT)",
+      "olcu": "120 × 70 × 85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "SERVİS BAR",
+      "poz": "I.15",
+      "ad": "Buz makinesi (BREMA)",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.01",
+      "ad": "Tabak servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "100 × 75 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.02",
+      "ad": "Sıcak servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "160 × 100 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.03",
+      "ad": "Ekmek servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "100 × 100 × 90",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "O.04",
+      "ad": "Soğuk servis ünitesi- Detaylara göre fiyatlandırılacaktır (İMALAT)",
+      "olcu": "160 × 100 × 90",
+      "adet": 2
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.01",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.02",
+      "ad": "Servis arabası, 2 katlı (İMALAT)",
+      "olcu": "60*90*60",
+      "adet": 2
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.03",
+      "ad": "Servis tezgahı, taban ve ara raflı (İMALAT)",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.04",
+      "ad": "Garson bankosu (İMALAT)",
+      "olcu": "190*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.05",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.06",
+      "ad": "Buz makinası, 42 kg/gün (ICEMATIC)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.07",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.08",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.09",
+      "ad": "Duvar rafı (İMALAT)",
+      "olcu": "160*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.10",
+      "ad": "Tek küvetli tezgah (İMALAT)",
+      "olcu": "50*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.11",
+      "ad": "Duvar dolabı (İMALAT)",
+      "olcu": "160*40*60",
+      "adet": 2
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.12",
+      "ad": "Çalışma tezgahı, ara raflı, dolaplı (İMALAT)",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.13",
+      "ad": "Kahve öğütücü (CUNILL)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.14",
+      "ad": "Espresso kahve makinası, çift gruplu (RANCILIO)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.15",
+      "ad": "Filtre kahve makinası (BUNN)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.16",
+      "ad": "Tek kapaklı tost makinası (ATALAY)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.17",
+      "ad": "Çay otomatı, 23 lt. (REMTA)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.18",
+      "ad": "Portakal sıkma makinesi (SANTOS)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.19",
+      "ad": "Katı meyve / sebze suyu sıkma (SANTOS)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "O",
+      "bolumAd": "AÇIK BÜFE",
+      "poz": "R.20",
+      "ad": "Mikrodalga fırın (GALANZ)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.01",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "30 × 30 × 14",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.02",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "74 × 30 × 14",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Y.03",
+      "ad": "Yer ızgarası, tavalı, yatay (PORTASHELF)",
+      "olcu": "118 × 30 × 14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "Z.01",
+      "ad": "Soğuk depo (ROTA)",
+      "olcu": "325*400*240",
+      "adet": 1
+    }
+  ]
+}

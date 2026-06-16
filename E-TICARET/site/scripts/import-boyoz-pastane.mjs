@@ -1,0 +1,108 @@
+/**
+ * 2016-134 Smyrna Boyoz → boyoz-pastane 100–250 m² (Pastane Cafe)
+ * Kaynak: PFOS/veri/boyoz-pastane-2016-134.xlsx
+ * Kullanım: npm run pfos:boyoz-pastane:import
+ */
+import { execFileSync } from "node:child_process";
+import ExcelJS from "exceljs";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseLainoxProformaFiyatWs } from "./lib/lainox-proforma-parse.mjs";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SITE = path.join(__dirname, "..");
+const VERI_DIR = path.join(SITE, "..", "..", "PFOS", "veri");
+const OUT = path.join(SITE, "public", "data", "pfos-referans");
+const MANIFEST = path.join(SITE, "public", "data", "pfos-kategoriler.json");
+const KORPUS_SCRIPT = path.join(__dirname, "build-pfos-mutfak-korpus.mjs");
+
+const KATEGORI_ID = "boyoz-pastane";
+const BANT_ID = "100-250";
+const XLSX = "boyoz-pastane-2016-134.xlsx";
+const REFERANS_M2 = 175;
+
+async function upsertManifest(meta) {
+  let manifest = { version: "1", updated_at: new Date().toISOString(), kategoriler: [] };
+  try {
+    manifest = JSON.parse(await fs.readFile(MANIFEST, "utf8"));
+  } catch {
+    /* */
+  }
+  const kategoriler = Array.isArray(manifest.kategoriler) ? manifest.kategoriler : [];
+  const idx = kategoriler.findIndex((k) => k.id === KATEGORI_ID);
+  const kayit = {
+    id: KATEGORI_ID,
+    label: "Pastane Cafe (Boyoz)",
+    ustKategori: "Pastane & Fırın",
+    bantlar: [],
+  };
+  const existing = idx >= 0 ? kategoriler[idx] : kayit;
+  const bantlar = Array.isArray(existing.bantlar) ? [...existing.bantlar] : [];
+  const bantKayit = {
+    id: BANT_ID,
+    label: "100–250 m² (Smyrna Boyoz)",
+    referansM2: REFERANS_M2,
+    meta,
+  };
+  const bi = bantlar.findIndex((b) => b.id === BANT_ID);
+  if (bi >= 0) bantlar[bi] = bantKayit;
+  else bantlar.push(bantKayit);
+  kayit.bantlar = bantlar;
+  if (idx >= 0) kategoriler[idx] = kayit;
+  else kategoriler.push(kayit);
+  manifest.kategoriler = kategoriler;
+  manifest.updated_at = new Date().toISOString();
+  await fs.writeFile(MANIFEST, JSON.stringify(manifest, null, 2), "utf8");
+}
+
+async function main() {
+  const src = path.join(VERI_DIR, XLSX);
+  const wb = new ExcelJS.Workbook();
+  await wb.xlsx.readFile(src);
+  const kalemler = parseLainoxProformaFiyatWs(wb.worksheets[0]);
+  const toplamAdet = kalemler.reduce(
+    (t, r) => (typeof r.adet === "number" ? t + r.adet : t),
+    0,
+  );
+  const yukleme = new Date().toISOString();
+  const liste = {
+    kategoriId: KATEGORI_ID,
+    bantId: BANT_ID,
+    label: "Pastane Cafe (Boyoz) 100–250 m²",
+    referansM2: REFERANS_M2,
+    kaynakDosya: "2016-134 SMYRNA BOYOZ LAINOX/2016-134.xlsx",
+    not: "Smyrna Boyoz · giriş kat satış · üretim mutfağı · bulaşıkhane · boyoz fırını",
+    konseptSinif: "pastane-cafe-boyoz",
+    yukleme,
+    kalemSayisi: kalemler.length,
+    toplamAdet,
+    kalemler,
+  };
+
+  await fs.mkdir(OUT, { recursive: true });
+  const dest = path.join(OUT, `${KATEGORI_ID}-${BANT_ID}.json`);
+  await fs.writeFile(dest, JSON.stringify(liste, null, 2), "utf8");
+  console.log("OK", dest, kalemler.length, "kalem, toplamAdet", toplamAdet);
+
+  await upsertManifest({
+    listeDosya: `${KATEGORI_ID}-${BANT_ID}.json`,
+    kalemSayisi: liste.kalemSayisi,
+    toplamAdet: liste.toplamAdet,
+    kaynakDosya: liste.kaynakDosya,
+    yukleme,
+    konseptSinif: liste.konseptSinif,
+  });
+  console.log("Manifest güncellendi:", KATEGORI_ID);
+
+  try {
+    execFileSync("node", [KORPUS_SCRIPT], { stdio: "inherit", cwd: SITE });
+  } catch (e) {
+    console.warn("Korpus güncellenemedi:", e.message);
+  }
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

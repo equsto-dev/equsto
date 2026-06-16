@@ -39,6 +39,7 @@ export const KonseptEnum = z.enum([
   "tavukcu",
   "kanatci-kebapci",
   "patisserie-yemek",
+  "boyoz-pastane",
   "restoran",
   "kokteyl-kahve",
   "kahve-atolyesi",
@@ -47,7 +48,9 @@ export const KonseptEnum = z.enum([
   "casual-cafe",
   "buyuk-yemekhane",
   "guneli-pastane",
+  "ekmek-kruvasan",
   "sehir-otel",
+  "tatil-otel",
   "kiremit-akasya",
   "mus-selinoz-turk",
   "kasap",
@@ -58,6 +61,8 @@ export const KonseptEnum = z.enum([
   "kahve-tatli",
   "kahve-duragi-pastane",
   "resort-otel",
+  "donerci",
+  "personel-yemekhane",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -81,6 +86,7 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   tavukcu: "Tavukçu",
   "kanatci-kebapci": "Kanatçı-Kebapçı",
   "patisserie-yemek": "Patisserie + Yemek",
+  "boyoz-pastane": "Pastane Cafe (Boyoz)",
   restoran: "Restoran",
   "kokteyl-kahve": "Kokteyl + Kahve",
   "kahve-atolyesi": "Kahve Atölyesi",
@@ -89,7 +95,9 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   "casual-cafe": "Casual Cafe",
   "buyuk-yemekhane": "Büyük Yemekhane",
   "guneli-pastane": "Güneli Fırın",
+  "ekmek-kruvasan": "Ekmek + Kruvasan",
   "sehir-otel": "Şehir Oteli (Business)",
+  "tatil-otel": "Tatil Oteli",
   "kiremit-akasya": "Kiremit Akasya",
   "mus-selinoz-turk": "Türk Mutfağı — Lokanta",
   kasap: "Kasap",
@@ -100,6 +108,8 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   "kahve-tatli": "Kahve & Tatlı",
   "kahve-duragi-pastane": "Kahve Durağı — Pastane & Kahvaltı",
   "resort-otel": "Resort Otel (ölçekli)",
+  donerci: "Dönerci (Yeni Nesil)",
+  "personel-yemekhane": "Personel Yemekhanesi (Catering)",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";

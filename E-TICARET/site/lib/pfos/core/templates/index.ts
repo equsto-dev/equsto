@@ -44,6 +44,11 @@ import { buildKahveDuragiTemplate } from "../../referans/kahve-duragi";
 import { buildKahveTatliTemplate } from "../../referans/kahve-tatli";
 import { buildKahveDuragiPastaneTemplate } from "../../referans/kahve-duragi-pastane";
 import { buildResortOtelTemplate } from "../../referans/resort-otel";
+import { buildDonerciTemplate } from "../../referans/donerci";
+import { buildPersonelYemekhaneTemplate } from "../../referans/personel-yemekhane";
+import { buildBoyozPastaneTemplate } from "../../referans/boyoz-pastane";
+import { buildEkmekKruvasanTemplate } from "../../referans/ekmek-kruvasan";
+import { buildTatilOtelTemplate } from "../../referans/tatil-otel";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
@@ -51,6 +56,8 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "coffee-shop",
   "italyan",
   "birahane",
+  "donerci",
+  "personel-yemekhane",
   "pastane",
   "pizzaci",
   "pideci",
@@ -61,6 +68,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "tavukcu",
   "kanatci-kebapci",
   "patisserie-yemek",
+  "boyoz-pastane",
   "all-day-dining-cafe",
   "restoran",
   "kokteyl-kahve",
@@ -71,8 +79,10 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "buyuk-yemekhane",
   "guneli-pastane",
   "sehir-otel",
+  "tatil-otel",
   "kiremit-akasya",
   "mus-selinoz-turk",
+  "ekmek-kruvasan",
   "kasap",
   "kasap-sarkuteri",
   "sarkuteri-restoran",
@@ -87,7 +97,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
 export const TEMPLATES: Record<
   Exclude<
     Konsept,
-    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "kanatci-kebapci" | "patisserie-yemek" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve" | "kahve-atolyesi" | "harvest-cafe" | "all-sport-cafe" | "casual-cafe" | "buyuk-yemekhane" | "guneli-pastane" | "sehir-otel" | "kiremit-akasya" | "mus-selinoz-turk" | "kasap" | "kasap-sarkuteri" | "sarkuteri-restoran" | "inari-bar-yemek" | "kahve-duragi" | "kahve-tatli" | "kahve-duragi-pastane" | "resort-otel" | "turk-restoran"
+    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "donerci" | "personel-yemekhane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "kanatci-kebapci" | "patisserie-yemek" | "boyoz-pastane" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve" | "kahve-atolyesi" | "harvest-cafe" | "all-sport-cafe" | "casual-cafe" | "buyuk-yemekhane" | "guneli-pastane" | "ekmek-kruvasan" | "sehir-otel" | "tatil-otel" | "kiremit-akasya" | "mus-selinoz-turk" | "kasap" | "kasap-sarkuteri" | "sarkuteri-restoran" | "inari-bar-yemek" | "kahve-duragi" | "kahve-tatli" | "kahve-duragi-pastane" | "resort-otel" | "turk-restoran"
   >,
   ConceptTemplate
 > = {
@@ -127,6 +137,8 @@ export async function resolveTemplateForQuote(
   if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);
   if (konsept === "italyan") return buildItalyanTemplate(m2);
   if (konsept === "birahane") return buildBirahaneTemplate(m2);
+  if (konsept === "donerci") return buildDonerciTemplate(m2);
+  if (konsept === "personel-yemekhane") return buildPersonelYemekhaneTemplate(m2);
   if (konsept === "pastane") return buildPastaneTemplate(m2);
   if (konsept === "pizzaci") return buildPizzaciReferansTemplate(m2);
   if (konsept === "pideci") return buildPideciTemplate(m2);
@@ -137,6 +149,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "tavukcu") return buildTavukcuTemplate(m2);
   if (konsept === "kanatci-kebapci") return buildKanatciKebapciTemplate(m2);
   if (konsept === "patisserie-yemek") return buildPatisserieYemekTemplate(m2);
+  if (konsept === "boyoz-pastane") return buildBoyozPastaneTemplate(m2);
   if (konsept === "all-day-dining-cafe") return buildAllDayDiningTemplate(m2);
   if (konsept === "restoran") return buildRestoranTemplate(m2);
   if (konsept === "kokteyl-kahve") return buildKokteylKahveTemplate(m2);
@@ -146,7 +159,9 @@ export async function resolveTemplateForQuote(
   if (konsept === "casual-cafe") return buildCasualCafeTemplate(m2);
   if (konsept === "buyuk-yemekhane") return buildBuyukYemekhaneTemplate(m2);
   if (konsept === "guneli-pastane") return buildGuneliPastaneTemplate(m2);
+  if (konsept === "ekmek-kruvasan") return buildEkmekKruvasanTemplate(m2);
   if (konsept === "sehir-otel") return buildSehirOtelTemplate(m2);
+  if (konsept === "tatil-otel") return buildTatilOtelTemplate(m2);
   if (konsept === "kiremit-akasya") return buildKiremitAkasyaTemplate(m2);
   if (konsept === "mus-selinoz-turk") return buildMusSelinozTurkTemplate(m2);
   if (konsept === "kasap") return buildKasapTemplate(m2);

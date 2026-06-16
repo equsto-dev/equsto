@@ -25,6 +25,14 @@ export type ReferansListeId =
   | M2BantId
   | "mahalle"
   | "referans"
+  | "150-250"
+  | "150-400"
+  | "200-350"
+  | "250-500"
+  | "350-500"
+  | "350-600"
+  | "800-1500"
+  | "sutis-mersin"
   | "100-300"
   | "100-200"
   | "150-200"
@@ -37,7 +45,6 @@ export type ReferansListeId =
   | "150-300"
   | "500-1000"
   | "30-50"
-  | "150-250"
   | "80-150"
   | "50-150"
   | "2000-3500"
@@ -95,6 +102,7 @@ export function pickBalikciListe(
 ): ReferansListeId {
   const t = String(altTip ?? "").toLowerCase();
   if (t.includes("mahalle")) return "mahalle";
+  if (m2 >= 350) return "350-600";
   return pickM2Bant(m2);
 }
 
@@ -263,6 +271,11 @@ export async function loadReferansProfil(
     | "casual-cafe"
     | "buyuk-yemekhane"
     | "guneli-pastane"
+    | "boyoz-pastane"
+    | "ekmek-kruvasan"
+    | "tatil-otel"
+    | "donerci"
+    | "personel-yemekhane"
     | "sehir-otel"
     | "kiremit-akasya"
     | "mus-selinoz-turk"
@@ -285,6 +298,16 @@ export async function loadReferansProfil(
       ? "ikinciplan"
       : kategoriId === "pizzaci"
         ? pickPizzaciListe(m2)
+        : kategoriId === "boyoz-pastane"
+          ? "100-250"
+        : kategoriId === "ekmek-kruvasan"
+          ? "150-400"
+        : kategoriId === "tatil-otel"
+          ? "800-1500"
+        : kategoriId === "personel-yemekhane"
+          ? "150-250"
+        : kategoriId === "donerci"
+          ? "350-500"
         : kategoriId === "pastane"
           ? pickPastaneListe(m2)
           : kategoriId === "pideci"
