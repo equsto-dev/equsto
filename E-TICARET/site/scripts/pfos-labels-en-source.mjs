@@ -89,6 +89,7 @@ export const PFOS_LABELS_EN = {
   "Balık Restaurant": "Seafood restaurant",
   Kebapçı: "Kebab restaurant",
   "Kanatçı-Kebapçı": "Wings & kebab restaurant",
+  "Patisserie + Yemek": "Patisserie & dining restaurant",
   Pizzacı: "Pizzeria",
   "Türk / Esnaf lokanta": "Turkish / local restaurant",
   Meyhane: "Meyhane (tavern)",

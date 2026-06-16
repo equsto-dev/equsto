@@ -7,6 +7,7 @@ import {
   pickBalikciListe,
   pickItalyanListe,
   pickKahveDuragiListe,
+  pickKebapOrtadoguListe,
   pickM2Bant,
   pickPastaneListe,
   pickPizzaciListe,
@@ -50,6 +51,8 @@ function legacyListeId(
       return pickPastaneListe(m2);
     case "kahve-duragi":
       return pickKahveDuragiListe(m2);
+    case "kebap-ortadogu":
+      return pickKebapOrtadoguListe(m2);
     case "all-day-dining-cafe":
       return pickAllDayDiningListe(m2) ?? "150-300";
     case "coffee-shop":

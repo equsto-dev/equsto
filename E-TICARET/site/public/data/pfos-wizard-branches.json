@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T06:09:01.102Z",
-  "aktifPaketSayisi": 48,
+  "updated_at": "2026-06-16T06:29:49.810Z",
+  "aktifPaketSayisi": 49,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -72,6 +72,7 @@
       "Şarküteri Kiosk",
       "Kebapçı",
       "Kanatçı-Kebapçı",
+      "Patisserie + Yemek",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
@@ -136,6 +137,7 @@
       "Şarküteri Kiosk",
       "Kebapçı",
       "Kanatçı-Kebapçı",
+      "Patisserie + Yemek",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
@@ -201,7 +203,7 @@
       "slug": "sarkuteri-kiosk"
     },
     "Kebapçı": {
-      "min": 300,
+      "min": 80,
       "max": 500,
       "slug": "kebap-ortadogu"
     },
@@ -209,6 +211,11 @@
       "min": 100,
       "max": 250,
       "slug": "kanatci-kebapci"
+    },
+    "Patisserie + Yemek": {
+      "min": 200,
+      "max": 400,
+      "slug": "patisserie-yemek"
     },
     "Pizzacı": {
       "min": 80,

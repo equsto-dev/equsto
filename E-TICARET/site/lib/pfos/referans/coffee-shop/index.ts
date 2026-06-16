@@ -9,7 +9,7 @@ export async function buildCoffeeShopTemplate(
   return {
     konsept: "coffee-shop",
     label: "Coffee Shop",
-    ornekler: ["Espressolab Watergarden", "Espressolab", "Gloria Jean's"],
+    ornekler: ["İKİNCİPLAN Kafe", "Espressolab Watergarden", "Espressolab", "Gloria Jean's"],
     segmentBasis: "m2",
     seatDensity: 1.5,
     teklifPozModu: "referans",

@@ -1,0 +1,765 @@
+{
+  "kategoriId": "patisserie-yemek",
+  "bantId": "200-400",
+  "label": "Patisserie + Yemek 200–400 m² (HAMOUR Acarkent)",
+  "referansM2": 300,
+  "kaynakDosya": "2024-032 HAMOUR ACARKENT/2024-032.xlsx",
+  "not": "HAMOUR Acarkent · patisserie · mutfak · bar · soğuk oda · bulaşıkhane · yer ızgarası",
+  "yukleme": "2026-06-16T06:30:11.674Z",
+  "kalemSayisi": 94,
+  "toplamAdet": 113,
+  "kalemler": [
+    {
+      "bolum": "K",
+      "bolumAd": "k- kuru depo",
+      "poz": "K1",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "76×53×160",
+      "adet": 3
+    },
+    {
+      "bolum": "K",
+      "bolumAd": "k- kuru depo",
+      "poz": "K2",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "107×53×160",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "c- soğuk oda",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "320×200×230",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "c- soğuk oda",
+      "poz": "C2",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "76×36×160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "c- soğuk oda",
+      "poz": "C3",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "137×36×160",
+      "adet": 3
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "f- derin dondurucu oda",
+      "poz": "F1",
+      "ad": "PANEL TİP DERİN DONDURUCU ODA",
+      "olcu": "220×200×230",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "f- derin dondurucu oda",
+      "poz": "F2",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "137×36×160",
+      "adet": 2
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "f- derin dondurucu oda",
+      "poz": "F3",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "152×53×160",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI, HAREKETLİ",
+      "olcu": "67×85×205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M2",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI, HAREKETLİ",
+      "olcu": "67×85×205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, HAREKETLİ",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M4",
+      "ad": "DUVAR RAFI",
+      "olcu": "120×30×60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M5",
+      "ad": "GIDA DİLİMLEME MAKİNASI",
+      "olcu": "Q300",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M6",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "100 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M7",
+      "ad": "CİHAZALTI BUZDOLABI, ÇİFT SIRA ÇEKMECELİ",
+      "olcu": "160×70×60",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M8",
+      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜ",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M9",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "40×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M11",
+      "ad": "MAKARNA PİŞİRİCİ, ELK., DOLAPLI",
+      "olcu": "40×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M12",
+      "ad": "POWER GRILL, GAZLI, SETÜSTÜ",
+      "olcu": "80×73×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M13",
+      "ad": "DÖRT AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80×73×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M15",
+      "ad": "TAVA RAFI",
+      "olcu": "360×40×45",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M16",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "650×100×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M17",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M18",
+      "ad": "DUVAR RAFI",
+      "olcu": "120×30×4",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M19",
+      "ad": "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ, HAREKETLİ",
+      "olcu": "187×70×85/142",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M20",
+      "ad": "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ, HAREKETLİ",
+      "olcu": "140×70×85/142",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M20A",
+      "ad": "DUVAR RAFI",
+      "olcu": "140×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M21",
+      "ad": "FIRIN TEZGAHI",
+      "olcu": "160×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M22",
+      "ad": "YEMEKÇİLİK FIRINI, GAZLI",
+      "olcu": "10 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M22A",
+      "ad": "DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "60×60×82",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M22B",
+      "ad": "BLAST CHILLER",
+      "olcu": "5 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M23",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "105×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M24",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M25",
+      "ad": "SALAMANDER, ASANSÖRLÜ, ELK.",
+      "olcu": "60×60×60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M26",
+      "ad": "TOST MAKİNASI",
+      "olcu": "2745",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M27",
+      "ad": "SERVİS TEZGAHI, SICAK DOLAPLI, TABAN VE ARA RAFLI",
+      "olcu": "185×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M28",
+      "ad": "SERVİS RAFI",
+      "olcu": "185×30×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "m- mutfak",
+      "poz": "M29",
+      "ad": "RAF ALTI ISITICI",
+      "olcu": "140 cm",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P1",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI, HAREKETLİ",
+      "olcu": "90×90×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P2",
+      "ad": "HAMUR AÇMA MAKİNASI VE KRUVASAN APARATI",
+      "olcu": "500-1000",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P4",
+      "ad": "SPİRAL HAMUR YOĞURMA MAKİNASI",
+      "olcu": "40 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P5",
+      "ad": "İSTİF RAFI, 4 KATLI",
+      "olcu": "76×53×160",
+      "adet": 2
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P6",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "100 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P7",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, HAREKETLİ",
+      "olcu": "150×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P7A",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, HAREKETLİ",
+      "olcu": "150×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P8",
+      "ad": "MAYALAMA DOLABI",
+      "olcu": "68×93×205",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P9",
+      "ad": "UN ŞEKER ARABASI",
+      "olcu": "103 lt.",
+      "adet": 3
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P10",
+      "ad": "TEPSİ TAŞIMA ARABASI",
+      "olcu": "17 katlı",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P13",
+      "ad": "ROKON FRN-10 E",
+      "olcu": "10 40×60",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P13A",
+      "ad": "İKİ KATLI EKMEK FIRINI, TAŞ TABANLI",
+      "olcu": "8 40×60",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P14",
+      "ad": "TEZGAH TİPİ BUZ, 3 SIRA ÇEK., MERMER TAB., HAR.",
+      "olcu": "187×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P15",
+      "ad": "İNDÜKSİYONLU OCAK, SETÜSTÜ, İKİLİ",
+      "olcu": "40×60×20",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P17",
+      "ad": "MİKSER, SETÜSTÜ",
+      "olcu": "6,9 lt",
+      "adet": 2
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P18",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P19",
+      "ad": "DUVAR DOLABI",
+      "olcu": "187×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P19A",
+      "ad": "DUVAR DOLABI",
+      "olcu": "150×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P19B",
+      "ad": "DUVAR RAFI",
+      "olcu": "120×30×4",
+      "adet": 2
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "p- patiserrie",
+      "poz": "P21",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI, HAREKETLİ",
+      "olcu": "67×85×205",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S1",
+      "ad": "ŞARAP DOLABI",
+      "olcu": "300×60×240",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S2",
+      "ad": "PASTA VİTRİN DOLABI",
+      "olcu": "300×70×170",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, KASA ÇEKMECELİ",
+      "olcu": "160×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S4",
+      "ad": "PASTA TEŞHİR DOLABI, CLEAR CAM",
+      "olcu": "180×70×85/140",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S5",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "130×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S6",
+      "ad": "CAM KAPILI TEZGAH TİPİ BIZDLABI, 3 KAPILI, HAREKETLİ",
+      "olcu": "187×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S7",
+      "ad": "CAM KAPILI TEZGAH TİPİ BIZDLABI, 3 KAPILI, HAREKETLİ",
+      "olcu": "187×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S8",
+      "ad": "TURBO MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S9",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "100×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S10",
+      "ad": "ESSPRESO KAHVE MAKİNASI",
+      "olcu": "çift gruplu",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S11",
+      "ad": "KAHVE DEĞİRMENİ, DİJİTAL",
+      "olcu": "otomatik",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S12",
+      "ad": "CAM KAPILI TEZGAH TİPİ BIZDLABI, 2 KAPILI, HAREKETLİ",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S13",
+      "ad": "FİLTRE KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S14",
+      "ad": "TÜRK KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S15",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "180×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S16",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S17",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "44 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S18",
+      "ad": "CAM KAPILI TEZGAH TİPİ BIZDLABI, 2 KAPILI, HAREKETLİ",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S19",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S20",
+      "ad": "KATI MEYVE SIKACAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S21",
+      "ad": "BAR MİKSER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S22",
+      "ad": "BAR BLENDER, KABİNLİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "s- patiserrie & bar",
+      "poz": "S23",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D1",
+      "ad": "BULAŞIK SIYIRMA TEZGAHI",
+      "olcu": "130×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D2",
+      "ad": "SERVİS RAFI",
+      "olcu": "130×30×60",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D3",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Q40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D4",
+      "ad": "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+      "olcu": "110×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D5",
+      "ad": "ÖN YIKAMA DUŞU, ARA MUSLUKLU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D6",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN YİP",
+      "olcu": "1000 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D7",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "100×97×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D8",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "70×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D9",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "152×36×160",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "d- bulaşık yıkama",
+      "poz": "D10",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "183×46×160",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "y- yer ızgarası",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30×30×14",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "y- yer ızgarası",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "95×30×14",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "y- yer ızgarası",
+      "poz": "Y3",
+      "ad": "YER IZGARASI",
+      "olcu": "140×30×14",
+      "adet": 2
+    }
+  ]
+}
