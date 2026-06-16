@@ -33,6 +33,7 @@ export type ListeBantId =
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
   | "500-2000-arnavutkoy"
+  | "ikinciplan"
   | "200-500"
   | "20-60"
   | "200-5000";
@@ -580,23 +581,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "coffee_shop",
     name: "Coffee Shop",
     parent: "Kafe / Coffee Shop",
-    desc: "Espressolab Watergarden referans (2016-114) · kahve + pasta teşhir · motor: coffee-shop",
+    desc: "Kahve + pasta teşhir · İKİNCİPLAN (2024-054) veya Espressolab Watergarden · motor: coffee-shop",
     pfos: {
       motorSlug: "coffee-shop",
       dukkanSecim: "Coffee Shop",
       m2Min: 60,
       m2Max: 300,
-      bantKurali: "Tek referans liste (Espressolab Watergarden); m² ile adet ölçeklenir",
+      bantKurali: "Varsayılan İKİNCİPLAN; Espressolab Watergarden alternatif bant",
       teklifKaynagi: "pfos-referans",
-      listeYolu: "veri/espresolab-watergarden-2016-114.xlsx · proje-veri/coffee-shop-ekipman-listesi.xlsx",
+      listeYolu: "ikinciplan-kafe-2024-054.xlsx · veri/espresolab-watergarden-2016-114.xlsx",
       durum: "aktif",
       bantlar: [
-        {
-          id: "referans",
-          label: "Referans liste",
-          referansM2: 120,
-          listeDosya: "coffee-shop-referans.json",
-        },
+        liste("ikinciplan", "İKİNCİPLAN Kafe (2024-054)", 100, "coffee-shop"),
+        liste("referans", "Espressolab Watergarden", 120, "coffee-shop"),
       ],
     },
     questions: [],

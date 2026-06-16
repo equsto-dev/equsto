@@ -134,6 +134,11 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     planNot: "proje-veri/coffee-shop-ekipman-listesi.xlsx",
     bantlar: [
       {
+        id: "ikinciplan",
+        label: "İKİNCİPLAN Kafe (2024-054)",
+        referansM2: 100,
+      },
+      {
         id: "referans",
         label: "Referans liste (Espressolab)",
         referansM2: 120,

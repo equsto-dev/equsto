@@ -56,7 +56,7 @@ function legacyListeId(
     case "all-day-dining-cafe":
       return pickAllDayDiningListe(m2) ?? "150-300";
     case "coffee-shop":
-      return "referans";
+      return "ikinciplan";
     default:
       return null;
   }
