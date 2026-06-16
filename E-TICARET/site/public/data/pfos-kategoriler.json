@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T10:05:51.488Z",
+  "updated_at": "2026-06-16T10:18:56.577Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -386,14 +386,14 @@
       "bantlar": [
         {
           "id": "500-1000",
-          "label": "500–1000 m²",
-          "referansM2": 750,
+          "label": "500–1000 m² (ONNOGROUP)",
+          "referansM2": 500,
           "meta": {
             "listeDosya": "restoran-500-1000.json",
-            "kalemSayisi": 110,
-            "toplamAdet": 149,
-            "kaynakDosya": "RESTORAN.xlsx",
-            "yukleme": "2026-05-30T23:45:49.431Z"
+            "kalemSayisi": 223,
+            "toplamAdet": 277,
+            "kaynakDosya": "2017-142 ONNOGROUP/2017-142.xlsx",
+            "yukleme": "2026-06-16T10:18:56.570Z"
           }
         }
       ]
