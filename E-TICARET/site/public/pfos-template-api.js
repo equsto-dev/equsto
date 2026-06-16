@@ -128,6 +128,13 @@
       return "buyuk-yemekhane";
     }
     if (
+      d === "Pastane Cafe (Boyoz)" ||
+      /boyoz|smyrna/i.test(d) ||
+      (/pastane/i.test(d) && /boyoz/i.test(d))
+    ) {
+      return "boyoz-pastane";
+    }
+    if (
       d === "Güneli Fırın" ||
       d === "Pastane & Yerel" ||
       /güneli\s*fırın|guneli\s*firin/i.test(d) ||
@@ -149,6 +156,13 @@
       (/otel/i.test(k) && /şehir|sehir|business|hampton/i.test(d))
     ) {
       return "sehir-otel";
+    }
+    if (
+      d === "Tatil Oteli" ||
+      /tatil\s*oteli|holiday\s*hotel|wyndam|wyndham/i.test(d) ||
+      (/otel/i.test(k) && /tatil|holiday|wyndam|wyndham/i.test(d))
+    ) {
+      return "tatil-otel";
     }
     if (
       d === "Türk Mutfağı — Lokanta" ||

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T06:37:10.813Z",
-  "aktifPaketSayisi": 49,
+  "updated_at": "2026-06-16T08:09:52.331Z",
+  "aktifPaketSayisi": 52,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -75,13 +75,16 @@
       "Patisserie + Yemek",
       "Pizzacı",
       "Türk / Esnaf lokanta",
+      "Meyhane",
       "All Dining Cafe",
       "Restoran",
       "Şarküteri Restoran",
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
-      "Kasap + Şarküteri"
+      "Kasap + Şarküteri",
+      "Türk Mutfağı",
+      "Food Court"
     ],
     "Kafe / Coffee Shop": [
       "Kahve Atölyesi",
@@ -115,7 +118,8 @@
     ],
     "Otel F&B": [
       "Şehir Oteli (Business)",
-      "Resort Otel"
+      "Resort Otel",
+      "Tatil Oteli"
     ],
     "Catering": [
       "Büyük Yemekhane (Catering)",
@@ -124,7 +128,8 @@
       "Yerinde Üretim"
     ],
     "Üretim / Fabrika": [
-      "Fabrika Yemekhanesi"
+      "Fabrika Yemekhanesi",
+      "Ekmek + Kruvasan"
     ],
     "Franchise": [
       "Steakhouse",
@@ -140,13 +145,16 @@
       "Patisserie + Yemek",
       "Pizzacı",
       "Türk / Esnaf lokanta",
+      "Meyhane",
       "All Dining Cafe",
       "Restoran",
       "Şarküteri Restoran",
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
-      "Kasap + Şarküteri"
+      "Kasap + Şarküteri",
+      "Türk Mutfağı",
+      "Food Court"
     ]
   },
   "legacyKonsept": {
@@ -158,8 +166,7 @@
     "Otel F&B": "Hotel",
     "Catering": "Catering",
     "Bulut Mutfak": "Bulut Mutfak",
-    "Üretim / Fabrika": "Catering",
-    "Bilmiyorum": "Restaurant"
+    "Üretim / Fabrika": "Catering"
   },
   "m2ByDukkan": {
     "Steakhouse": {
@@ -227,8 +234,13 @@
       "max": 5000,
       "slug": "turk-restoran"
     },
+    "Meyhane": {
+      "min": 100,
+      "max": 500,
+      "slug": "meyhane"
+    },
     "All Dining Cafe": {
-      "min": 150,
+      "min": 100,
       "max": 400,
       "slug": "all-day-dining-cafe"
     },
@@ -382,6 +394,11 @@
       "max": 500,
       "slug": "resort-otel"
     },
+    "Tatil Oteli": {
+      "min": 250,
+      "max": 4000,
+      "slug": "tatil-otel"
+    },
     "Büyük Yemekhane (Catering)": {
       "min": 2000,
       "max": 3500,
@@ -391,6 +408,11 @@
       "min": 2000,
       "max": 3500,
       "slug": "buyuk-yemekhane"
+    },
+    "Ekmek + Kruvasan": {
+      "min": 150,
+      "max": 400,
+      "slug": "ekmek-kruvasan"
     },
     "Okul Yemekhanesi": {
       "min": 2000,

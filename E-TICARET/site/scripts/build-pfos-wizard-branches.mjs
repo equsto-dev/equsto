@@ -35,7 +35,6 @@ const LEGACY_KONSEPT = {
   Catering: "Catering",
   "Bulut Mutfak": "Bulut Mutfak",
   "Üretim / Fabrika": "Catering",
-  Bilmiyorum: "Restaurant",
 };
 
 function readJson(p) {
@@ -69,6 +68,23 @@ function main() {
   dukkanBySegment.Franchise = dukkanBySegment.Restoran
     ? [...dukkanBySegment.Restoran]
     : [];
+
+  const qDukkan = questions.find((q) => q.id === "q_dukkan_turu");
+  const branchMap = qDukkan?.branches;
+  if (branchMap && typeof branchMap === "object") {
+    for (const [seg, list] of Object.entries(branchMap)) {
+      if (!Array.isArray(list)) continue;
+      if (!dukkanBySegment[seg]) dukkanBySegment[seg] = [];
+      for (const sel of list) {
+        const s = String(sel || "").trim();
+        if (!s) continue;
+        if (!dukkanBySegment[seg].includes(s)) dukkanBySegment[seg].push(s);
+      }
+    }
+    if (dukkanBySegment.Restoran) {
+      dukkanBySegment.Franchise = [...dukkanBySegment.Restoran];
+    }
+  }
 
   const konseptRows = segmentOrder.map((seg) => ({
     v: seg,

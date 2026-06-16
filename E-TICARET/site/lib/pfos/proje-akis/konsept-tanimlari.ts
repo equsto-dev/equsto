@@ -33,7 +33,10 @@ export type ListeBantId =
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
   | "500-2000-arnavutkoy"
+  | "50-80-oda"
   | "ikinciplan"
+  | "800-1500"
+  | "150-400"
   | "200-500"
   | "20-60"
   | "200-5000";
@@ -385,6 +388,7 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     pfos: {
       motorSlug: "turk-restoran",
       dukkanSecim: "Türk / Esnaf lokanta",
+      dukkanAltTipler: ["Self servis", "Food Court", "Masaya servis"],
       m2Min: 150,
       m2Max: 5000,
       bantKurali:
@@ -415,10 +419,11 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       dukkanSecim: "Meyhane",
       m2Min: 100,
       m2Max: 500,
-      bantKurali: "Motor şablon; bant yok",
-      teklifKaynagi: "motor-sablon",
-      durum: "motor",
-      bantlar: [],
+      bantKurali: "Tek referans liste (200–350 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/meyhane-dersaadet-2017-098.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("200-350", "200–350 m² (Dersaadet 2017-098)", 275, "meyhane")],
     },
     questions: [],
   },
@@ -426,17 +431,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "all_day_dining",
     name: "All Day Dining / Cafe",
     parent: "Restoran",
-    desc: "All day dining · 150–300 m² The House referans · >300 m² THC proforma",
+    desc: "All day dining · 100–200 m² Smyrna Boyoz (2016-134) · 150–300 m² The House · >300 m² THC proforma",
     pfos: {
       motorSlug: "all-day-dining-cafe",
       dukkanSecim: "All Dining Cafe",
-      m2Min: 150,
+      m2Min: 100,
       m2Max: 400,
-      bantKurali: "150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
-      listeYolu: "proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+      bantKurali: "100–200 m² → Smyrna Boyoz; 150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
+      listeYolu:
+        "veri/boyoz-pastane-2016-134.xlsx · proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
+        liste("100-200", "100–200 m² (Smyrna Boyoz)", 150, "all-day-dining-cafe"),
         liste("150-300", "150–300 m²", 225, "all-day-dining-cafe"),
       ],
     },
@@ -724,6 +731,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       bantlar: [
         liste("100-200", "100–200 m² (≤150 m²)", 150, "pastane"),
         liste("150-250", "150–250 m² (>150 m²)", 200, "pastane"),
+      ],
+    },
+    questions: [],
+  },
+  {
+    id: "pastane_boyoz",
+    name: "Pastane Cafe (Boyoz)",
+    parent: "Pastane & Fırın",
+    desc:
+      "İzmir boyoz dükkanı · Smyrna 2016-134 · satış + üretim · 100–250 m² · motor: boyoz-pastane",
+    pfos: {
+      motorSlug: "boyoz-pastane",
+      dukkanSecim: "Pastane Cafe (Boyoz)",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/boyoz-pastane-2016-134.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "planlanan",
+      bantlar: [
+        liste("100-250", "100–250 m² (Smyrna Boyoz)", 175, "boyoz-pastane"),
       ],
     },
     questions: [],
@@ -1022,16 +1050,17 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       dukkanSecim: "Şehir Oteli (Business)",
       m2Min: 500,
       m2Max: 2000,
-      bantKurali: "Varsayılan Sheraton Arnavutköy; Hampton, Kocaeli ve DoubleTree Topkapı ayrı bantlar",
+      bantKurali: "Varsayılan Hampton Bolu; Kocaeli, DoubleTree Topkapı ve Sheraton Arnavutköy ayrı bantlar",
       listeYolu:
         "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx · veri/sheraton-arnavutkoy-2024-122.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
-        liste("500-2000-arnavutkoy", "500–2000 m² (Sheraton Arnavutköy)", 1000, "sehir-otel"),
         liste("500-2000", "500–2000 m² (Hampton Bolu)", 1000, "sehir-otel"),
+        liste("50-80-oda", "50–80 oda (Zigana Alaçatı)", 300, "sehir-otel"),
         liste("500-2000-kocaeli", "500–2000 m² (Kocaeli)", 1000, "sehir-otel"),
         liste("500-2000-topkapi", "500–2000 m² (DoubleTree Topkapı · 140 oda)", 1000, "sehir-otel"),
+        liste("500-2000-arnavutkoy", "500–2000 m² (Sheraton Arnavutköy)", 1000, "sehir-otel"),
       ],
     },
     questions: [],
@@ -1063,7 +1092,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     150,
     1500,
   ),
-  konseptPlanlanan("otel_tatil", "Tatil Oteli", "Otel F&B", "Tatil Oteli", 250, 4000),
+  {
+    id: "otel_tatil",
+    name: "Tatil Oteli",
+    parent: "Otel F&B",
+    desc: "Tatil Oteli · Wyndham 2016-194 referans · 800–1500 m² (1000 m² hedef) · motor: tatil-otel",
+    pfos: {
+      motorSlug: "tatil-otel",
+      dukkanSecim: "Tatil Oteli",
+      m2Min: 250,
+      m2Max: 4000,
+      bantKurali: "Tek referans liste (Wyndham); m² ile adet ölçeklenir",
+      listeYolu: "veri/wyndham-tatil-otel-2016-194.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("800-1500", "800–1500 m² (Wyndham 2016-194)", 1000, "tatil-otel")],
+    },
+    questions: [],
+  },
   {
     id: "catering_buyuk_yemekhane",
     name: "Büyük Yemekhane (Catering)",
@@ -1097,6 +1143,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("2000-3500", "2000–3500 kişi/gün", 2750, "buyuk-yemekhane")],
+    },
+    questions: [],
+  },
+  {
+    id: "uretim_ekmek_kruvasan",
+    name: "Ekmek + Kruvasan",
+    parent: "Üretim / Fabrika",
+    desc:
+      "Ekmek + kruvasan imalathane · soğuk oda · şoklama · fırın hattı · 150–400 m² · Hakan İnan 2017-093 · motor: ekmek-kruvasan",
+    pfos: {
+      motorSlug: "ekmek-kruvasan",
+      dukkanSecim: "Ekmek + Kruvasan",
+      m2Min: 150,
+      m2Max: 400,
+      bantKurali: "Tek referans liste (150–400 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/ekmek-kruvasan-2017-093.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("150-400", "150–400 m² (Hakan İnan 093)", 300, "ekmek-kruvasan"),
+      ],
     },
     questions: [],
   },
@@ -1262,6 +1329,12 @@ export function buildDukkanBranchesFromKonseptler(
   } else if (!branches.Catering.includes("Yerinde Üretim")) {
     branches.Catering.push("Yerinde Üretim");
   }
+  // Kiremit Akasya — Restoran segmentinde de Türk Mutfağı & Food Court
+  const kiremitDukkan = ["Türk Mutfağı", "Food Court"];
+  for (const sel of kiremitDukkan) {
+    if (!branches.Restoran) branches.Restoran = [];
+    if (!branches.Restoran.includes(sel)) branches.Restoran.push(sel);
+  }
   return branches;
 }
 
@@ -1277,6 +1350,7 @@ export const DUKKAN_SECIM_ESLEME: Record<string, string> = Object.fromEntries(
 export const DUKKAN_SECIM_LEGACY_ALIASES: Record<string, string> = {
   "Büyük Restoran": "Restoran",
   "Bar + Yemek (Hafif Asya)": "Bar + Yemek",
+  "Esnaf Lokantası": "Türk / Esnaf lokanta",
 };
 
 export function normalizeDukkanSecim(raw: string): string {

@@ -9,12 +9,12 @@ import {
 } from "@/lib/pfos/schemas/pfos.schema";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import {
-  findShopTypeByDukkanSecim,
+  findShopTypeForQuote,
   loadProjeAkisShopTypes,
 } from "@/lib/pfos/proje-akis/load-shop-types";
 
 const M2_RANGES: Record<string, { min: number; max: number }> = {
-  "all-day-dining-cafe": { min: 150, max: 400 },
+  "all-day-dining-cafe": { min: 100, max: 400 },
   "kebap-ortadogu": { min: 80, max: 500 },
   pizzaci: { min: 80, max: 500 },
   meyhane: { min: 100, max: 500 },
@@ -33,6 +33,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   tavukcu: { min: 80, max: 150 },
   "kanatci-kebapci": { min: 100, max: 250 },
   "patisserie-yemek": { min: 200, max: 400 },
+  "boyoz-pastane": { min: 100, max: 250 },
   restoran: { min: 500, max: 1000 },
   "kokteyl-kahve": { min: 30, max: 50 },
   "kahve-atolyesi": { min: 80, max: 150 },
@@ -41,7 +42,9 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "casual-cafe": { min: 50, max: 150 },
   "buyuk-yemekhane": { min: 2000, max: 3500 },
   "guneli-pastane": { min: 200, max: 400 },
+  "ekmek-kruvasan": { min: 150, max: 400 },
   "sehir-otel": { min: 500, max: 2000 },
+  "tatil-otel": { min: 250, max: 4000 },
   "kiremit-akasya": { min: 100, max: 250 },
   "mus-selinoz-turk": { min: 100, max: 250 },
   kasap: { min: 100, max: 250 },
@@ -661,6 +664,17 @@ export function pfosGetKonseptler() {
       kalemSayisi: 46,
     },
     {
+      slug: "ekmek-kruvasan",
+      label: KONSEPT_LABELS["ekmek-kruvasan"],
+      ornekler: [
+        "Little Farm imalathane",
+        "Ekmek + kruvasan üretim",
+        "Fırın hattı + soğuk zincir",
+      ],
+      seatDensity: 0,
+      kalemSayisi: 35,
+    },
+    {
       slug: "resort-otel",
       label: KONSEPT_LABELS["resort-otel"],
       ornekler: [
@@ -740,10 +754,11 @@ export async function pfosPostQuote(req: NextRequest) {
     const body = await req.json();
     const input = PFOSRequestSchema.parse(body);
     const shopTypes = await loadProjeAkisShopTypes();
-    const shopType = findShopTypeByDukkanSecim(
+    const shopType = findShopTypeForQuote(
       shopTypes,
       input.dukkanSecim ?? "",
       input.konsept,
+      input.altTip,
     );
     const template = await resolveTemplateForQuote(
       input.konsept,
@@ -820,14 +835,17 @@ export async function pfosPostCalculate(req: NextRequest) {
       "casual-cafe",
       "buyuk-yemekhane",
       "guneli-pastane",
+      "ekmek-kruvasan",
       "resort-otel",
       "sehir-otel",
+      "tatil-otel",
       "kiremit-akasya",
       "kasap",
       "kasap-sarkuteri",
       "sarkuteri-restoran",
       "inari-bar-yemek",
       "coffee-shop",
+      "boyoz-pastane",
     ].includes(pfosReq.konsept)
   ) {
     return NextResponse.json(
@@ -860,8 +878,10 @@ export async function pfosPostCalculate(req: NextRequest) {
           "casual-cafe",
           "buyuk-yemekhane",
           "guneli-pastane",
+          "ekmek-kruvasan",
           "resort-otel",
           "sehir-otel",
+          "tatil-otel",
           "kiremit-akasya",
           "mus-selinoz-turk",
           "kasap",
@@ -869,6 +889,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "sarkuteri-restoran",
           "inari-bar-yemek",
           "coffee-shop",
+          "boyoz-pastane",
         ],
       },
       { status: 404 },

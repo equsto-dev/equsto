@@ -491,6 +491,15 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       );
       return;
     }
+    if (
+      motorGirdi.dukkanSecim === "Türk / Esnaf lokanta" &&
+      !motorGirdi.altTip?.trim()
+    ) {
+      setError(
+        t("Restoran alt tipi seçin (self servis, food court veya masaya servis)."),
+      );
+      return;
+    }
 
     setLoading(true);
     setError(null);
@@ -631,11 +640,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         q.type === "select_conditional"
           ? dukkanSecenekleri(q, answers, m2ByDukkan)
           : ((q.options as string[]) ?? []);
-      const hideBilmiyorum =
-        q.id === "q_ust_segment" || q.id === "q_dukkan_turu";
-      const opts = hideBilmiyorum
-        ? rawOpts.filter((o) => o !== "Bilmiyorum")
-        : rawOpts;
+      const opts = rawOpts.filter((o) => o !== "Bilmiyorum");
       const val = String(answers[id] ?? "");
       const twoCol = opts.length > 6;
       const bulutKompakt =
@@ -674,7 +679,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       return (
         <>
           <div className={styles.multiGrid}>
-            {((q.options as string[]) ?? []).map((opt, i) => (
+            {((q.options as string[]) ?? [])
+              .filter((o) => o !== "Bilmiyorum")
+              .map((opt, i) => (
               <label
                 key={opt}
                 className={`${styles.multiLabel}${selected.includes(opt) ? ` ${styles.multiLabelSelected}` : ""}`}

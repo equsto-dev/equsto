@@ -73,8 +73,8 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     id: "s4b",
     num: "↳",
     title: "Alt tip",
-    sub: "Balık veya fast food alt modeli.",
-    questionIds: ["q_balik_alt", "q_fast_alt"],
+    sub: "Balık, fast food veya restoran alt modeli.",
+    questionIds: ["q_balik_alt", "q_fast_alt", "q_restoran_alt"],
     skipIfEmpty: true,
   },
 ];
@@ -173,7 +173,12 @@ export function panelAnswerSummary(
     case "s4":
       return String(answers.q_dukkan_turu ?? "");
     case "s4b":
-      return String(answers.q_balik_alt ?? answers.q_fast_alt ?? "");
+      return String(
+        answers.q_balik_alt ??
+          answers.q_fast_alt ??
+          answers.q_restoran_alt ??
+          "",
+      );
     default:
       return "";
   }
@@ -188,6 +193,7 @@ const DOWNSTREAM_CLEAR: Partial<
     "q_dukkan_turu",
     "q_balik_alt",
     "q_fast_alt",
+    "q_restoran_alt",
     "q_ne_pisireceksin",
     "q_m2",
     "q_karar",
@@ -199,6 +205,7 @@ const DOWNSTREAM_CLEAR: Partial<
     "q_dukkan_turu",
     "q_balik_alt",
     "q_fast_alt",
+    "q_restoran_alt",
     "q_ne_pisireceksin",
     "q_karar",
   ],
@@ -206,12 +213,14 @@ const DOWNSTREAM_CLEAR: Partial<
     "q_servis_model",
     "q_balik_alt",
     "q_fast_alt",
+    "q_restoran_alt",
     "q_ne_pisireceksin",
     "q_karar",
   ],
   q_servis_model: ["q_karar"],
   q_balik_alt: ["q_karar"],
   q_fast_alt: ["q_karar"],
+  q_restoran_alt: ["q_karar"],
   q_ne_pisireceksin: ["q_karar"],
 };
 

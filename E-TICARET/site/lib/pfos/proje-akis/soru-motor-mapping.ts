@@ -14,6 +14,7 @@ export type SoruCevapHaritasi = {
   q_dukkan_turu?: string;
   q_balik_alt?: string;
   q_fast_alt?: string;
+  q_restoran_alt?: string;
   q_servis_model?: string;
   q_ne_pisireceksin?: string | string[];
   q_m2?: number | string;
@@ -57,6 +58,22 @@ export type ShopTypeMotorRow = {
   };
 };
 
+/** Restoran alt tip → Kiremit Akasya dükkan seçimi (ff_turk_mutfagi / ff_food_court) */
+export function kiremitDukkanFromRestoranAlt(
+  altTip?: string | null,
+): string | null {
+  const t = String(altTip ?? "").trim().toLowerCase();
+  if (!t) return null;
+  if (/food\s*court/.test(t)) return "Food Court";
+  if (/self\s*servis/.test(t)) return "Türk Mutfağı";
+  return null;
+}
+
+function isTurkEsnafDukkan(dukkan: string): boolean {
+  const d = dukkan.trim().toLowerCase();
+  return d === "türk / esnaf lokanta" || d === "esnaf lokantası";
+}
+
 /** shopTypes tablosundan motor slug (Adem konsept verisi) */
 export function dukkanSecimdenMotorSlug(
   dukkanSecim: string,
@@ -77,21 +94,27 @@ export function dukkanSecimdenMotorSlug(
 export function soruCevaplarindanMotorGirdi(
   c: SoruCevapHaritasi,
 ): MotorGirdi {
-  const dukkan = String(c.q_dukkan_turu ?? "").trim();
+  const dukkanRaw = String(c.q_dukkan_turu ?? "").trim();
+  const dukkan = normalizeDukkanSecim(dukkanRaw);
   const balikAlt = String(c.q_balik_alt ?? "").trim();
   const fastAlt = String(c.q_fast_alt ?? "").trim();
+  const restoranAlt = String(c.q_restoran_alt ?? "").trim();
 
   let altTip: string | undefined;
+  let dukkanSecim = dukkan;
+
   if (dukkan === "Balık Restaurant" && balikAlt) altTip = balikAlt;
-  else if (
-    String(c.q_ust_segment ?? "").includes("Fast Food") &&
-    fastAlt
-  )
+  else if (String(c.q_ust_segment ?? "").includes("Fast Food") && fastAlt)
     altTip = fastAlt;
+  else if (isTurkEsnafDukkan(dukkan) && restoranAlt) {
+    altTip = restoranAlt;
+    const kiremitDukkan = kiremitDukkanFromRestoranAlt(restoranAlt);
+    if (kiremitDukkan) dukkanSecim = kiremitDukkan;
+  }
 
   return {
     ustSegment: String(c.q_ust_segment ?? ""),
-    dukkanSecim: normalizeDukkanSecim(dukkan),
+    dukkanSecim,
     altTip,
     menuHatlari: menuDizi(c.q_ne_pisireceksin),
     m2: m2Sayi(c.q_m2),

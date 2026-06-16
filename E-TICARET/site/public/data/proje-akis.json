@@ -52,7 +52,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining ≤200→100-200, 200–300→150-300, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); ekmek-kruvasan → 150-400; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; tatil-otel → 800-1500; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; boyoz-pastane → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -110,13 +110,16 @@
             "Patisserie + Yemek",
             "Pizzacı",
             "Türk / Esnaf lokanta",
+            "Meyhane",
             "All Dining Cafe",
             "Restoran",
             "Şarküteri Restoran",
             "Fine Dining",
             "Dünya Mutfağı",
             "Kasap",
-            "Kasap + Şarküteri"
+            "Kasap + Şarküteri",
+            "Türk Mutfağı",
+            "Food Court"
           ],
           "Kafe / Coffee Shop": [
             "Kahve Atölyesi",
@@ -150,7 +153,8 @@
           ],
           "Otel F&B": [
             "Şehir Oteli (Business)",
-            "Resort Otel"
+            "Resort Otel",
+            "Tatil Oteli"
           ],
           "Catering": [
             "Büyük Yemekhane (Catering)",
@@ -159,7 +163,8 @@
             "Yerinde Üretim"
           ],
           "Üretim / Fabrika": [
-            "Fabrika Yemekhanesi"
+            "Fabrika Yemekhanesi",
+            "Ekmek + Kruvasan"
           ]
         },
         "gosterIf": "q_ust_segment",
@@ -178,8 +183,7 @@
           "Masa servisi (full service)",
           "Self servis / kiosk",
           "Paket ve delivery ağırlıklı",
-          "Karışık",
-          "Bilmiyorum"
+          "Karışık"
         ],
         "gosterIf": "q_dukkan_turu",
         "mapsTo": "isletme.servis",
@@ -197,8 +201,7 @@
           "Mahalle balıkçısı",
           "Balık Restaurant",
           "Balık lokantası",
-          "Seafood bistro",
-          "Bilmiyorum"
+          "Seafood bistro"
         ],
         "gosterIf": "q_dukkan_turu=Balık Restaurant",
         "mapsTo": "balikci.altTip",
@@ -218,13 +221,30 @@
           "Döner / Dürüm",
           "Pide / Lahmacun",
           "Pizza (paket)",
-          "Hot Dog / Snack",
-          "Bilmiyorum"
+          "Hot Dog / Snack"
         ],
         "gosterIf": "q_ust_segment=Fast Food / QSR",
         "mapsTo": "fast_food.altTip",
         "motorEtkisi": "planlanan — genel şablon",
         "note": "Burger, FC, döner vb. — liste motoru planlanan."
+      },
+      {
+        "id": "q_restoran_alt",
+        "step": "04",
+        "panel": "C3",
+        "text": "Restoran alt tip",
+        "type": "select",
+        "required": "true",
+        "options": [
+          "Self servis",
+          "Food Court",
+          "Masaya servis",
+          "Bilmiyorum"
+        ],
+        "gosterIf": "q_dukkan_turu=Türk / Esnaf lokanta",
+        "mapsTo": "turk_restoran.altTip",
+        "motorEtkisi": "self servis / food court → kiremit-akasya 100–250; masaya servis → turk-restoran",
+        "note": "2016-085 Kiremit Akasya · self servis & food court aynı referans."
       },
       {
         "id": "q_ne_pisireceksin",
@@ -249,8 +269,7 @@
           "Kahve / İçecek",
           "Meze",
           "Açık Büfe",
-          "Diğer",
-          "Bilmiyorum"
+          "Diğer"
         ],
         "gosterIf": "q_dukkan_turu",
         "mapsTo": "menu.hattlari",
@@ -629,6 +648,11 @@
         "pfos": {
           "motorSlug": "turk-restoran",
           "dukkanSecim": "Türk / Esnaf lokanta",
+          "dukkanAltTipler": [
+            "Self servis",
+            "Food Court",
+            "Masaya servis"
+          ],
           "m2Min": 150,
           "m2Max": 5000,
           "bantKurali": "≤300 m² → S13-388; >300 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
@@ -662,10 +686,18 @@
           "dukkanSecim": "Meyhane",
           "m2Min": 100,
           "m2Max": 500,
-          "bantKurali": "Motor şablon; bant yok",
-          "teklifKaynagi": "motor-sablon",
-          "durum": "motor",
-          "bantlar": []
+          "bantKurali": "Tek referans liste (200–350 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/meyhane-dersaadet-2017-098.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "200-350",
+              "label": "200–350 m² (Dersaadet 2017-098)",
+              "referansM2": 275,
+              "listeDosya": "pfos-referans/meyhane-200-350.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -673,17 +705,23 @@
         "id": "all_day_dining",
         "name": "All Day Dining / Cafe",
         "parent": "Restoran",
-        "desc": "All day dining · 150–300 m² The House referans · >300 m² THC proforma",
+        "desc": "All day dining · 100–200 m² Smyrna Boyoz (2016-134) · 150–300 m² The House · >300 m² THC proforma",
         "pfos": {
           "motorSlug": "all-day-dining-cafe",
           "dukkanSecim": "All Dining Cafe",
-          "m2Min": 150,
+          "m2Min": 100,
           "m2Max": 400,
-          "bantKurali": "150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
-          "listeYolu": "proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+          "bantKurali": "100–200 m² → Smyrna Boyoz; 150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
+          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx · proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
+            {
+              "id": "100-200",
+              "label": "100–200 m² (Smyrna Boyoz)",
+              "referansM2": 150,
+              "listeDosya": "pfos-referans/all-day-dining-cafe-100-200.json"
+            },
             {
               "id": "150-300",
               "label": "150–300 m²",
@@ -1099,6 +1137,31 @@
               "label": "150–250 m² (>150 m²)",
               "referansM2": 200,
               "listeDosya": "pfos-referans/pastane-150-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "pastane_boyoz",
+        "name": "Pastane Cafe (Boyoz)",
+        "parent": "Pastane & Fırın",
+        "desc": "İzmir boyoz dükkanı · Smyrna 2016-134 · satış + üretim · 100–250 m² · motor: boyoz-pastane",
+        "pfos": {
+          "motorSlug": "boyoz-pastane",
+          "dukkanSecim": "Pastane Cafe (Boyoz)",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "planlanan",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m² (Smyrna Boyoz)",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/boyoz-pastane-100-250.json"
             }
           ]
         },
@@ -1609,22 +1672,22 @@
           "dukkanSecim": "Şehir Oteli (Business)",
           "m2Min": 500,
           "m2Max": 2000,
-          "bantKurali": "Varsayılan Sheraton Arnavutköy; Hampton, Kocaeli ve DoubleTree Topkapı ayrı bantlar",
+          "bantKurali": "Varsayılan Hampton Bolu; Kocaeli, DoubleTree Topkapı ve Sheraton Arnavutköy ayrı bantlar",
           "listeYolu": "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx · veri/sheraton-arnavutkoy-2024-122.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
-              "id": "500-2000-arnavutkoy",
-              "label": "500–2000 m² (Sheraton Arnavutköy)",
-              "referansM2": 1000,
-              "listeDosya": "pfos-referans/sehir-otel-500-2000-arnavutkoy.json"
-            },
-            {
               "id": "500-2000",
               "label": "500–2000 m² (Hampton Bolu)",
               "referansM2": 1000,
               "listeDosya": "pfos-referans/sehir-otel-500-2000.json"
+            },
+            {
+              "id": "50-80-oda",
+              "label": "50–80 oda (Zigana Alaçatı)",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/sehir-otel-50-80-oda.json"
             },
             {
               "id": "500-2000-kocaeli",
@@ -1637,6 +1700,12 @@
               "label": "500–2000 m² (DoubleTree Topkapı · 140 oda)",
               "referansM2": 1000,
               "listeDosya": "pfos-referans/sehir-otel-500-2000-topkapi.json"
+            },
+            {
+              "id": "500-2000-arnavutkoy",
+              "label": "500–2000 m² (Sheraton Arnavutköy)",
+              "referansM2": 1000,
+              "listeDosya": "pfos-referans/sehir-otel-500-2000-arnavutkoy.json"
             }
           ]
         },
@@ -1688,16 +1757,24 @@
         "id": "otel_tatil",
         "name": "Tatil Oteli",
         "parent": "Otel F&B",
-        "desc": "Tatil Oteli · liste hazırlanıyor — genel şablon",
+        "desc": "Tatil Oteli · Wyndham 2016-194 referans · 800–1500 m² (1000 m² hedef) · motor: tatil-otel",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "tatil-otel",
           "dukkanSecim": "Tatil Oteli",
           "m2Min": 250,
           "m2Max": 4000,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "bantKurali": "Tek referans liste (Wyndham); m² ile adet ölçeklenir",
+          "listeYolu": "veri/wyndham-tatil-otel-2016-194.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "800-1500",
+              "label": "800–1500 m² (Wyndham 2016-194)",
+              "referansM2": 1000,
+              "listeDosya": "pfos-referans/tatil-otel-800-1500.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -1746,6 +1823,31 @@
               "label": "2000–3500 kişi/gün",
               "referansM2": 2750,
               "listeDosya": "pfos-referans/buyuk-yemekhane-2000-3500.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "uretim_ekmek_kruvasan",
+        "name": "Ekmek + Kruvasan",
+        "parent": "Üretim / Fabrika",
+        "desc": "Ekmek + kruvasan imalathane · soğuk oda · şoklama · fırın hattı · 150–400 m² · Hakan İnan 2017-093 · motor: ekmek-kruvasan",
+        "pfos": {
+          "motorSlug": "ekmek-kruvasan",
+          "dukkanSecim": "Ekmek + Kruvasan",
+          "m2Min": 150,
+          "m2Max": 400,
+          "bantKurali": "Tek referans liste (150–400 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/ekmek-kruvasan-2017-093.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "150-400",
+              "label": "150–400 m² (Hakan İnan 093)",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/ekmek-kruvasan-150-400.json"
             }
           ]
         },
@@ -62275,6 +62377,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T06:37:10.658Z"
+    "updated_at": "2026-06-16T08:09:52.141Z"
   }
 }
