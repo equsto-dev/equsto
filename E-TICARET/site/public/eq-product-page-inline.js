@@ -1066,6 +1066,27 @@ window.searchFilter = window.searchFilter || function () {};
       return g + "×" + d + "×" + y + " mm";
     }
 
+    function formatVariantDimMmPdp(g, d, y) {
+      var G = Number(g) || 0;
+      var D = Number(d) || 0;
+      var H = Number(y) || 0;
+      if (G > 0 && D > 0 && H > 0) return dimLabelFromMmPdp(G, D, H);
+      if (G > 0 && D > 0) return G + "×" + D + " mm";
+      if (G > 0 && H > 0) return G + "×" + H + " mm";
+      if (G > 0) return G + " mm";
+      if (D > 0 && H > 0) return D + "×" + H + " mm";
+      if (D > 0) return D + " mm";
+      if (H > 0) return H + " mm";
+      return "";
+    }
+
+    function sanitizeDimInProductName(name) {
+      return String(name || "").replace(
+        /(\d+)\s*[×x]\s*0(?:\s*[×x]\s*0)?\s*mm/gi,
+        "$1 mm"
+      );
+    }
+
     function formatOlculerLinePdp(raw) {
       if (!raw) return "";
       if (raw.olcu_etiket) return String(raw.olcu_etiket);
@@ -1080,10 +1101,11 @@ window.searchFilter = window.searchFilter || function () {};
       var g = Number(o.genislik_mm);
       var d = Number(o.derinlik_mm);
       var y = Number(o.yukseklik_mm);
-      if (!g || !d || !y) return "";
+      var dim = formatVariantDimMmPdp(g, d, y);
+      if (!dim) return "";
       var name = String(raw.name || "");
-      if (/×\d/.test(name)) return "";
-      return dimLabelFromMmPdp(g, d, y);
+      if (/[×x]\s*\d/.test(name) && !/×0|x0/i.test(name)) return "";
+      return dim;
     }
 
     function shortModelLabel(p) {
@@ -4751,7 +4773,7 @@ window.searchFilter = window.searchFilter || function () {};
         esc(pdpSeriesEyebrow(x)) +
         "</p>" +
         '<h1 class="eq-epdp-title eq-caglayan-title">' +
-        esc(x.name || "") +
+        esc(sanitizeDimInProductName(x.name || "")) +
         "</h1>" +
         '<p class="eq-epdp-cod eq-caglayan-cod">' +
         esc(__pdpT("pdp.product_code_prefix", "Ürün kodu:")) +

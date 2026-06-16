@@ -494,6 +494,8 @@
         if (!nameHasDim && !looksLikeSink) {
           return DEPT === 'tezgah' ? dimLabelTezgahFromMm(g, d, y) : dimLabelFromMm(g, d, y);
         }
+      } else if (DEPT === 'market-reyon' && g > 0 && !d && !y) {
+        return g + ' mm';
       }
     }
 
