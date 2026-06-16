@@ -40,7 +40,6 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     promoLead:
       "GN 1/1 uyumlu dokuz çekmeceli tezgah tipi buzdolabı — profesyonel mutfaklarda erişilebilir soğutma, HACCP dijital kontrol ve yüksek verimli monoblok soğutma sistemi.",
     promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
-    cta: "Ürün sayfasına git →",
     href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
     image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03-cutout.png",
     imageAlt: "Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı",
@@ -56,7 +55,6 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     promoLead:
       "Et ve süt ürünleri teşhirinde menteşeli düz camlı Tiger WFG — modüler uzunluk seçenekleri, 0/+5 °C çalışma, kolay yükleme ve hijyenik temizlik.",
     promoBadges: ["TIGER 800 WFG/CB", "937 mm", "0/+5 °C", "Remote", "LED aydınlatma"],
-    cta: "Ürün sayfasına git →",
     href: "/shop/market-reyonlari/eq-tiger-wfg-eq1",
     dept: "market-reyon",
     image: "/data/prosogutma-market/tiger-wfg/tigerwfgon.png",
@@ -73,7 +71,6 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     promoLead:
       "Parlak LED aydınlatmalı, 12×5 L kapasiteli profesyonel dondurma teşhir dolabı — kavisli temperli cam, fanlı soğutma ve otomatik defrost ile pastane ve kafe vitrinleri için.",
     promoBadges: ["12 gözlü", "-12/-22 °C", "120 cm", "R290", "5 L küvet"],
-    cta: "Ürün sayfasına git →",
     href: "/shop/sogutma/118-dt-12",
     dept: "sogutma",
     image: "/images/catalog/senox/mutbex/28608.jpg",

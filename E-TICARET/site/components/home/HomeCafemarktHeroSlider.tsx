@@ -59,7 +59,6 @@ function SplitPromoSlide({ card }: { card: SplitSlide }) {
             <li key={badge}>{badge}</li>
           ))}
         </ul>
-        <span className="eq-cmkt-promo__cta">{card.cta}</span>
       </div>
       <div className="eq-cmkt-promo__media">
         {/* eslint-disable-next-line @next/next/no-img-element */}
