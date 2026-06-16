@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T11:15:39.384Z",
+  "updated_at": "2026-06-16T12:01:03.384642Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -386,7 +386,7 @@
             "kalemSayisi": 82,
             "toplamAdet": 87,
             "kaynakDosya": "2017-154 THC MAVİBAHÇE/2017-154-2.pdf",
-            "yukleme": "2026-06-16T10:37:18.186809Z"
+            "yukleme": "2026-06-16T12:01:03.382622Z"
           }
         }
       ]

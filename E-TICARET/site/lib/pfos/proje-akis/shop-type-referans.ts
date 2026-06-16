@@ -54,7 +54,7 @@ function legacyListeId(
     case "kebap-ortadogu":
       return pickKebapOrtadoguListe(m2);
     case "all-day-dining-cafe":
-      return pickAllDayDiningListe(m2) ?? "150-300";
+      return pickAllDayDiningListe(m2) ?? "200-400";
     case "coffee-shop":
       return "ikinciplan";
     default:
