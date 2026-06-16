@@ -251,6 +251,7 @@
     "pfos:kebap-ortadogu:meftech:import": "node scripts/import-kebap-ortadogu-meftech-konsept.mjs 200-400",
     "pfos:kebap-ortadogu:meftech:80-200:import": "node scripts/import-kebap-ortadogu-meftech-konsept.mjs 80-200",
     "pfos:thehouse-150-300:import": "node scripts/import-thehouse-150-300-konsept.mjs",
+    "pfos:havelka:import": "node scripts/import-havelka-2017-128-allday-italyan.mjs",
     "pfos:restoran:import": "node scripts/import-restoran-konsept.mjs",
     "pfos:kokteyl-kahve:import": "node scripts/import-kokteyl-kahve-konsept.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
