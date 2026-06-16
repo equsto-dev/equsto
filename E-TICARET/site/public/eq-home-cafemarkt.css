@@ -127,6 +127,38 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   border-color: #fff;
 }
 
+.eq-cmkt-hero-main-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.45);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.eq-cmkt-hero-main-nav--prev {
+  left: 6px;
+}
+
+.eq-cmkt-hero-main-nav--next {
+  right: 6px;
+}
+
+.eq-cmkt-hero-main-nav:hover {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
 .eq-cmkt-hero-side {
   grid-column: 2;
   grid-row: 1 / span 2;
