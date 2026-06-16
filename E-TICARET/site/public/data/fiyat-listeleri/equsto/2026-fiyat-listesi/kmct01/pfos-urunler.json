@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09072-01",
-    "sku": "EQUSTO.09072.01",
-    "model": "EQUSTO.09072.01",
-    "urun_kodu": "EQUSTO.09072.01",
+    "id": "equsto__equsto-kmct01-09072",
+    "sku": "EQUSTO.KMCT01.09072",
+    "model": "EQUSTO.KMCT01.09072",
+    "urun_kodu": "EQUSTO.KMCT01.09072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09072.01\nModel serisi: KMCT01\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 170.0\nSatış fiyatı (EUR, %10 iskonto): 153.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.09072\nModel serisi: KMCT01\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 170.0\nSatış fiyatı (EUR, %10 iskonto): 153.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺8.229,00 + KDV\nKDV Dahil ₺9.875,00"
   },
   {
-    "id": "equsto__equsto-10072-01",
-    "sku": "EQUSTO.10072.01",
-    "model": "EQUSTO.10072.01",
-    "urun_kodu": "EQUSTO.10072.01",
+    "id": "equsto__equsto-kmct01-10072",
+    "sku": "EQUSTO.KMCT01.10072",
+    "model": "EQUSTO.KMCT01.10072",
+    "urun_kodu": "EQUSTO.KMCT01.10072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10072.01\nModel serisi: KMCT01\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 195.0\nSatış fiyatı (EUR, %10 iskonto): 175.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.10072\nModel serisi: KMCT01\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 195.0\nSatış fiyatı (EUR, %10 iskonto): 175.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺9.439,00 + KDV\nKDV Dahil ₺11.327,00"
   },
   {
-    "id": "equsto__equsto-11072-01",
-    "sku": "EQUSTO.11072.01",
-    "model": "EQUSTO.11072.01",
-    "urun_kodu": "EQUSTO.11072.01",
+    "id": "equsto__equsto-kmct01-11072",
+    "sku": "EQUSTO.KMCT01.11072",
+    "model": "EQUSTO.KMCT01.11072",
+    "urun_kodu": "EQUSTO.KMCT01.11072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11072.01\nModel serisi: KMCT01\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %10 iskonto): 193.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.11072\nModel serisi: KMCT01\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %10 iskonto): 193.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺10.407,00 + KDV\nKDV Dahil ₺12.488,00"
   },
   {
-    "id": "equsto__equsto-12072-01",
-    "sku": "EQUSTO.12072.01",
-    "model": "EQUSTO.12072.01",
-    "urun_kodu": "EQUSTO.12072.01",
+    "id": "equsto__equsto-kmct01-12072",
+    "sku": "EQUSTO.KMCT01.12072",
+    "model": "EQUSTO.KMCT01.12072",
+    "urun_kodu": "EQUSTO.KMCT01.12072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12072.01\nModel serisi: KMCT01\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 240.0\nSatış fiyatı (EUR, %10 iskonto): 216.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.12072\nModel serisi: KMCT01\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 240.0\nSatış fiyatı (EUR, %10 iskonto): 216.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺11.618,00 + KDV\nKDV Dahil ₺13.942,00"
   },
   {
-    "id": "equsto__equsto-13072-01",
-    "sku": "EQUSTO.13072.01",
-    "model": "EQUSTO.13072.01",
-    "urun_kodu": "EQUSTO.13072.01",
+    "id": "equsto__equsto-kmct01-13072",
+    "sku": "EQUSTO.KMCT01.13072",
+    "model": "EQUSTO.KMCT01.13072",
+    "urun_kodu": "EQUSTO.KMCT01.13072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13072.01\nModel serisi: KMCT01\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 260.0\nSatış fiyatı (EUR, %10 iskonto): 234.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.13072\nModel serisi: KMCT01\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 260.0\nSatış fiyatı (EUR, %10 iskonto): 234.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -250,10 +250,10 @@
     "price": "₺12.586,00 + KDV\nKDV Dahil ₺15.103,00"
   },
   {
-    "id": "equsto__equsto-14072-01",
-    "sku": "EQUSTO.14072.01",
-    "model": "EQUSTO.14072.01",
-    "urun_kodu": "EQUSTO.14072.01",
+    "id": "equsto__equsto-kmct01-14072",
+    "sku": "EQUSTO.KMCT01.14072",
+    "model": "EQUSTO.KMCT01.14072",
+    "urun_kodu": "EQUSTO.KMCT01.14072",
     "kod": "KMCT01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -288,7 +288,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14072.01\nModel serisi: KMCT01\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %10 iskonto): 252.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMCT01.14072\nModel serisi: KMCT01\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %10 iskonto): 252.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT01",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ-KMÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

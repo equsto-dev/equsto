@@ -13,16 +13,16 @@
   "kur_tcmb_tarih": "16.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-16T17:00:09.324938+00:00",
+  "imported_at": "2026-06-16T18:14:57.465462+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kmgt02/urun.png",
   "pfos": {
     "count": 6,
     "urunler": [
       {
-        "id": "equsto__equsto-09072-02",
-        "sku": "EQUSTO.09072.02",
-        "model": "EQUSTO.09072.02",
-        "urun_kodu": "EQUSTO.09072.02",
+        "id": "equsto__equsto-kmgt02-09072",
+        "sku": "EQUSTO.KMGT02.09072",
+        "model": "EQUSTO.KMGT02.09072",
+        "urun_kodu": "EQUSTO.KMGT02.09072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -57,7 +57,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09072.02\nModel serisi: KMGT02\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.09072\nModel serisi: KMGT02\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -69,10 +69,10 @@
         "price": "₺16.216,00 + KDV\nKDV Dahil ₺19.459,00"
       },
       {
-        "id": "equsto__equsto-10072-02",
-        "sku": "EQUSTO.10072.02",
-        "model": "EQUSTO.10072.02",
-        "urun_kodu": "EQUSTO.10072.02",
+        "id": "equsto__equsto-kmgt02-10072",
+        "sku": "EQUSTO.KMGT02.10072",
+        "model": "EQUSTO.KMGT02.10072",
+        "urun_kodu": "EQUSTO.KMGT02.10072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -107,7 +107,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10072.02\nModel serisi: KMGT02\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.10072\nModel serisi: KMGT02\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -119,10 +119,10 @@
         "price": "₺17.426,00 + KDV\nKDV Dahil ₺20.911,00"
       },
       {
-        "id": "equsto__equsto-11072-02",
-        "sku": "EQUSTO.11072.02",
-        "model": "EQUSTO.11072.02",
-        "urun_kodu": "EQUSTO.11072.02",
+        "id": "equsto__equsto-kmgt02-11072",
+        "sku": "EQUSTO.KMGT02.11072",
+        "model": "EQUSTO.KMGT02.11072",
+        "urun_kodu": "EQUSTO.KMGT02.11072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -157,7 +157,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11072.02\nModel serisi: KMGT02\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 380.0\nSatış fiyatı (EUR, %10 iskonto): 342.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.11072\nModel serisi: KMGT02\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 380.0\nSatış fiyatı (EUR, %10 iskonto): 342.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -169,10 +169,10 @@
         "price": "₺18.394,00 + KDV\nKDV Dahil ₺22.073,00"
       },
       {
-        "id": "equsto__equsto-12072-02",
-        "sku": "EQUSTO.12072.02",
-        "model": "EQUSTO.12072.02",
-        "urun_kodu": "EQUSTO.12072.02",
+        "id": "equsto__equsto-kmgt02-12072",
+        "sku": "EQUSTO.KMGT02.12072",
+        "model": "EQUSTO.KMGT02.12072",
+        "urun_kodu": "EQUSTO.KMGT02.12072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -207,7 +207,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12072.02\nModel serisi: KMGT02\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.12072\nModel serisi: KMGT02\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -219,10 +219,10 @@
         "price": "₺19.605,00 + KDV\nKDV Dahil ₺23.526,00"
       },
       {
-        "id": "equsto__equsto-13072-02",
-        "sku": "EQUSTO.13072.02",
-        "model": "EQUSTO.13072.02",
-        "urun_kodu": "EQUSTO.13072.02",
+        "id": "equsto__equsto-kmgt02-13072",
+        "sku": "EQUSTO.KMGT02.13072",
+        "model": "EQUSTO.KMGT02.13072",
+        "urun_kodu": "EQUSTO.KMGT02.13072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -257,7 +257,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13072.02\nModel serisi: KMGT02\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.13072\nModel serisi: KMGT02\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -269,10 +269,10 @@
         "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
       },
       {
-        "id": "equsto__equsto-14072-02",
-        "sku": "EQUSTO.14072.02",
-        "model": "EQUSTO.14072.02",
-        "urun_kodu": "EQUSTO.14072.02",
+        "id": "equsto__equsto-kmgt02-14072",
+        "sku": "EQUSTO.KMGT02.14072",
+        "model": "EQUSTO.KMGT02.14072",
+        "urun_kodu": "EQUSTO.KMGT02.14072",
         "kod": "KMGT02",
         "dept": "tezgah",
         "category": "calisma-tezgahi",
@@ -307,7 +307,7 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14072.02\nModel serisi: KMGT02\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
+        "specs": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KMGT02.14072\nModel serisi: KMGT02\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMGT02",
         "aciklama": "TEK EVYELİ MAKİNA GİRİŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

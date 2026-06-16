@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-08080-02",
-    "sku": "EQUSTO.08080.02",
-    "model": "EQUSTO.08080.02",
-    "urun_kodu": "EQUSTO.08080.02",
+    "id": "equsto__equsto-kfast02-08080",
+    "sku": "EQUSTO.KFAST02.08080",
+    "model": "EQUSTO.KFAST02.08080",
+    "urun_kodu": "EQUSTO.KFAST02.08080",
     "kod": "KFAST02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ 800×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.08080.02\nModel serisi: KFAST02\nEbat: 80×80×85 cm (800×800×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %10 iskonto): 328.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KFAST02",
+    "specs": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ 800×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KFAST02.08080\nModel serisi: KFAST02\nEbat: 80×80×85 cm (800×800×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %10 iskonto): 328.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KFAST02",
     "aciklama": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺17.668,00 + KDV\nKDV Dahil ₺21.202,00"
   },
   {
-    "id": "equsto__equsto-09080-02",
-    "sku": "EQUSTO.09080.02",
-    "model": "EQUSTO.09080.02",
-    "urun_kodu": "EQUSTO.09080.02",
+    "id": "equsto__equsto-kfast02-09080",
+    "sku": "EQUSTO.KFAST02.09080",
+    "model": "EQUSTO.KFAST02.09080",
+    "urun_kodu": "EQUSTO.KFAST02.09080",
     "kod": "KFAST02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09080.02\nModel serisi: KFAST02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KFAST02",
+    "specs": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KFAST02.09080\nModel serisi: KFAST02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KFAST02",
     "aciklama": "FIRIN ALT STANDI, ETRAFI AÇIK, TABAN RAFLI, TEPSİ KİTLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

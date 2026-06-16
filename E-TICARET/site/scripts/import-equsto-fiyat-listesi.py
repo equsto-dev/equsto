@@ -90,11 +90,6 @@ def slug_dir(kod: str) -> str:
     return kod.lower().replace("_", "-")
 
 
-def family_suffix(kod: str) -> str:
-    m = re.search(r"(\d{2})$", kod)
-    return m.group(1) if m else "00"
-
-
 def parse_title(raw: str, kod: str) -> str:
     if not raw:
         return kod
@@ -153,11 +148,14 @@ def eticaret_filter(rows: list[dict], kod: str) -> list[dict]:
 
 
 def sku_for(en: int, derinlik: int, kod: str) -> str:
-    return f"EQUSTO.{en:03d}{derinlik:02d}.{family_suffix(kod)}"
+    """Benzersiz stok kodu — tam seri kodu + ölçü (KCT02 ≠ KHCT02)."""
+    k = norm_tr(kod)
+    return f"EQUSTO.{k}.{en:03d}{derinlik:02d}"
 
 
 def slug_for(en: int, derinlik: int, kod: str) -> str:
-    return f"equsto-{en:03d}{derinlik:02d}-{family_suffix(kod)}"
+    k = slug_dir(norm_tr(kod))
+    return f"equsto-{k}-{en:03d}{derinlik:02d}"
 
 
 def fmt_try(n: float) -> str:

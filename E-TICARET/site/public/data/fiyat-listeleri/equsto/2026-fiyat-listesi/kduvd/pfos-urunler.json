@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09030-00",
-    "sku": "EQUSTO.09030.00",
-    "model": "EQUSTO.09030.00",
-    "urun_kodu": "EQUSTO.09030.00",
+    "id": "equsto__equsto-kduvd-09030",
+    "sku": "EQUSTO.KDUVD.09030",
+    "model": "EQUSTO.KDUVD.09030",
+    "urun_kodu": "EQUSTO.KDUVD.09030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09030.00\nModel serisi: KDUVD\nEbat: 90×30×60 cm (900×300×600 mm)\n\nListe fiyatı (EUR): 295.0\nSatış fiyatı (EUR, %10 iskonto): 265.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.09030\nModel serisi: KDUVD\nEbat: 90×30×60 cm (900×300×600 mm)\n\nListe fiyatı (EUR): 295.0\nSatış fiyatı (EUR, %10 iskonto): 265.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺14.280,00 + KDV\nKDV Dahil ₺17.136,00"
   },
   {
-    "id": "equsto__equsto-09035-00",
-    "sku": "EQUSTO.09035.00",
-    "model": "EQUSTO.09035.00",
-    "urun_kodu": "EQUSTO.09035.00",
+    "id": "equsto__equsto-kduvd-09035",
+    "sku": "EQUSTO.KDUVD.09035",
+    "model": "EQUSTO.KDUVD.09035",
+    "urun_kodu": "EQUSTO.KDUVD.09035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09035.00\nModel serisi: KDUVD\nEbat: 90×35×60 cm (900×350×600 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %10 iskonto): 283.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.09035\nModel serisi: KDUVD\nEbat: 90×35×60 cm (900×350×600 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %10 iskonto): 283.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺15.248,00 + KDV\nKDV Dahil ₺18.298,00"
   },
   {
-    "id": "equsto__equsto-09040-00",
-    "sku": "EQUSTO.09040.00",
-    "model": "EQUSTO.09040.00",
-    "urun_kodu": "EQUSTO.09040.00",
+    "id": "equsto__equsto-kduvd-09040",
+    "sku": "EQUSTO.KDUVD.09040",
+    "model": "EQUSTO.KDUVD.09040",
+    "urun_kodu": "EQUSTO.KDUVD.09040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09040.00\nModel serisi: KDUVD\nEbat: 90×40×60 cm (900×400×600 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %10 iskonto): 297.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.09040\nModel serisi: KDUVD\nEbat: 90×40×60 cm (900×400×600 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %10 iskonto): 297.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺15.974,00 + KDV\nKDV Dahil ₺19.169,00"
   },
   {
-    "id": "equsto__equsto-10030-00",
-    "sku": "EQUSTO.10030.00",
-    "model": "EQUSTO.10030.00",
-    "urun_kodu": "EQUSTO.10030.00",
+    "id": "equsto__equsto-kduvd-10030",
+    "sku": "EQUSTO.KDUVD.10030",
+    "model": "EQUSTO.KDUVD.10030",
+    "urun_kodu": "EQUSTO.KDUVD.10030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10030.00\nModel serisi: KDUVD\nEbat: 100×30×60 cm (1000×300×600 mm)\n\nListe fiyatı (EUR): 325.0\nSatış fiyatı (EUR, %10 iskonto): 292.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.10030\nModel serisi: KDUVD\nEbat: 100×30×60 cm (1000×300×600 mm)\n\nListe fiyatı (EUR): 325.0\nSatış fiyatı (EUR, %10 iskonto): 292.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺15.732,00 + KDV\nKDV Dahil ₺18.878,00"
   },
   {
-    "id": "equsto__equsto-10035-00",
-    "sku": "EQUSTO.10035.00",
-    "model": "EQUSTO.10035.00",
-    "urun_kodu": "EQUSTO.10035.00",
+    "id": "equsto__equsto-kduvd-10035",
+    "sku": "EQUSTO.KDUVD.10035",
+    "model": "EQUSTO.KDUVD.10035",
+    "urun_kodu": "EQUSTO.KDUVD.10035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10035.00\nModel serisi: KDUVD\nEbat: 100×35×60 cm (1000×350×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.10035\nModel serisi: KDUVD\nEbat: 100×35×60 cm (1000×350×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -250,10 +250,10 @@
     "price": "₺16.216,00 + KDV\nKDV Dahil ₺19.459,00"
   },
   {
-    "id": "equsto__equsto-10040-00",
-    "sku": "EQUSTO.10040.00",
-    "model": "EQUSTO.10040.00",
-    "urun_kodu": "EQUSTO.10040.00",
+    "id": "equsto__equsto-kduvd-10040",
+    "sku": "EQUSTO.KDUVD.10040",
+    "model": "EQUSTO.KDUVD.10040",
+    "urun_kodu": "EQUSTO.KDUVD.10040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -288,7 +288,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10040.00\nModel serisi: KDUVD\nEbat: 100×40×60 cm (1000×400×600 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1000×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.10040\nModel serisi: KDUVD\nEbat: 100×40×60 cm (1000×400×600 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -300,10 +300,10 @@
     "price": "₺17.426,00 + KDV\nKDV Dahil ₺20.911,00"
   },
   {
-    "id": "equsto__equsto-11030-00",
-    "sku": "EQUSTO.11030.00",
-    "model": "EQUSTO.11030.00",
-    "urun_kodu": "EQUSTO.11030.00",
+    "id": "equsto__equsto-kduvd-11030",
+    "sku": "EQUSTO.KDUVD.11030",
+    "model": "EQUSTO.KDUVD.11030",
+    "urun_kodu": "EQUSTO.KDUVD.11030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -338,7 +338,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11030.00\nModel serisi: KDUVD\nEbat: 110×30×60 cm (1100×300×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.11030\nModel serisi: KDUVD\nEbat: 110×30×60 cm (1100×300×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -350,10 +350,10 @@
     "price": "₺16.216,00 + KDV\nKDV Dahil ₺19.459,00"
   },
   {
-    "id": "equsto__equsto-11035-00",
-    "sku": "EQUSTO.11035.00",
-    "model": "EQUSTO.11035.00",
-    "urun_kodu": "EQUSTO.11035.00",
+    "id": "equsto__equsto-kduvd-11035",
+    "sku": "EQUSTO.KDUVD.11035",
+    "model": "EQUSTO.KDUVD.11035",
+    "urun_kodu": "EQUSTO.KDUVD.11035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -388,7 +388,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11035.00\nModel serisi: KDUVD\nEbat: 110×35×60 cm (1100×350×600 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.11035\nModel serisi: KDUVD\nEbat: 110×35×60 cm (1100×350×600 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -400,10 +400,10 @@
     "price": "₺17.910,00 + KDV\nKDV Dahil ₺21.492,00"
   },
   {
-    "id": "equsto__equsto-11040-00",
-    "sku": "EQUSTO.11040.00",
-    "model": "EQUSTO.11040.00",
-    "urun_kodu": "EQUSTO.11040.00",
+    "id": "equsto__equsto-kduvd-11040",
+    "sku": "EQUSTO.KDUVD.11040",
+    "model": "EQUSTO.KDUVD.11040",
+    "urun_kodu": "EQUSTO.KDUVD.11040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -438,7 +438,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11040.00\nModel serisi: KDUVD\nEbat: 110×40×60 cm (1100×400×600 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1100×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.11040\nModel serisi: KDUVD\nEbat: 110×40×60 cm (1100×400×600 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -450,10 +450,10 @@
     "price": "₺18.636,00 + KDV\nKDV Dahil ₺22.363,00"
   },
   {
-    "id": "equsto__equsto-12030-00",
-    "sku": "EQUSTO.12030.00",
-    "model": "EQUSTO.12030.00",
-    "urun_kodu": "EQUSTO.12030.00",
+    "id": "equsto__equsto-kduvd-12030",
+    "sku": "EQUSTO.KDUVD.12030",
+    "model": "EQUSTO.KDUVD.12030",
+    "urun_kodu": "EQUSTO.KDUVD.12030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -488,7 +488,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12030.00\nModel serisi: KDUVD\nEbat: 120×30×60 cm (1200×300×600 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.12030\nModel serisi: KDUVD\nEbat: 120×30×60 cm (1200×300×600 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %10 iskonto): 333.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -500,10 +500,10 @@
     "price": "₺17.910,00 + KDV\nKDV Dahil ₺21.492,00"
   },
   {
-    "id": "equsto__equsto-12035-00",
-    "sku": "EQUSTO.12035.00",
-    "model": "EQUSTO.12035.00",
-    "urun_kodu": "EQUSTO.12035.00",
+    "id": "equsto__equsto-kduvd-12035",
+    "sku": "EQUSTO.KDUVD.12035",
+    "model": "EQUSTO.KDUVD.12035",
+    "urun_kodu": "EQUSTO.KDUVD.12035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -538,7 +538,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12035.00\nModel serisi: KDUVD\nEbat: 120×35×60 cm (1200×350×600 mm)\n\nListe fiyatı (EUR): 396.0\nSatış fiyatı (EUR, %10 iskonto): 356.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.12035\nModel serisi: KDUVD\nEbat: 120×35×60 cm (1200×350×600 mm)\n\nListe fiyatı (EUR): 396.0\nSatış fiyatı (EUR, %10 iskonto): 356.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -550,10 +550,10 @@
     "price": "₺19.169,00 + KDV\nKDV Dahil ₺23.003,00"
   },
   {
-    "id": "equsto__equsto-12040-00",
-    "sku": "EQUSTO.12040.00",
-    "model": "EQUSTO.12040.00",
-    "urun_kodu": "EQUSTO.12040.00",
+    "id": "equsto__equsto-kduvd-12040",
+    "sku": "EQUSTO.KDUVD.12040",
+    "model": "EQUSTO.KDUVD.12040",
+    "urun_kodu": "EQUSTO.KDUVD.12040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -588,7 +588,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12040.00\nModel serisi: KDUVD\nEbat: 120×40×60 cm (1200×400×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %10 iskonto): 373.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1200×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.12040\nModel serisi: KDUVD\nEbat: 120×40×60 cm (1200×400×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %10 iskonto): 373.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -600,10 +600,10 @@
     "price": "₺20.089,00 + KDV\nKDV Dahil ₺24.107,00"
   },
   {
-    "id": "equsto__equsto-13030-00",
-    "sku": "EQUSTO.13030.00",
-    "model": "EQUSTO.13030.00",
-    "urun_kodu": "EQUSTO.13030.00",
+    "id": "equsto__equsto-kduvd-13030",
+    "sku": "EQUSTO.KDUVD.13030",
+    "model": "EQUSTO.KDUVD.13030",
+    "urun_kodu": "EQUSTO.KDUVD.13030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -638,7 +638,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13030.00\nModel serisi: KDUVD\nEbat: 130×30×60 cm (1300×300×600 mm)\n\nListe fiyatı (EUR): 396.0\nSatış fiyatı (EUR, %10 iskonto): 356.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.13030\nModel serisi: KDUVD\nEbat: 130×30×60 cm (1300×300×600 mm)\n\nListe fiyatı (EUR): 396.0\nSatış fiyatı (EUR, %10 iskonto): 356.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -650,10 +650,10 @@
     "price": "₺19.169,00 + KDV\nKDV Dahil ₺23.003,00"
   },
   {
-    "id": "equsto__equsto-13035-00",
-    "sku": "EQUSTO.13035.00",
-    "model": "EQUSTO.13035.00",
-    "urun_kodu": "EQUSTO.13035.00",
+    "id": "equsto__equsto-kduvd-13035",
+    "sku": "EQUSTO.KDUVD.13035",
+    "model": "EQUSTO.KDUVD.13035",
+    "urun_kodu": "EQUSTO.KDUVD.13035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -688,7 +688,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13035.00\nModel serisi: KDUVD\nEbat: 130×35×60 cm (1300×350×600 mm)\n\nListe fiyatı (EUR): 426.0\nSatış fiyatı (EUR, %10 iskonto): 383.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.13035\nModel serisi: KDUVD\nEbat: 130×35×60 cm (1300×350×600 mm)\n\nListe fiyatı (EUR): 426.0\nSatış fiyatı (EUR, %10 iskonto): 383.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -700,10 +700,10 @@
     "price": "₺20.621,00 + KDV\nKDV Dahil ₺24.745,00"
   },
   {
-    "id": "equsto__equsto-13040-00",
-    "sku": "EQUSTO.13040.00",
-    "model": "EQUSTO.13040.00",
-    "urun_kodu": "EQUSTO.13040.00",
+    "id": "equsto__equsto-kduvd-13040",
+    "sku": "EQUSTO.KDUVD.13040",
+    "model": "EQUSTO.KDUVD.13040",
+    "urun_kodu": "EQUSTO.KDUVD.13040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -738,7 +738,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13040.00\nModel serisi: KDUVD\nEbat: 130×40×60 cm (1300×400×600 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1300×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.13040\nModel serisi: KDUVD\nEbat: 130×40×60 cm (1300×400×600 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -750,10 +750,10 @@
     "price": "₺21.783,00 + KDV\nKDV Dahil ₺26.140,00"
   },
   {
-    "id": "equsto__equsto-14030-00",
-    "sku": "EQUSTO.14030.00",
-    "model": "EQUSTO.14030.00",
-    "urun_kodu": "EQUSTO.14030.00",
+    "id": "equsto__equsto-kduvd-14030",
+    "sku": "EQUSTO.KDUVD.14030",
+    "model": "EQUSTO.KDUVD.14030",
+    "urun_kodu": "EQUSTO.KDUVD.14030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -788,7 +788,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14030.00\nModel serisi: KDUVD\nEbat: 140×30×60 cm (1400×300×600 mm)\n\nListe fiyatı (EUR): 435.0\nSatış fiyatı (EUR, %10 iskonto): 391.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.14030\nModel serisi: KDUVD\nEbat: 140×30×60 cm (1400×300×600 mm)\n\nListe fiyatı (EUR): 435.0\nSatış fiyatı (EUR, %10 iskonto): 391.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -800,10 +800,10 @@
     "price": "₺21.057,00 + KDV\nKDV Dahil ₺25.268,00"
   },
   {
-    "id": "equsto__equsto-14035-00",
-    "sku": "EQUSTO.14035.00",
-    "model": "EQUSTO.14035.00",
-    "urun_kodu": "EQUSTO.14035.00",
+    "id": "equsto__equsto-kduvd-14035",
+    "sku": "EQUSTO.KDUVD.14035",
+    "model": "EQUSTO.KDUVD.14035",
+    "urun_kodu": "EQUSTO.KDUVD.14035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -838,7 +838,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14035.00\nModel serisi: KDUVD\nEbat: 140×35×60 cm (1400×350×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %10 iskonto): 410.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.14035\nModel serisi: KDUVD\nEbat: 140×35×60 cm (1400×350×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %10 iskonto): 410.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -850,10 +850,10 @@
     "price": "₺22.073,00 + KDV\nKDV Dahil ₺26.488,00"
   },
   {
-    "id": "equsto__equsto-14040-00",
-    "sku": "EQUSTO.14040.00",
-    "model": "EQUSTO.14040.00",
-    "urun_kodu": "EQUSTO.14040.00",
+    "id": "equsto__equsto-kduvd-14040",
+    "sku": "EQUSTO.KDUVD.14040",
+    "model": "EQUSTO.KDUVD.14040",
+    "urun_kodu": "EQUSTO.KDUVD.14040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -888,7 +888,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14040.00\nModel serisi: KDUVD\nEbat: 140×40×60 cm (1400×400×600 mm)\n\nListe fiyatı (EUR): 482.0\nSatış fiyatı (EUR, %10 iskonto): 433.8\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1400×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.14040\nModel serisi: KDUVD\nEbat: 140×40×60 cm (1400×400×600 mm)\n\nListe fiyatı (EUR): 482.0\nSatış fiyatı (EUR, %10 iskonto): 433.8\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -900,10 +900,10 @@
     "price": "₺23.332,00 + KDV\nKDV Dahil ₺27.998,00"
   },
   {
-    "id": "equsto__equsto-15030-00",
-    "sku": "EQUSTO.15030.00",
-    "model": "EQUSTO.15030.00",
-    "urun_kodu": "EQUSTO.15030.00",
+    "id": "equsto__equsto-kduvd-15030",
+    "sku": "EQUSTO.KDUVD.15030",
+    "model": "EQUSTO.KDUVD.15030",
+    "urun_kodu": "EQUSTO.KDUVD.15030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -938,7 +938,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15030.00\nModel serisi: KDUVD\nEbat: 150×30×60 cm (1500×300×600 mm)\n\nListe fiyatı (EUR): 466.0\nSatış fiyatı (EUR, %10 iskonto): 419.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.15030\nModel serisi: KDUVD\nEbat: 150×30×60 cm (1500×300×600 mm)\n\nListe fiyatı (EUR): 466.0\nSatış fiyatı (EUR, %10 iskonto): 419.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -950,10 +950,10 @@
     "price": "₺22.557,00 + KDV\nKDV Dahil ₺27.068,00"
   },
   {
-    "id": "equsto__equsto-15035-00",
-    "sku": "EQUSTO.15035.00",
-    "model": "EQUSTO.15035.00",
-    "urun_kodu": "EQUSTO.15035.00",
+    "id": "equsto__equsto-kduvd-15035",
+    "sku": "EQUSTO.KDUVD.15035",
+    "model": "EQUSTO.KDUVD.15035",
+    "urun_kodu": "EQUSTO.KDUVD.15035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -988,7 +988,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15035.00\nModel serisi: KDUVD\nEbat: 150×35×60 cm (1500×350×600 mm)\n\nListe fiyatı (EUR): 486.0\nSatış fiyatı (EUR, %10 iskonto): 437.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.15035\nModel serisi: KDUVD\nEbat: 150×35×60 cm (1500×350×600 mm)\n\nListe fiyatı (EUR): 486.0\nSatış fiyatı (EUR, %10 iskonto): 437.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1000,10 +1000,10 @@
     "price": "₺23.525,00 + KDV\nKDV Dahil ₺28.230,00"
   },
   {
-    "id": "equsto__equsto-15040-00",
-    "sku": "EQUSTO.15040.00",
-    "model": "EQUSTO.15040.00",
-    "urun_kodu": "EQUSTO.15040.00",
+    "id": "equsto__equsto-kduvd-15040",
+    "sku": "EQUSTO.KDUVD.15040",
+    "model": "EQUSTO.KDUVD.15040",
+    "urun_kodu": "EQUSTO.KDUVD.15040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -1038,7 +1038,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15040.00\nModel serisi: KDUVD\nEbat: 150×40×60 cm (1500×400×600 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1500×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.15040\nModel serisi: KDUVD\nEbat: 150×40×60 cm (1500×400×600 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1050,10 +1050,10 @@
     "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
   },
   {
-    "id": "equsto__equsto-16030-00",
-    "sku": "EQUSTO.16030.00",
-    "model": "EQUSTO.16030.00",
-    "urun_kodu": "EQUSTO.16030.00",
+    "id": "equsto__equsto-kduvd-16030",
+    "sku": "EQUSTO.KDUVD.16030",
+    "model": "EQUSTO.KDUVD.16030",
+    "urun_kodu": "EQUSTO.KDUVD.16030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -1088,7 +1088,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16030.00\nModel serisi: KDUVD\nEbat: 160×30×60 cm (1600×300×600 mm)\n\nListe fiyatı (EUR): 480.0\nSatış fiyatı (EUR, %10 iskonto): 432.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.16030\nModel serisi: KDUVD\nEbat: 160×30×60 cm (1600×300×600 mm)\n\nListe fiyatı (EUR): 480.0\nSatış fiyatı (EUR, %10 iskonto): 432.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1100,10 +1100,10 @@
     "price": "₺23.235,00 + KDV\nKDV Dahil ₺27.882,00"
   },
   {
-    "id": "equsto__equsto-16035-00",
-    "sku": "EQUSTO.16035.00",
-    "model": "EQUSTO.16035.00",
-    "urun_kodu": "EQUSTO.16035.00",
+    "id": "equsto__equsto-kduvd-16035",
+    "sku": "EQUSTO.KDUVD.16035",
+    "model": "EQUSTO.KDUVD.16035",
+    "urun_kodu": "EQUSTO.KDUVD.16035",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -1138,7 +1138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16035.00\nModel serisi: KDUVD\nEbat: 160×35×60 cm (1600×350×600 mm)\n\nListe fiyatı (EUR): 516.0\nSatış fiyatı (EUR, %10 iskonto): 464.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×350×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.16035\nModel serisi: KDUVD\nEbat: 160×35×60 cm (1600×350×600 mm)\n\nListe fiyatı (EUR): 516.0\nSatış fiyatı (EUR, %10 iskonto): 464.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1150,10 +1150,10 @@
     "price": "₺24.978,00 + KDV\nKDV Dahil ₺29.974,00"
   },
   {
-    "id": "equsto__equsto-16040-00",
-    "sku": "EQUSTO.16040.00",
-    "model": "EQUSTO.16040.00",
-    "urun_kodu": "EQUSTO.16040.00",
+    "id": "equsto__equsto-kduvd-16040",
+    "sku": "EQUSTO.KDUVD.16040",
+    "model": "EQUSTO.KDUVD.16040",
+    "urun_kodu": "EQUSTO.KDUVD.16040",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -1188,7 +1188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16040.00\nModel serisi: KDUVD\nEbat: 160×40×60 cm (1600×400×600 mm)\n\nListe fiyatı (EUR): 550.0\nSatış fiyatı (EUR, %10 iskonto): 495.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1600×400×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.16040\nModel serisi: KDUVD\nEbat: 160×40×60 cm (1600×400×600 mm)\n\nListe fiyatı (EUR): 550.0\nSatış fiyatı (EUR, %10 iskonto): 495.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1200,10 +1200,10 @@
     "price": "₺26.623,00 + KDV\nKDV Dahil ₺31.948,00"
   },
   {
-    "id": "equsto__equsto-17030-00",
-    "sku": "EQUSTO.17030.00",
-    "model": "EQUSTO.17030.00",
-    "urun_kodu": "EQUSTO.17030.00",
+    "id": "equsto__equsto-kduvd-17030",
+    "sku": "EQUSTO.KDUVD.17030",
+    "model": "EQUSTO.KDUVD.17030",
+    "urun_kodu": "EQUSTO.KDUVD.17030",
     "kod": "KDUVD",
     "dept": "dolap",
     "category": "duvar-dolabi",
@@ -1238,7 +1238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1700×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.17030.00\nModel serisi: KDUVD\nEbat: 170×30×60 cm (1700×300×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %10 iskonto): 459.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
+    "specs": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 1700×300×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDUVD.17030\nModel serisi: KDUVD\nEbat: 170×30×60 cm (1700×300×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %10 iskonto): 459.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVD",
     "aciklama": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
