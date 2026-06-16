@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /**
- * Pimak katalog s.188-197 (mutfak ekipmanları) → tezgah: Pimak marka + PIMAK kodları
- * davlumbaz: Equsto marka (aynı PDF s.195–196)
+ * Pimak katalog s.188-197 → tezgah + davlumbaz: Pimak marka + PIMAK kodları
  * Kaynak: PFOS/veri/pimak/p188-197-products.json + PDF görselleri
  *
  *   node scripts/import-equsto-p188-197.mjs
@@ -21,12 +20,9 @@ const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const OUT_IMG = path.join(ROOT, "public/images/catalog/equsto");
 const MANIFEST = path.join(ROOT, "public/data/equsto/manifest.json");
 
-const TEZGAH_BRAND = "Pimak";
-const TEZGAH_BRAND_ID = "pimak";
-const TEZGAH_KAYNAK = "pimak-katalog-pdf";
-const DAVLUMBAZ_BRAND = "Equsto";
-const DAVLUMBAZ_BRAND_ID = "equsto";
-const DAVLUMBAZ_KAYNAK = "equsto-katalog-pdf";
+const PIMAK_BRAND = "Pimak";
+const PIMAK_BRAND_ID = "pimak";
+const PIMAK_KAYNAK = "pimak-katalog-pdf";
 const LEGACY_KAYNAKLAR = new Set(["equsto-katalog-pdf", "equsto-pimak-pdf", "pimak-katalog-pdf"]);
 const DEFAULT_DEPT = "tezgah";
 const BAYI_ISKONTO = 0.47;
@@ -218,28 +214,27 @@ function isDavlumbazRow(r) {
 
 function toRow(p, kur) {
   const dept = deptFor(p);
-  const isTezgah = dept === DEFAULT_DEPT;
-  const brand = isTezgah ? TEZGAH_BRAND : DAVLUMBAZ_BRAND;
-  const brandId = isTezgah ? TEZGAH_BRAND_ID : DAVLUMBAZ_BRAND_ID;
-  const sku = isTezgah ? pimakSku(p.urun_kodu) : equstoSku(p.urun_kodu);
-  const slug = isTezgah ? pimakSlug(p.urun_kodu) : equstoSlug(p.urun_kodu);
-  const kaynak = isTezgah ? TEZGAH_KAYNAK : DAVLUMBAZ_KAYNAK;
-  const kaynakLabel = isTezgah ? "Pimak katalog 2026" : "Equsto katalog 2026";
+  const sku = pimakSku(p.urun_kodu);
+  const slug = pimakSlug(p.urun_kodu);
   const liste = Number(p.liste_fiyati_eur) || 0;
   const px = liste > 0 ? pricingFromListe(liste, kur) : null;
   const images = copyImage(p, imageStorageSlug(p.urun_kodu));
-  const id = `${brandId}__${slug}`;
+  const id = `${PIMAK_BRAND_ID}__${slug}`;
 
   return {
     id,
     dept,
     category: p.category || "calisma-tezgahi",
-    brand,
-    oem_brand: isTezgah ? "Pimak" : undefined,
+    brand: PIMAK_BRAND,
+    oem_brand: "Pimak",
     name: p.baslik,
     price: px?.price || "Teklif için iletişim",
     fiyat_bekleniyor: !px,
-    specs: formatSpecs(p, px, { brand, sku, kaynakLabel }),
+    specs: formatSpecs(p, px, {
+      brand: PIMAK_BRAND,
+      sku,
+      kaynakLabel: "Pimak katalog 2026",
+    }),
     aciklama: (p.temel_ozellikler || []).join("\n"),
     teknik_ozellikler: [
       ...(p.temel_ozellikler || []),
@@ -252,13 +247,13 @@ function toRow(p, kur) {
     sku,
     model: sku,
     urun_kodu: sku,
-    kaynak,
+    kaynak: PIMAK_KAYNAK,
     kaynak_url: "",
     pdf_page: p.pdf_page,
     linkKaynak: "",
     ...(px || {}),
-    kaynak_fiyat_listesi: px ? kaynak : undefined,
-    ...(isTezgah && /^PIMAK\./i.test(sku)
+    kaynak_fiyat_listesi: px ? PIMAK_KAYNAK : undefined,
+    ...( /^PIMAK\./i.test(sku)
       ? { marka_kodu: "PIMAK", marka_urun_kodu: sku.replace(/^PIMAK\./i, "") }
       : {}),
   };
@@ -269,7 +264,7 @@ function isP188197ImportRow(r) {
   if (LEGACY_KAYNAKLAR.has(k)) return true;
   if (String(r?.id || "").startsWith("equsto__equsto-")) return true;
   if (String(r?.id || "").startsWith("pimak__pimak-")) return true;
-  if (r?.brand === DAVLUMBAZ_BRAND && String(r?.id || "").includes("equsto-pimak")) return true;
+  if (r?.brand === PIMAK_BRAND && String(r?.id || "").includes("equsto-pimak")) return true;
   return false;
 }
 
@@ -316,8 +311,8 @@ async function main() {
       JSON.stringify(
         {
           generated: new Date().toISOString(),
-          brand: TEZGAH_BRAND,
-          kaynak: TEZGAH_KAYNAK,
+          brand: PIMAK_BRAND,
+          kaynak: PIMAK_KAYNAK,
           pdf_pages: "188-197",
           imported: rows.length,
           priced,

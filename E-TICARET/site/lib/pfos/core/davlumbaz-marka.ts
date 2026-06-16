@@ -1,5 +1,5 @@
-/** PFOS davlumbaz — teklif markası ve EQUSTO SKU üretimi */
-export const DAVLUMBAZ_MARKA = "Equsto";
+/** PFOS davlumbaz — teklif markası ve Pimak (eski EQUSTO) SKU üretimi */
+export const DAVLUMBAZ_MARKA = "Pimak";
 
 /** EQUSTO katalog derinlikleri (cm) */
 export const EQUSTO_DAVLUMBAZ_DEPTHS_CM = [100, 120, 150, 200, 250] as const;
@@ -21,7 +21,7 @@ export function isEqustoDavlumbazMiddleBlock(mid: string): boolean {
 
 export function isEqustoDavlumbazRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
-  const mid = s.match(/^EQUSTO\.(\d{5})\./i)?.[1];
+  const mid = s.match(/^(?:EQUSTO|PIMAK)\.(\d{5})\./i)?.[1];
   if (!mid) return false;
   if (ad && /tezgah|sehpa|evye|calisma|çalışma/i.test(ad) && !/davlumbaz/i.test(ad)) {
     return false;
@@ -98,7 +98,7 @@ export function generateEqustoDavlumbazSku(
   const depth = snapDavlumbazDepthCm(depthCm);
   const prefix = equstoDavlumbazSizePrefix(widthCm, depth);
   const suffix = inferEqustoDavlumbazSuffix(isim, form);
-  return `EQUSTO.${prefix}.${suffix}`;
+  return `PIMAK.${prefix}.${suffix}`;
 }
 
 export function dimsCmFromOlcu(olcu: string): [number, number] | null {
