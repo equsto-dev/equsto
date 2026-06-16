@@ -879,22 +879,28 @@
         "id": "coffee_shop",
         "name": "Coffee Shop",
         "parent": "Kafe / Coffee Shop",
-        "desc": "Espressolab Watergarden referans (2016-114) · kahve + pasta teşhir · motor: coffee-shop",
+        "desc": "Kahve + pasta teşhir · İKİNCİPLAN (2024-054) veya Espressolab Watergarden · motor: coffee-shop",
         "pfos": {
           "motorSlug": "coffee-shop",
           "dukkanSecim": "Coffee Shop",
           "m2Min": 60,
           "m2Max": 300,
-          "bantKurali": "Tek referans liste (Espressolab Watergarden); m² ile adet ölçeklenir",
+          "bantKurali": "Varsayılan İKİNCİPLAN; Espressolab Watergarden alternatif bant",
           "teklifKaynagi": "pfos-referans",
-          "listeYolu": "veri/espresolab-watergarden-2016-114.xlsx · proje-veri/coffee-shop-ekipman-listesi.xlsx",
+          "listeYolu": "ikinciplan-kafe-2024-054.xlsx · veri/espresolab-watergarden-2016-114.xlsx",
           "durum": "aktif",
           "bantlar": [
             {
+              "id": "ikinciplan",
+              "label": "İKİNCİPLAN Kafe (2024-054)",
+              "referansM2": 100,
+              "listeDosya": "pfos-referans/coffee-shop-ikinciplan.json"
+            },
+            {
               "id": "referans",
-              "label": "Referans liste",
+              "label": "Espressolab Watergarden",
               "referansM2": 120,
-              "listeDosya": "coffee-shop-referans.json"
+              "listeDosya": "pfos-referans/coffee-shop-referans.json"
             }
           ]
         },
@@ -62269,6 +62275,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T06:29:49.673Z"
+    "updated_at": "2026-06-16T06:37:10.658Z"
   }
 }

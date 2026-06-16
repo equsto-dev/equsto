@@ -43,6 +43,8 @@ export type ReferansListeId =
   | "2000-3500"
   | "1500-2500"
   | "200-400"
+  | "300-500"
+  | "ikinciplan"
   | "500-2000"
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
@@ -280,7 +282,7 @@ export async function loadReferansProfil(
   const bantId =
     listeId ??
     (kategoriId === "coffee-shop"
-      ? "referans"
+      ? "ikinciplan"
       : kategoriId === "pizzaci"
         ? pickPizzaciListe(m2)
         : kategoriId === "pastane"
