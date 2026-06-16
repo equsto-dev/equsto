@@ -36,7 +36,10 @@ import {
 import {
   CALISMA_TEZGAH_MARKA,
   isCalismaTezgahiPfosKalem,
+  isPimakTezgahSku,
+  PIMAK_TEZGAH_MARKA,
 } from "./calisma-tezgah";
+import { isPimakDavlumbazSku } from "./davlumbaz-marka";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -177,6 +180,11 @@ export function resolveTeklifMarka(opts: {
   urunTipi?: string | null;
   sku?: string | null;
 }): string {
+  const sku = String(opts.sku ?? "").trim();
+  if (isPimakTezgahSku(sku) || isPimakDavlumbazSku(sku)) {
+    return PIMAK_TEZGAH_MARKA;
+  }
+
   if (
     isOztiBuzdolabiSku(opts.sku) ||
     isOztiBuzdolabiRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })
@@ -263,6 +271,9 @@ export function resolveTeklifMarka(opts: {
       urunTipi: opts.urunTipi,
     })
   ) {
+    if (opts.katalogMarka?.trim() && foldTr(opts.katalogMarka) === foldTr(PIMAK_TEZGAH_MARKA)) {
+      return PIMAK_TEZGAH_MARKA;
+    }
     return CALISMA_TEZGAH_MARKA;
   }
 
@@ -386,6 +397,7 @@ export function enrichEslesmisFromKatalogRow(
       linkMarka: ctx?.linkMarka,
       zoneMarka: ctx?.zoneMarka,
       urunTipi: ctx?.urunTipi,
+      sku: row.sku,
     }),
     model: resolveKatalogModel(row),
     olcu: formatKatalogOlcu(row, ctx?.zoneOlcu),

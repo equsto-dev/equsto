@@ -1,6 +1,6 @@
 import { foldTr } from "@/lib/search-query";
 
-/** Pimak PDF gömülü görsel — EQUSTO / PIMAK tezgah SKU soneki */
+/** Pimak PDF gömülü görsel — PIMAK tezgah SKU soneki */
 const SUFFIX_GORSEL: Record<string, string> = {
   "00": "p188-prod00.jpeg",
   "08": "p188-prod01.jpeg",
@@ -40,9 +40,13 @@ function evyeliGorselFile(suffix: string, tanim?: string | null): string | null 
   return null;
 }
 
+function pimakImageSlug(mid: string, suffix: string): string {
+  return `pimak-${mid}-${suffix}`.toLowerCase();
+}
+
 /**
- * EQUSTO.WWDDD.SS veya PIMAK.WWDDD.SS → `images/catalog/equsto/equsto-wwddd-ss/pXXX.jpeg`
- * Pimak katalog PDF sayfa görselleri (p188–p194).
+ * PIMAK.WWDDD.SS → `images/catalog/pimak/pimak-wwddd-ss/pXXX.jpeg`
+ * Eski `images/catalog/equsto/equsto-*` yolları geriye dönük alias olarak üretilir.
  */
 export function equstoPimakGorselRelFromSku(
   sku: string | null | undefined,
@@ -52,13 +56,16 @@ export function equstoPimakGorselRelFromSku(
   const m = /^(?:EQUSTO|PIMAK)\.(\d{4,5})\.(\d{2})$/i.exec(k);
   if (!m) return null;
 
-  const slug = `equsto-${m[1]}-${m[2]}`.toLowerCase();
+  const slug = pimakImageSlug(m[1], m[2]);
   const suffix = m[2] ?? "";
   const file = evyeliGorselFile(suffix, tanim) ?? SUFFIX_GORSEL[suffix] ?? null;
   if (!file) return null;
 
-  return `images/catalog/equsto/${slug}/${file}`;
+  return `images/catalog/pimak/${slug}/${file}`;
 }
+
+/** @deprecated equsto-pimak-gorsel — geriye dönük import adı */
+export const pimakTezgahGorselRelFromSku = equstoPimakGorselRelFromSku;
 
 export function isEqustoOrPimakTezgahSku(sku: string | null | undefined): boolean {
   return /^(?:EQUSTO|PIMAK)\.\d{4,5}\.\d{2}$/i.test(normSku(sku));

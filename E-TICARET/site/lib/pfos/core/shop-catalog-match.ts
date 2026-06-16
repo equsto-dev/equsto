@@ -20,11 +20,13 @@ import {
 import {
   isCalismaTezgahiTipKodu,
   isEqustoTezgahRow,
+  isPimakTezgahSku,
   isSetUstuAraTezgahKatalog,
   CALISMA_TEZGAH_MARKA,
 } from "./calisma-tezgah";
 import {
   isEqustoDavlumbazRow,
+  isPimakDavlumbazSku,
   isOztiDavlumbazSku,
 } from "./davlumbaz-marka";
 import {
@@ -464,9 +466,10 @@ function scoreCandidate(
     if (isOztiKatalogMarka(row.marka_ad) && /7911\.n1\./.test(skuN)) {
       return -9999;
     }
-    if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    if (isPimakTezgahSku(row.sku)) score += 920;
+    else if (isEqustoFiyatListesiSku(row.sku)) score += 800;
     else if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
-    else if (!isEqustoFiyatListesiSku(row.sku)) return -9999;
+    else return -9999;
   }
 
   if (
@@ -482,7 +485,8 @@ function scoreCandidate(
     if (isOztiDavlumbazSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /7885\./.test(normName(row.sku ?? "")))) {
       return -9999;
     }
-    if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    if (isPimakDavlumbazSku(row.sku)) score += 920;
+    else if (isEqustoFiyatListesiSku(row.sku)) score += 800;
     else if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
     else return -9999;
   }

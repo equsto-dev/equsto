@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T11:58:56.887Z",
+  "updated_at": "2026-06-16T20:08:13.730Z",
   "aktifPaketSayisi": 55,
   "segmentOrder": [
     "Restoran",
@@ -174,7 +174,7 @@
   "m2ByDukkan": {
     "Steakhouse": {
       "min": 80,
-      "max": 250,
+      "max": 500,
       "slug": "steakhouse"
     },
     "Balık Restaurant": {
@@ -184,12 +184,12 @@
     },
     "İtalyan Restoran": {
       "min": 100,
-      "max": 300,
+      "max": 500,
       "slug": "italyan"
     },
     "Pideci": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "pideci"
     },
     "Sushi": {
@@ -199,7 +199,7 @@
     },
     "Bar + Yemek": {
       "min": 100,
-      "max": 200,
+      "max": 500,
       "slug": "inari-bar-yemek"
     },
     "Tavukçu": {
@@ -219,12 +219,12 @@
     },
     "Kanatçı-Kebapçı": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "kanatci-kebapci"
     },
     "Patisserie + Yemek": {
       "min": 200,
-      "max": 400,
+      "max": 500,
       "slug": "patisserie-yemek"
     },
     "Pizzacı": {
@@ -244,7 +244,7 @@
     },
     "All Dining Cafe": {
       "min": 100,
-      "max": 400,
+      "max": 500,
       "slug": "all-day-dining-cafe"
     },
     "Kahve Atölyesi": {
@@ -299,7 +299,7 @@
     },
     "Şarküteri Restoran": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "sarkuteri-restoran"
     },
     "Fine Dining": {
@@ -314,12 +314,12 @@
     },
     "Kasap": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "kasap"
     },
     "Kasap + Şarküteri": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "kasap-sarkuteri"
     },
     "Pastane": {
@@ -344,7 +344,7 @@
     },
     "Türk Mutfağı": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "kiremit-akasya"
     },
     "Türk Mutfağı — Lokanta": {
@@ -359,7 +359,7 @@
     },
     "Food Court": {
       "min": 100,
-      "max": 250,
+      "max": 500,
       "slug": "kiremit-akasya"
     },
     "Hamburger Kiosk": {

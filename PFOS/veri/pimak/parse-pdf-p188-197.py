@@ -305,7 +305,7 @@ def parse_page_195(body: str, manifest: dict) -> list[dict]:
         name = f"{family} {olcu['olcu_etiket']}"
         products.append({
             "urun_kodu": code,
-            "slug": slugify(f"equsto-{code}"),
+            "slug": slugify(f"pimak-{code}"),
             "baslik": name,
             "aile": family,
             "aile_slug": slugify(family),
@@ -326,6 +326,94 @@ def parse_page_195(body: str, manifest: dict) -> list[dict]:
         add_row(code, prices[off + i], dims[off + i], "Orta Tip Filtresiz Davlumbaz")
 
     return products
+
+
+# s.194 — OCR M029 placeholder; fiyat kolonlarından çift evyeli kodları sentezlenir
+PAGE_194_CIFT_DIMS: list[tuple[int, int]] = [
+    (1200, 600),
+    (1400, 600),
+    (1600, 600),
+    (1800, 600),
+    (2000, 600),
+    (1200, 700),
+    (1400, 700),
+    (1600, 700),
+    (1800, 700),
+    (2000, 700),
+]
+PAGE_194_CIFT_RAFSIZ_EUR = [310, 320, 340, 360, 380, 320, 340, 360, 380, 410]
+PAGE_194_CIFT_RAFLI_EUR = [620, 640, 660, 680, 700, 640, 660, 700, 740, 780]
+# PDF’de çift raflı için gerçek sonek yok; .14 sentetik (çakışmayı önler, .12=rufsız)
+PAGE_194_CIFT_RAFLI_SUFFIX = "14"
+_BOGUS_P194_UC17 = re.compile(r"^PIMAK\.(12|14|16|18|20)(060|070)\.17$", re.I)
+
+
+def mid_from_dims(w: int, d: int) -> str:
+    """1200×700 → 12070 (PIMAK ölçü orta kodu)."""
+    return f"{w // 100:02d}{d // 100:02d}0"
+
+
+def _p194_product_row(
+    code: str,
+    family: str,
+    price: float,
+    w: int,
+    d: int,
+    h: int,
+    family_idx: int,
+    manifest: dict,
+) -> dict:
+    dim = f"{w}x{d}x{h}"
+    olcu = {
+        "olcu_etiket": f"{w}×{d}×{h} mm",
+        "olculer": {"genislik_mm": w, "derinlik_mm": d, "yukseklik_mm": h},
+    }
+    name = f"{family} {olcu['olcu_etiket']}"
+    return {
+        "urun_kodu": code,
+        "slug": slugify(f"pimak-{code}"),
+        "baslik": name,
+        "aile": family,
+        "aile_slug": slugify(family),
+        "category": map_category(family, code),
+        "pdf_page": 194,
+        "liste_fiyati_eur": price,
+        "ebat_mm": dim,
+        **olcu,
+        "temel_ozellikler": [],
+        "gorsel_yerel": pick_image(194, family, family_idx, manifest),
+    }
+
+
+def parse_page_194_cift_evyeli(manifest: dict) -> list[dict]:
+    """Çift evyeli taban rafsız (.12) ve raflı (.14) — PDF M029 yerine."""
+    products: list[dict] = []
+    specs = [
+        ("Çift Evyeli Taban Rafsız Tezgah", "12", PAGE_194_CIFT_RAFSIZ_EUR, 0),
+        (
+            "Çift Evyeli Taban Raflı Tezgah",
+            PAGE_194_CIFT_RAFLI_SUFFIX,
+            PAGE_194_CIFT_RAFLI_EUR,
+            1,
+        ),
+    ]
+    for family, suffix, prices, fam_idx in specs:
+        for i, (w, d) in enumerate(PAGE_194_CIFT_DIMS):
+            code = f"PIMAK.{mid_from_dims(w, d)}.{suffix}"
+            products.append(
+                _p194_product_row(code, family, float(prices[i]), w, d, 850, fam_idx, manifest)
+            )
+    return products
+
+
+def purge_bogus_page194_uc17(all_by_code: dict[str, dict]) -> int:
+    """Yanlış blok eşlemesi: 120–200 cm ölçülerde .17 üç evyeli sanılmış."""
+    removed = 0
+    for k in list(all_by_code.keys()):
+        if _BOGUS_P194_UC17.match(k):
+            del all_by_code[k]
+            removed += 1
+    return removed
 
 
 BLOCK_PAGES = frozenset(range(188, 195)) | {197}
@@ -560,7 +648,7 @@ def parse_page(page: int, body: str, families_seen: dict, manifest: dict) -> lis
         name = normalize_ligatures(family.split("|")[0].strip())
         if dim:
             name = f"{name} {dim.replace('x', '×')} mm"
-        slug = slugify(f"equsto-{code}")
+        slug = slugify(f"pimak-{code}")
         cat = map_category(family, code)
         products.append({
             "urun_kodu": code,
@@ -598,6 +686,12 @@ def main():
             parsed = parse_page(page, body, families_seen, manifest)
         for p in parsed:
             all_by_code[p["urun_kodu"]] = p
+
+    for p in parse_page_194_cift_evyeli(manifest):
+        all_by_code[p["urun_kodu"]] = p
+    n_purge = purge_bogus_page194_uc17(all_by_code)
+    if n_purge:
+        print(f"[parse-p188-197] s.194 yanlis .17 temizlendi: {n_purge}")
 
     OUT.write_text(json.dumps(list(all_by_code.values()), ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[parse-p188-197] {len(all_by_code)} urun -> {OUT.name}")

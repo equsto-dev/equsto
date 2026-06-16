@@ -102,6 +102,9 @@ export async function resolveGorselUrlBySku(
   const fromCatalog = index.get(key);
 
   const pimakTezgah = equstoPimakGorselRelFromSku(key, tanim);
+  const legacyPimakTezgah = pimakTezgah
+    ? pimakTezgah.replace(/^images\/catalog\/pimak\/pimak-/, "images/catalog/equsto/equsto-")
+    : null;
   const ozti = oztiWebImageRelFromSku(key);
   const portashelf = portashelfGorselRelFromSku(key);
   const equstoDir = equstoGorselRelFromSku(key);
@@ -117,6 +120,7 @@ export async function resolveGorselUrlBySku(
   const hit = firstExistingImageRel([
     existing,
     pimakTezgah,
+    legacyPimakTezgah,
     portashelf,
     fromCatalog,
     ozti,
