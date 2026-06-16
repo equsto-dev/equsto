@@ -158,6 +158,8 @@
     "catalog:pimak:fiyat": "python scripts/sync-pimak-fiyat-pdf.py",
     "catalog:pimak:import": "node scripts/import-pimak.mjs",
     "catalog:equsto:p188-197": "node scripts/import-equsto-p188-197.mjs",
+    "catalog:equsto:fiyat-listesi": "python scripts/import-equsto-fiyat-listesi.py && node scripts/import-equsto-fiyat-listesi-shop.mjs",
+    "catalog:equsto:fiyat-kct02": "python scripts/import-equsto-fiyat-listesi.py --sheet KCT02 && node scripts/import-equsto-fiyat-listesi-shop.mjs",
     "catalog:equsto:servis-hatti": "node scripts/import-equsto-servis-hatti.mjs",
     "catalog:equsto:servis-migrate": "node scripts/migrate-equsto-servis-to-market-reyon.mjs",
     "catalog:electrolux:fiyat": "python scripts/sync-electrolux-fiyat-2026.py",

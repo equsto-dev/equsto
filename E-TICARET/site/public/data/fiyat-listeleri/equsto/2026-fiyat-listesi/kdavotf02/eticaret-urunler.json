@@ -1,0 +1,52 @@
+[
+  {
+    "id": "equsto__equsto-200200-02",
+    "sku": "EQUSTO.200200.02",
+    "model": "EQUSTO.200200.02",
+    "urun_kodu": "EQUSTO.200200.02",
+    "kod": "KDAVOTF02",
+    "dept": "davlumbaz",
+    "category": "davlumbaz-orta-tip",
+    "brand": "Equsto",
+    "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2000×2000×600 mm",
+    "baslik": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2000×2000×600 mm",
+    "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+    "en_cm": 200,
+    "derinlik_cm": 200,
+    "yukseklik_cm": 60,
+    "olcu": "200×200×60",
+    "olcu_excel": "200 x 200 x 60 cm.",
+    "olcu_mm": "2000×2000×600",
+    "olcu_etiket": "2000×2000×600 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 600
+    },
+    "liste_fiyati_eur": 1095.0,
+    "taban_eur": null,
+    "cekmece_eur": null,
+    "satis_fiyati_eur": 985.5,
+    "satis_eur_indirimli": 985.5,
+    "iskonto_oran": 10,
+    "kur_eur_try": 53.7848,
+    "fiyat_bekleniyor": false,
+    "eticaret": true,
+    "pfos": true,
+    "images": [
+      "images/catalog/equsto/fiyat-listesi/kdavotf02/urun.png"
+    ],
+    "kaynak": "equsto-fiyat-listesi-2026",
+    "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
+    "specs": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2000×2000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.200200.02\nModel serisi: KDAVOTF02\nEbat: 200×200×60 cm (2000×2000×600 mm)\n\nListe fiyatı (EUR): 1095.0\nSatış fiyatı (EUR, %10 iskonto): 985.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVOTF02",
+    "aciklama": "DAVLUMBAZ ORTA TİP, FİLTRELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
+    "teknik_ozellikler": [
+      "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+      "Model: KDAVOTF02",
+      "Ebat: 200×200×60 cm (2000×2000×600 mm)"
+    ],
+    "fiyat_tl_net": 53005,
+    "fiyat_tl": 63606,
+    "price": "₺53.005,00 + KDV\nKDV Dahil ₺63.606,00"
+  }
+]

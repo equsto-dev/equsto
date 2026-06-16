@@ -1,0 +1,102 @@
+[
+  {
+    "id": "equsto__equsto-100120-02",
+    "sku": "EQUSTO.100120.02",
+    "model": "EQUSTO.100120.02",
+    "urun_kodu": "EQUSTO.100120.02",
+    "kod": "KDAVDTF02",
+    "dept": "davlumbaz",
+    "category": "davlumbaz-duvar-tipi",
+    "brand": "Equsto",
+    "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1000×1200×600 mm",
+    "baslik": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1000×1200×600 mm",
+    "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+    "en_cm": 100,
+    "derinlik_cm": 120,
+    "yukseklik_cm": 60,
+    "olcu": "100×120×60",
+    "olcu_excel": "100 x 120 x 60 cm.",
+    "olcu_mm": "1000×1200×600",
+    "olcu_etiket": "1000×1200×600 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 600
+    },
+    "liste_fiyati_eur": 445.0,
+    "taban_eur": null,
+    "cekmece_eur": null,
+    "satis_fiyati_eur": 400.5,
+    "satis_eur_indirimli": 400.5,
+    "iskonto_oran": 10,
+    "kur_eur_try": 53.7848,
+    "fiyat_bekleniyor": false,
+    "eticaret": true,
+    "pfos": true,
+    "images": [
+      "images/catalog/equsto/fiyat-listesi/kdavdtf02/urun.png"
+    ],
+    "kaynak": "equsto-fiyat-listesi-2026",
+    "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
+    "specs": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.100120.02\nModel serisi: KDAVDTF02\nEbat: 100×120×60 cm (1000×1200×600 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %10 iskonto): 400.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDTF02",
+    "aciklama": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
+    "teknik_ozellikler": [
+      "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+      "Model: KDAVDTF02",
+      "Ebat: 100×120×60 cm (1000×1200×600 mm)"
+    ],
+    "fiyat_tl_net": 21541,
+    "fiyat_tl": 25849,
+    "price": "₺21.541,00 + KDV\nKDV Dahil ₺25.849,00"
+  },
+  {
+    "id": "equsto__equsto-200120-02",
+    "sku": "EQUSTO.200120.02",
+    "model": "EQUSTO.200120.02",
+    "urun_kodu": "EQUSTO.200120.02",
+    "kod": "KDAVDTF02",
+    "dept": "davlumbaz",
+    "category": "davlumbaz-duvar-tipi",
+    "brand": "Equsto",
+    "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2000×1200×600 mm",
+    "baslik": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2000×1200×600 mm",
+    "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+    "en_cm": 200,
+    "derinlik_cm": 120,
+    "yukseklik_cm": 60,
+    "olcu": "200×120×60",
+    "olcu_excel": "200 x 120 x 60 cm.",
+    "olcu_mm": "2000×1200×600",
+    "olcu_etiket": "2000×1200×600 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 600
+    },
+    "liste_fiyati_eur": 705.0,
+    "taban_eur": null,
+    "cekmece_eur": null,
+    "satis_fiyati_eur": 634.5,
+    "satis_eur_indirimli": 634.5,
+    "iskonto_oran": 10,
+    "kur_eur_try": 53.7848,
+    "fiyat_bekleniyor": false,
+    "eticaret": true,
+    "pfos": true,
+    "images": [
+      "images/catalog/equsto/fiyat-listesi/kdavdtf02/urun.png"
+    ],
+    "kaynak": "equsto-fiyat-listesi-2026",
+    "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
+    "specs": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.200120.02\nModel serisi: KDAVDTF02\nEbat: 200×120×60 cm (2000×1200×600 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %10 iskonto): 634.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDTF02",
+    "aciklama": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
+    "teknik_ozellikler": [
+      "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+      "Model: KDAVDTF02",
+      "Ebat: 200×120×60 cm (2000×1200×600 mm)"
+    ],
+    "fiyat_tl_net": 34126,
+    "fiyat_tl": 40951,
+    "price": "₺34.126,00 + KDV\nKDV Dahil ₺40.951,00"
+  }
+]
