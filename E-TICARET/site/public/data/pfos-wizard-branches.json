@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-05-31T15:27:59.208Z",
-  "aktifPaketSayisi": 44,
+  "updated_at": "2026-06-16T04:54:26.053Z",
+  "aktifPaketSayisi": 46,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -67,14 +67,15 @@
       "İtalyan Restoran",
       "Pideci",
       "Sushi",
-      "Bar + Yemek (Hafif Asya)",
+      "Bar + Yemek",
       "Tavukçu",
       "Şarküteri Kiosk",
       "Kebapçı",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
-      "Büyük Restoran",
+      "Restoran",
+      "Şarküteri Restoran",
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
@@ -123,6 +124,7 @@
     "Catering": [
       "Büyük Yemekhane (Catering)",
       "Okul Yemekhanesi",
+      "Yerinde Üretim",
       "Bilmiyorum"
     ],
     "Üretim / Fabrika": [
@@ -135,14 +137,15 @@
       "İtalyan Restoran",
       "Pideci",
       "Sushi",
-      "Bar + Yemek (Hafif Asya)",
+      "Bar + Yemek",
       "Tavukçu",
       "Şarküteri Kiosk",
       "Kebapçı",
       "Pizzacı",
       "Türk / Esnaf lokanta",
       "All Dining Cafe",
-      "Büyük Restoran",
+      "Restoran",
+      "Şarküteri Restoran",
       "Fine Dining",
       "Dünya Mutfağı",
       "Kasap",
@@ -188,7 +191,7 @@
       "max": 100,
       "slug": "sushi"
     },
-    "Bar + Yemek (Hafif Asya)": {
+    "Bar + Yemek": {
       "min": 100,
       "max": 200,
       "slug": "inari-bar-yemek"
@@ -263,10 +266,15 @@
       "max": 300,
       "slug": "coffee-shop"
     },
-    "Büyük Restoran": {
+    "Restoran": {
       "min": 500,
       "max": 1000,
       "slug": "restoran"
+    },
+    "Şarküteri Restoran": {
+      "min": 100,
+      "max": 250,
+      "slug": "sarkuteri-restoran"
     },
     "Fine Dining": {
       "min": 500,
@@ -382,6 +390,11 @@
       "min": 2000,
       "max": 3500,
       "slug": "buyuk-yemekhane"
+    },
+    "Yerinde Üretim": {
+      "min": 20,
+      "max": 60,
+      "slug": "yerinde-uretim"
     }
   }
 }

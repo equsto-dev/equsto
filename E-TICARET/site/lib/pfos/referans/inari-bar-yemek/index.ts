@@ -6,11 +6,11 @@ export async function buildInariBarYemekTemplate(m2: number): Promise<ConceptTem
   const ref = await loadReferansProfil("inari-bar-yemek", m2);
   return {
     konsept: "inari-bar-yemek",
-    label: "Bar + Yemek (Hafif Asya)",
+    label: "Bar + Yemek",
     ornekler: [
       "Inari Restaurant referans",
       "Bar + mutfak",
-      "Hafif Asya mutfağı menüsü",
+      "Kokteyl & yemek menüsü",
     ],
     segmentBasis: "m2",
     seatDensity: 1.6,

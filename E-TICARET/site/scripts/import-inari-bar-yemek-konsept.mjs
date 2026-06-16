@@ -75,7 +75,7 @@ async function main() {
   const liste = {
     kategoriId: KATEGORI_ID,
     bantId: BANT_ID,
-    label: "Bar + Yemek (Hafif Asya) 100–200 m²",
+    label: "Bar + Yemek 100–200 m²",
     referansM2: REFERANS_M2,
     kaynakDosya: "2016-093 INARI RESTAURANT/2016-093-2.xlsx",
     not: "Inari Restaurant · bar + yemek · hafif Asya mutfağı",
@@ -107,7 +107,7 @@ async function main() {
   const idx = kategoriler.findIndex((k) => k.id === KATEGORI_ID);
   const kayit = {
     id: KATEGORI_ID,
-    label: "Bar + Yemek (Hafif Asya)",
+    label: "Bar + Yemek",
     ustKategori: "Restoran",
     bantlar: [{ id: BANT_ID, label: "100–200 m²", referansM2: REFERANS_M2, meta }],
   };

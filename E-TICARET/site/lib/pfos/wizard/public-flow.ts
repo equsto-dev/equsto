@@ -74,15 +74,41 @@ export function visibleWizardQuestions(
   );
 }
 
+export type M2DukkanBand = { min: number; max: number };
+
+export function filtreDukkanSecenekleriM2(
+  opts: string[],
+  answers: SoruCevapHaritasi,
+  m2ByDukkan: Record<string, M2DukkanBand>,
+): string[] {
+  const m2 = Number(answers.q_m2);
+  if (!Number.isFinite(m2) || m2 <= 0 || !Object.keys(m2ByDukkan).length) {
+    return opts;
+  }
+  const filtered = opts.filter((opt) => {
+    if (opt === "Bilmiyorum") return true;
+    const band =
+      m2ByDukkan[opt] ??
+      (opt === "Restoran" ? m2ByDukkan["Büyük Restoran"] : undefined);
+    if (!band) return true;
+    return m2 >= band.min && m2 <= band.max;
+  });
+  return filtered.length ? filtered : opts;
+}
+
 export function dukkanSecenekleri(
   q: WizardQuestion,
   answers: SoruCevapHaritasi,
+  m2ByDukkan?: Record<string, M2DukkanBand>,
 ): string[] {
   if (q.type === "select_conditional" && q.branches) {
     const seg = String(answers.q_ust_segment ?? "");
     const branches = q.branches as Record<string, string[]>;
     const opts = branches[seg] ?? branches.Bilmiyorum ?? [];
-    return filtreBulutDukkanSecenekleri(opts, answers);
+    const bulut = filtreBulutDukkanSecenekleri(opts, answers);
+    return m2ByDukkan
+      ? filtreDukkanSecenekleriM2(bulut, answers, m2ByDukkan)
+      : bulut;
   }
   return (q.options as string[]) ?? [];
 }

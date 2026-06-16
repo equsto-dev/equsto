@@ -2130,13 +2130,25 @@ function frConfirm(){
 }
 
 // ── 04 Dükkan Türü ───────────────────────────────────────────────────────────
+function pfosFilterDukkanByM2(list) {
+  const m2 = Number(D.alan) || 0;
+  const bands = window.PFOS_M2_BY_DUKKAN || {};
+  if (!m2) return list;
+  return list.filter(function (d) {
+    if (d === "Bilmiyorum") return true;
+    const hit = bands[d] || (d === "Restoran" ? bands["Büyük Restoran"] : null);
+    if (!hit) return true;
+    return m2 >= hit.min && m2 <= hit.max;
+  });
+}
+
 function renderS4(){
   const k=D.konsept;
   const ti=document.getElementById('s4-title');
   const su=document.getElementById('s4-sub');
   const bd=document.getElementById('s4-bd');
   ti.textContent='Dükkan türü'; su.textContent='Listeden size en yakın seçeneği işaretleyin.';
-  const list=DUKKAN[k]||[];
+  const list=pfosFilterDukkanByM2(DUKKAN[k]||[]);
   bd.innerHTML=`<div class="og tall">${list.map(d=>
     `<button class="opt${D.dukkan===d?' sel':''}" data-v="${esc(d)}" onclick="setDukkan('${esc(d)}')">${d}</button>`
   ).join('')}</div>`;
@@ -2211,7 +2223,7 @@ function setAlt(val){
 // ── Konsepte göre sonraki adım ────────────────────────────────────────────────
 function afterDukkan(){
   const k=D.konsept;
-  if(D.dukkan==='Gurme Şarküteri'){ reveal('s4e'); done('s4e'); }
+  if(D.dukkan==='Şarküteri Restoran'||D.dukkan==='Gurme Şarküteri'){ reveal('s4e'); done('s4e'); }
   else hideFrom('s4e');
   if(k==='Hotel'){renderS4c_hotel();reveal('s4c');activate('s4c');}
   else if(k==='Catering'){renderS4c_catering();reveal('s4c');activate('s4c');}
@@ -2818,7 +2830,7 @@ function tahmini(){
   let m = perM2[D.konsept] || 750;
   if (d === 'Steakhouse' || D.konsept === 'Steakhouse') m = Math.max(m, 1000);
   if (d === 'Fine Dining') m = Math.max(m, 1050);
-  if (d === 'Gurme Şarküteri') m = Math.max(m, 800);
+  if (d === 'Şarküteri Restoran' || d === 'Gurme Şarküteri') m = Math.max(m, 800);
   if (d === 'Pizzacı') m = Math.max(m, 720);
   if (d === 'Dönerci') m = Math.max(m, 680);
   if (pastaneLike) m = Math.min(m, 650);

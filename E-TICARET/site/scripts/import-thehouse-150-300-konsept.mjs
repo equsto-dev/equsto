@@ -1,5 +1,5 @@
 /**
- * 19 THEHOUSE CAFE 150-300 m2.xlsx → italyan + all-day-dining-cafe (150–300 m²)
+ * 19 THEHOUSE CAFE 150-300 m2.xlsx → all-day-dining-cafe (150–300 m²)
  * Kullanım: node scripts/import-thehouse-150-300-konsept.mjs
  */
 import ExcelJS from "exceljs";
@@ -18,12 +18,6 @@ const XLSX = "19 THEHOUSE CAFE 150-300 m2.xlsx";
 const REFERANS_M2 = 225;
 
 const TARGETS = [
-  {
-    kategoriId: "italyan",
-    label: "İtalyan Restoran 150–300 m²",
-    ustKategori: "Restaurant",
-    kategoriLabel: "İtalyan Restoran",
-  },
   {
     kategoriId: "all-day-dining-cafe",
     label: "All Day Dining Cafe 150–300 m² (The House)",

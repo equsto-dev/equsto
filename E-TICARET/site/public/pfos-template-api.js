@@ -164,6 +164,13 @@
       return "kiremit-akasya";
     }
     if (
+      d === "Şarküteri Restoran" ||
+      d === "Gurme Şarküteri" ||
+      /şarküteri\s*restoran|sarkuteri\s*restoran/i.test(d)
+    ) {
+      return "sarkuteri-restoran";
+    }
+    if (
       d === "Kasap + Şarküteri" ||
       (/kasap/i.test(d) && /şarküteri|sarkuteri/i.test(d))
     ) {
@@ -177,6 +184,7 @@
       return "kasap";
     }
     if (
+      d === "Bar + Yemek" ||
       d === "Bar + Yemek (Hafif Asya)" ||
       /inari/i.test(d) ||
       (/bar/i.test(d) && /yemek/i.test(d) && /asya|hafif/i.test(d)) ||
@@ -234,6 +242,7 @@
       return "kokteyl-kahve";
     }
     if (
+      d === "Restoran" ||
       d === "Büyük Restoran" ||
       d === "Fine Dining" ||
       d === "Dünya Mutfağı" ||

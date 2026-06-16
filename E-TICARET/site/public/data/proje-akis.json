@@ -52,7 +52,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -71,8 +71,7 @@
           "Otel F&B",
           "Catering",
           "Bulut Mutfak",
-          "Üretim / Fabrika",
-          "Bilmiyorum"
+          "Üretim / Fabrika"
         ],
         "mapsTo": "agac.ust-segment",
         "motorEtkisi": "q_dukkan_turu dallanması",
@@ -103,14 +102,15 @@
             "İtalyan Restoran",
             "Pideci",
             "Sushi",
-            "Bar + Yemek (Hafif Asya)",
+            "Bar + Yemek",
             "Tavukçu",
             "Şarküteri Kiosk",
             "Kebapçı",
             "Pizzacı",
             "Türk / Esnaf lokanta",
             "All Dining Cafe",
-            "Büyük Restoran",
+            "Restoran",
+            "Şarküteri Restoran",
             "Fine Dining",
             "Dünya Mutfağı",
             "Kasap",
@@ -159,6 +159,7 @@
           "Catering": [
             "Büyük Yemekhane (Catering)",
             "Okul Yemekhanesi",
+            "Yerinde Üretim",
             "Bilmiyorum"
           ],
           "Üretim / Fabrika": [
@@ -367,23 +368,17 @@
           "dukkanSecim": "İtalyan Restoran",
           "m2Min": 100,
           "m2Max": 300,
-          "bantKurali": "≤150 m² → 03-italyan (100–300); >150 m² → The House (150–300)",
+          "bantKurali": "03-italyan referans listesi (100–300 m²); m² ile adet ölçeklenir",
           "planPdf": "proje-veri/03-italyan.pdf",
-          "listeYolu": "proje-veri/03-italyan 100-300 m2.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx",
+          "listeYolu": "proje-veri/03-italyan 100-300 m2.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
               "id": "100-300",
-              "label": "100–300 m² (≤150 m²)",
+              "label": "100–300 m²",
               "referansM2": 200,
               "listeDosya": "pfos-referans/italyan-100-300.json"
-            },
-            {
-              "id": "150-300",
-              "label": "150–300 m² (>150 m²)",
-              "referansM2": 225,
-              "listeDosya": "pfos-referans/italyan-150-300.json"
             }
           ]
         },
@@ -443,12 +438,12 @@
       },
       {
         "id": "restaurant_inari_bar_yemek",
-        "name": "Bar + Yemek (Hafif Asya)",
+        "name": "Bar + Yemek",
         "parent": "Restoran",
-        "desc": "Bar + yemek · hafif Asya mutfağı · 100–200 m² referans (2016-093 Inari) · motor: inari-bar-yemek",
+        "desc": "Bar + yemek · 100–200 m² referans (2016-093 Inari) · motor: inari-bar-yemek",
         "pfos": {
           "motorSlug": "inari-bar-yemek",
-          "dukkanSecim": "Bar + Yemek (Hafif Asya)",
+          "dukkanSecim": "Bar + Yemek",
           "m2Min": 100,
           "m2Max": 200,
           "bantKurali": "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
@@ -852,12 +847,12 @@
       },
       {
         "id": "restaurant_buyuk_restoran",
-        "name": "Büyük Restoran",
+        "name": "Restoran",
         "parent": "Restoran",
         "desc": "500–1000 m² · büyük yemek rezervasyonları · düğün & özel organizasyon · eğlence & etkinlik · motor: restoran",
         "pfos": {
           "motorSlug": "restoran",
-          "dukkanSecim": "Büyük Restoran",
+          "dukkanSecim": "Restoran",
           "m2Min": 500,
           "m2Max": 1000,
           "bantKurali": "Tek referans liste (500–1000 m²); m² ile adet ölçeklenir",
@@ -870,6 +865,31 @@
               "label": "500–1000 m²",
               "referansM2": 750,
               "listeDosya": "pfos-referans/restoran-500-1000.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_sarkuteri_restoran",
+        "name": "Şarküteri Restoran",
+        "parent": "Restoran",
+        "desc": "Şarküteri restoran · teşhir + hazırlık mutfağı · Ortaklar Rota (2016-087) referansı · motor: sarkuteri-restoran",
+        "pfos": {
+          "motorSlug": "sarkuteri-restoran",
+          "dukkanSecim": "Şarküteri Restoran",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Ortaklar Rota kasap+şarküteri referans listesi (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/kasap-ortaklar-2016-087.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 200,
+              "listeDosya": "pfos-referans/sarkuteri-restoran-100-250.json"
             }
           ]
         },
@@ -972,23 +992,6 @@
               "listeDosya": "pfos-referans/kasap-sarkuteri-100-250.json"
             }
           ]
-        },
-        "questions": []
-      },
-      {
-        "id": "restaurant_sarkuteri",
-        "name": "Gurme Şarküteri",
-        "parent": "Restoran",
-        "desc": "Gurme Şarküteri · liste hazırlanıyor — genel şablon",
-        "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Gurme Şarküteri",
-          "m2Min": 40,
-          "m2Max": 200,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
         },
         "questions": []
       },
@@ -1727,16 +1730,16 @@
         "id": "catering_yerinde",
         "name": "Yerinde Üretim",
         "parent": "Catering",
-        "desc": "20–60 kişilik fabrika mutfağı · Liva 2016-178 referans · motor: yerinde-uretim (planlanan)",
+        "desc": "20–60 kişilik fabrika mutfağı · Liva 2016-178 referans · motor: yerinde-uretim",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "yerinde-uretim",
           "dukkanSecim": "Yerinde Üretim",
           "m2Min": 20,
           "m2Max": 60,
           "bantKurali": "Kişi sayısı bandı (20–60); referans liste Liva 178",
           "listeYolu": "veri/liva-fabrika-2016-178.xlsx",
           "teklifKaynagi": "referans-json",
-          "durum": "planlanan",
+          "durum": "aktif",
           "bantlar": [
             {
               "id": "20-60",
@@ -62197,6 +62200,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-05-31T18:00:04.804Z"
+    "updated_at": "2026-06-16T04:54:25.030Z"
   }
 }
