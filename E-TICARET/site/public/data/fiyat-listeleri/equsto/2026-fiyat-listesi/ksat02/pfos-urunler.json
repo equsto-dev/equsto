@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-04060-02",
-    "sku": "EQUSTO.04060.02",
-    "model": "EQUSTO.04060.02",
-    "urun_kodu": "EQUSTO.04060.02",
+    "id": "equsto__equsto-ksat02-04060",
+    "sku": "EQUSTO.KSAT02.04060",
+    "model": "EQUSTO.KSAT02.04060",
+    "urun_kodu": "EQUSTO.KSAT02.04060",
     "kod": "KSAT02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 400×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.04060.02\nModel serisi: KSAT02\nEbat: 40×60×60 cm (400×600×600 mm)\n\nListe fiyatı (EUR): 147.0\nSatış fiyatı (EUR, %10 iskonto): 132.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
+    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 400×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSAT02.04060\nModel serisi: KSAT02\nEbat: 40×60×60 cm (400×600×600 mm)\n\nListe fiyatı (EUR): 147.0\nSatış fiyatı (EUR, %10 iskonto): 132.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
     "aciklama": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺7.116,00 + KDV\nKDV Dahil ₺8.539,00"
   },
   {
-    "id": "equsto__equsto-10060-02",
-    "sku": "EQUSTO.10060.02",
-    "model": "EQUSTO.10060.02",
-    "urun_kodu": "EQUSTO.10060.02",
+    "id": "equsto__equsto-ksat02-10060",
+    "sku": "EQUSTO.KSAT02.10060",
+    "model": "EQUSTO.KSAT02.10060",
+    "urun_kodu": "EQUSTO.KSAT02.10060",
     "kod": "KSAT02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1000×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10060.02\nModel serisi: KSAT02\nEbat: 100×60×60 cm (1000×600×600 mm)\n\nListe fiyatı (EUR): 256.0\nSatış fiyatı (EUR, %10 iskonto): 230.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
+    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1000×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSAT02.10060\nModel serisi: KSAT02\nEbat: 100×60×60 cm (1000×600×600 mm)\n\nListe fiyatı (EUR): 256.0\nSatış fiyatı (EUR, %10 iskonto): 230.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
     "aciklama": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺12.392,00 + KDV\nKDV Dahil ₺14.870,00"
   },
   {
-    "id": "equsto__equsto-12060-02",
-    "sku": "EQUSTO.12060.02",
-    "model": "EQUSTO.12060.02",
-    "urun_kodu": "EQUSTO.12060.02",
+    "id": "equsto__equsto-ksat02-12060",
+    "sku": "EQUSTO.KSAT02.12060",
+    "model": "EQUSTO.KSAT02.12060",
+    "urun_kodu": "EQUSTO.KSAT02.12060",
     "kod": "KSAT02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1200×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12060.02\nModel serisi: KSAT02\nEbat: 120×60×60 cm (1200×600×600 mm)\n\nListe fiyatı (EUR): 259.0\nSatış fiyatı (EUR, %10 iskonto): 233.1\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
+    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1200×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSAT02.12060\nModel serisi: KSAT02\nEbat: 120×60×60 cm (1200×600×600 mm)\n\nListe fiyatı (EUR): 259.0\nSatış fiyatı (EUR, %10 iskonto): 233.1\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
     "aciklama": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺12.537,00 + KDV\nKDV Dahil ₺15.044,00"
   },
   {
-    "id": "equsto__equsto-07065-02",
-    "sku": "EQUSTO.07065.02",
-    "model": "EQUSTO.07065.02",
-    "urun_kodu": "EQUSTO.07065.02",
+    "id": "equsto__equsto-ksat02-07065",
+    "sku": "EQUSTO.KSAT02.07065",
+    "model": "EQUSTO.KSAT02.07065",
+    "urun_kodu": "EQUSTO.KSAT02.07065",
     "kod": "KSAT02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 700×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.07065.02\nModel serisi: KSAT02\nEbat: 70×65×60 cm (700×650×600 mm)\n\nListe fiyatı (EUR): 141.0\nSatış fiyatı (EUR, %10 iskonto): 126.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
+    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 700×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSAT02.07065\nModel serisi: KSAT02\nEbat: 70×65×60 cm (700×650×600 mm)\n\nListe fiyatı (EUR): 141.0\nSatış fiyatı (EUR, %10 iskonto): 126.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
     "aciklama": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺6.825,00 + KDV\nKDV Dahil ₺8.190,00"
   },
   {
-    "id": "equsto__equsto-10565-02",
-    "sku": "EQUSTO.10565.02",
-    "model": "EQUSTO.10565.02",
-    "urun_kodu": "EQUSTO.10565.02",
+    "id": "equsto__equsto-ksat02-10565",
+    "sku": "EQUSTO.KSAT02.10565",
+    "model": "EQUSTO.KSAT02.10565",
+    "urun_kodu": "EQUSTO.KSAT02.10565",
     "kod": "KSAT02",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1050×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10565.02\nModel serisi: KSAT02\nEbat: 105×65×60 cm (1050×650×600 mm)\n\nListe fiyatı (EUR): 229.0\nSatış fiyatı (EUR, %10 iskonto): 206.1\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
+    "specs": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI 1050×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSAT02.10565\nModel serisi: KSAT02\nEbat: 105×65×60 cm (1050×650×600 mm)\n\nListe fiyatı (EUR): 229.0\nSatış fiyatı (EUR, %10 iskonto): 206.1\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSAT02",
     "aciklama": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

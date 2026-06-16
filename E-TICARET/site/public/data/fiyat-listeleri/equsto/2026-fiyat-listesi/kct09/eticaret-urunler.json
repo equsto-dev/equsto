@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09070-09",
-    "sku": "EQUSTO.09070.09",
-    "model": "EQUSTO.09070.09",
-    "urun_kodu": "EQUSTO.09070.09",
+    "id": "equsto__equsto-kct09-09070",
+    "sku": "EQUSTO.KCT09.09070",
+    "model": "EQUSTO.KCT09.09070",
+    "urun_kodu": "EQUSTO.KCT09.09070",
     "kod": "KCT09",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09070.09\nModel serisi: KCT09\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 681.0\nSatış fiyatı (EUR, %10 iskonto): 612.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT09.09070\nModel serisi: KCT09\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 681.0\nSatış fiyatı (EUR, %10 iskonto): 612.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺32.965,00 + KDV\nKDV Dahil ₺39.558,00"
   },
   {
-    "id": "equsto__equsto-12070-09",
-    "sku": "EQUSTO.12070.09",
-    "model": "EQUSTO.12070.09",
-    "urun_kodu": "EQUSTO.12070.09",
+    "id": "equsto__equsto-kct09-12070",
+    "sku": "EQUSTO.KCT09.12070",
+    "model": "EQUSTO.KCT09.12070",
+    "urun_kodu": "EQUSTO.KCT09.12070",
     "kod": "KCT09",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12070.09\nModel serisi: KCT09\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %10 iskonto): 688.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT09.12070\nModel serisi: KCT09\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %10 iskonto): 688.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺37.031,00 + KDV\nKDV Dahil ₺44.437,00"
   },
   {
-    "id": "equsto__equsto-14070-09",
-    "sku": "EQUSTO.14070.09",
-    "model": "EQUSTO.14070.09",
-    "urun_kodu": "EQUSTO.14070.09",
+    "id": "equsto__equsto-kct09-14070",
+    "sku": "EQUSTO.KCT09.14070",
+    "model": "EQUSTO.KCT09.14070",
+    "urun_kodu": "EQUSTO.KCT09.14070",
     "kod": "KCT09",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14070.09\nModel serisi: KCT09\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 821.0\nSatış fiyatı (EUR, %10 iskonto): 738.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT09.14070\nModel serisi: KCT09\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 821.0\nSatış fiyatı (EUR, %10 iskonto): 738.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺39.742,00 + KDV\nKDV Dahil ₺47.690,00"
   },
   {
-    "id": "equsto__equsto-16070-09",
-    "sku": "EQUSTO.16070.09",
-    "model": "EQUSTO.16070.09",
-    "urun_kodu": "EQUSTO.16070.09",
+    "id": "equsto__equsto-kct09-16070",
+    "sku": "EQUSTO.KCT09.16070",
+    "model": "EQUSTO.KCT09.16070",
+    "urun_kodu": "EQUSTO.KCT09.16070",
     "kod": "KCT09",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16070.09\nModel serisi: KCT09\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 866.0\nSatış fiyatı (EUR, %10 iskonto): 779.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT09.16070\nModel serisi: KCT09\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 866.0\nSatış fiyatı (EUR, %10 iskonto): 779.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT09",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

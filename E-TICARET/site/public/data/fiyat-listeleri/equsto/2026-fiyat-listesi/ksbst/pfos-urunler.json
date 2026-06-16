@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09060-00",
-    "sku": "EQUSTO.09060.00",
-    "model": "EQUSTO.09060.00",
-    "urun_kodu": "EQUSTO.09060.00",
+    "id": "equsto__equsto-ksbst-09060",
+    "sku": "EQUSTO.KSBST.09060",
+    "model": "EQUSTO.KSBST.09060",
+    "urun_kodu": "EQUSTO.KSBST.09060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09060.00\nModel serisi: KSBST\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %10 iskonto): 283.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.09060\nModel serisi: KSBST\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %10 iskonto): 283.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺15.248,00 + KDV\nKDV Dahil ₺18.298,00"
   },
   {
-    "id": "equsto__equsto-09070-00",
-    "sku": "EQUSTO.09070.00",
-    "model": "EQUSTO.09070.00",
-    "urun_kodu": "EQUSTO.09070.00",
+    "id": "equsto__equsto-ksbst-09070",
+    "sku": "EQUSTO.KSBST.09070",
+    "model": "EQUSTO.KSBST.09070",
+    "urun_kodu": "EQUSTO.KSBST.09070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09070.00\nModel serisi: KSBST\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 337.0\nSatış fiyatı (EUR, %10 iskonto): 303.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.09070\nModel serisi: KSBST\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 337.0\nSatış fiyatı (EUR, %10 iskonto): 303.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺16.313,00 + KDV\nKDV Dahil ₺19.576,00"
   },
   {
-    "id": "equsto__equsto-09080-00",
-    "sku": "EQUSTO.09080.00",
-    "model": "EQUSTO.09080.00",
-    "urun_kodu": "EQUSTO.09080.00",
+    "id": "equsto__equsto-ksbst-09080",
+    "sku": "EQUSTO.KSBST.09080",
+    "model": "EQUSTO.KSBST.09080",
+    "urun_kodu": "EQUSTO.KSBST.09080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09080.00\nModel serisi: KSBST\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.09080\nModel serisi: KSBST\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺17.426,00 + KDV\nKDV Dahil ₺20.911,00"
   },
   {
-    "id": "equsto__equsto-10060-00",
-    "sku": "EQUSTO.10060.00",
-    "model": "EQUSTO.10060.00",
-    "urun_kodu": "EQUSTO.10060.00",
+    "id": "equsto__equsto-ksbst-10060",
+    "sku": "EQUSTO.KSBST.10060",
+    "model": "EQUSTO.KSBST.10060",
+    "urun_kodu": "EQUSTO.KSBST.10060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10060.00\nModel serisi: KSBST\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %10 iskonto): 306.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.10060\nModel serisi: KSBST\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %10 iskonto): 306.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺16.458,00 + KDV\nKDV Dahil ₺19.750,00"
   },
   {
-    "id": "equsto__equsto-10070-00",
-    "sku": "EQUSTO.10070.00",
-    "model": "EQUSTO.10070.00",
-    "urun_kodu": "EQUSTO.10070.00",
+    "id": "equsto__equsto-ksbst-10070",
+    "sku": "EQUSTO.KSBST.10070",
+    "model": "EQUSTO.KSBST.10070",
+    "urun_kodu": "EQUSTO.KSBST.10070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10070.00\nModel serisi: KSBST\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.10070\nModel serisi: KSBST\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %10 iskonto): 324.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -250,10 +250,10 @@
     "price": "₺17.426,00 + KDV\nKDV Dahil ₺20.911,00"
   },
   {
-    "id": "equsto__equsto-10080-00",
-    "sku": "EQUSTO.10080.00",
-    "model": "EQUSTO.10080.00",
-    "urun_kodu": "EQUSTO.10080.00",
+    "id": "equsto__equsto-ksbst-10080",
+    "sku": "EQUSTO.KSBST.10080",
+    "model": "EQUSTO.KSBST.10080",
+    "urun_kodu": "EQUSTO.KSBST.10080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -288,7 +288,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10080.00\nModel serisi: KSBST\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %10 iskonto): 344.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.10080\nModel serisi: KSBST\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %10 iskonto): 344.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -300,10 +300,10 @@
     "price": "₺18.540,00 + KDV\nKDV Dahil ₺22.248,00"
   },
   {
-    "id": "equsto__equsto-11060-00",
-    "sku": "EQUSTO.11060.00",
-    "model": "EQUSTO.11060.00",
-    "urun_kodu": "EQUSTO.11060.00",
+    "id": "equsto__equsto-ksbst-11060",
+    "sku": "EQUSTO.KSBST.11060",
+    "model": "EQUSTO.KSBST.11060",
+    "urun_kodu": "EQUSTO.KSBST.11060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -338,7 +338,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11060.00\nModel serisi: KSBST\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 350.0\nSatış fiyatı (EUR, %10 iskonto): 315.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.11060\nModel serisi: KSBST\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 350.0\nSatış fiyatı (EUR, %10 iskonto): 315.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -350,10 +350,10 @@
     "price": "₺16.942,00 + KDV\nKDV Dahil ₺20.330,00"
   },
   {
-    "id": "equsto__equsto-11070-00",
-    "sku": "EQUSTO.11070.00",
-    "model": "EQUSTO.11070.00",
-    "urun_kodu": "EQUSTO.11070.00",
+    "id": "equsto__equsto-ksbst-11070",
+    "sku": "EQUSTO.KSBST.11070",
+    "model": "EQUSTO.KSBST.11070",
+    "urun_kodu": "EQUSTO.KSBST.11070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -388,7 +388,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11070.00\nModel serisi: KSBST\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.11070\nModel serisi: KSBST\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -400,10 +400,10 @@
     "price": "₺18.636,00 + KDV\nKDV Dahil ₺22.363,00"
   },
   {
-    "id": "equsto__equsto-11080-00",
-    "sku": "EQUSTO.11080.00",
-    "model": "EQUSTO.11080.00",
-    "urun_kodu": "EQUSTO.11080.00",
+    "id": "equsto__equsto-ksbst-11080",
+    "sku": "EQUSTO.KSBST.11080",
+    "model": "EQUSTO.KSBST.11080",
+    "urun_kodu": "EQUSTO.KSBST.11080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -438,7 +438,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11080.00\nModel serisi: KSBST\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.11080\nModel serisi: KSBST\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -450,10 +450,10 @@
     "price": "₺19.605,00 + KDV\nKDV Dahil ₺23.526,00"
   },
   {
-    "id": "equsto__equsto-12060-00",
-    "sku": "EQUSTO.12060.00",
-    "model": "EQUSTO.12060.00",
-    "urun_kodu": "EQUSTO.12060.00",
+    "id": "equsto__equsto-ksbst-12060",
+    "sku": "EQUSTO.KSBST.12060",
+    "model": "EQUSTO.KSBST.12060",
+    "urun_kodu": "EQUSTO.KSBST.12060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -488,7 +488,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12060.00\nModel serisi: KSBST\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 371.0\nSatış fiyatı (EUR, %10 iskonto): 333.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.12060\nModel serisi: KSBST\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 371.0\nSatış fiyatı (EUR, %10 iskonto): 333.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -500,10 +500,10 @@
     "price": "₺17.959,00 + KDV\nKDV Dahil ₺21.551,00"
   },
   {
-    "id": "equsto__equsto-12070-00",
-    "sku": "EQUSTO.12070.00",
-    "model": "EQUSTO.12070.00",
-    "urun_kodu": "EQUSTO.12070.00",
+    "id": "equsto__equsto-ksbst-12070",
+    "sku": "EQUSTO.KSBST.12070",
+    "model": "EQUSTO.KSBST.12070",
+    "urun_kodu": "EQUSTO.KSBST.12070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -538,7 +538,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12070.00\nModel serisi: KSBST\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.12070\nModel serisi: KSBST\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %10 iskonto): 364.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -550,10 +550,10 @@
     "price": "₺19.605,00 + KDV\nKDV Dahil ₺23.526,00"
   },
   {
-    "id": "equsto__equsto-12080-00",
-    "sku": "EQUSTO.12080.00",
-    "model": "EQUSTO.12080.00",
-    "urun_kodu": "EQUSTO.12080.00",
+    "id": "equsto__equsto-ksbst-12080",
+    "sku": "EQUSTO.KSBST.12080",
+    "model": "EQUSTO.KSBST.12080",
+    "urun_kodu": "EQUSTO.KSBST.12080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -588,7 +588,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12080.00\nModel serisi: KSBST\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.12080\nModel serisi: KSBST\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -600,10 +600,10 @@
     "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
   },
   {
-    "id": "equsto__equsto-13060-00",
-    "sku": "EQUSTO.13060.00",
-    "model": "EQUSTO.13060.00",
-    "urun_kodu": "EQUSTO.13060.00",
+    "id": "equsto__equsto-ksbst-13060",
+    "sku": "EQUSTO.KSBST.13060",
+    "model": "EQUSTO.KSBST.13060",
+    "urun_kodu": "EQUSTO.KSBST.13060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -638,7 +638,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13060.00\nModel serisi: KSBST\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %10 iskonto): 355.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.13060\nModel serisi: KSBST\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %10 iskonto): 355.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -650,10 +650,10 @@
     "price": "₺19.120,00 + KDV\nKDV Dahil ₺22.944,00"
   },
   {
-    "id": "equsto__equsto-13070-00",
-    "sku": "EQUSTO.13070.00",
-    "model": "EQUSTO.13070.00",
-    "urun_kodu": "EQUSTO.13070.00",
+    "id": "equsto__equsto-ksbst-13070",
+    "sku": "EQUSTO.KSBST.13070",
+    "model": "EQUSTO.KSBST.13070",
+    "urun_kodu": "EQUSTO.KSBST.13070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -688,7 +688,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13070.00\nModel serisi: KSBST\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.13070\nModel serisi: KSBST\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -700,10 +700,10 @@
     "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
   },
   {
-    "id": "equsto__equsto-13080-00",
-    "sku": "EQUSTO.13080.00",
-    "model": "EQUSTO.13080.00",
-    "urun_kodu": "EQUSTO.13080.00",
+    "id": "equsto__equsto-ksbst-13080",
+    "sku": "EQUSTO.KSBST.13080",
+    "model": "EQUSTO.KSBST.13080",
+    "urun_kodu": "EQUSTO.KSBST.13080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -738,7 +738,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13080.00\nModel serisi: KSBST\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.13080\nModel serisi: KSBST\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -750,10 +750,10 @@
     "price": "₺21.783,00 + KDV\nKDV Dahil ₺26.140,00"
   },
   {
-    "id": "equsto__equsto-14060-00",
-    "sku": "EQUSTO.14060.00",
-    "model": "EQUSTO.14060.00",
-    "urun_kodu": "EQUSTO.14060.00",
+    "id": "equsto__equsto-ksbst-14060",
+    "sku": "EQUSTO.KSBST.14060",
+    "model": "EQUSTO.KSBST.14060",
+    "urun_kodu": "EQUSTO.KSBST.14060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -788,7 +788,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14060.00\nModel serisi: KSBST\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %10 iskonto): 374.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.14060\nModel serisi: KSBST\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %10 iskonto): 374.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -800,10 +800,10 @@
     "price": "₺20.137,00 + KDV\nKDV Dahil ₺24.164,00"
   },
   {
-    "id": "equsto__equsto-14070-00",
-    "sku": "EQUSTO.14070.00",
-    "model": "EQUSTO.14070.00",
-    "urun_kodu": "EQUSTO.14070.00",
+    "id": "equsto__equsto-ksbst-14070",
+    "sku": "EQUSTO.KSBST.14070",
+    "model": "EQUSTO.KSBST.14070",
+    "urun_kodu": "EQUSTO.KSBST.14070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -838,7 +838,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14070.00\nModel serisi: KSBST\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.14070\nModel serisi: KSBST\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -850,10 +850,10 @@
     "price": "₺21.299,00 + KDV\nKDV Dahil ₺25.559,00"
   },
   {
-    "id": "equsto__equsto-14080-00",
-    "sku": "EQUSTO.14080.00",
-    "model": "EQUSTO.14080.00",
-    "urun_kodu": "EQUSTO.14080.00",
+    "id": "equsto__equsto-ksbst-14080",
+    "sku": "EQUSTO.KSBST.14080",
+    "model": "EQUSTO.KSBST.14080",
+    "urun_kodu": "EQUSTO.KSBST.14080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -888,7 +888,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14080.00\nModel serisi: KSBST\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %10 iskonto): 427.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.14080\nModel serisi: KSBST\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %10 iskonto): 427.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -900,10 +900,10 @@
     "price": "₺22.993,00 + KDV\nKDV Dahil ₺27.592,00"
   },
   {
-    "id": "equsto__equsto-15060-00",
-    "sku": "EQUSTO.15060.00",
-    "model": "EQUSTO.15060.00",
-    "urun_kodu": "EQUSTO.15060.00",
+    "id": "equsto__equsto-ksbst-15060",
+    "sku": "EQUSTO.KSBST.15060",
+    "model": "EQUSTO.KSBST.15060",
+    "urun_kodu": "EQUSTO.KSBST.15060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -938,7 +938,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15060.00\nModel serisi: KSBST\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.15060\nModel serisi: KSBST\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -950,10 +950,10 @@
     "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
   },
   {
-    "id": "equsto__equsto-15070-00",
-    "sku": "EQUSTO.15070.00",
-    "model": "EQUSTO.15070.00",
-    "urun_kodu": "EQUSTO.15070.00",
+    "id": "equsto__equsto-ksbst-15070",
+    "sku": "EQUSTO.KSBST.15070",
+    "model": "EQUSTO.KSBST.15070",
+    "urun_kodu": "EQUSTO.KSBST.15070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -988,7 +988,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15070.00\nModel serisi: KSBST\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %10 iskonto): 414.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.15070\nModel serisi: KSBST\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %10 iskonto): 414.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1000,10 +1000,10 @@
     "price": "₺22.315,00 + KDV\nKDV Dahil ₺26.778,00"
   },
   {
-    "id": "equsto__equsto-15080-00",
-    "sku": "EQUSTO.15080.00",
-    "model": "EQUSTO.15080.00",
-    "urun_kodu": "EQUSTO.15080.00",
+    "id": "equsto__equsto-ksbst-15080",
+    "sku": "EQUSTO.KSBST.15080",
+    "model": "EQUSTO.KSBST.15080",
+    "urun_kodu": "EQUSTO.KSBST.15080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1038,7 +1038,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15080.00\nModel serisi: KSBST\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 496.0\nSatış fiyatı (EUR, %10 iskonto): 446.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.15080\nModel serisi: KSBST\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 496.0\nSatış fiyatı (EUR, %10 iskonto): 446.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1050,10 +1050,10 @@
     "price": "₺24.010,00 + KDV\nKDV Dahil ₺28.812,00"
   },
   {
-    "id": "equsto__equsto-16060-00",
-    "sku": "EQUSTO.16060.00",
-    "model": "EQUSTO.16060.00",
-    "urun_kodu": "EQUSTO.16060.00",
+    "id": "equsto__equsto-ksbst-16060",
+    "sku": "EQUSTO.KSBST.16060",
+    "model": "EQUSTO.KSBST.16060",
+    "urun_kodu": "EQUSTO.KSBST.16060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1088,7 +1088,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16060.00\nModel serisi: KSBST\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.16060\nModel serisi: KSBST\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1100,10 +1100,10 @@
     "price": "₺21.783,00 + KDV\nKDV Dahil ₺26.140,00"
   },
   {
-    "id": "equsto__equsto-16070-00",
-    "sku": "EQUSTO.16070.00",
-    "model": "EQUSTO.16070.00",
-    "urun_kodu": "EQUSTO.16070.00",
+    "id": "equsto__equsto-ksbst-16070",
+    "sku": "EQUSTO.KSBST.16070",
+    "model": "EQUSTO.KSBST.16070",
+    "urun_kodu": "EQUSTO.KSBST.16070",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1138,7 +1138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16070.00\nModel serisi: KSBST\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 485.0\nSatış fiyatı (EUR, %10 iskonto): 436.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.16070\nModel serisi: KSBST\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 485.0\nSatış fiyatı (EUR, %10 iskonto): 436.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1150,10 +1150,10 @@
     "price": "₺23.477,00 + KDV\nKDV Dahil ₺28.172,00"
   },
   {
-    "id": "equsto__equsto-16080-00",
-    "sku": "EQUSTO.16080.00",
-    "model": "EQUSTO.16080.00",
-    "urun_kodu": "EQUSTO.16080.00",
+    "id": "equsto__equsto-ksbst-16080",
+    "sku": "EQUSTO.KSBST.16080",
+    "model": "EQUSTO.KSBST.16080",
+    "urun_kodu": "EQUSTO.KSBST.16080",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1188,7 +1188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16080.00\nModel serisi: KSBST\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %10 iskonto): 468.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.16080\nModel serisi: KSBST\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %10 iskonto): 468.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1200,10 +1200,10 @@
     "price": "₺25.171,00 + KDV\nKDV Dahil ₺30.205,00"
   },
   {
-    "id": "equsto__equsto-17060-00",
-    "sku": "EQUSTO.17060.00",
-    "model": "EQUSTO.17060.00",
-    "urun_kodu": "EQUSTO.17060.00",
+    "id": "equsto__equsto-ksbst-17060",
+    "sku": "EQUSTO.KSBST.17060",
+    "model": "EQUSTO.KSBST.17060",
+    "urun_kodu": "EQUSTO.KSBST.17060",
     "kod": "KSBST",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1238,7 +1238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.17060.00\nModel serisi: KSBST\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %10 iskonto): 427.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
+    "specs": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSBST.17060\nModel serisi: KSBST\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %10 iskonto): 427.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSBST",
     "aciklama": "SEBZE SÜZME TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

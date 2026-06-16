@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-100100-01",
-    "sku": "EQUSTO.100100.01",
-    "model": "EQUSTO.100100.01",
-    "urun_kodu": "EQUSTO.100100.01",
+    "id": "equsto__equsto-kdavdt01-100100",
+    "sku": "EQUSTO.KDAVDT01.100100",
+    "model": "EQUSTO.KDAVDT01.100100",
+    "urun_kodu": "EQUSTO.KDAVDT01.100100",
     "kod": "KDAVDT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-duvar-tipi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 1000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.100100.01\nModel serisi: KDAVDT01\nEbat: 100×100×60 cm (1000×1000×600 mm)\n\nListe fiyatı (EUR): 325.0\nSatış fiyatı (EUR, %10 iskonto): 292.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 1000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVDT01.100100\nModel serisi: KDAVDT01\nEbat: 100×100×60 cm (1000×1000×600 mm)\n\nListe fiyatı (EUR): 325.0\nSatış fiyatı (EUR, %10 iskonto): 292.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺15.732,00 + KDV\nKDV Dahil ₺18.878,00"
   },
   {
-    "id": "equsto__equsto-100120-01",
-    "sku": "EQUSTO.100120.01",
-    "model": "EQUSTO.100120.01",
-    "urun_kodu": "EQUSTO.100120.01",
+    "id": "equsto__equsto-kdavdt01-100120",
+    "sku": "EQUSTO.KDAVDT01.100120",
+    "model": "EQUSTO.KDAVDT01.100120",
+    "urun_kodu": "EQUSTO.KDAVDT01.100120",
     "kod": "KDAVDT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-duvar-tipi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 1000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.100120.01\nModel serisi: KDAVDT01\nEbat: 100×120×60 cm (1000×1200×600 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %10 iskonto): 320.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 1000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVDT01.100120\nModel serisi: KDAVDT01\nEbat: 100×120×60 cm (1000×1200×600 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %10 iskonto): 320.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺17.233,00 + KDV\nKDV Dahil ₺20.680,00"
   },
   {
-    "id": "equsto__equsto-200100-01",
-    "sku": "EQUSTO.200100.01",
-    "model": "EQUSTO.200100.01",
-    "urun_kodu": "EQUSTO.200100.01",
+    "id": "equsto__equsto-kdavdt01-200100",
+    "sku": "EQUSTO.KDAVDT01.200100",
+    "model": "EQUSTO.KDAVDT01.200100",
+    "urun_kodu": "EQUSTO.KDAVDT01.200100",
     "kod": "KDAVDT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-duvar-tipi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.200100.01\nModel serisi: KDAVDT01\nEbat: 200×100×60 cm (2000×1000×600 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVDT01.200100\nModel serisi: KDAVDT01\nEbat: 200×100×60 cm (2000×1000×600 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
   },
   {
-    "id": "equsto__equsto-200120-01",
-    "sku": "EQUSTO.200120.01",
-    "model": "EQUSTO.200120.01",
-    "urun_kodu": "EQUSTO.200120.01",
+    "id": "equsto__equsto-kdavdt01-200120",
+    "sku": "EQUSTO.KDAVDT01.200120",
+    "model": "EQUSTO.KDAVDT01.200120",
+    "urun_kodu": "EQUSTO.KDAVDT01.200120",
     "kod": "KDAVDT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-duvar-tipi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.200120.01\nModel serisi: KDAVDT01\nEbat: 200×120×60 cm (2000×1200×600 mm)\n\nListe fiyatı (EUR): 567.0\nSatış fiyatı (EUR, %10 iskonto): 510.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2000×1200×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVDT01.200120\nModel serisi: KDAVDT01\nEbat: 200×120×60 cm (2000×1200×600 mm)\n\nListe fiyatı (EUR): 567.0\nSatış fiyatı (EUR, %10 iskonto): 510.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺27.446,00 + KDV\nKDV Dahil ₺32.935,00"
   },
   {
-    "id": "equsto__equsto-300100-01",
-    "sku": "EQUSTO.300100.01",
-    "model": "EQUSTO.300100.01",
-    "urun_kodu": "EQUSTO.300100.01",
+    "id": "equsto__equsto-kdavdt01-300100",
+    "sku": "EQUSTO.KDAVDT01.300100",
+    "model": "EQUSTO.KDAVDT01.300100",
+    "urun_kodu": "EQUSTO.KDAVDT01.300100",
     "kod": "KDAVDT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-duvar-tipi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 3000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.300100.01\nModel serisi: KDAVDT01\nEbat: 300×100×60 cm (3000×1000×600 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %10 iskonto): 634.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 3000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVDT01.300100\nModel serisi: KDAVDT01\nEbat: 300×100×60 cm (3000×1000×600 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %10 iskonto): 634.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVDT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09030-01",
-    "sku": "EQUSTO.09030.01",
-    "model": "EQUSTO.09030.01",
-    "urun_kodu": "EQUSTO.09030.01",
+    "id": "equsto__equsto-ksrftk01-09030",
+    "sku": "EQUSTO.KSRFTK01.09030",
+    "model": "EQUSTO.KSRFTK01.09030",
+    "urun_kodu": "EQUSTO.KSRFTK01.09030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 900×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09030.01\nModel serisi: KSRFTK01\nEbat: 90×30×35 cm (900×300×350 mm)\n\nListe fiyatı (EUR): 68.0\nSatış fiyatı (EUR, %10 iskonto): 61.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 900×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.09030\nModel serisi: KSRFTK01\nEbat: 90×30×35 cm (900×300×350 mm)\n\nListe fiyatı (EUR): 68.0\nSatış fiyatı (EUR, %10 iskonto): 61.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺3.292,00 + KDV\nKDV Dahil ₺3.950,00"
   },
   {
-    "id": "equsto__equsto-10030-01",
-    "sku": "EQUSTO.10030.01",
-    "model": "EQUSTO.10030.01",
-    "urun_kodu": "EQUSTO.10030.01",
+    "id": "equsto__equsto-ksrftk01-10030",
+    "sku": "EQUSTO.KSRFTK01.10030",
+    "model": "EQUSTO.KSRFTK01.10030",
+    "urun_kodu": "EQUSTO.KSRFTK01.10030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1000×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10030.01\nModel serisi: KSRFTK01\nEbat: 100×30×35 cm (1000×300×350 mm)\n\nListe fiyatı (EUR): 75.0\nSatış fiyatı (EUR, %10 iskonto): 67.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1000×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.10030\nModel serisi: KSRFTK01\nEbat: 100×30×35 cm (1000×300×350 mm)\n\nListe fiyatı (EUR): 75.0\nSatış fiyatı (EUR, %10 iskonto): 67.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺3.630,00 + KDV\nKDV Dahil ₺4.356,00"
   },
   {
-    "id": "equsto__equsto-11030-01",
-    "sku": "EQUSTO.11030.01",
-    "model": "EQUSTO.11030.01",
-    "urun_kodu": "EQUSTO.11030.01",
+    "id": "equsto__equsto-ksrftk01-11030",
+    "sku": "EQUSTO.KSRFTK01.11030",
+    "model": "EQUSTO.KSRFTK01.11030",
+    "urun_kodu": "EQUSTO.KSRFTK01.11030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1100×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11030.01\nModel serisi: KSRFTK01\nEbat: 110×30×35 cm (1100×300×350 mm)\n\nListe fiyatı (EUR): 83.0\nSatış fiyatı (EUR, %10 iskonto): 74.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1100×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.11030\nModel serisi: KSRFTK01\nEbat: 110×30×35 cm (1100×300×350 mm)\n\nListe fiyatı (EUR): 83.0\nSatış fiyatı (EUR, %10 iskonto): 74.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺4.018,00 + KDV\nKDV Dahil ₺4.822,00"
   },
   {
-    "id": "equsto__equsto-12030-01",
-    "sku": "EQUSTO.12030.01",
-    "model": "EQUSTO.12030.01",
-    "urun_kodu": "EQUSTO.12030.01",
+    "id": "equsto__equsto-ksrftk01-12030",
+    "sku": "EQUSTO.KSRFTK01.12030",
+    "model": "EQUSTO.KSRFTK01.12030",
+    "urun_kodu": "EQUSTO.KSRFTK01.12030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1200×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12030.01\nModel serisi: KSRFTK01\nEbat: 120×30×35 cm (1200×300×350 mm)\n\nListe fiyatı (EUR): 90.0\nSatış fiyatı (EUR, %10 iskonto): 81.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1200×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.12030\nModel serisi: KSRFTK01\nEbat: 120×30×35 cm (1200×300×350 mm)\n\nListe fiyatı (EUR): 90.0\nSatış fiyatı (EUR, %10 iskonto): 81.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -200,10 +200,10 @@
     "price": "₺4.357,00 + KDV\nKDV Dahil ₺5.228,00"
   },
   {
-    "id": "equsto__equsto-13030-01",
-    "sku": "EQUSTO.13030.01",
-    "model": "EQUSTO.13030.01",
-    "urun_kodu": "EQUSTO.13030.01",
+    "id": "equsto__equsto-ksrftk01-13030",
+    "sku": "EQUSTO.KSRFTK01.13030",
+    "model": "EQUSTO.KSRFTK01.13030",
+    "urun_kodu": "EQUSTO.KSRFTK01.13030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -238,7 +238,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1300×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13030.01\nModel serisi: KSRFTK01\nEbat: 130×30×35 cm (1300×300×350 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %10 iskonto): 88.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1300×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.13030\nModel serisi: KSRFTK01\nEbat: 130×30×35 cm (1300×300×350 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %10 iskonto): 88.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -250,10 +250,10 @@
     "price": "₺4.744,00 + KDV\nKDV Dahil ₺5.693,00"
   },
   {
-    "id": "equsto__equsto-14030-01",
-    "sku": "EQUSTO.14030.01",
-    "model": "EQUSTO.14030.01",
-    "urun_kodu": "EQUSTO.14030.01",
+    "id": "equsto__equsto-ksrftk01-14030",
+    "sku": "EQUSTO.KSRFTK01.14030",
+    "model": "EQUSTO.KSRFTK01.14030",
+    "urun_kodu": "EQUSTO.KSRFTK01.14030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -288,7 +288,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1400×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14030.01\nModel serisi: KSRFTK01\nEbat: 140×30×35 cm (1400×300×350 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %10 iskonto): 94.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1400×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.14030\nModel serisi: KSRFTK01\nEbat: 140×30×35 cm (1400×300×350 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %10 iskonto): 94.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -300,10 +300,10 @@
     "price": "₺5.083,00 + KDV\nKDV Dahil ₺6.100,00"
   },
   {
-    "id": "equsto__equsto-15030-01",
-    "sku": "EQUSTO.15030.01",
-    "model": "EQUSTO.15030.01",
-    "urun_kodu": "EQUSTO.15030.01",
+    "id": "equsto__equsto-ksrftk01-15030",
+    "sku": "EQUSTO.KSRFTK01.15030",
+    "model": "EQUSTO.KSRFTK01.15030",
+    "urun_kodu": "EQUSTO.KSRFTK01.15030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -338,7 +338,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1500×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15030.01\nModel serisi: KSRFTK01\nEbat: 150×30×35 cm (1500×300×350 mm)\n\nListe fiyatı (EUR): 113.0\nSatış fiyatı (EUR, %10 iskonto): 101.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1500×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.15030\nModel serisi: KSRFTK01\nEbat: 150×30×35 cm (1500×300×350 mm)\n\nListe fiyatı (EUR): 113.0\nSatış fiyatı (EUR, %10 iskonto): 101.7\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -350,10 +350,10 @@
     "price": "₺5.470,00 + KDV\nKDV Dahil ₺6.564,00"
   },
   {
-    "id": "equsto__equsto-16030-01",
-    "sku": "EQUSTO.16030.01",
-    "model": "EQUSTO.16030.01",
-    "urun_kodu": "EQUSTO.16030.01",
+    "id": "equsto__equsto-ksrftk01-16030",
+    "sku": "EQUSTO.KSRFTK01.16030",
+    "model": "EQUSTO.KSRFTK01.16030",
+    "urun_kodu": "EQUSTO.KSRFTK01.16030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -388,7 +388,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1600×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16030.01\nModel serisi: KSRFTK01\nEbat: 160×30×35 cm (1600×300×350 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %10 iskonto): 108.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1600×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.16030\nModel serisi: KSRFTK01\nEbat: 160×30×35 cm (1600×300×350 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %10 iskonto): 108.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -400,10 +400,10 @@
     "price": "₺5.809,00 + KDV\nKDV Dahil ₺6.971,00"
   },
   {
-    "id": "equsto__equsto-17030-01",
-    "sku": "EQUSTO.17030.01",
-    "model": "EQUSTO.17030.01",
-    "urun_kodu": "EQUSTO.17030.01",
+    "id": "equsto__equsto-ksrftk01-17030",
+    "sku": "EQUSTO.KSRFTK01.17030",
+    "model": "EQUSTO.KSRFTK01.17030",
+    "urun_kodu": "EQUSTO.KSRFTK01.17030",
     "kod": "KSRFTK01",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -438,7 +438,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1700×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.17030.01\nModel serisi: KSRFTK01\nEbat: 170×30×35 cm (1700×300×350 mm)\n\nListe fiyatı (EUR): 128.0\nSatış fiyatı (EUR, %10 iskonto): 115.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
+    "specs": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI 1700×300×350 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KSRFTK01.17030\nModel serisi: KSRFTK01\nEbat: 170×30×35 cm (1700×300×350 mm)\n\nListe fiyatı (EUR): 128.0\nSatış fiyatı (EUR, %10 iskonto): 115.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFTK01",
     "aciklama": "SERVİS RAFI TEK KATLI, ÖNÜ CAMLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

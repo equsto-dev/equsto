@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-09060-05",
-    "sku": "EQUSTO.09060.05",
-    "model": "EQUSTO.09060.05",
-    "urun_kodu": "EQUSTO.09060.05",
+    "id": "equsto__equsto-kct05-09060",
+    "sku": "EQUSTO.KCT05.09060",
+    "model": "EQUSTO.KCT05.09060",
+    "urun_kodu": "EQUSTO.KCT05.09060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09060.05\nModel serisi: KCT05\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %10 iskonto): 274.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.09060\nModel serisi: KCT05\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %10 iskonto): 274.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -52,10 +52,10 @@
     "price": "₺14.764,00 + KDV\nKDV Dahil ₺17.717,00"
   },
   {
-    "id": "equsto__equsto-09070-05",
-    "sku": "EQUSTO.09070.05",
-    "model": "EQUSTO.09070.05",
-    "urun_kodu": "EQUSTO.09070.05",
+    "id": "equsto__equsto-kct05-09070",
+    "sku": "EQUSTO.KCT05.09070",
+    "model": "EQUSTO.KCT05.09070",
+    "urun_kodu": "EQUSTO.KCT05.09070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -90,7 +90,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09070.05\nModel serisi: KCT05\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %10 iskonto): 297.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.09070\nModel serisi: KCT05\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %10 iskonto): 297.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -104,10 +104,10 @@
     "price": "₺15.974,00 + KDV\nKDV Dahil ₺19.169,00"
   },
   {
-    "id": "equsto__equsto-09080-05",
-    "sku": "EQUSTO.09080.05",
-    "model": "EQUSTO.09080.05",
-    "urun_kodu": "EQUSTO.09080.05",
+    "id": "equsto__equsto-kct05-09080",
+    "sku": "EQUSTO.KCT05.09080",
+    "model": "EQUSTO.KCT05.09080",
+    "urun_kodu": "EQUSTO.KCT05.09080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -142,7 +142,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09080.05\nModel serisi: KCT05\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.09080\nModel serisi: KCT05\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -156,10 +156,10 @@
     "price": "₺17.184,00 + KDV\nKDV Dahil ₺20.621,00"
   },
   {
-    "id": "equsto__equsto-09090-05",
-    "sku": "EQUSTO.09090.05",
-    "model": "EQUSTO.09090.05",
-    "urun_kodu": "EQUSTO.09090.05",
+    "id": "equsto__equsto-kct05-09090",
+    "sku": "EQUSTO.KCT05.09090",
+    "model": "EQUSTO.KCT05.09090",
+    "urun_kodu": "EQUSTO.KCT05.09090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -194,7 +194,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.09090.05\nModel serisi: KCT05\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %10 iskonto): 337.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.09090\nModel serisi: KCT05\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %10 iskonto): 337.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -208,10 +208,10 @@
     "price": "₺18.152,00 + KDV\nKDV Dahil ₺21.782,00"
   },
   {
-    "id": "equsto__equsto-10060-05",
-    "sku": "EQUSTO.10060.05",
-    "model": "EQUSTO.10060.05",
-    "urun_kodu": "EQUSTO.10060.05",
+    "id": "equsto__equsto-kct05-10060",
+    "sku": "EQUSTO.KCT05.10060",
+    "model": "EQUSTO.KCT05.10060",
+    "urun_kodu": "EQUSTO.KCT05.10060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -246,7 +246,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10060.05\nModel serisi: KCT05\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.10060\nModel serisi: KCT05\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %10 iskonto): 301.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -260,10 +260,10 @@
     "price": "₺16.216,00 + KDV\nKDV Dahil ₺19.459,00"
   },
   {
-    "id": "equsto__equsto-10070-05",
-    "sku": "EQUSTO.10070.05",
-    "model": "EQUSTO.10070.05",
-    "urun_kodu": "EQUSTO.10070.05",
+    "id": "equsto__equsto-kct05-10070",
+    "sku": "EQUSTO.KCT05.10070",
+    "model": "EQUSTO.KCT05.10070",
+    "urun_kodu": "EQUSTO.KCT05.10070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -298,7 +298,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10070.05\nModel serisi: KCT05\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.10070\nModel serisi: KCT05\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -312,10 +312,10 @@
     "price": "₺17.184,00 + KDV\nKDV Dahil ₺20.621,00"
   },
   {
-    "id": "equsto__equsto-10080-05",
-    "sku": "EQUSTO.10080.05",
-    "model": "EQUSTO.10080.05",
-    "urun_kodu": "EQUSTO.10080.05",
+    "id": "equsto__equsto-kct05-10080",
+    "sku": "EQUSTO.KCT05.10080",
+    "model": "EQUSTO.KCT05.10080",
+    "urun_kodu": "EQUSTO.KCT05.10080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -350,7 +350,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10080.05\nModel serisi: KCT05\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %10 iskonto): 337.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.10080\nModel serisi: KCT05\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %10 iskonto): 337.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -364,10 +364,10 @@
     "price": "₺18.152,00 + KDV\nKDV Dahil ₺21.782,00"
   },
   {
-    "id": "equsto__equsto-10090-05",
-    "sku": "EQUSTO.10090.05",
-    "model": "EQUSTO.10090.05",
-    "urun_kodu": "EQUSTO.10090.05",
+    "id": "equsto__equsto-kct05-10090",
+    "sku": "EQUSTO.KCT05.10090",
+    "model": "EQUSTO.KCT05.10090",
+    "urun_kodu": "EQUSTO.KCT05.10090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -402,7 +402,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.10090.05\nModel serisi: KCT05\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %10 iskonto): 355.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.10090\nModel serisi: KCT05\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %10 iskonto): 355.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -416,10 +416,10 @@
     "price": "₺19.120,00 + KDV\nKDV Dahil ₺22.944,00"
   },
   {
-    "id": "equsto__equsto-11060-05",
-    "sku": "EQUSTO.11060.05",
-    "model": "EQUSTO.11060.05",
-    "urun_kodu": "EQUSTO.11060.05",
+    "id": "equsto__equsto-kct05-11060",
+    "sku": "EQUSTO.KCT05.11060",
+    "model": "EQUSTO.KCT05.11060",
+    "urun_kodu": "EQUSTO.KCT05.11060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -454,7 +454,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11060.05\nModel serisi: KCT05\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %10 iskonto): 306.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.11060\nModel serisi: KCT05\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %10 iskonto): 306.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -468,10 +468,10 @@
     "price": "₺16.458,00 + KDV\nKDV Dahil ₺19.750,00"
   },
   {
-    "id": "equsto__equsto-11070-05",
-    "sku": "EQUSTO.11070.05",
-    "model": "EQUSTO.11070.05",
-    "urun_kodu": "EQUSTO.11070.05",
+    "id": "equsto__equsto-kct05-11070",
+    "sku": "EQUSTO.KCT05.11070",
+    "model": "EQUSTO.KCT05.11070",
+    "urun_kodu": "EQUSTO.KCT05.11070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -506,7 +506,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11070.05\nModel serisi: KCT05\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %10 iskonto): 328.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.11070\nModel serisi: KCT05\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %10 iskonto): 328.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -520,10 +520,10 @@
     "price": "₺17.668,00 + KDV\nKDV Dahil ₺21.202,00"
   },
   {
-    "id": "equsto__equsto-11080-05",
-    "sku": "EQUSTO.11080.05",
-    "model": "EQUSTO.11080.05",
-    "urun_kodu": "EQUSTO.11080.05",
+    "id": "equsto__equsto-kct05-11080",
+    "sku": "EQUSTO.KCT05.11080",
+    "model": "EQUSTO.KCT05.11080",
+    "urun_kodu": "EQUSTO.KCT05.11080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -558,7 +558,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11080.05\nModel serisi: KCT05\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 377.0\nSatış fiyatı (EUR, %10 iskonto): 339.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.11080\nModel serisi: KCT05\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 377.0\nSatış fiyatı (EUR, %10 iskonto): 339.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -572,10 +572,10 @@
     "price": "₺18.249,00 + KDV\nKDV Dahil ₺21.899,00"
   },
   {
-    "id": "equsto__equsto-11090-05",
-    "sku": "EQUSTO.11090.05",
-    "model": "EQUSTO.11090.05",
-    "urun_kodu": "EQUSTO.11090.05",
+    "id": "equsto__equsto-kct05-11090",
+    "sku": "EQUSTO.KCT05.11090",
+    "model": "EQUSTO.KCT05.11090",
+    "urun_kodu": "EQUSTO.KCT05.11090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -610,7 +610,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11090.05\nModel serisi: KCT05\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %10 iskonto): 378.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.11090\nModel serisi: KCT05\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %10 iskonto): 378.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -624,10 +624,10 @@
     "price": "₺20.379,00 + KDV\nKDV Dahil ₺24.455,00"
   },
   {
-    "id": "equsto__equsto-12060-05",
-    "sku": "EQUSTO.12060.05",
-    "model": "EQUSTO.12060.05",
-    "urun_kodu": "EQUSTO.12060.05",
+    "id": "equsto__equsto-kct05-12060",
+    "sku": "EQUSTO.KCT05.12060",
+    "model": "EQUSTO.KCT05.12060",
+    "urun_kodu": "EQUSTO.KCT05.12060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -662,7 +662,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12060.05\nModel serisi: KCT05\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.12060\nModel serisi: KCT05\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %10 iskonto): 319.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -676,10 +676,10 @@
     "price": "₺17.184,00 + KDV\nKDV Dahil ₺20.621,00"
   },
   {
-    "id": "equsto__equsto-12070-05",
-    "sku": "EQUSTO.12070.05",
-    "model": "EQUSTO.12070.05",
-    "urun_kodu": "EQUSTO.12070.05",
+    "id": "equsto__equsto-kct05-12070",
+    "sku": "EQUSTO.KCT05.12070",
+    "model": "EQUSTO.KCT05.12070",
+    "urun_kodu": "EQUSTO.KCT05.12070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -714,7 +714,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12070.05\nModel serisi: KCT05\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %10 iskonto): 351.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.12070\nModel serisi: KCT05\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %10 iskonto): 351.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -728,10 +728,10 @@
     "price": "₺18.878,00 + KDV\nKDV Dahil ₺22.654,00"
   },
   {
-    "id": "equsto__equsto-12080-05",
-    "sku": "EQUSTO.12080.05",
-    "model": "EQUSTO.12080.05",
-    "urun_kodu": "EQUSTO.12080.05",
+    "id": "equsto__equsto-kct05-12080",
+    "sku": "EQUSTO.KCT05.12080",
+    "model": "EQUSTO.KCT05.12080",
+    "urun_kodu": "EQUSTO.KCT05.12080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -766,7 +766,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12080.05\nModel serisi: KCT05\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.12080\nModel serisi: KCT05\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -780,10 +780,10 @@
     "price": "₺19.653,00 + KDV\nKDV Dahil ₺23.584,00"
   },
   {
-    "id": "equsto__equsto-12090-05",
-    "sku": "EQUSTO.12090.05",
-    "model": "EQUSTO.12090.05",
-    "urun_kodu": "EQUSTO.12090.05",
+    "id": "equsto__equsto-kct05-12090",
+    "sku": "EQUSTO.KCT05.12090",
+    "model": "EQUSTO.KCT05.12090",
+    "urun_kodu": "EQUSTO.KCT05.12090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -818,7 +818,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12090.05\nModel serisi: KCT05\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %10 iskonto): 400.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.12090\nModel serisi: KCT05\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %10 iskonto): 400.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -832,10 +832,10 @@
     "price": "₺21.541,00 + KDV\nKDV Dahil ₺25.849,00"
   },
   {
-    "id": "equsto__equsto-13060-05",
-    "sku": "EQUSTO.13060.05",
-    "model": "EQUSTO.13060.05",
-    "urun_kodu": "EQUSTO.13060.05",
+    "id": "equsto__equsto-kct05-13060",
+    "sku": "EQUSTO.KCT05.13060",
+    "model": "EQUSTO.KCT05.13060",
+    "urun_kodu": "EQUSTO.KCT05.13060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -870,7 +870,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13060.05\nModel serisi: KCT05\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.13060\nModel serisi: KCT05\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %10 iskonto): 346.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -884,10 +884,10 @@
     "price": "₺18.636,00 + KDV\nKDV Dahil ₺22.363,00"
   },
   {
-    "id": "equsto__equsto-13070-05",
-    "sku": "EQUSTO.13070.05",
-    "model": "EQUSTO.13070.05",
-    "urun_kodu": "EQUSTO.13070.05",
+    "id": "equsto__equsto-kct05-13070",
+    "sku": "EQUSTO.KCT05.13070",
+    "model": "EQUSTO.KCT05.13070",
+    "urun_kodu": "EQUSTO.KCT05.13070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -922,7 +922,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13070.05\nModel serisi: KCT05\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.13070\nModel serisi: KCT05\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -936,10 +936,10 @@
     "price": "₺19.653,00 + KDV\nKDV Dahil ₺23.584,00"
   },
   {
-    "id": "equsto__equsto-13080-05",
-    "sku": "EQUSTO.13080.05",
-    "model": "EQUSTO.13080.05",
-    "urun_kodu": "EQUSTO.13080.05",
+    "id": "equsto__equsto-kct05-13080",
+    "sku": "EQUSTO.KCT05.13080",
+    "model": "EQUSTO.KCT05.13080",
+    "urun_kodu": "EQUSTO.KCT05.13080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -974,7 +974,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13080.05\nModel serisi: KCT05\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.13080\nModel serisi: KCT05\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -988,10 +988,10 @@
     "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
   },
   {
-    "id": "equsto__equsto-13090-05",
-    "sku": "EQUSTO.13090.05",
-    "model": "EQUSTO.13090.05",
-    "urun_kodu": "EQUSTO.13090.05",
+    "id": "equsto__equsto-kct05-13090",
+    "sku": "EQUSTO.KCT05.13090",
+    "model": "EQUSTO.KCT05.13090",
+    "urun_kodu": "EQUSTO.KCT05.13090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1026,7 +1026,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.13090.05\nModel serisi: KCT05\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 460.0\nSatış fiyatı (EUR, %10 iskonto): 414.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.13090\nModel serisi: KCT05\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 460.0\nSatış fiyatı (EUR, %10 iskonto): 414.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1040,10 +1040,10 @@
     "price": "₺22.267,00 + KDV\nKDV Dahil ₺26.720,00"
   },
   {
-    "id": "equsto__equsto-14060-05",
-    "sku": "EQUSTO.14060.05",
-    "model": "EQUSTO.14060.05",
-    "urun_kodu": "EQUSTO.14060.05",
+    "id": "equsto__equsto-kct05-14060",
+    "sku": "EQUSTO.KCT05.14060",
+    "model": "EQUSTO.KCT05.14060",
+    "urun_kodu": "EQUSTO.KCT05.14060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1078,7 +1078,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14060.05\nModel serisi: KCT05\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 400.0\nSatış fiyatı (EUR, %10 iskonto): 360.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.14060\nModel serisi: KCT05\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 400.0\nSatış fiyatı (EUR, %10 iskonto): 360.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1092,10 +1092,10 @@
     "price": "₺19.363,00 + KDV\nKDV Dahil ₺23.236,00"
   },
   {
-    "id": "equsto__equsto-14070-05",
-    "sku": "EQUSTO.14070.05",
-    "model": "EQUSTO.14070.05",
-    "urun_kodu": "EQUSTO.14070.05",
+    "id": "equsto__equsto-kct05-14070",
+    "sku": "EQUSTO.KCT05.14070",
+    "model": "EQUSTO.KCT05.14070",
+    "urun_kodu": "EQUSTO.KCT05.14070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1130,7 +1130,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14070.05\nModel serisi: KCT05\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.14070\nModel serisi: KCT05\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %10 iskonto): 387.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1144,10 +1144,10 @@
     "price": "₺20.815,00 + KDV\nKDV Dahil ₺24.978,00"
   },
   {
-    "id": "equsto__equsto-14080-05",
-    "sku": "EQUSTO.14080.05",
-    "model": "EQUSTO.14080.05",
-    "urun_kodu": "EQUSTO.14080.05",
+    "id": "equsto__equsto-kct05-14080",
+    "sku": "EQUSTO.KCT05.14080",
+    "model": "EQUSTO.KCT05.14080",
+    "urun_kodu": "EQUSTO.KCT05.14080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1182,7 +1182,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14080.05\nModel serisi: KCT05\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.14080\nModel serisi: KCT05\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %10 iskonto): 405.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1196,10 +1196,10 @@
     "price": "₺21.783,00 + KDV\nKDV Dahil ₺26.140,00"
   },
   {
-    "id": "equsto__equsto-14090-05",
-    "sku": "EQUSTO.14090.05",
-    "model": "EQUSTO.14090.05",
-    "urun_kodu": "EQUSTO.14090.05",
+    "id": "equsto__equsto-kct05-14090",
+    "sku": "EQUSTO.KCT05.14090",
+    "model": "EQUSTO.KCT05.14090",
+    "urun_kodu": "EQUSTO.KCT05.14090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1234,7 +1234,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14090.05\nModel serisi: KCT05\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.14090\nModel serisi: KCT05\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1248,10 +1248,10 @@
     "price": "₺23.283,00 + KDV\nKDV Dahil ₺27.940,00"
   },
   {
-    "id": "equsto__equsto-15060-05",
-    "sku": "EQUSTO.15060.05",
-    "model": "EQUSTO.15060.05",
-    "urun_kodu": "EQUSTO.15060.05",
+    "id": "equsto__equsto-kct05-15060",
+    "sku": "EQUSTO.KCT05.15060",
+    "model": "EQUSTO.KCT05.15060",
+    "urun_kodu": "EQUSTO.KCT05.15060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1286,7 +1286,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15060.05\nModel serisi: KCT05\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.15060\nModel serisi: KCT05\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 406.0\nSatış fiyatı (EUR, %10 iskonto): 365.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1300,10 +1300,10 @@
     "price": "₺19.653,00 + KDV\nKDV Dahil ₺23.584,00"
   },
   {
-    "id": "equsto__equsto-15070-05",
-    "sku": "EQUSTO.15070.05",
-    "model": "EQUSTO.15070.05",
-    "urun_kodu": "EQUSTO.15070.05",
+    "id": "equsto__equsto-kct05-15070",
+    "sku": "EQUSTO.KCT05.15070",
+    "model": "EQUSTO.KCT05.15070",
+    "urun_kodu": "EQUSTO.KCT05.15070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1338,7 +1338,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15070.05\nModel serisi: KCT05\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.15070\nModel serisi: KCT05\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1352,10 +1352,10 @@
     "price": "₺21.299,00 + KDV\nKDV Dahil ₺25.559,00"
   },
   {
-    "id": "equsto__equsto-15080-05",
-    "sku": "EQUSTO.15080.05",
-    "model": "EQUSTO.15080.05",
-    "urun_kodu": "EQUSTO.15080.05",
+    "id": "equsto__equsto-kct05-15080",
+    "sku": "EQUSTO.KCT05.15080",
+    "model": "EQUSTO.KCT05.15080",
+    "urun_kodu": "EQUSTO.KCT05.15080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1390,7 +1390,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15080.05\nModel serisi: KCT05\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.15080\nModel serisi: KCT05\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1404,10 +1404,10 @@
     "price": "₺23.283,00 + KDV\nKDV Dahil ₺27.940,00"
   },
   {
-    "id": "equsto__equsto-15090-05",
-    "sku": "EQUSTO.15090.05",
-    "model": "EQUSTO.15090.05",
-    "urun_kodu": "EQUSTO.15090.05",
+    "id": "equsto__equsto-kct05-15090",
+    "sku": "EQUSTO.KCT05.15090",
+    "model": "EQUSTO.KCT05.15090",
+    "urun_kodu": "EQUSTO.KCT05.15090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1442,7 +1442,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.15090.05\nModel serisi: KCT05\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %10 iskonto): 454.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.15090\nModel serisi: KCT05\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %10 iskonto): 454.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1456,10 +1456,10 @@
     "price": "₺24.445,00 + KDV\nKDV Dahil ₺29.334,00"
   },
   {
-    "id": "equsto__equsto-16060-05",
-    "sku": "EQUSTO.16060.05",
-    "model": "EQUSTO.16060.05",
-    "urun_kodu": "EQUSTO.16060.05",
+    "id": "equsto__equsto-kct05-16060",
+    "sku": "EQUSTO.KCT05.16060",
+    "model": "EQUSTO.KCT05.16060",
+    "urun_kodu": "EQUSTO.KCT05.16060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1494,7 +1494,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16060.05\nModel serisi: KCT05\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %10 iskonto): 374.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.16060\nModel serisi: KCT05\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %10 iskonto): 374.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1508,10 +1508,10 @@
     "price": "₺20.137,00 + KDV\nKDV Dahil ₺24.164,00"
   },
   {
-    "id": "equsto__equsto-16070-05",
-    "sku": "EQUSTO.16070.05",
-    "model": "EQUSTO.16070.05",
-    "urun_kodu": "EQUSTO.16070.05",
+    "id": "equsto__equsto-kct05-16070",
+    "sku": "EQUSTO.KCT05.16070",
+    "model": "EQUSTO.KCT05.16070",
+    "urun_kodu": "EQUSTO.KCT05.16070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1546,7 +1546,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16070.05\nModel serisi: KCT05\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 460.0\nSatış fiyatı (EUR, %10 iskonto): 414.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.16070\nModel serisi: KCT05\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 460.0\nSatış fiyatı (EUR, %10 iskonto): 414.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1560,10 +1560,10 @@
     "price": "₺22.267,00 + KDV\nKDV Dahil ₺26.720,00"
   },
   {
-    "id": "equsto__equsto-16080-05",
-    "sku": "EQUSTO.16080.05",
-    "model": "EQUSTO.16080.05",
-    "urun_kodu": "EQUSTO.16080.05",
+    "id": "equsto__equsto-kct05-16080",
+    "sku": "EQUSTO.KCT05.16080",
+    "model": "EQUSTO.KCT05.16080",
+    "urun_kodu": "EQUSTO.KCT05.16080",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1598,7 +1598,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16080.05\nModel serisi: KCT05\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.16080\nModel serisi: KCT05\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 515.0\nSatış fiyatı (EUR, %10 iskonto): 463.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1612,10 +1612,10 @@
     "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
   },
   {
-    "id": "equsto__equsto-16090-05",
-    "sku": "EQUSTO.16090.05",
-    "model": "EQUSTO.16090.05",
-    "urun_kodu": "EQUSTO.16090.05",
+    "id": "equsto__equsto-kct05-16090",
+    "sku": "EQUSTO.KCT05.16090",
+    "model": "EQUSTO.KCT05.16090",
+    "urun_kodu": "EQUSTO.KCT05.16090",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1650,7 +1650,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16090.05\nModel serisi: KCT05\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 535.0\nSatış fiyatı (EUR, %10 iskonto): 481.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.16090\nModel serisi: KCT05\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 535.0\nSatış fiyatı (EUR, %10 iskonto): 481.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1664,10 +1664,10 @@
     "price": "₺25.897,00 + KDV\nKDV Dahil ₺31.076,00"
   },
   {
-    "id": "equsto__equsto-17060-05",
-    "sku": "EQUSTO.17060.05",
-    "model": "EQUSTO.17060.05",
-    "urun_kodu": "EQUSTO.17060.05",
+    "id": "equsto__equsto-kct05-17060",
+    "sku": "EQUSTO.KCT05.17060",
+    "model": "EQUSTO.KCT05.17060",
+    "urun_kodu": "EQUSTO.KCT05.17060",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1702,7 +1702,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.17060.05\nModel serisi: KCT05\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.17060\nModel serisi: KCT05\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %10 iskonto): 396.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -1716,10 +1716,10 @@
     "price": "₺21.299,00 + KDV\nKDV Dahil ₺25.559,00"
   },
   {
-    "id": "equsto__equsto-17070-05",
-    "sku": "EQUSTO.17070.05",
-    "model": "EQUSTO.17070.05",
-    "urun_kodu": "EQUSTO.17070.05",
+    "id": "equsto__equsto-kct05-17070",
+    "sku": "EQUSTO.KCT05.17070",
+    "model": "EQUSTO.KCT05.17070",
+    "urun_kodu": "EQUSTO.KCT05.17070",
     "kod": "KCT05",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -1754,7 +1754,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.17070.05\nModel serisi: KCT05\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT05.17070\nModel serisi: KCT05\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %10 iskonto): 432.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT05",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

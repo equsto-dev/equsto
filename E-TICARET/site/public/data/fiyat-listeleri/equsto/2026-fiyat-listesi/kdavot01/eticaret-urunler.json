@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-200200-01",
-    "sku": "EQUSTO.200200.01",
-    "model": "EQUSTO.200200.01",
-    "urun_kodu": "EQUSTO.200200.01",
+    "id": "equsto__equsto-kdavot01-200200",
+    "sku": "EQUSTO.KDAVOT01.200200",
+    "model": "EQUSTO.KDAVOT01.200200",
+    "urun_kodu": "EQUSTO.KDAVOT01.200200",
     "kod": "KDAVOT01",
     "dept": "davlumbaz",
     "category": "davlumbaz-orta-tip",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "FİLTRESİZ DAVLUMBAZ ORTA TİP 2000×2000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.200200.01\nModel serisi: KDAVOT01\nEbat: 200×200×60 cm (2000×2000×600 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %10 iskonto): 688.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVOT01",
+    "specs": "FİLTRESİZ DAVLUMBAZ ORTA TİP 2000×2000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KDAVOT01.200200\nModel serisi: KDAVOT01\nEbat: 200×200×60 cm (2000×2000×600 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %10 iskonto): 688.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDAVOT01",
     "aciklama": "FİLTRESİZ DAVLUMBAZ ORTA TİP. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",

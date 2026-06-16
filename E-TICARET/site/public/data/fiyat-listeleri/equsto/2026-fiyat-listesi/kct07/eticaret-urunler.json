@@ -1,9 +1,9 @@
 [
   {
-    "id": "equsto__equsto-11070-07",
-    "sku": "EQUSTO.11070.07",
-    "model": "EQUSTO.11070.07",
-    "urun_kodu": "EQUSTO.11070.07",
+    "id": "equsto__equsto-kct07-11070",
+    "sku": "EQUSTO.KCT07.11070",
+    "model": "EQUSTO.KCT07.11070",
+    "urun_kodu": "EQUSTO.KCT07.11070",
     "kod": "KCT07",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.11070.07\nModel serisi: KCT07\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 276.0\nSatış fiyatı (EUR, %10 iskonto): 248.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT07.11070\nModel serisi: KCT07\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 276.0\nSatış fiyatı (EUR, %10 iskonto): 248.4\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -50,10 +50,10 @@
     "price": "₺13.360,00 + KDV\nKDV Dahil ₺16.032,00"
   },
   {
-    "id": "equsto__equsto-12070-07",
-    "sku": "EQUSTO.12070.07",
-    "model": "EQUSTO.12070.07",
-    "urun_kodu": "EQUSTO.12070.07",
+    "id": "equsto__equsto-kct07-12070",
+    "sku": "EQUSTO.KCT07.12070",
+    "model": "EQUSTO.KCT07.12070",
+    "urun_kodu": "EQUSTO.KCT07.12070",
     "kod": "KCT07",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -88,7 +88,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.12070.07\nModel serisi: KCT07\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 298.0\nSatış fiyatı (EUR, %10 iskonto): 268.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT07.12070\nModel serisi: KCT07\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 298.0\nSatış fiyatı (EUR, %10 iskonto): 268.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -100,10 +100,10 @@
     "price": "₺14.425,00 + KDV\nKDV Dahil ₺17.310,00"
   },
   {
-    "id": "equsto__equsto-14070-07",
-    "sku": "EQUSTO.14070.07",
-    "model": "EQUSTO.14070.07",
-    "urun_kodu": "EQUSTO.14070.07",
+    "id": "equsto__equsto-kct07-14070",
+    "sku": "EQUSTO.KCT07.14070",
+    "model": "EQUSTO.KCT07.14070",
+    "urun_kodu": "EQUSTO.KCT07.14070",
     "kod": "KCT07",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -138,7 +138,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.14070.07\nModel serisi: KCT07\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 331.0\nSatış fiyatı (EUR, %10 iskonto): 297.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT07.14070\nModel serisi: KCT07\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 331.0\nSatış fiyatı (EUR, %10 iskonto): 297.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -150,10 +150,10 @@
     "price": "₺16.022,00 + KDV\nKDV Dahil ₺19.226,00"
   },
   {
-    "id": "equsto__equsto-16070-07",
-    "sku": "EQUSTO.16070.07",
-    "model": "EQUSTO.16070.07",
-    "urun_kodu": "EQUSTO.16070.07",
+    "id": "equsto__equsto-kct07-16070",
+    "sku": "EQUSTO.KCT07.16070",
+    "model": "EQUSTO.KCT07.16070",
+    "urun_kodu": "EQUSTO.KCT07.16070",
     "kod": "KCT07",
     "dept": "tezgah",
     "category": "calisma-tezgahi",
@@ -188,7 +188,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.16070.07\nModel serisi: KCT07\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 364.0\nSatış fiyatı (EUR, %10 iskonto): 327.6\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQUSTO.KCT07.16070\nModel serisi: KCT07\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 364.0\nSatış fiyatı (EUR, %10 iskonto): 327.6\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT07",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, KISMİ TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
