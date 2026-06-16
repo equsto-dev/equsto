@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T08:08:47.267Z",
+  "updated_at": "2026-06-16T09:38:42.277Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -72,6 +72,19 @@
             "toplamAdet": 68,
             "kaynakDosya": "2016-094 UÇAN BALIK/2016-094.xlsx",
             "yukleme": "2026-06-16T06:55:26.018Z"
+          }
+        },
+        {
+          "id": "350-600",
+          "label": "350–600 m² (Dudak Payı 2017-191)",
+          "referansM2": 475,
+          "meta": {
+            "listeDosya": "balikci-350-600.json",
+            "kalemSayisi": 70,
+            "toplamAdet": 99,
+            "kaynakDosya": "2017-191 DUDAK PAYI WATERGARDEN/2017-191-2.xlsx",
+            "yukleme": "2026-06-16T09:38:42.271Z",
+            "konseptSinif": "balikci-dudakpayi"
           }
         }
       ]
@@ -989,6 +1002,26 @@
             "kaynakDosya": "2017-098 DERSAADET KARAKÖY/2017-098-1.xlsx",
             "yukleme": "2026-06-16T08:08:47.262Z",
             "konseptSinif": "meyhane-dersaadet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "personel-yemekhane",
+      "label": "Personel Yemekhanesi (Catering)",
+      "ustKategori": "Catering",
+      "bantlar": [
+        {
+          "id": "150-250",
+          "label": "150–250 kişi (Laguna 2017-058)",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "personel-yemekhane-150-250.json",
+            "kalemSayisi": 21,
+            "toplamAdet": 26,
+            "kaynakDosya": "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
+            "yukleme": "2026-06-16T09:25:05.178Z",
+            "konseptSinif": "personel-yemekhane-laguna"
           }
         }
       ]

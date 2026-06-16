@@ -21,6 +21,7 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
       { id: "mahalle", label: "Mahalle balıkçı", referansM2: 80 },
       { id: "80-150", label: "80–150 m²", referansM2: 115 },
       { id: "150-250", label: "150–250 m²", referansM2: 200 },
+      { id: "350-600", label: "350–600 m²", referansM2: 475 },
     ],
   },
   {
@@ -70,6 +71,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
         referansM2: 2000,
       },
     ],
+  },
+  {
+    id: "personel-yemekhane",
+    label: "Personel Yemekhanesi (Catering)",
+    ustKategori: "Catering / Kurumsal",
+    planNot: "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
+    bantlar: [{ id: "150-250", label: "150–250 kişi", referansM2: 200 }],
   },
   {
     id: "guneli-pastane",

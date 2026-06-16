@@ -21,7 +21,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "turk-restoran": { min: 150, max: 5000 },
   "coffee-shop": { min: 60, max: 300 },
   steakhouse: { min: 80, max: 250 },
-  balikci: { min: 80, max: 250 },
+  balikci: { min: 80, max: 600 },
   italyan: { min: 100, max: 300 },
   birahane: { min: 100, max: 300 },
   pastane: { min: 100, max: 250 },
@@ -55,6 +55,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "kahve-tatli": { min: 40, max: 100 },
   "kahve-duragi-pastane": { min: 100, max: 200 },
   "resort-otel": { min: 200, max: 500 },
+  "personel-yemekhane": { min: 150, max: 250 },
 };
 
 export function pfosGetConcepts() {

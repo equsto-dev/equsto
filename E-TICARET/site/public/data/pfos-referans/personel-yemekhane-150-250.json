@@ -1,0 +1,190 @@
+{
+  "kategoriId": "personel-yemekhane",
+  "bantId": "150-250",
+  "label": "Personel Yemekhanesi (Catering) 150–250 kişi",
+  "referansM2": 200,
+  "referansBirim": "kisi",
+  "kaynakDosya": "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
+  "not": "Laguna Thermal personel mutfağı · ~200 kişilik catering yemekhanesi · 2017-058",
+  "konseptSinif": "personel-yemekhane-laguna",
+  "yukleme": "2026-06-16T09:25:05.178Z",
+  "kalemSayisi": 21,
+  "toplamAdet": 26,
+  "kalemler": [
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A1",
+      "ad": "YER OCAĞI, ARABALI",
+      "marka": "ersöz",
+      "olcu": "70*80*50",
+      "adet": 3
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A2",
+      "ad": "FIRINI TEZGAHI",
+      "olcu": "90*80*70",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A3",
+      "ad": "COMBI FIRIN (2. EL)",
+      "marka": "rational",
+      "olcu": "10 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A4",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "580*147*50",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A5",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "125*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A6",
+      "ad": "DUVAR RAFI",
+      "olcu": "125*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A7",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A8",
+      "ad": "DUVAR RAFI",
+      "olcu": "160*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A9",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI, HAREKETLİ",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A10",
+      "ad": "KUVER ÜNİTESİ, KAYDIRMA STANDLI, MOBİLYA VE KÜVETLER HARİÇ",
+      "olcu": "70*70*135",
+      "adet": 1
+    },
+    {
+      "bolum": "sicak-mutfak",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "A11",
+      "ad": "BAINMARIE, 3 GN 1/1, SERVİS RAFLI, KAYDIRMA STANDLI, MOBİLYA VE KÜVETLER HARİÇ",
+      "olcu": "120*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B1",
+      "ad": "BULAŞIK SIYIRMA TEZGAHI",
+      "olcu": "115*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B2",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B3",
+      "ad": "TEK EVYELİ MAKİNE GİRİŞ TEZGAHI",
+      "olcu": "150*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B4",
+      "ad": "ÖN YIKAMA DUŞ BATARYASI",
+      "marka": "cancan",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B5",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP (2. EL)",
+      "marka": "inoksan",
+      "olcu": "1000 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B6",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "100*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B7",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "70*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşik-yikama",
+      "bolumAd": "BULAŞIK YIKAMA",
+      "poz": "B8",
+      "ad": "TEPSİ TOPLAMA ARABASI, TABLDOT TEPSİYE GÖRE",
+      "marka": "portashelf",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI, YANDAN ÇIKIŞLI, ALTDAN\nSİFONLU",
+      "marka": "portashelf",
+      "olcu": "95*20*14",
+      "adet": 1
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y3",
+      "ad": "YER IZGARASI, YANDAN ÇIKIŞLI, ALTDAN\nSİFONLU",
+      "marka": "portashelf",
+      "olcu": "120*20*14",
+      "adet": 3
+    }
+  ]
+}

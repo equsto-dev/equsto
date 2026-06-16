@@ -1,0 +1,301 @@
+{
+  "kategoriId": "ekmek-kruvasan",
+  "bantId": "150-400",
+  "label": "Ekmek + Kruvasan imalathane 150–400 m²",
+  "referansM2": 300,
+  "kaynakDosya": "2017-093 HAKAN İNAN İMALATHANE/2017-093.xlsx",
+  "not": "Little Farm · ekmek + kruvasan üretim · soğuk oda · şoklama · fırın hattı · Hakan İnan 2017-093",
+  "konseptSinif": "ekmek-kruvasan-imalathane",
+  "yukleme": "2026-06-16T07:50:09.623Z",
+  "kalemSayisi": 35,
+  "toplamAdet": 105,
+  "kalemler": [
+    {
+      "bolum": "kuru-depolar",
+      "bolumAd": "KURU DEPOLAR",
+      "poz": "K1",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 15
+    },
+    {
+      "bolum": "kuru-depolar",
+      "bolumAd": "KURU DEPOLAR",
+      "poz": "K2",
+      "ad": "POLİETİLEN PALET",
+      "olcu": "120*80*16",
+      "adet": 13
+    },
+    {
+      "bolum": "soğuk-oda",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "650*650*240",
+      "adet": 1
+    },
+    {
+      "bolum": "şoklama-odasi",
+      "bolumAd": "ŞOKLAMA ODASI",
+      "poz": "D1",
+      "ad": "PANEL TİP ŞOKLAMA ODASI",
+      "olcu": "300*350*240",
+      "adet": 1
+    },
+    {
+      "bolum": "şoklama-odasi",
+      "bolumAd": "ŞOKLAMA ODASI",
+      "poz": "D2",
+      "ad": "TAVA ARABASI",
+      "olcu": "65*85*160",
+      "adet": 12
+    },
+    {
+      "bolum": "deri̇n-dondurucu-oda",
+      "bolumAd": "DERİN DONDURUCU ODA",
+      "poz": "F1",
+      "ad": "PANEL TİP DERİN DONDURUCU ODA",
+      "olcu": "600*650*240",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A1",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "40*30*40",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A2",
+      "ad": "BONE GALOŞLUK",
+      "olcu": "60*20*70",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A3",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "300*110*85",
+      "adet": 7
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A4",
+      "ad": "UN ŞEKER ARABASI",
+      "olcu": "103 lt.",
+      "adet": 8
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A5",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "220*90*85",
+      "adet": 6
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A6",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, ÇİFT KAPILI",
+      "olcu": "150*90*205",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A7",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A8",
+      "ad": "SU SOĞUTMA DOLABI",
+      "olcu": "300 lt.",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A9",
+      "ad": "SPIRAL MİKSER",
+      "marka": "FİMAK",
+      "olcu": "SPM250",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A11",
+      "ad": "KES TART MAKİNASI",
+      "marka": "FİMAK",
+      "olcu": "KTM 110",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A12",
+      "ad": "KONİK ÇEVİRME MAKİNASI",
+      "marka": "FİMAK",
+      "olcu": "KÇM 2000A",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A13",
+      "ad": "BAZLAMA PİŞİRME ÜNİTESİ",
+      "olcu": "250*90*85",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A14",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "550*117*50",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A15",
+      "ad": "BAZLAMA BEKLETME ARABASI, TAHTA",
+      "olcu": "-",
+      "adet": 5
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A16",
+      "ad": "PASTACILIK VE EKMEK FIRINI",
+      "marka": "LAINOX",
+      "olcu": "15*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A17",
+      "ad": "FIRIN ARABASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A18",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A19",
+      "ad": "ROKON FIRIN",
+      "marka": "FİMAK",
+      "olcu": "15 TEPSİLİ",
+      "adet": 2
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A20",
+      "ad": "KATLI FIRIN",
+      "marka": "FİMAK",
+      "olcu": "120*120 4 KATLI",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A21",
+      "ad": "BRÜLÖRLÜ DÖNER FIRIN",
+      "marka": "FİMAK",
+      "olcu": "FD150",
+      "adet": 1
+    },
+    {
+      "bolum": "i̇malathane",
+      "bolumAd": "İMALATHANE",
+      "poz": "A22",
+      "ad": "MAYALAMA KABİNİ",
+      "olcu": "3 KAPILI",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B1",
+      "ad": "SIYIRMA TEZGAHI, ETRAFI KAPALI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B2",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B3",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "∅40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B4",
+      "ad": "ÇALIŞMA TEZGAHI, RAFLI",
+      "olcu": "125*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B5",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "bulaşikhane",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B6",
+      "ad": "İSTİF RAFI",
+      "olcu": "1000 tb/s",
+      "adet": 2
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 4
+    },
+    {
+      "bolum": "yer-izgarasi",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y3",
+      "ad": "HİJYEN PASPASI",
+      "olcu": "60*80*4",
+      "adet": 1
+    }
+  ]
+}

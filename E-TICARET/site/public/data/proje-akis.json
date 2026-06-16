@@ -160,7 +160,8 @@
             "Büyük Yemekhane (Catering)",
             "Okul Yemekhanesi",
             "Üretim Fabrikası",
-            "Yerinde Üretim"
+            "Yerinde Üretim",
+            "Personel Yemekhanesi"
           ],
           "Üretim / Fabrika": [
             "Fabrika Yemekhanesi",
@@ -329,7 +330,7 @@
         "id": "restaurant_balik",
         "name": "Balıkçı / Balık restoran",
         "parent": "Restoran",
-        "desc": "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+        "desc": "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
         "pfos": {
           "motorSlug": "balikci",
           "dukkanSecim": "Balık Restaurant",
@@ -340,9 +341,9 @@
             "Seafood bistro"
           ],
           "m2Min": 80,
-          "m2Max": 250,
-          "bantKurali": "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; m² > 150 → 150-250 (Uçan Balık)",
-          "listeYolu": "veri/ucan-balik-2016-094.xlsx · proje-veri/150-250 m2 BALIKCI",
+          "m2Max": 600,
+          "bantKurali": "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; 150–250 → 150-250 (Uçan Balık); 350–600 → 350-600 (Dudak Payı)",
+          "listeYolu": "veri/ucan-balik-2016-094.xlsx · veri/balikci-dudakpayi-2017-191.xlsx",
           "planPdf": "2 BALIKCI-PLAN.pdf",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
@@ -364,6 +365,12 @@
               "label": "150–250 m²",
               "referansM2": 200,
               "listeDosya": "pfos-referans/balikci-150-250.json"
+            },
+            {
+              "id": "350-600",
+              "label": "350–600 m² (Dudak Payı 2017-191)",
+              "referansM2": 475,
+              "listeDosya": "pfos-referans/balikci-350-600.json"
             }
           ]
         },
@@ -1923,6 +1930,31 @@
               "label": "20–60 kişi (Liva 178)",
               "referansM2": 40,
               "listeDosya": "pfos-referans/yerinde-uretim-20-60.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "catering_personel_yemekhane",
+        "name": "Personel Yemekhanesi",
+        "parent": "Catering",
+        "desc": "Personel yemekhanesi · ~200 kişi · Laguna Thermal 2017-058 referans · motor: personel-yemekhane",
+        "pfos": {
+          "motorSlug": "personel-yemekhane",
+          "dukkanSecim": "Personel Yemekhanesi",
+          "m2Min": 150,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (150–250 kişi); kapasite ile adet ölçeklenir",
+          "listeYolu": "veri/personel-yemekhane-laguna-2017-058.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "150-250",
+              "label": "150–250 kişi (Laguna 2017-058)",
+              "referansM2": 200,
+              "listeDosya": "pfos-referans/personel-yemekhane-150-250.json"
             }
           ]
         },
@@ -62377,6 +62409,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T08:09:52.141Z"
+    "updated_at": "2026-06-16T09:38:42.871Z"
   }
 }

@@ -18,6 +18,7 @@ export type ListeBantId =
   | "200-350"
   | "200-500"
   | "300-500"
+  | "350-600"
   | "40-100"
   | "kiosk"
   | "60-100"
@@ -162,7 +163,7 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_balik",
     name: "Balıkçı / Balık restoran",
     parent: "Restoran",
-    desc: "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
+    desc: "Balık restoran + mahalle balıkçı · Uçan Balık (2016-094) + Dudak Payı (2017-191) · motor: balikci",
     pfos: {
       motorSlug: "balikci",
       dukkanSecim: "Balık Restaurant",
@@ -173,10 +174,10 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
         "Seafood bistro",
       ],
       m2Min: 80,
-      m2Max: 250,
+      m2Max: 600,
       bantKurali:
-        "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; m² > 150 → 150-250 (Uçan Balık)",
-      listeYolu: "veri/ucan-balik-2016-094.xlsx · proje-veri/150-250 m2 BALIKCI",
+        "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; 150–250 → 150-250 (Uçan Balık); 350–600 → 350-600 (Dudak Payı)",
+      listeYolu: "veri/ucan-balik-2016-094.xlsx · veri/balikci-dudakpayi-2017-191.xlsx",
       planPdf: "2 BALIKCI-PLAN.pdf",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
@@ -184,6 +185,7 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
         liste("mahalle", "Mahalle balıkçı", 80, "balikci"),
         bant("80-150", 115, "balikci"),
         bant("150-250", 200, "balikci"),
+        liste("350-600", "350–600 m² (Dudak Payı 2017-191)", 475, "balikci"),
       ],
     },
     questions: [],

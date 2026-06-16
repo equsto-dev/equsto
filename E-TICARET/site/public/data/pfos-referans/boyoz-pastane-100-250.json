@@ -1,0 +1,206 @@
+{
+  "kategoriId": "boyoz-pastane",
+  "bantId": "100-250",
+  "label": "Pastane Cafe (Boyoz) 100–250 m²",
+  "referansM2": 175,
+  "kaynakDosya": "2016-134 SMYRNA BOYOZ LAINOX/2016-134.xlsx",
+  "not": "Smyrna Boyoz · giriş kat satış · üretim mutfağı · bulaşıkhane · boyoz fırını",
+  "konseptSinif": "pastane-cafe-boyoz",
+  "yukleme": "2026-06-16T07:13:47.233Z",
+  "kalemSayisi": 24,
+  "toplamAdet": 25,
+  "kalemler": [
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A1",
+      "ad": "KASA TEZGAHI",
+      "olcu": "100*75*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A2",
+      "ad": "TEŞHİR DOLABI",
+      "olcu": "180*75*130",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A3",
+      "ad": "TEŞHİR DOLABI",
+      "olcu": "180*75*130",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A4",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "180*50*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A5",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A6",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "143*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A7",
+      "ad": "ÇAY OCAĞI, 3 DEMLİKLİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A7A",
+      "ad": "ÇAY OCAĞI DAVLUMBAZI, DUVAR TİPİ",
+      "olcu": "100*60*40",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A8",
+      "ad": "ÇALIŞMA TEAZGAHI, DOLAPLI, KAHVE ÇEKMECESİ",
+      "olcu": "110*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A9",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "çift gruplu",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A10",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A11",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A12",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "225*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A13",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A14",
+      "ad": "BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A15",
+      "ad": "TEZGAHALTI DERİNDONDURUCU",
+      "olcu": "114 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A16",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A17",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+      "olcu": "110*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A18",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A19",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A20",
+      "ad": "[object Object]",
+      "olcu": "70*80*205",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A21",
+      "ad": "FIRIN TEZGAHI, TEPSİ İSTİFLİ",
+      "olcu": "90*90*70",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A23",
+      "ad": "FIRIN DAVLUMBAZI, DUVARA MONTE",
+      "olcu": "110*110*40",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A24",
+      "ad": "NAKLİYE MONTAJ",
+      "olcu": "-",
+      "adet": 1
+    }
+  ]
+}
