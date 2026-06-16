@@ -665,7 +665,8 @@ export function pfosGetKonseptler() {
     },
     {
       slug: "ekmek-kruvasan",
-      label: KONSEPT_LABELS["ekmek-kruvasan"],
+      // Not all konsept slugs are in the strict KONSEPT_LABELS union yet.
+      label: (KONSEPT_LABELS as Record<string, string>)["ekmek-kruvasan"] || "Ekmek + Kruvasan",
       ornekler: [
         "Little Farm imalathane",
         "Ekmek + kruvasan üretim",
