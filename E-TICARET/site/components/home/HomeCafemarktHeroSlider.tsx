@@ -89,6 +89,13 @@ export function HomeCafemarktHeroSlider({ slides }: { slides: CafemarktPromoCard
     pauseUntilRef.current = Date.now() + AUTO_MS;
   }, [count]);
 
+  const go = useCallback(
+    (dir: -1 | 1) => {
+      goTo(active + dir);
+    },
+    [active, goTo],
+  );
+
   useEffect(() => {
     if (count <= 1 || paused) return;
 
@@ -136,6 +143,22 @@ export function HomeCafemarktHeroSlider({ slides }: { slides: CafemarktPromoCard
           </div>
         ))}
       </div>
+      <button
+        type="button"
+        className="eq-cmkt-hero-main-nav eq-cmkt-hero-main-nav--prev"
+        aria-label="Önceki slayt"
+        onClick={() => go(-1)}
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        className="eq-cmkt-hero-main-nav eq-cmkt-hero-main-nav--next"
+        aria-label="Sonraki slayt"
+        onClick={() => go(1)}
+      >
+        ›
+      </button>
       <div className="eq-cmkt-hero-main-dots" role="tablist" aria-label="Öne çıkan ürün slaytları">
         {splitSlides.map((card, i) => (
           <button

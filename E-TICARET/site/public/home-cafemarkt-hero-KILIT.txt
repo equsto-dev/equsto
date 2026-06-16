@@ -43,7 +43,7 @@ ayrı kilit: public/home-pop-cats-KILIT.txt · Bento şeridi ayrı (değiştiril
     split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0; buzdolabı img 125%
 
 ── Kilitli içerik (lib/home-cafemarkt-content.ts) ─────────────────────────
-  cafemarktHeroMainSlides: 2 slayt (split) — ozti-dual · proso-tiger-wfg
+  cafemarktHeroMainSlides: 3 slayt (split) — ozti-dual · proso-tiger-wfg · senox-dt-12
   cafemarktHeroMain: ilk slayt (Öztiryakiler) — ozti-79e3-37nmv-03-cutout.png · #001e50
   cafemarktHeroSide: kahve · yikama · pisirme-ocak · pisirme-firin
 

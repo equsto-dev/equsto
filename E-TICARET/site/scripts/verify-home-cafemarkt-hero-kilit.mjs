@@ -67,6 +67,9 @@ if (!css.includes("grid-row: 1 / span 2")) {
 if (!css.includes(".eq-cmkt-hero-main-wrap")) {
   fail("eq-home-cafemarkt.css: hero main slider wrap yok");
 }
+if (!css.includes(".eq-cmkt-hero-main-nav")) {
+  fail("eq-home-cafemarkt.css: hero nav okları yok");
+}
 if (!/\.eq-cmkt-hero-side\s*\{[\s\S]*?grid-row:\s*1\s*\/\s*span\s*2;[\s\S]*?grid-template-columns:\s*1fr\s+1fr;[\s\S]*?grid-template-rows:\s*1fr\s+1fr;/.test(css)) {
   fail("eq-home-cafemarkt.css: hero-side 2x2 grid yok");
 }
@@ -113,6 +116,9 @@ if (!heroSlider.includes("eq-cmkt-promo--main")) {
 if (!heroSlider.includes("eq-cmkt-hero-main-wrap")) {
   fail("HomeCafemarktHeroSlider.tsx: hero wrap yok");
 }
+if (!heroSlider.includes("eq-cmkt-hero-main-nav")) {
+  fail("HomeCafemarktHeroSlider.tsx: hero nav okları yok");
+}
 
 const mount = read("components/home/HomeCafemarktMount.tsx");
 if (!mount.includes("eq-home-cafemarkt-mount")) fail("HomeCafemarktMount.tsx: mount id yok");
@@ -128,6 +134,9 @@ if (!content.includes("ozti-79e3-37nmv-03-cutout.png")) {
 }
 if (!content.includes('id: "proso-tiger-wfg"')) {
   fail("home-cafemarkt-content.ts: proso tiger wfg slaytı yok");
+}
+if (!content.includes('id: "senox-dt-12"')) {
+  fail("home-cafemarkt-content.ts: senox dt-12 slaytı yok");
 }
 if (!content.includes("export const cafemarktHeroMainSlides")) {
   fail("home-cafemarkt-content.ts: cafemarktHeroMainSlides yok");

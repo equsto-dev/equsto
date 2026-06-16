@@ -29,7 +29,7 @@ export type CafemarktPromoCard = {
   textLight?: boolean;
 };
 
-/** Sol hero split slaytları — Öztiryakiler + Proso Tiger WFG EQ1 */
+/** Sol hero split slaytları — Öztiryakiler · Proso Tiger WFG · Şenox DT-12 */
 export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
   {
     id: "ozti-dual",
@@ -62,6 +62,23 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     image: "/data/prosogutma-market/tiger-wfg/tigerwfgon.png",
     imageAlt: "Proso Tiger WFG EQ1 — menteşeli düz camlı şarküteri reyonu",
     bg: "#0a2e3a",
+    textLight: true,
+  },
+  {
+    id: "senox-dt-12",
+    layout: "split",
+    promoKicker: "Şenox · dondurma reyonu · DT-12",
+    title: "12 Gözlü",
+    titleEm: "Dondurma Reyonu",
+    promoLead:
+      "Parlak LED aydınlatmalı, 12×5 L kapasiteli profesyonel dondurma teşhir dolabı — kavisli temperli cam, fanlı soğutma ve otomatik defrost ile pastane ve kafe vitrinleri için.",
+    promoBadges: ["12 gözlü", "-12/-22 °C", "120 cm", "R290", "5 L küvet"],
+    cta: "Ürün sayfasına git →",
+    href: "/shop/sogutma/118-dt-12",
+    dept: "sogutma",
+    image: "/images/catalog/senox/mutbex/28608.jpg",
+    imageAlt: "Şenox DT-12 — 12 gözlü dondurma reyonu",
+    bg: "#1a2233",
     textLight: true,
   },
 ];
