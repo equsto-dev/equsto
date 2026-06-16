@@ -1,5 +1,5 @@
 import { resolveTipKodu } from "./tip-kodu";
-import { isEqustoFiyatListesiSku } from "./equsto-fiyat-listesi-pfos";
+import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-sku";
 
 /** Yer tezgahları — EQUSTO Fiyat Listesi 2026 */
 export const CALISMA_TEZGAH_MARKA = "Equsto";
