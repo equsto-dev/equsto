@@ -12,6 +12,7 @@ import type { ShopTypeKayit } from "../../proje-akis/konsept-tanimlari";
 import { buildTemplateFromShopType } from "../../proje-akis/shop-type-referans";
 import { buildBalikciTemplate } from "../../referans/balikci";
 import { buildCoffeeShopTemplate } from "../../referans/coffee-shop";
+import { buildCoffeeShopYemekTemplate } from "../../referans/coffee-shop-yemek";
 import { buildSteakhouseTemplate } from "../../referans/steakhouse";
 import { buildItalyanTemplate } from "../../referans/italyan";
 import { buildBirahaneTemplate } from "../../referans/birahane";
@@ -33,6 +34,7 @@ import { buildAllSportCafeTemplate } from "../../referans/all-sport-cafe";
 import { buildCasualCafeTemplate } from "../../referans/casual-cafe";
 import { buildBuyukYemekhaneTemplate } from "../../referans/buyuk-yemekhane";
 import { buildGuneliPastaneTemplate } from "../../referans/guneli-pastane";
+import { buildPastaneCafeTemplate } from "../../referans/pastane-cafe";
 import { buildSehirOtelTemplate } from "../../referans/sehir-otel";
 import { buildKiremitAkasyaTemplate } from "../../referans/kiremit-akasya";
 import { buildMusSelinozTurkTemplate } from "../../referans/mus-selinoz-turk";
@@ -54,6 +56,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
   "balikci",
   "coffee-shop",
+  "coffee-shop-yemek",
   "italyan",
   "birahane",
   "donerci",
@@ -78,6 +81,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "casual-cafe",
   "buyuk-yemekhane",
   "guneli-pastane",
+  "pastane-cafe",
   "sehir-otel",
   "tatil-otel",
   "kiremit-akasya",
@@ -97,7 +101,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
 export const TEMPLATES: Record<
   Exclude<
     Konsept,
-    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "donerci" | "personel-yemekhane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "kanatci-kebapci" | "patisserie-yemek" | "boyoz-pastane" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve" | "kahve-atolyesi" | "harvest-cafe" | "all-sport-cafe" | "casual-cafe" | "buyuk-yemekhane" | "guneli-pastane" | "ekmek-kruvasan" | "sehir-otel" | "tatil-otel" | "kiremit-akasya" | "mus-selinoz-turk" | "kasap" | "kasap-sarkuteri" | "sarkuteri-restoran" | "inari-bar-yemek" | "kahve-duragi" | "kahve-tatli" | "kahve-duragi-pastane" | "resort-otel" | "turk-restoran"
+    "steakhouse" | "balikci" | "coffee-shop" | "coffee-shop-yemek" | "italyan" | "birahane" | "donerci" | "personel-yemekhane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "kanatci-kebapci" | "patisserie-yemek" | "boyoz-pastane" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve" | "kahve-atolyesi" | "harvest-cafe" | "all-sport-cafe" | "casual-cafe" | "buyuk-yemekhane" | "guneli-pastane" | "pastane-cafe" | "ekmek-kruvasan" | "sehir-otel" | "tatil-otel" | "kiremit-akasya" | "mus-selinoz-turk" | "kasap" | "kasap-sarkuteri" | "sarkuteri-restoran" | "inari-bar-yemek" | "kahve-duragi" | "kahve-tatli" | "kahve-duragi-pastane" | "resort-otel" | "turk-restoran"
   >,
   ConceptTemplate
 > = {
@@ -135,6 +139,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "steakhouse") return buildSteakhouseTemplate(m2);
   if (konsept === "balikci") return buildBalikciTemplate(m2, undefined, altTip);
   if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);
+  if (konsept === "coffee-shop-yemek") return buildCoffeeShopYemekTemplate(m2);
   if (konsept === "italyan") return buildItalyanTemplate(m2);
   if (konsept === "birahane") return buildBirahaneTemplate(m2);
   if (konsept === "donerci") return buildDonerciTemplate(m2);
@@ -159,6 +164,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "casual-cafe") return buildCasualCafeTemplate(m2);
   if (konsept === "buyuk-yemekhane") return buildBuyukYemekhaneTemplate(m2);
   if (konsept === "guneli-pastane") return buildGuneliPastaneTemplate(m2);
+  if (konsept === "pastane-cafe") return buildPastaneCafeTemplate(m2);
   if (konsept === "ekmek-kruvasan") return buildEkmekKruvasanTemplate(m2);
   if (konsept === "sehir-otel") return buildSehirOtelTemplate(m2);
   if (konsept === "tatil-otel") return buildTatilOtelTemplate(m2);

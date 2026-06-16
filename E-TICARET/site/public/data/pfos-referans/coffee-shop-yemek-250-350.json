@@ -1,0 +1,710 @@
+{
+  "kategoriId": "coffee-shop-yemek",
+  "bantId": "250-350",
+  "label": "Coffee Shop Trabzon 300 m²",
+  "referansM2": 300,
+  "kaynakDosya": "2018/2018-013 COFFEESHOP TRABZON/2018-013-1.xlsx",
+  "not": "Coffee shop + yemek · bar + mutfak · 300 m²",
+  "konseptSinif": "coffee-shop-yemek",
+  "yukleme": "2026-06-16T11:15:39.379Z",
+  "kalemSayisi": 87,
+  "toplamAdet": 96,
+  "kalemler": [
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "1",
+      "ad": "KOKTEYL HAZIRLIK TEZGAHI ÜNİT.BUZ HAZNELİ, ŞİŞELİKSİZ",
+      "olcu": "40×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "2",
+      "ad": "TEZGAH TİPİ BUZDOLABI YATAY TİP",
+      "olcu": "140×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "3",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "4",
+      "ad": "BULAŞIK MAKİNASI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "5",
+      "ad": "TEK EVYELİ TEZGAH",
+      "olcu": "140×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "6",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "7",
+      "ad": "ÇÖP ÜNİTESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "71",
+      "ad": "GÖZ EVYE",
+      "olcu": "50×50×30",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "8",
+      "ad": "ÇALIŞMA TEZGAHI TABAN RAFSIZ SIRTLI",
+      "olcu": "53×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "8.1A",
+      "ad": "ÇÖP ÜNİTESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "9",
+      "ad": "ÇALIŞMA TEZGAHI DOLAPLI ARA RAFLI",
+      "olcu": "130×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "11",
+      "ad": "ÇALIŞMA TEZGAHI TABAN RAFSIZ SIRTLI",
+      "olcu": "100×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "12",
+      "ad": "ŞİŞE SOĞUTUCU DOLAP CAM KAPILI",
+      "olcu": "90×50×92",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "14",
+      "ad": "KAHVE ÇEKMECELİ ÇALIŞMA TEZGAHI ARA RAFLI DEVRİLİR",
+      "olcu": "100×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "15",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "16",
+      "ad": "ÇALIŞMA TEZGAHI DOLAPLI ÇARPMA KAPILI TABAN RAFSIZ",
+      "olcu": "120×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "17",
+      "ad": "TEZGAH TİPİ YATAY BUZDOLABI",
+      "olcu": "178×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "18",
+      "ad": "ÇALIŞMA TEZGAHI DOLAPLI ARA RAFLI",
+      "olcu": "143×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "19",
+      "ad": "SOĞUK DİK CAMLI TEŞHİR ÜNİTESİ",
+      "olcu": "150×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "20",
+      "ad": "TEZGAH TİPİ YATAY BUZDOLABI",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT BAR ALANI",
+      "poz": "20.2A",
+      "ad": "KASA TEZGAH ÜZERİ CORIAN TABLA",
+      "olcu": "5,6 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "21",
+      "ad": "ÇÖP ÜNİTESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "23",
+      "ad": "ÇALIŞMA TEZGAHI KISMİ DOLAPLI ARA RAFLI",
+      "olcu": "122×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "24",
+      "ad": "ÇALIŞMA TEZGAHI DOLAPLI ARA RAFLI",
+      "olcu": "82×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "26",
+      "ad": "TEZGAH TİPİ YATAY BUZDOLABI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "27",
+      "ad": "KAHVE ÇEKMECELİ ÇALIŞMA TEZGAHI",
+      "olcu": "100×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "28",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "48×58×80",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "29",
+      "ad": "ŞİŞE SOĞUTUCU DOLAP CAM KAPILI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "30",
+      "ad": "ÇALIŞMA TEZGAHI TABAN RAFSIZ SIRTLI",
+      "olcu": "100×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "31",
+      "ad": "BULAŞIK MAKİNASI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "32",
+      "ad": "TEK EVYELİ TEZGAH",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "32",
+      "ad": "GÖZ EVYE",
+      "olcu": "50×50×30",
+      "adet": 1
+    },
+    {
+      "bolum": "1",
+      "bolumAd": "1. KAT BAR PLANI",
+      "poz": "32",
+      "ad": "CORIAN ÜST TABLA",
+      "olcu": "5,6 m2",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "33",
+      "ad": "SIYIRMA TEZGAHI",
+      "olcu": "120×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "34",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "50×40×40",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "35",
+      "ad": "BULAŞIK MAKİNASI GİRİŞ TEZGAHI",
+      "olcu": "90×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "36",
+      "ad": "SPREY ÜNİTESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "37",
+      "ad": "BULAŞIK MAKİNASI",
+      "olcu": "1000 tb/h",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "38",
+      "ad": "DUVAR TİPi DAVLUMBAZ FİLTRESİZ",
+      "olcu": "100×100×50",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "39",
+      "ad": "BULAŞIK MAKİNASI ÇIKIŞ TEZGAHI",
+      "olcu": "70×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "40",
+      "ad": "İSTİF RAFI IZGARA TABLA",
+      "olcu": "122×53×183",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "41",
+      "ad": "PİZZA FIRINI, 2 KATLI 6+6",
+      "olcu": "122×82×78",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "42",
+      "ad": "FIRIN ALT TEZGAHI",
+      "olcu": "150×90×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "43",
+      "ad": "UNOX ROSELLA FIRIN XFT04",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "44",
+      "ad": "FIRIN ALT RAFI",
+      "olcu": "67×80×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "45",
+      "ad": "SICAKLIK DOLABI SIRTLI ELEKTRİKLİ",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "46",
+      "ad": "KÖMÜRLÜ IZGARA DAVLUMBAZLI",
+      "olcu": "100×50×115",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "461",
+      "ad": "DAVLUMBAZ YANI SAC KAPAMA",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "47",
+      "ad": "ÇALIŞMA TEZGAHI TABAN RAFSIZ SIRTLI",
+      "olcu": "85×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "48",
+      "ad": "KÖMÜR ARABASI",
+      "olcu": "50×60×65",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "49",
+      "ad": "SET ÜSTÜ FRİTÖZ ELEKTRİKLİ",
+      "olcu": "80×70×28",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "50",
+      "ad": "SET ÜSTÜ ARA TEZGAH",
+      "olcu": "40×70×28",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "51",
+      "ad": "SET ÜSTÜ MAKARNA FRİTÖZÜ ELEKTRİKLİ",
+      "olcu": "40×70×28",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "52",
+      "ad": "SET ÜSTÜ DÖRTLÜ OCAK GAZLI",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "53",
+      "ad": "WOK OCAK TEKLİ GAZLI",
+      "olcu": "40×70×28",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "54",
+      "ad": "CİHAZLATI BUZDOLABI",
+      "olcu": "240×70×60",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "55",
+      "ad": "ÇİFT CİDARLI DAVLUMBAZ DUVAR TİPİ",
+      "olcu": "485×110×50",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "56",
+      "ad": "ÇİFT CİDARLI DAVLUMBAZ DUVAR TİPİ",
+      "olcu": "155×140×50",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "57",
+      "ad": "DAVLUMBAZ ALT RAFI",
+      "olcu": "280×50×45",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "58",
+      "ad": "MERMER TABLALI TEZGAH TİPİ BUZDOLABI",
+      "olcu": "178×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "59",
+      "ad": "GARNİTÜRLÜK",
+      "olcu": "131×34×60",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "60",
+      "ad": "HAMUR AÇMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "60.1A",
+      "ad": "HAMUR YOĞURMA MAKİNASI",
+      "olcu": "30 kg",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "61",
+      "ad": "DUVAR RAFI",
+      "olcu": "132×35×40",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "62",
+      "ad": "TEZGAH TİPİ YATAY BUZDOLABI, 4 ÇEKMECELİ",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "63",
+      "ad": "TOST MAKİNASI",
+      "olcu": "2745",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "64",
+      "ad": "TEZGAH TİPİ YATAY DEEPFREEZE",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "65",
+      "ad": "EL BLENDER",
+      "olcu": "CMP250",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "66",
+      "ad": "SEBZE DOĞRAMA MAKİNASI",
+      "olcu": "CL50",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "661",
+      "ad": "BIÇAK SETİ 4 LÜ",
+      "olcu": "ROBOTCOUPE",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "67",
+      "ad": "SOĞAN DOĞRAMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "68",
+      "ad": "TEK EVYELİ TEZGAH",
+      "olcu": "50×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "69",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "50×40×40",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "70",
+      "ad": "TEZGAH TİPİ YATAY BUZDOLABI 6 ÇEKMECELİ",
+      "olcu": "190×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "71",
+      "ad": "GARNİTÜRLÜK",
+      "olcu": "178×34×60",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "72",
+      "ad": "DUVAR RAFI",
+      "olcu": "178×30×40",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "73",
+      "ad": "SOĞUK ODA",
+      "olcu": "358×229×240",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "74",
+      "ad": "DEEPFREEZE DEPO",
+      "olcu": "277×208×240",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "75",
+      "ad": "İSTİF RAFI",
+      "olcu": "183×53×183",
+      "adet": 5
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "76",
+      "ad": "İSTİF RAFI",
+      "olcu": "137×53×183",
+      "adet": 3
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "77",
+      "ad": "İSTİF RAFI",
+      "olcu": "91×46×183",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "78",
+      "ad": "İSTİF RAFI",
+      "olcu": "122×46×183",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "79",
+      "ad": "İSTİF RAFI",
+      "olcu": "122×53×183",
+      "adet": 3
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "80",
+      "ad": "İSTİF RAFI",
+      "olcu": "107×53×183",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "81",
+      "ad": "EL YIKAMA EVYESİ OVAL TİP MEKANİZMALI",
+      "olcu": "50×39×23",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "82",
+      "ad": "BONE GALOŞLUK",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "2",
+      "bolumAd": "2. KAT",
+      "poz": "83",
+      "ad": "HAREKETLİ TEZGAH ARA RAFLI",
+      "olcu": "80×60×85",
+      "adet": 1
+    }
+  ]
+}

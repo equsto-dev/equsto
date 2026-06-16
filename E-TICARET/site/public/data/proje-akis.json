@@ -52,7 +52,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining ≤200→100-200, 200–300→150-300, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); ekmek-kruvasan → 150-400; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; tatil-otel → 800-1500; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; boyoz-pastane → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan → 100-300 (03-italyan); all-day-dining ≤200→100-200, 201–300→150-300, 301–400→200-400 (THC Mavibahçe); restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; catering_uretim / Üretim Fabrikası → 1500-2500 m² (15–30 bin kap.); ekmek-kruvasan → 150-400; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; tatil-otel → 800-1500; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; kanatci-kebapci → 100-250; patisserie-yemek → 200-400; boyoz-pastane → 100-250; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu ≤200→80-200, ≤400→200-400 MEFTECH referans, >400→300-500 zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -129,12 +129,14 @@
             "All Sport Cafe",
             "Kahve Durağı — Pastane & Kahvaltı",
             "Kahve & Tatlı",
-            "Coffee Shop"
+            "Coffee Shop",
+            "Coffee Shop + Yemek"
           ],
           "Pastane & Fırın": [
             "Pastane",
             "Güneli Fırın",
-            "Pastane & Yerel"
+            "Pastane & Yerel",
+            "Pastane + Cafe"
           ],
           "Fast Food / QSR": [
             "Türk Mutfağı",
@@ -662,8 +664,8 @@
           ],
           "m2Min": 150,
           "m2Max": 5000,
-          "bantKurali": "≤300 m² → S13-388; >300 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
-          "listeYolu": "lib/pfos/data/pfos-s13-388-referanslar.json · veri/sutis-sislihane-2017-006.xlsx",
+          "bantKurali": "≤300 m² → S13-388; 300–500 m² → Vadi İstanbul (2017-204); >500 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
+          "listeYolu": "lib/pfos/data/pfos-s13-388-referanslar.json · 2017/2017-204 VADİİSTANBUL/2017-204-4.xlsx · veri/sutis-sislihane-2017-006.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
@@ -672,6 +674,12 @@
               "label": "150–300 m² (S13-388)",
               "referansM2": 220,
               "listeDosya": "lib/pfos/data/pfos-s13-388-referanslar.json"
+            },
+            {
+              "id": "300-500",
+              "label": "300–500 m² (Vadi İstanbul Lokanta 2017-204)",
+              "referansM2": 400,
+              "listeDosya": "pfos-referans/vadiistanbul-lokanta-300-500.json"
             },
             {
               "id": "200-5000",
@@ -712,14 +720,14 @@
         "id": "all_day_dining",
         "name": "All Day Dining / Cafe",
         "parent": "Restoran",
-        "desc": "All day dining · 100–200 m² Smyrna Boyoz (2016-134) · 150–300 m² The House · >300 m² THC proforma",
+        "desc": "All day dining · 100–200 m² Smyrna Boyoz · 150–300 m² Havelka · 200–400 m² THC Mavibahçe",
         "pfos": {
           "motorSlug": "all-day-dining-cafe",
           "dukkanSecim": "All Dining Cafe",
           "m2Min": 100,
           "m2Max": 400,
-          "bantKurali": "100–200 m² → Smyrna Boyoz; 150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
-          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx · proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+          "bantKurali": "≤200 m² → Smyrna Boyoz; 201–300 m² → Havelka; 301–400 m² → THC Mavibahçe (2017-154)",
+          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx · proje-veri/2017-128-havelka.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
@@ -731,9 +739,15 @@
             },
             {
               "id": "150-300",
-              "label": "150–300 m²",
+              "label": "150–300 m² (Havelka)",
               "referansM2": 225,
               "listeDosya": "pfos-referans/all-day-dining-cafe-150-300.json"
+            },
+            {
+              "id": "200-400",
+              "label": "200–400 m² (THC Mavibahçe)",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/all-day-dining-cafe-200-400.json"
             }
           ]
         },
@@ -952,6 +966,31 @@
         "questions": []
       },
       {
+        "id": "coffee_shop_yemek",
+        "name": "Coffee Shop + Yemek",
+        "parent": "Kafe / Coffee Shop",
+        "desc": "Coffee shop + sıcak yemek · bar + mutfak · Trabzon (2018-013) · 300 m² referans · motor: coffee-shop-yemek",
+        "pfos": {
+          "motorSlug": "coffee-shop-yemek",
+          "dukkanSecim": "Coffee Shop + Yemek",
+          "m2Min": 250,
+          "m2Max": 350,
+          "bantKurali": "Tek referans liste (250–350 m²); m² ile adet ölçeklenir",
+          "listeYolu": "2018/2018-013 COFFEESHOP TRABZON/2018-013-1.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "250-350",
+              "label": "250–350 m² (Trabzon 2018-013)",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/coffee-shop-yemek-250-350.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
         "id": "restaurant_buyuk_restoran",
         "name": "Restoran",
         "parent": "Restoran",
@@ -1005,22 +1044,22 @@
         "id": "restaurant_fine_dining",
         "name": "Fine Dining",
         "parent": "Restoran",
-        "desc": "Fine dining · 500–1000 m² büyük restoran referansı · motor: restoran",
+        "desc": "Fine dining · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
         "pfos": {
           "motorSlug": "restoran",
           "dukkanSecim": "Fine Dining",
           "m2Min": 500,
           "m2Max": 1000,
-          "bantKurali": "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
-          "listeYolu": "proje-veri/RESTORAN.xlsx",
+          "bantKurali": "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
+          "listeYolu": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
               "id": "500-1000",
               "label": "500–1000 m²",
-              "referansM2": 750,
-              "listeDosya": "pfos-referans/restoran-500-1000.json"
+              "referansM2": 500,
+              "listeDosya": "pfos-referans/uka-akasya-500-1000.json"
             }
           ]
         },
@@ -1030,22 +1069,22 @@
         "id": "restaurant_dunya",
         "name": "Dünya Mutfağı",
         "parent": "Restoran",
-        "desc": "Dünya mutfağı · 500–1000 m² büyük restoran referansı · motor: restoran",
+        "desc": "Dünya mutfağı · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
         "pfos": {
           "motorSlug": "restoran",
           "dukkanSecim": "Dünya Mutfağı",
           "m2Min": 500,
           "m2Max": 1000,
-          "bantKurali": "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
-          "listeYolu": "proje-veri/RESTORAN.xlsx",
+          "bantKurali": "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
+          "listeYolu": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
               "id": "500-1000",
               "label": "500–1000 m²",
-              "referansM2": 750,
-              "listeDosya": "pfos-referans/restoran-500-1000.json"
+              "referansM2": 500,
+              "listeDosya": "pfos-referans/uka-akasya-500-1000.json"
             }
           ]
         },
@@ -1219,6 +1258,31 @@
               "label": "200–400 m²",
               "referansM2": 300,
               "listeDosya": "pfos-referans/guneli-pastane-200-400.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "pastane_cafe",
+        "name": "Pastane + Cafe",
+        "parent": "Pastane & Fırın",
+        "desc": "Pastane + cafe · üretim + teşhir + sıcak mutfak · Hacısayid Büyükçekmece (2017-210) · motor: pastane-cafe",
+        "pfos": {
+          "motorSlug": "pastane-cafe",
+          "dukkanSecim": "Pastane + Cafe",
+          "m2Min": 300,
+          "m2Max": 500,
+          "bantKurali": "Tek referans liste (300–500 m²); m² ile adet ölçeklenir",
+          "listeYolu": "2017/2017-210 HACISAYİD BÜYÜKÇEKMECE/2017-210-1.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "300-500",
+              "label": "300–500 m² (Hacısayid 2017-210)",
+              "referansM2": 400,
+              "listeDosya": "pfos-referans/pastane-cafe-300-500.json"
             }
           ]
         },
@@ -62409,6 +62473,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-16T09:38:42.871Z"
+    "updated_at": "2026-06-16T11:58:56.752Z"
   }
 }

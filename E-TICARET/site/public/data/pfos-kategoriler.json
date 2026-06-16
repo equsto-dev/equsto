@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-16T10:18:56.577Z",
+  "updated_at": "2026-06-16T11:15:39.384Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -375,6 +375,18 @@
             "toplamAdet": 51,
             "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
             "yukleme": "2026-06-16T10:05:51.463Z"
+          }
+        },
+        {
+          "id": "200-400",
+          "label": "200–400 m² (THC Mavibahçe)",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "all-day-dining-cafe-200-400.json",
+            "kalemSayisi": 82,
+            "toplamAdet": 87,
+            "kaynakDosya": "2017-154 THC MAVİBAHÇE/2017-154-2.pdf",
+            "yukleme": "2026-06-16T10:37:18.186809Z"
           }
         }
       ]
@@ -1049,10 +1061,67 @@
           "referansM2": 500,
           "meta": {
             "listeDosya": "uka-akasya-500-1000.json",
-            "kalemSayisi": 0,
-            "toplamAdet": 0,
+            "kalemSayisi": 129,
+            "toplamAdet": 158,
             "kaynakDosya": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
-            "yukleme": "2026-06-16T09:59:42.105Z"
+            "yukleme": "2026-06-16T10:23:46.653Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vadiistanbul-lokanta",
+      "label": "Vadi İstanbul Lokanta",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "300-500",
+          "label": "300–500 m²",
+          "referansM2": 400,
+          "meta": {
+            "listeDosya": "vadiistanbul-lokanta-300-500.json",
+            "kalemSayisi": 84,
+            "toplamAdet": 118,
+            "kaynakDosya": "2017/2017-204 VADİİSTANBUL/2017-204-4.xlsx",
+            "yukleme": "2026-06-16T10:23:46.656Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pastane-cafe",
+      "label": "Pastane + Cafe (Hacısayid)",
+      "ustKategori": "Pastane & Fırın",
+      "bantlar": [
+        {
+          "id": "300-500",
+          "label": "300–500 m²",
+          "referansM2": 400,
+          "meta": {
+            "listeDosya": "pastane-cafe-300-500.json",
+            "kalemSayisi": 52,
+            "toplamAdet": 52,
+            "kaynakDosya": "2017/2017-210 HACISAYİD BÜYÜKÇEKMECE/2017-210-1.xlsx",
+            "yukleme": "2026-06-16T11:02:26.138Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coffee-shop-yemek",
+      "label": "Coffee Shop + Yemek",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "250-350",
+          "label": "250–350 m²",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "coffee-shop-yemek-250-350.json",
+            "kalemSayisi": 87,
+            "toplamAdet": 96,
+            "kaynakDosya": "2018/2018-013 COFFEESHOP TRABZON/2018-013-1.xlsx",
+            "yukleme": "2026-06-16T11:15:39.379Z"
           }
         }
       ]

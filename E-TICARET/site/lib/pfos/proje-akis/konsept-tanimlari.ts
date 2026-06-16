@@ -31,6 +31,7 @@ export type ListeBantId =
   | "2000-3500"
   | "1500-2500"
   | "200-400"
+  | "250-350"
   | "500-2000"
   | "500-2000-kocaeli"
   | "500-2000-topkapi"
@@ -395,9 +396,9 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       m2Min: 150,
       m2Max: 5000,
       bantKurali:
-        "≤300 m² → S13-388; >300 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
+        "≤300 m² → S13-388; 300–500 m² → Vadi İstanbul (2017-204); >500 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
       listeYolu:
-        "lib/pfos/data/pfos-s13-388-referanslar.json · veri/sutis-sislihane-2017-006.xlsx",
+        "lib/pfos/data/pfos-s13-388-referanslar.json · 2017/2017-204 VADİİSTANBUL/2017-204-4.xlsx · veri/sutis-sislihane-2017-006.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
@@ -407,6 +408,12 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
           referansM2: 220,
           listeDosya: "lib/pfos/data/pfos-s13-388-referanslar.json",
         },
+        liste(
+          "300-500",
+          "300–500 m² (Vadi İstanbul Lokanta 2017-204)",
+          400,
+          "vadiistanbul-lokanta",
+        ),
         liste("200-5000", "200–5000 m² (Sütiş Şişhane)", 500, "turk-restoran"),
       ],
     },
@@ -434,20 +441,22 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "all_day_dining",
     name: "All Day Dining / Cafe",
     parent: "Restoran",
-    desc: "All day dining · 100–200 m² Smyrna Boyoz (2016-134) · 150–300 m² The House · >300 m² THC proforma",
+    desc: "All day dining · 100–200 m² Smyrna Boyoz · 150–300 m² Havelka · 200–400 m² THC Mavibahçe",
     pfos: {
       motorSlug: "all-day-dining-cafe",
       dukkanSecim: "All Dining Cafe",
       m2Min: 100,
       m2Max: 400,
-      bantKurali: "100–200 m² → Smyrna Boyoz; 150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
+      bantKurali:
+        "≤200 m² → Smyrna Boyoz; 201–300 m² → Havelka; 301–400 m² → THC Mavibahçe (2017-154)",
       listeYolu:
-        "veri/boyoz-pastane-2016-134.xlsx · proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+        "veri/boyoz-pastane-2016-134.xlsx · proje-veri/2017-128-havelka.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
         liste("100-200", "100–200 m² (Smyrna Boyoz)", 150, "all-day-dining-cafe"),
-        liste("150-300", "150–300 m²", 225, "all-day-dining-cafe"),
+        liste("150-300", "150–300 m² (Havelka)", 225, "all-day-dining-cafe"),
+        liste("200-400", "200–400 m² (THC Mavibahçe)", 300, "all-day-dining-cafe"),
       ],
     },
     questions: [],
@@ -609,6 +618,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     questions: [],
   },
   {
+    id: "coffee_shop_yemek",
+    name: "Coffee Shop + Yemek",
+    parent: "Kafe / Coffee Shop",
+    desc:
+      "Coffee shop + sıcak yemek · bar + mutfak · Trabzon (2018-013) · 300 m² referans · motor: coffee-shop-yemek",
+    pfos: {
+      motorSlug: "coffee-shop-yemek",
+      dukkanSecim: "Coffee Shop + Yemek",
+      m2Min: 250,
+      m2Max: 350,
+      bantKurali: "Tek referans liste (250–350 m²); m² ile adet ölçeklenir",
+      listeYolu: "2018/2018-013 COFFEESHOP TRABZON/2018-013-1.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("250-350", "250–350 m² (Trabzon 2018-013)", 300, "coffee-shop-yemek"),
+      ],
+    },
+    questions: [],
+  },
+  {
     id: "restaurant_buyuk_restoran",
     name: "Restoran",
     parent: "Restoran",
@@ -648,17 +678,17 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_fine_dining",
     name: "Fine Dining",
     parent: "Restoran",
-    desc: "Fine dining · 500–1000 m² büyük restoran referansı · motor: restoran",
+    desc: "Fine dining · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
     pfos: {
       motorSlug: "restoran",
       dukkanSecim: "Fine Dining",
       m2Min: 500,
       m2Max: 1000,
-      bantKurali: "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
-      listeYolu: "proje-veri/RESTORAN.xlsx",
+      bantKurali: "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
+      listeYolu: "2017/2017-193 UKA AKASYA/2017-193.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+      bantlar: [liste("500-1000", "500–1000 m²", 500, "uka-akasya")],
     },
     questions: [],
   },
@@ -666,17 +696,17 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_dunya",
     name: "Dünya Mutfağı",
     parent: "Restoran",
-    desc: "Dünya mutfağı · 500–1000 m² büyük restoran referansı · motor: restoran",
+    desc: "Dünya mutfağı · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
     pfos: {
       motorSlug: "restoran",
       dukkanSecim: "Dünya Mutfağı",
       m2Min: 500,
       m2Max: 1000,
-      bantKurali: "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
-      listeYolu: "proje-veri/RESTORAN.xlsx",
+      bantKurali: "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
+      listeYolu: "2017/2017-193 UKA AKASYA/2017-193.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+      bantlar: [liste("500-1000", "500–1000 m²", 500, "uka-akasya")],
     },
     questions: [],
   },
@@ -792,6 +822,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("200-400", "200–400 m²", 300, "guneli-pastane")],
+    },
+    questions: [],
+  },
+  {
+    id: "pastane_cafe",
+    name: "Pastane + Cafe",
+    parent: "Pastane & Fırın",
+    desc:
+      "Pastane + cafe · üretim + teşhir + sıcak mutfak · Hacısayid Büyükçekmece (2017-210) · motor: pastane-cafe",
+    pfos: {
+      motorSlug: "pastane-cafe",
+      dukkanSecim: "Pastane + Cafe",
+      m2Min: 300,
+      m2Max: 500,
+      bantKurali: "Tek referans liste (300–500 m²); m² ile adet ölçeklenir",
+      listeYolu: "2017/2017-210 HACISAYİD BÜYÜKÇEKMECE/2017-210-1.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("300-500", "300–500 m² (Hacısayid 2017-210)", 400, "pastane-cafe"),
+      ],
     },
     questions: [],
   },

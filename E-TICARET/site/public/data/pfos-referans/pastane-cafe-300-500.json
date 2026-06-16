@@ -1,0 +1,430 @@
+{
+  "kategoriId": "pastane-cafe",
+  "bantId": "300-500",
+  "label": "Hacısayid Pastane + Cafe 300–500 m²",
+  "referansM2": 400,
+  "kaynakDosya": "2017/2017-210 HACISAYİD BÜYÜKÇEKMECE/2017-210-1.xlsx",
+  "not": "Pastane + cafe · üretim + teşhir + sıcak mutfak · 300–500 m²",
+  "konseptSinif": "pastane-cafe",
+  "yukleme": "2026-06-16T11:02:26.138Z",
+  "kalemSayisi": 52,
+  "toplamAdet": 52,
+  "kalemler": [
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "1",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "2",
+      "ad": "TEK EVYELİ SIYIRMA TEZGAHI",
+      "olcu": "150×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "3",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "4",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "5",
+      "ad": "İSTİF RAFI, DEMONTE",
+      "olcu": "122×46×160",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "6",
+      "ad": "İSTİF RAFI, DEMONTE",
+      "olcu": "92×46×160",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "70×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "8",
+      "ad": "İKİ EVYELİ TEZGAH",
+      "olcu": "120×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "9",
+      "ad": "ATIK ARABASI",
+      "olcu": "40×40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "10",
+      "ad": "DUVAR RAFI",
+      "olcu": "190×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "11",
+      "ad": "TEZGAH TİPİ BUZDOLABI 3 KAPILI",
+      "olcu": "200×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "12",
+      "ad": "DUVAR RAFI",
+      "olcu": "130×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "13",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "135×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "14",
+      "ad": "SERVİS TEZGAHI 3 TARAF KAPALI TABAN VE ARA RAFLI, SERVİS RAFLI",
+      "olcu": "100×60×85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "15",
+      "ad": "SALATA HAZIRLIK BUZDOLABI, YÜKSEK",
+      "olcu": "150×60×85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "16",
+      "ad": "SERVİS TEZGAHI 3 TARAF KAPALI TABAN VE ARA RAFLI, SERVİS RAFLI",
+      "olcu": "100×60×85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "17",
+      "ad": "DUVAR TİP DAVLUMBAZ, FİLTRELİ",
+      "olcu": "120×120×50",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "18",
+      "ad": "KONVEKSİYONLU FIRIN + MAYALANDIRMA",
+      "olcu": "100×100×80",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "19",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "90×82×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "20",
+      "ad": "PİZZA FIRINI 2 KATLI",
+      "olcu": "85×80×785",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "21",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "85×65×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "22",
+      "ad": "TOST MAKİNASI 20 DİLİM",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "23",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "65×65×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "24",
+      "ad": "MAKARNA FRİTÖZÜ",
+      "olcu": "40×60×30",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "25",
+      "ad": "4'LÜ OCAK",
+      "olcu": "80×60×30",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "26",
+      "ad": "SETALTI ÇALIŞMA TEZGAHI SAĞ VE SOL ÇEKMECELİ",
+      "olcu": "130×65×55",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "27",
+      "ad": "PLATE IZGARA, GAZLI",
+      "olcu": "60×60×30",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "28",
+      "ad": "İKİ GÖZLÜ FRİTÖZ",
+      "olcu": "60×60×30",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "29",
+      "ad": "NÖTR ARA TEZGAH SETÜSTÜ",
+      "olcu": "40×60×30",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "30",
+      "ad": "DUVAR TİPİ DAVLUMBAZ FİLTRELİ",
+      "olcu": "420×80×50",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "31",
+      "ad": "DİK TİP DERİNDONDURUCU, TEK KAPILI",
+      "olcu": "70×70×205",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "32",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 2 CAM KAPILI",
+      "olcu": "140×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "33",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "113×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "34",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "165×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "35",
+      "ad": "ÇAY OCAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "36",
+      "ad": "DAVLUMBAZ",
+      "olcu": "100×60×40",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "37",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 TB/s",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "38",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 KG/GÜN",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "39",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "40",
+      "ad": "KATI MEYVE SIKACAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "41",
+      "ad": "BAR BLENDER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "42",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "İ",
+      "bolumAd": "İÇECEK BÖLÜMÜ",
+      "poz": "43",
+      "ad": "TERAZİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SOĞUK DEPO",
+      "poz": "44",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "250×250×240",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "DERİN DONDURUCU DEPO",
+      "poz": "45",
+      "ad": "PANEL TİP DERİN DONDURUCU DEPO",
+      "olcu": "250×250×240",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "46",
+      "ad": "KÖŞE PASTA DOLABI",
+      "olcu": "205/205×75×130",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "47",
+      "ad": "SÜTLÜ TATLI DOLABI",
+      "olcu": "160×75×130",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "48",
+      "ad": "ÇİKOLATA DOLABI",
+      "olcu": "160×75×130",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "49",
+      "ad": "KURU PASTA DOLABI",
+      "olcu": "200×75×130",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "50",
+      "ad": "UNLU MAMÜL DOLABI",
+      "olcu": "300×75×130",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "51",
+      "ad": "ÇİKOLATA DOLABI",
+      "olcu": "250×70×210",
+      "adet": 1
+    },
+    {
+      "bolum": "T",
+      "bolumAd": "TEŞHİR HATTI",
+      "poz": "52",
+      "ad": "NAKLİYE MONTAJ",
+      "olcu": "—",
+      "adet": 1
+    }
+  ]
+}
