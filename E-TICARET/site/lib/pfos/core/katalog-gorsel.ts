@@ -11,6 +11,7 @@ import {
 } from "./katalog-gorsel-url";
 import { isPortashelfSku, PORTASHELF_304_GORSEL_REL } from "./portashelf-fiyat";
 import { equstoPimakGorselRelFromSku } from "./equsto-pimak-gorsel";
+import { equstoFiyatListesiGorselRelFromSku } from "./equsto-fiyat-sku";
 import { isEqustoDavlumbazRow } from "./davlumbaz-marka";
 import { tezgahEvyeGorselRel } from "./tezgah-evye-gorsel";
 
@@ -63,6 +64,13 @@ function localPublicFileExists(rel: string): boolean {
   }
 }
 
+/** PDF öncesi — normalize edilmiş görsel yolunun dosyası var mı */
+export function pfosGorselFileExists(url: string | null | undefined): boolean {
+  const normalized = normalizePfosGorselUrl(url);
+  if (!normalized) return false;
+  return localPublicFileExists(normalized.replace(/^\/data\//, ""));
+}
+
 function firstExistingImageRel(candidates: Array<string | null | undefined>): string | null {
   for (const c of candidates) {
     const rel = String(c ?? "").trim();
@@ -105,6 +113,7 @@ export async function resolveGorselUrlBySku(
   const legacyPimakTezgah = pimakTezgah
     ? pimakTezgah.replace(/^images\/catalog\/pimak\/pimak-/, "images/catalog/equsto/equsto-")
     : null;
+  const equstoFiyat = equstoFiyatListesiGorselRelFromSku(key);
   const ozti = oztiWebImageRelFromSku(key);
   const portashelf = portashelfGorselRelFromSku(key);
   const equstoDir = equstoGorselRelFromSku(key);
@@ -119,6 +128,7 @@ export async function resolveGorselUrlBySku(
 
   const hit = firstExistingImageRel([
     existing,
+    equstoFiyat,
     pimakTezgah,
     legacyPimakTezgah,
     portashelf,

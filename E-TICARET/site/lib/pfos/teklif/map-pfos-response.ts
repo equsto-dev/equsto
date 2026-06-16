@@ -22,6 +22,7 @@ import {
   portashelfGorselRelFromSku,
 } from "../core/katalog-gorsel-url";
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
+import { equstoFiyatListesiGorselRelFromSku } from "../core/equsto-fiyat-sku";
 import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
 import { buzdolabiDisplayIsimFromSablon } from "../referans/buzdolabi-display";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
@@ -32,6 +33,9 @@ import {
 import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { tezgahEvyeGorselRel } from "../core/tezgah-evye-gorsel";
+import { isCalismaTezgahiReferansIsim } from "../core/calisma-tezgah";
+import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
+import { PORTASHELF_304_GORSEL_REL } from "../core/portashelf-fiyat";
 
 function cleanObjectString(s: string | null | undefined): string {
   if (!s) return "";
@@ -89,6 +93,7 @@ export function pfosResponseToTeklifV14(
     const stokNo = u?.sku?.trim() ?? "";
 
     let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
+        equstoFiyatListesiGorselRelFromSku(stokNo) ??
         u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
@@ -117,6 +122,20 @@ export function pfosResponseToTeklifV14(
     const evyeGorsel = tezgahEvyeGorselRel(stokNo, sablonIsim);
     if (evyeGorsel) {
       finalGorsel = evyeGorsel;
+    }
+
+    if (isIstifRafiReferansIsim(sablonIsim)) {
+      finalGorsel = finalGorsel ?? PORTASHELF_304_GORSEL_REL;
+    }
+
+    if (
+      !finalGorsel &&
+      isCalismaTezgahiReferansIsim(sablonIsim, cleanObjectString(k.notlar)) &&
+      u?.olcu
+    ) {
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ??
+        equstoFiyatListesiGorselRelFromSku(stokNo);
     }
 
     const gorselFallback = normalizePfosGorselUrl(finalGorsel);
