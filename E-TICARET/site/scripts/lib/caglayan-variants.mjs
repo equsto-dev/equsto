@@ -447,17 +447,27 @@ export function sortVariantsByOlculer(variants) {
   });
 }
 
+/** Sıfır olan eksenleri atlayarak varyant ölçü etiketi (Proso: yalnız uzunluk). */
+export function formatVariantDimMm(g, d, y) {
+  const G = Number(g) || 0;
+  const D = Number(d) || 0;
+  const H = Number(y) || 0;
+  if (G > 0 && D > 0 && H > 0) return `${G}×${D}×${H} mm`;
+  if (G > 0 && D > 0) return `${G}×${D} mm`;
+  if (G > 0 && H > 0) return `${G}×${H} mm`;
+  if (G > 0) return `${G} mm`;
+  if (D > 0 && H > 0) return `${D}×${H} mm`;
+  if (D > 0) return `${D} mm`;
+  if (H > 0) return `${H} mm`;
+  return "";
+}
+
 export function variantDisplayName(baslik, v, eqNo) {
   const brand = eqBrandName(baslik);
   const eq = eqNo != null ? " " + eqVariantCode(eqNo) : "";
   const kod = v.modelKod ? ` · ${v.modelKod}` : "";
-  const dim =
-    v.derinlik_mm > 0 && v.yukseklik_mm > 0
-      ? `${v.genislik_mm}×${v.derinlik_mm}×${v.yukseklik_mm} mm`
-      : v.derinlik_mm > 0
-        ? `${v.genislik_mm}×${v.derinlik_mm} mm`
-        : `${v.genislik_mm}×${v.yukseklik_mm} mm`;
-  return `${brand}${eq}${kod} — ${dim}`;
+  const dim = formatVariantDimMm(v.genislik_mm, v.derinlik_mm, v.yukseklik_mm);
+  return dim ? `${brand}${eq}${kod} — ${dim}` : `${brand}${eq}${kod}`;
 }
 
 export function variantModelNo(baslik, _v, eqNo) {
