@@ -4,7 +4,8 @@ import GeoLandingRoute from "@/components/vitrin/GeoLandingRoute";
 import { buildGeoMetadata } from "@/lib/geo/metadata";
 import { GEO_TR_SLUGS } from "@/lib/vitrin/geo-routes";
 
-export const dynamicParams = false;
+// Allow unknown slugs to resolve to a clean 404 (notFound) without Next.js logging NoFallbackError.
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return GEO_TR_SLUGS.map((slug) => ({ slug }));
