@@ -1,0 +1,769 @@
+{
+  "kategoriId": "vadiistanbul-lokanta",
+  "bantId": "300-500",
+  "label": "Vadi İstanbul Lokanta 300–500 m²",
+  "referansM2": 400,
+  "kaynakDosya": "2017/2017-204 VADİİSTANBUL/2017-204-4.xlsx",
+  "not": "Türk / lokanta · self servis + a la carte · 300–500 m²",
+  "yukleme": "2026-06-16T10:23:46.656Z",
+  "kalemSayisi": 84,
+  "toplamAdet": 118,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- KURU DEPO",
+      "poz": "A1",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "183×53×160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK ODA",
+      "poz": "C1",
+      "marka": "karyer",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "240×230×240",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK ODA",
+      "poz": "C2",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "91×53×160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK ODA",
+      "poz": "C3",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "122×53×160",
+      "adet": 2
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- DERİN DONDURUCU ODA",
+      "poz": "F1",
+      "marka": "karyer",
+      "ad": "PANEL TİP DERİN DONDURUCU ODA",
+      "olcu": "160×230×240",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- DERİN DONDURUCU ODA",
+      "poz": "F2",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "122×46×160",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "F- DERİN DONDURUCU ODA",
+      "poz": "F3",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "137×53×160",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M1",
+      "marka": "frenox",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70×70×205",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M2",
+      "marka": "frenox",
+      "ad": "MAKE-UP DOLABI, 2 KAPILI",
+      "olcu": "140×70×85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M3",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "190×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M4",
+      "marka": "atalay",
+      "ad": "DÖNER OCAĞI, GAZLI",
+      "olcu": "4 RADYANLI",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M5",
+      "marka": "atalay",
+      "ad": "TOST MAKİNASI",
+      "olcu": "2745",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M6",
+      "marka": "304 K",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "220×100×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M9",
+      "marka": "inoksan",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "40×70×30",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M10",
+      "marka": "inoksan",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80×70×30",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M11",
+      "marka": "inoksan",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., DOLAPLI",
+      "olcu": "80×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M12",
+      "marka": "inoksan",
+      "ad": "PLATE IZGARA, OLUKLU, GAZLI, SETÜSTÜ",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M13",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "140×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M14",
+      "marka": "inoksan",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M16",
+      "marka": "304 K",
+      "ad": "DAVLUMBAZ, ADA TİPİ, FİLTRELİ",
+      "olcu": "350×220×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M17",
+      "marka": "304 K",
+      "ad": "TAVA RAFI, SALAMANDER RAFI DAHİLDİR",
+      "olcu": "220×35×35",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M18",
+      "marka": "imalat",
+      "ad": "TATLI TEŞHİR DOLABI, GRANİT HARİÇ",
+      "olcu": "120×90×90×130",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M19",
+      "marka": "imalat",
+      "ad": "SOĞUK TEŞHİR DOLABI, GRANİT HARİÇ",
+      "olcu": "250×90×90×130",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M20",
+      "marka": "304 K",
+      "ad": "SERVİS TEZGAHI, GRANİT HARİÇ",
+      "olcu": "290×90×90",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M21",
+      "marka": "304 K",
+      "ad": "TABAK TEZGAHI",
+      "olcu": "60×90×90",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M22",
+      "marka": "portashelf",
+      "ad": "TABAK KARTUŞU, ISITMALI",
+      "olcu": "T260L-ESP",
+      "adet": 4
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M23",
+      "marka": "304 K",
+      "ad": "SICAK YEMEK DOLABI, ELK., GRANİT VE KÜVET HARİÇ",
+      "olcu": "90×90×90/130",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M24",
+      "marka": "imalat",
+      "ad": "SICAK YEMEK DOLABI, ELK., GRANİT VE KÜVET HARİÇ",
+      "olcu": "220×90×90/130",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M25",
+      "marka": "304 K",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M26",
+      "marka": "304 K",
+      "ad": "DUVAR RAFI",
+      "olcu": "70×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- AÇIK MUTFAK",
+      "poz": "M27",
+      "marka": "304 K",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N1",
+      "marka": "frenox",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70×70×205",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N2",
+      "marka": "304 K",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N3",
+      "marka": "304 K",
+      "ad": "DUVAR RAFI",
+      "olcu": "120×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N4",
+      "marka": "304 K",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N5",
+      "marka": "304 K",
+      "ad": "ET KÜTÜĞÜ",
+      "olcu": "110×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N6",
+      "marka": "frenox",
+      "ad": "TEZGAH TİPİ BUZDOLBI,3 KAPILI, POLİETİLEN TABLALI",
+      "olcu": "190×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N7",
+      "marka": "304 K",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "190×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N8",
+      "marka": "304 K",
+      "ad": "DUVAR RAFI",
+      "olcu": "190×30×4",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N9",
+      "marka": "304 K",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N10",
+      "marka": "304 K",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "160×70×85",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N11",
+      "marka": "inoksan",
+      "ad": "YEMEK FIRINI, ELK., EKF101",
+      "olcu": "10 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N12",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "90×80×85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N13",
+      "marka": "ersöz",
+      "ad": "YER OCAĞI, ÇİFT YANIŞLI, GAZLI",
+      "olcu": "60×60×50",
+      "adet": 3
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- SICAK MUTFAK",
+      "poz": "N14",
+      "marka": "304 K",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "450×117×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D1",
+      "marka": "304 K",
+      "ad": "BULAŞIK SIYIRMA TEZGAHI",
+      "olcu": "120×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D2",
+      "marka": "304 K",
+      "ad": "BASKET RAFI",
+      "olcu": "120×40×60",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D3",
+      "marka": "304 K",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D4",
+      "marka": "304 K",
+      "ad": "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+      "olcu": "120×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D5",
+      "marka": "cancan",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D6",
+      "marka": "inoksan",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
+      "olcu": "1000 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D7",
+      "marka": "304 K",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "100×97×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D8",
+      "marka": "304 K",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "70×75×85",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D9",
+      "marka": "304 K",
+      "ad": "KAZAN YIKAMA EVYESİ",
+      "olcu": "100×80×57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D10",
+      "marka": "portashelf",
+      "ad": "İSTİF RAFI",
+      "olcu": "137×53×160",
+      "adet": 5
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S1",
+      "marka": "304 K",
+      "ad": "SERVİS TEZGAHI, GRANİT HARİÇ",
+      "olcu": "250/145×70×90",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S2",
+      "marka": "304 K",
+      "ad": "KASA TEZGAHI, GRANİT HARİÇ",
+      "olcu": "250/145×70×90",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S3",
+      "marka": "imalat",
+      "ad": "EKMEK TEŞHİR DOLABI",
+      "olcu": "310×70×130",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S4",
+      "marka": "imalat",
+      "ad": "ÇİKOLATA TEŞHİR DOLABI",
+      "olcu": "120×70×130",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S5",
+      "marka": "304 K",
+      "ad": "SERVİS TEZGAHI, GRANİT HARİÇ",
+      "olcu": "130×70×90",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S6",
+      "marka": "imalat",
+      "ad": "PASTA TEŞHİR DOLABI",
+      "olcu": "230×70×90",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S7",
+      "marka": "304 K",
+      "ad": "SERVİS TEZGAHI, GRANİT HARİÇ",
+      "olcu": "110×70×85",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S8",
+      "marka": "imalat",
+      "ad": "KURABİYE DOLABI",
+      "olcu": "120×70×130",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S9",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "315×80×90",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S10",
+      "marka": "304 K",
+      "ad": "FIRIN TEZGAHI, TEPSİ İSTİFLİ",
+      "olcu": "80×80×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S11",
+      "marka": "unox",
+      "ad": "PASTACILIK FIRINI, ELEKTRİKLİ XFT193",
+      "olcu": "4 ×40×60",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S13",
+      "marka": "bosfor",
+      "ad": "HAMUR YOĞURMA MAKİNASI",
+      "olcu": "35 kg",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S14",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, ARA RAFLI, DOLAPLI",
+      "olcu": "220×80×85",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S- PATISERRIE BÖLÜMÜ",
+      "poz": "S15",
+      "marka": "bora",
+      "ad": "UN ŞEKER ARABASI",
+      "olcu": "40×70×70",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B1",
+      "marka": "304 K",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "150×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B2",
+      "marka": "inoksan",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B3",
+      "marka": "fagor",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "50 kg/g",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B4",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "140×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B5",
+      "marka": "meşale",
+      "ad": "ÇAY OCAĞI",
+      "olcu": "SEMAVER",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B7",
+      "marka": "frenox",
+      "ad": "CAM KAPILI BUZDOLABI, 2 KAPILI",
+      "olcu": "140×60×85",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B8",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "110×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B9",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "100×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B12",
+      "marka": "VBM",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "vbm",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B13",
+      "marka": "caedo",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "caedo",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B14",
+      "marka": "—",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B15",
+      "marka": "frenox",
+      "ad": "CAM KAPILI BUZDOLABI, 3 KAPILI",
+      "olcu": "186×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B16",
+      "marka": "304 K",
+      "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "110×60×85",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "marka": "portashelf",
+      "ad": "YER IZGARASI",
+      "olcu": "30×30×14",
+      "adet": 5
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y3",
+      "marka": "portashelf",
+      "ad": "YER IZGARASI",
+      "olcu": "120×30×14",
+      "adet": 8
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T09:38:43.064Z",
-  "aktifPaketSayisi": 53,
+  "updated_at": "2026-06-16T11:58:56.887Z",
+  "aktifPaketSayisi": 55,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -94,12 +94,14 @@
       "All Sport Cafe",
       "Kahve Durağı — Pastane & Kahvaltı",
       "Kahve & Tatlı",
-      "Coffee Shop"
+      "Coffee Shop",
+      "Coffee Shop + Yemek"
     ],
     "Pastane & Fırın": [
       "Pastane",
       "Güneli Fırın",
-      "Pastane & Yerel"
+      "Pastane & Yerel",
+      "Pastane + Cafe"
     ],
     "Fast Food / QSR": [
       "Türk Mutfağı",
@@ -285,6 +287,11 @@
       "max": 300,
       "slug": "coffee-shop"
     },
+    "Coffee Shop + Yemek": {
+      "min": 250,
+      "max": 350,
+      "slug": "coffee-shop-yemek"
+    },
     "Restoran": {
       "min": 500,
       "max": 1000,
@@ -329,6 +336,11 @@
       "min": 200,
       "max": 400,
       "slug": "guneli-pastane"
+    },
+    "Pastane + Cafe": {
+      "min": 300,
+      "max": 500,
+      "slug": "pastane-cafe"
     },
     "Türk Mutfağı": {
       "min": 100,

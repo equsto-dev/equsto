@@ -73,9 +73,14 @@ export function pickItalyanListe(_m2: number): "100-300" {
   return "100-300";
 }
 
-/** All day dining: 150–300 m² referans JSON (The House); >300 → gömülü THC listeleri */
-export function pickAllDayDiningListe(m2: number): "150-300" | null {
-  return m2 >= 150 && m2 <= 300 ? "150-300" : null;
+/** All day dining: ≤200 → Boyoz; 201–300 → Havelka; 301–400 → THC Mavibahçe; >400 → gömülü THC */
+export function pickAllDayDiningListe(
+  m2: number,
+): "100-200" | "150-300" | "200-400" | null {
+  if (m2 <= 200) return "100-200";
+  if (m2 <= 300) return "150-300";
+  if (m2 <= 400) return "200-400";
+  return null;
 }
 
 /** Pastane: ≤150 m² → 14-PASTANE (100–200); >150 → ekipman_listesi (150–250) */
@@ -250,6 +255,7 @@ export async function loadReferansProfil(
     | "steakhouse"
     | "balikci"
     | "coffee-shop"
+    | "coffee-shop-yemek"
     | "italyan"
     | "birahane"
     | "pastane"
@@ -271,6 +277,7 @@ export async function loadReferansProfil(
     | "casual-cafe"
     | "buyuk-yemekhane"
     | "guneli-pastane"
+    | "pastane-cafe"
     | "boyoz-pastane"
     | "ekmek-kruvasan"
     | "tatil-otel"
@@ -296,6 +303,8 @@ export async function loadReferansProfil(
     listeId ??
     (kategoriId === "coffee-shop"
       ? "ikinciplan"
+      : kategoriId === "coffee-shop-yemek"
+        ? "250-350"
       : kategoriId === "pizzaci"
         ? pickPizzaciListe(m2)
         : kategoriId === "boyoz-pastane"
@@ -329,7 +338,7 @@ export async function loadReferansProfil(
                       : kategoriId === "italyan"
                         ? pickItalyanListe(m2)
                         : kategoriId === "all-day-dining-cafe"
-                          ? pickAllDayDiningListe(m2) ?? "150-300"
+                          ? pickAllDayDiningListe(m2) ?? "200-400"
                           : kategoriId === "restoran"
                             ? "500-1000"
                             : kategoriId === "kokteyl-kahve"
@@ -346,6 +355,8 @@ export async function loadReferansProfil(
                                       ? "2000-3500"
                                       : kategoriId === "guneli-pastane"
                                         ? "200-400"
+                                        : kategoriId === "pastane-cafe"
+                                          ? "300-500"
                                         : kategoriId === "sehir-otel"
                                           ? "500-2000-arnavutkoy"
                                           : kategoriId === "resort-otel"

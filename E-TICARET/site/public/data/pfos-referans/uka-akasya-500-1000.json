@@ -1,0 +1,1174 @@
+{
+  "kategoriId": "uka-akasya",
+  "bantId": "500-1000",
+  "label": "UKA Akasya 500 m²",
+  "referansM2": 500,
+  "kaynakDosya": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
+  "not": "Fine Dining · Dünya Mutfağı · 500 m²",
+  "yukleme": "2026-06-16T10:23:46.653Z",
+  "kalemSayisi": 129,
+  "toplamAdet": 158,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A1",
+      "marka": "—",
+      "ad": "ÇALIŞMA TEZGAHI, KAPAKLI, TABAN RAFLI",
+      "olcu": "70×80×100",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A2",
+      "marka": "—",
+      "ad": "TAVA RAFI",
+      "olcu": "570×40×45",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A3",
+      "marka": "casta",
+      "ad": "WOK/ÇORBA KUZİNESİ, DUVAR TİPİ, 2+2 BRULÖR",
+      "olcu": "200×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A4",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ ARA TEZGH, ÖNÜ KAPALI",
+      "olcu": "40×70×30",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A5",
+      "marka": "zanussi",
+      "ad": "4 AÇIK ATEŞLİ OCAK",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A6",
+      "marka": "frenox",
+      "ad": "SOĞUTMALI ALT DOLAP, 6 ÇEKMECELİ",
+      "olcu": "160×70×60",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A7",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ GAZLI GRILL",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A8",
+      "marka": "zanussi",
+      "ad": "ÖNÜ AÇIK DOLAP",
+      "olcu": "80×55×60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A8.1",
+      "marka": "zanussi",
+      "ad": "ALT DOLAP İÇİN KAPI",
+      "olcu": "40×4×44",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A9",
+      "marka": "zanussi",
+      "ad": "2x12 lt. SETÜSTÜ ELEKTRİKLİ FRİTÖZ",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A10",
+      "marka": "zanussi",
+      "ad": "ELK., SALAMANDER ASANSÖRLÜ",
+      "olcu": "65×45×47",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A10.1",
+      "marka": "bertos",
+      "ad": "SALAMANDER ALT RAFI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A11",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ ARA TEZGAH, ÖNÜ KAPALI",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A12",
+      "marka": "—",
+      "ad": "DUVAR TİPİ DAVLUMBAZ, FİLTRELİ, AYDINLATMALI",
+      "olcu": "860×120×50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A13",
+      "marka": "casta",
+      "ad": "DIM SUM KAPAKLI",
+      "olcu": "80×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A14",
+      "marka": "unox",
+      "ad": "ELK. KOMBİ FIRIN",
+      "olcu": "10 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A14.1",
+      "marka": "—",
+      "ad": "FIRIN İÇİN DOLAPLI STAND",
+      "olcu": "90×85×80",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A14.2",
+      "marka": "—",
+      "ad": "FIRIN İÇİN YAĞ FİLTRESİ",
+      "olcu": "62×49×10",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A15",
+      "marka": "frenox",
+      "ad": "3 KAPILI SOĞUTMALI TEZGAH ÜST TABLASI",
+      "olcu": "172×70×15",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A16",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH İÇİN 3x1/3 ÇEKMECE KİTİ",
+      "olcu": "46×64×60",
+      "adet": 3
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A17",
+      "marka": "frenox",
+      "ad": "D. DON. TEZGAH 3 KAPI, TABLASIZ",
+      "olcu": "172×70×80",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A18",
+      "marka": "—",
+      "ad": "DUVAR DOLABI, CAM KAPAKLI, AYDINLATMALI",
+      "olcu": "195×40×60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A19",
+      "marka": "—",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A20",
+      "marka": "—",
+      "ad": "DOLAPLI ÇALIŞMA TEZGAHI, KAYAR KAPILI",
+      "olcu": "105×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A21",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH, 3 KAPILI",
+      "olcu": "172×70×85",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A21.1",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH İÇİN 3x1/3 ÇEKMECE KİTİ",
+      "olcu": "46×64×60",
+      "adet": 6
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A22",
+      "marka": "hoshizaki",
+      "ad": "SUSHI TEŞHİR DOLABI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A23",
+      "marka": "hoshizaki",
+      "ad": "SUSHI TEŞHİR DOLABI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A24",
+      "marka": "—",
+      "ad": "SICAKLIK DOLABI, 2 KAYAR KAPILI",
+      "olcu": "140×70×90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A25",
+      "marka": "nayati",
+      "ad": "ELK. TEPPANYAKİ IZGARASI",
+      "olcu": "120×77×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A26",
+      "marka": "—",
+      "ad": "EVYE ALT DOLABI",
+      "olcu": "60×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A27",
+      "marka": "—",
+      "ad": "ANKASTRE EVYE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A28",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH 4 KAPILI",
+      "olcu": "220×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A28.1",
+      "marka": "frenox",
+      "ad": "SOĞUK HAVUZLU ÜST TABLA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- ÜST KAT PİŞİRME VE SERVİS",
+      "poz": "A29",
+      "marka": "—",
+      "ad": "MERMER BANKO",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B1",
+      "marka": "—",
+      "ad": "DUVAR RAFI",
+      "olcu": "130×40×3",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B2",
+      "marka": "—",
+      "ad": "BALIK İŞLEME TEZGAH",
+      "olcu": "184×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B3",
+      "marka": "clarco",
+      "ad": "DİRSEK KONTROLLÜ SPREY DUŞ",
+      "olcu": "80×46×140",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B4",
+      "marka": "—",
+      "ad": "1 EVYELİ TEZGAH",
+      "olcu": "70×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B5",
+      "marka": "clarco",
+      "ad": "DİRSEK KONTROLLÜ SPREY DUŞ",
+      "olcu": "60×39×70",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B6",
+      "marka": "—",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI, TEK ÇEKMECELİ",
+      "olcu": "110×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B7",
+      "marka": "—",
+      "ad": "UV STERİL DOLAP, 10 BIÇAKLI",
+      "olcu": "52×14×65",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B8",
+      "marka": "—",
+      "ad": "UYUM TEZGAHI",
+      "olcu": "70×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B9",
+      "marka": "electrolux",
+      "ad": "SEBZE KESME MAKİNASI",
+      "olcu": "25×50×50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B9.2",
+      "marka": "electrolux",
+      "ad": "DİSK SETİ",
+      "olcu": "51×24×26",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B10",
+      "marka": "—",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "98×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B11",
+      "marka": "—",
+      "ad": "DUVAR RAFI",
+      "olcu": "144×40×3",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B12",
+      "marka": "—",
+      "ad": "DUVAR RAFI",
+      "olcu": "180×40×3",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B13",
+      "marka": "—",
+      "ad": "2 EVYELİ TEZGAH, EVYE 50x50 cm.",
+      "olcu": "190×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B14",
+      "marka": "frenox",
+      "ad": "GN BUZDOLABI 304, 1 KAPI",
+      "olcu": "71×94×205",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B15",
+      "marka": "frenox",
+      "ad": "GN D. DONDURUCU, 304, 1 KAPI",
+      "olcu": "71×84×205",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B16",
+      "marka": "—",
+      "ad": "MOBİL ÇALIŞMA TEZGAHI",
+      "olcu": "180×70×90",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B17",
+      "marka": "—",
+      "ad": "2 EVYELİ TEZGAH, EVYE 50x50 cm.",
+      "olcu": "180×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B18",
+      "marka": "—",
+      "ad": "ETEJER ALM. AYAK, 4 P.ETİLEN RAFLI",
+      "olcu": "95×48×170",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B19",
+      "marka": "—",
+      "ad": "BLOK KAPAKLI DERİN DONDURUCU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B20",
+      "marka": "—",
+      "ad": "EL YIKAMA EVYESİ, DİZ KONTROLLÜ",
+      "olcu": "45×45×40",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B21",
+      "marka": "ithal",
+      "ad": "MUTFAK HORTUMU, OTOMATİK SARMALI",
+      "olcu": "47×52×55",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B22",
+      "marka": "—",
+      "ad": "BLOK KAPAKLI -85 DERİN DONDURUCU",
+      "olcu": "170×65×76",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B23",
+      "marka": "dito sama",
+      "ad": "8 lt. MİKSER, ELEKTRONİK, HIZ AYARLI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B24",
+      "marka": "—",
+      "ad": "MERMER ÇALIŞMA TABLASI",
+      "olcu": "172×75×3",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B25",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH, 3 KAPILI, SIRTLI",
+      "olcu": "172×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- ÜST KAT HAZIRLIK MUTFAĞI",
+      "poz": "B26",
+      "marka": "—",
+      "ad": "DUVAR RAFI",
+      "olcu": "172×40×3",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C1",
+      "marka": "—",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI, SERVİS RAFLI",
+      "olcu": "140×70×135",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C2",
+      "marka": "—",
+      "ad": "SICAKLIK DOLABI, 2 KAYAR KAPILI",
+      "olcu": "140×70×90",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C2.1",
+      "marka": "—",
+      "ad": "ISITMALI SERVİS RAFI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C3",
+      "marka": "frenox",
+      "ad": "SALADET, 2 KAPILI",
+      "olcu": "140 CM",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C4",
+      "marka": "—",
+      "ad": "1 EVYELİ TEZGAH, ÇÖP ÇEKMECELİ",
+      "olcu": "90×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C5",
+      "marka": "clarco",
+      "ad": "DİRSEK KONTROLLÜ SPREY DUŞ",
+      "olcu": "60×39×70",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C6",
+      "marka": "—",
+      "ad": "60 L S/S ÇÖP ARABASI, KAPAKLI",
+      "olcu": "45×45×64",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C7",
+      "marka": "frenox",
+      "ad": "SALADET, 3 KAPILI",
+      "olcu": "176×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C8",
+      "marka": "—",
+      "ad": "ÇALIŞMA TEZGAHI, SIRTLI, MERMER TABLALI",
+      "olcu": "265×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C9",
+      "marka": "—",
+      "ad": "DUVAR DOLABI, KAPAKLI",
+      "olcu": "168×40×65",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C10",
+      "marka": "—",
+      "ad": "ERZAK/ TEK KAPAKLI PASLANMAZ",
+      "olcu": "45×60×50",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C11",
+      "marka": "omis",
+      "ad": "SPIRAL HAMUR YOĞURMA MAKİNASI",
+      "olcu": "42×72×67",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C11.1",
+      "marka": "omis",
+      "ad": "SPIRAL HAMUR YOĞURMA MAK. TEKER KİTİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C12",
+      "marka": "—",
+      "ad": "1 EVYELİ TEZGAH, KAPAKLI",
+      "olcu": "70×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C13",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH, TABLASIZ, 3 KAPILI",
+      "olcu": "172×70×80",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C13.1",
+      "marka": "—",
+      "ad": "MERMER TABLA",
+      "olcu": "172×70×3",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C14",
+      "marka": "—",
+      "ad": "EL YIKAMA EVYESİ, PEDALLI, ÇÖP KABİNLİ",
+      "olcu": "45×45×85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C15",
+      "marka": "frenox",
+      "ad": "TEZGAH ALTI DONDURUCU",
+      "olcu": "60×64×82",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C16",
+      "marka": "—",
+      "ad": "ÇALIŞMA TEZGAHI, SIRTLI DOLAPLI, KAPAKLI",
+      "olcu": "140×70×100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C17",
+      "marka": "—",
+      "ad": "DUVAR DOLABI, 2 KAYAR KAPILI",
+      "olcu": "157×40×65",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C18",
+      "marka": "frenox",
+      "ad": "SOĞUK TEZGAH, 4x1/2 ÇEKMECELİ",
+      "olcu": "124×70×95",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C19",
+      "marka": "unox",
+      "ad": "ELK. KOMBİ FIRIN",
+      "olcu": "90×91×105",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C19.1",
+      "marka": "—",
+      "ad": "FIRIN İÇİN YAĞ FİLTRESİ",
+      "olcu": "62×49×100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C19.2",
+      "marka": "—",
+      "ad": "PASTA K. FIRINI, SICAK DOLAP STAND",
+      "olcu": "90×45×80",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C19.3",
+      "marka": "—",
+      "ad": "FIRIN DAVLUMBAZI, FANSIZ",
+      "olcu": "90×122×40",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C20",
+      "marka": "bertos",
+      "ad": "ELK. SALAMANDER, ASANSÖRLÜ",
+      "olcu": "65×45×47",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C21",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ ELEKTRİLİ BAINMARIE",
+      "olcu": "40×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C22",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ ARA TEZGAH, ÖNÜ KAPALI",
+      "olcu": "40×70×30",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C23",
+      "marka": "frenox",
+      "ad": "SOĞUTMALI ALT DOLAP, 4 ÇEKMECELİ",
+      "olcu": "120×70×60",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C24",
+      "marka": "zanussi",
+      "ad": "SETÜSTÜ GAZLI GRILL",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C25",
+      "marka": "zanussi",
+      "ad": "2x12 lt. SETÜSTÜ ELEKTRİKLİ FRİTÖZ",
+      "olcu": "80×70×30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C26",
+      "marka": "zanussi",
+      "ad": "GAZLI MAKARNA PİŞİRİCİ 1x24 LT.",
+      "olcu": "40×70×85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C26.1",
+      "marka": "zanussi",
+      "ad": "MAKARNA PİŞİRİCİ İÇİN SEPET",
+      "olcu": "(105×105 mm)",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C26.2",
+      "marka": "zanussi",
+      "ad": "MAKARNA PİŞİRİCİ İÇİN SEPET İÇİN SUPORT",
+      "olcu": "23×35×3",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C26.3",
+      "marka": "zanussi",
+      "ad": "MAKARNA PİŞİRİCİ İÇİN KAPAK",
+      "olcu": "25×45×5",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C27",
+      "marka": "zanussi",
+      "ad": "4 AÇIK ATEŞLİ GAZLI OCAK",
+      "olcu": "80×70×30",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C28",
+      "marka": "frenox",
+      "ad": "SOĞUTMALI ALT DOLAP, 6 ÇEKMECELİ",
+      "olcu": "160×70×60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C29",
+      "marka": "zanussi",
+      "ad": "ÖNÜ AÇIK ALT DOLAP",
+      "olcu": "40×55×60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C29.1",
+      "marka": "zanussi",
+      "ad": "ALT DOLAP İÇİN KAPI",
+      "olcu": "40×4×44",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- ZEMİN KAT ALACARTE MUTFAK",
+      "poz": "C30",
+      "marka": "—",
+      "ad": "ORTA TİP FİLTRELİ DAVLUMBAZ, TAVA RAFLI, AYDINLATMALI",
+      "olcu": "300×200×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D1",
+      "marka": "—",
+      "ad": "60 lt. S/S ÇOP ARABASI, KAPAKLI",
+      "olcu": "45×45×64",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D2",
+      "marka": "—",
+      "ad": "BULAŞIK KABUL TEZGAH, BASKET STANDLI, ÖN KISIN KAPALI, TEK KATLI",
+      "olcu": "140×80×155",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D3",
+      "marka": "—",
+      "ad": "2 EVYELİ MAK. GİRİŞ TEZGAHI",
+      "olcu": "130×75×90",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D4",
+      "marka": "clarco",
+      "ad": "DİRSEK KONTROLLÜ SPREY DUŞ",
+      "olcu": "80×46×140",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D5",
+      "marka": "elettrobar",
+      "ad": "GİYOTİN BULAŞIK MAKİNASI",
+      "olcu": "75×75×155",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D6",
+      "marka": "—",
+      "ad": "GİYOTİN MAK. GİRİŞ-ÇIKIŞ TEZGAHI",
+      "olcu": "60×60×91",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D7",
+      "marka": "—",
+      "ad": "DUVAR TİPİ DAVLUMBAZ",
+      "olcu": "110×100×50",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- BULAŞIKHANE",
+      "poz": "D8",
+      "marka": "—",
+      "ad": "ETEJER ALM. AYAK, 4 P.ETİLEN RAFLI",
+      "olcu": "258×47×170",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- DEPO",
+      "poz": "E1",
+      "marka": "—",
+      "ad": "BLOK KAPAKLI DEEPFREEZE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- DEPO",
+      "poz": "E2",
+      "marka": "frenox",
+      "ad": "GN BUZDOLABI 304, 1 KAPI",
+      "olcu": "71×84×205",
+      "adet": 4
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E- DEPO",
+      "poz": "E3",
+      "marka": "scotsman",
+      "ad": "BUZ MAKİNASI HAZNELİ, 55 KG",
+      "olcu": "90 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G1",
+      "marka": "—",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G2",
+      "marka": "frenox",
+      "ad": "2 CAM KAPILI BAR BUZDOLABI",
+      "olcu": "92×50×91",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G3",
+      "marka": "—",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "18×31×56",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G4",
+      "marka": "ışıkgaz",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "38×42×56",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G5",
+      "marka": "elettrobar",
+      "ad": "TEZGAH ALTI BULAŞIK MAKİNASI",
+      "olcu": "60×61×82",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G6",
+      "marka": "—",
+      "ad": "EVYE ALT DOLABI, ÇÖP ÇEKMECELİ",
+      "olcu": "60×60×90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G6.1",
+      "marka": "—",
+      "ad": "ÇALIŞMA TEZGAHI, BARDAK BASKET KIZAKLI",
+      "olcu": "60×60×90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G7",
+      "marka": "—",
+      "ad": "ANKASTRE EVYE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G8",
+      "marka": "santos",
+      "ad": "PORTAKAL SIKACAĞI",
+      "olcu": "21×21×28",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G9",
+      "marka": "scotsman",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "33 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G10",
+      "marka": "santos",
+      "ad": "BAR BLENDER, 1,25 lt.",
+      "olcu": "16×20×40",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G11",
+      "marka": "—",
+      "ad": "KOKTEYLE HAZIRLIK İSTASYONU, ANKASTRE",
+      "olcu": "60×60×25",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G12",
+      "marka": "—",
+      "ad": "KOKTEYL ALT TEZGAHI",
+      "olcu": "60×73×90",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- BAR",
+      "poz": "G13",
+      "marka": "—",
+      "ad": "MERMER TEZGAH",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "H- PİZZA PİŞİRME VE SERVİS",
+      "poz": "H1",
+      "marka": "morello forni",
+      "ad": "STANDART PİZZA FIRINI GAZLI",
+      "olcu": "FG110",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "H- PİZZA PİŞİRME VE SERVİS",
+      "poz": "H2",
+      "marka": "frenox",
+      "ad": "PİZZA TEZGAH, GARNİTÜRLÜK, 2 KAPI + 6 ÇEKMECE",
+      "olcu": "178×70×150",
+      "adet": 1
+    }
+  ]
+}
