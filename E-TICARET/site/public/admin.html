@@ -2383,7 +2383,8 @@ const TIP_SOZLUGU=[
   {k:"basket_rafi",a:"Basket rafı",c:"yikama",s:"P2"},
   {k:"yag_tutucu",a:"Yağ tutucu",c:"yikama",s:"P2"},
   /* ── HAZIRLIK ─────────────────────────────────────────────── */
-  {k:"tezgah_rafli_dol",a:"Çalışma tezgahı — taban raflı dolaplı",c:"hazirlik",s:"P1+P2"},
+  {k:"tezgah_rafli_dol",a:"çalışma tezgahı · taban ve ara raflı dolaplı",c:"tezgah_davlumbaz",s:"P1+P2"},
+  {k:"balik_hazirlik_tezgah",a:"balık hazırlık tezgahı",c:"tezgah_davlumbaz",s:"P1+P2"},
   {k:"tezgah_taban_rafli",a:"Çalışma tezgahı, taban raflı",c:"tezgah",s:"motor"},
   {k:"tezgah_rafli",a:"Çalışma tezgahı — taban ve ara raflı",c:"hazirlik",s:"P1+P2"},
   {k:"tezgah_ara_notr_dol",a:"Nötr ara tezgah, dolaplı",c:"hazirlik",s:"P1+P2"},
@@ -2408,7 +2409,7 @@ const TIP_SOZLUGU=[
   {k:"un_seker_arabasi",a:"Un şeker arabası",c:"hazirlik",s:"P2"},
   /* ── DİĞER ────────────────────────────────────────────────── */
   {k:"davlumbaz_duvar",a:"Davlumbaz, duvar tipi",c:"diger",s:"P1+P2"},
-  {k:"davlumbaz_dekoratif",a:"Fırın davlumbazı, dekoratif",c:"diger",s:"P1+P2"},
+  {k:"davlumbaz_dekoratif",a:"davlumbaz · fırın davlumbazı, dekoratif",c:"diger",s:"P1+P2"},
   {k:"pizza_teshir_unitesi",a:"Pizza teşhir ünitesi",c:"diger",s:"P1"},
   {k:"kasa_bankosu",a:"Kasa bankosu",c:"diger",s:"P1+P2"},
   {k:"yer_izgarasi",a:"Yer ızgarası",c:"diger",s:"P1+P2"},
@@ -2509,7 +2510,7 @@ const PFOS_Q_NE_GENEL=['Kahvaltı','Izgara','Kebap','Döner','Pizza','Pide / Lah
 const PFOS_Q_PISIR_HAT=['Izgara / Ocakbaşı','Pizza / Fırın ürünleri','Kızartma','Türk mutfağı (kebap, börek, pide)','Pasta / Tatlı','Soğuk mutfak (salata, meze)','Deniz ürünleri','Kahvaltı / Brunch','Dünya mutfağı','İçecek ağırlıklı','Bilmiyorum'];
 const PFOS_Q_ODA=['25–50 oda','50–100 oda','100–200 oda','200+ oda','Bilmiyorum'];
 const PFOS_Q_MENU=['Oda & Kahvaltı','A la Carte','Açık Büfe','Banket','Lounge Bar','Havuz Bar','Bar','Bilmiyorum'];
-const PFOS_Q_KAP_GUN=['1.000–5.000 kişi/gün','5.000–10.000 kişi/gün','10.000–20.000 kişi/gün','Bilmiyorum'];
+const PFOS_Q_KAP_GUN=['1.000–5.000 kişi/gün','5.000–10.000 kişi/gün','10.000–20.000 kişi/gün','15–30 bin kap.','Bilmiyorum'];
 const PFOS_Q_SERV=['300 kişi','400 kişi','800 kişi','2.000+ kişi','Bilmiyorum'];
 const PFOS_Q_KAP_TEK=[...PFOS_Q_ODA,...PFOS_Q_MENU,...PFOS_Q_KAP_GUN,...PFOS_Q_SERV,'İlgilenmiyorum'];
 const PFOS_Q_ELK=['Doğalgaz bağlantısı mevcut','Elektrik trifaze 380V mevcut','LPG kullanılacak','Hem doğalgaz hem trifaze mevcut','Bilmiyorum'];
