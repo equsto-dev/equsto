@@ -1,12 +1,12 @@
 {
-  "version": "2026-06-16T18-49-11",
-  "rebuiltAt": "2026-06-16T18:49:11.333Z",
-  "ekipmanlar": 9564,
-  "withImage": 9562,
+  "version": "2026-06-16T19-40-04",
+  "rebuiltAt": "2026-06-16T19:40:04.496Z",
+  "ekipmanlar": 9595,
+  "withImage": 9593,
   "brands": 19,
   "deptCounts": {
     "araba": 92,
-    "davlumbaz": 243,
+    "davlumbaz": 274,
     "dolap": 793,
     "hazirlik": 574,
     "icecek": 149,
@@ -25,5 +25,5 @@
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 9339,
-  "productsEnStale": 225
+  "productsEnStale": 256
 }

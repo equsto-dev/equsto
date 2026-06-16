@@ -3,13 +3,13 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "kaynak": "equsto-fiyat-listesi-2026",
-  "imported_at": "2026-06-16T18:49:06.561903+00:00",
+  "imported_at": "2026-06-16T19:40:01.572061+00:00",
   "kur_eur_try": 53.7848,
   "sheet_count": 80,
   "excel_sheet_count": 76,
   "dual_split_count": 4,
   "pfos_count": 1561,
-  "eticaret_count": 201,
+  "eticaret_count": 232,
   "sheets": [
     {
       "kod": "KCT02",
@@ -619,7 +619,7 @@
       "dept": "davlumbaz",
       "category": "davlumbaz-duvar-tipi",
       "pfos_count": 38,
-      "eticaret_count": 5,
+      "eticaret_count": 10,
       "gorsel": "images/catalog/equsto/fiyat-listesi/kdavdt01/urun.png",
       "slug": "kdavdt01"
     },
@@ -631,7 +631,7 @@
       "dept": "davlumbaz",
       "category": "davlumbaz-orta-tip",
       "pfos_count": 38,
-      "eticaret_count": 1,
+      "eticaret_count": 10,
       "gorsel": "images/catalog/equsto/fiyat-listesi/kdavot01/urun.png",
       "slug": "kdavot01"
     },
@@ -643,7 +643,7 @@
       "dept": "davlumbaz",
       "category": "davlumbaz-duvar-tipi",
       "pfos_count": 38,
-      "eticaret_count": 2,
+      "eticaret_count": 10,
       "gorsel": "images/catalog/equsto/fiyat-listesi/kdavdtf02/urun.png",
       "slug": "kdavdtf02"
     },
@@ -655,7 +655,7 @@
       "dept": "davlumbaz",
       "category": "davlumbaz-orta-tip",
       "pfos_count": 38,
-      "eticaret_count": 1,
+      "eticaret_count": 10,
       "gorsel": "images/catalog/equsto/fiyat-listesi/kdavotf02/urun.png",
       "slug": "kdavotf02"
     },
