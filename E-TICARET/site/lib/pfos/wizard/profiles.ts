@@ -217,7 +217,7 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
   restoran: {
     konsept: "restoran",
     konseptUst: "Restoran",
-    dukkan: "Büyük Restoran",
+    dukkan: "Restoran",
     pfosZones: [
       "ana_mutfak",
       "soguk_oda",
@@ -426,10 +426,23 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "bulasikhane",
     ],
   },
+  "sarkuteri-restoran": {
+    konsept: "sarkuteri-restoran",
+    konseptUst: "Restoran",
+    dukkan: "Şarküteri Restoran",
+    pfosZones: [
+      "ana_mutfak",
+      "soguk_oda",
+      "sebze_hazirlik",
+      "kuru_depo",
+      "bar",
+      "bulasikhane",
+    ],
+  },
   "inari-bar-yemek": {
     konsept: "inari-bar-yemek",
     konseptUst: "Restoran",
-    dukkan: "Bar + Yemek (Hafif Asya)",
+    dukkan: "Bar + Yemek",
     pfosZones: ["bar", "ana_mutfak", "bulasikhane", "soguk_oda", "kuru_depo"],
   },
 };

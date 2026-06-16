@@ -36,6 +36,7 @@ import { buildKiremitAkasyaTemplate } from "../../referans/kiremit-akasya";
 import { buildMusSelinozTurkTemplate } from "../../referans/mus-selinoz-turk";
 import { buildKasapTemplate } from "../../referans/kasap";
 import { buildKasapSarkuteriTemplate } from "../../referans/kasap-sarkuteri";
+import { buildSarkuteriRestoranTemplate } from "../../referans/sarkuteri-restoran";
 import { buildInariBarYemekTemplate } from "../../referans/inari-bar-yemek";
 import { buildKahveDuragiTemplate } from "../../referans/kahve-duragi";
 import { buildKahveTatliTemplate } from "../../referans/kahve-tatli";
@@ -70,6 +71,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "mus-selinoz-turk",
   "kasap",
   "kasap-sarkuteri",
+  "sarkuteri-restoran",
   "inari-bar-yemek",
   "kahve-duragi",
   "kahve-tatli",
@@ -143,6 +145,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "mus-selinoz-turk") return buildMusSelinozTurkTemplate(m2);
   if (konsept === "kasap") return buildKasapTemplate(m2);
   if (konsept === "kasap-sarkuteri") return buildKasapSarkuteriTemplate(m2);
+  if (konsept === "sarkuteri-restoran") return buildSarkuteriRestoranTemplate(m2);
   if (konsept === "inari-bar-yemek") return buildInariBarYemekTemplate(m2);
   if (konsept === "kahve-duragi") return buildKahveDuragiTemplate(m2);
   if (konsept === "kahve-tatli") return buildKahveTatliTemplate(m2);

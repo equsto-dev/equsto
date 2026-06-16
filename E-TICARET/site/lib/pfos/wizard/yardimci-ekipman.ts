@@ -24,6 +24,14 @@ const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
     "Benmari (sos)",
     "Et kıyma (ilave)",
   ],
+  "Şarküteri Restoran": [
+    "Soğutmalı teşhir vitrin",
+    "Dilimleme makinası",
+    "Vakum makinası",
+    "Tartı seti",
+    "Benmari (sos)",
+    "Masa servisi ekipmanı",
+  ],
   Şarküteri: [
     "Soğutmalı teşhir vitrin",
     "Dilimleme makinası",

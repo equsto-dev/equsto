@@ -6,7 +6,7 @@ export async function buildRestoranTemplate(m2: number): Promise<ConceptTemplate
   const ref = await loadReferansProfil("restoran", m2);
   return {
     konsept: "restoran",
-    label: "Büyük Restoran",
+    label: "Restoran",
     ornekler: [
       "Büyük yemek rezervasyonları",
       "Düğün & özel organizasyon",

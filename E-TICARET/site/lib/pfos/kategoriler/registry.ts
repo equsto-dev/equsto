@@ -101,8 +101,15 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 200 }],
   },
   {
+    id: "sarkuteri-restoran",
+    label: "Şarküteri Restoran",
+    ustKategori: "Restoran",
+    planNot: "veri/kasap-ortaklar-2016-087.xlsx (Ortaklar Rota — şarküteri restoran)",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 200 }],
+  },
+  {
     id: "inari-bar-yemek",
-    label: "Bar + Yemek (Hafif Asya)",
+    label: "Bar + Yemek",
     ustKategori: "Restoran",
     planNot: "2016-093 INARI RESTAURANT/2016-093-2.xlsx",
     bantlar: [{ id: "100-200", label: "100–200 m²", referansM2: 150 }],
@@ -126,8 +133,7 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ustKategori: "Restaurant",
     planNot: "proje-veri/03-italyan 100-300 m2.xlsx",
     bantlar: [
-      { id: "100-300", label: "100–300 m² (≤150 m²)", referansM2: 200 },
-      { id: "150-300", label: "150–300 m² (>150 m²)", referansM2: 225 },
+      { id: "100-300", label: "100–300 m²", referansM2: 200 },
     ],
   },
   {
@@ -217,7 +223,7 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
   },
   {
     id: "restoran",
-    label: "Büyük Restoran",
+    label: "Restoran",
     ustKategori: "Restoran",
     planNot: "proje-veri/RESTORAN.xlsx · düğün · büyük rezervasyon · eğlence",
     bantlar: [{ id: "500-1000", label: "500–1000 m²", referansM2: 750 }],

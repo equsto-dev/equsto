@@ -129,15 +129,11 @@ async function main() {
     referansM2: REFERANS_M2,
     meta,
   };
-  const existing = idx >= 0 ? kategoriler[idx] : null;
-  const otherBantlar = (existing?.bantlar ?? []).filter((b) => b.id !== BANT_ID);
   const kayit = {
     id: KATEGORI_ID,
     label: "İtalyan Restoran",
     ustKategori: "Restaurant",
-    bantlar: [...otherBantlar, bant].sort((a, b) =>
-      String(a.id).localeCompare(String(b.id)),
-    ),
+    bantlar: [bant],
   };
   if (idx >= 0) kategoriler[idx] = kayit;
   else kategoriler.push(kayit);

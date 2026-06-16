@@ -191,15 +191,12 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       dukkanSecim: "İtalyan Restoran",
       m2Min: 100,
       m2Max: 300,
-      bantKurali: "≤150 m² → 03-italyan (100–300); >150 m² → The House (150–300)",
+      bantKurali: "03-italyan referans listesi (100–300 m²); m² ile adet ölçeklenir",
       planPdf: "proje-veri/03-italyan.pdf",
-      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx",
+      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [
-        liste("100-300", "100–300 m² (≤150 m²)", 200, "italyan"),
-        liste("150-300", "150–300 m² (>150 m²)", 225, "italyan"),
-      ],
+      bantlar: [liste("100-300", "100–300 m²", 200, "italyan")],
     },
     questions: [],
   },
@@ -243,12 +240,12 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
   },
   {
     id: "restaurant_inari_bar_yemek",
-    name: "Bar + Yemek (Hafif Asya)",
+    name: "Bar + Yemek",
     parent: "Restoran",
-    desc: "Bar + yemek · hafif Asya mutfağı · 100–200 m² referans (2016-093 Inari) · motor: inari-bar-yemek",
+    desc: "Bar + yemek · 100–200 m² referans (2016-093 Inari) · motor: inari-bar-yemek",
     pfos: {
       motorSlug: "inari-bar-yemek",
-      dukkanSecim: "Bar + Yemek (Hafif Asya)",
+      dukkanSecim: "Bar + Yemek",
       m2Min: 100,
       m2Max: 200,
       bantKurali: "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
@@ -563,12 +560,12 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
   },
   {
     id: "restaurant_buyuk_restoran",
-    name: "Büyük Restoran",
+    name: "Restoran",
     parent: "Restoran",
     desc: "500–1000 m² · büyük yemek rezervasyonları · düğün & özel organizasyon · eğlence & etkinlik · motor: restoran",
     pfos: {
       motorSlug: "restoran",
-      dukkanSecim: "Büyük Restoran",
+      dukkanSecim: "Restoran",
       m2Min: 500,
       m2Max: 1000,
       bantKurali: "Tek referans liste (500–1000 m²); m² ile adet ölçeklenir",
@@ -576,6 +573,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_sarkuteri_restoran",
+    name: "Şarküteri Restoran",
+    parent: "Restoran",
+    desc: "Şarküteri restoran · teşhir + hazırlık mutfağı · Ortaklar Rota (2016-087) referansı · motor: sarkuteri-restoran",
+    pfos: {
+      motorSlug: "sarkuteri-restoran",
+      dukkanSecim: "Şarküteri Restoran",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Ortaklar Rota kasap+şarküteri referans listesi (100–250 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/kasap-ortaklar-2016-087.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-250", "100–250 m²", 200, "sarkuteri-restoran")],
     },
     questions: [],
   },
@@ -651,14 +666,6 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     },
     questions: [],
   },
-  konseptPlanlanan(
-    "restaurant_sarkuteri",
-    "Gurme Şarküteri",
-    "Restoran",
-    "Gurme Şarküteri",
-    40,
-    200,
-  ),
   konseptPlanlanan("kafeterya", "Kafeterya", "Kafe / Coffee Shop", "Kafeterya", 80, 350),
   {
     id: "pastane",
@@ -1221,6 +1228,18 @@ export const DUKKAN_SECIM_ESLEME: Record<string, string> = Object.fromEntries(
     t.pfos.dukkanSecim,
   ]),
 );
+
+/** Eski sihirbaz kayıtları — dukkanSecim yeniden adlandırmaları */
+export const DUKKAN_SECIM_LEGACY_ALIASES: Record<string, string> = {
+  "Büyük Restoran": "Restoran",
+  "Bar + Yemek (Hafif Asya)": "Bar + Yemek",
+};
+
+export function normalizeDukkanSecim(raw: string): string {
+  const d = raw.trim();
+  if (!d) return d;
+  return DUKKAN_SECIM_LEGACY_ALIASES[d] ?? DUKKAN_SECIM_ESLEME[d] ?? d;
+}
 
 export type ShopType = ShopTypeKayit;
 

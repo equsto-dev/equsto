@@ -354,6 +354,23 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     () => soruCevaplarindanMotorGirdi(answers),
     [answers],
   );
+  const m2ByDukkan = useMemo(() => {
+    const out: Record<string, { min: number; max: number }> = {};
+    for (const t of shopTypes) {
+      const pf = t.pfos;
+      const sel = pf?.dukkanSecim?.trim();
+      if (!sel) continue;
+      const min = Number(pf.m2Min) || 0;
+      const max = Number(pf.m2Max) || 0;
+      if (min > 0 || max > 0) {
+        out[sel] = { min: min || 20, max: max || 10000 };
+      }
+    }
+    if (out.Restoran && !out["Büyük Restoran"]) {
+      out["Büyük Restoran"] = out.Restoran;
+    }
+    return out;
+  }, [shopTypes]);
   const motorSlug = useMemo(
     () => dukkanSecimdenMotorSlug(motorGirdi.dukkanSecim, shopTypes),
     [motorGirdi.dukkanSecim, shopTypes],
@@ -748,7 +765,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     if (q.type === "select" || q.type === "select_conditional") {
       const rawOpts =
         q.type === "select_conditional"
-          ? dukkanSecenekleri(q, answers)
+          ? dukkanSecenekleri(q, answers, m2ByDukkan)
           : ((q.options as string[]) ?? []);
       const opts =
         q.id === "q_ust_segment"

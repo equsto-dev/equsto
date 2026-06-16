@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-31T15:34:37.314Z",
+  "updated_at": "2026-06-16T04:34:18.393Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -109,19 +109,7 @@
             "kalemSayisi": 86,
             "toplamAdet": 104,
             "kaynakDosya": "03-italyan 100-300 m2.xlsx",
-            "yukleme": "2026-05-30T10:21:38.514Z"
-          }
-        },
-        {
-          "id": "150-300",
-          "label": "150–300 m²",
-          "referansM2": 225,
-          "meta": {
-            "listeDosya": "italyan-150-300.json",
-            "kalemSayisi": 89,
-            "toplamAdet": 103,
-            "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
-            "yukleme": "2026-05-30T23:38:31.664Z"
+            "yukleme": "2026-06-16T04:34:18.389Z"
           }
         }
       ]
@@ -577,7 +565,7 @@
     },
     {
       "id": "inari-bar-yemek",
-      "label": "Bar + Yemek (Hafif Asya)",
+      "label": "Bar + Yemek",
       "ustKategori": "Restoran",
       "bantlar": [
         {

@@ -3,7 +3,7 @@
  * Konsept tanımı (shopTypes) Adem tarafında; burada yalnızca soru → alan haritası.
  */
 
-import { DUKKAN_SECIM_ESLEME } from "@/lib/pfos/proje-akis/konsept-tanimlari";
+import { DUKKAN_SECIM_ESLEME, normalizeDukkanSecim } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 
 export { DUKKAN_SECIM_ESLEME };
 
@@ -64,7 +64,11 @@ export function dukkanSecimdenMotorSlug(
 ): string | null {
   const d = dukkanSecim.trim();
   if (!d) return null;
-  const hit = shopTypes.find((s) => s.pfos?.dukkanSecim === d);
+  const norm = normalizeDukkanSecim(d);
+  const hit = shopTypes.find(
+    (s) =>
+      s.pfos?.dukkanSecim === norm || s.pfos?.dukkanSecim === d,
+  );
   const slug = hit?.pfos?.motorSlug?.trim();
   return slug || null;
 }
@@ -87,7 +91,7 @@ export function soruCevaplarindanMotorGirdi(
 
   return {
     ustSegment: String(c.q_ust_segment ?? ""),
-    dukkanSecim: DUKKAN_SECIM_ESLEME[dukkan] ?? dukkan,
+    dukkanSecim: normalizeDukkanSecim(dukkan),
     altTip,
     menuHatlari: menuDizi(c.q_ne_pisireceksin),
     m2: m2Sayi(c.q_m2),

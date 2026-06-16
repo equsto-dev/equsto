@@ -57,9 +57,9 @@ export function pickPizzaciListe(m2: number): "80-200" | "200-500" {
   return m2 <= 200 ? "80-200" : "200-500";
 }
 
-/** İtalyan: ≤150 m² → 03-italyan (100–300); >150 → The House (150–300) */
-export function pickItalyanListe(m2: number): "100-300" | "150-300" {
-  return m2 <= 150 ? "100-300" : "150-300";
+/** İtalyan: 100–300 m² → 03-italyan referans listesi */
+export function pickItalyanListe(_m2: number): "100-300" {
+  return "100-300";
 }
 
 /** All day dining: 150–300 m² referans JSON (The House); >300 → gömülü THC listeleri */
@@ -219,8 +219,10 @@ export async function loadPfosReferansListe(
   kategoriId: string,
   listeId: ReferansListeId,
 ): Promise<PfosReferansListeDosya | null> {
+  const dosyaKategori =
+    kategoriId === "sarkuteri-restoran" ? "kasap-sarkuteri" : kategoriId;
   return readJsonFile<PfosReferansListeDosya>(
-    dataRel(REF_DIR, `${kategoriId}-${listeId}.json`),
+    dataRel(REF_DIR, `${dosyaKategori}-${listeId}.json`),
   );
 }
 
@@ -253,6 +255,7 @@ export async function loadReferansProfil(
     | "mus-selinoz-turk"
     | "kasap"
     | "kasap-sarkuteri"
+    | "sarkuteri-restoran"
     | "inari-bar-yemek"
     | "kahve-duragi"
     | "kahve-tatli"
@@ -312,7 +315,8 @@ export async function loadReferansProfil(
                                             : kategoriId === "mus-selinoz-turk"
                                               ? "100-250"
                                               : kategoriId === "kasap" ||
-                                                kategoriId === "kasap-sarkuteri"
+                                                kategoriId === "kasap-sarkuteri" ||
+                                                kategoriId === "sarkuteri-restoran"
                                               ? "100-250"
                                               : kategoriId === "inari-bar-yemek"
                                                 ? "100-200"
