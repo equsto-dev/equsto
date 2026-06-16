@@ -15,6 +15,7 @@ export type ListeBantId =
   | "100-200"
   | "150-200"
   | "100-250"
+  | "200-350"
   | "200-500"
   | "300-500"
   | "40-100"
@@ -1224,6 +1225,26 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       durum: "aktif",
       bantlar: [
         liste("20-60", "20–60 kişi (Liva 178)", 40, "yerinde-uretim"),
+      ],
+    },
+    questions: [],
+  },
+  {
+    id: "catering_personel_yemekhane",
+    name: "Personel Yemekhanesi",
+    parent: "Catering",
+    desc: "Personel yemekhanesi · ~200 kişi · Laguna Thermal 2017-058 referans · motor: personel-yemekhane",
+    pfos: {
+      motorSlug: "personel-yemekhane",
+      dukkanSecim: "Personel Yemekhanesi",
+      m2Min: 150,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (150–250 kişi); kapasite ile adet ölçeklenir",
+      listeYolu: "veri/personel-yemekhane-laguna-2017-058.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("150-250", "150–250 kişi (Laguna 2017-058)", 200, "personel-yemekhane"),
       ],
     },
     questions: [],
