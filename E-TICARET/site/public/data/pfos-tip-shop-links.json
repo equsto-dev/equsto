@@ -10,6 +10,10 @@
       "marka": "Equsto",
       "name": "DAVLUMBAZ — EQUSTO ölçü/tip eşlemesi"
     },
+    "davlumbaz_dekoratif": {
+      "marka": "Equsto",
+      "name": "FIRIN DAVLUMBAZI DEKORATİF — EQUSTO ölçü eşlemesi"
+    },
     "tezgah_tip_buzdolabi": {
       "marka": "Öztiryakiler",
       "sku": "79E3.27NMV.00",
@@ -36,7 +40,9 @@
     },
     "servis_rafi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "0913.00507.01"
+      "sku": "7897.14030.03",
+      "marka": "Öztiryakiler",
+      "name": "SERVİS RAFI BOMBE CAMLI 140*30 — paslanmaz çelik servis rafı"
     },
     "char_broil": {
       "marka": "Öztiryakiler",
@@ -66,6 +72,18 @@
       "sku": "7856.GN120.08",
       "marka": "Öztiryakiler",
       "name": "FRITOZ GN 1/2 ELEKTRIKLİ 8 LT 3 KW. EF8"
+    },
+    "fritoz_dolapli_elk": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.N1.40908.02",
+      "marka": "Öztiryakiler",
+      "name": "900 SERİ FRİTÖZ DOLAPLI ELEKTRİKLİ 40*90*85"
+    },
+    "fritoz_dolapli_gaz": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.N1.40908.04",
+      "marka": "Öztiryakiler",
+      "name": "900 SERİ FRİTÖZ DOLAPLI GAZLI 40*90*85"
     },
     "fritoz_cift_hazne_elk": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",

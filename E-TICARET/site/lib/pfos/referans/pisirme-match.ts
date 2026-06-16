@@ -83,6 +83,9 @@ export function oztiPisirmeKatalogUyumsuz(
   if (/tost\s*mak/.test(s) && /^78\d{2}\./.test(String(katalogSku ?? ""))) {
     return true;
   }
+  if (/dolap/.test(s) && /fritoz|fritöz/.test(s) && /7856\.(gn|ef)/i.test(String(katalogSku ?? ""))) {
+    return true;
+  }
   if (
     /mikrodalga|microwave|menumaster/i.test(s) &&
     (/kuzine|firinli|brulor|brülör|acik\s*ates|açık\s*ateş|4\s*kare\s*plate/i.test(k) ||
@@ -302,6 +305,10 @@ function scoreOztiPisirmeRow(
   const refN = norm(referansIsim);
   const ad = norm(row.ad);
   const refBlob = norm(`${referansIsim} ${notlar ?? ""}`);
+  if (family === "fritoz" && /dolap/.test(refBlob)) {
+    if (/7856\.n1\.(40908|80908)/i.test(sku)) score += 350;
+    if (/7856\.(gn|ef)/i.test(sku)) score -= 8000;
+  }
   if (family === "fritoz" && /cift|çift|2\s*x|iki\s*sepet|iki\s*hazne/.test(refBlob)) {
     if (/set\s*ustu|setüstü/.test(refBlob)) {
       if (/7856\.n1\.80703\.11/i.test(sku) && /elektrik|elk/.test(refBlob)) score += 300;

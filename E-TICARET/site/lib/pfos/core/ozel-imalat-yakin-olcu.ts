@@ -60,6 +60,61 @@ function pickClosestRow<T extends { sku?: string | null; fiyat_tl?: number }>(
   return best?.row ?? null;
 }
 
+function pickClosestRowByDims<T extends { sku?: string | null }>(
+  rows: T[],
+  target: [number, number],
+): T | null {
+  let best: { row: T; dist: number } | null = null;
+  for (const row of rows) {
+    const dims = parseEqustoSkuDims(row.sku);
+    if (!dims) continue;
+    const dist = olcuManhattanDistance(target, [dims.widthCm, dims.depthCm]);
+    if (
+      !best ||
+      dist < best.dist ||
+      (dist === best.dist &&
+        dims.widthCm >
+          (parseEqustoSkuDims(best.row.sku)?.widthCm ?? 0))
+    ) {
+      best = { row, dist };
+    }
+  }
+  return best?.row ?? null;
+}
+
+/** Tezgah — aynı varyant soneki, görseli olan en yakın genişlik×derinlik */
+export function findClosestEqustoTezgahImageRow(
+  rows: AdminUrunRow[],
+  isim: string,
+  olcu: string,
+  generatedSku?: string | null,
+): AdminUrunRow | null {
+  const target =
+    dimsCmFromOlcu(olcu) ??
+    (() => {
+      const prefix = equstoTezgahSizePrefix(olcu);
+      if (!prefix) return null;
+      return [Number(prefix.slice(0, 3)), Number(prefix.slice(3, 5))] as [
+        number,
+        number,
+      ];
+    })();
+  if (!target) return null;
+
+  const suffix =
+    parseEqustoSkuDims(generatedSku)?.suffix ??
+    inferEqustoTezgahVariantSuffix(isim);
+
+  const pool = rows.filter(
+    (r) =>
+      r.durum === "aktif" &&
+      isEqustoTezgahRow(r.sku, r.ad) &&
+      r.gorsel_url &&
+      parseEqustoSkuDims(r.sku)?.suffix === suffix,
+  );
+  return pickClosestRowByDims(pool, target);
+}
+
 /** Tezgah — aynı varyant soneki, en yakın genişlik×derinlik fiyatı */
 export function findClosestEqustoTezgahPriceRow(
   rows: AdminUrunRow[],

@@ -6,15 +6,15 @@
   "kaynakDosya": "2016-087 KASAP ORTAKLAR ROTA/2016-087.xlsx",
   "not": "Kasap + şarküteri teşhir · hazırlık mutfağı (Ortaklar Rota tam liste)",
   "yukleme": "2026-05-31T02:05:33.087Z",
-  "kalemSayisi": 36,
-  "toplamAdet": 46,
+  "kalemSayisi": 29,
+  "toplamAdet": 41,
   "kalemler": [
     {
       "bolum": "Z",
       "bolumAd": "ZEMİN KAT SATIŞ ALANI",
       "poz": "A1",
-      "ad": "KASA TEZGAHI",
-      "olcu": "60*80*90",
+      "ad": "ÇALIŞMA TEZGAHI, ÇEKMECELİ, DOLAPLI",
+      "olcu": "90*70*85",
       "adet": 1,
       "kategori": "tezgah"
     },
@@ -51,17 +51,8 @@
       "poz": "A5",
       "ad": "ÇALIŞMA TEZGAHI, KAHVE ÇEKMECELİ, BLOK ÇEKMECELİ, DOLAPLI",
       "olcu": "250*60*85",
-      "adet": 1,
+      "adet": 3,
       "kategori": "tezgah"
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
-      "poz": "A6",
-      "ad": "ESPRESSO KAHVE MAKİNASI",
-      "olcu": "-",
-      "adet": 1,
-      "kategori": "kahve"
     },
     {
       "bolum": "Z",
@@ -69,33 +60,6 @@
       "poz": "A6A",
       "ad": "ÇÖP ARABASI",
       "olcu": "40*50",
-      "adet": 1,
-      "kategori": "diger"
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
-      "poz": "A7",
-      "ad": "KAHVE DEĞİRMENİ",
-      "olcu": "-",
-      "adet": 1,
-      "kategori": "kahve"
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
-      "poz": "A8",
-      "ad": "KONVEKSİYONLU FIRIN, ELK.",
-      "olcu": "4 TEPSİLİ",
-      "adet": 1,
-      "kategori": "diger"
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
-      "poz": "A9",
-      "ad": "ÇAY OTOMATI",
-      "olcu": "23 LT.",
       "adet": 1,
       "kategori": "diger"
     },
@@ -186,33 +150,6 @@
       "poz": "M1",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "170*60*85",
-      "adet": 1,
-      "kategori": "tezgah"
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
-      "poz": "M2",
-      "ad": "4 GÖZLÜ OCAK, TABAN RAFLI",
-      "olcu": "100*100*85",
-      "adet": 1,
-      "kategori": "diger"
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
-      "poz": "M3",
-      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
-      "olcu": "140*140*50",
-      "adet": 1,
-      "kategori": "davlumbaz"
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
-      "poz": "M4",
-      "ad": "TEZGAH TİPİ BUZDOLABI, 2 SIRA ÇEKMECELİ",
-      "olcu": "180*70*85",
       "adet": 1,
       "kategori": "tezgah"
     },

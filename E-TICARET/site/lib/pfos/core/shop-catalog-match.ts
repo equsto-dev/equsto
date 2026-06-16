@@ -149,8 +149,12 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     /firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name) ||
     (/konveksiyonlu\s*firin\s*stand|setustu\s*konveksiyonlu\s*firin\s*stand/.test(name) &&
       /tepsi|istif|raf/.test(name)),
+  davlumbaz_dekoratif: (name) =>
+    /firin\s*davlumbaz|fırın\s*davlumbaz/.test(name) ||
+    (name.includes("davlumbaz") && name.includes("dekoratif")),
   davlumbaz_duvar: (name) => {
     if (isUnoxCheftopHoodName(name)) return false;
+    if (/firin\s*davlumbaz|fırın\s*davlumbaz/.test(name)) return false;
     if (name.includes("ultravent") || name.includes("yogusturma")) return false;
     return (
       name.includes("davlumbaz") &&
@@ -162,7 +166,22 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     (name.includes("yer izgar") || name.includes("yer ızgar")) &&
     !name.includes("istif") &&
     !name.includes("davlumbaz"),
-  fritoz_tek: (name) => name.includes("fritoz") || name.includes("fritöz"),
+  servis_rafi: (name) =>
+    (name.includes("servis raf") || name.includes("servis rafı")) &&
+    !name.includes("arab") &&
+    !name.includes("banko") &&
+    !name.includes("unite") &&
+    !name.includes("ünite"),
+  fritoz_dolapli_elk: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) &&
+    name.includes("dolap") &&
+    (name.includes("elektrik") || name.includes("elek")),
+  fritoz_dolapli_gaz: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) &&
+    name.includes("dolap") &&
+    (name.includes("gazli") || name.includes("gazlı") || /\bgaz\b/.test(name)),
+  fritoz_tek: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) && !name.includes("dolap"),
   tost_makinasi: (name) =>
     name.includes("tost") &&
     (name.includes("atm") || name.includes("atalay") || name.includes("tost mak")),
