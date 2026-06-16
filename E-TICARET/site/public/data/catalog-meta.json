@@ -1,12 +1,12 @@
 {
-  "version": "2026-06-16T07-31-39",
-  "rebuiltAt": "2026-06-16T07:31:39.511Z",
-  "ekipmanlar": 9364,
-  "withImage": 9362,
+  "version": "2026-06-16T16-50-57",
+  "rebuiltAt": "2026-06-16T16:50:57.394Z",
+  "ekipmanlar": 9418,
+  "withImage": 9416,
   "brands": 19,
   "deptCounts": {
     "araba": 92,
-    "davlumbaz": 234,
+    "davlumbaz": 243,
     "dolap": 793,
     "hazirlik": 574,
     "icecek": 149,
@@ -18,12 +18,12 @@
     "set-ustu-mutfak": 968,
     "sogutma": 850,
     "tasima": 171,
-    "tezgah": 590,
+    "tezgah": 635,
     "yikama": 333
   },
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 9339,
-  "productsEnStale": 25
+  "productsEnStale": 79
 }

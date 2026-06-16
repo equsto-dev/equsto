@@ -71,10 +71,12 @@ export function pdpSlugAliases(pathSlug: string): string[] {
   if (!base) return [];
   const out = new Set<string>([base]);
   const rules: Array<(s: string) => string> = [
+    (s) => s.replace(/^equsto-/, "pimak-"),
     (s) => s.replace(/^pimak-/, "equsto-"),
     (s) => s.replace(/^equsto-pimak-/, "equsto-"),
     (s) => s.replace(/^equsto__equsto-pimak-/, "equsto-"),
     (s) => s.replace(/^equsto__equsto-/, "equsto-"),
+    (s) => s.replace(/^pimak__pimak-/, "pimak-"),
   ];
   for (const rule of rules) {
     const next = normPathSlug(rule(base));

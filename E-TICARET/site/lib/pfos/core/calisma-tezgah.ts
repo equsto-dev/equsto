@@ -147,7 +147,7 @@ export function generateEqustoTezgahSku(isim: string, olcu: string): string | nu
   const prefix = equstoTezgahSizePrefix(olcu);
   if (!prefix) return null;
   const suffix = inferEqustoTezgahVariantSuffix(isim);
-  return `EQUSTO.${prefix}.${suffix}`;
+  return `PIMAK.${prefix}.${suffix}`;
 }
 
 export function isOztiYerTezgahSku(sku: string | null | undefined): boolean {

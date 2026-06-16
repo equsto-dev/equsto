@@ -105,13 +105,13 @@ if (fs.existsSync(auditPath)) {
 }
 
 const tezgah = JSON.parse(read("public/data/dept/tezgah.json"));
-const eq160 = tezgah.find((r) => r.sku === "EQUSTO.16070.04");
+const eq160 = tezgah.find((r) => r.sku === "PIMAK.16070.04");
 if (!eq160 || Math.abs(Number(eq160.liste_fiyati_eur) - 630) > 0.01) {
-  fail("tezgah.json: EQUSTO.16070.04 liste 630 € değil");
+  fail("tezgah.json: PIMAK.16070.04 liste 630 € değil");
 }
-const eq10070 = tezgah.find((r) => r.sku === "EQUSTO.10070.70");
+const eq10070 = tezgah.find((r) => r.sku === "PIMAK.10070.70");
 if (!eq10070 || Math.abs(Number(eq10070.liste_fiyati_eur) - 470) > 0.01) {
-  fail("tezgah.json: EQUSTO.10070.70 liste 470 € değil");
+  fail("tezgah.json: PIMAK.10070.70 liste 470 € değil");
 }
 
 if (err) {
