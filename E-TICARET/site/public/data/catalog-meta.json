@@ -1,8 +1,8 @@
 {
-  "version": "2026-06-16T16-50-57",
-  "rebuiltAt": "2026-06-16T16:50:57.394Z",
-  "ekipmanlar": 9418,
-  "withImage": 9416,
+  "version": "2026-06-16T17-00-16",
+  "rebuiltAt": "2026-06-16T17:00:16.764Z",
+  "ekipmanlar": 9419,
+  "withImage": 9417,
   "brands": 19,
   "deptCounts": {
     "araba": 92,
@@ -18,12 +18,12 @@
     "set-ustu-mutfak": 968,
     "sogutma": 850,
     "tasima": 171,
-    "tezgah": 635,
+    "tezgah": 636,
     "yikama": 333
   },
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 9339,
-  "productsEnStale": 79
+  "productsEnStale": 80
 }

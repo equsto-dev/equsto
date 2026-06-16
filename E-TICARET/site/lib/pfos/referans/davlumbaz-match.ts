@@ -208,14 +208,14 @@ export async function matchDavlumbazByReferans(
   if (target && isDavlumbazReferans(isim)) {
     const sku =
       generatedSku ??
-      `EQUSTO.${String(target[0]).padStart(3, "0")}${String(snapDavlumbazDepthCm(target[1])).padStart(2, "0")}.${inferEqustoDavlumbazSuffix(isim, tip.form)}`;
+      `PIMAK.${String(target[0]).padStart(3, "0")}${String(snapDavlumbazDepthCm(target[1])).padStart(2, "0")}.${inferEqustoDavlumbazSuffix(isim, tip.form)}`;
     const closestPrice = findClosestEqustoDavlumbazPriceRow(
       rows,
       target,
       (row) => rowMatchesTip(row, tip),
     );
     return {
-      id: `equsto-davlumbaz-${sku.toLowerCase()}`,
+      id: `pimak-davlumbaz-${sku.toLowerCase()}`,
       sku,
       ad: displayIsimFromSablon(isim),
       marka: DAVLUMBAZ_MARKA,
