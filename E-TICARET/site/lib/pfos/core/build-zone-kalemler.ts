@@ -68,6 +68,10 @@ export async function buildZoneCatalogKalemler(opts: {
         p.tip_kodu,
         kat,
         opts.fiyatStratejisi,
+        p.name,
+        p.dimensions
+          ? `ölçü: ${String(p.dimensions).replace(/×/g, "*")}`
+          : null,
       );
       if (!urun && Number(p.unit_price_try) > 0) {
         urun = catalogToEslesmis(p);

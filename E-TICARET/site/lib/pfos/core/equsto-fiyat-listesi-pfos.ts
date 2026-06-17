@@ -1,5 +1,5 @@
 /**
- * PFOS — EQUSTO Fiyat Listesi 2026 tezgah / davlumbaz eşlemesi (EQ.* kodları).
+ * PFOS — EQUSTO Fiyat Listesi 2026 tezgah / davlumbaz / duvar raf eşlemesi (EQ.* kodları).
  */
 import { readJsonFile, dataRel } from "@/lib/legacy-data";
 import { ecomRowToAdminUrun, type AdminUrunRow } from "@/lib/admin-urun";
@@ -102,10 +102,13 @@ export function inferTezgahSeriesKods(isim: string): string[] {
   return ["KCT02", "KCT01", "KCT03", "KCT04", "KCT05"];
 }
 
-function inferDavlumbazSeriesKods(isim: string): string[] {
-  const n = norm(isim);
+function inferDavlumbazSeriesKods(isim: string, urunTipi?: string | null): string[] {
+  const n = norm(`${isim} ${urunTipi ?? ""}`);
   const orta = /orta\s*tip/.test(n);
   const filtrel = /filtresiz/.test(n) ? false : /filtreli|filtrel/.test(n) ? true : null;
+  if (/giyotin|bulasikhane|bym\s*10|1000\s*tb/.test(n) && !orta) {
+    return ["KDAVDT01"];
+  }
   if (orta) {
     if (filtrel === true) return ["KDAVOTF02"];
     if (filtrel === false) return ["KDAVOT01"];
@@ -114,6 +117,54 @@ function inferDavlumbazSeriesKods(isim: string): string[] {
   if (filtrel === true) return ["KDAVDTF02"];
   if (filtrel === false) return ["KDAVDT01"];
   return ["KDAVDT01", "KDAVDTF02", "KDAVOT01", "KDAVOTF02"];
+}
+
+const DUVAR_RAF_SERIES = new Set(["KDUVR01", "KDUVR02", "KSDUVR03", "KBASRAF"]);
+
+function isTezgahPoolKod(kod: string): boolean {
+  if (!kod) return false;
+  if (kod.startsWith("KDAV")) return false;
+  if (DUVAR_RAF_SERIES.has(kod)) return false;
+  return true;
+}
+
+/** Referans adı → EQUSTO duvar / basket raf serisi */
+export function inferDuvarRafSeriesKods(isim: string, urunTipi?: string | null): string[] {
+  const n = norm(`${isim} ${urunTipi ?? ""}`);
+  if (/basket\s*raf|tezgah\s*ust|tezgahust/.test(n)) return ["KBASRAF"];
+  if (/suzmeli|süzmeli|suzme/.test(n)) return ["KSDUVR03"];
+  if (/cift\s*sira|çift\s*sira|iki\s*sira|çift\s*sirali|cift\s*sirali/.test(n)) {
+    return ["KDUVR02", "KDUVR01"];
+  }
+  return ["KDUVR01", "KDUVR02", "KSDUVR03"];
+}
+
+function scoreDuvarRafRow(
+  row: AdminUrunRow,
+  isim: string,
+  target: { en: number; derinlik: number },
+  seriesKods: string[],
+): number {
+  const parsed = parseEqSku(row.sku);
+  if (!parsed || !DUVAR_RAF_SERIES.has(parsed.kod)) return -9999;
+
+  const dist = Math.abs(parsed.en - target.en) + Math.abs(parsed.derinlik - target.derinlik);
+  if (dist > 30) return -9999;
+
+  let score = 500 - dist;
+  const seriesIdx = seriesKods.indexOf(parsed.kod);
+  if (seriesIdx >= 0) score += 400 - seriesIdx * 8;
+  else score -= 120;
+
+  const ad = norm(row.ad);
+  const n = norm(isim);
+  if (/tek\s*sira|tek\s*sirali/.test(n) && /tek\s*sira/.test(ad)) score += 60;
+  if (/cift\s*sira|çift\s*sira/.test(n) && /cift\s*sira|çift\s*sira/.test(ad)) score += 60;
+  if (/suzmeli|süzmeli/.test(n) && /suzmeli|süzmeli/.test(ad)) score += 60;
+  if (/basket/.test(n) && /basket/.test(ad)) score += 80;
+  if (row.fiyat_tl > 0) score += 10;
+  if (row.gorsel_url) score += 5;
+  return score;
 }
 
 function scoreTezgahRow(
@@ -198,7 +249,7 @@ export async function matchEqustoFiyatListesiTezgah(
 
   const pool = (await loadPfosPool()).filter((r) => {
     const k = parseEqSku(r.sku)?.kod ?? "";
-    return k && !k.startsWith("KDAV");
+    return isTezgahPoolKod(k);
   });
   if (!pool.length) return null;
 
@@ -222,7 +273,7 @@ export async function matchEqustoFiyatListesiDavlumbaz(
   urunTipi?: string | null,
 ): Promise<EslesmisUrun | null> {
   const dims = dimsFromOlcuText(olcu);
-  const seriesKods = inferDavlumbazSeriesKods(isim);
+  const seriesKods = inferDavlumbazSeriesKods(isim, urunTipi);
 
   const pool = (await loadPfosPool()).filter((r) => {
     const k = parseEqSku(r.sku)?.kod ?? "";
@@ -234,6 +285,36 @@ export async function matchEqustoFiyatListesiDavlumbaz(
     .map((row) => ({
       row,
       score: scoreDavlumbazRow(row, isim, dims, seriesKods),
+    }))
+    .filter((x) => x.score > 200)
+    .sort((a, b) => b.score - a.score);
+
+  const best = scored[0]?.row;
+  if (!best) return null;
+  return rowToEslesmis(best, isim, urunTipi);
+}
+
+export async function matchEqustoFiyatListesiDuvarRaf(
+  isim: string,
+  olcu: string,
+  urunTipi?: string | null,
+): Promise<EslesmisUrun | null> {
+  const { normalizeDuvarRafDims } = await import("../referans/duvar-raf-heuristics");
+  const dims =
+    normalizeDuvarRafDims(olcu, isim) ?? dimsFromOlcuText(olcu);
+  if (!dims) return null;
+
+  const pool = (await loadPfosPool()).filter((r) => {
+    const k = parseEqSku(r.sku)?.kod ?? "";
+    return DUVAR_RAF_SERIES.has(k);
+  });
+  if (!pool.length) return null;
+
+  const seriesKods = inferDuvarRafSeriesKods(isim, urunTipi);
+  const scored = pool
+    .map((row) => ({
+      row,
+      score: scoreDuvarRafRow(row, isim, dims, seriesKods),
     }))
     .filter((x) => x.score > 200)
     .sort((a, b) => b.score - a.score);

@@ -24,6 +24,8 @@ import { matchCopArabasiByReferans } from "../referans/cop-arabasi-match";
 import { isCalismaTezgahiPfosKalem } from "./calisma-tezgah";
 import { matchCalismaTezgahiByReferans } from "../referans/calisma-tezgah-match";
 import { isDavlumbazReferans, matchDavlumbazByReferans } from "../referans/davlumbaz-match";
+import { isDuvarRafiPfosKalem } from "./duvar-raf-marka";
+import { matchDuvarRafiByReferans } from "../referans/duvar-raf-match";
 import { isBuzdolabiPfosKalem } from "./portabianco-marka";
 import { matchBuzdolapByReferans } from "../referans/buzdolabi-match";
 import { isCaglayanTeshirPfosKalem } from "./caglayan-marka";
@@ -197,6 +199,24 @@ export async function matchCatalogFallback(
     if (tezgah) return tezgah;
   }
 
+  if (
+    isDuvarRafiPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const duvarRaf = await matchDuvarRafiByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      fiyatStratejisi,
+      urunTipi,
+    );
+    if (duvarRaf) return duvarRaf;
+  }
+
   if (isDavlumbazReferans(sablonIsim ?? "") && sablonIsim?.trim()) {
     const olcu =
       notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
@@ -205,6 +225,20 @@ export async function matchCatalogFallback(
     const dav = await matchDavlumbazByReferans(
       sablonIsim,
       olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (dav) return dav;
+  }
+
+  if (
+    /^davlumbaz/.test(String(urunTipi ?? "").replace(/_/g, "-")) &&
+    !sablonIsim?.trim()
+  ) {
+    const dav = await matchDavlumbazByReferans(
+      "Davlumbaz (filtresiz)",
+      "",
       notlar,
       urunTipi,
       fiyatStratejisi,
