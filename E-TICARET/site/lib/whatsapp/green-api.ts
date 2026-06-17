@@ -49,12 +49,25 @@ export async function sendGreenApiText(
   const json = (await r.json().catch(() => ({}))) as {
     idMessage?: string;
     message?: string;
+    invokeStatus?: { status?: string; description?: string };
+    correspondentsStatus?: { description?: string };
   };
 
-  if (!r.ok) {
+  const invokeErr =
+    json.invokeStatus?.description ||
+    (json.invokeStatus?.status &&
+    !/^(success|ok)$/i.test(json.invokeStatus.status)
+      ? json.invokeStatus.status
+      : "") ||
+    json.correspondentsStatus?.description;
+
+  if (!r.ok || invokeErr || !json.idMessage) {
     return {
       ok: false,
-      error: json.message || (await r.text().catch(() => "")).slice(0, 240) || `HTTP ${r.status}`,
+      error:
+        invokeErr ||
+        json.message ||
+        `HTTP ${r.status}`,
       status: r.status,
     };
   }

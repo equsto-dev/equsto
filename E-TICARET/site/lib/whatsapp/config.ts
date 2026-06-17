@@ -63,6 +63,32 @@ export function whatsAppNotifyTo(): string {
   return raw.replace(/\D/g, "");
 }
 
+/** Green API QR ile bağlı WhatsApp hattı (kendine mesaj bildirim vermez). */
+export function greenApiInstancePhone(): string {
+  const raw =
+    env("GREEN_API_INSTANCE_WID") ||
+    env("GREEN_API_INSTANCE_PHONE") ||
+    env("EQUSTO_WHATSAPP_E164");
+  return normalizeWaRecipient(raw);
+}
+
+/**
+ * Sahip bildirimi — Green API instance ile aynı numaraya gitmez (push düşmez).
+ * WHATSAPP_NOTIFY_ALT_TO ile iş/ikinci hattı kullanın.
+ */
+export function ownerWhatsAppNotifyPhone(): string {
+  const notify = normalizeWaRecipient(whatsAppNotifyTo());
+  const instance = greenApiInstancePhone();
+  const alt = normalizeWaRecipient(env("WHATSAPP_NOTIFY_ALT_TO"));
+  if (notify && instance && notify === instance) {
+    if (alt && alt !== instance) return alt;
+    return notify;
+  }
+  if (notify) return notify;
+  if (alt) return alt;
+  return "";
+}
+
 export function vitrinWhatsAppE164(): string {
   const raw = env("EQUSTO_WHATSAPP_E164") || "905326840152";
   return raw.replace(/\D/g, "");
