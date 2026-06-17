@@ -732,6 +732,10 @@
     if (row.images && row.images.length) {
       imgRel = pickPlpHeroImage(row.images);
     }
+    // İnoksan STP180 görseli CDN'de hatalı (ocak resmi). Geçici olarak STP150 ile değiştir.
+    if (row && row.id === 'inoksan__ino-stp180' && imgRel && /ino-stp180\.jpg$/i.test(String(imgRel))) {
+      imgRel = 'images/catalog/inoksan/web/ino-stp150.jpg';
+    }
     var ozSku = String(row.sku || row.urun_kodu || row.model || '');
     if (row.category === 'soguk-odalar' || /7919\.CR/i.test(ozSku)) {
       imgRel = 'images/catalog/soguk-oda/soguk-oda-vitrin.png';
