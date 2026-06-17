@@ -40,6 +40,10 @@ import {
   PIMAK_TEZGAH_MARKA,
 } from "./calisma-tezgah";
 import { isPimakDavlumbazSku } from "./davlumbaz-marka";
+import {
+  DUVAR_RAF_MARKA,
+  isDuvarRafiPfosKalem,
+} from "./duvar-raf-marka";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -275,6 +279,15 @@ export function resolveTeklifMarka(opts: {
       return PIMAK_TEZGAH_MARKA;
     }
     return CALISMA_TEZGAH_MARKA;
+  }
+
+  if (
+    isDuvarRafiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return DUVAR_RAF_MARKA;
   }
 
   if (

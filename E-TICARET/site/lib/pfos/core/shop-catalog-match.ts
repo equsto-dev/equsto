@@ -30,6 +30,12 @@ import {
   isOztiDavlumbazSku,
 } from "./davlumbaz-marka";
 import {
+  isDuvarRafiTipKodu,
+  isEqustoDuvarRafRow,
+  isEqustoDuvarRafSku,
+} from "./duvar-raf-marka";
+import { isEqustoFiyatListesiSku } from "./equsto-fiyat-sku";
+import {
   isBuzdolabiTipKodu,
   isPortabiancoBuzdolabiRow,
 } from "./portabianco-marka";
@@ -53,7 +59,6 @@ import { isSenoxVakumTipKodu } from "./senox-marka";
 import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
-import { isEqustoFiyatListesiSku } from "./equsto-fiyat-sku";
 import {
   normalizeTipKodu,
   resolveTipKodu,
@@ -488,6 +493,15 @@ function scoreCandidate(
     if (isPimakDavlumbazSku(row.sku)) score += 920;
     else if (isEqustoFiyatListesiSku(row.sku)) score += 800;
     else if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
+    else return -9999;
+  }
+
+  if (isDuvarRafiTipKodu(tip)) {
+    const skuN = normName(row.sku ?? "");
+    if (/^7897\./.test(skuN)) return -9999;
+    if (isOztiKatalogMarka(row.marka_ad) && /^7897\./.test(skuN)) return -9999;
+    if (isEqustoDuvarRafSku(row.sku)) score += 800;
+    else if (isEqustoDuvarRafRow(row.sku, row.ad)) score += 350;
     else return -9999;
   }
 
