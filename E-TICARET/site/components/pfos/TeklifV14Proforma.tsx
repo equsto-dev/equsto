@@ -432,15 +432,15 @@ export default function TeklifV14Proforma({
           <colgroup>
             <col style={{ width: "3%" }} />
             <col style={{ width: "4%" }} />
-            <col style={{ width: "9%" }} />
-            <col style={{ width: "34%" }} />
-            <col style={{ width: "10%" }} />
-            <col style={{ width: "9%" }} />
+            <col style={{ width: "8%" }} />
+            <col style={{ width: "28%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "8%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "4%" }} />
-            <col style={{ width: "7%" }} />
-            <col style={{ width: "8%" }} />
+            <col style={{ width: "11%" }} />
+            <col style={{ width: "11%" }} />
           </colgroup>
           <thead>
             <tr>
@@ -448,7 +448,13 @@ export default function TeklifV14Proforma({
                 <th
                   key={h}
                   style={
-                    h === "Marka" || h === "Ölçü" ? thMarkaOlcu : thStyle
+                    h === "Ölçü"
+                      ? thOlcu
+                      : h === "Marka"
+                        ? thMarka
+                        : h === "Satış" || h === "Toplam"
+                          ? thFiyat
+                          : thStyle
                   }
                 >
                   {h}
@@ -486,10 +492,10 @@ export default function TeklifV14Proforma({
                       <td style={tdC}>{formatKwHucre(row.elkKw)}</td>
                       <td style={tdC}>{formatKwHucre(row.gazKw)}</td>
                       <td style={tdC}>{row.adet}</td>
-                      <td style={tdC}>
+                      <td style={tdFiyat}>
                         {formatEurHucre(row.birimSatis)}
                       </td>
-                      <td style={tdC}>
+                      <td style={tdFiyat}>
                         {formatEurHucre(row.toplamSatis)}
                       </td>
                     </tr>
@@ -536,7 +542,7 @@ export default function TeklifV14Proforma({
               <td style={{ ...td, fontWeight: 700, textAlign: "center" }}>
                 GENEL TOPLAM
               </td>
-              <td style={{ ...tdC, fontWeight: 700 }}>
+              <td style={{ ...tdFiyat, fontWeight: 700 }}>
                 {formatTeklifDovizHucre(ozet.genelToplam, ozet.doviz)}
               </td>
             </tr>
@@ -742,6 +748,7 @@ export default function TeklifV14Proforma({
 
 const table: CSSProperties = {
   width: "100%",
+  minWidth: 980,
   borderCollapse: "collapse",
   fontSize: 11,
   tableLayout: "fixed",
@@ -749,21 +756,30 @@ const table: CSSProperties = {
 
 const thStyle: CSSProperties = {
   textAlign: "center",
-  padding: "6px 4px",
+  padding: "6px 6px",
   borderBottom: "1px solid #ccc",
   fontWeight: 700,
   fontSize: 10,
   whiteSpace: "nowrap",
 };
 
-const thMarkaOlcu: CSSProperties = {
+const thOlcu: CSSProperties = {
   ...thStyle,
-  width: 72,
-  padding: "6px 2px",
+  padding: "6px 10px",
+};
+
+const thMarka: CSSProperties = {
+  ...thStyle,
+  padding: "6px 6px",
+};
+
+const thFiyat: CSSProperties = {
+  ...thStyle,
+  padding: "6px 10px",
 };
 
 const td: CSSProperties = {
-  padding: "5px 4px",
+  padding: "5px 6px",
   borderBottom: "1px solid #eee",
   verticalAlign: "top",
 };
@@ -797,12 +813,18 @@ const tdOlcu: CSSProperties = {
   textAlign: "center",
   fontSize: 10,
   whiteSpace: "nowrap",
-  padding: "5px 2px",
+  padding: "5px 10px",
 };
 
 const tdBolPoz: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 
 const tdC: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
+
+const tdFiyat: CSSProperties = {
+  ...tdC,
+  padding: "5px 12px",
+  letterSpacing: "0.02em",
+};
 
 const sectionTd: CSSProperties = {
   padding: "8px 4px",
