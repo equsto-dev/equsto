@@ -116,6 +116,43 @@ export function formatKwHucre(kw: number | null | undefined): string {
   return `${String(kw)} kW`;
 }
 
+/** Döviz kodu → sembol (proforma dip toplam / Excel) */
+export function dovizSembol(doviz?: string | null): string {
+  const d = String(doviz ?? "EUR")
+    .trim()
+    .toUpperCase();
+  if (d === "USD") return "$";
+  if (d === "TRY" || d === "TL") return "₺";
+  return "€";
+}
+
+/** Proforma EUR fiyat hücresi — örn. 1.140 € */
+export function formatEurHucre(
+  amount: number | null | undefined,
+  fractionDigits = 0,
+): string {
+  if (amount == null || !Number.isFinite(amount)) return "—";
+  const n = fractionDigits === 0 ? Math.round(amount) : amount;
+  return `${n.toLocaleString("tr-TR", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  })} €`;
+}
+
+/** Proforma fiyat + döviz sembolü */
+export function formatTeklifDovizHucre(
+  amount: number | null | undefined,
+  doviz?: string | null,
+  fractionDigits = 0,
+): string {
+  if (amount == null || !Number.isFinite(amount)) return "—";
+  const n = fractionDigits === 0 ? Math.round(amount) : amount;
+  return `${n.toLocaleString("tr-TR", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  })} ${dovizSembol(doviz)}`;
+}
+
 /** Excel kW sütunu — sayısal değer + görünüm birimi */
 export const KW_HUCRE_EXCEL_NUMFMT = '0.0" kW"';
 

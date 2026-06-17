@@ -1,4 +1,5 @@
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
+import { formatTeklifDovizHucre } from "@/lib/pfos/teklif/format-v14";
 import { sanitizeTeklifV14ModelForExport } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
 
 export function parseTeklifV14(body: Record<string, unknown>): TeklifModelV14 | null {
@@ -15,9 +16,5 @@ export function teklifPdfFilename(model: TeklifModelV14, refNo: string): string 
 }
 
 export function teklifGenelToplamLabel(model: TeklifModelV14): string {
-  return model.ozet.genelToplam != null
-    ? `${model.ozet.genelToplam.toLocaleString("tr-TR", {
-        minimumFractionDigits: 2,
-      })} ${model.ozet.doviz}`
-    : "—";
+  return formatTeklifDovizHucre(model.ozet.genelToplam, model.ozet.doviz, 2);
 }

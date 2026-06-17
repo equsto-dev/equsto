@@ -8,7 +8,7 @@ import {
   TEKLIF_BOLUM_ROW_FILL_ARGB,
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT } from "./format-v14";
+import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT, dovizSembol } from "./format-v14";
 import { fetchTcmbKurForTeklif } from "./fetch-kur.client";
 import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
@@ -262,7 +262,7 @@ async function buildProductBlock(
   ws.getCell(rowNum, 8).font = { bold: true };
   ws.getCell(rowNum, 9).value = { formula: sumFormula };
   ws.getCell(rowNum, 9).numFmt = "#,##0";
-  ws.getCell(rowNum, 12).value = model.ozet.doviz;
+  ws.getCell(rowNum, 12).value = dovizSembol(model.ozet.doviz);
 }
 
 async function fetchEurTry(): Promise<number | null> {
