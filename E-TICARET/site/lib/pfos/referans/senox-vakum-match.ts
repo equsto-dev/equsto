@@ -116,9 +116,9 @@ function olcuFromSenox(p: SenoxCatalogProduct): string | null {
   const s = p.specs;
   if (s?.genislik_mm && s?.derinlik_mm) {
     const y = s.yukseklik_mm ? `×${s.yukseklik_mm}` : "";
-    return `${s.genislik_mm}×${s.derinlik_mm}${y} mm`;
+    return `${s.genislik_mm}×${s.derinlik_mm}${y}`;
   }
-  if (s?.ebat_mm) return `${s.ebat_mm} mm`;
+  if (s?.ebat_mm) return `${s.ebat_mm}`;
   return null;
 }
 

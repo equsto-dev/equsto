@@ -172,17 +172,20 @@
   }
 
   function dimLabelFromMm(g, d, y) {
+    if (typeof window.eqDimLabelFromMm === 'function') return window.eqDimLabelFromMm(g, d, y);
     if (!g || !d || !y) return '';
-    if (g >= 1000 && d >= 1000) {
-      return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
-    }
-    return g + '×' + d + '×' + y + ' mm';
+    return g + '×' + d + '×' + y;
   }
 
-  /** Tezgah PLP — genişlik cm cinsinden okunur (140×60×85 cm). */
+  /** Tezgah PLP — mm cinsinden, birim ibaresi yok */
   function dimLabelTezgahFromMm(g, d, y) {
-    if (!g || !d || !y) return '';
-    return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
+    if (typeof window.eqDimTezgahLabelFromMm === 'function') return window.eqDimTezgahLabelFromMm(g, d, y);
+    return dimLabelFromMm(g, d, y);
+  }
+
+  function stripDimUnitSuffix(s) {
+    if (typeof window.eqStripDimUnitSuffix === 'function') return window.eqStripDimUnitSuffix(s);
+    return String(s || '').replace(/[x*]/gi, '×').replace(/\s*(?:mm|cm)\b\.?/gi, '').trim();
   }
 
   function parseLenToMm(raw) {
@@ -422,8 +425,8 @@
       if (my) y = parseLenToMm(my[1]) || y;
     }
     if (g && d && y) return dimLabelFromMm(g, d, y);
-    if (g && d) return g + '×' + d + ' mm';
-    if (g) return g + ' mm';
+    if (g && d) return g + '×' + d;
+    if (g) return String(g);
 
     var name = String((raw && raw.name) || '');
     var mW = name.match(/-\s*(\d{3,4})\s*mm\b/i) || name.match(/(\d{3,4})\s*mm\b/i);
@@ -432,8 +435,8 @@
       var specText = String((raw && raw.specs) || '');
       var mD = specText.match(/(\d+)\s*mm\s*derinlik/i);
       var depth = mD ? Number(mD[1]) : 0;
-      if (g && depth) return g + '×' + depth + ' mm';
-      if (g) return g + ' mm';
+      if (g && depth) return g + '×' + depth;
+      if (g) return String(g);
     }
     return '';
   }
@@ -460,7 +463,7 @@
   /** PLP kart alt satırı — olculer, ürün adı veya Öztiryakiler oda kodu. */
   function formatOlculerLine(raw) {
     if (!raw) return '';
-    if (raw.olcu_etiket) return String(raw.olcu_etiket);
+    if (raw.olcu_etiket) return stripDimUnitSuffix(raw.olcu_etiket);
 
     if (isInoksanCatalogRow(raw)) {
       var inoDim = formatInoksanOlculer(raw);
@@ -495,7 +498,7 @@
           return DEPT === 'tezgah' ? dimLabelTezgahFromMm(g, d, y) : dimLabelFromMm(g, d, y);
         }
       } else if (DEPT === 'market-reyon' && g > 0 && !d && !y) {
-        return g + ' mm';
+        return String(g);
       }
     }
 

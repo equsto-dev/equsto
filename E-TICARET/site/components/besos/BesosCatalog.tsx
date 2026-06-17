@@ -76,7 +76,7 @@ function TapTile({ product, locale }: { product: BesosProduct; locale: BesosLoca
   const price = besosPriceLabel(product, locale);
   const desc = product.description ? truncate(product.description, 140) : "";
   const dim = product.totalDimensionsMm
-    ? `${besosUi("totalDimensions", locale)} ${product.totalDimensionsMm} mm`
+    ? `${besosUi("totalDimensions", locale)} ${product.totalDimensionsMm}`
     : "";
   const href = besosModuleHrefFromProduct(product, locale);
 

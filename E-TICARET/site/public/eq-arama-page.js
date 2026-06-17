@@ -79,11 +79,9 @@
   }
 
   function dimLabelFromMm(g, d, y) {
+    if (typeof window.eqDimLabelFromMm === "function") return window.eqDimLabelFromMm(g, d, y);
     if (!g || !d || !y) return "";
-    if (g >= 1000 && d >= 1000) {
-      return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
-    }
-    return g + "×" + d + "×" + y + " mm";
+    return g + "×" + d + "×" + y;
   }
 
   function isInoksanCatalogRow(raw) {
@@ -197,7 +195,11 @@
 
   function formatOlculerLine(raw) {
     if (!raw) return "";
-    if (raw.olcu_etiket) return String(raw.olcu_etiket);
+    if (raw.olcu_etiket) {
+      return typeof window.eqStripDimUnitSuffix === "function"
+        ? window.eqStripDimUnitSuffix(raw.olcu_etiket)
+        : String(raw.olcu_etiket).replace(/\s*(?:mm|cm)\b\.?/gi, "").trim();
+    }
     if (isInoksanCatalogRow(raw)) {
       var o = raw.olculer;
       if (o) {

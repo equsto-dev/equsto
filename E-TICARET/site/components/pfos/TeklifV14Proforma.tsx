@@ -5,7 +5,7 @@ import { Button, Collapse, Form, Modal, Typography } from "antd";
 import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
-import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } from "@/lib/pfos/teklif/format-v14";
+import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre, displayOlcuMm } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
@@ -481,7 +481,7 @@ export default function TeklifV14Proforma({
                       <td style={tdTanim}>
                         {sanitizeTeklifV14SatirTanim(row.tanim)}
                       </td>
-                      <td style={tdOlcu}>{row.olcu || "—"}</td>
+                      <td style={tdOlcu}>{displayOlcuMm(row.olcu)}</td>
                       <td style={tdMarka}>{row.marka}</td>
                       <td style={tdC}>{formatKwHucre(row.elkKw)}</td>
                       <td style={tdC}>{formatKwHucre(row.gazKw)}</td>

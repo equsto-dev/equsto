@@ -524,7 +524,7 @@
     var boy = r.boyMm != null ? r.boyMm : r.boy;
     var yuk = r.yukMm != null ? r.yukMm : r.yukseklikMm != null ? r.yukseklikMm : r.yuk;
     if (en != null && boy != null && yuk != null) {
-      return String(en) + '\u00d7' + String(boy) + '\u00d7' + String(yuk) + ' mm';
+      return String(en) + '\u00d7' + String(boy) + '\u00d7' + String(yuk);
     }
     var raw = repairPfosText(r.olcu || r.olcuText || r.dimensions || '');
     if (!raw) return '\u2014';
@@ -549,7 +549,7 @@
       b *= 10;
       c *= 10;
     }
-    return a + '\u00d7' + b + '\u00d7' + c + ' mm';
+    return a + '\u00d7' + b + '\u00d7' + c;
   }
 
   function tanimBaslikPlain(r) {

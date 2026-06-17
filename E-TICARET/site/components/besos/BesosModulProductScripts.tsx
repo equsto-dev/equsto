@@ -37,6 +37,7 @@ export default function BesosModulProductScripts() {
       />
       <Script src={`/eq-besos-actions.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-besos-pdp-boot.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-page-inline.js?v=${v}`} strategy="afterInteractive" />
     </>
   );

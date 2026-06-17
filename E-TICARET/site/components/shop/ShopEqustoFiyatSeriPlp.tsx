@@ -1,4 +1,5 @@
 import type { EqustoFiyatSeriProduct } from "@/lib/shop/equsto-fiyat-seri";
+import { stripOlcuUnitSuffix } from "@/lib/pfos/teklif/olcu-mm";
 
 function fmtPrice(p: EqustoFiyatSeriProduct): string {
   if (p.fiyat_tl && p.fiyat_tl > 0) {
@@ -95,7 +96,9 @@ export default function ShopEqustoFiyatSeriPlp({
                 </CardLink>
                 <div className="eq-dept-plp-card__brand">{p.brand}</div>
                 <div className="eq-dept-plp-card__code">{p.sku}</div>
-                {p.olcu_etiket ? <div className="eq-dept-plp-card__dims">{p.olcu_etiket}</div> : null}
+                {p.olcu_etiket ? (
+                  <div className="eq-dept-plp-card__dims">{stripOlcuUnitSuffix(p.olcu_etiket)}</div>
+                ) : null}
                 <div className="eq-dept-plp-card__price">{fmtPrice(p)}</div>
                 <div className="eq-dept-plp-card__price-note">
                   {p.vitrin ? "KDV dahil · vitrin" : "PFOS liste fiyatı"}

@@ -79,12 +79,12 @@
       p.dimensionsMm.forEach(function (d) {
         if (!d || !nz(d.value)) return;
         var lbl = isEn() && d.labelEn ? d.labelEn : d.label || d.labelEn || "";
-        teknik.push((lbl ? lbl + ": " : "") + d.value + " mm");
+        teknik.push((lbl ? lbl + ": " : "") + d.value);
       });
     }
     if (nz(p.totalDimensionsMm)) {
       var totalLbl = isEn() ? "Total dimensions:" : "Toplam ölçü:";
-      teknik.push(totalLbl + " " + p.totalDimensionsMm + " mm");
+      teknik.push(totalLbl + " " + p.totalDimensionsMm);
     }
 
     var descTr = nz(p.description);

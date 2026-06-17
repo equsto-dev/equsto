@@ -38,11 +38,9 @@
   }
 
   function dimLabelFromMm(g, d, y) {
+    if (typeof window.eqDimLabelFromMm === "function") return window.eqDimLabelFromMm(g, d, y);
     if (!g || !d || !y) return "";
-    if (g >= 1000 && d >= 1000) {
-      return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
-    }
-    return g + "×" + d + "×" + y + " mm";
+    return g + "×" + d + "×" + y;
   }
 
   function dimLabelTezgahFromMm(g, d, y) {

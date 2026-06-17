@@ -41,6 +41,7 @@ export default function ShopProductScripts() {
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-filter-column.js" strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-dim-mm.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-product-page-inline.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
     </>
