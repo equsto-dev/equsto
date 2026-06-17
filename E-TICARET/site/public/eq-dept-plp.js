@@ -1411,6 +1411,14 @@
           var end = Math.min(i + CHUNK, arr.length);
           for (; i < end; i++) {
             var u = normalizeRow(arr[i]);
+            // Soğutma PLP: Blender / mikser ürünleri yanlışlıkla düşerse hariç tut.
+            if (
+              DEPT === 'sogutma' &&
+              u &&
+              (/\bblender\b/i.test(String(u.n || '')) || /\bmikser\b/i.test(String(u.n || '')))
+            ) {
+              continue;
+            }
             if (!skipItem(u)) out.push(u);
           }
           if (grid && i < arr.length) {
