@@ -1,14 +1,15 @@
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import {
   DAVLUMBAZ_MARKA,
-  isPimakDavlumbazSku,
-  PIMAK_DAVLUMBAZ_MARKA,
 } from "../core/davlumbaz-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { matchEqustoFiyatListesiDavlumbaz } from "../core/equsto-fiyat-listesi-pfos";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
+
+/** Giyotin BYM üstü — standart duvar tip filtresiz davlumbaz (Equsto KDAVDT01) */
+export const GIYOTIN_BM_DAVLUMBAZ_OLCU = "100*100*50";
 
 export function isDavlumbazReferans(isim: string): boolean {
   return /davlumbaz/i.test(String(isim ?? ""));
@@ -29,7 +30,8 @@ export async function matchDavlumbazByReferans(
     extractOlcuFromNotlar(notlar) ||
     String(notlar ?? "")
       .replace(/^ölçü:\s*/i, "")
-      .trim();
+      .trim() ||
+    defaultGiyotinDavlumbazOlcu(isim, notlar, urunTipi);
   const olcuDisplay =
     toOlcuMmDisplay(
       sanitizeDavlumbazOlcu(isim, olcuRaw, urunTipi) ?? olcuRaw,
@@ -41,21 +43,20 @@ export async function matchDavlumbazByReferans(
     urunTipi ?? undefined,
   );
   if (matched) {
-    const marka = isPimakDavlumbazSku(matched.sku) ? PIMAK_DAVLUMBAZ_MARKA : DAVLUMBAZ_MARKA;
     return {
       ...matched,
       ad: displayIsimFromSablon(isim),
-      marka,
+      marka: DAVLUMBAZ_MARKA,
       olcu: olcuDisplay,
     };
   }
 
   if (isDavlumbazReferans(isim)) {
     return {
-      id: `pimak-davlumbaz-ozel`,
+      id: `equsto-davlumbaz-ozel`,
       sku: "",
       ad: displayIsimFromSablon(isim),
-      marka: PIMAK_DAVLUMBAZ_MARKA,
+      marka: DAVLUMBAZ_MARKA,
       model: null,
       olcu: olcuDisplay,
       elektrikGucuKw: null,
@@ -68,4 +69,33 @@ export async function matchDavlumbazByReferans(
   }
 
   return null;
+}
+
+function normBlob(...parts: Array<string | null | undefined>): string {
+  return parts
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+}
+
+/** Bulaşıkhane giyotin hattı — ölçü yoksa 100×100 cm duvar tip filtresiz */
+function defaultGiyotinDavlumbazOlcu(
+  isim: string,
+  notlar?: string | null,
+  urunTipi?: string | null,
+): string {
+  const blob = normBlob(isim, notlar, urunTipi);
+  if (!/davlumbaz/.test(blob)) return "";
+  if (
+    /giyotin|bulasikhane|bulaşıkhane|bym\s*10|1000\s*tb|makine\s*giris|makine\s*giriş/.test(
+      blob,
+    ) ||
+    /filtresiz/.test(blob)
+  ) {
+    return GIYOTIN_BM_DAVLUMBAZ_OLCU;
+  }
+  return "";
 }

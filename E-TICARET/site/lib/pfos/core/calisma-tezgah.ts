@@ -1,7 +1,8 @@
 import { resolveTipKodu } from "./tip-kodu";
-import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-sku";
+import { isEqustoFiyatListesiSku } from "./equsto-fiyat-sku";
+import { isEqustoDuvarRafSku } from "./duvar-raf-marka";
 
-/** Yer tezgahları — Pimak katalog (PIMAK.*) + Equsto fiyat listesi (EQ.*) */
+/** Yer tezgahları — PFOS önerisi: yalnızca Equsto (EQ.* / EQUSTO.*). */
 export const CALISMA_TEZGAH_MARKA = "Equsto";
 export const PIMAK_TEZGAH_MARKA = "Pimak";
 
@@ -108,10 +109,11 @@ export function isPimakTezgahSku(sku: string | null | undefined): boolean {
 
 export function isEqustoTezgahRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
-  if (isPimakTezgahSku(s)) return true;
+  if (isPimakTezgahSku(s)) return false;
   if (isEqustoFiyatListesiSku(s)) {
     const kod = s.match(/^EQ\.([A-Z0-9]+)\./i)?.[1] ?? "";
     if (kod.startsWith("KDAV")) return false;
+    if (isEqustoDuvarRafSku(s)) return false;
     if (ad && /davlumbaz/i.test(ad)) return false;
     return true;
   }
