@@ -427,7 +427,9 @@ export default function TeklifV14Proforma({
         </div>
       </div>
 
-      <div style={{ overflowX: "auto" }}>
+      <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        {/* PDF ile aynı: A4 yatay (~1060px) — dar ekranda yatay kaydırma */}
+        <div style={proformaLandscape}>
         <table style={table}>
           <colgroup>
             <col style={{ width: "3%" }} />
@@ -505,14 +507,14 @@ export default function TeklifV14Proforma({
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={2} style={specTdFoto}>
+                        <td colSpan={3} style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={row.fotoUrl}
                               alt=""
                               style={{
-                                maxWidth: 150,
+                                maxWidth: "100%",
                                 maxHeight: 125,
                                 objectFit: "contain",
                                 display: "block",
@@ -523,8 +525,8 @@ export default function TeklifV14Proforma({
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td style={specTdGap} />
-                        <td colSpan={8} style={specTdAcik}>
+                        <td style={specTdSpacer} aria-hidden="true" />
+                        <td colSpan={7} style={specTdAcik}>
                           <pre style={specPre}>{aciklamaMetni}</pre>
                         </td>
                       </tr>
@@ -559,6 +561,7 @@ export default function TeklifV14Proforma({
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
 
       {deliveryOnly ? (
@@ -757,6 +760,13 @@ export default function TeklifV14Proforma({
   );
 }
 
+/** A4 yatay içerik genişliği (print HTML ile hizalı) */
+const proformaLandscape: CSSProperties = {
+  minWidth: 1060,
+  width: "100%",
+  maxWidth: 1123,
+};
+
 const table: CSSProperties = {
   width: "100%",
   borderCollapse: "collapse",
@@ -842,21 +852,28 @@ const specTdFoto: CSSProperties = {
   textAlign: "left",
   verticalAlign: "top",
   paddingLeft: 0,
-  paddingRight: 0,
+  paddingRight: 4,
+  overflow: "hidden",
+  maxWidth: 0,
 };
 
-const specTdGap: CSSProperties = {
+/** Tanımı sütunu — foto ile açıklama arasında boşluk */
+const specTdSpacer: CSSProperties = {
   ...specTd,
   padding: 0,
 };
 
-/** Açıklama — Tanımı sütunundan itibaren (Stok no boşluk) */
+/** Açıklama — Ölçü sütunundan itibaren (Tanımı bir sütun sağda) */
 const specTdAcik: CSSProperties = {
   ...specTd,
   paddingLeft: 4,
+  wordBreak: "break-word",
 };
 
 const specPre: CSSProperties = {
   margin: 0,
   whiteSpace: "pre-wrap",
+  fontSize: 10,
+  lineHeight: 1.45,
+  wordBreak: "break-word",
 };
