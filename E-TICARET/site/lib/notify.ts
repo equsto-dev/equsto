@@ -3,6 +3,8 @@ import { appendWaChatMessage } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
+  greenApiInstancePhone,
+  ownerWhatsAppNotifyPhone,
   sendWhatsAppText,
   whatsAppNotifyTo,
   whatsAppSendConfigured,
@@ -187,13 +189,26 @@ export async function sendInstantAlert(
     }
   } else if (channelEnabled("sms", opts)) {
     skipped.push("sms");
+    if (to && twToken && (!twSid || !twFrom)) {
+      errors.push(
+        "sms: Twilio eksik — TWILIO_ACCOUNT_SID (AC…) ve TWILIO_FROM (Twilio numarası) gerekli; FROM olarak 0532… kullanılamaz",
+      );
+    }
   }
 
-  if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && whatsAppNotifyTo()) {
+  const ownerWaTo = ownerWhatsAppNotifyPhone();
+  if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && ownerWaTo) {
     try {
-      const wa = await sendWhatsAppText(whatsAppNotifyTo(), text.slice(0, 4096));
-      if (wa.ok) sent.push("whatsapp");
-      else errors.push(`whatsapp: ${wa.error || "send failed"}`);
+      const instance = greenApiInstancePhone();
+      if (instance && ownerWaTo === instance) {
+        errors.push(
+          "whatsapp: bildirim hedefi Green API hattıyla aynı — telefona push düşmez; WHATSAPP_NOTIFY_ALT_TO ayarlayın",
+        );
+      } else {
+        const wa = await sendWhatsAppText(ownerWaTo, text.slice(0, 4096));
+        if (wa.ok) sent.push("whatsapp");
+        else errors.push(`whatsapp: ${wa.error || "send failed"}`);
+      }
     } catch (e) {
       errors.push(`whatsapp: ${e instanceof Error ? e.message : String(e)}`);
     }
@@ -246,16 +261,15 @@ export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
   return sendInstantAlert("Equsto — yeni mesaj (kedi sohbet)", leadBody(m));
 }
 
-/** WhatsApp modal — sahip WhatsApp + telefon SMS öncelikli, ardından e-posta/Telegram. */
+/** WhatsApp modal — sahip WhatsApp bildirimi + e-posta/Telegram yedek. */
 export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult> {
   const title = "Equsto — WhatsApp modal mesajı";
   const body = leadBody(m);
   const ownerWa = await sendInstantAlert(title, body, { only: ["whatsapp"] });
-  const ownerSms = await sendInstantAlert(title, body, { only: ["sms"] });
   const rest = await sendInstantAlert(title, body, { skip: ["whatsapp", "sms"] });
-  const merged = mergeNotifyResults(ownerWa, ownerSms, rest);
-  if (!merged.sent.includes("whatsapp") && !merged.sent.includes("sms")) {
-    console.warn("[notify] whatsapp-modal: sahip WA/SMS bildirimi gönderilemedi", merged);
+  const merged = mergeNotifyResults(ownerWa, rest);
+  if (!merged.sent.includes("whatsapp")) {
+    console.warn("[notify] whatsapp-modal: sahip WA bildirimi gönderilemedi", merged);
   }
   return merged;
 }

@@ -12,6 +12,10 @@ export {
 
   whatsAppNotifyTo,
 
+  greenApiInstancePhone,
+
+  ownerWhatsAppNotifyPhone,
+
   whatsAppPhoneNumberId,
 
   whatsAppVerifyToken,
