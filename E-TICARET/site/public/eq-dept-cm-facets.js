@@ -1,5 +1,5 @@
 /**
- * Cafemarkt tarzı departman filtreleri sol filtre (Kategoriler, Marka, Model, Enerji, Fiyat).
+ * Cafemarkt tarzı departman filtreleri sol filtre (Kategoriler, Marka, Ölçü, Enerji, Fiyat).
  */
 (function (global) {
   'use strict';
@@ -57,7 +57,6 @@
     return out;
   }
 
-  var MODEL_CAP = 48;
   /** Yıkama PLP: Öztiryakiler OEM alt markaları filtrede gösterilmez. */
   var YIKAMA_HIDDEN_FACET_BRANDS = { OKY: true, AMX: true };
 
@@ -416,15 +415,12 @@
 
     function tallyCounts(pool) {
       var brandCounts = {};
-      var modelCounts = {};
       var energyCounts = {};
       var priceMinAll = Infinity;
       var priceMaxAll = 0;
       pool.forEach(function (u) {
         var b = productBrand(u);
         if (b && !isHiddenFacetBrand(b, dept)) brandCounts[b] = (brandCounts[b] || 0) + 1;
-        var model = extractModel(u.n, u.b);
-        if (model) modelCounts[model] = (modelCounts[model] || 0) + 1;
         ENERGY_TYPES.forEach(function (e) {
           if (matchEnergy(u, e.id)) energyCounts[e.id] = (energyCounts[e.id] || 0) + 1;
         });
@@ -435,15 +431,13 @@
         }
       });
       if (!isFinite(priceMinAll)) priceMinAll = 0;
-      return { brandCounts: brandCounts, modelCounts: modelCounts, energyCounts: energyCounts, priceMinAll: priceMinAll, priceMaxAll: priceMaxAll };
+      return { brandCounts: brandCounts, energyCounts: energyCounts, priceMinAll: priceMinAll, priceMaxAll: priceMaxAll };
     }
 
     var brandTally = tallyCounts(getPool('brand'));
-    var modelTally = tallyCounts(getPool('model'));
     var energyTally = tallyCounts(getPool('energy'));
     var priceTally = tallyCounts(getPool('price'));
     var brandCounts = brandTally.brandCounts;
-    var modelCounts = modelTally.modelCounts;
     var energyCounts = energyTally.energyCounts;
     var priceMinAll = priceTally.priceMinAll;
     var priceMaxAll = priceTally.priceMaxAll;
@@ -470,12 +464,6 @@
         return brandCounts[b] - brandCounts[a];
       });
     }
-
-    var models = Object.keys(modelCounts)
-      .sort(function (a, b) {
-        return modelCounts[b] - modelCounts[a];
-      })
-      .slice(0, MODEL_CAP);
 
     var tilePool = getPool('tile');
     var tileItems = [];
@@ -624,33 +612,22 @@
     });
     html += '</ul></div></details>';
 
-    if (models.length) {
-      html +=
-        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
-        esc(__facetT('plp.facet_model', 'Model')) +
-        '</summary>' +
-        '<div class="eq-cm-facet__body">' +
-        '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-model-q" placeholder="' +
-        esc(__facetT('plp.facet_model_ph', 'Model ara')) +
-        '" autocomplete="off">' +
-        '<ul class="eq-cm-facet__list" id="eq-dept-cm-model-list">';
-      models.forEach(function (m) {
-        var checked = (state.models || []).indexOf(m) >= 0 ? ' checked' : '';
-        html +=
-          '<li class="eq-cm-facet__item" data-model-label="' +
-          esc(lc(m)) +
-          '"><label class="eq-cm-facet__label">' +
-          '<input type="checkbox" name="eq-dept-cm-model" value="' +
-          esc(m) +
-          '"' +
-          checked +
-          '><span>' +
-          esc(m) +
-          '</span><span class="eq-cm-facet__count">(' +
-          modelCounts[m] +
-          ')</span></label></li>';
+    if ((dept === 'tezgah' || dept === 'davlumbaz') && global.EqOlcuFacets) {
+      var olcuPool = getPool('olcu');
+      var olcuCounts = global.EqOlcuFacets.countFacets(
+        olcuPool.map(function (u) {
+          return { name: u.n, n: u.n, category: u.c, raw: u.raw };
+        }),
+        dept,
+      );
+      html += global.EqOlcuFacets.renderFacetListHtml({
+        counts: olcuCounts,
+        selected: state.olcu || [],
+        inputName: 'eq-dept-cm-olcu',
+        dept: dept,
+        title: __facetT('plp.facet_olcu', 'Ölçü'),
+        searchPlaceholder: __facetT('plp.facet_olcu_ph', 'Ölçü ara'),
       });
-      html += '</ul></div></details>';
     }
 
     html +=
@@ -692,7 +669,7 @@
       });
     }
     bindSearch('#eq-dept-cm-brand-q', '#eq-dept-cm-brand-list', 'data-brand-label');
-    bindSearch('#eq-dept-cm-model-q', '#eq-dept-cm-model-list', 'data-model-label');
+    bindSearch('#eq-dept-cm-olcu-q', '#eq-dept-cm-olcu-list', 'data-olcu-label');
 
     host.querySelectorAll('input[name="eq-dept-cm-cat"]').forEach(function (inp) {
       inp.addEventListener('change', function () {
@@ -714,13 +691,13 @@
       });
     });
 
-    host.querySelectorAll('input[name="eq-dept-cm-model"]').forEach(function (inp) {
+    host.querySelectorAll('input[name="eq-dept-cm-olcu"]').forEach(function (inp) {
       inp.addEventListener('change', function () {
-        state.models = [];
-        host.querySelectorAll('input[name="eq-dept-cm-model"]:checked').forEach(function (c) {
-          state.models.push(c.value);
+        state.olcu = [];
+        host.querySelectorAll('input[name="eq-dept-cm-olcu"]:checked').forEach(function (c) {
+          state.olcu.push(c.value);
         });
-        onChange('model');
+        onChange('olcu');
       });
     });
 
@@ -811,8 +788,12 @@
       if (isHiddenFacetBrand(label, chipDept)) return;
       chips.push({ type: 'brand', value: label, text: label });
     });
-    (state.models || []).forEach(function (m) {
-      chips.push({ type: 'model', value: m, text: m });
+    (state.olcu || []).forEach(function (ok) {
+      var ol =
+        global.EqOlcuFacets && global.EqOlcuFacets.labelFromKey
+          ? global.EqOlcuFacets.labelFromKey(ok, chipDept)
+          : ok;
+      chips.push({ type: 'olcu', value: ok, text: ol });
     });
     (state.energy || []).forEach(function (eid) {
       var lbl = eid;

@@ -43,7 +43,7 @@
     ready: false,
     activeTiles: [],
     brands: [],
-    models: [],
+    olcu: [],
     energy: [],
     kuvetGn: [],
     buzdolapTip: [],
@@ -788,10 +788,13 @@
         return state.brands.indexOf(brandKey(u)) >= 0;
       });
     }
-    if (state.models.length && window.EqDeptCmFacets) {
+    if (state.olcu.length && window.EqOlcuFacets) {
       list = list.filter(function (u) {
-        var m = window.EqDeptCmFacets.extractModel(u.n, u.b);
-        return state.models.indexOf(m) >= 0;
+        return window.EqOlcuFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.olcu,
+          DEPT,
+        );
       });
     }
     if (state.kuvetGn.length && window.EqKuvetGnFacets) {
@@ -883,9 +886,13 @@
         return state.brands.indexOf(brandKey(u)) >= 0;
       });
     }
-    if (state.models.length && exclude !== 'model' && window.EqDeptCmFacets) {
+    if (state.olcu.length && exclude !== 'olcu' && window.EqOlcuFacets) {
       list = list.filter(function (u) {
-        return state.models.indexOf(window.EqDeptCmFacets.extractModel(u.n, u.b)) >= 0;
+        return window.EqOlcuFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.olcu,
+          DEPT,
+        );
       });
     }
     if (state.kuvetGn.length && exclude !== 'kuvetGn' && window.EqKuvetGnFacets) {
@@ -944,7 +951,7 @@
   function clearAllFilters() {
     state.activeTiles = [];
     state.brands = [];
-    state.models = [];
+    state.olcu = [];
     state.energy = [];
     state.kuvetGn = [];
     state.buzdolapTip = [];
@@ -969,7 +976,7 @@
         });
       }
       else if (type === 'brand') state.brands = state.brands.filter(function (b) { return b !== value; });
-      else if (type === 'model') state.models = state.models.filter(function (m) { return m !== value; });
+      else if (type === 'olcu') state.olcu = state.olcu.filter(function (k) { return k !== value; });
       else if (type === 'energy') state.energy = state.energy.filter(function (e) { return e !== value; });
       else if (type === 'kuvetGn') state.kuvetGn = state.kuvetGn.filter(function (k) { return k !== value; });
       else if (type === 'buzdolapTip') state.buzdolapTip = state.buzdolapTip.filter(function (k) { return k !== value; });
@@ -1170,8 +1177,11 @@
       var hasChip =
         state.activeTiles.length ||
         state.brands.length ||
-        state.models.length ||
+        state.olcu.length ||
         state.energy.length ||
+        state.kuvetGn.length ||
+        state.buzdolapTip.length ||
+        state.pisirmeTip.length ||
         state.priceMin !== '' ||
         state.priceMax !== '';
       selWrap.hidden = !hasChip;
