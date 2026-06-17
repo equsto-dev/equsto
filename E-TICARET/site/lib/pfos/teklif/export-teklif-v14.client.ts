@@ -81,12 +81,12 @@ function writeDataRow(
   ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
   ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 7).value = satir.adet;
-  ws.getCell(rowNum, 8).value = satir.birimSatis ?? 0;
-  ws.getCell(rowNum, 8).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 8).value = Math.round(satir.birimSatis ?? 0);
+  ws.getCell(rowNum, 8).numFmt = "#,##0";
   ws.getCell(rowNum, 9).value = {
-    formula: `G${rowNum}*H${rowNum}`,
+    formula: `ROUND(G${rowNum}*H${rowNum},0)`,
   };
-  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
   ws.getCell(rowNum, 10).value = satir.marka;
   ws.getCell(rowNum, 10).alignment = { horizontal: "center", vertical: "top" };
   ws.getCell(rowNum, 11).value = satir.olcu || "—";
@@ -132,7 +132,7 @@ async function writeSpecRow(
   applyRowStyle(ws, rowNum, specTpl);
   try {
     ws.mergeCells(`A${rowNum}:B${rowNum}`);
-    ws.mergeCells(`D${rowNum}:L${rowNum}`);
+    ws.mergeCells(`E${rowNum}:L${rowNum}`);
   } catch {
     /* merged */
   }
@@ -157,8 +157,8 @@ async function writeSpecRow(
     } as ExcelJS.Alignment;
   }
 
-  ws.getCell(rowNum, 4).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 4).alignment = {
+  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 5).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
@@ -261,7 +261,7 @@ async function buildProductBlock(
   ws.getCell(rowNum, 8).value = "GENEL TOPLAM";
   ws.getCell(rowNum, 8).font = { bold: true };
   ws.getCell(rowNum, 9).value = { formula: sumFormula };
-  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
   ws.getCell(rowNum, 12).value = model.ozet.doviz;
 }
 
