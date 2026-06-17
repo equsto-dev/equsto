@@ -11,7 +11,7 @@ Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akış�
   • Üye oturumu + Hesabım’da kayıtlı cep telefonu zorunlu (equsto-wa-phone-gate)
   • Modal açıkken GET /api/whatsapp/chat ile 4 sn polling (since= artımlı)
   • Müşteri modalden yazınca: POST /api/musteriler (kaynak: whatsapp-modal) → DB user satırı
-  • Sahip bildirimi: notifyWhatsAppModalLead → ownerWhatsAppNotifyPhone (ALT ile kendine gönderim engeli)
+  • Sahip bildirimi: notifyWhatsAppModalLead → WHATSAPP_NOTIFY_TO (532, Green API ile aynı hat)
   • Otomatik «mesajınız alındı» cevabı: notifyCustomerLeadAck → team satırı (waMessageId)
   • Telefondan müşteriye yazılan: Green API outgoingMessageReceived → webhook → team satırı
   • Müşteriden gelen WA: incomingMessageReceived → webhook → user satırı
