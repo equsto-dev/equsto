@@ -180,7 +180,7 @@ async function build() {
   for (let c = 1; c <= COL_COUNT; c++) ws.getCell(12, c).border = borderThin();
 
   // Row 13 — sütun toplamları
-  ws.getCell(13, 4).value = "Sütun toplamları →";
+  ws.getCell(13, 4).value = "";
   ws.getCell(13, 4).alignment = { horizontal: "right", vertical: "middle" };
   ws.getCell(13, 5).numFmt = "0.0";
   ws.getCell(13, 6).numFmt = "0.0";

@@ -242,7 +242,7 @@ async function buildProductBlock(
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, subTpl);
-  ws.getCell(rowNum, 4).value = "Sütun toplamları →";
+  ws.getCell(rowNum, 4).value = "";
   if (elkParts.length) {
     ws.getCell(rowNum, 5).value = { formula: elkSum };
     ws.getCell(rowNum, 5).numFmt = KW_HUCRE_EXCEL_NUMFMT;

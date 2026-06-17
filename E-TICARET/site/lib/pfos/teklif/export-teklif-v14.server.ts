@@ -189,7 +189,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, subTpl);
-  ws.getCell(rowNum, 4).value = "Sütun toplamları →";
+  ws.getCell(rowNum, 4).value = "";
   if (elkParts.length) {
     ws.getCell(rowNum, 7).value = { formula: elkSum };
     ws.getCell(rowNum, 7).numFmt = KW_HUCRE_EXCEL_NUMFMT;
