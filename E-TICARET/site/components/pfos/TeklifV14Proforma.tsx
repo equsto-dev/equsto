@@ -505,27 +505,27 @@ export default function TeklifV14Proforma({
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={2} style={specTdFoto}>
-                          {row.fotoUrl ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              src={row.fotoUrl}
-                              alt=""
-                              style={{
-                                maxWidth: 150,
-                                maxHeight: 125,
-                                objectFit: "contain",
-                                display: "block",
-                                margin: 0,
-                              }}
-                            />
-                          ) : hasKnownProduct ? (
-                            row.fotoNot ?? "📷 Fotoğraf"
-                          ) : null}
-                        </td>
-                        <td style={specTdGap} />
-                        <td colSpan={8} style={specTdAcik}>
-                          <pre style={specPre}>{aciklamaMetni}</pre>
+                        <td colSpan={COLS.length} style={specTdStack}>
+                          <div style={specStack}>
+                            {row.fotoUrl ? (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                src={row.fotoUrl}
+                                alt=""
+                                style={{
+                                  maxWidth: 150,
+                                  maxHeight: 125,
+                                  objectFit: "contain",
+                                  display: "block",
+                                }}
+                              />
+                            ) : hasKnownProduct && !aciklamaMetni ? (
+                              row.fotoNot ?? "📷 Fotoğraf"
+                            ) : null}
+                            {aciklamaMetni ? (
+                              <pre style={specPre}>{aciklamaMetni}</pre>
+                            ) : null}
+                          </div>
                         </td>
                       </tr>
                     )}
@@ -837,26 +837,24 @@ const specTd: CSSProperties = {
   verticalAlign: "top",
 };
 
-const specTdFoto: CSSProperties = {
+const specTdStack: CSSProperties = {
   ...specTd,
-  textAlign: "left",
-  verticalAlign: "top",
-  paddingLeft: 0,
-  paddingRight: 0,
+  padding: "8px 12px",
 };
 
-const specTdGap: CSSProperties = {
-  ...specTd,
-  padding: 0,
-};
-
-/** Açıklama — Tanımı sütunundan itibaren (Stok no boşluk) */
-const specTdAcik: CSSProperties = {
-  ...specTd,
-  paddingLeft: 4,
+const specStack: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: 8,
+  maxWidth: "100%",
 };
 
 const specPre: CSSProperties = {
   margin: 0,
   whiteSpace: "pre-wrap",
+  fontSize: 10,
+  lineHeight: 1.45,
+  wordBreak: "break-word",
+  width: "100%",
 };
