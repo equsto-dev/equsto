@@ -1059,37 +1059,40 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function dimLabelFromMmPdp(g, d, y) {
+      if (typeof window.eqDimLabelFromMm === "function") return window.eqDimLabelFromMm(g, d, y);
       if (!g || !d || !y) return "";
-      if (g >= 1000 && d >= 1000) {
-        return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
-      }
-      return g + "×" + d + "×" + y + " mm";
+      return g + "×" + d + "×" + y;
     }
 
     function formatVariantDimMmPdp(g, d, y) {
+      if (typeof window.eqDimLabelFromMm === "function") return window.eqDimLabelFromMm(g, d, y);
       var G = Number(g) || 0;
       var D = Number(d) || 0;
       var H = Number(y) || 0;
       if (G > 0 && D > 0 && H > 0) return dimLabelFromMmPdp(G, D, H);
-      if (G > 0 && D > 0) return G + "×" + D + " mm";
-      if (G > 0 && H > 0) return G + "×" + H + " mm";
-      if (G > 0) return G + " mm";
-      if (D > 0 && H > 0) return D + "×" + H + " mm";
-      if (D > 0) return D + " mm";
-      if (H > 0) return H + " mm";
+      if (G > 0 && D > 0) return G + "×" + D;
+      if (G > 0 && H > 0) return G + "×" + H;
+      if (G > 0) return String(G);
+      if (D > 0 && H > 0) return D + "×" + H;
+      if (D > 0) return String(D);
+      if (H > 0) return String(H);
       return "";
     }
 
     function sanitizeDimInProductName(name) {
       return String(name || "").replace(
         /(\d+)\s*[×x]\s*0(?:\s*[×x]\s*0)?\s*mm/gi,
-        "$1 mm"
+        "$1"
       );
     }
 
     function formatOlculerLinePdp(raw) {
       if (!raw) return "";
-      if (raw.olcu_etiket) return String(raw.olcu_etiket);
+      if (raw.olcu_etiket) {
+        return typeof window.eqStripDimUnitSuffix === "function"
+          ? window.eqStripDimUnitSuffix(raw.olcu_etiket)
+          : String(raw.olcu_etiket).replace(/\s*(?:mm|cm)\b\.?/gi, "").trim();
+      }
       var o = raw.olculer;
       if (!o) return "";
       if (isInoksanCatalogRow(raw)) {
@@ -2011,9 +2014,9 @@ window.searchFilter = window.searchFilter || function () {};
       var d = productDimsFrom(x);
       if (!d.len && !d.depth && !d.height) return "";
       var parts = [];
-      if (d.len) parts.push(__pdpT("pdp.dim_length", "Uzunluk") + " " + d.len + " mm");
-      if (d.depth) parts.push(__pdpT("pdp.dim_depth", "Derinlik") + " " + d.depth + " mm");
-      if (d.height) parts.push(__pdpT("pdp.dim_height", "Yükseklik") + " " + d.height + " mm");
+      if (d.len) parts.push(__pdpT("pdp.dim_length", "Uzunluk") + " " + d.len);
+      if (d.depth) parts.push(__pdpT("pdp.dim_depth", "Derinlik") + " " + d.depth);
+      if (d.height) parts.push(__pdpT("pdp.dim_height", "Yükseklik") + " " + d.height);
       return (
         '<ul class="eq-specs-dims">' +
         parts.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") +
@@ -2370,9 +2373,9 @@ window.searchFilter = window.searchFilter || function () {};
       var parts = [];
       if (x.olculer) {
         var o = x.olculer;
-        if (o.genislik_mm) parts.push(__pdpT("pdp.dim_length", "Uzunluk") + " " + o.genislik_mm + " mm");
-        if (o.derinlik_mm) parts.push(__pdpT("pdp.dim_depth", "Derinlik") + " " + o.derinlik_mm + " mm");
-        if (o.yukseklik_mm) parts.push(__pdpT("pdp.dim_height", "Yükseklik") + " " + o.yukseklik_mm + " mm");
+        if (o.genislik_mm) parts.push(__pdpT("pdp.dim_length", "Uzunluk") + " " + o.genislik_mm);
+        if (o.derinlik_mm) parts.push(__pdpT("pdp.dim_depth", "Derinlik") + " " + o.derinlik_mm);
+        if (o.yukseklik_mm) parts.push(__pdpT("pdp.dim_height", "Yükseklik") + " " + o.yukseklik_mm);
       }
       if (x.caglayanModelKod) parts.push(String(x.caglayanModelKod));
       if (parts.length) return parts.join(" · ");
@@ -4497,17 +4500,17 @@ window.searchFilter = window.searchFilter || function () {};
           '</summary><div class="eq-caglayan-acc__body"><ul>' +
           (o.genislik_mm
             ? "<li>" +
-              esc(__pdpT("pdp.dim_length", "Uzunluk") + ": " + o.genislik_mm + " mm") +
+              esc(__pdpT("pdp.dim_length", "Uzunluk") + ": " + o.genislik_mm) +
               "</li>"
             : "") +
           (o.derinlik_mm
             ? "<li>" +
-              esc(__pdpT("pdp.dim_depth", "Derinlik") + ": " + o.derinlik_mm + " mm") +
+              esc(__pdpT("pdp.dim_depth", "Derinlik") + ": " + o.derinlik_mm) +
               "</li>"
             : "") +
           (o.yukseklik_mm
             ? "<li>" +
-              esc(__pdpT("pdp.dim_height", "Yükseklik") + ": " + o.yukseklik_mm + " mm") +
+              esc(__pdpT("pdp.dim_height", "Yükseklik") + ": " + o.yukseklik_mm) +
               "</li>"
             : "") +
           "</ul></div></details>";

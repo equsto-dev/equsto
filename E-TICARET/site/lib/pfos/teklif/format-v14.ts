@@ -1,4 +1,10 @@
-import { isTepsiKapasiteMetni, olcuMmFromSku } from "./olcu-mm";
+import {
+  displayOlcuMm,
+  isTepsiKapasiteMetni,
+  olcuMmFromSku,
+  stripOlcuUnitSuffix,
+  toOlcuMmDisplay,
+} from "./olcu-mm";
 
 /** v14 proforma — tarih ve teklif no biçimleri */
 
@@ -86,12 +92,17 @@ export function olcuForTeklifSatir(
     if (!s) continue;
     if (s === "—") continue;
     if (isTepsiKapasiteMetni(s)) continue;
-    if (isOlcuMetni(s)) return s;
-    // Katalogdan gelen hazır ölçü (ör. 550×545×530 mm, 10 GN 1/1)
-    if (/[×x*]\s*\d/.test(s) && (/\bmm\b/i.test(s) || /\d+\s*gn\b/i.test(s))) return s;
+
+    const mm = toOlcuMmDisplay(s);
+    if (mm) return mm;
+
+    if (isOlcuMetni(s)) return stripOlcuUnitSuffix(s);
+    if (/[×x*]\s*\d/.test(s) && /\d+\s*gn\b/i.test(s)) return s;
   }
   return "—";
 }
+
+export { displayOlcuMm };
 
 /** Stok kodundan ve eşleşmiş ürün alanlarından v14 Ölçü */
 export function olcuForTeklifUrun(

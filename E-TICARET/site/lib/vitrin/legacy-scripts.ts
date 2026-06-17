@@ -40,6 +40,7 @@ export const HOME_SCRIPTS = [
 export const PFOS_EXTRA_STYLES = [`/eq-pfos-wizard.css?v=${v}`];
 
 export const PFOS_SCRIPTS = [
+  `/eq-dim-mm.js?v=${v}`,
   `/eq-display-terminology.js?v=${v}`,
   `/eq-pfos-i18n.js?v=${v}`,
   `/eq-pfos-programmatic-seo.js`,
@@ -63,7 +64,7 @@ export const LOGIN_SCRIPTS = [`/auth-social.js?v=${v}`, `/theme.js?v=${v}`];
 
 export const IMT300_SCRIPTS = [`/eq-youtube-embed.js`];
 
-export const BAR_MODULE_SCRIPTS = [`/eq-bar-module.js?v=${v}`];
+export const BAR_MODULE_SCRIPTS = [`/eq-dim-mm.js?v=${v}`, `/eq-bar-module.js?v=${v}`];
 
 export const BAR_DESIGN_SCRIPTS = [`/eq-bar-design.js?v=${v}`, `/eq-analytics.js`];
 

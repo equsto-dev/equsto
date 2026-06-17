@@ -54,7 +54,7 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     titleEm: "Şarküteri Reyonu",
     promoLead:
       "Et ve süt ürünleri teşhirinde menteşeli düz camlı Tiger WFG — modüler uzunluk seçenekleri, 0/+5 °C çalışma, kolay yükleme ve hijyenik temizlik.",
-    promoBadges: ["TIGER 800 WFG/CB", "937 mm", "0/+5 °C", "Remote", "LED aydınlatma"],
+    promoBadges: ["TIGER 800 WFG/CB", "937", "0/+5 °C", "Remote", "LED aydınlatma"],
     href: "/shop/market-reyonlari/eq-tiger-wfg-eq1",
     image: "/data/prosogutma-market/tiger-wfg/tigerwfgon.png",
     imageAlt: "Proso Tiger WFG EQ1 — menteşeli düz camlı şarküteri reyonu",
@@ -69,7 +69,7 @@ export const cafemarktHeroMainSlides: CafemarktPromoCard[] = [
     titleEm: "Soğuk Oda",
     promoLead:
       "0/+5 °C çalışma sıcaklığında panel-split soğuk oda — modüler ölçü seçenekleri, hijyenik panel yapı ve split ünite ile restoran, otel ve depo uygulamaları.",
-    promoBadges: ["7919.CR4020", "4000×2000 mm", "0/+5 °C", "Panel-split", "Split ünite"],
+    promoBadges: ["7919.CR4020", "4000×2000", "0/+5 °C", "Panel-split", "Split ünite"],
     href: "/shop/sogutma/7919-cr4020-00",
     image: "/images/catalog/soguk-oda/soguk-oda-vitrin.png",
     imageAlt: "Öztiryakiler soğuk oda panel-split tip 0/+5 °C — 7919.CR4020",

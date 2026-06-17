@@ -85,7 +85,7 @@ function GearPanel({
   const hero = mod.image ? besosAssetPath(mod.image) : "";
   const href = mod.slug ? besosModuleHrefFromProduct(mod, locale) : "#";
   const title = mod.name || mod.code;
-  const dim = mod.totalDimensionsMm ? `${mod.totalDimensionsMm} mm` : "";
+  const dim = mod.totalDimensionsMm ? `${mod.totalDimensionsMm}` : "";
 
   const media = hero ? (
     <div className="bd-portfolio-panel-media">

@@ -172,7 +172,7 @@
       priceHtml +
       (desc ? '<p class="bm-desc">' + esc(desc) + "</p>" : "") +
       (total
-        ? '<div class="bm-dim-badge"><span>Toplam ölçü</span> ' + esc(total) + " mm</div>"
+        ? '<div class="bm-dim-badge"><span>Toplam ölçü</span> ' + esc(total) + "</div>"
         : "") +
       dimsHtml +
       featsHtml +

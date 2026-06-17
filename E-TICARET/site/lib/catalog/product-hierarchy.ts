@@ -104,7 +104,7 @@ export function formatOlcuMm(
   const d = derinlikMm ?? null;
   const h = yukseklikMm ?? null;
   if (w == null && d == null && h == null) return "";
-  return [w ?? "—", d ?? "—", h ?? "—"].join(" × ") + " mm";
+  return [w ?? "—", d ?? "—", h ?? "—"].join(" × ");
 }
 
 type ProductWithRelations = Product & {

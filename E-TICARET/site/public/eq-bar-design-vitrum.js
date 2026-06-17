@@ -270,7 +270,7 @@
     var href = moduleHref(mod.slug || mod);
     var title = modLabel(mod);
     var code = mod.code ? String(mod.code) : "";
-    var dim = mod.totalDimensionsMm ? String(mod.totalDimensionsMm) + " mm" : "";
+    var dim = mod.totalDimensionsMm ? String(mod.totalDimensionsMm) : "";
     var mediaInner;
     if (hero && tech) {
       mediaInner =

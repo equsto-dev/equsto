@@ -452,13 +452,13 @@ export function formatVariantDimMm(g, d, y) {
   const G = Number(g) || 0;
   const D = Number(d) || 0;
   const H = Number(y) || 0;
-  if (G > 0 && D > 0 && H > 0) return `${G}×${D}×${H} mm`;
-  if (G > 0 && D > 0) return `${G}×${D} mm`;
-  if (G > 0 && H > 0) return `${G}×${H} mm`;
-  if (G > 0) return `${G} mm`;
-  if (D > 0 && H > 0) return `${D}×${H} mm`;
-  if (D > 0) return `${D} mm`;
-  if (H > 0) return `${H} mm`;
+  if (G > 0 && D > 0 && H > 0) return `${G}×${D}×${H}`;
+  if (G > 0 && D > 0) return `${G}×${D}`;
+  if (G > 0 && H > 0) return `${G}×${H}`;
+  if (G > 0) return `${G}`;
+  if (D > 0 && H > 0) return `${D}×${H}`;
+  if (D > 0) return `${D}`;
+  if (H > 0) return `${H}`;
   return "";
 }
 
