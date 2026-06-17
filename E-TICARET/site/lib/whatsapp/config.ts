@@ -72,21 +72,9 @@ export function greenApiInstancePhone(): string {
   return normalizeWaRecipient(raw);
 }
 
-/**
- * Sahip bildirimi — Green API instance ile aynı numaraya gitmez (push düşmez).
- * WHATSAPP_NOTIFY_ALT_TO ile iş/ikinci hattı kullanın.
- */
+/** Sahip bildirimi — WHATSAPP_NOTIFY_TO (Green API ile aynı hat: doğrudan cevap için). */
 export function ownerWhatsAppNotifyPhone(): string {
-  const notify = normalizeWaRecipient(whatsAppNotifyTo());
-  const instance = greenApiInstancePhone();
-  const alt = normalizeWaRecipient(env("WHATSAPP_NOTIFY_ALT_TO"));
-  if (notify && instance && notify === instance) {
-    if (alt && alt !== instance) return alt;
-    return notify;
-  }
-  if (notify) return notify;
-  if (alt) return alt;
-  return "";
+  return normalizeWaRecipient(whatsAppNotifyTo());
 }
 
 export function vitrinWhatsAppE164(): string {

@@ -3,7 +3,6 @@ import { appendWaChatMessage } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
-  greenApiInstancePhone,
   ownerWhatsAppNotifyPhone,
   sendWhatsAppText,
   whatsAppNotifyTo,
@@ -199,16 +198,9 @@ export async function sendInstantAlert(
   const ownerWaTo = ownerWhatsAppNotifyPhone();
   if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && ownerWaTo) {
     try {
-      const instance = greenApiInstancePhone();
-      if (instance && ownerWaTo === instance) {
-        errors.push(
-          "whatsapp: bildirim hedefi Green API hattıyla aynı — telefona push düşmez; WHATSAPP_NOTIFY_ALT_TO ayarlayın",
-        );
-      } else {
-        const wa = await sendWhatsAppText(ownerWaTo, text.slice(0, 4096));
-        if (wa.ok) sent.push("whatsapp");
-        else errors.push(`whatsapp: ${wa.error || "send failed"}`);
-      }
+      const wa = await sendWhatsAppText(ownerWaTo, text.slice(0, 4096));
+      if (wa.ok) sent.push("whatsapp");
+      else errors.push(`whatsapp: ${wa.error || "send failed"}`);
     } catch (e) {
       errors.push(`whatsapp: ${e instanceof Error ? e.message : String(e)}`);
     }
