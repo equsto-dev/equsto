@@ -797,7 +797,8 @@
     }
     if (/^images\//i.test(s)) {
       if (!isCdnMigrateRel(s)) return "";
-      return base + "/" + encodeDataRelPath(s);
+      var cdnRel = pimakCatalogRelCandidates(s)[0] || s;
+      return base + "/" + encodeDataRelPath(cdnRel);
     }
     if (/^catalog\//i.test(s)) {
       s = "images/" + s;
@@ -1000,6 +1001,34 @@
 
   var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
 
+  /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
+  function pimakCatalogRelCandidates(rel) {
+    var s = String(rel || "")
+      .replace(/\\/g, "/")
+      .replace(/^\.\//, "")
+      .trim();
+    var out = [];
+    function add(x) {
+      x = String(x || "")
+        .replace(/\\/g, "/")
+        .replace(/^\.\//, "")
+        .trim();
+      if (x && out.indexOf(x) < 0) out.push(x);
+    }
+    if (/^images\/catalog\/pimak\/davlumbaz-/i.test(s)) {
+      add(s.replace(/\/catalog\/pimak\//, "/catalog/equsto/"));
+      add(s);
+      return out;
+    }
+    if (/^images\/catalog\/pimak\/pimak-/i.test(s)) {
+      add(s.replace(/\/catalog\/pimak\/pimak-/, "/catalog/equsto/equsto-pimak-"));
+      add(s);
+      return out;
+    }
+    add(s);
+    return out;
+  }
+
   function withCatalogImgV(url) {
     if (
       !url ||
@@ -1027,6 +1056,12 @@
     if (webFromPdf) rels.push(webFromPdf);
     if (pdfRel) rels.push(pdfRel);
     if (!rels.length) rels.push(raw);
+    var relsExpanded = [];
+    for (var rxi = 0; rxi < rels.length; rxi++) {
+      var aliases = pimakCatalogRelCandidates(rels[rxi]);
+      for (var rai = 0; rai < aliases.length; rai++) relsExpanded.push(aliases[rai]);
+    }
+    rels = relsExpanded;
 
     var list = [];
     var seen = {};

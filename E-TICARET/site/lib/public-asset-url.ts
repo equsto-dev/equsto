@@ -26,6 +26,19 @@ function encodeRelPath(rel: string): string {
     .join("/");
 }
 
+/** Pimak katalog yolu → CDN'deki legacy equsto yolu (shop PLP ile uyumlu). */
+function resolvePimakCatalogPath(publicPath: string): string {
+  const norm = normalizePublicPath(publicPath);
+  const rel = relFromPublicPath(norm);
+  if (/^images\/catalog\/pimak\/davlumbaz-/i.test(rel)) {
+    return norm.replace(/\/catalog\/pimak\//, "/catalog/equsto/");
+  }
+  if (/^images\/catalog\/pimak\/pimak-/i.test(rel)) {
+    return norm.replace(/\/catalog\/pimak\/pimak-/, "/catalog/equsto/equsto-pimak-");
+  }
+  return norm;
+}
+
 export function isCdnPublicPath(publicPath: string): boolean {
   const rel = relFromPublicPath(publicPath);
   if (/^images\//i.test(rel)) return true;
@@ -39,7 +52,7 @@ export function isCdnPublicPath(publicPath: string): boolean {
 
 /** /images/… veya tam URL → CloudFront (Faz B) + cache bust */
 export function publicAssetUrl(path: string, version = SHOP_ASSET_V): string {
-  const norm = normalizePublicPath(path);
+  const norm = resolvePimakCatalogPath(normalizePublicPath(path));
   if (/^https?:\/\//i.test(norm)) {
     const sep = norm.includes("?") ? "&" : "?";
     return `${norm}${sep}v=${version}`;
