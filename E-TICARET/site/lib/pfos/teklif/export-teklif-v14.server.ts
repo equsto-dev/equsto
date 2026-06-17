@@ -7,7 +7,7 @@ import {
   TEKLIF_BOLUM_ROW_FILL_ARGB,
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT } from "./format-v14";
+import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT, dovizSembol } from "./format-v14";
 import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const PRODUCT_BLOCK_START = 5;
@@ -209,7 +209,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   ws.getCell(rowNum, 10).font = { bold: true };
   ws.getCell(rowNum, 11).value = { formula: sumFormula };
   ws.getCell(rowNum, 11).numFmt = "#,##0";
-  ws.getCell(rowNum, 12).value = model.ozet.doviz;
+  ws.getCell(rowNum, 12).value = dovizSembol(model.ozet.doviz);
 }
 
 /** Sunucu — PFOS v14 Excel (e-posta eki) */

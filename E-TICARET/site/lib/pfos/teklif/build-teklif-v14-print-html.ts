@@ -1,6 +1,6 @@
 import type { TeklifModelV14 } from "./teklif-v14.types";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, formatKwHucre } from "./format-v14";
+import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } from "./format-v14";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "./constants";
 import {
   sanitizeTeklifV14SatirAciklama,
@@ -49,14 +49,8 @@ export function buildTeklifV14PrintHtml(
   for (const block of blocks) {
     tbody += `<tr class="sec"><td colspan="11">${esc(block.bolumBaslik)}</td></tr>`;
     for (const row of block.satirlar) {
-      const birim =
-        row.birimSatis != null
-          ? row.birimSatis.toLocaleString("tr-TR", { minimumFractionDigits: 2 })
-          : "—";
-      const toplam =
-        row.toplamSatis != null
-          ? row.toplamSatis.toLocaleString("tr-TR", { minimumFractionDigits: 2 })
-          : "—";
+      const birim = formatEurHucre(row.birimSatis, 2);
+      const toplam = formatEurHucre(row.toplamSatis, 2);
       tbody += `<tr>
         <td class="bol">${esc(row.bolumNo)}</td>
         <td class="poz">${esc(row.poz)}</td>
@@ -87,10 +81,7 @@ export function buildTeklifV14PrintHtml(
     }
   }
 
-  const genel =
-    ozet.genelToplam != null
-      ? `${ozet.genelToplam.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} ${ozet.doviz}`
-      : "—";
+  const genel = formatTeklifDovizHucre(ozet.genelToplam, ozet.doviz, 2);
 
   const sartlar = model.sartlar
     .map((s) => `<div class="sart">${esc(s)}</div>`)

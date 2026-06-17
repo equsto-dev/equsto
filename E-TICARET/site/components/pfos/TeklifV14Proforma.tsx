@@ -5,7 +5,7 @@ import { Button, Collapse, Form, Modal, Typography } from "antd";
 import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
-import { formatTarihTr, formatKwHucre } from "@/lib/pfos/teklif/format-v14";
+import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
@@ -487,20 +487,10 @@ export default function TeklifV14Proforma({
                       <td style={tdC}>{formatKwHucre(row.gazKw)}</td>
                       <td style={tdC}>{row.adet}</td>
                       <td style={tdC}>
-                        {row.birimSatis != null
-                          ? Math.round(row.birimSatis).toLocaleString("tr-TR", {
-                              minimumFractionDigits: 0,
-                              maximumFractionDigits: 0,
-                            })
-                          : "—"}
+                        {formatEurHucre(row.birimSatis)}
                       </td>
                       <td style={tdC}>
-                        {row.toplamSatis != null
-                          ? Math.round(row.toplamSatis).toLocaleString("tr-TR", {
-                              minimumFractionDigits: 0,
-                              maximumFractionDigits: 0,
-                            })
-                          : "—"}
+                        {formatEurHucre(row.toplamSatis)}
                       </td>
                     </tr>
                     {showSpecRow && (
@@ -549,12 +539,7 @@ export default function TeklifV14Proforma({
                 GENEL TOPLAM
               </td>
               <td style={{ ...tdC, fontWeight: 700 }}>
-                {ozet.genelToplam != null
-                  ? `${Math.round(ozet.genelToplam).toLocaleString("tr-TR", {
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 0,
-                    })} ${ozet.doviz}`
-                  : "—"}
+                {formatTeklifDovizHucre(ozet.genelToplam, ozet.doviz)}
               </td>
             </tr>
           </tbody>
