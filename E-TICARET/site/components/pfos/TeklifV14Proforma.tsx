@@ -5,7 +5,7 @@ import { Button, Collapse, Form, Modal, Typography } from "antd";
 import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
-import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre, displayOlcuMm } from "@/lib/pfos/teklif/format-v14";
+import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
@@ -432,15 +432,15 @@ export default function TeklifV14Proforma({
           <colgroup>
             <col style={{ width: "3%" }} />
             <col style={{ width: "4%" }} />
-            <col style={{ width: "8%" }} />
-            <col style={{ width: "28%" }} />
-            <col style={{ width: "13%" }} />
-            <col style={{ width: "8%" }} />
+            <col style={{ width: "9%" }} />
+            <col style={{ width: "31%" }} />
+            <col style={{ width: "11%" }} />
+            <col style={{ width: "9%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "4%" }} />
-            <col style={{ width: "11%" }} />
-            <col style={{ width: "11%" }} />
+            <col style={{ width: "9%" }} />
+            <col style={{ width: "10%" }} />
           </colgroup>
           <thead>
             <tr>
@@ -448,13 +448,7 @@ export default function TeklifV14Proforma({
                 <th
                   key={h}
                   style={
-                    h === "Ölçü"
-                      ? thOlcu
-                      : h === "Marka"
-                        ? thMarka
-                        : h === "Satış" || h === "Toplam"
-                          ? thFiyat
-                          : thStyle
+                    h === "Marka" || h === "Ölçü" ? thMarkaOlcu : thStyle
                   }
                 >
                   {h}
@@ -487,7 +481,7 @@ export default function TeklifV14Proforma({
                       <td style={tdTanim}>
                         {sanitizeTeklifV14SatirTanim(row.tanim)}
                       </td>
-                      <td style={tdOlcu}>{displayOlcuMm(row.olcu)}</td>
+                      <td style={tdOlcu}>{row.olcu || "—"}</td>
                       <td style={tdMarka}>{row.marka}</td>
                       <td style={tdC}>{formatKwHucre(row.elkKw)}</td>
                       <td style={tdC}>{formatKwHucre(row.gazKw)}</td>
@@ -748,7 +742,6 @@ export default function TeklifV14Proforma({
 
 const table: CSSProperties = {
   width: "100%",
-  minWidth: 980,
   borderCollapse: "collapse",
   fontSize: 11,
   tableLayout: "fixed",
@@ -756,30 +749,20 @@ const table: CSSProperties = {
 
 const thStyle: CSSProperties = {
   textAlign: "center",
-  padding: "6px 6px",
+  padding: "6px 4px",
   borderBottom: "1px solid #ccc",
   fontWeight: 700,
   fontSize: 10,
   whiteSpace: "nowrap",
 };
 
-const thOlcu: CSSProperties = {
+const thMarkaOlcu: CSSProperties = {
   ...thStyle,
-  padding: "6px 10px",
-};
-
-const thMarka: CSSProperties = {
-  ...thStyle,
-  padding: "6px 6px",
-};
-
-const thFiyat: CSSProperties = {
-  ...thStyle,
-  padding: "6px 10px",
+  padding: "6px 4px",
 };
 
 const td: CSSProperties = {
-  padding: "5px 6px",
+  padding: "5px 4px",
   borderBottom: "1px solid #eee",
   verticalAlign: "top",
 };
@@ -813,7 +796,7 @@ const tdOlcu: CSSProperties = {
   textAlign: "center",
   fontSize: 10,
   whiteSpace: "nowrap",
-  padding: "5px 10px",
+  padding: "5px 6px",
 };
 
 const tdBolPoz: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
@@ -822,8 +805,8 @@ const tdC: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 
 const tdFiyat: CSSProperties = {
   ...tdC,
-  padding: "5px 12px",
-  letterSpacing: "0.02em",
+  padding: "5px 8px",
+  fontVariantNumeric: "tabular-nums",
 };
 
 const sectionTd: CSSProperties = {
