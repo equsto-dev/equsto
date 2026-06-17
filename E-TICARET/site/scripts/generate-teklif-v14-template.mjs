@@ -138,9 +138,9 @@ async function build() {
   ws.getCell(6, 6).numFmt = "0.0";
   ws.getCell(6, 7).value = sample.adet;
   ws.getCell(6, 8).value = sample.satis;
-  ws.getCell(6, 8).numFmt = "#,##0.00";
+  ws.getCell(6, 8).numFmt = "#,##0";
   ws.getCell(6, 9).value = { formula: "G6*H6" };
-  ws.getCell(6, 9).numFmt = "#,##0.00";
+  ws.getCell(6, 9).numFmt = "#,##0";
   ws.getCell(6, 10).value = sample.marka;
   ws.getCell(6, 10).alignment = center;
   ws.getCell(6, 11).value = sample.olcu;
@@ -153,11 +153,11 @@ async function build() {
 
   // Row 7 — foto (Stok no sütunu) + açıklama şablonu
   mergeSafe(ws, 7, 1, 7, 2);
-  mergeSafe(ws, 7, 4, 7, COL_COUNT);
+  mergeSafe(ws, 7, 5, 7, COL_COUNT);
   ws.getCell(7, 3).value = "📷\nFotoğraf";
   ws.getCell(7, 3).alignment = leftTop;
-  ws.getCell(7, 4).value = "•  Örnek teknik açıklama";
-  ws.getCell(7, 4).alignment = leftTop;
+  ws.getCell(7, 5).value = "•  Örnek teknik açıklama";
+  ws.getCell(7, 5).alignment = leftTop;
   ws.getRow(7).height = 120;
   for (let c = 1; c <= COL_COUNT; c++) {
     ws.getCell(7, c).fill = {
@@ -189,7 +189,7 @@ async function build() {
   // Row 14 — genel toplam
   ws.getCell(14, 8).value = "GENEL TOPLAM";
   ws.getCell(14, 8).font = fontBold;
-  ws.getCell(14, 9).numFmt = "#,##0.00";
+  ws.getCell(14, 9).numFmt = "#,##0";
   ws.getCell(14, 12).value = "EUR";
   for (let c = 1; c <= COL_COUNT; c++) ws.getCell(14, c).border = borderThin();
 

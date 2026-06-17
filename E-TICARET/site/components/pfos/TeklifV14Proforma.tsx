@@ -488,15 +488,17 @@ export default function TeklifV14Proforma({
                       <td style={tdC}>{row.adet}</td>
                       <td style={tdC}>
                         {row.birimSatis != null
-                          ? row.birimSatis.toLocaleString("tr-TR", {
-                              minimumFractionDigits: 2,
+                          ? Math.round(row.birimSatis).toLocaleString("tr-TR", {
+                              minimumFractionDigits: 0,
+                              maximumFractionDigits: 0,
                             })
                           : "—"}
                       </td>
                       <td style={tdC}>
                         {row.toplamSatis != null
-                          ? row.toplamSatis.toLocaleString("tr-TR", {
-                              minimumFractionDigits: 2,
+                          ? Math.round(row.toplamSatis).toLocaleString("tr-TR", {
+                              minimumFractionDigits: 0,
+                              maximumFractionDigits: 0,
                             })
                           : "—"}
                       </td>
@@ -548,8 +550,9 @@ export default function TeklifV14Proforma({
               </td>
               <td style={{ ...tdC, fontWeight: 700 }}>
                 {ozet.genelToplam != null
-                  ? `${ozet.genelToplam.toLocaleString("tr-TR", {
-                      minimumFractionDigits: 2,
+                  ? `${Math.round(ozet.genelToplam).toLocaleString("tr-TR", {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
                     })} ${ozet.doviz}`
                   : "—"}
               </td>

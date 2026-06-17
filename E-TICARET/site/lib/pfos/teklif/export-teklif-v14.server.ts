@@ -83,10 +83,10 @@ function writeDataRow(
   ws.getCell(rowNum, 8).value = kwHucreExcelValue(satir.gazKw);
   ws.getCell(rowNum, 8).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 9).value = satir.adet;
-  ws.getCell(rowNum, 10).value = satir.birimSatis ?? 0;
-  ws.getCell(rowNum, 10).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 11).value = { formula: `I${rowNum}*J${rowNum}` };
-  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 10).value = Math.round(satir.birimSatis ?? 0);
+  ws.getCell(rowNum, 10).numFmt = "#,##0";
+  ws.getCell(rowNum, 11).value = { formula: `ROUND(I${rowNum}*J${rowNum},0)` };
+  ws.getCell(rowNum, 11).numFmt = "#,##0";
   ws.getCell(rowNum, 12).value = satir.doviz;
 }
 
@@ -99,7 +99,7 @@ function writeSpecRow(
   applyRowStyle(ws, rowNum, specTpl);
   try {
     ws.mergeCells(`A${rowNum}:B${rowNum}`);
-    ws.mergeCells(`D${rowNum}:L${rowNum}`);
+    ws.mergeCells(`E${rowNum}:L${rowNum}`);
   } catch {
     /* merged */
   }
@@ -109,8 +109,8 @@ function writeSpecRow(
     vertical: "middle",
     wrapText: true,
   };
-  ws.getCell(rowNum, 4).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 4).alignment = {
+  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 5).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
@@ -208,7 +208,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   ws.getCell(rowNum, 10).value = "GENEL TOPLAM";
   ws.getCell(rowNum, 10).font = { bold: true };
   ws.getCell(rowNum, 11).value = { formula: sumFormula };
-  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 11).numFmt = "#,##0";
   ws.getCell(rowNum, 12).value = model.ozet.doviz;
 }
 
