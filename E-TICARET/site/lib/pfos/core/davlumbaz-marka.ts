@@ -1,6 +1,6 @@
 import { isEqustoFiyatListesiSku, parseEqSku } from "./equsto-fiyat-sku";
 
-/** PFOS davlumbaz — Pimak katalog (PIMAK.*) + Equsto fiyat listesi (EQ.KDAV*) */
+/** PFOS davlumbaz — öneri: yalnızca Equsto fiyat listesi (EQ.KDAV*). */
 export const DAVLUMBAZ_MARKA = "Equsto";
 export const PIMAK_DAVLUMBAZ_MARKA = "Pimak";
 
@@ -30,13 +30,9 @@ export function isEqustoDavlumbazRow(sku: string | null | undefined, ad?: string
     if (kod.startsWith("KDAV")) return true;
     return false;
   }
-  const mid = s.match(/^(?:EQUSTO|PIMAK)\.(\d{5})\./i)?.[1];
-  if (!mid) return false;
-  if (ad && /tezgah|sehpa|evye|calisma|çalışma/i.test(ad) && !/davlumbaz/i.test(ad)) {
-    return false;
-  }
-  if (ad && /davlumbaz/i.test(ad)) return true;
-  return isEqustoDavlumbazMiddleBlock(mid);
+  // Legacy PIMAK/EQUSTO 5-digit block is no longer used for PFOS önerisi.
+  // Davlumbaz önerisi yalnızca EQ.KDAV* havuzundan yapılır.
+  return false;
 }
 
 export function isOztiDavlumbazSku(sku: string | null | undefined): boolean {
