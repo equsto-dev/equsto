@@ -282,6 +282,8 @@
     "facet_clear_all": "HEPSİNİ SİL",
     "facet_brand": "Marka",
     "facet_brand_ph": "Marka ara",
+    "facet_olcu": "Ölçü",
+    "facet_olcu_ph": "Ölçü ara",
     "facet_model": "Model",
     "facet_model_ph": "Model ara",
     "facet_price": "Fiyat",
