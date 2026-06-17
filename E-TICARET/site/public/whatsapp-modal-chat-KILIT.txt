@@ -11,6 +11,7 @@ Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akış�
   • Üye oturumu + Hesabım’da kayıtlı cep telefonu zorunlu (equsto-wa-phone-gate)
   • Modal açıkken GET /api/whatsapp/chat ile 4 sn polling (since= artımlı)
   • Müşteri modalden yazınca: POST /api/musteriler (kaynak: whatsapp-modal) → DB user satırı
+  • Sahip bildirimi: notifyWhatsAppModalLead → WHATSAPP_NOTIFY_TO (WA) + EQUSTO_NOTIFY_SMS_E164 (SMS)
   • Otomatik «mesajınız alındı» cevabı: notifyCustomerLeadAck → team satırı (waMessageId)
   • Telefondan müşteriye yazılan: Green API outgoingMessageReceived → webhook → team satırı
   • Müşteriden gelen WA: incomingMessageReceived → webhook → user satırı
@@ -30,7 +31,7 @@ Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akış�
   lib/whatsapp/green-api.ts         — parseGreenApiOutboundMessages
   lib/whatsapp/api-handlers.ts      — webhook inbound/outbound → DB; GET green-api 200
   app/api/musteriler/[[...id]]/route.ts — modal gönderim → appendWaChatMessage
-  lib/notify.ts                       — notifyCustomerLeadAck → team satırı
+  lib/notify.ts                       — notifyWhatsAppModalLead → sahip WA + SMS
   public/contact.js                 — syncWaChatFromServer, startWaChatPoll (4000 ms)
   prisma/schema.prisma              — model WaChatMessage
   prisma/migrations/20260614170000_wa_chat_message/

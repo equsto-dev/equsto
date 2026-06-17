@@ -75,6 +75,9 @@ const musteriler = read("app/api/musteriler/[[...id]]/route.ts");
 if (!musteriler.includes('kaynak === "whatsapp-modal"')) {
   fail("musteriler route: whatsapp-modal kaynağı yok");
 }
+if (!musteriler.includes("notifyWhatsAppModalLead")) {
+  fail("musteriler route: notifyWhatsAppModalLead yok");
+}
 if (!musteriler.includes("appendWaChatMessage")) fail("musteriler route: appendWaChatMessage yok");
 
 const notify = read("lib/notify.ts");

@@ -8,7 +8,11 @@ import {
   normalizeMusteriPayload,
   validatePublicMusteriPayload,
 } from "@/lib/musteri";
-import { notifyCustomerLeadAck, notifyNewLead } from "@/lib/notify";
+import {
+  notifyCustomerLeadAck,
+  notifyNewLead,
+  notifyWhatsAppModalLead,
+} from "@/lib/notify";
 import { requireMemberSession, getMemberIdByToken, readBearerToken, readTokenFromBody, type MemberSessionPayload } from "@/lib/member-auth";
 import { appendWaChatMessage, normalizeChatPhone } from "@/lib/wa-chat";
 
@@ -81,9 +85,15 @@ export async function POST(req: NextRequest, ctx: Ctx) {
 
   try {
     const row = await db.musteri.create({ data });
-    void notifyNewLead(row).catch((e) => {
-      console.error("[notify] lead", e);
-    });
+    if (kaynak === "whatsapp-modal") {
+      void notifyWhatsAppModalLead(row).catch((e) => {
+        console.error("[notify] whatsapp-modal", e);
+      });
+    } else {
+      void notifyNewLead(row).catch((e) => {
+        console.error("[notify] lead", e);
+      });
+    }
     if (kaynak === "whatsapp-modal") {
       void notifyCustomerLeadAck(row).catch((e) => {
         console.error("[notify] customer wa ack", e);

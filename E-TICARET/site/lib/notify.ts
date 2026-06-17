@@ -67,10 +67,31 @@ export type NotifyResult = {
   errors: string[];
 };
 
-/** Yapılandırılmış kanallara anlık uyarı (Telegram / e-posta / SMS). */
+export type NotifyChannel = "telegram" | "email" | "sms" | "whatsapp";
+
+export type SendInstantAlertOptions = {
+  only?: NotifyChannel[];
+  skip?: NotifyChannel[];
+};
+
+function mergeNotifyResults(...parts: NotifyResult[]): NotifyResult {
+  const sent = [...new Set(parts.flatMap((p) => p.sent))];
+  const skipped = [...new Set(parts.flatMap((p) => p.skipped))];
+  const errors = parts.flatMap((p) => p.errors);
+  return { sent, skipped, errors };
+}
+
+function channelEnabled(ch: NotifyChannel, opts?: SendInstantAlertOptions): boolean {
+  if (opts?.only?.length && !opts.only.includes(ch)) return false;
+  if (opts?.skip?.includes(ch)) return false;
+  return true;
+}
+
+/** Yapılandırılmış kanallara anlık uyarı (Telegram / e-posta / SMS / WhatsApp). */
 export async function sendInstantAlert(
   title: string,
-  body: string
+  body: string,
+  opts?: SendInstantAlertOptions,
 ): Promise<NotifyResult> {
   const sent: string[] = [];
   const skipped: string[] = [];
@@ -79,7 +100,7 @@ export async function sendInstantAlert(
 
   const tgToken = telegramBotToken();
   const tgChat = telegramChatId();
-  if (tgToken && tgChat) {
+  if (channelEnabled("telegram", opts) && tgToken && tgChat) {
     try {
       const r = await fetch(
         `https://api.telegram.org/bot${tgToken}/sendMessage`,
@@ -102,13 +123,13 @@ export async function sendInstantAlert(
         `telegram: ${e instanceof Error ? e.message : String(e)}`
       );
     }
-  } else {
+  } else if (channelEnabled("telegram", opts)) {
     skipped.push("telegram");
   }
 
   const resendKey = env("RESEND_API_KEY");
   const emailTo = env("EQUSTO_NOTIFY_EMAIL");
-  if (resendKey && emailTo) {
+  if (channelEnabled("email", opts) && resendKey && emailTo) {
     try {
       const from = env("RESEND_FROM") || "Equsto <onboarding@resend.dev>";
       const r = await fetch("https://api.resend.com/emails", {
@@ -131,7 +152,7 @@ export async function sendInstantAlert(
     } catch (e) {
       errors.push(`email: ${e instanceof Error ? e.message : String(e)}`);
     }
-  } else {
+  } else if (channelEnabled("email", opts)) {
     skipped.push("email");
   }
 
@@ -139,7 +160,7 @@ export async function sendInstantAlert(
   const twToken = env("TWILIO_AUTH_TOKEN");
   const twFrom = env("TWILIO_FROM");
   const to = smsE164();
-  if (twSid && twToken && twFrom && to) {
+  if (channelEnabled("sms", opts) && twSid && twToken && twFrom && to) {
     try {
       const auth = Buffer.from(`${twSid}:${twToken}`).toString("base64");
       const r = await fetch(
@@ -164,11 +185,11 @@ export async function sendInstantAlert(
     } catch (e) {
       errors.push(`sms: ${e instanceof Error ? e.message : String(e)}`);
     }
-  } else {
+  } else if (channelEnabled("sms", opts)) {
     skipped.push("sms");
   }
 
-  if (whatsAppSendConfigured() && whatsAppNotifyTo()) {
+  if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && whatsAppNotifyTo()) {
     try {
       const wa = await sendWhatsAppText(whatsAppNotifyTo(), text.slice(0, 4096));
       if (wa.ok) sent.push("whatsapp");
@@ -176,7 +197,7 @@ export async function sendInstantAlert(
     } catch (e) {
       errors.push(`whatsapp: ${e instanceof Error ? e.message : String(e)}`);
     }
-  } else {
+  } else if (channelEnabled("whatsapp", opts)) {
     skipped.push("whatsapp");
   }
 
@@ -223,6 +244,20 @@ function leadBody(m: Musteri): string {
 
 export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
   return sendInstantAlert("Equsto — yeni mesaj (kedi sohbet)", leadBody(m));
+}
+
+/** WhatsApp modal — sahip WhatsApp + telefon SMS öncelikli, ardından e-posta/Telegram. */
+export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult> {
+  const title = "Equsto — WhatsApp modal mesajı";
+  const body = leadBody(m);
+  const ownerWa = await sendInstantAlert(title, body, { only: ["whatsapp"] });
+  const ownerSms = await sendInstantAlert(title, body, { only: ["sms"] });
+  const rest = await sendInstantAlert(title, body, { skip: ["whatsapp", "sms"] });
+  const merged = mergeNotifyResults(ownerWa, ownerSms, rest);
+  if (!merged.sent.includes("whatsapp") && !merged.sent.includes("sms")) {
+    console.warn("[notify] whatsapp-modal: sahip WA/SMS bildirimi gönderilemedi", merged);
+  }
+  return merged;
 }
 
 /** Müşteriye WhatsApp onayı (Green API / Meta — telefon profilde kayıtlı olmalı) */
