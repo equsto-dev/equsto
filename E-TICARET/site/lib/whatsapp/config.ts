@@ -72,9 +72,27 @@ export function greenApiInstancePhone(): string {
   return normalizeWaRecipient(raw);
 }
 
-/** Sahip bildirimi — WHATSAPP_NOTIFY_TO (Green API ile aynı hat: doğrudan cevap için). */
+/** Green API hattı kendine WA bildirimi alamaz (notify === instance). */
+export function isOwnerSelfWhatsAppNotifyBlocked(): boolean {
+  if (whatsAppMode() !== "green-api" || !greenApiConfigured()) return false;
+  const owner = normalizeWaRecipient(whatsAppNotifyTo());
+  const instance = greenApiInstancePhone();
+  return Boolean(owner && instance && owner === instance);
+}
+
+/**
+ * Sahip bildirimi hedefi.
+ * Green API QR hattı ile aynı numara ise WHATSAPP_NOTIFY_ALT_TO (kişisel cep) kullanılır;
+ * yoksa boş döner — Telegram/e-posta yedek kanalları devreye girer.
+ */
 export function ownerWhatsAppNotifyPhone(): string {
-  return normalizeWaRecipient(whatsAppNotifyTo());
+  const owner = normalizeWaRecipient(whatsAppNotifyTo());
+  if (isOwnerSelfWhatsAppNotifyBlocked()) {
+    const alt = normalizeWaRecipient(env("WHATSAPP_NOTIFY_ALT_TO"));
+    if (alt && alt !== owner) return alt;
+    return "";
+  }
+  return owner;
 }
 
 export function vitrinWhatsAppE164(): string {
@@ -96,6 +114,9 @@ export function whatsAppEnvHints() {
     EQUSTO_WHATSAPP_MODE: mode,
     EQUSTO_WHATSAPP_E164: vitrinWhatsAppE164() ? "set" : "missing",
     WHATSAPP_NOTIFY_TO: whatsAppNotifyTo() ? "set" : "missing",
+    WHATSAPP_NOTIFY_ALT_TO: env("WHATSAPP_NOTIFY_ALT_TO") ? "set" : "missing",
+    owner_self_notify_blocked: isOwnerSelfWhatsAppNotifyBlocked() ? "yes" : "no",
+    owner_notify_target: ownerWhatsAppNotifyPhone() ? "set" : "missing",
   };
 
   if (mode === "meta") {
@@ -112,4 +133,4 @@ export function whatsAppEnvHints() {
 
   return hints;
 }
-
+

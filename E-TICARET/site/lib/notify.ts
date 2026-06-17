@@ -3,6 +3,7 @@ import { appendWaChatMessage } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
+  isOwnerSelfWhatsAppNotifyBlocked,
   ownerWhatsAppNotifyPhone,
   sendWhatsAppText,
   whatsAppNotifyTo,
@@ -253,14 +254,31 @@ export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
   return sendInstantAlert("Equsto — yeni mesaj (kedi sohbet)", leadBody(m));
 }
 
-/** WhatsApp modal — sahip WhatsApp bildirimi + e-posta/Telegram yedek. */
+/** WhatsApp modal — sahip bildirimi (WA / Telegram / e-posta). */
 export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult> {
   const title = "Equsto — WhatsApp modal mesajı";
   const body = leadBody(m);
-  const ownerWa = await sendInstantAlert(title, body, { only: ["whatsapp"] });
+  const ownerTarget = ownerWhatsAppNotifyPhone();
+
+  if (isOwnerSelfWhatsAppNotifyBlocked() && !ownerTarget) {
+    const push = await sendInstantAlert(title, body, {
+      only: ["telegram", "email"],
+    });
+    if (!push.sent.length) {
+      console.warn(
+        "[notify] whatsapp-modal: Green API hattı kendine WA alamaz; Telegram veya WHATSAPP_NOTIFY_ALT_TO gerekli",
+        push,
+      );
+    }
+    return push;
+  }
+
+  const ownerWa = ownerTarget
+    ? await sendInstantAlert(title, body, { only: ["whatsapp"] })
+    : { sent: [] as string[], skipped: ["whatsapp"], errors: [] as string[] };
   const rest = await sendInstantAlert(title, body, { skip: ["whatsapp", "sms"] });
   const merged = mergeNotifyResults(ownerWa, rest);
-  if (!merged.sent.includes("whatsapp")) {
+  if (ownerTarget && !merged.sent.includes("whatsapp")) {
     console.warn("[notify] whatsapp-modal: sahip WA bildirimi gönderilemedi", merged);
   }
   return merged;
@@ -368,5 +386,8 @@ export function notifyEnvHints() {
     TELEGRAM_CHAT_ID: telegramChatId() ? "set" : "missing",
     RESEND_API_KEY: env("RESEND_API_KEY") ? "set" : "missing",
     EQUSTO_NOTIFY_EMAIL: env("EQUSTO_NOTIFY_EMAIL") ? "set" : "missing",
+    owner_self_wa_blocked: isOwnerSelfWhatsAppNotifyBlocked() ? "yes" : "no",
+    owner_wa_notify_target: ownerWhatsAppNotifyPhone() ? "set" : "missing",
+    WHATSAPP_NOTIFY_ALT_TO: env("WHATSAPP_NOTIFY_ALT_TO") ? "set" : "missing",
   };
 }

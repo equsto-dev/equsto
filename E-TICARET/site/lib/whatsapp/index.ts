@@ -16,6 +16,8 @@ export {
 
   ownerWhatsAppNotifyPhone,
 
+  isOwnerSelfWhatsAppNotifyBlocked,
+
   whatsAppPhoneNumberId,
 
   whatsAppVerifyToken,
