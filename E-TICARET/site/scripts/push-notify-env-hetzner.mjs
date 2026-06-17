@@ -12,9 +12,8 @@ const remoteEnv =
   process.env.HETZNER_ENV_PATH || "/opt/equsto/E-TICARET/site/.env.production";
 const secretsPath = process.argv[2];
 
-const REMOVE_KEYS = ["WHATSAPP_NOTIFY_ALT_TO"];
-
 const KEYS = [
+  "WHATSAPP_NOTIFY_ALT_TO",
   "WHATSAPP_NOTIFY_TO",
   "GREEN_API_INSTANCE_WID",
   "EQUSTO_WHATSAPP_E164",
@@ -73,7 +72,7 @@ const scp = spawnSync("scp", [tmp, `root@${host}:/tmp/equsto-notify.env`], {
 fs.unlinkSync(tmp);
 if (scp.status !== 0) process.exit(scp.status ?? 1);
 
-const grepV = [...KEYS, ...REMOVE_KEYS].map((k) => `grep -v '^${k}='`).join(" | ");
+const grepV = KEYS.map((k) => `grep -v '^${k}='`).join(" | ");
 const remoteScript = `
 set -euo pipefail
 ENV="${remoteEnv}"
