@@ -527,9 +527,7 @@ export default function TeklifV14Proforma({
             <tr>
               <td colSpan={2} style={td} />
               <td style={td} />
-              <td style={{ ...td, textAlign: "right", fontWeight: 600 }}>
-                Sütun toplamları →
-              </td>
+              <td style={td} />
               <td style={td} />
               <td style={td} />
               <td style={tdC}>{formatKwHucre(ozet.toplamElektrikKw)}</td>

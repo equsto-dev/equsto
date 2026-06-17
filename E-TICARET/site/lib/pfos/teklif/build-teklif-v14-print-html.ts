@@ -165,7 +165,7 @@ export function buildTeklifV14PrintHtml(
       <tr class="total">
         <td colspan="2"></td>
         <td></td>
-        <td style="text-align:right">Sütun toplamları →</td>
+        <td></td>
         <td></td>
         <td></td>
         <td class="num">${esc(formatKwHucre(ozet.toplamElektrikKw))}</td>
