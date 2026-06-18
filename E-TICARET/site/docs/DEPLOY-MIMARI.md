@@ -1,12 +1,12 @@
-# Equsto canlı mimari (Vercel + AWS S3 + Supabase)
+# Equsto canlı mimari (Hetzner + AWS S3 + Supabase)
 
-Onaylanan dağılım — **2026-05-30**
+Onaylanan dağılım — **2026-05-30** (arama: Hetzner Docker, 2026-06 güncellemesi)
 
 ```
-equsto.com (Vercel)
-├── Next.js + API routes
+equsto.com (Hetzner — Docker)
+├── Next.js + API routes + Caddy (HTTPS)
+├── Meilisearch (Docker, ücretsiz)            → arama index
 ├── ekipmanlar.json, geo, i18n, küçük JSON  → Git + deploy
-├── Meilisearch Cloud                         → arama index
 └── Görseller + PDF (~2 GB şimdi, ~20 GB hedef)
     → AWS S3 (equsto-assets) → CloudFront → NEXT_PUBLIC_ASSET_CDN_URL
 
@@ -19,10 +19,10 @@ Supabase (gmnbhmwcmxukebulqwbn)
 
 | Katman | Teknoloji | Ne tutulur |
 |--------|-----------|------------|
-| Uygulama | Vercel | `app/`, `lib/`, legacy JS, API |
+| Uygulama | Hetzner Docker | `app/`, `lib/`, legacy JS, API |
+| Arama | Meilisearch (self-hosted) | Ürün index (`equsto_products`) |
 | Statik medya | **AWS S3 + CloudFront** | `public/images/`, büyük PDF klasörleri |
 | Veritabanı | **Supabase Postgres** | `Product`, `Musteri`, PFOS tabloları |
-| Arama | Meilisearch Cloud | Ürün index (ekipmanlar kaynaklı) |
 | Mağaza vitrin (şimdilik) | `public/data/ekipmanlar.json` | Git — ileride DB'ye kademeli geçiş |
 
 ## Uygulama fazları
@@ -30,12 +30,11 @@ Supabase (gmnbhmwcmxukebulqwbn)
 ### Faz A — Tamamlandı
 Repodan mirror/arşiv güvenli çıkarma (`git rm --cached`). Bkz. `docs/FAZ-A-GUVENLIK.md`.
 
-### Faz B — AWS CDN (sıradaki)
+### Faz B — AWS CDN (tamamlandı / sürdürülür)
 1. S3 bucket + CloudFront → `docs/FAZ-B-AWS.md`
-2. `npm run assets:s3:dry-run` → `npm run assets:s3:sync`
-3. Vercel: `NEXT_PUBLIC_ASSET_CDN_URL=https://….cloudfront.net`
+2. `npm run assets:s3:dry-run` → `npm run assets:s3:sync` (AWS profile `equsto`)
+3. Hetzner `.env.production`: `NEXT_PUBLIC_ASSET_CDN_URL=https://….cloudfront.net`
 4. `npm run assets:cdn:verify`
-5. CDN OK → `faz-b-untrack-cdn.mjs` (Git'ten görseller, diskte kalır)
 
 ### Faz C — Supabase Postgres
 1. Dashboard → şifre sıfırla → URI kopyala
@@ -56,7 +55,7 @@ Repodan mirror/arşiv güvenli çıkarma (`git rm --cached`). Bkz. `docs/FAZ-A-G
 | `NEXT_PUBLIC_ASSET_CDN_URL` | Vercel + `.env.local` | CloudFront kök URL |
 | `AWS_S3_BUCKET` | Yalnızca yerel upload | `equsto-assets` |
 | `AWS_REGION` | Yerel upload | `eu-central-1` önerilir |
-| `MEILISEARCH_*` | Vercel | Arama |
+| `MEILISEARCH_*` | Hetzner `.env.production` | Arama (self-hosted Docker) |
 | `EQUSTO_ADMIN_BEARER` | Vercel | Admin API |
 
 ## Güvenlik

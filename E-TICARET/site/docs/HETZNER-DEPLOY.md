@@ -1,4 +1,6 @@
-# Hetzner — equsto.com (Docker)
+# Hetzner — equsto.com (Docker) — **tek canlı ortam**
+
+> **Vercel kullanılmıyor** (2026-06). Tüm production deploy bu sunucuya yapılır. Eski Vercel dokümanları yalnızca env şablonu için referanstır.
 
 Vercel yerine kendi sunucunuzda Next.js + Caddy + **Meilisearch (Docker, ücretsiz)**. Veritabanı (Supabase) ve medya (CloudFront) dışarıda kalır.
 
