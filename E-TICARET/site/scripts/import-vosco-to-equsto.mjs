@@ -43,7 +43,7 @@ const VOSCO_CAT = {
   "Kahve Değirmenleri": { dept: "kahve", category: "kahve-makineleri" },
   "Kahve Makineleri": { dept: "kahve", category: "kahve-makineleri" },
   "Kahve Ekipmanları": { dept: "kahve", category: "kahve-makineleri" },
-  "Bar Blenderları": { dept: "kahve", category: "bar-blenderlar" },
+  "Bar Blenderları": { dept: "icecek", category: "bar-blender" },
   "Mikserler": { dept: "hazirlik", category: "mikserler" },
   "Meyve Sıkacağı": { dept: "icecek", category: "meyve-sikacaklari" },
   "Meyve Suyu Dispanserleri": { dept: "icecek", category: "meyve-suyu-sogutuculari" },
@@ -75,7 +75,9 @@ function mapDeptCategory(p) {
     return { dept: "set-ustu-mutfak", category: slugify(cat) || "set-ustu-mutfak-ekipmanlari" };
   }
   if (/meyve|juice|sıkac|sikac|dispanser/.test(hay)) return { dept: "icecek", category: "meyve-sikacaklari" };
-  if (/blender|mikser|kokteyl/.test(hay)) return { dept: "kahve", category: "bar-blenderlar" };
+  if (/bar blender|bbl\s*0/i.test(hay)) return { dept: "icecek", category: "bar-blender" };
+  if (/blender/.test(hay) && !/kokteyl|shaker|mikser/.test(hay)) return { dept: "icecek", category: "bar-blender" };
+  if (/mikser|kokteyl/.test(hay)) return { dept: "kahve", category: "bar-blenderlar" };
   if (/dilim|doğra|dogra|kıyma|kiyma/.test(hay)) return { dept: "hazirlik", category: "fac-gida-dilimleme-makinesi" };
   return { dept: "hazirlik", category: slugify(cat) || "vosco-diger" };
 }

@@ -72,7 +72,7 @@ const MUTBEX_CAT = {
   "Sıcak Su Otomatları": { dept: "icecek", category: "su-otomati" },
   "Gıda Dilimleme Makineleri": { dept: "hazirlik", category: "fac-gida-dilimleme-makinesi" },
   "Stand Mikserler": { dept: "hazirlik", category: "mikserler" },
-  "Bar Blenderları": { dept: "kahve", category: "bar-blenderlar" },
+  "Bar Blenderları": { dept: "icecek", category: "bar-blender" },
 };
 
 function mapDeptCategory(p) {
