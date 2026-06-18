@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260616-pimak-gorsel-v1";
+const SHOP_ASSET_V = "20260618-equsto-fiyat-listesi-v1";
 const EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
 const ISTIF_V2 = [
   "images/catalog/inoksan/web/istif-v2/ino-idd.jpg",
