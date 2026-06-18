@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 429.25,
     "satis_eur_indirimli": 429.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.09070\nModel serisi: KDCT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.09070\nModel serisi: KDCT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT01",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 23100,
-    "fiyat_tl": 27720,
-    "price": "₺23.100,00 + KDV\nKDV Dahil ₺27.720,00"
+    "fiyat_tl_net": 22875,
+    "fiyat_tl": 27450,
+    "price": "₺22.875,00 + KDV\nKDV Dahil ₺27.450,00"
   },
   {
     "id": "equsto__equsto-kdct01-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 535.5,
     "satis_eur_indirimli": 535.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.12070\nModel serisi: KDCT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %15 iskonto): 535.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.12070\nModel serisi: KDCT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %15 iskonto): 535.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT01",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 28817,
-    "fiyat_tl": 34580,
-    "price": "₺28.817,00 + KDV\nKDV Dahil ₺34.580,00"
+    "fiyat_tl_net": 28537,
+    "fiyat_tl": 34244,
+    "price": "₺28.537,00 + KDV\nKDV Dahil ₺34.244,00"
   },
   {
     "id": "equsto__equsto-kdct01-14070",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 617.1,
     "satis_eur_indirimli": 617.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.14070\nModel serisi: KDCT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 726.0\nSatış fiyatı (EUR, %15 iskonto): 617.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.14070\nModel serisi: KDCT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 726.0\nSatış fiyatı (EUR, %15 iskonto): 617.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT01",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 33208,
-    "fiyat_tl": 39850,
-    "price": "₺33.208,00 + KDV\nKDV Dahil ₺39.850,00"
+    "fiyat_tl_net": 32885,
+    "fiyat_tl": 39462,
+    "price": "₺32.885,00 + KDV\nKDV Dahil ₺39.462,00"
   },
   {
     "id": "equsto__equsto-kdct01-16070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 688.5,
     "satis_eur_indirimli": 688.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -188,15 +188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.16070\nModel serisi: KDCT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 810.0\nSatış fiyatı (EUR, %15 iskonto): 688.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT01.16070\nModel serisi: KDCT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 810.0\nSatış fiyatı (EUR, %15 iskonto): 688.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT01",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT01",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 37051,
-    "fiyat_tl": 44461,
-    "price": "₺37.051,00 + KDV\nKDV Dahil ₺44.461,00"
+    "fiyat_tl_net": 36690,
+    "fiyat_tl": 44028,
+    "price": "₺36.690,00 + KDV\nKDV Dahil ₺44.028,00"
   }
 ]

@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.170504+00:00",
+  "imported_at": "2026-06-18T13:00:46.670210+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/ktevt01/urun.png",
   "pfos": {
     "count": 25,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 271.15,
         "satis_eur_indirimli": 271.15,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09060\nModel serisi: KTEVT01\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 319.0\nSatış fiyatı (EUR, %15 iskonto): 271.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09060\nModel serisi: KTEVT01\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 319.0\nSatış fiyatı (EUR, %15 iskonto): 271.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 90×60×85 cm (900×600×850 mm)"
         ],
-        "fiyat_tl_net": 14592,
-        "fiyat_tl": 17510,
-        "price": "₺14.592,00 + KDV\nKDV Dahil ₺17.510,00"
+        "fiyat_tl_net": 14450,
+        "fiyat_tl": 17340,
+        "price": "₺14.450,00 + KDV\nKDV Dahil ₺17.340,00"
       },
       {
         "id": "equsto__equsto-ktevt01-09070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 278.8,
         "satis_eur_indirimli": 278.8,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09070\nModel serisi: KTEVT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09070\nModel serisi: KTEVT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 15003,
-        "fiyat_tl": 18004,
-        "price": "₺15.003,00 + KDV\nKDV Dahil ₺18.004,00"
+        "fiyat_tl_net": 14857,
+        "fiyat_tl": 17828,
+        "price": "₺14.857,00 + KDV\nKDV Dahil ₺17.828,00"
       },
       {
         "id": "equsto__equsto-ktevt01-09080",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 302.6,
         "satis_eur_indirimli": 302.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09080\nModel serisi: KTEVT01\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %15 iskonto): 302.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09080\nModel serisi: KTEVT01\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %15 iskonto): 302.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 90×80×85 cm (900×800×850 mm)"
         ],
-        "fiyat_tl_net": 16284,
-        "fiyat_tl": 19541,
-        "price": "₺16.284,00 + KDV\nKDV Dahil ₺19.541,00"
+        "fiyat_tl_net": 16125,
+        "fiyat_tl": 19350,
+        "price": "₺16.125,00 + KDV\nKDV Dahil ₺19.350,00"
       },
       {
         "id": "equsto__equsto-ktevt01-10060",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 278.8,
         "satis_eur_indirimli": 278.8,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10060\nModel serisi: KTEVT01\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10060\nModel serisi: KTEVT01\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 100×60×85 cm (1000×600×850 mm)"
         ],
-        "fiyat_tl_net": 15003,
-        "fiyat_tl": 18004,
-        "price": "₺15.003,00 + KDV\nKDV Dahil ₺18.004,00"
+        "fiyat_tl_net": 14857,
+        "fiyat_tl": 17828,
+        "price": "₺14.857,00 + KDV\nKDV Dahil ₺17.828,00"
       },
       {
         "id": "equsto__equsto-ktevt01-10070",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 294.1,
         "satis_eur_indirimli": 294.1,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10070\nModel serisi: KTEVT01\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 346.0\nSatış fiyatı (EUR, %15 iskonto): 294.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10070\nModel serisi: KTEVT01\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 346.0\nSatış fiyatı (EUR, %15 iskonto): 294.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 15827,
-        "fiyat_tl": 18992,
-        "price": "₺15.827,00 + KDV\nKDV Dahil ₺18.992,00"
+        "fiyat_tl_net": 15673,
+        "fiyat_tl": 18808,
+        "price": "₺15.673,00 + KDV\nKDV Dahil ₺18.808,00"
       },
       {
         "id": "equsto__equsto-ktevt01-10080",
@@ -298,7 +298,7 @@
         "satis_fiyati_eur": 310.25,
         "satis_eur_indirimli": 310.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -307,16 +307,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10080\nModel serisi: KTEVT01\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.10080\nModel serisi: KTEVT01\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 100×80×85 cm (1000×800×850 mm)"
         ],
-        "fiyat_tl_net": 16696,
-        "fiyat_tl": 20035,
-        "price": "₺16.696,00 + KDV\nKDV Dahil ₺20.035,00"
+        "fiyat_tl_net": 16533,
+        "fiyat_tl": 19840,
+        "price": "₺16.533,00 + KDV\nKDV Dahil ₺19.840,00"
       },
       {
         "id": "equsto__equsto-ktevt01-11060",
@@ -348,7 +348,7 @@
         "satis_fiyati_eur": 287.3,
         "satis_eur_indirimli": 287.3,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -357,16 +357,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11060\nModel serisi: KTEVT01\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 338.0\nSatış fiyatı (EUR, %15 iskonto): 287.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11060\nModel serisi: KTEVT01\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 338.0\nSatış fiyatı (EUR, %15 iskonto): 287.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 110×60×85 cm (1100×600×850 mm)"
         ],
-        "fiyat_tl_net": 15461,
-        "fiyat_tl": 18553,
-        "price": "₺15.461,00 + KDV\nKDV Dahil ₺18.553,00"
+        "fiyat_tl_net": 15310,
+        "fiyat_tl": 18372,
+        "price": "₺15.310,00 + KDV\nKDV Dahil ₺18.372,00"
       },
       {
         "id": "equsto__equsto-ktevt01-11070",
@@ -398,7 +398,7 @@
         "satis_fiyati_eur": 310.25,
         "satis_eur_indirimli": 310.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -407,16 +407,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11070\nModel serisi: KTEVT01\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11070\nModel serisi: KTEVT01\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 110×70×85 cm (1100×700×850 mm)"
         ],
-        "fiyat_tl_net": 16696,
-        "fiyat_tl": 20035,
-        "price": "₺16.696,00 + KDV\nKDV Dahil ₺20.035,00"
+        "fiyat_tl_net": 16533,
+        "fiyat_tl": 19840,
+        "price": "₺16.533,00 + KDV\nKDV Dahil ₺19.840,00"
       },
       {
         "id": "equsto__equsto-ktevt01-11080",
@@ -448,7 +448,7 @@
         "satis_fiyati_eur": 326.4,
         "satis_eur_indirimli": 326.4,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -457,16 +457,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11080\nModel serisi: KTEVT01\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 384.0\nSatış fiyatı (EUR, %15 iskonto): 326.4\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.11080\nModel serisi: KTEVT01\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 384.0\nSatış fiyatı (EUR, %15 iskonto): 326.4\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 110×80×85 cm (1100×800×850 mm)"
         ],
-        "fiyat_tl_net": 17565,
-        "fiyat_tl": 21078,
-        "price": "₺17.565,00 + KDV\nKDV Dahil ₺21.078,00"
+        "fiyat_tl_net": 17394,
+        "fiyat_tl": 20873,
+        "price": "₺17.394,00 + KDV\nKDV Dahil ₺20.873,00"
       },
       {
         "id": "equsto__equsto-ktevt01-12060",
@@ -498,7 +498,7 @@
         "satis_fiyati_eur": 302.6,
         "satis_eur_indirimli": 302.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -507,16 +507,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12060\nModel serisi: KTEVT01\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %15 iskonto): 302.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12060\nModel serisi: KTEVT01\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 356.0\nSatış fiyatı (EUR, %15 iskonto): 302.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 120×60×85 cm (1200×600×850 mm)"
         ],
-        "fiyat_tl_net": 16284,
-        "fiyat_tl": 19541,
-        "price": "₺16.284,00 + KDV\nKDV Dahil ₺19.541,00"
+        "fiyat_tl_net": 16125,
+        "fiyat_tl": 19350,
+        "price": "₺16.125,00 + KDV\nKDV Dahil ₺19.350,00"
       },
       {
         "id": "equsto__equsto-ktevt01-12070",
@@ -548,7 +548,7 @@
         "satis_fiyati_eur": 317.9,
         "satis_eur_indirimli": 317.9,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -557,16 +557,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12070\nModel serisi: KTEVT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 374.0\nSatış fiyatı (EUR, %15 iskonto): 317.9\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12070\nModel serisi: KTEVT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 374.0\nSatış fiyatı (EUR, %15 iskonto): 317.9\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 17107,
-        "fiyat_tl": 20528,
-        "price": "₺17.107,00 + KDV\nKDV Dahil ₺20.528,00"
+        "fiyat_tl_net": 16941,
+        "fiyat_tl": 20329,
+        "price": "₺16.941,00 + KDV\nKDV Dahil ₺20.329,00"
       },
       {
         "id": "equsto__equsto-ktevt01-12080",
@@ -598,7 +598,7 @@
         "satis_fiyati_eur": 342.55,
         "satis_eur_indirimli": 342.55,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -607,16 +607,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12080\nModel serisi: KTEVT01\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12080\nModel serisi: KTEVT01\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 120×80×85 cm (1200×800×850 mm)"
         ],
-        "fiyat_tl_net": 18434,
-        "fiyat_tl": 22121,
-        "price": "₺18.434,00 + KDV\nKDV Dahil ₺22.121,00"
+        "fiyat_tl_net": 18254,
+        "fiyat_tl": 21905,
+        "price": "₺18.254,00 + KDV\nKDV Dahil ₺21.905,00"
       },
       {
         "id": "equsto__equsto-ktevt01-13060",
@@ -648,7 +648,7 @@
         "satis_fiyati_eur": 310.25,
         "satis_eur_indirimli": 310.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -657,16 +657,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13060\nModel serisi: KTEVT01\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13060\nModel serisi: KTEVT01\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 130×60×85 cm (1300×600×850 mm)"
         ],
-        "fiyat_tl_net": 16696,
-        "fiyat_tl": 20035,
-        "price": "₺16.696,00 + KDV\nKDV Dahil ₺20.035,00"
+        "fiyat_tl_net": 16533,
+        "fiyat_tl": 19840,
+        "price": "₺16.533,00 + KDV\nKDV Dahil ₺19.840,00"
       },
       {
         "id": "equsto__equsto-ktevt01-13070",
@@ -698,7 +698,7 @@
         "satis_fiyati_eur": 334.05,
         "satis_eur_indirimli": 334.05,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -707,16 +707,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13070\nModel serisi: KTEVT01\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 393.0\nSatış fiyatı (EUR, %15 iskonto): 334.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13070\nModel serisi: KTEVT01\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 393.0\nSatış fiyatı (EUR, %15 iskonto): 334.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 130×70×85 cm (1300×700×850 mm)"
         ],
-        "fiyat_tl_net": 17976,
-        "fiyat_tl": 21571,
-        "price": "₺17.976,00 + KDV\nKDV Dahil ₺21.571,00"
+        "fiyat_tl_net": 17801,
+        "fiyat_tl": 21361,
+        "price": "₺17.801,00 + KDV\nKDV Dahil ₺21.361,00"
       },
       {
         "id": "equsto__equsto-ktevt01-13080",
@@ -748,7 +748,7 @@
         "satis_fiyati_eur": 349.35,
         "satis_eur_indirimli": 349.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -757,16 +757,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13080\nModel serisi: KTEVT01\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 411.0\nSatış fiyatı (EUR, %15 iskonto): 349.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.13080\nModel serisi: KTEVT01\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 411.0\nSatış fiyatı (EUR, %15 iskonto): 349.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 130×80×85 cm (1300×800×850 mm)"
         ],
-        "fiyat_tl_net": 18800,
-        "fiyat_tl": 22560,
-        "price": "₺18.800,00 + KDV\nKDV Dahil ₺22.560,00"
+        "fiyat_tl_net": 18617,
+        "fiyat_tl": 22340,
+        "price": "₺18.617,00 + KDV\nKDV Dahil ₺22.340,00"
       },
       {
         "id": "equsto__equsto-ktevt01-14060",
@@ -798,7 +798,7 @@
         "satis_fiyati_eur": 326.4,
         "satis_eur_indirimli": 326.4,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -807,16 +807,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14060\nModel serisi: KTEVT01\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 384.0\nSatış fiyatı (EUR, %15 iskonto): 326.4\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14060\nModel serisi: KTEVT01\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 384.0\nSatış fiyatı (EUR, %15 iskonto): 326.4\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 140×60×85 cm (1400×600×850 mm)"
         ],
-        "fiyat_tl_net": 17565,
-        "fiyat_tl": 21078,
-        "price": "₺17.565,00 + KDV\nKDV Dahil ₺21.078,00"
+        "fiyat_tl_net": 17394,
+        "fiyat_tl": 20873,
+        "price": "₺17.394,00 + KDV\nKDV Dahil ₺20.873,00"
       },
       {
         "id": "equsto__equsto-ktevt01-14070",
@@ -848,7 +848,7 @@
         "satis_fiyati_eur": 342.55,
         "satis_eur_indirimli": 342.55,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -857,16 +857,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14070\nModel serisi: KTEVT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14070\nModel serisi: KTEVT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 18434,
-        "fiyat_tl": 22121,
-        "price": "₺18.434,00 + KDV\nKDV Dahil ₺22.121,00"
+        "fiyat_tl_net": 18254,
+        "fiyat_tl": 21905,
+        "price": "₺18.254,00 + KDV\nKDV Dahil ₺21.905,00"
       },
       {
         "id": "equsto__equsto-ktevt01-14080",
@@ -898,7 +898,7 @@
         "satis_fiyati_eur": 365.5,
         "satis_eur_indirimli": 365.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -907,16 +907,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14080\nModel serisi: KTEVT01\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14080\nModel serisi: KTEVT01\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 140×80×85 cm (1400×800×850 mm)"
         ],
-        "fiyat_tl_net": 19669,
-        "fiyat_tl": 23603,
-        "price": "₺19.669,00 + KDV\nKDV Dahil ₺23.603,00"
+        "fiyat_tl_net": 19477,
+        "fiyat_tl": 23372,
+        "price": "₺19.477,00 + KDV\nKDV Dahil ₺23.372,00"
       },
       {
         "id": "equsto__equsto-ktevt01-15060",
@@ -948,7 +948,7 @@
         "satis_fiyati_eur": 334.05,
         "satis_eur_indirimli": 334.05,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -957,16 +957,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15060\nModel serisi: KTEVT01\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 393.0\nSatış fiyatı (EUR, %15 iskonto): 334.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15060\nModel serisi: KTEVT01\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 393.0\nSatış fiyatı (EUR, %15 iskonto): 334.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 150×60×85 cm (1500×600×850 mm)"
         ],
-        "fiyat_tl_net": 17976,
-        "fiyat_tl": 21571,
-        "price": "₺17.976,00 + KDV\nKDV Dahil ₺21.571,00"
+        "fiyat_tl_net": 17801,
+        "fiyat_tl": 21361,
+        "price": "₺17.801,00 + KDV\nKDV Dahil ₺21.361,00"
       },
       {
         "id": "equsto__equsto-ktevt01-15070",
@@ -998,7 +998,7 @@
         "satis_fiyati_eur": 357.0,
         "satis_eur_indirimli": 357.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1007,16 +1007,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15070\nModel serisi: KTEVT01\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 420.0\nSatış fiyatı (EUR, %15 iskonto): 357.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15070\nModel serisi: KTEVT01\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 420.0\nSatış fiyatı (EUR, %15 iskonto): 357.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 150×70×85 cm (1500×700×850 mm)"
         ],
-        "fiyat_tl_net": 19211,
-        "fiyat_tl": 23053,
-        "price": "₺19.211,00 + KDV\nKDV Dahil ₺23.053,00"
+        "fiyat_tl_net": 19024,
+        "fiyat_tl": 22829,
+        "price": "₺19.024,00 + KDV\nKDV Dahil ₺22.829,00"
       },
       {
         "id": "equsto__equsto-ktevt01-15080",
@@ -1048,7 +1048,7 @@
         "satis_fiyati_eur": 381.65,
         "satis_eur_indirimli": 381.65,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1057,16 +1057,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15080\nModel serisi: KTEVT01\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 449.0\nSatış fiyatı (EUR, %15 iskonto): 381.65\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.15080\nModel serisi: KTEVT01\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 449.0\nSatış fiyatı (EUR, %15 iskonto): 381.65\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 150×80×85 cm (1500×800×850 mm)"
         ],
-        "fiyat_tl_net": 20538,
-        "fiyat_tl": 24646,
-        "price": "₺20.538,00 + KDV\nKDV Dahil ₺24.646,00"
+        "fiyat_tl_net": 20338,
+        "fiyat_tl": 24406,
+        "price": "₺20.338,00 + KDV\nKDV Dahil ₺24.406,00"
       },
       {
         "id": "equsto__equsto-ktevt01-16060",
@@ -1098,7 +1098,7 @@
         "satis_fiyati_eur": 349.35,
         "satis_eur_indirimli": 349.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1107,16 +1107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16060\nModel serisi: KTEVT01\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 411.0\nSatış fiyatı (EUR, %15 iskonto): 349.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16060\nModel serisi: KTEVT01\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 411.0\nSatış fiyatı (EUR, %15 iskonto): 349.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 160×60×85 cm (1600×600×850 mm)"
         ],
-        "fiyat_tl_net": 18800,
-        "fiyat_tl": 22560,
-        "price": "₺18.800,00 + KDV\nKDV Dahil ₺22.560,00"
+        "fiyat_tl_net": 18617,
+        "fiyat_tl": 22340,
+        "price": "₺18.617,00 + KDV\nKDV Dahil ₺22.340,00"
       },
       {
         "id": "equsto__equsto-ktevt01-16070",
@@ -1148,7 +1148,7 @@
         "satis_fiyati_eur": 373.15,
         "satis_eur_indirimli": 373.15,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1157,16 +1157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16070\nModel serisi: KTEVT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16070\nModel serisi: KTEVT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 20081,
-        "fiyat_tl": 24097,
-        "price": "₺20.081,00 + KDV\nKDV Dahil ₺24.097,00"
+        "fiyat_tl_net": 19885,
+        "fiyat_tl": 23862,
+        "price": "₺19.885,00 + KDV\nKDV Dahil ₺23.862,00"
       },
       {
         "id": "equsto__equsto-ktevt01-16080",
@@ -1198,7 +1198,7 @@
         "satis_fiyati_eur": 389.3,
         "satis_eur_indirimli": 389.3,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1207,16 +1207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16080\nModel serisi: KTEVT01\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 458.0\nSatış fiyatı (EUR, %15 iskonto): 389.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16080\nModel serisi: KTEVT01\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 458.0\nSatış fiyatı (EUR, %15 iskonto): 389.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 160×80×85 cm (1600×800×850 mm)"
         ],
-        "fiyat_tl_net": 20950,
-        "fiyat_tl": 25140,
-        "price": "₺20.950,00 + KDV\nKDV Dahil ₺25.140,00"
+        "fiyat_tl_net": 20746,
+        "fiyat_tl": 24895,
+        "price": "₺20.746,00 + KDV\nKDV Dahil ₺24.895,00"
       },
       {
         "id": "equsto__equsto-ktevt01-17060",
@@ -1248,7 +1248,7 @@
         "satis_fiyati_eur": 357.0,
         "satis_eur_indirimli": 357.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1257,16 +1257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.17060\nModel serisi: KTEVT01\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 420.0\nSatış fiyatı (EUR, %15 iskonto): 357.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.17060\nModel serisi: KTEVT01\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 420.0\nSatış fiyatı (EUR, %15 iskonto): 357.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 170×60×85 cm (1700×600×850 mm)"
         ],
-        "fiyat_tl_net": 19211,
-        "fiyat_tl": 23053,
-        "price": "₺19.211,00 + KDV\nKDV Dahil ₺23.053,00"
+        "fiyat_tl_net": 19024,
+        "fiyat_tl": 22829,
+        "price": "₺19.024,00 + KDV\nKDV Dahil ₺22.829,00"
       }
     ]
   },
@@ -1303,7 +1303,7 @@
         "satis_fiyati_eur": 278.8,
         "satis_eur_indirimli": 278.8,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1312,16 +1312,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09070\nModel serisi: KTEVT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.09070\nModel serisi: KTEVT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 328.0\nSatış fiyatı (EUR, %15 iskonto): 278.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 15003,
-        "fiyat_tl": 18004,
-        "price": "₺15.003,00 + KDV\nKDV Dahil ₺18.004,00"
+        "fiyat_tl_net": 14857,
+        "fiyat_tl": 17828,
+        "price": "₺14.857,00 + KDV\nKDV Dahil ₺17.828,00"
       },
       {
         "id": "equsto__equsto-ktevt01-12070",
@@ -1353,7 +1353,7 @@
         "satis_fiyati_eur": 317.9,
         "satis_eur_indirimli": 317.9,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1362,16 +1362,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12070\nModel serisi: KTEVT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 374.0\nSatış fiyatı (EUR, %15 iskonto): 317.9\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.12070\nModel serisi: KTEVT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 374.0\nSatış fiyatı (EUR, %15 iskonto): 317.9\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 17107,
-        "fiyat_tl": 20528,
-        "price": "₺17.107,00 + KDV\nKDV Dahil ₺20.528,00"
+        "fiyat_tl_net": 16941,
+        "fiyat_tl": 20329,
+        "price": "₺16.941,00 + KDV\nKDV Dahil ₺20.329,00"
       },
       {
         "id": "equsto__equsto-ktevt01-14070",
@@ -1403,7 +1403,7 @@
         "satis_fiyati_eur": 342.55,
         "satis_eur_indirimli": 342.55,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1412,16 +1412,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14070\nModel serisi: KTEVT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.14070\nModel serisi: KTEVT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 403.0\nSatış fiyatı (EUR, %15 iskonto): 342.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 18434,
-        "fiyat_tl": 22121,
-        "price": "₺18.434,00 + KDV\nKDV Dahil ₺22.121,00"
+        "fiyat_tl_net": 18254,
+        "fiyat_tl": 21905,
+        "price": "₺18.254,00 + KDV\nKDV Dahil ₺21.905,00"
       },
       {
         "id": "equsto__equsto-ktevt01-16070",
@@ -1453,7 +1453,7 @@
         "satis_fiyati_eur": 373.15,
         "satis_eur_indirimli": 373.15,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1462,16 +1462,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16070\nModel serisi: KTEVT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
+        "specs": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVT01.16070\nModel serisi: KTEVT01\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVT01",
         "aciklama": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVT01",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 20081,
-        "fiyat_tl": 24097,
-        "price": "₺20.081,00 + KDV\nKDV Dahil ₺24.097,00"
+        "fiyat_tl_net": 19885,
+        "fiyat_tl": 23862,
+        "price": "₺19.885,00 + KDV\nKDV Dahil ₺23.862,00"
       }
     ]
   }

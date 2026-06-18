@@ -26,6 +26,12 @@ function encodeRelPath(rel: string): string {
     .join("/");
 }
 
+/** EQUSTO 2026 fiyat listesi — site kökü /images/… (Vercel rewrite → CloudFront). */
+function isEqustoFiyatListesiPath(publicPath: string): boolean {
+  const rel = relFromPublicPath(normalizePublicPath(publicPath));
+  return /^images\/catalog\/equsto\/fiyat-listesi\//i.test(rel);
+}
+
 /** Pimak katalog yolu → CDN'deki legacy equsto yolu (shop PLP ile uyumlu). */
 function resolvePimakCatalogPath(publicPath: string): string {
   const norm = normalizePublicPath(publicPath);
@@ -59,7 +65,9 @@ export function publicAssetUrl(path: string, version = SHOP_ASSET_V): string {
   }
 
   let href = norm;
-  if (isCdnPublicPath(norm)) {
+  if (isEqustoFiyatListesiPath(norm)) {
+    href = norm;
+  } else if (isCdnPublicPath(norm)) {
     href = `${publicAssetCdnBase()}/${encodeRelPath(relFromPublicPath(norm))}`;
   }
 

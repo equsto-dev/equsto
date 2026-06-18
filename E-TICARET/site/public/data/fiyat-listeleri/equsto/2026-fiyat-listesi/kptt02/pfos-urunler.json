@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09060\nModel serisi: KPTT02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09060\nModel serisi: KPTT02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 90×60×85 cm (900×600×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kptt02-09070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 327.25,
     "satis_eur_indirimli": 327.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09070\nModel serisi: KPTT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09070\nModel serisi: KPTT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 17611,
-    "fiyat_tl": 21133,
-    "price": "₺17.611,00 + KDV\nKDV Dahil ₺21.133,00"
+    "fiyat_tl_net": 17439,
+    "fiyat_tl": 20927,
+    "price": "₺17.439,00 + KDV\nKDV Dahil ₺20.927,00"
   },
   {
     "id": "equsto__equsto-kptt02-09080",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 348.5,
     "satis_eur_indirimli": 348.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09080\nModel serisi: KPTT02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.09080\nModel serisi: KPTT02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 90×80×85 cm (900×800×850 mm)"
     ],
-    "fiyat_tl_net": 18754,
-    "fiyat_tl": 22505,
-    "price": "₺18.754,00 + KDV\nKDV Dahil ₺22.505,00"
+    "fiyat_tl_net": 18571,
+    "fiyat_tl": 22285,
+    "price": "₺18.571,00 + KDV\nKDV Dahil ₺22.285,00"
   },
   {
     "id": "equsto__equsto-kptt02-10060",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 319.6,
     "satis_eur_indirimli": 319.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10060\nModel serisi: KPTT02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 376.0\nSatış fiyatı (EUR, %15 iskonto): 319.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10060\nModel serisi: KPTT02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 376.0\nSatış fiyatı (EUR, %15 iskonto): 319.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 100×60×85 cm (1000×600×850 mm)"
     ],
-    "fiyat_tl_net": 17199,
-    "fiyat_tl": 20639,
-    "price": "₺17.199,00 + KDV\nKDV Dahil ₺20.639,00"
+    "fiyat_tl_net": 17031,
+    "fiyat_tl": 20437,
+    "price": "₺17.031,00 + KDV\nKDV Dahil ₺20.437,00"
   },
   {
     "id": "equsto__equsto-kptt02-10070",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 344.25,
     "satis_eur_indirimli": 344.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10070\nModel serisi: KPTT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10070\nModel serisi: KPTT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 100×70×85 cm (1000×700×850 mm)"
     ],
-    "fiyat_tl_net": 18525,
-    "fiyat_tl": 22230,
-    "price": "₺18.525,00 + KDV\nKDV Dahil ₺22.230,00"
+    "fiyat_tl_net": 18345,
+    "fiyat_tl": 22014,
+    "price": "₺18.345,00 + KDV\nKDV Dahil ₺22.014,00"
   },
   {
     "id": "equsto__equsto-kptt02-10080",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 369.75,
     "satis_eur_indirimli": 369.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10080\nModel serisi: KPTT02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 435.0\nSatış fiyatı (EUR, %15 iskonto): 369.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.10080\nModel serisi: KPTT02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 435.0\nSatış fiyatı (EUR, %15 iskonto): 369.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 100×80×85 cm (1000×800×850 mm)"
     ],
-    "fiyat_tl_net": 19898,
-    "fiyat_tl": 23878,
-    "price": "₺19.898,00 + KDV\nKDV Dahil ₺23.878,00"
+    "fiyat_tl_net": 19704,
+    "fiyat_tl": 23645,
+    "price": "₺19.704,00 + KDV\nKDV Dahil ₺23.645,00"
   },
   {
     "id": "equsto__equsto-kptt02-11060",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 331.5,
     "satis_eur_indirimli": 331.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11060\nModel serisi: KPTT02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %15 iskonto): 331.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11060\nModel serisi: KPTT02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %15 iskonto): 331.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 110×60×85 cm (1100×600×850 mm)"
     ],
-    "fiyat_tl_net": 17839,
-    "fiyat_tl": 21407,
-    "price": "₺17.839,00 + KDV\nKDV Dahil ₺21.407,00"
+    "fiyat_tl_net": 17666,
+    "fiyat_tl": 21199,
+    "price": "₺17.666,00 + KDV\nKDV Dahil ₺21.199,00"
   },
   {
     "id": "equsto__equsto-kptt02-11070",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 357.85,
     "satis_eur_indirimli": 357.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11070\nModel serisi: KPTT02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %15 iskonto): 357.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11070\nModel serisi: KPTT02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %15 iskonto): 357.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 110×70×85 cm (1100×700×850 mm)"
     ],
-    "fiyat_tl_net": 19257,
-    "fiyat_tl": 23108,
-    "price": "₺19.257,00 + KDV\nKDV Dahil ₺23.108,00"
+    "fiyat_tl_net": 19070,
+    "fiyat_tl": 22884,
+    "price": "₺19.070,00 + KDV\nKDV Dahil ₺22.884,00"
   },
   {
     "id": "equsto__equsto-kptt02-11080",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 386.75,
     "satis_eur_indirimli": 386.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11080\nModel serisi: KPTT02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 455.0\nSatış fiyatı (EUR, %15 iskonto): 386.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.11080\nModel serisi: KPTT02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 455.0\nSatış fiyatı (EUR, %15 iskonto): 386.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 110×80×85 cm (1100×800×850 mm)"
     ],
-    "fiyat_tl_net": 20812,
-    "fiyat_tl": 24974,
-    "price": "₺20.812,00 + KDV\nKDV Dahil ₺24.974,00"
+    "fiyat_tl_net": 20610,
+    "fiyat_tl": 24732,
+    "price": "₺20.610,00 + KDV\nKDV Dahil ₺24.732,00"
   },
   {
     "id": "equsto__equsto-kptt02-12060",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 348.5,
     "satis_eur_indirimli": 348.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12060\nModel serisi: KPTT02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12060\nModel serisi: KPTT02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 120×60×85 cm (1200×600×850 mm)"
     ],
-    "fiyat_tl_net": 18754,
-    "fiyat_tl": 22505,
-    "price": "₺18.754,00 + KDV\nKDV Dahil ₺22.505,00"
+    "fiyat_tl_net": 18571,
+    "fiyat_tl": 22285,
+    "price": "₺18.571,00 + KDV\nKDV Dahil ₺22.285,00"
   },
   {
     "id": "equsto__equsto-kptt02-12070",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 378.25,
     "satis_eur_indirimli": 378.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12070\nModel serisi: KPTT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %15 iskonto): 378.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12070\nModel serisi: KPTT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %15 iskonto): 378.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 20355,
-    "fiyat_tl": 24426,
-    "price": "₺20.355,00 + KDV\nKDV Dahil ₺24.426,00"
+    "fiyat_tl_net": 20157,
+    "fiyat_tl": 24188,
+    "price": "₺20.157,00 + KDV\nKDV Dahil ₺24.188,00"
   },
   {
     "id": "equsto__equsto-kptt02-12080",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 404.6,
     "satis_eur_indirimli": 404.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12080\nModel serisi: KPTT02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 476.0\nSatış fiyatı (EUR, %15 iskonto): 404.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.12080\nModel serisi: KPTT02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 476.0\nSatış fiyatı (EUR, %15 iskonto): 404.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 120×80×85 cm (1200×800×850 mm)"
     ],
-    "fiyat_tl_net": 21773,
-    "fiyat_tl": 26128,
-    "price": "₺21.773,00 + KDV\nKDV Dahil ₺26.128,00"
+    "fiyat_tl_net": 21561,
+    "fiyat_tl": 25873,
+    "price": "₺21.561,00 + KDV\nKDV Dahil ₺25.873,00"
   },
   {
     "id": "equsto__equsto-kptt02-13060",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 365.5,
     "satis_eur_indirimli": 365.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13060\nModel serisi: KPTT02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13060\nModel serisi: KPTT02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 130×60×85 cm (1300×600×850 mm)"
     ],
-    "fiyat_tl_net": 19669,
-    "fiyat_tl": 23603,
-    "price": "₺19.669,00 + KDV\nKDV Dahil ₺23.603,00"
+    "fiyat_tl_net": 19477,
+    "fiyat_tl": 23372,
+    "price": "₺19.477,00 + KDV\nKDV Dahil ₺23.372,00"
   },
   {
     "id": "equsto__equsto-kptt02-13070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 395.25,
     "satis_eur_indirimli": 395.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13070\nModel serisi: KPTT02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13070\nModel serisi: KPTT02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 21270,
-    "fiyat_tl": 25524,
-    "price": "₺21.270,00 + KDV\nKDV Dahil ₺25.524,00"
+    "fiyat_tl_net": 21063,
+    "fiyat_tl": 25276,
+    "price": "₺21.063,00 + KDV\nKDV Dahil ₺25.276,00"
   },
   {
     "id": "equsto__equsto-kptt02-13080",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 425.0,
     "satis_eur_indirimli": 425.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13080\nModel serisi: KPTT02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.13080\nModel serisi: KPTT02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 130×80×85 cm (1300×800×850 mm)"
     ],
-    "fiyat_tl_net": 22871,
-    "fiyat_tl": 27445,
-    "price": "₺22.871,00 + KDV\nKDV Dahil ₺27.445,00"
+    "fiyat_tl_net": 22648,
+    "fiyat_tl": 27178,
+    "price": "₺22.648,00 + KDV\nKDV Dahil ₺27.178,00"
   },
   {
     "id": "equsto__equsto-kptt02-14060",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 378.25,
     "satis_eur_indirimli": 378.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14060\nModel serisi: KPTT02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %15 iskonto): 378.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14060\nModel serisi: KPTT02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 445.0\nSatış fiyatı (EUR, %15 iskonto): 378.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 140×60×85 cm (1400×600×850 mm)"
     ],
-    "fiyat_tl_net": 20355,
-    "fiyat_tl": 24426,
-    "price": "₺20.355,00 + KDV\nKDV Dahil ₺24.426,00"
+    "fiyat_tl_net": 20157,
+    "fiyat_tl": 24188,
+    "price": "₺20.157,00 + KDV\nKDV Dahil ₺24.188,00"
   },
   {
     "id": "equsto__equsto-kptt02-14070",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 408.85,
     "satis_eur_indirimli": 408.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -838,16 +838,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14070\nModel serisi: KPTT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %15 iskonto): 408.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14070\nModel serisi: KPTT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 481.0\nSatış fiyatı (EUR, %15 iskonto): 408.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 22002,
-    "fiyat_tl": 26402,
-    "price": "₺22.002,00 + KDV\nKDV Dahil ₺26.402,00"
+    "fiyat_tl_net": 21788,
+    "fiyat_tl": 26146,
+    "price": "₺21.788,00 + KDV\nKDV Dahil ₺26.146,00"
   },
   {
     "id": "equsto__equsto-kptt02-14080",
@@ -879,7 +879,7 @@
     "satis_fiyati_eur": 442.0,
     "satis_eur_indirimli": 442.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -888,16 +888,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14080\nModel serisi: KPTT02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %15 iskonto): 442.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.14080\nModel serisi: KPTT02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %15 iskonto): 442.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 140×80×85 cm (1400×800×850 mm)"
     ],
-    "fiyat_tl_net": 23786,
-    "fiyat_tl": 28543,
-    "price": "₺23.786,00 + KDV\nKDV Dahil ₺28.543,00"
+    "fiyat_tl_net": 23554,
+    "fiyat_tl": 28265,
+    "price": "₺23.554,00 + KDV\nKDV Dahil ₺28.265,00"
   },
   {
     "id": "equsto__equsto-kptt02-15060",
@@ -929,7 +929,7 @@
     "satis_fiyati_eur": 395.25,
     "satis_eur_indirimli": 395.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -938,16 +938,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15060\nModel serisi: KPTT02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15060\nModel serisi: KPTT02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 150×60×85 cm (1500×600×850 mm)"
     ],
-    "fiyat_tl_net": 21270,
-    "fiyat_tl": 25524,
-    "price": "₺21.270,00 + KDV\nKDV Dahil ₺25.524,00"
+    "fiyat_tl_net": 21063,
+    "fiyat_tl": 25276,
+    "price": "₺21.063,00 + KDV\nKDV Dahil ₺25.276,00"
   },
   {
     "id": "equsto__equsto-kptt02-15070",
@@ -979,7 +979,7 @@
     "satis_fiyati_eur": 429.25,
     "satis_eur_indirimli": 429.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -988,16 +988,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15070\nModel serisi: KPTT02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15070\nModel serisi: KPTT02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 23100,
-    "fiyat_tl": 27720,
-    "price": "₺23.100,00 + KDV\nKDV Dahil ₺27.720,00"
+    "fiyat_tl_net": 22875,
+    "fiyat_tl": 27450,
+    "price": "₺22.875,00 + KDV\nKDV Dahil ₺27.450,00"
   },
   {
     "id": "equsto__equsto-kptt02-15080",
@@ -1029,7 +1029,7 @@
     "satis_fiyati_eur": 463.25,
     "satis_eur_indirimli": 463.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1038,16 +1038,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15080\nModel serisi: KPTT02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.15080\nModel serisi: KPTT02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 150×80×85 cm (1500×800×850 mm)"
     ],
-    "fiyat_tl_net": 24929,
-    "fiyat_tl": 29915,
-    "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
+    "fiyat_tl_net": 24686,
+    "fiyat_tl": 29623,
+    "price": "₺24.686,00 + KDV\nKDV Dahil ₺29.623,00"
   },
   {
     "id": "equsto__equsto-kptt02-16060",
@@ -1079,7 +1079,7 @@
     "satis_fiyati_eur": 420.75,
     "satis_eur_indirimli": 420.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1088,16 +1088,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16060\nModel serisi: KPTT02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 495.0\nSatış fiyatı (EUR, %15 iskonto): 420.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16060\nModel serisi: KPTT02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 495.0\nSatış fiyatı (EUR, %15 iskonto): 420.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 160×60×85 cm (1600×600×850 mm)"
     ],
-    "fiyat_tl_net": 22642,
-    "fiyat_tl": 27170,
-    "price": "₺22.642,00 + KDV\nKDV Dahil ₺27.170,00"
+    "fiyat_tl_net": 22422,
+    "fiyat_tl": 26906,
+    "price": "₺22.422,00 + KDV\nKDV Dahil ₺26.906,00"
   },
   {
     "id": "equsto__equsto-kptt02-16070",
@@ -1129,7 +1129,7 @@
     "satis_fiyati_eur": 459.85,
     "satis_eur_indirimli": 459.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -1138,16 +1138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16070\nModel serisi: KPTT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 541.0\nSatış fiyatı (EUR, %15 iskonto): 459.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16070\nModel serisi: KPTT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 541.0\nSatış fiyatı (EUR, %15 iskonto): 459.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 24746,
-    "fiyat_tl": 29695,
-    "price": "₺24.746,00 + KDV\nKDV Dahil ₺29.695,00"
+    "fiyat_tl_net": 24505,
+    "fiyat_tl": 29406,
+    "price": "₺24.505,00 + KDV\nKDV Dahil ₺29.406,00"
   },
   {
     "id": "equsto__equsto-kptt02-16080",
@@ -1179,7 +1179,7 @@
     "satis_fiyati_eur": 498.1,
     "satis_eur_indirimli": 498.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1188,16 +1188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16080\nModel serisi: KPTT02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 586.0\nSatış fiyatı (EUR, %15 iskonto): 498.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.16080\nModel serisi: KPTT02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 586.0\nSatış fiyatı (EUR, %15 iskonto): 498.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 160×80×85 cm (1600×800×850 mm)"
     ],
-    "fiyat_tl_net": 26805,
-    "fiyat_tl": 32166,
-    "price": "₺26.805,00 + KDV\nKDV Dahil ₺32.166,00"
+    "fiyat_tl_net": 26544,
+    "fiyat_tl": 31853,
+    "price": "₺26.544,00 + KDV\nKDV Dahil ₺31.853,00"
   },
   {
     "id": "equsto__equsto-kptt02-17060",
@@ -1229,7 +1229,7 @@
     "satis_fiyati_eur": 430.1,
     "satis_eur_indirimli": 430.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1238,15 +1238,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.17060\nModel serisi: KPTT02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 506.0\nSatış fiyatı (EUR, %15 iskonto): 430.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
+    "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT02.17060\nModel serisi: KPTT02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 506.0\nSatış fiyatı (EUR, %15 iskonto): 430.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT02",
     "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KPTT02",
       "Ebat: 170×60×85 cm (1700×600×850 mm)"
     ],
-    "fiyat_tl_net": 23145,
-    "fiyat_tl": 27774,
-    "price": "₺23.145,00 + KDV\nKDV Dahil ₺27.774,00"
+    "fiyat_tl_net": 22920,
+    "fiyat_tl": 27504,
+    "price": "₺22.920,00 + KDV\nKDV Dahil ₺27.504,00"
   }
 ]

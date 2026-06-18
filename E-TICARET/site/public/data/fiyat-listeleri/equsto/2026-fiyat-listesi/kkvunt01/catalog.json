@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.786977+00:00",
+  "imported_at": "2026-06-18T13:00:46.941530+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kkvunt01/urun.png",
   "pfos": {
     "count": 2,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 272.0,
         "satis_eur_indirimli": 272.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×650×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06065\nModel serisi: KKVUNT01\nEbat: 60×65×120 cm (600×650×1200 mm)\n\nListe fiyatı (EUR): 320.0\nSatış fiyatı (EUR, %15 iskonto): 272.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
+        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×650×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06065\nModel serisi: KKVUNT01\nEbat: 60×65×120 cm (600×650×1200 mm)\n\nListe fiyatı (EUR): 320.0\nSatış fiyatı (EUR, %15 iskonto): 272.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
         "aciklama": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KKVUNT01",
           "Ebat: 60×65×120 cm (600×650×1200 mm)"
         ],
-        "fiyat_tl_net": 14637,
-        "fiyat_tl": 17564,
-        "price": "₺14.637,00 + KDV\nKDV Dahil ₺17.564,00"
+        "fiyat_tl_net": 14495,
+        "fiyat_tl": 17394,
+        "price": "₺14.495,00 + KDV\nKDV Dahil ₺17.394,00"
       },
       {
         "id": "equsto__equsto-kkvunt01-06070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 335.75,
         "satis_eur_indirimli": 335.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×700×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06070\nModel serisi: KKVUNT01\nEbat: 60×70×120 cm (600×700×1200 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
+        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×700×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06070\nModel serisi: KKVUNT01\nEbat: 60×70×120 cm (600×700×1200 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
         "aciklama": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KKVUNT01",
           "Ebat: 60×70×120 cm (600×700×1200 mm)"
         ],
-        "fiyat_tl_net": 18068,
-        "fiyat_tl": 21682,
-        "price": "₺18.068,00 + KDV\nKDV Dahil ₺21.682,00"
+        "fiyat_tl_net": 17892,
+        "fiyat_tl": 21470,
+        "price": "₺17.892,00 + KDV\nKDV Dahil ₺21.470,00"
       }
     ]
   },
@@ -153,7 +153,7 @@
         "satis_fiyati_eur": 335.75,
         "satis_eur_indirimli": 335.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -162,16 +162,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×700×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06070\nModel serisi: KKVUNT01\nEbat: 60×70×120 cm (600×700×1200 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
+        "specs": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK 600×700×1200 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT01.06070\nModel serisi: KKVUNT01\nEbat: 60×70×120 cm (600×700×1200 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT01",
         "aciklama": "KUVER ÜNİTESİ, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ AÇIK. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KKVUNT01",
           "Ebat: 60×70×120 cm (600×700×1200 mm)"
         ],
-        "fiyat_tl_net": 18068,
-        "fiyat_tl": 21682,
-        "price": "₺18.068,00 + KDV\nKDV Dahil ₺21.682,00"
+        "fiyat_tl_net": 17892,
+        "fiyat_tl": 21470,
+        "price": "₺17.892,00 + KDV\nKDV Dahil ₺21.470,00"
       }
     ]
   }

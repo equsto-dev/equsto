@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.802446+00:00",
+  "imported_at": "2026-06-18T13:00:46.954443+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kkvunt02/urun.png",
   "pfos": {
     "count": 1,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 501.5,
         "satis_eur_indirimli": 501.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ 700×700×1500 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT02.07070\nModel serisi: KKVUNT02\nEbat: 70×70×150 cm (700×700×1500 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT02",
+        "specs": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ 700×700×1500 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT02.07070\nModel serisi: KKVUNT02\nEbat: 70×70×150 cm (700×700×1500 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT02",
         "aciklama": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KKVUNT02",
           "Ebat: 70×70×150 cm (700×700×1500 mm)"
         ],
-        "fiyat_tl_net": 26988,
-        "fiyat_tl": 32386,
-        "price": "₺26.988,00 + KDV\nKDV Dahil ₺32.386,00"
+        "fiyat_tl_net": 26725,
+        "fiyat_tl": 32070,
+        "price": "₺26.725,00 + KDV\nKDV Dahil ₺32.070,00"
       }
     ]
   },
@@ -103,7 +103,7 @@
         "satis_fiyati_eur": 501.5,
         "satis_eur_indirimli": 501.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -112,16 +112,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ 700×700×1500 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT02.07070\nModel serisi: KKVUNT02\nEbat: 70×70×150 cm (700×700×1500 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT02",
+        "specs": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ 700×700×1500 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKVUNT02.07070\nModel serisi: KKVUNT02\nEbat: 70×70×150 cm (700×700×1500 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKVUNT02",
         "aciklama": "KUVER ÜNİTESİ,BARDAKLIK, ÇATAL, KAŞIK, BIÇAK YERLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KKVUNT02",
           "Ebat: 70×70×150 cm (700×700×1500 mm)"
         ],
-        "fiyat_tl_net": 26988,
-        "fiyat_tl": 32386,
-        "price": "₺26.988,00 + KDV\nKDV Dahil ₺32.386,00"
+        "fiyat_tl_net": 26725,
+        "fiyat_tl": 32070,
+        "price": "₺26.725,00 + KDV\nKDV Dahil ₺32.070,00"
       }
     ]
   }

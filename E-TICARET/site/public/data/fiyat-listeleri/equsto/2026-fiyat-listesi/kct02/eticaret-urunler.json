@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 245.65,
     "satis_eur_indirimli": 245.65,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.09070\nModel serisi: KCT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 289.0\nSatış fiyatı (EUR, %15 iskonto): 245.65\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
+    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.09070\nModel serisi: KCT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 289.0\nSatış fiyatı (EUR, %15 iskonto): 245.65\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
     "aciklama": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -47,9 +47,9 @@
       "Taban fiyat (EUR): 274.0",
       "Ek modül (EUR): 15.0"
     ],
-    "fiyat_tl_net": 13219,
-    "fiyat_tl": 15863,
-    "price": "₺13.219,00 + KDV\nKDV Dahil ₺15.863,00"
+    "fiyat_tl_net": 13091,
+    "fiyat_tl": 15709,
+    "price": "₺13.091,00 + KDV\nKDV Dahil ₺15.709,00"
   },
   {
     "id": "equsto__equsto-kct02-12070",
@@ -81,7 +81,7 @@
     "satis_fiyati_eur": 289.0,
     "satis_eur_indirimli": 289.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -90,7 +90,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.12070\nModel serisi: KCT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
+    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.12070\nModel serisi: KCT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
     "aciklama": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -99,9 +99,9 @@
       "Taban fiyat (EUR): 325.0",
       "Ek modül (EUR): 15.0"
     ],
-    "fiyat_tl_net": 15552,
-    "fiyat_tl": 18662,
-    "price": "₺15.552,00 + KDV\nKDV Dahil ₺18.662,00"
+    "fiyat_tl_net": 15401,
+    "fiyat_tl": 18481,
+    "price": "₺15.401,00 + KDV\nKDV Dahil ₺18.481,00"
   },
   {
     "id": "equsto__equsto-kct02-14070",
@@ -133,7 +133,7 @@
     "satis_fiyati_eur": 310.25,
     "satis_eur_indirimli": 310.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -142,7 +142,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.14070\nModel serisi: KCT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
+    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.14070\nModel serisi: KCT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
     "aciklama": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -151,9 +151,9 @@
       "Taban fiyat (EUR): 350.0",
       "Ek modül (EUR): 15.0"
     ],
-    "fiyat_tl_net": 16696,
-    "fiyat_tl": 20035,
-    "price": "₺16.696,00 + KDV\nKDV Dahil ₺20.035,00"
+    "fiyat_tl_net": 16533,
+    "fiyat_tl": 19840,
+    "price": "₺16.533,00 + KDV\nKDV Dahil ₺19.840,00"
   },
   {
     "id": "equsto__equsto-kct02-16070",
@@ -185,7 +185,7 @@
     "satis_fiyati_eur": 332.35,
     "satis_eur_indirimli": 332.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -194,7 +194,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.16070\nModel serisi: KCT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 391.0\nSatış fiyatı (EUR, %15 iskonto): 332.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
+    "specs": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT02.16070\nModel serisi: KCT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 391.0\nSatış fiyatı (EUR, %15 iskonto): 332.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT02",
     "aciklama": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -203,8 +203,8 @@
       "Taban fiyat (EUR): 376.0",
       "Ek modül (EUR): 15.0"
     ],
-    "fiyat_tl_net": 17885,
-    "fiyat_tl": 21462,
-    "price": "₺17.885,00 + KDV\nKDV Dahil ₺21.462,00"
+    "fiyat_tl_net": 17711,
+    "fiyat_tl": 21253,
+    "price": "₺17.711,00 + KDV\nKDV Dahil ₺21.253,00"
   }
 ]

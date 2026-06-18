@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 439.45,
     "satis_eur_indirimli": 439.45,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09060\nModel serisi: KCEVD02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 517.0\nSatış fiyatı (EUR, %15 iskonto): 439.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09060\nModel serisi: KCEVD02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 517.0\nSatış fiyatı (EUR, %15 iskonto): 439.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 90×60×85 cm (900×600×850 mm)"
     ],
-    "fiyat_tl_net": 23648,
-    "fiyat_tl": 28378,
-    "price": "₺23.648,00 + KDV\nKDV Dahil ₺28.378,00"
+    "fiyat_tl_net": 23418,
+    "fiyat_tl": 28102,
+    "price": "₺23.418,00 + KDV\nKDV Dahil ₺28.102,00"
   },
   {
     "id": "equsto__equsto-kcevd02-09070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 459.85,
     "satis_eur_indirimli": 459.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09070\nModel serisi: KCEVD02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 541.0\nSatış fiyatı (EUR, %15 iskonto): 459.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09070\nModel serisi: KCEVD02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 541.0\nSatış fiyatı (EUR, %15 iskonto): 459.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 24746,
-    "fiyat_tl": 29695,
-    "price": "₺24.746,00 + KDV\nKDV Dahil ₺29.695,00"
+    "fiyat_tl_net": 24505,
+    "fiyat_tl": 29406,
+    "price": "₺24.505,00 + KDV\nKDV Dahil ₺29.406,00"
   },
   {
     "id": "equsto__equsto-kcevd02-09080",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 481.1,
     "satis_eur_indirimli": 481.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09080\nModel serisi: KCEVD02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 566.0\nSatış fiyatı (EUR, %15 iskonto): 481.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.09080\nModel serisi: KCEVD02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 566.0\nSatış fiyatı (EUR, %15 iskonto): 481.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 90×80×85 cm (900×800×850 mm)"
     ],
-    "fiyat_tl_net": 25890,
-    "fiyat_tl": 31068,
-    "price": "₺25.890,00 + KDV\nKDV Dahil ₺31.068,00"
+    "fiyat_tl_net": 25638,
+    "fiyat_tl": 30766,
+    "price": "₺25.638,00 + KDV\nKDV Dahil ₺30.766,00"
   },
   {
     "id": "equsto__equsto-kcevd02-10060",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 455.6,
     "satis_eur_indirimli": 455.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10060\nModel serisi: KCEVD02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 536.0\nSatış fiyatı (EUR, %15 iskonto): 455.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10060\nModel serisi: KCEVD02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 536.0\nSatış fiyatı (EUR, %15 iskonto): 455.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 100×60×85 cm (1000×600×850 mm)"
     ],
-    "fiyat_tl_net": 24518,
-    "fiyat_tl": 29422,
-    "price": "₺24.518,00 + KDV\nKDV Dahil ₺29.422,00"
+    "fiyat_tl_net": 24279,
+    "fiyat_tl": 29135,
+    "price": "₺24.279,00 + KDV\nKDV Dahil ₺29.135,00"
   },
   {
     "id": "equsto__equsto-kcevd02-10070",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 489.6,
     "satis_eur_indirimli": 489.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10070\nModel serisi: KCEVD02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 576.0\nSatış fiyatı (EUR, %15 iskonto): 489.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10070\nModel serisi: KCEVD02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 576.0\nSatış fiyatı (EUR, %15 iskonto): 489.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 100×70×85 cm (1000×700×850 mm)"
     ],
-    "fiyat_tl_net": 26347,
-    "fiyat_tl": 31616,
-    "price": "₺26.347,00 + KDV\nKDV Dahil ₺31.616,00"
+    "fiyat_tl_net": 26091,
+    "fiyat_tl": 31309,
+    "price": "₺26.091,00 + KDV\nKDV Dahil ₺31.309,00"
   },
   {
     "id": "equsto__equsto-kcevd02-10080",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 514.25,
     "satis_eur_indirimli": 514.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10080\nModel serisi: KCEVD02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 605.0\nSatış fiyatı (EUR, %15 iskonto): 514.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.10080\nModel serisi: KCEVD02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 605.0\nSatış fiyatı (EUR, %15 iskonto): 514.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 100×80×85 cm (1000×800×850 mm)"
     ],
-    "fiyat_tl_net": 27674,
-    "fiyat_tl": 33209,
-    "price": "₺27.674,00 + KDV\nKDV Dahil ₺33.209,00"
+    "fiyat_tl_net": 27404,
+    "fiyat_tl": 32885,
+    "price": "₺27.404,00 + KDV\nKDV Dahil ₺32.885,00"
   },
   {
     "id": "equsto__equsto-kcevd02-11060",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 481.1,
     "satis_eur_indirimli": 481.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11060\nModel serisi: KCEVD02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 566.0\nSatış fiyatı (EUR, %15 iskonto): 481.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11060\nModel serisi: KCEVD02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 566.0\nSatış fiyatı (EUR, %15 iskonto): 481.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 110×60×85 cm (1100×600×850 mm)"
     ],
-    "fiyat_tl_net": 25890,
-    "fiyat_tl": 31068,
-    "price": "₺25.890,00 + KDV\nKDV Dahil ₺31.068,00"
+    "fiyat_tl_net": 25638,
+    "fiyat_tl": 30766,
+    "price": "₺25.638,00 + KDV\nKDV Dahil ₺30.766,00"
   },
   {
     "id": "equsto__equsto-kcevd02-11070",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 505.75,
     "satis_eur_indirimli": 505.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11070\nModel serisi: KCEVD02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 595.0\nSatış fiyatı (EUR, %15 iskonto): 505.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11070\nModel serisi: KCEVD02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 595.0\nSatış fiyatı (EUR, %15 iskonto): 505.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 110×70×85 cm (1100×700×850 mm)"
     ],
-    "fiyat_tl_net": 27216,
-    "fiyat_tl": 32659,
-    "price": "₺27.216,00 + KDV\nKDV Dahil ₺32.659,00"
+    "fiyat_tl_net": 26951,
+    "fiyat_tl": 32341,
+    "price": "₺26.951,00 + KDV\nKDV Dahil ₺32.341,00"
   },
   {
     "id": "equsto__equsto-kcevd02-11080",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 531.25,
     "satis_eur_indirimli": 531.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11080\nModel serisi: KCEVD02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.11080\nModel serisi: KCEVD02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 110×80×85 cm (1100×800×850 mm)"
     ],
-    "fiyat_tl_net": 28589,
-    "fiyat_tl": 34307,
-    "price": "₺28.589,00 + KDV\nKDV Dahil ₺34.307,00"
+    "fiyat_tl_net": 28310,
+    "fiyat_tl": 33972,
+    "price": "₺28.310,00 + KDV\nKDV Dahil ₺33.972,00"
   },
   {
     "id": "equsto__equsto-kcevd02-12060",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 505.75,
     "satis_eur_indirimli": 505.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12060\nModel serisi: KCEVD02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 595.0\nSatış fiyatı (EUR, %15 iskonto): 505.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12060\nModel serisi: KCEVD02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 595.0\nSatış fiyatı (EUR, %15 iskonto): 505.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 120×60×85 cm (1200×600×850 mm)"
     ],
-    "fiyat_tl_net": 27216,
-    "fiyat_tl": 32659,
-    "price": "₺27.216,00 + KDV\nKDV Dahil ₺32.659,00"
+    "fiyat_tl_net": 26951,
+    "fiyat_tl": 32341,
+    "price": "₺26.951,00 + KDV\nKDV Dahil ₺32.341,00"
   },
   {
     "id": "equsto__equsto-kcevd02-12070",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 531.25,
     "satis_eur_indirimli": 531.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12070\nModel serisi: KCEVD02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12070\nModel serisi: KCEVD02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 28589,
-    "fiyat_tl": 34307,
-    "price": "₺28.589,00 + KDV\nKDV Dahil ₺34.307,00"
+    "fiyat_tl_net": 28310,
+    "fiyat_tl": 33972,
+    "price": "₺28.310,00 + KDV\nKDV Dahil ₺33.972,00"
   },
   {
     "id": "equsto__equsto-kcevd02-12080",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 561.0,
     "satis_eur_indirimli": 561.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12080\nModel serisi: KCEVD02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.12080\nModel serisi: KCEVD02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 120×80×85 cm (1200×800×850 mm)"
     ],
-    "fiyat_tl_net": 30189,
-    "fiyat_tl": 36227,
-    "price": "₺30.189,00 + KDV\nKDV Dahil ₺36.227,00"
+    "fiyat_tl_net": 29896,
+    "fiyat_tl": 35875,
+    "price": "₺29.896,00 + KDV\nKDV Dahil ₺35.875,00"
   },
   {
     "id": "equsto__equsto-kcevd02-13060",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 531.25,
     "satis_eur_indirimli": 531.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13060\nModel serisi: KCEVD02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13060\nModel serisi: KCEVD02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 625.0\nSatış fiyatı (EUR, %15 iskonto): 531.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 130×60×85 cm (1300×600×850 mm)"
     ],
-    "fiyat_tl_net": 28589,
-    "fiyat_tl": 34307,
-    "price": "₺28.589,00 + KDV\nKDV Dahil ₺34.307,00"
+    "fiyat_tl_net": 28310,
+    "fiyat_tl": 33972,
+    "price": "₺28.310,00 + KDV\nKDV Dahil ₺33.972,00"
   },
   {
     "id": "equsto__equsto-kcevd02-13070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 555.05,
     "satis_eur_indirimli": 555.05,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13070\nModel serisi: KCEVD02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 653.0\nSatış fiyatı (EUR, %15 iskonto): 555.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13070\nModel serisi: KCEVD02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 653.0\nSatış fiyatı (EUR, %15 iskonto): 555.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 29869,
-    "fiyat_tl": 35843,
-    "price": "₺29.869,00 + KDV\nKDV Dahil ₺35.843,00"
+    "fiyat_tl_net": 29579,
+    "fiyat_tl": 35495,
+    "price": "₺29.579,00 + KDV\nKDV Dahil ₺35.495,00"
   },
   {
     "id": "equsto__equsto-kcevd02-13080",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 590.75,
     "satis_eur_indirimli": 590.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13080\nModel serisi: KCEVD02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %15 iskonto): 590.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.13080\nModel serisi: KCEVD02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %15 iskonto): 590.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 130×80×85 cm (1300×800×850 mm)"
     ],
-    "fiyat_tl_net": 31790,
-    "fiyat_tl": 38148,
-    "price": "₺31.790,00 + KDV\nKDV Dahil ₺38.148,00"
+    "fiyat_tl_net": 31481,
+    "fiyat_tl": 37777,
+    "price": "₺31.481,00 + KDV\nKDV Dahil ₺37.777,00"
   },
   {
     "id": "equsto__equsto-kcevd02-14060",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 561.0,
     "satis_eur_indirimli": 561.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14060\nModel serisi: KCEVD02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14060\nModel serisi: KCEVD02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 140×60×85 cm (1400×600×850 mm)"
     ],
-    "fiyat_tl_net": 30189,
-    "fiyat_tl": 36227,
-    "price": "₺30.189,00 + KDV\nKDV Dahil ₺36.227,00"
+    "fiyat_tl_net": 29896,
+    "fiyat_tl": 35875,
+    "price": "₺29.896,00 + KDV\nKDV Dahil ₺35.875,00"
   },
   {
     "id": "equsto__equsto-kcevd02-14070",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 579.7,
     "satis_eur_indirimli": 579.7,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -838,16 +838,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14070\nModel serisi: KCEVD02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 682.0\nSatış fiyatı (EUR, %15 iskonto): 579.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14070\nModel serisi: KCEVD02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 682.0\nSatış fiyatı (EUR, %15 iskonto): 579.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 31196,
-    "fiyat_tl": 37435,
-    "price": "₺31.196,00 + KDV\nKDV Dahil ₺37.435,00"
+    "fiyat_tl_net": 30892,
+    "fiyat_tl": 37070,
+    "price": "₺30.892,00 + KDV\nKDV Dahil ₺37.070,00"
   },
   {
     "id": "equsto__equsto-kcevd02-14080",
@@ -879,7 +879,7 @@
     "satis_fiyati_eur": 607.75,
     "satis_eur_indirimli": 607.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -888,16 +888,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14080\nModel serisi: KCEVD02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.14080\nModel serisi: KCEVD02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 140×80×85 cm (1400×800×850 mm)"
     ],
-    "fiyat_tl_net": 32705,
-    "fiyat_tl": 39246,
-    "price": "₺32.705,00 + KDV\nKDV Dahil ₺39.246,00"
+    "fiyat_tl_net": 32387,
+    "fiyat_tl": 38864,
+    "price": "₺32.387,00 + KDV\nKDV Dahil ₺38.864,00"
   },
   {
     "id": "equsto__equsto-kcevd02-15060",
@@ -929,7 +929,7 @@
     "satis_fiyati_eur": 573.75,
     "satis_eur_indirimli": 573.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -938,16 +938,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15060\nModel serisi: KCEVD02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15060\nModel serisi: KCEVD02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 150×60×85 cm (1500×600×850 mm)"
     ],
-    "fiyat_tl_net": 30876,
-    "fiyat_tl": 37051,
-    "price": "₺30.876,00 + KDV\nKDV Dahil ₺37.051,00"
+    "fiyat_tl_net": 30575,
+    "fiyat_tl": 36690,
+    "price": "₺30.575,00 + KDV\nKDV Dahil ₺36.690,00"
   },
   {
     "id": "equsto__equsto-kcevd02-15070",
@@ -979,7 +979,7 @@
     "satis_fiyati_eur": 596.7,
     "satis_eur_indirimli": 596.7,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -988,16 +988,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15070\nModel serisi: KCEVD02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 702.0\nSatış fiyatı (EUR, %15 iskonto): 596.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15070\nModel serisi: KCEVD02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 702.0\nSatış fiyatı (EUR, %15 iskonto): 596.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 32111,
-    "fiyat_tl": 38533,
-    "price": "₺32.111,00 + KDV\nKDV Dahil ₺38.533,00"
+    "fiyat_tl_net": 31798,
+    "fiyat_tl": 38158,
+    "price": "₺31.798,00 + KDV\nKDV Dahil ₺38.158,00"
   },
   {
     "id": "equsto__equsto-kcevd02-15080",
@@ -1029,7 +1029,7 @@
     "satis_fiyati_eur": 637.5,
     "satis_eur_indirimli": 637.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1038,16 +1038,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15080\nModel serisi: KCEVD02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 750.0\nSatış fiyatı (EUR, %15 iskonto): 637.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.15080\nModel serisi: KCEVD02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 750.0\nSatış fiyatı (EUR, %15 iskonto): 637.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 150×80×85 cm (1500×800×850 mm)"
     ],
-    "fiyat_tl_net": 34306,
-    "fiyat_tl": 41167,
-    "price": "₺34.306,00 + KDV\nKDV Dahil ₺41.167,00"
+    "fiyat_tl_net": 33972,
+    "fiyat_tl": 40766,
+    "price": "₺33.972,00 + KDV\nKDV Dahil ₺40.766,00"
   },
   {
     "id": "equsto__equsto-kcevd02-16060",
@@ -1079,7 +1079,7 @@
     "satis_fiyati_eur": 599.25,
     "satis_eur_indirimli": 599.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1088,16 +1088,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16060\nModel serisi: KCEVD02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16060\nModel serisi: KCEVD02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 160×60×85 cm (1600×600×850 mm)"
     ],
-    "fiyat_tl_net": 32248,
-    "fiyat_tl": 38698,
-    "price": "₺32.248,00 + KDV\nKDV Dahil ₺38.698,00"
+    "fiyat_tl_net": 31934,
+    "fiyat_tl": 38321,
+    "price": "₺31.934,00 + KDV\nKDV Dahil ₺38.321,00"
   },
   {
     "id": "equsto__equsto-kcevd02-16070",
@@ -1129,7 +1129,7 @@
     "satis_fiyati_eur": 630.7,
     "satis_eur_indirimli": 630.7,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -1138,16 +1138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16070\nModel serisi: KCEVD02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 742.0\nSatış fiyatı (EUR, %15 iskonto): 630.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16070\nModel serisi: KCEVD02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 742.0\nSatış fiyatı (EUR, %15 iskonto): 630.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 33940,
-    "fiyat_tl": 40728,
-    "price": "₺33.940,00 + KDV\nKDV Dahil ₺40.728,00"
+    "fiyat_tl_net": 33610,
+    "fiyat_tl": 40332,
+    "price": "₺33.610,00 + KDV\nKDV Dahil ₺40.332,00"
   },
   {
     "id": "equsto__equsto-kcevd02-16080",
@@ -1179,7 +1179,7 @@
     "satis_fiyati_eur": 655.35,
     "satis_eur_indirimli": 655.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1188,16 +1188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16080\nModel serisi: KCEVD02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 771.0\nSatış fiyatı (EUR, %15 iskonto): 655.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.16080\nModel serisi: KCEVD02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 771.0\nSatış fiyatı (EUR, %15 iskonto): 655.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 160×80×85 cm (1600×800×850 mm)"
     ],
-    "fiyat_tl_net": 35267,
-    "fiyat_tl": 42320,
-    "price": "₺35.267,00 + KDV\nKDV Dahil ₺42.320,00"
+    "fiyat_tl_net": 34923,
+    "fiyat_tl": 41908,
+    "price": "₺34.923,00 + KDV\nKDV Dahil ₺41.908,00"
   },
   {
     "id": "equsto__equsto-kcevd02-17060",
@@ -1229,7 +1229,7 @@
     "satis_fiyati_eur": 616.25,
     "satis_eur_indirimli": 616.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1238,15 +1238,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.17060\nModel serisi: KCEVD02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 725.0\nSatış fiyatı (EUR, %15 iskonto): 616.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
+    "specs": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCEVD02.17060\nModel serisi: KCEVD02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 725.0\nSatış fiyatı (EUR, %15 iskonto): 616.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCEVD02",
     "aciklama": "ÇİFT EVYELİ DOLAP, ETRAFI KAPALI, TABAN RAFLI-KÇEVD02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCEVD02",
       "Ebat: 170×60×85 cm (1700×600×850 mm)"
     ],
-    "fiyat_tl_net": 33163,
-    "fiyat_tl": 39796,
-    "price": "₺33.163,00 + KDV\nKDV Dahil ₺39.796,00"
+    "fiyat_tl_net": 32840,
+    "fiyat_tl": 39408,
+    "price": "₺32.840,00 + KDV\nKDV Dahil ₺39.408,00"
   }
 ]

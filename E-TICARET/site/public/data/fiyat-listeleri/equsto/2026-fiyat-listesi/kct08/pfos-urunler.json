@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 238.85,
     "satis_eur_indirimli": 238.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09060\nModel serisi: KCT08\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %15 iskonto): 238.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09060\nModel serisi: KCT08\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %15 iskonto): 238.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 90×60×85 cm (900×600×850 mm)"
     ],
-    "fiyat_tl_net": 12853,
-    "fiyat_tl": 15424,
-    "price": "₺12.853,00 + KDV\nKDV Dahil ₺15.424,00"
+    "fiyat_tl_net": 12728,
+    "fiyat_tl": 15274,
+    "price": "₺12.728,00 + KDV\nKDV Dahil ₺15.274,00"
   },
   {
     "id": "equsto__equsto-kct08-09070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 272.85,
     "satis_eur_indirimli": 272.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09070\nModel serisi: KCT08\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 321.0\nSatış fiyatı (EUR, %15 iskonto): 272.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09070\nModel serisi: KCT08\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 321.0\nSatış fiyatı (EUR, %15 iskonto): 272.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 14683,
-    "fiyat_tl": 17620,
-    "price": "₺14.683,00 + KDV\nKDV Dahil ₺17.620,00"
+    "fiyat_tl_net": 14540,
+    "fiyat_tl": 17448,
+    "price": "₺14.540,00 + KDV\nKDV Dahil ₺17.448,00"
   },
   {
     "id": "equsto__equsto-kct08-09080",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 295.8,
     "satis_eur_indirimli": 295.8,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09080\nModel serisi: KCT08\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 348.0\nSatış fiyatı (EUR, %15 iskonto): 295.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09080\nModel serisi: KCT08\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 348.0\nSatış fiyatı (EUR, %15 iskonto): 295.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 90×80×85 cm (900×800×850 mm)"
     ],
-    "fiyat_tl_net": 15918,
-    "fiyat_tl": 19102,
-    "price": "₺15.918,00 + KDV\nKDV Dahil ₺19.102,00"
+    "fiyat_tl_net": 15763,
+    "fiyat_tl": 18916,
+    "price": "₺15.763,00 + KDV\nKDV Dahil ₺18.916,00"
   },
   {
     "id": "equsto__equsto-kct08-09090",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 334.9,
     "satis_eur_indirimli": 334.9,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09090\nModel serisi: KCT08\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 394.0\nSatış fiyatı (EUR, %15 iskonto): 334.9\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.09090\nModel serisi: KCT08\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 394.0\nSatış fiyatı (EUR, %15 iskonto): 334.9\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 90×90×85 cm (900×900×850 mm)"
     ],
-    "fiyat_tl_net": 18022,
-    "fiyat_tl": 21626,
-    "price": "₺18.022,00 + KDV\nKDV Dahil ₺21.626,00"
+    "fiyat_tl_net": 17847,
+    "fiyat_tl": 21416,
+    "price": "₺17.847,00 + KDV\nKDV Dahil ₺21.416,00"
   },
   {
     "id": "equsto__equsto-kct08-10060",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 267.75,
     "satis_eur_indirimli": 267.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10060\nModel serisi: KCT08\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10060\nModel serisi: KCT08\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 100×60×85 cm (1000×600×850 mm)"
     ],
-    "fiyat_tl_net": 14409,
-    "fiyat_tl": 17291,
-    "price": "₺14.409,00 + KDV\nKDV Dahil ₺17.291,00"
+    "fiyat_tl_net": 14268,
+    "fiyat_tl": 17122,
+    "price": "₺14.268,00 + KDV\nKDV Dahil ₺17.122,00"
   },
   {
     "id": "equsto__equsto-kct08-10070",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 295.8,
     "satis_eur_indirimli": 295.8,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10070\nModel serisi: KCT08\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 348.0\nSatış fiyatı (EUR, %15 iskonto): 295.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10070\nModel serisi: KCT08\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 348.0\nSatış fiyatı (EUR, %15 iskonto): 295.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 100×70×85 cm (1000×700×850 mm)"
     ],
-    "fiyat_tl_net": 15918,
-    "fiyat_tl": 19102,
-    "price": "₺15.918,00 + KDV\nKDV Dahil ₺19.102,00"
+    "fiyat_tl_net": 15763,
+    "fiyat_tl": 18916,
+    "price": "₺15.763,00 + KDV\nKDV Dahil ₺18.916,00"
   },
   {
     "id": "equsto__equsto-kct08-10080",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 325.55,
     "satis_eur_indirimli": 325.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10080\nModel serisi: KCT08\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %15 iskonto): 325.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10080\nModel serisi: KCT08\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %15 iskonto): 325.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 100×80×85 cm (1000×800×850 mm)"
     ],
-    "fiyat_tl_net": 17519,
-    "fiyat_tl": 21023,
-    "price": "₺17.519,00 + KDV\nKDV Dahil ₺21.023,00"
+    "fiyat_tl_net": 17348,
+    "fiyat_tl": 20818,
+    "price": "₺17.348,00 + KDV\nKDV Dahil ₺20.818,00"
   },
   {
     "id": "equsto__equsto-kct08-10090",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 353.6,
     "satis_eur_indirimli": 353.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10090\nModel serisi: KCT08\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %15 iskonto): 353.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.10090\nModel serisi: KCT08\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %15 iskonto): 353.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 100×90×85 cm (1000×900×850 mm)"
     ],
-    "fiyat_tl_net": 19029,
-    "fiyat_tl": 22835,
-    "price": "₺19.029,00 + KDV\nKDV Dahil ₺22.835,00"
+    "fiyat_tl_net": 18843,
+    "fiyat_tl": 22612,
+    "price": "₺18.843,00 + KDV\nKDV Dahil ₺22.612,00"
   },
   {
     "id": "equsto__equsto-kct08-11060",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 277.95,
     "satis_eur_indirimli": 277.95,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11060\nModel serisi: KCT08\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 327.0\nSatış fiyatı (EUR, %15 iskonto): 277.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11060\nModel serisi: KCT08\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 327.0\nSatış fiyatı (EUR, %15 iskonto): 277.95\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 110×60×85 cm (1100×600×850 mm)"
     ],
-    "fiyat_tl_net": 14958,
-    "fiyat_tl": 17950,
-    "price": "₺14.958,00 + KDV\nKDV Dahil ₺17.950,00"
+    "fiyat_tl_net": 14812,
+    "fiyat_tl": 17774,
+    "price": "₺14.812,00 + KDV\nKDV Dahil ₺17.774,00"
   },
   {
     "id": "equsto__equsto-kct08-11070",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 315.35,
     "satis_eur_indirimli": 315.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11070\nModel serisi: KCT08\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 371.0\nSatış fiyatı (EUR, %15 iskonto): 315.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11070\nModel serisi: KCT08\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 371.0\nSatış fiyatı (EUR, %15 iskonto): 315.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 110×70×85 cm (1100×700×850 mm)"
     ],
-    "fiyat_tl_net": 16970,
-    "fiyat_tl": 20364,
-    "price": "₺16.970,00 + KDV\nKDV Dahil ₺20.364,00"
+    "fiyat_tl_net": 16805,
+    "fiyat_tl": 20166,
+    "price": "₺16.805,00 + KDV\nKDV Dahil ₺20.166,00"
   },
   {
     "id": "equsto__equsto-kct08-11080",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 353.6,
     "satis_eur_indirimli": 353.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11080\nModel serisi: KCT08\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %15 iskonto): 353.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11080\nModel serisi: KCT08\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 416.0\nSatış fiyatı (EUR, %15 iskonto): 353.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 110×80×85 cm (1100×800×850 mm)"
     ],
-    "fiyat_tl_net": 19029,
-    "fiyat_tl": 22835,
-    "price": "₺19.029,00 + KDV\nKDV Dahil ₺22.835,00"
+    "fiyat_tl_net": 18843,
+    "fiyat_tl": 22612,
+    "price": "₺18.843,00 + KDV\nKDV Dahil ₺22.612,00"
   },
   {
     "id": "equsto__equsto-kct08-11090",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 382.5,
     "satis_eur_indirimli": 382.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11090\nModel serisi: KCT08\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.11090\nModel serisi: KCT08\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 110×90×85 cm (1100×900×850 mm)"
     ],
-    "fiyat_tl_net": 20584,
-    "fiyat_tl": 24701,
-    "price": "₺20.584,00 + KDV\nKDV Dahil ₺24.701,00"
+    "fiyat_tl_net": 20383,
+    "fiyat_tl": 24460,
+    "price": "₺20.383,00 + KDV\nKDV Dahil ₺24.460,00"
   },
   {
     "id": "equsto__equsto-kct08-12060",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12060\nModel serisi: KCT08\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12060\nModel serisi: KCT08\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 120×60×85 cm (1200×600×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kct08-12070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 343.4,
     "satis_eur_indirimli": 343.4,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12070\nModel serisi: KCT08\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 404.0\nSatış fiyatı (EUR, %15 iskonto): 343.4\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12070\nModel serisi: KCT08\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 404.0\nSatış fiyatı (EUR, %15 iskonto): 343.4\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 18480,
-    "fiyat_tl": 22176,
-    "price": "₺18.480,00 + KDV\nKDV Dahil ₺22.176,00"
+    "fiyat_tl_net": 18300,
+    "fiyat_tl": 21960,
+    "price": "₺18.300,00 + KDV\nKDV Dahil ₺21.960,00"
   },
   {
     "id": "equsto__equsto-kct08-12080",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 373.15,
     "satis_eur_indirimli": 373.15,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12080\nModel serisi: KCT08\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12080\nModel serisi: KCT08\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 439.0\nSatış fiyatı (EUR, %15 iskonto): 373.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 120×80×85 cm (1200×800×850 mm)"
     ],
-    "fiyat_tl_net": 20081,
-    "fiyat_tl": 24097,
-    "price": "₺20.081,00 + KDV\nKDV Dahil ₺24.097,00"
+    "fiyat_tl_net": 19885,
+    "fiyat_tl": 23862,
+    "price": "₺19.885,00 + KDV\nKDV Dahil ₺23.862,00"
   },
   {
     "id": "equsto__equsto-kct08-12090",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 410.55,
     "satis_eur_indirimli": 410.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12090\nModel serisi: KCT08\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.12090\nModel serisi: KCT08\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 120×90×85 cm (1200×900×850 mm)"
     ],
-    "fiyat_tl_net": 22093,
-    "fiyat_tl": 26512,
-    "price": "₺22.093,00 + KDV\nKDV Dahil ₺26.512,00"
+    "fiyat_tl_net": 21878,
+    "fiyat_tl": 26254,
+    "price": "₺21.878,00 + KDV\nKDV Dahil ₺26.254,00"
   },
   {
     "id": "equsto__equsto-kct08-13060",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 325.55,
     "satis_eur_indirimli": 325.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -838,16 +838,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13060\nModel serisi: KCT08\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %15 iskonto): 325.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13060\nModel serisi: KCT08\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 383.0\nSatış fiyatı (EUR, %15 iskonto): 325.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 130×60×85 cm (1300×600×850 mm)"
     ],
-    "fiyat_tl_net": 17519,
-    "fiyat_tl": 21023,
-    "price": "₺17.519,00 + KDV\nKDV Dahil ₺21.023,00"
+    "fiyat_tl_net": 17348,
+    "fiyat_tl": 20818,
+    "price": "₺17.348,00 + KDV\nKDV Dahil ₺20.818,00"
   },
   {
     "id": "equsto__equsto-kct08-13070",
@@ -879,7 +879,7 @@
     "satis_fiyati_eur": 362.95,
     "satis_eur_indirimli": 362.95,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -888,16 +888,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13070\nModel serisi: KCT08\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 427.0\nSatış fiyatı (EUR, %15 iskonto): 362.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13070\nModel serisi: KCT08\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 427.0\nSatış fiyatı (EUR, %15 iskonto): 362.95\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 19532,
-    "fiyat_tl": 23438,
-    "price": "₺19.532,00 + KDV\nKDV Dahil ₺23.438,00"
+    "fiyat_tl_net": 19342,
+    "fiyat_tl": 23210,
+    "price": "₺19.342,00 + KDV\nKDV Dahil ₺23.210,00"
   },
   {
     "id": "equsto__equsto-kct08-13080",
@@ -929,7 +929,7 @@
     "satis_fiyati_eur": 402.05,
     "satis_eur_indirimli": 402.05,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -938,16 +938,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13080\nModel serisi: KCT08\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 473.0\nSatış fiyatı (EUR, %15 iskonto): 402.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13080\nModel serisi: KCT08\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 473.0\nSatış fiyatı (EUR, %15 iskonto): 402.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 130×80×85 cm (1300×800×850 mm)"
     ],
-    "fiyat_tl_net": 21636,
-    "fiyat_tl": 25963,
-    "price": "₺21.636,00 + KDV\nKDV Dahil ₺25.963,00"
+    "fiyat_tl_net": 21425,
+    "fiyat_tl": 25710,
+    "price": "₺21.425,00 + KDV\nKDV Dahil ₺25.710,00"
   },
   {
     "id": "equsto__equsto-kct08-13090",
@@ -979,7 +979,7 @@
     "satis_fiyati_eur": 439.45,
     "satis_eur_indirimli": 439.45,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -988,16 +988,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13090\nModel serisi: KCT08\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 517.0\nSatış fiyatı (EUR, %15 iskonto): 439.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.13090\nModel serisi: KCT08\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 517.0\nSatış fiyatı (EUR, %15 iskonto): 439.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 130×90×85 cm (1300×900×850 mm)"
     ],
-    "fiyat_tl_net": 23648,
-    "fiyat_tl": 28378,
-    "price": "₺23.648,00 + KDV\nKDV Dahil ₺28.378,00"
+    "fiyat_tl_net": 23418,
+    "fiyat_tl": 28102,
+    "price": "₺23.418,00 + KDV\nKDV Dahil ₺28.102,00"
   },
   {
     "id": "equsto__equsto-kct08-14060",
@@ -1029,7 +1029,7 @@
     "satis_fiyati_eur": 348.5,
     "satis_eur_indirimli": 348.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1038,16 +1038,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14060\nModel serisi: KCT08\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14060\nModel serisi: KCT08\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 140×60×85 cm (1400×600×850 mm)"
     ],
-    "fiyat_tl_net": 18754,
-    "fiyat_tl": 22505,
-    "price": "₺18.754,00 + KDV\nKDV Dahil ₺22.505,00"
+    "fiyat_tl_net": 18571,
+    "fiyat_tl": 22285,
+    "price": "₺18.571,00 + KDV\nKDV Dahil ₺22.285,00"
   },
   {
     "id": "equsto__equsto-kct08-14070",
@@ -1079,7 +1079,7 @@
     "satis_fiyati_eur": 391.85,
     "satis_eur_indirimli": 391.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -1088,16 +1088,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14070\nModel serisi: KCT08\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %15 iskonto): 391.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14070\nModel serisi: KCT08\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %15 iskonto): 391.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 21087,
-    "fiyat_tl": 25304,
-    "price": "₺21.087,00 + KDV\nKDV Dahil ₺25.304,00"
+    "fiyat_tl_net": 20882,
+    "fiyat_tl": 25058,
+    "price": "₺20.882,00 + KDV\nKDV Dahil ₺25.058,00"
   },
   {
     "id": "equsto__equsto-kct08-14080",
@@ -1129,7 +1129,7 @@
     "satis_fiyati_eur": 425.0,
     "satis_eur_indirimli": 425.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1138,16 +1138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14080\nModel serisi: KCT08\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14080\nModel serisi: KCT08\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 140×80×85 cm (1400×800×850 mm)"
     ],
-    "fiyat_tl_net": 22871,
-    "fiyat_tl": 27445,
-    "price": "₺22.871,00 + KDV\nKDV Dahil ₺27.445,00"
+    "fiyat_tl_net": 22648,
+    "fiyat_tl": 27178,
+    "price": "₺22.648,00 + KDV\nKDV Dahil ₺27.178,00"
   },
   {
     "id": "equsto__equsto-kct08-14090",
@@ -1179,7 +1179,7 @@
     "satis_fiyati_eur": 469.2,
     "satis_eur_indirimli": 469.2,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1188,16 +1188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14090\nModel serisi: KCT08\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 552.0\nSatış fiyatı (EUR, %15 iskonto): 469.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.14090\nModel serisi: KCT08\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 552.0\nSatış fiyatı (EUR, %15 iskonto): 469.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 140×90×85 cm (1400×900×850 mm)"
     ],
-    "fiyat_tl_net": 25249,
-    "fiyat_tl": 30299,
-    "price": "₺25.249,00 + KDV\nKDV Dahil ₺30.299,00"
+    "fiyat_tl_net": 25004,
+    "fiyat_tl": 30005,
+    "price": "₺25.004,00 + KDV\nKDV Dahil ₺30.005,00"
   },
   {
     "id": "equsto__equsto-kct08-15060",
@@ -1229,7 +1229,7 @@
     "satis_fiyati_eur": 362.95,
     "satis_eur_indirimli": 362.95,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1238,16 +1238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15060\nModel serisi: KCT08\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 427.0\nSatış fiyatı (EUR, %15 iskonto): 362.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15060\nModel serisi: KCT08\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 427.0\nSatış fiyatı (EUR, %15 iskonto): 362.95\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 150×60×85 cm (1500×600×850 mm)"
     ],
-    "fiyat_tl_net": 19532,
-    "fiyat_tl": 23438,
-    "price": "₺19.532,00 + KDV\nKDV Dahil ₺23.438,00"
+    "fiyat_tl_net": 19342,
+    "fiyat_tl": 23210,
+    "price": "₺19.342,00 + KDV\nKDV Dahil ₺23.210,00"
   },
   {
     "id": "equsto__equsto-kct08-15070",
@@ -1279,7 +1279,7 @@
     "satis_fiyati_eur": 410.55,
     "satis_eur_indirimli": 410.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1288,16 +1288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15070\nModel serisi: KCT08\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15070\nModel serisi: KCT08\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 22093,
-    "fiyat_tl": 26512,
-    "price": "₺22.093,00 + KDV\nKDV Dahil ₺26.512,00"
+    "fiyat_tl_net": 21878,
+    "fiyat_tl": 26254,
+    "price": "₺21.878,00 + KDV\nKDV Dahil ₺26.254,00"
   },
   {
     "id": "equsto__equsto-kct08-15080",
@@ -1329,7 +1329,7 @@
     "satis_fiyati_eur": 459.0,
     "satis_eur_indirimli": 459.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1338,16 +1338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15080\nModel serisi: KCT08\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15080\nModel serisi: KCT08\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 150×80×85 cm (1500×800×850 mm)"
     ],
-    "fiyat_tl_net": 24700,
-    "fiyat_tl": 29640,
-    "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+    "fiyat_tl_net": 24460,
+    "fiyat_tl": 29352,
+    "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
   },
   {
     "id": "equsto__equsto-kct08-15090",
@@ -1379,7 +1379,7 @@
     "satis_fiyati_eur": 497.25,
     "satis_eur_indirimli": 497.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1388,16 +1388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15090\nModel serisi: KCT08\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 585.0\nSatış fiyatı (EUR, %15 iskonto): 497.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.15090\nModel serisi: KCT08\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 585.0\nSatış fiyatı (EUR, %15 iskonto): 497.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 150×90×85 cm (1500×900×850 mm)"
     ],
-    "fiyat_tl_net": 26759,
-    "fiyat_tl": 32111,
-    "price": "₺26.759,00 + KDV\nKDV Dahil ₺32.111,00"
+    "fiyat_tl_net": 26498,
+    "fiyat_tl": 31798,
+    "price": "₺26.498,00 + KDV\nKDV Dahil ₺31.798,00"
   },
   {
     "id": "equsto__equsto-kct08-16060",
@@ -1429,7 +1429,7 @@
     "satis_fiyati_eur": 391.85,
     "satis_eur_indirimli": 391.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1438,16 +1438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16060\nModel serisi: KCT08\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %15 iskonto): 391.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16060\nModel serisi: KCT08\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 461.0\nSatış fiyatı (EUR, %15 iskonto): 391.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 160×60×85 cm (1600×600×850 mm)"
     ],
-    "fiyat_tl_net": 21087,
-    "fiyat_tl": 25304,
-    "price": "₺21.087,00 + KDV\nKDV Dahil ₺25.304,00"
+    "fiyat_tl_net": 20882,
+    "fiyat_tl": 25058,
+    "price": "₺20.882,00 + KDV\nKDV Dahil ₺25.058,00"
   },
   {
     "id": "equsto__equsto-kct08-16070",
@@ -1479,7 +1479,7 @@
     "satis_fiyati_eur": 430.1,
     "satis_eur_indirimli": 430.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -1488,16 +1488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16070\nModel serisi: KCT08\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 506.0\nSatış fiyatı (EUR, %15 iskonto): 430.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16070\nModel serisi: KCT08\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 506.0\nSatış fiyatı (EUR, %15 iskonto): 430.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 23145,
-    "fiyat_tl": 27774,
-    "price": "₺23.145,00 + KDV\nKDV Dahil ₺27.774,00"
+    "fiyat_tl_net": 22920,
+    "fiyat_tl": 27504,
+    "price": "₺22.920,00 + KDV\nKDV Dahil ₺27.504,00"
   },
   {
     "id": "equsto__equsto-kct08-16080",
@@ -1529,7 +1529,7 @@
     "satis_fiyati_eur": 487.05,
     "satis_eur_indirimli": 487.05,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1538,16 +1538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16080\nModel serisi: KCT08\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 573.0\nSatış fiyatı (EUR, %15 iskonto): 487.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16080\nModel serisi: KCT08\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 573.0\nSatış fiyatı (EUR, %15 iskonto): 487.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 160×80×85 cm (1600×800×850 mm)"
     ],
-    "fiyat_tl_net": 26210,
-    "fiyat_tl": 31452,
-    "price": "₺26.210,00 + KDV\nKDV Dahil ₺31.452,00"
+    "fiyat_tl_net": 25955,
+    "fiyat_tl": 31146,
+    "price": "₺25.955,00 + KDV\nKDV Dahil ₺31.146,00"
   },
   {
     "id": "equsto__equsto-kct08-16090",
@@ -1579,7 +1579,7 @@
     "satis_fiyati_eur": 526.15,
     "satis_eur_indirimli": 526.15,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1588,16 +1588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16090\nModel serisi: KCT08\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 619.0\nSatış fiyatı (EUR, %15 iskonto): 526.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.16090\nModel serisi: KCT08\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 619.0\nSatış fiyatı (EUR, %15 iskonto): 526.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 160×90×85 cm (1600×900×850 mm)"
     ],
-    "fiyat_tl_net": 28314,
-    "fiyat_tl": 33977,
-    "price": "₺28.314,00 + KDV\nKDV Dahil ₺33.977,00"
+    "fiyat_tl_net": 28038,
+    "fiyat_tl": 33646,
+    "price": "₺28.038,00 + KDV\nKDV Dahil ₺33.646,00"
   },
   {
     "id": "equsto__equsto-kct08-17060",
@@ -1629,7 +1629,7 @@
     "satis_fiyati_eur": 410.55,
     "satis_eur_indirimli": 410.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1638,16 +1638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.17060\nModel serisi: KCT08\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.17060\nModel serisi: KCT08\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 483.0\nSatış fiyatı (EUR, %15 iskonto): 410.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 170×60×85 cm (1700×600×850 mm)"
     ],
-    "fiyat_tl_net": 22093,
-    "fiyat_tl": 26512,
-    "price": "₺22.093,00 + KDV\nKDV Dahil ₺26.512,00"
+    "fiyat_tl_net": 21878,
+    "fiyat_tl": 26254,
+    "price": "₺21.878,00 + KDV\nKDV Dahil ₺26.254,00"
   },
   {
     "id": "equsto__equsto-kct08-17070",
@@ -1679,7 +1679,7 @@
     "satis_fiyati_eur": 459.0,
     "satis_eur_indirimli": 459.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1688,15 +1688,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.17070\nModel serisi: KCT08\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT08.17070\nModel serisi: KCT08\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT08",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KCT08",
       "Ebat: 170×70×85 cm (1700×700×850 mm)"
     ],
-    "fiyat_tl_net": 24700,
-    "fiyat_tl": 29640,
-    "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+    "fiyat_tl_net": 24460,
+    "fiyat_tl": 29352,
+    "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
   }
 ]

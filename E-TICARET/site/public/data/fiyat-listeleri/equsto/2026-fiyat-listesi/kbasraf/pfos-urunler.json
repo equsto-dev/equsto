@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 114.75,
     "satis_eur_indirimli": 114.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 900×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.09050\nModel serisi: KBASRAF\nEbat: 90×50×60 cm (900×500×600 mm)\n\nListe fiyatı (EUR): 135.0\nSatış fiyatı (EUR, %15 iskonto): 114.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 900×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.09050\nModel serisi: KBASRAF\nEbat: 90×50×60 cm (900×500×600 mm)\n\nListe fiyatı (EUR): 135.0\nSatış fiyatı (EUR, %15 iskonto): 114.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 90×50×60 cm (900×500×600 mm)"
     ],
-    "fiyat_tl_net": 6175,
-    "fiyat_tl": 7410,
-    "price": "₺6.175,00 + KDV\nKDV Dahil ₺7.410,00"
+    "fiyat_tl_net": 6115,
+    "fiyat_tl": 7338,
+    "price": "₺6.115,00 + KDV\nKDV Dahil ₺7.338,00"
   },
   {
     "id": "equsto__equsto-kbasraf-10050",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 119.0,
     "satis_eur_indirimli": 119.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1000×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.10050\nModel serisi: KBASRAF\nEbat: 100×50×60 cm (1000×500×600 mm)\n\nListe fiyatı (EUR): 140.0\nSatış fiyatı (EUR, %15 iskonto): 119.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1000×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.10050\nModel serisi: KBASRAF\nEbat: 100×50×60 cm (1000×500×600 mm)\n\nListe fiyatı (EUR): 140.0\nSatış fiyatı (EUR, %15 iskonto): 119.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 100×50×60 cm (1000×500×600 mm)"
     ],
-    "fiyat_tl_net": 6404,
-    "fiyat_tl": 7685,
-    "price": "₺6.404,00 + KDV\nKDV Dahil ₺7.685,00"
+    "fiyat_tl_net": 6341,
+    "fiyat_tl": 7609,
+    "price": "₺6.341,00 + KDV\nKDV Dahil ₺7.609,00"
   },
   {
     "id": "equsto__equsto-kbasraf-11050",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 127.5,
     "satis_eur_indirimli": 127.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1100×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.11050\nModel serisi: KBASRAF\nEbat: 110×50×60 cm (1100×500×600 mm)\n\nListe fiyatı (EUR): 150.0\nSatış fiyatı (EUR, %15 iskonto): 127.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1100×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.11050\nModel serisi: KBASRAF\nEbat: 110×50×60 cm (1100×500×600 mm)\n\nListe fiyatı (EUR): 150.0\nSatış fiyatı (EUR, %15 iskonto): 127.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 110×50×60 cm (1100×500×600 mm)"
     ],
-    "fiyat_tl_net": 6861,
-    "fiyat_tl": 8233,
-    "price": "₺6.861,00 + KDV\nKDV Dahil ₺8.233,00"
+    "fiyat_tl_net": 6794,
+    "fiyat_tl": 8153,
+    "price": "₺6.794,00 + KDV\nKDV Dahil ₺8.153,00"
   },
   {
     "id": "equsto__equsto-kbasraf-12050",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 136.0,
     "satis_eur_indirimli": 136.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1200×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.12050\nModel serisi: KBASRAF\nEbat: 120×50×60 cm (1200×500×600 mm)\n\nListe fiyatı (EUR): 160.0\nSatış fiyatı (EUR, %15 iskonto): 136.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1200×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.12050\nModel serisi: KBASRAF\nEbat: 120×50×60 cm (1200×500×600 mm)\n\nListe fiyatı (EUR): 160.0\nSatış fiyatı (EUR, %15 iskonto): 136.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 120×50×60 cm (1200×500×600 mm)"
     ],
-    "fiyat_tl_net": 7319,
-    "fiyat_tl": 8783,
-    "price": "₺7.319,00 + KDV\nKDV Dahil ₺8.783,00"
+    "fiyat_tl_net": 7247,
+    "fiyat_tl": 8696,
+    "price": "₺7.247,00 + KDV\nKDV Dahil ₺8.696,00"
   },
   {
     "id": "equsto__equsto-kbasraf-13050",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 144.5,
     "satis_eur_indirimli": 144.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1300×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.13050\nModel serisi: KBASRAF\nEbat: 130×50×60 cm (1300×500×600 mm)\n\nListe fiyatı (EUR): 170.0\nSatış fiyatı (EUR, %15 iskonto): 144.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1300×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.13050\nModel serisi: KBASRAF\nEbat: 130×50×60 cm (1300×500×600 mm)\n\nListe fiyatı (EUR): 170.0\nSatış fiyatı (EUR, %15 iskonto): 144.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 130×50×60 cm (1300×500×600 mm)"
     ],
-    "fiyat_tl_net": 7776,
-    "fiyat_tl": 9331,
-    "price": "₺7.776,00 + KDV\nKDV Dahil ₺9.331,00"
+    "fiyat_tl_net": 7700,
+    "fiyat_tl": 9240,
+    "price": "₺7.700,00 + KDV\nKDV Dahil ₺9.240,00"
   },
   {
     "id": "equsto__equsto-kbasraf-14050",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 153.0,
     "satis_eur_indirimli": 153.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1400×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.14050\nModel serisi: KBASRAF\nEbat: 140×50×60 cm (1400×500×600 mm)\n\nListe fiyatı (EUR): 180.0\nSatış fiyatı (EUR, %15 iskonto): 153.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1400×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.14050\nModel serisi: KBASRAF\nEbat: 140×50×60 cm (1400×500×600 mm)\n\nListe fiyatı (EUR): 180.0\nSatış fiyatı (EUR, %15 iskonto): 153.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 140×50×60 cm (1400×500×600 mm)"
     ],
-    "fiyat_tl_net": 8233,
-    "fiyat_tl": 9880,
-    "price": "₺8.233,00 + KDV\nKDV Dahil ₺9.880,00"
+    "fiyat_tl_net": 8153,
+    "fiyat_tl": 9784,
+    "price": "₺8.153,00 + KDV\nKDV Dahil ₺9.784,00"
   },
   {
     "id": "equsto__equsto-kbasraf-15050",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 157.25,
     "satis_eur_indirimli": 157.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1500×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.15050\nModel serisi: KBASRAF\nEbat: 150×50×60 cm (1500×500×600 mm)\n\nListe fiyatı (EUR): 185.0\nSatış fiyatı (EUR, %15 iskonto): 157.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1500×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.15050\nModel serisi: KBASRAF\nEbat: 150×50×60 cm (1500×500×600 mm)\n\nListe fiyatı (EUR): 185.0\nSatış fiyatı (EUR, %15 iskonto): 157.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 150×50×60 cm (1500×500×600 mm)"
     ],
-    "fiyat_tl_net": 8462,
-    "fiyat_tl": 10154,
-    "price": "₺8.462,00 + KDV\nKDV Dahil ₺10.154,00"
+    "fiyat_tl_net": 8380,
+    "fiyat_tl": 10056,
+    "price": "₺8.380,00 + KDV\nKDV Dahil ₺10.056,00"
   },
   {
     "id": "equsto__equsto-kbasraf-16050",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 165.75,
     "satis_eur_indirimli": 165.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1600×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.16050\nModel serisi: KBASRAF\nEbat: 160×50×60 cm (1600×500×600 mm)\n\nListe fiyatı (EUR): 195.0\nSatış fiyatı (EUR, %15 iskonto): 165.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1600×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.16050\nModel serisi: KBASRAF\nEbat: 160×50×60 cm (1600×500×600 mm)\n\nListe fiyatı (EUR): 195.0\nSatış fiyatı (EUR, %15 iskonto): 165.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 160×50×60 cm (1600×500×600 mm)"
     ],
-    "fiyat_tl_net": 8920,
-    "fiyat_tl": 10704,
-    "price": "₺8.920,00 + KDV\nKDV Dahil ₺10.704,00"
+    "fiyat_tl_net": 8833,
+    "fiyat_tl": 10600,
+    "price": "₺8.833,00 + KDV\nKDV Dahil ₺10.600,00"
   },
   {
     "id": "equsto__equsto-kbasraf-17050",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 178.5,
     "satis_eur_indirimli": 178.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,15 +438,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1700×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.17050\nModel serisi: KBASRAF\nEbat: 170×50×60 cm (1700×500×600 mm)\n\nListe fiyatı (EUR): 210.0\nSatış fiyatı (EUR, %15 iskonto): 178.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
+    "specs": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ 1700×500×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBASRAF.17050\nModel serisi: KBASRAF\nEbat: 170×50×60 cm (1700×500×600 mm)\n\nListe fiyatı (EUR): 210.0\nSatış fiyatı (EUR, %15 iskonto): 178.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBASRAF",
     "aciklama": "BASKET RAFI TEZGAHÜSTÜ, DİKMELERLE TEZGAHA MONTELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBASRAF",
       "Ebat: 170×50×60 cm (1700×500×600 mm)"
     ],
-    "fiyat_tl_net": 9606,
-    "fiyat_tl": 11527,
-    "price": "₺9.606,00 + KDV\nKDV Dahil ₺11.527,00"
+    "fiyat_tl_net": 9512,
+    "fiyat_tl": 11414,
+    "price": "₺9.512,00 + KDV\nKDV Dahil ₺11.414,00"
   }
 ]

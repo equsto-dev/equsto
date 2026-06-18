@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260618-equsto-fiyat-listesi-v1";
+  var CATALOG_V = "20260618-equsto-fiyat-listesi-v2";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

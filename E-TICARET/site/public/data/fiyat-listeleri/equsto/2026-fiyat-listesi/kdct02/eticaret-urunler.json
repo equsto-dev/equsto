@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 548.25,
     "satis_eur_indirimli": 548.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.10070\nModel serisi: KDCT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 645.0\nSatış fiyatı (EUR, %15 iskonto): 548.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.10070\nModel serisi: KDCT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 645.0\nSatış fiyatı (EUR, %15 iskonto): 548.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT02",
       "Ebat: 100×70×85 cm (1000×700×850 mm)"
     ],
-    "fiyat_tl_net": 29503,
-    "fiyat_tl": 35404,
-    "price": "₺29.503,00 + KDV\nKDV Dahil ₺35.404,00"
+    "fiyat_tl_net": 29216,
+    "fiyat_tl": 35059,
+    "price": "₺29.216,00 + KDV\nKDV Dahil ₺35.059,00"
   },
   {
     "id": "equsto__equsto-kdct02-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 612.0,
     "satis_eur_indirimli": 612.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.12070\nModel serisi: KDCT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 720.0\nSatış fiyatı (EUR, %15 iskonto): 612.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.12070\nModel serisi: KDCT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 720.0\nSatış fiyatı (EUR, %15 iskonto): 612.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 32934,
-    "fiyat_tl": 39521,
-    "price": "₺32.934,00 + KDV\nKDV Dahil ₺39.521,00"
+    "fiyat_tl_net": 32613,
+    "fiyat_tl": 39136,
+    "price": "₺32.613,00 + KDV\nKDV Dahil ₺39.136,00"
   },
   {
     "id": "equsto__equsto-kdct02-14070",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 693.6,
     "satis_eur_indirimli": 693.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.14070\nModel serisi: KDCT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 816.0\nSatış fiyatı (EUR, %15 iskonto): 693.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.14070\nModel serisi: KDCT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 816.0\nSatış fiyatı (EUR, %15 iskonto): 693.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 37325,
-    "fiyat_tl": 44790,
-    "price": "₺37.325,00 + KDV\nKDV Dahil ₺44.790,00"
+    "fiyat_tl_net": 36962,
+    "fiyat_tl": 44354,
+    "price": "₺36.962,00 + KDV\nKDV Dahil ₺44.354,00"
   },
   {
     "id": "equsto__equsto-kdct02-16070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 765.0,
     "satis_eur_indirimli": 765.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -188,15 +188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.16070\nModel serisi: KDCT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 900.0\nSatış fiyatı (EUR, %15 iskonto): 765.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
+    "specs": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDCT02.16070\nModel serisi: KDCT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 900.0\nSatış fiyatı (EUR, %15 iskonto): 765.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDCT02",
     "aciklama": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ-KDÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDCT02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 41167,
-    "fiyat_tl": 49400,
-    "price": "₺41.167,00 + KDV\nKDV Dahil ₺49.400,00"
+    "fiyat_tl_net": 40767,
+    "fiyat_tl": 48920,
+    "price": "₺40.767,00 + KDV\nKDV Dahil ₺48.920,00"
   }
 ]

@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 475.15,
     "satis_eur_indirimli": 475.15,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,7 +38,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.09070\nModel serisi: KCT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 559.0\nSatış fiyatı (EUR, %15 iskonto): 475.15\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.09070\nModel serisi: KCT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 559.0\nSatış fiyatı (EUR, %15 iskonto): 475.15\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -46,9 +46,9 @@
       "Ebat: 90×70×85 cm (900×700×850 mm)",
       "Taban fiyat (EUR): 499.0"
     ],
-    "fiyat_tl_net": 25570,
-    "fiyat_tl": 30684,
-    "price": "₺25.570,00 + KDV\nKDV Dahil ₺30.684,00"
+    "fiyat_tl_net": 25321,
+    "fiyat_tl": 30385,
+    "price": "₺25.321,00 + KDV\nKDV Dahil ₺30.385,00"
   },
   {
     "id": "equsto__equsto-kct03-12070",
@@ -80,7 +80,7 @@
     "satis_fiyati_eur": 518.5,
     "satis_eur_indirimli": 518.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -89,7 +89,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.12070\nModel serisi: KCT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 610.0\nSatış fiyatı (EUR, %15 iskonto): 518.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.12070\nModel serisi: KCT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 610.0\nSatış fiyatı (EUR, %15 iskonto): 518.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -97,9 +97,9 @@
       "Ebat: 120×70×85 cm (1200×700×850 mm)",
       "Taban fiyat (EUR): 550.0"
     ],
-    "fiyat_tl_net": 27902,
-    "fiyat_tl": 33482,
-    "price": "₺27.902,00 + KDV\nKDV Dahil ₺33.482,00"
+    "fiyat_tl_net": 27631,
+    "fiyat_tl": 33157,
+    "price": "₺27.631,00 + KDV\nKDV Dahil ₺33.157,00"
   },
   {
     "id": "equsto__equsto-kct03-14070",
@@ -131,7 +131,7 @@
     "satis_fiyati_eur": 539.75,
     "satis_eur_indirimli": 539.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -140,7 +140,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.14070\nModel serisi: KCT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 635.0\nSatış fiyatı (EUR, %15 iskonto): 539.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.14070\nModel serisi: KCT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 635.0\nSatış fiyatı (EUR, %15 iskonto): 539.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -149,9 +149,9 @@
       "Taban fiyat (EUR): 575.0",
       "Ek modül (EUR): 60.0"
     ],
-    "fiyat_tl_net": 29046,
-    "fiyat_tl": 34855,
-    "price": "₺29.046,00 + KDV\nKDV Dahil ₺34.855,00"
+    "fiyat_tl_net": 28763,
+    "fiyat_tl": 34516,
+    "price": "₺28.763,00 + KDV\nKDV Dahil ₺34.516,00"
   },
   {
     "id": "equsto__equsto-kct03-16070",
@@ -183,7 +183,7 @@
     "satis_fiyati_eur": 561.85,
     "satis_eur_indirimli": 561.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -192,7 +192,7 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.16070\nModel serisi: KCT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 661.0\nSatış fiyatı (EUR, %15 iskonto): 561.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
+    "specs": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KCT03.16070\nModel serisi: KCT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 661.0\nSatış fiyatı (EUR, %15 iskonto): 561.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KCT03",
     "aciklama": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, RAFSIZ, DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
@@ -201,8 +201,8 @@
       "Taban fiyat (EUR): 601.0",
       "Ek modül (EUR): 60.0"
     ],
-    "fiyat_tl_net": 30235,
-    "fiyat_tl": 36282,
-    "price": "₺30.235,00 + KDV\nKDV Dahil ₺36.282,00"
+    "fiyat_tl_net": 29941,
+    "fiyat_tl": 35929,
+    "price": "₺29.941,00 + KDV\nKDV Dahil ₺35.929,00"
   }
 ]

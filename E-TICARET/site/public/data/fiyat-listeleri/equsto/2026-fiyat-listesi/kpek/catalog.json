@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.359700+00:00",
+  "imported_at": "2026-06-18T13:00:46.720898+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kpek/urun.png",
   "pfos": {
     "count": 3,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 256.7,
         "satis_eur_indirimli": 256.7,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.06060\nModel serisi: KPEK\nEbat: 60×60×85 cm (600×600×850 mm)\n\nListe fiyatı (EUR): 302.0\nSatış fiyatı (EUR, %15 iskonto): 256.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
+        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.06060\nModel serisi: KPEK\nEbat: 60×60×85 cm (600×600×850 mm)\n\nListe fiyatı (EUR): 302.0\nSatış fiyatı (EUR, %15 iskonto): 256.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
         "aciklama": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPEK",
           "Ebat: 60×60×85 cm (600×600×850 mm)"
         ],
-        "fiyat_tl_net": 13814,
-        "fiyat_tl": 16577,
-        "price": "₺13.814,00 + KDV\nKDV Dahil ₺16.577,00"
+        "fiyat_tl_net": 13679,
+        "fiyat_tl": 16415,
+        "price": "₺13.679,00 + KDV\nKDV Dahil ₺16.415,00"
       },
       {
         "id": "equsto__equsto-kpek-07070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 318.75,
         "satis_eur_indirimli": 318.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.07070\nModel serisi: KPEK\nEbat: 70×70×85 cm (700×700×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %15 iskonto): 318.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
+        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.07070\nModel serisi: KPEK\nEbat: 70×70×85 cm (700×700×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %15 iskonto): 318.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
         "aciklama": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPEK",
           "Ebat: 70×70×85 cm (700×700×850 mm)"
         ],
-        "fiyat_tl_net": 17153,
-        "fiyat_tl": 20584,
-        "price": "₺17.153,00 + KDV\nKDV Dahil ₺20.584,00"
+        "fiyat_tl_net": 16986,
+        "fiyat_tl": 20383,
+        "price": "₺16.986,00 + KDV\nKDV Dahil ₺20.383,00"
       },
       {
         "id": "equsto__equsto-kpek-08080",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 387.6,
         "satis_eur_indirimli": 387.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 800×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.08080\nModel serisi: KPEK\nEbat: 80×80×85 cm (800×800×850 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
+        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 800×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.08080\nModel serisi: KPEK\nEbat: 80×80×85 cm (800×800×850 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
         "aciklama": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPEK",
           "Ebat: 80×80×85 cm (800×800×850 mm)"
         ],
-        "fiyat_tl_net": 20858,
-        "fiyat_tl": 25030,
-        "price": "₺20.858,00 + KDV\nKDV Dahil ₺25.030,00"
+        "fiyat_tl_net": 20655,
+        "fiyat_tl": 24786,
+        "price": "₺20.655,00 + KDV\nKDV Dahil ₺24.786,00"
       }
     ]
   },
@@ -203,7 +203,7 @@
         "satis_fiyati_eur": 318.75,
         "satis_eur_indirimli": 318.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -212,16 +212,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.07070\nModel serisi: KPEK\nEbat: 70×70×85 cm (700×700×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %15 iskonto): 318.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
+        "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.07070\nModel serisi: KPEK\nEbat: 70×70×85 cm (700×700×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %15 iskonto): 318.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
         "aciklama": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPEK",
           "Ebat: 70×70×85 cm (700×700×850 mm)"
         ],
-        "fiyat_tl_net": 17153,
-        "fiyat_tl": 20584,
-        "price": "₺17.153,00 + KDV\nKDV Dahil ₺20.584,00"
+        "fiyat_tl_net": 16986,
+        "fiyat_tl": 20383,
+        "price": "₺16.986,00 + KDV\nKDV Dahil ₺20.383,00"
       }
     ]
   }

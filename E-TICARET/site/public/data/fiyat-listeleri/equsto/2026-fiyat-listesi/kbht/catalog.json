@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.375928+00:00",
+  "imported_at": "2026-06-18T13:00:46.726726+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kbht/urun.png",
   "pfos": {
     "count": 5,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 284.75,
         "satis_eur_indirimli": 284.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.10070\nModel serisi: KBHT\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.10070\nModel serisi: KBHT\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 15323,
-        "fiyat_tl": 18388,
-        "price": "₺15.323,00 + KDV\nKDV Dahil ₺18.388,00"
+        "fiyat_tl_net": 15174,
+        "fiyat_tl": 18209,
+        "price": "₺15.174,00 + KDV\nKDV Dahil ₺18.209,00"
       },
       {
         "id": "equsto__equsto-kbht-12070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 344.25,
         "satis_eur_indirimli": 344.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.12070\nModel serisi: KBHT\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.12070\nModel serisi: KBHT\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 18525,
-        "fiyat_tl": 22230,
-        "price": "₺18.525,00 + KDV\nKDV Dahil ₺22.230,00"
+        "fiyat_tl_net": 18345,
+        "fiyat_tl": 22014,
+        "price": "₺18.345,00 + KDV\nKDV Dahil ₺22.014,00"
       },
       {
         "id": "equsto__equsto-kbht-15070",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 429.25,
         "satis_eur_indirimli": 429.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.15070\nModel serisi: KBHT\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.15070\nModel serisi: KBHT\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 505.0\nSatış fiyatı (EUR, %15 iskonto): 429.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 150×70×85 cm (1500×700×850 mm)"
         ],
-        "fiyat_tl_net": 23100,
-        "fiyat_tl": 27720,
-        "price": "₺23.100,00 + KDV\nKDV Dahil ₺27.720,00"
+        "fiyat_tl_net": 22875,
+        "fiyat_tl": 27450,
+        "price": "₺22.875,00 + KDV\nKDV Dahil ₺27.450,00"
       },
       {
         "id": "equsto__equsto-kbht-16070",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 459.0,
         "satis_eur_indirimli": 459.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.16070\nModel serisi: KBHT\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.16070\nModel serisi: KBHT\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 24700,
-        "fiyat_tl": 29640,
-        "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+        "fiyat_tl_net": 24460,
+        "fiyat_tl": 29352,
+        "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
       },
       {
         "id": "equsto__equsto-kbht-17070",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 484.5,
         "satis_eur_indirimli": 484.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.17070\nModel serisi: KBHT\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 570.0\nSatış fiyatı (EUR, %15 iskonto): 484.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.17070\nModel serisi: KBHT\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 570.0\nSatış fiyatı (EUR, %15 iskonto): 484.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 170×70×85 cm (1700×700×850 mm)"
         ],
-        "fiyat_tl_net": 26073,
-        "fiyat_tl": 31288,
-        "price": "₺26.073,00 + KDV\nKDV Dahil ₺31.288,00"
+        "fiyat_tl_net": 25819,
+        "fiyat_tl": 30983,
+        "price": "₺25.819,00 + KDV\nKDV Dahil ₺30.983,00"
       }
     ]
   },
@@ -303,7 +303,7 @@
         "satis_fiyati_eur": 284.75,
         "satis_eur_indirimli": 284.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -312,16 +312,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.10070\nModel serisi: KBHT\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.10070\nModel serisi: KBHT\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 15323,
-        "fiyat_tl": 18388,
-        "price": "₺15.323,00 + KDV\nKDV Dahil ₺18.388,00"
+        "fiyat_tl_net": 15174,
+        "fiyat_tl": 18209,
+        "price": "₺15.174,00 + KDV\nKDV Dahil ₺18.209,00"
       },
       {
         "id": "equsto__equsto-kbht-12070",
@@ -353,7 +353,7 @@
         "satis_fiyati_eur": 344.25,
         "satis_eur_indirimli": 344.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -362,16 +362,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.12070\nModel serisi: KBHT\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.12070\nModel serisi: KBHT\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 18525,
-        "fiyat_tl": 22230,
-        "price": "₺18.525,00 + KDV\nKDV Dahil ₺22.230,00"
+        "fiyat_tl_net": 18345,
+        "fiyat_tl": 22014,
+        "price": "₺18.345,00 + KDV\nKDV Dahil ₺22.014,00"
       },
       {
         "id": "equsto__equsto-kbht-16070",
@@ -403,7 +403,7 @@
         "satis_fiyati_eur": 459.0,
         "satis_eur_indirimli": 459.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -412,16 +412,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "KBHT 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.16070\nModel serisi: KBHT\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
+        "specs": "KBHT 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBHT.16070\nModel serisi: KBHT\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBHT",
         "aciklama": "KBHT. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KBHT",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 24700,
-        "fiyat_tl": 29640,
-        "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+        "fiyat_tl_net": 24460,
+        "fiyat_tl": 29352,
+        "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
       }
     ]
   }

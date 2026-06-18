@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 310.25,
     "satis_eur_indirimli": 310.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09070\nModel serisi: KKTYB\nEbat: 90×70×60 cm (900×700×600 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09070\nModel serisi: KKTYB\nEbat: 90×70×60 cm (900×700×600 mm)\n\nListe fiyatı (EUR): 365.0\nSatış fiyatı (EUR, %15 iskonto): 310.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 90×70×60 cm (900×700×600 mm)"
     ],
-    "fiyat_tl_net": 16696,
-    "fiyat_tl": 20035,
-    "price": "₺16.696,00 + KDV\nKDV Dahil ₺20.035,00"
+    "fiyat_tl_net": 16533,
+    "fiyat_tl": 19840,
+    "price": "₺16.533,00 + KDV\nKDV Dahil ₺19.840,00"
   },
   {
     "id": "equsto__equsto-kktyb-09080",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 331.5,
     "satis_eur_indirimli": 331.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09080\nModel serisi: KKTYB\nEbat: 90×80×60 cm (900×800×600 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %15 iskonto): 331.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09080\nModel serisi: KKTYB\nEbat: 90×80×60 cm (900×800×600 mm)\n\nListe fiyatı (EUR): 390.0\nSatış fiyatı (EUR, %15 iskonto): 331.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 90×80×60 cm (900×800×600 mm)"
     ],
-    "fiyat_tl_net": 17839,
-    "fiyat_tl": 21407,
-    "price": "₺17.839,00 + KDV\nKDV Dahil ₺21.407,00"
+    "fiyat_tl_net": 17666,
+    "fiyat_tl": 21199,
+    "price": "₺17.666,00 + KDV\nKDV Dahil ₺21.199,00"
   },
   {
     "id": "equsto__equsto-kktyb-09090",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 352.75,
     "satis_eur_indirimli": 352.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09090\nModel serisi: KKTYB\nEbat: 90×90×60 cm (900×900×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.09090\nModel serisi: KKTYB\nEbat: 90×90×60 cm (900×900×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 90×90×60 cm (900×900×600 mm)"
     ],
-    "fiyat_tl_net": 18983,
-    "fiyat_tl": 22780,
-    "price": "₺18.983,00 + KDV\nKDV Dahil ₺22.780,00"
+    "fiyat_tl_net": 18798,
+    "fiyat_tl": 22558,
+    "price": "₺18.798,00 + KDV\nKDV Dahil ₺22.558,00"
   },
   {
     "id": "equsto__equsto-kktyb-090100",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 392.7,
     "satis_eur_indirimli": 392.7,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.090100\nModel serisi: KKTYB\nEbat: 90×100×60 cm (900×1000×600 mm)\n\nListe fiyatı (EUR): 462.0\nSatış fiyatı (EUR, %15 iskonto): 392.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 900×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.090100\nModel serisi: KKTYB\nEbat: 90×100×60 cm (900×1000×600 mm)\n\nListe fiyatı (EUR): 462.0\nSatış fiyatı (EUR, %15 iskonto): 392.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 90×100×60 cm (900×1000×600 mm)"
     ],
-    "fiyat_tl_net": 21133,
-    "fiyat_tl": 25360,
-    "price": "₺21.133,00 + KDV\nKDV Dahil ₺25.360,00"
+    "fiyat_tl_net": 20927,
+    "fiyat_tl": 25112,
+    "price": "₺20.927,00 + KDV\nKDV Dahil ₺25.112,00"
   },
   {
     "id": "equsto__equsto-kktyb-10070",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 327.25,
     "satis_eur_indirimli": 327.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10070\nModel serisi: KKTYB\nEbat: 100×70×60 cm (1000×700×600 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10070\nModel serisi: KKTYB\nEbat: 100×70×60 cm (1000×700×600 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 100×70×60 cm (1000×700×600 mm)"
     ],
-    "fiyat_tl_net": 17611,
-    "fiyat_tl": 21133,
-    "price": "₺17.611,00 + KDV\nKDV Dahil ₺21.133,00"
+    "fiyat_tl_net": 17439,
+    "fiyat_tl": 20927,
+    "price": "₺17.439,00 + KDV\nKDV Dahil ₺20.927,00"
   },
   {
     "id": "equsto__equsto-kktyb-10080",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 357.85,
     "satis_eur_indirimli": 357.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10080\nModel serisi: KKTYB\nEbat: 100×80×60 cm (1000×800×600 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %15 iskonto): 357.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10080\nModel serisi: KKTYB\nEbat: 100×80×60 cm (1000×800×600 mm)\n\nListe fiyatı (EUR): 421.0\nSatış fiyatı (EUR, %15 iskonto): 357.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 100×80×60 cm (1000×800×600 mm)"
     ],
-    "fiyat_tl_net": 19257,
-    "fiyat_tl": 23108,
-    "price": "₺19.257,00 + KDV\nKDV Dahil ₺23.108,00"
+    "fiyat_tl_net": 19070,
+    "fiyat_tl": 22884,
+    "price": "₺19.070,00 + KDV\nKDV Dahil ₺22.884,00"
   },
   {
     "id": "equsto__equsto-kktyb-10090",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 387.6,
     "satis_eur_indirimli": 387.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10090\nModel serisi: KKTYB\nEbat: 100×90×60 cm (1000×900×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.10090\nModel serisi: KKTYB\nEbat: 100×90×60 cm (1000×900×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 100×90×60 cm (1000×900×600 mm)"
     ],
-    "fiyat_tl_net": 20858,
-    "fiyat_tl": 25030,
-    "price": "₺20.858,00 + KDV\nKDV Dahil ₺25.030,00"
+    "fiyat_tl_net": 20655,
+    "fiyat_tl": 24786,
+    "price": "₺20.655,00 + KDV\nKDV Dahil ₺24.786,00"
   },
   {
     "id": "equsto__equsto-kktyb-100100",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 433.5,
     "satis_eur_indirimli": 433.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.100100\nModel serisi: KKTYB\nEbat: 100×100×60 cm (1000×1000×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1000×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.100100\nModel serisi: KKTYB\nEbat: 100×100×60 cm (1000×1000×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 100×100×60 cm (1000×1000×600 mm)"
     ],
-    "fiyat_tl_net": 23328,
-    "fiyat_tl": 27994,
-    "price": "₺23.328,00 + KDV\nKDV Dahil ₺27.994,00"
+    "fiyat_tl_net": 23101,
+    "fiyat_tl": 27721,
+    "price": "₺23.101,00 + KDV\nKDV Dahil ₺27.721,00"
   },
   {
     "id": "equsto__equsto-kktyb-11070",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 352.75,
     "satis_eur_indirimli": 352.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11070\nModel serisi: KKTYB\nEbat: 110×70×60 cm (1100×700×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11070\nModel serisi: KKTYB\nEbat: 110×70×60 cm (1100×700×600 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 110×70×60 cm (1100×700×600 mm)"
     ],
-    "fiyat_tl_net": 18983,
-    "fiyat_tl": 22780,
-    "price": "₺18.983,00 + KDV\nKDV Dahil ₺22.780,00"
+    "fiyat_tl_net": 18798,
+    "fiyat_tl": 22558,
+    "price": "₺18.798,00 + KDV\nKDV Dahil ₺22.558,00"
   },
   {
     "id": "equsto__equsto-kktyb-11080",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 387.6,
     "satis_eur_indirimli": 387.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11080\nModel serisi: KKTYB\nEbat: 110×80×60 cm (1100×800×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11080\nModel serisi: KKTYB\nEbat: 110×80×60 cm (1100×800×600 mm)\n\nListe fiyatı (EUR): 456.0\nSatış fiyatı (EUR, %15 iskonto): 387.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 110×80×60 cm (1100×800×600 mm)"
     ],
-    "fiyat_tl_net": 20858,
-    "fiyat_tl": 25030,
-    "price": "₺20.858,00 + KDV\nKDV Dahil ₺25.030,00"
+    "fiyat_tl_net": 20655,
+    "fiyat_tl": 24786,
+    "price": "₺20.655,00 + KDV\nKDV Dahil ₺24.786,00"
   },
   {
     "id": "equsto__equsto-kktyb-11090",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 413.1,
     "satis_eur_indirimli": 413.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11090\nModel serisi: KKTYB\nEbat: 110×90×60 cm (1100×900×600 mm)\n\nListe fiyatı (EUR): 486.0\nSatış fiyatı (EUR, %15 iskonto): 413.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.11090\nModel serisi: KKTYB\nEbat: 110×90×60 cm (1100×900×600 mm)\n\nListe fiyatı (EUR): 486.0\nSatış fiyatı (EUR, %15 iskonto): 413.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 110×90×60 cm (1100×900×600 mm)"
     ],
-    "fiyat_tl_net": 22230,
-    "fiyat_tl": 26676,
-    "price": "₺22.230,00 + KDV\nKDV Dahil ₺26.676,00"
+    "fiyat_tl_net": 22014,
+    "fiyat_tl": 26417,
+    "price": "₺22.014,00 + KDV\nKDV Dahil ₺26.417,00"
   },
   {
     "id": "equsto__equsto-kktyb-110100",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 459.0,
     "satis_eur_indirimli": 459.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.110100\nModel serisi: KKTYB\nEbat: 110×100×60 cm (1100×1000×600 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1100×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.110100\nModel serisi: KKTYB\nEbat: 110×100×60 cm (1100×1000×600 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 110×100×60 cm (1100×1000×600 mm)"
     ],
-    "fiyat_tl_net": 24700,
-    "fiyat_tl": 29640,
-    "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+    "fiyat_tl_net": 24460,
+    "fiyat_tl": 29352,
+    "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
   },
   {
     "id": "equsto__equsto-kktyb-12070",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 382.5,
     "satis_eur_indirimli": 382.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12070\nModel serisi: KKTYB\nEbat: 120×70×60 cm (1200×700×600 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12070\nModel serisi: KKTYB\nEbat: 120×70×60 cm (1200×700×600 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 120×70×60 cm (1200×700×600 mm)"
     ],
-    "fiyat_tl_net": 20584,
-    "fiyat_tl": 24701,
-    "price": "₺20.584,00 + KDV\nKDV Dahil ₺24.701,00"
+    "fiyat_tl_net": 20383,
+    "fiyat_tl": 24460,
+    "price": "₺20.383,00 + KDV\nKDV Dahil ₺24.460,00"
   },
   {
     "id": "equsto__equsto-kktyb-12080",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 412.25,
     "satis_eur_indirimli": 412.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12080\nModel serisi: KKTYB\nEbat: 120×80×60 cm (1200×800×600 mm)\n\nListe fiyatı (EUR): 485.0\nSatış fiyatı (EUR, %15 iskonto): 412.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12080\nModel serisi: KKTYB\nEbat: 120×80×60 cm (1200×800×600 mm)\n\nListe fiyatı (EUR): 485.0\nSatış fiyatı (EUR, %15 iskonto): 412.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 120×80×60 cm (1200×800×600 mm)"
     ],
-    "fiyat_tl_net": 22185,
-    "fiyat_tl": 26622,
-    "price": "₺22.185,00 + KDV\nKDV Dahil ₺26.622,00"
+    "fiyat_tl_net": 21969,
+    "fiyat_tl": 26363,
+    "price": "₺21.969,00 + KDV\nKDV Dahil ₺26.363,00"
   },
   {
     "id": "equsto__equsto-kktyb-12090",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 438.6,
     "satis_eur_indirimli": 438.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12090\nModel serisi: KKTYB\nEbat: 120×90×60 cm (1200×900×600 mm)\n\nListe fiyatı (EUR): 516.0\nSatış fiyatı (EUR, %15 iskonto): 438.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.12090\nModel serisi: KKTYB\nEbat: 120×90×60 cm (1200×900×600 mm)\n\nListe fiyatı (EUR): 516.0\nSatış fiyatı (EUR, %15 iskonto): 438.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 120×90×60 cm (1200×900×600 mm)"
     ],
-    "fiyat_tl_net": 23603,
-    "fiyat_tl": 28324,
-    "price": "₺23.603,00 + KDV\nKDV Dahil ₺28.324,00"
+    "fiyat_tl_net": 23373,
+    "fiyat_tl": 28048,
+    "price": "₺23.373,00 + KDV\nKDV Dahil ₺28.048,00"
   },
   {
     "id": "equsto__equsto-kktyb-120100",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 493.0,
     "satis_eur_indirimli": 493.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.120100\nModel serisi: KKTYB\nEbat: 120×100×60 cm (1200×1000×600 mm)\n\nListe fiyatı (EUR): 580.0\nSatış fiyatı (EUR, %15 iskonto): 493.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1200×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.120100\nModel serisi: KKTYB\nEbat: 120×100×60 cm (1200×1000×600 mm)\n\nListe fiyatı (EUR): 580.0\nSatış fiyatı (EUR, %15 iskonto): 493.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 120×100×60 cm (1200×1000×600 mm)"
     ],
-    "fiyat_tl_net": 26530,
-    "fiyat_tl": 31836,
-    "price": "₺26.530,00 + KDV\nKDV Dahil ₺31.836,00"
+    "fiyat_tl_net": 26272,
+    "fiyat_tl": 31526,
+    "price": "₺26.272,00 + KDV\nKDV Dahil ₺31.526,00"
   },
   {
     "id": "equsto__equsto-kktyb-13070",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 408.0,
     "satis_eur_indirimli": 408.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -838,16 +838,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13070\nModel serisi: KKTYB\nEbat: 130×70×60 cm (1300×700×600 mm)\n\nListe fiyatı (EUR): 480.0\nSatış fiyatı (EUR, %15 iskonto): 408.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13070\nModel serisi: KKTYB\nEbat: 130×70×60 cm (1300×700×600 mm)\n\nListe fiyatı (EUR): 480.0\nSatış fiyatı (EUR, %15 iskonto): 408.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 130×70×60 cm (1300×700×600 mm)"
     ],
-    "fiyat_tl_net": 21956,
-    "fiyat_tl": 26347,
-    "price": "₺21.956,00 + KDV\nKDV Dahil ₺26.347,00"
+    "fiyat_tl_net": 21742,
+    "fiyat_tl": 26090,
+    "price": "₺21.742,00 + KDV\nKDV Dahil ₺26.090,00"
   },
   {
     "id": "equsto__equsto-kktyb-13080",
@@ -879,7 +879,7 @@
     "satis_fiyati_eur": 433.5,
     "satis_eur_indirimli": 433.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -888,16 +888,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13080\nModel serisi: KKTYB\nEbat: 130×80×60 cm (1300×800×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13080\nModel serisi: KKTYB\nEbat: 130×80×60 cm (1300×800×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 130×80×60 cm (1300×800×600 mm)"
     ],
-    "fiyat_tl_net": 23328,
-    "fiyat_tl": 27994,
-    "price": "₺23.328,00 + KDV\nKDV Dahil ₺27.994,00"
+    "fiyat_tl_net": 23101,
+    "fiyat_tl": 27721,
+    "price": "₺23.101,00 + KDV\nKDV Dahil ₺27.721,00"
   },
   {
     "id": "equsto__equsto-kktyb-13090",
@@ -929,7 +929,7 @@
     "satis_fiyati_eur": 469.2,
     "satis_eur_indirimli": 469.2,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -938,16 +938,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13090\nModel serisi: KKTYB\nEbat: 130×90×60 cm (1300×900×600 mm)\n\nListe fiyatı (EUR): 552.0\nSatış fiyatı (EUR, %15 iskonto): 469.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.13090\nModel serisi: KKTYB\nEbat: 130×90×60 cm (1300×900×600 mm)\n\nListe fiyatı (EUR): 552.0\nSatış fiyatı (EUR, %15 iskonto): 469.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 130×90×60 cm (1300×900×600 mm)"
     ],
-    "fiyat_tl_net": 25249,
-    "fiyat_tl": 30299,
-    "price": "₺25.249,00 + KDV\nKDV Dahil ₺30.299,00"
+    "fiyat_tl_net": 25004,
+    "fiyat_tl": 30005,
+    "price": "₺25.004,00 + KDV\nKDV Dahil ₺30.005,00"
   },
   {
     "id": "equsto__equsto-kktyb-130100",
@@ -979,7 +979,7 @@
     "satis_fiyati_eur": 522.75,
     "satis_eur_indirimli": 522.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -988,16 +988,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.130100\nModel serisi: KKTYB\nEbat: 130×100×60 cm (1300×1000×600 mm)\n\nListe fiyatı (EUR): 615.0\nSatış fiyatı (EUR, %15 iskonto): 522.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1300×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.130100\nModel serisi: KKTYB\nEbat: 130×100×60 cm (1300×1000×600 mm)\n\nListe fiyatı (EUR): 615.0\nSatış fiyatı (EUR, %15 iskonto): 522.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 130×100×60 cm (1300×1000×600 mm)"
     ],
-    "fiyat_tl_net": 28131,
-    "fiyat_tl": 33757,
-    "price": "₺28.131,00 + KDV\nKDV Dahil ₺33.757,00"
+    "fiyat_tl_net": 27857,
+    "fiyat_tl": 33428,
+    "price": "₺27.857,00 + KDV\nKDV Dahil ₺33.428,00"
   },
   {
     "id": "equsto__equsto-kktyb-14070",
@@ -1029,7 +1029,7 @@
     "satis_fiyati_eur": 422.45,
     "satis_eur_indirimli": 422.45,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -1038,16 +1038,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14070\nModel serisi: KKTYB\nEbat: 140×70×60 cm (1400×700×600 mm)\n\nListe fiyatı (EUR): 497.0\nSatış fiyatı (EUR, %15 iskonto): 422.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×700×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14070\nModel serisi: KKTYB\nEbat: 140×70×60 cm (1400×700×600 mm)\n\nListe fiyatı (EUR): 497.0\nSatış fiyatı (EUR, %15 iskonto): 422.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 140×70×60 cm (1400×700×600 mm)"
     ],
-    "fiyat_tl_net": 22734,
-    "fiyat_tl": 27281,
-    "price": "₺22.734,00 + KDV\nKDV Dahil ₺27.281,00"
+    "fiyat_tl_net": 22512,
+    "fiyat_tl": 27014,
+    "price": "₺22.512,00 + KDV\nKDV Dahil ₺27.014,00"
   },
   {
     "id": "equsto__equsto-kktyb-14080",
@@ -1079,7 +1079,7 @@
     "satis_fiyati_eur": 433.5,
     "satis_eur_indirimli": 433.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1088,16 +1088,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14080\nModel serisi: KKTYB\nEbat: 140×80×60 cm (1400×800×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×800×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14080\nModel serisi: KKTYB\nEbat: 140×80×60 cm (1400×800×600 mm)\n\nListe fiyatı (EUR): 510.0\nSatış fiyatı (EUR, %15 iskonto): 433.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 140×80×60 cm (1400×800×600 mm)"
     ],
-    "fiyat_tl_net": 23328,
-    "fiyat_tl": 27994,
-    "price": "₺23.328,00 + KDV\nKDV Dahil ₺27.994,00"
+    "fiyat_tl_net": 23101,
+    "fiyat_tl": 27721,
+    "price": "₺23.101,00 + KDV\nKDV Dahil ₺27.721,00"
   },
   {
     "id": "equsto__equsto-kktyb-14090",
@@ -1129,7 +1129,7 @@
     "satis_fiyati_eur": 501.5,
     "satis_eur_indirimli": 501.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1138,16 +1138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14090\nModel serisi: KKTYB\nEbat: 140×90×60 cm (1400×900×600 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×900×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.14090\nModel serisi: KKTYB\nEbat: 140×90×60 cm (1400×900×600 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 140×90×60 cm (1400×900×600 mm)"
     ],
-    "fiyat_tl_net": 26988,
-    "fiyat_tl": 32386,
-    "price": "₺26.988,00 + KDV\nKDV Dahil ₺32.386,00"
+    "fiyat_tl_net": 26725,
+    "fiyat_tl": 32070,
+    "price": "₺26.725,00 + KDV\nKDV Dahil ₺32.070,00"
   },
   {
     "id": "equsto__equsto-kktyb-140100",
@@ -1179,7 +1179,7 @@
     "satis_fiyati_eur": 556.75,
     "satis_eur_indirimli": 556.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1188,15 +1188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.140100\nModel serisi: KKTYB\nEbat: 140×100×60 cm (1400×1000×600 mm)\n\nListe fiyatı (EUR): 655.0\nSatış fiyatı (EUR, %15 iskonto): 556.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
+    "specs": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI 1400×1000×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KKTYB.140100\nModel serisi: KKTYB\nEbat: 140×100×60 cm (1400×1000×600 mm)\n\nListe fiyatı (EUR): 655.0\nSatış fiyatı (EUR, %15 iskonto): 556.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KKTYB",
     "aciklama": "KAZAN TENCERE YIKAMA BANKOSU, ETRAFI AÇIK, IZGARA ÜST TABLALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KKTYB",
       "Ebat: 140×100×60 cm (1400×1000×600 mm)"
     ],
-    "fiyat_tl_net": 29961,
-    "fiyat_tl": 35953,
-    "price": "₺29.961,00 + KDV\nKDV Dahil ₺35.953,00"
+    "fiyat_tl_net": 29669,
+    "fiyat_tl": 35603,
+    "price": "₺29.669,00 + KDV\nKDV Dahil ₺35.603,00"
   }
 ]

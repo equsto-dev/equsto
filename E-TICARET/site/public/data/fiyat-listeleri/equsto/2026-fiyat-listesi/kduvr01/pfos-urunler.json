@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 51.0,
     "satis_eur_indirimli": 51.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 900×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.09030\nModel serisi: KDUVR01\nEbat: 90×30×4 cm (900×300×40 mm)\n\nListe fiyatı (EUR): 60.0\nSatış fiyatı (EUR, %15 iskonto): 51.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 900×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.09030\nModel serisi: KDUVR01\nEbat: 90×30×4 cm (900×300×40 mm)\n\nListe fiyatı (EUR): 60.0\nSatış fiyatı (EUR, %15 iskonto): 51.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 90×30×4 cm (900×300×40 mm)"
     ],
-    "fiyat_tl_net": 2744,
-    "fiyat_tl": 3293,
-    "price": "₺2.744,00 + KDV\nKDV Dahil ₺3.293,00"
+    "fiyat_tl_net": 2718,
+    "fiyat_tl": 3262,
+    "price": "₺2.718,00 + KDV\nKDV Dahil ₺3.262,00"
   },
   {
     "id": "equsto__equsto-kduvr01-09035",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 57.8,
     "satis_eur_indirimli": 57.8,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 900×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.09035\nModel serisi: KDUVR01\nEbat: 90×35×4 cm (900×350×40 mm)\n\nListe fiyatı (EUR): 68.0\nSatış fiyatı (EUR, %15 iskonto): 57.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 900×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.09035\nModel serisi: KDUVR01\nEbat: 90×35×4 cm (900×350×40 mm)\n\nListe fiyatı (EUR): 68.0\nSatış fiyatı (EUR, %15 iskonto): 57.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 90×35×4 cm (900×350×40 mm)"
     ],
-    "fiyat_tl_net": 3110,
-    "fiyat_tl": 3732,
-    "price": "₺3.110,00 + KDV\nKDV Dahil ₺3.732,00"
+    "fiyat_tl_net": 3080,
+    "fiyat_tl": 3696,
+    "price": "₺3.080,00 + KDV\nKDV Dahil ₺3.696,00"
   },
   {
     "id": "equsto__equsto-kduvr01-10030",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 55.25,
     "satis_eur_indirimli": 55.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1000×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.10030\nModel serisi: KDUVR01\nEbat: 100×30×4 cm (1000×300×40 mm)\n\nListe fiyatı (EUR): 65.0\nSatış fiyatı (EUR, %15 iskonto): 55.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1000×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.10030\nModel serisi: KDUVR01\nEbat: 100×30×4 cm (1000×300×40 mm)\n\nListe fiyatı (EUR): 65.0\nSatış fiyatı (EUR, %15 iskonto): 55.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 100×30×4 cm (1000×300×40 mm)"
     ],
-    "fiyat_tl_net": 2973,
-    "fiyat_tl": 3568,
-    "price": "₺2.973,00 + KDV\nKDV Dahil ₺3.568,00"
+    "fiyat_tl_net": 2944,
+    "fiyat_tl": 3533,
+    "price": "₺2.944,00 + KDV\nKDV Dahil ₺3.533,00"
   },
   {
     "id": "equsto__equsto-kduvr01-10035",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 63.75,
     "satis_eur_indirimli": 63.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1000×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.10035\nModel serisi: KDUVR01\nEbat: 100×35×4 cm (1000×350×40 mm)\n\nListe fiyatı (EUR): 75.0\nSatış fiyatı (EUR, %15 iskonto): 63.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1000×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.10035\nModel serisi: KDUVR01\nEbat: 100×35×4 cm (1000×350×40 mm)\n\nListe fiyatı (EUR): 75.0\nSatış fiyatı (EUR, %15 iskonto): 63.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 100×35×4 cm (1000×350×40 mm)"
     ],
-    "fiyat_tl_net": 3431,
-    "fiyat_tl": 4117,
-    "price": "₺3.431,00 + KDV\nKDV Dahil ₺4.117,00"
+    "fiyat_tl_net": 3397,
+    "fiyat_tl": 4076,
+    "price": "₺3.397,00 + KDV\nKDV Dahil ₺4.076,00"
   },
   {
     "id": "equsto__equsto-kduvr01-11030",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 60.35,
     "satis_eur_indirimli": 60.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1100×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.11030\nModel serisi: KDUVR01\nEbat: 110×30×4 cm (1100×300×40 mm)\n\nListe fiyatı (EUR): 71.0\nSatış fiyatı (EUR, %15 iskonto): 60.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1100×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.11030\nModel serisi: KDUVR01\nEbat: 110×30×4 cm (1100×300×40 mm)\n\nListe fiyatı (EUR): 71.0\nSatış fiyatı (EUR, %15 iskonto): 60.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 110×30×4 cm (1100×300×40 mm)"
     ],
-    "fiyat_tl_net": 3248,
-    "fiyat_tl": 3898,
-    "price": "₺3.248,00 + KDV\nKDV Dahil ₺3.898,00"
+    "fiyat_tl_net": 3216,
+    "fiyat_tl": 3859,
+    "price": "₺3.216,00 + KDV\nKDV Dahil ₺3.859,00"
   },
   {
     "id": "equsto__equsto-kduvr01-11035",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 70.55,
     "satis_eur_indirimli": 70.55,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1100×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.11035\nModel serisi: KDUVR01\nEbat: 110×35×4 cm (1100×350×40 mm)\n\nListe fiyatı (EUR): 83.0\nSatış fiyatı (EUR, %15 iskonto): 70.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1100×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.11035\nModel serisi: KDUVR01\nEbat: 110×35×4 cm (1100×350×40 mm)\n\nListe fiyatı (EUR): 83.0\nSatış fiyatı (EUR, %15 iskonto): 70.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 110×35×4 cm (1100×350×40 mm)"
     ],
-    "fiyat_tl_net": 3797,
-    "fiyat_tl": 4556,
-    "price": "₺3.797,00 + KDV\nKDV Dahil ₺4.556,00"
+    "fiyat_tl_net": 3760,
+    "fiyat_tl": 4512,
+    "price": "₺3.760,00 + KDV\nKDV Dahil ₺4.512,00"
   },
   {
     "id": "equsto__equsto-kduvr01-12030",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 66.3,
     "satis_eur_indirimli": 66.3,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1200×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.12030\nModel serisi: KDUVR01\nEbat: 120×30×4 cm (1200×300×40 mm)\n\nListe fiyatı (EUR): 78.0\nSatış fiyatı (EUR, %15 iskonto): 66.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1200×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.12030\nModel serisi: KDUVR01\nEbat: 120×30×4 cm (1200×300×40 mm)\n\nListe fiyatı (EUR): 78.0\nSatış fiyatı (EUR, %15 iskonto): 66.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 120×30×4 cm (1200×300×40 mm)"
     ],
-    "fiyat_tl_net": 3568,
-    "fiyat_tl": 4282,
-    "price": "₺3.568,00 + KDV\nKDV Dahil ₺4.282,00"
+    "fiyat_tl_net": 3533,
+    "fiyat_tl": 4240,
+    "price": "₺3.533,00 + KDV\nKDV Dahil ₺4.240,00"
   },
   {
     "id": "equsto__equsto-kduvr01-12035",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 76.5,
     "satis_eur_indirimli": 76.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1200×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.12035\nModel serisi: KDUVR01\nEbat: 120×35×4 cm (1200×350×40 mm)\n\nListe fiyatı (EUR): 90.0\nSatış fiyatı (EUR, %15 iskonto): 76.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1200×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.12035\nModel serisi: KDUVR01\nEbat: 120×35×4 cm (1200×350×40 mm)\n\nListe fiyatı (EUR): 90.0\nSatış fiyatı (EUR, %15 iskonto): 76.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 120×35×4 cm (1200×350×40 mm)"
     ],
-    "fiyat_tl_net": 4117,
-    "fiyat_tl": 4940,
-    "price": "₺4.117,00 + KDV\nKDV Dahil ₺4.940,00"
+    "fiyat_tl_net": 4077,
+    "fiyat_tl": 4892,
+    "price": "₺4.077,00 + KDV\nKDV Dahil ₺4.892,00"
   },
   {
     "id": "equsto__equsto-kduvr01-13030",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 72.25,
     "satis_eur_indirimli": 72.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1300×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.13030\nModel serisi: KDUVR01\nEbat: 130×30×4 cm (1300×300×40 mm)\n\nListe fiyatı (EUR): 85.0\nSatış fiyatı (EUR, %15 iskonto): 72.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1300×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.13030\nModel serisi: KDUVR01\nEbat: 130×30×4 cm (1300×300×40 mm)\n\nListe fiyatı (EUR): 85.0\nSatış fiyatı (EUR, %15 iskonto): 72.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 130×30×4 cm (1300×300×40 mm)"
     ],
-    "fiyat_tl_net": 3888,
-    "fiyat_tl": 4666,
-    "price": "₺3.888,00 + KDV\nKDV Dahil ₺4.666,00"
+    "fiyat_tl_net": 3850,
+    "fiyat_tl": 4620,
+    "price": "₺3.850,00 + KDV\nKDV Dahil ₺4.620,00"
   },
   {
     "id": "equsto__equsto-kduvr01-13035",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 83.3,
     "satis_eur_indirimli": 83.3,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1300×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.13035\nModel serisi: KDUVR01\nEbat: 130×35×4 cm (1300×350×40 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1300×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.13035\nModel serisi: KDUVR01\nEbat: 130×35×4 cm (1300×350×40 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 130×35×4 cm (1300×350×40 mm)"
     ],
-    "fiyat_tl_net": 4483,
-    "fiyat_tl": 5380,
-    "price": "₺4.483,00 + KDV\nKDV Dahil ₺5.380,00"
+    "fiyat_tl_net": 4439,
+    "fiyat_tl": 5327,
+    "price": "₺4.439,00 + KDV\nKDV Dahil ₺5.327,00"
   },
   {
     "id": "equsto__equsto-kduvr01-14030",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 77.35,
     "satis_eur_indirimli": 77.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1400×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.14030\nModel serisi: KDUVR01\nEbat: 140×30×4 cm (1400×300×40 mm)\n\nListe fiyatı (EUR): 91.0\nSatış fiyatı (EUR, %15 iskonto): 77.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1400×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.14030\nModel serisi: KDUVR01\nEbat: 140×30×4 cm (1400×300×40 mm)\n\nListe fiyatı (EUR): 91.0\nSatış fiyatı (EUR, %15 iskonto): 77.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 140×30×4 cm (1400×300×40 mm)"
     ],
-    "fiyat_tl_net": 4162,
-    "fiyat_tl": 4994,
-    "price": "₺4.162,00 + KDV\nKDV Dahil ₺4.994,00"
+    "fiyat_tl_net": 4122,
+    "fiyat_tl": 4946,
+    "price": "₺4.122,00 + KDV\nKDV Dahil ₺4.946,00"
   },
   {
     "id": "equsto__equsto-kduvr01-14035",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 89.25,
     "satis_eur_indirimli": 89.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1400×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.14035\nModel serisi: KDUVR01\nEbat: 140×35×4 cm (1400×350×40 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1400×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.14035\nModel serisi: KDUVR01\nEbat: 140×35×4 cm (1400×350×40 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 140×35×4 cm (1400×350×40 mm)"
     ],
-    "fiyat_tl_net": 4803,
-    "fiyat_tl": 5764,
-    "price": "₺4.803,00 + KDV\nKDV Dahil ₺5.764,00"
+    "fiyat_tl_net": 4756,
+    "fiyat_tl": 5707,
+    "price": "₺4.756,00 + KDV\nKDV Dahil ₺5.707,00"
   },
   {
     "id": "equsto__equsto-kduvr01-15030",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 83.3,
     "satis_eur_indirimli": 83.3,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1500×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.15030\nModel serisi: KDUVR01\nEbat: 150×30×4 cm (1500×300×40 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1500×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.15030\nModel serisi: KDUVR01\nEbat: 150×30×4 cm (1500×300×40 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 150×30×4 cm (1500×300×40 mm)"
     ],
-    "fiyat_tl_net": 4483,
-    "fiyat_tl": 5380,
-    "price": "₺4.483,00 + KDV\nKDV Dahil ₺5.380,00"
+    "fiyat_tl_net": 4439,
+    "fiyat_tl": 5327,
+    "price": "₺4.439,00 + KDV\nKDV Dahil ₺5.327,00"
   },
   {
     "id": "equsto__equsto-kduvr01-15035",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 97.75,
     "satis_eur_indirimli": 97.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1500×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.15035\nModel serisi: KDUVR01\nEbat: 150×35×4 cm (1500×350×40 mm)\n\nListe fiyatı (EUR): 115.0\nSatış fiyatı (EUR, %15 iskonto): 97.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1500×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.15035\nModel serisi: KDUVR01\nEbat: 150×35×4 cm (1500×350×40 mm)\n\nListe fiyatı (EUR): 115.0\nSatış fiyatı (EUR, %15 iskonto): 97.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 150×35×4 cm (1500×350×40 mm)"
     ],
-    "fiyat_tl_net": 5260,
-    "fiyat_tl": 6312,
-    "price": "₺5.260,00 + KDV\nKDV Dahil ₺6.312,00"
+    "fiyat_tl_net": 5209,
+    "fiyat_tl": 6251,
+    "price": "₺5.209,00 + KDV\nKDV Dahil ₺6.251,00"
   },
   {
     "id": "equsto__equsto-kduvr01-16030",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 89.25,
     "satis_eur_indirimli": 89.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1600×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.16030\nModel serisi: KDUVR01\nEbat: 160×30×4 cm (1600×300×40 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1600×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.16030\nModel serisi: KDUVR01\nEbat: 160×30×4 cm (1600×300×40 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 160×30×4 cm (1600×300×40 mm)"
     ],
-    "fiyat_tl_net": 4803,
-    "fiyat_tl": 5764,
-    "price": "₺4.803,00 + KDV\nKDV Dahil ₺5.764,00"
+    "fiyat_tl_net": 4756,
+    "fiyat_tl": 5707,
+    "price": "₺4.756,00 + KDV\nKDV Dahil ₺5.707,00"
   },
   {
     "id": "equsto__equsto-kduvr01-16035",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 102.0,
     "satis_eur_indirimli": 102.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1600×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.16035\nModel serisi: KDUVR01\nEbat: 160×35×4 cm (1600×350×40 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1600×350×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.16035\nModel serisi: KDUVR01\nEbat: 160×35×4 cm (1600×350×40 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 160×35×4 cm (1600×350×40 mm)"
     ],
-    "fiyat_tl_net": 5489,
-    "fiyat_tl": 6587,
-    "price": "₺5.489,00 + KDV\nKDV Dahil ₺6.587,00"
+    "fiyat_tl_net": 5436,
+    "fiyat_tl": 6523,
+    "price": "₺5.436,00 + KDV\nKDV Dahil ₺6.523,00"
   },
   {
     "id": "equsto__equsto-kduvr01-17030",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 93.5,
     "satis_eur_indirimli": 93.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -838,15 +838,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "DUVAR RAFI, TEK SIRALI 1700×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.17030\nModel serisi: KDUVR01\nEbat: 170×30×4 cm (1700×300×40 mm)\n\nListe fiyatı (EUR): 110.0\nSatış fiyatı (EUR, %15 iskonto): 93.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
+    "specs": "DUVAR RAFI, TEK SIRALI 1700×300×40 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KDUVR01.17030\nModel serisi: KDUVR01\nEbat: 170×30×4 cm (1700×300×40 mm)\n\nListe fiyatı (EUR): 110.0\nSatış fiyatı (EUR, %15 iskonto): 93.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KDUVR01",
     "aciklama": "DUVAR RAFI, TEK SIRALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KDUVR01",
       "Ebat: 170×30×4 cm (1700×300×40 mm)"
     ],
-    "fiyat_tl_net": 5032,
-    "fiyat_tl": 6038,
-    "price": "₺5.032,00 + KDV\nKDV Dahil ₺6.038,00"
+    "fiyat_tl_net": 4983,
+    "fiyat_tl": 5980,
+    "price": "₺4.983,00 + KDV\nKDV Dahil ₺5.980,00"
   }
 ]
