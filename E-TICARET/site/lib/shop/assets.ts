@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260616-pimak-gorsel-v1";
+export const SHOP_ASSET_V = "20260618-equsto-fiyat-listesi-v1";
 export const BESOS_SUBNAV_ICON_V = "ref-vitrum-strip-6";
 
 /** Dept / ekipmanlar JSON — legacy static JS */
