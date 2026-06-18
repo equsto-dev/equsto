@@ -26,10 +26,10 @@
     "liste_fiyati_eur": 150.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 135.0,
-    "satis_eur_indirimli": 135.0,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 127.5,
+    "satis_eur_indirimli": 127.5,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 900×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.09030\nModel serisi: KSRFCK02\nEbat: 90×30×55 cm (900×300×550 mm)\n\nListe fiyatı (EUR): 150.0\nSatış fiyatı (EUR, %10 iskonto): 135.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 900×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.09030\nModel serisi: KSRFCK02\nEbat: 90×30×55 cm (900×300×550 mm)\n\nListe fiyatı (EUR): 150.0\nSatış fiyatı (EUR, %15 iskonto): 127.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 90×30×55 cm (900×300×550 mm)"
     ],
-    "fiyat_tl_net": 7261,
-    "fiyat_tl": 8713,
-    "price": "₺7.261,00 + KDV\nKDV Dahil ₺8.713,00"
+    "fiyat_tl_net": 6861,
+    "fiyat_tl": 8233,
+    "price": "₺6.861,00 + KDV\nKDV Dahil ₺8.233,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-10030",
@@ -76,10 +76,10 @@
     "liste_fiyati_eur": 165.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 148.5,
-    "satis_eur_indirimli": 148.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 140.25,
+    "satis_eur_indirimli": 140.25,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1000×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.10030\nModel serisi: KSRFCK02\nEbat: 100×30×55 cm (1000×300×550 mm)\n\nListe fiyatı (EUR): 165.0\nSatış fiyatı (EUR, %10 iskonto): 148.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1000×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.10030\nModel serisi: KSRFCK02\nEbat: 100×30×55 cm (1000×300×550 mm)\n\nListe fiyatı (EUR): 165.0\nSatış fiyatı (EUR, %15 iskonto): 140.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 100×30×55 cm (1000×300×550 mm)"
     ],
-    "fiyat_tl_net": 7987,
-    "fiyat_tl": 9584,
-    "price": "₺7.987,00 + KDV\nKDV Dahil ₺9.584,00"
+    "fiyat_tl_net": 7547,
+    "fiyat_tl": 9056,
+    "price": "₺7.547,00 + KDV\nKDV Dahil ₺9.056,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-11030",
@@ -126,10 +126,10 @@
     "liste_fiyati_eur": 182.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 163.8,
-    "satis_eur_indirimli": 163.8,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 154.7,
+    "satis_eur_indirimli": 154.7,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1100×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.11030\nModel serisi: KSRFCK02\nEbat: 110×30×55 cm (1100×300×550 mm)\n\nListe fiyatı (EUR): 182.0\nSatış fiyatı (EUR, %10 iskonto): 163.8\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1100×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.11030\nModel serisi: KSRFCK02\nEbat: 110×30×55 cm (1100×300×550 mm)\n\nListe fiyatı (EUR): 182.0\nSatış fiyatı (EUR, %15 iskonto): 154.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 110×30×55 cm (1100×300×550 mm)"
     ],
-    "fiyat_tl_net": 8810,
-    "fiyat_tl": 10572,
-    "price": "₺8.810,00 + KDV\nKDV Dahil ₺10.572,00"
+    "fiyat_tl_net": 8325,
+    "fiyat_tl": 9990,
+    "price": "₺8.325,00 + KDV\nKDV Dahil ₺9.990,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-12030",
@@ -176,10 +176,10 @@
     "liste_fiyati_eur": 198.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 178.2,
-    "satis_eur_indirimli": 178.2,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 168.3,
+    "satis_eur_indirimli": 168.3,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1200×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.12030\nModel serisi: KSRFCK02\nEbat: 120×30×55 cm (1200×300×550 mm)\n\nListe fiyatı (EUR): 198.0\nSatış fiyatı (EUR, %10 iskonto): 178.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1200×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.12030\nModel serisi: KSRFCK02\nEbat: 120×30×55 cm (1200×300×550 mm)\n\nListe fiyatı (EUR): 198.0\nSatış fiyatı (EUR, %15 iskonto): 168.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 120×30×55 cm (1200×300×550 mm)"
     ],
-    "fiyat_tl_net": 9584,
-    "fiyat_tl": 11501,
-    "price": "₺9.584,00 + KDV\nKDV Dahil ₺11.501,00"
+    "fiyat_tl_net": 9057,
+    "fiyat_tl": 10868,
+    "price": "₺9.057,00 + KDV\nKDV Dahil ₺10.868,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-13030",
@@ -226,10 +226,10 @@
     "liste_fiyati_eur": 215.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 193.5,
-    "satis_eur_indirimli": 193.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 182.75,
+    "satis_eur_indirimli": 182.75,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1300×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.13030\nModel serisi: KSRFCK02\nEbat: 130×30×55 cm (1300×300×550 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %10 iskonto): 193.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1300×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.13030\nModel serisi: KSRFCK02\nEbat: 130×30×55 cm (1300×300×550 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %15 iskonto): 182.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 130×30×55 cm (1300×300×550 mm)"
     ],
-    "fiyat_tl_net": 10407,
-    "fiyat_tl": 12488,
-    "price": "₺10.407,00 + KDV\nKDV Dahil ₺12.488,00"
+    "fiyat_tl_net": 9834,
+    "fiyat_tl": 11801,
+    "price": "₺9.834,00 + KDV\nKDV Dahil ₺11.801,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-14030",
@@ -276,10 +276,10 @@
     "liste_fiyati_eur": 231.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 207.9,
-    "satis_eur_indirimli": 207.9,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 196.35,
+    "satis_eur_indirimli": 196.35,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1400×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.14030\nModel serisi: KSRFCK02\nEbat: 140×30×55 cm (1400×300×550 mm)\n\nListe fiyatı (EUR): 231.0\nSatış fiyatı (EUR, %10 iskonto): 207.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1400×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.14030\nModel serisi: KSRFCK02\nEbat: 140×30×55 cm (1400×300×550 mm)\n\nListe fiyatı (EUR): 231.0\nSatış fiyatı (EUR, %15 iskonto): 196.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 140×30×55 cm (1400×300×550 mm)"
     ],
-    "fiyat_tl_net": 11182,
-    "fiyat_tl": 13418,
-    "price": "₺11.182,00 + KDV\nKDV Dahil ₺13.418,00"
+    "fiyat_tl_net": 10566,
+    "fiyat_tl": 12679,
+    "price": "₺10.566,00 + KDV\nKDV Dahil ₺12.679,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-15030",
@@ -326,10 +326,10 @@
     "liste_fiyati_eur": 248.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 223.2,
-    "satis_eur_indirimli": 223.2,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 210.8,
+    "satis_eur_indirimli": 210.8,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1500×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.15030\nModel serisi: KSRFCK02\nEbat: 150×30×55 cm (1500×300×550 mm)\n\nListe fiyatı (EUR): 248.0\nSatış fiyatı (EUR, %10 iskonto): 223.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1500×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.15030\nModel serisi: KSRFCK02\nEbat: 150×30×55 cm (1500×300×550 mm)\n\nListe fiyatı (EUR): 248.0\nSatış fiyatı (EUR, %15 iskonto): 210.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 150×30×55 cm (1500×300×550 mm)"
     ],
-    "fiyat_tl_net": 12005,
-    "fiyat_tl": 14406,
-    "price": "₺12.005,00 + KDV\nKDV Dahil ₺14.406,00"
+    "fiyat_tl_net": 11344,
+    "fiyat_tl": 13613,
+    "price": "₺11.344,00 + KDV\nKDV Dahil ₺13.613,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-16030",
@@ -376,10 +376,10 @@
     "liste_fiyati_eur": 265.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 238.5,
-    "satis_eur_indirimli": 238.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 225.25,
+    "satis_eur_indirimli": 225.25,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1600×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.16030\nModel serisi: KSRFCK02\nEbat: 160×30×55 cm (1600×300×550 mm)\n\nListe fiyatı (EUR): 265.0\nSatış fiyatı (EUR, %10 iskonto): 238.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1600×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.16030\nModel serisi: KSRFCK02\nEbat: 160×30×55 cm (1600×300×550 mm)\n\nListe fiyatı (EUR): 265.0\nSatış fiyatı (EUR, %15 iskonto): 225.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 160×30×55 cm (1600×300×550 mm)"
     ],
-    "fiyat_tl_net": 12828,
-    "fiyat_tl": 15394,
-    "price": "₺12.828,00 + KDV\nKDV Dahil ₺15.394,00"
+    "fiyat_tl_net": 12122,
+    "fiyat_tl": 14546,
+    "price": "₺12.122,00 + KDV\nKDV Dahil ₺14.546,00"
   },
   {
     "id": "equsto__equsto-ksrfck02-17030",
@@ -426,10 +426,10 @@
     "liste_fiyati_eur": 280.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 252.0,
-    "satis_eur_indirimli": 252.0,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 238.0,
+    "satis_eur_indirimli": 238.0,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,15 +438,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1700×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.17030\nModel serisi: KSRFCK02\nEbat: 170×30×55 cm (1700×300×550 mm)\n\nListe fiyatı (EUR): 280.0\nSatış fiyatı (EUR, %10 iskonto): 252.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
+    "specs": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02 1700×300×550 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRFCK02.17030\nModel serisi: KSRFCK02\nEbat: 170×30×55 cm (1700×300×550 mm)\n\nListe fiyatı (EUR): 280.0\nSatış fiyatı (EUR, %15 iskonto): 238.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRFCK02",
     "aciklama": "SERVİS RAFI ÇİFT KATLI-KSRFÇK02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRFCK02",
       "Ebat: 170×30×55 cm (1700×300×550 mm)"
     ],
-    "fiyat_tl_net": 13554,
-    "fiyat_tl": 16265,
-    "price": "₺13.554,00 + KDV\nKDV Dahil ₺16.265,00"
+    "fiyat_tl_net": 12808,
+    "fiyat_tl": 15370,
+    "price": "₺12.808,00 + KDV\nKDV Dahil ₺15.370,00"
   }
 ]
