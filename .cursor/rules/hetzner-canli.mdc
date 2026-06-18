@@ -1,0 +1,30 @@
+---
+description: Canlı site Hetzner'da — Vercel kullanılmıyor
+globs:
+  - E-TICARET/site/**
+---
+
+# Canlı deploy — Hetzner (Vercel yok)
+
+**equsto.com** yalnızca **Hetzner** sunucusunda çalışır. Vercel deploy / `vercel deploy` / GitHub→Vercel otomatik build **kullanılmıyor**.
+
+| | |
+|---|---|
+| Sunucu | `root@167.233.86.144` |
+| Repo yolu | `/opt/equsto/E-TICARET/site` |
+| Deploy | `bash scripts/hetzner-deploy.sh` (git pull + docker compose build + up) |
+| Görseller | AWS S3 `equsto-assets` → CloudFront (`npm run assets:s3:sync`, profile `equsto`) |
+| DB | Supabase Postgres |
+| Arama | Meilisearch (Docker, `docker-compose.yml`) |
+
+## Canlıya alma (agent)
+
+1. Değişiklikleri `main`'e push et.
+2. Görsel/medya değiştiyse: `aws s3 sync …/public/images/catalog/equsto/fiyat-listesi s3://equsto-assets/images/catalog/equsto/fiyat-listesi --profile equsto`
+3. Sunucuda:
+   ```bash
+   ssh root@167.233.86.144 'cd /opt/equsto/E-TICARET/site && bash scripts/hetzner-deploy.sh'
+   ```
+4. Doğrula: `curl -sS https://equsto.com/api/kur` ve `https://equsto.com/eq-site-urls.js` içinde güncel `SHOP_ASSET_V`.
+
+Detay: `E-TICARET/site/docs/HETZNER-DEPLOY.md`, `docs/DEPLOY-MIMARI.md`
