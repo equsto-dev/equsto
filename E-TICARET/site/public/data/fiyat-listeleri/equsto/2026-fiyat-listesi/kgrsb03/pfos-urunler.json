@@ -26,10 +26,10 @@
     "liste_fiyati_eur": 565.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 508.5,
-    "satis_eur_indirimli": 508.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 480.25,
+    "satis_eur_indirimli": 480.25,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 900×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.09040\nModel serisi: KGRSB03\nEbat: 90×40×80 cm (900×400×800 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %10 iskonto): 508.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 900×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.09040\nModel serisi: KGRSB03\nEbat: 90×40×80 cm (900×400×800 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %15 iskonto): 480.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 90×40×80 cm (900×400×800 mm)"
     ],
-    "fiyat_tl_net": 27350,
-    "fiyat_tl": 32820,
-    "price": "₺27.350,00 + KDV\nKDV Dahil ₺32.820,00"
+    "fiyat_tl_net": 25844,
+    "fiyat_tl": 31013,
+    "price": "₺25.844,00 + KDV\nKDV Dahil ₺31.013,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-10040",
@@ -76,10 +76,10 @@
     "liste_fiyati_eur": 598.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 538.2,
-    "satis_eur_indirimli": 538.2,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 508.3,
+    "satis_eur_indirimli": 508.3,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1000×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.10040\nModel serisi: KGRSB03\nEbat: 100×40×80 cm (1000×400×800 mm)\n\nListe fiyatı (EUR): 598.0\nSatış fiyatı (EUR, %10 iskonto): 538.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1000×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.10040\nModel serisi: KGRSB03\nEbat: 100×40×80 cm (1000×400×800 mm)\n\nListe fiyatı (EUR): 598.0\nSatış fiyatı (EUR, %15 iskonto): 508.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 100×40×80 cm (1000×400×800 mm)"
     ],
-    "fiyat_tl_net": 28947,
-    "fiyat_tl": 34736,
-    "price": "₺28.947,00 + KDV\nKDV Dahil ₺34.736,00"
+    "fiyat_tl_net": 27354,
+    "fiyat_tl": 32825,
+    "price": "₺27.354,00 + KDV\nKDV Dahil ₺32.825,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-11040",
@@ -126,10 +126,10 @@
     "liste_fiyati_eur": 630.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 567.0,
-    "satis_eur_indirimli": 567.0,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 535.5,
+    "satis_eur_indirimli": 535.5,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1100×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.11040\nModel serisi: KGRSB03\nEbat: 110×40×80 cm (1100×400×800 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %10 iskonto): 567.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1100×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.11040\nModel serisi: KGRSB03\nEbat: 110×40×80 cm (1100×400×800 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %15 iskonto): 535.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 110×40×80 cm (1100×400×800 mm)"
     ],
-    "fiyat_tl_net": 30496,
-    "fiyat_tl": 36595,
-    "price": "₺30.496,00 + KDV\nKDV Dahil ₺36.595,00"
+    "fiyat_tl_net": 28817,
+    "fiyat_tl": 34580,
+    "price": "₺28.817,00 + KDV\nKDV Dahil ₺34.580,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-12040",
@@ -176,10 +176,10 @@
     "liste_fiyati_eur": 667.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 600.3,
-    "satis_eur_indirimli": 600.3,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 566.95,
+    "satis_eur_indirimli": 566.95,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1200×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.12040\nModel serisi: KGRSB03\nEbat: 120×40×80 cm (1200×400×800 mm)\n\nListe fiyatı (EUR): 667.0\nSatış fiyatı (EUR, %10 iskonto): 600.3\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1200×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.12040\nModel serisi: KGRSB03\nEbat: 120×40×80 cm (1200×400×800 mm)\n\nListe fiyatı (EUR): 667.0\nSatış fiyatı (EUR, %15 iskonto): 566.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 120×40×80 cm (1200×400×800 mm)"
     ],
-    "fiyat_tl_net": 32287,
-    "fiyat_tl": 38744,
-    "price": "₺32.287,00 + KDV\nKDV Dahil ₺38.744,00"
+    "fiyat_tl_net": 30510,
+    "fiyat_tl": 36612,
+    "price": "₺30.510,00 + KDV\nKDV Dahil ₺36.612,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-13040",
@@ -226,10 +226,10 @@
     "liste_fiyati_eur": 695.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 625.5,
-    "satis_eur_indirimli": 625.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 590.75,
+    "satis_eur_indirimli": 590.75,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1300×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.13040\nModel serisi: KGRSB03\nEbat: 130×40×80 cm (1300×400×800 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %10 iskonto): 625.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1300×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.13040\nModel serisi: KGRSB03\nEbat: 130×40×80 cm (1300×400×800 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %15 iskonto): 590.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 130×40×80 cm (1300×400×800 mm)"
     ],
-    "fiyat_tl_net": 33642,
-    "fiyat_tl": 40370,
-    "price": "₺33.642,00 + KDV\nKDV Dahil ₺40.370,00"
+    "fiyat_tl_net": 31790,
+    "fiyat_tl": 38148,
+    "price": "₺31.790,00 + KDV\nKDV Dahil ₺38.148,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-14040",
@@ -276,10 +276,10 @@
     "liste_fiyati_eur": 735.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 661.5,
-    "satis_eur_indirimli": 661.5,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 624.75,
+    "satis_eur_indirimli": 624.75,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1400×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.14040\nModel serisi: KGRSB03\nEbat: 140×40×80 cm (1400×400×800 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %10 iskonto): 661.5\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1400×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.14040\nModel serisi: KGRSB03\nEbat: 140×40×80 cm (1400×400×800 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %15 iskonto): 624.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 140×40×80 cm (1400×400×800 mm)"
     ],
-    "fiyat_tl_net": 35579,
-    "fiyat_tl": 42695,
-    "price": "₺35.579,00 + KDV\nKDV Dahil ₺42.695,00"
+    "fiyat_tl_net": 33620,
+    "fiyat_tl": 40344,
+    "price": "₺33.620,00 + KDV\nKDV Dahil ₺40.344,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-15040",
@@ -326,10 +326,10 @@
     "liste_fiyati_eur": 761.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 684.9,
-    "satis_eur_indirimli": 684.9,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 646.85,
+    "satis_eur_indirimli": 646.85,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1500×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.15040\nModel serisi: KGRSB03\nEbat: 150×40×80 cm (1500×400×800 mm)\n\nListe fiyatı (EUR): 761.0\nSatış fiyatı (EUR, %10 iskonto): 684.9\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1500×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.15040\nModel serisi: KGRSB03\nEbat: 150×40×80 cm (1500×400×800 mm)\n\nListe fiyatı (EUR): 761.0\nSatış fiyatı (EUR, %15 iskonto): 646.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 150×40×80 cm (1500×400×800 mm)"
     ],
-    "fiyat_tl_net": 36837,
-    "fiyat_tl": 44204,
-    "price": "₺36.837,00 + KDV\nKDV Dahil ₺44.204,00"
+    "fiyat_tl_net": 34809,
+    "fiyat_tl": 41771,
+    "price": "₺34.809,00 + KDV\nKDV Dahil ₺41.771,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-16040",
@@ -376,10 +376,10 @@
     "liste_fiyati_eur": 798.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 718.2,
-    "satis_eur_indirimli": 718.2,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 678.3,
+    "satis_eur_indirimli": 678.3,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1600×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.16040\nModel serisi: KGRSB03\nEbat: 160×40×80 cm (1600×400×800 mm)\n\nListe fiyatı (EUR): 798.0\nSatış fiyatı (EUR, %10 iskonto): 718.2\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1600×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.16040\nModel serisi: KGRSB03\nEbat: 160×40×80 cm (1600×400×800 mm)\n\nListe fiyatı (EUR): 798.0\nSatış fiyatı (EUR, %15 iskonto): 678.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 160×40×80 cm (1600×400×800 mm)"
     ],
-    "fiyat_tl_net": 38628,
-    "fiyat_tl": 46354,
-    "price": "₺38.628,00 + KDV\nKDV Dahil ₺46.354,00"
+    "fiyat_tl_net": 36502,
+    "fiyat_tl": 43802,
+    "price": "₺36.502,00 + KDV\nKDV Dahil ₺43.802,00"
   },
   {
     "id": "equsto__equsto-kgrsb03-17040",
@@ -426,10 +426,10 @@
     "liste_fiyati_eur": 830.0,
     "taban_eur": null,
     "cekmece_eur": null,
-    "satis_fiyati_eur": 747.0,
-    "satis_eur_indirimli": 747.0,
-    "iskonto_oran": 10,
-    "kur_eur_try": 53.7848,
+    "satis_fiyati_eur": 705.5,
+    "satis_eur_indirimli": 705.5,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,15 +438,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1700×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.17040\nModel serisi: KGRSB03\nEbat: 170×40×80 cm (1700×400×800 mm)\n\nListe fiyatı (EUR): 830.0\nSatış fiyatı (EUR, %10 iskonto): 747.0\nKur: 1 EUR = 53.7848 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
+    "specs": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI 1700×400×800 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KGRSB03.17040\nModel serisi: KGRSB03\nEbat: 170×40×80 cm (1700×400×800 mm)\n\nListe fiyatı (EUR): 830.0\nSatış fiyatı (EUR, %15 iskonto): 705.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KGRSB03",
     "aciklama": "GARSON BANKOSU ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KGRSB03",
       "Ebat: 170×40×80 cm (1700×400×800 mm)"
     ],
-    "fiyat_tl_net": 40177,
-    "fiyat_tl": 48212,
-    "price": "₺40.177,00 + KDV\nKDV Dahil ₺48.212,00"
+    "fiyat_tl_net": 37966,
+    "fiyat_tl": 45559,
+    "price": "₺37.966,00 + KDV\nKDV Dahil ₺45.559,00"
   }
 ]

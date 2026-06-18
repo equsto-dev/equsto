@@ -25,7 +25,7 @@ XLSX = Path(r"c:\D Disk\FİYAT LİSTELERİ\EQUSTO - FİYAT LİSTESİ.xlsx")
 OUT_BASE = ROOT / "public/data/fiyat-listeleri/equsto/2026-fiyat-listesi"
 OUT_IMG_BASE = ROOT / "public/images/catalog/equsto/fiyat-listesi"
 
-ISKONTO = 0.10
+ISKONTO = 0.15
 KDV = 0.20
 ETICARET_DERINLIK_CM = 70
 ETICARET_EN_EXTRA = (120, 140, 160, 190)

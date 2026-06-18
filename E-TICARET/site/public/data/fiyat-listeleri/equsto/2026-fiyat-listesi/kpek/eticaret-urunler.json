@@ -1,0 +1,52 @@
+[
+  {
+    "id": "equsto__equsto-kpek-07070",
+    "sku": "EQ.KPEK.07070",
+    "model": "EQ.KPEK.07070",
+    "urun_kodu": "EQ.KPEK.07070",
+    "kod": "KPEK",
+    "dept": "tezgah",
+    "category": "calisma-tezgahi",
+    "brand": "Equsto",
+    "name": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm",
+    "baslik": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm",
+    "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+    "en_cm": 70,
+    "derinlik_cm": 70,
+    "yukseklik_cm": 85,
+    "olcu": "70×70×85",
+    "olcu_excel": "70 x 70 x 85 cm.",
+    "olcu_mm": "700×700×850",
+    "olcu_etiket": "700×700×850 mm",
+    "olculer": {
+      "genislik_mm": 700,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "liste_fiyati_eur": 375.0,
+    "taban_eur": null,
+    "cekmece_eur": null,
+    "satis_fiyati_eur": 318.75,
+    "satis_eur_indirimli": 318.75,
+    "iskonto_oran": 15,
+    "kur_eur_try": 53.8137,
+    "fiyat_bekleniyor": false,
+    "eticaret": true,
+    "pfos": true,
+    "images": [
+      "images/catalog/equsto/fiyat-listesi/kpek/urun.png"
+    ],
+    "kaynak": "equsto-fiyat-listesi-2026",
+    "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
+    "specs": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU 700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPEK.07070\nModel serisi: KPEK\nEbat: 70×70×85 cm (700×700×850 mm)\n\nListe fiyatı (EUR): 375.0\nSatış fiyatı (EUR, %15 iskonto): 318.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPEK",
+    "aciklama": "POLİETİLEN ET KÜTÜĞÜ ETRAFI AÇIK, TABAN RAFSIZ, POLİETİLEN BLOKLU. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
+    "teknik_ozellikler": [
+      "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
+      "Model: KPEK",
+      "Ebat: 70×70×85 cm (700×700×850 mm)"
+    ],
+    "fiyat_tl_net": 17153,
+    "fiyat_tl": 20584,
+    "price": "₺17.153,00 + KDV\nKDV Dahil ₺20.584,00"
+  }
+]
