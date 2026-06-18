@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260616-pimak-gorsel-v1";
+  var CATALOG_V = "20260618-equsto-fiyat-listesi-v1";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

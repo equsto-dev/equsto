@@ -785,6 +785,12 @@
     return false;
   }
 
+  function withEqustoFiyatListesiImgV(url) {
+    if (!url || !/equsto\/fiyat-listesi/i.test(url)) return url;
+    if (url.indexOf("v=" + EQ_EQUSTO_FIYAT_IMG_V) >= 0) return url;
+    return url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_EQUSTO_FIYAT_IMG_V;
+  }
+
   function equstoCdnAssetHref(rel) {
     var base = assetCdnBase();
     if (!base) return "";
@@ -798,11 +804,11 @@
     if (/^images\//i.test(s)) {
       if (!isCdnMigrateRel(s)) return "";
       var cdnRel = pimakCatalogRelCandidates(s)[0] || s;
-      return base + "/" + encodeDataRelPath(cdnRel);
+      return withEqustoFiyatListesiImgV(base + "/" + encodeDataRelPath(cdnRel));
     }
     if (/^catalog\//i.test(s)) {
       s = "images/" + s;
-      return base + "/" + encodeDataRelPath(s);
+      return withEqustoFiyatListesiImgV(base + "/" + encodeDataRelPath(s));
     }
     return "";
   }
@@ -1000,6 +1006,7 @@
   }
 
   var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
+  var EQ_EQUSTO_FIYAT_IMG_V = "20260618-equsto-fiyat-listesi-v1";
 
   /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
   function pimakCatalogRelCandidates(rel) {
