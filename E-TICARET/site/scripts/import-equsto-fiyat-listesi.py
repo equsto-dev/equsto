@@ -242,25 +242,42 @@ def product_images(ws) -> list[tuple[int, object]]:
     anchored = [(img_anchor(img), img) for img in images]
     product = [(r, img) for (r, _), img in anchored if r > 0]
     if product:
-        return sorted(product, key=lambda x: x[0])
+        return product
     return sorted(anchored, key=lambda x: x[0])[-1:]
 
 
-def save_product_image(img, kod: str, dry_run: bool) -> str | None:
+def pick_product_image_data(ws) -> bytes | None:
+    """Ürün renderı — satır>0 arası en büyük gömülü görsel (openpyxl _data yalnızca bir kez)."""
+    candidates = product_images(ws)
+    if not candidates:
+        return None
+    best = b""
+    for _, img in candidates:
+        data = img._data()
+        if len(data) > len(best):
+            best = data
+    return best if best else None
+
+
+def save_product_image_data(data: bytes, kod: str, dry_run: bool) -> str | None:
     rel = f"images/catalog/equsto/fiyat-listesi/{slug_dir(kod)}/urun.png"
     if dry_run:
         return rel
     dest = ROOT / "public" / rel
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(img._data())
+    dest.write_bytes(data)
     return rel
 
 
+def save_product_image(img, kod: str, dry_run: bool) -> str | None:
+    return save_product_image_data(img._data(), kod, dry_run)
+
+
 def extract_product_image(ws, out_dir: Path, kod: str, dry_run: bool) -> str | None:
-    product_imgs = product_images(ws)
-    if not product_imgs:
+    data = pick_product_image_data(ws)
+    if not data:
         return None
-    return save_product_image(product_imgs[0][1], kod, dry_run)
+    return save_product_image_data(data, kod, dry_run)
 
 
 def find_title_sections(ws, sheet_name: str) -> list[tuple[int, str, str]]:
@@ -470,13 +487,16 @@ def process_dual_sheet(ws, sheet_name: str, kur: float, dry_run: bool) -> list[d
     if len(sections) < 2:
         return []
 
-    anchored_imgs = product_images(ws)
+    anchored_imgs: list[tuple[int, bytes]] = []
+    for r, img in product_images(ws):
+        anchored_imgs.append((r, img._data()))
     results: list[dict] = []
     for i, (title_row, kod, title) in enumerate(sections):
         end_row = sections[i + 1][0] if i + 1 < len(sections) else ws.max_row + 1
         rows = parse_rows(ws, min_row=title_row, max_row=end_row - 1)
-        img_obj = image_for_section(anchored_imgs, title_row, end_row)
-        image = save_product_image(img_obj, kod, dry_run) if img_obj else None
+        in_range = [(r, data) for r, data in anchored_imgs if title_row <= r < end_row]
+        img_data = max(in_range, key=lambda x: len(x[1]))[1] if in_range else None
+        image = save_product_image_data(img_data, kod, dry_run) if img_data else None
         result = build_family_result(kod, sheet_name, title or kod, rows, image, kur, True)
         if result:
             results.append(result)

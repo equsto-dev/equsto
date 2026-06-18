@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.182092+00:00",
+  "imported_at": "2026-06-18T13:00:46.678444+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/ktevdt02/urun.png",
   "pfos": {
     "count": 25,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 335.75,
         "satis_eur_indirimli": 335.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09060\nModel serisi: KTEVDT02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09060\nModel serisi: KTEVDT02\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 90×60×85 cm (900×600×850 mm)"
         ],
-        "fiyat_tl_net": 18068,
-        "fiyat_tl": 21682,
-        "price": "₺18.068,00 + KDV\nKDV Dahil ₺21.682,00"
+        "fiyat_tl_net": 17892,
+        "fiyat_tl": 21470,
+        "price": "₺17.892,00 + KDV\nKDV Dahil ₺21.470,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-09070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 352.75,
         "satis_eur_indirimli": 352.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09070\nModel serisi: KTEVDT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09070\nModel serisi: KTEVDT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 18983,
-        "fiyat_tl": 22780,
-        "price": "₺18.983,00 + KDV\nKDV Dahil ₺22.780,00"
+        "fiyat_tl_net": 18798,
+        "fiyat_tl": 22558,
+        "price": "₺18.798,00 + KDV\nKDV Dahil ₺22.558,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-09080",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 374.0,
         "satis_eur_indirimli": 374.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09080\nModel serisi: KTEVDT02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %15 iskonto): 374.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09080\nModel serisi: KTEVDT02\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 440.0\nSatış fiyatı (EUR, %15 iskonto): 374.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 90×80×85 cm (900×800×850 mm)"
         ],
-        "fiyat_tl_net": 20126,
-        "fiyat_tl": 24151,
-        "price": "₺20.126,00 + KDV\nKDV Dahil ₺24.151,00"
+        "fiyat_tl_net": 19930,
+        "fiyat_tl": 23916,
+        "price": "₺19.930,00 + KDV\nKDV Dahil ₺23.916,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-10060",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 348.5,
         "satis_eur_indirimli": 348.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10060\nModel serisi: KTEVDT02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10060\nModel serisi: KTEVDT02\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 100×60×85 cm (1000×600×850 mm)"
         ],
-        "fiyat_tl_net": 18754,
-        "fiyat_tl": 22505,
-        "price": "₺18.754,00 + KDV\nKDV Dahil ₺22.505,00"
+        "fiyat_tl_net": 18571,
+        "fiyat_tl": 22285,
+        "price": "₺18.571,00 + KDV\nKDV Dahil ₺22.285,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-10070",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 379.95,
         "satis_eur_indirimli": 379.95,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10070\nModel serisi: KTEVDT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 447.0\nSatış fiyatı (EUR, %15 iskonto): 379.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10070\nModel serisi: KTEVDT02\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 447.0\nSatış fiyatı (EUR, %15 iskonto): 379.95\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 20447,
-        "fiyat_tl": 24536,
-        "price": "₺20.447,00 + KDV\nKDV Dahil ₺24.536,00"
+        "fiyat_tl_net": 20247,
+        "fiyat_tl": 24296,
+        "price": "₺20.247,00 + KDV\nKDV Dahil ₺24.296,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-10080",
@@ -298,7 +298,7 @@
         "satis_fiyati_eur": 403.75,
         "satis_eur_indirimli": 403.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -307,16 +307,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10080\nModel serisi: KTEVDT02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %15 iskonto): 403.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.10080\nModel serisi: KTEVDT02\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 475.0\nSatış fiyatı (EUR, %15 iskonto): 403.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 100×80×85 cm (1000×800×850 mm)"
         ],
-        "fiyat_tl_net": 21727,
-        "fiyat_tl": 26072,
-        "price": "₺21.727,00 + KDV\nKDV Dahil ₺26.072,00"
+        "fiyat_tl_net": 21516,
+        "fiyat_tl": 25819,
+        "price": "₺21.516,00 + KDV\nKDV Dahil ₺25.819,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-11060",
@@ -348,7 +348,7 @@
         "satis_fiyati_eur": 544.0,
         "satis_eur_indirimli": 544.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -357,16 +357,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11060\nModel serisi: KTEVDT02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 640.0\nSatış fiyatı (EUR, %15 iskonto): 544.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11060\nModel serisi: KTEVDT02\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 640.0\nSatış fiyatı (EUR, %15 iskonto): 544.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 110×60×85 cm (1100×600×850 mm)"
         ],
-        "fiyat_tl_net": 29275,
-        "fiyat_tl": 35130,
-        "price": "₺29.275,00 + KDV\nKDV Dahil ₺35.130,00"
+        "fiyat_tl_net": 28990,
+        "fiyat_tl": 34788,
+        "price": "₺28.990,00 + KDV\nKDV Dahil ₺34.788,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-11070",
@@ -398,7 +398,7 @@
         "satis_fiyati_eur": 395.25,
         "satis_eur_indirimli": 395.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -407,16 +407,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11070\nModel serisi: KTEVDT02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11070\nModel serisi: KTEVDT02\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 110×70×85 cm (1100×700×850 mm)"
         ],
-        "fiyat_tl_net": 21270,
-        "fiyat_tl": 25524,
-        "price": "₺21.270,00 + KDV\nKDV Dahil ₺25.524,00"
+        "fiyat_tl_net": 21063,
+        "fiyat_tl": 25276,
+        "price": "₺21.063,00 + KDV\nKDV Dahil ₺25.276,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-11080",
@@ -448,7 +448,7 @@
         "satis_fiyati_eur": 418.2,
         "satis_eur_indirimli": 418.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -457,16 +457,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11080\nModel serisi: KTEVDT02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.11080\nModel serisi: KTEVDT02\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 110×80×85 cm (1100×800×850 mm)"
         ],
-        "fiyat_tl_net": 22505,
-        "fiyat_tl": 27006,
-        "price": "₺22.505,00 + KDV\nKDV Dahil ₺27.006,00"
+        "fiyat_tl_net": 22286,
+        "fiyat_tl": 26743,
+        "price": "₺22.286,00 + KDV\nKDV Dahil ₺26.743,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-12060",
@@ -498,7 +498,7 @@
         "satis_fiyati_eur": 395.25,
         "satis_eur_indirimli": 395.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -507,16 +507,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12060\nModel serisi: KTEVDT02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12060\nModel serisi: KTEVDT02\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 465.0\nSatış fiyatı (EUR, %15 iskonto): 395.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 120×60×85 cm (1200×600×850 mm)"
         ],
-        "fiyat_tl_net": 21270,
-        "fiyat_tl": 25524,
-        "price": "₺21.270,00 + KDV\nKDV Dahil ₺25.524,00"
+        "fiyat_tl_net": 21063,
+        "fiyat_tl": 25276,
+        "price": "₺21.063,00 + KDV\nKDV Dahil ₺25.276,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-12070",
@@ -548,7 +548,7 @@
         "satis_fiyati_eur": 418.2,
         "satis_eur_indirimli": 418.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -557,16 +557,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12070\nModel serisi: KTEVDT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12070\nModel serisi: KTEVDT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 22505,
-        "fiyat_tl": 27006,
-        "price": "₺22.505,00 + KDV\nKDV Dahil ₺27.006,00"
+        "fiyat_tl_net": 22286,
+        "fiyat_tl": 26743,
+        "price": "₺22.286,00 + KDV\nKDV Dahil ₺26.743,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-12080",
@@ -598,7 +598,7 @@
         "satis_fiyati_eur": 444.55,
         "satis_eur_indirimli": 444.55,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -607,16 +607,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12080\nModel serisi: KTEVDT02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 523.0\nSatış fiyatı (EUR, %15 iskonto): 444.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12080\nModel serisi: KTEVDT02\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 523.0\nSatış fiyatı (EUR, %15 iskonto): 444.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 120×80×85 cm (1200×800×850 mm)"
         ],
-        "fiyat_tl_net": 23923,
-        "fiyat_tl": 28708,
-        "price": "₺23.923,00 + KDV\nKDV Dahil ₺28.708,00"
+        "fiyat_tl_net": 23690,
+        "fiyat_tl": 28428,
+        "price": "₺23.690,00 + KDV\nKDV Dahil ₺28.428,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-13060",
@@ -648,7 +648,7 @@
         "satis_fiyati_eur": 418.2,
         "satis_eur_indirimli": 418.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -657,16 +657,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13060\nModel serisi: KTEVDT02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13060\nModel serisi: KTEVDT02\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 130×60×85 cm (1300×600×850 mm)"
         ],
-        "fiyat_tl_net": 22505,
-        "fiyat_tl": 27006,
-        "price": "₺22.505,00 + KDV\nKDV Dahil ₺27.006,00"
+        "fiyat_tl_net": 22286,
+        "fiyat_tl": 26743,
+        "price": "₺22.286,00 + KDV\nKDV Dahil ₺26.743,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-13070",
@@ -698,7 +698,7 @@
         "satis_fiyati_eur": 442.0,
         "satis_eur_indirimli": 442.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -707,16 +707,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13070\nModel serisi: KTEVDT02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %15 iskonto): 442.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13070\nModel serisi: KTEVDT02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 520.0\nSatış fiyatı (EUR, %15 iskonto): 442.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 130×70×85 cm (1300×700×850 mm)"
         ],
-        "fiyat_tl_net": 23786,
-        "fiyat_tl": 28543,
-        "price": "₺23.786,00 + KDV\nKDV Dahil ₺28.543,00"
+        "fiyat_tl_net": 23554,
+        "fiyat_tl": 28265,
+        "price": "₺23.554,00 + KDV\nKDV Dahil ₺28.265,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-13080",
@@ -748,7 +748,7 @@
         "satis_fiyati_eur": 471.75,
         "satis_eur_indirimli": 471.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -757,16 +757,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13080\nModel serisi: KTEVDT02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 555.0\nSatış fiyatı (EUR, %15 iskonto): 471.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.13080\nModel serisi: KTEVDT02\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 555.0\nSatış fiyatı (EUR, %15 iskonto): 471.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 130×80×85 cm (1300×800×850 mm)"
         ],
-        "fiyat_tl_net": 25387,
-        "fiyat_tl": 30464,
-        "price": "₺25.387,00 + KDV\nKDV Dahil ₺30.464,00"
+        "fiyat_tl_net": 25139,
+        "fiyat_tl": 30167,
+        "price": "₺25.139,00 + KDV\nKDV Dahil ₺30.167,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-14060",
@@ -798,7 +798,7 @@
         "satis_fiyati_eur": 444.55,
         "satis_eur_indirimli": 444.55,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -807,16 +807,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14060\nModel serisi: KTEVDT02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 523.0\nSatış fiyatı (EUR, %15 iskonto): 444.55\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14060\nModel serisi: KTEVDT02\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 523.0\nSatış fiyatı (EUR, %15 iskonto): 444.55\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 140×60×85 cm (1400×600×850 mm)"
         ],
-        "fiyat_tl_net": 23923,
-        "fiyat_tl": 28708,
-        "price": "₺23.923,00 + KDV\nKDV Dahil ₺28.708,00"
+        "fiyat_tl_net": 23690,
+        "fiyat_tl": 28428,
+        "price": "₺23.690,00 + KDV\nKDV Dahil ₺28.428,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-14070",
@@ -848,7 +848,7 @@
         "satis_fiyati_eur": 463.25,
         "satis_eur_indirimli": 463.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -857,16 +857,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14070\nModel serisi: KTEVDT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14070\nModel serisi: KTEVDT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 24929,
-        "fiyat_tl": 29915,
-        "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
+        "fiyat_tl_net": 24686,
+        "fiyat_tl": 29623,
+        "price": "₺24.686,00 + KDV\nKDV Dahil ₺29.623,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-14080",
@@ -898,7 +898,7 @@
         "satis_fiyati_eur": 487.05,
         "satis_eur_indirimli": 487.05,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -907,16 +907,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14080\nModel serisi: KTEVDT02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 573.0\nSatış fiyatı (EUR, %15 iskonto): 487.05\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14080\nModel serisi: KTEVDT02\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 573.0\nSatış fiyatı (EUR, %15 iskonto): 487.05\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 140×80×85 cm (1400×800×850 mm)"
         ],
-        "fiyat_tl_net": 26210,
-        "fiyat_tl": 31452,
-        "price": "₺26.210,00 + KDV\nKDV Dahil ₺31.452,00"
+        "fiyat_tl_net": 25955,
+        "fiyat_tl": 31146,
+        "price": "₺25.955,00 + KDV\nKDV Dahil ₺31.146,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-15060",
@@ -948,7 +948,7 @@
         "satis_fiyati_eur": 456.45,
         "satis_eur_indirimli": 456.45,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -957,16 +957,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15060\nModel serisi: KTEVDT02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 537.0\nSatış fiyatı (EUR, %15 iskonto): 456.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15060\nModel serisi: KTEVDT02\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 537.0\nSatış fiyatı (EUR, %15 iskonto): 456.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 150×60×85 cm (1500×600×850 mm)"
         ],
-        "fiyat_tl_net": 24563,
-        "fiyat_tl": 29476,
-        "price": "₺24.563,00 + KDV\nKDV Dahil ₺29.476,00"
+        "fiyat_tl_net": 24324,
+        "fiyat_tl": 29189,
+        "price": "₺24.324,00 + KDV\nKDV Dahil ₺29.189,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-15070",
@@ -998,7 +998,7 @@
         "satis_fiyati_eur": 480.25,
         "satis_eur_indirimli": 480.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1007,16 +1007,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15070\nModel serisi: KTEVDT02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %15 iskonto): 480.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15070\nModel serisi: KTEVDT02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %15 iskonto): 480.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 150×70×85 cm (1500×700×850 mm)"
         ],
-        "fiyat_tl_net": 25844,
-        "fiyat_tl": 31013,
-        "price": "₺25.844,00 + KDV\nKDV Dahil ₺31.013,00"
+        "fiyat_tl_net": 25592,
+        "fiyat_tl": 30710,
+        "price": "₺25.592,00 + KDV\nKDV Dahil ₺30.710,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-15080",
@@ -1048,7 +1048,7 @@
         "satis_fiyati_eur": 514.25,
         "satis_eur_indirimli": 514.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1057,16 +1057,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15080\nModel serisi: KTEVDT02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 605.0\nSatış fiyatı (EUR, %15 iskonto): 514.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.15080\nModel serisi: KTEVDT02\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 605.0\nSatış fiyatı (EUR, %15 iskonto): 514.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 150×80×85 cm (1500×800×850 mm)"
         ],
-        "fiyat_tl_net": 27674,
-        "fiyat_tl": 33209,
-        "price": "₺27.674,00 + KDV\nKDV Dahil ₺33.209,00"
+        "fiyat_tl_net": 27404,
+        "fiyat_tl": 32885,
+        "price": "₺27.404,00 + KDV\nKDV Dahil ₺32.885,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-16060",
@@ -1098,7 +1098,7 @@
         "satis_fiyati_eur": 480.25,
         "satis_eur_indirimli": 480.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1107,16 +1107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16060\nModel serisi: KTEVDT02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %15 iskonto): 480.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16060\nModel serisi: KTEVDT02\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 565.0\nSatış fiyatı (EUR, %15 iskonto): 480.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 160×60×85 cm (1600×600×850 mm)"
         ],
-        "fiyat_tl_net": 25844,
-        "fiyat_tl": 31013,
-        "price": "₺25.844,00 + KDV\nKDV Dahil ₺31.013,00"
+        "fiyat_tl_net": 25592,
+        "fiyat_tl": 30710,
+        "price": "₺25.592,00 + KDV\nKDV Dahil ₺30.710,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-16070",
@@ -1148,7 +1148,7 @@
         "satis_fiyati_eur": 510.0,
         "satis_eur_indirimli": 510.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1157,16 +1157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16070\nModel serisi: KTEVDT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 600.0\nSatış fiyatı (EUR, %15 iskonto): 510.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16070\nModel serisi: KTEVDT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 600.0\nSatış fiyatı (EUR, %15 iskonto): 510.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 27445,
-        "fiyat_tl": 32934,
-        "price": "₺27.445,00 + KDV\nKDV Dahil ₺32.934,00"
+        "fiyat_tl_net": 27178,
+        "fiyat_tl": 32614,
+        "price": "₺27.178,00 + KDV\nKDV Dahil ₺32.614,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-16080",
@@ -1198,7 +1198,7 @@
         "satis_fiyati_eur": 532.95,
         "satis_eur_indirimli": 532.95,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1207,16 +1207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16080\nModel serisi: KTEVDT02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 627.0\nSatış fiyatı (EUR, %15 iskonto): 532.95\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16080\nModel serisi: KTEVDT02\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 627.0\nSatış fiyatı (EUR, %15 iskonto): 532.95\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 160×80×85 cm (1600×800×850 mm)"
         ],
-        "fiyat_tl_net": 28680,
-        "fiyat_tl": 34416,
-        "price": "₺28.680,00 + KDV\nKDV Dahil ₺34.416,00"
+        "fiyat_tl_net": 28401,
+        "fiyat_tl": 34081,
+        "price": "₺28.401,00 + KDV\nKDV Dahil ₺34.081,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-17060",
@@ -1248,7 +1248,7 @@
         "satis_fiyati_eur": 494.7,
         "satis_eur_indirimli": 494.7,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1257,16 +1257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.17060\nModel serisi: KTEVDT02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 582.0\nSatış fiyatı (EUR, %15 iskonto): 494.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.17060\nModel serisi: KTEVDT02\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 582.0\nSatış fiyatı (EUR, %15 iskonto): 494.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 170×60×85 cm (1700×600×850 mm)"
         ],
-        "fiyat_tl_net": 26622,
-        "fiyat_tl": 31946,
-        "price": "₺26.622,00 + KDV\nKDV Dahil ₺31.946,00"
+        "fiyat_tl_net": 26362,
+        "fiyat_tl": 31634,
+        "price": "₺26.362,00 + KDV\nKDV Dahil ₺31.634,00"
       }
     ]
   },
@@ -1303,7 +1303,7 @@
         "satis_fiyati_eur": 352.75,
         "satis_eur_indirimli": 352.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1312,16 +1312,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09070\nModel serisi: KTEVDT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.09070\nModel serisi: KTEVDT02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 415.0\nSatış fiyatı (EUR, %15 iskonto): 352.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 18983,
-        "fiyat_tl": 22780,
-        "price": "₺18.983,00 + KDV\nKDV Dahil ₺22.780,00"
+        "fiyat_tl_net": 18798,
+        "fiyat_tl": 22558,
+        "price": "₺18.798,00 + KDV\nKDV Dahil ₺22.558,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-12070",
@@ -1353,7 +1353,7 @@
         "satis_fiyati_eur": 418.2,
         "satis_eur_indirimli": 418.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1362,16 +1362,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12070\nModel serisi: KTEVDT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.12070\nModel serisi: KTEVDT02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 492.0\nSatış fiyatı (EUR, %15 iskonto): 418.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 22505,
-        "fiyat_tl": 27006,
-        "price": "₺22.505,00 + KDV\nKDV Dahil ₺27.006,00"
+        "fiyat_tl_net": 22286,
+        "fiyat_tl": 26743,
+        "price": "₺22.286,00 + KDV\nKDV Dahil ₺26.743,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-14070",
@@ -1403,7 +1403,7 @@
         "satis_fiyati_eur": 463.25,
         "satis_eur_indirimli": 463.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1412,16 +1412,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14070\nModel serisi: KTEVDT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.14070\nModel serisi: KTEVDT02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 545.0\nSatış fiyatı (EUR, %15 iskonto): 463.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 24929,
-        "fiyat_tl": 29915,
-        "price": "₺24.929,00 + KDV\nKDV Dahil ₺29.915,00"
+        "fiyat_tl_net": 24686,
+        "fiyat_tl": 29623,
+        "price": "₺24.686,00 + KDV\nKDV Dahil ₺29.623,00"
       },
       {
         "id": "equsto__equsto-ktevdt02-16070",
@@ -1453,7 +1453,7 @@
         "satis_fiyati_eur": 510.0,
         "satis_eur_indirimli": 510.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1462,16 +1462,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16070\nModel serisi: KTEVDT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 600.0\nSatış fiyatı (EUR, %15 iskonto): 510.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
+        "specs": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEVDT02.16070\nModel serisi: KTEVDT02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 600.0\nSatış fiyatı (EUR, %15 iskonto): 510.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEVDT02",
         "aciklama": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEVDT02",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 27445,
-        "fiyat_tl": 32934,
-        "price": "₺27.445,00 + KDV\nKDV Dahil ₺32.934,00"
+        "fiyat_tl_net": 27178,
+        "fiyat_tl": 32614,
+        "price": "₺27.178,00 + KDV\nKDV Dahil ₺32.614,00"
       }
     ]
   }

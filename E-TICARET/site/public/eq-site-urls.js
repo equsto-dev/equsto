@@ -791,10 +791,29 @@
     return url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_EQUSTO_FIYAT_IMG_V;
   }
 
+  /** EQUSTO 2026 fiyat listesi — /images/… (yerel veya Vercel→CloudFront fallback); doğrudan CDN değil. */
+  function isEqustoFiyatListesiImageRel(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/")
+      .replace(/^\//, "");
+    return /^images\/catalog\/equsto\/fiyat-listesi\//i.test(t);
+  }
+
+  function equstoFiyatListesiImgHref(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    if (!isEqustoFiyatListesiImageRel(t)) return "";
+    if (t.charAt(0) !== "/") t = "/" + t.replace(/^\/+/, "");
+    return withEqustoFiyatListesiImgV(t);
+  }
+
   function equstoCdnAssetHref(rel) {
     var base = assetCdnBase();
     if (!base) return "";
     var s = String(rel || "").replace(/\\/g, "/").replace(/^\.\//, "");
+    if (/equsto\/fiyat-listesi/i.test(s)) return "";
     if (!s || /^https?:\/\//i.test(s)) return s;
     if (s.charAt(0) === "/") s = s.slice(1);
     if (/^data\//i.test(s)) {
@@ -1006,7 +1025,7 @@
   }
 
   var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
-  var EQ_EQUSTO_FIYAT_IMG_V = "20260618-equsto-fiyat-listesi-v1";
+  var EQ_EQUSTO_FIYAT_IMG_V = "20260618-equsto-fiyat-listesi-v2";
 
   /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
   function pimakCatalogRelCandidates(rel) {
@@ -1125,7 +1144,12 @@
       if (istifRel) {
         file = istifRel.replace(/^images\//i, "");
       }
-      var cdnFirst = equstoCdnAssetHref("images/" + file);
+      var isFiyatListesi = /equsto\/fiyat-listesi\//i.test(file);
+      if (isFiyatListesi) {
+        chunk.push("/images/" + file);
+        chunk.push("/images/" + encodeDataRelPath(file));
+      }
+      var cdnFirst = isFiyatListesi ? "" : equstoCdnAssetHref("images/" + file);
       if (cdnFirst) chunk.push(cdnFirst);
       if (isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
         var axLive = oztiAxFromCatalogRel("images/" + file);
@@ -1241,7 +1265,10 @@
     if (!s) return "";
     if (s === "#" || s.charAt(0) === "#") return s;
     if (/^https?:\/\//i.test(s)) return s;
-    var cdnHit = equstoCdnAssetHref(s.charAt(0) === "/" ? s.slice(1) : s);
+    var relForPath = s.charAt(0) === "/" ? s.slice(1) : s;
+    var fiyatHref = equstoFiyatListesiImgHref(relForPath);
+    if (fiyatHref) return fiyatHref;
+    var cdnHit = equstoCdnAssetHref(relForPath);
     if (cdnHit) return withCatalogImgV(cdnHit);
     if (s.charAt(0) === "/") return s;
     if (s.indexOf("./") === 0 || s.indexOf("../") === 0) return s;
@@ -1532,6 +1559,8 @@
       if (/witcdn\.cafemarkt\.com/i.test(s) && (isEqustoLiveHost() || !allowRemoteImages())) return "";
       return s;
     }
+    var fiyatImg = equstoFiyatListesiImgHref(s);
+    if (fiyatImg) return fiyatImg;
     var pbLocalFirst = portabiancoLocalCatalogHref(s);
     if (pbLocalFirst) return pbLocalFirst;
     var pbYukselLocal = portabiancoYukselRelToLocal(s);

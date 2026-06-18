@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 629.0,
     "satis_eur_indirimli": 629.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1200×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.12065\nModel serisi: KSRVB02\nEbat: 120×65×85 cm (1200×650×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1200×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.12065\nModel serisi: KSRVB02\nEbat: 120×65×85 cm (1200×650×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 120×65×85 cm (1200×650×850 mm)"
     ],
-    "fiyat_tl_net": 33849,
-    "fiyat_tl": 40619,
-    "price": "₺33.849,00 + KDV\nKDV Dahil ₺40.619,00"
+    "fiyat_tl_net": 33519,
+    "fiyat_tl": 40223,
+    "price": "₺33.519,00 + KDV\nKDV Dahil ₺40.223,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 675.75,
     "satis_eur_indirimli": 675.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.12070\nModel serisi: KSRVB02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 795.0\nSatış fiyatı (EUR, %15 iskonto): 675.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.12070\nModel serisi: KSRVB02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 795.0\nSatış fiyatı (EUR, %15 iskonto): 675.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 36365,
-    "fiyat_tl": 43638,
-    "price": "₺36.365,00 + KDV\nKDV Dahil ₺43.638,00"
+    "fiyat_tl_net": 36011,
+    "fiyat_tl": 43213,
+    "price": "₺36.011,00 + KDV\nKDV Dahil ₺43.213,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-13065",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 642.6,
     "satis_eur_indirimli": 642.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1300×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.13065\nModel serisi: KSRVB02\nEbat: 130×65×85 cm (1300×650×850 mm)\n\nListe fiyatı (EUR): 756.0\nSatış fiyatı (EUR, %15 iskonto): 642.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1300×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.13065\nModel serisi: KSRVB02\nEbat: 130×65×85 cm (1300×650×850 mm)\n\nListe fiyatı (EUR): 756.0\nSatış fiyatı (EUR, %15 iskonto): 642.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 130×65×85 cm (1300×650×850 mm)"
     ],
-    "fiyat_tl_net": 34581,
-    "fiyat_tl": 41497,
-    "price": "₺34.581,00 + KDV\nKDV Dahil ₺41.497,00"
+    "fiyat_tl_net": 34244,
+    "fiyat_tl": 41093,
+    "price": "₺34.244,00 + KDV\nKDV Dahil ₺41.093,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-13070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 692.75,
     "satis_eur_indirimli": 692.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.13070\nModel serisi: KSRVB02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 815.0\nSatış fiyatı (EUR, %15 iskonto): 692.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.13070\nModel serisi: KSRVB02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 815.0\nSatış fiyatı (EUR, %15 iskonto): 692.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 37279,
-    "fiyat_tl": 44735,
-    "price": "₺37.279,00 + KDV\nKDV Dahil ₺44.735,00"
+    "fiyat_tl_net": 36917,
+    "fiyat_tl": 44300,
+    "price": "₺36.917,00 + KDV\nKDV Dahil ₺44.300,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-14065",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 583.1,
     "satis_eur_indirimli": 583.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1400×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.14065\nModel serisi: KSRVB02\nEbat: 140×65×85 cm (1400×650×850 mm)\n\nListe fiyatı (EUR): 686.0\nSatış fiyatı (EUR, %15 iskonto): 583.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1400×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.14065\nModel serisi: KSRVB02\nEbat: 140×65×85 cm (1400×650×850 mm)\n\nListe fiyatı (EUR): 686.0\nSatış fiyatı (EUR, %15 iskonto): 583.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 140×65×85 cm (1400×650×850 mm)"
     ],
-    "fiyat_tl_net": 31379,
-    "fiyat_tl": 37655,
-    "price": "₺31.379,00 + KDV\nKDV Dahil ₺37.655,00"
+    "fiyat_tl_net": 31073,
+    "fiyat_tl": 37288,
+    "price": "₺31.073,00 + KDV\nKDV Dahil ₺37.288,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-14070",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 707.2,
     "satis_eur_indirimli": 707.2,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.14070\nModel serisi: KSRVB02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 832.0\nSatış fiyatı (EUR, %15 iskonto): 707.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.14070\nModel serisi: KSRVB02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 832.0\nSatış fiyatı (EUR, %15 iskonto): 707.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 38057,
-    "fiyat_tl": 45668,
-    "price": "₺38.057,00 + KDV\nKDV Dahil ₺45.668,00"
+    "fiyat_tl_net": 37687,
+    "fiyat_tl": 45224,
+    "price": "₺37.687,00 + KDV\nKDV Dahil ₺45.224,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-15065",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 675.75,
     "satis_eur_indirimli": 675.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1500×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.15065\nModel serisi: KSRVB02\nEbat: 150×65×85 cm (1500×650×850 mm)\n\nListe fiyatı (EUR): 795.0\nSatış fiyatı (EUR, %15 iskonto): 675.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1500×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.15065\nModel serisi: KSRVB02\nEbat: 150×65×85 cm (1500×650×850 mm)\n\nListe fiyatı (EUR): 795.0\nSatış fiyatı (EUR, %15 iskonto): 675.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 150×65×85 cm (1500×650×850 mm)"
     ],
-    "fiyat_tl_net": 36365,
-    "fiyat_tl": 43638,
-    "price": "₺36.365,00 + KDV\nKDV Dahil ₺43.638,00"
+    "fiyat_tl_net": 36011,
+    "fiyat_tl": 43213,
+    "price": "₺36.011,00 + KDV\nKDV Dahil ₺43.213,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-15070",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 714.85,
     "satis_eur_indirimli": 714.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.15070\nModel serisi: KSRVB02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 841.0\nSatış fiyatı (EUR, %15 iskonto): 714.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.15070\nModel serisi: KSRVB02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 841.0\nSatış fiyatı (EUR, %15 iskonto): 714.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 38469,
-    "fiyat_tl": 46163,
-    "price": "₺38.469,00 + KDV\nKDV Dahil ₺46.163,00"
+    "fiyat_tl_net": 38094,
+    "fiyat_tl": 45713,
+    "price": "₺38.094,00 + KDV\nKDV Dahil ₺45.713,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-16065",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 709.75,
     "satis_eur_indirimli": 709.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1600×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.16065\nModel serisi: KSRVB02\nEbat: 160×65×85 cm (1600×650×850 mm)\n\nListe fiyatı (EUR): 835.0\nSatış fiyatı (EUR, %15 iskonto): 709.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1600×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.16065\nModel serisi: KSRVB02\nEbat: 160×65×85 cm (1600×650×850 mm)\n\nListe fiyatı (EUR): 835.0\nSatış fiyatı (EUR, %15 iskonto): 709.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 160×65×85 cm (1600×650×850 mm)"
     ],
-    "fiyat_tl_net": 38194,
-    "fiyat_tl": 45833,
-    "price": "₺38.194,00 + KDV\nKDV Dahil ₺45.833,00"
+    "fiyat_tl_net": 37822,
+    "fiyat_tl": 45386,
+    "price": "₺37.822,00 + KDV\nKDV Dahil ₺45.386,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-16070",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 756.5,
     "satis_eur_indirimli": 756.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.16070\nModel serisi: KSRVB02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 890.0\nSatış fiyatı (EUR, %15 iskonto): 756.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.16070\nModel serisi: KSRVB02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 890.0\nSatış fiyatı (EUR, %15 iskonto): 756.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 40710,
-    "fiyat_tl": 48852,
-    "price": "₺40.710,00 + KDV\nKDV Dahil ₺48.852,00"
+    "fiyat_tl_net": 40314,
+    "fiyat_tl": 48377,
+    "price": "₺40.314,00 + KDV\nKDV Dahil ₺48.377,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-17065",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 748.0,
     "satis_eur_indirimli": 748.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1700×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.17065\nModel serisi: KSRVB02\nEbat: 170×65×85 cm (1700×650×850 mm)\n\nListe fiyatı (EUR): 880.0\nSatış fiyatı (EUR, %15 iskonto): 748.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1700×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.17065\nModel serisi: KSRVB02\nEbat: 170×65×85 cm (1700×650×850 mm)\n\nListe fiyatı (EUR): 880.0\nSatış fiyatı (EUR, %15 iskonto): 748.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 170×65×85 cm (1700×650×850 mm)"
     ],
-    "fiyat_tl_net": 40253,
-    "fiyat_tl": 48304,
-    "price": "₺40.253,00 + KDV\nKDV Dahil ₺48.304,00"
+    "fiyat_tl_net": 39861,
+    "fiyat_tl": 47833,
+    "price": "₺39.861,00 + KDV\nKDV Dahil ₺47.833,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-17070",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 794.75,
     "satis_eur_indirimli": 794.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.17070\nModel serisi: KSRVB02\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 935.0\nSatış fiyatı (EUR, %15 iskonto): 794.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.17070\nModel serisi: KSRVB02\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 935.0\nSatış fiyatı (EUR, %15 iskonto): 794.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 170×70×85 cm (1700×700×850 mm)"
     ],
-    "fiyat_tl_net": 42768,
-    "fiyat_tl": 51322,
-    "price": "₺42.768,00 + KDV\nKDV Dahil ₺51.322,00"
+    "fiyat_tl_net": 42352,
+    "fiyat_tl": 50822,
+    "price": "₺42.352,00 + KDV\nKDV Dahil ₺50.822,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-18065",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 762.45,
     "satis_eur_indirimli": 762.45,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1800×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.18065\nModel serisi: KSRVB02\nEbat: 180×65×85 cm (1800×650×850 mm)\n\nListe fiyatı (EUR): 897.0\nSatış fiyatı (EUR, %15 iskonto): 762.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1800×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.18065\nModel serisi: KSRVB02\nEbat: 180×65×85 cm (1800×650×850 mm)\n\nListe fiyatı (EUR): 897.0\nSatış fiyatı (EUR, %15 iskonto): 762.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 180×65×85 cm (1800×650×850 mm)"
     ],
-    "fiyat_tl_net": 41030,
-    "fiyat_tl": 49236,
-    "price": "₺41.030,00 + KDV\nKDV Dahil ₺49.236,00"
+    "fiyat_tl_net": 40631,
+    "fiyat_tl": 48757,
+    "price": "₺40.631,00 + KDV\nKDV Dahil ₺48.757,00"
   },
   {
     "id": "equsto__equsto-ksrvb02-18070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 820.25,
     "satis_eur_indirimli": 820.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,15 +688,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1800×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.18070\nModel serisi: KSRVB02\nEbat: 180×70×85 cm (1800×700×850 mm)\n\nListe fiyatı (EUR): 965.0\nSatış fiyatı (EUR, %15 iskonto): 820.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
+    "specs": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC 1800×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSRVB02.18070\nModel serisi: KSRVB02\nEbat: 180×70×85 cm (1800×700×850 mm)\n\nListe fiyatı (EUR): 965.0\nSatış fiyatı (EUR, %15 iskonto): 820.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSRVB02",
     "aciklama": "SICAK SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI, ELEKTRİK ISITMALI-KSC. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSRVB02",
       "Ebat: 180×70×85 cm (1800×700×850 mm)"
     ],
-    "fiyat_tl_net": 44141,
-    "fiyat_tl": 52969,
-    "price": "₺44.141,00 + KDV\nKDV Dahil ₺52.969,00"
+    "fiyat_tl_net": 43711,
+    "fiyat_tl": 52453,
+    "price": "₺43.711,00 + KDV\nKDV Dahil ₺52.453,00"
   }
 ]

@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 425.0,
     "satis_eur_indirimli": 425.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1200×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.12065\nModel serisi: KNSRVB02\nEbat: 120×65×85 cm (1200×650×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1200×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.12065\nModel serisi: KNSRVB02\nEbat: 120×65×85 cm (1200×650×850 mm)\n\nListe fiyatı (EUR): 500.0\nSatış fiyatı (EUR, %15 iskonto): 425.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 120×65×85 cm (1200×650×850 mm)"
     ],
-    "fiyat_tl_net": 22871,
-    "fiyat_tl": 27445,
-    "price": "₺22.871,00 + KDV\nKDV Dahil ₺27.445,00"
+    "fiyat_tl_net": 22648,
+    "fiyat_tl": 27178,
+    "price": "₺22.648,00 + KDV\nKDV Dahil ₺27.178,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 447.1,
     "satis_eur_indirimli": 447.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.12070\nModel serisi: KNSRVB02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 526.0\nSatış fiyatı (EUR, %15 iskonto): 447.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.12070\nModel serisi: KNSRVB02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 526.0\nSatış fiyatı (EUR, %15 iskonto): 447.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 24060,
-    "fiyat_tl": 28872,
-    "price": "₺24.060,00 + KDV\nKDV Dahil ₺28.872,00"
+    "fiyat_tl_net": 23826,
+    "fiyat_tl": 28591,
+    "price": "₺23.826,00 + KDV\nKDV Dahil ₺28.591,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-13065",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 459.0,
     "satis_eur_indirimli": 459.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1300×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.13065\nModel serisi: KNSRVB02\nEbat: 130×65×85 cm (1300×650×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1300×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.13065\nModel serisi: KNSRVB02\nEbat: 130×65×85 cm (1300×650×850 mm)\n\nListe fiyatı (EUR): 540.0\nSatış fiyatı (EUR, %15 iskonto): 459.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 130×65×85 cm (1300×650×850 mm)"
     ],
-    "fiyat_tl_net": 24700,
-    "fiyat_tl": 29640,
-    "price": "₺24.700,00 + KDV\nKDV Dahil ₺29.640,00"
+    "fiyat_tl_net": 24460,
+    "fiyat_tl": 29352,
+    "price": "₺24.460,00 + KDV\nKDV Dahil ₺29.352,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-13070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 484.5,
     "satis_eur_indirimli": 484.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.13070\nModel serisi: KNSRVB02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 570.0\nSatış fiyatı (EUR, %15 iskonto): 484.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.13070\nModel serisi: KNSRVB02\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 570.0\nSatış fiyatı (EUR, %15 iskonto): 484.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 26073,
-    "fiyat_tl": 31288,
-    "price": "₺26.073,00 + KDV\nKDV Dahil ₺31.288,00"
+    "fiyat_tl_net": 25819,
+    "fiyat_tl": 30983,
+    "price": "₺25.819,00 + KDV\nKDV Dahil ₺30.983,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-14065",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 467.5,
     "satis_eur_indirimli": 467.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1400×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.14065\nModel serisi: KNSRVB02\nEbat: 140×65×85 cm (1400×650×850 mm)\n\nListe fiyatı (EUR): 550.0\nSatış fiyatı (EUR, %15 iskonto): 467.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1400×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.14065\nModel serisi: KNSRVB02\nEbat: 140×65×85 cm (1400×650×850 mm)\n\nListe fiyatı (EUR): 550.0\nSatış fiyatı (EUR, %15 iskonto): 467.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 140×65×85 cm (1400×650×850 mm)"
     ],
-    "fiyat_tl_net": 25158,
-    "fiyat_tl": 30190,
-    "price": "₺25.158,00 + KDV\nKDV Dahil ₺30.190,00"
+    "fiyat_tl_net": 24913,
+    "fiyat_tl": 29896,
+    "price": "₺24.913,00 + KDV\nKDV Dahil ₺29.896,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-14070",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 494.7,
     "satis_eur_indirimli": 494.7,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.14070\nModel serisi: KNSRVB02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 582.0\nSatış fiyatı (EUR, %15 iskonto): 494.7\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.14070\nModel serisi: KNSRVB02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 582.0\nSatış fiyatı (EUR, %15 iskonto): 494.7\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 26622,
-    "fiyat_tl": 31946,
-    "price": "₺26.622,00 + KDV\nKDV Dahil ₺31.946,00"
+    "fiyat_tl_net": 26362,
+    "fiyat_tl": 31634,
+    "price": "₺26.362,00 + KDV\nKDV Dahil ₺31.634,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-15065",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 501.5,
     "satis_eur_indirimli": 501.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1500×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.15065\nModel serisi: KNSRVB02\nEbat: 150×65×85 cm (1500×650×850 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1500×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.15065\nModel serisi: KNSRVB02\nEbat: 150×65×85 cm (1500×650×850 mm)\n\nListe fiyatı (EUR): 590.0\nSatış fiyatı (EUR, %15 iskonto): 501.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 150×65×85 cm (1500×650×850 mm)"
     ],
-    "fiyat_tl_net": 26988,
-    "fiyat_tl": 32386,
-    "price": "₺26.988,00 + KDV\nKDV Dahil ₺32.386,00"
+    "fiyat_tl_net": 26725,
+    "fiyat_tl": 32070,
+    "price": "₺26.725,00 + KDV\nKDV Dahil ₺32.070,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-15070",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 532.1,
     "satis_eur_indirimli": 532.1,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.15070\nModel serisi: KNSRVB02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 626.0\nSatış fiyatı (EUR, %15 iskonto): 532.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.15070\nModel serisi: KNSRVB02\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 626.0\nSatış fiyatı (EUR, %15 iskonto): 532.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 28634,
-    "fiyat_tl": 34361,
-    "price": "₺28.634,00 + KDV\nKDV Dahil ₺34.361,00"
+    "fiyat_tl_net": 28356,
+    "fiyat_tl": 34027,
+    "price": "₺28.356,00 + KDV\nKDV Dahil ₺34.027,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-16065",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 582.25,
     "satis_eur_indirimli": 582.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1600×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.16065\nModel serisi: KNSRVB02\nEbat: 160×65×85 cm (1600×650×850 mm)\n\nListe fiyatı (EUR): 685.0\nSatış fiyatı (EUR, %15 iskonto): 582.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1600×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.16065\nModel serisi: KNSRVB02\nEbat: 160×65×85 cm (1600×650×850 mm)\n\nListe fiyatı (EUR): 685.0\nSatış fiyatı (EUR, %15 iskonto): 582.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 160×65×85 cm (1600×650×850 mm)"
     ],
-    "fiyat_tl_net": 31333,
-    "fiyat_tl": 37600,
-    "price": "₺31.333,00 + KDV\nKDV Dahil ₺37.600,00"
+    "fiyat_tl_net": 31028,
+    "fiyat_tl": 37234,
+    "price": "₺31.028,00 + KDV\nKDV Dahil ₺37.234,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-16070",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 612.0,
     "satis_eur_indirimli": 612.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.16070\nModel serisi: KNSRVB02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 720.0\nSatış fiyatı (EUR, %15 iskonto): 612.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.16070\nModel serisi: KNSRVB02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 720.0\nSatış fiyatı (EUR, %15 iskonto): 612.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 32934,
-    "fiyat_tl": 39521,
-    "price": "₺32.934,00 + KDV\nKDV Dahil ₺39.521,00"
+    "fiyat_tl_net": 32613,
+    "fiyat_tl": 39136,
+    "price": "₺32.613,00 + KDV\nKDV Dahil ₺39.136,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-17065",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 620.5,
     "satis_eur_indirimli": 620.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1700×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.17065\nModel serisi: KNSRVB02\nEbat: 170×65×85 cm (1700×650×850 mm)\n\nListe fiyatı (EUR): 730.0\nSatış fiyatı (EUR, %15 iskonto): 620.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1700×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.17065\nModel serisi: KNSRVB02\nEbat: 170×65×85 cm (1700×650×850 mm)\n\nListe fiyatı (EUR): 730.0\nSatış fiyatı (EUR, %15 iskonto): 620.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 170×65×85 cm (1700×650×850 mm)"
     ],
-    "fiyat_tl_net": 33391,
-    "fiyat_tl": 40069,
-    "price": "₺33.391,00 + KDV\nKDV Dahil ₺40.069,00"
+    "fiyat_tl_net": 33066,
+    "fiyat_tl": 39679,
+    "price": "₺33.066,00 + KDV\nKDV Dahil ₺39.679,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-17070",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 646.0,
     "satis_eur_indirimli": 646.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.17070\nModel serisi: KNSRVB02\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 760.0\nSatış fiyatı (EUR, %15 iskonto): 646.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1700×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.17070\nModel serisi: KNSRVB02\nEbat: 170×70×85 cm (1700×700×850 mm)\n\nListe fiyatı (EUR): 760.0\nSatış fiyatı (EUR, %15 iskonto): 646.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 170×70×85 cm (1700×700×850 mm)"
     ],
-    "fiyat_tl_net": 34764,
-    "fiyat_tl": 41717,
-    "price": "₺34.764,00 + KDV\nKDV Dahil ₺41.717,00"
+    "fiyat_tl_net": 34425,
+    "fiyat_tl": 41310,
+    "price": "₺34.425,00 + KDV\nKDV Dahil ₺41.310,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-18065",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 714.0,
     "satis_eur_indirimli": 714.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1800×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.18065\nModel serisi: KNSRVB02\nEbat: 180×65×85 cm (1800×650×850 mm)\n\nListe fiyatı (EUR): 840.0\nSatış fiyatı (EUR, %15 iskonto): 714.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1800×650×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.18065\nModel serisi: KNSRVB02\nEbat: 180×65×85 cm (1800×650×850 mm)\n\nListe fiyatı (EUR): 840.0\nSatış fiyatı (EUR, %15 iskonto): 714.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 180×65×85 cm (1800×650×850 mm)"
     ],
-    "fiyat_tl_net": 38423,
-    "fiyat_tl": 46108,
-    "price": "₺38.423,00 + KDV\nKDV Dahil ₺46.108,00"
+    "fiyat_tl_net": 38049,
+    "fiyat_tl": 45659,
+    "price": "₺38.049,00 + KDV\nKDV Dahil ₺45.659,00"
   },
   {
     "id": "equsto__equsto-knsrvb02-18070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 748.0,
     "satis_eur_indirimli": 748.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,15 +688,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1800×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.18070\nModel serisi: KNSRVB02\nEbat: 180×70×85 cm (1800×700×850 mm)\n\nListe fiyatı (EUR): 880.0\nSatış fiyatı (EUR, %15 iskonto): 748.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
+    "specs": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI 1800×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KNSRVB02.18070\nModel serisi: KNSRVB02\nEbat: 180×70×85 cm (1800×700×850 mm)\n\nListe fiyatı (EUR): 880.0\nSatış fiyatı (EUR, %15 iskonto): 748.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KNSRVB02",
     "aciklama": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KNSRVB02",
       "Ebat: 180×70×85 cm (1800×700×850 mm)"
     ],
-    "fiyat_tl_net": 40253,
-    "fiyat_tl": 48304,
-    "price": "₺40.253,00 + KDV\nKDV Dahil ₺48.304,00"
+    "fiyat_tl_net": 39861,
+    "fiyat_tl": 47833,
+    "price": "₺39.861,00 + KDV\nKDV Dahil ₺47.833,00"
   }
 ]

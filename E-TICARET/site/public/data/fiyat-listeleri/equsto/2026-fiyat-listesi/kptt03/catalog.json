@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.111107+00:00",
+  "imported_at": "2026-06-18T13:00:46.626804+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kptt03/urun.png",
   "pfos": {
     "count": 25,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 535.5,
         "satis_eur_indirimli": 535.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09060\nModel serisi: KPTT03\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %15 iskonto): 535.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09060\nModel serisi: KPTT03\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 630.0\nSatış fiyatı (EUR, %15 iskonto): 535.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 90×60×85 cm (900×600×850 mm)"
         ],
-        "fiyat_tl_net": 28817,
-        "fiyat_tl": 34580,
-        "price": "₺28.817,00 + KDV\nKDV Dahil ₺34.580,00"
+        "fiyat_tl_net": 28537,
+        "fiyat_tl": 34244,
+        "price": "₺28.537,00 + KDV\nKDV Dahil ₺34.244,00"
       },
       {
         "id": "equsto__equsto-kptt03-09070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 554.2,
         "satis_eur_indirimli": 554.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09070\nModel serisi: KPTT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 652.0\nSatış fiyatı (EUR, %15 iskonto): 554.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09070\nModel serisi: KPTT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 652.0\nSatış fiyatı (EUR, %15 iskonto): 554.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 29824,
-        "fiyat_tl": 35789,
-        "price": "₺29.824,00 + KDV\nKDV Dahil ₺35.789,00"
+        "fiyat_tl_net": 29533,
+        "fiyat_tl": 35440,
+        "price": "₺29.533,00 + KDV\nKDV Dahil ₺35.440,00"
       },
       {
         "id": "equsto__equsto-kptt03-09080",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 578.0,
         "satis_eur_indirimli": 578.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09080\nModel serisi: KPTT03\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09080\nModel serisi: KPTT03\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 90×80×85 cm (900×800×850 mm)"
         ],
-        "fiyat_tl_net": 31104,
-        "fiyat_tl": 37325,
-        "price": "₺31.104,00 + KDV\nKDV Dahil ₺37.325,00"
+        "fiyat_tl_net": 30802,
+        "fiyat_tl": 36962,
+        "price": "₺30.802,00 + KDV\nKDV Dahil ₺36.962,00"
       },
       {
         "id": "equsto__equsto-kptt03-10060",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 549.1,
         "satis_eur_indirimli": 549.1,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10060\nModel serisi: KPTT03\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 646.0\nSatış fiyatı (EUR, %15 iskonto): 549.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10060\nModel serisi: KPTT03\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 646.0\nSatış fiyatı (EUR, %15 iskonto): 549.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 100×60×85 cm (1000×600×850 mm)"
         ],
-        "fiyat_tl_net": 29549,
-        "fiyat_tl": 35459,
-        "price": "₺29.549,00 + KDV\nKDV Dahil ₺35.459,00"
+        "fiyat_tl_net": 29261,
+        "fiyat_tl": 35113,
+        "price": "₺29.261,00 + KDV\nKDV Dahil ₺35.113,00"
       },
       {
         "id": "equsto__equsto-kptt03-10070",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 573.75,
         "satis_eur_indirimli": 573.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10070\nModel serisi: KPTT03\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10070\nModel serisi: KPTT03\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 30876,
-        "fiyat_tl": 37051,
-        "price": "₺30.876,00 + KDV\nKDV Dahil ₺37.051,00"
+        "fiyat_tl_net": 30575,
+        "fiyat_tl": 36690,
+        "price": "₺30.575,00 + KDV\nKDV Dahil ₺36.690,00"
       },
       {
         "id": "equsto__equsto-kptt03-10080",
@@ -298,7 +298,7 @@
         "satis_fiyati_eur": 599.25,
         "satis_eur_indirimli": 599.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -307,16 +307,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10080\nModel serisi: KPTT03\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.10080\nModel serisi: KPTT03\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 100×80×85 cm (1000×800×850 mm)"
         ],
-        "fiyat_tl_net": 32248,
-        "fiyat_tl": 38698,
-        "price": "₺32.248,00 + KDV\nKDV Dahil ₺38.698,00"
+        "fiyat_tl_net": 31934,
+        "fiyat_tl": 38321,
+        "price": "₺31.934,00 + KDV\nKDV Dahil ₺38.321,00"
       },
       {
         "id": "equsto__equsto-kptt03-11060",
@@ -348,7 +348,7 @@
         "satis_fiyati_eur": 561.0,
         "satis_eur_indirimli": 561.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -357,16 +357,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11060\nModel serisi: KPTT03\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11060\nModel serisi: KPTT03\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 660.0\nSatış fiyatı (EUR, %15 iskonto): 561.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 110×60×85 cm (1100×600×850 mm)"
         ],
-        "fiyat_tl_net": 30189,
-        "fiyat_tl": 36227,
-        "price": "₺30.189,00 + KDV\nKDV Dahil ₺36.227,00"
+        "fiyat_tl_net": 29896,
+        "fiyat_tl": 35875,
+        "price": "₺29.896,00 + KDV\nKDV Dahil ₺35.875,00"
       },
       {
         "id": "equsto__equsto-kptt03-11070",
@@ -398,7 +398,7 @@
         "satis_fiyati_eur": 587.35,
         "satis_eur_indirimli": 587.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -407,16 +407,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11070\nModel serisi: KPTT03\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 691.0\nSatış fiyatı (EUR, %15 iskonto): 587.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11070\nModel serisi: KPTT03\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 691.0\nSatış fiyatı (EUR, %15 iskonto): 587.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 110×70×85 cm (1100×700×850 mm)"
         ],
-        "fiyat_tl_net": 31607,
-        "fiyat_tl": 37928,
-        "price": "₺31.607,00 + KDV\nKDV Dahil ₺37.928,00"
+        "fiyat_tl_net": 31300,
+        "fiyat_tl": 37560,
+        "price": "₺31.300,00 + KDV\nKDV Dahil ₺37.560,00"
       },
       {
         "id": "equsto__equsto-kptt03-11080",
@@ -448,7 +448,7 @@
         "satis_fiyati_eur": 616.25,
         "satis_eur_indirimli": 616.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -457,16 +457,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11080\nModel serisi: KPTT03\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 725.0\nSatış fiyatı (EUR, %15 iskonto): 616.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.11080\nModel serisi: KPTT03\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 725.0\nSatış fiyatı (EUR, %15 iskonto): 616.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 110×80×85 cm (1100×800×850 mm)"
         ],
-        "fiyat_tl_net": 33163,
-        "fiyat_tl": 39796,
-        "price": "₺33.163,00 + KDV\nKDV Dahil ₺39.796,00"
+        "fiyat_tl_net": 32840,
+        "fiyat_tl": 39408,
+        "price": "₺32.840,00 + KDV\nKDV Dahil ₺39.408,00"
       },
       {
         "id": "equsto__equsto-kptt03-12060",
@@ -498,7 +498,7 @@
         "satis_fiyati_eur": 578.0,
         "satis_eur_indirimli": 578.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -507,16 +507,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12060\nModel serisi: KPTT03\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12060\nModel serisi: KPTT03\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 120×60×85 cm (1200×600×850 mm)"
         ],
-        "fiyat_tl_net": 31104,
-        "fiyat_tl": 37325,
-        "price": "₺31.104,00 + KDV\nKDV Dahil ₺37.325,00"
+        "fiyat_tl_net": 30802,
+        "fiyat_tl": 36962,
+        "price": "₺30.802,00 + KDV\nKDV Dahil ₺36.962,00"
       },
       {
         "id": "equsto__equsto-kptt03-12070",
@@ -548,7 +548,7 @@
         "satis_fiyati_eur": 607.75,
         "satis_eur_indirimli": 607.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -557,16 +557,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12070\nModel serisi: KPTT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12070\nModel serisi: KPTT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 32705,
-        "fiyat_tl": 39246,
-        "price": "₺32.705,00 + KDV\nKDV Dahil ₺39.246,00"
+        "fiyat_tl_net": 32387,
+        "fiyat_tl": 38864,
+        "price": "₺32.387,00 + KDV\nKDV Dahil ₺38.864,00"
       },
       {
         "id": "equsto__equsto-kptt03-12080",
@@ -598,7 +598,7 @@
         "satis_fiyati_eur": 634.1,
         "satis_eur_indirimli": 634.1,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -607,16 +607,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12080\nModel serisi: KPTT03\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 746.0\nSatış fiyatı (EUR, %15 iskonto): 634.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12080\nModel serisi: KPTT03\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 746.0\nSatış fiyatı (EUR, %15 iskonto): 634.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 120×80×85 cm (1200×800×850 mm)"
         ],
-        "fiyat_tl_net": 34123,
-        "fiyat_tl": 40948,
-        "price": "₺34.123,00 + KDV\nKDV Dahil ₺40.948,00"
+        "fiyat_tl_net": 33791,
+        "fiyat_tl": 40549,
+        "price": "₺33.791,00 + KDV\nKDV Dahil ₺40.549,00"
       },
       {
         "id": "equsto__equsto-kptt03-13060",
@@ -648,7 +648,7 @@
         "satis_fiyati_eur": 595.0,
         "satis_eur_indirimli": 595.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -657,16 +657,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13060\nModel serisi: KPTT03\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 700.0\nSatış fiyatı (EUR, %15 iskonto): 595.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13060\nModel serisi: KPTT03\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 700.0\nSatış fiyatı (EUR, %15 iskonto): 595.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 130×60×85 cm (1300×600×850 mm)"
         ],
-        "fiyat_tl_net": 32019,
-        "fiyat_tl": 38423,
-        "price": "₺32.019,00 + KDV\nKDV Dahil ₺38.423,00"
+        "fiyat_tl_net": 31707,
+        "fiyat_tl": 38048,
+        "price": "₺31.707,00 + KDV\nKDV Dahil ₺38.048,00"
       },
       {
         "id": "equsto__equsto-kptt03-13070",
@@ -698,7 +698,7 @@
         "satis_fiyati_eur": 624.75,
         "satis_eur_indirimli": 624.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -707,16 +707,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13070\nModel serisi: KPTT03\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %15 iskonto): 624.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13070\nModel serisi: KPTT03\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %15 iskonto): 624.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 130×70×85 cm (1300×700×850 mm)"
         ],
-        "fiyat_tl_net": 33620,
-        "fiyat_tl": 40344,
-        "price": "₺33.620,00 + KDV\nKDV Dahil ₺40.344,00"
+        "fiyat_tl_net": 33293,
+        "fiyat_tl": 39952,
+        "price": "₺33.293,00 + KDV\nKDV Dahil ₺39.952,00"
       },
       {
         "id": "equsto__equsto-kptt03-13080",
@@ -748,7 +748,7 @@
         "satis_fiyati_eur": 654.5,
         "satis_eur_indirimli": 654.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -757,16 +757,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13080\nModel serisi: KPTT03\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 770.0\nSatış fiyatı (EUR, %15 iskonto): 654.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.13080\nModel serisi: KPTT03\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 770.0\nSatış fiyatı (EUR, %15 iskonto): 654.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 130×80×85 cm (1300×800×850 mm)"
         ],
-        "fiyat_tl_net": 35221,
-        "fiyat_tl": 42265,
-        "price": "₺35.221,00 + KDV\nKDV Dahil ₺42.265,00"
+        "fiyat_tl_net": 34878,
+        "fiyat_tl": 41854,
+        "price": "₺34.878,00 + KDV\nKDV Dahil ₺41.854,00"
       },
       {
         "id": "equsto__equsto-kptt03-14060",
@@ -798,7 +798,7 @@
         "satis_fiyati_eur": 607.75,
         "satis_eur_indirimli": 607.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -807,16 +807,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14060\nModel serisi: KPTT03\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14060\nModel serisi: KPTT03\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 140×60×85 cm (1400×600×850 mm)"
         ],
-        "fiyat_tl_net": 32705,
-        "fiyat_tl": 39246,
-        "price": "₺32.705,00 + KDV\nKDV Dahil ₺39.246,00"
+        "fiyat_tl_net": 32387,
+        "fiyat_tl": 38864,
+        "price": "₺32.387,00 + KDV\nKDV Dahil ₺38.864,00"
       },
       {
         "id": "equsto__equsto-kptt03-14070",
@@ -848,7 +848,7 @@
         "satis_fiyati_eur": 638.35,
         "satis_eur_indirimli": 638.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -857,16 +857,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14070\nModel serisi: KPTT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 751.0\nSatış fiyatı (EUR, %15 iskonto): 638.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14070\nModel serisi: KPTT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 751.0\nSatış fiyatı (EUR, %15 iskonto): 638.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 34352,
-        "fiyat_tl": 41222,
-        "price": "₺34.352,00 + KDV\nKDV Dahil ₺41.222,00"
+        "fiyat_tl_net": 34018,
+        "fiyat_tl": 40822,
+        "price": "₺34.018,00 + KDV\nKDV Dahil ₺40.822,00"
       },
       {
         "id": "equsto__equsto-kptt03-14080",
@@ -898,7 +898,7 @@
         "satis_fiyati_eur": 671.5,
         "satis_eur_indirimli": 671.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -907,16 +907,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14080\nModel serisi: KPTT03\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 790.0\nSatış fiyatı (EUR, %15 iskonto): 671.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14080\nModel serisi: KPTT03\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 790.0\nSatış fiyatı (EUR, %15 iskonto): 671.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 140×80×85 cm (1400×800×850 mm)"
         ],
-        "fiyat_tl_net": 36136,
-        "fiyat_tl": 43363,
-        "price": "₺36.136,00 + KDV\nKDV Dahil ₺43.363,00"
+        "fiyat_tl_net": 35784,
+        "fiyat_tl": 42941,
+        "price": "₺35.784,00 + KDV\nKDV Dahil ₺42.941,00"
       },
       {
         "id": "equsto__equsto-kptt03-15060",
@@ -948,7 +948,7 @@
         "satis_fiyati_eur": 624.75,
         "satis_eur_indirimli": 624.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -957,16 +957,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15060\nModel serisi: KPTT03\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %15 iskonto): 624.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15060\nModel serisi: KPTT03\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 735.0\nSatış fiyatı (EUR, %15 iskonto): 624.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 150×60×85 cm (1500×600×850 mm)"
         ],
-        "fiyat_tl_net": 33620,
-        "fiyat_tl": 40344,
-        "price": "₺33.620,00 + KDV\nKDV Dahil ₺40.344,00"
+        "fiyat_tl_net": 33293,
+        "fiyat_tl": 39952,
+        "price": "₺33.293,00 + KDV\nKDV Dahil ₺39.952,00"
       },
       {
         "id": "equsto__equsto-kptt03-15070",
@@ -998,7 +998,7 @@
         "satis_fiyati_eur": 658.75,
         "satis_eur_indirimli": 658.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1007,16 +1007,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15070\nModel serisi: KPTT03\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 775.0\nSatış fiyatı (EUR, %15 iskonto): 658.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15070\nModel serisi: KPTT03\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 775.0\nSatış fiyatı (EUR, %15 iskonto): 658.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 150×70×85 cm (1500×700×850 mm)"
         ],
-        "fiyat_tl_net": 35450,
-        "fiyat_tl": 42540,
-        "price": "₺35.450,00 + KDV\nKDV Dahil ₺42.540,00"
+        "fiyat_tl_net": 35105,
+        "fiyat_tl": 42126,
+        "price": "₺35.105,00 + KDV\nKDV Dahil ₺42.126,00"
       },
       {
         "id": "equsto__equsto-kptt03-15080",
@@ -1048,7 +1048,7 @@
         "satis_fiyati_eur": 692.75,
         "satis_eur_indirimli": 692.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1057,16 +1057,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15080\nModel serisi: KPTT03\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 815.0\nSatış fiyatı (EUR, %15 iskonto): 692.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.15080\nModel serisi: KPTT03\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 815.0\nSatış fiyatı (EUR, %15 iskonto): 692.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 150×80×85 cm (1500×800×850 mm)"
         ],
-        "fiyat_tl_net": 37279,
-        "fiyat_tl": 44735,
-        "price": "₺37.279,00 + KDV\nKDV Dahil ₺44.735,00"
+        "fiyat_tl_net": 36917,
+        "fiyat_tl": 44300,
+        "price": "₺36.917,00 + KDV\nKDV Dahil ₺44.300,00"
       },
       {
         "id": "equsto__equsto-kptt03-16060",
@@ -1098,7 +1098,7 @@
         "satis_fiyati_eur": 650.25,
         "satis_eur_indirimli": 650.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1107,16 +1107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16060\nModel serisi: KPTT03\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %15 iskonto): 650.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16060\nModel serisi: KPTT03\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %15 iskonto): 650.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 160×60×85 cm (1600×600×850 mm)"
         ],
-        "fiyat_tl_net": 34992,
-        "fiyat_tl": 41990,
-        "price": "₺34.992,00 + KDV\nKDV Dahil ₺41.990,00"
+        "fiyat_tl_net": 34652,
+        "fiyat_tl": 41582,
+        "price": "₺34.652,00 + KDV\nKDV Dahil ₺41.582,00"
       },
       {
         "id": "equsto__equsto-kptt03-16070",
@@ -1148,7 +1148,7 @@
         "satis_fiyati_eur": 689.35,
         "satis_eur_indirimli": 689.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1157,16 +1157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16070\nModel serisi: KPTT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 811.0\nSatış fiyatı (EUR, %15 iskonto): 689.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16070\nModel serisi: KPTT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 811.0\nSatış fiyatı (EUR, %15 iskonto): 689.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 37096,
-        "fiyat_tl": 44515,
-        "price": "₺37.096,00 + KDV\nKDV Dahil ₺44.515,00"
+        "fiyat_tl_net": 36735,
+        "fiyat_tl": 44082,
+        "price": "₺36.735,00 + KDV\nKDV Dahil ₺44.082,00"
       },
       {
         "id": "equsto__equsto-kptt03-16080",
@@ -1198,7 +1198,7 @@
         "satis_fiyati_eur": 727.6,
         "satis_eur_indirimli": 727.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1207,16 +1207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16080\nModel serisi: KPTT03\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 856.0\nSatış fiyatı (EUR, %15 iskonto): 727.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16080\nModel serisi: KPTT03\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 856.0\nSatış fiyatı (EUR, %15 iskonto): 727.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 160×80×85 cm (1600×800×850 mm)"
         ],
-        "fiyat_tl_net": 39155,
-        "fiyat_tl": 46986,
-        "price": "₺39.155,00 + KDV\nKDV Dahil ₺46.986,00"
+        "fiyat_tl_net": 38774,
+        "fiyat_tl": 46529,
+        "price": "₺38.774,00 + KDV\nKDV Dahil ₺46.529,00"
       },
       {
         "id": "equsto__equsto-kptt03-17060",
@@ -1248,7 +1248,7 @@
         "satis_fiyati_eur": 659.6,
         "satis_eur_indirimli": 659.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -1257,16 +1257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.17060\nModel serisi: KPTT03\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 776.0\nSatış fiyatı (EUR, %15 iskonto): 659.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.17060\nModel serisi: KPTT03\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 776.0\nSatış fiyatı (EUR, %15 iskonto): 659.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 170×60×85 cm (1700×600×850 mm)"
         ],
-        "fiyat_tl_net": 35496,
-        "fiyat_tl": 42595,
-        "price": "₺35.496,00 + KDV\nKDV Dahil ₺42.595,00"
+        "fiyat_tl_net": 35150,
+        "fiyat_tl": 42180,
+        "price": "₺35.150,00 + KDV\nKDV Dahil ₺42.180,00"
       }
     ]
   },
@@ -1303,7 +1303,7 @@
         "satis_fiyati_eur": 554.2,
         "satis_eur_indirimli": 554.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1312,16 +1312,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09070\nModel serisi: KPTT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 652.0\nSatış fiyatı (EUR, %15 iskonto): 554.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.09070\nModel serisi: KPTT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 652.0\nSatış fiyatı (EUR, %15 iskonto): 554.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 29824,
-        "fiyat_tl": 35789,
-        "price": "₺29.824,00 + KDV\nKDV Dahil ₺35.789,00"
+        "fiyat_tl_net": 29533,
+        "fiyat_tl": 35440,
+        "price": "₺29.533,00 + KDV\nKDV Dahil ₺35.440,00"
       },
       {
         "id": "equsto__equsto-kptt03-12070",
@@ -1353,7 +1353,7 @@
         "satis_fiyati_eur": 607.75,
         "satis_eur_indirimli": 607.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1362,16 +1362,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12070\nModel serisi: KPTT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.12070\nModel serisi: KPTT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 32705,
-        "fiyat_tl": 39246,
-        "price": "₺32.705,00 + KDV\nKDV Dahil ₺39.246,00"
+        "fiyat_tl_net": 32387,
+        "fiyat_tl": 38864,
+        "price": "₺32.387,00 + KDV\nKDV Dahil ₺38.864,00"
       },
       {
         "id": "equsto__equsto-kptt03-14070",
@@ -1403,7 +1403,7 @@
         "satis_fiyati_eur": 638.35,
         "satis_eur_indirimli": 638.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1412,16 +1412,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14070\nModel serisi: KPTT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 751.0\nSatış fiyatı (EUR, %15 iskonto): 638.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.14070\nModel serisi: KPTT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 751.0\nSatış fiyatı (EUR, %15 iskonto): 638.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 34352,
-        "fiyat_tl": 41222,
-        "price": "₺34.352,00 + KDV\nKDV Dahil ₺41.222,00"
+        "fiyat_tl_net": 34018,
+        "fiyat_tl": 40822,
+        "price": "₺34.018,00 + KDV\nKDV Dahil ₺40.822,00"
       },
       {
         "id": "equsto__equsto-kptt03-16070",
@@ -1453,7 +1453,7 @@
         "satis_fiyati_eur": 689.35,
         "satis_eur_indirimli": 689.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -1462,16 +1462,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16070\nModel serisi: KPTT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 811.0\nSatış fiyatı (EUR, %15 iskonto): 689.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
+        "specs": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPTT03.16070\nModel serisi: KPTT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 811.0\nSatış fiyatı (EUR, %15 iskonto): 689.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPTT03",
         "aciklama": "POLİETİLEN TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ,DÖRTLÜ BLOK ÇEKMECELİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPTT03",
           "Ebat: 160×70×85 cm (1600×700×850 mm)"
         ],
-        "fiyat_tl_net": 37096,
-        "fiyat_tl": 44515,
-        "price": "₺37.096,00 + KDV\nKDV Dahil ₺44.515,00"
+        "fiyat_tl_net": 36735,
+        "fiyat_tl": 44082,
+        "price": "₺36.735,00 + KDV\nKDV Dahil ₺44.082,00"
       }
     ]
   }

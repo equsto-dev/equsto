@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:08.821239+00:00",
+  "imported_at": "2026-06-18T13:00:46.966312+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/ktepsurst01/urun.png",
   "pfos": {
     "count": 14,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 72.25,
         "satis_eur_indirimli": 72.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1200×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.12030\nModel serisi: KTEPSURST01\nEbat: 120×30×10 cm (1200×300×100 mm)\n\nListe fiyatı (EUR): 85.0\nSatış fiyatı (EUR, %15 iskonto): 72.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1200×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.12030\nModel serisi: KTEPSURST01\nEbat: 120×30×10 cm (1200×300×100 mm)\n\nListe fiyatı (EUR): 85.0\nSatış fiyatı (EUR, %15 iskonto): 72.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 120×30×10 cm (1200×300×100 mm)"
         ],
-        "fiyat_tl_net": 3888,
-        "fiyat_tl": 4666,
-        "price": "₺3.888,00 + KDV\nKDV Dahil ₺4.666,00"
+        "fiyat_tl_net": 3850,
+        "fiyat_tl": 4620,
+        "price": "₺3.850,00 + KDV\nKDV Dahil ₺4.620,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-12035",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 80.75,
         "satis_eur_indirimli": 80.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1200×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.12035\nModel serisi: KTEPSURST01\nEbat: 120×35×10 cm (1200×350×100 mm)\n\nListe fiyatı (EUR): 95.0\nSatış fiyatı (EUR, %15 iskonto): 80.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1200×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.12035\nModel serisi: KTEPSURST01\nEbat: 120×35×10 cm (1200×350×100 mm)\n\nListe fiyatı (EUR): 95.0\nSatış fiyatı (EUR, %15 iskonto): 80.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 120×35×10 cm (1200×350×100 mm)"
         ],
-        "fiyat_tl_net": 4345,
-        "fiyat_tl": 5214,
-        "price": "₺4.345,00 + KDV\nKDV Dahil ₺5.214,00"
+        "fiyat_tl_net": 4303,
+        "fiyat_tl": 5164,
+        "price": "₺4.303,00 + KDV\nKDV Dahil ₺5.164,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-13030",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 77.35,
         "satis_eur_indirimli": 77.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1300×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.13030\nModel serisi: KTEPSURST01\nEbat: 130×30×10 cm (1300×300×100 mm)\n\nListe fiyatı (EUR): 91.0\nSatış fiyatı (EUR, %15 iskonto): 77.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1300×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.13030\nModel serisi: KTEPSURST01\nEbat: 130×30×10 cm (1300×300×100 mm)\n\nListe fiyatı (EUR): 91.0\nSatış fiyatı (EUR, %15 iskonto): 77.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 130×30×10 cm (1300×300×100 mm)"
         ],
-        "fiyat_tl_net": 4162,
-        "fiyat_tl": 4994,
-        "price": "₺4.162,00 + KDV\nKDV Dahil ₺4.994,00"
+        "fiyat_tl_net": 4122,
+        "fiyat_tl": 4946,
+        "price": "₺4.122,00 + KDV\nKDV Dahil ₺4.946,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-13035",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 89.25,
         "satis_eur_indirimli": 89.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1300×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.13035\nModel serisi: KTEPSURST01\nEbat: 130×35×10 cm (1300×350×100 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1300×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.13035\nModel serisi: KTEPSURST01\nEbat: 130×35×10 cm (1300×350×100 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 130×35×10 cm (1300×350×100 mm)"
         ],
-        "fiyat_tl_net": 4803,
-        "fiyat_tl": 5764,
-        "price": "₺4.803,00 + KDV\nKDV Dahil ₺5.764,00"
+        "fiyat_tl_net": 4756,
+        "fiyat_tl": 5707,
+        "price": "₺4.756,00 + KDV\nKDV Dahil ₺5.707,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-14030",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 83.3,
         "satis_eur_indirimli": 83.3,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1400×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.14030\nModel serisi: KTEPSURST01\nEbat: 140×30×10 cm (1400×300×100 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1400×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.14030\nModel serisi: KTEPSURST01\nEbat: 140×30×10 cm (1400×300×100 mm)\n\nListe fiyatı (EUR): 98.0\nSatış fiyatı (EUR, %15 iskonto): 83.3\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 140×30×10 cm (1400×300×100 mm)"
         ],
-        "fiyat_tl_net": 4483,
-        "fiyat_tl": 5380,
-        "price": "₺4.483,00 + KDV\nKDV Dahil ₺5.380,00"
+        "fiyat_tl_net": 4439,
+        "fiyat_tl": 5327,
+        "price": "₺4.439,00 + KDV\nKDV Dahil ₺5.327,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-14035",
@@ -298,7 +298,7 @@
         "satis_fiyati_eur": 95.2,
         "satis_eur_indirimli": 95.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -307,16 +307,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1400×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.14035\nModel serisi: KTEPSURST01\nEbat: 140×35×10 cm (1400×350×100 mm)\n\nListe fiyatı (EUR): 112.0\nSatış fiyatı (EUR, %15 iskonto): 95.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1400×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.14035\nModel serisi: KTEPSURST01\nEbat: 140×35×10 cm (1400×350×100 mm)\n\nListe fiyatı (EUR): 112.0\nSatış fiyatı (EUR, %15 iskonto): 95.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 140×35×10 cm (1400×350×100 mm)"
         ],
-        "fiyat_tl_net": 5123,
-        "fiyat_tl": 6148,
-        "price": "₺5.123,00 + KDV\nKDV Dahil ₺6.148,00"
+        "fiyat_tl_net": 5073,
+        "fiyat_tl": 6088,
+        "price": "₺5.073,00 + KDV\nKDV Dahil ₺6.088,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-15030",
@@ -348,7 +348,7 @@
         "satis_fiyati_eur": 89.25,
         "satis_eur_indirimli": 89.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -357,16 +357,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1500×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.15030\nModel serisi: KTEPSURST01\nEbat: 150×30×10 cm (1500×300×100 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1500×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.15030\nModel serisi: KTEPSURST01\nEbat: 150×30×10 cm (1500×300×100 mm)\n\nListe fiyatı (EUR): 105.0\nSatış fiyatı (EUR, %15 iskonto): 89.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 150×30×10 cm (1500×300×100 mm)"
         ],
-        "fiyat_tl_net": 4803,
-        "fiyat_tl": 5764,
-        "price": "₺4.803,00 + KDV\nKDV Dahil ₺5.764,00"
+        "fiyat_tl_net": 4756,
+        "fiyat_tl": 5707,
+        "price": "₺4.756,00 + KDV\nKDV Dahil ₺5.707,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-15035",
@@ -398,7 +398,7 @@
         "satis_fiyati_eur": 102.0,
         "satis_eur_indirimli": 102.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -407,16 +407,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1500×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.15035\nModel serisi: KTEPSURST01\nEbat: 150×35×10 cm (1500×350×100 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1500×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.15035\nModel serisi: KTEPSURST01\nEbat: 150×35×10 cm (1500×350×100 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 150×35×10 cm (1500×350×100 mm)"
         ],
-        "fiyat_tl_net": 5489,
-        "fiyat_tl": 6587,
-        "price": "₺5.489,00 + KDV\nKDV Dahil ₺6.587,00"
+        "fiyat_tl_net": 5436,
+        "fiyat_tl": 6523,
+        "price": "₺5.436,00 + KDV\nKDV Dahil ₺6.523,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-16030",
@@ -448,7 +448,7 @@
         "satis_fiyati_eur": 95.2,
         "satis_eur_indirimli": 95.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -457,16 +457,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1600×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.16030\nModel serisi: KTEPSURST01\nEbat: 160×30×10 cm (1600×300×100 mm)\n\nListe fiyatı (EUR): 112.0\nSatış fiyatı (EUR, %15 iskonto): 95.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1600×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.16030\nModel serisi: KTEPSURST01\nEbat: 160×30×10 cm (1600×300×100 mm)\n\nListe fiyatı (EUR): 112.0\nSatış fiyatı (EUR, %15 iskonto): 95.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 160×30×10 cm (1600×300×100 mm)"
         ],
-        "fiyat_tl_net": 5123,
-        "fiyat_tl": 6148,
-        "price": "₺5.123,00 + KDV\nKDV Dahil ₺6.148,00"
+        "fiyat_tl_net": 5073,
+        "fiyat_tl": 6088,
+        "price": "₺5.073,00 + KDV\nKDV Dahil ₺6.088,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-16035",
@@ -498,7 +498,7 @@
         "satis_fiyati_eur": 109.65,
         "satis_eur_indirimli": 109.65,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -507,16 +507,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1600×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.16035\nModel serisi: KTEPSURST01\nEbat: 160×35×10 cm (1600×350×100 mm)\n\nListe fiyatı (EUR): 129.0\nSatış fiyatı (EUR, %15 iskonto): 109.65\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1600×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.16035\nModel serisi: KTEPSURST01\nEbat: 160×35×10 cm (1600×350×100 mm)\n\nListe fiyatı (EUR): 129.0\nSatış fiyatı (EUR, %15 iskonto): 109.65\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 160×35×10 cm (1600×350×100 mm)"
         ],
-        "fiyat_tl_net": 5901,
-        "fiyat_tl": 7081,
-        "price": "₺5.901,00 + KDV\nKDV Dahil ₺7.081,00"
+        "fiyat_tl_net": 5843,
+        "fiyat_tl": 7012,
+        "price": "₺5.843,00 + KDV\nKDV Dahil ₺7.012,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-17030",
@@ -548,7 +548,7 @@
         "satis_fiyati_eur": 102.0,
         "satis_eur_indirimli": 102.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -557,16 +557,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1700×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.17030\nModel serisi: KTEPSURST01\nEbat: 170×30×10 cm (1700×300×100 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1700×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.17030\nModel serisi: KTEPSURST01\nEbat: 170×30×10 cm (1700×300×100 mm)\n\nListe fiyatı (EUR): 120.0\nSatış fiyatı (EUR, %15 iskonto): 102.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 170×30×10 cm (1700×300×100 mm)"
         ],
-        "fiyat_tl_net": 5489,
-        "fiyat_tl": 6587,
-        "price": "₺5.489,00 + KDV\nKDV Dahil ₺6.587,00"
+        "fiyat_tl_net": 5436,
+        "fiyat_tl": 6523,
+        "price": "₺5.436,00 + KDV\nKDV Dahil ₺6.523,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-17035",
@@ -598,7 +598,7 @@
         "satis_fiyati_eur": 115.6,
         "satis_eur_indirimli": 115.6,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -607,16 +607,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1700×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.17035\nModel serisi: KTEPSURST01\nEbat: 170×35×10 cm (1700×350×100 mm)\n\nListe fiyatı (EUR): 136.0\nSatış fiyatı (EUR, %15 iskonto): 115.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1700×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.17035\nModel serisi: KTEPSURST01\nEbat: 170×35×10 cm (1700×350×100 mm)\n\nListe fiyatı (EUR): 136.0\nSatış fiyatı (EUR, %15 iskonto): 115.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 170×35×10 cm (1700×350×100 mm)"
         ],
-        "fiyat_tl_net": 6221,
-        "fiyat_tl": 7465,
-        "price": "₺6.221,00 + KDV\nKDV Dahil ₺7.465,00"
+        "fiyat_tl_net": 6160,
+        "fiyat_tl": 7392,
+        "price": "₺6.160,00 + KDV\nKDV Dahil ₺7.392,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-18030",
@@ -648,7 +648,7 @@
         "satis_fiyati_eur": 107.1,
         "satis_eur_indirimli": 107.1,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -657,16 +657,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1800×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.18030\nModel serisi: KTEPSURST01\nEbat: 180×30×10 cm (1800×300×100 mm)\n\nListe fiyatı (EUR): 126.0\nSatış fiyatı (EUR, %15 iskonto): 107.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1800×300×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.18030\nModel serisi: KTEPSURST01\nEbat: 180×30×10 cm (1800×300×100 mm)\n\nListe fiyatı (EUR): 126.0\nSatış fiyatı (EUR, %15 iskonto): 107.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 180×30×10 cm (1800×300×100 mm)"
         ],
-        "fiyat_tl_net": 5763,
-        "fiyat_tl": 6916,
-        "price": "₺5.763,00 + KDV\nKDV Dahil ₺6.916,00"
+        "fiyat_tl_net": 5707,
+        "fiyat_tl": 6848,
+        "price": "₺5.707,00 + KDV\nKDV Dahil ₺6.848,00"
       },
       {
         "id": "equsto__equsto-ktepsurst01-18035",
@@ -698,7 +698,7 @@
         "satis_fiyati_eur": 123.25,
         "satis_eur_indirimli": 123.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -707,16 +707,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1800×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.18035\nModel serisi: KTEPSURST01\nEbat: 180×35×10 cm (1800×350×100 mm)\n\nListe fiyatı (EUR): 145.0\nSatış fiyatı (EUR, %15 iskonto): 123.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
+        "specs": "TEPSİ SÜRME STANDI-KTEPSÜRST01 1800×350×100 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KTEPSURST01.18035\nModel serisi: KTEPSURST01\nEbat: 180×35×10 cm (1800×350×100 mm)\n\nListe fiyatı (EUR): 145.0\nSatış fiyatı (EUR, %15 iskonto): 123.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KTEPSURST01",
         "aciklama": "TEPSİ SÜRME STANDI-KTEPSÜRST01. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KTEPSURST01",
           "Ebat: 180×35×10 cm (1800×350×100 mm)"
         ],
-        "fiyat_tl_net": 6633,
-        "fiyat_tl": 7960,
-        "price": "₺6.633,00 + KDV\nKDV Dahil ₺7.960,00"
+        "fiyat_tl_net": 6568,
+        "fiyat_tl": 7882,
+        "price": "₺6.568,00 + KDV\nKDV Dahil ₺7.882,00"
       }
     ]
   },

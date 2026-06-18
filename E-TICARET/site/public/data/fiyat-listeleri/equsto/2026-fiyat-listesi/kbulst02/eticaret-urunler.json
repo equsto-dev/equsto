@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 182.75,
     "satis_eur_indirimli": 182.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.09070\nModel serisi: KBULST02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %15 iskonto): 182.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
+    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.09070\nModel serisi: KBULST02\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 215.0\nSatış fiyatı (EUR, %15 iskonto): 182.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
     "aciklama": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULST02",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 9834,
-    "fiyat_tl": 11801,
-    "price": "₺9.834,00 + KDV\nKDV Dahil ₺11.801,00"
+    "fiyat_tl_net": 9739,
+    "fiyat_tl": 11687,
+    "price": "₺9.739,00 + KDV\nKDV Dahil ₺11.687,00"
   },
   {
     "id": "equsto__equsto-kbulst02-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 216.75,
     "satis_eur_indirimli": 216.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.12070\nModel serisi: KBULST02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 255.0\nSatış fiyatı (EUR, %15 iskonto): 216.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
+    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.12070\nModel serisi: KBULST02\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 255.0\nSatış fiyatı (EUR, %15 iskonto): 216.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
     "aciklama": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULST02",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 11664,
-    "fiyat_tl": 13997,
-    "price": "₺11.664,00 + KDV\nKDV Dahil ₺13.997,00"
+    "fiyat_tl_net": 11551,
+    "fiyat_tl": 13861,
+    "price": "₺11.551,00 + KDV\nKDV Dahil ₺13.861,00"
   },
   {
     "id": "equsto__equsto-kbulst02-14070",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 233.75,
     "satis_eur_indirimli": 233.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.14070\nModel serisi: KBULST02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 275.0\nSatış fiyatı (EUR, %15 iskonto): 233.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
+    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.14070\nModel serisi: KBULST02\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 275.0\nSatış fiyatı (EUR, %15 iskonto): 233.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
     "aciklama": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULST02",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 12579,
-    "fiyat_tl": 15095,
-    "price": "₺12.579,00 + KDV\nKDV Dahil ₺15.095,00"
+    "fiyat_tl_net": 12456,
+    "fiyat_tl": 14947,
+    "price": "₺12.456,00 + KDV\nKDV Dahil ₺14.947,00"
   },
   {
     "id": "equsto__equsto-kbulst02-16070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 259.25,
     "satis_eur_indirimli": 259.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -188,15 +188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.16070\nModel serisi: KBULST02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
+    "specs": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULST02.16070\nModel serisi: KBULST02\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULST02",
     "aciklama": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULST02",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 13951,
-    "fiyat_tl": 16741,
-    "price": "₺13.951,00 + KDV\nKDV Dahil ₺16.741,00"
+    "fiyat_tl_net": 13815,
+    "fiyat_tl": 16578,
+    "price": "₺13.815,00 + KDV\nKDV Dahil ₺16.578,00"
   }
 ]

@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 208.25,
     "satis_eur_indirimli": 208.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.09072\nModel serisi: KMCT02\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 245.0\nSatış fiyatı (EUR, %15 iskonto): 208.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 900×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.09072\nModel serisi: KMCT02\nEbat: 90×72×85 cm (900×720×850 mm)\n\nListe fiyatı (EUR): 245.0\nSatış fiyatı (EUR, %15 iskonto): 208.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 90×72×85 cm (900×720×850 mm)"
     ],
-    "fiyat_tl_net": 11207,
-    "fiyat_tl": 13448,
-    "price": "₺11.207,00 + KDV\nKDV Dahil ₺13.448,00"
+    "fiyat_tl_net": 11098,
+    "fiyat_tl": 13318,
+    "price": "₺11.098,00 + KDV\nKDV Dahil ₺13.318,00"
   },
   {
     "id": "equsto__equsto-kmct02-10072",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 229.5,
     "satis_eur_indirimli": 229.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.10072\nModel serisi: KMCT02\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 270.0\nSatış fiyatı (EUR, %15 iskonto): 229.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1000×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.10072\nModel serisi: KMCT02\nEbat: 100×72×85 cm (1000×720×850 mm)\n\nListe fiyatı (EUR): 270.0\nSatış fiyatı (EUR, %15 iskonto): 229.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 100×72×85 cm (1000×720×850 mm)"
     ],
-    "fiyat_tl_net": 12350,
-    "fiyat_tl": 14820,
-    "price": "₺12.350,00 + KDV\nKDV Dahil ₺14.820,00"
+    "fiyat_tl_net": 12230,
+    "fiyat_tl": 14676,
+    "price": "₺12.230,00 + KDV\nKDV Dahil ₺14.676,00"
   },
   {
     "id": "equsto__equsto-kmct02-11072",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 246.5,
     "satis_eur_indirimli": 246.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.11072\nModel serisi: KMCT02\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 290.0\nSatış fiyatı (EUR, %15 iskonto): 246.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1100×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.11072\nModel serisi: KMCT02\nEbat: 110×72×85 cm (1100×720×850 mm)\n\nListe fiyatı (EUR): 290.0\nSatış fiyatı (EUR, %15 iskonto): 246.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 110×72×85 cm (1100×720×850 mm)"
     ],
-    "fiyat_tl_net": 13265,
-    "fiyat_tl": 15918,
-    "price": "₺13.265,00 + KDV\nKDV Dahil ₺15.918,00"
+    "fiyat_tl_net": 13136,
+    "fiyat_tl": 15763,
+    "price": "₺13.136,00 + KDV\nKDV Dahil ₺15.763,00"
   },
   {
     "id": "equsto__equsto-kmct02-12072",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 267.75,
     "satis_eur_indirimli": 267.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.12072\nModel serisi: KMCT02\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1200×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.12072\nModel serisi: KMCT02\nEbat: 120×72×85 cm (1200×720×850 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 120×72×85 cm (1200×720×850 mm)"
     ],
-    "fiyat_tl_net": 14409,
-    "fiyat_tl": 17291,
-    "price": "₺14.409,00 + KDV\nKDV Dahil ₺17.291,00"
+    "fiyat_tl_net": 14268,
+    "fiyat_tl": 17122,
+    "price": "₺14.268,00 + KDV\nKDV Dahil ₺17.122,00"
   },
   {
     "id": "equsto__equsto-kmct02-13072",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 289.0,
     "satis_eur_indirimli": 289.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.13072\nModel serisi: KMCT02\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1300×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.13072\nModel serisi: KMCT02\nEbat: 130×72×85 cm (1300×720×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 130×72×85 cm (1300×720×850 mm)"
     ],
-    "fiyat_tl_net": 15552,
-    "fiyat_tl": 18662,
-    "price": "₺15.552,00 + KDV\nKDV Dahil ₺18.662,00"
+    "fiyat_tl_net": 15401,
+    "fiyat_tl": 18481,
+    "price": "₺15.401,00 + KDV\nKDV Dahil ₺18.481,00"
   },
   {
     "id": "equsto__equsto-kmct02-14072",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,15 +288,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.14072\nModel serisi: KMCT02\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
+    "specs": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02 1400×720×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMCT02.14072\nModel serisi: KMCT02\nEbat: 140×72×85 cm (1400×720×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMCT02",
     "aciklama": "MAKİNA ÇIKIŞ TEZGAHI, ETRAFI AÇIK, KISMİ IZGARA TABAN RAFLI-KMÇT02. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMCT02",
       "Ebat: 140×72×85 cm (1400×720×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   }
 ]

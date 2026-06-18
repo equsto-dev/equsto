@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:09.153671+00:00",
+  "imported_at": "2026-06-18T13:00:47.427687+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/kprmxt01/urun.png",
   "pfos": {
     "count": 12,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 178.5,
         "satis_eur_indirimli": 178.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09060\nModel serisi: KPRMXT01\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 210.0\nSatış fiyatı (EUR, %15 iskonto): 178.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09060\nModel serisi: KPRMXT01\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 210.0\nSatış fiyatı (EUR, %15 iskonto): 178.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 90×60×85 cm (900×600×850 mm)"
         ],
-        "fiyat_tl_net": 9606,
-        "fiyat_tl": 11527,
-        "price": "₺9.606,00 + KDV\nKDV Dahil ₺11.527,00"
+        "fiyat_tl_net": 9512,
+        "fiyat_tl": 11414,
+        "price": "₺9.512,00 + KDV\nKDV Dahil ₺11.414,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-09070",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 187.0,
         "satis_eur_indirimli": 187.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09070\nModel serisi: KPRMXT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 220.0\nSatış fiyatı (EUR, %15 iskonto): 187.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09070\nModel serisi: KPRMXT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 220.0\nSatış fiyatı (EUR, %15 iskonto): 187.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 10063,
-        "fiyat_tl": 12076,
-        "price": "₺10.063,00 + KDV\nKDV Dahil ₺12.076,00"
+        "fiyat_tl_net": 9965,
+        "fiyat_tl": 11958,
+        "price": "₺9.965,00 + KDV\nKDV Dahil ₺11.958,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-10060",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 238.0,
         "satis_eur_indirimli": 238.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.10060\nModel serisi: KPRMXT01\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 280.0\nSatış fiyatı (EUR, %15 iskonto): 238.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.10060\nModel serisi: KPRMXT01\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 280.0\nSatış fiyatı (EUR, %15 iskonto): 238.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 100×60×85 cm (1000×600×850 mm)"
         ],
-        "fiyat_tl_net": 12808,
-        "fiyat_tl": 15370,
-        "price": "₺12.808,00 + KDV\nKDV Dahil ₺15.370,00"
+        "fiyat_tl_net": 12683,
+        "fiyat_tl": 15220,
+        "price": "₺12.683,00 + KDV\nKDV Dahil ₺15.220,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-10070",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 246.5,
         "satis_eur_indirimli": 246.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.10070\nModel serisi: KPRMXT01\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 290.0\nSatış fiyatı (EUR, %15 iskonto): 246.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.10070\nModel serisi: KPRMXT01\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 290.0\nSatış fiyatı (EUR, %15 iskonto): 246.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 100×70×85 cm (1000×700×850 mm)"
         ],
-        "fiyat_tl_net": 13265,
-        "fiyat_tl": 15918,
-        "price": "₺13.265,00 + KDV\nKDV Dahil ₺15.918,00"
+        "fiyat_tl_net": 13136,
+        "fiyat_tl": 15763,
+        "price": "₺13.136,00 + KDV\nKDV Dahil ₺15.763,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-11060",
@@ -248,7 +248,7 @@
         "satis_fiyati_eur": 248.2,
         "satis_eur_indirimli": 248.2,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -257,16 +257,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.11060\nModel serisi: KPRMXT01\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.11060\nModel serisi: KPRMXT01\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 110×60×85 cm (1100×600×850 mm)"
         ],
-        "fiyat_tl_net": 13357,
-        "fiyat_tl": 16028,
-        "price": "₺13.357,00 + KDV\nKDV Dahil ₺16.028,00"
+        "fiyat_tl_net": 13227,
+        "fiyat_tl": 15872,
+        "price": "₺13.227,00 + KDV\nKDV Dahil ₺15.872,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-11070",
@@ -298,7 +298,7 @@
         "satis_fiyati_eur": 255.0,
         "satis_eur_indirimli": 255.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -307,16 +307,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.11070\nModel serisi: KPRMXT01\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 300.0\nSatış fiyatı (EUR, %15 iskonto): 255.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.11070\nModel serisi: KPRMXT01\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 300.0\nSatış fiyatı (EUR, %15 iskonto): 255.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 110×70×85 cm (1100×700×850 mm)"
         ],
-        "fiyat_tl_net": 13722,
-        "fiyat_tl": 16466,
-        "price": "₺13.722,00 + KDV\nKDV Dahil ₺16.466,00"
+        "fiyat_tl_net": 13589,
+        "fiyat_tl": 16307,
+        "price": "₺13.589,00 + KDV\nKDV Dahil ₺16.307,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-12060",
@@ -348,7 +348,7 @@
         "satis_fiyati_eur": 293.25,
         "satis_eur_indirimli": 293.25,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -357,16 +357,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12060\nModel serisi: KPRMXT01\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 345.0\nSatış fiyatı (EUR, %15 iskonto): 293.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12060\nModel serisi: KPRMXT01\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 345.0\nSatış fiyatı (EUR, %15 iskonto): 293.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 120×60×85 cm (1200×600×850 mm)"
         ],
-        "fiyat_tl_net": 15781,
-        "fiyat_tl": 18937,
-        "price": "₺15.781,00 + KDV\nKDV Dahil ₺18.937,00"
+        "fiyat_tl_net": 15627,
+        "fiyat_tl": 18752,
+        "price": "₺15.627,00 + KDV\nKDV Dahil ₺18.752,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-12070",
@@ -398,7 +398,7 @@
         "satis_fiyati_eur": 314.5,
         "satis_eur_indirimli": 314.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -407,16 +407,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12070\nModel serisi: KPRMXT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %15 iskonto): 314.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12070\nModel serisi: KPRMXT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %15 iskonto): 314.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 16924,
-        "fiyat_tl": 20309,
-        "price": "₺16.924,00 + KDV\nKDV Dahil ₺20.309,00"
+        "fiyat_tl_net": 16760,
+        "fiyat_tl": 20112,
+        "price": "₺16.760,00 + KDV\nKDV Dahil ₺20.112,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-13060",
@@ -448,7 +448,7 @@
         "satis_fiyati_eur": 311.1,
         "satis_eur_indirimli": 311.1,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -457,16 +457,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.13060\nModel serisi: KPRMXT01\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 366.0\nSatış fiyatı (EUR, %15 iskonto): 311.1\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.13060\nModel serisi: KPRMXT01\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 366.0\nSatış fiyatı (EUR, %15 iskonto): 311.1\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 130×60×85 cm (1300×600×850 mm)"
         ],
-        "fiyat_tl_net": 16741,
-        "fiyat_tl": 20089,
-        "price": "₺16.741,00 + KDV\nKDV Dahil ₺20.089,00"
+        "fiyat_tl_net": 16578,
+        "fiyat_tl": 19894,
+        "price": "₺16.578,00 + KDV\nKDV Dahil ₺19.894,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-13070",
@@ -498,7 +498,7 @@
         "satis_fiyati_eur": 323.0,
         "satis_eur_indirimli": 323.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -507,16 +507,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.13070\nModel serisi: KPRMXT01\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 380.0\nSatış fiyatı (EUR, %15 iskonto): 323.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.13070\nModel serisi: KPRMXT01\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 380.0\nSatış fiyatı (EUR, %15 iskonto): 323.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 130×70×85 cm (1300×700×850 mm)"
         ],
-        "fiyat_tl_net": 17382,
-        "fiyat_tl": 20858,
-        "price": "₺17.382,00 + KDV\nKDV Dahil ₺20.858,00"
+        "fiyat_tl_net": 17213,
+        "fiyat_tl": 20656,
+        "price": "₺17.213,00 + KDV\nKDV Dahil ₺20.656,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-14060",
@@ -548,7 +548,7 @@
         "satis_fiyati_eur": 365.5,
         "satis_eur_indirimli": 365.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -557,16 +557,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14060\nModel serisi: KPRMXT01\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14060\nModel serisi: KPRMXT01\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 140×60×85 cm (1400×600×850 mm)"
         ],
-        "fiyat_tl_net": 19669,
-        "fiyat_tl": 23603,
-        "price": "₺19.669,00 + KDV\nKDV Dahil ₺23.603,00"
+        "fiyat_tl_net": 19477,
+        "fiyat_tl": 23372,
+        "price": "₺19.477,00 + KDV\nKDV Dahil ₺23.372,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-14070",
@@ -598,7 +598,7 @@
         "satis_fiyati_eur": 383.35,
         "satis_eur_indirimli": 383.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -607,16 +607,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14070\nModel serisi: KPRMXT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 451.0\nSatış fiyatı (EUR, %15 iskonto): 383.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14070\nModel serisi: KPRMXT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 451.0\nSatış fiyatı (EUR, %15 iskonto): 383.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 20629,
-        "fiyat_tl": 24755,
-        "price": "₺20.629,00 + KDV\nKDV Dahil ₺24.755,00"
+        "fiyat_tl_net": 20429,
+        "fiyat_tl": 24515,
+        "price": "₺20.429,00 + KDV\nKDV Dahil ₺24.515,00"
       }
     ]
   },
@@ -653,7 +653,7 @@
         "satis_fiyati_eur": 187.0,
         "satis_eur_indirimli": 187.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -662,16 +662,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09070\nModel serisi: KPRMXT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 220.0\nSatış fiyatı (EUR, %15 iskonto): 187.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.09070\nModel serisi: KPRMXT01\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 220.0\nSatış fiyatı (EUR, %15 iskonto): 187.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 90×70×85 cm (900×700×850 mm)"
         ],
-        "fiyat_tl_net": 10063,
-        "fiyat_tl": 12076,
-        "price": "₺10.063,00 + KDV\nKDV Dahil ₺12.076,00"
+        "fiyat_tl_net": 9965,
+        "fiyat_tl": 11958,
+        "price": "₺9.965,00 + KDV\nKDV Dahil ₺11.958,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-12070",
@@ -703,7 +703,7 @@
         "satis_fiyati_eur": 314.5,
         "satis_eur_indirimli": 314.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -712,16 +712,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12070\nModel serisi: KPRMXT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %15 iskonto): 314.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.12070\nModel serisi: KPRMXT01\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 370.0\nSatış fiyatı (EUR, %15 iskonto): 314.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 120×70×85 cm (1200×700×850 mm)"
         ],
-        "fiyat_tl_net": 16924,
-        "fiyat_tl": 20309,
-        "price": "₺16.924,00 + KDV\nKDV Dahil ₺20.309,00"
+        "fiyat_tl_net": 16760,
+        "fiyat_tl": 20112,
+        "price": "₺16.760,00 + KDV\nKDV Dahil ₺20.112,00"
       },
       {
         "id": "equsto__equsto-kprmxt01-14070",
@@ -753,7 +753,7 @@
         "satis_fiyati_eur": 383.35,
         "satis_eur_indirimli": 383.35,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": true,
         "pfos": true,
@@ -762,16 +762,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14070\nModel serisi: KPRMXT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 451.0\nSatış fiyatı (EUR, %15 iskonto): 383.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
+        "specs": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KPRMXT01.14070\nModel serisi: KPRMXT01\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 451.0\nSatış fiyatı (EUR, %15 iskonto): 383.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KPRMXT01",
         "aciklama": "PREMİX TEZGAHI ETRAFI AÇIK, TABAN RAFSIZ, ÖNÜ PANJUR KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KPRMXT01",
           "Ebat: 140×70×85 cm (1400×700×850 mm)"
         ],
-        "fiyat_tl_net": 20629,
-        "fiyat_tl": 24755,
-        "price": "₺20.629,00 + KDV\nKDV Dahil ₺24.755,00"
+        "fiyat_tl_net": 20429,
+        "fiyat_tl": 24515,
+        "price": "₺20.429,00 + KDV\nKDV Dahil ₺24.515,00"
       }
     ]
   }

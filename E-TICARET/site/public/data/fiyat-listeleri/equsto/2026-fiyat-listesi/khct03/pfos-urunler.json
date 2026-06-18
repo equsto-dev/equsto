@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 565.25,
     "satis_eur_indirimli": 565.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.09060\nModel serisi: KHCT03\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 665.0\nSatış fiyatı (EUR, %15 iskonto): 565.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 900×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.09060\nModel serisi: KHCT03\nEbat: 90×60×85 cm (900×600×850 mm)\n\nListe fiyatı (EUR): 665.0\nSatış fiyatı (EUR, %15 iskonto): 565.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 90×60×85 cm (900×600×850 mm)"
     ],
-    "fiyat_tl_net": 30418,
-    "fiyat_tl": 36502,
-    "price": "₺30.418,00 + KDV\nKDV Dahil ₺36.502,00"
+    "fiyat_tl_net": 30122,
+    "fiyat_tl": 36146,
+    "price": "₺30.122,00 + KDV\nKDV Dahil ₺36.146,00"
   },
   {
     "id": "equsto__equsto-khct03-09070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 573.75,
     "satis_eur_indirimli": 573.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.09070\nModel serisi: KHCT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.09070\nModel serisi: KHCT03\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 675.0\nSatış fiyatı (EUR, %15 iskonto): 573.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 30876,
-    "fiyat_tl": 37051,
-    "price": "₺30.876,00 + KDV\nKDV Dahil ₺37.051,00"
+    "fiyat_tl_net": 30575,
+    "fiyat_tl": 36690,
+    "price": "₺30.575,00 + KDV\nKDV Dahil ₺36.690,00"
   },
   {
     "id": "equsto__equsto-khct03-10060",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 578.0,
     "satis_eur_indirimli": 578.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.10060\nModel serisi: KHCT03\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1000×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.10060\nModel serisi: KHCT03\nEbat: 100×60×85 cm (1000×600×850 mm)\n\nListe fiyatı (EUR): 680.0\nSatış fiyatı (EUR, %15 iskonto): 578.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 100×60×85 cm (1000×600×850 mm)"
     ],
-    "fiyat_tl_net": 31104,
-    "fiyat_tl": 37325,
-    "price": "₺31.104,00 + KDV\nKDV Dahil ₺37.325,00"
+    "fiyat_tl_net": 30802,
+    "fiyat_tl": 36962,
+    "price": "₺30.802,00 + KDV\nKDV Dahil ₺36.962,00"
   },
   {
     "id": "equsto__equsto-khct03-10070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 590.75,
     "satis_eur_indirimli": 590.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.10070\nModel serisi: KHCT03\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %15 iskonto): 590.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1000×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.10070\nModel serisi: KHCT03\nEbat: 100×70×85 cm (1000×700×850 mm)\n\nListe fiyatı (EUR): 695.0\nSatış fiyatı (EUR, %15 iskonto): 590.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 100×70×85 cm (1000×700×850 mm)"
     ],
-    "fiyat_tl_net": 31790,
-    "fiyat_tl": 38148,
-    "price": "₺31.790,00 + KDV\nKDV Dahil ₺38.148,00"
+    "fiyat_tl_net": 31481,
+    "fiyat_tl": 37777,
+    "price": "₺31.481,00 + KDV\nKDV Dahil ₺37.777,00"
   },
   {
     "id": "equsto__equsto-khct03-11060",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 595.0,
     "satis_eur_indirimli": 595.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.11060\nModel serisi: KHCT03\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 700.0\nSatış fiyatı (EUR, %15 iskonto): 595.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1100×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.11060\nModel serisi: KHCT03\nEbat: 110×60×85 cm (1100×600×850 mm)\n\nListe fiyatı (EUR): 700.0\nSatış fiyatı (EUR, %15 iskonto): 595.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 110×60×85 cm (1100×600×850 mm)"
     ],
-    "fiyat_tl_net": 32019,
-    "fiyat_tl": 38423,
-    "price": "₺32.019,00 + KDV\nKDV Dahil ₺38.423,00"
+    "fiyat_tl_net": 31707,
+    "fiyat_tl": 38048,
+    "price": "₺31.707,00 + KDV\nKDV Dahil ₺38.048,00"
   },
   {
     "id": "equsto__equsto-khct03-11070",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 603.5,
     "satis_eur_indirimli": 603.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.11070\nModel serisi: KHCT03\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 710.0\nSatış fiyatı (EUR, %15 iskonto): 603.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1100×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.11070\nModel serisi: KHCT03\nEbat: 110×70×85 cm (1100×700×850 mm)\n\nListe fiyatı (EUR): 710.0\nSatış fiyatı (EUR, %15 iskonto): 603.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 110×70×85 cm (1100×700×850 mm)"
     ],
-    "fiyat_tl_net": 32477,
-    "fiyat_tl": 38972,
-    "price": "₺32.477,00 + KDV\nKDV Dahil ₺38.972,00"
+    "fiyat_tl_net": 32160,
+    "fiyat_tl": 38592,
+    "price": "₺32.160,00 + KDV\nKDV Dahil ₺38.592,00"
   },
   {
     "id": "equsto__equsto-khct03-12060",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 599.25,
     "satis_eur_indirimli": 599.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.12060\nModel serisi: KHCT03\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1200×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.12060\nModel serisi: KHCT03\nEbat: 120×60×85 cm (1200×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 120×60×85 cm (1200×600×850 mm)"
     ],
-    "fiyat_tl_net": 32248,
-    "fiyat_tl": 38698,
-    "price": "₺32.248,00 + KDV\nKDV Dahil ₺38.698,00"
+    "fiyat_tl_net": 31934,
+    "fiyat_tl": 38321,
+    "price": "₺31.934,00 + KDV\nKDV Dahil ₺38.321,00"
   },
   {
     "id": "equsto__equsto-khct03-12070",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 629.0,
     "satis_eur_indirimli": 629.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.12070\nModel serisi: KHCT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.12070\nModel serisi: KHCT03\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 33849,
-    "fiyat_tl": 40619,
-    "price": "₺33.849,00 + KDV\nKDV Dahil ₺40.619,00"
+    "fiyat_tl_net": 33519,
+    "fiyat_tl": 40223,
+    "price": "₺33.519,00 + KDV\nKDV Dahil ₺40.223,00"
   },
   {
     "id": "equsto__equsto-khct03-13060",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 599.25,
     "satis_eur_indirimli": 599.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.13060\nModel serisi: KHCT03\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1300×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.13060\nModel serisi: KHCT03\nEbat: 130×60×85 cm (1300×600×850 mm)\n\nListe fiyatı (EUR): 705.0\nSatış fiyatı (EUR, %15 iskonto): 599.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 130×60×85 cm (1300×600×850 mm)"
     ],
-    "fiyat_tl_net": 32248,
-    "fiyat_tl": 38698,
-    "price": "₺32.248,00 + KDV\nKDV Dahil ₺38.698,00"
+    "fiyat_tl_net": 31934,
+    "fiyat_tl": 38321,
+    "price": "₺31.934,00 + KDV\nKDV Dahil ₺38.321,00"
   },
   {
     "id": "equsto__equsto-khct03-13070",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 637.5,
     "satis_eur_indirimli": 637.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.13070\nModel serisi: KHCT03\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 750.0\nSatış fiyatı (EUR, %15 iskonto): 637.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1300×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.13070\nModel serisi: KHCT03\nEbat: 130×70×85 cm (1300×700×850 mm)\n\nListe fiyatı (EUR): 750.0\nSatış fiyatı (EUR, %15 iskonto): 637.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 130×70×85 cm (1300×700×850 mm)"
     ],
-    "fiyat_tl_net": 34306,
-    "fiyat_tl": 41167,
-    "price": "₺34.306,00 + KDV\nKDV Dahil ₺41.167,00"
+    "fiyat_tl_net": 33972,
+    "fiyat_tl": 40766,
+    "price": "₺33.972,00 + KDV\nKDV Dahil ₺40.766,00"
   },
   {
     "id": "equsto__equsto-khct03-14060",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 629.0,
     "satis_eur_indirimli": 629.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.14060\nModel serisi: KHCT03\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1400×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.14060\nModel serisi: KHCT03\nEbat: 140×60×85 cm (1400×600×850 mm)\n\nListe fiyatı (EUR): 740.0\nSatış fiyatı (EUR, %15 iskonto): 629.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 140×60×85 cm (1400×600×850 mm)"
     ],
-    "fiyat_tl_net": 33849,
-    "fiyat_tl": 40619,
-    "price": "₺33.849,00 + KDV\nKDV Dahil ₺40.619,00"
+    "fiyat_tl_net": 33519,
+    "fiyat_tl": 40223,
+    "price": "₺33.519,00 + KDV\nKDV Dahil ₺40.223,00"
   },
   {
     "id": "equsto__equsto-khct03-14070",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 650.25,
     "satis_eur_indirimli": 650.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.14070\nModel serisi: KHCT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %15 iskonto): 650.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.14070\nModel serisi: KHCT03\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 765.0\nSatış fiyatı (EUR, %15 iskonto): 650.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 34992,
-    "fiyat_tl": 41990,
-    "price": "₺34.992,00 + KDV\nKDV Dahil ₺41.990,00"
+    "fiyat_tl_net": 34652,
+    "fiyat_tl": 41582,
+    "price": "₺34.652,00 + KDV\nKDV Dahil ₺41.582,00"
   },
   {
     "id": "equsto__equsto-khct03-15060",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 641.75,
     "satis_eur_indirimli": 641.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.15060\nModel serisi: KHCT03\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 755.0\nSatış fiyatı (EUR, %15 iskonto): 641.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1500×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.15060\nModel serisi: KHCT03\nEbat: 150×60×85 cm (1500×600×850 mm)\n\nListe fiyatı (EUR): 755.0\nSatış fiyatı (EUR, %15 iskonto): 641.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 150×60×85 cm (1500×600×850 mm)"
     ],
-    "fiyat_tl_net": 34535,
-    "fiyat_tl": 41442,
-    "price": "₺34.535,00 + KDV\nKDV Dahil ₺41.442,00"
+    "fiyat_tl_net": 34199,
+    "fiyat_tl": 41039,
+    "price": "₺34.199,00 + KDV\nKDV Dahil ₺41.039,00"
   },
   {
     "id": "equsto__equsto-khct03-15070",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 667.25,
     "satis_eur_indirimli": 667.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.15070\nModel serisi: KHCT03\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 785.0\nSatış fiyatı (EUR, %15 iskonto): 667.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1500×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.15070\nModel serisi: KHCT03\nEbat: 150×70×85 cm (1500×700×850 mm)\n\nListe fiyatı (EUR): 785.0\nSatış fiyatı (EUR, %15 iskonto): 667.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 150×70×85 cm (1500×700×850 mm)"
     ],
-    "fiyat_tl_net": 35907,
-    "fiyat_tl": 43088,
-    "price": "₺35.907,00 + KDV\nKDV Dahil ₺43.088,00"
+    "fiyat_tl_net": 35558,
+    "fiyat_tl": 42670,
+    "price": "₺35.558,00 + KDV\nKDV Dahil ₺42.670,00"
   },
   {
     "id": "equsto__equsto-khct03-16060",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 654.5,
     "satis_eur_indirimli": 654.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.16060\nModel serisi: KHCT03\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 770.0\nSatış fiyatı (EUR, %15 iskonto): 654.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1600×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.16060\nModel serisi: KHCT03\nEbat: 160×60×85 cm (1600×600×850 mm)\n\nListe fiyatı (EUR): 770.0\nSatış fiyatı (EUR, %15 iskonto): 654.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 160×60×85 cm (1600×600×850 mm)"
     ],
-    "fiyat_tl_net": 35221,
-    "fiyat_tl": 42265,
-    "price": "₺35.221,00 + KDV\nKDV Dahil ₺42.265,00"
+    "fiyat_tl_net": 34878,
+    "fiyat_tl": 41854,
+    "price": "₺34.878,00 + KDV\nKDV Dahil ₺41.854,00"
   },
   {
     "id": "equsto__equsto-khct03-16070",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 680.0,
     "satis_eur_indirimli": 680.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.16070\nModel serisi: KHCT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 800.0\nSatış fiyatı (EUR, %15 iskonto): 680.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.16070\nModel serisi: KHCT03\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 800.0\nSatış fiyatı (EUR, %15 iskonto): 680.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 36593,
-    "fiyat_tl": 43912,
-    "price": "₺36.593,00 + KDV\nKDV Dahil ₺43.912,00"
+    "fiyat_tl_net": 36237,
+    "fiyat_tl": 43484,
+    "price": "₺36.237,00 + KDV\nKDV Dahil ₺43.484,00"
   },
   {
     "id": "equsto__equsto-khct03-17060",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 667.25,
     "satis_eur_indirimli": 667.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -838,15 +838,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.17060\nModel serisi: KHCT03\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 785.0\nSatış fiyatı (EUR, %15 iskonto): 667.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
+    "specs": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03 1700×600×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KHCT03.17060\nModel serisi: KHCT03\nEbat: 170×60×85 cm (1700×600×850 mm)\n\nListe fiyatı (EUR): 785.0\nSatış fiyatı (EUR, %15 iskonto): 667.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KHCT03",
     "aciklama": "HAREKETLİ ÇALIŞMA TEZGAHI,ETRAFI AÇIK, TABAN RAFLI, TEKERLEKLİ, DÖRTLÜ BLOK ÇEKMECELİ-KHÇT03. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KHCT03",
       "Ebat: 170×60×85 cm (1700×600×850 mm)"
     ],
-    "fiyat_tl_net": 35907,
-    "fiyat_tl": 43088,
-    "price": "₺35.907,00 + KDV\nKDV Dahil ₺43.088,00"
+    "fiyat_tl_net": 35558,
+    "fiyat_tl": 42670,
+    "price": "₺35.558,00 + KDV\nKDV Dahil ₺42.670,00"
   }
 ]

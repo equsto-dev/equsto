@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 607.75,
     "satis_eur_indirimli": 607.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.09070\nModel serisi: KSCKDLP\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
+    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.09070\nModel serisi: KSCKDLP\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 715.0\nSatış fiyatı (EUR, %15 iskonto): 607.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
     "aciklama": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSCKDLP",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 32705,
-    "fiyat_tl": 39246,
-    "price": "₺32.705,00 + KDV\nKDV Dahil ₺39.246,00"
+    "fiyat_tl_net": 32387,
+    "fiyat_tl": 38864,
+    "price": "₺32.387,00 + KDV\nKDV Dahil ₺38.864,00"
   },
   {
     "id": "equsto__equsto-ksckdlp-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 727.6,
     "satis_eur_indirimli": 727.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.12070\nModel serisi: KSCKDLP\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 856.0\nSatış fiyatı (EUR, %15 iskonto): 727.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
+    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.12070\nModel serisi: KSCKDLP\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 856.0\nSatış fiyatı (EUR, %15 iskonto): 727.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
     "aciklama": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSCKDLP",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 39155,
-    "fiyat_tl": 46986,
-    "price": "₺39.155,00 + KDV\nKDV Dahil ₺46.986,00"
+    "fiyat_tl_net": 38774,
+    "fiyat_tl": 46529,
+    "price": "₺38.774,00 + KDV\nKDV Dahil ₺46.529,00"
   },
   {
     "id": "equsto__equsto-ksckdlp-14070",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 812.6,
     "satis_eur_indirimli": 812.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.14070\nModel serisi: KSCKDLP\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 956.0\nSatış fiyatı (EUR, %15 iskonto): 812.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
+    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.14070\nModel serisi: KSCKDLP\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 956.0\nSatış fiyatı (EUR, %15 iskonto): 812.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
     "aciklama": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSCKDLP",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 43729,
-    "fiyat_tl": 52475,
-    "price": "₺43.729,00 + KDV\nKDV Dahil ₺52.475,00"
+    "fiyat_tl_net": 43303,
+    "fiyat_tl": 51964,
+    "price": "₺43.303,00 + KDV\nKDV Dahil ₺51.964,00"
   },
   {
     "id": "equsto__equsto-ksckdlp-16070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 896.75,
     "satis_eur_indirimli": 896.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -188,15 +188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.16070\nModel serisi: KSCKDLP\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 1055.0\nSatış fiyatı (EUR, %15 iskonto): 896.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
+    "specs": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSCKDLP.16070\nModel serisi: KSCKDLP\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 1055.0\nSatış fiyatı (EUR, %15 iskonto): 896.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSCKDLP",
     "aciklama": "SICAK DOLAP ETRAFI KAPALI, TABAN VE ARA RAFLI, ELEKTRİK ISITMALI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KSCKDLP",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 48257,
-    "fiyat_tl": 57908,
-    "price": "₺48.257,00 + KDV\nKDV Dahil ₺57.908,00"
+    "fiyat_tl_net": 47788,
+    "fiyat_tl": 57346,
+    "price": "₺47.788,00 + KDV\nKDV Dahil ₺57.346,00"
   }
 ]

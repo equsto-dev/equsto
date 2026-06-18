@@ -9,11 +9,11 @@
   "malzeme": "AISI 18/10 (304 kalite) paslanmaz çelik mamül",
   "marka": "Equsto",
   "iskonto_oran": 15,
-  "kur_eur_try": 53.8137,
-  "kur_tcmb_tarih": "17.06.2026",
+  "kur_eur_try": 53.2898,
+  "kur_tcmb_tarih": "18.06.2026",
   "kur_fallback": false,
   "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-  "imported_at": "2026-06-18T11:36:07.635472+00:00",
+  "imported_at": "2026-06-18T13:00:46.494376+00:00",
   "gorsel_urun": "images/catalog/equsto/fiyat-listesi/ksadt02/urun.png",
   "pfos": {
     "count": 4,
@@ -48,7 +48,7 @@
         "satis_fiyati_eur": 267.75,
         "satis_eur_indirimli": 267.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -57,16 +57,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1000×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.10060\nModel serisi: KSADT02\nEbat: 100×60×60 cm (1000×600×600 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
+        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1000×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.10060\nModel serisi: KSADT02\nEbat: 100×60×60 cm (1000×600×600 mm)\n\nListe fiyatı (EUR): 315.0\nSatış fiyatı (EUR, %15 iskonto): 267.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
         "aciklama": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KSADT02",
           "Ebat: 100×60×60 cm (1000×600×600 mm)"
         ],
-        "fiyat_tl_net": 14409,
-        "fiyat_tl": 17291,
-        "price": "₺14.409,00 + KDV\nKDV Dahil ₺17.291,00"
+        "fiyat_tl_net": 14268,
+        "fiyat_tl": 17122,
+        "price": "₺14.268,00 + KDV\nKDV Dahil ₺17.122,00"
       },
       {
         "id": "equsto__equsto-ksadt02-12060",
@@ -98,7 +98,7 @@
         "satis_fiyati_eur": 284.75,
         "satis_eur_indirimli": 284.75,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -107,16 +107,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1200×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.12060\nModel serisi: KSADT02\nEbat: 120×60×60 cm (1200×600×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
+        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1200×600×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.12060\nModel serisi: KSADT02\nEbat: 120×60×60 cm (1200×600×600 mm)\n\nListe fiyatı (EUR): 335.0\nSatış fiyatı (EUR, %15 iskonto): 284.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
         "aciklama": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KSADT02",
           "Ebat: 120×60×60 cm (1200×600×600 mm)"
         ],
-        "fiyat_tl_net": 15323,
-        "fiyat_tl": 18388,
-        "price": "₺15.323,00 + KDV\nKDV Dahil ₺18.388,00"
+        "fiyat_tl_net": 15174,
+        "fiyat_tl": 18209,
+        "price": "₺15.174,00 + KDV\nKDV Dahil ₺18.209,00"
       },
       {
         "id": "equsto__equsto-ksadt02-07065",
@@ -148,7 +148,7 @@
         "satis_fiyati_eur": 212.5,
         "satis_eur_indirimli": 212.5,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -157,16 +157,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 700×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.07065\nModel serisi: KSADT02\nEbat: 70×65×60 cm (700×650×600 mm)\n\nListe fiyatı (EUR): 250.0\nSatış fiyatı (EUR, %15 iskonto): 212.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
+        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 700×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.07065\nModel serisi: KSADT02\nEbat: 70×65×60 cm (700×650×600 mm)\n\nListe fiyatı (EUR): 250.0\nSatış fiyatı (EUR, %15 iskonto): 212.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
         "aciklama": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KSADT02",
           "Ebat: 70×65×60 cm (700×650×600 mm)"
         ],
-        "fiyat_tl_net": 11435,
-        "fiyat_tl": 13722,
-        "price": "₺11.435,00 + KDV\nKDV Dahil ₺13.722,00"
+        "fiyat_tl_net": 11324,
+        "fiyat_tl": 13589,
+        "price": "₺11.324,00 + KDV\nKDV Dahil ₺13.589,00"
       },
       {
         "id": "equsto__equsto-ksadt02-10565",
@@ -198,7 +198,7 @@
         "satis_fiyati_eur": 306.0,
         "satis_eur_indirimli": 306.0,
         "iskonto_oran": 15,
-        "kur_eur_try": 53.8137,
+        "kur_eur_try": 53.2898,
         "fiyat_bekleniyor": false,
         "eticaret": false,
         "pfos": true,
@@ -207,16 +207,16 @@
         ],
         "kaynak": "equsto-fiyat-listesi-2026",
         "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1050×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.10565\nModel serisi: KSADT02\nEbat: 105×65×60 cm (1050×650×600 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
+        "specs": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI 1050×650×600 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KSADT02.10565\nModel serisi: KSADT02\nEbat: 105×65×60 cm (1050×650×600 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KSADT02",
         "aciklama": "SET ALTI DOLAPLI TEZGAH, ETRAFI KAPALI, TABAN RAFLI, ÖNÜ KAPAKLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
         "teknik_ozellikler": [
           "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
           "Model: KSADT02",
           "Ebat: 105×65×60 cm (1050×650×600 mm)"
         ],
-        "fiyat_tl_net": 16467,
-        "fiyat_tl": 19760,
-        "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+        "fiyat_tl_net": 16307,
+        "fiyat_tl": 19568,
+        "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
       }
     ]
   },

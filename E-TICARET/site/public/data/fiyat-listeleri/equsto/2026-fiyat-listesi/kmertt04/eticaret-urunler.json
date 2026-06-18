@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 247.35,
     "satis_eur_indirimli": 247.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.09070\nModel serisi: KMERTT04\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 291.0\nSatış fiyatı (EUR, %15 iskonto): 247.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
+    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 900×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.09070\nModel serisi: KMERTT04\nEbat: 90×70×85 cm (900×700×850 mm)\n\nListe fiyatı (EUR): 291.0\nSatış fiyatı (EUR, %15 iskonto): 247.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
     "aciklama": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMERTT04",
       "Ebat: 90×70×85 cm (900×700×850 mm)"
     ],
-    "fiyat_tl_net": 13311,
-    "fiyat_tl": 15973,
-    "price": "₺13.311,00 + KDV\nKDV Dahil ₺15.973,00"
+    "fiyat_tl_net": 13181,
+    "fiyat_tl": 15817,
+    "price": "₺13.181,00 + KDV\nKDV Dahil ₺15.817,00"
   },
   {
     "id": "equsto__equsto-kmertt04-12070",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 298.35,
     "satis_eur_indirimli": 298.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.12070\nModel serisi: KMERTT04\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 351.0\nSatış fiyatı (EUR, %15 iskonto): 298.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
+    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1200×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.12070\nModel serisi: KMERTT04\nEbat: 120×70×85 cm (1200×700×850 mm)\n\nListe fiyatı (EUR): 351.0\nSatış fiyatı (EUR, %15 iskonto): 298.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
     "aciklama": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMERTT04",
       "Ebat: 120×70×85 cm (1200×700×850 mm)"
     ],
-    "fiyat_tl_net": 16055,
-    "fiyat_tl": 19266,
-    "price": "₺16.055,00 + KDV\nKDV Dahil ₺19.266,00"
+    "fiyat_tl_net": 15899,
+    "fiyat_tl": 19079,
+    "price": "₺15.899,00 + KDV\nKDV Dahil ₺19.079,00"
   },
   {
     "id": "equsto__equsto-kmertt04-14070",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 332.35,
     "satis_eur_indirimli": 332.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.14070\nModel serisi: KMERTT04\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 391.0\nSatış fiyatı (EUR, %15 iskonto): 332.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
+    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.14070\nModel serisi: KMERTT04\nEbat: 140×70×85 cm (1400×700×850 mm)\n\nListe fiyatı (EUR): 391.0\nSatış fiyatı (EUR, %15 iskonto): 332.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
     "aciklama": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMERTT04",
       "Ebat: 140×70×85 cm (1400×700×850 mm)"
     ],
-    "fiyat_tl_net": 17885,
-    "fiyat_tl": 21462,
-    "price": "₺17.885,00 + KDV\nKDV Dahil ₺21.462,00"
+    "fiyat_tl_net": 17711,
+    "fiyat_tl": 21253,
+    "price": "₺17.711,00 + KDV\nKDV Dahil ₺21.253,00"
   },
   {
     "id": "equsto__equsto-kmertt04-16070",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 380.8,
     "satis_eur_indirimli": 380.8,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": true,
     "pfos": true,
@@ -188,15 +188,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.16070\nModel serisi: KMERTT04\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 448.0\nSatış fiyatı (EUR, %15 iskonto): 380.8\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
+    "specs": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 1600×700×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KMERTT04.16070\nModel serisi: KMERTT04\nEbat: 160×70×85 cm (1600×700×850 mm)\n\nListe fiyatı (EUR): 448.0\nSatış fiyatı (EUR, %15 iskonto): 380.8\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KMERTT04",
     "aciklama": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFLI. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KMERTT04",
       "Ebat: 160×70×85 cm (1600×700×850 mm)"
     ],
-    "fiyat_tl_net": 20492,
-    "fiyat_tl": 24590,
-    "price": "₺20.492,00 + KDV\nKDV Dahil ₺24.590,00"
+    "fiyat_tl_net": 20293,
+    "fiyat_tl": 24352,
+    "price": "₺20.293,00 + KDV\nKDV Dahil ₺24.352,00"
   }
 ]

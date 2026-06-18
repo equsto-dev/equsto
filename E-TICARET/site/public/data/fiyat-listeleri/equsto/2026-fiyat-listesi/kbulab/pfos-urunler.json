@@ -29,7 +29,7 @@
     "satis_fiyati_eur": 200.6,
     "satis_eur_indirimli": 200.6,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -38,16 +38,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.09080\nModel serisi: KBULAB\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 236.0\nSatış fiyatı (EUR, %15 iskonto): 200.6\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.09080\nModel serisi: KBULAB\nEbat: 90×80×85 cm (900×800×850 mm)\n\nListe fiyatı (EUR): 236.0\nSatış fiyatı (EUR, %15 iskonto): 200.6\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 90×80×85 cm (900×800×850 mm)"
     ],
-    "fiyat_tl_net": 10795,
-    "fiyat_tl": 12954,
-    "price": "₺10.795,00 + KDV\nKDV Dahil ₺12.954,00"
+    "fiyat_tl_net": 10690,
+    "fiyat_tl": 12828,
+    "price": "₺10.690,00 + KDV\nKDV Dahil ₺12.828,00"
   },
   {
     "id": "equsto__equsto-kbulab-09090",
@@ -79,7 +79,7 @@
     "satis_fiyati_eur": 212.5,
     "satis_eur_indirimli": 212.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -88,16 +88,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.09090\nModel serisi: KBULAB\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 250.0\nSatış fiyatı (EUR, %15 iskonto): 212.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.09090\nModel serisi: KBULAB\nEbat: 90×90×85 cm (900×900×850 mm)\n\nListe fiyatı (EUR): 250.0\nSatış fiyatı (EUR, %15 iskonto): 212.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 90×90×85 cm (900×900×850 mm)"
     ],
-    "fiyat_tl_net": 11435,
-    "fiyat_tl": 13722,
-    "price": "₺11.435,00 + KDV\nKDV Dahil ₺13.722,00"
+    "fiyat_tl_net": 11324,
+    "fiyat_tl": 13589,
+    "price": "₺11.324,00 + KDV\nKDV Dahil ₺13.589,00"
   },
   {
     "id": "equsto__equsto-kbulab-090110",
@@ -129,7 +129,7 @@
     "satis_fiyati_eur": 238.85,
     "satis_eur_indirimli": 238.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -138,16 +138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.090110\nModel serisi: KBULAB\nEbat: 90×110×85 cm (900×1100×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %15 iskonto): 238.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.090110\nModel serisi: KBULAB\nEbat: 90×110×85 cm (900×1100×850 mm)\n\nListe fiyatı (EUR): 281.0\nSatış fiyatı (EUR, %15 iskonto): 238.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 90×110×85 cm (900×1100×850 mm)"
     ],
-    "fiyat_tl_net": 12853,
-    "fiyat_tl": 15424,
-    "price": "₺12.853,00 + KDV\nKDV Dahil ₺15.424,00"
+    "fiyat_tl_net": 12728,
+    "fiyat_tl": 15274,
+    "price": "₺12.728,00 + KDV\nKDV Dahil ₺15.274,00"
   },
   {
     "id": "equsto__equsto-kbulab-090120",
@@ -179,7 +179,7 @@
     "satis_fiyati_eur": 259.25,
     "satis_eur_indirimli": 259.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -188,16 +188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.090120\nModel serisi: KBULAB\nEbat: 90×120×85 cm (900×1200×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 900×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.090120\nModel serisi: KBULAB\nEbat: 90×120×85 cm (900×1200×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 90×120×85 cm (900×1200×850 mm)"
     ],
-    "fiyat_tl_net": 13951,
-    "fiyat_tl": 16741,
-    "price": "₺13.951,00 + KDV\nKDV Dahil ₺16.741,00"
+    "fiyat_tl_net": 13815,
+    "fiyat_tl": 16578,
+    "price": "₺13.815,00 + KDV\nKDV Dahil ₺16.578,00"
   },
   {
     "id": "equsto__equsto-kbulab-10080",
@@ -229,7 +229,7 @@
     "satis_fiyati_eur": 221.0,
     "satis_eur_indirimli": 221.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -238,16 +238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.10080\nModel serisi: KBULAB\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 260.0\nSatış fiyatı (EUR, %15 iskonto): 221.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.10080\nModel serisi: KBULAB\nEbat: 100×80×85 cm (1000×800×850 mm)\n\nListe fiyatı (EUR): 260.0\nSatış fiyatı (EUR, %15 iskonto): 221.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 100×80×85 cm (1000×800×850 mm)"
     ],
-    "fiyat_tl_net": 11893,
-    "fiyat_tl": 14272,
-    "price": "₺11.893,00 + KDV\nKDV Dahil ₺14.272,00"
+    "fiyat_tl_net": 11777,
+    "fiyat_tl": 14132,
+    "price": "₺11.777,00 + KDV\nKDV Dahil ₺14.132,00"
   },
   {
     "id": "equsto__equsto-kbulab-10090",
@@ -279,7 +279,7 @@
     "satis_fiyati_eur": 230.35,
     "satis_eur_indirimli": 230.35,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -288,16 +288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.10090\nModel serisi: KBULAB\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 271.0\nSatış fiyatı (EUR, %15 iskonto): 230.35\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.10090\nModel serisi: KBULAB\nEbat: 100×90×85 cm (1000×900×850 mm)\n\nListe fiyatı (EUR): 271.0\nSatış fiyatı (EUR, %15 iskonto): 230.35\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 100×90×85 cm (1000×900×850 mm)"
     ],
-    "fiyat_tl_net": 12396,
-    "fiyat_tl": 14875,
-    "price": "₺12.396,00 + KDV\nKDV Dahil ₺14.875,00"
+    "fiyat_tl_net": 12275,
+    "fiyat_tl": 14730,
+    "price": "₺12.275,00 + KDV\nKDV Dahil ₺14.730,00"
   },
   {
     "id": "equsto__equsto-kbulab-100110",
@@ -329,7 +329,7 @@
     "satis_fiyati_eur": 259.25,
     "satis_eur_indirimli": 259.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -338,16 +338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.100110\nModel serisi: KBULAB\nEbat: 100×110×85 cm (1000×1100×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.100110\nModel serisi: KBULAB\nEbat: 100×110×85 cm (1000×1100×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 100×110×85 cm (1000×1100×850 mm)"
     ],
-    "fiyat_tl_net": 13951,
-    "fiyat_tl": 16741,
-    "price": "₺13.951,00 + KDV\nKDV Dahil ₺16.741,00"
+    "fiyat_tl_net": 13815,
+    "fiyat_tl": 16578,
+    "price": "₺13.815,00 + KDV\nKDV Dahil ₺16.578,00"
   },
   {
     "id": "equsto__equsto-kbulab-100120",
@@ -379,7 +379,7 @@
     "satis_fiyati_eur": 280.5,
     "satis_eur_indirimli": 280.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -388,16 +388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.100120\nModel serisi: KBULAB\nEbat: 100×120×85 cm (1000×1200×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1000×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.100120\nModel serisi: KBULAB\nEbat: 100×120×85 cm (1000×1200×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 100×120×85 cm (1000×1200×850 mm)"
     ],
-    "fiyat_tl_net": 15095,
-    "fiyat_tl": 18114,
-    "price": "₺15.095,00 + KDV\nKDV Dahil ₺18.114,00"
+    "fiyat_tl_net": 14948,
+    "fiyat_tl": 17938,
+    "price": "₺14.948,00 + KDV\nKDV Dahil ₺17.938,00"
   },
   {
     "id": "equsto__equsto-kbulab-11080",
@@ -429,7 +429,7 @@
     "satis_fiyati_eur": 233.75,
     "satis_eur_indirimli": 233.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -438,16 +438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.11080\nModel serisi: KBULAB\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 275.0\nSatış fiyatı (EUR, %15 iskonto): 233.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.11080\nModel serisi: KBULAB\nEbat: 110×80×85 cm (1100×800×850 mm)\n\nListe fiyatı (EUR): 275.0\nSatış fiyatı (EUR, %15 iskonto): 233.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 110×80×85 cm (1100×800×850 mm)"
     ],
-    "fiyat_tl_net": 12579,
-    "fiyat_tl": 15095,
-    "price": "₺12.579,00 + KDV\nKDV Dahil ₺15.095,00"
+    "fiyat_tl_net": 12456,
+    "fiyat_tl": 14947,
+    "price": "₺12.456,00 + KDV\nKDV Dahil ₺14.947,00"
   },
   {
     "id": "equsto__equsto-kbulab-11090",
@@ -479,7 +479,7 @@
     "satis_fiyati_eur": 248.2,
     "satis_eur_indirimli": 248.2,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -488,16 +488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.11090\nModel serisi: KBULAB\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.11090\nModel serisi: KBULAB\nEbat: 110×90×85 cm (1100×900×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 110×90×85 cm (1100×900×850 mm)"
     ],
-    "fiyat_tl_net": 13357,
-    "fiyat_tl": 16028,
-    "price": "₺13.357,00 + KDV\nKDV Dahil ₺16.028,00"
+    "fiyat_tl_net": 13227,
+    "fiyat_tl": 15872,
+    "price": "₺13.227,00 + KDV\nKDV Dahil ₺15.872,00"
   },
   {
     "id": "equsto__equsto-kbulab-110110",
@@ -529,7 +529,7 @@
     "satis_fiyati_eur": 280.5,
     "satis_eur_indirimli": 280.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -538,16 +538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.110110\nModel serisi: KBULAB\nEbat: 110×110×85 cm (1100×1100×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.110110\nModel serisi: KBULAB\nEbat: 110×110×85 cm (1100×1100×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 110×110×85 cm (1100×1100×850 mm)"
     ],
-    "fiyat_tl_net": 15095,
-    "fiyat_tl": 18114,
-    "price": "₺15.095,00 + KDV\nKDV Dahil ₺18.114,00"
+    "fiyat_tl_net": 14948,
+    "fiyat_tl": 17938,
+    "price": "₺14.948,00 + KDV\nKDV Dahil ₺17.938,00"
   },
   {
     "id": "equsto__equsto-kbulab-110120",
@@ -579,7 +579,7 @@
     "satis_fiyati_eur": 286.45,
     "satis_eur_indirimli": 286.45,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -588,16 +588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.110120\nModel serisi: KBULAB\nEbat: 110×120×85 cm (1100×1200×850 mm)\n\nListe fiyatı (EUR): 337.0\nSatış fiyatı (EUR, %15 iskonto): 286.45\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1100×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.110120\nModel serisi: KBULAB\nEbat: 110×120×85 cm (1100×1200×850 mm)\n\nListe fiyatı (EUR): 337.0\nSatış fiyatı (EUR, %15 iskonto): 286.45\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 110×120×85 cm (1100×1200×850 mm)"
     ],
-    "fiyat_tl_net": 15415,
-    "fiyat_tl": 18498,
-    "price": "₺15.415,00 + KDV\nKDV Dahil ₺18.498,00"
+    "fiyat_tl_net": 15265,
+    "fiyat_tl": 18318,
+    "price": "₺15.265,00 + KDV\nKDV Dahil ₺18.318,00"
   },
   {
     "id": "equsto__equsto-kbulab-12080",
@@ -629,7 +629,7 @@
     "satis_fiyati_eur": 248.2,
     "satis_eur_indirimli": 248.2,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -638,16 +638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.12080\nModel serisi: KBULAB\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.12080\nModel serisi: KBULAB\nEbat: 120×80×85 cm (1200×800×850 mm)\n\nListe fiyatı (EUR): 292.0\nSatış fiyatı (EUR, %15 iskonto): 248.2\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 120×80×85 cm (1200×800×850 mm)"
     ],
-    "fiyat_tl_net": 13357,
-    "fiyat_tl": 16028,
-    "price": "₺13.357,00 + KDV\nKDV Dahil ₺16.028,00"
+    "fiyat_tl_net": 13227,
+    "fiyat_tl": 15872,
+    "price": "₺13.227,00 + KDV\nKDV Dahil ₺15.872,00"
   },
   {
     "id": "equsto__equsto-kbulab-12090",
@@ -679,7 +679,7 @@
     "satis_fiyati_eur": 259.25,
     "satis_eur_indirimli": 259.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -688,16 +688,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.12090\nModel serisi: KBULAB\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.12090\nModel serisi: KBULAB\nEbat: 120×90×85 cm (1200×900×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 120×90×85 cm (1200×900×850 mm)"
     ],
-    "fiyat_tl_net": 13951,
-    "fiyat_tl": 16741,
-    "price": "₺13.951,00 + KDV\nKDV Dahil ₺16.741,00"
+    "fiyat_tl_net": 13815,
+    "fiyat_tl": 16578,
+    "price": "₺13.815,00 + KDV\nKDV Dahil ₺16.578,00"
   },
   {
     "id": "equsto__equsto-kbulab-120110",
@@ -729,7 +729,7 @@
     "satis_fiyati_eur": 297.5,
     "satis_eur_indirimli": 297.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -738,16 +738,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.120110\nModel serisi: KBULAB\nEbat: 120×110×85 cm (1200×1100×850 mm)\n\nListe fiyatı (EUR): 350.0\nSatış fiyatı (EUR, %15 iskonto): 297.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.120110\nModel serisi: KBULAB\nEbat: 120×110×85 cm (1200×1100×850 mm)\n\nListe fiyatı (EUR): 350.0\nSatış fiyatı (EUR, %15 iskonto): 297.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 120×110×85 cm (1200×1100×850 mm)"
     ],
-    "fiyat_tl_net": 16010,
-    "fiyat_tl": 19212,
-    "price": "₺16.010,00 + KDV\nKDV Dahil ₺19.212,00"
+    "fiyat_tl_net": 15854,
+    "fiyat_tl": 19025,
+    "price": "₺15.854,00 + KDV\nKDV Dahil ₺19.025,00"
   },
   {
     "id": "equsto__equsto-kbulab-120120",
@@ -779,7 +779,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -788,16 +788,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.120120\nModel serisi: KBULAB\nEbat: 120×120×85 cm (1200×1200×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1200×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.120120\nModel serisi: KBULAB\nEbat: 120×120×85 cm (1200×1200×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 120×120×85 cm (1200×1200×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kbulab-13080",
@@ -829,7 +829,7 @@
     "satis_fiyati_eur": 259.25,
     "satis_eur_indirimli": 259.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -838,16 +838,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.13080\nModel serisi: KBULAB\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.13080\nModel serisi: KBULAB\nEbat: 130×80×85 cm (1300×800×850 mm)\n\nListe fiyatı (EUR): 305.0\nSatış fiyatı (EUR, %15 iskonto): 259.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 130×80×85 cm (1300×800×850 mm)"
     ],
-    "fiyat_tl_net": 13951,
-    "fiyat_tl": 16741,
-    "price": "₺13.951,00 + KDV\nKDV Dahil ₺16.741,00"
+    "fiyat_tl_net": 13815,
+    "fiyat_tl": 16578,
+    "price": "₺13.815,00 + KDV\nKDV Dahil ₺16.578,00"
   },
   {
     "id": "equsto__equsto-kbulab-13090",
@@ -879,7 +879,7 @@
     "satis_fiyati_eur": 272.85,
     "satis_eur_indirimli": 272.85,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -888,16 +888,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.13090\nModel serisi: KBULAB\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 321.0\nSatış fiyatı (EUR, %15 iskonto): 272.85\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.13090\nModel serisi: KBULAB\nEbat: 130×90×85 cm (1300×900×850 mm)\n\nListe fiyatı (EUR): 321.0\nSatış fiyatı (EUR, %15 iskonto): 272.85\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 130×90×85 cm (1300×900×850 mm)"
     ],
-    "fiyat_tl_net": 14683,
-    "fiyat_tl": 17620,
-    "price": "₺14.683,00 + KDV\nKDV Dahil ₺17.620,00"
+    "fiyat_tl_net": 14540,
+    "fiyat_tl": 17448,
+    "price": "₺14.540,00 + KDV\nKDV Dahil ₺17.448,00"
   },
   {
     "id": "equsto__equsto-kbulab-130110",
@@ -929,7 +929,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -938,16 +938,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.130110\nModel serisi: KBULAB\nEbat: 130×110×85 cm (1300×1100×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.130110\nModel serisi: KBULAB\nEbat: 130×110×85 cm (1300×1100×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 130×110×85 cm (1300×1100×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kbulab-130120",
@@ -979,7 +979,7 @@
     "satis_fiyati_eur": 335.75,
     "satis_eur_indirimli": 335.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -988,16 +988,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.130120\nModel serisi: KBULAB\nEbat: 130×120×85 cm (1300×1200×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1300×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.130120\nModel serisi: KBULAB\nEbat: 130×120×85 cm (1300×1200×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 130×120×85 cm (1300×1200×850 mm)"
     ],
-    "fiyat_tl_net": 18068,
-    "fiyat_tl": 21682,
-    "price": "₺18.068,00 + KDV\nKDV Dahil ₺21.682,00"
+    "fiyat_tl_net": 17892,
+    "fiyat_tl": 21470,
+    "price": "₺17.892,00 + KDV\nKDV Dahil ₺21.470,00"
   },
   {
     "id": "equsto__equsto-kbulab-14080",
@@ -1029,7 +1029,7 @@
     "satis_fiyati_eur": 280.5,
     "satis_eur_indirimli": 280.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1038,16 +1038,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.14080\nModel serisi: KBULAB\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.14080\nModel serisi: KBULAB\nEbat: 140×80×85 cm (1400×800×850 mm)\n\nListe fiyatı (EUR): 330.0\nSatış fiyatı (EUR, %15 iskonto): 280.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 140×80×85 cm (1400×800×850 mm)"
     ],
-    "fiyat_tl_net": 15095,
-    "fiyat_tl": 18114,
-    "price": "₺15.095,00 + KDV\nKDV Dahil ₺18.114,00"
+    "fiyat_tl_net": 14948,
+    "fiyat_tl": 17938,
+    "price": "₺14.948,00 + KDV\nKDV Dahil ₺17.938,00"
   },
   {
     "id": "equsto__equsto-kbulab-14090",
@@ -1079,7 +1079,7 @@
     "satis_fiyati_eur": 293.25,
     "satis_eur_indirimli": 293.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1088,16 +1088,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.14090\nModel serisi: KBULAB\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 345.0\nSatış fiyatı (EUR, %15 iskonto): 293.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.14090\nModel serisi: KBULAB\nEbat: 140×90×85 cm (1400×900×850 mm)\n\nListe fiyatı (EUR): 345.0\nSatış fiyatı (EUR, %15 iskonto): 293.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 140×90×85 cm (1400×900×850 mm)"
     ],
-    "fiyat_tl_net": 15781,
-    "fiyat_tl": 18937,
-    "price": "₺15.781,00 + KDV\nKDV Dahil ₺18.937,00"
+    "fiyat_tl_net": 15627,
+    "fiyat_tl": 18752,
+    "price": "₺15.627,00 + KDV\nKDV Dahil ₺18.752,00"
   },
   {
     "id": "equsto__equsto-kbulab-140110",
@@ -1129,7 +1129,7 @@
     "satis_fiyati_eur": 327.25,
     "satis_eur_indirimli": 327.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1138,16 +1138,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.140110\nModel serisi: KBULAB\nEbat: 140×110×85 cm (1400×1100×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.140110\nModel serisi: KBULAB\nEbat: 140×110×85 cm (1400×1100×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 140×110×85 cm (1400×1100×850 mm)"
     ],
-    "fiyat_tl_net": 17611,
-    "fiyat_tl": 21133,
-    "price": "₺17.611,00 + KDV\nKDV Dahil ₺21.133,00"
+    "fiyat_tl_net": 17439,
+    "fiyat_tl": 20927,
+    "price": "₺17.439,00 + KDV\nKDV Dahil ₺20.927,00"
   },
   {
     "id": "equsto__equsto-kbulab-140120",
@@ -1179,7 +1179,7 @@
     "satis_fiyati_eur": 348.5,
     "satis_eur_indirimli": 348.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1188,16 +1188,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.140120\nModel serisi: KBULAB\nEbat: 140×120×85 cm (1400×1200×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1400×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.140120\nModel serisi: KBULAB\nEbat: 140×120×85 cm (1400×1200×850 mm)\n\nListe fiyatı (EUR): 410.0\nSatış fiyatı (EUR, %15 iskonto): 348.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 140×120×85 cm (1400×1200×850 mm)"
     ],
-    "fiyat_tl_net": 18754,
-    "fiyat_tl": 22505,
-    "price": "₺18.754,00 + KDV\nKDV Dahil ₺22.505,00"
+    "fiyat_tl_net": 18571,
+    "fiyat_tl": 22285,
+    "price": "₺18.571,00 + KDV\nKDV Dahil ₺22.285,00"
   },
   {
     "id": "equsto__equsto-kbulab-15080",
@@ -1229,7 +1229,7 @@
     "satis_fiyati_eur": 289.0,
     "satis_eur_indirimli": 289.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1238,16 +1238,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.15080\nModel serisi: KBULAB\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.15080\nModel serisi: KBULAB\nEbat: 150×80×85 cm (1500×800×850 mm)\n\nListe fiyatı (EUR): 340.0\nSatış fiyatı (EUR, %15 iskonto): 289.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 150×80×85 cm (1500×800×850 mm)"
     ],
-    "fiyat_tl_net": 15552,
-    "fiyat_tl": 18662,
-    "price": "₺15.552,00 + KDV\nKDV Dahil ₺18.662,00"
+    "fiyat_tl_net": 15401,
+    "fiyat_tl": 18481,
+    "price": "₺15.401,00 + KDV\nKDV Dahil ₺18.481,00"
   },
   {
     "id": "equsto__equsto-kbulab-15090",
@@ -1279,7 +1279,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1288,16 +1288,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.15090\nModel serisi: KBULAB\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.15090\nModel serisi: KBULAB\nEbat: 150×90×85 cm (1500×900×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 150×90×85 cm (1500×900×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kbulab-150110",
@@ -1329,7 +1329,7 @@
     "satis_fiyati_eur": 344.25,
     "satis_eur_indirimli": 344.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1338,16 +1338,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.150110\nModel serisi: KBULAB\nEbat: 150×110×85 cm (1500×1100×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.150110\nModel serisi: KBULAB\nEbat: 150×110×85 cm (1500×1100×850 mm)\n\nListe fiyatı (EUR): 405.0\nSatış fiyatı (EUR, %15 iskonto): 344.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 150×110×85 cm (1500×1100×850 mm)"
     ],
-    "fiyat_tl_net": 18525,
-    "fiyat_tl": 22230,
-    "price": "₺18.525,00 + KDV\nKDV Dahil ₺22.230,00"
+    "fiyat_tl_net": 18345,
+    "fiyat_tl": 22014,
+    "price": "₺18.345,00 + KDV\nKDV Dahil ₺22.014,00"
   },
   {
     "id": "equsto__equsto-kbulab-150120",
@@ -1379,7 +1379,7 @@
     "satis_fiyati_eur": 365.5,
     "satis_eur_indirimli": 365.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1388,16 +1388,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.150120\nModel serisi: KBULAB\nEbat: 150×120×85 cm (1500×1200×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1500×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.150120\nModel serisi: KBULAB\nEbat: 150×120×85 cm (1500×1200×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 150×120×85 cm (1500×1200×850 mm)"
     ],
-    "fiyat_tl_net": 19669,
-    "fiyat_tl": 23603,
-    "price": "₺19.669,00 + KDV\nKDV Dahil ₺23.603,00"
+    "fiyat_tl_net": 19477,
+    "fiyat_tl": 23372,
+    "price": "₺19.477,00 + KDV\nKDV Dahil ₺23.372,00"
   },
   {
     "id": "equsto__equsto-kbulab-16080",
@@ -1429,7 +1429,7 @@
     "satis_fiyati_eur": 301.75,
     "satis_eur_indirimli": 301.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1438,16 +1438,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.16080\nModel serisi: KBULAB\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %15 iskonto): 301.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.16080\nModel serisi: KBULAB\nEbat: 160×80×85 cm (1600×800×850 mm)\n\nListe fiyatı (EUR): 355.0\nSatış fiyatı (EUR, %15 iskonto): 301.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 160×80×85 cm (1600×800×850 mm)"
     ],
-    "fiyat_tl_net": 16238,
-    "fiyat_tl": 19486,
-    "price": "₺16.238,00 + KDV\nKDV Dahil ₺19.486,00"
+    "fiyat_tl_net": 16080,
+    "fiyat_tl": 19296,
+    "price": "₺16.080,00 + KDV\nKDV Dahil ₺19.296,00"
   },
   {
     "id": "equsto__equsto-kbulab-16090",
@@ -1479,7 +1479,7 @@
     "satis_fiyati_eur": 327.25,
     "satis_eur_indirimli": 327.25,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1488,16 +1488,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.16090\nModel serisi: KBULAB\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.16090\nModel serisi: KBULAB\nEbat: 160×90×85 cm (1600×900×850 mm)\n\nListe fiyatı (EUR): 385.0\nSatış fiyatı (EUR, %15 iskonto): 327.25\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 160×90×85 cm (1600×900×850 mm)"
     ],
-    "fiyat_tl_net": 17611,
-    "fiyat_tl": 21133,
-    "price": "₺17.611,00 + KDV\nKDV Dahil ₺21.133,00"
+    "fiyat_tl_net": 17439,
+    "fiyat_tl": 20927,
+    "price": "₺17.439,00 + KDV\nKDV Dahil ₺20.927,00"
   },
   {
     "id": "equsto__equsto-kbulab-160110",
@@ -1529,7 +1529,7 @@
     "satis_fiyati_eur": 365.5,
     "satis_eur_indirimli": 365.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1538,16 +1538,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.160110\nModel serisi: KBULAB\nEbat: 160×110×85 cm (1600×1100×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×1100×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.160110\nModel serisi: KBULAB\nEbat: 160×110×85 cm (1600×1100×850 mm)\n\nListe fiyatı (EUR): 430.0\nSatış fiyatı (EUR, %15 iskonto): 365.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 160×110×85 cm (1600×1100×850 mm)"
     ],
-    "fiyat_tl_net": 19669,
-    "fiyat_tl": 23603,
-    "price": "₺19.669,00 + KDV\nKDV Dahil ₺23.603,00"
+    "fiyat_tl_net": 19477,
+    "fiyat_tl": 23372,
+    "price": "₺19.477,00 + KDV\nKDV Dahil ₺23.372,00"
   },
   {
     "id": "equsto__equsto-kbulab-160120",
@@ -1579,7 +1579,7 @@
     "satis_fiyati_eur": 382.5,
     "satis_eur_indirimli": 382.5,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1588,16 +1588,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.160120\nModel serisi: KBULAB\nEbat: 160×120×85 cm (1600×1200×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1600×1200×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.160120\nModel serisi: KBULAB\nEbat: 160×120×85 cm (1600×1200×850 mm)\n\nListe fiyatı (EUR): 450.0\nSatış fiyatı (EUR, %15 iskonto): 382.5\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 160×120×85 cm (1600×1200×850 mm)"
     ],
-    "fiyat_tl_net": 20584,
-    "fiyat_tl": 24701,
-    "price": "₺20.584,00 + KDV\nKDV Dahil ₺24.701,00"
+    "fiyat_tl_net": 20383,
+    "fiyat_tl": 24460,
+    "price": "₺20.383,00 + KDV\nKDV Dahil ₺24.460,00"
   },
   {
     "id": "equsto__equsto-kbulab-17080",
@@ -1629,7 +1629,7 @@
     "satis_fiyati_eur": 306.0,
     "satis_eur_indirimli": 306.0,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1638,16 +1638,16 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1700×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.17080\nModel serisi: KBULAB\nEbat: 170×80×85 cm (1700×800×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1700×800×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.17080\nModel serisi: KBULAB\nEbat: 170×80×85 cm (1700×800×850 mm)\n\nListe fiyatı (EUR): 360.0\nSatış fiyatı (EUR, %15 iskonto): 306.0\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 170×80×85 cm (1700×800×850 mm)"
     ],
-    "fiyat_tl_net": 16467,
-    "fiyat_tl": 19760,
-    "price": "₺16.467,00 + KDV\nKDV Dahil ₺19.760,00"
+    "fiyat_tl_net": 16307,
+    "fiyat_tl": 19568,
+    "price": "₺16.307,00 + KDV\nKDV Dahil ₺19.568,00"
   },
   {
     "id": "equsto__equsto-kbulab-17090",
@@ -1679,7 +1679,7 @@
     "satis_fiyati_eur": 335.75,
     "satis_eur_indirimli": 335.75,
     "iskonto_oran": 15,
-    "kur_eur_try": 53.8137,
+    "kur_eur_try": 53.2898,
     "fiyat_bekleniyor": false,
     "eticaret": false,
     "pfos": true,
@@ -1688,15 +1688,15 @@
     ],
     "kaynak": "equsto-fiyat-listesi-2026",
     "kaynak_dosya": "c:\\D Disk\\FİYAT LİSTELERİ\\EQUSTO - FİYAT LİSTESİ.xlsx",
-    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1700×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.17090\nModel serisi: KBULAB\nEbat: 170×90×85 cm (1700×900×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.8137 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
+    "specs": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ 1700×900×850 mm\n\nMarka: Equsto\nMalzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül\n\nÜrün kodu: EQ.KBULAB.17090\nModel serisi: KBULAB\nEbat: 170×90×85 cm (1700×900×850 mm)\n\nListe fiyatı (EUR): 395.0\nSatış fiyatı (EUR, %15 iskonto): 335.75\nKur: 1 EUR = 53.2898 TRY (KDV %20)\n\nKaynak: EQUSTO Fiyat Listesi 2026 — KBULAB",
     "aciklama": "BULAŞIK ALMA BANKOSU ETRAFI AÇIK, TABAN RAFSIZ. AISI 18/10 (304 kalite) paslanmaz çelik mamül.",
     "teknik_ozellikler": [
       "Malzeme: AISI 18/10 (304 kalite) paslanmaz çelik mamül",
       "Model: KBULAB",
       "Ebat: 170×90×85 cm (1700×900×850 mm)"
     ],
-    "fiyat_tl_net": 18068,
-    "fiyat_tl": 21682,
-    "price": "₺18.068,00 + KDV\nKDV Dahil ₺21.682,00"
+    "fiyat_tl_net": 17892,
+    "fiyat_tl": 21470,
+    "price": "₺17.892,00 + KDV\nKDV Dahil ₺21.470,00"
   }
 ]
