@@ -23,11 +23,28 @@ export const PFOS_Q_UST_SEGMENT = [
   "Fast Food / QSR",
   "Pastane & Fırın",
   "Bar & Lounge",
-  "Otel F&B",
   "Catering",
   "Bulut Mutfak",
   "Üretim / Fabrika",
 ] as const;
+
+/** 750 / 1000 m² — otel segmenti ve tüm şehir oteli referansları */
+export const PFOS_OTEL_UST_SEGMENT = "Otel F&B";
+export const PFOS_OTEL_BIRLESIK_M2 = [750, 1000] as const;
+
+export function otelSegmentM2Aktif(m2: number): boolean {
+  return (PFOS_OTEL_BIRLESIK_M2 as readonly number[]).includes(m2);
+}
+
+/** m² 750 veya 1000 ise konsept listesine Otel F&B eklenir */
+export function ustSegmentOptionsForM2(
+  base: readonly string[],
+  m2: number,
+): string[] {
+  if (!otelSegmentM2Aktif(m2)) return [...base];
+  if (base.includes(PFOS_OTEL_UST_SEGMENT)) return [...base];
+  return [...base, PFOS_OTEL_UST_SEGMENT];
+}
 
 /** Üst segment → dükkan türü dalları (yalnızca durum=aktif paketler) */
 export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> =
