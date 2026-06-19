@@ -26,7 +26,7 @@ export function buildEqSetId(typeId: string, bantId?: string) {
   return `set_${typeId}${bantId ? `_${bantId}` : ""}`.replace(/[^a-z0-9_]+/gi, "_");
 }
 
-function eqSetBantForSet(
+export function eqSetBantForSet(
   concept: ShopTypeKayit,
   setId: string,
 ): ShopTypeKayit["pfos"]["bantlar"][number] | undefined {

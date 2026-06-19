@@ -7,8 +7,8 @@ import { join } from "node:path";
 import { enrichShopTypesFromFile } from "../lib/pfos/proje-akis/konsept-tanimlari";
 import {
   createStarterEqSets,
-  createStarterRules,
 } from "../lib/pfos/proje-akis/set-kural-taslak";
+import { createRefinedRules } from "../lib/pfos/proje-akis/set-kural-ince-ayar";
 
 const jsonPath = join(process.cwd(), "public/data/proje-akis.json");
 const raw = JSON.parse(readFileSync(jsonPath, "utf8")) as {
@@ -22,7 +22,7 @@ const shopTypes = enrichShopTypesFromFile(
 );
 
 const eqSets = createStarterEqSets(shopTypes);
-const rules = createStarterRules(shopTypes, eqSets);
+const rules = createRefinedRules(shopTypes, eqSets);
 
 data.eqSets = eqSets;
 data.rules = rules;
