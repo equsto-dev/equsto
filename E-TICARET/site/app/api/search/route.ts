@@ -20,6 +20,7 @@ import {
 } from "@/lib/rank-search-hits";
 import { fetchSearchFacetPool } from "@/lib/search-facet-pool";
 import { resolveBrandSearchQuery } from "@/lib/search-brand-resolve";
+import { shouldBoostBrandCooking } from "@/lib/rank-brand-search-hits";
 import {
   applySearchFacetFilters,
   computeSearchFacetCounts,
@@ -162,6 +163,10 @@ export async function GET(req: NextRequest) {
           poolSize: pool.hits.length,
           poolTotal: pool.estimatedTotalHits,
           hasPisirmeFacets: searchHasPisirmeFacets(pool.hits),
+          sortMode:
+            brandMatch && shouldBoostBrandCooking(brandMatch.slug)
+              ? "brand-cooking"
+              : undefined,
         },
         warning:
           pool.estimatedTotalHits > pool.hits.length
