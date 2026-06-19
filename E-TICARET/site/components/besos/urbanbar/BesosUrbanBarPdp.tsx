@@ -1,6 +1,7 @@
 import BesosUrbanBarPdpActions from "@/components/besos/urbanbar/BesosUrbanBarPdpActions";
 import BesosUrbanBarPdpCart from "@/components/besos/urbanbar/BesosUrbanBarPdpCart";
 import BesosUrbanBarPdpGallery from "@/components/besos/urbanbar/BesosUrbanBarPdpGallery";
+import BesosUrbanBarPrice from "@/components/besos/urbanbar/BesosUrbanBarPrice";
 import BesosUrbanBarPdpRelated, {
   type RelatedProduct,
 } from "@/components/besos/urbanbar/BesosUrbanBarPdpRelated";
@@ -11,7 +12,7 @@ import {
   besosUrbanBarSectionHref,
 } from "@/lib/besos/urbanbar/catalog";
 import { resolveUrbanBarGalleryImages } from "@/lib/besos/urbanbar/gallery-images";
-import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
+import { urbanBarPackQtyFromProduct } from "@/lib/besos/urbanbar/pack-qty";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 export type BesosUrbanBarPdpView = {
@@ -55,30 +56,17 @@ function HtmlBlock({ html, className }: { html?: string; className?: string }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-function getBoxQuantity(name: string, specs?: { key: string; value: string }[]): string | null {
-  const nameMatch = name.match(/\bbox of (\d+)\b|\bpack of (\d+)\b|\bset of (\d+)\b/i);
-  if (nameMatch) {
-    const qty = nameMatch[1] || nameMatch[2] || nameMatch[3];
-    return qty;
-  }
-  const boxSpec = specs?.find((s) => /box|pack|qty|quantity/i.test(s.key));
-  if (boxSpec) return boxSpec.value;
-  return null;
-}
-
 export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView }) {
   const {
     product,
     locale,
     canonicalUrl,
     images,
-    priceLabel,
     cartItem,
     related,
   } = view;
   const features = product.features?.length ? product.features : null;
-  const { amount, vat } = splitUrbanBarPrice(priceLabel, locale);
-  const boxQty = getBoxQuantity(product.name, product.specifications);
+  const packQty = urbanBarPackQtyFromProduct(product);
 
   return (
     <main className="besos-page ub-pdp-page ub-shop">
@@ -91,19 +79,14 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
           <div className="ub-pdp-layout__info">
             <h1 className="ub-pdp-title">{product.name}</h1>
 
-            {amount ? (
-              <div className="ub-pdp-price">
-                <span className="ub-pdp-price__amount">{amount}</span>
-                {vat ? <span className="ub-pdp-price__vat">{vat}</span> : null}
-              </div>
-            ) : null}
+            <BesosUrbanBarPrice product={product} locale={locale} variant="pdp" />
 
-            {boxQty ? (
+            {packQty > 1 ? (
               <div className="ub-pdp-box-qty">
                 <span className="ub-pdp-box-qty__label">
-                  {locale === "en" ? "Sold in box quantities of:" : "Kutu İçeriği Adedi:"}
+                  {locale === "en" ? "Sold in box quantities of:" : "Kutu içeriği:"}
                 </span>
-                <strong className="ub-pdp-box-qty__val"> {boxQty}</strong>
+                <strong className="ub-pdp-box-qty__val"> {packQty}</strong>
               </div>
             ) : null}
 
@@ -228,6 +211,9 @@ export function buildUrbanBarPdpView(
   const related: RelatedProduct[] = relatedProducts.map((p) => ({
     name: p.name,
     price: p.price || "",
+    fiyat_tl: p.fiyat_tl,
+    code: p.code,
+    features: p.features,
     image: p.imageUrl || (p.image?.startsWith("http") ? p.image : p.image ? `/${p.image.replace(/^\.\//, "")}` : undefined),
     href: p.besosHref || besosUrbanBarProductHref(sectionKey, besosUrbanBarProductSlug(p), locale),
   }));
