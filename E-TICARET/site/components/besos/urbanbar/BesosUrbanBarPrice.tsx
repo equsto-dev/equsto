@@ -33,13 +33,6 @@ export default function BesosUrbanBarPrice({
         ? "ub-pdp-related__amount"
         : "ub-plp-card__price-amount";
 
-  const vatClass =
-    variant === "pdp"
-      ? "ub-pdp-price__vat"
-      : variant === "related"
-        ? "ub-pdp-related__vat"
-        : "ub-plp-card__price-vat";
-
   const unitClass =
     variant === "pdp"
       ? "ub-pdp-price__unit"
@@ -58,15 +51,9 @@ export default function BesosUrbanBarPrice({
     <div className={rootClass}>
       <span className={amountClass}>
         {display.amount}
-        {display.unitSuffix ? (
-          <span className={unitClass}>{display.unitSuffix}</span>
-        ) : null}
+        <span className={unitClass}>{display.unitSuffix}</span>
       </span>
-      {display.packTotalLine ? (
-        <span className={packClass}>{display.packTotalLine}</span>
-      ) : display.vat ? (
-        <span className={vatClass}>{display.vat}</span>
-      ) : null}
+      <span className={packClass}>{display.secondaryLine}</span>
     </div>
   );
 }
