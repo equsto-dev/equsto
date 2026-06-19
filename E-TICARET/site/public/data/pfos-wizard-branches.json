@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-16T20:08:13.730Z",
+  "updated_at": "2026-06-19T17:23:19.948Z",
   "aktifPaketSayisi": 55,
   "segmentOrder": [
     "Restoran",
@@ -8,7 +8,6 @@
     "Fast Food / QSR",
     "Pastane & Fırın",
     "Bar & Lounge",
-    "Otel F&B",
     "Catering",
     "Bulut Mutfak",
     "Üretim / Fabrika"
@@ -38,11 +37,6 @@
       "v": "Bar & Lounge",
       "label": "Bar & Lounge",
       "desc": "Birahane, kokteyl, wine & beer bar…"
-    },
-    {
-      "v": "Otel F&B",
-      "label": "Otel F&B",
-      "desc": "Şehir oteli, resort, tatil & kayak oteli…"
     },
     {
       "v": "Catering",
@@ -404,7 +398,7 @@
     },
     "Resort Otel": {
       "min": 200,
-      "max": 500,
+      "max": 2000,
       "slug": "resort-otel"
     },
     "Tatil Oteli": {

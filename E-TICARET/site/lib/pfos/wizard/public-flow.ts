@@ -168,6 +168,26 @@ function stripBilmiyorum(q: WizardQuestion): WizardQuestion {
   };
 }
 
+/** API eksik/bozuk seçenek gönderirse varsayılan listeyi koru */
+const OPTIONS_PREFER_DEFAULT_IDS = new Set(["q_ust_segment"]);
+
+function mergeWizardQuestion(
+  base: WizardQuestion | undefined,
+  q: WizardQuestion,
+): WizardQuestion {
+  if (!base) return stripBilmiyorum(q);
+  const merged: WizardQuestion = { ...base, ...q };
+  if (
+    OPTIONS_PREFER_DEFAULT_IDS.has(q.id) &&
+    Array.isArray(base.options) &&
+    Array.isArray(q.options) &&
+    q.options.length < base.options.length
+  ) {
+    merged.options = base.options;
+  }
+  return stripBilmiyorum(merged);
+}
+
 export function mergePublicWizardQuestions(
   fromApi: WizardQuestion[],
 ): WizardQuestion[] {
@@ -176,8 +196,7 @@ export function mergePublicWizardQuestions(
   for (const q of defaults) byId.set(q.id, q);
   for (const q of fromApi) {
     if (!q?.id) continue;
-    const base = byId.get(q.id);
-    byId.set(q.id, stripBilmiyorum(base ? { ...base, ...q } : q));
+    byId.set(q.id, mergeWizardQuestion(byId.get(q.id), q));
   }
   return sortWizardQuestions([...byId.values()].map(stripBilmiyorum));
 }
