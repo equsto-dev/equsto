@@ -1,10 +1,10 @@
 {
   "liste": "Vosco Katalog 2026",
   "source": "c:\\D Disk\\FİYAT LİSTELERİ\\Vosco_Katalog_2026.pdf",
-  "extractedAt": "2026-06-19T12:15:11.302005+00:00",
+  "extractedAt": "2026-06-19T13:22:26.209782+00:00",
   "pageCount": 96,
   "productCount": 157,
-  "pricedCount": 156,
+  "pricedCount": 142,
   "products": [
     {
       "model": "NG3R",
@@ -93,7 +93,7 @@
       "category": "Pati̇sseri̇e Firinlar",
       "page": 74,
       "specs": {
-        "liste_usd": 2500.0,
+        "liste_usd": 3250.0,
         "liste_eur": null,
         "guc": "9700 W / 220",
         "kapasite_kg": null,
@@ -153,7 +153,7 @@
       "category": "Kahve Deği̇rmenleri̇",
       "page": 34,
       "specs": {
-        "liste_usd": 1800.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "550 W / 220",
         "kapasite_kg": 12.0,
@@ -193,7 +193,7 @@
       "category": "Pati̇sseri̇e Firinlar",
       "page": 75,
       "specs": {
-        "liste_usd": 5750.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "9000 W / 380",
         "kapasite_kg": null,
@@ -213,7 +213,7 @@
       "category": "İndüksi̇yon Ocaklar",
       "page": 59,
       "specs": {
-        "liste_usd": 350.0,
+        "liste_usd": 360.0,
         "liste_eur": null,
         "guc": "3500 W / 220",
         "kapasite_kg": null,
@@ -233,7 +233,7 @@
       "category": "İndüksi̇yon Ocaklar",
       "page": 60,
       "specs": {
-        "liste_usd": 375.0,
+        "liste_usd": 400.0,
         "liste_eur": null,
         "guc": "3500 W / 220",
         "kapasite_kg": null,
@@ -383,7 +383,7 @@
       "category": "Krep & Waffle",
       "page": 56,
       "specs": {
-        "liste_usd": 760.0,
+        "liste_usd": 380.0,
         "liste_eur": null,
         "guc": "3000 W / 220",
         "kapasite_kg": 42.0,
@@ -464,7 +464,7 @@
       "page": 76,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 15000.0,
+        "liste_eur": null,
         "guc": "9400 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
@@ -594,7 +594,7 @@
       "page": 5,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1050.0,
+        "liste_eur": 1450.0,
         "guc": "150 W / 220",
         "kapasite_kg": 58.0,
         "kapasite_l": 238.0,
@@ -614,7 +614,7 @@
       "page": 5,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1450.0,
+        "liste_eur": 1500.0,
         "guc": "200 W / 220",
         "kapasite_kg": 83.0,
         "kapasite_l": 338.0,
@@ -768,7 +768,7 @@
       "category": "Elektri̇kli̇ Izgaralar",
       "page": 47,
       "specs": {
-        "liste_usd": 280.0,
+        "liste_usd": 230.0,
         "liste_eur": null,
         "guc": "3000 W / 220",
         "kapasite_kg": 25.0,
@@ -828,7 +828,7 @@
       "category": "Elektri̇kli̇ Izgaralar",
       "page": 48,
       "specs": {
-        "liste_usd": 350.0,
+        "liste_usd": 300.0,
         "liste_eur": null,
         "guc": "4400 W / 220",
         "kapasite_kg": 34.0,
@@ -883,7 +883,7 @@
       "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
-        "liste_usd": 2000.0,
+        "liste_usd": 1400.0,
         "liste_eur": null,
         "guc": "2500 W / 220",
         "kapasite_kg": null,
@@ -958,7 +958,7 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 22,
       "specs": {
-        "liste_usd": 6000.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -1053,7 +1053,7 @@
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 13,
       "specs": {
-        "liste_usd": 7500.0,
+        "liste_usd": 1680.0,
         "liste_eur": null,
         "guc": "210 W / 220",
         "kapasite_kg": 38.0,
@@ -1113,7 +1113,7 @@
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 12,
       "specs": {
-        "liste_usd": 1150.0,
+        "liste_usd": 2580.0,
         "liste_eur": null,
         "guc": "350 W / 220",
         "kapasite_kg": 76.0,
@@ -1193,7 +1193,7 @@
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 11,
       "specs": {
-        "liste_usd": 2050.0,
+        "liste_usd": 1750.0,
         "liste_eur": null,
         "guc": "240 W / 220",
         "kapasite_kg": 57.0,
@@ -1248,7 +1248,7 @@
       "category": "Krep & Waffle",
       "page": 55,
       "specs": {
-        "liste_usd": 300.0,
+        "liste_usd": 230.0,
         "liste_eur": null,
         "guc": "1750 W / 220",
         "kapasite_kg": null,
@@ -1348,7 +1348,7 @@
       "category": "Bar Blenderlari",
       "page": 29,
       "specs": {
-        "liste_usd": 380.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "2200 W / 220",
         "kapasite_kg": null,
@@ -1428,7 +1428,7 @@
       "category": "Bar Blenderlari",
       "page": 30,
       "specs": {
-        "liste_usd": 700.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "1600 W / 220",
         "kapasite_kg": null,
@@ -1583,7 +1583,7 @@
       "category": "Sebze & Soğan Doğrama",
       "page": 71,
       "specs": {
-        "liste_usd": 250.0,
+        "liste_usd": 1200.0,
         "liste_eur": null,
         "guc": "1100 W / 220",
         "kapasite_kg": null,
@@ -1738,7 +1738,7 @@
       "category": "Döner Maki̇nesi̇",
       "page": 45,
       "specs": {
-        "liste_usd": 1150.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "5 W / 220",
         "kapasite_kg": null,
@@ -1858,7 +1858,7 @@
       "category": "Sicak Teşhi̇r Üni̇teleri̇",
       "page": 89,
       "specs": {
-        "liste_usd": 750.0,
+        "liste_usd": 1000.0,
         "liste_eur": null,
         "guc": "825 W / 220",
         "kapasite_kg": null,
@@ -1919,7 +1919,7 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1000.0,
+        "liste_eur": null,
         "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
@@ -1939,7 +1939,7 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1000.0,
+        "liste_eur": null,
         "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
@@ -1959,7 +1959,7 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1000.0,
+        "liste_eur": null,
         "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
@@ -1999,7 +1999,7 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "liste_eur": 1000.0,
+        "liste_eur": null,
         "guc": "1720 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
@@ -2038,7 +2038,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
-        "liste_usd": 25.0,
+        "liste_usd": 35.0,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2088,7 +2088,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 17,
       "specs": {
-        "liste_usd": 3250.0,
+        "liste_usd": 3600.0,
         "liste_eur": null,
         "guc": "720 W / 220",
         "kapasite_kg": 100.0,
@@ -2108,7 +2108,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 17,
       "specs": {
-        "liste_usd": 3600.0,
+        "liste_usd": 6500.0,
         "liste_eur": null,
         "guc": "900 W / 220",
         "kapasite_kg": 120.0,
@@ -2168,7 +2168,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 18,
       "specs": {
-        "liste_usd": 7000.0,
+        "liste_usd": 7500.0,
         "liste_eur": null,
         "guc": "1500 W / 220",
         "kapasite_kg": 200.0,
@@ -2208,7 +2208,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": 35.0,
+        "liste_usd": 44.0,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2223,7 +2223,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": 25.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2238,7 +2238,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 18,
       "specs": {
-        "liste_usd": 7500.0,
+        "liste_usd": 8000.0,
         "liste_eur": null,
         "guc": "1500 W / 220",
         "kapasite_kg": 200.0,
@@ -2298,7 +2298,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 16,
       "specs": {
-        "liste_usd": 1800.0,
+        "liste_usd": 1900.0,
         "liste_eur": null,
         "guc": "300 W / 220",
         "kapasite_kg": 40.0,
@@ -2388,7 +2388,7 @@
       "category": "Buz Maki̇neleri̇",
       "page": 16,
       "specs": {
-        "liste_usd": 1900.0,
+        "liste_usd": 2100.0,
         "liste_eur": null,
         "guc": "350 W / 230",
         "kapasite_kg": 45.0,
@@ -2423,7 +2423,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
-        "liste_usd": 50.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2453,7 +2453,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": 25.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2523,7 +2523,7 @@
       "category": "Fri̇tözler",
       "page": 52,
       "specs": {
-        "liste_usd": 1150.0,
+        "liste_usd": 1750.0,
         "liste_eur": null,
         "guc": "3500 W / 220",
         "kapasite_kg": null,
@@ -2603,7 +2603,7 @@
       "category": "Sebze & Meyve Kurutucu",
       "page": 87,
       "specs": {
-        "liste_usd": 450.0,
+        "liste_usd": 510.0,
         "liste_eur": null,
         "guc": "800 W / 220",
         "kapasite_kg": null,
@@ -2683,7 +2683,7 @@
       "category": "Pi̇zza Firinlar",
       "page": 81,
       "specs": {
-        "liste_usd": 1200.0,
+        "liste_usd": 1400.0,
         "liste_eur": null,
         "guc": "4800 W / 220",
         "kapasite_kg": null,
@@ -2743,7 +2743,7 @@
       "category": "Pi̇zza Firinlar",
       "page": 82,
       "specs": {
-        "liste_usd": 2050.0,
+        "liste_usd": 2300.0,
         "liste_eur": null,
         "guc": "9000 W / 220",
         "kapasite_kg": null,
@@ -2763,7 +2763,7 @@
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 84,
       "specs": {
-        "liste_usd": 1250.0,
+        "liste_usd": 3500.0,
         "liste_eur": null,
         "guc": "10000 W / 380",
         "kapasite_kg": null,
