@@ -1,0 +1,182 @@
+{
+  "cod": "730304",
+  "title": "Buz makineleri Buz Makinesi, 22 gr küp buz, kapasite 55 kg/gün, kendinden hazneli",
+  "category": "Buz Makineleri 47 kg''dan 83 kg''a kadar",
+  "description": "Buz Makinesi, 22 gr küp buz, kapasite 55 kg/gün, kendinden hazneli, hazne kapasite 25 kg, hava soğutmalı",
+  "url": "https://www.electroluxprofessional.com/tr/pd/so%C4%9Futma-ekipmanlar%C4%B1/buz-ve-karbuz-makineleri/buz-makineleri/buz-makineleri-47-kg''dan-83-kg''a-kadar/buz-makineleri-buz-makinesi-22-gr-k%C3%BCp-buz-kapasite-55-kg-g%C3%BCn-kendinden-hazneli-730304/",
+  "specifications": [
+    {
+      "group": "Kapasite",
+      "items": [
+        {
+          "label": "Hazne kapasitesi",
+          "value": "25 kg"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1N ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "0.43 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "535 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "595 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "894 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "56 kg"
+        },
+        {
+          "label": "Verim",
+          "value": "55 kg/gün"
+        },
+        {
+          "label": "Küp tipi",
+          "value": "Küp buz 22gr"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Soğutucu gaz tipi",
+          "value": "R290"
+        },
+        {
+          "label": "Soğutucu gaz ağırlığı",
+          "value": "95 g"
+        },
+        {
+          "label": "Su tüketimi",
+          "value": "5.9 lt/hr"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Otomatik sistem ile kolay temizlik garantisi. Temizlik anahtarı ile etkinleştirilen sirkülasyon ve su durulaması. Program sonunda yeniden buz üretmeye geçer.",
+        "Esnek nözüllere sahip inovatif kireç önleyici püskürtme sistemi, hafif titreşimler ile kirecin birikmesini önler.",
+        "Sürekli ve standart üretim sağlayan buz yapma mekanizması.",
+        "Buz yapma metodu (sprey sistemi); kompakt, hijyenik olarak saf ve zor eriyen, kristal gibi buz küplerinin üretilmesini sağlar.",
+        "Su tüketimi ve kapasite 15°C su sıcaklığı ve 21°C ortam ısısı gözönüne alınarak hesaplanmıştır.",
+        "Buz makineleri, kompakt boyutları sayesinde her mekanda kullanılabilirler. Özellikle dar mekanlar için idealdirler.",
+        "Koni şeklinde buz küpleri.",
+        "Haznenin yuvarlatılmış iç köşeleri kolayca temizlenir.",
+        "Tümüyle otomatik.",
+        "İçi gıda maddeleriyle uyumlu ABS.",
+        "Sadece serbest akışlı drenaj için uygundur.",
+        "Hazne dahildir.",
+        "CE emniyet gereksinimleriyle uyumludur."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "CFC ve HCFC içermeyen, çevre dostu hidrokarbon soğutucu gaz R290 (GWP=3).",
+        "Tamamen yalıtılmış depolama kutusu sayesinde daha düşük enerji tüketimi."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Kullanılan yapı malzemelerinin kalitesi (ön, üst ve yan kısımlar 304 AISI paslanmaz çelikten yapılmıştır) ve gelişmiş ürün ve işlem teknolojisi sayesinde güvenilirlik garantisi.",
+        "Paslanmaz spreyler kolayca sökülür, yalın bir su akışı sağlar ve kireç oluşumunu önler.",
+        "Dışı 304 AISI paslanmaz çeliktir.",
+        "Buzla teması güvenli, alüminyum evaporatör.",
+        "AISI 304 paslanmaz çelikten yapılmış sağlam kapak açma sistemi.",
+        "Dahili ABS buz kapları.",
+        "Alet kullanmadan çıkarılabilen hijyenik plastik püskürtme kolları.",
+        "Esnek su hortumu, tahliye hortumu ve kazıyıcı ürün ile birlikte verilir.",
+        "Bakım için ana bileşenlere kolay erişim.",
+        "Basmalı açma/kapatma anahtarı.",
+        "105-155mm’lik ayarlanabilir ayaklar.",
+        "Fiş standarttır (Schuko tip)."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "730304",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/730304_ICB55I25SNP.dwg",
+      "local": "media/documents/730304/730304_ICB55I25SNP.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Buz Makinesi, 22 gr küp buz, kapasite 55 kg/gün, kendinden hazneli",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/730304_Ice Cuber (22gr), 55kg_24h, 25kg bin, air-cooled_Turkish.pdf",
+      "local": "media/documents/730304/730304_Ice%20Cuber%20(22gr),%2055kg_24h,%2025kg%20bin,%20air-cooled_Turkish.pdf"
+    },
+    {
+      "category": "El Broşürleri",
+      "type": "CLF",
+      "title": "Buz Makineleri",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CLF/CLF_CLF-9JE00316_1_5_16_2_EPR_flyer_Icemakers_TURKISH_LR.pdf",
+      "local": "media/documents/730304/CLF_CLF-9JE00316_1_5_16_2_EPR_flyer_Icemakers_TURKISH_LR.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "730304",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_730304_ICB55I25SNP.rfa",
+      "local": "media/documents/730304/QF_ELECTROLUXPROFESSIONAL_730304_ICB55I25SNP.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_730304_1_1_730304.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_730304_1_1_730304.jpg",
+      "local": "media/images/730304/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:38:35.181Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/buz-makineleri/"
+}

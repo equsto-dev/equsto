@@ -1,0 +1,83 @@
+{
+  "cod": "361204",
+  "title": "Servis Arabaları 2 Katlı Servis Arabası-900 mm İtme Kollu",
+  "category": "Servis Arabaları",
+  "description": "2 katlı servis arabası, itme kollu 900 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1-2-katl%C4%B1-servis-arabas%C4%B1-900-mm-i%CC%87tme-kollu-361204/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "995 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "695 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "916 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "27 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Eşit biçimde yerleştirildiğinde yükleme kapasitesi 100 kg'dır.",
+        "Dikişsiz, ses sönümlendirici malzemeyle takviye edilmiş rafların kenarları çift kıvrımlıdır ve şaseye kaynaklanmıştır.",
+        "Rafların ebadı: 900x600 mm.",
+        "Güçlü, ergonomik kulp ana karkasın uzantısı olarak imal edilmiştir.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361204",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/cpm092.dwg",
+      "local": "media/documents/361204/cpm092.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "2 Katlı Servis Arabası-900 mm İtme Kollu",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Two Tier Service Trolley with Handle 900 mm_361204_Turkish.pdf",
+      "local": "media/documents/361204/Two%20Tier%20Service%20Trolley%20with%20Handle%20900%20mm_361204_Turkish.pdf"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361204_1_1_361204.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361204_1_1_361204.jpg",
+      "local": "media/images/361204/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:49:30.206Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

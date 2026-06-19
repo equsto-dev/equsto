@@ -1,0 +1,142 @@
+{
+  "cod": "371020",
+  "title": "Modüler Pişirme Ekipmanları 700XP 2 Zonlu Setüstü Endüksiyon Ocak",
+  "category": "Setüstü Endüksiyon Ocaklar",
+  "description": "Endüstriyel 2 zonlu set üstü endüksiyon ocak, her zon 3,5 kW, 9 güç kademesi, derinlik 730 mm - 400 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/end%C3%BCksiyon-ocaklar/set%C3%BCst%C3%BC-end%C3%BCksiyon-ocaklar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-2-zonlu-set%C3%BCst%C3%BC-end%C3%BCksiyon-ocak-371020/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Endüksiyon ocaklarla uyumlu tencere ve tavalarla kullanılmalıdır.",
+          "value": "Endüksiyon ocaklarla uyumlu tencere ve tavalarla kullanılmalıdır."
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "30 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "38 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "530 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "460 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.2 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "IH720"
+        },
+        {
+          "label": "Setüstü endüksiyon ocak ebadı (genişlik)",
+          "value": "400 mm"
+        },
+        {
+          "label": "Setüstü endüksiyon ocak ebadı (derinlik)",
+          "value": "730 mm"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-415 V/3 ph/50/60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "7 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Isıtmada maksimum verimlilik için kullanılacak tencere çapı en az 12cm, en fazla 28 cm olmalıdır.",
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "6 mm kalınlıkta cam-seramik pişirme yüzeyi, bağımsız olarak kontrol edilen ve her biri 3,5 kW gücünde olan 2 endüksiyon zonludur.",
+        "Seramik pleytin hemen tüm yüzeyi kullanılır; pleytin üzerinde \"ölü\" alanlar yoktur.",
+        "Kontrol konsolunda her zon için gösterge lambası vardır.",
+        "Endüksiyon pleytlerin aşırı ısınmaya karşı emniyet aygıtı bulunur.",
+        "Güç, her bir zona kademeli olarak aktarılır yani alt seviyede daha hassas ayar yapılırken üst seviyelerde daha yüksek kademeler sözkonusu olur.",
+        "Mutfağa düşük seviyede ısı yayılımı.",
+        "Düz cam seramik pleyt doğrudan ısıtılmaz bu nedenle de pişirme yüzeyinde yanma olmaz.",
+        "Suya karşı koruma sınıfı: IPX4."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Bu model İsviçre Enerji Verimliliği Yönetmeliği (730.02) ile uyumludur."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371020/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371020",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7INED2000.dwg",
+      "local": "media/documents/371020/E7INED2000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP 2 Zonlu Setüstü Endüksiyon Ocak",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 2 Zone El. Induction cooking top_371020-371131_Turkish.pdf",
+      "local": "media/documents/371020/700XP%202%20Zone%20El.%20Induction%20cooking%20top_371020-371131_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371020",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371020_E7INED2000.rfa",
+      "local": "media/documents/371020/QF_ELECTROLUXPROFESSIONAL_371020_E7INED2000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371020_1_1_371020.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371020_1_1_371020.jpg",
+      "local": "media/images/371020/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T08:46:16.224Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

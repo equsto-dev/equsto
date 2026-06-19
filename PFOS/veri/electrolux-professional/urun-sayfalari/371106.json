@@ -1,0 +1,156 @@
+{
+  "cod": "371106",
+  "title": "Modüler Pişirme Ekipmanları 700XP Gazlı Çok Amaçlı Pişirici, Dolaplı-22Lt",
+  "category": "Gazlı Çok Amaçlı Pişiriciler",
+  "description": "Gazlı çok fonksiyonlu tava-22 Lt, (ızgara, kızartma tavası, kuru benmari ve tencere olarak kullanılabilir), sandviç tabanlı, termostatik ısı kontrolu, derinlik 730 mm - 800 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/%C3%A7ok-ama%C3%A7l%C4%B1-pi%C5%9Firiciler/gazl%C4%B1-%C3%A7ok-ama%C3%A7l%C4%B1-pi%C5%9Firiciler/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-gazl%C4%B1-%C3%A7ok-ama%C3%A7l%C4%B1-pi%C5%9Firici-dolapl%C4%B1-22lt-371106/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "MIN. çalışma sıcaklığı",
+          "value": "100 °C"
+        },
+        {
+          "label": "MAX.çalışma sıcaklığı",
+          "value": "250 °C"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "80 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "95 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "1140 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "860 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.8 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "N7BRG"
+        }
+      ]
+    },
+    {
+      "group": "Gaz",
+      "items": [
+        {
+          "label": "Gaz Gücü",
+          "value": "14 kW"
+        },
+        {
+          "label": "Standart gaz dağıtımı",
+          "value": "Doğal Gaz"
+        },
+        {
+          "label": "Gaz Tipi Seçeneği",
+          "value": "LPG;Doğal Gaz"
+        },
+        {
+          "label": "Gaz Girişi",
+          "value": "1/2\""
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Çok amaçlı pişirme cihazı, az yağda kızartma yapmak, sulu yemek pişirmek ve hatta benmari olarak kullanılabilir. Bu ünite, ayrıca sote yapmak, poşelemek, buharda pişirmek, sulu yemek pişirmek, kavurmak, haşlamak ve beyaz soslar hazırlamak için de kullanılır.",
+        "Haznenin pişirme yüzeyi, en uygun ızgara fonksiyonu için bileşik çelikten imal edilmiştir (12 mm kalınlıkta karbon çeliği plakanın üzerinde 3 mm kalınlıkta paslanmaz çelik başka bir plaka bulunur).",
+        "Paslanmaz çelik haznenin köşeleri yuvarlatılmıştır; temizlik işleminin kolaylaştırır.",
+        "Alt tarafın ısı kontrolu kontrol panelindeki bir termostat sayesinde hassas biçimde ayarlanabilir.",
+        "Sıcaklık 100°C ile 250°C arasında ayarlanabilir.",
+        "Tüm tabanda eşit ısı dağılımı.",
+        "Boş kazanın ısınma süresi çok kısadır.",
+        "Daha iyi bir ısı dağılımı için brulörlerde iki alev hattı bulunur.",
+        "Ünitenin 50 mm çapında, paslanmaz çelik, dört bacağı vardır (Yuvarlak tekmelikler opsiyoneldir)."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Gastronorm kap rayları, ürünle birlikte verilir.",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371106/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371106",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7MFGHDI00.dwg",
+      "local": "media/documents/371106/E7MFGHDI00.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Gazlı Çok Amaçlı Pişirici, Dolaplı-22Lt",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 22 lt. Gas Multifunctional Cooker - compound_371106_Turkish.pdf",
+      "local": "media/documents/371106/700XP%2022%20lt.%20Gas%20Multifunctional%20Cooker%20-%20compound_371106_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371106",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371106_E7MFGHDI00.rfa",
+      "local": "media/documents/371106/QF_ELECTROLUXPROFESSIONAL_371106_E7MFGHDI00.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "164255",
+      "description": "Düz ızgara için spatula - 700&900XP",
+      "quantity": "1"
+    },
+    {
+      "code": "921694",
+      "description": "Spatula için yuvarlak kenarlı bıçak (Multi fonksiyonlu pişiriciler için) - 700&900XP",
+      "quantity": "1"
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371106_1_2_371106_aperta.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371106_1_2_371106_aperta.jpg",
+      "local": "media/images/371106/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:11:33.061Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

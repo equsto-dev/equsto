@@ -387,6 +387,16 @@
       "marka": "Pimak",
       "sku": "CR 120",
       "name": "CR 120 Konik Yuvarlama Makinesi"
+    },
+    "firin_arabasi": {
+      "marka": "Unox",
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI"
+    },
+    "planet_mikser": {
+      "marka": "Boğaziçi",
+      "sku": "BM.20S",
+      "name": "Boğaziçi Planet Mikser"
     }
   }
 }

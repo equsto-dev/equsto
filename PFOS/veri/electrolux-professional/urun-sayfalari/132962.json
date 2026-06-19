@@ -1,0 +1,124 @@
+{
+  "cod": "132962",
+  "title": "Premium Serisi Tezgah-Evyeler 1200 mm Et ve Balık Hazırlama/Yıkama Tezgahı",
+  "category": "Et ve balık Hazırlık Tezgahları",
+  "description": "Et ve balık hazırlık/yıkama tezgahı, delikli ve çıkarılabilir, bıçak tutacağı, polietilen kesme tahtası, drenaj, sıyırma hunisi, sırtlı, 1200mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/et-ve-bal%C4%B1k-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-1200-mm-et-ve-bal%C4%B1k-haz%C4%B1rlama-y%C4%B1kama-tezgah%C4%B1-132962/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1000 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Evye sayısı",
+          "value": "1"
+        },
+        {
+          "label": "Evye boyutları",
+          "value": "1070x320xH180"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "40 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tezgaha mobil bir çöp kutusu ilave edilebilir. (opsiyonel aksesuar).",
+        "Ünitenin, 20 mm derinliğinde gömülü yüzeyi, ön kısımda polietilen kesme tahtası ve sıyırma açıklığı, delikli ve bölmeli çıkarılabilir üst kısımları, kolayca çıkarılabilen gastronorm sıvı kabı ve bıçak tutucusu bulunmaktadır. Bıçak dezenfektanı ayrı satılı",
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +0/-40 mm ayarlanabilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "132962",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/TLV1210EN.dwg",
+      "local": "media/documents/132962/TLV1210EN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1200 mm Et ve Balık Hazırlama/Yıkama Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1200 mm Meat & Fish Processing_Washing Table_132962_Turkish.pdf",
+      "local": "media/documents/132962/1200%20mm%20Meat%20&%20Fish%20Processing_Washing%20Table_132962_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "132962",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_132962_TLC1210PN.rfa",
+      "local": "media/documents/132962/QF_ELECTROLUXPROFESSIONAL_132962_TLC1210PN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133070_1_1_133070.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133070_1_1_133070.jpg",
+      "local": "media/images/132962/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:43:19.751Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

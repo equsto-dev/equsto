@@ -1,0 +1,90 @@
+{
+  "cod": "391220",
+  "title": "Modüler Pişirme Ekipmanları 900XP Alt Dolap-Kapalı Tip - 200mm",
+  "category": "Alt Dolaplar",
+  "description": "Önü kapalı alt dolap - 200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/900xp/ara-tezgahlar-ve-alt-dolaplar/alt-dolaplar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-900xp-alt-dolap-kapal%C4%B1-tip-200mm-391220/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "14 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Ünite diğer setüstü 900XP modellerinin altına da monte edilir.",
+        "Ünitenin ayarlanabilir (50 mm) ayakları AISI304 paslanmaz çeliktir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Yüksek hijyen standartlarına uygun Scotch Brite yüzey sonlandırmaya sahip paslanmaz çelik konstruksiyon."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/391220/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "391220",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/391220_E9BANB00C0.dwg",
+      "local": "media/documents/391220/391220_E9BANB00C0.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "900XP Alt Dolap-Kapalı Tip - 200mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/900XP 200 mm Closed Base_391220_Turkish.pdf",
+      "local": "media/documents/391220/900XP%20200%20mm%20Closed%20Base_391220_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "391220",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_391220_E9BANB00C0.rfa",
+      "local": "media/documents/391220/QF_ELECTROLUXPROFESSIONAL_391220_E9BANB00C0.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391220_1_5_391220.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391220_1_5_391220.jpg",
+      "local": "media/images/391220/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391220_1_1_391220.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391220_1_1_391220.jpg",
+      "local": "media/images/391220/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T10:00:48.082Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

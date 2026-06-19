@@ -1,0 +1,113 @@
+{
+  "cod": "922727",
+  "title": "Havalandırma Ekipmanları 6 üstü 6 GN 1/1 veya 10 üstü 6 GN 1/1 istiflemeli, elektrikli fırınlar için fanlı kondensli davlumbaz",
+  "category": "Kurulum Çözümleri - Havalandırma",
+  "description": "6+6 veya 6+10 GN 1/1 elektrikli fırınlar için fanlı kondensli davlumbaz",
+  "url": "https://www.electroluxprofessional.com/tr/pd/cook-chill-pi%C5%9Fir-so%C4%9Fut-/skyline-f%C4%B1r%C4%B1nlar-i%C3%A7in-aksesuarlar/kurulum-%C3%A7%C3%B6z%C3%BCmleri-havaland%C4%B1rma/havaland%C4%B1rma-ekipmanlar%C4%B1-6-%C3%BCst%C3%BC-6-gn-1-1-veya-10-%C3%BCst%C3%BC-6-gn-1-1-istiflemeli-elektrikli-f%C4%B1r%C4%B1nlar-i%C3%A7in-fanl%C4%B1-kondensli-davlumbaz-922727/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1 ph/50 Hz"
+        },
+        {
+          "label": "Standart kurulu güç",
+          "value": "0.4 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "875 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "1191 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "450 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "78 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "79 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Harici bağlantılı egzoz kanalı ihtiyacını ortadan kaldıran komple havalandırma sistemi.",
+        "3 otomatik hız moduna sahip fan motoru: - Kapak ve valf kapalıyken düşük hız;- Kapak kapalı valf açıkken orta hız;- Kapak açıkken yüksek hız.",
+        "Mutfağın tamamında hava değişim oranını hesaplar ve havalandırma normlarına (örneğin, VDI 2052 profesyonel mutfaklar için havalandırma standardına veya yerel standartlara) uygunluğu sağlar. Hava değişim oranının yetersiz olması davlumbazın arızalanmasına neden olabilir.",
+        "Ön labirent ve yoğuşma filtreleri kolayca çıkarılır ve bulaşık makinesinde yıkanabilir.",
+        "Egzost borusuna ihtiyaç yoktur.",
+        "Davlumbaz ile fırın arasındaki kablo bağlantısı, iki cihaz arasında iletişim sağlar. Davlumbaz fırının yazılımına bağlandığında, fırının gerçek zamanlı çalışmasına dayalı olarak fan gücünü ve koku emilimini otomatik olarak etkinleştirir.",
+        "Davlumbaz ve fırın senkronize şekilde çalışır. Fırın çalıştığında/durduğunda davlumbaz açılır/kapanır. Davlumbaz, kokuyu emmek için fanı, fırının gerçek zamanlı çalışmasına dayalı olarak Yüksek/Orta/Düşük güçte, otomatik olarak etkinleştirir.",
+        "Filitre yüzeyi yangın tehlikesine karşı koruma sağlar.",
+        "6 GN 1/1 veya 10 GN 1/1 katlı elektrikli LW kombi fırınlarda kullanılabilir.",
+        "Daha iyi filtreleme performansı için iki aşamalı kapak açma kiti (PNC 922265) önerilir."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Sistem doğru vakumu garanti altına alır ve yüksek enerji tasarrufu sağlar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Yönetmeliklere uygun olarak havalandırmanın olduğu bir alana monte edilmelidir.",
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır.",
+        "Çoklu filtreleme sistemi: - çıkan buharı ön filtreleme işleminden geçiren paslanmaz çelik labirent filtreler;- buhar-sıvı ayırıcı görevi gören yoğuşma filtresi ve ekstra damlacık ayırıcı.",
+        "Otomatik kapak açma aktivasyon sistemi.",
+        "ISO 9001, ISO 14001 ve ISO 50001 sertifikalı bir fabrikada geliştirilmiş ve üretilmiştir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Seriye genel bakış",
+      "type": "RAN",
+      "title": "922727",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/RAN/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf",
+      "local": "media/documents/922727/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "922727",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/HOCOST61011.dwg",
+      "local": "media/documents/922727/HOCOST61011.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "6 üstü 6 GN 1/1 veya 10 üstü 6 GN 1/1 istiflemeli, elektrikli fırınlar için fanlı kondensli davlumbaz",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/922727_Condensation hood for 6 on 6 GN 1_1 or 6 on 10 GN 1_1 stacked electric lenghtwise combi ovens.pdf",
+      "local": "media/documents/922727/922727_Condensation%20hood%20for%206%20on%206%20GN%201_1%20or%206%20on%2010%20GN%201_1%20stacked%20electric%20lenghtwise%20combi%20ovens.pdf"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_922718_1_1_922718.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_922718_1_1_922718.jpg",
+      "local": "media/images/922727/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:00:41.566Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/skyline-kombi-firin/"
+}

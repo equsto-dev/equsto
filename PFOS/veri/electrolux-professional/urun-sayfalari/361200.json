@@ -1,0 +1,90 @@
+{
+  "cod": "361200",
+  "title": "Servis Arabaları 2 Katlı Servis Arabası-600 mm İtme Kollu",
+  "category": "Servis Arabaları",
+  "description": "2 katlı servis arabası, itme kollu 600 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1-2-katl%C4%B1-servis-arabas%C4%B1-600-mm-i%CC%87tme-kollu-361200/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "695 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "695 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "916 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "18 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Eşit biçimde yerleştirildiğinde yükleme kapasitesi 100 kg'dır.",
+        "Dikişsiz, ses sönümlendirici malzemeyle takviye edilmiş rafların kenarları çift kıvrımlıdır ve şaseye kaynaklanmıştır.",
+        "Rafların ebadı: 600x600 mm.",
+        "Güçlü, ergonomik kulp ana karkasın uzantısı olarak imal edilmiştir.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361200",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/STR602WH.dwg",
+      "local": "media/documents/361200/STR602WH.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "2 Katlı Servis Arabası-600 mm İtme Kollu",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Two Tier Service Trolley with Handle 600 mm_361200_Turkish.pdf",
+      "local": "media/documents/361200/Two%20Tier%20Service%20Trolley%20with%20Handle%20600%20mm_361200_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361200",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361200_STR602WH.rfa",
+      "local": "media/documents/361200/QF_ELECTROLUXPROFESSIONAL_361200_STR602WH.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361200_1_1_361200.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361200_1_1_361200.jpg",
+      "local": "media/images/361200/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:49:05.388Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

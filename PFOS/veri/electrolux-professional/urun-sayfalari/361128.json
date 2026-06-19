@@ -1,0 +1,89 @@
+{
+  "cod": "361128",
+  "title": "Servis Arabaları Servis Tepsisi Toplama Arabası 10 Tepsilik",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "Servis tepsisi toplama arabası - 10xGN-EN1/1",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-servis-tepsisi-toplama-arabas%C4%B1-10-tepsilik-361128/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "515 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "610 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1460 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "25 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25x25 mm ebadında kare profildir ve tümüyle kaynaklıdır.",
+        "Krom kaplama galvaniz tepsi suportları temizlik amacıyla aşağı yukarı kaydırılır.",
+        "Demonte üst rafta bardak ve şişeler toplanır.",
+        "Tek sıra halinde 10 adet GN tepsi veya küvet alır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli ve krom kaplama galvaniz suportlu."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361128",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/RTT10.dwg",
+      "local": "media/documents/361128/RTT10.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Servis Tepsisi Toplama Arabası 10 Tepsilik",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Rack Trolley for 10 GN 1-1_361128_Turkish.pdf",
+      "local": "media/documents/361128/Rack%20Trolley%20for%2010%20GN%201-1_361128_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361128",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361128_RTT10.rfa",
+      "local": "media/documents/361128/QF_ELECTROLUXPROFESSIONAL_361128_RTT10.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361128_1_1_361128.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361128_1_1_361128.jpg",
+      "local": "media/images/361128/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:48:59.665Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

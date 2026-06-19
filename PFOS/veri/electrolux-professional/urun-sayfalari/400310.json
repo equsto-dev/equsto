@@ -1,0 +1,339 @@
+{
+  "cod": "400310",
+  "title": "Bulaşık Yıkama Tezgahaltı Bulaşık Makinesi (L), dokunmatik kontrol, tek cidarlı, AISI304 tesisat basınclı boyler, parlatıcı dispenseri, maks. 65 s/s, 3 faz",
+  "category": "NeoBlue Touch L (500x500mm sepet)",
+  "description": "Tezgah altı Bulaşık Makinesi (L), dokunmatik kontrol, tek cidarlı, tesisat basınçlı boyler, parlatıcı dispenserli, maks. 65 sepet/saat, Trifaze",
+  "url": "https://www.electroluxprofessional.com/tr/pd/bula%C5%9F%C4%B1k-y%C4%B1kama-ekipmanlar%C4%B1/tezgahalt%C4%B1-bula%C5%9F%C4%B1k-makineleri/neoblue-touch-l-500x500mm-sepet/bula%C5%9F%C4%B1k-y%C4%B1kama-tezgahalt%C4%B1-bula%C5%9F%C4%B1k-makinesi-l-dokunmatik-kontrol-tek-cidarl%C4%B1-aisi304-tesisat-bas%C4%B1ncl%C4%B1-boyler-parlat%C4%B1c%C4%B1-dispenseri-maks.-65-s-s-3-faz-400310/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "*65 r/h only available on App by Jan 2025",
+          "value": "*65 r/h only available on App by Jan 2025"
+        },
+        {
+          "label": "Sepet/Saat",
+          "value": "65 / 40 / 36 / 24 / 15"
+        },
+        {
+          "label": "Çevrim süresi (saniye)",
+          "value": "55 / 90 / 100 / 150 / 240"
+        },
+        {
+          "label": "Tabak/Saat",
+          "value": "1170 / 720 / 648 / 432 / 270"
+        },
+        {
+          "label": "Yıkama suyu sıcaklığı (MİN.)",
+          "value": "55-65°C"
+        },
+        {
+          "label": "Hücre boyutları-genişlik",
+          "value": "520 mm"
+        },
+        {
+          "label": "Hücre boyutları-derinlik",
+          "value": "540 mm"
+        },
+        {
+          "label": "Hücre boyutları-yükseklik",
+          "value": "400 mm"
+        },
+        {
+          "label": "Durulama sıcaklığı (MIN)",
+          "value": "60-85 °C"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "572 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "623 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "830 mm"
+        },
+        {
+          "label": "Ambalajlı ölçüleri (WxDxH)",
+          "value": "740x670x1000 mm"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-415 V/3N ph/50 Hz"
+        },
+        {
+          "label": "Voltaj değiştirilebilir",
+          "value": "230V 3~; 230V 1N~"
+        },
+        {
+          "label": "Standart kurulu güç",
+          "value": "5 kW"
+        },
+        {
+          "label": "Boyler ısıtma elemanları",
+          "value": "4,5 kW"
+        },
+        {
+          "label": "Tank ısıtma elemanları",
+          "value": "2 kW"
+        },
+        {
+          "label": "Yıkama pompasının ebadı",
+          "value": "0.55 kW"
+        }
+      ]
+    },
+    {
+      "group": "Performans tablosu (norm EN IEC 63136:2019)",
+      "items": [
+        {
+          "label": "Test edilmiş yıkama programı",
+          "value": "myEco"
+        },
+        {
+          "label": "Ortalama çevrim süresi (Tc), sn.",
+          "value": "447"
+        },
+        {
+          "label": "Güç hazır kullanım modu (Pu), kW",
+          "value": "0.19"
+        },
+        {
+          "label": "İlk dolum için enerji tüketimi (Es), kWh",
+          "value": "1.37"
+        },
+        {
+          "label": "İlk dolum için su tüketimi (Vs), l",
+          "value": "21.5"
+        },
+        {
+          "label": "Raf başına tabak sayısı",
+          "value": "18"
+        },
+        {
+          "label": "[NOT TRANSLATED]",
+          "value": "93"
+        },
+        {
+          "label": "Kir tutma performansı (xres)",
+          "value": "0.7"
+        },
+        {
+          "label": "Ortalama enerji tüketimi (Ec), kWh",
+          "value": "0.26"
+        },
+        {
+          "label": "Ortalama su tüketimi (Vc), l",
+          "value": "2.1"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Ses seviyesi",
+          "value": "<70 dBA"
+        },
+        {
+          "label": "Paketleme türü",
+          "value": "Box on pallet"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Basınç, bar min/max",
+          "value": "2-5 bar"
+        },
+        {
+          "label": "Giriş suyu sıcaklığı",
+          "value": "55-65 °C"
+        },
+        {
+          "label": "Drenaj hattının ebadı",
+          "value": "40 mm"
+        },
+        {
+          "label": "Giriş suyu basıncı",
+          "value": "29 - 73 psi (2 - 5 bar)"
+        },
+        {
+          "label": "Yıkama tankı kapasitesi (lt)",
+          "value": "22"
+        },
+        {
+          "label": "Çevrim başına su tüketimi (lt)",
+          "value": "2.1 / 2.4"
+        },
+        {
+          "label": "Boyler Kapasitesi (lt)",
+          "value": "5,8"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "3 veya tek fazlı elektirik bağlantısı, montaj sırasında değiştirilebilir.",
+        "Servis ve bakım ihtiyaçlarını en aza indirirken mükemmel sonuç için program sırasında otomatik ilk ve sürekli yüklemeli dahili parlatıcı gözü.",
+        "400 mm'lik boşluk yüksekliği, 325 mm yüksekliğe kadar bardakların, 360 mm çapa kadar pizza tabaklarının ve GN 1/1 tepsilerin (530 × 325 mm) yıkanmasına olanak tanır.",
+        "Tek parça üst ve alt kollar klipsli tiptedir, birbirinin yerine geçebilir, çıkarılması ve yeniden takılması kolaydır. Kombine yıkama ve durulama püskürtme sistemi, mükemmel yıkama performansı için haznenin içindeki geniş su kapsama alanını garanti eder.",
+        "Hazne içindeki pompa filtresi, genişletilmiş yüzeyi ile yıkama pompasına kir girmesini önler ve yıkama suyunu temiz tutar.",
+        "Hijyenik durulama için doğru durulama sıcaklığını garantilemek için gelen suyu 55-65 °C'ye çıkaracak şekilde boyutlandırılmış dahili basınç kazanı. Harici güçlendiriciye gerek yoktur.",
+        "Uygulama, yıkama programlarının yerinde özelleştirilmesine ve kimyasal dozajının ayarlanmasına olanak tanır. Cihaz ve alarm bilgilerinin zamanında geri bildirimini sağlar.",
+        "Birbiriyle bağlantılı sıcaklık sistemi hem yıkama hem de durulama suyunda istenen sıcaklıkları garanti eder.",
+        "Dokunmatik düğmeli kullanıcı arayüzü, cihaz durumunu yansıtan farklı renkleri ve LED simgeleri kullanarak faydalı bilgiler sağlar.",
+        "Etkili bir durulama sistemi, daha düşük işletme maliyetleri için sepet başına yalnızca 2,1/2,4 litre temiz sıcak su kullanır.",
+        "Profesyonel yıkama için kompozit malzemeden entegre döner yıkama ve durulama kolları, yüksek güçlü yıkama pompası ve yüksek kapasiteli boyler ile donatılmış yıkama sistemi.",
+        "Yıkama işleminden sonra ve durulamadan önce 4 saniyelik (süre değiştirilebilir) fasıla sayesinde durulamadan sonra temiz olmayan su damlacıklarının temiz bulaşıkların üzerine damlaması önlenir.",
+        "Tam otomatik kendi kendini temizleme programı makinenin içinde bakteri oluşumunu engeller.",
+        "İleri teknoloji ürünü elektronik kontrol; entegre programlama, servis ve bakım için arıza belirleme, otomatik olarak kendi kendini temizleme programını gerçekleştirir.",
+        "Teknik amaçlı olarak ön, elektronik kartlar için üst; ana bileşenler için alt panelden basit servis.",
+        "Uygulamada mevcut olan hızlı programla (Ocak 2025’ten itibaren), ideal koşullarda saatte 65 sepet veya 1170 tabak maksimum teorik yıkama kapasitesi.",
+        "Suya karşı koruma sınıfı: IPX4."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "MyEco programı ile sepet başına 2,1 lt su tüketimi.",
+        "UL Sertifikasyonuna* göre, önceki seriye kıyasla @’a kadar azalan enerji tüketimiyle yılda 4,212 kWh’ye eşdeğer tasarruf ve su kullanımında 2 lt'ye kadar azalma elde edilir, bu da program başına yalnızca 0,08 kg CO₂ eşdeğeri sağlar. (*Ürün kullanımı sırasında enerji tüketimine göre hesaplama (36 program/gün, 300 gün/yıl), kalibre edilmiş AB veri tabanı güncelleme değerlerine göre çeşitli enerji kaynakları dikkate alınarak yapılmıştır [kgCO2eq /KWh] - Kaynak: 2023’te yayınlanan",
+        "- IEA’ya göre 2021 için EIA Emisyon Faktörleri, Elektrik ve Isı CO2 için belirtilmiştir ve CH4 ve N2O faktörlerini de içermektedir. MyEco programı kullanılarak NeoBlue Touch ile program başına 3 lt su tüketimine sahip önceki Electrolux Profesyonel Tezgahaltı serisi arasında karşılaştırma yapılmıştır).",
+        "ErgoCert 4 yıldız sertifikalı ergonomik tasarım ve kullanım kolaylığı. Kullanıcı dostu arayüzü basit kullanımı ve ergonomik tasarım kullanıcının minimum stres yaşamasını sağlar. Çıkarılabilir bileşenlerdeki renkli temas noktaları, hızlı temizlik işlemlerinin yapılmasını sağlar.",
+        "Palet üzerindeki karton ambalaj tamamen geri dönüştürülebilirdir. Karton, tam sürdürülebilirliği ve çevresel açıdan sorumluluğu temin etmek için, p geri dönüştürülmüş malzemeden ve FSC* sertifikalı kağıttan üretilmiştir ve çevre dostu su bazlı mürekkeple basımı yapılmıştır. (* Dünyanın sürdürülebilir ormancılık alanında lider örgütü olan Orman Yönetim Konseyi).",
+        "Servis teknisyenlerine kolay erişim, özel teşhis desteği ve sorun giderme prosedürü ve en az 10 yıl yedek parça bulunabilirliği sayesinde ürün ömrünün uzaması.",
+        "MyEco programı ile program başına 260 watt ortalama enerji tüketimi.",
+        "Uygulama ile ayarlanabilen yıkama programları ve kimyasallar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Ön ve yan paneller, kapı ve yıkama tankı ağır hizmete uygun korozyona dayanıklı 304 AISI paslanmaz çelikten imal edilmiştir.",
+        "Korozyona karşı yüksek dayanıklılık sağlayan özel kaynaklı 304 paslanmaz çelik boyler.",
+        "Boyler drenajı, boylerin içinde uzun süre kalan suyu boşaltarak daha yüksek seviyede hijyen sağlar.",
+        "Yuvarlatılmış köşeli geniş yıkama tankında herhangi bir boru yoktur; kir birikmez, kolayca temizlenir.",
+        "Düşük su seviyesine karşı rezistans koruması.",
+        "Çift cidarlı izolasyonlu kapı",
+        "Arkası bir kapama pleytiyle tümüyle kapalıdır.",
+        "Temizliği kolaylaştıran düz yüzeyler.",
+        "Metal bağlantı parçalı PVC su hortumu yüksek basınca dayanıklıdır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "400310",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00236_1_5_16_14_EPR_Brochure_NeoBlueTouch_UCGW_TUR_20240912_LR.pdf",
+      "local": "media/documents/400310/BR_BR-9JE00236_1_5_16_14_EPR_Brochure_NeoBlueTouch_UCGW_TUR_20240912_LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "400310",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/400310_ETUCLP3.dwg",
+      "local": "media/documents/400310/400310_ETUCLP3.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Tezgahaltı Bulaşık Makinesi (L), dokunmatik kontrol, tek cidarlı, AISI304 tesisat basınclı boyler, parlatıcı dispenseri, maks. 65 s/s, 3 faz",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/400310_Undercounter Dishwasher (L), touch control, single skin with pressure boiler in AISI 304, rin.pdf",
+      "local": "media/documents/400310/400310_Undercounter%20Dishwasher%20(L),%20touch%20control,%20single%20skin%20with%20pressure%20boiler%20in%20AISI%20304,%20rin.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "400310",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_400310_ETUCLP3.rfa",
+      "local": "media/documents/400310/QF_ELECTROLUXPROFESSIONAL_400310_ETUCLP3.rfa"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "400310",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_400310_ETUCL3P.rfa",
+      "local": "media/documents/400310/QF_ELECTROLUXPROFESSIONAL_400310_ETUCL3P.rfa"
+    },
+    {
+      "category": "User Manuals",
+      "type": "OM",
+      "title": "400310 (Operating manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/OM/OM_59566XV01_4_17_OM__59566XV01_UC_05_tr.pdf",
+      "local": "media/documents/400310/OM_59566XV01_4_17_OM__59566XV01_UC_05_tr.pdf"
+    },
+    {
+      "category": "User Manuals",
+      "type": "IN",
+      "title": "400310 (Installation manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/IN/IN_59566XR01_3_18_IN__59566XR01_UC_04_tr.pdf",
+      "local": "media/documents/400310/IN_59566XR01_3_18_IN__59566XR01_UC_04_tr.pdf"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "864242",
+      "description": "Çatal-kaşık kutusu, sarı",
+      "quantity": "1"
+    },
+    {
+      "code": "867002",
+      "description": "18 tabak için bulaşık sepeti",
+      "quantity": "1"
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C13 ECO Bulaşık Makinesi Deterjanı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C12 Bulaşık makineleri için parlatıcı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C11 Bulaşık Makinesi Deterjanı; 20 litrelik 1 kutu.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C30 Çok Amaçlı Kireç Sökücü; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C15 ECO Bulaşık Makinesi Parlatıcısı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_400301_1_1_400301.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_400301_1_1_400301.jpg",
+      "local": "media/images/400310/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:37:26.931Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

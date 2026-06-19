@@ -1,0 +1,92 @@
+{
+  "cod": "361000",
+  "title": "Servis Arabaları Unlu Mamul Tepsileri için Araba 15x(400x600mm)",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "15 adet unlu mamul tepsisi (400x600 mm) için araba",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-unlu-mamul-tepsileri-i%C3%A7in-araba-15x400x600mm-361000/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "530 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "720 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1590 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "20 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Montajlı olarak teslim edilir.",
+        "400x600 mm ebadında unlu mamul tepsilerini taşımak için kullanılır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Scotch Brite yüzey sonlandırmaya sahip tümüyle 304 AISI paslanmaz çelik konstruksiyon.",
+        "ISO 9001 ve ISO 14001 sertifikalı fabrikada geliştirilmiş ve üretilmiştir.",
+        "Tüm tekerleklerde gri plastik tampon bulunur.",
+        "Ø 125 mm çapında 4 döner tekerlek, 2'si frenli.",
+        "L-biçimli rayların her iki ucu, basketleri tutmak için yukarı doğru kıvrılmıştır.",
+        "Dayanıklı iz bırakmayan tekerlekler."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361000",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/CTR15TS.dwg",
+      "local": "media/documents/361000/CTR15TS.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Unlu Mamul Tepsileri için Araba 15x(400x600mm)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Trolley for 15 pastry trays - 400x600mm_361000_Turkish.pdf",
+      "local": "media/documents/361000/Trolley%20for%2015%20pastry%20trays%20-%20400x600mm_361000_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361000",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361000_CTR15TS.rfa",
+      "local": "media/documents/361000/QF_ELECTROLUXPROFESSIONAL_361000_CTR15TS.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361000_1_1_361000.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361000_1_1_361000.jpg",
+      "local": "media/images/361000/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:51:58.451Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

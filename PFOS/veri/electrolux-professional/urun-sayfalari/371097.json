@@ -1,0 +1,149 @@
+{
+  "cod": "371097",
+  "title": "Modüler Pişirme Ekipmanları 700XP Elektrikli Setüstü Benmari, Tam Modul",
+  "category": "Setüstü Elektrikli Benmari",
+  "description": "Endüstriyel Elektrikli set üstü benmari, 1 hazneli-GN2/1-150 mm, derinlik 730 mm - 800 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/benmariler/set%C3%BCst%C3%BC-elektrikli-benmari/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-elektrikli-set%C3%BCst%C3%BC-benmari-tam-modul-371097/",
+  "specifications": [
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Drenaj",
+          "value": "50 mm"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (genişlik)",
+          "value": "630 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (yükseklik)",
+          "value": "156 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (derinlik)",
+          "value": "510 mm"
+        },
+        {
+          "label": "Termostat Aralığı",
+          "value": "30 °C MIN; 90 °C MAX"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "27 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "35 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "520 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "860 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.37 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "EBM78"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-400 V/2N ph/50-60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "3 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Cihazlar önü açık alt dolap, köprü suportları veya konsol sistemi üzerine monte edilir.",
+        "Benmari, sıcak su kullanarak yemeğin servis sıcaklığında muhafaza edilmesini sağlar.",
+        "Incoloy (nikel-krom-titanyum alaşımlı) kaplamalı rezistanslar hazne tabanının altına yerleştirilmiştir.",
+        "Su doldurma seviyesi haznenin yan duvarında işaretlidir.",
+        "Hazne manuel olarak doldurulur.",
+        "Su sıcaklığı termostatla kontrol edilir; maksimum sıcaklık 90°C'dir.",
+        "Haznedeki su makinenin önündeki bir musluktan drenaj edilir.",
+        "Tüm ana komponentler kolay bakım amacıyle ünitenin ön tarafında yer alır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Su haznesi cihazın üst tablasına dikişsiz biçimde kaynatılmıştır.",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371097/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371097",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7BMEHB000.dwg",
+      "local": "media/documents/371097/E7BMEHB000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Elektrikli Setüstü Benmari, Tam Modul",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP Full Module El. Bain Marie Top_371097-371145_Turkish.pdf",
+      "local": "media/documents/371097/700XP%20Full%20Module%20El.%20Bain%20Marie%20Top_371097-371145_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371097",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371097_E7BMEHB000.rfa",
+      "local": "media/documents/371097/QF_ELECTROLUXPROFESSIONAL_371097_E7BMEHB000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371097_1_1_371097.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371097_1_1_371097.jpg",
+      "local": "media/images/371097/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:10:34.854Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

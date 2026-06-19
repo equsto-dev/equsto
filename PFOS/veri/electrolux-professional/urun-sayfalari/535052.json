@@ -1,0 +1,402 @@
+{
+  "cod": "535052",
+  "title": "Bulaşık Yıkama green&clean Çok Durulamalı Konveyör Tip,Enerji Tasarruf Cihazı,ZERO LIME, orta boy kurutucu, elektrikli,200s/s,R>L",
+  "category": "Çoklu-durulamalı Konveyörlü Tip Bulaşık Makineleri - 200 sepet/saat - Kurutmalı",
+  "description": "Konveyörlü bulaşık makinası çoklu durulamalı, 200 sepet/saat, orta boy ön yıkama&kurutma, elektrikli, Sağdan>Sola, Enerji Tasarruf Cihazı, sürekli durulama, kendi kendini temizleme, SIFIR KİREÇ Cihazı, CLEAR BLUE Filtre Sistemi, WASH-SAFE KONTROL, dokunma",
+  "url": "https://www.electroluxprofessional.com/tr/pd/bula%C5%9F%C4%B1k-y%C4%B1kama-ekipmanlar%C4%B1/konvey%C3%B6rl%C3%BC-tip-bula%C5%9F%C4%B1k-makineleri/green-clean-%C3%A7oklu-durulamal%C4%B1-konvey%C3%B6rl%C3%BC-tip-bula%C5%9F%C4%B1k-makineleri/%C3%A7oklu-durulamal%C4%B1-konvey%C3%B6rl%C3%BC-tip-bula%C5%9F%C4%B1k-makineleri-200-sepet-saat-kurutmal%C4%B1/bula%C5%9F%C4%B1k-y%C4%B1kama-green-clean-%C3%A7ok-durulamal%C4%B1-konvey%C3%B6r-tipenerji-tasarruf-cihaz%C4%B1zero-lime-orta-boy-kurutucu-elektrikli200s-sr%3El-535052/",
+  "specifications": [
+    {
+      "group": "Hava emisyonu",
+      "items": [
+        {
+          "label": "Havadaki Nem (giriş, çıkış)",
+          "value": "100 / 100 % r.h."
+        },
+        {
+          "label": "Gizli ısı",
+          "value": "6900 W"
+        },
+        {
+          "label": "Hissedilen sıcaklık",
+          "value": "4700 W"
+        },
+        {
+          "label": "Hava akışı (giriş, çıkış)",
+          "value": "86 / 15 m³/h"
+        },
+        {
+          "label": "Hava sıcaklığı (giriş, çıkış)",
+          "value": "27 - 45 °C"
+        },
+        {
+          "label": "The data is measured at exhaust points at 25°C and 60% r.h. ambient conditions, 18°C inlet water temperature and refer only to the machine.",
+          "value": "The data is measured at exhaust points at 25°C and 60% r.h. ambient conditions, 18°C inlet water temperature and refer only to the machine."
+        },
+        {
+          "label": "This model requires a ventilation hood. Please refer to the attached \"Recommended Exhaust Hood Design\".",
+          "value": "This model requires a ventilation hood. Please refer to the attached \"Recommended Exhaust Hood Design\"."
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "When the machine runs at DIN 10510 compliant speed.",
+          "value": "When the machine runs at DIN 10510 compliant speed."
+        },
+        {
+          "label": "At average working conditions.",
+          "value": "At average working conditions."
+        },
+        {
+          "label": "Voltaj",
+          "value": "380-415 V/3N ph/50 Hz"
+        },
+        {
+          "label": "Enerji tüketimi",
+          "value": "29.6 kWh"
+        },
+        {
+          "label": "1. yıkama tankı ısıtma elemanları",
+          "value": "14 kW"
+        },
+        {
+          "label": "Üçlü tank ısıtma elemanları",
+          "value": "7 kW"
+        },
+        {
+          "label": "Standart kurulu güç",
+          "value": "34.1 kW"
+        },
+        {
+          "label": "Boyler ısıtma elemanları",
+          "value": "5 kW"
+        },
+        {
+          "label": "Min elektrik gücü",
+          "value": "27.1 kW"
+        },
+        {
+          "label": "Yıkama pompasının ebadı",
+          "value": "1.5 kW"
+        },
+        {
+          "label": "Durulama pompası boyutu (son, ikili, üçlü)",
+          "value": "0.55 / 0.32 / 0.32 kW"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "The higher the temperature, the faster the warm-up. Recommended temperature: 50°C.",
+          "value": "The higher the temperature, the faster the warm-up. Recommended temperature: 50°C."
+        },
+        {
+          "label": "When below 7°fH/4°dH special detergent and rinse aid are needed.",
+          "value": "When below 7°fH/4°dH special detergent and rinse aid are needed."
+        },
+        {
+          "label": "Giriş su hattı boyutu",
+          "value": "G 3/4\""
+        },
+        {
+          "label": "Giriş soğuk su hattı boyutu",
+          "value": "G 3/4\""
+        },
+        {
+          "label": "Drenaj hattının ebadı",
+          "value": "50mm"
+        },
+        {
+          "label": "Giriş suyu basıncı",
+          "value": "1.5-6 bar"
+        },
+        {
+          "label": "Giriş suyu besleme sıcaklığı (yıkama)",
+          "value": "5 - 65°C"
+        },
+        {
+          "label": "Yıkama ve durulama bölümü sıcak su giriş sıcaklığı",
+          "value": "5 - 30 °C"
+        },
+        {
+          "label": "Giriş suyu sertliği",
+          "value": "5-8 °fH / 2.8-4.5°dH"
+        },
+        {
+          "label": "Yıkama pompası akış hızı",
+          "value": "500 l/min"
+        },
+        {
+          "label": "Azami drenaj debisi",
+          "value": "1.8 l/s"
+        },
+        {
+          "label": "Yıkama tankı ebadı",
+          "value": "70 l"
+        },
+        {
+          "label": "İkili durulama tankı boyutu",
+          "value": "20 l"
+        },
+        {
+          "label": "Üçlü durulama tankı boyutu",
+          "value": "20 l"
+        },
+        {
+          "label": "Durulama suyu tüketimi",
+          "value": "Durulama suyu tüketimi:"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "For transportation purpose only, the depth can be reduced to 795mm by removing the control box and the door handles.",
+          "value": "For transportation purpose only, the depth can be reduced to 795mm by removing the control box and the door handles."
+        },
+        {
+          "label": "Reference norm used to measure the noise: IEC60335-2-58 annex AA.",
+          "value": "Reference norm used to measure the noise: IEC60335-2-58 annex AA."
+        },
+        {
+          "label": "Kapı açık olduğundaki yükseklik",
+          "value": "2095 mm"
+        },
+        {
+          "label": "Yükleme ağzının ebadı (genişlik)",
+          "value": "530 mm"
+        },
+        {
+          "label": "[NOT TRANSLATED]",
+          "value": "85 °C"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "3200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "895 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "2020 mm"
+        },
+        {
+          "label": "Yükleme ağzının ebadı (yükseklik)",
+          "value": "490 mm"
+        },
+        {
+          "label": "Yıkama suyu sıcaklığı",
+          "value": "55 - 65 °C"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "588 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "689 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "2200 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "1040 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "3990 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "9.13 m³"
+        },
+        {
+          "label": "Tezgahtan tezgaha mesafe",
+          "value": "3200 mm"
+        },
+        {
+          "label": "Üçlü durulama sıcaklığı",
+          "value": "70 - 75 °C"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Ses seviyesi",
+          "value": "<62 dBA"
+        },
+        {
+          "label": "Durulama suyu tüketimi maks. hızda",
+          "value": "80 l/h"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "IP25 koruma sınıfı; su jetlerine, katı cisimlere ve küçük hayvanlara (6 mm'den büyük) karşı koruma sağlar.",
+        "Büyük, denge ağırlıklı kontrol kapakları, yıkama ve durulama alanına her yönden engelsiz erişim sağlar. Kapak, enjeksiyonla doldurulmuş köpükle yalıtılmıştır. Bu, hem yapısal dayanıklılığı artırır hem de gürültü ve ısı kaybını azaltır.",
+        "Maksimum Su Teması (MWC) sağlayan yıkama kolları, yıkama tankının tüm uzunluğu boyunca konumlandırılmıştır.",
+        "Çoklu durulama kolları, çift durulama tanklarıyla birlikte çalışarak son durulama suyunu birkaç aşamada yeniden kullanır; böylece yıkanan ekipmanlarda hijyen sağlanır ve deterjan kalıntısı tamamen giderilir.",
+        "Kurutma bölgesi, güçlü bir fan yardımıyla dışarıdan kuru hava çekip iç hava ile karıştırarak tabaklardaki suyun büyük kısmını giderir. Bu sayede tabaklar güvenle tutulabilecek kadar serin bir sıcaklıkta ve kuru olarak çıkartılır.",
+        "Sezgisel dokunmatik ekran kontrol paneli, makine ile kolayca iletişim kurmak ve makine durumunu izlemek için kullanıcı-dostu bir ekrana sahiptir. Makine ile üç farklı etkileşim seviyesi sağlanır. Her biri operatöre, genel bakım personeline ya da yetkili servis ortağına ilgili mesajları ve bilgileri gösterir.",
+        "Tüm iç bileşenler: yıkama ve durulama kolları, tank filtreleri, perdeler temizlik için kolayca çıkarılabilir.",
+        "Girişte bulunan sıçrama siperliği, suyun makine dışına sıçramasını önler.",
+        "Bir arıza meydana geldiğinde otomatik yedekleme modu devreye girer. Hızlı çözümler için yönlendirmeli arıza giderme özelliği, 300'e yakın net bildirim ve 23 kolay takip edilebilir işlem içerir.",
+        "Ünite, makine kimliği, sayaçlar ve tüketim bilgileri, bileşenler, cihazlar ve alarm kayıtları gibi verilerin okunmasını kolaylaştıran bir USB portu ile donatılmıştır. Makine parametreleri yüklenip indirilebilir ve yazılım güncellenebilir.",
+        "Derin çekme preslenmiş yıkama tankı, tamamen yuvarlatılmış köşelere ve kir birikimini önlemek için tahliyeye doğru eğimli yapıya sahiptir; bu sayede birkaç dakika içinde hızlı tahliye sağlar. Kaynak noktası olmayan preslenmiş yıkama tankı, su sızdırmazlığı garanti eden bir çözüm sunar.",
+        "Tankta bulunan dahili Drenaj vanası, yıkama işlemini kesintiye uğratmadan tanktaki suyun otomatik olarak boşaltılıp tazelenmesini sağlar.",
+        "Otomatik boşaltma, temizlik ve sanitasyon döngüleri standart olarak sunulmaktadır. İç bölmeler, iç kapılar da dahil olmak üzere tamamen temizlenir ve dezenfekte edilir; bu sayede maksimum hijyen sağlanır ve bakteri oluşumu önlenir. Aynı zamanda operatörün manuel temizlik süresi ve iş yükü azaltılır.",
+        "Kendinden tahliyeli yıkama pompaları maksimum hijyen sağlar ve tüm yıkama ve durulama bölgeleri bir düğmeye basılarak otomatik olarak boşalır.",
+        "200 sepetin saatte maksimum kapasitesi, DIN 10510 veya NSF ANSI 3 uyumlu hıza kolayca dönüştürülebilir.",
+        "CLEAR BLUE filtreleme sistemi, yıkama suyundaki kirleri temizleyerek daha temiz su ve daha etkili deterjan sağlar. Bu sayede daha iyi yıkama performansı ve daha düşük işletme maliyeti sağlanır.",
+        "Entegre WASH-SAFE CONTROL sistemi, durulama suyunu dezenfekte etmek için su sıcaklığını 85°C'ye çıkarır. Harici bir boyler gerektirmez. Dahili hava bariyeri ve durulama güçlendirici pompa, su giriş koşullarından bağımsız olarak durulama döngüsü boyunca sabit sıcaklık ve basınç sağlar.",
+        "Üç farklı konveyör hızı, operatör tarafından kontrol paneli üzerinden seçilebilir ve sahada özelleştirilebilir.",
+        "Daha iyi ön-yıkama performansı sağlamak için ön-yıkama bölümü, soğuk su kullanır. Böylece yemek kalıntıları sıcaktan dolayı tabakta kalmaz."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Tüm bölmeler iç borusuzdur, bu sayede gizli kir birikintileri olmaz.",
+        "Farklı zonlarda bulunan otomatik başlat/durdur özelliği, sadece bir sepet o zonun içinden geçerken çalışmasını sağlar. Bu sayede su, enerji, kimyasal tüketimi ve gürültü azalır.",
+        "ZERO LIME (SIFIR KİREÇ ) cihazı, tamamen otomatik çalışan bir döngü ile boyler, hidrolik devre, yıkama ve durulama bölmelerindeki kireci tamamen temizleyerek en yüksek performansı sağlar. Yüksek verimli ısıtma elemanları sayesinde daha düşük enerji tüketimi sunar.",
+        "Entegre Enerji Tasarruf Cihazı (ESD), durulama ve yıkama tanklarında makine tarafından üretilen sıcak buharı kullanarak kazana girmeden önce gelen soğuk suyu 55°C’ye kadar ısıtır ve böylece enerji tasarrufu sağlar.",
+        "Çoklu Durulama teknolojisi, konveyör hızına bakılmaksızın her sepet için 0,4 litre durulama suyu tüketimini garanti ederek düşük enerji, su, deterjan ve parlatıcı tüketimi sağlar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm ana bileşenler dayanıklı ve paslanmaya karşı dirençli 304 tipi paslanmaz çelikten üretilmiştir: dış ön yüzey, yan paneller, iç bölmeler, yıkama ve durulama kolları, kapılar ve sepet taşıma sistemi.",
+        "Modüler tasarım, makinenin yalnızca teslimat için demonte edilip müşterinin sahasında tekrar monte edilmesini değil, aynı zamanda sahada ve zamanla özelleştirilmesini ve güncellenmesini de mümkün kılar.",
+        "Cihazın her iki yanında da hızlı ve kolay kurulum için giriş suyu, atık su, deterjan ve durulama katkı maddesi bağlantıları için harici ön düzenleme mevcuttur.",
+        "Makinenin altının temizliği için tam erişim sağlayan ayarlanabilir ayaklar.",
+        "Bulaşık makinesinin yapısı, uzun ömürlü sağlamlık sağlamak amacıyla 50 x 50 mm ebatlarında paslanmaz çelikten yapılmış sağlam bir çerçeveyle bir arada tutulmaktadır.",
+        "Ünite, sahada kolayca ön yıkama, yıkama ve 2 adede kadar kurutma modülü eklenebilmesi için modülerlik konseptiyle tasarlanmıştır.",
+        "Tüm elektrikli bileşenler, yüksek güvenilirlik sağlamak amacıyla sudan ve buhardan izole edilmiş IP65 koruma sınıfında merkezi bir kutu içerisinde toplanmıştır.",
+        "Makine DIN 10510 standardına uygun hızda çalıştığında.",
+        "Gürültü ölçümünde referans alınan norm: IEC60335-2-58, ek AA.",
+        "Tezgahtan tezgaha 2900mm uzunluk."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_green&clean Multirinse Rack Type DW TR",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00124_1_5_16_19_Çoklu Durulamalı Konveyörlü Tip Bulaşık Makineleri TR.pdf",
+      "local": "media/documents/535052/BR_BR-9JE00124_1_5_16_19_%C3%87oklu%20Durulamal%C4%B1%20Konvey%C3%B6rl%C3%BC%20Tip%20Bula%C5%9F%C4%B1k%20Makineleri%20TR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "535052",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/EMR20MEREW.dwg",
+      "local": "media/documents/535052/EMR20MEREW.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "L - tr\" data-ga-action=\"MAD2\" data-ga-category=\"search documentation\" >",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/535052_Turkish.pdf",
+      "local": "media/documents/535052/535052_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "535052",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_535052_EMR20MEREW.rfa",
+      "local": "media/documents/535052/QF_ELECTROLUXPROFESSIONAL_535052_EMR20MEREW.rfa"
+    },
+    {
+      "category": "User Manuals",
+      "type": "OM",
+      "title": "535052 (Operating manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/OM/OM_59566KT05_2_14_OM__59566KT05_RTR150-200-250-300_04_tr.pdf",
+      "local": "media/documents/535052/OM_59566KT05_2_14_OM__59566KT05_RTR150-200-250-300_04_tr.pdf"
+    },
+    {
+      "category": "User Manuals",
+      "type": "IN",
+      "title": "535052 (Installation manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/IN/IN_59566KS07_1_26_IN__59566KS07_02_tr.pdf",
+      "local": "media/documents/535052/IN_59566KS07_1_26_IN__59566KS07_02_tr.pdf"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "535038",
+      "description": "Çoklu durulamalı konveyörlü bulaşık makinası için, kapılı, orta boy kurutma",
+      "quantity": "1"
+    },
+    {
+      "code": "865280",
+      "description": "ESD'li konveyörlü bulaşık makinalarında çıkış ağzı için davlumbaz bağlantı kiti, sağda",
+      "quantity": "1"
+    },
+    {
+      "code": "865282",
+      "description": "Konveyörlü bulaşık makinesi için kit",
+      "quantity": "1"
+    },
+    {
+      "code": "922421",
+      "description": "OnE Connected (Kombi Fırınlar, Şok Soğutucu/Dondurucular, Konveyörlü Tip Bulaşık Makineleri) ve SkyDuo için IoT modülü (Her cihaz için bir IoT kartı gereklidir - Cook&Chill süreci için fırını şok soğutucuya bağlamak için)",
+      "quantity": "1"
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C13 ECO Bulaşık Makinesi Deterjanı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C12 Bulaşık makineleri için parlatıcı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C11 Bulaşık Makinesi Deterjanı; 20 litrelik 1 kutu.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C30 Çok Amaçlı Kireç Sökücü; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C15 ECO Bulaşık Makinesi Parlatıcısı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_535028_1_1_535028.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_535028_1_1_535028.jpg",
+      "local": "media/images/535052/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:39:52.852Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

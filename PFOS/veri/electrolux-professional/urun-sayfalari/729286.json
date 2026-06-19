@@ -1,0 +1,174 @@
+{
+  "cod": "729286",
+  "title": "Ekmekleme Paneleme İstasyonu ProSift MINI Paneleme istasyonu 1 modül",
+  "category": "Ekmek İstasyonları",
+  "description": "Ekmek Paneleme İstasyonu, 1 modüllü ProSift mini",
+  "url": "https://www.electroluxprofessional.com/tr/pd/so%C4%9Futma-ekipmanlar%C4%B1/tezgah-tip-so%C4%9Futucular-ve-derin-dondurucular/ekmek-i%CC%87stasyonlar%C4%B1/ekmekleme-paneleme-i%CC%87stasyonu-prosift-mini-paneleme-istasyonu-1-mod%C3%BCl-729286/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1 ph/50/60 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "0.05 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "710 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "795 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "958 mm"
+        },
+        {
+          "label": "Dış boyutlar, Ağırlık",
+          "value": "89 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "89 kg"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.94 m³"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Anlık tüketim",
+          "value": "0.4 Amps"
+        },
+        {
+          "label": "Ses seviyesi",
+          "value": "42 dBA"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Kesintisiz eleme programı, operatörün önceki ürün partisinin eleme programı devam ederken paneleme yapmasına olanak tanır.",
+        "Patentli otomatik iki aşamalı eleme sistemi, her seferinde maksimum eleme verimi ve üst düzey yiyecek kalitesi sunar. İki aşamalı tambur, istenmeyen hamur topaklarını çıkararak unun daha temiz kalmasını ve kızartma yağının daha uzun süre kullanılmasını sa",
+        "Oldukça dayanıklı plastik hazneli paneleme sistemi. Plastik tekneler, 2 entegre kulp sayesinde tezgahtan kolayca çıkarılabilir. Teknelerin alt kısmında, unun otomatik olarak filtrelenmek üzere ara hazneye boşaltılması ve sonrasında eleme tamburuna aktarıl"
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek kullanımlık plastik bileşenleri yoktur.",
+        "Uluslararası ISO 9001, ISO14001, OHSAS 18001, ISO 5001 sertifikasyonuna uygun olarak üretilmektedir.",
+        "Ünitenin 2 m uzunluğunda bir elektrik kablosu bulunmaktadır.",
+        "Suya karşı koruma sınıfı: IPX3.",
+        "Un ve gıda ile temas eden tüm malzemeler ve plastik parçalar Gıda ile Temas yönetmeliğine uygundur ve bulaşık makinesinde yıkanabilir.",
+        "2'si frenli 4 tekerleğe sahiptir.",
+        "Tüm konstruksiyon, her türlü çalışma ortamına dayanıklı 304 AISI paslanmaz çeliktendir.",
+        "CE onaylı (Makine Direktifi) CB uzatması.",
+        "Sessiz çalışma özelliğiyle, çalışma alanında ön kısma yakın kurulum imkanı."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "729286",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/BRDST1MS.dwg",
+      "local": "media/documents/729286/BRDST1MS.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "ProSift MINI Paneleme istasyonu 1 modül",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/729286_ProSift MINI Breading station 1 module_Turkish.pdf",
+      "local": "media/documents/729286/729286_ProSift%20MINI%20Breading%20station%201%20module_Turkish.pdf"
+    },
+    {
+      "category": "El Broşürleri",
+      "type": "CLF",
+      "title": "Restoran Zincirleri - Tavuk",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CLF/CLF_CLF-9JE00319_1_5_16_5_TR - CLF-9JE00319_EPR-Chains-leaflet-chicken.pdf",
+      "local": "media/documents/729286/CLF_CLF-9JE00319_1_5_16_5_TR%20-%20CLF-9JE00319_EPR-Chains-leaflet-chicken.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "729286",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_729286_BRDST1MS.rfa",
+      "local": "media/documents/729286/QF_ELECTROLUXPROFESSIONAL_729286_BRDST1MS.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "880533",
+      "description": "Paneleme istasyonu için taşıma kabı kapağı",
+      "quantity": "1"
+    },
+    {
+      "code": "880540",
+      "description": "Taşıma kabı sabitleme halkası",
+      "quantity": "1"
+    },
+    {
+      "code": "881183",
+      "description": "Paneleme istasyonu için kauçuk tapalı beyaz taşıma kabı",
+      "quantity": "1"
+    },
+    {
+      "code": "881184",
+      "description": "Paneleme istasyonu için kauçuk tapalı gri taşıma kabı",
+      "quantity": "1"
+    },
+    {
+      "code": "881215",
+      "description": "Paneleme istasyonu için plastik kazıyıcı",
+      "quantity": "1"
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_729286_1_1_729286.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_729286_1_1_729286.jpg",
+      "local": "media/images/729286/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:36:42.911Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/tezgah-tipi-sogutucular/"
+}

@@ -32,6 +32,7 @@ import {
 } from "./caglayan-marka";
 import {
   isAtalayPisirmePfosKalem,
+  isAtalayPisirmeRow,
 } from "./atalay-marka";
 import {
   CALISMA_TEZGAH_MARKA,
@@ -264,6 +265,9 @@ export function resolveTeklifMarka(opts: {
     if (m.includes("rational")) return "Rational";
     if (m.includes("unox")) return "Unox";
     if (m.includes("electrolux")) return "Electrolux";
+    if (isAtalayPisirmeRow({ sku: opts.sku, marka_ad: opts.katalogMarka })) {
+      return "Atalay";
+    }
     if (isOztiPisirmeRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })) {
       return OZTI_MARKA;
     }

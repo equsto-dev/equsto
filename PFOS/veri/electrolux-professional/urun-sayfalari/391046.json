@@ -1,0 +1,140 @@
+{
+  "cod": "391046",
+  "title": "Modüler Pişirme Ekipmanları 900XP Elektrikli Setüstü Kapalı Ocak - 400 mm",
+  "category": "Elektrikli Ocaklar",
+  "description": "Elektrikli set üstü tek büyük pleytli ocak, karbon çelik üst tabla, 2 ısı zonu - 400 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/900xp/dinlendirme-ocaklar%C4%B1/elektrikli-ocaklar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-900xp-elektrikli-set%C3%BCst%C3%BC-kapal%C4%B1-ocak-400-mm-391046/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Pişirme Yüzeyi Derinliği",
+          "value": "Pişirme Yüzeyi Derinliği:"
+        },
+        {
+          "label": "Pişirme Yüzeyi Genişliği",
+          "value": "Pişirme Yüzeyi Genişliği:"
+        },
+        {
+          "label": "MIN. çalışma sıcaklığı",
+          "value": "MIN. çalışma sıcaklığı:"
+        },
+        {
+          "label": "MAX.çalışma sıcaklığı",
+          "value": "MAX.çalışma sıcaklığı:"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "60 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "59 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "540 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "460 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "1020 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.25 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "EH92S"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-400 V/3N ph/50-60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "7 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Ocağın üst tablası karbon çeliğindendir, düz ve temizliği kolaydır.",
+        "Ayrı ayrı kontrol edilen 2 pişirme zonu.",
+        "Kılıflı rezistanlarla ısıtma.",
+        "Farklı pişirme ihtiyaçlarına cevap veren hassas ısı kontrolu; farklı zonlarda derece derece sıcaklık ayarı.",
+        "Geniş yüzeyi sayesinde çeşitli ebatlarda tava ve tencereler aynı anda kullanılabilir.",
+        "Tencereler kaldırmaya gerek olmadan bir zondan diğerine taşınabilir.",
+        "Tüm ana komponentler kolay bakım amacıyle ünitenin ön tarafında yer alır.",
+        "Kontrol düğmesinin özel dizaynı içine su sızmasına imkan vermez."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Ünite 930 mm derinliktedir ve geniş bir çalışma yüzeyine sahiptir.",
+        "Suya karşı koruma sınıfı ve sertifikası: IPX5",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/391046/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "391046",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E9HOED2000.dwg",
+      "local": "media/documents/391046/E9HOED2000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "900XP Elektrikli Setüstü Kapalı Ocak - 400 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/900XP Half Module Electric Hob Cooking Top_391046_Turkish.pdf",
+      "local": "media/documents/391046/900XP%20Half%20Module%20Electric%20Hob%20Cooking%20Top_391046_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "391046",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_391046_E9HOED2000.rfa",
+      "local": "media/documents/391046/QF_ELECTROLUXPROFESSIONAL_391046_E9HOED2000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391046_1_1_391046.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391046_1_1_391046.jpg",
+      "local": "media/images/391046/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:02:29.725Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

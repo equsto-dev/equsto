@@ -1,0 +1,168 @@
+{
+  "cod": "291214",
+  "title": "Pizza Teşhir Ünitesi Set üstü soğutmalı garnitür ünitesi 1780mm",
+  "category": "Pizza Tezgahları R290",
+  "description": "Set üstü soğutmalı garnitür ünitesi, 1780 mm, R290",
+  "url": "https://www.electroluxprofessional.com/tr/pd/so%C4%9Futma-ekipmanlar%C4%B1/tezgah-tip-so%C4%9Futucular-ve-derin-dondurucular/pizza-tezgahlar%C4%B1/pizza-tezgahlar%C4%B1-r290/pizza-te%C5%9Fhir-%C3%BCnitesi-set-%C3%BCst%C3%BC-so%C4%9Futmal%C4%B1-garnit%C3%BCr-%C3%BCnitesi-1780mm-291214/",
+  "specifications": [
+    {
+      "group": "Sertifikalar ISO",
+      "items": [
+        {
+          "label": "ISO Standards",
+          "value": "ISO 9001; ISO 14001; ISO 45001; ISO 50001"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1 ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "0.2 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1780 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "350 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "250 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "42 kg"
+        }
+      ]
+    },
+    {
+      "group": "Soğutma verileri",
+      "items": [
+        {
+          "label": "Kontrol tipi",
+          "value": "Dijital"
+        },
+        {
+          "label": "Min.Çalışma sıcaklığı",
+          "value": "0 °C"
+        },
+        {
+          "label": "Max.çalışma sıcaklığı",
+          "value": "10 °C"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Soğutucu gaz tipi",
+          "value": "R290"
+        },
+        {
+          "label": "Soğutma gücü",
+          "value": "314 W"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tropik iklim koşullarına uygun ünite.",
+        "Tüm uluslararası sertifikasyonlarla uyumludur ve CE işaretlidir.",
+        "Cam panelsiz de kullanılacak şekilde dizay edilmiştir; yanları, üstü ve arkayı kapatacak cam paneller ayrıca sipariş edilmelidir.",
+        "GN1/4 ve GN1/2 küvetlerle kullanılacak şekilde dizayn edilmiştir.",
+        "Teşhir ünitesi ¼ ve ½ GN küvet alır."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "CFC ve HCFC içermez, son derece çevre dostu soğutucu gaz türü: R290 (yalıtım köpüğünde kullanılan çevreci gaz: siklopentan). En düşük çevresel etkiye sahip hidrokarbon soğutucu gaz R290 (GWP=3), sera etkisini ve ozon tabakasına verilen zararı azaltmak için kullanılır.",
+        "Yüksek verimli entegre soğutma ünitesi düşük ses emisyonlu ve enerji tasarrufludur. Sıcaklık termostatla kontrol edilir."
+      ]
+    },
+    {
+      "group": "User Interface & Data Management",
+      "items": [
+        "Ürünü (aksesuarla) Wi‑Fi veya Ethernet bağlantısıyla OneConnected Platform'a bağlayarak sorunsuz bir uzaktan deneyim yaşarsınız. Gerçek zamanlı izleme ve analiz, alarm yönetimi, HACCP veri yönetimi, API'ler ve gelişmiş özellikler buzdolabınızı tamamen kontrol altında tutmanıza olanak sağlar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "ISO 9001 ve ISO 14001 sertifikalı fabrikada geliştirilmiş ve üretilmiştir.",
+        "Teşhir ünitesinin kablosu sol veya arka taraftan çıkar ve farklı montaj biçimlerine olanak verir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "291214",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/291214_ZVR1780H.dwg",
+      "local": "media/documents/291214/291214_ZVR1780H.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Set üstü soğutmalı garnitür ünitesi 1780mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/291214_Bench Type Refrigerated Show Case 1780mm_Turkish.pdf",
+      "local": "media/documents/291214/291214_Bench%20Type%20Refrigerated%20Show%20Case%201780mm_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "291214",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_291214_ZVR1780H.rfa",
+      "local": "media/documents/291214/QF_ELECTROLUXPROFESSIONAL_291214_ZVR1780H.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_291490_1_1_291490.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_291490_1_1_291490.jpg",
+      "local": "media/images/291214/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:21:26.856Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/tezgah-tipi-sogutucular/"
+}

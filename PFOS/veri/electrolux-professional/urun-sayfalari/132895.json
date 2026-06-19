@@ -1,0 +1,121 @@
+{
+  "cod": "132895",
+  "title": "Eco Serisi Tezgah-Evyeler Tek evyeli tezgah (400x500 mm) & sağ tarafı süzdürmeli - 1000 mm",
+  "category": "Tek Evyeli Ayaklı Çalışma Tezgahları",
+  "description": "Tek evyeli tezgah (400x500 mm), damlalık sağda - 1000 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-eco-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/evyeli-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/tek-evyeli-ayakl%C4%B1-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/eco-serisi-tezgah-evyeler-tek-evyeli-tezgah-400x500-mm-sa%C4%9F-taraf%C4%B1-s%C3%BCzd%C3%BCrmeli-1000-mm-132895/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1000 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Evye sayısı",
+          "value": "1"
+        },
+        {
+          "label": "Evye boyutları",
+          "value": "400X500XH250"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "40 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tümüyle paslanmaz çelik konstruksiyon.",
+        "Drenaj alanı kurutma işlemlerine uygundur.",
+        "Demonte olarak teslim edilir.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "132895",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/SL10DN.dwg",
+      "local": "media/documents/132895/SL10DN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Tek evyeli tezgah (400x500 mm) & sağ tarafı süzdürmeli - 1000 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1000 mm Sink with 1 Bowl - Right Drain_132895_Turkish.pdf",
+      "local": "media/documents/132895/1000%20mm%20Sink%20with%201%20Bowl%20-%20Right%20Drain_132895_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "132895",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_132895_SL10DN.rfa",
+      "local": "media/documents/132895/QF_ELECTROLUXPROFESSIONAL_132895_SL10DN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_132895_1_1_132895.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_132895_1_1_132895.jpg",
+      "local": "media/images/132895/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:40:49.368Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

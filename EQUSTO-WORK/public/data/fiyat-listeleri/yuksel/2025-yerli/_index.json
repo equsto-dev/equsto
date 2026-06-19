@@ -1,0 +1,51 @@
+{
+  "marka": "Yüksel Endüstriyel",
+  "liste": "YÜKSEL YERLİ - 2025",
+  "kaynak_pdf": "c:\\D Disk\\FİYAT LİSTELERİ\\YÜKSEL YERLİ - 2025.pdf",
+  "olusturma": "2026-06-06T12:02:17.650797+00:00",
+  "toplam_urun": 589,
+  "klasorler": [
+    {
+      "dept": "diger",
+      "slug": "accessories-ti-p-type",
+      "path": "diger/accessories-ti-p-type",
+      "adet": 1
+    },
+    {
+      "dept": "diger",
+      "slug": "epoxy-plastic-powder-coated-olcu-size-powder-coated",
+      "path": "diger/epoxy-plastic-powder-coated-olcu-size-powder-coated",
+      "adet": 12
+    },
+    {
+      "dept": "diger",
+      "slug": "fruit-vegetable-container",
+      "path": "diger/fruit-vegetable-container",
+      "adet": 1
+    },
+    {
+      "dept": "diger",
+      "slug": "olcu-size",
+      "path": "diger/olcu-size",
+      "adet": 48
+    },
+    {
+      "dept": "diger",
+      "slug": "rail-basket",
+      "path": "diger/rail-basket",
+      "adet": 2
+    },
+    {
+      "dept": "istif",
+      "slug": "portashelf",
+      "path": "istif/portashelf",
+      "adet": 489
+    },
+    {
+      "dept": "sogutma",
+      "slug": "sogutma-ekipmanlari",
+      "path": "sogutma/sogutma-ekipmanlari",
+      "adet": 36
+    }
+  ]
+}

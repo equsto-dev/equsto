@@ -1,0 +1,89 @@
+{
+  "cod": "361251",
+  "title": "Servis Arabaları Bulaşık Sepet Arabası-6 Basketlik 2 Rafı Eğimli",
+  "category": "Mobil Evyeler ve Sepet Arabaları",
+  "description": "Bulaşık sepet arabası, 6 sepetlik, 2'si eğimli",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/mobil-evyeler-ve-sepet-arabalar%C4%B1/servis-arabalar%C4%B1-bula%C5%9F%C4%B1k-sepet-arabas%C4%B1-6-basketlik-2-raf%C4%B1-e%C4%9Fimli-361251/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1590 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "22 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "L-şekilli kılavuz raylarının iki ucu yukarı doğru bükülmüştür.",
+        "İki üst ray eğimlidir.",
+        "500x500 mm ebadında bulaşık basketlerini taşımak için dizayn edilmiştir.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361251",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/MDNT6B.dwg",
+      "local": "media/documents/361251/MDNT6B.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Bulaşık Sepet Arabası-6 Basketlik 2 Rafı Eğimli",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/6 Dishwasher Rack Trolley - inclined_361251_Turkish.pdf",
+      "local": "media/documents/361251/6%20Dishwasher%20Rack%20Trolley%20-%20inclined_361251_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361251",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361251_MDNT6B.rfa",
+      "local": "media/documents/361251/QF_ELECTROLUXPROFESSIONAL_361251_MDNT6B.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361251_1_1_361251.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361251_1_1_361251.jpg",
+      "local": "media/images/361251/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:50:21.181Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

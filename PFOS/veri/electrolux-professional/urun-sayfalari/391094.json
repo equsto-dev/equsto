@@ -1,0 +1,170 @@
+{
+  "cod": "391094",
+  "title": "Modüler Pişirme Ekipmanları 900XP Elektrikli 1 Hazneli-18Lt Fritöz-400mm",
+  "category": "Elektrikli Fritözler",
+  "description": "18 Lt elektrikli fritöz, ısıtıcılar hazne içinde, 1 hazneli, 2x½ sepetli - 400 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/900xp/frit%C3%B6zler/elektrikli-frit%C3%B6zler/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-900xp-elektrikli-1-hazneli-18lt-frit%C3%B6z-400mm-391094/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (genişlik)",
+          "value": "340 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (yükseklik)",
+          "value": "290 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (derinlik)",
+          "value": "400 mm"
+        },
+        {
+          "label": "Hazne Kapasitesi",
+          "value": "18 lt MIN; 20 lt MAX"
+        },
+        {
+          "label": "Termostat Aralığı",
+          "value": "105 °C MIN; 185 °C MAX"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "57 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "60 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "1080 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "460 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "1020 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.51 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "EFI9118"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-400 V/3N ph/50/60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "16.5 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Verimli yağ yönetimi için opsiyonel taşınabilir yağ kalitesi izleme aracı (kod 9B8081).",
+        "Incoloy kaplamalı (nikel-krom-titanyum alaşımlı) rezistanslar haznenin içine yerleştirilmiştir ve temizlik için havaya kaldırılır.",
+        "Yağ sıcaklığının termostatik kontrolü, maksimum 185 °C'ye kadar.",
+        "Tüm ünitelerde standart olarak aşırı ısınma koruma termostatı bulunmaktadır.",
+        "Yağ, haznenin altındaki bir konteynıra bir musluktan boşaltılır.",
+        "Tüm ana komponentler kolay bakım amacıyle ünitenin ön tarafında yer alır.",
+        "Kontrol düğmesinin özel dizaynı içine su sızmasına imkan vermez.",
+        "Ünitenin 50 mm çapında, paslanmaz çelik, dört bacağı vardır (Yuvarlak tekmelikler opsiyoneldir).",
+        "Standart olarak 2 yarım boy basketi ve alt dolap için 1 sağ kapısı vardır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Temizliği kolaylaştırmak için hazne iç kısmı yuvarlatılmış köşelere sahiptir.",
+        "Ünite 930 mm derinliktedir ve geniş bir çalışma yüzeyine sahiptir.",
+        "Suya karşı koruma sınıfı ve sertifikası: IPX5",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/391094/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "391094",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E9FRED1HF0.dwg",
+      "local": "media/documents/391094/E9FRED1HF0.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "900XP Elektrikli 1 Hazneli-18Lt Fritöz-400mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/900XP 1 Well Electric Fryer 18 liter_391094-391178_Turkish.pdf",
+      "local": "media/documents/391094/900XP%201%20Well%20Electric%20Fryer%2018%20liter_391094-391178_Turkish.pdf"
+    },
+    {
+      "category": "El Broşürleri",
+      "type": "CLF",
+      "title": "Restoran Zincirleri - Tavuk",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CLF/CLF_CLF-9JE00319_1_5_16_5_TR - CLF-9JE00319_EPR-Chains-leaflet-chicken.pdf",
+      "local": "media/documents/391094/CLF_CLF-9JE00319_1_5_16_5_TR%20-%20CLF-9JE00319_EPR-Chains-leaflet-chicken.pdf"
+    },
+    {
+      "category": "El Broşürleri",
+      "type": "CLF",
+      "title": "Restoran Zincirleri - Burgerler",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CLF/CLF_CLF-9JE00320_1_5_16_6_TR - CLF-9JE00320_EPR-Chains-leaflet-burgers.pdf",
+      "local": "media/documents/391094/CLF_CLF-9JE00320_1_5_16_6_TR%20-%20CLF-9JE00320_EPR-Chains-leaflet-burgers.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "391094",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_391094_E9FRED1HF0.rfa",
+      "local": "media/documents/391094/QF_ELECTROLUXPROFESSIONAL_391094_E9FRED1HF0.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "206350",
+      "description": "Alt dolaplar için kapı, Electrolux - 700&900XP",
+      "quantity": "1"
+    },
+    {
+      "code": "927223",
+      "description": "18-23 Lt fritözler için 2x1/2 sepet - 900XP",
+      "quantity": "1"
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391094_1_1_391094.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391094_1_1_391094.jpg",
+      "local": "media/images/391094/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:33:58.496Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

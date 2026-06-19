@@ -1,0 +1,77 @@
+{
+  "cod": "865303",
+  "title": "Giyotin tip Bulaşık Makineleri için Elleçleme Sistemi Bulaşık giriş-çıkış tezgahı, giyotin tip bulaşık makinesi için, 1200mm",
+  "category": "Yükleme/boşaltma tezgahları",
+  "description": "Bulaşık giriş-çıkış tezgahı, giyotin tip bulaşık makinesi için - 1200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/bula%C5%9F%C4%B1k-y%C4%B1kama-ekipmanlar%C4%B1/giyotin-tip-bula%C5%9F%C4%B1k-makineleri/y%C3%BCkleme-bo%C5%9Faltma-tezgahlar%C4%B1/giyotin-tip-bula%C5%9F%C4%B1k-makineleri-i%C3%A7in-elle%C3%A7leme-sistemi-bula%C5%9F%C4%B1k-giri%C5%9F-%C3%A7%C4%B1k%C4%B1%C5%9F-tezgah%C4%B1-giyotin-tip-bula%C5%9F%C4%B1k-makinesi-i%C3%A7in-1200mm-865303/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "910 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "12 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Demontedir, montajı kolaydır.",
+        "Bulaşık makinesinin sol, sağ ve ön tarafından bağlantı olanağı.",
+        "500x500 mm ebadında bulaşık basketlerini taşımak için dizayn edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Bir taraftan bulaşık makinesine monte edilir ve diğer tarafında bir çift bacağı vardır.",
+        "Paslanmaz çelik ayakların yüksekliği 50 mm ayarlanabilir; böylece tezgahın üzerindeki su bulaşık makinesine doğru akar.",
+        "Tüm yüzeyler taşlanmış ve düzdür.",
+        "40x40 mm ebadında kare profil bacaklar 304 AISI paslanmaz çeliktir.",
+        "Derin, damlatmayan profillerin alt kenarı tümüyle katlanmıştır; emniyetlidir ve kolayca temizlenir.",
+        "Her tarafı AISI 304 paslanmaz çelik konstrüksiyondur."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "865303",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/BHHLU12.dwg",
+      "local": "media/documents/865303/BHHLU12.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Bulaşık giriş-çıkış tezgahı, giyotin tip bulaşık makinesi için, 1200mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Dishwasher Table Unloading_Loading - 1200mm_865303_Turkish.pdf",
+      "local": "media/documents/865303/Dishwasher%20Table%20Unloading_Loading%20-%201200mm_865303_Turkish.pdf"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_865303_1_1_865303.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_865303_1_1_865303.jpg",
+      "local": "media/images/865303/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:30:21.982Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

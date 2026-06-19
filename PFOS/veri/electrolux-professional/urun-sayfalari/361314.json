@@ -1,0 +1,91 @@
+{
+  "cod": "361314",
+  "title": "Servis Arabaları GN Küvet Arabası-GN1/1 Yükseklik Ayarı",
+  "category": "GN Küvet Arabaları",
+  "description": "GN küvet arabası, 1xGN1/1, ayarlanabilir yükseklik",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/gn-k%C3%BCvet-arabalar%C4%B1/servis-arabalar%C4%B1-gn-k%C3%BCvet-arabas%C4%B1-gn1-1-y%C3%BCkseklik-ayar%C4%B1-361314/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "390 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1100 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "15 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Eşit biçimde yerleştirildiğinde yükleme kapasitesi 70 kg'dır.",
+        "Dikişsiz ses sönümlendirici platform rafın kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "1XGN1/1 küvet için yüksekliği ayarlanabilir suport.",
+        "Platform raf boyutları 550x390 mm.",
+        "Kulp tüm yükü taşıyan karkas yapının bir parçasıdır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361314",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/CTR11VH.dwg",
+      "local": "media/documents/361314/CTR11VH.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "GN Küvet Arabası-GN1/1 Yükseklik Ayarı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Trolley for GN 1-1 variable height_361314_Turkish.pdf",
+      "local": "media/documents/361314/Trolley%20for%20GN%201-1%20variable%20height_361314_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361314",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361314_CTR11VH.rfa",
+      "local": "media/documents/361314/QF_ELECTROLUXPROFESSIONAL_361314_CTR11VH.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361314_1_1_Al361314.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361314_1_1_Al361314.jpg",
+      "local": "media/images/361314/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:49:08.997Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

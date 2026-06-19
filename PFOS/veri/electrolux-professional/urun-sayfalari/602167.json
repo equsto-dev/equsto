@@ -1,0 +1,146 @@
+{
+  "cod": "602167",
+  "title": "Turbo Mikserler TBX Pro Turbo sıvılaştırıcı motor (aksesuarlar dahil değildir), 2 hızlı, 850/1700 rpm, 380- 440V/3ph/50Hz",
+  "category": "TBXPro",
+  "description": "TBX Pro Turbo sıvılaştırıcı motor (aksesuarlar dahil değildir), 2 hızlı, 850/1700 rpm, 380-440V/3ph/50Hz",
+  "url": "https://www.electroluxprofessional.com/tr/pd/dinamik-haz%C4%B1rl%C4%B1k/el-mikserleri-ve-turbo-mikserler/turbo-mikserler/tbxpro/turbo-mikserler-tbx-pro-turbo-s%C4%B1v%C4%B1la%C5%9Ft%C4%B1r%C4%B1c%C4%B1-motor-aksesuarlar-dahil-de%C4%9Fildir-2-h%C4%B1zl%C4%B1-850-1700-rpm-380-440v-3ph-50hz-602167/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-440 V/3 ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "2.2 kW"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "2.2 kW"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "Cable without plug"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "628 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "1556 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1122 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "80 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "92 kg"
+        },
+        {
+          "label": "Yükseklik ayarı",
+          "value": "1122/1372 mm"
+        },
+        {
+          "label": "Onay belgeleri",
+          "value": "UKCA;CE;CB"
+        },
+        {
+          "label": "Su geçirmezlik endeksi",
+          "value": "IP23"
+        },
+        {
+          "label": "Hız sayısı",
+          "value": "2"
+        },
+        {
+          "label": "Rotasyon hızı",
+          "value": "Rotasyon hızı:"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Turbomikser, doğrudan doğruya pişirme konteynırının içinde sebze ve balık çorbalarını sıvılaştırmak, karıştırmak, inceltmek ve emülsifiye etmek için kullanılır; sebze ve meyva püreleri hazırlar; sos ve kremaları karıştırıp sıvılaştırır.",
+        "Sadece motorlu taban ünitesinden oluşmaktadır. Cihazın çalışması için boru(lar) ve alet(ler) ayrı olarak sipariş edilmelidir (opsiyonel aksesuarlara bakınız).",
+        "Hızlı ve kolay yükseklik ayarı için krank koluna sahiptir.",
+        "Mikser tüpü, herhangi bir alete gerek olmadan kolayca sökülüp parçalarına ayrılabilir: Tüp, şaft, rulman ve rotor.",
+        "Borunun ve başlığın tüm bileşenleri paslanmaz çelikten yapılmıştır ve bulaşık makinesinde yıkanabilir (yataklar hariç).",
+        "emniyet aygıtı, makinenin start almasına sadece çalışma pozisyonunda olduğunda izin verir.",
+        "700 Litre sıvı veya 200 kg patates alabilen kazanlar için tavsiye edilir.",
+        "Türbin, sıvının pervane üzerine akmasını hızlandırır, daha ince öğütme sağlar, üretimi artırır.",
+        "Özel püre aleti kullanılarak patates püresi hazırlamak için kullanılabilir (opsiyonel aksesuarlara bakınız)."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Talep üzerine 380-440V/60Hz/3-faz olarak sunulmaktadır.",
+        "2 hızlı: 850 ve 1700 rpm.",
+        "Talep üzerine 60Hz olarak sunulmaktadır (S kodu).",
+        "Güç: 2200 watt.",
+        "Maksimum düzeyde dayanıklılık sağlayan paslanmaz çelik konstruksiyon.",
+        "Paslanmaz çelikten yapılmış mobil platform üzerine monte edilmiştir (4 adet frenli tekerlek). Saklama modu: yerden tasarruf etmek için motoru/kolu aşağı katlayın.",
+        "Destekli mobil platform, maksimum iki adet borunun (monte edilmiş aletle birlikte) saklanmasına olanak tanır.",
+        "Üçüncü taraf onaylanmış kuruluşun verdiği CB test raporu ile CE onaylı (Makine Direktifi).",
+        "Fişsiz 8 m güç kablosu bulunmaktadır.",
+        "Su geçirmez kontrol paneli IP65’e, makinenin tamamı ise IP23’e uygundur.",
+        "Motor gövdesi için 250mm yükseklik ayarı aralığı. Farklı boru uzunlukları ile farklı kap derinliklerine uygundur (opsiyonel aksesuarlara bakınız).",
+        "Gıda ile temas eden tüm parçalar 1935/2004/EC'ye uygundur."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "602167",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/602167_TBX2TH.dwg",
+      "local": "media/documents/602167/602167_TBX2TH.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "TBX Pro Turbo sıvılaştırıcı motor (aksesuarlar dahil değildir), 2 hızlı, 850/1700 rpm, 380- 440V/3ph/50Hz",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/602167_TBXPro Turboliquidizer motor, 2 speeds_Turkish.pdf",
+      "local": "media/documents/602167/602167_TBXPro%20Turboliquidizer%20motor,%202%20speeds_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "602167",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_602167_TBX2TH.rfa",
+      "local": "media/documents/602167/QF_ELECTROLUXPROFESSIONAL_602167_TBX2TH.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602167_1_1_602170_602168_602171_602167.png",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602167_1_1_602170_602168_602171_602167.png",
+      "local": "media/images/602167/hero-1.png"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602170_1_2_602170_602168_602171_602167.png",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602170_1_2_602170_602168_602171_602167.png",
+      "local": "media/images/602167/hero-2.png"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:04:34.936Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/kaynatma-kazanlari-devrilir-tavalar/kaynatma-kazanlari-ve-devrilir-tavalar-diger/"
+}

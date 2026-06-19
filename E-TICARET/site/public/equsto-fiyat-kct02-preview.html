@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KÇT02 — EQUSTO Fiyat Listesi</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #c8c8c8;
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      font-size: 11pt;
+      color: #000;
+    }
+    .wrap { max-width: 1100px; margin: 24px auto; padding: 0 16px 40px; }
+    .sheet {
+      background: #fff;
+      border: 1px solid #999;
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+      padding: 18px 20px 24px;
+    }
+    .sheet-title {
+      font-size: 13pt;
+      font-weight: 700;
+      margin: 0 0 16px;
+      letter-spacing: .2px;
+    }
+    .sheet-kod {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 10pt;
+      font-weight: 600;
+      color: #444;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 360px) 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+    table.excel {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11pt;
+    }
+    table.excel td {
+      border: 1px solid #d0d0d0;
+      padding: 3px 8px;
+      white-space: nowrap;
+    }
+    table.excel tr.eticaret td { background: #e2efda; }
+    table.excel tr.head td {
+      background: #f2f2f2;
+      font-weight: 700;
+      border-color: #bfbfbf;
+    }
+    table.excel td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    table.excel td.x { text-align: center; width: 18px; border-left: none; border-right: none; padding: 3px 2px; }
+    table.excel td.unit { border-left: none; color: #333; }
+    .drawing {
+      border: 1px solid #d0d0d0;
+      background: #fafafa;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .drawing img { max-width: 100%; max-height: 520px; object-fit: contain; }
+    .legend {
+      margin-top: 14px;
+      font-size: 10pt;
+      color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .swatch { display: inline-block; width: 14px; height: 14px; background: #e2efda; border: 1px solid #a9d18e; vertical-align: middle; margin-right: 6px; }
+    .meta { margin-top: 10px; font-size: 10pt; color: #666; }
+    .eticaret-box {
+      margin-top: 20px;
+      border-top: 2px solid #e0e0e0;
+      padding-top: 16px;
+    }
+    .eticaret-box h2 { font-size: 12pt; margin: 0 0 10px; }
+    .ec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .ec-card {
+      border: 1px solid #a9d18e;
+      background: #f6fff3;
+      padding: 10px 12px;
+      font-size: 10pt;
+    }
+    .ec-card b { display: block; font-size: 11pt; margin-bottom: 4px; }
+    .loading, .err { text-align: center; padding: 48px; color: #666; }
+    .err { color: #b00020; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sheet" id="sheet" hidden>
+      <h1 class="sheet-title"><span id="title"></span><span class="sheet-kod" id="kod"></span></h1>
+      <div class="layout">
+        <div>
+          <table class="excel">
+            <tbody id="tbody"></tbody>
+          </table>
+          <div class="legend">
+            <span><span class="swatch"></span> E-ticaret (derinlik 70 cm)</span>
+            <span id="price-note"></span>
+          </div>
+        </div>
+        <div class="drawing">
+          <img id="drawing" alt="KÇT02 ürün çizimi"/>
+        </div>
+      </div>
+      <div class="eticaret-box">
+        <h2>E-ticaret seçimi (4 ölçü)</h2>
+        <div class="ec-grid" id="ec-grid"></div>
+      </div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <div class="loading" id="loading">Excel sayfası yükleniyor…</div>
+    <div class="err hidden" id="err"></div>
+  </div>
+  <script>
+    const CATALOG = "/data/fiyat-listeleri/equsto/2026-fiyat-listesi/kct02/catalog.json";
+    fetch(CATALOG).then(r => {
+      if (!r.ok) throw new Error(r.status + " " + r.statusText);
+      return r.json();
+    }).then(cat => {
+      document.getElementById("loading").classList.add("hidden");
+      document.getElementById("sheet").hidden = false;
+      document.getElementById("title").textContent = cat.urun_adi;
+      document.getElementById("kod").textContent = "-" + cat.sheet;
+      const img = cat.gorsel_urun || (cat.gorseller && cat.gorseller[0]);
+      if (img) document.getElementById("drawing").src = "/" + img;
+      document.getElementById("price-note").textContent =
+        "Liste € = taban + çekmece (" + (cat.cekmece_eur || 15) + " €)";
+      document.getElementById("meta").textContent =
+        "Kaynak: EQUSTO Fiyat Listesi | Kur: 1 EUR = " + cat.kur_eur_try + " TRY | Satış = Liste × 0,90";
+      const tb = document.getElementById("tbody");
+      const head = document.createElement("tr");
+      head.className = "head";
+      head.innerHTML = "<td>En</td><td></td><td>Der.</td><td></td><td>Yük.</td><td></td><td class=\"num\">Liste €</td><td class=\"num\">Satış €</td>";
+      tb.appendChild(head);
+      cat.pfos.urunler.forEach(p => {
+        const tr = document.createElement("tr");
+        if (p.eticaret) tr.classList.add("eticaret");
+        const parts = p.olcu_excel ? p.olcu_excel.replace(" cm.", "").split(" x ") : p.olcu.replace(/×/g, " x ").split(" x ");
+        tr.innerHTML =
+          "<td class=\"num\">" + parts[0] + "</td><td class=\"x\">x</td>" +
+          "<td class=\"num\">" + parts[1] + "</td><td class=\"x\">x</td>" +
+          "<td class=\"num\">" + parts[2] + "</td><td class=\"unit\">cm.</td>" +
+          "<td class=\"num\">" + p.liste_fiyati_eur + "</td>" +
+          "<td class=\"num\">" + p.satis_fiyati_eur + "</td>";
+        tb.appendChild(tr);
+      });
+      const eg = document.getElementById("ec-grid");
+      cat.eticaret.urunler.forEach(p => {
+        const d = document.createElement("div");
+        d.className = "ec-card";
+        d.innerHTML = "<b>" + p.olcu + " cm</b>Liste: " + p.liste_fiyati_eur + " €<br>Satış: " + p.satis_fiyati_eur + " €<br>₺" + (p.fiyat_tl_net||0).toLocaleString("tr-TR") + " + KDV";
+        eg.appendChild(d);
+      });
+    }).catch(e => {
+      document.getElementById("loading").classList.add("hidden");
+      const el = document.getElementById("err");
+      el.textContent = "Hata: " + e.message + " — npm run dev (port 3099)";
+      el.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

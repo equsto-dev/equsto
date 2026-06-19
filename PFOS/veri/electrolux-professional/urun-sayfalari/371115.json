@@ -1,0 +1,108 @@
+{
+  "cod": "371115",
+  "title": "Modüler Pişirme Ekipmanları 700XP Ara Tezgah, Önü Kapalı-1/4 Modul",
+  "category": "Setüstü Ara Çalışma Tezgahları",
+  "description": "Endüstriyel Set üstü ara çalışma tezgahı, önü kapalı, ¼ modül - 200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/set%C3%BCst%C3%BC-ara-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-ara-tezgah-%C3%B6n%C3%BC-kapal%C4%B1-1-4-modul-371115/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "730 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "250 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "6 kg"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "10 1/4\" (260 mm)"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "32 1/4\" (820 mm)"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "20 1/2\" (520 mm)"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "26 lbs (12 kg)"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "3.91 ft³ (0.11 m³)"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Ağır hizmete uygun paslanmaz çelik iç çerçeve.",
+        "Ünite, diğer 700 serisi alt dolapların üzerine monte edilir.",
+        "Dik açılı kenarlar ünitelerin birbirleriyle sıkıca birleşmelerini sağlar ve aralarında kir birikmesini engeller."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Paslanmaz çelik üst tabla ağır hizmete uygundur, her türlü yüke dayanıklıdır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371115/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371115",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7WTNBN000.dwg",
+      "local": "media/documents/371115/E7WTNBN000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Ara Tezgah, Önü Kapalı-1/4 Modul",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 1_4 Module Ambient Worktop closed front_371115_Turkish.pdf",
+      "local": "media/documents/371115/700XP%201_4%20Module%20Ambient%20Worktop%20closed%20front_371115_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371115",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371115_E7WTNBN000.rfa",
+      "local": "media/documents/371115/QF_ELECTROLUXPROFESSIONAL_371115_E7WTNBN000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371115_1_1_371115.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371115_1_1_371115.jpg",
+      "local": "media/images/371115/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:12:46.036Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

@@ -1,0 +1,88 @@
+{
+  "cod": "391155",
+  "title": "Modüler Pişirme Ekipmanları 900XP Alt Dolap-11/2 Modul - 1200mm",
+  "category": "Alt Dolaplar",
+  "description": "Alt dolap, önü açık, 1,5 modül - 1200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/900xp/ara-tezgahlar-ve-alt-dolaplar/alt-dolaplar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-900xp-alt-dolap-11-2-modul-1200mm-391155/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "785 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "45 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Ünite diğer setüstü 900XP modellerinin altına da monte edilir.",
+        "Ünitenin yüksekliği 50 mm ayarlanabilir ayakları paslanmaz çeliktir.",
+        "Önü açık alt dolap tencere, tava ve tepsilerin depolanması için kullanılır.",
+        "Kulplu kapılar, çekmeceler, ısıtıcı kitler ve GN küvetler için kılavuz rayları ayrı ayrı sipariş edilebilir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Yüksek hijyen standartlarına uygun Scotch Brite yüzey sonlandırmaya sahip paslanmaz çelik konstruksiyon.",
+        "Ünite 930 mm derinliktedir ve geniş bir çalışma yüzeyine sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/391155/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "391155",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/391155_E9BANL00O0.dwg",
+      "local": "media/documents/391155/391155_E9BANL00O0.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "900XP Alt Dolap-11/2 Modul - 1200mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/900XP 1200 mm Open Base_391155_Turkish.pdf",
+      "local": "media/documents/391155/900XP%201200%20mm%20Open%20Base_391155_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "391155",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_391155_E9BANL00O0.rfa",
+      "local": "media/documents/391155/QF_ELECTROLUXPROFESSIONAL_391155_E9BANL00O0.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391155_2_2_391155_e.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391155_2_2_391155_e.jpg",
+      "local": "media/images/391155/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:35:49.683Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

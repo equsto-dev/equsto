@@ -1,0 +1,121 @@
+{
+  "at": "2026-06-14T10:25:34.458Z",
+  "dryRun": false,
+  "deptChanges": 16,
+  "masterChanges": 0,
+  "changes": [
+    {
+      "kod": "7865.N1.12708.10L",
+      "prev": "6",
+      "next": "36",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (LS)-6x6 kW+7 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.12708.10LP",
+      "prev": "6",
+      "next": "40.5",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (LP)-3x6 kW+3x7,5 kW +7 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.12708.10LS",
+      "prev": "7.5",
+      "next": "45",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (LS)-6x7,5 kW +7 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.12708.50L",
+      "prev": "6",
+      "next": "36",
+      "name": "700 SERİ KUZİNE BÜYÜK FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (L)-6x6 kW+13 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.12708.50LP",
+      "prev": "6",
+      "next": "40.5",
+      "name": "700 SERİ KUZİNE BÜYÜK FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (LP)-3x6 Kw+3x7,5 kW+13 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.12708.50LS",
+      "prev": "7.5",
+      "next": "45",
+      "name": "700 SERİ KUZİNE BÜYÜK FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85 (LS)-6x7,5 kW+13 kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.40703.33L",
+      "prev": "6",
+      "next": "12",
+      "name": "700 SERİ SET ÜSTÜ İKİLİ OCAK GAZLI 40*70*30 (L) -2x6 kW",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.40703.33LS",
+      "prev": "7.5",
+      "next": "15",
+      "name": "700 SERİ SET ÜSTÜ İKİLİ OCAK GAZLI 40*70*30 (LS) -2x7,5 kW",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80703.35L",
+      "prev": "6",
+      "next": "24",
+      "name": "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30 (L)-4x6 kW",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80703.35LP",
+      "prev": "6",
+      "next": "27",
+      "name": "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30 (LP)-2x6kW+2x7,5kW",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80703.35LS",
+      "prev": "7.5",
+      "next": "30",
+      "name": "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30 (LS)-4x7,5kW",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80708.10L",
+      "prev": "6",
+      "next": "24",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 4 AÇIK ATEŞ 80*70*85 (L)-4x6kW+7kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80708.10LP",
+      "prev": "6",
+      "next": "27",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 4 AÇIK ATEŞ 80*70*85 (LP)-2x6kW+2x7,5kW+7kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80708.10LS",
+      "prev": "7.5",
+      "next": "60",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 4 AÇIK ATEŞ 80*70*85 (LS)-4x7,5kW+7kW GAZLI FIRIN",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80908.10",
+      "prev": "40",
+      "next": "32",
+      "name": "900 SERİ KUZİNE FIRINLI GAZLI 4 AÇIK ATEŞ 80*90*85 (2x10 kW+2x6 kW+8 kW=40 kW)",
+      "dept": "pisirme"
+    },
+    {
+      "kod": "7865.N1.80908.10P",
+      "prev": "48",
+      "next": "40",
+      "name": "900 SERİ KUZİNE FIRINLI GAZLI 4 AÇIK ATEŞ 80*90*85 (4x10 kW+8 kW=48 kW)",
+      "dept": "pisirme"
+    }
+  ],
+  "master": []
+}

@@ -1,0 +1,135 @@
+{
+  "isTipi": "kafe",
+  "konsept": "kafe",
+  "label": "Kafe / Coffee Shop",
+  "olcek": [
+    { "id": "S1", "key": "kucuk", "label": "Küçük", "m2Min": 40, "m2Max": 99, "referansM2": 70 },
+    { "id": "S2", "key": "orta", "label": "Orta", "m2Min": 100, "m2Max": 149, "referansM2": 120 },
+    { "id": "S3", "key": "buyuk", "label": "Büyük", "m2Min": 150, "m2Max": 200, "referansM2": 175 }
+  ],
+  "yogunluk": [
+    { "id": "Y1", "key": "bar", "label": "Bar / içecek", "aciklama": "Espresso hattı, minimal mutfak" },
+    { "id": "Y2", "key": "hafif_mutfak", "label": "Hafif mutfak", "aciklama": "Cafe-restaurant, sıcak yemek, bulaşık hattı" },
+    { "id": "Y3", "key": "pastane", "label": "Pastane / tatlı", "aciklama": "Teşhir, konveksiyon, kahvaltı" }
+  ],
+  "hucreler": [
+    {
+      "id": "kafe_kucuk_bar",
+      "olcek": "S1",
+      "yogunluk": "Y1",
+      "label": "Küçük × Bar",
+      "referansM2": 70,
+      "interpolated": true,
+      "interpolasyonKaynak": "kafe_orta_bar"
+    },
+    {
+      "id": "kafe_kucuk_hafif_mutfak",
+      "olcek": "S1",
+      "yogunluk": "Y2",
+      "label": "Küçük × Hafif mutfak",
+      "referansM2": 70,
+      "interpolated": true,
+      "interpolasyonKaynak": "kafe_orta_hafif_mutfak"
+    },
+    {
+      "id": "kafe_kucuk_pastane",
+      "olcek": "S1",
+      "yogunluk": "Y3",
+      "label": "Küçük × Pastane",
+      "referansM2": 70,
+      "referansSeed": {
+        "listeDosya": "kahve-tatli-40-100.json",
+        "eskiKonseptId": "kahve-tatli",
+        "bantId": "40-100",
+        "proje": "2016-132 Hacıbozan Çemberlitaş"
+      }
+    },
+    {
+      "id": "kafe_orta_bar",
+      "olcek": "S2",
+      "yogunluk": "Y1",
+      "label": "Orta × Bar",
+      "referansM2": 120,
+      "referansSeed": {
+        "listeDosya": "coffee-shop-referans.json",
+        "eskiKonseptId": "coffee-shop",
+        "bantId": "referans",
+        "proje": "2016-114 Espressolab Watergarden"
+      }
+    },
+    {
+      "id": "kafe_orta_hafif_mutfak",
+      "olcek": "S2",
+      "yogunluk": "Y2",
+      "label": "Orta × Hafif mutfak",
+      "referansM2": 125,
+      "referansSeed": {
+        "listeDosya": "kahve-duragi-100-200.json",
+        "eskiKonseptId": "kahve-duragi",
+        "bantId": "100-200",
+        "proje": "2016-105 Kahve Durağı Konyaaltı"
+      }
+    },
+    {
+      "id": "kafe_orta_pastane",
+      "olcek": "S2",
+      "yogunluk": "Y3",
+      "label": "Orta × Pastane",
+      "referansM2": 120,
+      "interpolated": true,
+      "interpolasyonKaynak": "kafe_kucuk_pastane"
+    },
+    {
+      "id": "kafe_buyuk_bar",
+      "olcek": "S3",
+      "yogunluk": "Y1",
+      "label": "Büyük × Bar",
+      "referansM2": 175,
+      "interpolated": true,
+      "interpolasyonKaynak": "kafe_orta_bar"
+    },
+    {
+      "id": "kafe_buyuk_hafif_mutfak",
+      "olcek": "S3",
+      "yogunluk": "Y2",
+      "label": "Büyük × Hafif mutfak",
+      "referansM2": 175,
+      "referansSeed": {
+        "listeDosya": "kahve-duragi-150-200.json",
+        "eskiKonseptId": "kahve-duragi",
+        "bantId": "150-200",
+        "proje": "2016-106 Kahve Durağı Karabük"
+      }
+    },
+    {
+      "id": "kafe_buyuk_pastane",
+      "olcek": "S3",
+      "yogunluk": "Y3",
+      "label": "Büyük × Pastane",
+      "referansM2": 150,
+      "referansSeed": {
+        "listeDosya": "kahve-duragi-pastane-100-200.json",
+        "eskiKonseptId": "kahve-duragi-pastane",
+        "bantId": "100-200",
+        "proje": "2016-135 Kahve Durağı Sultangazi"
+      }
+    }
+  ],
+  "legacyKonseptMap": {
+    "coffee-shop": { "olcek": "S2", "yogunluk": "Y1" },
+    "kahve-atolyesi": { "olcek": "S2", "yogunluk": "Y2" },
+    "harvest-cafe": { "olcek": "S3", "yogunluk": "Y2" },
+    "all-sport-cafe": { "olcek": "S3", "yogunluk": "Y2" },
+    "casual-cafe": { "olcek": "S2", "yogunluk": "Y2" },
+    "kahve-tatli": { "olcek": "S1", "yogunluk": "Y3" },
+    "kahve-duragi-pastane": { "olcek": "S3", "yogunluk": "Y3" },
+    "kahve-duragi": {
+      "olcek": "S2",
+      "yogunluk": "Y2",
+      "bantEsleme": {
+        "100-200": { "olcek": "S2", "yogunluk": "Y2" },
+        "150-200": { "olcek": "S3", "yogunluk": "Y2" }
+      }
+    }
+  }
+}

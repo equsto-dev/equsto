@@ -1,0 +1,126 @@
+{
+  "cod": "133078",
+  "title": "Premium Serisi Tezgah-Evyeler 2000 mm Dolaplı Çalışma Tezgahı",
+  "category": "Dolaplı Çalışma Tezgahları",
+  "description": "Dolaplı çalışma tezgahı, 1 ara raflı, 2 kayar kapılı, (6 ayaklı) - 2000mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/dolapl%C4%B1-tezgahlar/dolapl%C4%B1-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-2000-mm-dolapl%C4%B1-%C3%A7al%C4%B1%C5%9Fma-tezgah%C4%B1-133078/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dolap genişliği",
+          "value": "1945 mm"
+        },
+        {
+          "label": "Dolap derinliği",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dolap yüksekliği",
+          "value": "610 mm"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "2000 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Kapı tipi ve sayısı",
+          "value": "2 Kayar"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "75 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Paslanmaz çelik kulplar hem hijyeniktir hem de güvenilirdir.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir.",
+        "Dolaplı çalışma tezgahı 125 mm çapında tekerlekler (2'si frenli) üzerine de monte edilebilir. Tekerlekler opsiyonel aksesuardır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Köşeleri perçinli, paslanmaz çelik, çapraz güçlendiricili ara raf.",
+        "Yüksekliği 150 mm, çapı 54 mm olan, -35/+25 mm ayarlanabilir 304 AISI paslanmaz çelik ayaklar.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "İçteki paslanmaz çelik, kaynaklı karkas yapı, konstruksiyonu çok güçlendirir ve dayanıklı kılar.",
+        "8/10 kalınlığında taban panelinin ön kesiti 40 mm yüksekliktedir; sac kenarları yukarı doğru kıvrılmıştır, altında takviye bulunur. Konstruksiyonu daha da güçlendirmek için bacaklara kaynaklanmıştır.",
+        "10/10 kalınlıkta 304 AISI paslanmaz çelik taban paneli 15/10 kalınlıkta alt takviyelerle güçlendirilmiştir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133078",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/TN2000EN.dwg",
+      "local": "media/documents/133078/TN2000EN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "2000 mm Dolaplı Çalışma Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/2000 mm Worktop Cupboard_133078_Turkish.pdf",
+      "local": "media/documents/133078/2000%20mm%20Worktop%20Cupboard_133078_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133078",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133078_TN2000EN.rfa",
+      "local": "media/documents/133078/QF_ELECTROLUXPROFESSIONAL_133078_TN2000EN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133078_1_1_133078.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133078_1_1_133078.jpg",
+      "local": "media/images/133078/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:48:39.903Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

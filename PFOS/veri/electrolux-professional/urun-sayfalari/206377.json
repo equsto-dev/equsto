@@ -1,0 +1,105 @@
+{
+  "cod": "206377",
+  "title": "Modüler Pişirme Ekipmanları 700XP Musluklu ve Su Sayaçlı Ara Tezgah-200 mm",
+  "category": "Setüstü Ara Çalışma Tezgahları",
+  "description": "Bataryalı ve su sayaçlı ara tezgah (700XP) - 200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/set%C3%BCst%C3%BC-ara-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-musluklu-ve-su-saya%C3%A7l%C4%B1-ara-tezgah-200-mm-206377/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "230 V/1 ph/50/60 Hz"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "730 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "250 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "6 kg"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Soğuk su giriş hattının çapı",
+          "value": "3/4\""
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Cihazlar önü açık alt dolap, köprü suportları veya konsol sistemi üzerine monte edilir.",
+        "Su debisinin izlenebildiği LED ışıklı gösterge.",
+        "Soğuk su musluğu.",
+        "200 mm genişlikte setüstü ünite. Bataryalı ve elektronik su sayaçlı."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Paslanmaz çelik üst tabla ağır hizmete uygundur, her türlü yüke dayanıklıdır.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir.",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/206377/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "206377",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/WTNWTCT7E.dwg",
+      "local": "media/documents/206377/WTNWTCT7E.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Musluklu ve Su Sayaçlı Ara Tezgah-200 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP Worktop with Water Column, Liter Counter- 200 mm_206377_Turkish.pdf",
+      "local": "media/documents/206377/700XP%20Worktop%20with%20Water%20Column,%20Liter%20Counter-%20200%20mm_206377_Turkish.pdf"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_206377_1_0_206377.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_206377_1_0_206377.jpg",
+      "local": "media/images/206377/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_206377_1_2_206377.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_206377_1_2_206377.jpg",
+      "local": "media/images/206377/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:55:14.490Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

@@ -1,0 +1,798 @@
+{
+  "date": "2026-06-02",
+  "equstoSource": "ekipmanlar.json (Öztiryakiler 2025, bayi net +8%, KDV dahil)",
+  "cafemarktSource": "cafemarkt.com/soguk-oda PLP (KDV dahil)",
+  "equstoTotal": 88,
+  "cafemarktInSnapshot": 64,
+  "matched": 64,
+  "unmatchedEqusto": [
+    {
+      "sku": "7919.CR2515.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C  250X150X240 CM",
+      "key": "cr-split:250x150"
+    },
+    {
+      "sku": "7919.CR2525.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:250x250"
+    },
+    {
+      "sku": "7919.CR3025.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:300x250"
+    },
+    {
+      "sku": "7919.CR3030.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:300x300"
+    },
+    {
+      "sku": "7919.CR3017.00",
+      "name": "COLD ROOM300*175*240 cm",
+      "key": "cr-panel:300x175x240"
+    },
+    {
+      "sku": "7919.CR3520.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:350x200"
+    },
+    {
+      "sku": "7919.CR3530.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:350x300"
+    },
+    {
+      "sku": "7919.CR4015.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:400x150"
+    },
+    {
+      "sku": "7919.CR4020.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:400x200"
+    },
+    {
+      "sku": "7919.CR4035.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:400x350"
+    },
+    {
+      "sku": "7919.CR4520.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:450x200"
+    },
+    {
+      "sku": "7919.CR4525.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:450x250"
+    },
+    {
+      "sku": "7919.CR4540.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:450x400"
+    },
+    {
+      "sku": "7919.CR5025.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:500x250"
+    },
+    {
+      "sku": "7919.CR5035.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:500x350"
+    },
+    {
+      "sku": "7919.CR5040.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:500x400"
+    },
+    {
+      "sku": "7919.CR5045.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:500x450"
+    },
+    {
+      "sku": "7919.CR5050.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:500x500"
+    },
+    {
+      "sku": "7919.CR6040.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:600x400"
+    },
+    {
+      "sku": "7919.CR6045.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+      "key": "cr-split:600x450"
+    },
+    {
+      "sku": "7919.DF2515.00",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C  250X150X240 CM",
+      "key": "df-split:250x150"
+    },
+    {
+      "sku": "7919.DF3025.00",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+      "key": "df-split:300x250"
+    },
+    {
+      "sku": "7919.DF3520.00",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+      "key": "df-split:350x200"
+    },
+    {
+      "sku": "7919.DF3535.00",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+      "key": "df-split:350x350"
+    }
+  ],
+  "unmatchedCafemarkt": 0,
+  "summary": {
+    "avgEqustoVsCafePct": -21.188887195392304,
+    "equstoCheaperCount": 64,
+    "cafeCheaperCount": 0,
+    "avgSavingsWhenEqustoCheaper": 21.188887195392304
+  },
+  "byType": {
+    "cr-split": {
+      "count": 21,
+      "avgDiffPct": -21.257229780945774
+    },
+    "df-panel": {
+      "count": 4,
+      "avgDiffPct": -21.257265303981622
+    },
+    "df-split": {
+      "count": 36,
+      "avgDiffPct": -21.135733266670265
+    },
+    "cr-panel": {
+      "count": 3,
+      "avgDiffPct": -21.257165429729984
+    }
+  },
+  "rows": [
+    {
+      "key": "cr-split:400x250",
+      "sku": "7919.CR4025.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 400x250 cm",
+      "equsto": 405338,
+      "cafemarkt": 514763.82,
+      "diff": -109425.82,
+      "diffPct": -21.25748076078851,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-panel:150x175x240",
+      "sku": "7919.DF1517.00",
+      "name": "Öztiryakiler Deep Freezer, 150x175x240 cm",
+      "equsto": 293942,
+      "cafemarkt": 373294.89,
+      "diff": -79352.89000000001,
+      "diffPct": -21.257427338477633,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:300x150",
+      "sku": "7919.DF3015.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 300x150 cm",
+      "equsto": 358098,
+      "cafemarkt": 454770.46,
+      "diff": -96672.46000000002,
+      "diffPct": -21.257418522742224,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:300x150",
+      "sku": "7919.CR3015.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 300x150 cm",
+      "equsto": 298735,
+      "cafemarkt": 379381.75,
+      "diff": -80646.75,
+      "diffPct": -21.257414200867597,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:150x150",
+      "sku": "7919.CR1515.00",
+      "name": "Öztiryakiler Soğuk Oda, Panel-Split Tip 0/+5 C, 150x150 cm",
+      "equsto": 254348,
+      "cafemarkt": 323011.99,
+      "diff": -68663.98999999999,
+      "diffPct": -21.257412147456193,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x150",
+      "sku": "7919.DF4015.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x150 cm",
+      "equsto": 391668,
+      "cafemarkt": 497402.88,
+      "diff": -105734.88,
+      "diffPct": -21.257391995800266,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:200x200",
+      "sku": "7919.CR2020.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 200x200 cm",
+      "equsto": 286706,
+      "cafemarkt": 364105.2,
+      "diff": -77399.20000000001,
+      "diffPct": -21.257372869159795,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x300",
+      "sku": "7919.DF4030.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x300 cm",
+      "equsto": 574121,
+      "cafemarkt": 729110.69,
+      "diff": -154989.68999999994,
+      "diffPct": -21.257360799359553,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:600x550",
+      "sku": "7919.CR6055.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 600x550 cm",
+      "equsto": 793370,
+      "cafemarkt": 1007547.78,
+      "diff": -214177.78000000003,
+      "diffPct": -21.2573323321699,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x250",
+      "sku": "7919.DF4525.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x250 cm",
+      "equsto": 490849,
+      "cafemarkt": 623358.32,
+      "diff": -132509.31999999995,
+      "diffPct": -21.257327567232913,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:150x150",
+      "sku": "7919.DF1515.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 150x150 cm",
+      "equsto": 293010,
+      "cafemarkt": 372110.78,
+      "diff": -79100.78000000003,
+      "diffPct": -21.257320199108452,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x300",
+      "sku": "7919.DF6030.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x300 cm",
+      "equsto": 671418,
+      "cafemarkt": 852673.5,
+      "diff": -181255.5,
+      "diffPct": -21.25731595974309,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x400",
+      "sku": "7919.DF6040.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x400 cm",
+      "equsto": 777257,
+      "cafemarkt": 987084.66,
+      "diff": -209827.66000000003,
+      "diffPct": -21.257311404272052,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x350",
+      "sku": "7919.DF4535.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x350 cm",
+      "equsto": 617706,
+      "cafemarkt": 784461.37,
+      "diff": -166755.37,
+      "diffPct": -21.25730805584474,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x500",
+      "sku": "7919.DF6050.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x500 cm",
+      "equsto": 1037443,
+      "cafemarkt": 1317510.17,
+      "diff": -280067.1699999999,
+      "diffPct": -21.257306120073437,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:450x350",
+      "sku": "7919.CR4535.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 450x350 cm",
+      "equsto": 518712,
+      "cafemarkt": 658742.89,
+      "diff": -140030.89,
+      "diffPct": -21.257290534095937,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:400x400",
+      "sku": "7919.CR4040.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 400x400 cm",
+      "equsto": 534714,
+      "cafemarkt": 679064.74,
+      "diff": -144350.74,
+      "diffPct": -21.25728689726991,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x600",
+      "sku": "7919.DF6060.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x600 cm",
+      "equsto": 1204808,
+      "cafemarkt": 1530056.48,
+      "diff": -325248.48,
+      "diffPct": -21.25728587483254,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x500",
+      "sku": "7919.DF5050.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x500 cm",
+      "equsto": 786060,
+      "cafemarkt": 998263.7,
+      "diff": -212203.69999999995,
+      "diffPct": -21.257279013551226,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x200",
+      "sku": "7919.DF4020.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x200 cm",
+      "equsto": 448010,
+      "cafemarkt": 568954.15,
+      "diff": -120944.15000000002,
+      "diffPct": -21.257275300654722,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x300",
+      "sku": "7919.DF4530.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x300 cm",
+      "equsto": 586393,
+      "cafemarkt": 744694.82,
+      "diff": -158301.81999999995,
+      "diffPct": -21.257274221405215,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:250x200",
+      "sku": "7919.DF2520.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 250x200 cm",
+      "equsto": 364943,
+      "cafemarkt": 463462.49,
+      "diff": -98519.48999999999,
+      "diffPct": -21.257273700833913,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:250x200",
+      "sku": "7919.CR2520.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 250x200 cm",
+      "equsto": 304200,
+      "cafemarkt": 386321.38,
+      "diff": -82121.38,
+      "diffPct": -21.2572703069139,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-panel:250x175x240",
+      "sku": "7919.DF2517.00",
+      "name": "Öztiryakiler Deep Freezer, 250x175x240 cm",
+      "equsto": 363731,
+      "cafemarkt": 461923.28,
+      "diff": -98192.28000000003,
+      "diffPct": -21.25727025492199,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x550",
+      "sku": "7919.DF6055.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x550 cm",
+      "equsto": 1163219,
+      "cafemarkt": 1477239.69,
+      "diff": -314020.68999999994,
+      "diffPct": -21.257260560065237,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x450",
+      "sku": "7919.DF5045.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x450 cm",
+      "equsto": 749730,
+      "cafemarkt": 952125.83,
+      "diff": -202395.82999999996,
+      "diffPct": -21.257256511988544,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:600x600",
+      "sku": "7919.CR6060.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 600x600 cm",
+      "equsto": 854804,
+      "cafemarkt": 1085565.42,
+      "diff": -230761.41999999993,
+      "diffPct": -21.257255965283044,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:300x300",
+      "sku": "7919.DF3030.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 300x300 cm",
+      "equsto": 460282,
+      "cafemarkt": 584538.93,
+      "diff": -124256.93000000005,
+      "diffPct": -21.257254841863148,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:600x450",
+      "sku": "7919.DF6045.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 600x450 cm",
+      "equsto": 819108,
+      "cafemarkt": 1040232.79,
+      "diff": -221124.79000000004,
+      "diffPct": -21.257240891243203,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:350x150",
+      "sku": "7919.DF3515.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 350x150 cm",
+      "equsto": 374119,
+      "cafemarkt": 475115.43,
+      "diff": -100996.43,
+      "diffPct": -21.257240582567484,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x250",
+      "sku": "7919.DF4025.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x250 cm",
+      "equsto": 479100,
+      "cafemarkt": 608436.87,
+      "diff": -129336.87,
+      "diffPct": -21.257237418896064,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-panel:300x175x240",
+      "sku": "7919.DF3017.00",
+      "name": "Öztiryakiler Deep Freezer, 300x175x240 cm",
+      "equsto": 375238,
+      "cafemarkt": 476536.49,
+      "diff": -101298.48999999999,
+      "diffPct": -21.257236775299198,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:600x500",
+      "sku": "7919.CR6050.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 600x500 cm",
+      "equsto": 757153,
+      "cafemarkt": 961552.46,
+      "diff": -204399.45999999996,
+      "diffPct": -21.257234368679164,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x250",
+      "sku": "7919.DF5025.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x250 cm",
+      "equsto": 594208,
+      "cafemarkt": 754619.12,
+      "diff": -160411.12,
+      "diffPct": -21.257229739951462,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x350",
+      "sku": "7919.DF5035.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x350 cm",
+      "equsto": 666868,
+      "cafemarkt": 846894.23,
+      "diff": -180026.22999999998,
+      "diffPct": -21.25722712740645,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:500x300",
+      "sku": "7919.CR5030.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 500x300 cm",
+      "equsto": 530462,
+      "cafemarkt": 673664.33,
+      "diff": -143202.32999999996,
+      "diffPct": -21.257223163351988,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x350",
+      "sku": "7919.DF4035.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x350 cm",
+      "equsto": 605230,
+      "cafemarkt": 768616.53,
+      "diff": -163386.53000000003,
+      "diffPct": -21.25722302641605,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x400",
+      "sku": "7919.DF4540.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x400 cm",
+      "equsto": 655790,
+      "cafemarkt": 832825.55,
+      "diff": -177035.55000000005,
+      "diffPct": -21.257218873748535,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x150",
+      "sku": "7919.DF4515.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x150 cm",
+      "equsto": 402523,
+      "cafemarkt": 511187.09,
+      "diff": -108664.09000000003,
+      "diffPct": -21.257205458768535,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:600x300",
+      "sku": "7919.CR6030.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 600x300 cm",
+      "equsto": 567072,
+      "cafemarkt": 720157.31,
+      "diff": -153085.31000000006,
+      "diffPct": -21.257204207230785,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x450",
+      "sku": "7919.DF4545.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x450 cm",
+      "equsto": 678413,
+      "cafemarkt": 861555.61,
+      "diff": -183142.61,
+      "diffPct": -21.25720126179667,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x300",
+      "sku": "7919.DF5030.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x300 cm",
+      "equsto": 630538,
+      "cafemarkt": 800756.35,
+      "diff": -170218.34999999998,
+      "diffPct": -21.25719639937916,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:200x200",
+      "sku": "7919.DF2020.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 200x200 cm",
+      "equsto": 344783,
+      "cafemarkt": 437859.66,
+      "diff": -93076.65999999997,
+      "diffPct": -21.25719003207557,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:350x350",
+      "sku": "7919.CR3535.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 350x350 cm",
+      "equsto": 447787,
+      "cafemarkt": 568670.33,
+      "diff": -120883.32999999996,
+      "diffPct": -21.257189556557304,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:350x250",
+      "sku": "7919.DF3525.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 350x250 cm",
+      "equsto": 455135,
+      "cafemarkt": 578001.93,
+      "diff": -122866.93000000005,
+      "diffPct": -21.257183345391258,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:350x300",
+      "sku": "7919.DF3530.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 350x300 cm",
+      "equsto": 483371,
+      "cafemarkt": 613860.4,
+      "diff": -130489.40000000002,
+      "diffPct": -21.257178342176825,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:200x150",
+      "sku": "7919.DF2015.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 200x150 cm",
+      "equsto": 303809,
+      "cafemarkt": 385824.36,
+      "diff": -82015.35999999999,
+      "diffPct": -21.257175156073604,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-panel:250x175x240",
+      "sku": "7919.CR2517.00",
+      "name": "Öztiryakiler Panel Tipi Soğuk Oda, 250x175x240 cm",
+      "equsto": 303044,
+      "cafemarkt": 384852.8,
+      "diff": -81808.79999999999,
+      "diffPct": -21.257166376339214,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-panel:150x175x240",
+      "sku": "7919.CR1517.00",
+      "name": "Öztiryakiler Panel Tipi Soğuk Oda, 150x175x240 cm",
+      "equsto": 255263,
+      "cafemarkt": 324172.99,
+      "diff": -68909.98999999999,
+      "diffPct": -21.257165811377433,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-panel:200x225x240",
+      "sku": "7919.CR2022.00",
+      "name": "Öztiryakiler Panel Tipi Soğuk Oda, 200x225x240 cm",
+      "equsto": 295379,
+      "cafemarkt": 375118.57,
+      "diff": -79739.57,
+      "diffPct": -21.257164101473304,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:450x450",
+      "sku": "7919.CR4545.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 450x450 cm",
+      "equsto": 582011,
+      "cafemarkt": 739128.74,
+      "diff": -157117.74,
+      "diffPct": -21.2571547414054,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:300x200",
+      "sku": "7919.DF3020.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 300x200 cm",
+      "equsto": 383314,
+      "cafemarkt": 486792.14,
+      "diff": -103478.14000000001,
+      "diffPct": -21.257150947424915,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:200x150",
+      "sku": "7919.CR2015.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 200x150 cm",
+      "equsto": 263730,
+      "cafemarkt": 334925.65,
+      "diff": -71195.65000000002,
+      "diffPct": -21.257150654182507,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:250x250",
+      "sku": "7919.DF2525.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 250x250 cm",
+      "equsto": 397208,
+      "cafemarkt": 504436.9,
+      "diff": -107228.90000000002,
+      "diffPct": -21.25714831726228,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:350x150",
+      "sku": "7919.CR3515.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 350x150 cm",
+      "equsto": 312761,
+      "cafemarkt": 397192.83,
+      "diff": -84431.83000000002,
+      "diffPct": -21.25713850373382,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:400x300",
+      "sku": "7919.CR4030.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 400x300 cm",
+      "equsto": 447358,
+      "cafemarkt": 568125.15,
+      "diff": -120767.15000000002,
+      "diffPct": -21.257138501965635,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-panel:200x225x240",
+      "sku": "7919.DF2022.00",
+      "name": "Öztiryakiler Deep Freezer, 200x225x240 cm",
+      "equsto": 354798,
+      "cafemarkt": 450577.92,
+      "diff": -95779.91999999998,
+      "diffPct": -21.257126847227664,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:450x300",
+      "sku": "7919.CR4530.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 450x300 cm",
+      "equsto": 458194,
+      "cafemarkt": 581886.24,
+      "diff": -123692.23999999999,
+      "diffPct": -21.257117198715676,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:500x400",
+      "sku": "7919.DF5040.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 500x400 cm",
+      "equsto": 694210,
+      "cafemarkt": 881616.11,
+      "diff": -187406.11,
+      "diffPct": -21.257110421904606,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:300x200",
+      "sku": "7919.CR3020.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 300x200 cm",
+      "equsto": 332381,
+      "cafemarkt": 422109.21,
+      "diff": -89728.21000000002,
+      "diffPct": -21.257107846568903,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:450x200",
+      "sku": "7919.DF4520.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 450x200 cm",
+      "equsto": 459574,
+      "cafemarkt": 583638.65,
+      "diff": -124064.65000000002,
+      "diffPct": -21.25709974827747,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:350x250",
+      "sku": "7919.CR3525.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 350x250 cm",
+      "equsto": 384023,
+      "cafemarkt": 487691.78,
+      "diff": -103668.78000000003,
+      "diffPct": -21.25702836328306,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "cr-split:450x150",
+      "sku": "7919.CR4515.00",
+      "name": "Öztiryakiler Panel-Split Tip Soğuk Oda, 0/+5 C, 450x150 cm",
+      "equsto": 349558,
+      "cafemarkt": 443922.76,
+      "diff": -94364.76000000001,
+      "diffPct": -21.257022280182255,
+      "cheaper": "Equsto"
+    },
+    {
+      "key": "df-split:400x400",
+      "sku": "7919.DF4040.00",
+      "name": "Öztiryakiler Panel-Split Tip Deep Freeze, -22/-18 C, 400x400 cm",
+      "equsto": 636319,
+      "cafemarkt": 765567.64,
+      "diff": -129248.64000000001,
+      "diffPct": -16.882719859998264,
+      "cheaper": "Equsto"
+    }
+  ],
+  "unmatchedCafeKeys": []
+}

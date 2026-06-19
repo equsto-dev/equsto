@@ -105,7 +105,9 @@ function normName(s: string): string {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s+/g, " ");
+    .replace(/ı/g, "i")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 /** Unox fırın üstü davlumbaz — PFOS özel imalat / duvar tipi eşleşmesine girmesin */

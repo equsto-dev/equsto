@@ -1,0 +1,140 @@
+{
+  "cod": "391098",
+  "title": "Modüler Pişirme Ekipmanları 900XP Elektrikli Setüstü Patates Sıcak Tutucu-400mm",
+  "category": "Elektrikli Sıcak Tutucu",
+  "description": "Patates sıcak tutucu, elektrikli, 1 hazneli",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/900xp/s%C4%B1cak-tutucu/elektrikli-s%C4%B1cak-tutucu/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-900xp-elektrikli-set%C3%BCst%C3%BC-patates-s%C4%B1cak-tutucu-400mm-391098/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (genişlik)",
+          "value": "306 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (yükseklik)",
+          "value": "156 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (derinlik)",
+          "value": "510 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "28 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "ISO 9001 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "640 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "480 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "1020 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.31 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "ECS9"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-230 V/1 ph/50-60 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "1 kW"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "1 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Genellikle fritözlerle birlikte kullanılır; içine konan kızarmış malzemenin yağı hazne tabanına süzülür.",
+        "Cihaz, tabak müşteriye servis edilinceye kadar sıcak tutulmasını sağlar.",
+        "Enfraruj ısıtıcılar ünitenin arkasında yer alır ve böylece sıcak tutma süresi uzar.",
+        "Hazne maksimum 150 mm derinlikte GN1/1 küvet alır.",
+        "Kolay kullanımlı kontrol paneli.",
+        "Ünitenin tabanında GN1/1 ebadında perfore bir sac bulunur; bunun özel biçimi yiyeceklerin kolayca toplanmasını sağlar.",
+        "2 mm kalınlıkta, Scotch Brite yüzey sonlandırmaya sahip paslanmaz çelik üst tabla tek parça olarak preslenerek imal edilmiştir; temizliği kolaydır.",
+        "Tüm ana komponentler kolay bakım amacıyle ünitenin ön tarafında yer alır.",
+        "Kontrol düğmesinin özel dizaynı içine su sızmasına imkan vermez."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Suya karşı koruma sınıfı ve sertifikası: IPX5",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/391098/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "391098",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E9CSPDC000.dwg",
+      "local": "media/documents/391098/E9CSPDC000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "900XP Elektrikli Setüstü Patates Sıcak Tutucu-400mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/900XP Electric Chip Scuttle_391098_Turkish.pdf",
+      "local": "media/documents/391098/900XP%20Electric%20Chip%20Scuttle_391098_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "391098",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_391098_E9CSPDC000.rfa",
+      "local": "media/documents/391098/QF_ELECTROLUXPROFESSIONAL_391098_E9CSPDC000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_391098_1_1_391098.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_391098_1_1_391098.jpg",
+      "local": "media/images/391098/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:04:22.857Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

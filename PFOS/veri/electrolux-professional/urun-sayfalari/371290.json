@@ -1,0 +1,184 @@
+{
+  "cod": "371290",
+  "title": "Modüler Pişirme Ekipmanları 700XP 2 Drawer Refrigerated Base",
+  "category": "Cihazaltı Soğuk ve Dondurucu Dolaplar",
+  "description": "Soğutmalı cihaz altı tezgah, 2 çekmeceli, +10/-2°C, otomatik defrost-R290",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/cihazalt%C4%B1-so%C4%9Fuk-ve-dondurucu-dolaplar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-2-drawer-refrigerated-base-371290/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-230 V/1N ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "0.4 kW"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "0.4 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "95 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "101 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "800 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "1260 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.83 m³"
+        },
+        {
+          "label": "Brüt kapasite",
+          "value": "120 Lt"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Soğutucu gaz tipi",
+          "value": "R290"
+        },
+        {
+          "label": "Soğutucu gaz ağırlığı",
+          "value": "85 g"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Pişirme bloğunun içine modüler kurulum için tasarlandı.",
+        "Kondens suyu otomatik olarak buharlaştırılır. Bu amaçla kondens kabının içinde bir ısıtıcı bulunur.",
+        "Gastronorm uyumlu.",
+        "Ünite diğer setüstü 700XP modellerinin altına da monte edilir.",
+        "Et, balık ve süt ürünlerini depolamak için -2°C ile +10°C arasında ayarlanabilen ısı aralığı.",
+        "Fanlı hava sirkülasyonu hem eşit ısı dağılımı sağlar hem de kabini hızla soğutur.",
+        "Dik açılı kenarlar ünitelerin birbirleriyle sıkıca birleşmelerini sağlar ve aralarında kir birikmesini engeller."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "CFC ve HCFC içermez (ekolojik soğutucu gaz: R290)."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Ünite, paslanmaz çelikten 150 mm yükseklik ayarlı ayaklarla birlikte teslim edilir. Ayaklar 250 mm'ye kadar uzatılabilir.",
+        "Tüm dış paneller, yüksek hijyen standardına sahip Scotch Brite yüzey sonlandırmaya sahip paslanmaz çeliktir.",
+        "Çalışma koşullarına uygun entegre kompresör.",
+        "Tüm komponentlere cihazın ön tarafından ulaşılır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371290/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371290",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7TTAECOMIN.dwg",
+      "local": "media/documents/371290/E7TTAECOMIN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP 2 Drawer Refrigerated Base",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 2 Drawer Refrigerated Base_371290_Turkish.pdf",
+      "local": "media/documents/371290/700XP%202%20Drawer%20Refrigerated%20Base_371290_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371290",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371290_E7TTAECOMIN.rfa",
+      "local": "media/documents/371290/QF_ELECTROLUXPROFESSIONAL_371290_E7TTAECOMIN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371120_1_2_371120.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371120_1_2_371120.jpg",
+      "local": "media/images/371290/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T10:35:22.618Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

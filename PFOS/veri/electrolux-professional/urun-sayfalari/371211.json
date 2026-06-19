@@ -1,0 +1,88 @@
+{
+  "cod": "371211",
+  "title": "Modüler Pişirme Ekipmanları 700XP Alt Dolap, Çekmeceli-1/4 Modul",
+  "category": "Alt Dolaplar",
+  "description": "Alt dolap, şişeler için çekmeceli, ¼ modül - 200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/alt-dolaplar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-alt-dolap-%C3%A7ekmeceli-1-4-modul-371211/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "550 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "600 mm"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Ünite diğer setüstü 700XP modellerinin altına da monte edilir.",
+        "Ünitenin yüksekliği 50 mm ayarlanabilir ayakları paslanmaz çeliktir.",
+        "Kulplu kapılar, çekmeceler, ısıtıcı kitler ve GN küvetler için kılavuz rayları ayrı ayrı sipariş edilebilir.",
+        "Alt bölüm tencere, tava ve tepsilerin depolanması için kullanılır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Yüksek hijyen standartlarına uygun Scotch Brite yüzey sonlandırmaya sahip paslanmaz çelik konstruksiyon."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371211/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371211",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/371211_E7BANB00CE.dwg",
+      "local": "media/documents/371211/371211_E7BANB00CE.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Alt Dolap, Çekmeceli-1/4 Modul",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP Base Cupboard 1_4 Module - Bottle Drawer_371211_Turkish.pdf",
+      "local": "media/documents/371211/700XP%20Base%20Cupboard%201_4%20Module%20-%20Bottle%20Drawer_371211_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371211",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371211_E7BANB00CE.rfa",
+      "local": "media/documents/371211/QF_ELECTROLUXPROFESSIONAL_371211_E7BANB00CE.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371211_1_4_371211.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371211_1_4_371211.jpg",
+      "local": "media/images/371211/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371211_1_1_371211.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371211_1_1_371211.jpg",
+      "local": "media/images/371211/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:58:14.876Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

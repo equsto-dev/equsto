@@ -1,0 +1,128 @@
+{
+  "cod": "133107",
+  "title": "Premium Serisi Tezgah-Evyeler 1400 mm Tek Evyeli Tezgah - Damlalık Sağda",
+  "category": "Ayaklı Tek Evyeli Tezgahlar",
+  "description": "Tek evyeli tezgah (500x600x300mm), damlalığı sağda - 1400mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/evyeli-tezgahlar/ayakl%C4%B1-tek-evyeli-tezgahlar/premium-serisi-tezgah-evyeler-1400-mm-tek-evyeli-tezgah-damlal%C4%B1k-sa%C4%9Fda-133107/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1400 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Evye sayısı",
+          "value": "1"
+        },
+        {
+          "label": "Evye boyutları",
+          "value": "600x500xH320"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "46 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +0/-40 mm ayarlanabilir.",
+        "Drenaj alanı kurutma işlemlerine uygundur.",
+        "Demonte olarak teslim edilir.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "Ön kesiti 50 mm yükseklikte 304 AISI paslanmaz çelik taban rafı; zeminden 200 mm yukarda özel yivlere oturtularak monte edilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133107",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/LG1416DXEN.dwg",
+      "local": "media/documents/133107/LG1416DXEN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1400 mm Tek Evyeli Tezgah - Damlalık Sağda",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1400 mm Sink Unit with 1 Bowl - Right drain_133107_Turkish.pdf",
+      "local": "media/documents/133107/1400%20mm%20Sink%20Unit%20with%201%20Bowl%20-%20Right%20drain_133107_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133107",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133107_LG1416DXEN.rfa",
+      "local": "media/documents/133107/QF_ELECTROLUXPROFESSIONAL_133107_LG1416DXEN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133107_1_1_133107.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133107_1_1_133107.jpg",
+      "local": "media/images/133107/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:45:53.239Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

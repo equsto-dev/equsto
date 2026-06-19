@@ -1,0 +1,129 @@
+{
+  "_aciklama": "Pimak katalog s.170 (PIDS PLAST) — sitede ürün sayfası yok; kategori URL boş.",
+  "_kategori_url": "https://www.pimak.com/urunler/un-ve-seker-arabalari",
+  "products": [
+    {
+      "slug": "fc-100-un-seker-arabasi",
+      "urunKodu": "FC-100",
+      "baslik": "FC-100 Un Şeker Arabası",
+      "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari",
+      "kategori": {
+        "slug": "un-ve-seker-arabalari",
+        "label": "Un ve Seker Arabalari",
+        "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari"
+      },
+      "liste_fiyati_eur": 70,
+      "gorselYerel": { "fileName": "un-seker-katalog-s170.png" },
+      "temelOzellikler": [
+        "Gıda temasına uygun PP malzeme",
+        "Dayanıklı PC kayar kapak",
+        "2 sabit + 2 döner tekerlek",
+        "Kullanım aralığı: -40°C / +115°C",
+        "Bulaşık makinesinde yıkanabilir",
+        "Pürüzsüz ve hijyenik iç yüzey",
+        "Hafif ve dayanıklı gövde"
+      ],
+      "temelOzelliklerMetin": "Gıda temasına uygun PP malzeme\nDayanıklı PC kayar kapak\n2 sabit + 2 döner tekerlek\n-40°C / +115°C kullanım aralığı\nBulaşık makinesinde yıkanabilir\nPürüzsüz ve hijyenik iç yüzey\nHafif ve dayanıklı gövde",
+      "teknikDetaylar": {
+        "kolonlar": ["Ürün Kodu", "Ürün Adı", "Ebat (cm)", "Ağırlık (Kg.)", "Fiyat"],
+        "satirlar": [
+          {
+            "Ürün Kodu": "FC-100",
+            "Ürün Adı": "Un Şeker Arabası",
+            "Ebat (cm)": "46 x 74 x 76",
+            "Ağırlık (Kg.)": "6,4",
+            "Fiyat": "70 €"
+          }
+        ]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.170 (PIDS PLAST yeni ürün); web sitesinde ayrı ürün sayfası yok."
+    },
+    {
+      "slug": "pdb-75-tepsi",
+      "urunKodu": "PDB-75",
+      "baslik": "PDB-75 Tepsi",
+      "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari",
+      "kategori": {
+        "slug": "un-ve-seker-arabalari",
+        "label": "Un ve Seker Arabalari",
+        "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari"
+      },
+      "liste_fiyati_eur": 8,
+      "gorselYerel": { "fileName": "un-seker-katalog-s170.png" },
+      "temelOzellikler": [
+        "Gıda temasına uygun PP malzeme",
+        "40 x 60 x 10 cm",
+        "Bulaşık makinesinde yıkanabilir"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [
+          {
+            "Ürün Kodu": "PDB-75",
+            "Ürün Adı": "Tepsi",
+            "Ebat (cm)": "40 x 60 x 10",
+            "Fiyat": "8 €"
+          }
+        ]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.170"
+    },
+    {
+      "slug": "pdb-100-tepsi",
+      "urunKodu": "PDB-100",
+      "baslik": "PDB-100 Tepsi",
+      "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari",
+      "kategori": {
+        "slug": "un-ve-seker-arabalari",
+        "label": "Un ve Seker Arabalari",
+        "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari"
+      },
+      "liste_fiyati_eur": 7,
+      "gorselYerel": { "fileName": "un-seker-katalog-s170.png" },
+      "temelOzellikler": [
+        "Gıda temasına uygun PP malzeme",
+        "40 x 60 x 7,5 cm",
+        "Bulaşık makinesinde yıkanabilir"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [
+          {
+            "Ürün Kodu": "PDB-100",
+            "Ürün Adı": "Tepsi",
+            "Ebat (cm)": "40 x 60 x 7,5",
+            "Fiyat": "7 €"
+          }
+        ]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.170"
+    },
+    {
+      "slug": "pdb-l-tepsi-kapagi",
+      "urunKodu": "PDB-L",
+      "baslik": "PDB-L Tepsi Kapağı",
+      "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari",
+      "kategori": {
+        "slug": "un-ve-seker-arabalari",
+        "label": "Un ve Seker Arabalari",
+        "url": "https://www.pimak.com/urunler/un-ve-seker-arabalari"
+      },
+      "liste_fiyati_eur": 6,
+      "gorselYerel": { "fileName": "un-seker-katalog-s170.png" },
+      "temelOzellikler": [
+        "Dayanıklı PC kayar kapak",
+        "40 x 60 cm",
+        "PDB tepsiler ile uyumlu"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [
+          {
+            "Ürün Kodu": "PDB-L",
+            "Ürün Adı": "Tepsi Kapağı",
+            "Ebat (cm)": "40 x 60",
+            "Fiyat": "6 €"
+          }
+        ]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.170"
+    }
+  ]
+}
