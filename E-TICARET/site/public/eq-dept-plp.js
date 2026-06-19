@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260619-kdv-dahil-v3';
+  var CATALOG_V = '20260619-kdv-dahil-v4';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -100,7 +100,7 @@
         else if (net > 0) n = net;
       }
     }
-    if (!(n > 0)) return String(row.price || '').split('\n')[0] || '';
+    if (!(n > 0)) return '';
     return (
       '₺' +
       n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
@@ -109,7 +109,7 @@
   }
 
   function formatPrice(p, raw) {
-    return displayPriceForRow(raw || (p ? { price: p } : null), {
+    return displayPriceForRow(raw || null, {
       quoteLabel: __plpT('plp.quote_contact', 'Teklif için iletişim'),
     });
   }
@@ -1112,7 +1112,7 @@
         return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + '</div>' : '';
       })() +
       (u.p
-        ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p, u.raw)) + '</div>'
+        ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(null, u.raw)) + '</div>'
         : '') +
       (function () {
         var note = formatPriceNote(u.raw);

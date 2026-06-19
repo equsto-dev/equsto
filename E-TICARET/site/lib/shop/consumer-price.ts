@@ -60,7 +60,18 @@ export function formatConsumerPriceTry(
   }
   const n = resolveKdvDahilTry(row);
   if (!(n > 0)) {
-    return String(row?.price || "").split("\n")[0] || "";
+    const fallback = String(row?.price || "");
+    if (/\+?\s*K\s*D\s*V/i.test(fallback)) {
+      const v = extractKdvDahilFromPriceString(fallback);
+      if (v > 0) {
+        const formatted = v.toLocaleString("tr-TR", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+        return `₺${formatted} KDV dahil`;
+      }
+    }
+    return fallback.split("\n")[0] || "";
   }
   const formatted = n.toLocaleString("tr-TR", {
     minimumFractionDigits: 2,
