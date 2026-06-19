@@ -135,6 +135,8 @@ function rowFromPilot(
     detailAvailable: Boolean(p.detail_json),
     dwgUrl: dwg?.url ?? (dwg?.path ? `/data/${dwg.path}` : null),
   };
+}
+
 function rowFromArchive(
   p: ArchiveProject,
   referansById: Map<string, ReferansProject>,
