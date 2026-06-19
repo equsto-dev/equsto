@@ -14,10 +14,12 @@ const raw = JSON.parse(readFileSync(jsonPath, "utf8")) as {
 };
 
 const data = (raw.data ?? raw) as Record<string, unknown>;
+const prevRules = Array.isArray(data.rules) ? data.rules : [];
+const prevEqSets = Array.isArray(data.eqSets) ? data.eqSets : [];
 data.questions = DEFAULT_WIZARD_QUESTIONS;
 data.shopTypes = PFOS_KONSEPT_SHOP_TYPES;
-data.rules = [];
-data.eqSets = [];
+data.rules = prevRules;
+data.eqSets = prevEqSets;
 data.updated_at = new Date().toISOString();
 
 const out = raw.data ? { ...raw, data } : data;
