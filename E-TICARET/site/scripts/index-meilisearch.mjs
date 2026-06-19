@@ -22,10 +22,10 @@ const key = process.env.MEILISEARCH_MASTER_KEY?.trim();
 
 if (!host || !key) {
   const miss = [];
-  if (!host) miss.push("MEILISEARCH_HOST (boş — Cloud’daki https://….meilisearch.io adresi)");
+  if (!host) miss.push("MEILISEARCH_HOST (boş — yerel: http://127.0.0.1:7700, Hetzner: http://meilisearch:7700)");
   if (!key) miss.push("MEILISEARCH_MASTER_KEY");
-  console.error("[search:index] Eksik .env.local alanları:\n  - " + miss.join("\n  - "));
-  console.error("Dosya: equsto-v2/.env.local  |  bkz. docs/MEILISEARCH.md");
+  console.error("[search:index] Eksik env alanları:\n  - " + miss.join("\n  - "));
+  console.error("Dosya: .env.local veya .env.production  |  bkz. docs/MEILISEARCH.md");
   process.exit(1);
 }
 
@@ -174,6 +174,8 @@ function rowToDoc(row, deptFallback) {
     marka_urun_kodu: String(row.marka_urun_kodu || "").trim(),
     kategori_yolu: kategoriYolu,
     price: String(row.price || "").split("\n")[0].slice(0, 120),
+    fiyat_tl: Number(row.fiyat_tl) > 0 ? Number(row.fiyat_tl) : null,
+    fiyat_bekleniyor: row.fiyat_bekleniyor ? 1 : 0,
     liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
     satis_eur_indirimli: Number(row.satis_eur_indirimli) || null,
     iskonto_oran: Number(row.iskonto_oran) || null,
@@ -316,6 +318,8 @@ async function main() {
       "marka_urun_kodu",
       "kategori_yolu",
       "price",
+      "fiyat_tl",
+      "fiyat_bekleniyor",
       "liste_fiyati_eur",
       "satis_eur_indirimli",
       "iskonto_oran",

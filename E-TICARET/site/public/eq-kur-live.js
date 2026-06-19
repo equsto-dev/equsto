@@ -181,8 +181,11 @@
 
   function priceForRow(row) {
     if (!row) return "";
+    if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
+      return window.EqustoPriceDisplay.formatCard(row);
+    }
     var px = state.rate ? computeRowPrices(row, state.rate) : null;
-    if (px) return px.priceShort;
+    if (px) return px.price;
     return String(row.price || "").split("\n")[0];
   }
 

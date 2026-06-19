@@ -843,7 +843,28 @@
     if (bn) bn.textContent = q > 99 ? '99+' : String(q);
   }
 
-  function extractPrice(raw) {
+  function extractPrice(raw, item) {
+    if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === 'function') {
+      var card = window.EqustoPriceDisplay.formatCard(item || { price: raw });
+      if (card) {
+        return card
+          .replace(/€/g, '')
+          .replace(/₺/g, '')
+          .replace(/\+?\s*KDV/gi, '')
+          .replace(/KDV\s*dahil/gi, '')
+          .trim();
+      }
+    }
+    if (item && item.fiyat_tl != null && item.fiyat_tl !== '') {
+      var ft = Number(item.fiyat_tl);
+      if (Number.isFinite(ft) && ft > 0) {
+        try {
+          return ft.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        } catch (_) {
+          return String(ft);
+        }
+      }
+    }
     if (raw == null || raw === '') return '';
     var s = String(raw).split('\n')[0] || String(raw);
     return s
@@ -867,7 +888,7 @@
         }
       }
     }
-    if (!p && x.price) p = extractPrice(x.price);
+    if (!p && x.price) p = extractPrice(x.price, x);
     var img0 =
       Array.isArray(x.images) && x.images[0]
         ? String(x.images[0]).replace(/\\/g, '/')

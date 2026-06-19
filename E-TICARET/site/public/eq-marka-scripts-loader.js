@@ -13,6 +13,7 @@
   }
 
   var FILES = [
+    "eq-price-display.js",
     "eq-display-terminology.js",
     "eq-shop-catalog-bootstrap.js",
     "eq-filter-column.js",

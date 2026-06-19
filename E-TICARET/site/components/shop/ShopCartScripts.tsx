@@ -49,6 +49,7 @@ export default function ShopCartScripts() {
       <Script src="/ecom-data.js" strategy="afterInteractive" />
       <Script src={`/eq-shop-header.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/equsto-member.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
       <Script
         src={`/ecom-cart.js?v=${v}`}
         strategy="afterInteractive"

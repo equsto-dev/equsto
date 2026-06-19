@@ -6,6 +6,7 @@ import { resolveShopDept } from "@/lib/shop/category-dept";
 import { isShopDeptSlug } from "@/lib/shop/depts";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
+import { resolveKdvDahilTry } from "@/lib/shop/consumer-price";
 
 export { absoluteAssetUrl };
 
@@ -37,41 +38,13 @@ export type MerchantFeedStats = {
   skippedInvalid: number;
 };
 
-function parseTrAmount(fragment: string): number {
-  const n = parseFloat(
-    String(fragment || "")
-      .replace(/\.(?=\d{3}(\D|$))/g, "")
-      .replace(",", "."),
-  );
-  return Number.isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0;
-}
-
 /** KDV dahil TRY — Shopping için tüketici fiyatı. */
 export function resolveMerchantPriceTry(row: CatalogRow): number {
-  const fiyatTl = Number(row.fiyat_tl);
-  const raw = String(row.price || "");
-
-  const dahil = raw.match(/K\s*D\s*V\s*Dahil[^\d]*([\d.,]+)/i);
-  if (dahil) {
-    const v = parseTrAmount(dahil[1]);
-    if (v > 0) return v;
-  }
-
-  const haric = raw.match(/([\d.,]+)\s*\+\s*K\s*D\s*V/i);
-  if (haric) {
-    const v = parseTrAmount(haric[1]);
-    if (v > 0) return Math.round(v * 1.2 * 100) / 100;
-  }
-
-  if (Number.isFinite(fiyatTl) && fiyatTl > 0) {
-    return Math.round(fiyatTl * 1.2 * 100) / 100;
-  }
-
-  const digits = raw.replace(/[^\d,.\-]/g, "").replace(/\.(?=\d{3}(\D|$))/g, "").replace(",", ".");
-  const n = parseFloat(digits);
-  if (Number.isFinite(n) && n > 0) return Math.round(n * 100) / 100;
-
-  return 0;
+  return resolveKdvDahilTry({
+    fiyat_tl: row.fiyat_tl as number | string | null | undefined,
+    price: row.price as string | null | undefined,
+    fiyat_bekleniyor: row.fiyat_bekleniyor as number | boolean | null | undefined,
+  });
 }
 
 export function isQuoteOnlyProduct(row: CatalogRow): boolean {
