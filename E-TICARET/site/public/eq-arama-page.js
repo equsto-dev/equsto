@@ -668,12 +668,18 @@
 
   function formatPrice(hit) {
     if (!hit) return "";
-    if (window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
-      var rate = window.EqustoKurLive.getRate();
-      if (rate) {
-        var px = window.EqustoKurLive.computeRowPrices(hit, rate);
-        if (px && px.priceShort) return px.priceShort;
-      }
+    if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
+      return window.EqustoPriceDisplay.formatCard(hit);
+    }
+    if (Number(hit.fiyat_tl) > 0) {
+      return (
+        "₺" +
+        Number(hit.fiyat_tl).toLocaleString("tr-TR", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }) +
+        " KDV dahil"
+      );
     }
     return String(hit.price || "").split("\n")[0];
   }
@@ -1316,7 +1322,6 @@
         var warn = res.data.warning ? String(res.data.warning) : "";
         var total = res.data.estimatedTotalHits;
         var hasMore = !!res.data.hasMore;
-        serverFacets = res.data.facets || serverFacets;
 
         if (replace) {
           if (!hasActiveFilters()) {
@@ -1326,6 +1331,7 @@
         } else {
           sourceHits = dedupeHits(sourceHits.concat(rawHits));
         }
+        serverFacets = res.data.facets || serverFacets;
 
         lastRender = { q: q, total: total, err: null, warning: warn, hasMore: hasMore };
         renderAll();
