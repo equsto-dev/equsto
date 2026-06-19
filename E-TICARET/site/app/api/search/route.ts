@@ -19,6 +19,7 @@ import {
   shouldDiversifySearchHits,
 } from "@/lib/rank-search-hits";
 import { fetchSearchFacetPool } from "@/lib/search-facet-pool";
+import { resolveBrandSearchQuery } from "@/lib/search-brand-resolve";
 import {
   applySearchFacetFilters,
   computeSearchFacetCounts,
@@ -135,7 +136,12 @@ export async function GET(req: NextRequest) {
       const facets = computeSearchFacetCounts(pool.hits, facetState);
       const hits = filtered.slice(offset, offset + limit);
       const total = filtered.length;
-      const source = client ? "meilisearch" : "fallback";
+      const brandMatch = resolveBrandSearchQuery(q);
+      const source = brandMatch
+        ? "brand"
+        : client
+          ? "meilisearch"
+          : "fallback";
 
       logSearchQuery(q, total, source);
 

@@ -254,6 +254,39 @@ export type FallbackSearchOptions = {
 };
 
 /** Meilisearch yokken veya hibrit tamamlamada — katalog JSON üzerinde arama */
+export async function catalogSearchByBrand(
+  match: { displayName: string; markaKodu?: string; query?: string },
+  limit: number,
+  offset = 0,
+) {
+  const rows = await loadCatalogRows();
+  const brandFold = foldTr(match.displayName);
+  const kod = String(match.markaKodu || "").toUpperCase();
+  const hits: CatalogSearchHit[] = [];
+
+  for (const row of rows) {
+    const mk = String(row.marka_kodu || "").toUpperCase();
+    const b = foldTr(String(row.brand || ""));
+    let ok = false;
+    if (kod && mk === kod) ok = true;
+    else if (brandFold && b.includes(brandFold)) ok = true;
+    else if (brandFold && brandFold.includes(b) && b.length > 3) ok = true;
+    if (!ok) continue;
+    const hit = rowToHitFromRow(row);
+    if (hit) hits.push(hit);
+  }
+
+  const ranked = rankSearchHitsByRelevance(
+    match.query || match.displayName,
+    hits,
+  );
+  return {
+    hits: ranked.slice(offset, offset + limit),
+    estimatedTotalHits: ranked.length,
+  };
+}
+
+/** Meilisearch yokken veya hibrit tamamlamada — katalog JSON üzerinde arama */
 export async function fallbackCatalogSearch(
   q: string,
   limit: number,
