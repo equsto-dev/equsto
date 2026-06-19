@@ -1,0 +1,220 @@
+import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
+
+type TipRule = {
+  tip: string;
+  test: (n: string, poz: string) => boolean;
+};
+
+function norm(s: string): string {
+  return String(s || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/\s+/g, " ");
+}
+
+/** Referans satır adı → shop/zone tip_kodu (URUN_TIPI_ALIASES ile uyumlu) */
+const TIP_RULES: TipRule[] = [
+  {
+    tip: "montaj-nakliye",
+    test: (n) => n.includes("nakliye") || n.includes("montaj"),
+  },
+  {
+    tip: "espresso-2-grup",
+    test: (n) =>
+      n.includes("espresso") &&
+      (n.includes("makina") || n.includes("makin") || n.includes("gruplu")),
+  },
+  {
+    tip: "soguk-tesir-dolabi-pastane",
+    test: (n) =>
+      n.includes("teshir") ||
+      n.includes("teşhir") ||
+      (n.includes("soguk") && n.includes("pasta")),
+  },
+  {
+    tip: "sise-sogutucu-3-kapili",
+    test: (n) =>
+      n.includes("sise") &&
+      n.includes("sogut") &&
+      (n.includes("uc kapili") || n.includes("3 kapili")),
+  },
+  {
+    tip: "sise-sogutucu-2-kapili",
+    test: (n) =>
+      n.includes("sise") &&
+      n.includes("sogut") &&
+      (n.includes("iki kapili") || n.includes("2 kapili")),
+  },
+  {
+    tip: "bar-buzdolabi",
+    test: (n) => n.includes("sise") && n.includes("sogut"),
+  },
+  {
+    tip: "kahve-degirmeni",
+    test: (n) => n.includes("degirmen") && !n.includes("makina"),
+  },
+  {
+    tip: "filter-coffee-makinesi",
+    test: (n) => n.includes("filtre") && n.includes("kahve"),
+  },
+  {
+    tip: "kahve-makinasi-turk",
+    test: (n) =>
+      (n.includes("turk kahve") || n.includes("türk kahve") || n.includes("atkm")) &&
+      n.includes("makina"),
+  },
+  {
+    tip: "buz-makinesi-90kg",
+    test: (n) => n.includes("buz makin"),
+  },
+  {
+    tip: "glass-washer",
+    test: (n) => n.includes("bardak yik") || n.includes("bardak yık"),
+  },
+  {
+    tip: "calisma-tezgahi-kasa-kahve",
+    test: (n) =>
+      n.includes("calisma tezgah") &&
+      (n.includes("kasa") || n.includes("kahve cekmece")),
+  },
+  {
+    tip: "calisma-tezgahi-dolapli",
+    test: (n) =>
+      n.includes("calisma tezgah") &&
+      (n.includes("dolap") || n.includes("evyeli") || n.includes("evye")),
+  },
+  {
+    tip: "calisma-tezgahi-taban-ara",
+    test: (n) => n.includes("calisma tezgah") && n.includes("ara raf"),
+  },
+  {
+    tip: "calisma-tezgahi",
+    test: (n) => n.includes("calisma tezgah") || n.includes("çalışma tezgah"),
+  },
+  {
+    tip: "evye-tezgahi-dolapli",
+    test: (n) => n.includes("evye tezgah") || (n.includes("evyeli") && n.includes("tezgah")),
+  },
+  {
+    tip: "cop-tezgahi",
+    test: (n) => n.includes("cop tezgah") || n.includes("çöp tezgah"),
+  },
+  {
+    tip: "cop-arabasi",
+    test: (n) => n.includes("cop araba") || n.includes("çöp araba"),
+  },
+  {
+    tip: "rinser-evyesi",
+    test: (n) => n.includes("rinser") || n.includes("rincer") || n.includes("durulama"),
+  },
+  {
+    tip: "bar-kuvet",
+    test: (n) => n.includes("kuvet"),
+  },
+  {
+    tip: "konveksiyon-firin-unox",
+    test: (n) =>
+      (n.includes("firin") || n.includes("fırın")) &&
+      (n.includes("unox") || n.includes("jet firin")),
+  },
+  {
+    tip: "speed-oven-merry-chef",
+    test: (n) => n.includes("merrychef") || n.includes("merry chef"),
+  },
+  {
+    tip: "bar-blender",
+    test: (n) => n.includes("blender"),
+  },
+  {
+    tip: "bar-mikser",
+    test: (n) => n.includes("bar mikser") || n.includes("milk frother"),
+  },
+  {
+    tip: "kati-meyve-sikacagi",
+    test: (n) => n.includes("meyve sik") || n.includes("portakal sik"),
+  },
+  {
+    tip: "yer-izgara-kucuk",
+    test: (n) => n.includes("yer izgar") || n.includes("yer ızgar"),
+  },
+  {
+    tip: "icecek-havuzu-soguk",
+    test: (n) => n.includes("icecek havuzu") || n.includes("içecek havuzu"),
+  },
+  {
+    tip: "depo-buzdolabi-tek-kapili",
+    test: (n) =>
+      n.includes("buzdolab") &&
+      !n.includes("tezgah") &&
+      !n.includes("setalti") &&
+      (n.includes("depo") || n.includes("dik tip")),
+  },
+  {
+    tip: "setalti-derin-dondurucu",
+    test: (n) =>
+      n.includes("derin donduruc") &&
+      !n.includes("depo") &&
+      (n.includes("setalti") ||
+        n.includes("cihazalti") ||
+        n.includes("tek kapili") ||
+        n.includes("60*60")),
+  },
+  {
+    tip: "depo-derin-dondurucu",
+    test: (n) => n.includes("derin donduruc") || n.includes("derindonduruc"),
+  },
+  {
+    tip: "istif-rafi",
+    test: (n) => n.includes("istif raf"),
+  },
+  {
+    tip: "kombi-firin-6t",
+    test: (n) =>
+      n.includes("kombi") ||
+      n.includes("konveksiyon") ||
+      (n.includes("firin") && !n.includes("unox")),
+  },
+  {
+    tip: "bulasik-makinesi-giyotin",
+    test: (n) => n.includes("giyotin") || n.includes("bulaşık makina"),
+  },
+  {
+    tip: "davlumbaz-duvar",
+    test: (n) => n.includes("davlumbaz"),
+  },
+  {
+    tip: "fritoz-tek",
+    test: (n) => n.includes("fritoz") || n.includes("fritöz"),
+  },
+  {
+    tip: "yer-izgara",
+    test: (n) => n.includes("izgara") && !n.includes("yer izgar"),
+  },
+];
+
+/**
+ * Excel referans satırından katalog tip_kodu üretir.
+ * Eşleşme yoksa eski pfos_{poz}_{slug} yedeği (manuel link için).
+ */
+export function inferUrunTipiFromReferansSatir(s: PfosEkipmanSatir): string {
+  const n = norm(s.ad);
+  const poz = String(s.poz || "").trim().toUpperCase();
+
+  for (const rule of TIP_RULES) {
+    if (rule.test(n, poz)) return rule.tip;
+  }
+
+  const base = s.ad
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_|_$/g, "")
+    .slice(0, 48);
+  return `pfos_${s.poz.toLowerCase()}_${base || "kalem"}`;
+}

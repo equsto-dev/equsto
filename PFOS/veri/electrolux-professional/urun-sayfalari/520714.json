@@ -1,0 +1,307 @@
+{
+  "cod": "520714",
+  "title": "Bulaşık Yıkama Flight type dishwasher, 2 tanks, 6400 dishes/h, electric, 950mm loading, 1300mm unloading",
+  "category": "2 Tanklı",
+  "description": "Tünel tipi bulaşık makinesi, 2 tanklı, 6400 tabak/saat kapasiteli, elektrikli, 950 mm yükleme alanı, 1300 mm boşaltma alanı, 1 kurutma tüneli, 55 mm konveyör, sağdan sola çalışma yönü.",
+  "url": "https://www.electroluxprofessional.com/tr/pd/bula%C5%9F%C4%B1k-y%C4%B1kama-ekipmanlar%C4%B1/t%C3%BCnel-tip-bula%C5%9F%C4%B1k-makineleri/2-tankl%C4%B1/bula%C5%9F%C4%B1k-y%C4%B1kama-flight-type-dishwasher-2-tanks-6400-dishes-h-electric-950mm-loading-1300mm-unloading-520714/",
+  "specifications": [
+    {
+      "group": "Hava emisyonu",
+      "items": [
+        {
+          "label": "Havadaki nem (üst)",
+          "value": "100 % r.h."
+        },
+        {
+          "label": "Hava akışı (üst)",
+          "value": "1000 m³/h"
+        },
+        {
+          "label": "Hava sıcaklığı (giriş, çıkış)",
+          "value": "30 - 40 °C"
+        },
+        {
+          "label": "The data is measured at exhaust points at 25°C and 60% r.h. ambient conditions, 14°C inlet water temperature and refer only to the machine.",
+          "value": "The data is measured at exhaust points at 25°C and 60% r.h. ambient conditions, 14°C inlet water temperature and refer only to the machine."
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "The higher the temperature, the faster the warm-up time. Recommended temperature of 50°C.",
+          "value": "The higher the temperature, the faster the warm-up time. Recommended temperature of 50°C."
+        },
+        {
+          "label": "Giriş su hattı boyutu",
+          "value": "ISO 3/4\" G"
+        },
+        {
+          "label": "Drenaj hattının ebadı",
+          "value": "2\""
+        },
+        {
+          "label": "Giriş suyu basıncı",
+          "value": "1-6 bar"
+        },
+        {
+          "label": "Giriş suyu besleme sıcaklığı (boyler)",
+          "value": "10 min / 60 max °C"
+        },
+        {
+          "label": "Giriş suyu besleme sıcaklığı (tanklar)",
+          "value": "10 min / 60 max °C"
+        },
+        {
+          "label": "Giriş suyu sertliği",
+          "value": "14 °fH / 8°dH"
+        },
+        {
+          "label": "Ön-yıkama tankı boyutu",
+          "value": "98 l"
+        },
+        {
+          "label": "Yıkama tankı ebadı",
+          "value": "98 l"
+        },
+        {
+          "label": "İkili durulama tankı boyutu",
+          "value": "8 l"
+        },
+        {
+          "label": "[NOT TRANSLATED]",
+          "value": "560 l/m"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Saatlik sepet kapasitesi (min.hızda)",
+          "value": "6400tabak/4320tepsiler/240Basket"
+        },
+        {
+          "label": "Kapı açık olduğundaki yükseklik",
+          "value": "2092 mm"
+        },
+        {
+          "label": "Yükleme ağzının ebadı (genişlik)",
+          "value": "612 mm"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "5450 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "946 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1983 mm"
+        },
+        {
+          "label": "Yükleme ağzının ebadı (yükseklik)",
+          "value": "412 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "1123 kg"
+        },
+        {
+          "label": "Saatlik sepet kapasitesi (maksimum hızda)",
+          "value": "4536tabak/3024tepsiler/168Basket"
+        },
+        {
+          "label": "Konveyör hızı (min/maks)",
+          "value": "1.4 / 2"
+        },
+        {
+          "label": "Ön-yıkama sıcaklığı",
+          "value": "30-50°C"
+        },
+        {
+          "label": "İkili durulama sıcaklığı",
+          "value": "60 - 70 °C"
+        },
+        {
+          "label": "[NOT TRANSLATED]",
+          "value": "82 - 90 °C"
+        },
+        {
+          "label": "Kurutma sıcaklığı",
+          "value": "50-70 °C"
+        },
+        {
+          "label": "Kurutma fanı kapasitesi",
+          "value": "3500 m³/h"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-415 V/3N ph/50 Hz"
+        },
+        {
+          "label": "1. yıkama tankı ısıtma elemanları",
+          "value": "16 kW"
+        },
+        {
+          "label": "Standart kurulu güç",
+          "value": "48.5 kW"
+        },
+        {
+          "label": "Boyler ısıtma elemanları",
+          "value": "18 kW"
+        },
+        {
+          "label": "Kurutucu kurulum gücü",
+          "value": "9.75 kW"
+        },
+        {
+          "label": "Durulama pompası boyutu",
+          "value": "0.25 kW"
+        },
+        {
+          "label": "Ön-yıkama pompası boyutu",
+          "value": "2 kW"
+        },
+        {
+          "label": "Yıkama pompasının ebadı",
+          "value": "2 kW"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Durulama suyu tüketimi maks. hızda",
+          "value": "210 l/h"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Uç kısmında limit anahtarı bulunan 1,300mm'lik boşaltma bölümü, temiz bulaşıkların zamanında çıkarılmadıkları takdirde zarar görmemesi için konveyörü otomatik olarak durdurur.",
+        "Ön yıkama tankındaki soğuk su hem üst hem de alt kollara pompalanarak kirli bulaşıkların ön temizliği yapılır, bu sayede daha büyük gıda parçacıklarının ve et suyu, sos gibi sıvı artıkların bulaşıklardan akıtılması sağlanır. Böylece makinenin ana yıkama t",
+        "Ana yıkama tanklarındaki 55-65°C sıcaklıktaki su deterjan ile karıştırılır ve hem üst hem de alt yıkama kollarından bulaşıkların üzerine püskürtülerek yıkama çözeltisinin dengeli şekilde dağılması ve yıkama alanlarının tamamına erişilmesi sağlanır.",
+        "DUO-durulama sistemi ile donatılmış durulama alanı: yan nozülleri olan ana durulama kolları sirküle edilen durulama suyuyla doldurulur ve durulama suyu deterjan kalıntılarının büyük oranda giderilmesi için perde şeklinde güçlü bir basınçla püskürtülür. İk",
+        "Boylerin önünde bulunan ve önceden ayarlanabilen dahili basınç vanası, şebeke suyunun basıncını dengeleyerek uygun durulama basıncı ve optimum hijyen sağlar.",
+        "Makinenin entegre bir parçası olan, kontrol kapağına (800 mm boyunda) sahip kurutma bölümü. Bu kapak sayesinde operatör, kurutma işlemi neredeyse tamamlanmış ürünleri, aşırı sıcak hale gelmeden çıkarabilir.",
+        "Ön tarafından kolayca servis verilir.",
+        "Saatte maksimum 6.400 parça bulaşık kapasitesi.",
+        "Operatör tarafından kontrol panelinden seçilebilen iki konveyör hızı.",
+        "Tırnak aralığı 55 mm olan çok amaçlı konveyör bant, bulaşıkların doğrudan veya standart 500x500 mm raflar kullanılarak konveyöre yüklenmesine imkan verir.",
+        "950mm'lik geniş yükleme bölümü bulaşıkların kolayca yüklenmesini sağlar.",
+        "Makinenin hem yükleme hem de boşaltma bölümlerinde acil durumlarda durdurmayı sağlayan emniyet anahtarları bulunmaktadır. Bu anahtarlar, yıkanan bulaşıkların temizlikten sonra çıkarılmaması durumunda konveyörü durdurur.",
+        "Tüm sıcaklıkları gösteren, kolay kullanımlı düz panel."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Yükleme bölümündeki infrared foto-sensörler sayesinde cihazda bulaşık yokken yıkama ve durulama işlemlerini kısa süre içinde durdurarak etkili enerji, su, deterjan ve parlatıcı tasarrufu sağlar.",
+        "Karşı dengeleme sistemli büyük kontrol kapakları, ön yıkama, yıkama, durulama ve kurutma alanlarına sınırsız çepeçevre erişim sağlar. Çift katmanlı kapaklar gücü artırmanın yanı sıra gürültüyü ve ısı kaybını da azaltır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Dış ön, yan ve arka paneller, iç hazne, yıkama alanı, kollar, tank filtreleri ve kapaklar dahil tüm ana bileşenler, ağır hizmet tipi, korozyona dayanıklı 304 tip paslanmaz çelikten yapılmıştır.",
+        "Kir oluşumunu önlemek için tamamen yuvarlak köşelere sahip derin çekme presli tanklar hızlı tahliye sağlar. Kaynak noktası olmayan presli tanklar su geçirmez.",
+        "Yükleme alanında ayak yoktur.",
+        "İkili tank filtreleri (düz ve küçük filtre), tankı enlemesine tamamen kaplar.",
+        "Yıkama/durulama kolları ve filtreler kolayca çıkarılarak temizlenebilir.",
+        "Tahliye hattı, zeminin kolay ve güvenli şekilde temizlenmesi ve nakliye sırasında borunun zarar görmemesi için korozyona dayanıklı 304 tipi paslanmaz çelik panellerle tamamen kapatılmıştır.",
+        "Makinenin altının temizliği için tam erişim sağlayan ayarlanabilir ayaklar."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "520714",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/EFTD064EL2U2D1M5R385.dwg",
+      "local": "media/documents/520714/EFTD064EL2U2D1M5R385.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Flight type dishwasher, 2 tanks, 6400 dishes/h, electric, 950mm loading, 1300mm unloading",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/520714-520715_Flight type dishwasher, 2 tanks, 6400 dishes_h, electric, 950mm loading, 1300mm unload.pdf",
+      "local": "media/documents/520714/520714-520715_Flight%20type%20dishwasher,%202%20tanks,%206400%20dishes_h,%20electric,%20950mm%20loading,%201300mm%20unload.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "520714",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_520714_EFTD064EL2U2D1M5R385.rfa",
+      "local": "media/documents/520714/QF_ELECTROLUXPROFESSIONAL_520714_EFTD064EL2U2D1M5R385.rfa"
+    },
+    {
+      "category": "User Manuals",
+      "type": "IN",
+      "title": "520714 (Installation manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/IN/IN_PM00509_1.0_5_IN__PM00509_Flight_Type_ESD_tr.pdf",
+      "local": "media/documents/520714/IN_PM00509_1.0_5_IN__PM00509_Flight_Type_ESD_tr.pdf"
+    },
+    {
+      "category": "User Manuals",
+      "type": "OM",
+      "title": "520714 (Operating manual)",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/OM/OM_PM00510_1_5_OM__PM00510_Flight_Type_ESD_tr.pdf",
+      "local": "media/documents/520714/OM_PM00510_1_5_OM__PM00510_Flight_Type_ESD_tr.pdf"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C13 ECO Bulaşık Makinesi Deterjanı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C12 Bulaşık makineleri için parlatıcı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C11 Bulaşık Makinesi Deterjanı; 20 litrelik 1 kutu.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C30 Çok Amaçlı Kireç Sökücü; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "C15 ECO Bulaşık Makinesi Parlatıcısı; 2 adet 5 litrelik kutudan oluşan bir paket.",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_520025_1_1_520025.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_520025_1_1_520025.jpg",
+      "local": "media/images/520714/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:55:05.265Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

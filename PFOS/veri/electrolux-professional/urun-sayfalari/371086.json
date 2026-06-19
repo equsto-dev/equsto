@@ -1,0 +1,138 @@
+{
+  "cod": "371086",
+  "title": "Modüler Pişirme Ekipmanları 700XP Setüstü Patates Sıcak Tutucu",
+  "category": "Elektrikli Patates Sıcak Tutucu",
+  "description": "Endüstriyel Patates sıcak tutucu, elektrikli, 1 hazneli",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/elektrikli-patates-s%C4%B1cak-tutucu/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-set%C3%BCst%C3%BC-patates-s%C4%B1cak-tutucu-371086/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihaz veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (genişlik)",
+          "value": "306 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (yükseklik)",
+          "value": "156 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (derinlik)",
+          "value": "510 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "20 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "27 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "650 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "460 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.25 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "ECS7"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-230 V/1 ph/50-60 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "1 kW"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "1 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Fritözlerin yanına yerleştirilmesi tavsiye edilir. Kızartılan malzemedeki fazla yağ haznede toplanır.",
+        "Enfraruj ısıtıcılar ünitenin arkasında yer alır ve yemekler tabaklanıp servis edilinceye kadar sıcak tutulabilirler.",
+        "Hazne maksimum 150 mm derinlikte GN1/1 küvet alır.",
+        "Kolay kullanımlı kontrol paneli.",
+        "Ünitenin tabanında GN1/1 ebadında perfore bir sac bulunur; bunun özel biçimi yiyeceklerin kolayca toplanmasını sağlar.",
+        "Tüm ana komponentler kolay bakım amacıyle ünitenin ön tarafında yer alır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Suya karşı koruma sınıfı: IPX4.",
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371086/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371086",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7CSEDC000.dwg",
+      "local": "media/documents/371086/E7CSEDC000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Setüstü Patates Sıcak Tutucu",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP Electric Chip Scuttle_371086_Turkish.pdf",
+      "local": "media/documents/371086/700XP%20Electric%20Chip%20Scuttle_371086_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371086",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371086_E7CSEDC000.rfa",
+      "local": "media/documents/371086/QF_ELECTROLUXPROFESSIONAL_371086_E7CSEDC000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371086_1_1_371086.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371086_1_1_371086.jpg",
+      "local": "media/images/371086/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T08:51:51.020Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

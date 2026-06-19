@@ -1,0 +1,341 @@
+"use client";
+
+import {
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
+import {
+  filterDistricts,
+  filterProvinces,
+  findDistrictByName,
+  findProvinceByName,
+  loadTrAdres,
+  type PfosAdresFormValue,
+} from "@/lib/pfos/adres/tr-adres";
+import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
+import styles from "./pfos-public.module.css";
+
+type FieldProps = {
+  fieldKey: string;
+  label: string;
+  required?: boolean;
+  placeholder: string;
+  value: string;
+  disabled?: boolean;
+  suggestions: string[];
+  open: boolean;
+  onOpen: (open: boolean) => void;
+  onChange: (value: string) => void;
+  onPick: (value: string) => void;
+};
+
+function AutocompleteField({
+  fieldKey,
+  label,
+  required,
+  placeholder,
+  value,
+  disabled,
+  suggestions,
+  open,
+  onOpen,
+  onChange,
+  onPick,
+}: FieldProps) {
+  const listId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [highlight, setHighlight] = useState(0);
+  const [armed, setArmed] = useState(false);
+  const inputName = `pfos_${fieldKey}_${listId.replace(/:/g, "")}`;
+
+  function armInput() {
+    setArmed(true);
+  }
+
+  function disarmInput() {
+    setArmed(false);
+  }
+
+  useEffect(() => {
+    setHighlight(0);
+  }, [suggestions, open]);
+
+  function onKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    if (!open || !suggestions.length) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setHighlight((i) => Math.min(i + 1, suggestions.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setHighlight((i) => Math.max(i - 1, 0));
+    } else if (e.key === "Enter" && suggestions[highlight]) {
+      e.preventDefault();
+      onPick(suggestions[highlight]!);
+    } else if (e.key === "Escape") {
+      onOpen(false);
+    }
+  }
+
+  return (
+    <label className={styles.fieldLabel}>
+      {label}
+      {required ? " *" : ""}
+        <div className={`${styles.acWrap}${open ? ` ${styles.acWrapOpen}` : ""}`}>
+        <input
+          ref={inputRef}
+          className={styles.textInput}
+          type="text"
+          name={inputName}
+          id={inputName}
+          placeholder={placeholder}
+          value={value}
+          disabled={disabled}
+          readOnly={!armed}
+          autoComplete="one-time-code"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          data-lpignore="true"
+          data-1p-ignore
+          data-bwignore
+          data-form-type="other"
+          enterKeyHint="next"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded={open}
+          aria-controls={listId}
+          onMouseDown={() => {
+            armInput();
+            onOpen(true);
+          }}
+          onTouchStart={() => {
+            armInput();
+            onOpen(true);
+          }}
+          onChange={(e) => {
+            onChange(e.target.value);
+            onOpen(true);
+          }}
+          onFocus={() => {
+            armInput();
+            onOpen(true);
+          }}
+          onBlur={() => {
+            disarmInput();
+            const input = inputRef.current;
+            setTimeout(() => {
+              if (!input) return;
+              const root = input.closest("[data-pfos-adres-form]");
+              const active = document.activeElement;
+              if (
+                root &&
+                active instanceof HTMLElement &&
+                root.contains(active) &&
+                (active.getAttribute("role") === "combobox" ||
+                  active.closest('[role="listbox"]'))
+              ) {
+                return;
+              }
+              onOpen(false);
+            }, 160);
+          }}
+          onKeyDown={onKeyDown}
+        />
+        {open && value.trim() && suggestions.length === 0 ? (
+          <div className={styles.acList} id={listId} role="listbox">
+            <div className={styles.acEmpty}>Eşleşen sonuç yok</div>
+          </div>
+        ) : null}
+        {open && suggestions.length > 0 ? (
+          <div className={styles.acList} id={listId} role="listbox">
+            {suggestions.map((item, i) => (
+              <button
+                key={item}
+                type="button"
+                role="option"
+                aria-selected={i === highlight}
+                className={`${styles.acItem}${i === highlight ? ` ${styles.acItemHl}` : ""}`}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  onPick(item);
+                }}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </label>
+  );
+}
+
+type Props = {
+  value: PfosAdresFormValue;
+  onChange: (value: PfosAdresFormValue) => void;
+  onListOpenChange?: (open: boolean) => void;
+};
+
+export default function PfosAdresAutocomplete({
+  value,
+  onChange,
+  onListOpenChange,
+}: Props) {
+  const { t } = usePfosLabel();
+  const [ready, setReady] = useState(false);
+  const [provinceId, setProvinceId] = useState<number | null>(null);
+  const [districtId, setDistrictId] = useState<string | null>(null);
+  const [openField, setOpenField] = useState<"il" | "ilce" | null>(null);
+
+  const setFieldOpen = useCallback((field: "il" | "ilce", open: boolean) => {
+    setOpenField((cur) => {
+      if (open) return field;
+      return cur === field ? null : cur;
+    });
+  }, []);
+
+  useEffect(() => {
+    void loadTrAdres().then(setReady);
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    const p = findProvinceByName(value.il);
+    setProvinceId(p?.id ?? null);
+    const d = p ? findDistrictByName(p.id, value.ilce) : null;
+    setDistrictId(d?.id ?? null);
+  }, [ready, value.il, value.ilce]);
+
+  useEffect(() => {
+    onListOpenChange?.(openField !== null);
+  }, [openField, onListOpenChange]);
+
+  useEffect(() => {
+    return () => onListOpenChange?.(false);
+  }, [onListOpenChange]);
+
+  const patch = useCallback(
+    (patch: Partial<PfosAdresFormValue>) => {
+      onChange({ ...value, ...patch });
+    },
+    [onChange, value],
+  );
+
+  const ilSuggestions = filterProvinces(value.il).map((p) => p.name);
+  const ilceSuggestions =
+    provinceId != null
+      ? filterDistricts(provinceId, value.ilce).map((d) => d.name)
+      : [];
+
+  function pickIl(name: string) {
+    const p = findProvinceByName(name);
+    setProvinceId(p?.id ?? null);
+    setDistrictId(null);
+    patch({ il: p?.name ?? name, ilce: "", mahalle: "" });
+    setOpenField(null);
+  }
+
+  function pickIlce(name: string) {
+    if (provinceId == null) {
+      const p = findProvinceByName(value.il);
+      if (p) setProvinceId(p.id);
+    }
+    const pid = provinceId ?? findProvinceByName(value.il)?.id;
+    const d = pid != null ? findDistrictByName(pid, name) : null;
+    setDistrictId(d?.id ?? null);
+    patch({ ilce: d?.name ?? name, mahalle: "" });
+    setOpenField(null);
+  }
+
+  return (
+    <form
+      className={`${styles.adresGrid}${openField ? ` ${styles.adresGridOpen}` : ""}`}
+      data-pfos-adres-form=""
+      autoComplete="off"
+      onSubmit={(e) => e.preventDefault()}
+    >
+      {/* Chrome adres otofill tuzağı — gerçek alanlar aşağıda */}
+      <div className={styles.adresAutofillTrap} aria-hidden="true">
+        <input
+          type="text"
+          name="pfos_trap_street"
+          autoComplete="street-address"
+          tabIndex={-1}
+          defaultValue=""
+        />
+        <input
+          type="text"
+          name="pfos_trap_city"
+          autoComplete="address-level2"
+          tabIndex={-1}
+          defaultValue=""
+        />
+      </div>
+      {!ready ? (
+        <p className={styles.questionNote}>{t("Adres listesi yükleniyor…")}</p>
+      ) : null}
+
+      <div className={styles.adresRow}>
+        <AutocompleteField
+          fieldKey="il"
+          label={t("İl (şehir)")}
+          required
+          placeholder={t("Yazmaya başlayın — örn. İstanbul")}
+          value={value.il}
+          suggestions={ilSuggestions}
+          open={openField === "il"}
+          onOpen={(o) => setFieldOpen("il", o)}
+          onChange={(il) => {
+            const prevP = findProvinceByName(value.il);
+            const nextP = findProvinceByName(il);
+            setProvinceId(nextP?.id ?? null);
+            if (prevP?.id !== nextP?.id) {
+              patch({ il, ilce: "", mahalle: "" });
+            } else {
+              patch({ il });
+            }
+          }}
+          onPick={pickIl}
+        />
+
+        <AutocompleteField
+          fieldKey="ilce"
+          label="İlçe"
+          required
+          placeholder={
+            provinceId != null
+              ? "Listeden seçin veya yazın"
+              : "Önce il seçin"
+          }
+          value={value.ilce}
+          disabled={!value.il.trim()}
+          suggestions={ilceSuggestions}
+          open={openField === "ilce"}
+          onOpen={(o) => setFieldOpen("ilce", o)}
+          onChange={(ilce) => {
+            if (provinceId == null) {
+              const p = findProvinceByName(value.il);
+              if (p) setProvinceId(p.id);
+            }
+            const pid = provinceId ?? findProvinceByName(value.il)?.id;
+            const d =
+              pid != null ? findDistrictByName(pid, ilce) : null;
+            setDistrictId(d?.id ?? null);
+            patch({ ilce, mahalle: "" });
+          }}
+          onPick={pickIlce}
+        />
+      </div>
+
+      {provinceId != null && value.ilce && !districtId ? (
+        <p className={styles.adresWarn}>
+          {t("İlçe listeden eşleşmedi — yine de devam edebilirsiniz.")}
+        </p>
+      ) : null}
+    </form>
+  );
+}

@@ -1,0 +1,95 @@
+{
+  "cod": "922613",
+  "title": "Pişirme Aksesuarları 6 ve 10xGN1/1 fırınlar için açık tip alt stand",
+  "category": "Kurulum Çözümleri - Alt Dolaplar ve Destekler",
+  "description": "6 & 10 GN 2/1 fırın için tepsi destekli açık alt dolap",
+  "url": "https://www.electroluxprofessional.com/tr/pd/cook-chill-pi%C5%9Fir-so%C4%9Fut-/skyline-f%C4%B1r%C4%B1nlar-i%C3%A7in-aksesuarlar/kurulum-%C3%A7%C3%B6z%C3%BCmleri-alt-dolaplar-ve-destekler/pi%C5%9Firme-aksesuarlar%C4%B1-6-ve-10xgn1-1-f%C4%B1r%C4%B1nlar-i%C3%A7in-a%C3%A7%C4%B1k-tip-alt-stand-922613/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1088 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "901 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "770 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "44.5 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "68 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Fırının kolaylıkla kurulabilmesi için önceden düzenlenmiş yapı (ayakları çıkarmaya gerek kalmaz).",
+        "Kaidenin alt kısmında montaj delikleri bulunmaktadır.",
+        "Ürüne 1 adet tepsi destek ünitesi dahildir; ikinci ünite opsiyonel olarak eklenebilmektedir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tümüyle paslanmaz çelik konstruksiyon."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Seriye genel bakış",
+      "type": "RAN",
+      "title": "922613",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/RAN/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf",
+      "local": "media/documents/922613/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "922613",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/OPBATRSU61021.dwg",
+      "local": "media/documents/922613/OPBATRSU61021.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "6 ve 10xGN1/1 fırınlar için açık tip alt stand",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Open Base with Tray GastroNorm Support, 6 and 10GN1_1&2_1 Ovens_922612-922613_Turkish.pdf",
+      "local": "media/documents/922613/Open%20Base%20with%20Tray%20GastroNorm%20Support,%206%20and%2010GN1_1&2_1%20Ovens_922612-922613_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "922613",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_922613_OPBATRSU61021.rfa",
+      "local": "media/documents/922613/QF_ELECTROLUXPROFESSIONAL_922613_OPBATRSU61021.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_922612_1_3_922612.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_922612_1_3_922612.jpg",
+      "local": "media/images/922613/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_922612_1_4_922612.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_922612_1_4_922612.jpg",
+      "local": "media/images/922613/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T10:58:42.929Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/skyline-kombi-firin/"
+}

@@ -1,0 +1,89 @@
+{
+  "cod": "361255",
+  "title": "Servis Arabaları GN Küvet Arabası-16xGN1/1 Üst Tablalı",
+  "category": "GN Küvet Arabaları",
+  "description": "GN küvet arabası, 16xGN1/1, üst tablalı, alçak tip, yükseklik=900mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/gn-k%C3%BCvet-arabalar%C4%B1/servis-arabalar%C4%B1-gn-k%C3%BCvet-arabas%C4%B1-16xgn1-1-%C3%BCst-tablal%C4%B1-361255/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "617 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "810 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "26 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25x25 mm ebadında kare profildir ve tümüyle kaynaklıdır.",
+        "C-şekilli \"devrilmez tip\" kılavuz raylarının her iki ucu yukarı doğru bükülmüştür.",
+        "GN1/1 küvet alır.",
+        "Çalışma tablası vardır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361255",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/CTR161T.dwg",
+      "local": "media/documents/361255/CTR161T.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "GN Küvet Arabası-16xGN1/1 Üst Tablalı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/16 GN 1-1 Container Trolley with worktop_361255_Turkish.pdf",
+      "local": "media/documents/361255/16%20GN%201-1%20Container%20Trolley%20with%20worktop_361255_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361255",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361255_CTR161T.rfa",
+      "local": "media/documents/361255/QF_ELECTROLUXPROFESSIONAL_361255_CTR161T.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_ITC361255_1_1_361255.JPG",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_ITC361255_1_1_361255.JPG",
+      "local": "media/images/361255/hero-1.JPG"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:50:09.408Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

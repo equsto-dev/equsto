@@ -1,0 +1,122 @@
+{
+  "cod": "133069",
+  "title": "Premium Serisi Tezgah-Evyeler 1600 mm Sırtlı Sebze Hazırlama Tezgahı",
+  "category": "Sebze Hazırlık Tezgahları",
+  "description": "Sebze hazırlık/yıkama tezgahı, 1 polietilen kesme tahtası, 2 hazne, sıyırma hunisi, sırtlı - 1600 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/sebze-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-1600-mm-s%C4%B1rtl%C4%B1-sebze-haz%C4%B1rlama-tezgah%C4%B1-133069/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1000 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "60 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek parça halinde preslenmiş evye (400x400x200 mm); taşma borusu ve drenaj deliği bulunur.",
+        "Sırtlı arka bölüm tümüyle kaynaklı paslanmaz çelik profil ile kapatılmıştır.",
+        "Tezgahlara ayak yerine tekerlek seti monte edilebilir.",
+        "Demonte olarak teslim edilir.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tezgaha mobil bir çöp kutusu ilave edilebilir. (opsiyonel aksesuar).",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +0/-40 mm ayarlanabilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133069",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/TLV1810PN.dwg",
+      "local": "media/documents/133069/TLV1810PN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1600 mm Sırtlı Sebze Hazırlama Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1600 mm Vegetables Processing Table with Upstand_133069_Turkish.pdf",
+      "local": "media/documents/133069/1600%20mm%20Vegetables%20Processing%20Table%20with%20Upstand_133069_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133069",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133069_TLV1810PN.rfa",
+      "local": "media/documents/133069/QF_ELECTROLUXPROFESSIONAL_133069_TLV1810PN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133069_1_1_133069.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133069_1_1_133069.jpg",
+      "local": "media/images/133069/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:41:48.774Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

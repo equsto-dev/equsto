@@ -1,0 +1,109 @@
+{
+  "cod": "133123",
+  "title": "Premium Serisi Tezgah-Evyeler 1 Çarpar Kapılı Köşe Tip Duvar Dolabı",
+  "category": "Çarpar Kapılı Duvar Dolapları",
+  "description": "Köşe tipi duvar dolabı, 1 raflı, 1 çarpar kapılı",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/duvar-dolaplar%C4%B1/%C3%A7arpar-kap%C4%B1l%C4%B1-duvar-dolaplar%C4%B1/premium-serisi-tezgah-evyeler-1-%C3%A7arpar-kap%C4%B1l%C4%B1-k%C3%B6%C5%9Fe-tip-duvar-dolab%C4%B1-133123/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Kapı adedi",
+          "value": "1"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "850 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "850 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "650 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "18 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Paslanmaz çelik kulplar hem hijyeniktir hem de güvenilirdir.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "En yüksek hijyen standartlarını karşılayan paslanmaz çelik Scotch Brite kaplama.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "Ses sönümlendirici iç panelli kapının iç tarafında 304 AISI paslanmaz çelik menteşeler bulunur.",
+        "İçteki paslanmaz çelik, kaynaklı karkas yapı, konstruksiyonu çok güçlendirir ve dayanıklı kılar.",
+        "Sadece 2 kapı kullanılarak dolabın içindeki her noktaya kolayca ulaşılır.",
+        "Duvar rafının ergonomik kulpları ve üç farklı yükseklikte monte edilebilen ara rafı vardır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133123",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/PAB800EN.dwg",
+      "local": "media/documents/133123/PAB800EN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1 Çarpar Kapılı Köşe Tip Duvar Dolabı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Corner Type Wall Cupboard with 1 Door_133123_Turkish.pdf",
+      "local": "media/documents/133123/Corner%20Type%20Wall%20Cupboard%20with%201%20Door_133123_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133123",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133123_PAB800EN.rfa",
+      "local": "media/documents/133123/QF_ELECTROLUXPROFESSIONAL_133123_PAB800EN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133123_1_2_133123.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133123_1_2_133123.jpg",
+      "local": "media/images/133123/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:40:44.038Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

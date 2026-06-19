@@ -1,0 +1,121 @@
+{
+  "cod": "133121",
+  "title": "Premium Serisi Tezgah-Evyeler 1600 mm 2 Kayar Kapılı Duvar Dolabı",
+  "category": "Kayar Kapılı Duvar Dolapları",
+  "description": "Duvar dolabı, 1 raflı, 2 kayar kapılı - 1600 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/duvar-dolaplar%C4%B1/kayar-kap%C4%B1l%C4%B1-duvar-dolaplar%C4%B1/premium-serisi-tezgah-evyeler-1600-mm-2-kayar-kap%C4%B1l%C4%B1-duvar-dolab%C4%B1-133121/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dolap genişliği",
+          "value": "1588 mm"
+        },
+        {
+          "label": "Dolap derinliği",
+          "value": "333 mm"
+        },
+        {
+          "label": "Dolap yüksekliği",
+          "value": "570 mm"
+        },
+        {
+          "label": "Kapı adedi",
+          "value": "2"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "400 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "650 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "31 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Paslanmaz çelik kulplar hem hijyeniktir hem de güvenilirdir.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "En yüksek hijyen standartlarını karşılayan paslanmaz çelik Scotch Brite kaplama.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "İçteki paslanmaz çelik, kaynaklı karkas yapı, konstruksiyonu çok güçlendirir ve dayanıklı kılar.",
+        "Duvar rafının ergonomik kulpları ve üç farklı yükseklikte monte edilebilen ara rafı vardır.",
+        "Ses sönümlendirici güçlü, kayar kapılar ön çerçeveyle aynı hizadadır.",
+        "Sadece 2 kapı kullanılarak dolabın içindeki her noktaya kolayca ulaşılır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133121",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/PS1600EN.dwg",
+      "local": "media/documents/133121/PS1600EN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1600 mm 2 Kayar Kapılı Duvar Dolabı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1600 mm Wall Cupboard with 2 Sliding Doors_133121_Turkish.pdf",
+      "local": "media/documents/133121/1600%20mm%20Wall%20Cupboard%20with%202%20Sliding%20Doors_133121_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133121",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133121_PS1600EN.rfa",
+      "local": "media/documents/133121/QF_ELECTROLUXPROFESSIONAL_133121_PS1600EN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133121_1_1_133121.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133121_1_1_133121.jpg",
+      "local": "media/images/133121/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:46:11.501Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

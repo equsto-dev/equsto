@@ -1,0 +1,83 @@
+{
+  "cod": "922616",
+  "title": "Pişirme Aksesuarları 6 ve 10xGN1/1 fırınlar için dolaplı stand, tepsi raflı",
+  "category": "Kurulum Çözümleri - Alt Dolaplar ve Destekler",
+  "description": "6 & 10 GN 2/1 fırın için tepsi destekli alt dolap",
+  "url": "https://www.electroluxprofessional.com/tr/pd/cook-chill-pi%C5%9Fir-so%C4%9Fut-/skyline-f%C4%B1r%C4%B1nlar-i%C3%A7in-aksesuarlar/kurulum-%C3%A7%C3%B6z%C3%BCmleri-alt-dolaplar-ve-destekler/pi%C5%9Firme-aksesuarlar%C4%B1-6-ve-10xgn1-1-f%C4%B1r%C4%B1nlar-i%C3%A7in-dolapl%C4%B1-stand-tepsi-rafl%C4%B1-922616/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1090 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "971 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "770 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "80 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "76 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Fırının kolaylıkla kurulabilmesi için önceden düzenlenmiş yapı (ayakları çıkarmaya gerek kalmaz).",
+        "Kaidenin alt kısmında montaj delikleri bulunmaktadır.",
+        "Ürüne 1 adet tepsi destek ünitesi dahildir; ikinci ünite opsiyonel olarak eklenebilmektedir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tümüyle paslanmaz çelik konstruksiyon."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Seriye genel bakış",
+      "type": "RAN",
+      "title": "922616",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/RAN/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf",
+      "local": "media/documents/922616/RAN_RAN-9JE00032_1_5_16_13_EPR_RO_Skyline_accessories_TURKISH-20230619_LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "922616",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/CUBATR61021.dwg",
+      "local": "media/documents/922616/CUBATR61021.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "6 ve 10xGN1/1 fırınlar için dolaplı stand, tepsi raflı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Cupboard base with tray support 6 and 10GN 1_1&2_1 for Ovens_922614-922616_Turkish.pdf",
+      "local": "media/documents/922616/Cupboard%20base%20with%20tray%20support%206%20and%2010GN%201_1&2_1%20for%20Ovens_922614-922616_Turkish.pdf"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_922616_1_1_922616 with 62 oven.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_922616_1_1_922616 with 62 oven.jpg",
+      "local": "media/images/922616/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:00:23.981Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/skyline-kombi-firin/"
+}

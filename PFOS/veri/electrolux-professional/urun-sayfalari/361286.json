@@ -1,0 +1,89 @@
+{
+  "cod": "361286",
+  "title": "Servis Arabaları Tabak Arabası-150 Tabaklık 1 Taraflı-H=835mm",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "1 taraflı tabak arabası, 150 tabaklık, yükseklik=835 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-tabak-arabas%C4%B1-150-tabakl%C4%B1k-1-tarafl%C4%B1-h=835mm-361286/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "880 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "470 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "835 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "15 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Krom kaplama galvaniz telden 2 adet tabak bölücü, farklı pozisyonlarda yerleştirilebilir.",
+        "Dikişsiz yatık taban ve üst ve arka rafların kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "Maksimum 245 mm çapında 150 adet tabak alır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361286",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/PTR150.dwg",
+      "local": "media/documents/361286/PTR150.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Tabak Arabası-150 Tabaklık 1 Taraflı-H=835mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1 Side Trolley for 150 plates - height 835 mm_361286_Turkish.pdf",
+      "local": "media/documents/361286/1%20Side%20Trolley%20for%20150%20plates%20-%20height%20835%20mm_361286_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361286",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361286_PTR150.rfa",
+      "local": "media/documents/361286/QF_ELECTROLUXPROFESSIONAL_361286_PTR150.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361286_1_1_361286.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361286_1_1_361286.jpg",
+      "local": "media/images/361286/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:50:16.674Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

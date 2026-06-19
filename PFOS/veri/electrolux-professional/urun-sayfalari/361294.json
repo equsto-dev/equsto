@@ -1,0 +1,89 @@
+{
+  "cod": "361294",
+  "title": "Servis Arabaları Tabak Arabası-300 Tabaklık 2 Taraflı & 2 Katlı - H=835 mm",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "2 taraflı ve 2 katlı tabak arabası, 300 tabak, yükseklik=835mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-tabak-arabas%C4%B1-300-tabakl%C4%B1k-2-tarafl%C4%B1-2-katl%C4%B1-h=835-mm-361294/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "880 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "840 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "835 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "33 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25x25 mm ebadında kare profildir ve tümüyle kaynaklıdır.",
+        "Krom kaplama galvaniz telden 8 adet tabak bölücü, farklı pozisyonlarda yerleştirilebilir.",
+        "Dikişsiz yatık taban ve üst ve arka rafların kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "Maksimum 245 mm çapında 300 adet tabak alır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361294",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/PTR300T.dwg",
+      "local": "media/documents/361294/PTR300T.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Tabak Arabası-300 Tabaklık 2 Taraflı & 2 Katlı - H=835 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/2 Side - 2 Tier Trolley for 300 plates_361294_Turkish.pdf",
+      "local": "media/documents/361294/2%20Side%20-%202%20Tier%20Trolley%20for%20300%20plates_361294_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361294",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361294_PTR300T.rfa",
+      "local": "media/documents/361294/QF_ELECTROLUXPROFESSIONAL_361294_PTR300T.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_ITC361294_1_1_361294.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_ITC361294_1_1_361294.jpg",
+      "local": "media/images/361294/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:51:13.706Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

@@ -1,0 +1,91 @@
+{
+  "cod": "361230",
+  "title": "Servis Arabaları Yük Taşıma Arabası-600 mm",
+  "category": "Servis Arabaları",
+  "description": "Platform arabası 600 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1-y%C3%BCk-ta%C5%9F%C4%B1ma-arabas%C4%B1-600-mm-361230/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "670 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "13 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Mutfak gereçlerini ve bulaşık sepetlerini taşımak için kullanılır.",
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Eşit biçimde yerleştirildiğinde yükleme kapasitesi 150 kg'dır.",
+        "Dikişsiz ses sönümlendirici platform rafın kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "Platform raf boyutları 600x600 mm.",
+        "Kulp tüm yükü taşıyan karkas yapının bir parçasıdır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361230",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/STR601.dwg",
+      "local": "media/documents/361230/STR601.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Yük Taşıma Arabası-600 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Platform Trolley 600 mm_361230_Turkish.pdf",
+      "local": "media/documents/361230/Platform%20Trolley%20600%20mm_361230_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361230",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361230_STR601.rfa",
+      "local": "media/documents/361230/QF_ELECTROLUXPROFESSIONAL_361230_STR601.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361230_1_2_361230.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361230_1_2_361230.jpg",
+      "local": "media/images/361230/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:05:52.880Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

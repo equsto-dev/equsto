@@ -1,0 +1,112 @@
+{
+  "cod": "133065",
+  "title": "Premium Serisi Tezgah-Evyeler 1200 mm Mobil Çalışma Tezgahı",
+  "category": "Çalışma Tezgahları",
+  "description": "Mobil çalışma tezgahı, 1200mm (Yükseklik=900)",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-1200-mm-mobil-%C3%A7al%C4%B1%C5%9Fma-tezgah%C4%B1-133065/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Drawer combinations - No. 400 mm drawers",
+          "value": "3"
+        },
+        {
+          "label": "Drawer combinations - No.600 mm drawers",
+          "value": "3"
+        },
+        {
+          "label": "Drawer combinations - No. 400 + 600 mm drawers",
+          "value": "1+2"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "40 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın yüksekliği tekerlekler dahil 900 mm'dir; diğer tezgahlarla aynı yükseklikte olduğundan tencere ve tavaların kolayca hareket ettirilebilmesine olanak sağlar.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir.",
+        "4 adet tekerlek standarttır."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "Üst tabla 50 mm yükseklikte, Scotch Brite yüzey sonlandırmaya sahip ve 15/10 kalınlıkta 304 AISI paslanmaz çeliktir; kenarları damlatmaz ve köşeleri kaynaklıdır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1200 mm Mobil Çalışma Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1200 mm Work Table+Wheels_133065_Turkish.pdf",
+      "local": "media/documents/133065/1200%20mm%20Work%20Table+Wheels_133065_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133065",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133065_TG1200ENR.rfa",
+      "local": "media/documents/133065/QF_ELECTROLUXPROFESSIONAL_133065_TG1200ENR.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133065_1_2_133065.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133065_1_2_133065.jpg",
+      "local": "media/images/133065/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:48:33.145Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

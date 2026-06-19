@@ -1,0 +1,142 @@
+{
+  "cod": "602181",
+  "title": "Vakum Paketleme Makineleri Set Üstü Vakum Paketleme Makinesi 20m3/saat",
+  "category": "Setüstü vakum paketleme makineleri",
+  "description": "Setüstü Vakum Paketleme Makinesi, 20 m3/saat, dokunmatik ekran",
+  "url": "https://www.electroluxprofessional.com/tr/pd/dinamik-haz%C4%B1rl%C4%B1k/tamamlay%C4%B1c%C4%B1-%C3%BCr%C3%BCnler/vakum-paketleme-makineleri/set%C3%BCst%C3%BC-vakum-paketleme-makineleri/vakum-paketleme-makineleri-set-%C3%BCst%C3%BC-vakum-paketleme-makinesi-20m3-saat-602181/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1N ph/50-60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "0.9 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Doldurma tahtası numarası",
+          "value": "3"
+        },
+        {
+          "label": "Gaz nozulları",
+          "value": "2"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "531 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "594 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "440 mm"
+        },
+        {
+          "label": "Net ağırlık (kg)",
+          "value": "62"
+        },
+        {
+          "label": "Hazne kapasitesi",
+          "value": "25.2 lt"
+        },
+        {
+          "label": "Pompa",
+          "value": "20 m³/h"
+        },
+        {
+          "label": "Sızdırmazlık çubuğu konumu",
+          "value": "Ön"
+        },
+        {
+          "label": "Sızdırmazlık çubuğu uzunluğu",
+          "value": "410 mm"
+        },
+        {
+          "label": "Maksimum hazne (hazne + kapak) boyutları",
+          "value": "440 x 448 x 170 mm"
+        },
+        {
+          "label": "Hazne çalışma boyutları",
+          "value": "387 x 448 x 130 mm"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Setüstü vakum paketleme makinesi, yağlı vakum pompalı.",
+        "Kalibrasyon gerektirmeyen mutlak tip vakum sensörü ile yüksek hassasiyetle vakum seviyesi kontrolü.",
+        "Sabit kalınlıkta, hidroformlu, paslanmaz çelikten yapılmış, kolay temizlenen köşeleri yuvarlatılmış basınç haznesi.",
+        "Kenarları yuvarlatılmış, sağlam, şeffaf PMMA (Pleksiglas) kapak, program sonunda otomatik olarak açılır",
+        "Sıvılara, neme, kire ve toza dayanıklı, temperli camdan yapılmış 5\" dokunmatik ekranlı kontrol paneli sayesinde kullanıcı dostu arayüz.",
+        "5 ekran dili: EN, FR, IT, DE, ES.",
+        "10 düzenlenebilir program (vakum, ekstra vakum, mühürleme süresi, gaz yüzdesi).",
+        "Gıda işleme için 4 ön ayarlı (Gurme) program.",
+        "İnert gaz enjeksiyonlu (hassas/yumuşak yiyecekler için) 3 ön ayarlı döngü (Gasplus).",
+        "Kavanozlar/konteynerler için 4 vakum programı.",
+        "Saklama ve sous vide pişirme için 2 ön ayarlı program.",
+        "Sekiz vakum fazında ve sekiz duraklama fazında (Degas) 1 programlanabilir hava tahliye programı.",
+        "Softair döngü sonunda yavaş hava dönüşü, yiyeceklere karşı daha hassas (deformasyonu önler).",
+        "0,1 ila 6 saniye arasında ayarlanabilir mühürleme süresi.",
+        "Özel pompa yağı temizleme programı (H2Out).",
+        "Soğutma gerektiren sıcak yiyecekler, paketleme işleminde arıza, gaz eksikliği, yağ değişimi gibi durumlarda otomatik uyarı verir.",
+        "Hava çıkış ağzına özel bir boru bağlanarak konteynerlerde harici vakum paketleme için önceden düzenlenmiştir. Opsiyonel yedek parça olarak bir adaptör ile harici bir konteynere vakum işlemi yapmak mümkündür. Bunun için harici konteynırın borusunu hava emiş valfine birleştirmek yeterlidir.",
+        "3 adet PE dolum tablası dahildir.",
+        "400 mm kapama barı, temizlik için kolayca çıkarılabilir.",
+        "İnert gaz sistemine bağlanmak üzere önceden ayarlanmış ünite."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tamamı 304 AISI paslanmaz çelikten imal edilmiştir.",
+        "Gövdenin menteşeli açıklığı sayesinde servis için kolay erişim."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "602181",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/602181_EVP20T.dwg",
+      "local": "media/documents/602181/602181_EVP20T.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Set Üstü Vakum Paketleme Makinesi 20m3/saat",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Vacuum packer 20m3-h table top_602181_Turkish.pdf",
+      "local": "media/documents/602181/Vacuum%20packer%2020m3-h%20table%20top_602181_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "602181",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_602181_EVP20T.rfa",
+      "local": "media/documents/602181/QF_ELECTROLUXPROFESSIONAL_602181_EVP20T.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602181_1_1_602181.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602181_1_1_602181.jpg",
+      "local": "media/images/602181/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:54:41.690Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/vakum-paketleme-makineleri/"
+}

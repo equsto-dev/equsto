@@ -1,0 +1,120 @@
+{
+  "cod": "133051",
+  "title": "Premium Serisi Tezgah-Evyeler 1600 mm Çalışma Tezgahı",
+  "category": "Çalışma Tezgahları",
+  "description": "Çalışma tezgahı, 1600mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-1600-mm-%C3%A7al%C4%B1%C5%9Fma-tezgah%C4%B1-133051/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Drawer combinations - No. 400 mm drawers",
+          "value": "3"
+        },
+        {
+          "label": "Drawer combinations - No.600 mm drawers",
+          "value": "2"
+        },
+        {
+          "label": "Drawer combinations - No. 400 + 600 mm drawers",
+          "value": "2+1"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "50 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgah 400 veya 600 mm genişlikte çekmecelerle (opsiyonel aksesuar) birlikte sipariş edilebilir. İhtiyaca göre ilk çekmeceye başka çekmeceler de ilave edilerek 2,3 veya 4'lü çekmece blokları yaratmak mümkündür.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Demonte olarak teslim edilir.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "Üst tabla 50 mm yükseklikte, Scotch Brite yüzey sonlandırmaya sahip ve 15/10 kalınlıkta 304 AISI paslanmaz çeliktir; kenarları damlatmaz ve köşeleri kaynaklıdır.",
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +0/-40 mm ayarlanabilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133051",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/133051_TG1600EN.dwg",
+      "local": "media/documents/133051/133051_TG1600EN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1600 mm Çalışma Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1600 mm Work Table_133051_Turkish.pdf",
+      "local": "media/documents/133051/1600%20mm%20Work%20Table_133051_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133051",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133051_TG1600EN.rfa",
+      "local": "media/documents/133051/QF_ELECTROLUXPROFESSIONAL_133051_TG1600EN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133051_1_1_133051.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133051_1_1_133051.jpg",
+      "local": "media/images/133051/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:45:05.772Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

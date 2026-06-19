@@ -1,0 +1,125 @@
+{
+  "cod": "232189",
+  "title": "Yüksek Kapasiteli Pişirme Ekipmanları Easyline Electric Boiling Pan with Auto Filling System 100lt",
+  "category": "Elektrikli kaynatma kazanları EBE Easy Line",
+  "description": "Elektrikli kaynatma kazanı, otomatik su doldurma sistemli, 100 Lt - EasyLine Kaynatma kazanının doğru şekilde monte edilebilmesi için sol kolon 928000 ve montaj kiti 928002 cihazla birlikte sipariş edilmelidir. İlave olarak kurulumda; cihaz ilk defa zemine monte edilecekse 928001, cihaz mevcut kullanılan bir zemine vidalanacaksa 928003 - biri sağ kolona diğeri sol kolona olmak üzere 2 adet sipariş edilmesi gerekir.",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/di%C4%9Fer-pi%C5%9Firme-ekipmanlar%C4%B1/kaynatma-kazanlar%C4%B1/elektrikli-kaynatma-kazanlar%C4%B1-ebe-easy-line/y%C3%BCksek-kapasiteli-pi%C5%9Firme-ekipmanlar%C4%B1-easyline-electric-boiling-pan-with-auto-filling-system-100lt-232189/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "400 V/3N ph/50-60 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "15 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "MIN. çalışma sıcaklığı",
+          "value": "30 °C"
+        },
+        {
+          "label": "MAX.çalışma sıcaklığı",
+          "value": "108 °C"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "780 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Net kullanılabilir kazan kapasitesi",
+          "value": "100 Lt"
+        },
+        {
+          "label": "Devirme mekanizması",
+          "value": "Otomatik"
+        },
+        {
+          "label": "Rulman",
+          "value": "Merkezi"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Yiyecekler 108°C doymuş buhar kullanılarak indirek ısıtma sistemi ile kazanın taban ve yan duvarlarından ısıtılarak pişirilir. Cekette hava tahliye sistemi bulunur.",
+        "Yüksek termal girdi ve hızlı ısınma.",
+        "Cekete su otomatik olarak doldurulur.",
+        "Ergonomik kazan boyutları: Çapının geniş, derinliğinin az olması karıştırma ve yemeği elleçleme işlemlerini kolaylaştırır.",
+        "Kavisli kazan tabanı sayesinde, kazanda çok az miktarda malzeme olsa dahi hazırlık işlemini mükemmel biçimde yapar.",
+        "Düşük su seviyesine karşı koruma sağlayan emniyet termostatı.",
+        "Emniyet valfi buhar ceketinde oluşabilecek aşırı basıncı engeller.",
+        "CE emniyet gereksinimleriyle uyumludur.",
+        "Yüksek hijyen standartlarına uygun konstruksiyon.",
+        "Suya karşı yüksek koruma sınıfı (IPX5) ve panellerin dış yüzeyinde düşük sıcaklık sayesinde çok emniyetlidir.",
+        "Verimli ısıtma teknolojisi ve ısıyı hazne içinde tutan izolasyonu sayesinde hızlı çalışma özelliği."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Kazanın yüksek kalitede termal izolasyonu enerji tasarrufu sağlar ve çalışma sırasında ortama düşük ısı yayar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "304 AISI paslanmaz çelik konstruksiyon ve köşeleri yuvarlatılmış derin çekme kazan.",
+        "Kazan 90°'den daha fazla yatar ve yemek tümüyle boşalır.",
+        "Motorlu devirme tertibatı.",
+        "Elektromekanik kontrol.",
+        "Yüksek devirme pozisyonu sayesinde ergonomik ve kullanıcı dostudur ve küvetleri rahatça doldurmayı sağlayan özel tasarımlı boşaltma ağzı bulunur.",
+        "Devirme aksının kazanın ortasında olması boşaltma ağzının yüksekte durmasını ve yüksek kapların kolayca doldurulmasını sağlar.",
+        "Elektrik rezistansları direk olarak ceketteki suya daldırılmıştır; ısı kaybı çok düşüktür ve dolayısıyla kazananın verimliliği yüksektir.",
+        "Maksimum basınç: 0,5 bar; çalışma basıncı: 0,4 bar."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "232189",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/EBE100AWF.dwg",
+      "local": "media/documents/232189/EBE100AWF.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Easyline Electric Boiling Pan with Auto Filling System 100lt",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Easyline Electric Boiling Pan with Auto Filling System 100lt_232189_Turkish.pdf",
+      "local": "media/documents/232189/Easyline%20Electric%20Boiling%20Pan%20with%20Auto%20Filling%20System%20100lt_232189_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "232189",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_232189_EBE100AWF.rfa",
+      "local": "media/documents/232189/QF_ELECTROLUXPROFESSIONAL_232189_EBE100AWF.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_ALEBE100_1_2_232099.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_ALEBE100_1_2_232099.jpg",
+      "local": "media/images/232189/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:05:34.105Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/kaynatma-kazanlari-devrilir-tavalar/kaynatma-kazanlari-ve-devrilir-tavalar-diger/"
+}

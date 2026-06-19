@@ -1,0 +1,108 @@
+{
+  "cod": "601131",
+  "title": "Dilimleme makineleri Yatık tip dilimleme makinesi, bıçak çapı 300mm, kayışlı transmisyon",
+  "category": "Yatık Tip Dilimleme Makineleri - Kayış Transmisyonlu Modeller",
+  "description": "Yatık tip dilimleme makinesi, bıçak çapı 300 mm. Kesme kapasitesi: Kare 185x185 mm; dikdörtgen 250x170 mm, yuvarlak Ø190 mm, kayışlı transmisyon",
+  "url": "https://www.electroluxprofessional.com/tr/pd/dinamik-haz%C4%B1rl%C4%B1k/dilimleme-makineleri/yat%C4%B1k-tip-dilimleme-makineleri/yat%C4%B1k-tip-dilimleme-makineleri-kay%C4%B1%C5%9F-transmisyonlu-modeller/dilimleme-makineleri-yat%C4%B1k-tip-dilimleme-makinesi-b%C4%B1%C3%A7ak-%C3%A7ap%C4%B1-300mm-kay%C4%B1%C5%9Fl%C4%B1-transmisyon-601131/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "230 V/1N ph/50 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "0.19 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "620 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "510 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "450 mm"
+        },
+        {
+          "label": "Net ağırlık (kg)",
+          "value": "30"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Manuel yatık tip dilimleme makinesi.",
+        "Dilim kalınlığı: 0-15 mm.",
+        "Kesme kalınlığını ayarlayan düğme (milimetrelik ayar olanağı).",
+        "Kayışlı transmisyon.",
+        "Fan soğutmalı bıçak motoru aralıksız kullanım için dizayn edilmiştir, sessiz kullanım ve ekonomik servis için V-kayışlı tahrik sistem.",
+        "Demonte taşıma sistemi sürekli olarak kendi kendine yağlanır.",
+        "Bıçak bileme taşı ve bıçağı koruyan kapak kolayca sökülür.",
+        "Bıçak sökme aleti ile birlikte.",
+        "Çalışma, temizlik ve bakım işlemlerinde yüksek derecede emniyet.",
+        "Bıçak çapı 300 mm olan modelin kesme kapasitesi. • kare: 190x190 mm • dikdörtgen: 250x190 mm • yuvarlak: 220 mm"
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Bıçak krom dövme çelikten yapılmıştır ve ekstra koruma için bıçak koruyucu halkası bulunmaktadır.",
+        "Kompakt dizayn.",
+        "Taşlanmış, satine eloksallı alumiyum konstruksiyon. Bu yapısı sayesinde asitlere, tuzlara ve oksidasyona neden olabilecek işlemlere karşı yüksek bir direnç ve hijyen sağlar.",
+        "Pleksicam el koruması standarttır.",
+        "IP koruma sınıfı: IP42."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "601131",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/MSG30B.dwg",
+      "local": "media/documents/601131/MSG30B.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Yatık tip dilimleme makinesi, bıçak çapı 300mm, kayışlı transmisyon",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/300 mm Gravity Slicer - belt transmission_601131-601112_Turkish.pdf",
+      "local": "media/documents/601131/300%20mm%20Gravity%20Slicer%20-%20belt%20transmission_601131-601112_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "601131",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_601131_MSG30B.rfa",
+      "local": "media/documents/601131/QF_ELECTROLUXPROFESSIONAL_601131_MSG30B.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_601131_1_3_601131.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_601131_1_3_601131.jpg",
+      "local": "media/images/601131/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_601131_2_2_601131.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_601131_2_2_601131.jpg",
+      "local": "media/images/601131/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:54:34.633Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/kes-karistir-dilimle/"
+}

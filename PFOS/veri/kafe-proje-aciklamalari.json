@@ -1,0 +1,150 @@
+{
+  "tarih": "2026-06-07",
+  "isTipi": "kafe",
+  "aciklama": "Her proje için senin domain notların. Doldur / düzelt — matris kuralları buna göre güncellenir.",
+  "matrisEksenleri": {
+    "olcek": "S1 küçük (40-99 m²) | S2 orta (100-149) | S3 büyük (150-200)",
+    "yogunluk": "Y1 bar | Y2 hafif mutfak | Y3 pastane/tatlı"
+  },
+  "projeler": [
+    {
+      "id": "coffee-shop-referans",
+      "konseptId": "coffee-shop",
+      "proje": "2016-114 Espressolab Watergarden",
+      "m2": 120,
+      "matrisHucre": "S2×Y1",
+      "seed": true,
+      "profil": "Bar / içecek ağırlıklı; sıcak mutfak yok.",
+      "menu": "Espresso, filtre, soğuk içecek, sandviç/snack (hazır).",
+      "matrisNotu": "Orta ölçek bar-only referansı. Wizard anchor.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "kahve-tatli-40-100",
+      "konseptId": "kahve-tatli",
+      "proje": "2016-132 Hacıbozan Çemberlitaş",
+      "m2": 70,
+      "matrisHucre": "S1×Y3",
+      "seed": true,
+      "profil": "Küçük kahve + tatlı / pastane vitrin.",
+      "menu": "Kahve, pasta, tatlı teşhir; sınırlı sıcak üretim.",
+      "matrisNotu": "Küçük pastane bandının tek seed listesi.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "kahve-duragi-100-200",
+      "konseptId": "kahve-duragi",
+      "proje": "2016-105 Kahve Durağı Konyaaltı",
+      "m2": 125,
+      "matrisHucre": "S2×Y2",
+      "seed": true,
+      "profil": "Zincir cafe-restaurant kompakt.",
+      "menu": "Kahve + sıcak yemek, tost, makarna vb.",
+      "matrisNotu": "S2×Y2 için birincil seed (Atölyesi/Casual ile aynı hücre).",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "kahve-duragi-150-200",
+      "konseptId": "kahve-duragi",
+      "proje": "2016-106 Kahve Durağı Karabük",
+      "m2": 175,
+      "matrisHucre": "S3×Y2",
+      "seed": true,
+      "profil": "Zincir cafe-restaurant standart; en kapsamlı Y2.",
+      "menu": "Tam cafe-restaurant menüsü, yüksek servis.",
+      "matrisNotu": "S3×Y2 seed — 51 kalem, öncelikli referans.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "kahve-duragi-pastane-100-200",
+      "konseptId": "kahve-duragi-pastane",
+      "proje": "2016-135 Kahve Durağı Sultangazi",
+      "m2": 150,
+      "matrisHucre": "S3×Y3",
+      "seed": true,
+      "profil": "Pastane + kahvaltı + kahve barı.",
+      "menu": "Kahvaltı, pasta, börek; konveksiyon hattı.",
+      "matrisNotu": "Büyük pastane hücresi seed.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "kahve-atolyesi-80-150",
+      "konseptId": "kahve-atolyesi",
+      "proje": "2016-046 Kahve Atölyesi Lainox",
+      "m2": 120,
+      "matrisHucre": "S2×Y2",
+      "seed": false,
+      "profil": "Çok tezgahlı üretim mutfağı + kahve.",
+      "menu": "",
+      "matrisNotu": "S2×Y2 doğrulama listesi; seed değil.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "harvest-cafe-100-200",
+      "konseptId": "harvest-cafe",
+      "proje": "2016-051 Harvest Bahçeşehir",
+      "m2": 150,
+      "matrisHucre": "S3×Y2",
+      "seed": false,
+      "profil": "Büyük cafe-restaurant; filtre kahve + teşhir.",
+      "menu": "",
+      "matrisNotu": "S3×Y2 alternatif; Karabük seed tercih edilir.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "all-sport-cafe-100-200",
+      "konseptId": "all-sport-cafe",
+      "proje": "2016-064 All Sport Cafe",
+      "m2": 150,
+      "matrisHucre": "S3×Y2",
+      "seed": false,
+      "profil": "Spor cafe; daha hafif mutfak (32 kalem).",
+      "menu": "",
+      "matrisNotu": "Harvest/Karabük ile birleştirilebilir.",
+      "eksikler": "",
+      "seninNotun": ""
+    },
+    {
+      "id": "casual-cafe-50-150",
+      "konseptId": "casual-cafe",
+      "proje": "2017-026 Beykent Şifa Cafe",
+      "m2": 100,
+      "matrisHucre": "S2×Y2",
+      "seed": false,
+      "profil": "Genel casual cafe-restaurant.",
+      "menu": "",
+      "matrisNotu": "Konyaaltı seed ile aynı hücre.",
+      "eksikler": "",
+      "seninNotun": ""
+    }
+  ],
+  "bosHucreler": [
+    {
+      "hucre": "S1×Y1",
+      "oneri": "coffee-shop profilinden m² ölçekle",
+      "seninNotun": ""
+    },
+    {
+      "hucre": "S1×Y2",
+      "oneri": "S2×Y2 kurallarından küçült",
+      "seninNotun": ""
+    },
+    {
+      "hucre": "S2×Y3",
+      "oneri": "kahve-tatli + S3×Y3 arası interpolasyon",
+      "seninNotun": ""
+    },
+    {
+      "hucre": "S3×Y1",
+      "oneri": "coffee-shop × büyük bar ölçeği",
+      "seninNotun": ""
+    }
+  ]
+}

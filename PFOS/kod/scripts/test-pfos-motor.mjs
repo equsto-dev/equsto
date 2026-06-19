@@ -11,7 +11,9 @@ const KONSEPTLER = [
   { konsept: "meyhane", m2: 180 },
   { konsept: "kebap-ortadogu", m2: 220 },
   { konsept: "all-day-dining-cafe", m2: 280 },
-] ;
+  { konsept: "restoran", m2: 300 },
+  { konsept: "restoran", m2: 600 },
+];
 
 clearMatchProductCache();
 clearShopCatalogCache();

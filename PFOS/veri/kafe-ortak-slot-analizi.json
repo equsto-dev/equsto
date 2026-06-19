@@ -1,0 +1,919 @@
+{
+  "tarih": "2026-06-07",
+  "listeSayisi": 9,
+  "listeler": [
+    {
+      "id": "coffee-shop-referans",
+      "label": "Coffee Shop",
+      "m2": 120,
+      "kalem": 20,
+      "kaynak": "2016-114 ESPRESOLAB WATERGARDEN/2016-114-1.xlsx"
+    },
+    {
+      "id": "kahve-atolyesi-80-150",
+      "label": "Kahve Atölyesi",
+      "m2": 120,
+      "kalem": 47,
+      "kaynak": "2016-046 KAHVE ATÖLYESİ LAINOX/2016-046-1.xlsx"
+    },
+    {
+      "id": "harvest-cafe-100-200",
+      "label": "Harvest Cafe",
+      "m2": 150,
+      "kalem": 44,
+      "kaynak": "2016-051 HARVEST BAHÇEŞEHİR MEFFTECH/2016-051-4.xlsx"
+    },
+    {
+      "id": "all-sport-cafe-100-200",
+      "label": "All Sport Cafe",
+      "m2": 150,
+      "kalem": 32,
+      "kaynak": "2016-064 ALL SPORT CAFE MEFFTECH/2016-064-1.xlsx"
+    },
+    {
+      "id": "kahve-duragi-100-200",
+      "label": "Kahve Durağı",
+      "m2": 125,
+      "kalem": 46,
+      "kaynak": "2016-105 KAVE DURAĞI KONYALTI LAINOX/2016-105.xlsx"
+    },
+    {
+      "id": "kahve-duragi-150-200",
+      "label": "Kahve Durağı",
+      "m2": 175,
+      "kalem": 51,
+      "kaynak": "2016-106 KAHVE DURAĞI KARABÜK LAINOX/2016-106.xlsx"
+    },
+    {
+      "id": "kahve-tatli-40-100",
+      "label": "Kahve & Tatlı",
+      "m2": 70,
+      "kalem": 34,
+      "kaynak": "2016-132 HACIBOZAN ÇEMBERLİTAŞ LAINOX/2016-132-2.xlsx"
+    },
+    {
+      "id": "kahve-duragi-pastane-100-200",
+      "label": "Kahve Durağı — Pastane & Kahvaltı",
+      "m2": 150,
+      "kalem": 43,
+      "kaynak": "2016-135 KAHVE DURAĞI SULTANGAZİ LAINOX/2016-135.xlsx"
+    },
+    {
+      "id": "casual-cafe-50-150",
+      "label": "Casual Cafe",
+      "m2": 100,
+      "kalem": 49,
+      "kaynak": "2017-026 BEYKENT ŞİFA CAFE/2017-026.xlsx"
+    }
+  ],
+  "katmanlar": {
+    "cekirdek": 9,
+    "ortak": 7,
+    "opsiyonel": 9,
+    "nadir": 4
+  },
+  "slotlar": [
+    {
+      "slot": "diger",
+      "label": "Sınıflandırılamayan",
+      "listCount": 9,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 145,
+      "ornekler": [
+        "KAHVE MAKİNASI",
+        "SERVİS TEZGAHI, GRANİT MOBİLYA HARİÇTİR",
+        "ÇİKOLATA DOLABI, GRANİT MOBİLYA HARİÇTİR",
+        "PASTA DOLABI, GRANİT MOBİLYA HARİÇTİR"
+      ],
+      "tips": [
+        "?"
+      ],
+      "pct": 100,
+      "ortAdet": 16.1,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "calisma_tezgahi",
+      "label": "Bar çalışma tezgahı",
+      "listCount": 9,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 61,
+      "ornekler": [
+        "ÇALIŞMA TEZGAHI, KASA ÇEKMECELİ, KAHVE ÇEKMECELİ, TABAN VE ARA RAFLI",
+        "ÇİFT EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI, SİYAH BOYALI",
+        "ÇALIŞMA TEZGAHI, ÇÖP ÇEKMECELİ, SİYAH BOYALI",
+        "ÇALIŞMA TEZGAHI, ARA RAFLI, DOLAPLI"
+      ],
+      "tips": [
+        "calisma-tezgahi-kasa-kahve",
+        "calisma-tezgahi-dolapli",
+        "calisma-tezgahi",
+        "calisma-tezgahi-taban-ara"
+      ],
+      "pct": 100,
+      "ortAdet": 6.8,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "derin_dondurucu",
+      "label": "Derin dondurucu",
+      "listCount": 9,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 12,
+      "ornekler": [
+        "SETALTI DERİNDONDURUCU, TEK KAPILI",
+        "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+        "PANEL TİP DERİN DONDURUCU ODA",
+        "TEK KAPILI DERİN DONDURUCU"
+      ],
+      "tips": [
+        "setalti-derin-dondurucu",
+        "depo-derin-dondurucu"
+      ],
+      "pct": 100,
+      "ortAdet": 1.3,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "espresso_makinesi",
+      "label": "Espresso makinesi (2 grup)",
+      "listCount": 9,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 10,
+      "ornekler": [
+        "ESPRESSO KAHVE MAKİNASI",
+        "ESPRESSO KAHVE MAKİNASI",
+        "ESPRESSO KAHVE MAKİNASI",
+        "ESPRESSO KAHVE MAKİNASI"
+      ],
+      "tips": [
+        "espresso-2-grup"
+      ],
+      "pct": 100,
+      "ortAdet": 1.1,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "kombi_firin",
+      "label": "Kombi fırın",
+      "listCount": 8,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 16,
+      "ornekler": [
+        "FIRIN TEZGAHI, TEPSİ İSTİFLİ",
+        "KONVEKSİYONLU FIRIN",
+        "FIRIN TEZGAHI",
+        "FIRIN DAVLUMBAZI"
+      ],
+      "tips": [
+        "kombi-firin-6t"
+      ],
+      "pct": 88.9,
+      "ortAdet": 2,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "davlumbaz",
+      "label": "Davlumbaz",
+      "listCount": 8,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 12,
+      "ornekler": [
+        "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+        "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+        "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+        "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ"
+      ],
+      "tips": [
+        "davlumbaz-duvar"
+      ],
+      "pct": 88.9,
+      "ortAdet": 1.5,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "meyve_sikacagi",
+      "label": "Meyve sıkacağı",
+      "listCount": 8,
+      "lists": [
+        "coffee-shop-referans",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 9,
+      "ornekler": [
+        "KATI MEYVE SIKACAĞI",
+        "KOLLU PORTAKAL SIKMA",
+        "PORTAKAL SIKMA MAKİNASI",
+        "PORTAKAL SIKMA MAKİNASI"
+      ],
+      "tips": [
+        "kati-meyve-sikacagi"
+      ],
+      "pct": 88.9,
+      "ortAdet": 1.1,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "buz_makinesi",
+      "label": "Buz makinesi",
+      "listCount": 8,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 8,
+      "ornekler": [
+        "BUZ MAKİNASI",
+        "BUZ MAKİNASI",
+        "BUZ MAKİNASI",
+        "BUZ MAKİNASI"
+      ],
+      "tips": [
+        "buz-makinesi-90kg"
+      ],
+      "pct": 88.9,
+      "ortAdet": 1,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "blender",
+      "label": "Blender",
+      "listCount": 8,
+      "lists": [
+        "coffee-shop-referans",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 8,
+      "ornekler": [
+        "BAR BLENDER",
+        "BAR BLENDER",
+        "BAR BLENDER, KABİNLİ",
+        "BAR BLENDER"
+      ],
+      "tips": [
+        "bar-blender"
+      ],
+      "pct": 88.9,
+      "ortAdet": 1,
+      "katman": "cekirdek"
+    },
+    {
+      "slot": "bulasik_makinesi",
+      "label": "Bulaşık makinesi",
+      "listCount": 7,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 14,
+      "ornekler": [
+        "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+        "BULAŞIK YIKAMA MAKİNASI, SETALTI (TECH-500)",
+        "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+        "BULAŞIK YIKAMA MAKİNASI, SETALTI"
+      ],
+      "tips": [
+        "bulasik-makinesi-setalti",
+        "bulasik-makinesi-giyotin"
+      ],
+      "pct": 77.8,
+      "ortAdet": 2,
+      "katman": "ortak"
+    },
+    {
+      "slot": "buzdolabi_diger",
+      "label": "Buzdolabı (diğer)",
+      "listCount": 7,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 10,
+      "ornekler": [
+        "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+        "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ, REMOTE CONTROL",
+        "GARNİTÜR ÜNİTELİ BUZDOLABI",
+        "TEZGAH TİPİ BUZDOLABI, (CAMLI OLMALI)"
+      ],
+      "tips": [
+        "?"
+      ],
+      "pct": 77.8,
+      "ortAdet": 1.4,
+      "katman": "ortak"
+    },
+    {
+      "slot": "cop_arabasi",
+      "label": "Çöp arabası",
+      "listCount": 7,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200"
+      ],
+      "totalAdet": 8,
+      "ornekler": [
+        "ÇÖP ARABASI",
+        "ÇÖP ARABASI",
+        "ÇÖP ARABASI",
+        "ÇÖP ARABASI"
+      ],
+      "tips": [
+        "cop-arabasi"
+      ],
+      "pct": 77.8,
+      "ortAdet": 1.1,
+      "katman": "ortak"
+    },
+    {
+      "slot": "yer_izgarasi",
+      "label": "Yer ızgarası",
+      "listCount": 6,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 20,
+      "ornekler": [
+        "YER IZGARASI",
+        "YER IZGARASI",
+        "YER IZGARASI",
+        "YER IZGARASI"
+      ],
+      "tips": [
+        "yer-izgara-kucuk"
+      ],
+      "pct": 66.7,
+      "ortAdet": 3.3,
+      "katman": "ortak"
+    },
+    {
+      "slot": "depo_buzdolabi",
+      "label": "Depo / dik tip buzdolabı",
+      "listCount": 6,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 8,
+      "ornekler": [
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+        "DEPO TİPİ BUZDOLABI, TEK KAPILI"
+      ],
+      "tips": [
+        "depo-buzdolabi-tek-kapili"
+      ],
+      "pct": 66.7,
+      "ortAdet": 1.3,
+      "katman": "ortak"
+    },
+    {
+      "slot": "pisirme_izgara",
+      "label": "Pişirme ızgarası / ocak",
+      "listCount": 6,
+      "lists": [
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200"
+      ],
+      "totalAdet": 6,
+      "ornekler": [
+        "IZGARA, ELK., SETÜSTÜ",
+        "DÖKÜM IZGARA, GAZLI, SETÜSTÜ",
+        "IZGARA",
+        "IZGARA"
+      ],
+      "tips": [
+        "yer-izgara"
+      ],
+      "pct": 66.7,
+      "ortAdet": 1,
+      "katman": "ortak"
+    },
+    {
+      "slot": "fritoz",
+      "label": "Fritöz",
+      "listCount": 5,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-tatli-40-100",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 5,
+      "ornekler": [
+        "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+        "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+        "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+        "FRİTÖZ, ELK."
+      ],
+      "tips": [
+        "fritoz-tek"
+      ],
+      "pct": 55.6,
+      "ortAdet": 1,
+      "katman": "ortak"
+    },
+    {
+      "slot": "soguk_teshir",
+      "label": "Soğuk teşhir vitrini",
+      "listCount": 4,
+      "lists": [
+        "coffee-shop-referans",
+        "harvest-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200"
+      ],
+      "totalAdet": 7,
+      "ornekler": [
+        "SOĞUK TEŞHİR DOLABI (İÇECEK+ PASTA + NÖTR)",
+        "NÖTR TEŞHİR DOLABI, ALT DEPO SOĞUTMALI, GRANİT DAHİL, MOBİLYA HARİÇTİR",
+        "SOĞUK TEŞHİR DOLABI, DEPOSUZ, MOTORU BÜNYESİNDE, GRANİT DAHİL, MOBİLYA HARİÇTİR",
+        "PASTA TEŞHİR DOLABI"
+      ],
+      "tips": [
+        "soguk-tesir-dolabi-pastane"
+      ],
+      "pct": 44.4,
+      "ortAdet": 1.8,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "istif_rafi",
+      "label": "İstif rafı",
+      "listCount": 3,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "kahve-duragi-pastane-100-200"
+      ],
+      "totalAdet": 13,
+      "ornekler": [
+        "İSTİF RAFI, DEMONTE, 4 KATLI",
+        "İSTİF RAFI, DEMONTE, 4 KATLI",
+        "İSTİF RAFI, DEMONTE, 4 KATLI",
+        "İSTİF RAFI, DEMONTE, 4 KATLI"
+      ],
+      "tips": [
+        "istif-rafi"
+      ],
+      "pct": 33.3,
+      "ortAdet": 4.3,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "bar_kuvet",
+      "label": "Bar küvet (GN)",
+      "listCount": 3,
+      "lists": [
+        "kahve-atolyesi-80-150",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200"
+      ],
+      "totalAdet": 8,
+      "ornekler": [
+        "MAKE-UP DOLABI, 2 KAPILI, KÜVETLER DAHİL",
+        "TEK KÜVETLİ TEZGAH",
+        "TEK KÜVETLİ TEZGAH",
+        "TEK KÜVETLİ TEZGAH"
+      ],
+      "tips": [
+        "bar-kuvet"
+      ],
+      "pct": 33.3,
+      "ortAdet": 2.7,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "sise_sogutucu",
+      "label": "Şişe soğutucu (bar)",
+      "listCount": 3,
+      "lists": [
+        "coffee-shop-referans",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200"
+      ],
+      "totalAdet": 4,
+      "ornekler": [
+        "ŞİŞE SOĞUTUCU, İKİ KAPILI",
+        "ŞİŞE SOĞUTUCU, TEK KAPILI, SETALTI",
+        "ŞİŞE SOĞUTUCU, DUVAR TİPİ, REMOTE CONTROL"
+      ],
+      "tips": [
+        "sise-sogutucu-2-kapili",
+        "bar-buzdolabi"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1.3,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "kahve_degirmeni",
+      "label": "Kahve öğütücü",
+      "listCount": 3,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "KAHVE DEĞİRMENİ",
+        "KAHVE DEĞİRMENİ",
+        "KAHVE DEĞİRMENİ"
+      ],
+      "tips": [
+        "kahve-degirmeni"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "filtre_kahve",
+      "label": "Filtre kahve makinesi",
+      "listCount": 3,
+      "lists": [
+        "coffee-shop-referans",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "FİLTRE KAHVE MAKİNASI (ANIMO M200)",
+        "FİLTRE KAHVE MAKİNASI",
+        "FİLTRE KAHVE MAKİNASI"
+      ],
+      "tips": [
+        "filter-coffee-makinesi"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "setalti_buzdolabi",
+      "label": "Tezgah altı buzdolabı",
+      "listCount": 3,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "all-sport-cafe-100-200"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "SETALTI BUZDOLABI, TEK KAPILI",
+        "CİHAZALTI BUZDOLABI, ÇEKMECELİ",
+        "CİHAZALTI BUZDOLABI, ÇİFT SIRA ÇEKMECELİ, REMOTE CONTROL"
+      ],
+      "tips": [
+        "setalti-buzdolabi-tek"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "konveksiyon_firin",
+      "label": "Konveksiyon fırın",
+      "listCount": 3,
+      "lists": [
+        "harvest-cafe-100-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "FIRIN",
+        "FIRIN",
+        "FIRIN"
+      ],
+      "tips": [
+        "konveksiyon-firin-pastane"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "turk_kahve",
+      "label": "Türk kahvesi makinesi",
+      "listCount": 3,
+      "lists": [
+        "harvest-cafe-100-200",
+        "kahve-tatli-40-100",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "TÜRK KAHVE MAKİNASI",
+        "TÜRK KAHVE MAKİNASI",
+        "TÜRK KAHVE MAKİNASI"
+      ],
+      "tips": [
+        "kahve-makinasi-turk"
+      ],
+      "pct": 33.3,
+      "ortAdet": 1,
+      "katman": "opsiyonel"
+    },
+    {
+      "slot": "bardak_yikama",
+      "label": "Bardak yıkama makinesi",
+      "listCount": 2,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-duragi-pastane-100-200"
+      ],
+      "totalAdet": 3,
+      "ornekler": [
+        "BARDAK YIKAMA MAKİNASI, UCL 500 TB/SAAT, ALMAN",
+        "BARDAK YIKAMA MAKİNASI, NEOSYSTEM 500 TB/SAAT, İTALYAN",
+        "BARDAK YIKAMA MAKİNASI, SETALTI"
+      ],
+      "tips": [
+        "glass-washer"
+      ],
+      "pct": 22.2,
+      "ortAdet": 1.5,
+      "katman": "nadir"
+    },
+    {
+      "slot": "firin_diger",
+      "label": "Fırın (diğer)",
+      "listCount": 2,
+      "lists": [
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200"
+      ],
+      "totalAdet": 2,
+      "ornekler": [
+        "FIRIN STANDI",
+        "FIRIN STANDI"
+      ],
+      "tips": [
+        "?"
+      ],
+      "pct": 22.2,
+      "ortAdet": 1,
+      "katman": "nadir"
+    },
+    {
+      "slot": "milk_frother",
+      "label": "Milk frother / bar mikser",
+      "listCount": 1,
+      "lists": [
+        "coffee-shop-referans"
+      ],
+      "totalAdet": 1,
+      "ornekler": [
+        "BAR MİKSER"
+      ],
+      "tips": [
+        "bar-mikser"
+      ],
+      "pct": 11.1,
+      "ortAdet": 1,
+      "katman": "nadir"
+    },
+    {
+      "slot": "speed_oven",
+      "label": "Speed oven",
+      "listCount": 1,
+      "lists": [
+        "coffee-shop-referans"
+      ],
+      "totalAdet": 1,
+      "ornekler": [
+        "MERRYCHEF"
+      ],
+      "tips": [
+        "speed-oven-merry-chef"
+      ],
+      "pct": 11.1,
+      "ortAdet": 1,
+      "katman": "nadir"
+    }
+  ],
+  "matrisOnerisi": [
+    {
+      "slot": "calisma_tezgahi",
+      "label": "Bar çalışma tezgahı",
+      "zorunlu": true,
+      "ortAdet": 6.8,
+      "listelerdePct": 100
+    },
+    {
+      "slot": "derin_dondurucu",
+      "label": "Derin dondurucu",
+      "zorunlu": true,
+      "ortAdet": 1.3,
+      "listelerdePct": 100
+    },
+    {
+      "slot": "espresso_makinesi",
+      "label": "Espresso makinesi (2 grup)",
+      "zorunlu": true,
+      "ortAdet": 1.1,
+      "listelerdePct": 100
+    },
+    {
+      "slot": "kombi_firin",
+      "label": "Kombi fırın",
+      "zorunlu": true,
+      "ortAdet": 2,
+      "listelerdePct": 88.9
+    },
+    {
+      "slot": "davlumbaz",
+      "label": "Davlumbaz",
+      "zorunlu": true,
+      "ortAdet": 1.5,
+      "listelerdePct": 88.9
+    },
+    {
+      "slot": "meyve_sikacagi",
+      "label": "Meyve sıkacağı",
+      "zorunlu": true,
+      "ortAdet": 1.1,
+      "listelerdePct": 88.9
+    },
+    {
+      "slot": "buz_makinesi",
+      "label": "Buz makinesi",
+      "zorunlu": true,
+      "ortAdet": 1,
+      "listelerdePct": 88.9
+    },
+    {
+      "slot": "blender",
+      "label": "Blender",
+      "zorunlu": true,
+      "ortAdet": 1,
+      "listelerdePct": 88.9
+    },
+    {
+      "slot": "bulasik_makinesi",
+      "label": "Bulaşık makinesi",
+      "zorunlu": false,
+      "ortAdet": 2,
+      "listelerdePct": 77.8
+    },
+    {
+      "slot": "buzdolabi_diger",
+      "label": "Buzdolabı (diğer)",
+      "zorunlu": false,
+      "ortAdet": 1.4,
+      "listelerdePct": 77.8
+    },
+    {
+      "slot": "cop_arabasi",
+      "label": "Çöp arabası",
+      "zorunlu": false,
+      "ortAdet": 1.1,
+      "listelerdePct": 77.8
+    },
+    {
+      "slot": "yer_izgarasi",
+      "label": "Yer ızgarası",
+      "zorunlu": false,
+      "ortAdet": 3.3,
+      "listelerdePct": 66.7
+    }
+  ],
+  "notEslesmeyen": [
+    {
+      "slot": "diger",
+      "label": "Sınıflandırılamayan",
+      "listCount": 9,
+      "lists": [
+        "coffee-shop-referans",
+        "kahve-atolyesi-80-150",
+        "harvest-cafe-100-200",
+        "all-sport-cafe-100-200",
+        "kahve-duragi-100-200",
+        "kahve-duragi-150-200",
+        "kahve-tatli-40-100",
+        "kahve-duragi-pastane-100-200",
+        "casual-cafe-50-150"
+      ],
+      "totalAdet": 145,
+      "ornekler": [
+        "KAHVE MAKİNASI",
+        "SERVİS TEZGAHI, GRANİT MOBİLYA HARİÇTİR",
+        "ÇİKOLATA DOLABI, GRANİT MOBİLYA HARİÇTİR",
+        "PASTA DOLABI, GRANİT MOBİLYA HARİÇTİR"
+      ],
+      "tips": [
+        "?"
+      ],
+      "pct": 100,
+      "ortAdet": 16.1,
+      "katman": "cekirdek"
+    }
+  ]
+}

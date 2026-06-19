@@ -1,0 +1,471 @@
+﻿[
+  {
+    "model": "EMH-15",
+    "sku": "118.EMH15",
+    "name": "Senox Dondurma Makinesi, 1.5 L, EMH15",
+    "id": "senox__senox-emh-15"
+  },
+  {
+    "model": "GGM",
+    "sku": "118.GGM",
+    "name": "Senox Et Kemik Testeresi, GGM",
+    "id": "senox__senox-ggm"
+  },
+  {
+    "model": "GGM-M-20",
+    "sku": "118.GGM.M20",
+    "name": "Senox GGM M20 Planet Mikser, 20 lt",
+    "id": "senox__senox-ggm-m-20"
+  },
+  {
+    "model": "GGM-M-30",
+    "sku": "118.GGM.M30",
+    "name": "Senox GGM M30 Planet Mikser, 30 lt",
+    "id": "senox__senox-ggm-m-30"
+  },
+  {
+    "model": "AAMH-300",
+    "sku": "118.AAMH300",
+    "name": "Senox Otomatik G─▒da Dilimleme Makinesi, AAMH300",
+    "id": "senox__senox-aamh-300"
+  },
+  {
+    "model": "SEMG-16K",
+    "sku": "118.SEMG.16K",
+    "name": "Senox Soft Dondurma Makinesi, 16 L, Tek Grupla, SEMG 16K",
+    "id": "senox__senox-semg-16k"
+  },
+  {
+    "model": "STRC",
+    "sku": "118.STRC",
+    "name": "Senox Stre├ğ Sarma Makinesi",
+    "id": "senox__senox-strc"
+  },
+  {
+    "model": "40-LB",
+    "sku": "118.40.LB",
+    "name": "Senox 40 LB Su Sebili, Boyal─▒ Galvaniz, 40 lt",
+    "id": "senox__senox-40-lb"
+  },
+  {
+    "model": "BZ-12",
+    "sku": "118.BZ12",
+    "name": "Senox BZ12 Buz Makinesi, 12 kg/g├╝n Kapasiteli",
+    "id": "senox__senox-bz-12"
+  },
+  {
+    "model": "BZ-20",
+    "sku": "118.BZ20",
+    "name": "Senox BZ20 Buz Makinesi, 15 kg/g├╝n Kapasiteli",
+    "id": "senox__senox-bz-20"
+  },
+  {
+    "model": "CKA",
+    "sku": "118.CKA",
+    "name": "Senox ├çat─▒l─▒ K├Âp├╝kl├╝ Ayran Makinesi, 40 lt",
+    "id": "senox__senox-cka"
+  },
+  {
+    "model": "KMP-01",
+    "sku": "118.KMP.01",
+    "name": "Senox KMP 01 Kat─▒ Meyve S─▒kaca─ş─▒",
+    "id": "senox__senox-kmp-01"
+  },
+  {
+    "model": "KRS-105",
+    "sku": "118.KRS.105",
+    "name": "Senox Lifetech Otel Tipi ├çelik Kettle, 1,2 lt",
+    "id": "senox__senox-krs-105"
+  },
+  {
+    "model": "PS-01",
+    "sku": "118.PS.01",
+    "name": "Senox Motorlu Portakal S─▒kma Makinesi",
+    "id": "senox__senox-ps-01"
+  },
+  {
+    "model": "LT-12",
+    "sku": "118.LT.12",
+    "name": "Senox Su Yumu┼şat─▒c─▒ Filtre, 12 L",
+    "id": "senox__senox-lt-12"
+  },
+  {
+    "model": "LT-16",
+    "sku": "118.LT.16",
+    "name": "Senox Su Yumu┼şat─▒c─▒ Filtre, 16 L",
+    "id": "senox__senox-lt-16"
+  },
+  {
+    "model": "LT-8",
+    "sku": "118.LT.8",
+    "name": "Senox Su Yumu┼şat─▒c─▒ Filtre, 8 L",
+    "id": "senox__senox-lt-8"
+  },
+  {
+    "model": "COFFEDIO",
+    "sku": "118.COFFEDIO",
+    "name": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+    "id": "senox__senox-coffedio"
+  },
+  {
+    "model": "HC-600",
+    "sku": "118.HC.600",
+    "name": "Senox Titan Kahve De─şirmeni, HC 600",
+    "id": "senox__senox-hc-600"
+  },
+  {
+    "model": "TITAN-LL",
+    "sku": "118.TITAN.ll",
+    "name": "Senox Titan Kahve De─şirmeni, TITAN ll",
+    "id": "senox__senox-titan-ll"
+  },
+  {
+    "model": "BBL-02",
+    "sku": "118.BBL.02",
+    "name": "┼Şenox BBL 02 Bar Blender",
+    "id": "senox__senox-bbl-02"
+  },
+  {
+    "model": "SNX-17-S",
+    "sku": "118.SNX17.S",
+    "name": "Senox Ask─▒ Tip Is─▒t─▒c─▒ Lamba, Siyah, SNX 17 S",
+    "id": "senox__senox-snx-17-s"
+  },
+  {
+    "model": "BNA-027",
+    "sku": "118.BNA027",
+    "name": "Senox BNA 027 Mafsall─▒ Makyaj Aynas─▒",
+    "id": "senox__senox-bna-027"
+  },
+  {
+    "model": "BNA-028",
+    "sku": "118.BNA028",
+    "name": "Senox BNA 028 Mafsall─▒ Makyaj Aynas─▒, Led I┼ş─▒kl─▒",
+    "id": "senox__senox-bna-028"
+  },
+  {
+    "model": "SNX-17-G",
+    "sku": "118.SNX.17.G",
+    "name": "Senox Is─▒t─▒c─▒ Lamba Alt─▒n Renk, SNX 17 G",
+    "id": "senox__senox-snx-17-g"
+  },
+  {
+    "model": "SNX-17-B",
+    "sku": "118.SNX.17.B",
+    "name": "Senox Is─▒t─▒c─▒ Lamba Bak─▒r Renk, SNX 17 B",
+    "id": "senox__senox-snx-17-b"
+  },
+  {
+    "model": "SNX-17-C",
+    "sku": "118.SNX.17.C",
+    "name": "Senox Is─▒t─▒c─▒ Lamba Krom Renk, SNX 17 C",
+    "id": "senox__senox-snx-17-c"
+  },
+  {
+    "model": "HIJYENB-TF",
+    "sku": "118.HIJYENB.TF",
+    "name": "Senox Taban F─▒r├ğal─▒ Hijyen Bariyeri",
+    "id": "senox__senox-hijyenb-tf"
+  },
+  {
+    "model": "300-COMB─░",
+    "sku": "118.300.COMB─░",
+    "name": "Senox 300 Combi Bar Tipi So─şutucu Dolap, 145 L,",
+    "id": "senox__senox-300-combi"
+  },
+  {
+    "model": "DF-200",
+    "sku": "118.DF200",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, 200L, DF 200",
+    "id": "senox__senox-df-200"
+  },
+  {
+    "model": "DF-300",
+    "sku": "118.DF300",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, 300L, DF 300",
+    "id": "senox__senox-df-300"
+  },
+  {
+    "model": "DF-400",
+    "sku": "118.DF400",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, 400L, DF 400",
+    "id": "senox__senox-df-400"
+  },
+  {
+    "model": "DF-500",
+    "sku": "118.DF500",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, 500L, DF 500",
+    "id": "senox__senox-df-500"
+  },
+  {
+    "model": "DF-600",
+    "sku": "118.DF600",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, 600L, DF 600",
+    "id": "senox__senox-df-600"
+  },
+  {
+    "model": "DF-500K",
+    "sku": "118.DF500K",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, Krom , 500L, DF 500K",
+    "id": "senox__senox-df-500k"
+  },
+  {
+    "model": "DF-600K",
+    "sku": "118.DF600K",
+    "name": "Senox Blok Kap─▒l─▒ Derin Dondurucu, Krom , 600L, DF 600K",
+    "id": "senox__senox-df-600k"
+  },
+  {
+    "model": "CKM-120T",
+    "sku": "118.CKM.120T",
+    "name": "Senox CKM 120T ├çekmeceli So─şuk Te┼şhir Dolab─▒, 120x80x105,5 cm",
+    "id": "senox__senox-ckm-120t"
+  },
+  {
+    "model": "CKM-150T",
+    "sku": "118.CKM.150T",
+    "name": "Senox CKM 150T ├çekmeceli So─şuk Te┼şhir Dolab─▒, 150x80x105,5 cm",
+    "id": "senox__senox-ckm-150t"
+  },
+  {
+    "model": "CKM-180T",
+    "sku": "118.CKM.180T",
+    "name": "Senox CKM 180T ├çekmeceli So─şuk Te┼şhir Dolab─▒, 180x80x105,5 cm",
+    "id": "senox__senox-ckm-180t"
+  },
+  {
+    "model": "CEK-3GN-11",
+    "sku": "118.CEK.3GN11",
+    "name": "Senox ├çekmeceli S─▒cak Dolap, 3xGn 1/1",
+    "id": "senox__senox-cek-3gn-11"
+  },
+  {
+    "model": "WF-377",
+    "sku": "118.WF377",
+    "name": "Senox Dik Tip Derin Dondurucu, 5 Rafl─▒",
+    "id": "senox__senox-wf-377"
+  },
+  {
+    "model": "SSC-1500",
+    "sku": "118.SSC.1500",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 2 Kap─▒l─▒, 1077 L, SSC 1500",
+    "id": "senox__senox-ssc-1500"
+  },
+  {
+    "model": "KSC-458",
+    "sku": "118.KSC.458",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 2 Kap─▒l─▒, 458 L, KSC 458",
+    "id": "senox__senox-ksc-458"
+  },
+  {
+    "model": "KSC-293",
+    "sku": "118.KSC.293",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 293 L, KSC 293",
+    "id": "senox__senox-ksc-293"
+  },
+  {
+    "model": "SSC-1600",
+    "sku": "118.SSC.1600",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 3 Kap─▒l─▒, 1153 L, SSC 1600",
+    "id": "senox__senox-ssc-1600"
+  },
+  {
+    "model": "SSC-375",
+    "sku": "118.SSC.375",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 345 L, SSC 375",
+    "id": "senox__senox-ssc-375"
+  },
+  {
+    "model": "KSC-390",
+    "sku": "118.KSC.390",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 390 L, KSC 390",
+    "id": "senox__senox-ksc-390"
+  },
+  {
+    "model": "SSC-510",
+    "sku": "118.SSC.510",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 445 L, SSC 510",
+    "id": "senox__senox-ssc-510"
+  },
+  {
+    "model": "SSC-900",
+    "sku": "118.SSC.900",
+    "name": "Senox Dik Tip ┼Şi┼şe So─şutucu Dolap, 683 L, SSC 900",
+    "id": "senox__senox-ssc-900"
+  },
+  {
+    "model": "DP-250",
+    "sku": "118.DP.250",
+    "name": "Senox DP 250 Dik Tip So─şuk Pasta Te┼şhir Dolab─▒, 52,2x48,7x186 cm",
+    "id": "senox__senox-dp-250"
+  },
+  {
+    "model": "DP-270",
+    "sku": "118.DP.270",
+    "name": "Senox DP 270 Dik Tip So─şuk Pasta Te┼şhir Dolab─▒, 55,9x52,5x189,5 cm",
+    "id": "senox__senox-dp-270"
+  },
+  {
+    "model": "DP-360",
+    "sku": "118.DP.360",
+    "name": "Senox DP 360 Dik So─şuk Pasta Te┼şhir Dolab─▒, 68x68x1768,4 cm",
+    "id": "senox__senox-dp-360"
+  },
+  {
+    "model": "DP-600",
+    "sku": "118.DP.600",
+    "name": "Senox DP 600 Dik Tip So─şuk Pasta Te┼şhir Dolab─▒, 85,2x65,2x199 cm",
+    "id": "senox__senox-dp-600"
+  },
+  {
+    "model": "DP-66",
+    "sku": "118.DP.66",
+    "name": "Senox DP 66 Dik Tip So─şuk Pasta Te┼şhir Dolab─▒, 45x45x101,3 cm",
+    "id": "senox__senox-dp-66"
+  },
+  {
+    "model": "DP-98",
+    "sku": "118.DP.98",
+    "name": "Senox DP 98 Dik Tip So─şuk Pasta Te┼şhir Dolab─▒, 45,4x40,8x112 cm",
+    "id": "senox__senox-dp-98"
+  },
+  {
+    "model": "ICT-130",
+    "sku": "118.ICT.130",
+    "name": "Senox ICT 130 ─░├ğecek Te┼şhir Dolab─▒, 131x71x179,5 cm",
+    "id": "senox__senox-ict-130"
+  },
+  {
+    "model": "SSC-900K",
+    "sku": "118.SSC.900K",
+    "name": "Senox Kanopili Dik Tip ┼Şi┼şe So─şutucu Dolap, 683 L, SSC 900K",
+    "id": "senox__senox-ssc-900k"
+  },
+  {
+    "model": "S-900K",
+    "sku": "118.S.900K",
+    "name": "Senox Kanopili Dik Tip ┼Şi┼şe So─şutucu, 683 L, ├çift Kap─▒l─▒, S 900K",
+    "id": "senox__senox-s-900k"
+  },
+  {
+    "model": "MT-213",
+    "sku": "118.MT.213",
+    "name": "Senox MT 213 So─şuk Meze Te┼şhir Dolab─▒, 212,3x85,5x140,6 cm",
+    "id": "senox__senox-mt-213"
+  },
+  {
+    "model": "NRGZ-100",
+    "sku": "118.NRGZ100",
+    "name": "Senox Nergiz Pasta Te┼şhir Dolab─▒, 43,5x41x108,5 cm",
+    "id": "senox__senox-nrgz-100"
+  },
+  {
+    "model": "PD-400",
+    "sku": "118.PD400",
+    "name": "Senox PD 400 Pasta Te┼şhir Dolab─▒, 490L, 60x60x185 cm",
+    "id": "senox__senox-pd-400"
+  },
+  {
+    "model": "PD-400D",
+    "sku": "118.PD400D",
+    "name": "Senox PD 400D Pasta Te┼şhir Dolab─▒, 490L, 60x60x185 cm",
+    "id": "senox__senox-pd-400d"
+  },
+  {
+    "model": "PST-150T",
+    "sku": "118.PST.150T",
+    "name": "Senox PST 150T ─░├ğecek Te┼şhir Dolab─▒, 150x70x200 cm",
+    "id": "senox__senox-pst-150t"
+  },
+  {
+    "model": "PST-200T",
+    "sku": "118.PST.200T",
+    "name": "Senox PST 200T ─░├ğecek Te┼şhir Dolab─▒, 200x70x200 cm",
+    "id": "senox__senox-pst-200t"
+  },
+  {
+    "model": "WN-180",
+    "sku": "118.WN.180",
+    "name": "Senox Sarap So─şutma Dolab─▒, WN 180",
+    "id": "senox__senox-wn-180"
+  },
+  {
+    "model": "WN-375S",
+    "sku": "118.WN375S",
+    "name": "Senox Sarap So─şutma Dolab─▒, WN 375S",
+    "id": "senox__senox-wn-375s"
+  },
+  {
+    "model": "WN-385",
+    "sku": "118.WN385",
+    "name": "Senox Sarap So─şutma Dolab─▒, WN 385",
+    "id": "senox__senox-wn-385"
+  },
+  {
+    "model": "SRDNY-215",
+    "sku": "118.SRDNY215",
+    "name": "Senox Sardunya 215 Pasta Teshir Dolaplar─▒ 215 LT, 52x49x160 cm",
+    "id": "senox__senox-srdny-215"
+  },
+  {
+    "model": "SET-E-120S",
+    "sku": "118.SET.E.120S",
+node : count 77
+At C:\Users\adema\AppData\Local\Temp\ps-script-1877d8d0-ce34-4455-81d4-7088bb235ac3.ps1:86 char:44
++ ... "C:\D Disk\EQUSTO-WORK\E-TICARET\site"; node --input-type=module -e "
++                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (count 77:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    "name": "Senox SET E 120S Set ├£st├╝ So─şuk Pasta Te┼şhir Dolab─▒, E─şik Cam, 120x60x70 cm",
+    "id": "senox__senox-set-e-120s"
+  },
+  {
+    "model": "SET-E-90C",
+    "sku": "118.SET.E.90C",
+    "name": "Senox SET E 90C Set ├£st├╝ S─▒cak Pasta Te┼şhir Dolab─▒ E─şik Cam, 90x60x70 cm",
+    "id": "senox__senox-set-e-90c"
+  },
+  {
+    "model": "SET-E-90S",
+    "sku": "118.SET.E.90S",
+    "name": "Senox SET E 90S Set ├£st├╝ So─şuk Pasta Te┼şhir Dolab─▒, E─şik Cam, 90x60x70 cm",
+    "id": "senox__senox-set-e-90s"
+  },
+  {
+    "model": "SET-E-75S",
+    "sku": "118.SET.E.75S",
+    "name": "Senox SET P 75S Set ├£st├╝ So─şuk Pasta Te┼şhir Dolab─▒, Panaromik Cam, 70x60x70 cm",
+    "id": "senox__senox-set-e-75s"
+  },
+  {
+    "model": "SET-P-90C",
+    "sku": "118.SET.P.90C",
+    "name": "Senox SET P 90C Set ├£st├╝ S─▒cak Pasta Te┼şhir Dolab─▒, Panaromik Cam, 90x60x70 cm",
+    "id": "senox__senox-set-p-90c"
+  },
+  {
+    "model": "SET-P-90S",
+    "sku": "118.SET.P.90S",
+    "name": "Senox SET P 90S Set ├£st├╝ So─şuk Pasta Te┼şhir Dolab─▒, Panaromik Cam, 90x60x70 cm",
+    "id": "senox__senox-set-p-90s"
+  },
+  {
+    "model": "SET-P-75C",
+    "sku": "118.SET.P.75C",
+    "name": "Senox Set ├£st├╝ S─▒cak Te┼şhir Dolab─▒, Panaromik Cam, SET P 75C",
+    "id": "senox__senox-set-p-75c"
+  },
+  {
+    "model": "SMF-5120-ST",
+    "sku": "118.SMF.5120.ST",
+    "name": "Senox SMF-5120 ST Tezgah Alt─▒ Derin Dondurucu, Tek Kap─▒l─▒",
+    "id": "senox__senox-smf-5120-st"
+  },
+  {
+    "model": "SC-900-K",
+    "sku": "118.SC900.K",
+    "name": "┼Şenox 2 Kap─▒l─▒ Dik Tip ┼Şi┼şe So─şutucu, 0 - +10 ┬║ C ,Kanopili , 90,6x72x201,5 cm",
+    "id": "senox__senox-sc-900-k"
+  }
+]

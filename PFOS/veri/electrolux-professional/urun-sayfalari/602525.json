@@ -1,0 +1,147 @@
+{
+  "cod": "602525",
+  "title": "Kahve Sistemi Aura Geleneksel Espresso Kahve Makinesi, 3 Maestro Gruplu, Dosamat ® ile",
+  "category": "Espresso Kahve Makineleri - AURA Dosamat özellikli",
+  "description": "Geleneksel Espresso Kahve Makinesi, Aura 3 Maestro gruplu, 15,6 lt boyler, Dosamat® otomatik portafiltre (kahve kaşığı) algılama özelliği, 3 bağımsız kontrol paneli 4 programlanabilir dozajlama programıyla, PID sıcaklık kontrolü, elektronik ön demleme, programlanabilir buhar ve su, otomatik temizleme programı, Easylock porta filtre",
+  "url": "https://www.electroluxprofessional.com/tr/pd/i%CC%87%C3%A7ecek/s%C4%B1cak-i%CC%87%C3%A7ecek/espresso-kahve-makineleri-aura/espresso-kahve-makineleri-aura-dosamat-%C3%B6zellikli/kahve-sistemi-aura-geleneksel-espresso-kahve-makinesi-3-maestro-gruplu-dosamat-%C2%AE-ile-602525/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "400 V/3N ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "4.8 kW"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "Cable without plug"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Net ağırlık",
+          "value": "83 kg"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.83 m³"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Anlık tüketim",
+          "value": "7.2 Amps"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Soğuk su sıcaklığı (min/max)",
+          "value": "5 / 60 °C"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "AURA, kahve alma işleminde yüksek performans ve tutarlılığı hedefleyen hacimsel komutlara aşina olan kullanıcılara adanmıştır.",
+        "Elektronik ön infüzyon.",
+        "Paslanmaz çelik ve kromun modern tasarımı olan AURA, sezgisel bir programlama için dokunmatik ekran arayüzüne sahip elektronik kontrol kutuları ve tepsi ızgarasının LED aydınlatmasıyla iddialı bir siluet sergiliyor.",
+        "Otomatik temizleme programı",
+        "3 Maestro gruplu.",
+        "MAESTRO termo ayarlı demleme grupları, portafiltrenin minimum çabayla kilitlenmesine ve kapatılmasına yardımcı olan EASYLOCK sistemi ile donatılmıştır.",
+        "Büyük kapasiteli çift panelli fincan ısıtıcı.",
+        "Manuel Steamglide kolu.CHAR (13) CHAR (10)",
+        "Programlanabilir su ve buhar",
+        "Dosamat ® portafiltrenin kendi kendine tanıması, başlatma/durdurma, shot süresi göstergesi ile 4 programlanabilir dozlama seçimine sahip 3 bağımsız kontrol kutusu.",
+        "Profesyonel yarı otomatik AURA serisi, estetik ve performansın mükemmel uyumunu sunan, üst düzey geleneksel bir espresso makinesinin tüm teknik özelliklerine sahiptir.",
+        "Güncelleme için USB arayüzü."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "PID (orantılı-integral-türev) Sıcaklık kontrolü: Demleme sıcaklığı yönetim sistemine tutarlılık ve doğruluk sağlayan hassas bir kontrol algoritması sistemi.",
+        "15.6 litre boyler.",
+        "Paslanmaz çelik gövde",
+        "Easylock porta filtresi.",
+        "Bilgisayar/kasiyer arayüzü için RS-232 protokolü."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_Coffee_Catalog_TUR",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00241_1_5_16_3_BR_BR-9JE00241_1_5_1_1_EPR_Coffee_Catalog_TUR_LR_202411.pdf",
+      "local": "media/documents/602525/BR_BR-9JE00241_1_5_16_3_BR_BR-9JE00241_1_5_1_1_EPR_Coffee_Catalog_TUR_LR_202411.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "602525",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/AURA3DO.dwg",
+      "local": "media/documents/602525/AURA3DO.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Aura Geleneksel Espresso Kahve Makinesi, 3 Maestro Gruplu, Dosamat ® ile",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/602525_Aura Traditional espresso machine, 3 Maestro groups with Dosamat ®_Turkish.pdf",
+      "local": "media/documents/602525/602525_Aura%20Traditional%20espresso%20machine,%203%20Maestro%20groups%20with%20Dosamat%20%C2%AE_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "602525",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_602525_AURA3DO.rfa",
+      "local": "media/documents/602525/QF_ELECTROLUXPROFESSIONAL_602525_AURA3DO.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": "1"
+    },
+    {
+      "code": "871008",
+      "description": "Portafiltre, Aura tek fincan için",
+      "quantity": "1"
+    },
+    {
+      "code": "871009",
+      "description": "Portafiltre Aura iki fincan için",
+      "quantity": "3"
+    },
+    {
+      "code": "871041",
+      "description": "Yükseltilmiş ayak seti",
+      "quantity": "1"
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602525_1_3_Aura_602525.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602525_1_3_Aura_602525.jpg",
+      "local": "media/images/602525/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T10:51:23.572Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/espresso-kahve-makineleri/"
+}

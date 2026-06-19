@@ -1,0 +1,1065 @@
+{
+  "count": 118,
+  "rows": [
+    {
+      "model": "ADA-210T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 111909,
+      "mutOnly": 329970,
+      "diff": -218061,
+      "pdf": 3500,
+      "mut": 10320
+    },
+    {
+      "model": "DT-24",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 703425,
+      "mutOnly": 907419,
+      "diff": -203994,
+      "pdf": 22000,
+      "mut": 28380
+    },
+    {
+      "model": "ADA-180T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 95922,
+      "mutOnly": 288724,
+      "diff": -192802,
+      "pdf": 3000,
+      "mut": 9030
+    },
+    {
+      "model": "DY-04",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 639478,
+      "mutOnly": 824926,
+      "diff": -185448,
+      "pdf": 20000,
+      "mut": 25800
+    },
+    {
+      "model": "DT-18",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 575530,
+      "mutOnly": 742433,
+      "diff": -166903,
+      "pdf": 18000,
+      "mut": 23220
+    },
+    {
+      "model": "ADA-150T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 95922,
+      "mutOnly": 247478,
+      "diff": -151556,
+      "pdf": 3000,
+      "mut": 7740
+    },
+    {
+      "model": "DT-12",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 447634,
+      "mutOnly": 577448,
+      "diff": -129814,
+      "pdf": 14000,
+      "mut": 18060
+    },
+    {
+      "model": "DT-13",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 447634,
+      "mutOnly": 577448,
+      "diff": -129814,
+      "pdf": 14000,
+      "mut": 18060
+    },
+    {
+      "model": "DY-02",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 383687,
+      "mutOnly": 494956,
+      "diff": -111269,
+      "pdf": 12000,
+      "mut": 15480
+    },
+    {
+      "model": "DT-600",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 319739,
+      "mutOnly": 412463,
+      "diff": -92724,
+      "pdf": 10000,
+      "mut": 12900
+    },
+    {
+      "model": "DT-9",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 319739,
+      "mutOnly": 412463,
+      "diff": -92724,
+      "pdf": 10000,
+      "mut": 12900
+    },
+    {
+      "model": "VM-3",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 76737,
+      "mutOnly": 0,
+      "diff": 76737,
+      "pdf": 2400
+    },
+    {
+      "model": "KO-180T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 255791,
+      "mutOnly": 329970,
+      "diff": -74179,
+      "pdf": 8000,
+      "mut": 10320
+    },
+    {
+      "model": "KOE-180T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 255791,
+      "mutOnly": 329970,
+      "diff": -74179,
+      "pdf": 8000,
+      "mut": 10320
+    },
+    {
+      "model": "KO-150T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 211028,
+      "mutOnly": 272226,
+      "diff": -61198,
+      "pdf": 6600,
+      "mut": 8514
+    },
+    {
+      "model": "KOE-150T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 211028,
+      "mutOnly": 272226,
+      "diff": -61198,
+      "pdf": 6600,
+      "mut": 8514
+    },
+    {
+      "model": "DY-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 207830,
+      "mutOnly": 268101,
+      "diff": -60271,
+      "pdf": 6500,
+      "mut": 8385
+    },
+    {
+      "model": "WM-2",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 57553,
+      "mutOnly": 0,
+      "diff": 57553,
+      "pdf": 1800
+    },
+    {
+      "model": "DT-8",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 191843,
+      "mutOnly": 247478,
+      "diff": -55635,
+      "pdf": 6000,
+      "mut": 7740
+    },
+    {
+      "model": "GGM-M-30",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 41566,
+      "mutOnly": 96929,
+      "diff": -55363,
+      "pdf": 1300,
+      "mut": 3031.5
+    },
+    {
+      "model": "500-LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 182251,
+      "mutOnly": 235104,
+      "diff": -52853,
+      "pdf": 5700,
+      "mut": 7353
+    },
+    {
+      "model": "KO-120T",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 179054,
+      "mutOnly": 230979,
+      "diff": -51925,
+      "pdf": 5600,
+      "mut": 7224
+    },
+    {
+      "model": "SDS-1510-DC-3YF",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 71941,
+      "mutOnly": 123739,
+      "diff": -51798,
+      "pdf": 2250,
+      "mut": 3870
+    },
+    {
+      "model": "400LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 166264,
+      "mutOnly": 214481,
+      "diff": -48217,
+      "pdf": 5200,
+      "mut": 6708
+    },
+    {
+      "model": "DT-6",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 159869,
+      "mutOnly": 206232,
+      "diff": -46363,
+      "pdf": 5000,
+      "mut": 6450
+    },
+    {
+      "model": "SFT-03-PRO",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 150277,
+      "mutOnly": 193858,
+      "diff": -43581,
+      "pdf": 4700,
+      "mut": 6063
+    },
+    {
+      "model": "300LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 147080,
+      "mutOnly": 189733,
+      "diff": -42653,
+      "pdf": 4600,
+      "mut": 5934
+    },
+    {
+      "model": "SFT-02-PRO",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 143882,
+      "mutOnly": 185608,
+      "diff": -41726,
+      "pdf": 4500,
+      "mut": 5805
+    },
+    {
+      "model": "GGM-M-20",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 35171,
+      "mutOnly": 76306,
+      "diff": -41135,
+      "pdf": 1100,
+      "mut": 2386.5
+    },
+    {
+      "model": "MT-153",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 111909,
+      "mutOnly": 144362,
+      "diff": -32453,
+      "pdf": 3500,
+      "mut": 4515
+    },
+    {
+      "model": "WN-400",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 108711,
+      "mutOnly": 140237,
+      "diff": -31526,
+      "pdf": 3400,
+      "mut": 4386
+    },
+    {
+      "model": "MT-123",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 95922,
+      "mutOnly": 123739,
+      "diff": -27817,
+      "pdf": 3000,
+      "mut": 3870
+    },
+    {
+      "model": "SLS-03",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 89527,
+      "mutOnly": 115490,
+      "diff": -25963,
+      "pdf": 2800,
+      "mut": 3612
+    },
+    {
+      "model": "160LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 89527,
+      "mutOnly": 115490,
+      "diff": -25963,
+      "pdf": 2800,
+      "mut": 3612
+    },
+    {
+      "model": "WN-770",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 86329,
+      "mutOnly": 111365,
+      "diff": -25036,
+      "pdf": 2700,
+      "mut": 3483
+    },
+    {
+      "model": "WN-1010",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 86329,
+      "mutOnly": 111365,
+      "diff": -25036,
+      "pdf": 2700,
+      "mut": 3483
+    },
+    {
+      "model": "SRB-15X-3",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 22382,
+      "mutOnly": 45371,
+      "diff": -22989,
+      "pdf": 700,
+      "mut": 1419
+    },
+    {
+      "model": "SNX-12R",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 73540,
+      "mutOnly": 94867,
+      "diff": -21327,
+      "pdf": 2300,
+      "mut": 2967
+    },
+    {
+      "model": "SYD-410",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 41566,
+      "mutOnly": 61869,
+      "diff": -20303,
+      "pdf": 1300,
+      "mut": 1935
+    },
+    {
+      "model": "SLS-02",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 67145,
+      "mutOnly": 86617,
+      "diff": -19472,
+      "pdf": 2100,
+      "mut": 2709
+    },
+    {
+      "model": "SLD-04",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 63948,
+      "mutOnly": 82493,
+      "diff": -18545,
+      "pdf": 2000,
+      "mut": 2580
+    },
+    {
+      "model": "BBCS-350",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 47961,
+      "mutOnly": 65994,
+      "diff": -18033,
+      "pdf": 1500,
+      "mut": 2064
+    },
+    {
+      "model": "SYD-510",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 47961,
+      "mutOnly": 65994,
+      "diff": -18033,
+      "pdf": 1500,
+      "mut": 2064
+    },
+    {
+      "model": "KA-18",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 60111,
+      "mutOnly": 77543,
+      "diff": -17432,
+      "pdf": 1880,
+      "mut": 2425.2
+    },
+    {
+      "model": "BL-40L-60C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 7993,
+      "mutOnly": 24748,
+      "diff": -16755,
+      "pdf": 250,
+      "mut": 774
+    },
+    {
+      "model": "KA-30",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 57553,
+      "mutOnly": 74243,
+      "diff": -16690,
+      "pdf": 1800,
+      "mut": 2322
+    },
+    {
+      "model": "KKM-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 57553,
+      "mutOnly": 74243,
+      "diff": -16690,
+      "pdf": 1800,
+      "mut": 2322
+    },
+    {
+      "model": "SLD-03",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 57553,
+      "mutOnly": 74243,
+      "diff": -16690,
+      "pdf": 1800,
+      "mut": 2322
+    },
+    {
+      "model": "DT-200",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 57553,
+      "mutOnly": 74243,
+      "diff": -16690,
+      "pdf": 1800,
+      "mut": 2322
+    },
+    {
+      "model": "SBCS-350",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 54356,
+      "mutOnly": 70119,
+      "diff": -15763,
+      "pdf": 1700,
+      "mut": 2193
+    },
+    {
+      "model": "WN-350",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 54356,
+      "mutOnly": 70119,
+      "diff": -15763,
+      "pdf": 1700,
+      "mut": 2193
+    },
+    {
+      "model": "SLS-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 51158,
+      "mutOnly": 65994,
+      "diff": -14836,
+      "pdf": 1600,
+      "mut": 2064
+    },
+    {
+      "model": "DT-100",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 51158,
+      "mutOnly": 65994,
+      "diff": -14836,
+      "pdf": 1600,
+      "mut": 2064
+    },
+    {
+      "model": "BBC-350",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 47961,
+      "mutOnly": 61869,
+      "diff": -13908,
+      "pdf": 1500,
+      "mut": 1935
+    },
+    {
+      "model": "SBC-350",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 54356,
+      "mutOnly": 68056,
+      "diff": -13700,
+      "pdf": 1700,
+      "mut": 2128.5
+    },
+    {
+      "model": "BBCS-250",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 39967,
+      "mutOnly": 53620,
+      "diff": -13653,
+      "pdf": 1250,
+      "mut": 1677
+    },
+    {
+      "model": "WN-250",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 46362,
+      "mutOnly": 59807,
+      "diff": -13445,
+      "pdf": 1450,
+      "mut": 1870.5
+    },
+    {
+      "model": "80LK-AS",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 44763,
+      "mutOnly": 57745,
+      "diff": -12982,
+      "pdf": 1400,
+      "mut": 1806
+    },
+    {
+      "model": "SBCS-250",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 44763,
+      "mutOnly": 57745,
+      "diff": -12982,
+      "pdf": 1400,
+      "mut": 1806
+    },
+    {
+      "model": "WN-150",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 43165,
+      "mutOnly": 55683,
+      "diff": -12518,
+      "pdf": 1350,
+      "mut": 1741.5
+    },
+    {
+      "model": "SYD-310",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 41566,
+      "mutOnly": 53620,
+      "diff": -12054,
+      "pdf": 1300,
+      "mut": 1677
+    },
+    {
+      "model": "BBC-250",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 39967,
+      "mutOnly": 51558,
+      "diff": -11591,
+      "pdf": 1250,
+      "mut": 1612.5
+    },
+    {
+      "model": "40-LK-AS",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 38369,
+      "mutOnly": 49496,
+      "diff": -11127,
+      "pdf": 1200,
+      "mut": 1548
+    },
+    {
+      "model": "SBC-150",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 38369,
+      "mutOnly": 49496,
+      "diff": -11127,
+      "pdf": 1200,
+      "mut": 1548
+    },
+    {
+      "model": "HT-15",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 38369,
+      "mutOnly": 49496,
+      "diff": -11127,
+      "pdf": 1200,
+      "mut": 1548
+    },
+    {
+      "model": "SBC-250",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 44763,
+      "mutOnly": 55683,
+      "diff": -10920,
+      "pdf": 1400,
+      "mut": 1741.5
+    },
+    {
+      "model": "BBC-150",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 35171,
+      "mutOnly": 45371,
+      "diff": -10200,
+      "pdf": 1100,
+      "mut": 1419
+    },
+    {
+      "model": "HT-12",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 35171,
+      "mutOnly": 45371,
+      "diff": -10200,
+      "pdf": 1100,
+      "mut": 1419
+    },
+    {
+      "model": "SET-85P",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 47961,
+      "mutOnly": 57745,
+      "diff": -9784,
+      "pdf": 1500,
+      "mut": 1806
+    },
+    {
+      "model": "BL-40L-50C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 14069,
+      "mutOnly": 23717,
+      "diff": -9648,
+      "pdf": 440,
+      "mut": 741.75
+    },
+    {
+      "model": "SFT-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 31974,
+      "mutOnly": 41246,
+      "diff": -9272,
+      "pdf": 1000,
+      "mut": 1290
+    },
+    {
+      "model": "HT-10",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 31974,
+      "mutOnly": 41246,
+      "diff": -9272,
+      "pdf": 1000,
+      "mut": 1290
+    },
+    {
+      "model": "BL-40C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 13429,
+      "mutOnly": 22685,
+      "diff": -9256,
+      "pdf": 420,
+      "mut": 709.5
+    },
+    {
+      "model": "SET-67P",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 44763,
+      "mutOnly": 53620,
+      "diff": -8857,
+      "pdf": 1400,
+      "mut": 1677
+    },
+    {
+      "model": "BL-40L-50",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9272,
+      "mutOnly": 17530,
+      "diff": -8258,
+      "pdf": 290,
+      "mut": 548.25
+    },
+    {
+      "model": "MS-10",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 27178,
+      "mutOnly": 35059,
+      "diff": -7881,
+      "pdf": 850,
+      "mut": 1096.5
+    },
+    {
+      "model": "WD-737",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 25579,
+      "mutOnly": 32997,
+      "diff": -7418,
+      "pdf": 800,
+      "mut": 1032
+    },
+    {
+      "model": "MS-07",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 23980,
+      "mutOnly": 30935,
+      "diff": -6955,
+      "pdf": 750,
+      "mut": 967.5
+    },
+    {
+      "model": " IC-80A",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 22382,
+      "mutOnly": 28872,
+      "diff": -6490,
+      "pdf": 700,
+      "mut": 903
+    },
+    {
+      "model": "SRB-20",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 22382,
+      "mutOnly": 28872,
+      "diff": -6490,
+      "pdf": 700,
+      "mut": 903
+    },
+    {
+      "model": "SRB-15X-2",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 35171,
+      "mutOnly": 28872,
+      "diff": 6299,
+      "pdf": 1100,
+      "mut": 903
+    },
+    {
+      "model": "MC-30",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 10232,
+      "mutOnly": 16499,
+      "diff": -6267,
+      "pdf": 320,
+      "mut": 516
+    },
+    {
+      "model": "SRB-12",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 19184,
+      "mutOnly": 24748,
+      "diff": -5564,
+      "pdf": 600,
+      "mut": 774
+    },
+    {
+      "model": "40-LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 38369,
+      "mutOnly": 32997,
+      "diff": 5372,
+      "pdf": 1200,
+      "mut": 1032
+    },
+    {
+      "model": "VN-25RO",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 17586,
+      "mutOnly": 22685,
+      "diff": -5099,
+      "pdf": 550,
+      "mut": 709.5
+    },
+    {
+      "model": "BL-40L-60",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 14388,
+      "mutOnly": 18561,
+      "diff": -4173,
+      "pdf": 450,
+      "mut": 580.5
+    },
+    {
+      "model": "SRB-15",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 14388,
+      "mutOnly": 18561,
+      "diff": -4173,
+      "pdf": 450,
+      "mut": 580.5
+    },
+    {
+      "model": "BL-25L-35C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 14069,
+      "mutOnly": 18148,
+      "diff": -4079,
+      "pdf": 440,
+      "mut": 567.6
+    },
+    {
+      "model": "SNX-25-B",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 13611,
+      "diff": -4019,
+      "pdf": 300,
+      "mut": 425.7
+    },
+    {
+      "model": "SNX-25-C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 13611,
+      "diff": -4019,
+      "pdf": 300,
+      "mut": 425.7
+    },
+    {
+      "model": "SNX-25-S",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 13611,
+      "diff": -4019,
+      "pdf": 300,
+      "mut": 425.7
+    },
+    {
+      "model": "BL-25C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 13429,
+      "mutOnly": 17323,
+      "diff": -3894,
+      "pdf": 420,
+      "mut": 541.8
+    },
+    {
+      "model": "BL-40",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 12790,
+      "mutOnly": 16499,
+      "diff": -3709,
+      "pdf": 400,
+      "mut": 516
+    },
+    {
+      "model": "KM-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 12790,
+      "mutOnly": 16499,
+      "diff": -3709,
+      "pdf": 400,
+      "mut": 516
+    },
+    {
+      "model": "SNX-25-G",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 10551,
+      "mutOnly": 13611,
+      "diff": -3060,
+      "pdf": 330,
+      "mut": 425.7
+    },
+    {
+      "model": "BS-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "VM-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "SNX-17-S",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "SNX-17-G",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "SNX-17-B",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "SNX-17-C",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "SNX-35SC",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "DBE-02",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9592,
+      "mutOnly": 12374,
+      "diff": -2782,
+      "pdf": 300,
+      "mut": 387
+    },
+    {
+      "model": "BL-25L-35",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 9272,
+      "mutOnly": 11961,
+      "diff": -2689,
+      "pdf": 290,
+      "mut": 374.1
+    },
+    {
+      "model": "BL-25",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 8633,
+      "mutOnly": 11137,
+      "diff": -2504,
+      "pdf": 270,
+      "mut": 348.3
+    },
+    {
+      "model": "YSO-200",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 7993,
+      "mutOnly": 10312,
+      "diff": -2319,
+      "pdf": 250,
+      "mut": 322.5
+    },
+    {
+      "model": "DBE-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 7993,
+      "mutOnly": 10312,
+      "diff": -2319,
+      "pdf": 250,
+      "mut": 322.5
+    },
+    {
+      "model": "YSO-100",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 6395,
+      "mutOnly": 8249,
+      "diff": -1854,
+      "pdf": 200,
+      "mut": 258
+    },
+    {
+      "model": "DM-02",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 6395,
+      "mutOnly": 8249,
+      "diff": -1854,
+      "pdf": 200,
+      "mut": 258
+    },
+    {
+      "model": "DS-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 6075,
+      "mutOnly": 7837,
+      "diff": -1762,
+      "pdf": 190,
+      "mut": 245.1
+    },
+    {
+      "model": "DM-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 5755,
+      "mutOnly": 7424,
+      "diff": -1669,
+      "pdf": 180,
+      "mut": 232.2
+    },
+    {
+      "model": "TM-01",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 5755,
+      "mutOnly": 7424,
+      "diff": -1669,
+      "pdf": 180,
+      "mut": 232.2
+    },
+    {
+      "model": "KASA",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 3837,
+      "mutOnly": 4950,
+      "diff": -1113,
+      "pdf": 120,
+      "mut": 154.8
+    },
+    {
+      "model": "T-02",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 6395,
+      "mutOnly": 7287,
+      "diff": -892,
+      "pdf": 200,
+      "mut": 227.9
+    },
+    {
+      "model": "80LK",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 44763,
+      "mutOnly": 45371,
+      "diff": -608,
+      "pdf": 1400,
+      "mut": 1419
+    },
+    {
+      "model": "MC-25",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 12790,
+      "mutOnly": 13199,
+      "diff": -409,
+      "pdf": 400,
+      "mut": 412.8
+    },
+    {
+      "model": "CMVA-1",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 17586,
+      "mutOnly": 17323,
+      "diff": 263,
+      "pdf": 550,
+      "mut": 541.8
+    },
+    {
+      "model": "KRS-009",
+      "kaynak": "senox-pdf-2026-1",
+      "cur": 576,
+      "mutOnly": 742,
+      "diff": -166,
+      "pdf": 18,
+      "mut": 23.22
+    }
+  ]
+}

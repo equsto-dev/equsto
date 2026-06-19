@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "note": "Doğrulanmış referans poz → katalog SKU. Anahtar: {listeKey}|{poz}. Fiyat ekipmanlar.json satis_fiyat_eur alanından; yoksa boş.",
+  "links": {
+    "balikci-150-250|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 290*290"
+    },
+    "balikci-150-250|Y2": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 940*290"
+    },
+    "balikci-150-250-ekipman-listesi|G2": {
+      "sku": "9805.CB425.HC",
+      "marka": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
+    },
+    "balikci-80-150|G2": {
+      "sku": "9805.CB425.HC",
+      "marka": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
+    },
+    "all-day-dining-cafe-150-300|I12": {
+      "sku": "9805.CB416.HC",
+      "marka": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE"
+    },
+    "italyan-150-300|I12": {
+      "sku": "9805.CB416.HC",
+      "marka": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE"
+    },
+    "pideci-100-250|E4": {
+      "sku": "7919.37NTV.S0",
+      "name": "TAG 370 NTV ÜÇ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK TABLALI 188*70"
+    },
+    "s13-388-turk-220|6": {
+      "sku": "9890.XBC10.E1",
+      "name": "UNOX BAKERTOP 10 TEPSI 600*400 KOMBI FIRIN ELEKTRIKLI ONE MODEL"
+    },
+    "s13-388-turk-220|7": {
+      "sku": "9890.XBC01.EU",
+      "name": "UNOX TAŞ TABANLI FIRIN 1 TEPSİ 40X60"
+    },
+    "sarkuteri-kiosk-kiosk|C9": {
+      "sku": "075T.11110.AD",
+      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+    },
+    "tavukcu-80-150|A2": {
+      "sku": "7897.14030.30",
+      "name": "DUVAR RAFI 140*30"
+    },
+    "tavukcu-80-150|A4": {
+      "sku": "7897.10030.30",
+      "name": "DUVAR RAFI 100*30"
+    },
+    "tavukcu-80-150|B1": {
+      "sku": "7919.CR2520.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C 250X150X240 CM"
+    },
+    "tavukcu-80-150|B2": {
+      "sku": "46-X-137-X-183",
+      "marka": "Portashelf",
+      "name": "Portashelf 4 Katlı Raf 46×137×183 cm"
+    },
+    "tavukcu-80-150|B3": {
+      "sku": "46-X-122-X-183",
+      "marka": "Portashelf",
+      "name": "Portashelf 4 Katlı Raf 46×122×183 cm"
+    },
+    "tavukcu-80-150|C4": {
+      "sku": "9805.CB416.HC",
+      "marka": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE"
+    },
+    "tavukcu-80-150|C5": {
+      "sku": "075T.11110.AD",
+      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+    },
+    "tavukcu-80-150|C7": {
+      "sku": "8574.CM080.00",
+      "name": "CAY MAKINASI 80 BARDAK (referans: çay otomatı 23 lt)"
+    },
+    "tavukcu-80-150|C6": {
+      "sku": "79E3.37NMV.01",
+      "name": "TAG 370 NMV 3 CAM KAPI YATAY TIP BUZDOLABI 188*60"
+    },
+    "tavukcu-80-150|C8": {
+      "sku": "9860.00011.00",
+      "marka": "Santos",
+      "name": "SANTOS PORTAKAL SIKMA MAKINASI NO 11"
+    },
+    "tavukcu-80-150|C9": {
+      "sku": "9563.BL811.00",
+      "name": "ÖZTİRYAKİLER BAR BLENDER BL811"
+    },
+    "tavukcu-80-150|C13": {
+      "sku": "7919.06LMV.00",
+      "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU (setaltı derin — 60*60 ref.)"
+    },
+    "tavukcu-80-150|C14": {
+      "sku": "7919.27NTV.S0",
+      "name": "TAG 270 NTV İKİ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK 142*70 (setaltı 2 kapı ref.)"
+    },
+    "tavukcu-80-150|C15": {
+      "sku": "7865.N1.12708.10L",
+      "name": "700 SERİ KUZİNE FIRINLI GAZLI 6 AÇIK ATEŞ 120*70*85"
+    },
+    "tavukcu-80-150|C16": {
+      "sku": "AEF-870",
+      "name": "Atalay Fritözler AEF - 870 2 x 6-12 lt"
+    },
+    "tavukcu-80-150|C17": {
+      "sku": "7864.N1.40703.06",
+      "name": "700 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 40*70*30"
+    },
+    "tavukcu-80-150|C18": {
+      "sku": "79E3.37NMV.01",
+      "name": "TAG 370 NMV 3 CAM KAPI YATAY TIP BUZDOLABI 188*60"
+    },
+    "tavukcu-80-150|C19": {
+      "sku": "8845.0CRG2.00",
+      "name": "PILIC CEVIRME MAKINASI 2 SIS 8-10 PILIC KAPASITE GAZLI"
+    },
+    "tavukcu-80-150|C21": {
+      "sku": "8799.70240.00",
+      "name": "SINEK OLDURUCU CIHAZ 40 M2 KP40"
+    },
+    "tavukcu-80-150|Y1": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 940*290"
+    },
+    "coffee-shop-referans|A8": {
+      "sku": "073M.11010.AD",
+      "marka": "Öztiryakiler",
+      "name": "BARDAK YIKAMA MAKİNASI OBY 500 B Plus (35x35) PDT — 500 bardak/saat"
+    },
+    "coffee-shop-referans|A15": {
+      "sku": "9574.M200.00",
+      "marka": "Animo",
+      "name": "FILTRE KAHVE MAKINESI ANIMO M200 Cam Sürahi"
+    },
+    "coffee-shop-referans|A18": {
+      "sku": "79E4.27NMV.00",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV YATAY TİP BUZDOLABI (setaltı modül)"
+    },
+    "coffee-shop-referans|A19": {
+      "sku": "7919.06LMV.00",
+      "marka": "Öztiryakiler",
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
+    }
+  }
+}

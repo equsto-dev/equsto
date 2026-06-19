@@ -1,0 +1,141 @@
+{
+  "cod": "291161",
+  "title": "Modüler Pişirme Ekipmanları 2 hazneli ve 2 sepetli, 380 lt gazlı otomatik makarna pişirici",
+  "category": "Otomatik Makarna Pişiriciler",
+  "description": "2 hazneli ve 2 sepetli, 380 lt gazlı otomatik makarna pişirici",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/di%C4%9Fer-pi%C5%9Firme-ekipmanlar%C4%B1/otomatik-makarna-pi%C5%9Firiciler/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-2-hazneli-ve-2-sepetli-380-lt-gazl%C4%B1-otomatik-makarna-pi%C5%9Firici-291161/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "230 V/1N ph/50 Hz"
+        }
+      ]
+    },
+    {
+      "group": "Gaz",
+      "items": [
+        {
+          "label": "Gaz Gücü",
+          "value": "60 kW"
+        },
+        {
+          "label": "Gaz Tipi Seçeneği",
+          "value": "LPG;Doğal Gaz"
+        },
+        {
+          "label": "Gaz Girişi",
+          "value": "1\"1/4"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Hazne adedi",
+          "value": "2"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (genişlik)",
+          "value": "625 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (yükseklik)",
+          "value": "410 mm"
+        },
+        {
+          "label": "Kullanılabilir hazne boyutları (derinlik)",
+          "value": "640 mm"
+        },
+        {
+          "label": "Hazne Kapasitesi",
+          "value": "190 lt MIN; 190 lt MAX"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1600 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "1280 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "850 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "386 kg"
+        },
+        {
+          "label": "Basket sayısı",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Yüksek verimli makarna, pilav ve sebze pişirme cihazı. Catering şirketleri, hastaneler, okul kantinleri, şarküteriler ve oteller için ideal çözüm. Gıda sanayinde ve üretim laboratuvarlarında da kullanılır.",
+        "Düşük voltajlı (24 Volt) elektromekanik linear aktivatör ile kaldırılan basketler pişirme devresinin sonunda otomatik olarak devrilir.",
+        "Elektronik valfler ve elektronik kumanda panosu ile otomatik su dolumu ve suyu otomatik tamamlama.",
+        "Pilot alevinin kazayla sönmesi durumunda emniyet valfi ve gazı kesen emniyet kiti gaz akışını durdurur.",
+        "Buhar akışı bir küresel vanayla kontrol edilir.",
+        "Kullanımı kolay ve fonksiyonel kontrol paneli ve koruma sağlayan şeffaf pleksiglas kapak.",
+        "Sondalı elektrovalf haznede su olmazsa ısıtmayı durdurur.",
+        "Makinenin çalıştığını gösteren ışıklı AÇMA/KAPAMA düğmesi.",
+        "Elektronik karta entegre otomatik ateşleme."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Pişirme basketi ve suyla temas eden tüm parçalar 316 AISI paslanmaz çeliktir.",
+        "Kontrol ve emniyet ünitesinde emniyet vanası, basınç düşürme valfi ve basınç ölçer bulunur.",
+        "Isıtma paslanmaz çelik brulörlerle gerçekleşir.",
+        "Tüm gazlı cihazlar standart olarak doğal gazla kullanıma uygun olarak teslim edilir; ancak tüm cihazlarda LPG dönüşüm memeleri de bulunur.",
+        "Basketlerin sonlandırma sviçi için elektronik kontrol.",
+        "2\" ebadında büyük drenaj musluğu cihazın ön tarafındadır, izolasyonlu kulbu vardır.",
+        "Buhar basıncı: 0,5 bar."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "291161",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/CR42G.dwg",
+      "local": "media/documents/291161/CR42G.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "2 hazneli ve 2 sepetli, 380 lt gazlı otomatik makarna pişirici",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/291161_Gas Automatic Pasta Cooker 2x190lt_Turkish.pdf",
+      "local": "media/documents/291161/291161_Gas%20Automatic%20Pasta%20Cooker%202x190lt_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "291161",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_291161_CR42G.rfa",
+      "local": "media/documents/291161/QF_ELECTROLUXPROFESSIONAL_291161_CR42G.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_ITC291189_1_2_291161.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_ITC291189_1_2_291161.jpg",
+      "local": "media/images/291161/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:04:43.318Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/kaynatma-kazanlari-devrilir-tavalar/kaynatma-kazanlari-ve-devrilir-tavalar-diger/"
+}

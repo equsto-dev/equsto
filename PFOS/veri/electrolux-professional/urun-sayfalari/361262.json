@@ -1,0 +1,88 @@
+{
+  "cod": "361262",
+  "title": "Servis Arabaları GN Küvet Arabası-34xGN1/1",
+  "category": "GN Küvet Arabaları",
+  "description": "GN küvet arabası, 34xGN1/1, 2 adet GN1/1 sıralı, yükseklik=1590mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/gn-k%C3%BCvet-arabalar%C4%B1/servis-arabalar%C4%B1-gn-k%C3%BCvet-arabas%C4%B1-34xgn1-1-361262/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "809 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "617 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1590 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "45 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25x25 mm ebadında kare profildir ve tümüyle kaynaklıdır.",
+        "C-şekilli \"devrilmez tip\" kılavuz raylarının her iki ucu yukarı doğru bükülmüştür.",
+        "İki sıra halinde GN1/1 küvet alır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361262",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/MDNT341GN.dwg",
+      "local": "media/documents/361262/MDNT341GN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "GN Küvet Arabası-34xGN1/1",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/34 GN 1-1 Container Trolley_361262_Turkish.pdf",
+      "local": "media/documents/361262/34%20GN%201-1%20Container%20Trolley_361262_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361262",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361262_MDNT341GN.rfa",
+      "local": "media/documents/361262/QF_ELECTROLUXPROFESSIONAL_361262_MDNT341GN.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361262_1_2_361262.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361262_1_2_361262.jpg",
+      "local": "media/images/361262/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:51:24.571Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

@@ -1,0 +1,476 @@
+{
+  "found": [
+    {
+      "model": "GGM-M-20",
+      "sku": "118.GGM.M20",
+      "name": "Senox GGM M20 Planet Mikser, 20 lt",
+      "best": {
+        "price": 1100,
+        "pk": "M20",
+        "model": "M20",
+        "title": "Senox / Inoksan M20",
+        "score": 60,
+        "via": "model"
+      }
+    },
+    {
+      "model": "GGM-M-30",
+      "sku": "118.GGM.M30",
+      "name": "Senox GGM M30 Planet Mikser, 30 lt",
+      "best": {
+        "price": 1300,
+        "pk": "M30",
+        "model": "M30",
+        "title": "Senox / Inoksan M30",
+        "score": 60,
+        "via": "model"
+      }
+    }
+  ],
+  "notFound": [
+    {
+      "model": "EMH-15",
+      "sku": "118.EMH15",
+      "name": "Senox Dondurma Makinesi, 1.5 L, EMH15",
+      "best": null
+    },
+    {
+      "model": "GGM",
+      "sku": "118.GGM",
+      "name": "Senox Et Kemik Testeresi, GGM",
+      "best": null
+    },
+    {
+      "model": "AAMH-300",
+      "sku": "118.AAMH300",
+      "name": "Senox Otomatik Gıda Dilimleme Makinesi, AAMH300",
+      "best": null
+    },
+    {
+      "model": "SEMG-16K",
+      "sku": "118.SEMG.16K",
+      "name": "Senox Soft Dondurma Makinesi, 16 L, Tek Grupla, SEMG 16",
+      "best": null
+    },
+    {
+      "model": "STRC",
+      "sku": "118.STRC",
+      "name": "Senox Streç Sarma Makinesi",
+      "best": null
+    },
+    {
+      "model": "40-LB",
+      "sku": "118.40.LB",
+      "name": "Senox 40 LB Su Sebili, Boyalı Galvaniz, 40 lt",
+      "best": null
+    },
+    {
+      "model": "BZ-12",
+      "sku": "118.BZ12",
+      "name": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+      "best": null
+    },
+    {
+      "model": "BZ-20",
+      "sku": "118.BZ20",
+      "name": "Senox BZ20 Buz Makinesi, 15 kg/gün Kapasiteli",
+      "best": null
+    },
+    {
+      "model": "CKA",
+      "sku": "118.CKA",
+      "name": "Senox Çatılı Köpüklü Ayran Makinesi, 40 lt",
+      "best": null
+    },
+    {
+      "model": "KMP-01",
+      "sku": "118.KMP.01",
+      "name": "Senox KMP 01 Katı Meyve Sıkacağı",
+      "best": null
+    },
+    {
+      "model": "KRS-105",
+      "sku": "118.KRS.105",
+      "name": "Senox Lifetech Otel Tipi Çelik Kettle, 1,2 lt",
+      "best": null
+    },
+    {
+      "model": "PS-01",
+      "sku": "118.PS.01",
+      "name": "Senox Motorlu Portakal Sıkma Makinesi",
+      "best": null
+    },
+    {
+      "model": "LT-12",
+      "sku": "118.LT.12",
+      "name": "Senox Su Yumuşatıcı Filtre, 12 L",
+      "best": null
+    },
+    {
+      "model": "LT-16",
+      "sku": "118.LT.16",
+      "name": "Senox Su Yumuşatıcı Filtre, 16 L",
+      "best": null
+    },
+    {
+      "model": "LT-8",
+      "sku": "118.LT.8",
+      "name": "Senox Su Yumuşatıcı Filtre, 8 L",
+      "best": null
+    },
+    {
+      "model": "COFFEDIO",
+      "sku": "118.COFFEDIO",
+      "name": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+      "best": null
+    },
+    {
+      "model": "HC-600",
+      "sku": "118.HC.600",
+      "name": "Senox Titan Kahve Değirmeni, HC 600",
+      "best": null
+    },
+    {
+      "model": "TITAN-LL",
+      "sku": "118.TITAN.ll",
+      "name": "Senox Titan Kahve Değirmeni, TITAN ll",
+      "best": null
+    },
+    {
+      "model": "BBL-02",
+      "sku": "118.BBL.02",
+      "name": "Şenox BBL 02 Bar Blender",
+      "best": null
+    },
+    {
+      "model": "SNX-17-S",
+      "sku": "118.SNX17.S",
+      "name": "Senox Askı Tip Isıtıcı Lamba, Siyah, SNX 17 S",
+      "best": null
+    },
+    {
+      "model": "BNA-027",
+      "sku": "118.BNA027",
+      "name": "Senox BNA 027 Mafsallı Makyaj Aynası",
+      "best": null
+    },
+    {
+      "model": "BNA-028",
+      "sku": "118.BNA028",
+      "name": "Senox BNA 028 Mafsallı Makyaj Aynası, Led Işıklı",
+      "best": null
+    },
+    {
+      "model": "SNX-17-G",
+      "sku": "118.SNX.17.G",
+      "name": "Senox Isıtıcı Lamba Altın Renk, SNX 17 G",
+      "best": null
+    },
+    {
+      "model": "SNX-17-B",
+      "sku": "118.SNX.17.B",
+      "name": "Senox Isıtıcı Lamba Bakır Renk, SNX 17 B",
+      "best": null
+    },
+    {
+      "model": "SNX-17-C",
+      "sku": "118.SNX.17.C",
+      "name": "Senox Isıtıcı Lamba Krom Renk, SNX 17 C",
+      "best": null
+    },
+    {
+      "model": "HIJYENB-TF",
+      "sku": "118.HIJYENB.TF",
+      "name": "Senox Taban Fırçalı Hijyen Bariyeri",
+      "best": null
+    },
+    {
+      "model": "300-COMBİ",
+      "sku": "118.300.COMBİ",
+      "name": "Senox 300 Combi Bar Tipi Soğutucu Dolap, 145 L,",
+      "best": null
+    },
+    {
+      "model": "DF-200",
+      "sku": "118.DF200",
+      "name": "Senox Blok Kapılı Derin Dondurucu, 200L, DF 200",
+      "best": null
+    },
+    {
+      "model": "DF-300",
+      "sku": "118.DF300",
+      "name": "Senox Blok Kapılı Derin Dondurucu, 300L, DF 300",
+      "best": null
+    },
+    {
+      "model": "DF-400",
+      "sku": "118.DF400",
+      "name": "Senox Blok Kapılı Derin Dondurucu, 400L, DF 400",
+      "best": null
+    },
+    {
+      "model": "DF-500",
+      "sku": "118.DF500",
+      "name": "Senox Blok Kapılı Derin Dondurucu, 500L, DF 500",
+      "best": null
+    },
+    {
+      "model": "DF-600",
+      "sku": "118.DF600",
+      "name": "Senox Blok Kapılı Derin Dondurucu, 600L, DF 600",
+      "best": null
+    },
+    {
+      "model": "DF-500K",
+      "sku": "118.DF500K",
+      "name": "Senox Blok Kapılı Derin Dondurucu, Krom , 500L, DF 500K",
+      "best": null
+    },
+    {
+      "model": "DF-600K",
+      "sku": "118.DF600K",
+      "name": "Senox Blok Kapılı Derin Dondurucu, Krom , 600L, DF 600K",
+      "best": null
+    },
+    {
+      "model": "CKM-120T",
+      "sku": "118.CKM.120T",
+      "name": "Senox CKM 120T Çekmeceli Soğuk Teşhir Dolabı, 120x80x10",
+      "best": null
+    },
+    {
+      "model": "CKM-150T",
+      "sku": "118.CKM.150T",
+      "name": "Senox CKM 150T Çekmeceli Soğuk Teşhir Dolabı, 150x80x10",
+      "best": null
+    },
+    {
+      "model": "CKM-180T",
+      "sku": "118.CKM.180T",
+      "name": "Senox CKM 180T Çekmeceli Soğuk Teşhir Dolabı, 180x80x10",
+      "best": null
+    },
+    {
+      "model": "CEK-3GN-11",
+      "sku": "118.CEK.3GN11",
+      "name": "Senox Çekmeceli Sıcak Dolap, 3xGn 1/1",
+      "best": null
+    },
+    {
+      "model": "WF-377",
+      "sku": "118.WF377",
+      "name": "Senox Dik Tip Derin Dondurucu, 5 Raflı",
+      "best": null
+    },
+    {
+      "model": "SSC-1500",
+      "sku": "118.SSC.1500",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 1077 L, SS",
+      "best": null
+    },
+    {
+      "model": "KSC-458",
+      "sku": "118.KSC.458",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 458 L, KSC",
+      "best": null
+    },
+    {
+      "model": "KSC-293",
+      "sku": "118.KSC.293",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 293 L, KSC 293",
+      "best": null
+    },
+    {
+      "model": "SSC-1600",
+      "sku": "118.SSC.1600",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 3 Kapılı, 1153 L, SS",
+      "best": null
+    },
+    {
+      "model": "SSC-375",
+      "sku": "118.SSC.375",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 345 L, SSC 375",
+      "best": null
+    },
+    {
+      "model": "KSC-390",
+      "sku": "118.KSC.390",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 390 L, KSC 390",
+      "best": null
+    },
+    {
+      "model": "SSC-510",
+      "sku": "118.SSC.510",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 445 L, SSC 510",
+      "best": null
+    },
+    {
+      "model": "SSC-900",
+      "sku": "118.SSC.900",
+      "name": "Senox Dik Tip Şişe Soğutucu Dolap, 683 L, SSC 900",
+      "best": null
+    },
+    {
+      "model": "DP-250",
+      "sku": "118.DP.250",
+      "name": "Senox DP 250 Dik Tip Soğuk Pasta Teşhir Dolabı, 52,2x48",
+      "best": null
+    },
+    {
+      "model": "DP-270",
+      "sku": "118.DP.270",
+      "name": "Senox DP 270 Dik Tip Soğuk Pasta Teşhir Dolabı, 55,9x52",
+      "best": null
+    },
+    {
+      "model": "DP-360",
+      "sku": "118.DP.360",
+      "name": "Senox DP 360 Dik Soğuk Pasta Teşhir Dolabı, 68x68x1768,",
+      "best": null
+    },
+    {
+      "model": "DP-600",
+      "sku": "118.DP.600",
+      "name": "Senox DP 600 Dik Tip Soğuk Pasta Teşhir Dolabı, 85,2x65",
+      "best": null
+    },
+    {
+      "model": "DP-66",
+      "sku": "118.DP.66",
+      "name": "Senox DP 66 Dik Tip Soğuk Pasta Teşhir Dolabı, 45x45x10",
+      "best": null
+    },
+    {
+      "model": "DP-98",
+      "sku": "118.DP.98",
+      "name": "Senox DP 98 Dik Tip Soğuk Pasta Teşhir Dolabı, 45,4x40,",
+      "best": null
+    },
+    {
+      "model": "ICT-130",
+      "sku": "118.ICT.130",
+      "name": "Senox ICT 130 İçecek Teşhir Dolabı, 131x71x179,5 cm",
+      "best": null
+    },
+    {
+      "model": "SSC-900K",
+      "sku": "118.SSC.900K",
+      "name": "Senox Kanopili Dik Tip Şişe Soğutucu Dolap, 683 L, SSC ",
+      "best": null
+    },
+    {
+      "model": "S-900K",
+      "sku": "118.S.900K",
+      "name": "Senox Kanopili Dik Tip Şişe Soğutucu, 683 L, Çift Kapıl",
+      "best": null
+    },
+    {
+      "model": "MT-213",
+      "sku": "118.MT.213",
+      "name": "Senox MT 213 Soğuk Meze Teşhir Dolabı, 212,3x85,5x140,6",
+      "best": null
+    },
+    {
+      "model": "NRGZ-100",
+      "sku": "118.NRGZ100",
+      "name": "Senox Nergiz Pasta Teşhir Dolabı, 43,5x41x108,5 cm",
+      "best": null
+    },
+    {
+      "model": "PD-400",
+      "sku": "118.PD400",
+      "name": "Senox PD 400 Pasta Teşhir Dolabı, 490L, 60x60x185 cm",
+      "best": null
+    },
+    {
+      "model": "PD-400D",
+      "sku": "118.PD400D",
+      "name": "Senox PD 400D Pasta Teşhir Dolabı, 490L, 60x60x185 cm",
+      "best": null
+    },
+    {
+      "model": "PST-150T",
+      "sku": "118.PST.150T",
+      "name": "Senox PST 150T İçecek Teşhir Dolabı, 150x70x200 cm",
+      "best": null
+    },
+    {
+      "model": "PST-200T",
+      "sku": "118.PST.200T",
+      "name": "Senox PST 200T İçecek Teşhir Dolabı, 200x70x200 cm",
+      "best": null
+    },
+    {
+      "model": "WN-375S",
+      "sku": "118.WN375S",
+      "name": "Senox Sarap Soğutma Dolabı, WN 375S",
+      "best": null
+    },
+    {
+      "model": "WN-385",
+      "sku": "118.WN385",
+      "name": "Senox Sarap Soğutma Dolabı, WN 385",
+      "best": null
+    },
+    {
+      "model": "SRDNY-215",
+      "sku": "118.SRDNY215",
+      "name": "Senox Sardunya 215 Pasta Teshir Dolapları 215 LT, 52x49",
+      "best": null
+    },
+    {
+      "model": "SET-E-120S",
+      "sku": "118.SET.E.120S",
+      "name": "Senox SET E 120S Set Üstü Soğuk Pasta Teşhir Dolabı, Eğ",
+      "best": null
+    },
+    {
+      "model": "SET-E-90C",
+      "sku": "118.SET.E.90C",
+      "name": "Senox SET E 90C Set Üstü Sıcak Pasta Teşhir Dolabı Eğik",
+      "best": null
+    },
+    {
+      "model": "SET-E-90S",
+      "sku": "118.SET.E.90S",
+      "name": "Senox SET E 90S Set Üstü Soğuk Pasta Teşhir Dolabı, Eği",
+      "best": null
+    },
+    {
+      "model": "SET-E-75S",
+      "sku": "118.SET.E.75S",
+      "name": "Senox SET P 75S Set Üstü Soğuk Pasta Teşhir Dolabı, Pan",
+      "best": null
+    },
+    {
+      "model": "SET-P-90C",
+      "sku": "118.SET.P.90C",
+      "name": "Senox SET P 90C Set Üstü Sıcak Pasta Teşhir Dolabı, Pan",
+      "best": null
+    },
+    {
+      "model": "SET-P-90S",
+      "sku": "118.SET.P.90S",
+      "name": "Senox SET P 90S Set Üstü Soğuk Pasta Teşhir Dolabı, Pan",
+      "best": null
+    },
+    {
+      "model": "SET-P-75C",
+      "sku": "118.SET.P.75C",
+      "name": "Senox Set Üstü Sıcak Teşhir Dolabı, Panaromik Cam, SET ",
+      "best": null
+    },
+    {
+      "model": "SMF-5120-ST",
+      "sku": "118.SMF.5120.ST",
+      "name": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapı",
+      "best": null
+    },
+    {
+      "model": "SC-900-K",
+      "sku": "118.SC900.K",
+      "name": "Şenox 2 Kapılı Dik Tip Şişe Soğutucu, 0 - +10 º C ,Kano",
+      "best": null
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "cod": "361220",
+  "title": "Servis Arabaları 2 Katlı Servis Arabası-1200 mm",
+  "category": "Servis Arabaları",
+  "description": "2 katlı servis arabası 1200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1/servis-arabalar%C4%B1-2-katl%C4%B1-servis-arabas%C4%B1-1200-mm-361220/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1295 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "695 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "816 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "24 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "Eşit biçimde yerleştirildiğinde yükleme kapasitesi 150 kg'dır.",
+        "Dikişsiz, ses sönümlendirici malzemeyle takviye edilmiş rafların kenarları çift kıvrımlıdır ve şaseye kaynaklanmıştır.",
+        "Rafların ebadı: 1200x600 mm.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361220",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/STR122.dwg",
+      "local": "media/documents/361220/STR122.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "2 Katlı Servis Arabası-1200 mm",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Two Tier Service Trolley 1200 mm_361220_Turkish.pdf",
+      "local": "media/documents/361220/Two%20Tier%20Service%20Trolley%201200%20mm_361220_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361220",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361220_STR122.rfa",
+      "local": "media/documents/361220/QF_ELECTROLUXPROFESSIONAL_361220_STR122.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361220_1_2_361220.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361220_1_2_361220.jpg",
+      "local": "media/images/361220/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:52:14.541Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

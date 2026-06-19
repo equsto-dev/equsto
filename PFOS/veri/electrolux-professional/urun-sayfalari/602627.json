@@ -1,0 +1,141 @@
+{
+  "cod": "602627",
+  "title": "Kahve Sistemi Classic Geleneksek Espresso Kahve Makinesi, 1 Gruplu, 6.3 litre Boyler",
+  "category": "Espresso Kahve Makineleri - CLASSIC",
+  "description": "Geleneksel Espresso Kahve Makinesi, Classic 1 gruplu, 6,3 lt boyler, 4 programlanabilir dozajlama programı, manuel buhar ve su, otomatik temizleme programı, paslanmaz çelik gövde",
+  "url": "https://www.electroluxprofessional.com/tr/pd/i%CC%87%C3%A7ecek/s%C4%B1cak-i%CC%87%C3%A7ecek/espresso-kahve-makineleri-classic/espresso-kahve-makineleri-classic/kahve-sistemi-classic-geleneksek-espresso-kahve-makinesi-1-gruplu-6.3-litre-boyler-602627/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "230 V/1N ph/50 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "3 kW"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "Cable without plug"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Net ağırlık",
+          "value": "41 kg"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.32 m³"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Anlık tüketim",
+          "value": "13 Amps"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Soğuk su sıcaklığı (min/max)",
+          "value": "5 / 60 °C"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Büyük fincan ısıtma kapasitesi: makinelerin üstünde entegre fincan ısıtıcısı.",
+        "Classic, kolay kullanımı ve servis kolaylığı ile gün boyunca olağanüstü kahve sağlayan teknik özellikler sunar.",
+        "Otomatik temizleme programı.",
+        "Maestro demleme grubu: doğrudan boyler grubu başlıkları, shot sıcaklığında tutarlılık için monte edilmiştir.",
+        "Klasik zarif hatları ve kahve profesyonellerinin takdir ettiği güvenilir teknolojiler, CLASSIC modeli, kalite/fiyat oranı ile daha çekici hale getirmiştir. CLASSIC, günün en yoğun dönemlerinde bile mükemmel kalitede espresso sonucu ve tutarlılığı sağlamak için mükemmel bir geleneksel espresso makinesidir.",
+        "Ağır hizmet tipi bileşenler ve kaynaklı yapı, termal tutarlılık ve güvenilir kahve alımı için doğrudan monte edilmiş bir boyler grubu başlığı, karmaşık olmayan servis kolaylığı için bileşenlere kolay erişim ve sınırsız buhar.",
+        "Tek boyler: 330 ml dahili boyler ile Isı eşanjörü teknolojisine sahip 1 büyük bakır boyler.",
+        "Grup başına 4 programlanabilir ses tuşu + manuel kontrol için her grup başına yarı otomatik anahtar."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Dahili fincan ısıtıcısı.",
+        "1 gruplu - 6,3 litre boyler.",
+        "Paslanmaz çelik gövde"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_Coffee_Catalog_TUR",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00241_1_5_16_3_BR_BR-9JE00241_1_5_1_1_EPR_Coffee_Catalog_TUR_LR_202411.pdf",
+      "local": "media/documents/602627/BR_BR-9JE00241_1_5_16_3_BR_BR-9JE00241_1_5_1_1_EPR_Coffee_Catalog_TUR_LR_202411.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "602627",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/602627_CLASSIC1.dwg",
+      "local": "media/documents/602627/602627_CLASSIC1.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Classic Geleneksek Espresso Kahve Makinesi, 1 Gruplu, 6.3 litre Boyler",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/602627_Classic Traditional Espresso Machine, 1 group, 6.3 liter boiler_Turkish.pdf",
+      "local": "media/documents/602627/602627_Classic%20Traditional%20Espresso%20Machine,%201%20group,%206.3%20liter%20boiler_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "602627",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_602627_CLASSIC1.rfa",
+      "local": "media/documents/602627/QF_ELECTROLUXPROFESSIONAL_602627_CLASSIC1.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": "1"
+    },
+    {
+      "code": "871002",
+      "description": "Portafiltre, tek fincan için",
+      "quantity": "1"
+    },
+    {
+      "code": "871003",
+      "description": "Portafiltre iki fincan için",
+      "quantity": "1"
+    },
+    {
+      "code": "871041",
+      "description": "Yükseltilmiş ayak seti",
+      "quantity": "1"
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602627_1_1_602627.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602627_1_1_602627.jpg",
+      "local": "media/images/602627/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T10:50:06.549Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/espresso-kahve-makineleri/"
+}

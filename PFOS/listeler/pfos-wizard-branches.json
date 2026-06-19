@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-19T17:23:19.948Z",
+  "aktifPaketSayisi": 55,
+  "segmentOrder": [
+    "Restoran",
+    "Kafe / Coffee Shop",
+    "Fast Food / QSR",
+    "Pastane & Fırın",
+    "Bar & Lounge",
+    "Catering",
+    "Bulut Mutfak",
+    "Üretim / Fabrika"
+  ],
+  "konseptRows": [
+    {
+      "v": "Restoran",
+      "label": "Restoran",
+      "desc": "Steakhouse, balık, kebap, pizzacı, Türk restoran…"
+    },
+    {
+      "v": "Kafe / Coffee Shop",
+      "label": "Kafe / Coffee Shop",
+      "desc": "Coffee shop, casual cafe, harvest, kahve durağı…"
+    },
+    {
+      "v": "Fast Food / QSR",
+      "label": "Fast Food / QSR",
+      "desc": "Burger, kiosk, tavukçu, döner, pizza paket…"
+    },
+    {
+      "v": "Pastane & Fırın",
+      "label": "Pastane & Fırın",
+      "desc": "Pastane, güneli fırın, artisan üretim…"
+    },
+    {
+      "v": "Bar & Lounge",
+      "label": "Bar & Lounge",
+      "desc": "Birahane, kokteyl, wine & beer bar…"
+    },
+    {
+      "v": "Catering",
+      "label": "Catering",
+      "desc": "Yemekhane, yerinde üretim, taşıma yemek…"
+    },
+    {
+      "v": "Bulut Mutfak",
+      "label": "Bulut Mutfak",
+      "desc": "Grab&Go, coffee counter, döner, pizza…"
+    },
+    {
+      "v": "Üretim / Fabrika",
+      "label": "Üretim / Fabrika",
+      "desc": "Fabrika mutfak ölçekleri (m² bandı)"
+    }
+  ],
+  "dukkanBySegment": {
+    "Restoran": [
+      "Steakhouse",
+      "Balık Restaurant",
+      "İtalyan Restoran",
+      "Pideci",
+      "Sushi",
+      "Bar + Yemek",
+      "Tavukçu",
+      "Şarküteri Kiosk",
+      "Kebapçı",
+      "Kanatçı-Kebapçı",
+      "Patisserie + Yemek",
+      "Pizzacı",
+      "Türk / Esnaf lokanta",
+      "Meyhane",
+      "All Dining Cafe",
+      "Restoran",
+      "Şarküteri Restoran",
+      "Fine Dining",
+      "Dünya Mutfağı",
+      "Kasap",
+      "Kasap + Şarküteri",
+      "Türk Mutfağı",
+      "Food Court"
+    ],
+    "Kafe / Coffee Shop": [
+      "Kahve Atölyesi",
+      "Casual Cafe",
+      "Harvest Cafe",
+      "Kahve Durağı",
+      "All Sport Cafe",
+      "Kahve Durağı — Pastane & Kahvaltı",
+      "Kahve & Tatlı",
+      "Coffee Shop",
+      "Coffee Shop + Yemek"
+    ],
+    "Pastane & Fırın": [
+      "Pastane",
+      "Güneli Fırın",
+      "Pastane & Yerel",
+      "Pastane + Cafe"
+    ],
+    "Fast Food / QSR": [
+      "Türk Mutfağı",
+      "Türk Mutfağı — Lokanta",
+      "Self Servis",
+      "Food Court",
+      "Hamburger Kiosk",
+      "Hotdog Kiosk",
+      "Fried Chicken"
+    ],
+    "Bar & Lounge": [
+      "Birahane",
+      "Kokteyl + Kahve",
+      "Kokteyl Bar",
+      "Mixology Bar"
+    ],
+    "Otel F&B": [
+      "Şehir Oteli (Business)",
+      "Resort Otel",
+      "Tatil Oteli"
+    ],
+    "Catering": [
+      "Büyük Yemekhane (Catering)",
+      "Okul Yemekhanesi",
+      "Üretim Fabrikası",
+      "Yerinde Üretim",
+      "Personel Yemekhanesi"
+    ],
+    "Üretim / Fabrika": [
+      "Fabrika Yemekhanesi",
+      "Ekmek + Kruvasan"
+    ],
+    "Franchise": [
+      "Steakhouse",
+      "Balık Restaurant",
+      "İtalyan Restoran",
+      "Pideci",
+      "Sushi",
+      "Bar + Yemek",
+      "Tavukçu",
+      "Şarküteri Kiosk",
+      "Kebapçı",
+      "Kanatçı-Kebapçı",
+      "Patisserie + Yemek",
+      "Pizzacı",
+      "Türk / Esnaf lokanta",
+      "Meyhane",
+      "All Dining Cafe",
+      "Restoran",
+      "Şarküteri Restoran",
+      "Fine Dining",
+      "Dünya Mutfağı",
+      "Kasap",
+      "Kasap + Şarküteri",
+      "Türk Mutfağı",
+      "Food Court"
+    ]
+  },
+  "legacyKonsept": {
+    "Restoran": "Restaurant",
+    "Kafe / Coffee Shop": "Cafe",
+    "Fast Food / QSR": "Restaurant",
+    "Pastane & Fırın": "Pastane & Patisserie",
+    "Bar & Lounge": "Bar",
+    "Otel F&B": "Hotel",
+    "Catering": "Catering",
+    "Bulut Mutfak": "Bulut Mutfak",
+    "Üretim / Fabrika": "Catering"
+  },
+  "m2ByDukkan": {
+    "Steakhouse": {
+      "min": 80,
+      "max": 500,
+      "slug": "steakhouse"
+    },
+    "Balık Restaurant": {
+      "min": 80,
+      "max": 600,
+      "slug": "balikci"
+    },
+    "İtalyan Restoran": {
+      "min": 100,
+      "max": 500,
+      "slug": "italyan"
+    },
+    "Pideci": {
+      "min": 100,
+      "max": 500,
+      "slug": "pideci"
+    },
+    "Sushi": {
+      "min": 40,
+      "max": 100,
+      "slug": "sushi"
+    },
+    "Bar + Yemek": {
+      "min": 100,
+      "max": 500,
+      "slug": "inari-bar-yemek"
+    },
+    "Tavukçu": {
+      "min": 80,
+      "max": 150,
+      "slug": "tavukcu"
+    },
+    "Şarküteri Kiosk": {
+      "min": 25,
+      "max": 80,
+      "slug": "sarkuteri-kiosk"
+    },
+    "Kebapçı": {
+      "min": 80,
+      "max": 500,
+      "slug": "kebap-ortadogu"
+    },
+    "Kanatçı-Kebapçı": {
+      "min": 100,
+      "max": 500,
+      "slug": "kanatci-kebapci"
+    },
+    "Patisserie + Yemek": {
+      "min": 200,
+      "max": 500,
+      "slug": "patisserie-yemek"
+    },
+    "Pizzacı": {
+      "min": 80,
+      "max": 500,
+      "slug": "pizzaci"
+    },
+    "Türk / Esnaf lokanta": {
+      "min": 150,
+      "max": 5000,
+      "slug": "turk-restoran"
+    },
+    "Meyhane": {
+      "min": 100,
+      "max": 500,
+      "slug": "meyhane"
+    },
+    "All Dining Cafe": {
+      "min": 100,
+      "max": 500,
+      "slug": "all-day-dining-cafe"
+    },
+    "Kahve Atölyesi": {
+      "min": 80,
+      "max": 150,
+      "slug": "kahve-atolyesi"
+    },
+    "Casual Cafe": {
+      "min": 50,
+      "max": 150,
+      "slug": "casual-cafe"
+    },
+    "Harvest Cafe": {
+      "min": 100,
+      "max": 200,
+      "slug": "harvest-cafe"
+    },
+    "Kahve Durağı": {
+      "min": 100,
+      "max": 200,
+      "slug": "kahve-duragi"
+    },
+    "All Sport Cafe": {
+      "min": 100,
+      "max": 200,
+      "slug": "all-sport-cafe"
+    },
+    "Kahve Durağı — Pastane & Kahvaltı": {
+      "min": 100,
+      "max": 200,
+      "slug": "kahve-duragi-pastane"
+    },
+    "Kahve & Tatlı": {
+      "min": 40,
+      "max": 100,
+      "slug": "kahve-tatli"
+    },
+    "Coffee Shop": {
+      "min": 60,
+      "max": 300,
+      "slug": "coffee-shop"
+    },
+    "Coffee Shop + Yemek": {
+      "min": 250,
+      "max": 350,
+      "slug": "coffee-shop-yemek"
+    },
+    "Restoran": {
+      "min": 500,
+      "max": 1000,
+      "slug": "restoran"
+    },
+    "Şarküteri Restoran": {
+      "min": 100,
+      "max": 500,
+      "slug": "sarkuteri-restoran"
+    },
+    "Fine Dining": {
+      "min": 500,
+      "max": 1000,
+      "slug": "restoran"
+    },
+    "Dünya Mutfağı": {
+      "min": 500,
+      "max": 1000,
+      "slug": "restoran"
+    },
+    "Kasap": {
+      "min": 100,
+      "max": 500,
+      "slug": "kasap"
+    },
+    "Kasap + Şarküteri": {
+      "min": 100,
+      "max": 500,
+      "slug": "kasap-sarkuteri"
+    },
+    "Pastane": {
+      "min": 100,
+      "max": 250,
+      "slug": "pastane"
+    },
+    "Güneli Fırın": {
+      "min": 200,
+      "max": 400,
+      "slug": "guneli-pastane"
+    },
+    "Pastane & Yerel": {
+      "min": 200,
+      "max": 400,
+      "slug": "guneli-pastane"
+    },
+    "Pastane + Cafe": {
+      "min": 300,
+      "max": 500,
+      "slug": "pastane-cafe"
+    },
+    "Türk Mutfağı": {
+      "min": 100,
+      "max": 500,
+      "slug": "kiremit-akasya"
+    },
+    "Türk Mutfağı — Lokanta": {
+      "min": 100,
+      "max": 250,
+      "slug": "mus-selinoz-turk"
+    },
+    "Self Servis": {
+      "min": 100,
+      "max": 250,
+      "slug": "kiremit-akasya"
+    },
+    "Food Court": {
+      "min": 100,
+      "max": 500,
+      "slug": "kiremit-akasya"
+    },
+    "Hamburger Kiosk": {
+      "min": 60,
+      "max": 100,
+      "slug": "hamburger-kiosk"
+    },
+    "Hotdog Kiosk": {
+      "min": 25,
+      "max": 60,
+      "slug": "hotdog-kiosk"
+    },
+    "Fried Chicken": {
+      "min": 80,
+      "max": 150,
+      "slug": "tavukcu"
+    },
+    "Birahane": {
+      "min": 100,
+      "max": 300,
+      "slug": "birahane"
+    },
+    "Kokteyl + Kahve": {
+      "min": 30,
+      "max": 50,
+      "slug": "kokteyl-kahve"
+    },
+    "Kokteyl Bar": {
+      "min": 30,
+      "max": 50,
+      "slug": "kokteyl-kahve"
+    },
+    "Mixology Bar": {
+      "min": 30,
+      "max": 50,
+      "slug": "kokteyl-kahve"
+    },
+    "Şehir Oteli (Business)": {
+      "min": 500,
+      "max": 2000,
+      "slug": "sehir-otel"
+    },
+    "Resort Otel": {
+      "min": 200,
+      "max": 2000,
+      "slug": "resort-otel"
+    },
+    "Tatil Oteli": {
+      "min": 250,
+      "max": 4000,
+      "slug": "tatil-otel"
+    },
+    "Büyük Yemekhane (Catering)": {
+      "min": 2000,
+      "max": 3500,
+      "slug": "buyuk-yemekhane"
+    },
+    "Fabrika Yemekhanesi": {
+      "min": 2000,
+      "max": 3500,
+      "slug": "buyuk-yemekhane"
+    },
+    "Ekmek + Kruvasan": {
+      "min": 150,
+      "max": 400,
+      "slug": "ekmek-kruvasan"
+    },
+    "Okul Yemekhanesi": {
+      "min": 2000,
+      "max": 3500,
+      "slug": "buyuk-yemekhane"
+    },
+    "Üretim Fabrikası": {
+      "min": 1500,
+      "max": 2500,
+      "slug": "buyuk-yemekhane"
+    },
+    "Yerinde Üretim": {
+      "min": 20,
+      "max": 60,
+      "slug": "yerinde-uretim"
+    },
+    "Personel Yemekhanesi": {
+      "min": 150,
+      "max": 250,
+      "slug": "personel-yemekhane"
+    }
+  }
+}

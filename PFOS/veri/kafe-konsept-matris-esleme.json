@@ -1,0 +1,182 @@
+{
+  "tarih": "2026-06-07",
+  "isTipi": "kafe",
+  "matris": {
+    "olcek": {
+      "S1": { "id": "kucuk", "label": "Küçük", "m2Min": 40, "m2Max": 99 },
+      "S2": { "id": "orta", "label": "Orta", "m2Min": 100, "m2Max": 149 },
+      "S3": { "id": "buyuk", "label": "Büyük", "m2Min": 150, "m2Max": 200 }
+    },
+    "yogunluk": {
+      "Y1": { "id": "bar", "label": "Bar / içecek ağırlıklı", "aciklama": "Espresso hattı, minimal mutfak" },
+      "Y2": { "id": "hafif_mutfak", "label": "Hafif mutfak / cafe-restaurant", "aciklama": "Sıcak yemek, ızgara, bulaşık hattı" },
+      "Y3": { "id": "pastane", "label": "Pastane / tatlı / kahvaltı", "aciklama": "Teşhir, konveksiyon, hamur hattı" }
+    },
+    "hucreIdFormat": "kafe_{olcek}_{yogunluk}"
+  },
+  "eslemeler": [
+    {
+      "eskiKonseptId": "kahve-atolyesi",
+      "bantId": "80-150",
+      "listeDosya": "kahve-atolyesi-80-150.json",
+      "label": "Kahve Atölyesi",
+      "referansM2": 120,
+      "kalemSayisi": 47,
+      "matrisHucre": "S2×Y2",
+      "matrisHucreId": "kafe_orta_hafif_mutfak",
+      "guven": "yuksek",
+      "not": "Çok tezgah + tam mutfak; orta ölçekte en yoğun Y2 referansı",
+      "wizardAlias": "kafe / orta / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "seed"
+    },
+    {
+      "eskiKonseptId": "harvest-cafe",
+      "bantId": "100-200",
+      "listeDosya": "harvest-cafe-100-200.json",
+      "label": "Harvest Cafe",
+      "referansM2": 150,
+      "kalemSayisi": 44,
+      "matrisHucre": "S3×Y2",
+      "matrisHucreId": "kafe_buyuk_hafif_mutfak",
+      "guven": "yuksek",
+      "not": "Büyük cafe-restaurant; filtre kahve + teşhir",
+      "wizardAlias": "kafe / buyuk / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "seed"
+    },
+    {
+      "eskiKonseptId": "all-sport-cafe",
+      "bantId": "100-200",
+      "listeDosya": "all-sport-cafe-100-200.json",
+      "label": "All Sport Cafe",
+      "referansM2": 150,
+      "kalemSayisi": 32,
+      "matrisHucre": "S3×Y2",
+      "matrisHucreId": "kafe_buyuk_hafif_mutfak",
+      "guven": "orta",
+      "not": "Harvest ile aynı hücre; daha hafif set (32 kalem). Birleştirme adayı.",
+      "wizardAlias": "kafe / buyuk / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "alternatif",
+      "birlestir": "harvest-cafe-100-200"
+    },
+    {
+      "eskiKonseptId": "kahve-duragi",
+      "bantId": "100-200",
+      "listeDosya": "kahve-duragi-100-200.json",
+      "label": "Kahve Durağı (Konyaaltı)",
+      "referansM2": 125,
+      "kalemSayisi": 46,
+      "konseptSinif": "cafe-restaurant-kompakt",
+      "matrisHucre": "S2×Y2",
+      "matrisHucreId": "kafe_orta_hafif_mutfak",
+      "guven": "yuksek",
+      "not": "Zincir cafe-restaurant kompakt profili",
+      "wizardAlias": "kafe / orta / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "seed"
+    },
+    {
+      "eskiKonseptId": "kahve-duragi",
+      "bantId": "150-200",
+      "listeDosya": "kahve-duragi-150-200.json",
+      "label": "Kahve Durağı (Karabük)",
+      "referansM2": 175,
+      "kalemSayisi": 51,
+      "konseptSinif": "cafe-restaurant-standart",
+      "matrisHucre": "S3×Y2",
+      "matrisHucreId": "kafe_buyuk_hafif_mutfak",
+      "guven": "yuksek",
+      "not": "Zincir cafe-restaurant standart; en kapsamlı Y2 listesi (51 kalem)",
+      "wizardAlias": "kafe / buyuk / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "seed-oncelikli"
+    },
+    {
+      "eskiKonseptId": "kahve-tatli",
+      "bantId": "40-100",
+      "listeDosya": "kahve-tatli-40-100.json",
+      "label": "Kahve & Tatlı",
+      "referansM2": 70,
+      "kalemSayisi": 34,
+      "konseptSinif": "kahve-tatli-pastane",
+      "matrisHucre": "S1×Y3",
+      "matrisHucreId": "kafe_kucuk_pastane",
+      "guven": "yuksek",
+      "not": "Küçük pastane/tatlı bandının tek net referansı",
+      "wizardAlias": "kafe / kucuk / pastane",
+      "deprecated": true,
+      "referansRol": "seed"
+    },
+    {
+      "eskiKonseptId": "kahve-duragi-pastane",
+      "bantId": "100-200",
+      "listeDosya": "kahve-duragi-pastane-100-200.json",
+      "label": "Kahve Durağı — Pastane & Kahvaltı",
+      "referansM2": 150,
+      "kalemSayisi": 43,
+      "konseptSinif": "pastane-kahvalti-hafif-yemek",
+      "matrisHucre": "S3×Y3",
+      "matrisHucreId": "kafe_buyuk_pastane",
+      "guven": "yuksek",
+      "not": "Pastane + kahvaltı; konveksiyon fırın. Y2 ile kesişir ama Y3 çekirdeği daha doğru.",
+      "wizardAlias": "kafe / buyuk / pastane",
+      "deprecated": true,
+      "referansRol": "seed"
+    },
+    {
+      "eskiKonseptId": "casual-cafe",
+      "bantId": "50-150",
+      "listeDosya": "casual-cafe-50-150.json",
+      "label": "Casual Cafe",
+      "referansM2": 100,
+      "kalemSayisi": 49,
+      "matrisHucre": "S2×Y2",
+      "matrisHucreId": "kafe_orta_hafif_mutfak",
+      "guven": "yuksek",
+      "not": "Genel cafe-restaurant; Kahve Durağı Konyaaltı ile aynı hücre",
+      "wizardAlias": "kafe / orta / hafif_mutfak",
+      "deprecated": true,
+      "referansRol": "seed"
+    }
+  ],
+  "coffeeShopAnchor": {
+    "eskiKonseptId": "coffee-shop",
+    "bantId": "referans",
+    "listeDosya": "coffee-shop-referans.json",
+    "label": "Coffee Shop (Espressolab)",
+    "referansM2": 120,
+    "kalemSayisi": 20,
+    "matrisHucre": "S2×Y1",
+    "matrisHucreId": "kafe_orta_bar",
+    "not": "Mevcut wizard konsepti; matrisin bar-only referansı. Deprecated değil — yeni kafe×Y1 ile birleşecek.",
+    "referansRol": "anchor"
+  },
+  "hucreDokumu": {
+    "S1×Y1": { "label": "Küçük × Bar", "referans": null, "durum": "bos", "oneri": "coffee-shop profilinden ölçekle" },
+    "S1×Y2": { "label": "Küçük × Hafif mutfak", "referans": null, "durum": "bos", "oneri": "kahve-tatli mutfak slotları + S2×Y2 ölçekle" },
+    "S1×Y3": { "label": "Küçük × Pastane", "referans": ["kahve-tatli-40-100"], "durum": "dolu", "seed": "kahve-tatli-40-100.json" },
+    "S2×Y1": { "label": "Orta × Bar", "referans": ["coffee-shop-referans"], "durum": "dolu", "seed": "coffee-shop-referans.json" },
+    "S2×Y2": { "label": "Orta × Hafif mutfak", "referans": ["kahve-atolyesi-80-150", "kahve-duragi-100-200", "casual-cafe-50-150"], "durum": "dolu-coklu", "seed": "kahve-duragi-100-200.json", "not": "3 liste aynı hücre — tek seed seç" },
+    "S2×Y3": { "label": "Orta × Pastane", "referans": null, "durum": "bos", "oneri": "kahve-duragi-pastane veya kahve-tatli ölçekle" },
+    "S3×Y1": { "label": "Büyük × Bar", "referans": null, "durum": "bos", "oneri": "coffee-shop × 1.3 ölçek" },
+    "S3×Y2": { "label": "Büyük × Hafif mutfak", "referans": ["harvest-cafe-100-200", "all-sport-cafe-100-200", "kahve-duragi-150-200"], "durum": "dolu-coklu", "seed": "kahve-duragi-150-200.json", "not": "all-sport birleştirilebilir" },
+    "S3×Y3": { "label": "Büyük × Pastane", "referans": ["kahve-duragi-pastane-100-200"], "durum": "dolu", "seed": "kahve-duragi-pastane-100-200.json" }
+  },
+  "migrasyon": {
+    "yeniKonseptId": "kafe",
+    "wizardSecim": ["olcek: S1|S2|S3", "yogunluk: Y1|Y2|Y3"],
+    "eskiKonseptYonlendirme": {
+      "coffee-shop": { "redirect": "kafe", "varsayilan": { "olcek": "S2", "yogunluk": "Y1" } },
+      "kahve-atolyesi": { "redirect": "kafe", "varsayilan": { "olcek": "S2", "yogunluk": "Y2" } },
+      "harvest-cafe": { "redirect": "kafe", "varsayilan": { "olcek": "S3", "yogunluk": "Y2" } },
+      "all-sport-cafe": { "redirect": "kafe", "varsayilan": { "olcek": "S3", "yogunluk": "Y2" } },
+      "kahve-duragi": { "redirect": "kafe", "bantEsleme": { "100-200": { "olcek": "S2", "yogunluk": "Y2" }, "150-200": { "olcek": "S3", "yogunluk": "Y2" } } },
+      "kahve-tatli": { "redirect": "kafe", "varsayilan": { "olcek": "S1", "yogunluk": "Y3" } },
+      "kahve-duragi-pastane": { "redirect": "kafe", "varsayilan": { "olcek": "S3", "yogunluk": "Y3" } },
+      "casual-cafe": { "redirect": "kafe", "varsayilan": { "olcek": "S2", "yogunluk": "Y2" } }
+    },
+    "pfosKategorilerJson": "8 ayrı kategori kaydı → tek 'kafe' + bantlar S1-Y1 … S3-Y3 veya meta.matrisHucre"
+  }
+}

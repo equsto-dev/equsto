@@ -1,0 +1,125 @@
+{
+  "cod": "602179",
+  "title": "Vakum Paketleme Makineleri Set üstü Vakum Paketleme Makinesi 12m3/saat",
+  "category": "Setüstü vakum paketleme makineleri",
+  "description": "Set üstü vakum paketleme makinesi, 12 m³/saat, dijital kontrol,",
+  "url": "https://www.electroluxprofessional.com/tr/pd/dinamik-haz%C4%B1rl%C4%B1k/tamamlay%C4%B1c%C4%B1-%C3%BCr%C3%BCnler/vakum-paketleme-makineleri/set%C3%BCst%C3%BC-vakum-paketleme-makineleri/vakum-paketleme-makineleri-set-%C3%BCst%C3%BC-vakum-paketleme-makinesi-12m3-saat-602179/",
+  "specifications": [
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220/240 V/1N ph/50-60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "0.7 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "415 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "587 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "437 mm"
+        },
+        {
+          "label": "Net ağırlık (kg)",
+          "value": "46.5"
+        },
+        {
+          "label": "Kontrol paneli",
+          "value": "Kontrol paneli:"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "CE-SCHUKO"
+        },
+        {
+          "label": "Hazne kapasitesi",
+          "value": "19 lt"
+        },
+        {
+          "label": "Pompa",
+          "value": "12 m³/h"
+        },
+        {
+          "label": "Kapasite",
+          "value": "19 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Setüstü vakum paketleme makinesi, yağlı vakum pompalı.",
+        "Kalibrasyon gerektirmeyen mutlak tip vakum sensörü ile yüksek hassasiyetle vakum seviyesi kontrolü.",
+        "Sabit kalınlıkta, hidroformlu, paslanmaz çelikten yapılmış, kolay temizlenen köşeleri yuvarlatılmış basınç haznesi.",
+        "Kenarları yuvarlatılmış, sağlam, şeffaf PMMA (Pleksiglas) kapak, program sonunda otomatik olarak açılır",
+        "Kontrol paneli; sıvılara, neme, kire ve toza dayanıklıdır.",
+        "10 düzenlenebilir program (vakum, ekstra vakum, mühürleme süresi, gaz yüzdesi).",
+        "Kavanozlar/konteynerler için 1 vakum programı.",
+        "1 ayarlanabilir hava tahliye programı.",
+        "0,1 ila 6 saniye arasında ayarlanabilir mühürleme süresi.",
+        "Özel pompa yağı temizleme programı (H2Out).",
+        "Soğutma gerektiren sıcak yiyecekler, paketleme işleminde arıza, gaz eksikliği, yağ değişimi gibi durumlarda otomatik uyarı verir.",
+        "Hava çıkış ağzına özel bir boru bağlanarak konteynerlerde harici vakum paketleme için önceden düzenlenmiştir. Opsiyonel yedek parça olarak bir adaptör ile harici bir konteynere vakum işlemi yapmak mümkündür. Bunun için harici konteynırın borusunu hava emiş valfine birleştirmek yeterlidir.",
+        "2 PE dolum tabağı dahildir.",
+        "Kapama barı: 310 mm, temizlik için kolayca çıkarılabilir.",
+        "İnert gaz sistemine bağlanmak üzere önceden ayarlanmış ünite."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tamamı 304 AISI paslanmaz çelikten imal edilmiştir.",
+        "Gövdenin menteşeli açıklığı sayesinde servis için kolay erişim."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "602179",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/602179_EVP12D.dwg",
+      "local": "media/documents/602179/602179_EVP12D.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Set üstü Vakum Paketleme Makinesi 12m3/saat",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Vacuum packer 12m3-h table top_602179_Turkish.pdf",
+      "local": "media/documents/602179/Vacuum%20packer%2012m3-h%20table%20top_602179_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "602179",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_602179_EVP12D.rfa",
+      "local": "media/documents/602179/QF_ELECTROLUXPROFESSIONAL_602179_EVP12D.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_602179_1_2_602179.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_602179_1_2_602179.jpg",
+      "local": "media/images/602179/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:54:17.244Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/vakum-paketleme-makineleri/"
+}

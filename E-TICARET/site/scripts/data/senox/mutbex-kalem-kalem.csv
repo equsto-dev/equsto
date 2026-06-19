@@ -1,0 +1,215 @@
+﻿Sıra;Model;SKU;Ürün adı;Dept;Durum;Equsto kaynak;PDF liste EUR;Mutbex liste EUR;Fark EUR (Mut−PDF);Fark %;PDF daha ucuz;Equsto satış EUR;PDF satış EUR;Mutbex satış EUR;Satış fark EUR;Equsto TL (KDV dahil)
+1;BL-40L-60C;118.BL40L60C;"Senox BL40L60 El Blenderı, 600 mm, Combi Model";hazirlik;Her iki kaynak;PDF;250;774;524;67.7;Evet;125;125;387;262;8028
+2;GGM-M-30;118.GGM.M30;"Senox GGM M30 Planet Mikser, 30 lt";hazirlik;Her iki kaynak;PDF;1300;3031.5;1731.5;57.1;Evet;650;650;1515.75;865.75;41744
+3;GGM-M-20;118.GGM.M20;"Senox GGM M20 Planet Mikser, 20 lt";hazirlik;Her iki kaynak;PDF;1100;2386.5;1286.5;53.9;Evet;550;550;1193.25;643.25;35322
+4;SRB-15X-3;118.SRB.15X3;"Senox SRB15x3 Soğuk İçecek Dispenseri, 3 Hazneli, 15x3 lt";icecek;Her iki kaynak;PDF;700;1419;719;50.7;Evet;350;350;709.5;359.5;22478
+5;BL-40L-50;118.BL40L50;"Senox BL40L50 El Blenderı, 500 mm";hazirlik;Her iki kaynak;PDF;290;548.25;258.25;47.1;Evet;145;145;274.13;129.13;9312
+6;BL-40C;118.BL40C;"Senox BL40C El Blenderı, 400 mm, Combi Model";hazirlik;Her iki kaynak;PDF;420;709.5;289.5;40.8;Evet;210;210;354.75;144.75;13487
+7;BL-40L-50C;118.BL40L50C;"Senox BL40L50C El Blenderı,50 mm, Combi Model";hazirlik;Her iki kaynak;PDF;440;741.75;301.75;40.7;Evet;220;220;370.88;150.88;14129
+8;MC-30;118.MC30;"Senox Mikrodalga Fırın, 53,6x44,2x39 cm, 30 Litre, 900 W";set-ustu-mutfak;Her iki kaynak;PDF;320;516;196;38;Evet;160;160;258;98;10275
+9;WN-350;118.WN.350;"Senox Şarap Soğutma Dolabı, WN 350";sogutma;Her iki kaynak;PDF;1450;2193;743;33.9;Evet;725;725;1096.5;371.5;46561
+10;SYD-410;118.SYD410;"Senox 7 Gözlü Dondurma Reyonu, 283 lt, 131,1x65x85 cm";sogutma;Her iki kaynak;PDF;1300;1935;635;32.8;Evet;650;650;967.5;317.5;41744
+11;SNX-25-B;118.SNX.25.B;"Senox Askı Tip Isıtıcı Lamba, Bronz SNX 25 B";servis;Her iki kaynak;PDF;300;425.7;125.7;29.5;Evet;150;150;212.85;62.85;9633
+12;SNX-25-C;118.SNX.25.C;"Senox Askı Tip Isıtıcı Lamba, Gümüş, SNX 25 C";servis;Her iki kaynak;PDF;300;425.7;125.7;29.5;Evet;150;150;212.85;62.85;9633
+13;SNX-25-S;118.SNX25.S;"Senox Askı Tip Isıtıcı Lamba, Siyah, SNX 25 S";servis;Her iki kaynak;PDF;300;425.7;125.7;29.5;Evet;150;150;212.85;62.85;9633
+14;BBCS-350;118.BBCS.350;"Senox 3 Sürgülü Kapılı Bar Altı Şişe Soğutucu , 135x50,5x85 cm";sogutma;Her iki kaynak;PDF;1500;2064;564;27.3;Evet;750;750;1032;282;48166
+15;SYD-510;118.SYD510;"Senox 8 Gözlü Dondurma Reyonu, 300 lt, 151,4x65x85 cm";sogutma;Her iki kaynak;PDF;1500;2064;564;27.3;Evet;750;750;1032;282;48166
+16;BBCS-250;118.BBCS.250;"Senox 2 Sürgülü Kapılı Bar Altı Şişe Soğutucu , Siyah, 90x50,5x85 cm";sogutma;Her iki kaynak;PDF;1250;1677;427;25.5;Evet;625;625;838.5;213.5;40139
+17;BL-25;118.BL25;"Senox BL 25 El Blenderı, 300 mm";hazirlik;Her iki kaynak;PDF;270;348.3;78.3;22.5;Evet;135;135;174.15;39.15;8670
+18;BL-25C;118.BL25C;"Senox BL 25C El Blenderı, 300 mm, Combi Model";hazirlik;Her iki kaynak;PDF;420;541.8;121.8;22.5;Evet;210;210;270.9;60.9;13487
+19;BL-25L-35;118.BL25L35;"Senox BL25 L35 El Blenderı, 350 mm";hazirlik;Her iki kaynak;PDF;290;374.1;84.1;22.5;Evet;145;145;187.05;42.05;9312
+20;BL-25L-35C;118.BL25L35C;"Senox BL25 L35C El Blenderı, 350 mm, Combi Model";hazirlik;Her iki kaynak;PDF;440;567.6;127.6;22.5;Evet;220;220;283.8;63.8;14129
+21;BL-40;118.BL40;"Senox BL40 El Blenderı, 400 mm";hazirlik;Her iki kaynak;PDF;400;516;116;22.5;Evet;200;200;258;58;12844
+22;BL-40L-60;118.BL40L60;"Senox BL40L60 El Blenderı, 600 mm";hazirlik;Her iki kaynak;PDF;450;580.5;130.5;22.5;Evet;225;225;290.25;65.25;14450
+23;DY-01;118.DY.01;"Senox DY 01 Tek Hazneli Dondurma Yapıcı, 15 lt/saat Kapasiteli";hazirlik;Her iki kaynak;PDF;6500;8385;1885;22.5;Evet;3250;3250;4192.5;942.5;208721
+24;DY-02;118.DY.02;"Senox DY 02 Çift Hazneli Dondurma Yapıcı, Çift Hazneli, 30 lt/saat Kapasiteli";hazirlik;Her iki kaynak;PDF;12000;15480;3480;22.5;Evet;6000;6000;7740;1740;385331
+25;DY-04;118.DY.04;"Senox DY 04 Dört Hazneli Dondurma Yapıcı, 4 Hazneli, 60 lt/saat Kapasiteli";hazirlik;Her iki kaynak;PDF;20000;25800;5800;22.5;Evet;10000;10000;12900;2900;642218
+26;MS-10;118.MS10;"Senox MS10 Set Üstü Stand Mikser, 10 lt, 500 w";hazirlik;Her iki kaynak;PDF;850;1096.5;246.5;22.5;Evet;425;425;548.25;123.25;27294
+27;VM-01;286.VM01;"Senox Seles Mini Vakum Makinesi, VM 01";hazirlik;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+28;SFT-01;118.SFT.01;"Senox SFT 01 Soft Dondurma Makinesi, 1,2 lt Hazneli";hazirlik;Her iki kaynak;PDF;1000;1290;290;22.5;Evet;500;500;645;145;32111
+29;SFT-02-PRO;118.SFT.02.Pro;"Senox SFT 02 Pro Soft Dondurma Makinesi, 6x2 lt Hazneli";hazirlik;Her iki kaynak;PDF;4500;5805;1305;22.5;Evet;2250;2250;2902.5;652.5;144499
+30;SFT-03-PRO;118.SFT.03.Pro;"Senox SFT 03 Pro Soft Dondurma Makinesi, 5,5x2 lt Hazneli";hazirlik;Her iki kaynak;PDF;4700;6063;1363;22.5;Evet;2350;2350;3031.5;681.5;150921
+31;MS-07;118.MS07;"Senox Stand Mikser Mutfak Şefi 7 L, MS07";hazirlik;Her iki kaynak;PDF;750;967.5;217.5;22.5;Evet;375;375;483.75;108.75;24083
+32;40-LK-AS;118.40.LK.AS;"Senox 40 LK AS Arıtmalı Su Sebili, Krom, 40 lt";icecek;Her iki kaynak;PDF;1200;1548;348;22.5;Evet;600;600;774;174;38533
+33;40-LK;118.40.LK;"Senox 40 LK Su Sebili, Krom, 40 lt";icecek;Her iki kaynak;PDF;800;1032;232;22.5;Evet;400;400;516;116;25689
+34; IC-80A;118. IC80A;"Senox Buz Kırıcı, Paslanmaz Çelik Hazne, 3 Litre, IC80A";icecek;Her iki kaynak;PDF;700;903;203;22.5;Evet;350;350;451.5;101.5;22478
+35;DS-01;118.DS.01;"Senox DS-01 Sıcak Soğuk Su Sebili, Üstten Damacanalı";icecek;Her iki kaynak;PDF;190;245.1;55.1;22.5;Evet;95;95;122.55;27.55;6101
+36;KM-01;118.KM01;"Senox Km01 Katı Meyve Sıkacağı, 1000 w";icecek;Her iki kaynak;PDF;400;516;116;22.5;Evet;200;200;258;58;12844
+37;KA-18;118.KA18;"Senox Set Üstü Köpüklü Ayran Makinesi, 18 L, KA 18";icecek;Her iki kaynak;PDF;1880;2425.2;545.2;22.5;Evet;940;940;1212.6;272.6;60369
+38;KA-30;118.KA30;"Senox Set Üstü Köpüklü Ayran Makinesi, 30 L, KA 30";icecek;Her iki kaynak;PDF;1800;2322;522;22.5;Evet;900;900;1161;261;57800
+39;SLS-01;118.SLS.01;"Senox SLS 01 Tekli Slush Makinesi, 12 lt";icecek;Her iki kaynak;PDF;1600;2064;464;22.5;Evet;800;800;1032;232;51377
+40;SLS-02;118.SLS.02;"Senox SLS 02 Çiftli Slush Makinesi, 12x2 lt";icecek;Her iki kaynak;PDF;2100;2709;609;22.5;Evet;1050;1050;1354.5;304.5;67433
+41;SLS-03;118.SLS.03;"Senox SLS 03 3lü Slush Makinesi, 12x3 lt";icecek;Her iki kaynak;PDF;2800;3612;812;22.5;Evet;1400;1400;1806;406;89911
+42;SRB-12;118.SRB12;"Senox SRB12 Soğuk İçecek Dispenseri, Tek Hazneli, 12 lt";icecek;Her iki kaynak;PDF;600;774;174;22.5;Evet;300;300;387;87;19267
+43;SRB-15;118.SRB.15;"Senox SRB15 Soğuk İçecek Dispenseri, Tek Hazneli, 15 lt";icecek;Her iki kaynak;PDF;450;580.5;130.5;22.5;Evet;225;225;290.25;65.25;14450
+44;SRB-20;118.SRB20;"Senox SRB20 Soğuk İçecek Dispenseri, Tek Hazneli, 20 lt";icecek;Her iki kaynak;PDF;700;903;203;22.5;Evet;350;350;451.5;101.5;22478
+45;160LK;118.160LK;"Senox Su Sebili, Soğuk Su, 160 L, 160 LK";icecek;Her iki kaynak;PDF;2800;3612;812;22.5;Evet;1400;1400;1806;406;89911
+46;300LK;118.300LK;"Senox Su Sebili, Soğuk Su, 300 L, 300 LK";icecek;Her iki kaynak;PDF;4600;5934;1334;22.5;Evet;2300;2300;2967;667;147710
+47;400LK;118.400LK;"Senox Su Sebili, Soğuk Su, 400 L, 400 LK";icecek;Her iki kaynak;PDF;5200;6708;1508;22.5;Evet;2600;2600;3354;754;166977
+48;500-LK;118.500.LK;"Senox Su Sebili, Soğuk Su, 500 L, 500 LK";icecek;Her iki kaynak;PDF;5700;7353;1653;22.5;Evet;2850;2850;3676.5;826.5;183032
+49;80LK;118.80LK;"Senox Su Sebili, Soğuk Su, 80 L, 80 LK";icecek;Her iki kaynak;PDF;1100;1419;319;22.5;Evet;550;550;709.5;159.5;35322
+50;80LK-AS;118.80LK.AS;"Senox Su Sebili, Soğuk Su, 80 L, Arıtma Sistemli 80 LK-AS";icecek;Her iki kaynak;PDF;1400;1806;406;22.5;Evet;700;700;903;203;44955
+51;KRS-009;118.KRS009;Senox ABS Plastik Exclusive Karşılama Tepsisi;servis;Her iki kaynak;PDF;18;23.22;5.22;22.5;Evet;9;9;11.61;2.61;578
+52;SNX-25-G;118.SNX.25.G;"Senox Askı Tip Isıtıcı Lamba, Altın SNX 25 G";servis;Her iki kaynak;PDF;330;425.7;95.7;22.5;Evet;165;165;212.85;47.85;10597
+53;SNX-17-S;118.SNX17.S;"Senox Askı Tip Isıtıcı Lamba, Siyah, SNX 17 S";servis;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+54;SNX-17-G;118.SNX.17.G;"Senox Isıtıcı Lamba Altın Renk, SNX 17 G";servis;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+55;SNX-17-B;118.SNX.17.B;"Senox Isıtıcı Lamba Bakır Renk, SNX 17 B";servis;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+56;SNX-17-C;118.SNX.17.C;"Senox Isıtıcı Lamba Krom Renk, SNX 17 C";servis;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+57;KASA;118.KASA;Senox Otel Tipi Kasa;servis;Her iki kaynak;PDF;120;154.8;34.8;22.5;Evet;60;60;77.4;17.4;3853
+58;YSO-100;118.YSO.100;"Senox Yapışkanlı Sinek Öldürücü, YSO 100";servis;Her iki kaynak;PDF;200;258;58;22.5;Evet;100;100;129;29;6422
+59;YSO-200;118.YSO.200;"Senox Yapışkanlı Sinek Öldürücü, YSO 200";servis;Her iki kaynak;PDF;250;322.5;72.5;22.5;Evet;125;125;161.25;36.25;8028
+60;SNX-12R;118.SNX12R;"Senox 12 Gözlü Dondurma Reyonu, SNX12R , 115,2 x 90,3x 126,7 cm";sogutma;Her iki kaynak;PDF;2300;2967;667;22.5;Evet;1150;1150;1483.5;333.5;73855
+61;BBC-250;118.BBC.250;"Senox 2 Kapılı Bar Altı Şişe Soğutucu , 90x50,5x85 cm, Siyah";sogutma;Her iki kaynak;PDF;1250;1612.5;362.5;22.5;Evet;625;625;806.25;181.25;40139
+62;BBC-350;118.BBC.350;"Senox 3 Kapılı Bar Altı Şişe Soğutucu , 135x50,5x85 cm";sogutma;Her iki kaynak;PDF;1500;1935;435;22.5;Evet;750;750;967.5;217.5;48166
+63;SYD-310;118.SYD310;"Senox 5 Gözlü Dondurma Reyonu, 210 lt, 103,6x65x85 cm";sogutma;Her iki kaynak;PDF;1300;1677;377;22.5;Evet;650;650;838.5;188.5;41744
+64;SNX-35SC;118.SNX.35SC;Senox Cam Kapılı Minibar;sogutma;Her iki kaynak;PDF;300;387;87;22.5;Evet;150;150;193.5;43.5;9633
+65;DT-100;118.DT.100;"Senox DT 100 Dondurma Teşhir Dolabı, 62x61,6x72,3(84,5) cm";sogutma;Her iki kaynak;PDF;1600;2064;464;22.5;Evet;800;800;1032;232;51377
+66;DT-200;118.DT.200;"Senox DT 200 Dondurma Teşhir Dolabı 62x61,6x88,3(100,5) cm";sogutma;Her iki kaynak;PDF;1800;2322;522;22.5;Evet;900;900;1161;261;57800
+67;DT-600;118.DT.600;"Senox DT 600 Dik Tip Dondurma Teşhir Dolabı, 117x84,5x61,8 cm";sogutma;Her iki kaynak;PDF;10000;12900;2900;22.5;Evet;5000;5000;6450;1450;321109
+68;DT-12;118.DT.12;"Senox DT-12 12 Gözlü Dondurma Reyonu, 120x109,5x135 cm";sogutma;Her iki kaynak;PDF;14000;18060;4060;22.5;Evet;7000;7000;9030;2030;449553
+69;DT-13;118.DT.13;"Senox DT-13 13 Gözlü Dondurma Reyonu, 183,2x88x126,3 cm";sogutma;Her iki kaynak;PDF;14000;18060;4060;22.5;Evet;7000;7000;9030;2030;449553
+70;DT-18;118.DT.18;"Senox DT-18 18 Gözlü Dondurma Reyonu, 172x109,5x135 cm";sogutma;Her iki kaynak;PDF;18000;23220;5220;22.5;Evet;9000;9000;11610;2610;577997
+71;DT-24;118.DT.24;"Senox DT-24 24 Gözlü Dondurma Reyonu, 224,5x109,5x135 cm";sogutma;Her iki kaynak;PDF;22000;28380;6380;22.5;Evet;11000;11000;14190;3190;706440
+72;DT-6;118.DT.6;"Senox DT-6 6 Gözlü Dondurma Reyonu, 117x84,5x61,8 cm";sogutma;Her iki kaynak;PDF;5000;6450;1450;22.5;Evet;2500;2500;3225;725;160555
+73;DT-8;118.DT.8;"Senox DT-8 8 Gözlü Dondurma Reyonu 152,5x84,5x61,8 cm";sogutma;Her iki kaynak;PDF;6000;7740;1740;22.5;Evet;3000;3000;3870;870;192666
+74;DT-9;118.DT.9;"Senox DT-9 9 Gözlü Dondurma Reyonu, 129,2x88x126,3 cm";sogutma;Her iki kaynak;PDF;10000;12900;2900;22.5;Evet;5000;5000;6450;1450;321109
+75;WN-150;118.WN.150;"Senox Şarap Soğutma Dolabı, WN 150";sogutma;Her iki kaynak;PDF;1350;1741.5;391.5;22.5;Evet;675;675;870.75;195.75;43350
+76;WN-770;118.WN.770;"Senox Şarap Soğutma Dolabı, WN 770";sogutma;Her iki kaynak;PDF;2700;3483;783;22.5;Evet;1350;1350;1741.5;391.5;86699
+77;BBC-150;118.BBC.150;"Senox Tek Kapılı Bar Altı Şişe Soğutucu , 60x50,5x85 cm";sogutma;Her iki kaynak;PDF;1100;1419;319;22.5;Evet;550;550;709.5;159.5;35322
+78;SBC-150;118.SBC.150;"Senox Tek Kapılı Bar Altı Şişe Soğutucu , 60x50,5x85 cm , Krom Renk";sogutma;Her iki kaynak;PDF;1200;1548;348;22.5;Evet;600;600;774;174;38533
+79;WN-400;118.WN.400;"Senox WN 400 Şarap Dolabı, 81 Şişe Kapasiteli";sogutma;Her iki kaynak;PDF;3400;4386;986;22.5;Evet;1700;1700;2193;493;109177
+80;WN-1010;118.WN.1010;"Senox WN-1010 Şarap Dolabı, Çarpma Kapılı, 200 Şişe Kapasiteli, Siyah";sogutma;Her iki kaynak;PDF;2700;3483;783;22.5;Evet;1350;1350;1741.5;391.5;86699
+81;DM-02;118.DM.02;"Duvara Monte Duş Spreyi, Ara Musluklu";yikama;Her iki kaynak;PDF;200;258;58;22.5;Evet;100;100;129;29;6422
+82;DM-01;118.DM.01;Senox Duvara Monte Duş Spreyi;yikama;Her iki kaynak;PDF;180;232.2;52.2;22.5;Evet;90;90;116.1;26.1;5780
+83;HT-10;118.HT.10;"Senox Geri Toplamalı Ön Yıkama Duşu, 10 m";yikama;Her iki kaynak;PDF;1000;1290;290;22.5;Evet;500;500;645;145;32111
+84;HT-12;118.HT.12;"Senox Geri Toplamalı Ön Yıkama Duşu, 12 m";yikama;Her iki kaynak;PDF;1100;1419;319;22.5;Evet;550;550;709.5;159.5;35322
+85;HT-15;118.HT.15;"Senox Geri Toplamalı Ön Yıkama Duşu, 15 m";yikama;Her iki kaynak;PDF;1200;1548;348;22.5;Evet;600;600;774;174;38533
+86;TM-01;118.TM.01;Senox Tezgaha Monte Duş Spreyi;yikama;Her iki kaynak;PDF;180;232.2;52.2;22.5;Evet;90;90;116.1;26.1;5780
+87;SBC-350;118.SBC.350;"Senox 3 Kapılı Bar Altı Şişe Soğutucu , 135x50,5x85 cm, Inox";sogutma;Her iki kaynak;PDF;1700;2128.5;428.5;20.1;Evet;850;850;1064.25;214.25;54589
+88;SBC-250;118.SBC.250;"Senox 2 Kapılı Bar Altı Şişe Soğutucu , 90x50,5x85 cm, Inox";sogutma;Her iki kaynak;PDF;1400;1741.5;341.5;19.6;Evet;700;700;870.75;170.75;44955
+89;SRB-15X-2;118.SRB.15X2;"Senox SRB15x2 Soğuk İçecek Dispenseri, Çift Hazneli, 15x2 lt";icecek;Her iki kaynak;PDF;1100;903;-197;17.9;Hayır;550;550;451.5;-98.5;35322
+90;T-02;118.T.02;"Senox Tezgaha Monte Duş Spreyi Ünitesi, Ara Musluklu T 02";yikama;Her iki kaynak;PDF;200;227.9;27.9;12.2;Evet;100;100;113.95;13.95;6422
+91;WN-250;118.WN.250;"Senox Şarap Soğutma Dolabı, WN 250";sogutma;Her iki kaynak;PDF;1700;1870.5;170.5;9.1;Evet;850;850;935.25;85.25;54589
+92;MC-25;118.MC25;"Senox Mikrodalga Fırın, 45,2x34,5x26,8 cm";set-ustu-mutfak;Her iki kaynak;PDF;400;412.8;12.8;3.1;Evet;200;200;206.4;6.4;12844
+93;WM-2;WM-2;Senox WM-2 Tek Çene Vakum Makinesi;hazirlik;Sadece PDF;PDF;1800;;;;—;900;900;;;57800
+94;VM-3;VM-3;Senox VM 3 Çift Çene Vakum Makinesi;hazirlik;Sadece PDF;PDF;2400;;;;—;1200;1200;;;77066
+95;DVF-01;118.DVF-01;"Senox DVF-01 Davlumbaz Filtresi, 50x50 cm";davlumbaz;Sadece Mutbex;Mutbex;;43;;;—;21.5;;21.5;;1381
+96;BS-01;118.BS.01;"Senox BS-01 Bıçak Sterilizatör, 10 Bıçaklık";hazirlik;Sadece Mutbex;Mutbex;;387;;;—;193.5;;193.5;;12427
+97;EMH-15;118.EMH15;"Senox Dondurma Makinesi, 1.5 L, EMH15";hazirlik;Sadece Mutbex;Mutbex;;903;;;—;451.5;;451.5;;28996
+98;GGM;118.GGM;"Senox Et Kemik Testeresi, GGM";hazirlik;Sadece Mutbex;Mutbex;;2128.5;;;—;1064.25;;1064.25;;68348
+99;AAMH-300;118.AAMH300;"Senox Otomatik Gıda Dilimleme Makinesi, AAMH300";hazirlik;Sadece Mutbex;Mutbex;;2451;;;—;1225.5;;1225.5;;78704
+100;SEMG-16K;118.SEMG.16K;"Senox Soft Dondurma Makinesi, 16 L, Tek Grupla, SEMG 16K";hazirlik;Sadece Mutbex;Mutbex;;4515;;;—;2257.5;;2257.5;;144981
+101;STRC;118.STRC;Senox Streç Sarma Makinesi;hazirlik;Sadece Mutbex;Mutbex;;232.2;;;—;116.1;;116.1;;7456
+102;40-LB;118.40.LB;"Senox 40 LB Su Sebili, Boyalı Galvaniz, 40 lt";icecek;Sadece Mutbex;Mutbex;;903;;;—;451.5;;451.5;;28996
+103;BZ-12;118.BZ12;"Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli";icecek;Sadece Mutbex;Mutbex;;361.2;;;—;180.6;;180.6;;11598
+104;BZ-20;118.BZ20;"Senox BZ20 Buz Makinesi, 15 kg/gün Kapasiteli";icecek;Sadece Mutbex;Mutbex;;903;;;—;451.5;;451.5;;28996
+105;CKA;118.CKA;"Senox Çatılı Köpüklü Ayran Makinesi, 40 lt";icecek;Sadece Mutbex;Mutbex;;3289.5;;;—;1644.75;;1644.75;;105629
+106;KMP-01;118.KMP.01;Senox KMP 01 Katı Meyve Sıkacağı;icecek;Sadece Mutbex;Mutbex;;516;;;—;258;;258;;16569
+107;KRS-105;118.KRS.105;"Senox Lifetech Otel Tipi Çelik Kettle, 1,2 lt";icecek;Sadece Mutbex;Mutbex;;46.44;;;—;23.22;;23.22;;1491
+108;PS-01;118.PS.01;Senox Motorlu Portakal Sıkma Makinesi;icecek;Sadece Mutbex;Mutbex;;387;;;—;193.5;;193.5;;12427
+109;LT-12;118.LT.12;"Senox Su Yumuşatıcı Filtre, 12 L";icecek;Sadece Mutbex;Mutbex;;316.05;;;—;158.03;;158.03;;10149
+110;LT-16;118.LT.16;"Senox Su Yumuşatıcı Filtre, 16 L";icecek;Sadece Mutbex;Mutbex;;361.2;;;—;180.6;;180.6;;11598
+111;LT-8;118.LT.8;"Senox Su Yumuşatıcı Filtre, 8 L";icecek;Sadece Mutbex;Mutbex;;258;;;—;129;;129;;8285
+112;CMVA-1;118.CMVA1;"Senox CMVA1 2 Hızlı Kokteyl Mikseri, Paslanmaz Hazne";kahve;Sadece Mutbex;Mutbex;;541.8;;;—;270.9;;270.9;;17398
+113;COFFEDIO;118.COFFEDIO;"Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu";kahve;Sadece Mutbex;Mutbex;;516;;;—;258;;258;;16569
+114;KKM-01;118.KKM.01;"Senox KKM 01 Kahve Kavurma Makinesi, 1500 gr/saat Kapasiteli";kahve;Sadece Mutbex;Mutbex;;2322;;;—;1161;;1161;;74562
+115;HC-600;118.HC.600;"Senox Titan Kahve Değirmeni, HC 600";kahve;Sadece Mutbex;Mutbex;;1573.8;;;—;786.9;;786.9;;50536
+116;TITAN-LL;118.TITAN.ll;"Senox Titan Kahve Değirmeni, TITAN ll";kahve;Sadece Mutbex;Mutbex;;1006.2;;;—;503.1;;503.1;;32310
+117;BBL-02;118.BBL.02;Şenox BBL 02 Bar Blender;kahve;Sadece Mutbex;Mutbex;;645;;;—;322.5;;322.5;;20712
+118;BNA-027;118.BNA027;Senox BNA 027 Mafsallı Makyaj Aynası;servis;Sadece Mutbex;Mutbex;;77.4;;;—;38.7;;38.7;;2485
+119;BNA-028;118.BNA028;"Senox BNA 028 Mafsallı Makyaj Aynası, Led Işıklı";servis;Sadece Mutbex;Mutbex;;167.7;;;—;83.85;;83.85;;5385
+120;SLD-03;118.SLD.03;"Senox Granit Kaplama Soğutuculu Salad Bar, 500 L";servis;Sadece Mutbex;Mutbex;;2322;;;—;1161;;1161;;74562
+121;SLD-04;118.SLD.04;"Senox Granit Kaplama Soğutuculu Salad Bar, 532 L";servis;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+122;8060-MCC;118.8060.MCC;"Senox Sıcak Teşhir Ünitesi, SNX8060 MCC";servis;Sadece Mutbex;Mutbex;;1741.5;;;—;870.75;;870.75;;55921
+123;8060-PPNC;118.8060.PPNC;"Senox Sıcak Teşhir Ünitesi, SNX8060 PPNC";servis;Sadece Mutbex;Mutbex;;1935;;;—;967.5;;967.5;;62135
+124;HIJYENB-TF;118.HIJYENB.TF;Senox Taban Fırçalı Hijyen Bariyeri;servis;Sadece Mutbex;Mutbex;;12900;;;—;6450;;6450;;414231
+125;HIJYENB;118.HIJYENB;Senox Taban Fırçasız Hijyen Bariyeri;servis;Sadece Mutbex;Mutbex;;11610;;;—;5805;;5805;;372808
+126;SBCS-350;118.SBCS.350;"Senox 2 Kapılı, Sürgülü Bar Altı Şişe Soğutucu, Ekstra Uzun Model 135x50,5x85 cm";sogutma;Sadece Mutbex;Mutbex;;2193;;;—;1096.5;;1096.5;;70419
+127;SBCS-250;118.SBCS.250;"Senox 2 Sürgülü Kapılı Bar Altı Şişe Soğutucu , 90x50,5x85 cm";sogutma;Sadece Mutbex;Mutbex;;1806;;;—;903;;903;;57992
+128;SDS-1510-DC-3CF;118.SDS1510.DC3CF;"Senox 3 Kapılı Dik Tip Şişe Soğutucu, Kanopili, 150x69x207,5 cm";sogutma;Sadece Mutbex;Mutbex;;4257;;;—;2128.5;;2128.5;;136696
+129;SDS-1510-DC-3YF;118.SDS1510.DC3YF;"Senox 3 Kapılı Dik Tip Şişe Soğutucu, Kanopisiz, 150x69x207,5 cm";sogutma;Sadece Mutbex;Mutbex;;3870;;;—;1935;;1935;;124269
+130;300-COMBİ;118.300.COMBİ;"Senox 300 Combi Bar Tipi Soğutucu Dolap, 145 L,";sogutma;Sadece Mutbex;Mutbex;;2386.5;;;—;1193.25;;1193.25;;76633
+131;7301-S;118.7301.S;"Senox 7301 NF Fanlı Soğutmalı 7 Çekmeceli Derin Dondurucu, Siyah";sogutma;Sadece Mutbex;Mutbex;;1096.5;;;—;548.25;;548.25;;35210
+132;ADA-150T;118.ADA.150T;"Senox ADA 150T Ada Tipi Soğuk Teşhir Dolabı, 150x90x92 cm";sogutma;Sadece Mutbex;Mutbex;;7740;;;—;3870;;3870;;248539
+133;ADA-180T;118.ADA.180T;"Senox ADA 180T Ada Tipi Soğuk Teşhir Dolabı, 180x90x92 cm";sogutma;Sadece Mutbex;Mutbex;;9030;;;—;4515;;4515;;289962
+134;ADA-210T;118.ADA.210T;"Senox ADA 210T Ada Tipi Soğuk Teşhir Dolabı, 210x90x92 cm";sogutma;Sadece Mutbex;Mutbex;;10320;;;—;5160;;5160;;331385
+135;BLK-01-110;118.BLK01.110;"Senox BLK01 Teşhir Reyonu, 110x80x80 cm";sogutma;Sadece Mutbex;Mutbex;;4128;;;—;2064;;2064;;132554
+136;BLK-01-90;118.BLK01.90;"Senox BLK01 Teşhir Reyonu, 90x80x80 cm";sogutma;Sadece Mutbex;Mutbex;;3934.5;;;—;1967.25;;1967.25;;126340
+137;DF-200;118.DF200;"Senox Blok Kapılı Derin Dondurucu, 200L, DF 200";sogutma;Sadece Mutbex;Mutbex;;774;;;—;387;;387;;24854
+138;DF-300;118.DF300;"Senox Blok Kapılı Derin Dondurucu, 300L, DF 300";sogutma;Sadece Mutbex;Mutbex;;838.5;;;—;419.25;;419.25;;26925
+139;DF-400;118.DF400;"Senox Blok Kapılı Derin Dondurucu, 400L, DF 400";sogutma;Sadece Mutbex;Mutbex;;967.5;;;—;483.75;;483.75;;31067
+140;DF-500;118.DF500;"Senox Blok Kapılı Derin Dondurucu, 500L, DF 500";sogutma;Sadece Mutbex;Mutbex;;1032;;;—;516;;516;;33138
+141;DF-600;118.DF600;"Senox Blok Kapılı Derin Dondurucu, 600L, DF 600";sogutma;Sadece Mutbex;Mutbex;;1419;;;—;709.5;;709.5;;45565
+142;DF-500K;118.DF500K;"Senox Blok Kapılı Derin Dondurucu, Krom , 500L, DF 500K";sogutma;Sadece Mutbex;Mutbex;;1419;;;—;709.5;;709.5;;45565
+143;DF-600K;118.DF600K;"Senox Blok Kapılı Derin Dondurucu, Krom , 600L, DF 600K";sogutma;Sadece Mutbex;Mutbex;;1741.5;;;—;870.75;;870.75;;55921
+144;CKM-120T;118.CKM.120T;"Senox CKM 120T Çekmeceli Soğuk Teşhir Dolabı, 120x80x105,5 cm";sogutma;Sadece Mutbex;Mutbex;;9030;;;—;4515;;4515;;289962
+145;CKM-150T;118.CKM.150T;"Senox CKM 150T Çekmeceli Soğuk Teşhir Dolabı, 150x80x105,5 cm";sogutma;Sadece Mutbex;Mutbex;;10965;;;—;5482.5;;5482.5;;352096
+146;CKM-180T;118.CKM.180T;"Senox CKM 180T Çekmeceli Soğuk Teşhir Dolabı, 180x80x105,5 cm";sogutma;Sadece Mutbex;Mutbex;;12900;;;—;6450;;6450;;414231
+147;CEK-3GN-11;118.CEK.3GN11;"Senox Çekmeceli Sıcak Dolap, 3xGn 1/1";sogutma;Sadece Mutbex;Mutbex;;1935;;;—;967.5;;967.5;;62135
+148;SDS-1010-DC-2CF-B;118.SDS1010.DC2CF.B;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopili Çarpma Kapılı, Beyaz, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+149;SDS-1010-SC-2CF-B;118.SDS1010.SC2CF.B;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopili Sürgü Kapılı, Beyaz, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+150;SDS-1010-DC-2CF-S;118.SDS1010.DC2CF.S;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopili, Çarpma Kapılı, Siyah, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2902.5;;;—;1451.25;;1451.25;;93202
+151;SDS-1010-SC-2CF-S;118.SDS1010.SC2CF.S;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopili, Sürgü Kapılı, Siyah, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2902.5;;;—;1451.25;;1451.25;;93202
+152;SDS-1010-SC-2YF-B;118.SDS1010.SC2YF.B;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopisiz Sürgü Kapılı, Beyaz, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+153;SDS-1010-DC-2YF-S;118.SDS1010.DC2YF.S;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopisiz, Çarpma Kapılı, Siyah, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2902.5;;;—;1451.25;;1451.25;;93202
+154;SDS-1010-SC-2YF-S;118.SDS1010.SC2YF.S;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Kanopisiz, Sürgü Kapılı, Siyah, 98x74x214,5 cm";sogutma;Sadece Mutbex;Mutbex;;2902.5;;;—;1451.25;;1451.25;;93202
+155;SDS-770-DC-2DF;118.SDS770.DC2DF;"Senox Çift Kapılı Dik Tip Şişe Soğutucu, Siyah, 120x60,5x181 cm";sogutma;Sadece Mutbex;Mutbex;;2967;;;—;1483.5;;1483.5;;95273
+156;WF-377;118.WF377;"Senox Dik Tip Derin Dondurucu, 5 Raflı";sogutma;Sadece Mutbex;Mutbex;;2451;;;—;1225.5;;1225.5;;78704
+157;SSC-1500;118.SSC.1500;"Senox Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 1077 L, SSC 1500";sogutma;Sadece Mutbex;Mutbex;;4515;;;—;2257.5;;2257.5;;144981
+158;KSC-458;118.KSC.458;"Senox Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 458 L, KSC 458";sogutma;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+159;KSC-293;118.KSC.293;"Senox Dik Tip Şişe Soğutucu Dolap, 293 L, KSC 293";sogutma;Sadece Mutbex;Mutbex;;1612.5;;;—;806.25;;806.25;;51779
+160;SSC-1600;118.SSC.1600;"Senox Dik Tip Şişe Soğutucu Dolap, 3 Kapılı, 1153 L, SSC 1600";sogutma;Sadece Mutbex;Mutbex;;4773;;;—;2386.5;;2386.5;;153265
+161;SSC-375;118.SSC.375;"Senox Dik Tip Şişe Soğutucu Dolap, 345 L, SSC 375";sogutma;Sadece Mutbex;Mutbex;;1419;;;—;709.5;;709.5;;45565
+162;KSC-390;118.KSC.390;"Senox Dik Tip Şişe Soğutucu Dolap, 390 L, KSC 390";sogutma;Sadece Mutbex;Mutbex;;1419;;;—;709.5;;709.5;;45565
+163;SSC-510;118.SSC.510;"Senox Dik Tip Şişe Soğutucu Dolap, 445 L, SSC 510";sogutma;Sadece Mutbex;Mutbex;;1612.5;;;—;806.25;;806.25;;51779
+164;SSC-900;118.SSC.900;"Senox Dik Tip Şişe Soğutucu Dolap, 683 L, SSC 900";sogutma;Sadece Mutbex;Mutbex;;3031.5;;;—;1515.75;;1515.75;;97344
+165;DP-250;118.DP.250;"Senox DP 250 Dik Tip Soğuk Pasta Teşhir Dolabı, 52,2x48,7x186 cm";sogutma;Sadece Mutbex;Mutbex;;3870;;;—;1935;;1935;;124269
+166;DP-270;118.DP.270;"Senox DP 270 Dik Tip Soğuk Pasta Teşhir Dolabı, 55,9x52,5x189,5 cm";sogutma;Sadece Mutbex;Mutbex;;3096;;;—;1548;;1548;;99415
+167;DP-360;118.DP.360;"Senox DP 360 Dik Soğuk Pasta Teşhir Dolabı, 68x68x1768,4 cm";sogutma;Sadece Mutbex;Mutbex;;6450;;;—;3225;;3225;;207115
+168;DP-600;118.DP.600;"Senox DP 600 Dik Tip Soğuk Pasta Teşhir Dolabı, 85,2x65,2x199 cm";sogutma;Sadece Mutbex;Mutbex;;5805;;;—;2902.5;;2902.5;;186404
+169;DP-66;118.DP.66;"Senox DP 66 Dik Tip Soğuk Pasta Teşhir Dolabı, 45x45x101,3 cm";sogutma;Sadece Mutbex;Mutbex;;1935;;;—;967.5;;967.5;;62135
+170;DP-98;118.DP.98;"Senox DP 98 Dik Tip Soğuk Pasta Teşhir Dolabı, 45,4x40,8x112 cm";sogutma;Sadece Mutbex;Mutbex;;11610;;;—;5805;;5805;;372808
+171;VN-25HA;118.VN25HA;"Senox DS-02 Sıcak Soğuk Su Sebili, Alttan Damacanalı";sogutma;Sadece Mutbex;Mutbex;;438.6;;;—;219.3;;219.3;;14084
+172;VN-25RO;118.VN25RO;Senox DS-03 Arıtmalı Sıcak ve Soğuk Su Sebili;sogutma;Sadece Mutbex;Mutbex;;709.5;;;—;354.75;;354.75;;22783
+173;WD-737;118.WD737;"Senox DS-04 Buz, Sıcak ve Soğuk Su Sebili";sogutma;Sadece Mutbex;Mutbex;;1032;;;—;516;;516;;33138
+174;7301-G;118.7301.G;"Senox Fanlık Soğutmalı 7 Çekmeceli Derin Dondurucu, Gri 7301";sogutma;Sadece Mutbex;Mutbex;;1096.5;;;—;548.25;;548.25;;35210
+175;ICT-130;118.ICT.130;"Senox ICT 130 İçecek Teşhir Dolabı, 131x71x179,5 cm";sogutma;Sadece Mutbex;Mutbex;;5805;;;—;2902.5;;2902.5;;186404
+176;SSC-900K;118.SSC.900K;"Senox Kanopili Dik Tip Şişe Soğutucu Dolap, 683 L, SSC 900K";sogutma;Sadece Mutbex;Mutbex;;3031.5;;;—;1515.75;;1515.75;;97344
+177;S-900K;118.S.900K;"Senox Kanopili Dik Tip Şişe Soğutucu, 683 L, Çift Kapılı, S 900K";sogutma;Sadece Mutbex;Mutbex;;2709;;;—;1354.5;;1354.5;;86988
+178;KO-120T;118.KO.120T;"Senox KO 120T Kasa Önü Soğuk İçecek Dolabı, 120x84,5x154,8 cm";sogutma;Sadece Mutbex;Mutbex;;7224;;;—;3612;;3612;;231969
+179;KO-150T;118.KO.150T;"Senox KO 150T Kasa Önü Soğuk İçecek Dolabı, 150x84,5x154,8 cm";sogutma;Sadece Mutbex;Mutbex;;8514;;;—;4257;;4257;;273392
+180;KO-180T;118.KO.180T;"Senox KO 180T Kasa Önü Soğuk İçecek Dolabı, 180x84,5x154,8 cm";sogutma;Sadece Mutbex;Mutbex;;10320;;;—;5160;;5160;;331385
+181;KOE-150T;118.KOE.150T;"Senox KOE 150T Kasa Önü Exclusive Soğuk İçecek Dolabı, 150×84,5×151 cm";sogutma;Sadece Mutbex;Mutbex;;8514;;;—;4257;;4257;;273392
+182;KOE-180T;118.KOE.180T;"Senox KOE 180T Kasa Önü Exclusive Soğuk İçecek Dolabı, 180×84,5×151 cm";sogutma;Sadece Mutbex;Mutbex;;10320;;;—;5160;;5160;;331385
+183;MT-123;118.MT.123;"Senox MT 123 Soğuk Meze Teşhir Dolabı, 122,3x85,5x140,6 cm";sogutma;Sadece Mutbex;Mutbex;;3870;;;—;1935;;1935;;124269
+184;MT-153;118.MT.153;"Senox MT 153 Soğuk Meze Teşhir Dolabı, 152,3x85,5x140,6 cm";sogutma;Sadece Mutbex;Mutbex;;4515;;;—;2257.5;;2257.5;;144981
+185;MT-213;118.MT.213;"Senox MT 213 Soğuk Meze Teşhir Dolabı, 212,3x85,5x140,6 cm";sogutma;Sadece Mutbex;Mutbex;;7095;;;—;3547.5;;3547.5;;227827
+186;NRGZ-100;118.NRGZ100;"Senox Nergiz Pasta Teşhir Dolabı, 43,5x41x108,5 cm";sogutma;Sadece Mutbex;Mutbex;;1290;;;—;645;;645;;41423
+187;PD-400;118.PD400;"Senox PD 400 Pasta Teşhir Dolabı, 490L, 60x60x185 cm";sogutma;Sadece Mutbex;Mutbex;;2709;;;—;1354.5;;1354.5;;86988
+188;PD-400D;118.PD400D;"Senox PD 400D Pasta Teşhir Dolabı, 490L, 60x60x185 cm";sogutma;Sadece Mutbex;Mutbex;;2967;;;—;1483.5;;1483.5;;95273
+189;PST-150T;118.PST.150T;"Senox PST 150T İçecek Teşhir Dolabı, 150x70x200 cm";sogutma;Sadece Mutbex;Mutbex;;7740;;;—;3870;;3870;;248539
+190;PST-200T;118.PST.200T;"Senox PST 200T İçecek Teşhir Dolabı, 200x70x200 cm";sogutma;Sadece Mutbex;Mutbex;;9030;;;—;4515;;4515;;289962
+191;WN-180;118.WN.180;"Senox Sarap Soğutma Dolabı, WN 180";sogutma;Sadece Mutbex;Mutbex;;1419;;;—;709.5;;709.5;;45565
+192;WN-375S;118.WN375S;"Senox Sarap Soğutma Dolabı, WN 375S";sogutma;Sadece Mutbex;Mutbex;;1999.5;;;—;999.75;;999.75;;64206
+193;WN-385;118.WN385;"Senox Sarap Soğutma Dolabı, WN 385";sogutma;Sadece Mutbex;Mutbex;;2193;;;—;1096.5;;1096.5;;70419
+194;SRDNY-215;118.SRDNY215;"Senox Sardunya 215 Pasta Teshir Dolapları 215 LT, 52x49x160 cm";sogutma;Sadece Mutbex;Mutbex;;2322;;;—;1161;;1161;;74562
+195;SDS-265-DC-1-CF-P;118.SDS.265.DC.1.CF.P;Senox SDS 265 DC 1 CF P Premium Slim Dik Tip Şişe Soğutucu;sogutma;Sadece Mutbex;Mutbex;;1548;;;—;774;;774;;49708
+196;SDS-265-DC-1-CF;118.SDS.265.DC.1.CF;Senox SDS 265 DC 1 CF Slim Dik Tip Şişe Soğutucu;sogutma;Sadece Mutbex;Mutbex;;1290;;;—;645;;645;;41423
+197;SDS-385-DC-1YWP;118.SDS385.DC1YWP;"Senox SDS 385 DC 1 YW-P Şarap Dolabı, 150 Şişe Kapasiteli";sogutma;Sadece Mutbex;Mutbex;;1999.5;;;—;999.75;;999.75;;64206
+198;SDS-710-DC;118.SDS.710.DC;"Senox SDS 710 DC Dik Tip Şişe Soğutucu, Kanopisiz";sogutma;Sadece Mutbex;Mutbex;;1870.5;;;—;935.25;;935.25;;60063
+199;SET-67P;118.SET.67P;"Senox SET 67P Set Üstü Sıcak Teşhir Dolabı, 67,8×56,8×68,6 cm";sogutma;Sadece Mutbex;Mutbex;;1677;;;—;838.5;;838.5;;53850
+200;SET-85P;118.SET.85P;"Senox SET 85P Set Üstü Sıcak Teşhir Dolabı, 85,6×56,8×68,6 cm";sogutma;Sadece Mutbex;Mutbex;;1806;;;—;903;;903;;57992
+201;SET-E-120S;118.SET.E.120S;"Senox SET E 120S Set Üstü Soğuk Pasta Teşhir Dolabı, Eğik Cam, 120x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;2580;;;—;1290;;1290;;82846
+202;SET-E-90C;118.SET.E.90C;"Senox SET E 90C Set Üstü Sıcak Pasta Teşhir Dolabı Eğik Cam, 90x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;1999.5;;;—;999.75;;999.75;;64206
+203;SET-E-90S;118.SET.E.90S;"Senox SET E 90S Set Üstü Soğuk Pasta Teşhir Dolabı, Eğik Cam, 90x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;1935;;;—;967.5;;967.5;;62135
+204;SET-E-75S;118.SET.E.75S;"Senox SET P 75S Set Üstü Soğuk Pasta Teşhir Dolabı, Panaromik Cam, 70x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;1806;;;—;903;;903;;57992
+205;SET-P-90C;118.SET.P.90C;"Senox SET P 90C Set Üstü Sıcak Pasta Teşhir Dolabı, Panaromik Cam, 90x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;1806;;;—;903;;903;;57992
+206;SET-P-90S;118.SET.P.90S;"Senox SET P 90S Set Üstü Soğuk Pasta Teşhir Dolabı, Panaromik Cam, 90x60x70 cm";sogutma;Sadece Mutbex;Mutbex;;2257.5;;;—;1128.75;;1128.75;;72490
+207;SET-P-75C;118.SET.P.75C;"Senox Set Üstü Sıcak Teşhir Dolabı, Panaromik Cam, SET P 75C";sogutma;Sadece Mutbex;Mutbex;;1677;;;—;838.5;;838.5;;53850
+208;SMF-5120-ST;118.SMF.5120.ST;"Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı";sogutma;Sadece Mutbex;Mutbex;;1032;;;—;516;;516;;33138
+209;SMR-5120-ST;118.SMR.5120.ST;"Senox SMR-5120 ST Tezgah Altı Soğutucu, Tek Kapılı";sogutma;Sadece Mutbex;Mutbex;;645;;;—;322.5;;322.5;;20712
+210;7300A;118.7300A;"Senox Statik 7 Çekmeceli Derin Dondurucu, 7300A";sogutma;Sadece Mutbex;Mutbex;;967.5;;;—;483.75;;483.75;;31067
+211;SDS-385-DCPF;118.SDS385.DCPF;"Senox Tek Kapılı Dik Tip Şişe Soğutucu, Kanopisiz Siyah, 59,5x60,5x181 cm";sogutma;Sadece Mutbex;Mutbex;;1290;;;—;645;;645;;41423
+212;SC-900-K;118.SC900.K;"Şenox 2 Kapılı Dik Tip Şişe Soğutucu, 0 - +10 º C ,Kanopili , 90,6x72x201,5 cm";sogutma;Sadece Mutbex;Mutbex;;4300;;;—;2150;;2150;;138077
+213;DBE-02;118.DBE.02;"Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02";yikama;Sadece Mutbex;Mutbex;;387;;;—;193.5;;193.5;;12427
+214;DBE-01;118.DBE.01;"Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01";yikama;Sadece Mutbex;Mutbex;;322.5;;;—;161.25;;161.25;;10356

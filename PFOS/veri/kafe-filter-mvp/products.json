@@ -1,0 +1,12 @@
+[
+  { "id": "P001", "ad": "Espresso makinesi 2 grup", "kategori": "KAFE", "seviye": "LIGHT" },
+  { "id": "P002", "ad": "Kahve değirmeni", "kategori": "KAFE", "seviye": "LIGHT" },
+  { "id": "P003", "ad": "Bar blender", "kategori": "KAFE", "seviye": "LIGHT" },
+  { "id": "P004", "ad": "Buz makinesi 90 kg", "kategori": "KAFE", "seviye": "LIGHT" },
+  { "id": "P005", "ad": "Kombi fırın 6 tepsi", "kategori": "KAFE", "seviye": "HEAVY" },
+  { "id": "P006", "ad": "Bulaşık makinesi giyotin", "kategori": "KAFE", "seviye": "HEAVY" },
+  { "id": "P007", "ad": "Konveksiyon fırın pastane", "kategori": "KAFE", "seviye": "PASTANE" },
+  { "id": "P008", "ad": "Filtre kahve makinesi", "kategori": "KAFE", "seviye": "LIGHT" },
+  { "id": "P009", "ad": "Döner ocağı", "kategori": "RESTORAN", "seviye": "HEAVY" },
+  { "id": "P010", "ad": "Portakal sıkacağı", "kategori": "KAFE", "seviye": "LIGHT" }
+]

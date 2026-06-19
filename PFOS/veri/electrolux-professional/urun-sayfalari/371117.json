@@ -1,0 +1,92 @@
+{
+  "cod": "371117",
+  "title": "Modüler Pişirme Ekipmanları 700XP Ara Tezgah, Çekmeceli-1/2 Modul",
+  "category": "Setüstü Ara Çalışma Tezgahları",
+  "description": "Endüstriyel Set üstü ara çalışma tezgahı, çekmeceli, ½ modül - 400 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/set%C3%BCst%C3%BC-ara-%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-ara-tezgah-%C3%A7ekmeceli-1-2-modul-371117/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "400 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "730 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "250 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "15 kg"
+        },
+        {
+          "label": "Çekmece Boyutu",
+          "value": "Çekmece Boyutu:"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "Ağır hizmete uygun paslanmaz çelik iç çerçeve.",
+        "Ünite, diğer 700 serisi alt dolapların üzerine monte edilir.",
+        "Dik açılı kenarlar ünitelerin birbirleriyle sıkıca birleşmelerini sağlar ve aralarında kir birikmesini engeller."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Paslanmaz çelik üst tabla ağır hizmete uygundur, her türlü yüke dayanıklıdır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371117/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371117",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7WTNDN00E.dwg",
+      "local": "media/documents/371117/E7WTNDN00E.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Ara Tezgah, Çekmeceli-1/2 Modul",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 1_2 Module Ambient Worktop -drawer_371117_Turkish.pdf",
+      "local": "media/documents/371117/700XP%201_2%20Module%20Ambient%20Worktop%20-drawer_371117_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371117",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371117_E7WTNDN00E.rfa",
+      "local": "media/documents/371117/QF_ELECTROLUXPROFESSIONAL_371117_E7WTNDN00E.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371117_1_1_371117.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371117_1_1_371117.jpg",
+      "local": "media/images/371117/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:38:34.148Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

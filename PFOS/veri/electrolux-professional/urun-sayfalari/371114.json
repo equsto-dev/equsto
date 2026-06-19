@@ -1,0 +1,87 @@
+{
+  "cod": "371114",
+  "title": "Modüler Pişirme Ekipmanları 700XP Alt Dolap - 1-1/2 Module",
+  "category": "Alt Dolaplar",
+  "description": "Alt dolap, önü açık, 1,5 modül - 1200 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/ara-tezgahlar-ve-alt-dolaplar/alt-dolaplar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-alt-dolap-1-1-2-module-371114/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1200 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "550 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "600 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "23 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Ünite diğer setüstü 700XP modellerinin altına da monte edilir.",
+        "Ünitenin yüksekliği 50 mm ayarlanabilir ayakları paslanmaz çeliktir.",
+        "Önü açık alt dolap tencere, tava ve tepsilerin depolanması için kullanılır.",
+        "Kulplu kapılar, çekmeceler, ısıtıcı kitler ve GN küvetler için kılavuz rayları ayrı ayrı sipariş edilebilir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Yüksek hijyen standartlarına uygun Scotch Brite yüzey sonlandırmaya sahip paslanmaz çelik konstruksiyon."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371114/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371114",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/371114_E7BANL00O0.dwg",
+      "local": "media/documents/371114/371114_E7BANL00O0.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP Alt Dolap - 1-1/2 Module",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP Open Base Cupboard 1- 1_2 Module_371114_Turkish.pdf",
+      "local": "media/documents/371114/700XP%20Open%20Base%20Cupboard%201-%201_2%20Module_371114_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371114",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371114_E7BANL00O0.rfa",
+      "local": "media/documents/371114/QF_ELECTROLUXPROFESSIONAL_371114_E7BANL00O0.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371114_1_4_371114_frontale.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371114_1_4_371114_frontale.jpg",
+      "local": "media/images/371114/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:29:31.729Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

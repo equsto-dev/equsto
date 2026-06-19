@@ -1,0 +1,89 @@
+{
+  "cod": "361246",
+  "title": "Servis Arabaları Bulaşık basket Arabası-4 Basketlik Üst Tablalı",
+  "category": "Mobil Evyeler ve Sepet Arabaları",
+  "description": "Bulaşık sepet arabası, üst tablalı, 4 sepetlik",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/mobil-evyeler-ve-sepet-arabalar%C4%B1/servis-arabalar%C4%B1-bula%C5%9F%C4%B1k-basket-arabas%C4%B1-4-basketlik-%C3%BCst-tablal%C4%B1-361246/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "20 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "L-şekilli kılavuz raylarının iki ucu yukarı doğru bükülmüştür.",
+        "500x500 mm ebadında bulaşık basketlerini taşımak için dizayn edilmiştir.",
+        "Kulp tüm yükü taşıyan karkas yapının bir parçasıdır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361246",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/DRT4T.dwg",
+      "local": "media/documents/361246/DRT4T.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Bulaşık basket Arabası-4 Basketlik Üst Tablalı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/4 Dishwasher Rack Trolley with Top Shelf_361246_Turkish.pdf",
+      "local": "media/documents/361246/4%20Dishwasher%20Rack%20Trolley%20with%20Top%20Shelf_361246_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361246",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361246_DRT4T.rfa",
+      "local": "media/documents/361246/QF_ELECTROLUXPROFESSIONAL_361246_DRT4T.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_361246_1_1_361246.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_361246_1_1_361246.jpg",
+      "local": "media/images/361246/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:49:51.731Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

@@ -1,0 +1,286 @@
+{
+  "cod": "503023",
+  "title": "Bulaşık Yıkama Çok Amaçlı Bulaşık Makinesi",
+  "category": "Çok Amaçlı Bulaşık Makineleri WTU40",
+  "description": "Çok Amaçlı Bulaşık Makinesi, elektronik kontrol, drenaj pompalı, çift cidarlı, 9 kW basınçlı boyler, 3 programlı, 1170 tabak/saat, 3PH - WTU40PDP",
+  "url": "https://www.electroluxprofessional.com/tr/pd/bula%C5%9F%C4%B1k-y%C4%B1kama-ekipmanlar%C4%B1/%C3%A7ok-ama%C3%A7l%C4%B1-bula%C5%9F%C4%B1k-makineleri/%C3%A7ok-ama%C3%A7l%C4%B1-bula%C5%9F%C4%B1k-makineleri-wtu40/bula%C5%9F%C4%B1k-y%C4%B1kama-%C3%A7ok-ama%C3%A7l%C4%B1-bula%C5%9F%C4%B1k-makinesi-503023/",
+  "specifications": [
+    {
+      "group": "Drenaj",
+      "items": [
+        {
+          "label": "Drenaj pompa gücü",
+          "value": "0.034 kW"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "400 V/3N ph/50 Hz"
+        },
+        {
+          "label": "Voltaj değiştirilebilir",
+          "value": "230V 1N~; 230V 3~;"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "12.1 kW"
+        },
+        {
+          "label": "Tank ısıtma elemanları",
+          "value": "3 kW"
+        },
+        {
+          "label": "Yıkama pompasının gücü",
+          "value": "0.8 kW"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Yıkama devresi sıcaklığı",
+          "value": "55-65 °C"
+        },
+        {
+          "label": "Sıcak durulama çevriminde suyun derecesi",
+          "value": "80-90 °C"
+        },
+        {
+          "label": "Sepet/Saat",
+          "value": "65 / 0 / / /"
+        },
+        {
+          "label": "Çevrim süresi (saniye)",
+          "value": "55/90/300 / / / /"
+        },
+        {
+          "label": "Tabak/Saat",
+          "value": "1170 / 0 / / /"
+        },
+        {
+          "label": "Çevrim sayısı-saniye",
+          "value": "3 (55/90/300)"
+        },
+        {
+          "label": "Yıkama suyu sıcaklığı (MİN.)",
+          "value": "55-65°C"
+        },
+        {
+          "label": "Hücre boyutları-genişlik",
+          "value": "554 mm"
+        },
+        {
+          "label": "Hücre boyutları-derinlik",
+          "value": "570 mm"
+        },
+        {
+          "label": "Hücre boyutları-yükseklik",
+          "value": "450 mm"
+        },
+        {
+          "label": "Durulama sıcaklığı (MIN)",
+          "value": "80-90 °C"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "642 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "723 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1477 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "88 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "100 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "1680 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "810 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "750 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "1.02 m³"
+        },
+        {
+          "label": "Bilgi",
+          "value": "Boiler and tank heaters can work together (Total power=13,2kW)"
+        },
+        {
+          "label": "Boyler tipi",
+          "value": "Basınç"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Ses seviyesi",
+          "value": "<68 dBA"
+        }
+      ]
+    },
+    {
+      "group": "Su",
+      "items": [
+        {
+          "label": "Basınç, bar min/max",
+          "value": "2-3 bar"
+        },
+        {
+          "label": "Yıkama çevriminde elektrikli ısıtıcılar",
+          "value": "3 kW"
+        },
+        {
+          "label": "Sıcak durulama çevrim süresi (saniye)",
+          "value": "16"
+        },
+        {
+          "label": "Sıcak durulama çevriminde su tüketimi (lt)",
+          "value": "3.8"
+        },
+        {
+          "label": "Giriş su hattı boyutu",
+          "value": "G 3/4\""
+        },
+        {
+          "label": "Giriş suyu sıcaklığı",
+          "value": "50 °C"
+        },
+        {
+          "label": "Drenaj hattının ebadı",
+          "value": "20.5mm"
+        },
+        {
+          "label": "Giriş suyu basıncı",
+          "value": "2-3 bar"
+        },
+        {
+          "label": "Yıkama tankı kapasitesi (lt)",
+          "value": "42"
+        },
+        {
+          "label": "Çevrim başına su tüketimi (lt)",
+          "value": "/ 3.8"
+        },
+        {
+          "label": "Boyler Kapasitesi (lt)",
+          "value": "12"
+        },
+        {
+          "label": "Tank Kapasitesi (lt)",
+          "value": "42"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Entegre atmosferik boyler, 50°C sıcaklıktaki giriş suyunu minimum 82°C'ye yükselterek sanitizasyon sağlayacak bir durulama suyu elde edilir. Makinenin dışında başka bir boylere ihtiyaç duyulmaz.",
+        "Çift basket suportu, pizza tabakları, tepsiler ve diğer kap kacak için 550x535 mm ebadında daha büyük bir basket veya tabak, bardak ve çatal kaşık için 500x500 mm ebadında standart basket alır.",
+        "Makineyi açmadan hızlı ve kolay monte edilmesini sağlayan drenaj pompası.",
+        "Otomatik arıza belirleme sistemi.",
+        "Ön tarafından kolayca servis verilir.",
+        "Yıkama/durulama kolları ve filitre kolayca sökülür.",
+        "Tam otomatik kendi kendini temizleme programı makinenin içinde bakteri oluşumunu engeller.",
+        "Kullanımı kolay kontrol paneli: Yıkama ve durulama suyu sıcaklıkları için dijital gösterge.",
+        "Otomatik boyler boşaltma fonksiyonu.",
+        "55/90/300 saniyelik programlar.",
+        "Düşük ses seviyesi <65 dBA."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "HACCP sistem uygulaması ve Enerji Yönetim aygıtı için ön düzenlemeler fabrikada yapılmıştır.",
+        "En üst kalite malzemeden üretilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Açma-kapama işlemlerini kolaylaştıran karşı dengeli kapı.",
+        "Parlatıcı dipenser pompası.",
+        "Temizliği kolaylaştıran düz yüzeyler.",
+        "Yıkama/durulama kolları ve nozullar paslanmaz çeliktir.",
+        "304 AISI paslanmaz çelik ön ve yan paneller, yıkama tankı ve filitre.",
+        "Çift cidarlı konstruksiyon.",
+        "Arkası bir kapama pleytiyle tümüyle kapalıdır.",
+        "Yuvarlatılmış köşeli çift yıkama tankı kolayca temizlenebilir.",
+        "Yıkama bölümünde hiç boru bulunmaz."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "503023",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/WTU40PDP.dwg",
+      "local": "media/documents/503023/WTU40PDP.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Çok Amaçlı Bulaşık Makinesi",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Utensil Dishwasher with Drain Pump and Pressure Boiler_503023_Turkish.pdf",
+      "local": "media/documents/503023/Utensil%20Dishwasher%20with%20Drain%20Pump%20and%20Pressure%20Boiler_503023_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "503023",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_503023_WTU40PDP.rfa",
+      "local": "media/documents/503023/QF_ELECTROLUXPROFESSIONAL_503023_WTU40PDP.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "864242",
+      "description": "Çatal-kaşık kutusu, sarı",
+      "quantity": "2"
+    },
+    {
+      "code": "867002",
+      "description": "18 tabak için bulaşık sepeti",
+      "quantity": "1"
+    },
+    {
+      "code": "867045",
+      "description": "Tel basket, pizza tabakları-Çap 320 mm, tepsiler ve kullanım malzemeleri için",
+      "quantity": "1"
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_503023_1_1_503023.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_503023_1_1_503023.jpg",
+      "local": "media/images/503023/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T11:07:34.540Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/ticari-bulasik-makinesi/"
+}

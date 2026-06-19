@@ -1,0 +1,130 @@
+{
+  "cod": "133063",
+  "title": "Premium Serisi Tezgah-Evyeler 1800 mm Sağ Evyeli ve Sırtlı Çalışma Tezgahı",
+  "category": "Çalışma Tezgahları - Evyeli",
+  "description": "Özel şef çalışma tezgahı, sırtlı, 1 evye (Sağda) - 1800 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1/%C3%A7al%C4%B1%C5%9Fma-tezgahlar%C4%B1-evyeli/premium-serisi-tezgah-evyeler-1800-mm-sa%C4%9F-evyeli-ve-s%C4%B1rtl%C4%B1-%C3%A7al%C4%B1%C5%9Fma-tezgah%C4%B1-133063/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1800 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Evye sayısı",
+          "value": "1"
+        },
+        {
+          "label": "Evye boyutları",
+          "value": "400x400xH250"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "54 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgah 400 veya 600 mm genişlikte çekmecelerle (opsiyonel aksesuar) birlikte sipariş edilebilir. İhtiyaca göre ilk çekmeceye başka çekmeceler de ilave edilerek 2,3 veya 4'lü çekmece blokları yaratmak mümkündür.",
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tek parça halinde preslenmiş evye (400x400x200 mm); taşma borusu ve drenaj deliği bulunur.",
+        "Sırtlı arka bölüm tümüyle kaynaklı paslanmaz çelik profil ile kapatılmıştır.",
+        "Demonte olarak teslim edilir.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "Üst tabla 50 mm yükseklikte, Scotch Brite yüzey sonlandırmaya sahip ve 15/10 kalınlıkta 304 AISI paslanmaz çeliktir; kenarları damlatmaz ve köşeleri kaynaklıdır.",
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +0/-40 mm ayarlanabilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133063",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/TL1810DXEN.dwg",
+      "local": "media/documents/133063/TL1810DXEN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1800 mm Sağ Evyeli ve Sırtlı Çalışma Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1800 mm Work Table with Upstand - Right Bowl_133063_Turkish.pdf",
+      "local": "media/documents/133063/1800%20mm%20Work%20Table%20with%20Upstand%20-%20Right%20Bowl_133063_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133063",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133063_TL1810DXEN.rfa",
+      "local": "media/documents/133063/QF_ELECTROLUXPROFESSIONAL_133063_TL1810DXEN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133063_1_1_133063.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133063_1_1_133063.jpg",
+      "local": "media/images/133063/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:43:38.584Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

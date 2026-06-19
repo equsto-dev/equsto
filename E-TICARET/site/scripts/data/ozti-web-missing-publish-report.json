@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-06-13T17:42:59.133Z",
+  "dryRun": false,
+  "stats": {
+    "targets": 629,
+    "categoryUpdated": 38,
+    "fallbackDesc": 629,
+    "addedNew": 807,
+    "kuvetAssigned": 78,
+    "uncategorized": [],
+    "deptMoved": 0,
+    "byDept": {
+      "davlumbaz": 4,
+      "dolap": 16,
+      "hazirlik": 148,
+      "icecek": 18,
+      "kahve": 8,
+      "pisirme": 59,
+      "set-ustu-mutfak": 258,
+      "sogutma": 85,
+      "tasima": 21,
+      "tezgah": 6,
+      "yikama": 6
+    },
+    "uncategorizedCount": 0
+  },
+  "uncategorized": []
+}

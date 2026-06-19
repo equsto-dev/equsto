@@ -1,0 +1,126 @@
+{
+  "cod": "351157",
+  "title": "Yemek Dağıtım Sistemi Sıcak Banket Arabası-20xGN2/1",
+  "category": "Banket Arabaları",
+  "description": "Isıtmalı banket arabası - 20xGN2/1",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/banket-arabalar%C4%B1/yemek-da%C4%9F%C4%B1t%C4%B1m-sistemi-s%C4%B1cak-banket-arabas%C4%B1-20xgn2-1-351157/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "GN 2/1-100 mm küvet",
+          "value": "20 Adet"
+        },
+        {
+          "label": "GN 1/1-100 mm küvet",
+          "value": "40 Adet"
+        },
+        {
+          "label": "Yükleme kapasitesi",
+          "value": "340 kg"
+        },
+        {
+          "label": "Kapı adedi",
+          "value": "2"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1520 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "885 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1570 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "233 kg"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Tekerlek malzemesi:"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Tekerlek çapı:"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-230 V/1N ph/50/60 Hz"
+        },
+        {
+          "label": "Toplam Kurulu Güç",
+          "value": "3.2 kW"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "CE-SCHUKO"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Sıcak yemeklerin ihtiyaçlarına uygun +30°C ile +90°C arasında sıcaklık ayarı dijital gösterge ile yapılır.",
+        "Araba, set edilen 90°C sıcaklığa yaklaşık 35 dakikada ulaşır.",
+        "Izgara raflar üzerinde GN2/1 ve GN1/1 küvet veya tabaklar yerleştirilebilir (304 AISI paslanmaz çelik ızgara raflar dahildir).",
+        "Kuru ısıtma veya yemeklerin kurumasını önleyen nemli havayla ısıtma.",
+        "Ergonomik kulplar.",
+        "Tüm uluslararası sertifikasyonlarla uyumludur ve CE işaretlidir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Çift cidarlı 304 AISI paslanmaz çelik konstruksiyon; izolasyonlu paneller.",
+        "Spiral kablolu.",
+        "Çevresinde, kapısında ve kulplardaki kalın tamponlar darbeleri abzorbe eder.",
+        "125 mm çapında 2 sabit ve frenli 2 döner tekerlek."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "351157",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/BT2021H.dwg",
+      "local": "media/documents/351157/BT2021H.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Sıcak Banket Arabası-20xGN2/1",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Heated Banquet Trolley - 20x2_1 GN_351157_Turkish.pdf",
+      "local": "media/documents/351157/Heated%20Banquet%20Trolley%20-%2020x2_1%20GN_351157_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "351157",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_351157_BT2021H.rfa",
+      "local": "media/documents/351157/QF_ELECTROLUXPROFESSIONAL_351157_BT2021H.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_351157_1_1_351157.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_351157_1_1_351157.jpg",
+      "local": "media/images/351157/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:49:15.140Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

@@ -1,0 +1,90 @@
+{
+  "cod": "361296",
+  "title": "Servis Arabaları Tabak ve Bulaşık Basketi Arabası",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "Tabak ve bulaşık sepet arabası, 4 çift bulaşık sepeti rayı ve 3 tabak rafı bulunur.",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-tabak-ve-bula%C5%9F%C4%B1k-basketi-arabas%C4%B1-361296/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "645 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "940 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "1260 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "22 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25 mm çapında borularla yapılmıştır ve tümüyle kaynaklıdır.",
+        "L-şeklinde kılavuz rayları bulunur.",
+        "Dikişsiz taban ve üst ve arka rafların kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "500x500 mm ebadında 4 adet bulaşık basketi alır.",
+        "Bir tarafında istiflenmiş tabakların yerleştirildiği 3 adet eğimli rafı vardır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361296",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/MDNT4B3S.dwg",
+      "local": "media/documents/361296/MDNT4B3S.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Tabak ve Bulaşık Basketi Arabası",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/Plate and Rack Trolley_361296_Turkish.pdf",
+      "local": "media/documents/361296/Plate%20and%20Rack%20Trolley_361296_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361296",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361296_MDNT4B3S.rfa",
+      "local": "media/documents/361296/QF_ELECTROLUXPROFESSIONAL_361296_MDNT4B3S.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_ITC361296_1_2_361296.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_ITC361296_1_2_361296.jpg",
+      "local": "media/images/361296/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:51:30.109Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}

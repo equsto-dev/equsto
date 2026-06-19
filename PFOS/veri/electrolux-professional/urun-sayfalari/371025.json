@@ -1,0 +1,151 @@
+{
+  "cod": "371025",
+  "title": "Modüler Pişirme Ekipmanları 700XP 4 Zonlu Setüstü Enfraruj Ocak",
+  "category": "Setüstü Enfraruj Ocaklar",
+  "description": "Endüstriyel 4 zonlu set üstü enfraruj ocak, her zon 2,2 kW, derinlik 730 mm - 800 mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/pi%C5%9Firme-ekipmanlar%C4%B1/700xp/enfraruj-ocaklar/set%C3%BCst%C3%BC-enfraruj-ocaklar/mod%C3%BCler-pi%C5%9Firme-ekipmanlar%C4%B1-700xp-4-zonlu-set%C3%BCst%C3%BC-enfraruj-ocak-371025/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir.",
+          "value": "Bu cihaz ısıya duyarlı bir başka cihazın veya mobilyanın yakınına yerleştirilirse 150 mm'lik bir açıklık bırakılması veya ısı izolasyonu sağlanması gereklidir."
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "35 kg"
+        },
+        {
+          "label": "Ambalajlı ağırlık",
+          "value": "42 kg"
+        },
+        {
+          "label": "Ambalaj yüksekliği",
+          "value": "530 mm"
+        },
+        {
+          "label": "Ambalaj genişliği",
+          "value": "820 mm"
+        },
+        {
+          "label": "Ambalaj derinliği",
+          "value": "860 mm"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "0.37 m³"
+        },
+        {
+          "label": "Sertifika grubu",
+          "value": "N7CIE"
+        },
+        {
+          "label": "Ön Pleytlerin Gücü",
+          "value": "2.2 - 2.2 kW"
+        },
+        {
+          "label": "Arka pleytlerin gücü",
+          "value": "2.2 - 2.2 kW"
+        },
+        {
+          "label": "Ön pleytlerin ebadı",
+          "value": "Ø 230 Ø 230"
+        },
+        {
+          "label": "Arka pleytlerin ebadı",
+          "value": "Ø 230 Ø 230"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "380-400 V/3N ph/50/60 Hz"
+        },
+        {
+          "label": "Toplam Watt",
+          "value": "8.8 kW"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Alt dolap, köprü suportu veya konsol sistemi üzerine monte edilebilir.",
+        "4 enfraruj ısıtma zonlu, 6 mm kalınlıkta seramik cam pişirme yüzeyi.",
+        "230 mm çapında tek merkezli yuvarlak ısıtıcılar geniş tavaların tabanına da enerjiyi eşit dağıtırlar.",
+        "İçeriye sıvı sızmaması için pişirme yüzeyi sıkıca izole edilmiştir.",
+        "Yüzeyin sıcak olduğunu gösteren uyarı ışığı.",
+        "Pişirme pleytinden tavaya hızlı bir ısı transferi sağlanır.",
+        "Mutfağa düşük seviyede ısı yayılımı.",
+        "Ultra yüksek güçlü rezistanslarla ısıtma.",
+        "Düz cam-seramik yüzey kolayca temizlenir; maksimum hijyen sağlanır.",
+        "Suya karşı koruma sınıfı: IPX4."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Her zonda ayrı enerji ayarı."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm dış paneller Scotch Brite yüzey işlemeli paslanmaz çeliktendir.",
+        "Tek parça, preslenmiş, 1.5 mm kalınlıkta üst tabla paslanmaz çeliktir.",
+        "Model, üniteler arasında boşluk ve kir birikmesini önlemek için sıfır birleşim sağlayan dik açılı yan kenarlara sahiptir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "EPR_e-XP 700 & 900 Modüler Pişirme",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00249_1_5_16_14_EPR_e-XP Modular Cooking line_brochure_TUR-LR.pdf",
+      "local": "media/documents/371025/BR_BR-9JE00249_1_5_16_14_EPR_e-XP%20Modular%20Cooking%20line_brochure_TUR-LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "371025",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/E7IREH4000.dwg",
+      "local": "media/documents/371025/E7IREH4000.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "700XP 4 Zonlu Setüstü Enfraruj Ocak",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/700XP 4 Zone El. Infrared cooking top_371025-371134_Turkish.pdf",
+      "local": "media/documents/371025/700XP%204%20Zone%20El.%20Infrared%20cooking%20top_371025-371134_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "371025",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_371025_E7IREH4000.rfa",
+      "local": "media/documents/371025/QF_ELECTROLUXPROFESSIONAL_371025_E7IREH4000.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371025_1_1_371025.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371025_1_1_371025.jpg",
+      "local": "media/images/371025/hero-1.jpg"
+    },
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_371021_1_1_371021.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_371021_1_1_371021.jpg",
+      "local": "media/images/371025/hero-2.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T09:25:33.858Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/elektrikli-power-grill-hp/"
+}

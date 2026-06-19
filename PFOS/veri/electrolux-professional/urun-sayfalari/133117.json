@@ -1,0 +1,127 @@
+{
+  "cod": "133117",
+  "title": "Premium Serisi Tezgah-Evyeler 1800 mm 2 Evyeli Yıkama Tezgahı",
+  "category": "Büyük Evyeli Yıkama Tezgahları",
+  "description": "Yıkama tezgahı, 2 evyeli (800x510x340mm) - 1800mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/paslanmaz-%C3%A7elik-tezgahlar-evyeler/-premium-tip-haz%C4%B1rl%C4%B1k-tezgahlar%C4%B1/evyeli-tezgahlar/b%C3%BCy%C3%BCk-evyeli-y%C4%B1kama-tezgahlar%C4%B1/premium-serisi-tezgah-evyeler-1800-mm-2-evyeli-y%C4%B1kama-tezgah%C4%B1-133117/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "1800 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "700 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "900 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yükseklik",
+          "value": "100 mm"
+        },
+        {
+          "label": "Sırt boyutları, Derinlik",
+          "value": "13 mm"
+        },
+        {
+          "label": "Sırt boyutları, Yarı Çap",
+          "value": "R=10"
+        },
+        {
+          "label": "Evye sayısı",
+          "value": "2"
+        },
+        {
+          "label": "Evye boyutları",
+          "value": "800x500xH400"
+        },
+        {
+          "label": "Üst tabla kalınlığı",
+          "value": "50 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "72 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Tezgahın sağlamlığı, stabilitesi ve güvenirliliği doğru olarak test edilmiştir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Aksesuar olarak, tekne içi kullanıma uygun tava yıkama destek aparatı mevcuttur.",
+        "10 mm yarıçaplı köşeli ve 13 mm derinlikte 100 mm yükseklikte sırt.",
+        "Her ihtiyaca uygun farklı musluk mevcuttur.",
+        "Tamamen AISI 304 paslanmaz çelikten yapılmış ağır hizmet tipi konstrüksüyon maksimum dayanıklılık sağlar.",
+        "50 mm çapında yuvarlak bacaklar 304 AISI paslanmaz çeliktir, yüksekliği +010/-60 mm ayarlanabilir.",
+        "Evyelerin üst tablalarına bacaklar üzerine monte edilirler ve musluklar kolayca arkadan takılabilir."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "133117",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/VLP1802SEN.dwg",
+      "local": "media/documents/133117/VLP1802SEN.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1800 mm 2 Evyeli Yıkama Tezgahı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1800 mm Soaking Sink with 2 Bowls_133117_Turkish.pdf",
+      "local": "media/documents/133117/1800%20mm%20Soaking%20Sink%20with%202%20Bowls_133117_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "133117",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_133117_VLP1802SEN.rfa",
+      "local": "media/documents/133117/QF_ELECTROLUXPROFESSIONAL_133117_VLP1802SEN.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    },
+    {
+      "code": "0",
+      "description": "",
+      "quantity": ""
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_133117_1_1_133117.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_133117_1_1_133117.jpg",
+      "local": "media/images/133117/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:44:37.130Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/paslanmaz-celik-imalati/"
+}

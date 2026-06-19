@@ -1,0 +1,300 @@
+{
+  "cod": "727257",
+  "title": "ecostore Premium 1 Kapılı Dijital Derin Dondurucu-670 Lt (-22/-15°C) - Uzaktan Soğutma",
+  "category": "ecostore Premium 670 - 1430 litre Dijital Derin Dondurucular",
+  "description": "GN derin dondurucu, Premium, 1 kapılı, tropikal, AISI304, kabin ışığı, -22/-15°C, dijital ekran, UZAKTAN Soğutmalı - 670 Lt",
+  "url": "https://www.electroluxprofessional.com/tr/pd/so%C4%9Futma-ekipmanlar%C4%B1/buzdolaplar%C4%B1-ve-derin-dondurucular/ecostore-premium-670-1430-litre/ecostore-premium-670-1430-litre-dijital-derin-dondurucular/ecostore-premium-1-kap%C4%B1l%C4%B1-dijital-derin-dondurucu-670-lt-22-15%C2%B0c-uzaktan-so%C4%9Futma-727257/",
+  "specifications": [
+    {
+      "group": "Kapasite",
+      "items": [
+        {
+          "label": "Izgara rafların tipi ve sayısı (dahildir)",
+          "value": "4 - GN 2/1"
+        }
+      ]
+    },
+    {
+      "group": "Sertifikalar ISO",
+      "items": [
+        {
+          "label": "ISO Standards",
+          "value": "ISO 9001; ISO 14001; ISO 45001; ISO 50001"
+        }
+      ]
+    },
+    {
+      "group": "Elektrik",
+      "items": [
+        {
+          "label": "Voltaj",
+          "value": "220-240 V/1 ph/50/60 Hz"
+        },
+        {
+          "label": "Elektrik gücü max",
+          "value": "0.31 kW"
+        },
+        {
+          "label": "Fiş tipi",
+          "value": "CE-SCHUKO"
+        }
+      ]
+    },
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Kapı menteşeleri",
+          "value": "Kapı menteşeleri:"
+        },
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "710 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "835 mm"
+        },
+        {
+          "label": "Dış boyutlar, kapı açık olduğundaki derinlik",
+          "value": "1480 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "2050 mm"
+        },
+        {
+          "label": "Kapı tipi ve sayısı",
+          "value": "1 Tam"
+        },
+        {
+          "label": "İç boyutlar (genişlik)",
+          "value": "560 mm"
+        },
+        {
+          "label": "İç boyutlar (derinlik)",
+          "value": "707 mm"
+        },
+        {
+          "label": "İç boyutlar (yükseklik)",
+          "value": "1544 mm"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "102 kg"
+        },
+        {
+          "label": "Ambalajlı hacim",
+          "value": "1.49 m³"
+        },
+        {
+          "label": "Yükseklik ayarı",
+          "value": "20/35 mm"
+        },
+        {
+          "label": "Dış malzeme",
+          "value": "304 AISI"
+        },
+        {
+          "label": "İç malzeme",
+          "value": "304 AISI"
+        },
+        {
+          "label": "Onay belgeleri",
+          "value": "CB;CE"
+        },
+        {
+          "label": "Pozisyon & aralık sayısı",
+          "value": "44; 30 mm"
+        },
+        {
+          "label": "Su geçirmezlik endeksi",
+          "value": "IPX1"
+        },
+        {
+          "label": "Brüt kapasite",
+          "value": "670 Lt"
+        }
+      ]
+    },
+    {
+      "group": "Soğutma verileri",
+      "items": [
+        {
+          "label": "Kontrol tipi",
+          "value": "Dijital"
+        },
+        {
+          "label": "Min.Çalışma sıcaklığı",
+          "value": "-15 °C"
+        },
+        {
+          "label": "Max.çalışma sıcaklığı",
+          "value": "-22 °C"
+        },
+        {
+          "label": "Kompresör gücü",
+          "value": "Kompresör gücü:"
+        },
+        {
+          "label": "Soğutucu gaz tipi",
+          "value": "R404A;R452A"
+        },
+        {
+          "label": "Bağlantı boruları (uzaktan)-Çıkış (LP)",
+          "value": "9.5 mm"
+        },
+        {
+          "label": "Soğutma ünitesi",
+          "value": "Uzaktan"
+        },
+        {
+          "label": "Defrost tipi",
+          "value": "Elektrik"
+        },
+        {
+          "label": "İzolasyon",
+          "value": "75 mm (Siklopentan)"
+        },
+        {
+          "label": "Önerilen soğutma gücü*",
+          "value": "971 W"
+        },
+        {
+          "label": "Evaporasyon ısısında durum",
+          "value": "-20 °C"
+        },
+        {
+          "label": "Kondensasyon ısısında durum",
+          "value": "55 °C"
+        },
+        {
+          "label": "Ortam ısısında durum",
+          "value": "32 °C"
+        },
+        {
+          "label": "Bağlantı boruları (uzaktan)-çıkış",
+          "value": "9.5 mm"
+        },
+        {
+          "label": "Bağlantı boruları (uzaktan)-giriş",
+          "value": "6 mm"
+        },
+        {
+          "label": "*Not",
+          "value": "Soğutma gücü 15 m (borulama) linear mesafe esas alınarak hesaplanmıştır"
+        }
+      ]
+    },
+    {
+      "group": "Sürdürülebilirlik",
+      "items": [
+        {
+          "label": "Anlık tüketim",
+          "value": "1.32 Amps"
+        },
+        {
+          "label": "Ses seviyesi",
+          "value": "45 dBA"
+        },
+        {
+          "label": "İklim sınıfı",
+          "value": "5"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Uzak bir bilgisayara ve entegre HACCP sistemlerine bağlantıyı kolaylaştırmak için RS485 portuna uygun şekilde önceden hazırlanmıştır.",
+        "İç yapı, 44 adet ızgara yerleştirme pozisyonu sunar; bu sayede daha yüksek net kapasite ve daha geniş depolama alanı sağlar.",
+        "Dolap, en iyi yalıtım performansı ve \u00100 çevresel koruma sağlamak amacıyla 75 mm kalınlığa kadar siklopentan izolasyon ile donatılmıştır (ısıl iletkenlik: 0,020 W/m*K).",
+        "Tropik iklim koşullarına uygun ünite.",
+        "Derin dondurucu modelin -22 ile -15°C arasında ayarlanabilen çalışma sıcaklığı vardır.",
+        "Devrilmeye karşı korumalı raylar üzerinde 2/1 GN ızgara veya rafları alabilecek geniş depolama alanı.",
+        "OptiFlow: arkadan öne doğru yönlendirilmiş hava akışı ve çıkarılabilir hava kanalları sayesinde her koşulda eşit sıcaklık dağılımı ve hızlı soğutma sağlanır.",
+        "Evaporatörü kaplayan 60 mm kalınlığındaki yalıtım, tek bir işlemle kolayca çıkarılabilir."
+      ]
+    },
+    {
+      "group": "Sustainability",
+      "items": [
+        "Enerji tasarrufu sağlamak ve en iyi iç görüşü elde etmek için iç LED aydınlatma.",
+        "Kapı açıldığında fanı durduran kapı anahtarı, soğuk havanın hazne dışına çıkmasını engelleyerek enerji tasarrufu sağlar.",
+        "Isı yalıtımını artırmak, enerji tüketimini azaltmak ve temizliği kolaylaştırmak için çıkarılabilir üç bölmeli balon tipi manyetik kapı contası.",
+        "Buzlanma İzleme (Frost Watch) Kontrolü: Tam otomatik defrost işlemi, yalnızca evaporatörde gerçekten buz oluşmaya başladığında devreye girer ve buzun tamamen temizlenmesini sağlarken enerji verimliliğini de optimize edecek şekilde defrost süresini otomatik olarak ayarlar."
+      ]
+    },
+    {
+      "group": "User Interface & Data Management",
+      "items": [
+        "Ürünü (aksesuarla) Wi‑Fi veya Ethernet bağlantısıyla OneConnected Platform'a bağlayarak sorunsuz bir uzaktan deneyim yaşarsınız. Gerçek zamanlı izleme ve analiz, alarm yönetimi, HACCP veri yönetimi, API'ler ve gelişmiş özellikler buzdolabınızı tamamen kontrol altında tutmanıza olanak sağlar.",
+        "Kabindeki sıcaklığın görüntülenmesi ve ayarlanması için büyük beyaz dijitli dijital ekran. Dahili Bluetooth teknolojisi sayesinde HACCP geçmiş verileri saklanabilir ve uygulama üzerinden indirilebilir.",
+        "Electrolux Professional Buzdolabı Kontrol Uygulaması, müşterilerimizin hayatını kolaylaştırır: - HACCP verileri ve hassas kontrol sağlayan alarmlar sayesinde saklama sürecinin güvenliğini izleyin - HACCP bilgilerini doğrudan e-posta adresine excel formatında gönderme imkânı ile zaman kazanın ve verileri kolayca yönetin - Hızlı işlemler: dolap sıcaklığını/turbo soğutmayı ayarlayın ve tarih/saat belirleyin",
+        "Geniş dijital beyaz rakamlı ekran; dolap sıcaklığını gösterme ve ayarlama, manuel defrost döngüsü başlatma, turbo soğutma döngüsü (sıcak yükleri hızlıca soğutmak için) ve iç aydınlatma düğmesi özelliklerine sahiptir."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "İç taban, tek parça sacdan preslenmiş ve yuvarlatılmış köşelere sahiptir.",
+        "Kilitlenebilir kapı.",
+        "Soğutucu gaz tipi: R404a.",
+        "Uzaktan soğutma ünitesi.",
+        "En yüksek kalite AISI 304 paslanmaz çelikten üretilmiştir.",
+        "Bakım için ana bileşenlere kolay erişim.",
+        "Paslanmaz çelik raf rayları ve destekleri kolayca sökülebilir.",
+        "Yuvarlatılmış iç köşeler, kolayca çıkarılabilen raf kızakları, ızgaralar ve hava yönlendiricileri sayesinde temizlik kolaylığı sağlanır ve yüksek hijyen standartları korunur.",
+        "Anti-korozyon taban, zemin temizliğinde kullanılan agresif deterjanların dolaba zarar vermesini önler."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "Broşürler",
+      "type": "BR",
+      "title": "727257",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/BR/BR_BR-9JE00234_1_5_16_8_EPR_brochure_ecostoreCabinets_TURKISH_LR.pdf",
+      "local": "media/documents/727257/BR_BR-9JE00234_1_5_16_8_EPR_brochure_ecostoreCabinets_TURKISH_LR.pdf"
+    },
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "727257",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/727257_ESP71FFR.dwg",
+      "local": "media/documents/727257/727257_ESP71FFR.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "1 Kapılı Dijital Derin Dondurucu-670 Lt (-22/-15°C) - Uzaktan Soğutma",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1 Door Digital Freezer - 670lt - -22 -15 - Remote_727257_Turkish.pdf",
+      "local": "media/documents/727257/1%20Door%20Digital%20Freezer%20-%20670lt%20-%20-22%20-15%20-%20Remote_727257_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "727257",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_727257_ESP71FFR.rfa",
+      "local": "media/documents/727257/QF_ELECTROLUXPROFESSIONAL_727257_ESP71FFR.rfa"
+    }
+  ],
+  "accessories": [
+    {
+      "code": "881020",
+      "description": "GN2/1 rilsan ızgara raf, 2 adet kılavuz rayı ile birlikte",
+      "quantity": "4"
+    }
+  ],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_727257_1_1_727257.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_727257_1_1_727257.jpg",
+      "local": "media/images/727257/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:04:03.253Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/buzdolaplari-ve-dondurucular/"
+}

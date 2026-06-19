@@ -1,0 +1,89 @@
+{
+  "cod": "361292",
+  "title": "Servis Arabaları Servis Tepsileri için Araba-300 Tepsilik 1 Taraflı",
+  "category": "Tepsi ve Tabak Arabaları",
+  "description": "1 taraflı tepsi arabası, 300 EN1/1 tepsi, yükseklik=835mm",
+  "url": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/tepsi-ve-tabak-arabalar%C4%B1/servis-arabalar%C4%B1-servis-tepsileri-i%C3%A7in-araba-300-tepsilik--1-tarafl%C4%B1-361292/",
+  "specifications": [
+    {
+      "group": "Temel bilgiler",
+      "items": [
+        {
+          "label": "Dış boyutlar, Genişlik",
+          "value": "880 mm"
+        },
+        {
+          "label": "Dış boyutlar, Derinlik",
+          "value": "640 mm"
+        },
+        {
+          "label": "Dış boyutlar, Yükseklik",
+          "value": "835 mm"
+        },
+        {
+          "label": "Tekerlek malzemesi",
+          "value": "Çinko kaplama"
+        },
+        {
+          "label": "Tekerlek çapı",
+          "value": "Ø 125"
+        },
+        {
+          "label": "Net ağırlık",
+          "value": "20 kg"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "group": "Main Features",
+      "items": [
+        "Şasesi 25x25 mm ebadında kare profildir ve tümüyle kaynaklıdır.",
+        "Krom kaplama galvaniz telden tabak bölücü, farklı pozisyonlarda yerleştirilebilir.",
+        "Dikişsiz yatık taban ve üst ve arka rafların kenarları kıvrılmıştır ve karkas yapıya kaynaklanmıştır.",
+        "300 adet EN 1/1 tepsi alır.",
+        "Plastik tamponlu, Ø 125 mm çapında 4 döner tekerlek, 2'si frenli."
+      ]
+    },
+    {
+      "group": "Construction",
+      "items": [
+        "Tüm bileşenler ve paneller AISI 304 paslanmaz çelikten yapılmıştır."
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": "CAD Çizimleri",
+      "type": "CAD",
+      "title": "361292",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/CAD/TTR300.dwg",
+      "local": "media/documents/361292/TTR300.dwg"
+    },
+    {
+      "category": "Veri Sayfası",
+      "type": "MAD2",
+      "title": "Servis Tepsileri için Araba-300 Tepsilik 1 Taraflı",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/MAD2/Electrolux Professional/Turkish/1 Side Trolley for 300 EN 1-1 trays_361292_Turkish.pdf",
+      "local": "media/documents/361292/1%20Side%20Trolley%20for%20300%20EN%201-1%20trays_361292_Turkish.pdf"
+    },
+    {
+      "category": "BIM/Revit",
+      "type": "REVIT",
+      "title": "361292",
+      "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_361292_TTR300.rfa",
+      "local": "media/documents/361292/QF_ELECTROLUXPROFESSIONAL_361292_TTR300.rfa"
+    }
+  ],
+  "accessories": [],
+  "images": [
+    {
+      "full": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_AL361292_1_1_361292.jpg",
+      "thumb": "https://tools.electroluxprofessional.com/Mirror/Doc/PH_415x415/PH_AL361292_1_1_361292.jpg",
+      "local": "media/images/361292/hero-1.jpg"
+    }
+  ],
+  "scrapedAt": "2026-06-05T12:51:41.722Z",
+  "listing": "https://www.electroluxprofessional.com/tr/ticari-mutfak-ekipmanlari/mutfak-arabalari/"
+}
