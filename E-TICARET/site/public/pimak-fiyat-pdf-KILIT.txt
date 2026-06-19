@@ -53,7 +53,7 @@ YASAK (onay olmadan):
   cd PFOS/veri/pimak && python verify-spot-check.py
 
 ── Cache bust ─────────────────────────────────────────────────────────────
-  • SHOP_ASSET_V = 20260618-equsto-fiyat-listesi-v2
+  • SHOP_ASSET_V = 20260619-kdv-dahil-vitrin
 
 ── Cursor ─────────────────────────────────────────────────────────────────
   .cursor/rules/pimak-fiyat-pdf-kilit.mdc
