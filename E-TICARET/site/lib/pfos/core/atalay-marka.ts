@@ -34,7 +34,7 @@ function norm(s: string | null | undefined): string {
 export function isPisirmeReferansIsim(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
   if (!n) return false;
-  if (/buzdolab|donduruc|sogutuc|soğutuc|bulasik|bulaşık|yikama|vakum|davlumbaz|teshir|teşhir|vitrin|reyon/.test(n)) {
+  if (/buzdolab|donduruc|sogutuc|soğutuc|bulasik|bulaşık|yikama|vakum|davlumbaz|teshir|teşhir|vitrin|reyon|araba|trolley/.test(n)) {
     return false;
   }
   if (/yer\s*izgar|yer\s*ızgar/.test(n)) return false;

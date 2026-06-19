@@ -252,7 +252,7 @@ export function referansKatalogUyumsuz(
   if (!s || !k) return false;
 
   // 10. Tost makinesi vs döner sarma/kesme/döner
-  const isKatTost = k.includes("tost") || /^aktm|^akek-0/i.test(katalogSku ?? "");
+  const isKatTost = k.includes("tost") || /^aktm|^akek-0|^atm-|^vbl-/i.test(katalogSku ?? "");
   if (s.includes("tost") && (k.includes("doner") || k.includes("döner") || k.includes("sarma") || !isKatTost)) {
     return true;
   }
@@ -662,7 +662,10 @@ async function matchByTipShopLink(
   if (isCaglayanTeshirPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
     return null;
   }
-  if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+  if (
+    isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
+    !isTostMakinasiReferans(input.isim, input.urunTipi)
+  ) {
     return null;
   }
   if (tip === "buz_makinesi" && isBuzMakinesiReferans(input.isim)) {
@@ -810,10 +813,92 @@ async function matchByVerifiedLink(
   return null;
 }
 
+async function matchMixersByReferans(
+  input: ReferansMatchInput,
+  olcu: string,
+): Promise<EslesmisUrun | null> {
+  const name = norm(input.isim);
+  const rows = await loadLegacyCatalogRows();
+
+  if (isTostMakinasiReferans(input.isim, input.urunTipi)) {
+    return null;
+  }
+
+  // Planet mikser ve setüstü mikserler
+  if (
+    /planet\s*mikser|planet\s*hamur|mikser\s*setustu|mikser\s*setüstü|stand\s*mikser/.test(name) ||
+    (name.includes("mikser") && !name.includes("el mikser") && !name.includes("bar mikser") && !name.includes("cikolata") && !name.includes("choc"))
+  ) {
+    const capacity = norm(input.olcu || input.notlar || "");
+    
+    // a. Setüstü / küçük mikserler (4.5 lt, 5 lt, 7 lt, 8 lt, 10 lt)
+    if (
+      /4[.,]5|5\s*lt|7\s*lt|8\s*lt|10\s*lt|setustu|setüstü|mutfak\s*sefi|mutfak\s*şefi/.test(capacity) ||
+      /setustu|setüstü|mutfak\s*sefi|mutfak\s*şefi/.test(name)
+    ) {
+      const sku = /10\s*lt/.test(capacity) ? "118.MS10" : "118.MS07";
+      const found = rows.find((r) => r.sku === sku);
+      if (found) {
+        return katalogRowToEslesmis(found, { linkMarka: "Şenox" });
+      }
+    }
+
+    // b. 60 lt Mikser
+    if (/60\s*lt|60/.test(capacity)) {
+      const found = rows.find((r) => r.sku === "BM.60S");
+      if (found) {
+        return katalogRowToEslesmis(found, { linkMarka: HAZIRLIK_MARKA });
+      }
+    }
+
+    // c. 20 lt Mikser
+    if (/20\s*lt|20/.test(capacity)) {
+      const found = rows.find((r) => r.sku === "BM.20S");
+      if (found) {
+        return katalogRowToEslesmis(found, { linkMarka: HAZIRLIK_MARKA });
+      }
+    }
+
+    // d. 40 lt Mikser
+    if (/40\s*lt|40/.test(capacity)) {
+      const found = rows.find((r) => r.sku === "BM.40S");
+      if (found) {
+        return katalogRowToEslesmis(found, { linkMarka: HAZIRLIK_MARKA });
+      }
+    }
+
+    // Default fallback planet mikser
+    const defLink = rows.find((r) => r.sku === "BM.20S");
+    if (defLink) return katalogRowToEslesmis(defLink, { linkMarka: HAZIRLIK_MARKA });
+  }
+
+  // Hamur yoğurma makinesi (çatal kollu / spiral)
+  if (/hamur\s*yogur|hamur\s*yoğur/.test(name)) {
+    const capacity = norm(input.olcu || input.notlar || "");
+
+    // 50 kg hamur yoğurma -> BHY.50
+    if (/50\s*kg|50/.test(capacity)) {
+      const found = rows.find((r) => r.sku === "BHY.50");
+      if (found) {
+        return katalogRowToEslesmis(found, { linkMarka: HAZIRLIK_MARKA });
+      }
+    }
+
+    // Default fallback hamur yoğurma
+    const defLink = rows.find((r) => r.sku === "BHY.50");
+    if (defLink) return katalogRowToEslesmis(defLink, { linkMarka: HAZIRLIK_MARKA });
+  }
+
+  return null;
+}
+
 async function matchByFamilyRules(
   input: ReferansMatchInput,
   olcu: string,
 ): Promise<EslesmisUrun | null> {
+  const mixer = await matchMixersByReferans(input, olcu);
+  if (mixer) return mixer;
+
   if (isYerIzgarasiReferans(input.isim) || /^yer-izgara-\d+$/.test(input.urunTipi)) {
     return matchYerIzgarasiByOlcu(olcu, input.notlar, input.fiyatStratejisi);
   }
@@ -906,9 +991,11 @@ async function matchByFamilyRules(
     return matchTasFirinByReferans(input.isim, input.fiyatStratejisi);
   }
   if (
-    input.urunTipi === "konveksiyon-firin-pastane" ||
-    input.urunTipi === "konveksiyon-firin-unox" ||
-    (isGenericReferansIsim(input.isim) && /firin|fırın/.test(norm(input.isim)))
+    (input.urunTipi === "konveksiyon-firin-pastane" ||
+      input.urunTipi === "konveksiyon-firin-unox" ||
+      (isGenericReferansIsim(input.isim) && /firin|fırın/.test(norm(input.isim)))) &&
+    input.urunTipi !== "firin-arabasi" &&
+    !/araba|trolley/.test(norm(input.isim))
   ) {
     return matchKonveksiyonFirinByReferans(
       input.isim,
@@ -928,6 +1015,9 @@ async function matchStrictCatalog(
   olcu: string,
 ): Promise<EslesmisUrun | null> {
   const familyTip = referansTipKodu(input);
+  if (familyTip === "firin_arabasi") {
+    return null;
+  }
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
@@ -1399,7 +1489,7 @@ export async function matchReferansKalem(
   }
 
   const hazirlikTip = inferHazirlikTipFromIsim(input.isim);
-  if (hazirlikTip) {
+  if (hazirlikTip && hazirlikTip !== "planet_mikser" && hazirlikTip !== "spiral_hamur") {
     const shop = await matchShopCatalog(hazirlikTip, input.fiyatStratejisi);
     if (shop) return { ...shop, marka: HAZIRLIK_MARKA };
   }
