@@ -97,12 +97,12 @@ function lineCountFromProject(p: ArchiveProject): number {
   return n;
 }
 
-type PilotProject = ArchiveProject & {
+type PilotProject = Omit<ArchiveProject, "files"> & {
   detail_json?: string;
   pfos_zones?: string[];
   bolum_m2?: Record<string, number>;
   m2_toplam?: number;
-  files?: { path?: string; type?: string; name?: string; url?: string }[];
+  files?: { path?: string; type?: string; name?: string; url?: string; line_count?: number }[];
   approved?: boolean;
 };
 
