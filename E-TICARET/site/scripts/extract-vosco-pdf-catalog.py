@@ -65,41 +65,84 @@ def parse_prices_near(
     lines: list[str], idx: int, line_pages: list[int]
 ) -> tuple[float, float]:
     """Kod satırına en yakın fiyat — yalnızca aynı PDF sayfasında."""
-    usd = eur = 0.0
     page = line_pages[idx]
+    assigns = _page_price_assignments(lines, line_pages).get(page, {})
+    hit = assigns.get(idx)
+    if hit:
+        kind, val = hit
+        return (val, 0.0) if kind == "usd" else (0.0, val)
+    return 0.0, 0.0
 
-    # Kod → fiyat (VHS-206C → $250): sonraki kod satırına kadar tara
-    j = idx + 1
-    while j < len(lines) and j < idx + 22 and line_pages[j] == page:
-        if CODE_RE.match(lines[j]):
-            break
-        um = PRICE_USD_RE.search(lines[j])
-        em = PRICE_EUR_RE.search(lines[j])
-        if um:
-            usd = float(um.group(1).replace(",", ""))
-            break
-        if em:
-            eur = float(em.group(1).replace(",", ""))
-            break
-        j += 1
 
-    if usd or eur:
-        return usd, eur
+_page_assign_cache: dict[int, dict[int, tuple[str, float]]] = {}
 
-    # Geriye: fiyat → kod blokları
-    j = idx - 1
-    while j >= 0 and j >= idx - 35 and line_pages[j] == page:
-        um = PRICE_USD_RE.search(lines[j])
-        em = PRICE_EUR_RE.search(lines[j])
-        if um:
-            usd = float(um.group(1).replace(",", ""))
-            break
-        if em:
-            eur = float(em.group(1).replace(",", ""))
-            break
-        j -= 1
 
-    return usd, eur
+def _page_price_assignments(
+    lines: list[str], line_pages: list[int]
+) -> dict[int, dict[int, tuple[str, float]]]:
+    """Sayfa bazında kod↔fiyat: önce ileri, sonra atanmamış en yakın geri."""
+    global _page_assign_cache
+    if _page_assign_cache:
+        return _page_assign_cache
+
+    pages = sorted(set(line_pages))
+    for page in pages:
+        code_idxs = [
+            i
+            for i, p in enumerate(line_pages)
+            if p == page and CODE_RE.match(lines[i])
+        ]
+        price_idxs: list[tuple[int, str, float]] = []
+        for i, p in enumerate(line_pages):
+            if p != page:
+                continue
+            um = PRICE_USD_RE.search(lines[i])
+            em = PRICE_EUR_RE.search(lines[i])
+            if um:
+                price_idxs.append(
+                    (i, "usd", float(um.group(1).replace(",", "")))
+                )
+            elif em:
+                price_idxs.append(
+                    (i, "eur", float(em.group(1).replace(",", "")))
+                )
+
+        assigned: dict[int, tuple[str, float]] = {}
+        used: set[int] = set()
+
+        for ci, code_idx in enumerate(code_idxs):
+            next_code = code_idxs[ci + 1] if ci + 1 < len(code_idxs) else len(lines)
+            for pidx, kind, val in price_idxs:
+                if pidx in used:
+                    continue
+                if code_idx < pidx < next_code:
+                    assigned[code_idx] = (kind, val)
+                    used.add(pidx)
+                    break
+
+        for ci, code_idx in enumerate(code_idxs):
+            if code_idx in assigned:
+                continue
+            prev_code = code_idxs[ci - 1] if ci > 0 else -1
+            first_code = code_idxs[0]
+            best: tuple[int, str, float, int] | None = None
+            for pidx, kind, val in price_idxs:
+                if pidx in used or pidx >= code_idx:
+                    continue
+                in_between = prev_code >= 0 and prev_code < pidx < code_idx
+                orphan_before_block = ci > 0 and pidx < first_code
+                if not in_between and not orphan_before_block:
+                    continue
+                dist = code_idx - pidx
+                if best is None or dist < best[0]:
+                    best = (dist, kind, val, pidx)
+            if best:
+                assigned[code_idx] = (best[1], best[2])
+                used.add(best[3])
+
+        _page_assign_cache[page] = assigned
+
+    return _page_assign_cache
 
 
 def pair_page_block_prices(lines: list[str], line_pages: list[int]) -> None:
@@ -270,10 +313,9 @@ def pair_leading_codes_trailing_prices(lines: list[str]) -> None:
                 break
             k += 1
 
-        if len(prices) >= 1:
+        if len(prices) >= len(codes):
             for ci, code in enumerate(codes):
-                pi = min(ci, len(prices) - 1)
-                kind, val = prices[pi]
+                kind, val = prices[ci]
                 _pending_pairs.append(("lead", code, kind, val))
             i = j
             continue
@@ -284,8 +326,9 @@ _pending_pairs: list[tuple[str, str, str, float]] = []
 
 
 def extract_all(doc: fitz.Document) -> dict[str, dict]:
-    global _pending_pairs
+    global _pending_pairs, _page_assign_cache
     _pending_pairs = []
+    _page_assign_cache = {}
     lines: list[str] = []
     line_pages: list[int] = []
     for pi in range(doc.page_count):
@@ -377,7 +420,8 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
             "specs": {},
         }
         has_parse = p["specs"].get("liste_usd") or p["specs"].get("liste_eur")
-        if pr < 3 and has_parse:
+        # Yalnızca düşük öncelikli "trail" parse sonucunu korur; lead/pageblock her zaman kazanır
+        if pr == 1 and has_parse:
             continue
         if kind == "usd":
             p["specs"]["liste_usd"] = val
