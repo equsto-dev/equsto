@@ -10,6 +10,7 @@ const v = SHOP_ASSET_V;
 export default function ShopCoreScripts() {
   return (
     <>
+      <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <AssetCdnConfigScript />
       <Script src={`/portabianco-cafemarkt-img-map.js?v=${v}`} strategy="beforeInteractive" />

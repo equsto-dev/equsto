@@ -181,12 +181,55 @@
 
   function priceForRow(row) {
     if (!row) return "";
+    if (row.price_display) return String(row.price_display);
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
       return window.EqustoPriceDisplay.formatCard(row);
     }
     var px = state.rate ? computeRowPrices(row, state.rate) : null;
-    if (px) return px.price;
-    return String(row.price || "").split("\n")[0];
+    if (px && px.price) return px.price;
+    if (Number(row.fiyat_tl) > 0) {
+      return (
+        "₺" +
+        Number(row.fiyat_tl).toLocaleString("tr-TR", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }) +
+        " KDV dahil"
+      );
+    }
+    var full = String(row.price || "");
+    var dahil = full.match(/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/i);
+    if (dahil) {
+      var v = parseFloat(
+        String(dahil[1]).replace(/\.(?=\d{3}(\D|$))/g, "").replace(",", "."),
+      );
+      if (Number.isFinite(v) && v > 0) {
+        return (
+          "₺" +
+          v.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+          " KDV dahil"
+        );
+      }
+    }
+    var line0 = full.split("\n")[0] || "";
+    if (/\+?\s*K\s*D\s*V/i.test(line0)) {
+      var net = parseFloat(
+        line0
+          .replace(/₺/g, "")
+          .replace(/\+?\s*KDV.*/gi, "")
+          .replace(/\./g, "")
+          .replace(",", "."),
+      );
+      if (Number.isFinite(net) && net > 0) {
+        var kdv = Math.round(net * 1.2 * 100) / 100;
+        return (
+          "₺" +
+          kdv.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+          " KDV dahil"
+        );
+      }
+    }
+    return line0;
   }
 
   function start() {

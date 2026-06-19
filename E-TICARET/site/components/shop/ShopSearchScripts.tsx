@@ -14,7 +14,7 @@ declare global {
 export default function ShopSearchScripts() {
   return (
     <>
-      <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
