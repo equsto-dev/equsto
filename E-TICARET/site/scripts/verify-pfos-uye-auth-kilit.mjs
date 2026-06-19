@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260618-equsto-fiyat-listesi-v2";
+const SHOP_ASSET_V = "20260619-kdv-dahil-vitrin";
 const WA_MODAL_BUILD = 25;
 let err = 0;
 

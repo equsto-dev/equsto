@@ -1025,7 +1025,7 @@
   }
 
   var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
-  var EQ_EQUSTO_FIYAT_IMG_V = "20260618-equsto-fiyat-listesi-v2";
+  var EQ_EQUSTO_FIYAT_IMG_V = "20260619-kdv-dahil-vitrin";
 
   /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
   function pimakCatalogRelCandidates(rel) {

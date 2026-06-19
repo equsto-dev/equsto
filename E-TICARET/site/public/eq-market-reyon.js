@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260618-equsto-fiyat-listesi-v2";
+  var CATALOG_V = "20260619-kdv-dahil-vitrin";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
