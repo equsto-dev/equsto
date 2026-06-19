@@ -9,6 +9,7 @@ export const HAZIRLIK_TIP_KODLARI = new Set([
   "kemik_testere",
   "dilimleme_makinesi",
   "spiral_hamur",
+  "planet_mikser",
   "hamur_acma",
   "patates_soyma",
 ]);
@@ -36,7 +37,11 @@ const HAZIRLIK_ISIM_KALIP: Array<{ tip: string; test: RegExp }> = [
   },
   {
     tip: "spiral_hamur",
-    test: /hamur\s*yogur|hamur\s*yoğur|spiral\s*mikser|planet\s*mikser|planet\s*hamur/,
+    test: /hamur\s*yogur|hamur\s*yoğur|spiral\s*mikser|spiral\s*hamur/,
+  },
+  {
+    tip: "planet_mikser",
+    test: /planet\s*mikser|planet\s*hamur|mikser\s*setustu|mikser\s*setüstü|stand\s*mikser/,
   },
   { tip: "hamur_acma", test: /hamur\s*acma|hamur\s*açma/ },
   { tip: "patates_soyma", test: /patates\s*soy|sebze\s*soy/ },

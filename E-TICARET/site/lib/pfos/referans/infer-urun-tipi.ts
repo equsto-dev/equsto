@@ -412,6 +412,10 @@ const TIP_RULES: TipRule[] = [
     test: (n) => /firin\s*davlumbaz|fırın\s*davlumbaz/.test(n),
   },
   {
+    tip: "firin-arabasi",
+    test: (n) => /firin\s*arabas|fırın\s*arabas|tepsi\s*tasima\s*arabas|tepsi\s*taşıma\s*arabas/.test(n),
+  },
+  {
     tip: "kombi-firin-6t",
     test: (n) =>
       n.includes("kombi") ||
