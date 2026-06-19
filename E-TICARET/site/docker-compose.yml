@@ -2,7 +2,7 @@
 #   cp .env.production.example .env
 #   docker compose --env-file .env.production up -d --build
 #
-# Meilisearch: aynı sunucuda Docker (ücretsiz) — Cloud gerekmez
+# Meilisearch: Hetzner sunucusunda Docker (ücretsiz, MIT)
 
 name: equsto
 

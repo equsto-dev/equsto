@@ -3,6 +3,190 @@
   "generated_at": "2026-05-23T18:51:20.616165+00:00",
   "projects": [
     {
+      "id": "S13-117",
+      "baslik": "Steakhouse (S13-117-8)",
+      "konsept": "Steakhouse",
+      "dukkan": "Steakhouse",
+      "source_file": "pfos-projeler/S13-117/S13-117-8.dwg",
+      "status": "referans-pilot",
+      "path": "public/data/pfos-projeler/S13-117/S13-117-8.dwg",
+      "zone_order": [
+        "show_mutfagi",
+        "soguk_oda",
+        "derin_dondurucu",
+        "et_hazirlik",
+        "ana_mutfak",
+        "bar",
+        "sebze_hazirlik",
+        "pastane",
+        "kuru_depo",
+        "bulasikhane",
+        "izgara_meze"
+      ],
+      "zones": {
+        "show_mutfagi": {
+          "zone_key": "show_mutfagi",
+          "labels_found": [
+            "G- Ön Mutfak / Et Teşhir"
+          ],
+          "line_count": 15,
+          "sample_lines": [
+            "DRY-AGED DOLABI",
+            "ET TEŞHİR REYONU",
+            "ÇALIŞMA TEZGAHI, TABAN  VE ARA RAFLI",
+            "SERVİS BANKOSU",
+            "LAVTAŞLI IZGARA, GAZLI, SETÜSTÜ, MARENO GPL68G",
+            "SP64E",
+            "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ, MARENO FQE 61L",
+            "SETALTI BUZDOLABI"
+          ]
+        },
+        "soguk_oda": {
+          "zone_key": "soguk_oda",
+          "labels_found": [
+            "B- Soğuk Oda"
+          ],
+          "line_count": 3,
+          "sample_lines": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI",
+            "İSTİF RAFI"
+          ]
+        },
+        "derin_dondurucu": {
+          "zone_key": "derin_dondurucu",
+          "labels_found": [
+            "C- Deepfreeze Depo"
+          ],
+          "line_count": 2,
+          "sample_lines": [
+            "PANEL TİP SOĞUK ODA",
+            "İSTİF RAFI"
+          ]
+        },
+        "et_hazirlik": {
+          "zone_key": "et_hazirlik",
+          "labels_found": [
+            "D- Hazırlık Bölümü"
+          ],
+          "line_count": 9,
+          "sample_lines": [
+            "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "ÇÖP ARABASI",
+            "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "ET KÜTÜĞÜ",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI"
+          ]
+        },
+        "ana_mutfak": {
+          "zone_key": "ana_mutfak",
+          "labels_found": [
+            "F- Pişirme"
+          ],
+          "line_count": 10,
+          "sample_lines": [
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ, MARENO C67GP",
+            "SOS BAINMARIE, ELK. SETÜSTÜ",
+            "SETALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "SALAMANDER, BERTO'S",
+            "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+            "TEZGAH TİPİ BUZDOLABI, 3  KAPILI"
+          ]
+        },
+        "bar": {
+          "zone_key": "bar",
+          "labels_found": [
+            "I- İçecek"
+          ],
+          "line_count": 5,
+          "sample_lines": [
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "BAR BLENDER, SANTOS",
+            "BAR MİKSER, SANTOS",
+            "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+            "KAHVE DEĞİRMENİ, MAZZER"
+          ]
+        },
+        "sebze_hazirlik": {
+          "zone_key": "sebze_hazirlik",
+          "labels_found": [
+            "H- Soğuk Hazırlık"
+          ],
+          "line_count": 6,
+          "sample_lines": [
+            "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "DUVAR RAFI",
+            "MAKE-UP UNİTESİ, 3 KAPILI"
+          ]
+        },
+        "pastane": {
+          "zone_key": "pastane",
+          "labels_found": [
+            "E- Hamur Hazırlık"
+          ],
+          "line_count": 10,
+          "sample_lines": [
+            "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ",
+            "DUVAR RAFI",
+            "SETÜSTÜ MİKSER, DOMINO",
+            "MERMER TABLALI ÇALIŞMA TEZGAHI",
+            "DUVAR  RAFI",
+            "MERMER TABLALI ÇALIŞMA TEZGAHI",
+            "DUVAR RAFI"
+          ]
+        },
+        "kuru_depo": {
+          "zone_key": "kuru_depo",
+          "labels_found": [
+            "A- Kuru Depo"
+          ],
+          "line_count": 1,
+          "sample_lines": [
+            "İSTİF RAFI"
+          ]
+        },
+        "bulasikhane": {
+          "zone_key": "bulasikhane",
+          "labels_found": [
+            "J- Bulaşık Yıkama"
+          ],
+          "line_count": 11,
+          "sample_lines": [
+            "BULAŞIK SIYIRMA TEZGAHI",
+            "BASKET RAFI",
+            "ÇÖP ARABASI",
+            "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "ÖN YIKAMA DUŞU",
+            "YAĞ TUTUCU",
+            "DAVLUMBAZ, DUVAR TİPİ",
+            "BYM ÇIKIŞİ"
+          ]
+        },
+        "izgara_meze": {
+          "zone_key": "izgara_meze",
+          "labels_found": [
+            "Y- Yer Izgara"
+          ],
+          "line_count": 2,
+          "sample_lines": [
+            "YER IZGARASI",
+            "YER IZGARASI"
+          ]
+        }
+      },
+      "approved_at": "2026-05-23",
+      "note": "Onaylı (2026-05-23): brüt 270 m²; masa oturum 128 m²; mutfak bölümleri 118 m². Yer ızgaraları (Y) mutfaktadır — salon değil."
+    },
+    {
       "id": "2017-050",
       "baslik": "DoubleTree Hilton Topkapı",
       "konsept": "Hotel",
@@ -475,5 +659,6 @@
       "show_mutfagi": 1
     },
     "missing_files": []
-  }
+  },
+  "updated_at": "2026-06-19T04:10:20.695Z"
 }

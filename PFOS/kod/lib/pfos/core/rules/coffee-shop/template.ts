@@ -1,8 +1,7 @@
 /**
- * Coffee Shop — motor şablonu Espressolab referans kütüphanesinden üretilir.
- * Tüm şube listeleri: lib/pfos/referans/coffee-shop-espressolab.ts
+ * Coffee Shop — teklif şablonu proje-veri Excel → pfos-referans JSON üzerinden yüklenir.
+ * @see lib/pfos/referans/coffee-shop/index.ts
  */
 
-import { buildCoffeeShopTemplate } from "@/lib/pfos/referans";
-
-export const coffeeShop = buildCoffeeShopTemplate();
+export const coffeeShopTemplateNote =
+  "coffee-shop şablonu resolveTemplateForQuote ile yüklenir";

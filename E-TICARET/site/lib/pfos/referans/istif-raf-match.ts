@@ -252,7 +252,7 @@ export async function matchIstifRafiByReferans(
     }
   }
 
-  if (isIstifRafiReferansIsim(isim)) {
+  if (isIstifRafiReferansIsim(isim) && olcuText) {
     return {
       id: "portashelf-istif-ozel",
       sku: "",

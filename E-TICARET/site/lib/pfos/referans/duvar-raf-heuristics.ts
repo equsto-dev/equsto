@@ -11,7 +11,7 @@ function norm(s: string): string {
 
 export function isDuvarRafiReferans(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
-  if (/basket\s*raf/.test(n)) return true;
+  if (/basket\s*raf/.test(n) || /tava\s*raf/.test(n)) return true;
   return /duvar\s*raf/.test(n) && !/davlumbaz/.test(n);
 }
 

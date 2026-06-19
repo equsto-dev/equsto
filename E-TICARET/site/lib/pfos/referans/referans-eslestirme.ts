@@ -676,13 +676,19 @@ async function matchByTipShopLink(
   }
   if (
     isIstifRafiTipKodu(tip) &&
-    isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
+    isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
+    (extractOlcuFromNotlar(input.notlar) ||
+      (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "") ||
+      input.sku)
   ) {
     return null;
   }
   if (
     isCopArabasiTipKodu(tip) &&
-    isCopArabasiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
+    isCopArabasiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
+    (extractOlcuFromNotlar(input.notlar) ||
+      (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "") ||
+      input.sku)
   ) {
     return null;
   }
@@ -1029,12 +1035,52 @@ async function matchStrictCatalog(
   });
 }
 
+async function getOzelImalatPrice(isim: string, olcu: string, urunTipi?: string | null): Promise<number> {
+  let ozelFiyat = 0;
+  try {
+    const { loadLegacyCatalogRows } = await import("@/lib/legacy-catalog");
+    const { findClosestEqustoTezgahPriceRow, findClosestEqustoDavlumbazPriceRow } = await import("../core/ozel-imalat-yakin-olcu");
+    const { isCalismaTezgahiPfosKalem } = await import("../core/calisma-tezgah");
+    const { isDavlumbazReferans } = await import("./davlumbaz-match");
+    const { dimsCmFromOlcu } = await import("../core/davlumbaz-marka");
+
+    const rows = await loadLegacyCatalogRows();
+    if (isCalismaTezgahiPfosKalem({ isim, urunTipi })) {
+      const closest = findClosestEqustoTezgahPriceRow(rows, isim, olcu);
+      if (closest) {
+        ozelFiyat = closest.fiyat_tl;
+      }
+    } else if (isDavlumbazReferans(isim)) {
+      const targetDims = dimsCmFromOlcu(olcu);
+      const isOrta = /orta\s*tip/i.test(`${isim} ${urunTipi ?? ""}`);
+      const isFiltreli = !/filtresiz/i.test(`${isim} ${urunTipi ?? ""}`);
+      const filter = (row: AdminUrunRow) => {
+        const sku = String(row.sku ?? "").toUpperCase();
+        const isRowOrta = sku.includes("KDAVO");
+        const isRowFiltreli = sku.includes("KDAVDTF") || sku.includes("KDAVOTF");
+        return isRowOrta === isOrta && isRowFiltreli === isFiltreli;
+      };
+      const closest = findClosestEqustoDavlumbazPriceRow(rows, targetDims, filter);
+      if (closest) {
+        ozelFiyat = closest.fiyat_tl;
+      }
+    }
+  } catch (e) {
+    console.error("Error in getOzelImalatPrice:", e);
+  }
+  return ozelFiyat;
+}
+
 async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUrun> {
+  const olcu =
+    extractOlcuFromNotlar(input.notlar) ||
+    (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+(?:\s*[*xX×]\s*\d+)?)/)?.[1] ?? "");
+  const ozelFiyat = await getOzelImalatPrice(input.isim, olcu, input.urunTipi);
   return buildOzelImalatEslesmis({
     isim: input.isim,
     urunTipi: input.urunTipi,
     notlar: input.notlar,
-    fiyatTry: 0,
+    fiyatTry: ozelFiyat,
     fiyatEur: null,
   });
 }
@@ -1363,6 +1409,12 @@ export async function matchReferansKalem(
     return family;
   }
 
+  const strict = await matchStrictCatalog(input, olcu);
+  if (strict) return strict;
+
+  const byMasterEq = await matchByMasterEqustoKod(input);
+  if (byMasterEq) return byMasterEq;
+
   const tipLinked = await matchByTipShopLink(input);
   if (
     tipLinked &&
@@ -1370,12 +1422,6 @@ export async function matchReferansKalem(
   ) {
     return tipLinked;
   }
-
-  const strict = await matchStrictCatalog(input, olcu);
-  if (strict) return strict;
-
-  const byMasterEq = await matchByMasterEqustoKod(input);
-  if (byMasterEq) return byMasterEq;
 
   if (
     isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi }) ||
@@ -1453,11 +1499,12 @@ export async function matchReferansKalem(
       );
       if (pisirme) return pisirme;
     }
+    const ozelFiyat = await getOzelImalatPrice(input.isim, olcu, input.urunTipi);
     return buildOzelImalatEslesmis({
       isim: input.isim,
       urunTipi: input.urunTipi,
       notlar: input.notlar,
-      fiyatTry: 0,
+      fiyatTry: ozelFiyat,
       fiyatEur: null,
     });
   }

@@ -183,6 +183,7 @@ export function resolveTeklifMarka(opts: {
   zoneMarka?: string | null;
   urunTipi?: string | null;
   sku?: string | null;
+  ignoreSablonMarka?: boolean;
 }): string {
   const sku = String(opts.sku ?? "").trim();
   if (isPimakTezgahSku(sku) || isPimakDavlumbazSku(sku)) {
@@ -301,8 +302,10 @@ export function resolveTeklifMarka(opts: {
 
   if (opts.linkMarka?.trim()) return markaCanonLabel(opts.linkMarka);
 
-  const fromIsim = markaFromSablonIsim(opts.sablonIsim);
-  if (fromIsim && fromIsim !== "—") return fromIsim;
+  if (!opts.ignoreSablonMarka) {
+    const fromIsim = markaFromSablonIsim(opts.sablonIsim);
+    if (fromIsim && fromIsim !== "—") return fromIsim;
+  }
 
   const fromMetin = markaFromKatalogMetin(opts.urunAd, opts.urunMetin);
   if (fromMetin) return markaCanonLabel(fromMetin);

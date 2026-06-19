@@ -17,6 +17,43 @@ import type {
 } from "../schemas/pfos.schema";
 import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
+import { applyNakliyeMontajToKalemler } from "../teklif/nakliye-montaj";
+import { enrichPfosKalemlerGorsel } from "./katalog-gorsel";
+import { enrichEslesmisUrunKw } from "./enrich-eslesmis-kw";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
+import type { KategoriKodu } from "../schemas/pfos.schema";
+import { isDynamicKonsept } from "./templates";
+import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
+import { resetTeshirReyonSeriesPin } from "../referans/teshir-reyon-match";
+import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
+
+const YIKAMA_TIP_KODU = new Set([
+  "bulasik_giyotin_1000",
+  "bulasik_makinesi_giyotin",
+  "bardak_yikama",
+  "cop_siyirma_tez",
+  "bym_cikis_tez",
+  "bulasik_cikis_tezgahi",
+  "yag_tutucu",
+  "on_yikama_dusu",
+  "dus_sprey",
+  "yer_yikama_hortumu",
+]);
+
+function normalizeKategoriKodu(k: PFOSKalemi): PFOSKalemi {
+  const tip = resolveTipKodu(k.urunTipi);
+  const isim = String(k.isim || "").toLocaleLowerCase("tr");
+  if (
+    YIKAMA_TIP_KODU.has(tip) ||
+    /bulaşık|bulasik|giyotin|bym |sıyırma|yıkama|yikama|yağ tutucu|yag tutucu/.test(isim)
+  ) {
+    if (k.kategoriKodu !== "H") return { ...k, kategoriKodu: "H" as KategoriKodu };
+  }
+  if (/^davlumbaz/.test(k.urunTipi.replace(/_/g, "-")) && k.kategoriKodu === "G") {
+    return { ...k, kategoriKodu: "B" as KategoriKodu };
+  }
+  return k;
+}
 
 export function resolveBolumM2(
   konsept: Konsept,
@@ -53,12 +90,16 @@ async function buildTemplateKalemler(
   m2: number,
   fiyatStratejisi: FiyatStratejisi,
   existingTips: Set<string>,
+  referansListOnly = false,
 ): Promise<PFOSKalemi[]> {
   const eligibleItems = template.items.filter((item) => {
     if (item.minM2 !== undefined && m2 < item.minM2) return false;
     if (item.maxM2 !== undefined && m2 >= item.maxM2) return false;
     return true;
   });
+
+  await loadLegacyCatalogRows();
+  resetTeshirReyonSeriesPin();
 
   const kalemler: PFOSKalemi[] = [];
 
@@ -70,18 +111,40 @@ async function buildTemplateKalemler(
       : tipResolved;
     if (existingTips.has(tipKey)) continue;
 
-    const adet = calcAdet(item.scale, m2, template.seatDensity);
-    const urun = await matchProductForMotor(
-      item.urunTipi,
-      item.kategoriKodu,
-      fiyatStratejisi,
-    );
+    const adet = referansListOnly
+      ? item.scale.type === "fixed"
+        ? item.scale.adet
+        : calcAdet(item.scale, m2, template.seatDensity)
+      : calcAdet(item.scale, m2, template.seatDensity);
+    const urunMatched = referansListOnly
+      ? await matchProductForReferansKalem({
+          urunTipi: item.urunTipi,
+          fiyatStratejisi,
+          isim: item.isim,
+          notlar: item.notlar,
+          referansPoz: item.referansPoz,
+          referansListeKey:
+            item.referansListeKey ?? template.referansId ?? undefined,
+        })
+      : await matchProductForMotor(
+          item.urunTipi,
+          item.kategoriKodu,
+          fiyatStratejisi,
+          item.isim,
+          item.notlar,
+        );
+    const urun = await enrichEslesmisUrunKw(urunMatched, {
+      isim: item.isim,
+      urunTipi: item.urunTipi,
+    });
 
     kalemler.push({
       poz: item.referansPoz ?? "",
       referansPoz: item.referansPoz,
       kategoriKodu: item.kategoriKodu,
       altKategori: item.altKategori,
+      referansBolumSira: item.referansBolumSira,
+      referansBolumKey: item.referansBolumKey,
       urunTipi: item.urunTipi,
       isim: item.isim,
       tip: item.tip,
@@ -138,6 +201,7 @@ export async function calculateUnifiedQuote(
   req: PFOSRequest,
   template: ConceptTemplate,
 ): Promise<PFOSResponse> {
+  resetTeshirReyonSeriesPin();
   const { konsept, sehir } = req;
   const fiyatStratejisi: FiyatStratejisi =
     req.fiyatStratejisi ?? "orta";
@@ -168,12 +232,19 @@ export async function calculateUnifiedQuote(
           (z) => (bolumM2Effective[z] ?? 0) > 0,
         );
 
-  /** Zone katalog (ZRN) + konsept şablonu birleşimi */
-  const zoneKalemler = await buildZoneCatalogKalemler({
-    zoneKeys,
-    bolumM2: bolumM2Effective,
-    fiyatStratejisi,
-  });
+  /** Referans JSON konseptlerinde zone katalog (bar espresso vb.) eklenmez */
+  const referansListOnly =
+    template.teklifPozModu === "referans" ||
+    isDynamicKonsept(konseptKey) ||
+    Boolean(template.referansId);
+
+  const zoneKalemler = referansListOnly
+    ? []
+    : await buildZoneCatalogKalemler({
+        zoneKeys,
+        bolumM2: bolumM2Effective,
+        fiyatStratejisi,
+      });
 
   const existingTips = new Set(
     zoneKalemler.map((k) => resolveTipKodu(k.urunTipi)),
@@ -183,10 +254,11 @@ export async function calculateUnifiedQuote(
     req.m2,
     fiyatStratejisi,
     existingTips,
+    referansListOnly,
   );
 
-  const kalemler = finalizeKalemlerForTeklif(
-    dedupeKalemler([...zoneKalemler, ...templateKalemler]),
+  const kalemlerRaw = finalizeKalemlerForTeklif(
+    dedupeKalemler([...zoneKalemler, ...templateKalemler]).map(normalizeKategoriKodu),
     template.teklifPozModu || template.teklifBolum
       ? {
           pozModu: template.teklifPozModu ?? "kategori",
@@ -195,22 +267,43 @@ export async function calculateUnifiedQuote(
       : undefined,
   );
 
-  const zorunluKalemler = kalemler.filter((k) => k.tip === "zorunlu");
-  const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);
-  const eslesmeToplam = kalemler.filter((k) => k.urun !== null).length;
+  const kalemler = await applyNakliyeMontajToKalemler(kalemlerRaw, {
+    m2: req.m2,
+    sehir: sehir ?? null,
+  });
 
-  const toplamElektrikKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? 0;
+  const kalemlerWithGorsel = await enrichPfosKalemlerGorsel(kalemler);
+
+  const zorunluKalemler = kalemlerWithGorsel.filter((k) => k.tip === "zorunlu");
+  const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);
+  const eslesmeToplam = kalemlerWithGorsel.filter((k) => k.urun !== null).length;
+
+  const toplamElektrikKw = kalemlerWithGorsel.reduce((sum, k) => {
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).elektrikGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
-  const toplamGazKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.gazGucuKw ?? k.gazGucuKwHint ?? 0;
+  const toplamGazKw = kalemlerWithGorsel.reduce((sum, k) => {
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).gazGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
   const eksikZorunlu = zorunluKalemler.filter((k) => k.urun === null);
-  const toplamFiyatEslesen = kalemler.reduce((sum, k) => {
+  const toplamFiyatEslesen = kalemlerWithGorsel.reduce((sum, k) => {
     if (!k.urun) return sum;
     return sum + k.urun.fiyat * k.adet;
   }, 0);
@@ -225,7 +318,24 @@ export async function calculateUnifiedQuote(
       : 0.8;
 
   const uyarilar: string[] = [];
-  if (zoneKalemler.length === 0 && zoneKeys.length > 0) {
+  if (referansListOnly) {
+    uyarilar.push(
+      "Ekipman listesi yalnızca kayıtlı referans dosyasından alındı (proje-akis shopTypes / m² bandı).",
+    );
+    const fiyatsiz = kalemlerWithGorsel.filter(
+      (k) => k.tip === "zorunlu" && (!k.urun || k.urun.fiyat <= 0),
+    );
+    if (fiyatsiz.length > 0) {
+      uyarilar.push(
+        `${fiyatsiz.length} kalem için katalog fiyatı bulunamadı — Equsto özel imalat / pfos-referans-sku-links.json ile doğrulanmalı: ` +
+          fiyatsiz
+            .slice(0, 6)
+            .map((k) => `${k.referansPoz ?? k.poz} ${k.isim}`)
+            .join("; ") +
+          (fiyatsiz.length > 6 ? "…" : ""),
+      );
+    }
+  } else if (zoneKalemler.length === 0 && zoneKeys.length > 0) {
     uyarilar.push(
       "Mutfak bölümü seçildi ancak zone kataloğundan kalem üretilemedi — yalnızca konsept şablonu uygulandı.",
     );
@@ -246,9 +356,11 @@ export async function calculateUnifiedQuote(
       "Güven skoru düşük — ürün kataloğunun bu konsept için genişletilmesi önerilir.",
     );
   }
-  uyarilar.push(
-    "PFOS yapay zekadan yardım alır; hata yapabilir. Teklif öncesi uzmanla doğrulayınız.",
-  );
+  if (!referansListOnly) {
+    uyarilar.push(
+      "PFOS yapay zekadan yardım alır; hata yapabilir. Teklif öncesi uzmanla doğrulayınız.",
+    );
+  }
 
   return {
     konsept,
@@ -256,7 +368,7 @@ export async function calculateUnifiedQuote(
     m2: req.m2,
     sehir,
     guvenSkoru,
-    kalemler,
+    kalemler: kalemlerWithGorsel,
     bolumM2: bolumM2Effective,
     zonesUsed: zoneKeys,
     teklifLayout:

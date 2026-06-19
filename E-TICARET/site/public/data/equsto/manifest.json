@@ -1,13 +1,13 @@
 {
-  "generated": "2026-06-16T16:59:22.522Z",
+  "generated": "2026-06-16T19:58:06.217Z",
   "brand": "Pimak",
   "kaynak": "pimak-katalog-pdf",
   "pdf_pages": "188-197",
-  "imported": 302,
-  "priced": 302,
-  "with_image": 302,
+  "imported": 312,
+  "priced": 312,
+  "with_image": 312,
   "depts": {
-    "tezgah": 211,
+    "tezgah": 221,
     "davlumbaz": 91
   }
 }

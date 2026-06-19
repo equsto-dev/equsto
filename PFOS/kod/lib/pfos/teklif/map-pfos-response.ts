@@ -8,27 +8,58 @@ import {
   bolumForKalem,
   finalizeKalemlerForTeklif,
 } from "./assign-poz";
-import { formatTarihTr, isOlcuMetni, olcuForTeklifUrun, tlToEur, yeniTeklifSayisi } from "./format-v14";
+import {
+  birimEurFromEslesmis,
+  formatTarihTr,
+  isOlcuMetni,
+  olcuForTeklifUrun,
+  yeniTeklifSayisi,
+} from "./format-v14";
 import { resolveTeklifMarka } from "../core/catalog-enrich";
+import {
+  normalizePfosGorselUrl,
+  oztiWebImageRelFromSku,
+  portashelfGorselRelFromSku,
+} from "../core/katalog-gorsel-url";
+import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
+import { equstoFiyatListesiGorselRelFromSku } from "../core/equsto-fiyat-sku";
+import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
+import { buzdolabiDisplayIsimFromSablon } from "../referans/buzdolabi-display";
+import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
+import {
+  formatPfosDisplayTanim,
+  isProformaJunkText,
+} from "../parse-upload/sanitize-tanim";
+import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
+import { tezgahEvyeGorselRel } from "../core/tezgah-evye-gorsel";
+import { isCalismaTezgahiReferansIsim } from "../core/calisma-tezgah";
+import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
+import { PORTASHELF_304_GORSEL_REL } from "../core/portashelf-fiyat";
 
-function specAciklama(k: PFOSResponse["kalemler"][number]): string {
-  const u = k.urun;
-  const lines: string[] = [];
-  if (u?.ad && u.ad !== k.isim) lines.push(`•  ${u.ad}`);
-  if (k.notlar && !isOlcuMetni(k.notlar)) lines.push(`•  ${k.notlar}`);
-  if (u?.sku) lines.push(`•  Stok: ${u.sku}`);
-  if (u?.model && u.model !== u.sku) lines.push(`•  Model: ${u.model}`);
-  const marka = resolveTeklifMarka({
-    katalogMarka: u?.marka,
-    urunAd: u?.ad,
-    sablonIsim: k.isim,
-  });
-  if (marka && marka !== "—") lines.push(`•  Marka: ${marka}`);
-  const elk = u?.elektrikGucuKw ?? k.elektrikGucuKwHint;
-  const gaz = u?.gazGucuKw ?? k.gazGucuKwHint;
-  if (elk && elk > 0) lines.push(`•  Elektrik: ${elk} kW`);
-  if (gaz && gaz > 0) lines.push(`•  Gaz: ${gaz} kW`);
-  return lines.join("\n");
+function cleanObjectString(s: string | null | undefined): string {
+  if (!s) return "";
+  return s.replace(/\[object\s+object\]/gi, " ").replace(/\s+/g, " ").trim();
+}
+
+function specAciklama(
+  k: PFOSResponse["kalemler"][number],
+  _referansListe = false,
+): string {
+  const fromUrun = k.urun?.teklifAciklama?.trim();
+  if (fromUrun) return normalizeTeklifAciklamaText(cleanObjectString(fromUrun));
+  const notlar = cleanObjectString(k.notlar);
+  if (isProformaJunkText(notlar)) {
+    return "";
+  }
+  return normalizeTeklifAciklamaText(
+    buildCatalogTeklifAciklama({
+      description: null,
+      teknik_ozellikler: null,
+      specs: notlar || null,
+      aciklama: formatPfosDisplayTanim(k.isim),
+    }),
+  );
 }
 
 /**
@@ -48,14 +79,81 @@ export function pfosResponseToTeklifV14(
   },
 ): TeklifModelV14 {
   const kalemler = finalizeKalemlerForTeklif(res.kalemler, res.teklifLayout);
+  const referansListe =
+    res.teklifLayout?.pozModu === "referans" ||
+    kalemler.every((k) => !!k.referansPoz);
   const eurTry = meta.eurTry ?? null;
   const doviz: TeklifV14Satir["doviz"] = "EUR";
 
   const satirlar: TeklifV14Satir[] = kalemler.map((k) => {
     const u = k.urun;
     const adet = k.adet;
-    const birimEur = tlToEur(u?.fiyat ?? null, eurTry);
+    const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
+    const stokNo = u?.sku?.trim() ?? "";
+
+    let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
+        equstoFiyatListesiGorselRelFromSku(stokNo) ??
+        u?.gorselUrl ??
+        equstoPimakGorselRelFromSku(stokNo, k.isim) ??
+        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
+
+    const sablonIsim = formatPfosDisplayTanim(k.isim);
+    const isDavlumbazSku =
+      isEqustoDavlumbazRow(stokNo) || /^(7885|9885)\./i.test(stokNo);
+    if (isDavlumbazSku && !/davlumbaz/i.test(sablonIsim)) {
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ?? null;
+    }
+
+    const nameL = sablonIsim.toLowerCase();
+    if (
+      /induksiyon|indüksiyon|ocak|mikser/.test(nameL) &&
+      finalGorsel &&
+      /market|inci|vitrin|display|tatlı|tatli|caglayan|cupcake/i.test(
+        String(finalGorsel),
+      )
+    ) {
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ??
+        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
+    }
+
+    const evyeGorsel = tezgahEvyeGorselRel(stokNo, sablonIsim);
+    if (evyeGorsel) {
+      finalGorsel = evyeGorsel;
+    }
+
+    if (isIstifRafiReferansIsim(sablonIsim)) {
+      finalGorsel = finalGorsel ?? PORTASHELF_304_GORSEL_REL;
+    }
+
+    if (
+      !finalGorsel &&
+      isCalismaTezgahiReferansIsim(sablonIsim, cleanObjectString(k.notlar)) &&
+      u?.olcu
+    ) {
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ??
+        equstoFiyatListesiGorselRelFromSku(stokNo);
+    }
+
+    const gorselFallback = normalizePfosGorselUrl(finalGorsel);
+    const kw = resolveTeklifKw({
+      isim: sablonIsim,
+      urunTipi: k.urunTipi,
+      urun: u,
+      elektrikGucuKwHint: k.elektrikGucuKwHint,
+      gazGucuKwHint: k.gazGucuKwHint,
+    });
+
+    const olcuTeklif =
+      olcuForTeklifUrun(u, cleanObjectString(k.notlar));
+    const tanim = buzdolabiDisplayIsimFromSablon(sablonIsim, {
+      sku: u?.sku,
+      katalogAd: u?.ad,
+      olcu: olcuTeklif,
+    });
 
     return {
       bolumNo,
@@ -63,21 +161,29 @@ export function pfosResponseToTeklifV14(
       poz: k.poz,
       ek: "",
       stokNo: u?.sku ?? "",
-      tanim: k.isim,
+      tanim,
       marka: resolveTeklifMarka({
         katalogMarka: u?.marka,
         urunAd: u?.ad,
-        sablonIsim: k.isim,
+        sablonIsim,
+        urunTipi: k.urunTipi,
+        sku: u?.sku,
+        ignoreSablonMarka: referansListe,
       }),
-      olcu: olcuForTeklifUrun(u, k.notlar),
-      elkKw: u?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? null,
-      gazKw: u?.gazGucuKw ?? k.gazGucuKwHint ?? null,
+      olcu:
+        sanitizeDavlumbazOlcu(
+          tanim,
+          olcuTeklif,
+          k.urunTipi,
+        ) ?? olcuTeklif,
+      elkKw: kw.elektrikGucuKw,
+      gazKw: kw.gazGucuKw,
       adet,
       birimSatis: birimEur,
       toplamSatis: birimEur != null ? birimEur * adet : null,
       doviz,
-      fotoNot: u?.gorselUrl ? `Fotoğraf\n${u.gorselUrl}` : undefined,
-      aciklama: specAciklama(k) || undefined,
+      fotoUrl: gorselFallback ?? undefined,
+      aciklama: specAciklama(k, referansListe) || undefined,
     };
   });
 
@@ -107,7 +213,6 @@ export function pfosResponseToTeklifV14(
     },
     sartlar: [
       ...TEKLIF_V14_SARTLAR,
-      ...res.uyarilar.filter((u) => !u.startsWith("PFOS yapay")),
     ],
     meta: {
       konsept: res.konsept,

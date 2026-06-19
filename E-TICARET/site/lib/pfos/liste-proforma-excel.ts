@@ -359,6 +359,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
   let header: TabularHeader | null = null;
   let bolum = "";
   let bolumAd = "";
+  let sectionIndex = 0;
 
   ws.eachRow({ includeEmpty: false }, (row) => {
     const cells = rowCells(row);
@@ -387,18 +388,20 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       !NUM_POZ_RE.test(noRaw.replace(/\D/g, ""))
     ) {
       bolum = pozRaw.toUpperCase();
-      bolumAd = adBase;
+      sectionIndex++;
+      bolumAd = `${adBase}\0${sectionIndex}`;
       return;
     }
 
     if (
       !pozRaw &&
       !noRaw &&
-      adBase.length > 8 &&
+      adBase.length >= 3 &&
       !OLCU_RE.test(adBase) &&
       !/^\d+$/.test(adBase)
     ) {
-      bolumAd = adBase;
+      sectionIndex++;
+      bolumAd = `${adBase}\0${sectionIndex}`;
       const harf = adBase.match(/\b([A-Z])\s*[-–]/i)?.[1];
       if (harf) bolum = harf.toUpperCase();
       return;
@@ -416,7 +419,17 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
 
     let olcu = "—";
     if (header.olcu >= 0) {
-      const raw = cells[header.olcu]?.trim();
+      let raw = cells[header.olcu]?.trim();
+      if (!raw) {
+        for (let i = header.olcu + 1; i < cells.length; i++) {
+          if (i === header.adet || i === header.malzeme) break;
+          const val = cells[i]?.trim();
+          if (val) {
+            raw = val;
+            break;
+          }
+        }
+      }
       if (raw) olcu = OLCU_RE.test(raw) ? (raw.match(OLCU_RE)?.[0] ?? raw) : raw;
     }
     if (olcu === "—") {
@@ -475,6 +488,7 @@ export function parseProformaExcelWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
   const rows: PfosEkipmanSatir[] = [];
   let bolum = "";
   let bolumAd = "";
+  let sectionIndex = 0;
 
   ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
     if (rowNumber < 2) return;
@@ -488,11 +502,12 @@ export function parseProformaExcelWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
     if (pozIdx < 0) {
       const header = cells.filter(Boolean).join(" ");
       if (
-        header.length > 4 &&
+        header.length >= 3 &&
         !/tanim|açıklama|ölçü|adet|fiyat/i.test(header) &&
         cells.length <= 2
       ) {
-        bolumAd = header;
+        sectionIndex++;
+        bolumAd = `${header}\0${sectionIndex}`;
         bolum = header.charAt(0).toUpperCase();
       }
       return;

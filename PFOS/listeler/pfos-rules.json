@@ -102,7 +102,7 @@
       "when": { "konseptIn": ["Steakhouse", "Restaurant"], "dukkanIn": ["Steakhouse"], "alanGte": 220 },
       "add": ["IND_OCAK_6", "KNV", "BZDL_600", "BULASIK_T"]
     },
-    { "id": "shop-sarkuteri", "priority": 800, "when": { "dukkanEq": "Gurme Şarküteri" }, "add": ["ET_DLBI", "VAKUM"] },
+    { "id": "shop-sarkuteri", "priority": 800, "when": { "dukkanIn": ["Gurme Şarküteri", "Şarküteri Restoran"] }, "add": ["ET_DLBI", "VAKUM"] },
     { "id": "shop-balik", "priority": 800, "when": { "dukkanEq": "Balık Restaurant" }, "add": ["BUZ_MAK"] },
 
     { "id": "fastfood-burger", "priority": 790, "when": { "dukkanEq": "Fastfood", "altEq": "Burger" }, "add": ["CHAR_BROIL", "FRITOR"] },

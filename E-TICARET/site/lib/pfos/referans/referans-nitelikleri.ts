@@ -114,6 +114,8 @@ export function referansKatalogCeliski(
   const k = norm(katalogAd);
   if (!k) return false;
 
+  // Gelen listedeki markayı değil, PFOS'ta belirlenen markaları eşleştirmek için marka çelişki kontrolünü devre dışı bırakıyoruz.
+  /*
   if (ref.markalar.length) {
     const katMarka = katalogMarkalari(katalogAd);
     if (katMarka.length && !ref.markalar.some((m) => katMarka.includes(m))) {
@@ -123,6 +125,7 @@ export function referansKatalogCeliski(
       return true;
     }
   }
+  */
 
   if (ref.buzKgGun != null && /buz mak|ice/.test(k)) {
     const katKg = buzKgFromKatalog(katalogAd);

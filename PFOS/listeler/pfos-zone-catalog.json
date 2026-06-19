@@ -258,6 +258,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "patates_soyma",
+          "marka": "Boğaziçi",
           "unit_price_try": 28500,
           "price_source": "referans_try"
         }
@@ -295,6 +296,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "dilimleme_makinesi",
+          "marka": "Boğaziçi",
           "unit_price_try": 23246,
           "price_source": "ekipmanlar_medyan",
           "zone_rule": "sarkuteri_zorunlu_et_opsiyonel"
@@ -307,6 +309,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "kiyma_makinesi",
+          "marka": "Boğaziçi",
           "unit_price_try": 48500,
           "price_source": "referans_try"
         },
@@ -318,6 +321,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "kemik_testere",
+          "marka": "Boğaziçi",
           "unit_price_try": 62000,
           "price_source": "referans_try"
         },
@@ -329,6 +333,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "vakum_makinesi",
+          "marka": "Boğaziçi",
           "unit_price_try": 18500,
           "price_source": "referans_try"
         }
@@ -598,6 +603,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "bulasik_sepet",
+          "marka": "Inoksan",
           "unit_price_try": 45000,
           "price_source": "referans_try"
         },
@@ -609,6 +615,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "bulasik_giyotin_1000",
+          "marka": "Inoksan",
           "unit_price_try": 80978,
           "price_source": "ekipmanlar_medyan"
         },
@@ -620,6 +627,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "bulasik_tunel",
+          "marka": "Inoksan",
           "unit_price_try": 245000,
           "price_source": "referans_try"
         }
@@ -635,6 +643,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "spiral_hamur",
+          "marka": "Boğaziçi",
           "unit_price_try": 95000,
           "price_source": "referans_try"
         },
@@ -646,6 +655,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "hamur_acma",
+          "marka": "Boğaziçi",
           "unit_price_try": 55000,
           "price_source": "referans_try"
         },
@@ -775,6 +785,7 @@
           "m2_per_unit": null,
           "min_qty": 1,
           "tip_kodu": "bardak_yikama",
+          "marka": "Inoksan",
           "unit_price_try": 35000,
           "price_source": "referans_try"
         }

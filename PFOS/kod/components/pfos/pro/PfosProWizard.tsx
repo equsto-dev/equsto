@@ -18,6 +18,7 @@ import {
   Alert,
   App,
   Button,
+  Checkbox,
   Col,
   Empty,
   Row,
@@ -58,6 +59,7 @@ import {
   formatTeklifKurLine,
   type TeklifKurSnapshot,
 } from "@/lib/pfos/teklif/fetch-kur.client";
+import type { PfosProjeDetail } from "@/lib/pfos/projects/load-project-detail";
 import { TEKLIF_V14_EUR_TRY_URL } from "@/lib/pfos/teklif/constants";
 
 const ILLER = [
@@ -96,6 +98,10 @@ export default function PfosProWizard() {
   const [hata, setHata] = useState<string | null>(null);
   const [kur, setKur] = useState<TeklifKurSnapshot | null>(null);
   const [kurYukleniyor, setKurYukleniyor] = useState(true);
+  const [referansProjeler, setReferansProjeler] = useState<
+    { id: string; baslik: string; zoneCount: number; dwgUrl?: string | null }[]
+  >([]);
+  const [referansYukleniyor, setReferansYukleniyor] = useState(false);
 
   const set = useCallback(
     (patch: Partial<PfosWizardState>) =>
@@ -168,22 +174,146 @@ export default function PfosProWizard() {
   }
 
   const seciliKonsept = konseptler.find((k) => k.konsept === state.konsept);
+  const m2Min = seciliKonsept?.m2Min ?? 30;
+  const m2Max = seciliKonsept?.m2Max ?? 2000;
   const profil = state.konsept ? PROFIL_BY_SLUG[state.konsept] : null;
-  const zones = zonesForKonsept(state.konsept);
+  const profileZones = zonesForKonsept(state.konsept);
+  const activeZones =
+    state.referansProjeId && state.referansZoneSecimi.length
+      ? state.referansZoneSecimi
+      : profileZones;
+  const zones = activeZones;
   const toplamM2 = parseM2(state.m2Toplam);
   const bolumToplam = sumBolum(state.bolumM2);
   const m2Fark = toplamM2 > 0 ? toplamM2 - bolumToplam : 0;
   const m2Ok =
-    toplamM2 >= 30 && (bolumToplam === 0 || Math.abs(m2Fark) < 1);
+    toplamM2 >= m2Min &&
+    toplamM2 <= m2Max &&
+    (bolumToplam === 0 || Math.abs(m2Fark) < 1);
+
+  function bolumFromReferansSecimi(
+    secili: string[],
+    kaynak: Record<string, number>,
+  ): Record<string, number | string> {
+    const out: Record<string, number | string> = {};
+    for (const z of secili) {
+      const v = kaynak[z];
+      if (v != null && v > 0) out[z] = v;
+    }
+    return out;
+  }
 
   function handleKonsept(k: Konsept) {
     const t = parseM2(state.m2Toplam);
     const z = zonesForKonsept(k);
     set({
       konsept: k,
+      referansProjeId: null,
+      referansZoneSecimi: [],
+      referansBolumM2: {},
       bolumM2: t > 0 && z.length ? dagitM2Toplam(z, t) : {},
     });
   }
+
+  const applyReferansProje = useCallback(
+    async (projeId: string | null) => {
+      if (!projeId) {
+        set({
+          referansProjeId: null,
+          referansZoneSecimi: [],
+          referansBolumM2: {},
+        });
+        return;
+      }
+      setReferansYukleniyor(true);
+      try {
+        const res = await fetch(`/api/pfos/projects/${encodeURIComponent(projeId)}`, {
+          cache: "no-store",
+        });
+        if (!res.ok) throw new Error("Proje detayı alınamadı");
+        const j = (await res.json()) as { project?: PfosProjeDetail };
+        const p = j.project;
+        if (!p) throw new Error("Proje bulunamadı");
+        const secili = p.pfosZones ?? [];
+        set({
+          referansProjeId: p.id,
+          referansBolumM2: p.bolumM2,
+          referansZoneSecimi: secili,
+          m2Toplam: p.m2Toplam,
+          bolumM2: bolumFromReferansSecimi(secili, p.bolumM2),
+          projeAdi: p.baslik,
+        });
+        message.success(`${p.baslik} — ${secili.length} bölüm yüklendi`);
+      } catch (e) {
+        message.error(e instanceof Error ? e.message : "Referans proje yüklenemedi");
+      } finally {
+        setReferansYukleniyor(false);
+      }
+    },
+    [message, set],
+  );
+
+  function toggleReferansZone(zoneKey: string, checked: boolean) {
+    const next = checked
+      ? [...state.referansZoneSecimi, zoneKey]
+      : state.referansZoneSecimi.filter((z) => z !== zoneKey);
+    set({
+      referansZoneSecimi: next,
+      bolumM2: bolumFromReferansSecimi(next, state.referansBolumM2),
+    });
+  }
+
+  useEffect(() => {
+    if (!state.konsept || !seciliKonsept) {
+      setReferansProjeler([]);
+      return;
+    }
+    let cancelled = false;
+    setReferansYukleniyor(true);
+    fetch("/api/pfos/projects", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((j) => {
+        if (cancelled) return;
+        const label = seciliKonsept.label.toLowerCase();
+        const slug = state.konsept!.toLowerCase();
+        const list = (j.projects ?? [])
+          .filter(
+            (p: {
+              detailAvailable?: boolean;
+              konsept?: string;
+              dukkan?: string;
+              id?: string;
+            }) =>
+              p.detailAvailable &&
+              ((p.konsept ?? "").toLowerCase().includes(slug) ||
+                (p.dukkan ?? "").toLowerCase().includes(label) ||
+                label.includes((p.konsept ?? "").toLowerCase())),
+          )
+          .map(
+            (p: {
+              id: string;
+              baslik: string;
+              zoneCount: number;
+              dwgUrl?: string | null;
+            }) => ({
+              id: p.id,
+              baslik: p.baslik,
+              zoneCount: p.zoneCount,
+              dwgUrl: p.dwgUrl,
+            }),
+          );
+        setReferansProjeler(list);
+      })
+      .catch(() => {
+        if (!cancelled) setReferansProjeler([]);
+      })
+      .finally(() => {
+        if (!cancelled) setReferansYukleniyor(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [state.konsept, seciliKonsept]);
 
   function handleM2Toplam(v: number | null) {
     const val = v ?? "";
@@ -207,7 +337,7 @@ export default function PfosProWizard() {
   async function teklifOlustur() {
     if (!state.konsept) return;
     const m2 = parseM2(state.m2Toplam);
-    if (m2 < 30) return;
+    if (m2 < m2Min || m2 > m2Max) return;
 
     setYukleniyor(true);
     setHata(null);
@@ -596,11 +726,11 @@ export default function PfosProWizard() {
                 <Col xs={24} md={10} lg={8}>
                   <ProFormDigit
                     label="Toplam alan (m²)"
-                    min={30}
-                    max={2000}
+                    min={m2Min}
+                    max={m2Max}
                     extra={
                       seciliKonsept
-                        ? `Önerilen: ${seciliKonsept.m2Min}–${seciliKonsept.m2Max} m²`
+                        ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
                         : undefined
                     }
                     fieldProps={{
@@ -614,8 +744,8 @@ export default function PfosProWizard() {
             ) : (
               <ProFormDigit
                 label="Toplam alan (m²)"
-                min={30}
-                max={2000}
+                min={m2Min}
+                max={m2Max}
                 fieldProps={{
                   value: toplamM2 || undefined,
                   onChange: handleM2Toplam,
@@ -623,7 +753,7 @@ export default function PfosProWizard() {
                 }}
                 extra={
                   seciliKonsept
-                    ? `Önerilen: ${seciliKonsept.m2Min}–${seciliKonsept.m2Max} m²`
+                    ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
                     : undefined
                 }
               />
@@ -645,6 +775,60 @@ export default function PfosProWizard() {
               message="Teklif çıktısı: Excel proforma"
               description={`13 sütun proforma (Böl · Poz · Tanım · Marka · Ölçü · Elk · Gaz · Adet · Satış EUR). ${teklifMarkaPaneliOzeti()}`}
             />
+
+            {referansProjeler.length > 0 && (
+              <ProCard
+                size="small"
+                title="Referans mutfak projesi"
+                style={{ marginBottom: 16 }}
+                loading={referansYukleniyor}
+              >
+                <ProFormSelect
+                  label="Arşiv proje"
+                  showSearch
+                  allowClear
+                  options={[
+                    { label: "— Manuel bölüm m² —", value: "" },
+                    ...referansProjeler.map((p) => ({
+                      label: `${p.baslik} (${p.zoneCount} bölüm)`,
+                      value: p.id,
+                    })),
+                  ]}
+                  fieldProps={{
+                    value: state.referansProjeId ?? "",
+                    placeholder: "S13-117 gibi onaylı proje seçin",
+                    onChange: (v) => void applyReferansProje(v ? String(v) : null),
+                  }}
+                />
+                {state.referansProjeId && state.referansBolumM2 && (
+                  <>
+                    <Typography.Text type="secondary" style={{ display: "block", marginBottom: 8 }}>
+                      Teklife dahil edilecek bölümler (m² proje planından)
+                    </Typography.Text>
+                    <Checkbox.Group
+                      value={state.referansZoneSecimi}
+                      style={{ width: "100%" }}
+                    >
+                      <Row gutter={[8, 8]}>
+                        {Object.keys(state.referansBolumM2).map((z) => (
+                          <Col xs={24} sm={12} md={8} key={z}>
+                            <Checkbox
+                              value={z}
+                              onChange={(e) => toggleReferansZone(z, e.target.checked)}
+                            >
+                              {zoneLabel(z)}
+                              {state.referansBolumM2[z]
+                                ? ` (${state.referansBolumM2[z]} m²)`
+                                : ""}
+                            </Checkbox>
+                          </Col>
+                        ))}
+                      </Row>
+                    </Checkbox.Group>
+                  </>
+                )}
+              </ProCard>
+            )}
 
             <Row gutter={[16, 0]} style={{ marginBottom: 8 }}>
               <Col xs={24} md={14}>
@@ -678,7 +862,16 @@ export default function PfosProWizard() {
                 <Button
                   size="small"
                   onClick={() => {
-                    const z = zonesForKonsept(state.konsept);
+                    if (state.referansProjeId && state.referansZoneSecimi.length) {
+                      set({
+                        bolumM2: bolumFromReferansSecimi(
+                          state.referansZoneSecimi,
+                          state.referansBolumM2,
+                        ),
+                      });
+                      return;
+                    }
+                    const z = profileZones;
                     if (toplamM2 > 0 && z.length) {
                       set({ bolumM2: dagitM2Toplam(z, toplamM2) });
                     }
@@ -695,7 +888,7 @@ export default function PfosProWizard() {
                     <ProFormDigit
                       label={zoneLabel(z)}
                       min={0}
-                      max={2000}
+                      max={m2Max}
                       fieldProps={{
                         value: parseM2(state.bolumM2[z]) || undefined,
                         onChange: (v) =>

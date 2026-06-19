@@ -90,7 +90,7 @@ export function inferTezgahSeriesKods(isim: string): string[] {
     if (/makine\s*giris|makine\s*giriş/.test(n)) return ["KMGT02", "KMGT01"];
     return ["KTEVT02", "KTEVT01"];
   }
-  if (/dolapli|dolaplı|dolap/.test(n) && /calisma|çalışma|tezgah/.test(n)) {
+  if (/dolapli|dolaplı|dolap|kapali|kapalı/.test(n) && /calisma|çalışma|tezgah/.test(n)) {
     return ["KDCT02", "KDCT01", "KDCT03"];
   }
   if (/set\s*alti|setalti/.test(n)) {
@@ -98,6 +98,12 @@ export function inferTezgahSeriesKods(isim: string): string[] {
   }
   if (/firin\s*stand|fırın\s*stand|firin\s*alt|fırın\s*alt/.test(n)) {
     return ["KSAT02", "KSAT01"];
+  }
+  if (/taban\s*ve\s*ara\s*rafl/.test(n)) {
+    return ["KCT08", "KCT09", "KCT04", "KCT05", "KCT02", "KCT01"];
+  }
+  if (/taban\s*rafl/.test(n)) {
+    return ["KCT04", "KCT05", "KCT06", "KCT02", "KCT01"];
   }
   return ["KCT02", "KCT01", "KCT03", "KCT04", "KCT05"];
 }

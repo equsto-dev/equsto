@@ -168,6 +168,7 @@ export function pfosResponseToTeklifV14(
         sablonIsim,
         urunTipi: k.urunTipi,
         sku: u?.sku,
+        ignoreSablonMarka: referansListe,
       }),
       olcu:
         sanitizeDavlumbazOlcu(

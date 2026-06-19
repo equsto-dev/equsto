@@ -48,8 +48,8 @@ npm run dev
 ## Sizin tarafınızda (briefing)
 
 1. **Supabase** — Frankfurt, pooling + direct URL
-2. **Meilisearch** — [Cloud](https://www.meilisearch.com/cloud) veya yerel Docker (`docs/MEILISEARCH.md`) — Hetzner gerekmez
-3. **Vercel** — repo bağla, env değişkenleri (`MEILISEARCH_*`)
+2. **Meilisearch** — yerel Docker veya Hetzner (`docs/MEILISEARCH.md`)
+3. **Hetzner** — `docker compose` + env (`MEILISEARCH_*` sunucuda)
 
 ## Kilitler
 

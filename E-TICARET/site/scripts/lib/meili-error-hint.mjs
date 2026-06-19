@@ -1,4 +1,4 @@
-/** Meilisearch bağlantı hatalarında Türkçe yönlendirme (Cloud instance silinmiş / host eski). */
+/** Meilisearch bağlantı hatalarında Türkçe yönlendirme. */
 export function printMeiliConnectionHint(host, message) {
   const msg = String(message || "");
   if (!msg.includes("no Route matched")) return false;

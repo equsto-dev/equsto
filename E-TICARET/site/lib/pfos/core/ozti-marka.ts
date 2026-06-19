@@ -40,7 +40,7 @@ export function isOztiPisirmeRow(row: {
   kategori?: string | null;
 }): boolean {
   const sku = String(row.sku ?? "");
-  if (!/^78\d{2}\./i.test(sku) && !isOztiKatalogMarka(row.marka_ad)) {
+  if (!/^78\d{2}\./i.test(sku) && !/^8890\.[a-zA-Z]/i.test(sku) && !isOztiKatalogMarka(row.marka_ad)) {
     return false;
   }
   const ad = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
@@ -49,5 +49,5 @@ export function isOztiPisirmeRow(row: {
       return false;
     }
   }
-  return isOztiPisirmeSku(sku) || (isOztiKatalogMarka(row.marka_ad) && /^78\d{2}\./.test(sku));
+  return isOztiPisirmeSku(sku) || (isOztiKatalogMarka(row.marka_ad) && (/^78\d{2}\./.test(sku) || /^8890\.[a-zA-Z]/i.test(sku)));
 }

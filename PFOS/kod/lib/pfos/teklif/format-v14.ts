@@ -1,4 +1,10 @@
-import { isTepsiKapasiteMetni, olcuMmFromSku } from "./olcu-mm";
+import {
+  displayOlcuMm,
+  isTepsiKapasiteMetni,
+  olcuMmFromSku,
+  stripOlcuUnitSuffix,
+  toOlcuMmDisplay,
+} from "./olcu-mm";
 
 /** v14 proforma — tarih ve teklif no biçimleri */
 
@@ -26,6 +32,43 @@ export function tlToEur(
   return Math.round(tl * 100) / 100;
 }
 
+/** KDV dahil TL (mağaza fiyat_tl) → KDV hariç EUR birim */
+export function tlKdvDahilToEurNet(
+  tlKdvDahil: number | null | undefined,
+  eurTry: number | null | undefined,
+  kdvOran = 20,
+): number | null {
+  if (tlKdvDahil == null || !Number.isFinite(tlKdvDahil) || tlKdvDahil <= 0) {
+    return null;
+  }
+  if (!(eurTry != null && eurTry > 0)) return null;
+  const netTl = tlKdvDahil / (1 + kdvOran / 100);
+  return Math.round((netTl / eurTry) * 100) / 100;
+}
+
+/** PFOS proforma birim EUR — önce katalog satış EUR; yoksa KDV hariç TL ÷ kur */
+export function birimEurFromEslesmis(
+  u: {
+    fiyat?: number | null;
+    fiyatEur?: number | null;
+    doviz?: string | null;
+  } | null
+  | undefined,
+  eurTry?: number | null,
+  _kdvOran = 20,
+): number | null {
+  if (!u) return null;
+  const eur = Number(u.fiyatEur);
+  if (Number.isFinite(eur) && eur > 0) {
+    return Math.round(eur * 100) / 100;
+  }
+  const tl = Number(u.fiyat);
+  if (Number.isFinite(tl) && tl > 0) {
+    return tlToEur(tl, eurTry);
+  }
+  return null;
+}
+
 /** W×D×H, 120*70*85, 90 kg/gün gibi fiziksel ölçü / kapasite metni */
 const OLCU_BOYUT =
   /\d+(?:[.,]\d+)?\s*[*×xX]\s*\d+(?:[.,]\d+)?(?:\s*[*×xX]\s*\d+(?:[.,]\d+)?)?/;
@@ -49,31 +92,80 @@ export function olcuForTeklifSatir(
     if (!s) continue;
     if (s === "—") continue;
     if (isTepsiKapasiteMetni(s)) continue;
-    if (isOlcuMetni(s)) return s;
-    // Katalogdan gelen hazır ölçü (ör. 550×545×530 mm, 10 GN 1/1)
-    if (/[×x*]\s*\d/.test(s) && (/\bmm\b/i.test(s) || /\d+\s*gn\b/i.test(s))) return s;
+
+    const mm = toOlcuMmDisplay(s);
+    if (mm) return mm;
+
+    if (isOlcuMetni(s)) return stripOlcuUnitSuffix(s);
+    if (/[×x*]\s*\d/.test(s) && /\d+\s*gn\b/i.test(s)) return s;
   }
   return "—";
 }
+
+export { displayOlcuMm };
 
 /** Stok kodundan ve eşleşmiş ürün alanlarından v14 Ölçü */
 export function olcuForTeklifUrun(
   urun: { sku?: string | null; olcu?: string | null; model?: string | null } | null | undefined,
   notlar?: string | null,
 ): string {
+  const referansOlcu = String(notlar ?? "")
+    .replace(/^ölçü:\s*/i, "")
+    .trim();
   return olcuForTeklifSatir(
-    olcuMmFromSku(urun?.sku),
+    isOlcuMetni(referansOlcu) ? referansOlcu : null,
     urun?.olcu ?? null,
+    olcuMmFromSku(urun?.sku),
     notlar,
     urun?.model,
   );
 }
 
-/** Proforma/tablo kW hücresi — değer yoksa veya 0 ise boş */
+/** Proforma/tablo kW hücresi — değer yoksa veya 0 ise boş; birim: kW */
 export function formatKwHucre(kw: number | null | undefined): string {
   if (kw == null || !Number.isFinite(kw) || kw <= 0) return "";
-  return String(kw);
+  return `${String(kw)} kW`;
 }
+
+/** Döviz kodu → sembol (proforma dip toplam / Excel) */
+export function dovizSembol(doviz?: string | null): string {
+  const d = String(doviz ?? "EUR")
+    .trim()
+    .toUpperCase();
+  if (d === "USD") return "$";
+  if (d === "TRY" || d === "TL") return "₺";
+  return "€";
+}
+
+/** Proforma EUR fiyat hücresi — örn. 1.140 € */
+export function formatEurHucre(
+  amount: number | null | undefined,
+  fractionDigits = 0,
+): string {
+  if (amount == null || !Number.isFinite(amount)) return "—";
+  const n = fractionDigits === 0 ? Math.round(amount) : amount;
+  return `${n.toLocaleString("tr-TR", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  })} €`;
+}
+
+/** Proforma fiyat + döviz sembolü */
+export function formatTeklifDovizHucre(
+  amount: number | null | undefined,
+  doviz?: string | null,
+  fractionDigits = 0,
+): string {
+  if (amount == null || !Number.isFinite(amount)) return "—";
+  const n = fractionDigits === 0 ? Math.round(amount) : amount;
+  return `${n.toLocaleString("tr-TR", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  })} ${dovizSembol(doviz)}`;
+}
+
+/** Excel kW sütunu — sayısal değer + görünüm birimi */
+export const KW_HUCRE_EXCEL_NUMFMT = '0.0" kW"';
 
 /** Excel hücresi — boş bırakılacaksa null */
 export function kwHucreExcelValue(kw: number | null | undefined): number | null {

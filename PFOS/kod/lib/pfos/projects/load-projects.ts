@@ -1,5 +1,4 @@
-import { readFile } from "fs/promises";
-import path from "path";
+import { readJsonFile } from "@/lib/legacy-data";
 import type {
   PfosProjeProfil,
   PfosProjeRow,
@@ -31,10 +30,6 @@ type ReferansProject = {
 };
 
 let cache: PfosProjelerResponse | null = null;
-
-function dataPath(name: string): string {
-  return path.join(process.cwd(), "public", "data", name);
-}
 
 function yilFromId(id: string): string {
   const m = id.match(/^(\d{4})/);
@@ -102,6 +97,46 @@ function lineCountFromProject(p: ArchiveProject): number {
   return n;
 }
 
+type PilotProject = Omit<ArchiveProject, "files"> & {
+  detail_json?: string;
+  pfos_zones?: string[];
+  bolum_m2?: Record<string, number>;
+  m2_toplam?: number;
+  files?: { path?: string; type?: string; name?: string; url?: string; line_count?: number }[];
+  approved?: boolean;
+};
+
+function rowFromPilot(
+  p: PilotProject,
+  referansIds: Set<string>,
+  profiles: PfosProjeProfil[],
+): PfosProjeRow {
+  const zones = p.zone_order ?? p.pfos_zones ?? Object.keys(p.zones ?? {});
+  const match = bestProfile(zones, profiles);
+  const dwg = (p.files ?? []).find((f) => f.type === "dwg");
+  const referans = referansIds.has(p.id) || p.status === "referans-pilot";
+
+  return {
+    id: p.id,
+    baslik: p.baslik ?? p.id,
+    folder: p.folder ?? p.baslik ?? p.id,
+    yil: yilFromId(p.id),
+    konsept: p.konsept ?? "",
+    dukkan: p.dukkan ?? "",
+    zones,
+    zoneCount: p.zone_count ?? zones.length,
+    fileCount: p.file_count ?? p.files?.length ?? 0,
+    lineCount: lineCountFromProject(p),
+    status: p.status ?? "pilot",
+    referans,
+    profilOneri: match?.label ?? null,
+    profilSkor: match ? Math.round(match.score * 100) : 0,
+    kaynak: "pilot",
+    detailAvailable: Boolean(p.detail_json),
+    dwgUrl: dwg?.url ?? (dwg?.path ? `/data/${dwg.path}` : null),
+  };
+}
+
 function rowFromArchive(
   p: ArchiveProject,
   referansById: Map<string, ReferansProject>,
@@ -147,24 +182,36 @@ function rowFromArchive(
 export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
   if (cache) return cache;
 
-  const [archiveRaw, referansRaw, kurallarRaw, vitrinRaw] = await Promise.all([
-    readFile(dataPath("pfos-archive-extract.json"), "utf-8"),
-    readFile(dataPath("pfos-referans-projeler.json"), "utf-8"),
-    readFile(dataPath("pfos-zone-proje-kurallari.json"), "utf-8"),
-    readFile(dataPath("pfos-projects.json"), "utf-8").catch(() => "{}"),
+  const [archive, referans, kurallar, vitrin, pilot] = await Promise.all([
+    readJsonFile<{ projects: ArchiveProject[] }>("pfos-archive-extract.json"),
+    readJsonFile<{ projects: ReferansProject[] }>("pfos-referans-projeler.json"),
+    readJsonFile<{ profiles: PfosProjeProfil[] }>("pfos-zone-proje-kurallari.json"),
+    readJsonFile<{
+      projects?: {
+        id: string;
+        baslik: string;
+        match?: { konsept?: string; dukkan?: string };
+        lines?: unknown[];
+      }[];
+    }>("pfos-projects.json"),
+    readJsonFile<{ projects?: PilotProject[] }>("pfos-pilot-projeler.json"),
   ]);
 
-  const archive = JSON.parse(archiveRaw) as { projects: ArchiveProject[] };
-  const referans = JSON.parse(referansRaw) as { projects: ReferansProject[] };
-  const kurallar = JSON.parse(kurallarRaw) as { profiles: PfosProjeProfil[] };
-  const vitrin = JSON.parse(vitrinRaw) as {
-    projects?: {
-      id: string;
-      baslik: string;
-      match?: { konsept?: string; dukkan?: string };
-      lines?: unknown[];
-    }[];
-  };
+  if (!archive || !referans || !kurallar) {
+    cache = {
+      projects: [],
+      profiles: [],
+      stats: {
+        total: 0,
+        referans: 0,
+        yillar: [],
+        konseptler: [],
+        dukkanlar: [],
+        zones: [],
+      },
+    };
+    return cache;
+  }
 
   const profiles = kurallar.profiles ?? [];
   const referansById = new Map(referans.projects.map((p) => [p.id, p]));
@@ -175,7 +222,11 @@ export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
     byId.set(p.id, rowFromArchive(p, referansById, referansIds, profiles));
   }
 
-  for (const v of vitrin.projects ?? []) {
+  for (const p of pilot?.projects ?? []) {
+    byId.set(p.id, rowFromPilot(p, referansIds, profiles));
+  }
+
+  for (const v of vitrin?.projects ?? []) {
     if (byId.has(v.id)) continue;
     const zones = ["ana_mutfak", "bar", "bulasikhane"];
     const match = bestProfile(zones, profiles);
