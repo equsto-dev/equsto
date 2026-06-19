@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260619-kdv-dahil-vitrin";
+  var CATALOG_V = "20260619-kdv-dahil-arama-v2";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
