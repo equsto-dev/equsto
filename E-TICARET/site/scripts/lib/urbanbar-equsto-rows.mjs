@@ -284,7 +284,7 @@ export async function buildUrbanBarRowsFromWeb(opts = {}) {
   const outImg = path.join(root, "public/images/catalog/urbanbar");
   const dryRun = opts.copyImages === false ? true : Boolean(opts.dryRun);
   const skipAlcohol = opts.skipAlcohol !== false;
-  const satisOran = Number(process.env.EQUSTO_URBANBAR_SATIS_ORAN || "1");
+  const satisOran = Number(process.env.EQUSTO_URBANBAR_SATIS_ORAN || "2");
 
   if (!fs.existsSync(srcJson)) {
     throw new Error(`urbanbar-web-catalog.json yok — önce scrape: ${srcJson}`);
