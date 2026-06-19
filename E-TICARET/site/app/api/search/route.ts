@@ -18,6 +18,14 @@ import {
   rankSearchHitsByRelevance,
   shouldDiversifySearchHits,
 } from "@/lib/rank-search-hits";
+import { fetchSearchFacetPool } from "@/lib/search-facet-pool";
+import {
+  applySearchFacetFilters,
+  computeSearchFacetCounts,
+  hasActiveSearchFacetFilters,
+  parseSearchFacetParams,
+  searchHasPisirmeFacets,
+} from "@/lib/search-page-facets";
 
 export const runtime = "nodejs";
 
@@ -39,7 +47,7 @@ export async function GET(req: NextRequest) {
           ok: false,
           missing: cfg.missing,
           index: cfg.index,
-          hint: "Vercel env: MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY",
+          hint: ".env.production: MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY",
         },
         503,
       );
@@ -68,6 +76,10 @@ export async function GET(req: NextRequest) {
     ? Math.min(Number(sp.get("limit") || 12), 15)
     : Math.min(Number(sp.get("limit") || 48), 100);
   const offset = isSuggest ? 0 : Math.max(Number(sp.get("offset") || 0), 0);
+  const facetState = parseSearchFacetParams(sp);
+  const wantsFacets =
+    !isSuggest &&
+    (sp.get("facets") === "1" || hasActiveSearchFacetFilters(facetState));
   const cfg = getMeiliConfigStatus();
 
   if (!q) {
@@ -115,6 +127,53 @@ export async function GET(req: NextRequest) {
   }
 
   const client = getMeiliAdmin();
+
+  if (wantsFacets && q) {
+    try {
+      const pool = await fetchSearchFacetPool(client, q);
+      const filtered = applySearchFacetFilters(pool.hits, facetState);
+      const facets = computeSearchFacetCounts(pool.hits, facetState);
+      const hits = filtered.slice(offset, offset + limit);
+      const total = filtered.length;
+      const source = client ? "meilisearch" : "fallback";
+
+      logSearchQuery(q, total, source);
+
+      return searchResponse({
+        query: q,
+        hits: await canonicalizeSearchHits(hits),
+        offset,
+        limit,
+        estimatedTotalHits: total,
+        hasMore: offset + hits.length < total,
+        source,
+        facets: {
+          depts: facets.depts,
+          brands: facets.brands,
+          pisirmeTip: facets.pisirmeTip,
+          priceMin: facets.priceMin,
+          priceMax: facets.priceMax,
+          poolSize: pool.hits.length,
+          poolTotal: pool.estimatedTotalHits,
+          hasPisirmeFacets: searchHasPisirmeFacets(pool.hits),
+        },
+        warning:
+          pool.estimatedTotalHits > pool.hits.length
+            ? `Filtre sayıları ilk ${pool.hits.length} sonuç üzerinden hesaplandı.`
+            : undefined,
+      });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Facet arama hatası";
+      console.error("[api/search] facets:", msg);
+      if (!client) {
+        return respondFallback(
+          offset,
+          `Facet araması başarısız (${msg}). Katalog araması kullanıldı.`,
+        );
+      }
+    }
+  }
+
   if (!client) {
     return respondFallback(
       offset,
