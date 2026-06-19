@@ -212,6 +212,7 @@
     "pfos:casual-cafe:import": "node scripts/import-casual-cafe-beykent.mjs",
     "pfos:wizard-branches:build": "node scripts/build-pfos-wizard-branches.mjs",
     "pfos:proje-akis:seed": "npx tsx scripts/seed-proje-akis-konsept.ts",
+    "pfos:proje-akis:seed-set-kural": "npx tsx scripts/seed-proje-akis-set-kural.ts",
     "pfos:proje-akis:sync-products": "node scripts/sync-proje-akis-products.mjs",
     "pfos:tip-sozluk:sync": "npx tsx scripts/sync-tip-sozlugu.ts",
     "pfos:wizard:sync": "npx tsx scripts/seed-proje-akis-konsept.ts && node scripts/build-pfos-wizard-branches.mjs",
