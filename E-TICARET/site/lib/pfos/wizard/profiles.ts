@@ -146,6 +146,7 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
     konsept: "steakhouse",
     konseptUst: "Restaurant",
     dukkan: "Steakhouse",
+    /** S13-117 onaylı pilot — show_mutfagi … izgara_meze */
     pfosZones: [
       "show_mutfagi",
       "soguk_oda",
@@ -154,8 +155,10 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "ana_mutfak",
       "bar",
       "sebze_hazirlik",
+      "pastane",
       "kuru_depo",
       "bulasikhane",
+      "izgara_meze",
     ],
   },
   balikci: {

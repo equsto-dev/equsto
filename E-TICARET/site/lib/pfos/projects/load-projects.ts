@@ -97,6 +97,44 @@ function lineCountFromProject(p: ArchiveProject): number {
   return n;
 }
 
+type PilotProject = ArchiveProject & {
+  detail_json?: string;
+  pfos_zones?: string[];
+  bolum_m2?: Record<string, number>;
+  m2_toplam?: number;
+  files?: { path?: string; type?: string; name?: string; url?: string }[];
+  approved?: boolean;
+};
+
+function rowFromPilot(
+  p: PilotProject,
+  referansIds: Set<string>,
+  profiles: PfosProjeProfil[],
+): PfosProjeRow {
+  const zones = p.zone_order ?? p.pfos_zones ?? Object.keys(p.zones ?? {});
+  const match = bestProfile(zones, profiles);
+  const dwg = (p.files ?? []).find((f) => f.type === "dwg");
+  const referans = referansIds.has(p.id) || p.status === "referans-pilot";
+
+  return {
+    id: p.id,
+    baslik: p.baslik ?? p.id,
+    folder: p.folder ?? p.baslik ?? p.id,
+    yil: yilFromId(p.id),
+    konsept: p.konsept ?? "",
+    dukkan: p.dukkan ?? "",
+    zones,
+    zoneCount: p.zone_count ?? zones.length,
+    fileCount: p.file_count ?? p.files?.length ?? 0,
+    lineCount: lineCountFromProject(p),
+    status: p.status ?? "pilot",
+    referans,
+    profilOneri: match?.label ?? null,
+    profilSkor: match ? Math.round(match.score * 100) : 0,
+    kaynak: "pilot",
+    detailAvailable: Boolean(p.detail_json),
+    dwgUrl: dwg?.url ?? (dwg?.path ? `/data/${dwg.path}` : null),
+  };
 function rowFromArchive(
   p: ArchiveProject,
   referansById: Map<string, ReferansProject>,
@@ -142,7 +180,7 @@ function rowFromArchive(
 export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
   if (cache) return cache;
 
-  const [archive, referans, kurallar, vitrin] = await Promise.all([
+  const [archive, referans, kurallar, vitrin, pilot] = await Promise.all([
     readJsonFile<{ projects: ArchiveProject[] }>("pfos-archive-extract.json"),
     readJsonFile<{ projects: ReferansProject[] }>("pfos-referans-projeler.json"),
     readJsonFile<{ profiles: PfosProjeProfil[] }>("pfos-zone-proje-kurallari.json"),
@@ -154,6 +192,7 @@ export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
         lines?: unknown[];
       }[];
     }>("pfos-projects.json"),
+    readJsonFile<{ projects?: PilotProject[] }>("pfos-pilot-projeler.json"),
   ]);
 
   if (!archive || !referans || !kurallar) {
@@ -179,6 +218,10 @@ export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
   const byId = new Map<string, PfosProjeRow>();
   for (const p of archive.projects ?? []) {
     byId.set(p.id, rowFromArchive(p, referansById, referansIds, profiles));
+  }
+
+  for (const p of pilot?.projects ?? []) {
+    byId.set(p.id, rowFromPilot(p, referansIds, profiles));
   }
 
   for (const v of vitrin?.projects ?? []) {
