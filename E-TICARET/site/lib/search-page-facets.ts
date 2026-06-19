@@ -24,6 +24,7 @@ export type SearchFacetCounts = {
 };
 
 export const SEARCH_FACET_POOL_CAP = 2000;
+export const BRAND_SEARCH_POOL_CAP = 5000;
 
 const DEPT_LABELS: Record<string, string> = {
   pisirme: "Pişirme",
