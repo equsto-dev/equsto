@@ -12,6 +12,7 @@
     return (el && el.getAttribute("data-eq-shop-chrome-v")) || "20260529-9890-imgs";
   })();
   var lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
+  var serverFacets = null;
   var catalogImgById = null;
   var catalogImgInflight = null;
   var uiBound = false;
@@ -320,8 +321,38 @@
     filterState.sort = "";
     filterState.priceMin = "";
     filterState.priceMax = "";
+    serverFacets = null;
     var sortEl = document.getElementById("eq-arama-sort");
     if (sortEl) sortEl.value = "";
+  }
+
+  function buildFacetQueryParams() {
+    var parts = ["facets=1"];
+    if (filterState.depts.length) {
+      parts.push("dept=" + encodeURIComponent(filterState.depts.join(",")));
+    }
+    if (filterState.brands.length) {
+      parts.push("brand=" + encodeURIComponent(filterState.brands.join(",")));
+    }
+    if (filterState.pisirmeTip.length) {
+      parts.push("pisirmeTip=" + encodeURIComponent(filterState.pisirmeTip.join(",")));
+    }
+    if (filterState.priceMin !== "") {
+      parts.push("priceMin=" + encodeURIComponent(filterState.priceMin));
+    }
+    if (filterState.priceMax !== "") {
+      parts.push("priceMax=" + encodeURIComponent(filterState.priceMax));
+    }
+    return parts.join("&");
+  }
+
+  function refetchWithFilters() {
+    var q = lastRender.q || getQuery();
+    if (!q) {
+      renderAll();
+      return;
+    }
+    fetchPage(q, 0, true);
   }
 
   function hasKuvetGnFacets() {
@@ -333,6 +364,7 @@
   }
 
   function hasPisirmeFacets() {
+    if (serverFacets && serverFacets.hasPisirmeFacets) return true;
     return !!(window.EqPisirmeFacets && sourceHits.some(window.EqPisirmeFacets.isPisirmeProduct));
   }
 
@@ -393,8 +425,21 @@
   }
 
   function filteredHits() {
-    var list = poolForCounts(null);
-    list = list.slice();
+    var list = serverFacets ? sourceHits.slice() : poolForCounts(null);
+    if (!serverFacets) {
+      list = list.slice();
+    } else {
+      if (filterState.kuvetGn.length && window.EqKuvetGnFacets) {
+        list = list.filter(function (h) {
+          return window.EqKuvetGnFacets.hitMatchesAnyFacet(h, filterState.kuvetGn);
+        });
+      }
+      if (filterState.buzdolapTip.length && window.EqBuzdolapFacets) {
+        list = list.filter(function (h) {
+          return window.EqBuzdolapFacets.hitMatchesAnyFacet(h, filterState.buzdolapTip);
+        });
+      }
+    }
     if (filterState.sort === "name") {
       list.sort(function (a, b) {
         return String(a.name || "").localeCompare(String(b.name || ""), "tr");
@@ -753,62 +798,79 @@
           filterState.depts = filterState.depts.filter(function (d) {
             return d !== val;
           });
+          refetchWithFilters();
         } else if (kind === "brand") {
           filterState.brands = filterState.brands.filter(function (b) {
             return b !== val;
           });
+          refetchWithFilters();
         } else if (kind === "kuvetGn") {
           filterState.kuvetGn = filterState.kuvetGn.filter(function (k) {
             return k !== val;
           });
+          renderAll();
         } else if (kind === "buzdolapTip") {
           filterState.buzdolapTip = filterState.buzdolapTip.filter(function (k) {
             return k !== val;
           });
+          renderAll();
         } else if (kind === "pisirmeTip") {
           filterState.pisirmeTip = filterState.pisirmeTip.filter(function (k) {
             return k !== val;
           });
-        } else if (kind === "priceMin") filterState.priceMin = "";
-        else if (kind === "priceMax") filterState.priceMax = "";
-        renderAll();
+          refetchWithFilters();
+        } else if (kind === "priceMin") {
+          filterState.priceMin = "";
+          refetchWithFilters();
+        } else if (kind === "priceMax") {
+          filterState.priceMax = "";
+          refetchWithFilters();
+        }
       });
     });
   }
 
   function renderFacets() {
     var host = document.getElementById("eq-arama-facets");
-    if (!host || !sourceHits.length) {
+    if (!host || (!sourceHits.length && !serverFacets)) {
       if (host) host.innerHTML = "";
       return;
     }
 
-    var deptPool = poolForCounts("dept");
-    var brandPool = poolForCounts("brand");
-    var kuvetGnPool = poolForCounts("kuvetGn");
-    var buzdolapTipPool = poolForCounts("buzdolapTip");
-    var pisirmeTipPool = poolForCounts("pisirmeTip");
-    var pricePool = poolForCounts("price");
     var deptCounts = Object.create(null);
     var brandCounts = Object.create(null);
     var priceMinAll = Infinity;
     var priceMaxAll = 0;
 
-    deptPool.forEach(function (h) {
-      var d = hitDeptKey(h);
-      deptCounts[d] = (deptCounts[d] || 0) + 1;
-    });
-    brandPool.forEach(function (h) {
-      var b = hitBrandKey(h);
-      if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
-    });
-    pricePool.forEach(function (h) {
-      var pr = parsePriceFromHit(h);
-      if (pr > 0) {
-        if (pr < priceMinAll) priceMinAll = pr;
-        if (pr > priceMaxAll) priceMaxAll = pr;
-      }
-    });
+    if (serverFacets) {
+      Object.keys(serverFacets.depts || {}).forEach(function (k) {
+        deptCounts[k] = serverFacets.depts[k];
+      });
+      Object.keys(serverFacets.brands || {}).forEach(function (k) {
+        brandCounts[k] = serverFacets.brands[k];
+      });
+      priceMinAll = Number(serverFacets.priceMin) || 0;
+      priceMaxAll = Number(serverFacets.priceMax) || 0;
+    } else {
+      var deptPool = poolForCounts("dept");
+      var brandPool = poolForCounts("brand");
+      var pricePool = poolForCounts("price");
+      deptPool.forEach(function (h) {
+        var d = hitDeptKey(h);
+        deptCounts[d] = (deptCounts[d] || 0) + 1;
+      });
+      brandPool.forEach(function (h) {
+        var b = hitBrandKey(h);
+        if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
+      });
+      pricePool.forEach(function (h) {
+        var pr = parsePriceFromHit(h);
+        if (pr > 0) {
+          if (pr < priceMinAll) priceMinAll = pr;
+          if (pr > priceMaxAll) priceMaxAll = pr;
+        }
+      });
+    }
     if (!isFinite(priceMinAll)) priceMinAll = 0;
 
     var depts = Object.keys(deptCounts).sort(function (a, b) {
@@ -876,6 +938,7 @@
     html += "</ul></div></details>";
 
     if (window.EqKuvetGnFacets && hasKuvetGnFacets()) {
+      var kuvetGnPool = poolForCounts("kuvetGn");
       var gnCounts = window.EqKuvetGnFacets.countFacets(kuvetGnPool);
       html += window.EqKuvetGnFacets.renderFacetListHtml({
         counts: gnCounts,
@@ -886,6 +949,7 @@
     }
 
     if (window.EqBuzdolapFacets && hasBuzdolapFacets()) {
+      var buzdolapTipPool = poolForCounts("buzdolapTip");
       var buzCounts = window.EqBuzdolapFacets.countFacets(buzdolapTipPool);
       html += window.EqBuzdolapFacets.renderFacetListHtml({
         counts: buzCounts,
@@ -896,7 +960,9 @@
     }
 
     if (window.EqPisirmeFacets && hasPisirmeFacets()) {
-      var pisCounts = window.EqPisirmeFacets.countFacets(pisirmeTipPool);
+      var pisCounts = serverFacets
+        ? serverFacets.pisirmeTip || {}
+        : window.EqPisirmeFacets.countFacets(poolForCounts("pisirmeTip"));
       html += window.EqPisirmeFacets.renderFacetListHtml({
         counts: pisCounts,
         selected: filterState.pisirmeTip,
@@ -956,7 +1022,7 @@
           deptVals.push(el.value);
         });
         filterState.depts = deptVals;
-        renderAll();
+        refetchWithFilters();
         return;
       }
       if (t.name === "eq-arama-brand") {
@@ -965,7 +1031,7 @@
           brandVals.push(el.value);
         });
         filterState.brands = brandVals;
-        renderAll();
+        refetchWithFilters();
         return;
       }
       if (t.name === "eq-arama-kuvet-gn") {
@@ -992,7 +1058,7 @@
           pisVals.push(el.value);
         });
         filterState.pisirmeTip = pisVals;
-        renderAll();
+        refetchWithFilters();
       }
     });
 
@@ -1013,7 +1079,7 @@
       var maxEl = document.getElementById("eq-arama-price-max");
       filterState.priceMin = minEl && minEl.value !== "" ? minEl.value : "";
       filterState.priceMax = maxEl && maxEl.value !== "" ? maxEl.value : "";
-      renderAll();
+      refetchWithFilters();
     });
   }
 
@@ -1154,12 +1220,15 @@
           "<strong>" +
           hits.length +
           "</strong> / " +
-          sourceHits.length +
+          (lastRender.total != null ? lastRender.total : sourceHits.length) +
           " " +
           esc(__searchT("search.filtered_shown", "gösteriliyor"));
       } else {
         filterCount.innerHTML =
-          "<strong>" + sourceHits.length + "</strong> " + esc(__searchT("search.products", "ürün"));
+          "<strong>" +
+          (lastRender.total != null ? lastRender.total : sourceHits.length) +
+          "</strong> " +
+          esc(__searchT("search.products", "ürün"));
       }
     }
 
@@ -1215,7 +1284,9 @@
         "&limit=" +
         PAGE_SIZE +
         "&offset=" +
-        offset,
+        offset +
+        "&" +
+        buildFacetQueryParams(),
       fetchOpts
     )
       .then(function (r) {
@@ -1234,6 +1305,7 @@
           };
           if (replace) {
             sourceHits = [];
+            serverFacets = null;
             resetFilters();
           }
           renderAll();
@@ -1244,9 +1316,12 @@
         var warn = res.data.warning ? String(res.data.warning) : "";
         var total = res.data.estimatedTotalHits;
         var hasMore = !!res.data.hasMore;
+        serverFacets = res.data.facets || serverFacets;
 
         if (replace) {
-          resetFilters();
+          if (!hasActiveFilters()) {
+            resetFilters();
+          }
           sourceHits = sortHitsWithImagesFirst(rawHits);
         } else {
           sourceHits = dedupeHits(sourceHits.concat(rawHits));
@@ -1267,6 +1342,7 @@
         };
         if (replace) {
           sourceHits = [];
+          serverFacets = null;
           resetFilters();
         }
         renderAll();
@@ -1306,7 +1382,7 @@
     if (clearAll) {
       clearAll.addEventListener("click", function () {
         resetFilters();
-        renderAll();
+        refetchWithFilters();
       });
     }
   }
