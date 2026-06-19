@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState, type MouseEvent, type SyntheticEvent } from "react";
+import BesosUrbanBarPrice from "@/components/besos/urbanbar/BesosUrbanBarPrice";
 import type { BesosLocale } from "@/lib/besos/locale";
 import { isShopifyCdn, resolveUrbanBarPlpImages } from "@/lib/besos/urbanbar/plp-images";
-import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 type CartItem = {
@@ -41,7 +41,6 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
   const { hoverCandidates } = resolved;
 
   const pdpHref = product.besosHref || "#";
-  const { amount, vat } = splitUrbanBarPrice(product.price || "", locale);
   const inStock = product.inStock !== false;
 
   const labels = {
@@ -139,12 +138,7 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
         <h3 className="ub-plp-card__title">
           <Link href={pdpHref}>{product.name}</Link>
         </h3>
-        {amount ? (
-          <div className="ub-plp-card__price">
-            <span className="ub-plp-card__price-amount">{amount}</span>
-            {vat ? <span className="ub-plp-card__price-vat">{vat}</span> : null}
-          </div>
-        ) : null}
+        <BesosUrbanBarPrice product={product} locale={locale} variant="plp" />
         <div className="ub-plp-card__buy">
           <div className="ub-plp-card__qty" role="group" aria-label={locale === "en" ? "Quantity" : "Adet"}>
             <button

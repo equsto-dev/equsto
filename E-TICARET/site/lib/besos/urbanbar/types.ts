@@ -56,6 +56,10 @@ export type BesosUrbanBarProduct = {
   images?: string[];
   price?: string;
   fiyat_tl?: number;
+  /** Kutu / paket adedi (1 = tekil) */
+  packQty?: number;
+  /** KDV dahil birim TL */
+  fiyat_tl_birim?: number;
   priceGbp?: number;
   vendor?: string;
   catTags?: string[];

@@ -21,6 +21,7 @@ import {
   parseDescriptionHtml,
   variantFacts,
 } from "./lib/parse-urbanbar-pdp-html.mjs";
+import { urbanBarUnitPricing } from "./lib/urbanbar-pack-qty.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEB_CATALOG = path.join(ROOT, "scripts/data/urbanbar/urbanbar-web-catalog.json");
@@ -107,6 +108,15 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     variant.variantSpecs || [],
   );
 
+  const unitPx = urbanBarUnitPricing({
+    name: row.name,
+    code: variant.sku || row.sku || row.model || handle || row.id,
+    features: parsed.features,
+    description: web?.description || row.aciklama || "",
+    specifications,
+    fiyat_tl: row.fiyat_tl,
+  });
+
   return {
     id: handle || row.id,
     equstoId: row.id,
@@ -136,6 +146,8 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     images: row.images || [],
     price: row.price,
     fiyat_tl: row.fiyat_tl,
+    packQty: unitPx?.packQty ?? 1,
+    fiyat_tl_birim: unitPx?.unitTl,
     priceGbp: variant.priceGbp ?? row.liste_fiyati_gbp,
     vendor: row.oem_brand || row.brand || web?.vendor,
     catTags: row.urbanbar_cat_tags || web?.catTags || [],

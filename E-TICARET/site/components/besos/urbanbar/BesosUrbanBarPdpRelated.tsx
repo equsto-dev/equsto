@@ -2,11 +2,14 @@
 
 import { useCallback, useRef } from "react";
 import Link from "next/link";
-import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
+import BesosUrbanBarPrice from "@/components/besos/urbanbar/BesosUrbanBarPrice";
 
 export type RelatedProduct = {
   name: string;
   price: string;
+  fiyat_tl?: number;
+  code?: string;
+  features?: string[];
   image?: string;
   href: string;
 };
@@ -36,9 +39,7 @@ export default function BesosUrbanBarPdpRelated({ items, locale = "tr" }: Props)
           ‹
         </button>
         <div className="ub-pdp-related__track" ref={trackRef}>
-          {items.map((p) => {
-            const { amount, vat } = splitUrbanBarPrice(p.price, locale);
-            return (
+          {items.map((p) => (
             <Link key={p.href} href={p.href} className="ub-pdp-related__card">
               <span className="ub-pdp-related__img">
                 {p.image ? (
@@ -50,18 +51,23 @@ export default function BesosUrbanBarPdpRelated({ items, locale = "tr" }: Props)
               </span>
               <span className="ub-pdp-related__body">
                 <span className="ub-pdp-related__name">{p.name}</span>
-                {amount ? (
-                  <span className="ub-pdp-related__price">
-                    {amount}
-                    {vat ? <span className="ub-pdp-related__vat"> {vat}</span> : null}
-                  </span>
-                ) : null}
+                <BesosUrbanBarPrice
+                  product={{
+                    name: p.name,
+                    price: p.price,
+                    fiyat_tl: p.fiyat_tl,
+                    code: p.code ?? "",
+                    features: p.features,
+                  }}
+                  locale={locale}
+                  variant="related"
+                />
               </span>
               <span className="ub-pdp-related__wish" aria-hidden="true">
                 ♡
               </span>
             </Link>
-          );})}
+          ))}
         </div>
         <button type="button" className="ub-pdp-related__nav ub-pdp-related__nav--next" onClick={() => scroll(1)} aria-label={locale === "en" ? "Next" : "Sonraki"}>
           ›
