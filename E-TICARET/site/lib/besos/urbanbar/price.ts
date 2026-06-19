@@ -44,10 +44,12 @@ export type UrbanBarPriceDisplay = {
   packQty: number;
   totalTl: number;
   unitTl: number;
+  /** Birim fiyat — ₺X.XXX */
   amount: string;
-  unitSuffix?: string;
-  vat: string;
-  packTotalLine?: string;
+  /** Her zaman "/ adet" veya "/ each" */
+  unitSuffix: string;
+  /** Alt satır: kutu toplamı veya tekil için sadece KDV */
+  secondaryLine: string;
 };
 
 export function resolveUrbanBarPriceDisplay(
@@ -68,29 +70,22 @@ export function resolveUrbanBarPriceDisplay(
   const vat = locale === "en" ? "Incl. VAT" : "KDV dahil";
   const unitFmt = formatUrbanBarTry(unitTl);
   const totalFmt = formatUrbanBarTry(totalTl);
+  const unitSuffix = locale === "en" ? "/ each" : "/ adet";
 
-  if (packQty > 1) {
-    const packLabel =
-      locale === "en"
-        ? `Box of ${packQty}: ${totalFmt}`
-        : `${packQty}'li kutu: ${totalFmt}`;
-    return {
-      packQty,
-      totalTl,
-      unitTl,
-      amount: unitFmt,
-      unitSuffix: locale === "en" ? "/ each" : "/ adet",
-      vat,
-      packTotalLine: `${packLabel} · ${vat}`,
-    };
-  }
+  const secondaryLine =
+    packQty > 1
+      ? locale === "en"
+        ? `Box of ${packQty}: ${totalFmt} · ${vat}`
+        : `${packQty}'li kutu: ${totalFmt} · ${vat}`
+      : vat;
 
   return {
-    packQty: 1,
+    packQty,
     totalTl,
-    unitTl: totalTl,
-    amount: totalFmt,
-    vat,
+    unitTl,
+    amount: unitFmt,
+    unitSuffix,
+    secondaryLine,
   };
 }
 
