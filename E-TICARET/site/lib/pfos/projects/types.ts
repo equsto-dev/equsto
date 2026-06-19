@@ -1,4 +1,4 @@
-export type PfosProjeKaynak = "arsiv" | "referans" | "vitrin";
+export type PfosProjeKaynak = "arsiv" | "referans" | "vitrin" | "pilot";
 
 export type PfosProjeProfil = {
   konsept: string;
@@ -24,6 +24,8 @@ export type PfosProjeRow = {
   profilOneri: string | null;
   profilSkor: number;
   kaynak: PfosProjeKaynak;
+  detailAvailable?: boolean;
+  dwgUrl?: string | null;
 };
 
 export type PfosProjelerResponse = {

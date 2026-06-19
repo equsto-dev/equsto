@@ -29,6 +29,9 @@ export function pfosQuickInitialState(): PfosWizardState {
     musteri: "",
     m2Toplam: m2,
     bolumM2: zones.length ? dagitM2Toplam(zones, m2) : {},
+    referansProjeId: null,
+    referansZoneSecimi: [],
+    referansBolumM2: {},
     fiyatStratejisi,
   };
 }
@@ -44,6 +47,9 @@ export function pfosWizardInitialState(): PfosWizardState {
     musteri: "",
     m2Toplam: "",
     bolumM2: {},
+    referansProjeId: null,
+    referansZoneSecimi: [],
+    referansBolumM2: {},
     fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
   };
 }

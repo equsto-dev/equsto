@@ -21,6 +21,12 @@ export type PfosWizardState = {
   m2Toplam: number | string;
   /** zone_key → m² */
   bolumM2: Record<string, number | string>;
+  /** Referans mutfak projesi (ör. S13-117) */
+  referansProjeId: string | null;
+  /** Projeden seçilen zone listesi */
+  referansZoneSecimi: string[];
+  /** Proje snapshot — zone m² */
+  referansBolumM2: Record<string, number>;
   fiyatStratejisi?: FiyatStratejisi;
 };
 

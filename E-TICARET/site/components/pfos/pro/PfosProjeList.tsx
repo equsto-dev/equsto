@@ -159,6 +159,20 @@ export default function PfosProjeList() {
         align: "right",
       },
       {
+        title: "DWG",
+        dataIndex: "dwgUrl",
+        search: false,
+        width: 56,
+        render: (_, r) =>
+          r.dwgUrl ? (
+            <a href={r.dwgUrl} target="_blank" rel="noreferrer">
+              Plan
+            </a>
+          ) : (
+            "—"
+          ),
+      },
+      {
         title: "Durum",
         dataIndex: "status",
         width: 80,
