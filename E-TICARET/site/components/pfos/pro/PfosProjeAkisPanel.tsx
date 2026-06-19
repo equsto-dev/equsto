@@ -24,10 +24,10 @@ import {
 import { DEFAULT_WIZARD_QUESTIONS } from "@/lib/pfos/proje-akis/wizard-questions";
 import {
   createStarterEqSets,
-  createStarterRules,
   type ProjeAkisEqSetRow as EqSetRow,
   type ProjeAkisRuleRow as RuleRow,
 } from "@/lib/pfos/proje-akis/set-kural-taslak";
+import { createRefinedRules } from "@/lib/pfos/proje-akis/set-kural-ince-ayar";
 import {
   EMPTY_PROJE_AKIS,
   fetchProjeAkis,
@@ -368,7 +368,7 @@ export default function PfosProjeAkisPanel() {
                   showIcon
                   style={{ marginBottom: 12 }}
                   message="Set ve kural taslakları"
-                  description="Bu alan proje-akis.json içindeki eqSets ve rules bloklarını yönetim paneline taşımak için ilk çalışma alanı. Üretilen taslaklar ürün seçimi yapmaz; konsept, m² bandı ve referans liste bağlantısını kurar."
+                  description="Üretilen kurallar teklif motoru eşikleriyle hizalıdır (m² lte/gt, balik alt tipi, Kiremit esnaf dalı vb.). Ürün seçimi yapmaz; konsept → referans liste bağlantısını kurar."
                 />
                 <Space style={{ marginBottom: 12 }} wrap>
                   <Button
@@ -387,7 +387,7 @@ export default function PfosProjeAkisPanel() {
                     loading={saving}
                     disabled={!eqSets.length}
                     onClick={() => {
-                      const nextRules = createStarterRules(shopTypes, eqSets);
+                      const nextRules = createRefinedRules(shopTypes, eqSets);
                       const next = { ...withBase(), rules: nextRules };
                       setData(next);
                       persist(next);

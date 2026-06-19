@@ -2230,7 +2230,7 @@
         "typeId": "restaurant_steakhouse",
         "setId": "set_restaurant_steakhouse_80_150",
         "priority": 20,
-        "desc": "Steakhouse seçilirse Steakhouse - 80–150 m² setini öner",
+        "desc": "Steakhouse: m² ≤ 150 → Steakhouse - 80–150 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2239,10 +2239,10 @@
             "value": "Steakhouse"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–150 m²"
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -2251,7 +2251,7 @@
         "typeId": "restaurant_steakhouse",
         "setId": "set_restaurant_steakhouse_150_250",
         "priority": 20,
-        "desc": "Steakhouse seçilirse Steakhouse - 150–250 m² setini öner",
+        "desc": "Steakhouse: m² > 150 → Steakhouse - 150–250 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2260,19 +2260,19 @@
             "value": "Steakhouse"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–250 m²"
+            "op": "gt",
+            "value": "150"
           }
         ]
       },
       {
-        "id": "rule_restaurant_balik_set_restaurant_balik_mahalle",
+        "id": "rule_restaurant_balik_set_restaurant_balik_mahalle_mahalle",
         "typeId": "restaurant_balik",
         "setId": "set_restaurant_balik_mahalle",
-        "priority": 20,
-        "desc": "Balıkçı / Balık restoran seçilirse Balıkçı / Balık restoran - Mahalle balıkçı setini öner",
+        "priority": 5,
+        "desc": "Balık Restaurant + Mahalle balıkçısı → mahalle listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2281,19 +2281,19 @@
             "value": "Balık Restaurant"
           },
           {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "Mahalle balıkçı"
+            "label": "Balık modeli",
+            "questionId": "q_balik_alt",
+            "op": "equals",
+            "value": "Mahalle balıkçısı"
           }
         ]
       },
       {
-        "id": "rule_restaurant_balik_set_restaurant_balik_80_150",
+        "id": "rule_restaurant_balik_set_restaurant_balik_80_150_kucuk",
         "typeId": "restaurant_balik",
         "setId": "set_restaurant_balik_80_150",
         "priority": 20,
-        "desc": "Balıkçı / Balık restoran seçilirse Balıkçı / Balık restoran - 80–150 m² setini öner",
+        "desc": "Balık Restaurant: m² ≤ 150 (mahalle hariç) → 80–150 listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2302,19 +2302,25 @@
             "value": "Balık Restaurant"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–150 m²"
+            "op": "lte",
+            "value": "150"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lt",
+            "value": "350"
           }
         ]
       },
       {
-        "id": "rule_restaurant_balik_set_restaurant_balik_150_250",
+        "id": "rule_restaurant_balik_set_restaurant_balik_150_250_orta",
         "typeId": "restaurant_balik",
         "setId": "set_restaurant_balik_150_250",
         "priority": 20,
-        "desc": "Balıkçı / Balık restoran seçilirse Balıkçı / Balık restoran - 150–250 m² setini öner",
+        "desc": "Balık Restaurant: 150 < m² < 350 → Uçan Balık listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2323,19 +2329,25 @@
             "value": "Balık Restaurant"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–250 m²"
+            "op": "gt",
+            "value": "150"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lt",
+            "value": "350"
           }
         ]
       },
       {
-        "id": "rule_restaurant_balik_set_restaurant_balik_350_600",
+        "id": "rule_restaurant_balik_set_restaurant_balik_350_600_buyuk",
         "typeId": "restaurant_balik",
         "setId": "set_restaurant_balik_350_600",
-        "priority": 20,
-        "desc": "Balıkçı / Balık restoran seçilirse Balıkçı / Balık restoran - 350–600 m² (Dudak Payı 2017-191) setini öner",
+        "priority": 15,
+        "desc": "Balık Restaurant: m² ≥ 350 → Dudak Payı listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2344,10 +2356,10 @@
             "value": "Balık Restaurant"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "350–600 m² (Dudak Payı 2017-191)"
+            "op": "gte",
+            "value": "350"
           }
         ]
       },
@@ -2356,7 +2368,7 @@
         "typeId": "restaurant_italyan",
         "setId": "set_restaurant_italyan_100_300",
         "priority": 20,
-        "desc": "İtalyan Restoran seçilirse İtalyan Restoran - 100–300 m² setini öner",
+        "desc": "İtalyan Restoran: 100–300 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2365,10 +2377,16 @@
             "value": "İtalyan Restoran"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–300 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "300"
           }
         ]
       },
@@ -2377,7 +2395,7 @@
         "typeId": "restaurant_pideci",
         "setId": "set_restaurant_pideci_100_250",
         "priority": 20,
-        "desc": "Pideci seçilirse Pideci - 100–250 m² setini öner",
+        "desc": "Pideci: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2386,10 +2404,16 @@
             "value": "Pideci"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -2398,7 +2422,7 @@
         "typeId": "restaurant_sushi",
         "setId": "set_restaurant_sushi_40_100",
         "priority": 20,
-        "desc": "Sushi seçilirse Sushi - 40–100 m² setini öner",
+        "desc": "Sushi: 40–100 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2407,10 +2431,16 @@
             "value": "Sushi"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "40–100 m²"
+            "op": "gte",
+            "value": "40"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "100"
           }
         ]
       },
@@ -2419,7 +2449,7 @@
         "typeId": "restaurant_inari_bar_yemek",
         "setId": "set_restaurant_inari_bar_yemek_100_200",
         "priority": 20,
-        "desc": "Bar + Yemek seçilirse Bar + Yemek - 100–200 m² setini öner",
+        "desc": "Bar + Yemek: 100–200 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2428,10 +2458,16 @@
             "value": "Bar + Yemek"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2440,7 +2476,7 @@
         "typeId": "restaurant_tavukcu",
         "setId": "set_restaurant_tavukcu_80_150",
         "priority": 20,
-        "desc": "Tavukçu seçilirse Tavukçu - 80–150 m² setini öner",
+        "desc": "Tavukçu: m² ≤ 150 → Tavukçu - 80–150 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2449,10 +2485,10 @@
             "value": "Tavukçu"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–150 m²"
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -2460,7 +2496,7 @@
         "id": "rule_restaurant_sarkuteri_kiosk_set_restaurant_sarkuteri_kiosk_kiosk",
         "typeId": "restaurant_sarkuteri_kiosk",
         "setId": "set_restaurant_sarkuteri_kiosk_kiosk",
-        "priority": 20,
+        "priority": 50,
         "desc": "Şarküteri Kiosk seçilirse Şarküteri Kiosk - Kiosk referans setini öner",
         "conditions": [
           {
@@ -2468,12 +2504,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Şarküteri Kiosk"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "Kiosk referans"
           }
         ]
       },
@@ -2482,7 +2512,7 @@
         "typeId": "restaurant_kebap",
         "setId": "set_restaurant_kebap_80_200",
         "priority": 20,
-        "desc": "Kebap & Ortadoğu seçilirse Kebap & Ortadoğu - 80–200 m² setini öner",
+        "desc": "Kebap & Ortadoğu: m² ≤ 200",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2491,10 +2521,10 @@
             "value": "Kebapçı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–200 m²"
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2503,7 +2533,7 @@
         "typeId": "restaurant_kebap",
         "setId": "set_restaurant_kebap_200_400",
         "priority": 20,
-        "desc": "Kebap & Ortadoğu seçilirse Kebap & Ortadoğu - 200–400 m² setini öner",
+        "desc": "Kebap & Ortadoğu: 200 < m² ≤ 400",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2512,10 +2542,16 @@
             "value": "Kebapçı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–400 m²"
+            "op": "gt",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -2524,7 +2560,7 @@
         "typeId": "restaurant_kebap",
         "setId": "set_restaurant_kebap_300_500",
         "priority": 20,
-        "desc": "Kebap & Ortadoğu seçilirse Kebap & Ortadoğu - 300–500 m² setini öner",
+        "desc": "Kebap & Ortadoğu: m² > 400 → zone şablonu bandı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2533,10 +2569,10 @@
             "value": "Kebapçı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "300–500 m²"
+            "op": "gt",
+            "value": "400"
           }
         ]
       },
@@ -2545,7 +2581,7 @@
         "typeId": "restaurant_kanatci_kebapci",
         "setId": "set_restaurant_kanatci_kebapci_100_250",
         "priority": 20,
-        "desc": "Kanatçı-Kebapçı seçilirse Kanatçı-Kebapçı - 100–250 m² setini öner",
+        "desc": "Kanatçı-Kebapçı: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2554,10 +2590,16 @@
             "value": "Kanatçı-Kebapçı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -2566,7 +2608,7 @@
         "typeId": "restaurant_patisserie_yemek",
         "setId": "set_restaurant_patisserie_yemek_200_400",
         "priority": 20,
-        "desc": "Patisserie + Yemek seçilirse Patisserie + Yemek - 200–400 m² setini öner",
+        "desc": "Patisserie + Yemek: 200–400 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2575,10 +2617,16 @@
             "value": "Patisserie + Yemek"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–400 m²"
+            "op": "gte",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -2587,7 +2635,7 @@
         "typeId": "pizzaci",
         "setId": "set_pizzaci_80_200",
         "priority": 20,
-        "desc": "Pizzacı seçilirse Pizzacı - 80–200 m² setini öner",
+        "desc": "Pizzacı: m² ≤ 200 → küçük salon listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2596,10 +2644,10 @@
             "value": "Pizzacı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–200 m²"
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2608,7 +2656,7 @@
         "typeId": "pizzaci",
         "setId": "set_pizzaci_200_500",
         "priority": 20,
-        "desc": "Pizzacı seçilirse Pizzacı - 200–500 m² setini öner",
+        "desc": "Pizzacı: m² > 200 → büyük salon listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2617,19 +2665,19 @@
             "value": "Pizzacı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–500 m²"
+            "op": "gt",
+            "value": "200"
           }
         ]
       },
       {
-        "id": "rule_turk_restoran_set_turk_restoran_150_300",
+        "id": "rule_turk_restoran_set_turk_restoran_150_300_s13",
         "typeId": "turk_restoran",
         "setId": "set_turk_restoran_150_300",
         "priority": 20,
-        "desc": "Türk Restoranı seçilirse Türk Restoranı - 150–300 m² (S13-388) setini öner",
+        "desc": "Türk lokanta: m² ≤ 300 → S13-388 referansı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2638,19 +2686,19 @@
             "value": "Türk / Esnaf lokanta"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–300 m² (S13-388)"
+            "op": "lte",
+            "value": "300"
           }
         ]
       },
       {
-        "id": "rule_turk_restoran_set_turk_restoran_300_500",
+        "id": "rule_turk_restoran_set_turk_restoran_300_500_vadi",
         "typeId": "turk_restoran",
         "setId": "set_turk_restoran_300_500",
         "priority": 20,
-        "desc": "Türk Restoranı seçilirse Türk Restoranı - 300–500 m² (Vadi İstanbul Lokanta 2017-204) setini öner",
+        "desc": "Türk lokanta: 300 < m² ≤ 500 → Vadi İstanbul",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2659,19 +2707,25 @@
             "value": "Türk / Esnaf lokanta"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "300–500 m² (Vadi İstanbul Lokanta 2017-204)"
+            "op": "gt",
+            "value": "300"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "500"
           }
         ]
       },
       {
-        "id": "rule_turk_restoran_set_turk_restoran_200_5000",
+        "id": "rule_turk_restoran_set_turk_restoran_200_5000_sutis",
         "typeId": "turk_restoran",
         "setId": "set_turk_restoran_200_5000",
         "priority": 20,
-        "desc": "Türk Restoranı seçilirse Türk Restoranı - 200–5000 m² (Sütiş Şişhane) setini öner",
+        "desc": "Türk lokanta: m² > 500 → Sütiş Şişhane referansı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2680,10 +2734,10 @@
             "value": "Türk / Esnaf lokanta"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–5000 m² (Sütiş Şişhane)"
+            "op": "gt",
+            "value": "500"
           }
         ]
       },
@@ -2692,7 +2746,7 @@
         "typeId": "meyhane",
         "setId": "set_meyhane_200_350",
         "priority": 20,
-        "desc": "Meyhane / Mezeli seçilirse Meyhane / Mezeli - 200–350 m² (Dersaadet 2017-098) setini öner",
+        "desc": "Meyhane / Mezeli: 200–350 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2701,19 +2755,25 @@
             "value": "Meyhane"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–350 m² (Dersaadet 2017-098)"
+            "op": "gte",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "350"
           }
         ]
       },
       {
-        "id": "rule_all_day_dining_set_all_day_dining_100_200",
+        "id": "rule_all_day_dining_set_all_day_dining_100_200_boyoz",
         "typeId": "all_day_dining",
         "setId": "set_all_day_dining_100_200",
-        "priority": 20,
-        "desc": "All Day Dining / Cafe seçilirse All Day Dining / Cafe - 100–200 m² (Smyrna Boyoz) setini öner",
+        "priority": 10,
+        "desc": "All Dining: m² ≤ 200 → Smyrna Boyoz listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2722,19 +2782,19 @@
             "value": "All Dining Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m² (Smyrna Boyoz)"
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
       {
-        "id": "rule_all_day_dining_set_all_day_dining_150_300",
+        "id": "rule_all_day_dining_set_all_day_dining_150_300_havelka",
         "typeId": "all_day_dining",
         "setId": "set_all_day_dining_150_300",
         "priority": 20,
-        "desc": "All Day Dining / Cafe seçilirse All Day Dining / Cafe - 150–300 m² (Havelka) setini öner",
+        "desc": "All Dining: 200 < m² ≤ 300 → Havelka listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2743,19 +2803,25 @@
             "value": "All Dining Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–300 m² (Havelka)"
+            "op": "gt",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "300"
           }
         ]
       },
       {
-        "id": "rule_all_day_dining_set_all_day_dining_200_400",
+        "id": "rule_all_day_dining_set_all_day_dining_200_400_thc",
         "typeId": "all_day_dining",
         "setId": "set_all_day_dining_200_400",
-        "priority": 20,
-        "desc": "All Day Dining / Cafe seçilirse All Day Dining / Cafe - 200–400 m² (THC Mavibahçe) setini öner",
+        "priority": 30,
+        "desc": "All Dining: 300 < m² ≤ 400 → THC Mavibahçe listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2764,10 +2830,16 @@
             "value": "All Dining Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–400 m² (THC Mavibahçe)"
+            "op": "gt",
+            "value": "300"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -2776,7 +2848,7 @@
         "typeId": "kafe_kahve_atolyesi",
         "setId": "set_kafe_kahve_atolyesi_80_150",
         "priority": 20,
-        "desc": "Kahve Atölyesi seçilirse Kahve Atölyesi - 80–150 m² setini öner",
+        "desc": "Kahve Atölyesi: m² ≤ 150 → Kahve Atölyesi - 80–150 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2785,10 +2857,10 @@
             "value": "Kahve Atölyesi"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–150 m²"
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -2797,7 +2869,7 @@
         "typeId": "kafe_casual_cafe",
         "setId": "set_kafe_casual_cafe_50_150",
         "priority": 20,
-        "desc": "Casual Cafe seçilirse Casual Cafe - 50–150 m² setini öner",
+        "desc": "Casual Cafe: 50–150 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2806,10 +2878,16 @@
             "value": "Casual Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "50–150 m²"
+            "op": "gte",
+            "value": "50"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -2818,7 +2896,7 @@
         "typeId": "kafe_harvest_cafe",
         "setId": "set_kafe_harvest_cafe_100_200",
         "priority": 20,
-        "desc": "Harvest Cafe seçilirse Harvest Cafe - 100–200 m² setini öner",
+        "desc": "Harvest Cafe: 100–200 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2827,10 +2905,16 @@
             "value": "Harvest Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2839,7 +2923,7 @@
         "typeId": "kafe_kahve_duragi",
         "setId": "set_kafe_kahve_duragi_100_200",
         "priority": 20,
-        "desc": "Kahve Durağı seçilirse Kahve Durağı - 100–150 m² (Konyaaltı) setini öner",
+        "desc": "Kahve Durağı: m² < 150 → Konyaaltı (kompakt)",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2848,10 +2932,10 @@
             "value": "Kahve Durağı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–150 m² (Konyaaltı)"
+            "op": "lt",
+            "value": "150"
           }
         ]
       },
@@ -2860,7 +2944,7 @@
         "typeId": "kafe_kahve_duragi",
         "setId": "set_kafe_kahve_duragi_150_200",
         "priority": 20,
-        "desc": "Kahve Durağı seçilirse Kahve Durağı - 150–200 m² (Karabük) setini öner",
+        "desc": "Kahve Durağı: m² ≥ 150 → Karabük (standart)",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2869,10 +2953,10 @@
             "value": "Kahve Durağı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–200 m² (Karabük)"
+            "op": "gte",
+            "value": "150"
           }
         ]
       },
@@ -2881,7 +2965,7 @@
         "typeId": "kafe_all_sport_cafe",
         "setId": "set_kafe_all_sport_cafe_100_200",
         "priority": 20,
-        "desc": "All Sport Cafe seçilirse All Sport Cafe - 100–200 m² setini öner",
+        "desc": "All Sport Cafe: 100–200 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2890,10 +2974,16 @@
             "value": "All Sport Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2902,7 +2992,7 @@
         "typeId": "kafe_kahve_duragi_pastane",
         "setId": "set_kafe_kahve_duragi_pastane_100_200",
         "priority": 20,
-        "desc": "Kahve Durağı — Pastane & Kahvaltı seçilirse Kahve Durağı — Pastane & Kahvaltı - 100–200 m² (Sultangazi) setini öner",
+        "desc": "Kahve Durağı — Pastane & Kahvaltı: 100–200 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2911,10 +3001,16 @@
             "value": "Kahve Durağı — Pastane & Kahvaltı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m² (Sultangazi)"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "200"
           }
         ]
       },
@@ -2923,7 +3019,7 @@
         "typeId": "kafe_kahve_tatli",
         "setId": "set_kafe_kahve_tatli_40_100",
         "priority": 20,
-        "desc": "Kahve & Tatlı seçilirse Kahve & Tatlı - 40–100 m² setini öner",
+        "desc": "Kahve & Tatlı: 40–100 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2932,10 +3028,16 @@
             "value": "Kahve & Tatlı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "40–100 m²"
+            "op": "gte",
+            "value": "40"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "100"
           }
         ]
       },
@@ -2943,7 +3045,7 @@
         "id": "rule_coffee_shop_set_coffee_shop_ikinciplan",
         "typeId": "coffee_shop",
         "setId": "set_coffee_shop_ikinciplan",
-        "priority": 20,
+        "priority": 50,
         "desc": "Coffee Shop seçilirse Coffee Shop - İKİNCİPLAN Kafe (2024-054) setini öner",
         "conditions": [
           {
@@ -2951,12 +3053,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Coffee Shop"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "İKİNCİPLAN Kafe (2024-054)"
           }
         ]
       },
@@ -2964,7 +3060,7 @@
         "id": "rule_coffee_shop_set_coffee_shop_referans",
         "typeId": "coffee_shop",
         "setId": "set_coffee_shop_referans",
-        "priority": 20,
+        "priority": 50,
         "desc": "Coffee Shop seçilirse Coffee Shop - Espressolab Watergarden setini öner",
         "conditions": [
           {
@@ -2972,12 +3068,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Coffee Shop"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "Espressolab Watergarden"
           }
         ]
       },
@@ -2986,7 +3076,7 @@
         "typeId": "coffee_shop_yemek",
         "setId": "set_coffee_shop_yemek_250_350",
         "priority": 20,
-        "desc": "Coffee Shop + Yemek seçilirse Coffee Shop + Yemek - 250–350 m² (Trabzon 2018-013) setini öner",
+        "desc": "Coffee Shop + Yemek: 250–350 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -2995,10 +3085,16 @@
             "value": "Coffee Shop + Yemek"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "250–350 m² (Trabzon 2018-013)"
+            "op": "gte",
+            "value": "250"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "350"
           }
         ]
       },
@@ -3007,7 +3103,7 @@
         "typeId": "restaurant_buyuk_restoran",
         "setId": "set_restaurant_buyuk_restoran_500_1000",
         "priority": 20,
-        "desc": "Restoran seçilirse Restoran - 500–1000 m² setini öner",
+        "desc": "Restoran: 500–1000 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3016,10 +3112,16 @@
             "value": "Restoran"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "500–1000 m²"
+            "op": "gte",
+            "value": "500"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "1000"
           }
         ]
       },
@@ -3028,7 +3130,7 @@
         "typeId": "restaurant_sarkuteri_restoran",
         "setId": "set_restaurant_sarkuteri_restoran_100_250",
         "priority": 20,
-        "desc": "Şarküteri Restoran seçilirse Şarküteri Restoran - 100–250 m² setini öner",
+        "desc": "Şarküteri Restoran: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3037,10 +3139,16 @@
             "value": "Şarküteri Restoran"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -3049,7 +3157,7 @@
         "typeId": "restaurant_fine_dining",
         "setId": "set_restaurant_fine_dining_500_1000",
         "priority": 20,
-        "desc": "Fine Dining seçilirse Fine Dining - 500–1000 m² setini öner",
+        "desc": "Fine Dining: 500–1000 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3058,10 +3166,16 @@
             "value": "Fine Dining"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "500–1000 m²"
+            "op": "gte",
+            "value": "500"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "1000"
           }
         ]
       },
@@ -3070,7 +3184,7 @@
         "typeId": "restaurant_dunya",
         "setId": "set_restaurant_dunya_500_1000",
         "priority": 20,
-        "desc": "Dünya Mutfağı seçilirse Dünya Mutfağı - 500–1000 m² setini öner",
+        "desc": "Dünya Mutfağı: 500–1000 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3079,10 +3193,16 @@
             "value": "Dünya Mutfağı"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "500–1000 m²"
+            "op": "gte",
+            "value": "500"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "1000"
           }
         ]
       },
@@ -3091,7 +3211,7 @@
         "typeId": "kasap_yalniz",
         "setId": "set_kasap_yalniz_100_250",
         "priority": 20,
-        "desc": "Kasap seçilirse Kasap - 100–250 m² setini öner",
+        "desc": "Kasap: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3100,10 +3220,16 @@
             "value": "Kasap"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -3112,7 +3238,7 @@
         "typeId": "kasap_sarkuteri",
         "setId": "set_kasap_sarkuteri_100_250",
         "priority": 20,
-        "desc": "Kasap + Şarküteri seçilirse Kasap + Şarküteri - 100–250 m² setini öner",
+        "desc": "Kasap + Şarküteri: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3121,10 +3247,16 @@
             "value": "Kasap + Şarküteri"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -3133,7 +3265,7 @@
         "typeId": "pastane",
         "setId": "set_pastane_100_200",
         "priority": 20,
-        "desc": "Pastane seçilirse Pastane - 100–200 m² (≤150 m²) setini öner",
+        "desc": "Pastane: m² ≤ 150 → 14-PASTANE listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3142,10 +3274,10 @@
             "value": "Pastane"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–200 m² (≤150 m²)"
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -3154,7 +3286,7 @@
         "typeId": "pastane",
         "setId": "set_pastane_150_250",
         "priority": 20,
-        "desc": "Pastane seçilirse Pastane - 150–250 m² (>150 m²) setini öner",
+        "desc": "Pastane: m² > 150 → geniş pastane listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3163,10 +3295,10 @@
             "value": "Pastane"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–250 m² (>150 m²)"
+            "op": "gt",
+            "value": "150"
           }
         ]
       },
@@ -3175,7 +3307,7 @@
         "typeId": "pastane_guneli",
         "setId": "set_pastane_guneli_200_400",
         "priority": 20,
-        "desc": "Güneli Fırın seçilirse Güneli Fırın - 200–400 m² setini öner",
+        "desc": "Güneli Fırın: 200–400 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3184,10 +3316,16 @@
             "value": "Güneli Fırın"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–400 m²"
+            "op": "gte",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -3196,7 +3334,7 @@
         "typeId": "pastane_yerel",
         "setId": "set_pastane_yerel_200_400",
         "priority": 20,
-        "desc": "Pastane & Yerel seçilirse Pastane & Yerel - 200–400 m² setini öner",
+        "desc": "Pastane & Yerel: 200–400 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3205,10 +3343,16 @@
             "value": "Pastane & Yerel"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–400 m²"
+            "op": "gte",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -3217,7 +3361,7 @@
         "typeId": "pastane_cafe",
         "setId": "set_pastane_cafe_300_500",
         "priority": 20,
-        "desc": "Pastane + Cafe seçilirse Pastane + Cafe - 300–500 m² (Hacısayid 2017-210) setini öner",
+        "desc": "Pastane + Cafe: 300–500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3226,31 +3370,52 @@
             "value": "Pastane + Cafe"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "300–500 m² (Hacısayid 2017-210)"
+            "op": "gte",
+            "value": "300"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "500"
           }
         ]
       },
       {
-        "id": "rule_ff_turk_mutfagi_set_ff_turk_mutfagi_100_250",
+        "id": "rule_ff_turk_mutfagi_set_ff_turk_mutfagi_100_250_esnaf_self",
         "typeId": "ff_turk_mutfagi",
         "setId": "set_ff_turk_mutfagi_100_250",
-        "priority": 20,
-        "desc": "Türk Mutfağı seçilirse Türk Mutfağı - 100–250 m² setini öner",
+        "priority": 10,
+        "desc": "Türk/Esnaf lokanta + Self servis → Kiremit Akasya listesi",
+        "conditions": [
+          {
+            "label": "Dükkan türü",
+            "questionId": "q_dukkan_turu",
+            "op": "equals",
+            "value": "Türk / Esnaf lokanta"
+          },
+          {
+            "label": "Restoran alt tip",
+            "questionId": "q_restoran_alt",
+            "op": "equals",
+            "value": "Self servis"
+          }
+        ]
+      },
+      {
+        "id": "rule_ff_turk_mutfagi_set_ff_turk_mutfagi_100_250_direct",
+        "typeId": "ff_turk_mutfagi",
+        "setId": "set_ff_turk_mutfagi_100_250",
+        "priority": 30,
+        "desc": "Doğrudan Türk Mutfağı seçimi → Kiremit Akasya listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Türk Mutfağı"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
           }
         ]
       },
@@ -3259,7 +3424,7 @@
         "typeId": "ff_mus_selinoz_turk",
         "setId": "set_ff_mus_selinoz_turk_100_250",
         "priority": 20,
-        "desc": "Türk Mutfağı — Lokanta seçilirse Türk Mutfağı — Lokanta - 100–250 m² (Muş 101) setini öner",
+        "desc": "Türk Mutfağı — Lokanta: 100–250 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3268,10 +3433,16 @@
             "value": "Türk Mutfağı — Lokanta"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m² (Muş 101)"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "250"
           }
         ]
       },
@@ -3280,40 +3451,49 @@
         "typeId": "ff_self_servis",
         "setId": "set_ff_self_servis_100_250",
         "priority": 20,
-        "desc": "Self Servis seçilirse Self Servis - 100–250 m² setini öner",
+        "desc": "Self Servis → Self Servis - 100–250 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Self Servis"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
           }
         ]
       },
       {
-        "id": "rule_ff_food_court_set_ff_food_court_100_250",
+        "id": "rule_ff_food_court_set_ff_food_court_100_250_esnaf_fc",
         "typeId": "ff_food_court",
         "setId": "set_ff_food_court_100_250",
-        "priority": 20,
-        "desc": "Food Court seçilirse Food Court - 100–250 m² setini öner",
+        "priority": 10,
+        "desc": "Türk/Esnaf lokanta + Food Court → Kiremit Akasya listesi",
+        "conditions": [
+          {
+            "label": "Dükkan türü",
+            "questionId": "q_dukkan_turu",
+            "op": "equals",
+            "value": "Türk / Esnaf lokanta"
+          },
+          {
+            "label": "Restoran alt tip",
+            "questionId": "q_restoran_alt",
+            "op": "equals",
+            "value": "Food Court"
+          }
+        ]
+      },
+      {
+        "id": "rule_ff_food_court_set_ff_food_court_100_250_direct",
+        "typeId": "ff_food_court",
+        "setId": "set_ff_food_court_100_250",
+        "priority": 30,
+        "desc": "Doğrudan Food Court seçimi → Kiremit Akasya listesi",
         "conditions": [
           {
             "label": "Dükkan türü",
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Food Court"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "100–250 m²"
           }
         ]
       },
@@ -3322,7 +3502,7 @@
         "typeId": "ff_hamburger_kiosk",
         "setId": "set_ff_hamburger_kiosk_60_100",
         "priority": 20,
-        "desc": "Hamburger Kiosk seçilirse Hamburger Kiosk - 60–100 m² setini öner",
+        "desc": "Hamburger Kiosk: 60–100 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3331,10 +3511,16 @@
             "value": "Hamburger Kiosk"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "60–100 m²"
+            "op": "gte",
+            "value": "60"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "100"
           }
         ]
       },
@@ -3342,7 +3528,7 @@
         "id": "rule_ff_hotdog_kiosk_set_ff_hotdog_kiosk_kiosk",
         "typeId": "ff_hotdog_kiosk",
         "setId": "set_ff_hotdog_kiosk_kiosk",
-        "priority": 20,
+        "priority": 50,
         "desc": "Hotdog Kiosk seçilirse Hotdog Kiosk - Kiosk referans setini öner",
         "conditions": [
           {
@@ -3350,12 +3536,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Hotdog Kiosk"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "Kiosk referans"
           }
         ]
       },
@@ -3364,7 +3544,7 @@
         "typeId": "ff_fried_chicken",
         "setId": "set_ff_fried_chicken_80_150",
         "priority": 20,
-        "desc": "Fried Chicken seçilirse Fried Chicken - 80–150 m² setini öner",
+        "desc": "Fried Chicken: m² ≤ 150 → Fried Chicken - 80–150 m²",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3373,10 +3553,10 @@
             "value": "Fried Chicken"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "80–150 m²"
+            "op": "lte",
+            "value": "150"
           }
         ]
       },
@@ -3385,7 +3565,7 @@
         "typeId": "bar_birahane",
         "setId": "set_bar_birahane_100_300",
         "priority": 20,
-        "desc": "Birahane seçilirse Birahane - 100–300 m² setini öner",
+        "desc": "Birahane: 100–300 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3394,10 +3574,16 @@
             "value": "Birahane"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "100–300 m²"
+            "op": "gte",
+            "value": "100"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "300"
           }
         ]
       },
@@ -3406,7 +3592,7 @@
         "typeId": "bar_kokteyl_kahve",
         "setId": "set_bar_kokteyl_kahve_30_50",
         "priority": 20,
-        "desc": "Kokteyl + Kahve seçilirse Kokteyl + Kahve - 30–50 m² setini öner",
+        "desc": "Kokteyl + Kahve: 30–50 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3415,10 +3601,16 @@
             "value": "Kokteyl + Kahve"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "30–50 m²"
+            "op": "gte",
+            "value": "30"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "50"
           }
         ]
       },
@@ -3427,7 +3619,7 @@
         "typeId": "bar_kokteyl",
         "setId": "set_bar_kokteyl_30_50",
         "priority": 20,
-        "desc": "Kokteyl Bar seçilirse Kokteyl Bar - 30–50 m² setini öner",
+        "desc": "Kokteyl Bar: 30–50 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3436,10 +3628,16 @@
             "value": "Kokteyl Bar"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "30–50 m²"
+            "op": "gte",
+            "value": "30"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "50"
           }
         ]
       },
@@ -3448,7 +3646,7 @@
         "typeId": "bar_mixology",
         "setId": "set_bar_mixology_30_50",
         "priority": 20,
-        "desc": "Mixology Bar seçilirse Mixology Bar - 30–50 m² setini öner",
+        "desc": "Mixology Bar: 30–50 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3457,10 +3655,16 @@
             "value": "Mixology Bar"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "30–50 m²"
+            "op": "gte",
+            "value": "30"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "50"
           }
         ]
       },
@@ -3469,7 +3673,7 @@
         "typeId": "otel_sehir",
         "setId": "set_otel_sehir_500_2000",
         "priority": 20,
-        "desc": "Şehir Oteli (Business) seçilirse Şehir Oteli (Business) - 500–2000 m² (Hampton Bolu) setini öner",
+        "desc": "Şehir Oteli (Business): 500–2000 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3478,10 +3682,16 @@
             "value": "Şehir Oteli (Business)"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "500–2000 m² (Hampton Bolu)"
+            "op": "gte",
+            "value": "500"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "2000"
           }
         ]
       },
@@ -3489,7 +3699,7 @@
         "id": "rule_otel_sehir_set_otel_sehir_50_80_oda",
         "typeId": "otel_sehir",
         "setId": "set_otel_sehir_50_80_oda",
-        "priority": 20,
+        "priority": 50,
         "desc": "Şehir Oteli (Business) seçilirse Şehir Oteli (Business) - 50–80 oda (Zigana Alaçatı) setini öner",
         "conditions": [
           {
@@ -3497,12 +3707,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Şehir Oteli (Business)"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "50–80 oda (Zigana Alaçatı)"
           }
         ]
       },
@@ -3510,7 +3714,7 @@
         "id": "rule_otel_sehir_set_otel_sehir_500_2000_kocaeli",
         "typeId": "otel_sehir",
         "setId": "set_otel_sehir_500_2000_kocaeli",
-        "priority": 20,
+        "priority": 50,
         "desc": "Şehir Oteli (Business) seçilirse Şehir Oteli (Business) - 500–2000 m² (Kocaeli) setini öner",
         "conditions": [
           {
@@ -3518,12 +3722,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Şehir Oteli (Business)"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "500–2000 m² (Kocaeli)"
           }
         ]
       },
@@ -3531,7 +3729,7 @@
         "id": "rule_otel_sehir_set_otel_sehir_500_2000_topkapi",
         "typeId": "otel_sehir",
         "setId": "set_otel_sehir_500_2000_topkapi",
-        "priority": 20,
+        "priority": 50,
         "desc": "Şehir Oteli (Business) seçilirse Şehir Oteli (Business) - 500–2000 m² (DoubleTree Topkapı · 140 oda) setini öner",
         "conditions": [
           {
@@ -3539,12 +3737,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Şehir Oteli (Business)"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "500–2000 m² (DoubleTree Topkapı · 140 oda)"
           }
         ]
       },
@@ -3552,7 +3744,7 @@
         "id": "rule_otel_sehir_set_otel_sehir_500_2000_arnavutkoy",
         "typeId": "otel_sehir",
         "setId": "set_otel_sehir_500_2000_arnavutkoy",
-        "priority": 20,
+        "priority": 50,
         "desc": "Şehir Oteli (Business) seçilirse Şehir Oteli (Business) - 500–2000 m² (Sheraton Arnavutköy) setini öner",
         "conditions": [
           {
@@ -3560,12 +3752,6 @@
             "questionId": "q_dukkan_turu",
             "op": "equals",
             "value": "Şehir Oteli (Business)"
-          },
-          {
-            "label": "m² bandı",
-            "questionId": "q_m2",
-            "op": "band",
-            "value": "500–2000 m² (Sheraton Arnavutköy)"
           }
         ]
       },
@@ -3574,7 +3760,7 @@
         "typeId": "otel_resort",
         "setId": "set_otel_resort_200_500",
         "priority": 20,
-        "desc": "Resort Otel (ölçekli) seçilirse Resort Otel (ölçekli) - 200–500 m² (Zigana) setini öner",
+        "desc": "Resort Otel (ölçekli): 200–500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3583,10 +3769,16 @@
             "value": "Resort Otel"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "200–500 m² (Zigana)"
+            "op": "gte",
+            "value": "200"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "500"
           }
         ]
       },
@@ -3595,7 +3787,7 @@
         "typeId": "otel_tatil",
         "setId": "set_otel_tatil_800_1500",
         "priority": 20,
-        "desc": "Tatil Oteli seçilirse Tatil Oteli - 800–1500 m² (Wyndham 2016-194) setini öner",
+        "desc": "Tatil Oteli: 800–1500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3604,10 +3796,16 @@
             "value": "Tatil Oteli"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "800–1500 m² (Wyndham 2016-194)"
+            "op": "gte",
+            "value": "800"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "1500"
           }
         ]
       },
@@ -3616,7 +3814,7 @@
         "typeId": "catering_buyuk_yemekhane",
         "setId": "set_catering_buyuk_yemekhane_2000_3500",
         "priority": 20,
-        "desc": "Büyük Yemekhane (Catering) seçilirse Büyük Yemekhane (Catering) - 2000–3500 kişi/gün setini öner",
+        "desc": "Büyük Yemekhane (Catering): 2000–3500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3625,10 +3823,16 @@
             "value": "Büyük Yemekhane (Catering)"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "2000–3500 kişi/gün"
+            "op": "gte",
+            "value": "2000"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "3500"
           }
         ]
       },
@@ -3637,7 +3841,7 @@
         "typeId": "fabrika_yemekhanesi",
         "setId": "set_fabrika_yemekhanesi_2000_3500",
         "priority": 20,
-        "desc": "Fabrika Yemekhanesi seçilirse Fabrika Yemekhanesi - 2000–3500 kişi/gün setini öner",
+        "desc": "Fabrika Yemekhanesi: 2000–3500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3646,10 +3850,16 @@
             "value": "Fabrika Yemekhanesi"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "2000–3500 kişi/gün"
+            "op": "gte",
+            "value": "2000"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "3500"
           }
         ]
       },
@@ -3658,7 +3868,7 @@
         "typeId": "uretim_ekmek_kruvasan",
         "setId": "set_uretim_ekmek_kruvasan_150_400",
         "priority": 20,
-        "desc": "Ekmek + Kruvasan seçilirse Ekmek + Kruvasan - 150–400 m² (Hakan İnan 093) setini öner",
+        "desc": "Ekmek + Kruvasan: 150–400 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3667,10 +3877,16 @@
             "value": "Ekmek + Kruvasan"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–400 m² (Hakan İnan 093)"
+            "op": "gte",
+            "value": "150"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "400"
           }
         ]
       },
@@ -3679,7 +3895,7 @@
         "typeId": "okul_yemekhanesi",
         "setId": "set_okul_yemekhanesi_2000_3500",
         "priority": 20,
-        "desc": "Okul Yemekhanesi seçilirse Okul Yemekhanesi - 2000–3500 kişi/gün setini öner",
+        "desc": "Okul Yemekhanesi: 2000–3500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3688,10 +3904,16 @@
             "value": "Okul Yemekhanesi"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "2000–3500 kişi/gün"
+            "op": "gte",
+            "value": "2000"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "3500"
           }
         ]
       },
@@ -3700,7 +3922,7 @@
         "typeId": "catering_uretim",
         "setId": "set_catering_uretim_1500_2500",
         "priority": 20,
-        "desc": "Üretim Fabrikası seçilirse Üretim Fabrikası - 1500–2500 m² · 15–30 bin yemek/gün setini öner",
+        "desc": "Üretim Fabrikası: 1500–2500 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3709,10 +3931,16 @@
             "value": "Üretim Fabrikası"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "1500–2500 m² · 15–30 bin yemek/gün"
+            "op": "gte",
+            "value": "1500"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "2500"
           }
         ]
       },
@@ -3721,7 +3949,7 @@
         "typeId": "catering_yerinde",
         "setId": "set_catering_yerinde_20_60",
         "priority": 20,
-        "desc": "Yerinde Üretim seçilirse Yerinde Üretim - 20–60 kişi (Liva 178) setini öner",
+        "desc": "Yerinde Üretim: 20–60 m² aralığı",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3730,10 +3958,16 @@
             "value": "Yerinde Üretim"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "20–60 kişi (Liva 178)"
+            "op": "gte",
+            "value": "20"
+          },
+          {
+            "label": "Alan m²",
+            "questionId": "q_m2",
+            "op": "lte",
+            "value": "60"
           }
         ]
       },
@@ -3742,7 +3976,7 @@
         "typeId": "catering_personel_yemekhane",
         "setId": "set_catering_personel_yemekhane_150_250",
         "priority": 20,
-        "desc": "Personel Yemekhanesi seçilirse Personel Yemekhanesi - 150–250 kişi (Laguna 2017-058) setini öner",
+        "desc": "Personel Yemekhanesi: m² > 150 → Personel Yemekhanesi - 150–250 kişi (Laguna 2017-058)",
         "conditions": [
           {
             "label": "Dükkan türü",
@@ -3751,10 +3985,10 @@
             "value": "Personel Yemekhanesi"
           },
           {
-            "label": "m² bandı",
+            "label": "Alan m²",
             "questionId": "q_m2",
-            "op": "band",
-            "value": "150–250 kişi (Laguna 2017-058)"
+            "op": "gt",
+            "value": "150"
           }
         ]
       }
@@ -64587,6 +64821,6 @@
         "tip_kodu": "9710.UX10N.00"
       }
     ],
-    "updated_at": "2026-06-19T03:55:24.308Z"
+    "updated_at": "2026-06-19T04:01:58.205Z"
   }
 }
