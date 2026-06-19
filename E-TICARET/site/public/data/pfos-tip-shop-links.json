@@ -362,6 +362,31 @@
       "marka": "Öztiryakiler",
       "sku": "7858.N1.40703.11",
       "name": "700 SERİ SET ÜSTÜ MAKARNA FRİTÖZÜ ELEKTRİKLİ 40*70*30"
+    },
+    "pizza_firini_kubbeli_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "8890.P5050.01",
+      "name": "PIZZA FIRINI 4 LU ELEKTRIKLI 380 V"
+    },
+    "cay_makinesi": {
+      "marka": "Öztiryakiler",
+      "sku": "8574.CM080.00",
+      "name": "CAY MAKINASI 80 BARDAK"
+    },
+    "sise_sogutucu_1k": {
+      "marka": "Şenox",
+      "sku": "118.SDS385.DCPF",
+      "name": "Senox Tek Kapılı Dik Tip Şişe Soğutucu, Kanopisiz"
+    },
+    "kahve_posa_cekmece": {
+      "marka": "Vosco",
+      "sku": "VSC-PCS",
+      "name": "Kahve Posa Çekmecesi Siyah – Espresso Makinesi Altı Posa Kutusu"
+    },
+    "konik_yuvarlama": {
+      "marka": "Pimak",
+      "sku": "CR 120",
+      "name": "CR 120 Konik Yuvarlama Makinesi"
     }
   }
 }

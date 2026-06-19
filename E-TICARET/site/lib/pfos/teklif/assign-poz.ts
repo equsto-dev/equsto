@@ -117,7 +117,7 @@ export function finalizeKalemlerForTeklif(
 }
 
 function excelBolumBaslik(k: PFOSKalemi): string | null {
-  const excelBolum = String(k.altKategori ?? "").trim();
+  const excelBolum = String(k.altKategori ?? "").split("\0")[0].trim();
   if (excelBolum.length > 1 && !/^[A-H]$/i.test(excelBolum)) {
     return excelBolum.replace(/\s+/g, " ").toUpperCase();
   }

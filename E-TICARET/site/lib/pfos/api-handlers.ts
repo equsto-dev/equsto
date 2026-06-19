@@ -56,7 +56,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "kahve-duragi": { min: 100, max: 200 },
   "kahve-tatli": { min: 40, max: 100 },
   "kahve-duragi-pastane": { min: 100, max: 200 },
-  "resort-otel": { min: 200, max: 500 },
+  "resort-otel": { min: 200, max: 2000 },
   "personel-yemekhane": { min: 150, max: 250 },
 };
 

@@ -11,6 +11,11 @@ export type ReferansKalem = {
   tip?: "zorunlu" | "tavsiye" | "opsiyonel";
   notlar?: string;
   altKategori?: string;
+  /** Excel listesindeki bölüm sırası (ilk görünüm) */
+  referansBolumSira?: number;
+  referansBolumKey?: string;
+  /** pfos-referans/{kategoriId}-{bantId} — SKU link anahtarı */
+  referansListeKey?: string;
   elektrikGucuKwHint?: number;
   gazGucuKwHint?: number;
 };

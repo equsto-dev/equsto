@@ -19,18 +19,10 @@ import BolumM2Step from "./steps/BolumM2Step";
 import TeklifSonucu from "./TeklifSonucu";
 import TeklifV14Onizleme from "./TeklifV14Onizleme";
 import { parseConceptsResponse } from "@/lib/pfos/wizard/parse-concepts";
+import { pfosWizardInitialState } from "@/lib/pfos/wizard/quick-mode";
 import { pfosS } from "./pfos-styles";
 
-const INITIAL: PfosWizardState = {
-  adim: 0,
-  adres: { il: "İstanbul", ilce: "", mahalle: "", cadde: "" },
-  lokasyon: "cadde",
-  konsept: null,
-  projeAdi: "",
-  musteri: "",
-  m2Toplam: "",
-  bolumM2: {},
-};
+const INITIAL = pfosWizardInitialState();
 
 export default function PFOSWizard() {
   const [state, setState] = useState<PfosWizardState>(INITIAL);

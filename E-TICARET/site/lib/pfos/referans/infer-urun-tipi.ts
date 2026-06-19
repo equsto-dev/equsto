@@ -540,6 +540,35 @@ const TIP_RULES: TipRule[] = [
       !n.includes("davlumbaz") &&
       !n.includes("tabla"),
   },
+  {
+    tip: "cay-makinesi",
+    test: (n) =>
+      n.includes("cay oca") ||
+      n.includes("çay oca") ||
+      n.includes("cay maki") ||
+      n.includes("çay maki") ||
+      n.includes("cay otomat") ||
+      n.includes("çay otomat"),
+  },
+  {
+    tip: "sise-sogutucu-tek-kapili",
+    test: (n) =>
+      (/icecek\s*dolab|içecek\s*dolab|sise\s*sogut|şişe\s*soğut/.test(n) &&
+        !/2\s*kap|3\s*kap|iki\s*kap|uc\s*kap|üç\s*kap/i.test(n)),
+  },
+  {
+    tip: "kahve-posa-cekmece",
+    test: (n) =>
+      n.includes("kahve cekmece") ||
+      n.includes("posa cekmece") ||
+      n.includes("posa kutu"),
+  },
+  {
+    tip: "konik-yuvarlama-makinesi",
+    test: (n) =>
+      n.includes("konik yuvarlama") ||
+      n.includes("hamur yuvarlama"),
+  },
 ];
 
 /**

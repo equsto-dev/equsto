@@ -2,7 +2,8 @@ import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 
 /** Excel bölüm başlığı / ürün adı — karşılaştırma için normalize */
 export function normalizeBolumMetin(s: string): string {
-  return String(s ?? "")
+  const clean = String(s ?? "").split("\0")[0];
+  return clean
     .toLocaleLowerCase("tr")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -40,7 +41,7 @@ export function kategoriFromBolumAd(
   if (/pastane|patiser|tatli\s*hazirlik/.test(b)) {
     return "D";
   }
-  if (/sebze\s*hazirlik|et\s*hazirlik|hazirlik\s*mutfak/.test(b)) {
+  if (/sebze\s*hazirlik|et\s*hazirlik|hazirlik\s*mutfak|^hazirlik$/.test(b)) {
     return "C";
   }
   if (
@@ -104,7 +105,7 @@ export function displayBolumBaslik(
   bolumAd: string | null | undefined,
   bolum?: string | null,
 ): string {
-  const ad = String(bolumAd ?? "").trim();
+  const ad = String(bolumAd ?? "").split("\0")[0].trim();
   if (ad) {
     let cleanAd = ad.replace(/\s+/g, " ").trim();
     if (/mutfak\s*depolama/i.test(cleanAd)) {

@@ -1,11 +1,27 @@
 "use client";
 
-import { ExportOutlined, FileAddOutlined, ProjectOutlined, ToolOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  CalculatorOutlined,
+  CloudDownloadOutlined,
+  CloudUploadOutlined,
+  ExportOutlined,
+  FileAddOutlined,
+  ProjectOutlined,
+  ToolOutlined,
+} from "@ant-design/icons";
 import { PageContainer, ProCard, StatisticCard } from "@ant-design/pro-components";
-import { Alert, Button, Col, Row, Space, Tabs, Typography } from "antd";
+import { Alert, Button, Space, Tabs, Typography } from "antd";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { getProToken } from "@/lib/pro-admin-client";
+import PfosExportPanel from "@/components/pfos/pro/PfosExportPanel";
+import PfosImportPanel from "@/components/pfos/pro/PfosImportPanel";
+import PfosKategoriPanel from "@/components/pfos/pro/PfosKategoriPanel";
+import PfosProjeAkisPanel from "@/components/pfos/pro/PfosProjeAkisPanel";
 import PfosProjeList from "@/components/pfos/pro/PfosProjeList";
 import PfosProWizard from "@/components/pfos/pro/PfosProWizard";
+import PfosSogukOdaPanel from "@/components/pfos/pro/PfosSogukOdaPanel";
 import { fetchProjeAkis } from "@/lib/pro-admin-client";
 
 function PfosOzetPanel() {
@@ -22,10 +38,6 @@ function PfosOzetPanel() {
   useEffect(() => {
     fetchProjeAkis()
       .then(({ data, error: err }) => {
-        if (err) {
-          setError(err);
-          return;
-        }
         setCounts({
           questions: data?.questions?.length ?? 0,
           rules: data?.rules?.length ?? 0,
@@ -33,6 +45,14 @@ function PfosOzetPanel() {
           sets: data?.eqSets?.length ?? 0,
           types: data?.shopTypes?.length ?? 0,
         });
+        const empty =
+          !data?.questions?.length &&
+          !data?.shopTypes?.length &&
+          !data?.products?.length;
+        if (err && empty) setError(err);
+      })
+      .catch(() => {
+        setError("Proje akışı verisi yüklenemedi");
       })
       .finally(() => setLoading(false));
   }, []);
@@ -40,52 +60,69 @@ function PfosOzetPanel() {
   return (
     <>
       {error && (
-        <Alert type="error" message={error} showIcon style={{ marginBottom: 16 }} />
+        <Alert
+          type="error"
+          showIcon
+          style={{ marginBottom: 16 }}
+          message={error}
+          description={
+            error.toLowerCase().includes("yetkisiz") ? (
+              <Space direction="vertical" size={4}>
+                <span>
+                  Kayıt için Bearer gerekir; okuma genelde{" "}
+                  <code>/data/proje-akis.json</code> üzerinden yapılır.
+                </span>
+                <Link href="/yonetim/giris">Yönetim girişi → Bearer token</Link>
+                {!getProToken() && (
+                  <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                    Yerel: <code>.env</code> içindeki{" "}
+                    <code>EQUSTO_ADMIN_BEARER</code> değerini yapıştırın.
+                  </Typography.Text>
+                )}
+              </Space>
+            ) : undefined
+          }
+        />
       )}
 
-      <Row gutter={[16, 16]}>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Sorular", value: counts.questions }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Kurallar", value: counts.rules }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "PFOS ürün", value: counts.products }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Setler", value: counts.sets }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Konsept", value: counts.types }}
-          />
-        </Col>
-      </Row>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(148px, 1fr))",
+          gap: 16,
+        }}
+      >
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Konsept", value: counts.types }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Sorular", value: counts.questions }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Kurallar", value: counts.rules }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Setler", value: counts.sets }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "PFOS ürün", value: counts.products }}
+        />
+      </div>
 
       <ProCard
-        title="Tam PFOS düzenleme (legacy)"
+        title="Legacy admin"
         style={{ marginTop: 16 }}
         extra={<ToolOutlined />}
       >
         <Typography.Paragraph>
-          PDF/Excel import, soru editörü ve kural setleri hâlâ{" "}
-          <strong>admin.html</strong> içinde. Teklif motoru ve sihirbaz bu panelde
-          (Ant Design Pro); canlı müşteri sayfası geçiş sürecinde{" "}
-          <strong>pfos.html</strong>.
+          Import, export ve soğuk oda hesabı bu panelde. Soru editörü ve kural
+          setleri için hâlâ <strong>admin.html</strong> kullanılabilir. Canlı
+          müşteri: <strong>/pfos</strong>.
         </Typography.Paragraph>
         <Space wrap>
           <Button
@@ -96,7 +133,7 @@ function PfosOzetPanel() {
           >
             PFOS Admin (HTML)
           </Button>
-          <Button href="/pfos.html" target="_blank">
+          <Button href="/pfos" target="_blank">
             Canlı PFOS (müşteri)
           </Button>
           <Button href="/yonetim/yayin">Yayınlama</Button>
@@ -137,6 +174,47 @@ export default function YonetimPfosPage() {
               </span>
             ),
             children: <PfosProWizard />,
+          },
+          {
+            key: "import",
+            label: (
+              <span>
+                <CloudUploadOutlined /> Import
+              </span>
+            ),
+            children: <PfosImportPanel />,
+          },
+          {
+            key: "export",
+            label: (
+              <span>
+                <CloudDownloadOutlined /> Export
+              </span>
+            ),
+            children: <PfosExportPanel />,
+          },
+          {
+            key: "soguk-oda",
+            label: (
+              <span>
+                <CalculatorOutlined /> Soğuk oda
+              </span>
+            ),
+            children: <PfosSogukOdaPanel />,
+          },
+          {
+            key: "kategoriler",
+            label: (
+              <span>
+                <AppstoreOutlined /> Kategoriler
+              </span>
+            ),
+            children: <PfosKategoriPanel />,
+          },
+          {
+            key: "proje-akis",
+            label: "Proje akışı (A) · Set & Kural",
+            children: <PfosProjeAkisPanel />,
           },
           {
             key: "projeler",

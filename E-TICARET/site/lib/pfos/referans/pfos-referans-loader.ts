@@ -60,6 +60,19 @@ export type ReferansListeId =
   | "200-500"
   | "200-5000";
 
+/** Şehir oteli — 750 / 1000 m²'de tüm referans listeleri birleştirilir */
+const SEHIR_OTEL_TUM_LISTELER: ReferansListeId[] = [
+  "500-2000",
+  "500-2000-kocaeli",
+  "500-2000-topkapi",
+  "500-2000-arnavutkoy",
+];
+
+export function pickSehirOtelListeIds(m2: number): ReferansListeId[] {
+  if (m2 === 750 || m2 === 1000) return [...SEHIR_OTEL_TUM_LISTELER];
+  return ["500-2000-arnavutkoy"];
+}
+
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
 }
@@ -300,6 +313,41 @@ export async function loadReferansProfil(
   listeId?: ReferansListeId,
   altTip?: string | null,
 ): Promise<ReferansProfil> {
+  if (kategoriId === "sehir-otel" && !listeId) {
+    const listeIds = pickSehirOtelListeIds(m2);
+    if (listeIds.length > 1) {
+      const kalemler: ReferansKalem[] = [];
+      const labels: string[] = [];
+      const kaynaklar: string[] = [];
+      for (const bid of listeIds) {
+        const raw = await loadPfosReferansListe(kategoriId, bid);
+        if (!raw?.kalemler?.length) continue;
+        let k = ekipmanToReferansKalemler(
+          raw.kalemler,
+          `${kategoriId}-${bid}`,
+        );
+        if (raw.referansM2 > 0) {
+          k = olcekReferansKalemlerForM2(k, m2, raw.referansM2);
+        }
+        kalemler.push(...k);
+        labels.push(raw.label);
+        if (raw.kaynakDosya) kaynaklar.push(raw.kaynakDosya);
+      }
+      if (!kalemler.length) {
+        throw new Error(
+          `sehir-otel birleşik liste boş (${m2} m²) — referans JSON dosyalarını kontrol edin.`,
+        );
+      }
+      return {
+        id: `sehir-otel-birlesik-${m2}`,
+        label: `Şehir oteli — ${labels.length} referans (${m2} m²)`,
+        referansM2: m2,
+        kaynak: kaynaklar.join(" · "),
+        kalemler,
+      };
+    }
+  }
+
   const bantId =
     listeId ??
     (kategoriId === "coffee-shop"
@@ -359,7 +407,7 @@ export async function loadReferansProfil(
                                         : kategoriId === "pastane-cafe"
                                           ? "300-500"
                                         : kategoriId === "sehir-otel"
-                                          ? "500-2000-arnavutkoy"
+                                          ? pickSehirOtelListeIds(m2)[0]
                                           : kategoriId === "resort-otel"
                                             ? "200-500"
                                           : kategoriId === "kiremit-akasya"

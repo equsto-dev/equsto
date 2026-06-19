@@ -2,10 +2,195 @@
   "success": true,
   "source": "static-fallback",
   "konseptler": [
-    { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 17 },
-    { "slug": "pizzaci", "label": "Pizzacı", "kalemSayisi": 32 },
-    { "slug": "turk-restoran", "label": "Türk Restoranı", "kalemSayisi": 35 },
+    { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 21, "not": "Espressolab Watergarden (2016-114) · AVM coffee shop" },
+    {
+      "slug": "pizzaci",
+      "label": "Pizzacı",
+      "kalemSayisi": 69,
+      "not": "80–500 m² (80–200 MIALIENTO · 200–500 Avcılar)"
+    },
+    {
+      "slug": "turk-restoran",
+      "label": "Türk Restoranı",
+      "kalemSayisi": 77,
+      "not": "150–5000 m² · S13-388 + Sütiş 2017-006 (çift referans, silinmez)"
+    },
     { "slug": "meyhane", "label": "Meyhane / Mezeli Restoran", "kalemSayisi": 32 },
-    { "slug": "kebap-ortadogu", "label": "Kebap & Ortadoğu Mutfağı", "kalemSayisi": 46 }
+    {
+      "slug": "kebap-ortadogu",
+      "label": "Kebap & Ortadoğu Mutfağı",
+      "kalemSayisi": 46,
+      "not": "300–500 m² zone şablonu"
+    },
+    { "slug": "steakhouse", "label": "Steakhouse", "kalemSayisi": 0, "not": "m² bantlı referans listesi" },
+    { "slug": "balikci", "label": "Balıkçı", "kalemSayisi": 56, "not": "80–150 / 150–250 m² · Uçan Balık (094) · mahalle" },
+    {
+      "slug": "italyan",
+      "label": "İtalyan Restoran",
+      "kalemSayisi": 89,
+      "not": "≤150 m² 03-italyan · >150 m² The House (150–300)"
+    },
+    {
+      "slug": "all-day-dining-cafe",
+      "label": "All Day Dining Cafe",
+      "kalemSayisi": 89,
+      "not": "150–300 m² The House · >300 m² THC proforma"
+    },
+    {
+      "slug": "birahane",
+      "label": "Birahane",
+      "kalemSayisi": 27,
+      "not": "100–300 m² referans (11 BIRAHANE)"
+    },
+    {
+      "slug": "pastane",
+      "label": "Pastane",
+      "kalemSayisi": 41,
+      "not": "≤150 m² 14-PASTANE · >150 m² ekipman_listesi (150–250)"
+    },
+    {
+      "slug": "pideci",
+      "label": "Pideci",
+      "kalemSayisi": 50,
+      "not": "100–250 m² referans (PIDECI)"
+    },
+    {
+      "slug": "sushi",
+      "label": "Sushi",
+      "kalemSayisi": 27,
+      "not": "40–100 m² referans (06 SUSHI)"
+    },
+    {
+      "slug": "sarkuteri-kiosk",
+      "label": "Şarküteri Kiosk",
+      "kalemSayisi": 23,
+      "not": "Kiosk referans (7 ŞARKÜTERİ)"
+    },
+    {
+      "slug": "hamburger-kiosk",
+      "label": "Hamburger Kiosk",
+      "kalemSayisi": 22,
+      "not": "60–100 m² kiosk (8 HAMBURGER)"
+    },
+    {
+      "slug": "hotdog-kiosk",
+      "label": "Hotdog Kiosk",
+      "kalemSayisi": 16,
+      "not": "Kiosk referans (13 HOTDOG)"
+    },
+    {
+      "slug": "tavukcu",
+      "label": "Tavukçu",
+      "kalemSayisi": 28,
+      "not": "80–150 m² referans (17 TAVUKCU)"
+    },
+    {
+      "slug": "restoran",
+      "label": "Büyük Restoran",
+      "kalemSayisi": 110,
+      "not": "500–1000 m² · düğün · büyük rezervasyon · eğlence (RESTORAN)"
+    },
+    {
+      "slug": "kokteyl-kahve",
+      "label": "Kokteyl + Kahve",
+      "kalemSayisi": 18,
+      "not": "30–50 m² · No Fish Today referans"
+    },
+    {
+      "slug": "kahve-atolyesi",
+      "label": "Kahve Atölyesi",
+      "kalemSayisi": 47,
+      "not": "80–150 m² · kahve + kahvaltı & hafif yemek (2016-046)"
+    },
+    {
+      "slug": "kahve-duragi",
+      "label": "Kahve Durağı",
+      "kalemSayisi": 51,
+      "not": "m²<150 Konyaaltı (105) · m²≥150 Karabük (106) · cafe-restaurant zincir"
+    },
+    {
+      "slug": "kahve-tatli",
+      "label": "Kahve & Tatlı",
+      "kalemSayisi": 34,
+      "not": "40–100 m² · Hacıbozan Çemberlitaş (132) · teşhir+bar / alt mutfak"
+    },
+    {
+      "slug": "kahve-duragi-pastane",
+      "label": "Kahve Durağı — Pastane & Kahvaltı",
+      "kalemSayisi": 43,
+      "not": "100–200 m² · Sultangazi (135) · pastane + kahvaltı + hafif yemek"
+    },
+    {
+      "slug": "harvest-cafe",
+      "label": "Harvest Cafe",
+      "kalemSayisi": 44,
+      "not": "100–200 m² · a la carte · tatlı & kahve (2016-051 Harvest)"
+    },
+    {
+      "slug": "all-sport-cafe",
+      "label": "All Sport Cafe",
+      "kalemSayisi": 32,
+      "not": "100–200 m² · all day cafe (2016-064)"
+    },
+    {
+      "slug": "casual-cafe",
+      "label": "Casual Cafe",
+      "kalemSayisi": 49,
+      "not": "50–150 m² · Şifa Cafe Beykent (2017-026)"
+    },
+    {
+      "slug": "buyuk-yemekhane",
+      "label": "Büyük Yemekhane",
+      "kalemSayisi": 285,
+      "not": "2000–3500 kişi/gün · Yozgat hastane (catering / fabrika / okul)"
+    },
+    {
+      "slug": "guneli-pastane",
+      "label": "Güneli Fırın",
+      "kalemSayisi": 46,
+      "not": "200–400 m² · pastane + yerel (2016-075)"
+    },
+    {
+      "slug": "resort-otel",
+      "label": "Resort Otel (ölçekli)",
+      "kalemSayisi": 64,
+      "not": "200–500 m² · Zigana Alaçatı (159) · restaurant + personel"
+    },
+    {
+      "slug": "sehir-otel",
+      "label": "Şehir Oteli (Business)",
+      "kalemSayisi": 186,
+      "not": "500–2000 m² · Hampton Bolu (088) · Kocaeli (077)"
+    },
+    {
+      "slug": "mus-selinoz-turk",
+      "label": "Türk Mutfağı — Lokanta",
+      "kalemSayisi": 89,
+      "not": "100–250 m² · Muş Selinöz (101) · bar+pasta+mutfak · Kiremit’ten ayrı"
+    },
+    {
+      "slug": "kiremit-akasya",
+      "label": "Kiremit Akasya",
+      "kalemSayisi": 30,
+      "not": "100–250 m² · Türk mutfağı · self servis · food court (2016-085)"
+    },
+    {
+      "slug": "kasap",
+      "label": "Kasap",
+      "kalemSayisi": 28,
+      "not": "100–250 m² · yalnızca kasap (2016-087 kasap)"
+    },
+    {
+      "slug": "kasap-sarkuteri",
+      "label": "Kasap + Şarküteri",
+      "kalemSayisi": 36,
+      "not": "100–250 m² · kasap + şarküteri tam liste (2016-087)"
+    },
+    {
+      "slug": "inari-bar-yemek",
+      "label": "Bar + Yemek",
+      "kalemSayisi": 37,
+      "not": "100–200 m² · Inari · bar + yemek · hafif Asya (2016-093)"
+    }
   ]
 }

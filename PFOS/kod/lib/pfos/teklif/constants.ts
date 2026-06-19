@@ -27,7 +27,7 @@ export const TEKLIF_V14_SARTLAR: string[] = [
   "  04.   Ödeme; siparişte %50 peşin banka havalesi, kalanı mal tesliminden önce banka havalesi şeklindedir.",
   "  05.   Ödeme şartlarının yerine getirilmesi ile birlikte teklif sipariş statüsüne geçer.",
   "  06.   Montaj satıcıya aittir. Her türlü tesisat ve sarf malzemesi alıcıya aittir.",
-  "  07.   Nakliye ve nakliye sigortası satıcıya aittir.",
+  "  07.   Nakliye ve nakliye sigortası alıcıya aittir.",
   "  08.   Her türlü yatay ve dikey taşımacılık alıcıya aittir. Kamyon üstü teslimdir.",
   "  09.   Teslim yeri müşteri adresidir.",
   "  10.   Teslim süresi: kesin siparişinizi takiben 6-8 hafta (üretim programına göre teyit).",

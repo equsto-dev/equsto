@@ -52,7 +52,7 @@ export function isCalismaTezgahiReferansIsim(
   const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
   if (!n) return false;
   if (
-    /set\s*ustu|setüstü|set alti|setalti|ara\s*tezgah|bym\s*giris|bym\s*cikis|bulasik.*giris|on\s*yikama|kokteyl\s*istasyon|servis\s*tezgah.*sicak/i.test(
+    /set\s*ustu|setüstü|set alti|setalti|ara\s*tezgah|bym\s*giris|bym\s*cikis|bulasik.*giris|on\s*yikama|kokteyl\s*istasyon|servis\s*tezgah.*sicak|buzdolab|donduruc|sogutuc|soğutuc/i.test(
       n,
     )
   ) {

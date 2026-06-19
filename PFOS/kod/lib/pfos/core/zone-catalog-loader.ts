@@ -1,5 +1,4 @@
-import { readFile } from "fs/promises";
-import path from "path";
+import { readJsonFile } from "@/lib/legacy-data";
 
 export type ZoneCatalogProduct = {
   id: string;
@@ -30,14 +29,11 @@ let cache: ZoneCatalogBundle | null = null;
 
 export async function loadZoneCatalog(): Promise<ZoneCatalogBundle> {
   if (cache) return cache;
-  const filePath = path.join(
-    process.cwd(),
-    "public",
-    "data",
-    "pfos-zone-catalog.json",
-  );
-  const raw = await readFile(filePath, "utf-8");
-  cache = JSON.parse(raw) as ZoneCatalogBundle;
+  const parsed = await readJsonFile<ZoneCatalogBundle>("pfos-zone-catalog.json");
+  if (!parsed) {
+    throw new Error("pfos-zone-catalog.json yüklenemedi");
+  }
+  cache = parsed;
   return cache;
 }
 

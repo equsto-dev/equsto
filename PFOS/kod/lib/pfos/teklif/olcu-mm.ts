@@ -1,4 +1,4 @@
-import katalogOlcuMm from "../../../public/data/pfos-katalog-olcu-mm.json";
+import katalogOlcuMm from "@/lib/pfos/data/pfos-katalog-olcu-mm.json";
 
 /** SKU → G×D×Y (mm), Öztiryakiler PDF / katalog doğrulanmış */
 type SkuOlcuMap = Record<string, string>;
@@ -20,11 +20,28 @@ export function olcuMmFromSku(sku: string | null | undefined): string | null {
   return toOlcuMmDisplay(hit);
 }
 
-/** Boyut dizisini "550×545×530 mm" biçimine getirir */
+/** Boyut dizisini "550×545×530" biçimine getirir (mm, birim ibaresi yok) */
 export function formatOlcuMm(parts: number[]): string | null {
   const nums = parts.filter((n) => Number.isFinite(n) && n > 0);
   if (!nums.length) return null;
-  return `${nums.map((n) => Math.round(n)).join("×")} mm`;
+  return nums.map((n) => Math.round(n)).join("×");
+}
+
+/** Görünüm — mm/cm birim soneklerini kaldırır */
+export function stripOlcuUnitSuffix(value: string | null | undefined): string {
+  return String(value ?? "")
+    .trim()
+    .replace(/[x*]/gi, "×")
+    .replace(/\s*(?:mm|cm)\b\.?/gi, "")
+    .trim();
+}
+
+/** Teklif / vitrin ölçü hücresi */
+export function displayOlcuMm(value: string | null | undefined): string {
+  const s = String(value ?? "").trim();
+  if (!s || s === "—") return s || "—";
+  if (isTepsiKapasiteMetni(s)) return s;
+  return toOlcuMmDisplay(s) ?? (stripOlcuUnitSuffix(s) || s);
 }
 
 /**
@@ -55,7 +72,7 @@ export function toOlcuMmDisplay(value: string | null | undefined): string | null
   if (isTepsiKapasiteMetni(s)) return null;
 
   if (/\bmm\b/i.test(s)) {
-    return s.replace(/[x*]/gi, "×").replace(/\s*mm\s*/gi, " mm").trim();
+    return stripOlcuUnitSuffix(s);
   }
 
   if (/gn\b|kutu\s*tipi|Ø|no\b/i.test(s) && !/\d\s*[×x*]\s*\d/.test(s)) {
@@ -82,6 +99,6 @@ export function toOlcuMmDisplay(value: string | null | undefined): string | null
     if (y != null) y = Math.round(y);
   }
 
-  if (y != null) return `${g}×${d}×${y} mm`;
-  return `${g}×${d} mm`;
+  if (y != null) return `${g}×${d}×${y}`;
+  return `${g}×${d}`;
 }

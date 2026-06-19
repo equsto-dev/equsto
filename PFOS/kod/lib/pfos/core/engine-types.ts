@@ -56,6 +56,10 @@ export type ConceptTemplateItem = {
   notlar?: string;
   /** Referans şablon satır sırası */
   sablonSira?: number;
+  referansBolumSira?: number;
+  referansBolumKey?: string;
+  /** pfos-referans SKU link anahtarı (ör. balikci-150-250) */
+  referansListeKey?: string;
 };
 
 export type ConceptTemplate = {

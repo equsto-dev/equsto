@@ -8,8 +8,9 @@ import {
   TEKLIF_BOLUM_ROW_FILL_ARGB,
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, kwHucreExcelValue } from "./format-v14";
+import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT, dovizSembol } from "./format-v14";
 import { fetchTcmbKurForTeklif } from "./fetch-kur.client";
+import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const PRODUCT_BLOCK_START = 5;
 const PRODUCT_BLOCK_ROWS = 16;
@@ -63,6 +64,8 @@ function fillHeader(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   kurCell.numFmt = '"₺"#,##0.00';
 }
 
+const TEKLIF_V14_COL_COUNT = 12;
+
 function writeDataRow(
   ws: ExcelJS.Worksheet,
   rowNum: number,
@@ -70,26 +73,57 @@ function writeDataRow(
 ) {
   ws.getCell(rowNum, 1).value = satir.bolumNo;
   ws.getCell(rowNum, 2).value = satir.poz;
-  ws.getCell(rowNum, 3).value = satir.ek ?? "";
-  ws.getCell(rowNum, 4).value = satir.stokNo;
-  ws.getCell(rowNum, 5).value = satir.tanim;
-  ws.getCell(rowNum, 6).value = satir.marka;
-  ws.getCell(rowNum, 7).value = satir.olcu || "—";
-  ws.getCell(rowNum, 8).value = kwHucreExcelValue(satir.elkKw);
-  ws.getCell(rowNum, 8).numFmt = "0.0";
-  ws.getCell(rowNum, 9).value = kwHucreExcelValue(satir.gazKw);
-  ws.getCell(rowNum, 9).numFmt = "0.0";
-  ws.getCell(rowNum, 10).value = satir.adet;
-  ws.getCell(rowNum, 11).value = satir.birimSatis ?? 0;
-  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 12).value = {
-    formula: `J${rowNum}*K${rowNum}`,
+  ws.getCell(rowNum, 3).value = satir.stokNo;
+  ws.getCell(rowNum, 3).alignment = { horizontal: "left", vertical: "top" };
+  ws.getCell(rowNum, 4).value = satir.tanim;
+  ws.getCell(rowNum, 5).value = kwHucreExcelValue(satir.elkKw);
+  ws.getCell(rowNum, 5).numFmt = KW_HUCRE_EXCEL_NUMFMT;
+  ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
+  ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
+  ws.getCell(rowNum, 7).value = satir.adet;
+  ws.getCell(rowNum, 8).value = Math.round(satir.birimSatis ?? 0);
+  ws.getCell(rowNum, 8).numFmt = "#,##0";
+  ws.getCell(rowNum, 9).value = {
+    formula: `ROUND(G${rowNum}*H${rowNum},0)`,
   };
-  ws.getCell(rowNum, 12).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 13).value = satir.doviz;
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
+  ws.getCell(rowNum, 10).value = satir.marka;
+  ws.getCell(rowNum, 10).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 11).value = satir.olcu || "—";
+  ws.getCell(rowNum, 11).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 12).value = satir.doviz;
 }
 
-function writeSpecRow(
+function absFetchUrl(url: string): string {
+  const u = url.trim();
+  if (!u) return "";
+  if (/^https?:\/\//i.test(u)) return u;
+  if (typeof window !== "undefined") {
+    return new URL(u.startsWith("/") ? u : `/${u}`, window.location.origin).href;
+  }
+  return u;
+}
+
+async function fetchImageBuffer(
+  url: string,
+): Promise<{ buffer: ArrayBuffer; extension: "png" | "jpeg" | "gif" } | null> {
+  try {
+    const res = await fetch(absFetchUrl(url), { cache: "force-cache" });
+    if (!res.ok) return null;
+    const ct = (res.headers.get("content-type") || "").toLowerCase();
+    const extension: "png" | "jpeg" | "gif" = ct.includes("png")
+      ? "png"
+      : ct.includes("gif")
+        ? "gif"
+        : "jpeg";
+    return { buffer: await res.arrayBuffer(), extension };
+  } catch {
+    return null;
+  }
+}
+
+async function writeSpecRow(
+  wb: ExcelJS.Workbook,
   ws: ExcelJS.Worksheet,
   rowNum: number,
   satir: TeklifV14Satir,
@@ -97,19 +131,34 @@ function writeSpecRow(
 ) {
   applyRowStyle(ws, rowNum, specTpl);
   try {
-    ws.mergeCells(`A${rowNum}:G${rowNum}`);
-    ws.mergeCells(`G${rowNum}:M${rowNum}`);
+    ws.mergeCells(`A${rowNum}:B${rowNum}`);
+    ws.mergeCells(`E${rowNum}:L${rowNum}`);
   } catch {
     /* merged */
   }
-  ws.getCell(rowNum, 1).value = satir.fotoNot ?? "📷\nFotoğraf";
-  ws.getCell(rowNum, 1).alignment = {
-    horizontal: "center",
-    vertical: "middle",
-    wrapText: true,
-  } as ExcelJS.Alignment;
-  ws.getCell(rowNum, 7).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 7).alignment = {
+
+  const img = satir.fotoUrl ? await fetchImageBuffer(satir.fotoUrl) : null;
+  if (img) {
+    const imageId = wb.addImage({
+      buffer: img.buffer,
+      extension: img.extension,
+    });
+    ws.addImage(imageId, {
+      tl: { col: 2.08, row: rowNum - 1 + 0.15 },
+      ext: { width: 110, height: 90 },
+    });
+    ws.getCell(rowNum, 3).value = "";
+  } else {
+    ws.getCell(rowNum, 3).value = satir.fotoNot ?? "📷\nFotoğraf";
+    ws.getCell(rowNum, 3).alignment = {
+      horizontal: "left",
+      vertical: "middle",
+      wrapText: true,
+    } as ExcelJS.Alignment;
+  }
+
+  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 5).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
@@ -117,7 +166,7 @@ function writeSpecRow(
   ws.getRow(rowNum).height = 120;
 }
 
-function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = 13) {
+function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = TEKLIF_V14_COL_COUNT) {
   for (let col = 1; col <= colCount; col++) {
     const cell = ws.getCell(rowNum, col);
     cell.fill = {
@@ -128,7 +177,11 @@ function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = 13)
   }
 }
 
-function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
+async function buildProductBlock(
+  ws: ExcelJS.Worksheet,
+  model: TeklifModelV14,
+  wb: ExcelJS.Workbook,
+) {
   const dataTpl = captureRowStyle(ws, DATA_TEMPLATE_ROW);
   const specTpl = captureRowStyle(ws, SPEC_TEMPLATE_ROW);
   const sectionTpl = captureRowStyle(ws, SECTION_TEMPLATE_ROW);
@@ -149,7 +202,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
     applyRowStyle(ws, rowNum, sectionTpl);
     applyBolumRowFill(ws, rowNum);
     try {
-      ws.mergeCells(`A${rowNum}:M${rowNum}`);
+      ws.mergeCells(`A${rowNum}:L${rowNum}`);
     } catch {
       /* merged */
     }
@@ -161,14 +214,14 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
       applyRowStyle(ws, rowNum, dataTpl);
       writeDataRow(ws, rowNum, satir);
       const dr = rowNum;
-      sumRefs.push(`L${dr}`);
-      elkParts.push(`H${dr}*J${dr}`);
-      gazParts.push(`I${dr}*J${dr}`);
-      adetRefs.push(`J${dr}`);
+      sumRefs.push(`I${dr}`);
+      elkParts.push(`E${dr}*G${dr}`);
+      gazParts.push(`F${dr}*G${dr}`);
+      adetRefs.push(`G${dr}`);
       rowNum++;
 
       ws.insertRow(rowNum, []);
-      writeSpecRow(ws, rowNum, satir, specTpl);
+      await writeSpecRow(wb, ws, rowNum, satir, specTpl);
       rowNum++;
     }
   }
@@ -180,36 +233,36 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, kwTpl);
-  ws.getCell(rowNum, 5).value = "Gazlı cihaz toplam bağlantısı (kW)";
+  ws.getCell(rowNum, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
   if (gazParts.length) {
-    ws.getCell(rowNum, 9).value = { formula: gazSum };
-    ws.getCell(rowNum, 9).numFmt = "0.0";
+    ws.getCell(rowNum, 6).value = { formula: gazSum };
+    ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   rowNum++;
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, subTpl);
-  ws.getCell(rowNum, 7).value = "Sütun toplamları →";
+  ws.getCell(rowNum, 4).value = "";
   if (elkParts.length) {
-    ws.getCell(rowNum, 8).value = { formula: elkSum };
-    ws.getCell(rowNum, 8).numFmt = "0.0";
+    ws.getCell(rowNum, 5).value = { formula: elkSum };
+    ws.getCell(rowNum, 5).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (gazParts.length) {
-    ws.getCell(rowNum, 9).value = { formula: gazSum };
-    ws.getCell(rowNum, 9).numFmt = "0.0";
+    ws.getCell(rowNum, 6).value = { formula: gazSum };
+    ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (adetRefs.length) {
-    ws.getCell(rowNum, 10).value = { formula: adetSum };
+    ws.getCell(rowNum, 7).value = { formula: adetSum };
   }
   rowNum++;
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, grandTpl);
-  ws.getCell(rowNum, 10).value = "GENEL TOPLAM";
-  ws.getCell(rowNum, 10).font = { bold: true };
-  ws.getCell(rowNum, 12).value = { formula: sumFormula };
-  ws.getCell(rowNum, 12).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 13).value = model.ozet.doviz;
+  ws.getCell(rowNum, 8).value = "GENEL TOPLAM";
+  ws.getCell(rowNum, 8).font = { bold: true };
+  ws.getCell(rowNum, 9).value = { formula: sumFormula };
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
+  ws.getCell(rowNum, 12).value = dovizSembol(model.ozet.doviz);
 }
 
 async function fetchEurTry(): Promise<number | null> {
@@ -221,13 +274,13 @@ async function fetchEurTry(): Promise<number | null> {
 export async function downloadTeklifV14Excel(model: TeklifModelV14) {
   const ExcelJS = (await import("exceljs")).default;
 
-  let merged = model;
+  let merged = sanitizeTeklifV14ModelForExport(model);
   if (merged.ust.eurTry == null) {
     const rate = await fetchEurTry();
     if (rate) {
       merged = {
-        ...model,
-        ust: { ...model.ust, eurTry: rate },
+        ...merged,
+        ust: { ...merged.ust, eurTry: rate },
       };
     }
   }
@@ -243,7 +296,7 @@ export async function downloadTeklifV14Excel(model: TeklifModelV14) {
   if (!ws) throw new Error("Excel sayfası bulunamadı");
 
   fillHeader(ws, merged);
-  buildProductBlock(ws, merged);
+  await buildProductBlock(ws, merged, wb);
 
   const buffer = await wb.xlsx.writeBuffer();
   const blob = new Blob([buffer], {

@@ -1124,13 +1124,13 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     name: "Resort Otel (ölçekli)",
     parent: "Otel F&B",
     desc:
-      "Boutique / resort F&B · Zigana Alaçatı 2016-159 · 200–500 m² · motor: resort-otel",
+      "Boutique / resort F&B · Zigana Alaçatı 2016-159 · 200–2000 m² · motor: resort-otel",
     pfos: {
       motorSlug: "resort-otel",
       dukkanSecim: "Resort Otel",
       m2Min: 200,
-      m2Max: 500,
-      bantKurali: "Tek referans liste (ölçekli resort); m² ile adet ölçeklenir",
+      m2Max: 2000,
+      bantKurali: "Tek referans liste (ölçekli resort); m² ile adet ölçeklenir · 750/1000 m² dahil",
       listeYolu: "veri/zigana-otel-2016-159.xls",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",

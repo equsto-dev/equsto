@@ -41,7 +41,7 @@ git push -u origin main
 | `NEXT_PUBLIC_SITE_URL` | İlk deploy: `https://PROJE.vercel.app` |
 | `LEGACY_DATA_BASE` | `https://equsto.com` (isteğe bağlı) |
 
-`MEILISEARCH_*` — [Meilisearch Cloud](https://www.meilisearch.com/cloud) veya yerel; bkz. [`MEILISEARCH.md`](MEILISEARCH.md)
+`MEILISEARCH_*` — yerel Docker veya Hetzner; bkz. [`MEILISEARCH.md`](MEILISEARCH.md)
 
 5. **Deploy**
 
@@ -73,6 +73,6 @@ Yeni site Vercel’de; eski domain yönlendirmesi ayrı adım (DNS).
 
 ## 5) Sprint 0 kalan (sonra)
 
-- [ ] Meilisearch Cloud + `npm run search:index` ([`MEILISEARCH.md`](MEILISEARCH.md))
+- [ ] Meilisearch Docker + `npm run search:index` ([`MEILISEARCH.md`](MEILISEARCH.md))
 - [ ] 10 Atalay ürünü `PUBLISHED` (admin veya seed genişletme)
 - [ ] Domain `equsto.com` → Vercel

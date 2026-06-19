@@ -81,7 +81,7 @@ merged.NEXT_PUBLIC_ASSET_CDN_URL =
 merged.NEXT_PUBLIC_GA4_ID =
   merged.NEXT_PUBLIC_GA4_ID || "G-MVRNFQC4PQ";
 
-/** Sunucuda yerel Meili (Cloud URL şablonda eski/ölü olabilir) */
+/** Sunucuda yerel Meili — MEILISEARCH_HOST=http://meilisearch:7700 */
 merged.MEILISEARCH_HOST = "http://meilisearch:7700";
 merged.MEILISEARCH_MASTER_KEY = "equsto-prod-meili-key";
 merged.MEILISEARCH_INDEX = merged.MEILISEARCH_INDEX || "equsto_products";

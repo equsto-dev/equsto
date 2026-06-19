@@ -1,7 +1,10 @@
 import type { ConceptTemplate } from "../../core/engine-types";
 import { referansKalemlerToTemplateItems } from "../build-template-items";
 import type { ReferansProfil } from "../referans-types";
-import { getS13ReferansForKonsept, S13_388_M2_BAND } from "../s13-388";
+import {
+  loadReferansProfil,
+  pickAllDayDiningListe,
+} from "../pfos-referans-loader";
 import {
   ALL_DAY_DINING_DEFAULT_REFERANS_ID,
   ALL_DAY_DINING_M2_BAND,
@@ -12,13 +15,8 @@ import {
 /** THC Bakü referans m² (yerleşim planı + proforma) */
 export const ALL_DAY_DINING_REFERANS_M2 = 280;
 
-const S13_ALL_DAY = getS13ReferansForKonsept("all-day-dining-cafe");
-
-/** THC (200–400) + S13-388 (150–300) */
-export const ALL_DAY_DINING_REFERANSLAR: ReferansProfil[] = [
-  ...THC_REFERANSLAR,
-  ...(S13_ALL_DAY ? [S13_ALL_DAY] : []),
-];
+/** THC (200–400 m²) — 150–300 m² The House listesi pfos-referans JSON */
+export const ALL_DAY_DINING_REFERANSLAR: ReferansProfil[] = [...THC_REFERANSLAR];
 
 export function listAllDayDiningReferanslar(): Pick<
   ReferansProfil,
@@ -38,28 +36,9 @@ export {
   getAllDayDiningReferans,
 };
 
-export function buildAllDayDiningTemplate(
-  referansId = ALL_DAY_DINING_DEFAULT_REFERANS_ID,
-): ConceptTemplate {
-  const ref = getAllDayDiningReferans(referansId);
-  return {
-    konsept: "all-day-dining-cafe",
-    label: "All Day Dining Cafe",
-    ornekler: ["The House Café", "Big Chefs", "Happy Moon's"],
-    segmentBasis: "m2",
-    seatDensity: 1.5,
-    teklifPozModu: "referans",
-    referansId: ref.id,
-    items: referansKalemlerToTemplateItems(ref.kalemler),
-  };
-}
-
 export function pickAllDayDiningReferansForM2(m2: number): ReferansProfil {
   const candidates = ALL_DAY_DINING_REFERANSLAR.filter((r) => {
     const refM2 = r.referansM2 ?? ALL_DAY_DINING_REFERANS_M2;
-    if (r.id.startsWith("s13-388")) {
-      return m2 >= S13_388_M2_BAND.min && m2 <= S13_388_M2_BAND.max;
-    }
     return m2 >= ALL_DAY_DINING_M2_BAND.min && m2 <= ALL_DAY_DINING_M2_BAND.max;
   });
   if (!candidates.length) {
@@ -71,4 +50,26 @@ export function pickAllDayDiningReferansForM2(m2: number): ReferansProfil {
       Math.abs((b.referansM2 ?? ALL_DAY_DINING_REFERANS_M2) - m2),
   );
   return sorted[0] ?? getAllDayDiningReferans(ALL_DAY_DINING_DEFAULT_REFERANS_ID);
+}
+
+export async function buildAllDayDiningTemplate(
+  m2: number,
+): Promise<ConceptTemplate> {
+  const listeId = pickAllDayDiningListe(m2);
+  const ref = listeId
+    ? await loadReferansProfil("all-day-dining-cafe", m2, listeId)
+    : pickAllDayDiningReferansForM2(m2);
+  return {
+    konsept: "all-day-dining-cafe",
+    label: "All Day Dining Cafe",
+    ornekler: ["The House Café", "Big Chefs", "Happy Moon's"],
+    segmentBasis: "m2",
+    seatDensity: 1.5,
+    teklifPozModu: "referans",
+    teklifBolum: listeId
+      ? { no: "19", baslik: `19. THE HOUSE CAFE · ${ref.label.toUpperCase()}` }
+      : undefined,
+    referansId: ref.id,
+    items: referansKalemlerToTemplateItems(ref.kalemler),
+  };
 }

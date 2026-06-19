@@ -8,6 +8,11 @@ import {
   soruCevaplarindanMotorGirdi,
   type SoruCevapHaritasi,
 } from "@/lib/pfos/proje-akis/soru-motor-mapping";
+import {
+  otelSegmentM2Aktif,
+  PFOS_OTEL_UST_SEGMENT,
+  ustSegmentOptionsForM2,
+} from "@/lib/pfos/proje-akis/wizard-questions";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import { fetchTcmbKurForTeklif } from "@/lib/pfos/teklif/fetch-kur.client";
 import { pfosResponseToTeklifV14 } from "@/lib/pfos/teklif/map-pfos-response";
@@ -414,6 +419,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     teklifRequestedRef.current = false;
     setAnswers((prev) => {
       let merged = clearDownstreamAnswers({ ...prev, q_m2: value }, "q_m2");
+      const m2 = Number(value);
+      if (
+        String(merged.q_ust_segment ?? "") === PFOS_OTEL_UST_SEGMENT &&
+        !otelSegmentM2Aktif(m2)
+      ) {
+        merged = { ...merged, q_ust_segment: "" };
+      }
       if (!bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)) {
         merged = { ...merged, q_dukkan_turu: "" };
       }
@@ -598,6 +610,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             )}
           </p>
         ) : null}
+        {otelSegmentM2Aktif(val) ? (
+          <p className={styles.alanHint} style={{ marginBottom: 10 }}>
+            {t(
+              "750 / 1000 m²: Otel F&B segmenti ve tüm otel referans listeleri kullanılabilir.",
+            )}
+          </p>
+        ) : null}
         <div className={styles.alanHero}>
           <input
             type="number"
@@ -639,7 +658,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const rawOpts =
         q.type === "select_conditional"
           ? dukkanSecenekleri(q, answers, m2ByDukkan)
-          : ((q.options as string[]) ?? []);
+          : q.id === "q_ust_segment"
+            ? ustSegmentOptionsForM2(
+                (q.options as string[]) ?? [],
+                Number(answers.q_m2),
+              )
+            : ((q.options as string[]) ?? []);
       const opts = rawOpts.filter((o) => o !== "Bilmiyorum");
       const val = String(answers[id] ?? "");
       const twoCol = opts.length > 6;

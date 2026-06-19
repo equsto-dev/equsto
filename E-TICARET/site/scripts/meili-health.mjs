@@ -1,5 +1,5 @@
 /**
- * Meilisearch erişim testi (Cloud UI yerine)
+ * Meilisearch erişim testi
  *   npm run search:health
  */
 import "./load-env.mjs";
@@ -11,9 +11,9 @@ const key = process.env.MEILISEARCH_MASTER_KEY?.trim();
 const indexUid = process.env.MEILISEARCH_INDEX?.trim() || "equsto_products";
 
 if (!host || !key) {
-  if (!host) console.error("[meili-health] MEILISEARCH_HOST boş — Cloud Project Settings → Host URL");
-  if (!key) console.error("[meili-health] MEILISEARCH_MASTER_KEY boş — Admin API Key");
-  console.error("Dosya: equsto-v2/.env.local");
+  if (!host) console.error("[meili-health] MEILISEARCH_HOST boş — yerel: http://127.0.0.1:7700");
+  if (!key) console.error("[meili-health] MEILISEARCH_MASTER_KEY boş");
+  console.error("Dosya: .env.local veya .env.production  |  bkz. docs/MEILISEARCH.md");
   process.exit(1);
 }
 

@@ -35,16 +35,40 @@ export function bolumBaslikFromKategori(kat: KategoriKodu): string {
   return `${bolumNoFromKategori(kat)}. ${label.toUpperCase()}`;
 }
 
-/** Espressolab A1, A4, A27 → sıra numarası */
+/** A12 → 12; 005 / 009 01 → sayısal sıra (poz harfi kategori için kullanılmaz) */
 export function referansPozSira(poz: string): number {
-  const m = String(poz || "").trim().match(/^[A-Z]+(\d+)$/i);
-  return m ? parseInt(m[1], 10) : 9999;
+  const p = String(poz || "").trim();
+  const letterNum = p.match(/^[A-Z]+(\d+)/i);
+  if (letterNum) return parseInt(letterNum[1], 10);
+  const num = parseInt(p.replace(/\s.*/, ""), 10);
+  return Number.isFinite(num) ? num : 9999;
+}
+
+function bolumSiraForKalem(k: PFOSKalemi): number {
+  if (k.referansBolumSira != null) return k.referansBolumSira;
+  return kategoriSiraIndex(k.kategoriKodu);
+}
+
+/** Referans listesi — JSON yükleme sırası (sablonSira) korunur */
+export function sortKalemlerReferansListesi(
+  kalemler: PFOSKalemi[],
+): PFOSKalemi[] {
+  return [...kalemler].sort((a, b) => {
+    const sa = a.sablonSira ?? 9999;
+    const sb = b.sablonSira ?? 9999;
+    if (sa !== sb) return sa - sb;
+    return referansPozSira(a.referansPoz ?? "") - referansPozSira(b.referansPoz ?? "");
+  });
 }
 
 export function sortKalemlerForTeklif(a: PFOSKalemi, b: PFOSKalemi): number {
+  const ba = bolumSiraForKalem(a);
+  const bb = bolumSiraForKalem(b);
+  if (ba !== bb) return ba - bb;
+
   if (a.referansPoz && b.referansPoz) {
-    const sa = a.sablonSira ?? referansPozSira(a.referansPoz);
-    const sb = b.sablonSira ?? referansPozSira(b.referansPoz);
+    const sa = referansPozSira(a.referansPoz);
+    const sb = referansPozSira(b.referansPoz);
     if (sa !== sb) return sa - sb;
   }
   const ka = kategoriSiraIndex(a.kategoriKodu);
@@ -72,12 +96,12 @@ export function assignPozNumbersKategori(kalemler: PFOSKalemi[]): PFOSKalemi[] {
   });
 }
 
-/** Referans modu: şablon sırasına göre A1, A2, A3 … (A1A/A6A gibi revize kodları teklife yansımaz) */
+/** Referans modu: Excel/JSON poz kodu (D6, H5 …) aynen kalır */
 export function assignPozNumbersReferans(kalemler: PFOSKalemi[]): PFOSKalemi[] {
-  return [...kalemler].sort(sortKalemlerForTeklif).map((k, i) => ({
-    ...k,
-    poz: `A${i + 1}`,
-  }));
+  return sortKalemlerReferansListesi(kalemler).map((k) => {
+    const poz = String(k.referansPoz ?? k.poz ?? "").trim();
+    return { ...k, poz: poz || k.poz };
+  });
 }
 
 export function finalizeKalemlerForTeklif(
@@ -92,10 +116,47 @@ export function finalizeKalemlerForTeklif(
   return assignPozNumbersKategori(kalemler);
 }
 
+function excelBolumBaslik(k: PFOSKalemi): string | null {
+  const excelBolum = String(k.altKategori ?? "").split("\0")[0].trim();
+  if (excelBolum.length > 1 && !/^[A-H]$/i.test(excelBolum)) {
+    return excelBolum.replace(/\s+/g, " ").toUpperCase();
+  }
+  return null;
+}
+
 export function bolumForKalem(
   k: PFOSKalemi,
   layout?: TeklifLayoutMeta,
 ): { bolumNo: string; bolumBaslik: string } {
+  const referansMode =
+    layout?.pozModu === "referans" ||
+    (k.referansPoz != null && String(k.referansPoz).length > 0);
+
+  if (referansMode) {
+    const excel = excelBolumBaslik(k);
+    if (excel) {
+      return {
+        bolumNo: String((k.referansBolumSira ?? 0) + 1).padStart(2, "0"),
+        bolumBaslik: excel,
+      };
+    }
+    const alt = String(k.altKategori ?? "").trim();
+    if (alt.length > 1 && !/^[A-H]$/i.test(alt)) {
+      return {
+        bolumNo: String((k.referansBolumSira ?? 0) + 1).padStart(2, "0"),
+        bolumBaslik: alt.toUpperCase(),
+      };
+    }
+  }
+
+  const excel = excelBolumBaslik(k);
+  if (excel) {
+    const sira = bolumSiraForKalem(k);
+    return {
+      bolumNo: String(sira + 1).padStart(2, "0"),
+      bolumBaslik: excel,
+    };
+  }
   if (layout?.bolum) {
     return { bolumNo: layout.bolum.no, bolumBaslik: layout.bolum.baslik };
   }

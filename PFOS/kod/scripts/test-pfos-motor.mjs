@@ -1,5 +1,5 @@
 import { calculateUnifiedQuote } from "../lib/pfos/core/unified-motor.ts";
-import { getTemplate } from "../lib/pfos/core/templates/index.ts";
+import { getTemplate, resolveTemplateForQuote } from "../lib/pfos/core/templates/index.ts";
 import { clearMatchProductCache } from "../lib/pfos/core/match-product.ts";
 import { clearShopCatalogCache } from "../lib/pfos/core/shop-catalog-match.ts";
 import { db } from "../lib/db.ts";
@@ -23,7 +23,7 @@ console.log("pfos products in DB:", pfosCount);
 console.log("---");
 
 for (const { konsept, m2 } of KONSEPTLER) {
-  const template = getTemplate(konsept);
+  const template = await resolveTemplateForQuote(konsept, m2);
   const r = await calculateUnifiedQuote(
     {
       konsept,

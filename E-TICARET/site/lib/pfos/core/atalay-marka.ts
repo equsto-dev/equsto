@@ -90,7 +90,7 @@ export function isAtalayPisirmeRow(row: {
 
 export function isOztiPisirmeSku(sku: string | null | undefined): boolean {
   const s = String(sku ?? "").trim();
-  return /^78[0-9]{2}\./i.test(s) || /^989[01]\./i.test(s);
+  return /^78[0-9]{2}\./i.test(s) || /^989[01]\./i.test(s) || /^8890\.[a-zA-Z]/i.test(s);
 }
 
 export function isPisirmeDisMarka(marka: string | null | undefined): boolean {

@@ -14,7 +14,7 @@ export const KATEGORI_LABELS: Record<KategoriKodu, string> = {
   D: "Pastane & Tatlı Hazırlık",
   E: "Soğuk Hazırlık & Salata",
   F: "Pizza Hazırlık & Servis",
-  G: "Mutfak Depolama",
+  G: "Mutfak",
   H: "Mutfak Bulaşık",
   X: "Nakliye & Montaj",
 };
@@ -26,6 +26,45 @@ export const KonseptEnum = z.enum([
   "meyhane",
   "turk-restoran",
   "coffee-shop",
+  "coffee-shop-yemek",
+  "steakhouse",
+  "balikci",
+  "italyan",
+  "birahane",
+  "pastane",
+  "pideci",
+  "sushi",
+  "sarkuteri-kiosk",
+  "hamburger-kiosk",
+  "hotdog-kiosk",
+  "tavukcu",
+  "kanatci-kebapci",
+  "patisserie-yemek",
+  "boyoz-pastane",
+  "restoran",
+  "kokteyl-kahve",
+  "kahve-atolyesi",
+  "harvest-cafe",
+  "all-sport-cafe",
+  "casual-cafe",
+  "buyuk-yemekhane",
+  "guneli-pastane",
+  "pastane-cafe",
+  "ekmek-kruvasan",
+  "sehir-otel",
+  "tatil-otel",
+  "kiremit-akasya",
+  "mus-selinoz-turk",
+  "kasap",
+  "kasap-sarkuteri",
+  "sarkuteri-restoran",
+  "inari-bar-yemek",
+  "kahve-duragi",
+  "kahve-tatli",
+  "kahve-duragi-pastane",
+  "resort-otel",
+  "donerci",
+  "personel-yemekhane",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -36,13 +75,52 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   meyhane: "Meyhane / Mezeli Restoran",
   "turk-restoran": "Türk Restoranı",
   "coffee-shop": "Coffee Shop",
+  "coffee-shop-yemek": "Coffee Shop + Yemek",
+  steakhouse: "Steakhouse",
+  balikci: "Balıkçı",
+  italyan: "İtalyan Restoran",
+  birahane: "Birahane",
+  pastane: "Pastane",
+  pideci: "Pideci",
+  sushi: "Sushi",
+  "sarkuteri-kiosk": "Şarküteri Kiosk",
+  "hamburger-kiosk": "Hamburger Kiosk",
+  "hotdog-kiosk": "Hotdog Kiosk",
+  tavukcu: "Tavukçu",
+  "kanatci-kebapci": "Kanatçı-Kebapçı",
+  "patisserie-yemek": "Patisserie + Yemek",
+  "boyoz-pastane": "Pastane Cafe (Boyoz)",
+  restoran: "Restoran",
+  "kokteyl-kahve": "Kokteyl + Kahve",
+  "kahve-atolyesi": "Kahve Atölyesi",
+  "harvest-cafe": "Harvest Cafe",
+  "all-sport-cafe": "All Sport Cafe",
+  "casual-cafe": "Casual Cafe",
+  "buyuk-yemekhane": "Büyük Yemekhane",
+  "guneli-pastane": "Güneli Fırın",
+  "pastane-cafe": "Pastane + Cafe",
+  "ekmek-kruvasan": "Ekmek + Kruvasan",
+  "sehir-otel": "Şehir Oteli (Business)",
+  "tatil-otel": "Tatil Oteli",
+  "kiremit-akasya": "Kiremit Akasya",
+  "mus-selinoz-turk": "Türk Mutfağı — Lokanta",
+  kasap: "Kasap",
+  "kasap-sarkuteri": "Kasap + Şarküteri",
+  "sarkuteri-restoran": "Şarküteri Restoran",
+  "inari-bar-yemek": "Bar + Yemek",
+  "kahve-duragi": "Kahve Durağı",
+  "kahve-tatli": "Kahve & Tatlı",
+  "kahve-duragi-pastane": "Kahve Durağı — Pastane & Kahvaltı",
+  "resort-otel": "Resort Otel (ölçekli)",
+  donerci: "Dönerci (Yeni Nesil)",
+  "personel-yemekhane": "Personel Yemekhanesi (Catering)",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
 
 export const PFOSRequestSchema = z.object({
-  konsept: KonseptEnum,
-  m2: z.number().min(30).max(2000),
+  konsept: z.string().min(1),
+  m2: z.number().min(30).max(10000),
   sehir: z.string().default("istanbul"),
   lokasyon: z.enum(["cadde", "avm"]).optional(),
   fiyatStratejisi: z.enum(["ekonomik", "orta", "premium"]).default("orta"),
@@ -51,6 +129,12 @@ export const PFOSRequestSchema = z.object({
   teslimatAdresi: z.string().optional(),
   projeAdi: z.string().optional(),
   musteri: z.string().optional(),
+  /** Balıkçı mahalle / alt tip — referans liste seçimi */
+  altTip: z.string().optional(),
+  /** Açık referans liste id (ör. s13-388-turk-220 | turk-restoran-200-5000); yoksa m² kuralı */
+  referansId: z.string().optional(),
+  /** q_dukkan_turu → shopTypes.pfos.dukkanSecim (referans dosyası seçimi) */
+  dukkanSecim: z.string().optional(),
 });
 
 export type PFOSRequest = z.infer<typeof PFOSRequestSchema>;
@@ -66,9 +150,13 @@ export const EslesmisUrunSchema = z.object({
   elektrikGucuKw: z.number().nullable(),
   gazGucuKw: z.number().nullable(),
   fiyat: z.number(),
+  /** Katalog Equsto satış (EUR, KDV hariç) — proforma birim fiyat */
+  fiyatEur: z.number().nullable().optional(),
   doviz: z.enum(["EUR", "TRY", "USD"]),
   gorselUrl: z.string().nullable(),
   slug: z.string().optional(),
+  /** PFOS teklif — teknik / ürün açıklaması (fiyat hariç) */
+  teklifAciklama: z.string().nullable().optional(),
 });
 
 export type EslesmisUrun = z.infer<typeof EslesmisUrunSchema>;
@@ -93,6 +181,9 @@ export const PFOSKalemiSchema = z.object({
   referansPoz: z.string().optional(),
   /** Referans şablon satır sırası (poz ataması için) */
   sablonSira: z.number().optional(),
+  /** Excel bölüm sırası — teklif gruplama / sıralama */
+  referansBolumSira: z.number().optional(),
+  referansBolumKey: z.string().optional(),
 });
 
 export type PFOSKalemi = z.infer<typeof PFOSKalemiSchema>;

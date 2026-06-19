@@ -1,5 +1,49 @@
 import type { AdminUrunRow } from "@/lib/admin-urun";
 import { olcuMmFromSku, toOlcuMmDisplay, formatOlcuMm } from "../teklif/olcu-mm";
+import {
+  isOzelImalatMotor,
+  isOzelImalatSablon,
+  OZEL_IMALAT_MARKA,
+} from "./ozel-imalat";
+import {
+  HAZIRLIK_MARKA,
+  isHazirlikPfosKalem,
+} from "./hazirlik-marka";
+import {
+  isSenoxPfosKalem,
+  SENOX_MARKA,
+} from "./senox-marka";
+import {
+  BULASIK_MARKA,
+  isBulasikPfosKalem,
+} from "./bulasik-marka";
+import {
+  PORTASHELF_MARKA,
+  isPortashelfMarkaKalem,
+} from "./portashelf-marka";
+import {
+  isBuzdolabiPfosKalem,
+  isMakeUpPfosKalem,
+} from "./portabianco-marka";
+import { OZTI_MARKA, isOztiBuzdolabiRow, isOztiBuzdolabiSku, isOztiPisirmeRow } from "./ozti-marka";
+import {
+  CAGLAYAN_MARKA,
+  isCaglayanTeshirPfosKalem,
+} from "./caglayan-marka";
+import {
+  isAtalayPisirmePfosKalem,
+} from "./atalay-marka";
+import {
+  CALISMA_TEZGAH_MARKA,
+  isCalismaTezgahiPfosKalem,
+  isPimakTezgahSku,
+  PIMAK_TEZGAH_MARKA,
+} from "./calisma-tezgah";
+import { isPimakDavlumbazSku } from "./davlumbaz-marka";
+import {
+  DUVAR_RAF_MARKA,
+  isDuvarRafiPfosKalem,
+} from "./duvar-raf-marka";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -19,6 +63,7 @@ const IMALAT_MARKALAR = [
   "Brema",
   "Santos",
   "Atalay",
+  "Boğaziçi",
   "Öztiryakiler",
   "WMF",
   "Empero",
@@ -111,6 +156,9 @@ export function markaFromSablonIsim(isim: string | null | undefined): string | n
   const inner = m[1].trim();
   if (!inner || /^\d/.test(inner)) return null;
   if (PARANTEZ_DEGIL_MARKA.test(foldTr(inner))) return null;
+  if (foldTr(inner) === "portashelf" || foldTr(inner) === "equsto") {
+    return OZEL_IMALAT_MARKA;
+  }
   for (const brand of IMALAT_MARKALAR) {
     if (foldTr(inner) === foldTr(brand)) return brand;
   }
@@ -118,6 +166,7 @@ export function markaFromSablonIsim(isim: string | null | undefined): string | n
   for (const brand of IMALAT_MARKALAR) {
     if (foldTr(canon) === foldTr(brand)) return brand;
   }
+  if (canon && canon !== "—") return canon;
   return null;
 }
 
@@ -132,14 +181,134 @@ export function resolveTeklifMarka(opts: {
   sablonIsim?: string | null;
   linkMarka?: string | null;
   zoneMarka?: string | null;
+  urunTipi?: string | null;
+  sku?: string | null;
+  ignoreSablonMarka?: boolean;
 }): string {
+  const sku = String(opts.sku ?? "").trim();
+  if (isPimakTezgahSku(sku) || isPimakDavlumbazSku(sku)) {
+    return PIMAK_TEZGAH_MARKA;
+  }
+
+  if (
+    isOztiBuzdolabiSku(opts.sku) ||
+    isOztiBuzdolabiRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })
+  ) {
+    return OZTI_MARKA;
+  }
+
+  if (
+    isMakeUpPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return OZTI_MARKA;
+  }
+
+  if (
+    isBuzdolabiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return OZTI_MARKA;
+  }
+
+  if (
+    isSenoxPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return SENOX_MARKA;
+  }
+
+  if (isOzelImalatMotor({ sablonIsim: opts.sablonIsim })) return OZEL_IMALAT_MARKA;
+  if (isOzelImalatSablon(opts.sablonIsim)) return OZEL_IMALAT_MARKA;
+
+  if (
+    isBulasikPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return BULASIK_MARKA;
+  }
+
+  if (
+    isPortashelfMarkaKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return PORTASHELF_MARKA;
+  }
+
+  if (
+    isCaglayanTeshirPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return CAGLAYAN_MARKA;
+  }
+
+  if (
+    isAtalayPisirmePfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    const m = (String(opts.katalogMarka || "") + " " + String(opts.urunAd || "")).toLowerCase();
+    if (m.includes("rational")) return "Rational";
+    if (m.includes("unox")) return "Unox";
+    if (m.includes("electrolux")) return "Electrolux";
+    if (isOztiPisirmeRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })) {
+      return OZTI_MARKA;
+    }
+    return OZTI_MARKA;
+  }
+
+  if (
+    isCalismaTezgahiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    if (opts.katalogMarka?.trim() && foldTr(opts.katalogMarka) === foldTr(PIMAK_TEZGAH_MARKA)) {
+      return PIMAK_TEZGAH_MARKA;
+    }
+    return CALISMA_TEZGAH_MARKA;
+  }
+
+  if (
+    isDuvarRafiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return DUVAR_RAF_MARKA;
+  }
+
+  if (
+    isHazirlikPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return HAZIRLIK_MARKA;
+  }
+
   if (opts.linkMarka?.trim()) return markaCanonLabel(opts.linkMarka);
+
+  if (!opts.ignoreSablonMarka) {
+    const fromIsim = markaFromSablonIsim(opts.sablonIsim);
+    if (fromIsim && fromIsim !== "—") return fromIsim;
+  }
 
   const fromMetin = markaFromKatalogMetin(opts.urunAd, opts.urunMetin);
   if (fromMetin) return markaCanonLabel(fromMetin);
-
-  const fromIsim = markaFromSablonIsim(opts.sablonIsim);
-  if (fromIsim && fromIsim !== "—") return fromIsim;
 
   if (opts.zoneMarka?.trim() && !isOztiDistributorMarka(opts.zoneMarka)) {
     return markaCanonLabel(opts.zoneMarka);
@@ -209,6 +378,7 @@ export function formatKatalogOlcu(
 /** Katalog model kodu — SKU ile aynıysa specs/ad içinden çıkar */
 export function resolveKatalogModel(row: AdminUrunRow): string | null {
   const sku = normKod(row.sku);
+  if (/^\d+-X-\d+-X-\d+$/i.test(String(row.sku ?? "").trim())) return null;
   const model = String(row.model ?? "").trim();
   if (model && normKod(model) !== sku) return model;
 
@@ -227,6 +397,7 @@ export function enrichEslesmisFromKatalogRow(
     zoneMarka?: string | null;
     zoneOlcu?: string | null;
     sablonIsim?: string | null;
+    urunTipi?: string | null;
   },
 ): {
   marka: string;
@@ -241,6 +412,8 @@ export function enrichEslesmisFromKatalogRow(
       sablonIsim: ctx?.sablonIsim,
       linkMarka: ctx?.linkMarka,
       zoneMarka: ctx?.zoneMarka,
+      urunTipi: ctx?.urunTipi,
+      sku: row.sku,
     }),
     model: resolveKatalogModel(row),
     olcu: formatKatalogOlcu(row, ctx?.zoneOlcu),

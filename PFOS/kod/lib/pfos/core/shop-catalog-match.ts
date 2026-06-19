@@ -1,9 +1,61 @@
-import { readFile } from "fs/promises";
-import path from "path";
-import type { AdminUrunRow } from "@/lib/admin-urun";
-import { loadLegacyCatalogRows, invalidateLegacyCatalogCache } from "@/lib/legacy-catalog";
+import { readJsonFile } from "@/lib/legacy-data";
+import {
+  loadLegacyCatalogRows,
+  invalidateLegacyCatalogCache,
+  type AdminUrunRow,
+} from "@/lib/legacy-catalog";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
+import { invalidateKatalogGorselCache } from "./katalog-gorsel";
+import { katalogRowToEslesmis } from "./katalog-row-eslesmis";
+import {
+  isBulasikMakinesiTipKodu,
+  BULASIK_MARKA,
+} from "./bulasik-marka";
+import {
+  isIstifRafiTipKodu,
+  isCopArabasiTipKodu,
+  PORTASHELF_MARKA,
+} from "./portashelf-marka";
+import {
+  isCalismaTezgahiTipKodu,
+  isEqustoTezgahRow,
+  isPimakTezgahSku,
+  isSetUstuAraTezgahKatalog,
+  CALISMA_TEZGAH_MARKA,
+} from "./calisma-tezgah";
+import {
+  isEqustoDavlumbazRow,
+  isPimakDavlumbazSku,
+  isOztiDavlumbazSku,
+} from "./davlumbaz-marka";
+import {
+  isDuvarRafiTipKodu,
+  isEqustoDuvarRafRow,
+  isEqustoDuvarRafSku,
+} from "./duvar-raf-marka";
+import { isEqustoFiyatListesiSku } from "./equsto-fiyat-sku";
+import {
+  isBuzdolabiTipKodu,
+  isPortabiancoBuzdolabiRow,
+} from "./portabianco-marka";
+import { isOztiBuzdolabiRow, isOztiPisirmeRow, OZTI_MARKA } from "./ozti-marka";
+import {
+  isTeshirVitrinTipKodu,
+  isCaglayanTeshirRow,
+  isOztiTeshirSku,
+} from "./caglayan-marka";
+import {
+  isPisirmeTipKodu,
+  isAtalayPisirmeRow,
+} from "./atalay-marka";
+import {
+  isHazirlikTipKodu,
+  HAZIRLIK_MARKA,
+  isHazirlikKatalogMarka,
+  isOztiKatalogMarka,
+} from "./hazirlik-marka";
+import { isSenoxVakumTipKodu } from "./senox-marka";
 import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
@@ -13,6 +65,20 @@ import {
   TIP_SEARCH_TERMS,
   TIP_SHOP_CATS,
 } from "./tip-kodu";
+
+/** Katalog Equsto satış EUR — ekipmanlar.json satis_fiyat_eur / satis_eur_indirimli */
+export function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
+  const eur = Number(row.satis_fiyat_eur);
+  if (eur > 0) return Math.round(eur * 100) / 100;
+  const fromSpecs = String(row.aciklama ?? "").match(
+    /Equsto\s+net\s*\([^)]*\)\s*:\s*([\d.,]+)/i,
+  );
+  if (fromSpecs) {
+    const parsed = Number(fromSpecs[1].replace(",", "."));
+    if (parsed > 0) return Math.round(parsed * 100) / 100;
+  }
+  return null;
+}
 
 const MIN_SCORE = 72;
 
@@ -42,20 +108,33 @@ function normName(s: string): string {
     .replace(/\s+/g, " ");
 }
 
+/** Unox fırın üstü davlumbaz — PFOS özel imalat / duvar tipi eşleşmesine girmesin */
+function isUnoxCheftopHoodName(name: string): boolean {
+  const n = normName(name);
+  return (
+    n.includes("eech") ||
+    n.includes("cheftop") ||
+    n.includes("cheft") ||
+    (n.includes("unox") && n.includes("davlumbaz"))
+  );
+}
+
 function isCombiOvenName(name: string): boolean {
   const n = normName(name);
   if (!n) return false;
-  const hasCombi =
-    n.includes("icombi") ||
-    n.includes("kombili") ||
-    /\bcombi\b/.test(n) ||
-    /\bkombi\b/.test(n) ||
-    (n.includes("kombi") && !n.includes("kombin") && !n.includes("kombine"));
-  if (!hasCombi && !n.includes("konveks")) return false;
   if (n.includes("buzdolab") || n.includes("dondurucu")) return false;
   if (n.includes("kombi tip") || n.includes("kombine")) return false;
   if (n.includes("blender") || n.includes("mikser")) return false;
-  return hasCombi || n.includes("konveks");
+  if (n.includes("mikrodalga")) return false;
+  return (
+    n.includes("icombi") ||
+    n.includes("kombili") ||
+    /\bcombi\b/.test(n) ||
+    (n.includes("kombi") &&
+      !n.includes("kombin") &&
+      !n.includes("kombine") &&
+      n.includes("firin"))
+  );
 }
 
 const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
@@ -68,13 +147,59 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     name.includes("giyotin") &&
     (name.includes("bulasik") || name.includes("bulaşık") || name.includes("tabak")),
   calisma_tezgahi: (name) =>
-    name.includes("tezgah") && !name.includes("buzdolab") && !name.includes("evye"),
-  davlumbaz_duvar: (name) => name.includes("davlumbaz") && !name.includes("izgar"),
+    name.includes("tezgah") &&
+    !name.includes("buzdolab") &&
+    !name.includes("set ust") &&
+    !name.includes("setust") &&
+    !name.includes("ara tezgah") &&
+    !/firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name),
+  tezgah_taban_rafli: (name) =>
+    /firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name) ||
+    (/konveksiyonlu\s*firin\s*stand|setustu\s*konveksiyonlu\s*firin\s*stand/.test(name) &&
+      /tepsi|istif|raf/.test(name)),
+  tezgah_rafli_dol: (name) =>
+    /taban\s*ve\s*ara\s*rafl/.test(name) &&
+    /dolap/.test(name) &&
+    (/calisma|çalışma|tezgah/.test(name)),
+  balik_hazirlik_tezgah: (name) =>
+    (/balik|balık/.test(name) && /hazirlik|hazırlık|tezgah/.test(name)) ||
+    /balik\s*hazirlik|balık\s*hazırlık/.test(name),
+  davlumbaz_dekoratif: (name) =>
+    /firin\s*davlumbaz|fırın\s*davlumbaz/.test(name) ||
+    (name.includes("davlumbaz") && name.includes("dekoratif")),
+  davlumbaz_duvar: (name) => {
+    if (isUnoxCheftopHoodName(name)) return false;
+    if (/firin\s*davlumbaz|fırın\s*davlumbaz/.test(name)) return false;
+    if (name.includes("ultravent") || name.includes("yogusturma")) return false;
+    return (
+      name.includes("davlumbaz") &&
+      (name.includes("duvar") || name.includes("duvar tipi")) &&
+      !name.includes("izgar")
+    );
+  },
   yer_izgara: (name) =>
     (name.includes("yer izgar") || name.includes("yer ızgar")) &&
     !name.includes("istif") &&
     !name.includes("davlumbaz"),
-  fritoz_tek: (name) => name.includes("fritoz") || name.includes("fritöz"),
+  servis_rafi: (name) =>
+    (name.includes("servis raf") || name.includes("servis rafı")) &&
+    !name.includes("arab") &&
+    !name.includes("banko") &&
+    !name.includes("unite") &&
+    !name.includes("ünite"),
+  fritoz_dolapli_elk: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) &&
+    name.includes("dolap") &&
+    (name.includes("elektrik") || name.includes("elek")),
+  fritoz_dolapli_gaz: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) &&
+    name.includes("dolap") &&
+    (name.includes("gazli") || name.includes("gazlı") || /\bgaz\b/.test(name)),
+  fritoz_tek: (name) =>
+    (name.includes("fritoz") || name.includes("fritöz")) && !name.includes("dolap"),
+  tost_makinasi: (name) =>
+    name.includes("tost") &&
+    (name.includes("atm") || name.includes("atalay") || name.includes("tost mak")),
   filter_coffee: (name) =>
     name.includes("filtre kahve") ||
     name.includes("filter kahve") ||
@@ -96,6 +221,10 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
       name.includes("kahve makinesi")
     );
   },
+  bar_blender: (name) =>
+    name.includes("blender") &&
+    !name.includes("mikrodalga") &&
+    !name.includes("robot coupe el blenderi cmp"),
   kahve_degirmeni: (name) => {
     if (name.includes("kahve makin") || name.includes("espresso")) return false;
     if (/wmf 1[13]00/.test(name)) return false;
@@ -125,6 +254,9 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
 
 function isExcludedForTip(name: string, tip: string): boolean {
   const n = normName(name);
+  if (/^davlumbaz/.test(tip.replace(/_/g, "-")) && isUnoxCheftopHoodName(n)) {
+    return true;
+  }
   if (tip === "derin_dondurucu_dik") {
     return n.includes("panel") || n.includes("split");
   }
@@ -147,7 +279,8 @@ function isExcludedForTip(name: string, tip: string): boolean {
   return false;
 }
 
-function itemMatchesTip(row: AdminUrunRow, tipKodu: string): boolean {
+/** Tip sözlüğü senkronu — katalog satırı bu tip_kodu ile eşleşiyor mu */
+export function productMatchesTipKodu(row: AdminUrunRow, tipKodu: string): boolean {
   const tip = String(tipKodu || "").trim();
   if (!tip) return false;
   const name = normName(row.ad);
@@ -160,6 +293,7 @@ function itemMatchesTip(row: AdminUrunRow, tipKodu: string): boolean {
 }
 
 function tipDeptHint(tip: string): string {
+  if (isHazirlikTipKodu(tip)) return "hazirlik";
   if (/buzdolab|sogut|dondurucu|tezgah_tip_buz|dik_tip_buz/.test(tip)) return "sogutma";
   if (/bulasik|yikama|bym_|cop_siyirma/.test(tip)) return "yikama";
   if (/espresso|kahve|filter|turk_kahve/.test(tip)) return "kahve";
@@ -180,20 +314,10 @@ function deptForRow(row: AdminUrunRow): string {
 
 async function loadTipShopLinks(): Promise<Record<string, TipShopLink>> {
   if (tipLinksCache) return tipLinksCache;
-  try {
-    const filePath = path.join(
-      process.cwd(),
-      "public",
-      "data",
-      "pfos-tip-shop-links.json",
-    );
-    const raw = JSON.parse(await readFile(filePath, "utf-8")) as {
-      links?: Record<string, TipShopLink>;
-    };
-    tipLinksCache = raw.links ?? {};
-  } catch {
-    tipLinksCache = {};
-  }
+  const raw = await readJsonFile<{ links?: Record<string, TipShopLink> }>(
+    "pfos-tip-shop-links.json",
+  );
+  tipLinksCache = raw?.links ?? {};
   return tipLinksCache;
 }
 
@@ -231,21 +355,41 @@ async function loadShopPool(): Promise<AdminUrunRow[]> {
 
 function pseudoRowFromLink(link: TipShopLink, tip: string): AdminUrunRow {
   const fiyat = Math.round(Number(link.fiyat_try) || 0);
+  const hazirlik = isHazirlikTipKodu(tip);
+  const bulasik = isBulasikMakinesiTipKodu(tip);
   return {
     id: `pfos-link-${tip}`,
+    equsto_kod: null,
+    marka_kodu: null,
+    urun_kodu: null,
     ad: link.name ?? link.sku ?? tip,
     sku: link.sku ?? null,
     tip_kodu: tip,
-    kategori: "sogutma-ekipmanlari",
-    kategori_ad: "Soğutma Ekipmanları",
+    kategori: hazirlik
+      ? "et-hazirlik-makineleri"
+      : bulasik
+        ? "bulasik-yikama-makineleri"
+        : "sogutma-ekipmanlari",
+    kategori_ad: hazirlik
+      ? "Et Hazırlık Makineleri"
+      : bulasik
+        ? "Bulaşık Yıkama Makineleri"
+        : "Soğutma Ekipmanları",
     marka_id: null,
-    marka_ad: link.brand ?? "Öztiryakiler Endüstriyel Mutfak",
+    marka_ad:
+      link.brand ??
+      (hazirlik
+        ? "Boğaziçi Makine"
+        : bulasik
+          ? "Inoksan"
+          : "Öztiryakiler Endüstriyel Mutfak"),
     model: link.model ?? null,
     stok: 0,
     fiyat_tl: fiyat,
     el_guc: null,
     gaz_guc: null,
     aciklama: null,
+    detay: null,
     gorsel_url: null,
     durum: "aktif",
     proje_fab_aktif: true,
@@ -261,25 +405,11 @@ function adminRowToEslesmis(
     zoneMeta?: { marka?: string; olcu?: string } | null;
   },
 ): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {
+  return katalogRowToEslesmis(row, {
     linkMarka: ctx?.link?.marka,
     zoneMarka: ctx?.zoneMeta?.marka,
     zoneOlcu: ctx?.zoneMeta?.olcu,
   });
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-  };
 }
 
 function scoreCandidate(
@@ -291,6 +421,122 @@ function scoreCandidate(
   const name = normName(row.ad);
   if (!name) return -9999;
   if (isExcludedForTip(name, tip)) return -9999;
+
+  if (isBulasikMakinesiTipKodu(tip)) {
+    const marka = normName(row.marka_ad);
+    const sku = normName(row.sku ?? "");
+    if (!marka.includes("inoksan") && !sku.startsWith("ino-")) score -= 2500;
+  }
+
+  if (isHazirlikTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    if (isHazirlikKatalogMarka(row.marka_ad)) score += 220;
+    if (name.includes("bogazici") || name.includes("boğaziçi")) score += 120;
+  }
+
+  if (isSenoxVakumTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    if (name.includes("senox") || name.includes("şenox")) score += 300;
+  }
+
+  if (isIstifRafiTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (/8897\.|7897\./.test(sku)) return -9999;
+    if (isOztiKatalogMarka(row.marka_ad) && !/^\d+-x-\d+-x-\d+/.test(sku)) {
+      return -9999;
+    }
+    const marka = normName(row.marka_ad);
+    if (marka.includes("portashelf") || /^\d+-x-\d+-x-\d+/.test(sku)) {
+      score += 320;
+    }
+  }
+
+  if (isCopArabasiTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    const marka = normName(row.marka_ad);
+    const sku = normName(row.sku ?? "");
+    if (marka.includes("portashelf") || marka.includes("yuksel") || sku === "mb126x") {
+      score += 320;
+    } else if (/8893\.|plastik|kova/.test(sku) || /plastik|kova/.test(name)) {
+      score -= 2500;
+    }
+  }
+
+  if (isCalismaTezgahiTipKodu(tip)) {
+    if (isSetUstuAraTezgahKatalog(row.ad, row.sku)) return -9999;
+    const skuN = normName(row.sku ?? "");
+    if (/electrolux|^132\d{3,6}$|371\d|^7711\.|^7897\.|^7911\./.test(skuN) || /electrolux/.test(normName(row.marka_ad))) {
+      return -9999;
+    }
+    if (isOztiKatalogMarka(row.marka_ad) && /7911\.n1\./.test(skuN)) {
+      return -9999;
+    }
+    if (isPimakTezgahSku(row.sku)) score += 920;
+    else if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    else if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
+    else return -9999;
+  }
+
+  if (
+    isCalismaTezgahiTipKodu(tip) === false &&
+    /calisma|çalışma|evyeli\s*tezgah|taban\s*rafl/i.test(name) &&
+    isOztiKatalogMarka(row.marka_ad) &&
+    /7911\.n1\./.test(normName(row.sku ?? ""))
+  ) {
+    return -9999;
+  }
+
+  if (tip === "davlumbaz_duvar" || /^davlumbaz/.test(tip.replace(/_/g, "-"))) {
+    if (isOztiDavlumbazSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /7885\./.test(normName(row.sku ?? "")))) {
+      return -9999;
+    }
+    if (isPimakDavlumbazSku(row.sku)) score += 920;
+    else if (isEqustoFiyatListesiSku(row.sku)) score += 800;
+    else if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
+    else return -9999;
+  }
+
+  if (isDuvarRafiTipKodu(tip)) {
+    const skuN = normName(row.sku ?? "");
+    if (/^7897\./.test(skuN)) return -9999;
+    if (isOztiKatalogMarka(row.marka_ad) && /^7897\./.test(skuN)) return -9999;
+    if (isEqustoDuvarRafSku(row.sku)) score += 800;
+    else if (isEqustoDuvarRafRow(row.sku, row.ad)) score += 350;
+    else return -9999;
+  }
+
+  if (isBuzdolabiTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (
+      (isPortabiancoBuzdolabiRow(row) || /^TT-|^DT-|^CA-|^BAR-|^SBT-|^SBM-/.test(sku)) &&
+      !isOztiBuzdolabiRow(row)
+    ) {
+      return -9999;
+    }
+    if (/^7919\.|^8919\.|^79e4\./.test(sku) && isOztiBuzdolabiRow(row)) {
+      score += 350;
+    }
+  }
+
+  if (isPisirmeTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (
+      (isAtalayPisirmeRow(row) || /^AEF-|^AEI-|^AGO-|^AAT-/.test(sku)) &&
+      !isOztiPisirmeRow(row)
+    ) {
+      return -9999;
+    }
+    if (/^78\d{2}\./.test(sku) && isOztiPisirmeRow(row)) {
+      score += 350;
+    }
+  }
+  if (isTeshirVitrinTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (isOztiTeshirSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /8919\.ts/.test(sku))) {
+      return -9999;
+    }
+    if (isCaglayanTeshirRow(row)) score += 350;
+  }
 
   const wantDept = tipDeptHint(tip);
   const gotDept = deptForRow(row);
@@ -315,8 +561,8 @@ function scoreCandidate(
   }
 
   if (TIP_MATCH_RULES[tip]) {
-    score += itemMatchesTip(row, tip) ? 140 : -800;
-  } else if (itemMatchesTip(row, tip)) {
+    score += productMatchesTipKodu(row, tip) ? 140 : -800;
+  } else if (productMatchesTipKodu(row, tip)) {
     score += 90;
   }
 
@@ -361,11 +607,123 @@ export async function matchShopCatalog(
   const zoneMeta = zoneMetaMap.get(normalizeTipKodu(tip)) ?? null;
   const ctx = { tip, link, zoneMeta };
 
+  /** Bulaşık yıkama makineleri — İnoksan referans; Electrolux/Öztiryakiler havuzundan seçilmesin */
+  if (isBulasikMakinesiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const bulLink: TipShopLink = {
+      marka: link.marka ?? BULASIK_MARKA,
+      ...link,
+    };
+    if (bulLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(bulLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: bulLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(bulLink, tip), {
+      ...ctx,
+      link: bulLink,
+    });
+  }
+
+  /** Yerden çalışma tezgahı — EQUSTO eşlemesi; set üstü ara tezgah SKU kullanılmaz */
+  if (isCalismaTezgahiTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Davlumbaz — EQUSTO ölçü/tip eşlemesi; Öztiryakiler 7885.* kullanılmaz */
+  if ((tip === "davlumbaz_duvar" || /^davlumbaz/.test(tip.replace(/_/g, "-"))) && link?.marka) {
+    return null;
+  }
+
+  /** Buzdolabı — Öztiryakiler ölçü/tip eşlemesi; Portabianco kullanılmaz */
+  if (isBuzdolabiTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Teşhir reyonu — Çağlayan Soğutma ölçü eşlemesi; Öztiryakiler TSV kullanılmaz */
+  if (isTeshirVitrinTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Pişirme — Öztiryakiler ölçü/tip eşlemesi; Atalay kullanılmaz */
+  if (isPisirmeTipKodu(tip) && (link?.marka || link?.sku)) {
+    if (link.sku && isOztiPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(link.sku!),
+      );
+      if (bySku) {
+        return adminRowToEslesmis(bySku, {
+          ...ctx,
+          link: { ...link, marka: OZTI_MARKA },
+        });
+      }
+    }
+    if (!link.sku || isAtalayPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
+      return null;
+    }
+  }
+
+  /** Çöp arabası — Portashelf (Yüksel); Öztiryakiler plastik kova kullanılmaz */
+  if (isCopArabasiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const psLink: TipShopLink = {
+      marka: link.marka ?? PORTASHELF_MARKA,
+      ...link,
+    };
+    if (psLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(psLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: psLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(psLink, tip), {
+      ...ctx,
+      link: psLink,
+    });
+  }
+
+  /** İstif rafları — Portashelf; Öztiryakiler havuzundan seçilmesin */
+  if (isIstifRafiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const psLink: TipShopLink = {
+      marka: link.marka ?? PORTASHELF_MARKA,
+      ...link,
+    };
+    if (psLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(psLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: psLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(psLink, tip), {
+      ...ctx,
+      link: psLink,
+    });
+  }
+
+  /** Hazırlık makineleri — Boğaziçi referans; katalog havuzundan Öztiryakiler seçilmesin */
+  if (isHazirlikTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const hazLink: TipShopLink = {
+      marka: link.marka ?? HAZIRLIK_MARKA,
+      ...link,
+    };
+    if (hazLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(hazLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: hazLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(hazLink, tip), {
+      ...ctx,
+      link: hazLink,
+    });
+  }
+
   if (link?.sku) {
     const bySku = pool.find(
       (r) => r.sku && normName(r.sku) === normName(link.sku!),
     );
-    if (bySku) return adminRowToEslesmis(bySku, ctx);
+    if (bySku && productMatchesTipKodu(bySku, tip)) {
+      return adminRowToEslesmis(bySku, ctx);
+    }
     if (link.name || link.brand) {
       return adminRowToEslesmis(pseudoRowFromLink(link, tip), ctx);
     }
@@ -399,4 +757,5 @@ export function clearShopCatalogCache(): void {
   tipLinksCache = null;
   zoneTipMetaCache = null;
   invalidateLegacyCatalogCache();
+  invalidateKatalogGorselCache();
 }

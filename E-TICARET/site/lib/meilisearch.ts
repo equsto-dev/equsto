@@ -1,6 +1,6 @@
 import { Meilisearch } from "meilisearch";
 
-/** Meilisearch Cloud veya yerel Docker — Hetzner zorunlu değil (bkz. docs/MEILISEARCH.md). */
+/** Self-hosted Meilisearch — Hetzner Docker veya yerel (bkz. docs/MEILISEARCH.md). */
 
 /** Vercel’de tırnaklı yapıştırma ve build-time inlining riskine karşı. */
 function readEnv(name: string): string {
@@ -39,5 +39,5 @@ export function getMeiliAdmin() {
   return new Meilisearch({ host, apiKey: key });
 }
 
-/** Cloud şablonda `products` çoğu zaman kullanılamaz → varsayılan `equsto_products` */
+/** Varsayılan indeks adı — `MEILISEARCH_INDEX` ile değiştirilebilir */
 export const PRODUCTS_INDEX = readEnv("MEILISEARCH_INDEX") || "equsto_products";

@@ -1,20 +1,38 @@
 {
   "version": 1,
-  "note": "PFOS tip_kodu → Equsto katalog SKU (manuel / doğrulanmış eşleşmeler)",
+  "note": "PFOS tip_kodu → Equsto katalog SKU — ekonomik / eco seri öncelikli (79K4 Öztiryakiler, EKOP Portabianco)",
   "links": {
     "kombi_firin_6t": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7890.60400.3T",
-      "marka": "Rational"
+      "marka": "Atalay",
+      "name": "KOMBİ / KONVEKSİYONLU FIRIN — Atalay katalog eşlemesi"
     },
     "davlumbaz_duvar": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9885.EECHC.00",
-      "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP"
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ — EQUSTO ölçü/tip eşlemesi"
+    },
+    "davlumbaz_dekoratif": {
+      "marka": "Equsto",
+      "name": "FIRIN DAVLUMBAZI DEKORATİF — EQUSTO ölçü eşlemesi"
+    },
+    "tezgah_tip_buzdolabi": {
+      "marka": "Öztiryakiler",
+      "sku": "79E3.27NMV.00",
+      "name": "TAG 270 NMV 2 INOX KAPI YATAY TIP BUZDOLABI — 79E3 eco"
+    },
+    "tezgah_buzdolabi_3kapi": {
+      "marka": "Öztiryakiler",
+      "sku": "79E3.37NMV.00",
+      "name": "TAG 370 NMV 3 INOX KAPI YATAY TIP BUZDOLABI 187×70"
+    },
+    "sogutma_tezgah": {
+      "marka": "Öztiryakiler",
+      "sku": "79E3.27NMV.00",
+      "name": "SOĞUTMALI TEZGAH / HAZIRLIK — 79E3 yatay eco"
     },
     "cop_arabasi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8893.00120.00"
+      "marka": "Portashelf",
+      "sku": "MB126X",
+      "name": "PASLANMAZ ÇÖP ARABASI"
     },
     "mikrodalga_firin": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -22,25 +40,61 @@
     },
     "servis_rafi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "0913.00507.01"
+      "sku": "7897.14030.03",
+      "marka": "Öztiryakiler",
+      "name": "SERVİS RAFI BOMBE CAMLI 140*30 — paslanmaz çelik servis rafı"
     },
     "char_broil": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7864.N1.40903.04"
+      "marka": "Öztiryakiler",
+      "name": "LAVATAŞ / SETÜSTÜ IZGARA — Öztiryakiler ölçü eşlemesi"
+    },
+    "dokum_izgara_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "7864.N1.80703.72",
+      "name": "700 SERİ SET ÜSTÜ DÖKÜM IZGARA GAZLI V2 MODEL 80*70*30"
+    },
+    "plate_izgara_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "7864.N1.80703.19",
+      "name": "700 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 80*70*30"
     },
     "salamander": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7850.58575.70"
+      "marka": "Öztiryakiler",
+      "name": "SALAMANDER — Öztiryakiler katalog eşlemesi"
     },
     "tezgah_duz": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7911.N1.60603.00"
+      "sku": "7911.N1.40603.00",
+      "name": "600 SERİ ARA TEZGAH SET ÜSTÜ 40*60*26"
     },
     "fritoz_tek": {
-      "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
-      "sku": "AEF-870",
-      "model": "AEF - 870",
-      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.GN120.08",
+      "marka": "Öztiryakiler",
+      "name": "FRITOZ GN 1/2 ELEKTRIKLİ 8 LT 3 KW. EF8"
+    },
+    "fritoz_dolapli_elk": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.N1.40908.02",
+      "marka": "Öztiryakiler",
+      "name": "900 SERİ FRİTÖZ DOLAPLI ELEKTRİKLİ 40*90*85"
+    },
+    "fritoz_dolapli_gaz": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.N1.40908.04",
+      "marka": "Öztiryakiler",
+      "name": "900 SERİ FRİTÖZ DOLAPLI GAZLI 40*90*85"
+    },
+    "fritoz_cift_hazne_elk": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.N1.80703.11",
+      "marka": "Öztiryakiler",
+      "name": "700 SERİ SET ÜSTÜ FRİTÖZ ELEKTRİKLİ 80*70*30"
+    },
+    "tost_makinasi": {
+      "marka": "Atalay",
+      "sku": "ATM-2745",
+      "name": "Atalay ATM-2745 230 V 27 x 45"
     },
     "espresso_makinasi": {
       "brand": "Nuova Simonelli",
@@ -49,9 +103,10 @@
       "name": "NUOVA SIMONELLI APPIA LIFE II COMPACT YÜKSEK KAŞIKLI KAHVE MAKİNASI"
     },
     "filter_coffee": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9574.B10HW.00",
-      "marka": "Bravilor"
+      "brand": "Animo",
+      "sku": "9574.M200.00",
+      "marka": "Animo",
+      "name": "FILTRE KAHVE MAKINESI ANIMO M200 Cam Sürahi"
     },
     "kahve_degirmeni": {
       "brand": "Nuova Simonelli",
@@ -61,17 +116,28 @@
     },
     "buz_makinesi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9805.ODB14.0A",
-      "name": "OZTI BUZ MAKINESI ODB140A 140KG/GUN FLAT ICE CUBE"
+      "sku": "9805.OKB46.A0",
+      "name": "OZTI BUZ MAKINESI OKB46A 46KG/GUN — markasız referans; Brema/kg aile kuralı öncelikli"
+    },
+    "buz_makinesi_brema_42": {
+      "brand": "Brema",
+      "sku": "9805.CB416.HC",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE"
+    },
+    "buz_makinesi_brema_48": {
+      "brand": "Brema",
+      "sku": "9805.CB425.HC",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
+    },
+    "istif_rafi": {
+      "marka": "Portashelf",
+      "sku": "46-X-152-X-183",
+      "name": "KATLI RAFLAR · TIER SHELVING · 46-X-152-X-183"
     },
     "derin_dondurucu_dik": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "sku": "7919.06LMV.00",
       "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU"
-    },
-    "bardak_yikama": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "073M.11010.AD"
     },
     "yer_izgara": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -79,11 +145,248 @@
       "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290"
     },
     "bar_buzdolabi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8919.BBC35.00",
       "marka": "Öztiryakiler",
-      "name": "ŞİŞE SOĞUTUCU BBC35 3 KAPILI",
-      "fiyat_try": 65000
+      "name": "BAR ŞİŞE SOĞUTUCU — Öztiryakiler kapı sayısına göre"
+    },
+    "sise_sogutucu_3k": {
+      "marka": "Öztiryakiler",
+      "name": "BAR ŞİŞE SOĞUTUCU 3 KAPILI — Öztiryakiler"
+    },
+    "sise_sogutucu_2k": {
+      "marka": "Öztiryakiler",
+      "name": "BAR ŞİŞE SOĞUTUCU 2 KAPILI — Öztiryakiler"
+    },
+    "setalti_buzdolabi": {
+      "marka": "Öztiryakiler",
+      "sku": "7919.26NTV.C1",
+      "name": "CİHAZ ALTI BUZDOLABI — en ucuz NTV.C1"
+    },
+    "setalti_derin_dondurucu": {
+      "marka": "Öztiryakiler",
+      "sku": "79E3.26LMV.00",
+      "name": "CİHAZ ALTI / TEZGAH DERİN DONDURUCU — 79E3 LMV eco"
+    },
+    "buro_tipi_derin_dondurucu": {
+      "marka": "—",
+      "name": "60×60×85 büro tipi paslanmaz gövdeli derin dondurucu — katalogda henüz yok"
+    },
+    "kokteyl_istasyon": {
+      "marka": "Besos",
+      "sku": "PL/BM.F.4.3-22",
+      "name": "Bar modülü 220×70×85 — dondurucu çekmeceli kokteyl istasyonu (226 cm referansa en yakın)"
+    },
+    "dik_tip_buzdolabi": {
+      "marka": "Öztiryakiler",
+      "sku": "79K4.06NMV.00",
+      "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI K TİP — 430 eco"
+    },
+    "dik_tip_buzdolabi_2k": {
+      "marka": "Öztiryakiler",
+      "sku": "79K4.12NMV.00",
+      "name": "GN 1200 NMV CIFT INOX KAPI DIK TIP BUZDOLABI K TİP — 430 eco"
+    },
+    "tezgah_alti_buz_cek": {
+      "marka": "Öztiryakiler",
+      "sku": "7919.26NTV.C1",
+      "name": "CİHAZ ALTI ÇEKMECELİ BUZDOLABI — NTV.C1"
+    },
+    "portabianco_dik_tip_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "DT-1NGN-EKOP",
+      "name": "Dik tip buzdolabı tek kapılı EKOP — en ucuz"
+    },
+    "portabianco_tezgah_tip_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "TTS-2N70-E",
+      "name": "Tezgah tip buzdolabı iki kapılı — eco"
+    },
+    "portabianco_setalti_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "CAM-2N70",
+      "name": "Cihaz altı buzdolabı iki kapılı"
+    },
+    "portabianco_derin_dondurucu_dik": {
+      "marka": "Portabianco",
+      "sku": "DTT-1NGNE",
+      "name": "Dik tip GN derin dondurucu"
+    },
+    "portabianco_sogutma_tezgah": {
+      "marka": "Portabianco",
+      "sku": "SBHD-2N70E",
+      "name": "GN havuzlu make-up buzdolabı — en ucuz SB serisi"
+    },
+    "portabianco_bar_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "BAR-150P",
+      "name": "Bar buzdolabı — en ucuz"
+    },
+    "cop_siyirma_tez": {
+      "marka": "Equsto",
+      "sku": "EQUSTO.19070.31",
+      "name": "Süzme Havuzlu Tezgah — bulaşık sıyırma; ölçüye göre EQUSTO .31"
+    },
+    "bym_siyirma_tezgah": {
+      "marka": "Equsto",
+      "sku": "EQUSTO.19070.31",
+      "name": "Bulaşık sıyırma tezgahı — süzme havuzlu EQUSTO serisi"
+    },
+    "basket_rafi": {
+      "marka": "Öztiryakiler",
+      "sku": "7897.19030.30",
+      "name": "DUVAR RAFI — basket rafı; ölçü genişliğine göre 7897.*30.30"
+    },
+    "duvar_rafi": {
+      "marka": "Öztiryakiler",
+      "sku": "7897.14030.30",
+      "name": "DUVAR RAFI 140×30 — ölçü genişliğine göre en yakın 7897"
+    },
+    "yer_yikama_hortumu": {
+      "marka": "Şenox",
+      "sku": "118.HT.10",
+      "name": "Geri toplamalı yer yıkama hortumu 10 m — 118.HT.* (ön yıkama duşu değil)"
+    },
+    "on_yikama_dusu": {
+      "marka": "Şenox",
+      "sku": "118.DM.02",
+      "name": "Duvara monte duş spreyi ara musluklu — ön yıkama duşu = sprey ünitesi"
+    },
+    "dus_sprey": {
+      "marka": "Şenox",
+      "sku": "118.DM.02",
+      "name": "Duş sprey ünitesi — on_yikama_dusu ile eşdeğer"
+    },
+    "montaj_nakliye": {
+      "brand": "Equsto Proje Fabrikası",
+      "sku": "PFOS-MONTAJ",
+      "name": "Montaj ve nakliye hizmeti"
+    },
+    "teshir_vitrin": {
+      "marka": "Çağlayan Soğutma",
+      "name": "TEŞHİR REYONU — Çağlayan ölçü eşlemesi"
+    },
+    "calisma_tezgahi": {
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI — EQUSTO ölçü/evye eşlemesi; sabit SKU yok"
+    },
+    "calisma_tezgahi_dolap": {
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI DOLAPLI — EQUSTO ölçü eşlemesi"
+    },
+    "tezgah_evyeli": {
+      "marka": "Equsto",
+      "name": "EVYELİ ÇALIŞMA TEZGAHI — EQUSTO ölçü/evye eşlemesi; sabit SKU yok"
+    },
+    "evye_tezgah_dolap": {
+      "marka": "Equsto",
+      "name": "EVYELİ TEZGAH — EQUSTO ölçü eşlemesi; Öztiryakiler 7711.* kullanılmaz"
+    },
+    "cop_tezgahi": {
+      "marka": "Equsto",
+      "name": "ÇÖP TEZGAHI — EQUSTO / özel imalat"
+    },
+    "raf_firin": {
+      "marka": "Atalay",
+      "name": "KONVEKSİYONLU / RAFLI FIRIN — Atalay"
+    },
+    "tas_tabanli_firin": {
+      "marka": "Atalay",
+      "name": "TAŞ TABANLI / PİZZA FIRINI — Atalay"
+    },
+    "bar_blender": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9563.HBB90.80",
+      "marka": "Hamilton Beach",
+      "name": "HAMILTON BEACH BAR BLENDER HBB908R-CE"
+    },
+    "meyve_sikacagi": {
+      "marka": "Şenox",
+      "sku": "118.KM01",
+      "name": "Senox Km01 Katı Meyve Sıkacağı, 1000 w"
+    },
+    "portakal_sikacagi": {
+      "marka": "Şenox",
+      "sku": "118.PS.01",
+      "name": "Senox Motorlu Portakal Sıkma Makinesi"
+    },
+    "bar_mikser": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9563.BL811.00",
+      "name": "ÖZTİRYAKİLER BAR BLENDER BL811"
+    },
+    "rinser_evye": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "073M.11010.AD",
+      "name": "RINCER EVYESİ",
+      "fiyat_try": 15000
+    },
+    "kiyma_makinesi": {
+      "marka": "Boğaziçi",
+      "sku": "BPKM.32S",
+      "name": "Boğaziçi 32 No Komple Krom Paslanmaz Soğutmalı Kıyma Makinesi BPKM.32S",
+      "fiyat_try": 48500
+    },
+    "kemik_testere": {
+      "marka": "Boğaziçi",
+      "sku": "BKT.1840",
+      "name": "Boğaziçi Et Kemik Testeresi BKT.1840",
+      "fiyat_try": 62000
+    },
+    "dilimleme_makinesi": {
+      "marka": "Boğaziçi",
+      "name": "Boğaziçi Gıda Dilimleme Makinesi Ø30 cm",
+      "fiyat_try": 23246
+    },
+    "vakum_makinesi": {
+      "marka": "Şenox",
+      "sku": "WM-2-TEK-ENEVAKUM-MAK-NES",
+      "name": "Senox WM-2 TEK ÇENEVAKUM MAKİNESİ"
+    },
+    "spiral_hamur": {
+      "marka": "Boğaziçi",
+      "sku": "BSH.35",
+      "name": "Boğaziçi 35 Kg Spiral Hamur Yoğurma Makinesi BSH.35",
+      "fiyat_try": 95000
+    },
+    "hamur_acma": {
+      "marka": "Boğaziçi",
+      "sku": "BHA.30",
+      "name": "Boğaziçi Hamur Açma Makinası Pide Lavaş Lahmacun Açma Makinesi 30 Luk BHA.30",
+      "fiyat_try": 55000
+    },
+    "patates_soyma": {
+      "marka": "Boğaziçi",
+      "name": "Boğaziçi Patates Soyma Makinesi 15 kg",
+      "fiyat_try": 28500
+    },
+    "makarna_pisirici_elk": {
+      "marka": "Öztiryakiler",
+      "sku": "7858.N1.40703.11",
+      "name": "700 SERİ SET ÜSTÜ MAKARNA FRİTÖZÜ ELEKTRİKLİ 40*70*30"
+    },
+    "pizza_firini_kubbeli_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "8890.P5050.01",
+      "name": "PIZZA FIRINI 4 LU ELEKTRIKLI 380 V"
+    },
+    "cay_makinesi": {
+      "marka": "Öztiryakiler",
+      "sku": "8574.CM080.00",
+      "name": "CAY MAKINASI 80 BARDAK"
+    },
+    "sise_sogutucu_1k": {
+      "marka": "Şenox",
+      "sku": "118.SDS385.DCPF",
+      "name": "Senox Tek Kapılı Dik Tip Şişe Soğutucu, Kanopisiz"
+    },
+    "kahve_posa_cekmece": {
+      "marka": "Vosco",
+      "sku": "VSC-PCS",
+      "name": "Kahve Posa Çekmecesi Siyah – Espresso Makinesi Altı Posa Kutusu"
+    },
+    "konik_yuvarlama": {
+      "marka": "Pimak",
+      "sku": "CR 120",
+      "name": "CR 120 Konik Yuvarlama Makinesi"
     }
   }
 }

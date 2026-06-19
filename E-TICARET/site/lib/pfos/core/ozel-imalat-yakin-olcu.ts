@@ -22,7 +22,7 @@ export function parseEqustoSkuDims(
 ): { widthCm: number; depthCm: number; suffix: string } | null {
   const eq = String(sku ?? "")
     .trim()
-    .match(/^EQ\.[A-Z0-9]+\.(\d{3})(\d{2})$/i);
+    .match(/^EQ\.[A-Z0-9]+\.(\d{3})(\d{2,3})$/i);
   if (eq) {
     return {
       widthCm: Number(eq[1]),

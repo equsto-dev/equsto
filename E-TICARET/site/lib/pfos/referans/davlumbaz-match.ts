@@ -52,6 +52,29 @@ export async function matchDavlumbazByReferans(
   }
 
   if (isDavlumbazReferans(isim)) {
+    let ozelFiyat = 0;
+    try {
+      const { loadLegacyCatalogRows } = await import("@/lib/legacy-catalog");
+      const { findClosestEqustoDavlumbazPriceRow } = await import("../core/ozel-imalat-yakin-olcu");
+      const { dimsCmFromOlcu } = await import("../core/davlumbaz-marka");
+      const rows = await loadLegacyCatalogRows();
+      const targetDims = dimsCmFromOlcu(olcuRaw);
+      const isOrta = /orta\s*tip/i.test(`${isim} ${urunTipi ?? ""}`);
+      const isFiltreli = !/filtresiz/i.test(`${isim} ${urunTipi ?? ""}`);
+      const filter = (row: any) => {
+        const sku = String(row.sku ?? "").toUpperCase();
+        const isRowOrta = sku.includes("KDAVO");
+        const isRowFiltreli = sku.includes("KDAVDTF") || sku.includes("KDAVOTF");
+        return isRowOrta === isOrta && isRowFiltreli === isFiltreli;
+      };
+      const closest = findClosestEqustoDavlumbazPriceRow(rows, targetDims, filter);
+      if (closest) {
+        ozelFiyat = closest.fiyat_tl;
+      }
+    } catch (e) {
+      console.error("Error in davlumbaz ozel fiyat fallback:", e);
+    }
+
     return {
       id: `equsto-davlumbaz-ozel`,
       sku: "",
@@ -61,7 +84,7 @@ export async function matchDavlumbazByReferans(
       olcu: olcuDisplay,
       elektrikGucuKw: null,
       gazGucuKw: null,
-      fiyat: 0,
+      fiyat: ozelFiyat,
       fiyatEur: null,
       doviz: "TRY",
       gorselUrl: null,
