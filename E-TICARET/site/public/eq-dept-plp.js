@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260619-kdv-dahil-arama-v2';
+  var CATALOG_V = '20260619-kdv-dahil-v3';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -76,28 +76,42 @@
     return isNaN(n) ? 0 : n;
   }
 
-  function formatPrice(p, raw) {
-    var row = raw || { price: p };
+  /** KDV dahil kart fiyatı — eq-price-display yoksa da çalışır. */
+  function displayPriceForRow(row, opts) {
+    opts = opts || {};
+    if (!row) return '';
+    if (row.price_display) return String(row.price_display);
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === 'function') {
-      return window.EqustoPriceDisplay.formatCard(row, {
-        quoteLabel: __plpT('plp.quote_contact', 'Teklif için iletişim'),
-      });
+      return window.EqustoPriceDisplay.formatCard(row, opts);
     }
-    if (row && (Number(row.fiyat_bekleniyor) === 1 || /teklif\s+için/i.test(String(row.price || p || '')))) {
-      return __plpT('plp.quote_contact', 'Teklif için iletişim');
+    if (row.fiyat_bekleniyor || /teklif\s+için/i.test(String(row.price || ''))) {
+      return opts.quoteLabel || __plpT('plp.quote_contact', 'Teklif için iletişim');
     }
-    if (Number(row.fiyat_tl) > 0) {
-      return (
-        '₺' +
-        Number(row.fiyat_tl).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-        ' KDV dahil'
-      );
+    var n = 0;
+    if (Number(row.fiyat_tl) > 0) n = Number(row.fiyat_tl);
+    if (!(n > 0)) {
+      var full = String(row.price || '');
+      var dahil = full.match(/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/i);
+      if (dahil) n = parsePrice(dahil[1]);
+      if (!(n > 0)) {
+        var line0 = full.split('\n')[0] || '';
+        var net = parsePrice(line0);
+        if (net > 0 && /\+?\s*K\s*D\s*V/i.test(line0)) n = Math.round(net * 1.2 * 100) / 100;
+        else if (net > 0) n = net;
+      }
     }
-    var s = String(p || '').split('\n')[0];
-    if (/€/.test(s)) return '';
-    var n = parsePrice(p);
-    if (!n) return '';
-    return '₺' + n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' KDV dahil';
+    if (!(n > 0)) return String(row.price || '').split('\n')[0] || '';
+    return (
+      '₺' +
+      n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+      ' KDV dahil'
+    );
+  }
+
+  function formatPrice(p, raw) {
+    return displayPriceForRow(raw || (p ? { price: p } : null), {
+      quoteLabel: __plpT('plp.quote_contact', 'Teklif için iletişim'),
+    });
   }
 
   function isPlpTechnicalImg(rel) {
@@ -726,10 +740,7 @@
     ) {
       row = window.EqustoKurLive.applyRowPrices(x) || x;
     }
-    var priceLine =
-      window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function'
-        ? window.EqustoKurLive.priceForRow(row)
-        : String(row.price || '').split('\n')[0];
+    var priceLine = displayPriceForRow(row);
     var imgRel = '';
     if (row.images && row.images.length) {
       imgRel = pickPlpHeroImage(row.images);

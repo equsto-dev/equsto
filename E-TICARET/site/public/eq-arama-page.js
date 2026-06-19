@@ -13,6 +13,7 @@
   })();
   var lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
   var serverFacets = null;
+  var preserveHitOrder = false;
   var catalogImgById = null;
   var catalogImgInflight = null;
   var uiBound = false;
@@ -546,7 +547,7 @@
     loadCatalogImageMap().then(function () {
       var enriched = enrichHits(hits);
       if (replace) {
-        sourceHits = sortHitsWithImagesFirst(enriched);
+        sourceHits = applyDisplaySort(enriched);
       } else {
         var idMap = Object.create(null);
         sourceHits.forEach(function (h, idx) {
@@ -633,6 +634,11 @@
     });
   }
 
+  function applyDisplaySort(hits) {
+    if (preserveHitOrder) return hits || [];
+    return sortHitsWithImagesFirst(hits);
+  }
+
   function imgSrc(hit) {
     var img = hit && hit.image;
     if (!img) return "";
@@ -689,6 +695,9 @@
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
       return window.EqustoPriceDisplay.formatCard(hit);
     }
+    if (hit.fiyat_bekleniyor || /teklif\s+için/i.test(String(hit.price || ""))) {
+      return __searchT("plp.quote_contact", "Teklif için iletişim");
+    }
     var n = parseKdvDahilTlFromHit(hit);
     if (n > 0) {
       return (
@@ -700,7 +709,9 @@
         " KDV dahil"
       );
     }
-    return String(hit.price || "").split("\n")[0];
+    var line0 = String(hit.price || "").split("\n")[0] || "";
+    if (/€/.test(line0)) return "";
+    return line0;
   }
 
   function getQuery() {
@@ -1346,7 +1357,10 @@
           if (!hasActiveFilters()) {
             resetFilters();
           }
-          sourceHits = sortHitsWithImagesFirst(rawHits);
+          preserveHitOrder = !!(
+            res.data.facets && res.data.facets.sortMode === "brand-cooking"
+          );
+          sourceHits = applyDisplaySort(rawHits);
         } else {
           sourceHits = dedupeHits(sourceHits.concat(rawHits));
         }
