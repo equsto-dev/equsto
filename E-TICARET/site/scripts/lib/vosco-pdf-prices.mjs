@@ -1,6 +1,6 @@
-/** Equsto satış = liste × 45% (%55 bayi iskonto) */
-export const VOSCO_SATIS_ORAN = 0.45;
-export const VOSCO_ISKONTO_ORAN = 0.55;
+/** Equsto satış = liste × 48% (%52 iskonto — müşteri listenin %48'ini öder) */
+export const VOSCO_SATIS_ORAN = 0.48;
+export const VOSCO_ISKONTO_ORAN = 0.52;
 
 import fs from "node:fs";
 import path from "node:path";

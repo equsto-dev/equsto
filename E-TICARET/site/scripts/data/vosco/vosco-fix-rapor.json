@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-06-19T12:17:46.868Z",
+  "pdfProducts": 157,
+  "pdfIndexKeys": 156,
+  "kur_usd_try": 46.3988,
+  "kur_eur_try": 53.2898,
+  "satis_oran": 0.48,
+  "iskonto_oran": 0.52,
+  "dryRun": true,
+  "summary": {
+    "total": 164,
+    "fixed": 0,
+    "iskonto_fix": 0,
+    "liste_fix": 0,
+    "manual": 4,
+    "site": 7,
+    "no_price": 1,
+    "target_pdf": 152
+  },
+  "fixed": [],
+  "no_pdf": [
+    {
+      "model": "VSC-MT3",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 1083
+    },
+    {
+      "model": "VSC-MT4"
+    },
+    {
+      "model": "VSC-MT58",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 461
+    },
+    {
+      "model": "VSC-MT58-PT",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 598
+    },
+    {
+      "model": "VSC-MT6",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 2347
+    },
+    {
+      "model": "VHS-J319",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 2581
+    },
+    {
+      "model": "VSC-70C",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 80599
+    },
+    {
+      "model": "VLJH-12",
+      "kaynak": "vosco-manual-tl",
+      "fiyat_tl": 26275
+    },
+    {
+      "model": "VST-520ECB",
+      "kaynak": "vosco-manual-tl",
+      "fiyat_tl": 42375
+    },
+    {
+      "model": "VST-520ECS",
+      "kaynak": "vosco-manual-tl",
+      "fiyat_tl": 42375
+    },
+    {
+      "model": "VSC-PCS",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 1750
+    },
+    {
+      "model": "VFTR-50L",
+      "kaynak": "vosco-manual-tl",
+      "fiyat_tl": 21000
+    }
+  ]
+}
