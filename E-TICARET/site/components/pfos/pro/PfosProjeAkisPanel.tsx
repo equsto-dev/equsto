@@ -23,100 +23,17 @@ import {
 } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 import { DEFAULT_WIZARD_QUESTIONS } from "@/lib/pfos/proje-akis/wizard-questions";
 import {
+  createStarterEqSets,
+  createStarterRules,
+  type ProjeAkisEqSetRow as EqSetRow,
+  type ProjeAkisRuleRow as RuleRow,
+} from "@/lib/pfos/proje-akis/set-kural-taslak";
+import {
   EMPTY_PROJE_AKIS,
   fetchProjeAkis,
   saveProjeAkis,
   type ProjeAkisData,
 } from "@/lib/pro-admin-client";
-
-type RuleRow = {
-  id: string;
-  typeId: string;
-  setId: string;
-  desc?: string;
-  priority?: number;
-  conditions?: { label?: string; questionId?: string; op?: string; value: string }[];
-};
-
-type EqSetRow = {
-  id: string;
-  name: string;
-  typeId?: string;
-  desc?: string;
-  source?: string;
-  selectedIds?: string[];
-};
-
-function buildEqSetId(typeId: string, bantId?: string) {
-  return `set_${typeId}${bantId ? `_${bantId}` : ""}`.replace(/[^a-z0-9_]+/gi, "_");
-}
-
-function buildRuleId(typeId: string, setId: string) {
-  return `rule_${typeId}_${setId}`.replace(/[^a-z0-9_]+/gi, "_");
-}
-
-function createStarterEqSets(shopTypes: ShopTypeKayit[]): EqSetRow[] {
-  const rows: EqSetRow[] = [];
-  for (const concept of shopTypes) {
-    if (concept.pfos.durum === "planlanan") continue;
-    if (concept.pfos.bantlar.length) {
-      for (const bant of concept.pfos.bantlar) {
-        rows.push({
-          id: buildEqSetId(concept.id, bant.id),
-          name: `${concept.name} - ${bant.label}`,
-          typeId: concept.id,
-          source: bant.listeDosya,
-          desc: `${concept.pfos.dukkanSecim} / ${bant.label} / ref ${bant.referansM2} m²`,
-          selectedIds: [],
-        });
-      }
-      continue;
-    }
-    rows.push({
-      id: buildEqSetId(concept.id),
-      name: `${concept.name} - motor şablon`,
-      typeId: concept.id,
-      source: concept.pfos.motorSlug || concept.pfos.teklifKaynagi,
-      desc: concept.pfos.bantKurali,
-      selectedIds: [],
-    });
-  }
-  return rows;
-}
-
-function createStarterRules(shopTypes: ShopTypeKayit[], eqSets: EqSetRow[]): RuleRow[] {
-  const rows: RuleRow[] = [];
-  for (const set of eqSets) {
-    const concept = shopTypes.find((t) => t.id === set.typeId);
-    if (!concept) continue;
-    const bant = concept.pfos.bantlar.find((b) => set.id.endsWith(`_${b.id}`));
-    const conditions: RuleRow["conditions"] = [
-      {
-        label: "Dükkan türü",
-        questionId: "q_dukkan_turu",
-        op: "equals",
-        value: concept.pfos.dukkanSecim,
-      },
-    ];
-    if (bant) {
-      conditions.push({
-        label: "m² bandı",
-        questionId: "q_m2",
-        op: "band",
-        value: bant.label,
-      });
-    }
-    rows.push({
-      id: buildRuleId(concept.id, set.id),
-      typeId: concept.id,
-      setId: set.id,
-      priority: bant ? 20 : 50,
-      desc: `${concept.name} seçilirse ${set.name} setini öner`,
-      conditions,
-    });
-  }
-  return rows;
-}
 
 export default function PfosProjeAkisPanel() {
   const [loading, setLoading] = useState(true);
