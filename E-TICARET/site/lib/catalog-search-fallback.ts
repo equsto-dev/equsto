@@ -12,6 +12,7 @@ import {
   shouldDiversifySearchHits,
 } from "@/lib/rank-search-hits";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
+import { formatConsumerPriceTry } from "@/lib/shop/consumer-price";
 
 export type CatalogSearchHit = {
   id: string;
@@ -28,6 +29,9 @@ export type CatalogSearchHit = {
   marka_urun_kodu?: string;
   kategori_yolu?: string[];
   price: string;
+  price_display?: string;
+  fiyat_tl?: number | null;
+  fiyat_bekleniyor?: number | null;
   liste_fiyati_eur: number | null;
   satis_eur_indirimli: number | null;
   iskonto_oran: number | null;
@@ -35,6 +39,21 @@ export type CatalogSearchHit = {
   url: string;
   specs: string;
 };
+
+function consumerPriceFields(row: CatalogRow): Pick<CatalogSearchHit, "fiyat_tl" | "fiyat_bekleniyor" | "price_display"> {
+  const fiyatTl = Number(row.fiyat_tl);
+  const fiyatBekleniyor = row.fiyat_bekleniyor ? 1 : 0;
+  const price = String(row.price || "");
+  return {
+    fiyat_tl: Number.isFinite(fiyatTl) && fiyatTl > 0 ? Math.round(fiyatTl * 100) / 100 : null,
+    fiyat_bekleniyor: fiyatBekleniyor,
+    price_display: formatConsumerPriceTry({
+      fiyat_tl: row.fiyat_tl as number | string | null | undefined,
+      price,
+      fiyat_bekleniyor: row.fiyat_bekleniyor as number | boolean | null | undefined,
+    }),
+  };
+}
 
 type CatalogRow = Record<string, unknown>;
 
@@ -97,6 +116,7 @@ export function rowToHitFromRow(row: CatalogRow): CatalogSearchHit | null {
       ? (row.kategori_yolu as string[])
       : undefined,
     price: String(row.price || "").split("\n")[0].slice(0, 120),
+    ...consumerPriceFields(row),
     liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
     satis_eur_indirimli:
       Number(row.satis_eur_indirimli || row.satis_fiyati_eur) || null,

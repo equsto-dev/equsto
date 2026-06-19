@@ -144,6 +144,45 @@ function searchHints(dept, category, name) {
   return categorySearchHints(dept, category, name);
 }
 
+function parseTrAmountForIndex(raw) {
+  const cleaned = String(raw || "")
+    .replace(/₺/g, "")
+    .replace(/\+?\s*KDV.*/gi, "")
+    .replace(/KDV\s*dahil/gi, "")
+    .trim()
+    .replace(/\.(?=\d{3}(\D|$))/g, "")
+    .replace(",", ".");
+  const n = parseFloat(cleaned);
+  return Number.isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0;
+}
+
+function resolveKdvDahilTlForIndex(row) {
+  const fiyatTl = Number(row.fiyat_tl);
+  if (Number.isFinite(fiyatTl) && fiyatTl > 0) return Math.round(fiyatTl * 100) / 100;
+  const full = String(row.price || "");
+  const dahil = full.match(/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/i);
+  if (dahil) {
+    const v = parseTrAmountForIndex(dahil[1]);
+    if (v > 0) return v;
+  }
+  const line0 = full.split("\n")[0] || "";
+  if (/\+?\s*K\s*D\s*V/i.test(line0)) {
+    const net = parseTrAmountForIndex(line0);
+    if (net > 0) return Math.round(net * 1.2 * 100) / 100;
+  }
+  if (/KDV\s*dahil/i.test(line0)) return parseTrAmountForIndex(line0);
+  return parseTrAmountForIndex(line0);
+}
+
+function formatPriceDisplayForIndex(row) {
+  if (row.fiyat_bekleniyor || /teklif\s+için/i.test(String(row.price || ""))) {
+    return "Teklif için iletişim";
+  }
+  const n = resolveKdvDahilTlForIndex(row);
+  if (!(n > 0)) return String(row.price || "").split("\n")[0].slice(0, 120);
+  return `₺${n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} KDV dahil`;
+}
+
 function rowToDoc(row, deptFallback) {
   const name = String(row.name || "").trim();
   if (!name) return null;
@@ -176,6 +215,7 @@ function rowToDoc(row, deptFallback) {
     price: String(row.price || "").split("\n")[0].slice(0, 120),
     fiyat_tl: Number(row.fiyat_tl) > 0 ? Number(row.fiyat_tl) : null,
     fiyat_bekleniyor: row.fiyat_bekleniyor ? 1 : 0,
+    price_display: formatPriceDisplayForIndex(row),
     liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
     satis_eur_indirimli: Number(row.satis_eur_indirimli) || null,
     iskonto_oran: Number(row.iskonto_oran) || null,
@@ -318,6 +358,7 @@ async function main() {
       "marka_urun_kodu",
       "kategori_yolu",
       "price",
+      "price_display",
       "fiyat_tl",
       "fiyat_bekleniyor",
       "liste_fiyati_eur",

@@ -666,15 +666,34 @@
     return "/data/" + img.replace(/^data\//, "");
   }
 
+  function parseKdvDahilTlFromHit(hit) {
+    if (!hit) return 0;
+    if (Number(hit.fiyat_tl) > 0) return Number(hit.fiyat_tl);
+    var full = String(hit.price || "");
+    var dahil = full.match(/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/i);
+    if (dahil) {
+      var v = parsePriceFromHit({ price: dahil[1] });
+      if (v > 0) return v;
+    }
+    var line0 = full.split("\n")[0] || "";
+    if (/\+?\s*K\s*D\s*V/i.test(line0)) {
+      var net = parsePriceFromHit({ price: line0 });
+      if (net > 0) return Math.round(net * 1.2 * 100) / 100;
+    }
+    return parsePriceFromHit(hit);
+  }
+
   function formatPrice(hit) {
     if (!hit) return "";
+    if (hit.price_display) return hit.price_display;
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
       return window.EqustoPriceDisplay.formatCard(hit);
     }
-    if (Number(hit.fiyat_tl) > 0) {
+    var n = parseKdvDahilTlFromHit(hit);
+    if (n > 0) {
       return (
         "₺" +
-        Number(hit.fiyat_tl).toLocaleString("tr-TR", {
+        n.toLocaleString("tr-TR", {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         }) +
