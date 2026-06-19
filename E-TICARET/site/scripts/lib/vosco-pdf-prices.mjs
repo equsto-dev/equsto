@@ -196,7 +196,7 @@ export function pricingFromVoscoPdfMatch(
     kur_eur_try: eurTry,
     fiyat_tl: kdvDahil,
     fiyat_tl_net: netTry,
-    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    price: `₺${fmtTry(kdvDahil)} KDV dahil`,
     fiyat_bekleniyor: false,
     fiyat_kaynak: "vosco-pdf-2026",
   };
@@ -215,7 +215,7 @@ export function pricingFromManualKdvDahilTry(kdvDahilTry, kdv = 20, meta = {}) {
   return {
     fiyat_tl: kdvDahil,
     fiyat_tl_net: Math.round(netTry),
-    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    price: `₺${fmtTry(kdvDahil)} KDV dahil`,
     fiyat_bekleniyor: false,
     fiyat_kaynak: meta.fiyat_kaynak || "vosco-manual-tl",
     site_fiyat_kdv_dahil: meta.site_fiyat_kdv_dahil,

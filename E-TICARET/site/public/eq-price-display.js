@@ -65,7 +65,12 @@
     }
     var n = resolveKdvDahilTl(row);
     if (!(n > 0)) {
-      return String((row && row.price) || "").split("\n")[0] || "";
+      var fallback = String((row && row.price) || "");
+      if (/\+?\s*K\s*D\s*V/i.test(fallback)) {
+        var netOnly = extractKdvDahilFromPriceString(fallback);
+        if (netOnly > 0) n = netOnly;
+      }
+      if (!(n > 0)) return fallback.split("\n")[0] || "";
     }
     var formatted = n.toLocaleString("tr-TR", {
       minimumFractionDigits: 2,

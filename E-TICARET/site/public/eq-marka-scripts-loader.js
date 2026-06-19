@@ -38,6 +38,15 @@
   }
 
   function start() {
+    if (!window.EqustoPriceDisplay) {
+      var pd = document.createElement("script");
+      pd.src = "/eq-price-display.js?v=" + encodeURIComponent(v);
+      pd.async = false;
+      pd.onload = start;
+      pd.onerror = start;
+      (document.head || document.body).appendChild(pd);
+      return;
+    }
     if (window.EqustoShopCatalog && window.EqCategoryShell) {
       if (!document.getElementById("eq-marka-plp-boot-js")) {
         var boot = document.createElement("script");

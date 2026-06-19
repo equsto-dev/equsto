@@ -19,6 +19,7 @@ export default function MarkaHubScripts() {
     <>
       <style id="eq-marka-hub-page-css">{MARKA_HUB_CSS}</style>
       <AssetCdnConfigScript />
+      <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-marka-scripts-loader.js?v=${v}`} strategy="afterInteractive" />
     </>

@@ -19,9 +19,39 @@
     if (global.EqustoPriceDisplay && typeof global.EqustoPriceDisplay.formatCard === "function") {
       return global.EqustoPriceDisplay.formatCard(x);
     }
-    var s = String((x && x.price) || "").trim();
-    if (!s) return "";
-    return s.split("\n")[0].trim();
+    if (!x) return "";
+    if (x.fiyat_bekleniyor || /teklif\s+için/i.test(String(x.price || ""))) {
+      return "Teklif için iletişim";
+    }
+    var n = 0;
+    if (Number(x.fiyat_tl) > 0) n = Number(x.fiyat_tl);
+    if (!(n > 0)) {
+      var full = String(x.price || "");
+      var dahil = full.match(/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/i);
+      if (dahil) {
+        n = parseFloat(
+          String(dahil[1]).replace(/\.(?=\d{3}(\D|$))/g, "").replace(",", "."),
+        );
+      }
+      if (!(n > 0)) {
+        var line0 = full.split("\n")[0] || "";
+        var net = parseFloat(
+          line0
+            .replace(/₺/g, "")
+            .replace(/\+?\s*KDV.*/gi, "")
+            .replace(/\./g, "")
+            .replace(",", "."),
+        );
+        if (net > 0 && /\+?\s*K\s*D\s*V/i.test(line0)) n = Math.round(net * 1.2 * 100) / 100;
+        else if (net > 0) n = net;
+      }
+    }
+    if (!(n > 0)) return "";
+    return (
+      "₺" +
+      n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+      " KDV dahil"
+    );
   }
 
   function priceOneLine(p) {
