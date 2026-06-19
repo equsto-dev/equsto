@@ -65,7 +65,7 @@ export async function canonicalizeSearchHits(
         formatConsumerPriceTry({
           fiyat_tl: fiyatTl,
           price: String(row.price || hit.price || ""),
-          fiyat_bekleniyor: row.fiyat_bekleniyor ?? hit.fiyat_bekleniyor,
+          fiyat_bekleniyor: Boolean(row.fiyat_bekleniyor || hit.fiyat_bekleniyor),
         }),
     };
   });
