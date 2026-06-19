@@ -1,11 +1,9 @@
 import type { EqustoFiyatSeriProduct } from "@/lib/shop/equsto-fiyat-seri";
+import { formatConsumerPriceTry } from "@/lib/shop/consumer-price";
 import { stripOlcuUnitSuffix } from "@/lib/pfos/teklif/olcu-mm";
 
 function fmtPrice(p: EqustoFiyatSeriProduct): string {
-  if (p.fiyat_tl && p.fiyat_tl > 0) {
-    return `₺${p.fiyat_tl.toLocaleString("tr-TR")},00`;
-  }
-  return String(p.price || "").split("\n")[0] || "Teklif için iletişim";
+  return formatConsumerPriceTry(p, { quoteLabel: "Teklif için iletişim" });
 }
 
 function CardLink({

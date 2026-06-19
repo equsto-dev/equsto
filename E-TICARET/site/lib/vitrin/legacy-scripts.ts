@@ -23,6 +23,7 @@ export const HOME_EXTRA_STYLES = [
 ];
 
 export const HOME_SCRIPTS = [
+  `/eq-price-display.js?v=${v}`,
   `/eq-home-vitrin.js?v=${v}`,
   `/eq-category-overrides.js?v=${v}`,
   `/eq-vendor-sanitize.js?v=${v}`,
@@ -71,6 +72,7 @@ export const BAR_DESIGN_SCRIPTS = [`/eq-bar-design.js?v=${v}`, `/eq-analytics.js
 export const ADMIN_SCRIPTS = [`/admin-app.js?v=${v}`];
 
 export const PRODUCT_SCRIPTS = [
+  `/eq-price-display.js?v=${v}`,
   `/eq-display-terminology.js?v=${v}`,
   `/eq-shop-catalog-bootstrap.js?v=${v}`,
   `/eq-filter-column.js?v=${v}`,

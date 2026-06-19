@@ -83,6 +83,9 @@
 
   function oztiPriceLine(raw) {
     if (!raw || !isOztiRaw(raw)) return '';
+    if (global.EqustoPriceDisplay && typeof global.EqustoPriceDisplay.formatCard === 'function') {
+      return global.EqustoPriceDisplay.formatCard(raw);
+    }
     if (global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function') {
       var live = global.EqustoKurLive.priceForRow(raw);
       if (live) return live;

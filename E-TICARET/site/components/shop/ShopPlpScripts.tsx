@@ -31,6 +31,7 @@ export default function ShopPlpScripts() {
       <Script src="/eq-dept-plp-config.js" strategy="afterInteractive" />
       <Script src={`/eq-dept-cm-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/equsto-pricing-core.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />

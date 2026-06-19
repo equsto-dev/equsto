@@ -512,6 +512,17 @@
 
   global.__eqMxReinitHero = initHero;
 
+  function spotlightPrice(u) {
+    if (global.EqustoPriceDisplay && typeof global.EqustoPriceDisplay.formatCard === 'function') {
+      var row = (u && u.raw) || u;
+      if (row) return global.EqustoPriceDisplay.formatCard(row);
+    }
+    var p = String((u && u.p) || '').trim();
+    if (!p) return '';
+    if (/KDV/i.test(p)) return p.indexOf('₺') === 0 ? p : '₺' + p;
+    return '₺' + p + ' KDV dahil';
+  }
+
   function renderMxSpotlightCard(u) {
     var img = u.img
       ? '<img src="' +
@@ -535,8 +546,8 @@
       '<div class="eq-mx-spot-card__name">' +
       esc(name) +
       '</div>' +
-      '<div class="eq-mx-spot-card__price">₺' +
-      esc(u.p || '') +
+      '<div class="eq-mx-spot-card__price">' +
+      esc(spotlightPrice(u)) +
       '</div></div></a>'
     );
   }

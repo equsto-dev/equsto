@@ -77,28 +77,27 @@
   }
 
   function formatPrice(p, raw) {
-    if (raw && (Number(raw.fiyat_bekleniyor) === 1 || /teklif\s+için/i.test(String(raw.price || p || '')))) {
+    var row = raw || { price: p };
+    if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === 'function') {
+      return window.EqustoPriceDisplay.formatCard(row, {
+        quoteLabel: __plpT('plp.quote_contact', 'Teklif için iletişim'),
+      });
+    }
+    if (row && (Number(row.fiyat_bekleniyor) === 1 || /teklif\s+için/i.test(String(row.price || p || '')))) {
       return __plpT('plp.quote_contact', 'Teklif için iletişim');
     }
-    if (raw && isOztiListeTlRow(raw) && /KDV\s*dahil/i.test(String(raw.price || p || ''))) {
-      return String(raw.price || p || '').split('\n')[0];
-    }
-    if (raw && Number(raw.fiyat_tl) > 0) {
+    if (Number(row.fiyat_tl) > 0) {
       return (
         '₺' +
-        Math.round(Number(raw.fiyat_tl)).toLocaleString('tr-TR', { maximumFractionDigits: 0 }) +
-        ',00'
+        Number(row.fiyat_tl).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+        ' KDV dahil'
       );
-    }
-    if (raw && window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function') {
-      var live = window.EqustoKurLive.priceForRow(raw);
-      if (live && !/€/.test(live)) return live;
     }
     var s = String(p || '').split('\n')[0];
     if (/€/.test(s)) return '';
     var n = parsePrice(p);
     if (!n) return '';
-    return '₺' + n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ',00';
+    return '₺' + n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' KDV dahil';
   }
 
   function isPlpTechnicalImg(rel) {

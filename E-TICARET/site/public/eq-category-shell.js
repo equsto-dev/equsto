@@ -15,6 +15,15 @@
       .replace(/"/g, "&quot;");
   }
 
+  function formatPriceRow(x) {
+    if (global.EqustoPriceDisplay && typeof global.EqustoPriceDisplay.formatCard === "function") {
+      return global.EqustoPriceDisplay.formatCard(x);
+    }
+    var s = String((x && x.price) || "").trim();
+    if (!s) return "";
+    return s.split("\n")[0].trim();
+  }
+
   function priceOneLine(p) {
     var s = String(p || "").trim();
     if (!s) return "";
@@ -146,7 +155,7 @@
         esc(x.name || "") +
         "</a>" +
         '<div class="eq-dept-plp-card__price">' +
-        esc(priceOneLine(x.price)) +
+        esc(formatPriceRow(x)) +
         "</div>" +
         cartBtn +
         "</article>"
@@ -169,7 +178,7 @@
         '<div class="eq-cat-card__body">' +
         '<a class="eq-cat-card__name" href="' + esc(href) + '">' + esc(x.name || "") + "</a>" +
         '<div class="eq-cat-card__brand">' + esc(x.oem_brand && x.oem_brand !== x.brand ? x.oem_brand : x.brand || "") + "</div>" +
-        '<div class="eq-cat-card__price">' + esc(priceOneLine(x.price)) + "</div>" +
+        '<div class="eq-cat-card__price">' + esc(formatPriceRow(x)) + "</div>" +
         '<button type="button" class="eq-cat-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>' +
         "</div></article>"
       );
