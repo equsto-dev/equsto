@@ -298,7 +298,15 @@ function findTabularHeader(cells: string[]): TabularHeader | null {
   const aciklamaIdx = lower.findIndex(
     (c) => c.includes("aciklama") && !c.includes("malzeme"),
   );
-  const pozIdx = lower.findIndex((c) => c.includes("poz"));
+  const pozIdx = lower.findIndex(
+    (c) =>
+      c.includes("poz") ||
+      c === "p.no" ||
+      c === "pno" ||
+      c === "p.no." ||
+      c === "poz no" ||
+      c === "poz no.",
+  );
   const noIdx = lower.findIndex((c) => c === "no" || c === "sira" || c === "s.no");
   const tanimIdx =
     malzemeIdx >= 0
@@ -367,6 +375,27 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
 
     if (!header) {
       header = findTabularHeader(cells);
+      return;
+    }
+
+    const firstCell = cells[0]?.trim();
+    const isEmptyOthers = firstCell &&
+      (header.malzeme < 0 || !cells[header.malzeme]?.trim()) &&
+      (header.poz < 0 || !cells[header.poz]?.trim()) &&
+      (header.no < 0 || !cells[header.no]?.trim()) &&
+      (header.aciklama < 0 || !cells[header.aciklama]?.trim());
+
+    const isMergedOthers = firstCell &&
+      (header.malzeme < 0 || cells[header.malzeme]?.trim() === firstCell) &&
+      (header.poz < 0 || cells[header.poz]?.trim() === firstCell) &&
+      (header.no < 0 || cells[header.no]?.trim() === firstCell) &&
+      (header.aciklama < 0 || cells[header.aciklama]?.trim() === firstCell);
+
+    if (isEmptyOthers || isMergedOthers) {
+      sectionIndex++;
+      bolumAd = `${firstCell}\0${sectionIndex}`;
+      const harf = firstCell.match(/\b([A-Z])\s*[-–]/i)?.[1] || firstCell.charAt(0).toUpperCase();
+      if (harf && BOLUM_HARF_RE.test(harf)) bolum = harf;
       return;
     }
 
@@ -476,9 +505,16 @@ export function pickBestProformaRows(
     ...extra,
   ];
   let best: PfosEkipmanSatir[] = [];
+  let bestScore = -1;
   for (const parse of parsers) {
     const rows = parse(ws);
-    if (rows.length > best.length) best = rows;
+    const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
+    const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
+    const score = rows.length + validOlcuCount * 5 + validAdetCount * 2;
+    if (score > bestScore) {
+      bestScore = score;
+      best = rows;
+    }
   }
   return best;
 }

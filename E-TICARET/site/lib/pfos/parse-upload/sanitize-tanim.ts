@@ -81,8 +81,8 @@ function stripProformaPriceTail(s: string): string {
 export function expandProformaAbbreviations(raw: string): string {
   return String(raw ?? "")
     .replace(/\bRFLI\b/gi, "RAFLI")
-    .replace(/\bKAY\.?\s*/gi, "KAYDIRMA ")
-    .replace(/\bMOB\.?\s*/gi, "MOBİLYA ")
+    .replace(/\bKAY\b|\bKAY\./gi, "KAYDIRMA")
+    .replace(/\bMOB\b|\bMOB\./gi, "MOBİLYA")
     .replace(/\bPOWER\s+GRILL\b/gi, "POWERGRILL")
     .replace(/\bSKTÜRK\b/gi, "")
     .replace(/\bSKTURK\b/gi, "");
