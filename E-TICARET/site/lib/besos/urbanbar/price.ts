@@ -1,7 +1,38 @@
 import type { BesosLocale } from "@/lib/besos/locale";
-import { resolveMerchantPriceTry } from "@/lib/google-merchant-feed";
 import { urbanBarPackQtyFromProduct } from "./pack-qty";
 import type { BesosUrbanBarProduct } from "./types";
+
+function parseTrAmount(fragment: string): number {
+  const n = parseFloat(
+    String(fragment || "")
+      .replace(/\.(?=\d{3}(\D|$))/g, "")
+      .replace(",", "."),
+  );
+  return Number.isFinite(n) && n > 0 ? Math.round(n) : 0;
+}
+
+/** Client-safe — Urban Bar fiyat_tl veya ₺… KDV dahil etiketinden toplam TRY */
+export function resolveUrbanBarTotalTry(input: {
+  fiyat_tl?: number;
+  price?: string;
+}): number {
+  const fiyatTl = Number(input.fiyat_tl);
+  if (Number.isFinite(fiyatTl) && fiyatTl > 0) return Math.round(fiyatTl);
+
+  const raw = String(input.price || "");
+  const dahil = raw.match(/₺?\s*([\d.,]+)\s*(?:KDV\s*dahil|Incl\.?\s*VAT)/i);
+  if (dahil) {
+    const v = parseTrAmount(dahil[1]);
+    if (v > 0) return v;
+  }
+
+  const digits = raw
+    .replace(/[^\d,.\-]/g, "")
+    .replace(/\.(?=\d{3}(\D|$))/g, "")
+    .replace(",", ".");
+  const n = parseFloat(digits);
+  return Number.isFinite(n) && n > 0 ? Math.round(n) : 0;
+}
 
 export function formatUrbanBarTry(amount: number): string {
   const n = Math.round(amount);
@@ -26,10 +57,10 @@ export function resolveUrbanBarPriceDisplay(
   >,
   locale: BesosLocale = "tr",
 ): UrbanBarPriceDisplay | null {
-  const totalTl =
-    typeof product.fiyat_tl === "number" && product.fiyat_tl > 0
-      ? product.fiyat_tl
-      : resolveMerchantPriceTry({ fiyat_tl: product.fiyat_tl, price: product.price });
+  const totalTl = resolveUrbanBarTotalTry({
+    fiyat_tl: product.fiyat_tl,
+    price: product.price,
+  });
   if (!totalTl || totalTl <= 0) return null;
 
   const packQty = urbanBarPackQtyFromProduct(product);
