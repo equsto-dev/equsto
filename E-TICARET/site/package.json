@@ -60,6 +60,7 @@
     "catalog:vosco:scrape": "node scripts/scrape-vosco-catalog.mjs",
     "catalog:vosco:compare-senox": "node scripts/compare-senox-vosco.mjs",
     "catalog:vosco:import": "node scripts/import-vosco-to-equsto.mjs",
+    "catalog:vosco:fix": "node scripts/fix-vosco-catalog-prices.mjs",
     "catalog:vosco:full": "npm run catalog:vosco:pdf && npm run catalog:vosco:scrape && npm run catalog:vosco:compare-senox && npm run catalog:vosco:import",
     "catalog:rational:prices": "node scripts/apply-rational-liste-prices.mjs",
     "catalog:rational:compare": "node scripts/compare-rational-multi-market.mjs",

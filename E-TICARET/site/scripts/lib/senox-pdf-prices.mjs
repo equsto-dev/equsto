@@ -59,6 +59,14 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["VM3", 2400],
   ["VM3FTENEVAKUMMAKNES", 2400],
   ["DZ4002F", 2400],
+  // SENOX 2026-1 s.58 — Salad bar (BLK-01 sayfası tablosu)
+  ["SLD03", 1800],
+  ["SLD04", 2000],
+]);
+
+/** Equsto satış — sabit KDV dahil TRY (kur değişse de fiyat sabit kalır) */
+export const SENOX_KDV_DAHIL_TL_OVERRIDES = new Map([
+  ["SBCS250", 46985],
 ]);
 
 /** Mutbex / Equsto model → PDF kod eşlemesi */
@@ -162,7 +170,9 @@ function parseDescriptionPrices(text) {
 function expandPdfShortKeys(model) {
   const out = new Set();
   const raw = String(model || "");
-  const prefixNum = raw.match(/^(DY|PDY|PDM|PLM|BLK|SNX|SYD|SDS|BBC|SBC|SMR|WN|WF|BZ|MS|KRS|CF|SYS|BN|BGN|UGN|CKT|DS|SFT|SLS|SRB|KM|IC|SMF|PDM)[-\s]?0?(\d+[A-Z0-9]*)/i);
+  const prefixNum = raw.match(
+    /^(DY|PDY|PDM|PLM|BLK|SNX|SYD|SDS|BBC|SBCS?|SMR|WN|WF|BZ|MS|KRS|CF|SYS|BN|BGN|UGN|CKT|DS|SFT|SLS|SRB|KM|IC|SMF|ADA|MT|KOE?|SET|WD|VN|CMVA|KKM|SLD|BS|DBE|DVF|HT|TM|DM)[-\s]+(\d+[A-Z0-9]*)/i,
+  );
   if (prefixNum) {
     out.add(prefixNum[1].toUpperCase() + prefixNum[2].toUpperCase().replace(/[^A-Z0-9]/g, ""));
   }
@@ -203,12 +213,22 @@ export function buildSenoxPdfPriceIndex(products) {
     if (main > 0) {
       addPrice(map, p.model, main, true);
       addPrice(map, p.title, main, true);
-      const short = String(p.title || "").match(/\b([A-Z]{2,4}-\d+[A-Z]?)\b/i);
-      if (short) addPrice(map, short[1], main, true);
+      const short = String(p.title || "").match(/\b([A-Z]{2,5}-\d+[A-Z0-9-]*)\b/gi);
+      if (short) {
+        for (const s of short) addPrice(map, s, main, true);
+      }
       for (const sk of expandPdfShortKeys(p.model)) {
         addPrice(map, sk, main, true);
       }
+      for (const sk of expandPdfShortKeys(p.title)) {
+        addPrice(map, sk, main, true);
+      }
     }
+  }
+
+  // Çoklu varyant tabloları (SBC/SBCS, SLD-03/04, ADA 150T/180T …)
+  for (const [k, v] of descMap) {
+    map.set(k, v);
   }
 
   for (const [k, v] of SENOX_LISTE_OVERRIDES) {
@@ -252,6 +272,30 @@ function priceFromProduct(pp) {
     if (k === modelKey) return v;
   }
   return parseEurNum(pp.specs?.fiyat_eur);
+}
+
+export function resolveSenoxListPrice(p, pdfIndex, pdfProducts, mutbexIndex, ocrRatio = 2.5) {
+  const pdfMatch = findPdfListPrice(p, pdfIndex, pdfProducts);
+  const mutbexMatch = findMutbexListPrice(p, mutbexIndex);
+  if (pdfMatch?.listeEur > 0 && mutbexMatch?.listeEur > 0) {
+    if (pdfMatch.listeEur > mutbexMatch.listeEur * ocrRatio) {
+      return {
+        listeEur: mutbexMatch.listeEur,
+        matchKey: mutbexMatch.matchKey,
+        source: "mutbex",
+        mutbexCode: mutbexMatch.mutbexCode,
+        satisEur: mutbexMatch.satisEur,
+        rejectedPdf: pdfMatch,
+      };
+    }
+  }
+  if (pdfMatch?.listeEur > 0) {
+    return { ...pdfMatch, source: pdfMatch.source || "pdf" };
+  }
+  if (mutbexMatch?.listeEur > 0) {
+    return { ...mutbexMatch, source: "mutbex" };
+  }
+  return null;
 }
 
 export function findPdfListPrice(p, index, products = []) {
@@ -360,6 +404,40 @@ export function findMutbexListPrice(p, index) {
     }
   }
   return null;
+}
+
+export function findManualSenoxKdvDahil(p) {
+  for (const k of candidateKeys(p)) {
+    if (SENOX_KDV_DAHIL_TL_OVERRIDES.has(k)) {
+      return { kdvDahil: SENOX_KDV_DAHIL_TL_OVERRIDES.get(k), matchKey: k };
+    }
+  }
+  return null;
+}
+
+export function pricingFromSenoxManualKdvDahil(kdvDahil, kur, kdv = 20, satisOran = 0.5) {
+  const fmtTry = (n) => {
+    const v = Math.round(Number(n));
+    const parts = v.toFixed(2).split(".");
+    const int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return `${int},${parts[1]}`;
+  };
+  const kdvDahilRounded = Math.round(Number(kdvDahil));
+  const netTry = kdvDahilRounded / (1 + kdv / 100);
+  const satis = netTry / kur;
+  const liste = satis / satisOran;
+  return {
+    liste_fiyati_eur: Math.round(liste * 100) / 100,
+    satis_fiyati_eur: Math.round(satis * 100) / 100,
+    satis_eur_indirimli: Math.round(satis * 100) / 100,
+    satis_oran: satisOran,
+    equsto_kar_oran: 0,
+    kur_eur_try: kur,
+    fiyat_tl: kdvDahilRounded,
+    fiyat_tl_net: Math.round(netTry),
+    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahilRounded)}`,
+    fiyat_bekleniyor: false,
+  };
 }
 
 export function pricingFromSenoxPdfListe(listeEur, kur, kdv = 20, satisOran = 0.5) {
