@@ -18,6 +18,10 @@ import {
   SEARCH_FACET_POOL_CAP,
 } from "@/lib/search-page-facets";
 import {
+  rankBrandSearchHitsCookingFirst,
+  shouldBoostBrandCooking,
+} from "@/lib/rank-brand-search-hits";
+import {
   diversifySearchHits,
   rankSearchHitsByRelevance,
 } from "@/lib/rank-search-hits";
@@ -92,7 +96,11 @@ async function fetchBrandSearchPool(
   }
 
   hits = await canonicalizeSearchHits(hits);
-  hits = rankSearchHitsByRelevance(brand.query, hits);
+  if (shouldBoostBrandCooking(brand.slug)) {
+    hits = rankBrandSearchHitsCookingFirst(hits, { diversifyHead: 48 });
+  } else {
+    hits = rankSearchHitsByRelevance(brand.query, hits);
+  }
   return {
     hits: hits.slice(0, cap),
     estimatedTotalHits: Math.max(total, hits.length),

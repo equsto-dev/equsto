@@ -27,6 +27,14 @@ const BRAND_ALIASES: Record<string, { slug: string; markaKodu?: string }> = {
   i̇noksan: { slug: "inoksan" },
 };
 
+/** BRAND_HUB_META dışındaki markalar — tam katalog havuzu */
+const STANDALONE_BRANDS: Record<
+  string,
+  { displayName: string; markaKodu?: string }
+> = {
+  inoksan: { displayName: "İnoksan" },
+};
+
 function hubMatch(slug: string): BrandSearchMatch | null {
   const hub = BRAND_HUB_META[slug];
   if (!hub) return null;
@@ -50,7 +58,18 @@ export function resolveBrandSearchQuery(q: string): BrandSearchMatch | null {
   const alias = BRAND_ALIASES[term];
   if (alias) {
     const m = hubMatch(alias.slug);
-    if (m) return { ...m, query: raw, markaKodu: alias.markaKodu ?? m.markaKodu };
+    if (m) {
+      return { ...m, query: raw, markaKodu: alias.markaKodu ?? m.markaKodu };
+    }
+    const standalone = STANDALONE_BRANDS[alias.slug];
+    if (standalone) {
+      return {
+        slug: alias.slug,
+        displayName: standalone.displayName,
+        markaKodu: alias.markaKodu ?? standalone.markaKodu,
+        query: raw,
+      };
+    }
   }
 
   for (const [slug, hub] of Object.entries(BRAND_HUB_META)) {
