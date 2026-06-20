@@ -108,7 +108,7 @@ function parseSumKwExpression(raw: string): number | null {
   return sum > 0 && sum <= 200 ? Math.round(sum * 1000) / 1000 : null;
 }
 
-function parseMaxGucKwFromText(text: string): number | null {
+export function parseMaxGucKwFromText(text: string): number | null {
   const patterns = [
     /maks\.?\s*g[uü][çc]\s*t[uü]ketimi\s*(?:\(kw\))?\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)/i,
     /(?:^|\n)\s*g[uü][çc]\s*t[uü]ketimi\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)\s*(?:kW|kw)?/im,
@@ -187,8 +187,14 @@ export function parseKwFromText(text: string): ResolvedKw {
   if (elkExplicit) elk = parseKwNumber(elkExplicit[1]);
 
   if (!elk && fuel !== "gaz") {
-    const maxGuc = parseMaxGucKwFromText(t);
-    if (maxGuc != null) elk = maxGuc;
+    const subsidiaryMotor =
+      /(?:durulama|yikama|yıkama|bosaltma|boşaltma|deterjan|parlat[ıi]c[ıi]|pompas[ıi])\s*motor\s*g[uü]c[uü]/i.test(
+        t,
+      );
+    if (!subsidiaryMotor) {
+      const maxGuc = parseMaxGucKwFromText(t);
+      if (maxGuc != null) elk = maxGuc;
+    }
   }
 
   if (!elk && fuel !== "gaz") {
@@ -267,9 +273,15 @@ export function parseKwFromText(text: string): ResolvedKw {
     elk = allKw[0] ?? null;
   }
   if (!elk && !gaz && allKw.length === 1) {
-    if (fuel === "gaz") gaz = allKw[0] ?? null;
-    else if (fuel !== "unknown") elk = allKw[0] ?? null;
-    else elk = allKw[0] ?? null;
+    const subsidiaryMotor =
+      /(?:durulama|yikama|yıkama|bosaltma|boşaltma|deterjan|parlat[ıi]c[ıi]|pompas[ıi])\s*motor\s*g[uü]c[uü]/i.test(
+        t,
+      );
+    if (!subsidiaryMotor) {
+      if (fuel === "gaz") gaz = allKw[0] ?? null;
+      else if (fuel !== "unknown") elk = allKw[0] ?? null;
+      else elk = allKw[0] ?? null;
+    }
   }
 
   return reconcileFuelKw({ elektrikGucuKw: elk, gazGucuKw: gaz }, fuel);
@@ -299,10 +311,16 @@ export function mergeResolvedKw(...parts: ResolvedKw[]): ResolvedKw {
   let elektrikGucuKw: number | null = null;
   let gazGucuKw: number | null = null;
   for (const p of parts) {
-    if (elektrikGucuKw == null && p.elektrikGucuKw != null) {
-      elektrikGucuKw = p.elektrikGucuKw;
+    if (p.elektrikGucuKw != null) {
+      if (elektrikGucuKw == null || p.elektrikGucuKw > elektrikGucuKw) {
+        elektrikGucuKw = p.elektrikGucuKw;
+      }
     }
-    if (gazGucuKw == null && p.gazGucuKw != null) gazGucuKw = p.gazGucuKw;
+    if (p.gazGucuKw != null) {
+      if (gazGucuKw == null || p.gazGucuKw > gazGucuKw) {
+        gazGucuKw = p.gazGucuKw;
+      }
+    }
   }
   return { elektrikGucuKw, gazGucuKw };
 }
@@ -391,6 +409,14 @@ export function resolveKwFromSources(src: KwTextSources): ResolvedKw {
       ? { elektrikGucuKw: null, gazGucuKw: olcuRaw.elektrikGucuKw ?? olcuRaw.gazGucuKw }
       : olcuRaw;
   const merged = mergeResolvedKw(fromFields, fromText, fromOlcu);
+  const fullBlob = kwSourceBlob(src);
+  const maxElkFromBlob = parseMaxGucKwFromText(fullBlob);
+  if (
+    maxElkFromBlob != null &&
+    (merged.elektrikGucuKw == null || maxElkFromBlob > merged.elektrikGucuKw)
+  ) {
+    merged.elektrikGucuKw = maxElkFromBlob;
+  }
   const brulorToplam = parseBrulorToplamKwFromText(
     [src.urunAd, src.aciklama, src.detay].filter(Boolean).join("\n"),
   );
