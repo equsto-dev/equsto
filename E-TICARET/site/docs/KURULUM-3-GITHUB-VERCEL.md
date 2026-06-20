@@ -35,7 +35,7 @@ git push -u origin main
 
 | Key | Değer |
 |-----|--------|
-| `DATABASE_URL` | Supabase **Transaction** pooler (6543), `aws-1-ap-northeast-1` |
+| `DATABASE_URL` | Supabase **Transaction** pooler (6543), `aws-1-eu-central-1` (Frankfurt) |
 | `DIRECT_URL` | Supabase **Session** pooler (5432), aynı host |
 | `EQUSTO_ADMIN_BEARER` | `.env.local` ile aynı token |
 | `NEXT_PUBLIC_SITE_URL` | İlk deploy: `https://PROJE.vercel.app` |

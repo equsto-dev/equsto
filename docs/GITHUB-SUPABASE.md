@@ -33,7 +33,7 @@ git push -u origin main
 
 1. [supabase.com](https://supabase.com) → **New project**
 2. İsim: `equsto-v2` (veya `equsto`)
-3. Bölge: Dashboard’da görünen bölge (ör. **Tokyo → ap-northeast-1**, host `aws-1-ap-northeast-1.pooler...`)
+3. Bölge: **Europe (Frankfurt) → eu-central-1** — Türkiye + Hetzner sunucuya en yakın Supabase bölgesi
 4. DB şifresini kaydedin
 
 ### Connection string’ler
