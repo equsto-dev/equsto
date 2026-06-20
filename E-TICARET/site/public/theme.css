@@ -1168,6 +1168,16 @@ body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > 
   color: var(--eq-hero-title) !important;
   text-shadow: none;
 }
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .eq-wf-subline,
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner .eq-wf-subline {
+  margin: 14px auto 0;
+  max-width: 52em;
+  font-size: clamp(14px, 2.4vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: var(--eq-text);
+}
 body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .hero-platform-line,
 body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero-banner--slim .hero-platform-line {
   margin: 0 0 6px;
@@ -1179,6 +1189,14 @@ body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero
   font-size: clamp(20px, 3.6vw, 32px) !important;
   font-weight: 800;
   letter-spacing: 0.1em;
+}
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .eq-wf-subline,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero-banner--slim .eq-wf-subline {
+  margin: 8px auto 0;
+  font-size: clamp(12px, 2vw, 15px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--eq-text);
 }
 
 body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim),
