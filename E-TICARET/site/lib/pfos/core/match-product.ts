@@ -1,22 +1,57 @@
-import type { PfosKategoriKodu } from "@/lib/prisma";
+import type { PfosKategoriKodu, Product, Brand, ProductImage } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { olcuMmFromSku } from "../teklif/olcu-mm";
 import { matchCatalogFallback, matchOzelImalatForSablon } from "./catalog-fallback";
 import { invalidateEqustoFiyatListesiPfosCache } from "./equsto-fiyat-listesi-pfos";
 import { isOzelImalatMotor } from "./ozel-imalat";
+import { resolveTipKodu } from "./tip-kodu";
+
+type CachedProduct = Product & {
+  brand: Brand;
+  images: ProductImage[];
+};
 
 let dbPfosSeeded: boolean | null = null;
 const matchCache = new Map<string, EslesmisUrun | null>();
 
+let globalProductsCache: CachedProduct[] | null = null;
+let cacheFetchedAt = 0;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes cache TTL
+
+async function getCachedPfosProducts(): Promise<CachedProduct[]> {
+  const now = Date.now();
+  if (globalProductsCache && (now - cacheFetchedAt) < CACHE_TTL_MS) {
+    return globalProductsCache;
+  }
+
+  const products = await db.product.findMany({
+    where: {
+      pfosAktif: true,
+      status: "PUBLISHED",
+      priceListTl: { gt: 0 },
+    },
+    include: {
+      brand: true,
+      images: {
+        where: { isPrimary: true },
+        take: 1,
+        orderBy: { order: "asc" },
+      },
+    },
+  });
+
+  globalProductsCache = products as CachedProduct[];
+  cacheFetchedAt = now;
+  dbPfosSeeded = products.length > 0;
+  return globalProductsCache;
+}
+
 async function dbHasPfosProducts(): Promise<boolean> {
   if (dbPfosSeeded !== null) return dbPfosSeeded;
   try {
-    const count = await db.product.count({
-      where: { pfosUrunTipi: { not: null }, pfosAktif: true },
-      take: 1,
-    });
-    dbPfosSeeded = count > 0;
+    const products = await getCachedPfosProducts();
+    dbPfosSeeded = products.length > 0;
   } catch {
     dbPfosSeeded = false;
   }
@@ -82,6 +117,11 @@ async function fallbackMatch(
   return matchCatalogFallback(urunTipi, fiyatStratejisi, sablonIsim, notlar);
 }
 
+function typesMatch(dbType: string | null | undefined, reqType: string): boolean {
+  if (!dbType) return false;
+  return resolveTipKodu(dbType) === resolveTipKodu(reqType);
+}
+
 export async function matchProductForMotor(
   urunTipi: string,
   kategoriKodu: string,
@@ -113,62 +153,55 @@ export async function matchProductForMotor(
     return catalog;
   }
 
-  const orderBy =
-    fiyatStratejisi === "premium"
-      ? ({ priceListTl: "desc" } as const)
-      : ({ priceListTl: "asc" } as const);
+  const allProducts = await getCachedPfosProducts();
 
-  const product = await db.product.findFirst({
-    where: {
-      pfosUrunTipi: urunTipi,
-      pfosKategoriKodu: kategoriKodu as PfosKategoriKodu,
-      pfosAktif: true,
-      status: "PUBLISHED",
-      priceListTl: { gt: 0 },
-    },
-    include: {
-      brand: true,
-      images: { where: { isPrimary: true }, take: 1, orderBy: { order: "asc" } },
-    },
-    orderBy,
-  });
+  const sortFn = (a: CachedProduct, b: CachedProduct) => {
+    const priceA = Number(a.priceListTl) || 0;
+    const priceB = Number(b.priceListTl) || 0;
+    return fiyatStratejisi === "premium" ? priceB - priceA : priceA - priceB;
+  };
 
-  if (!product) {
-    const loose = await db.product.findFirst({
-      where: {
-        pfosUrunTipi: urunTipi,
-        pfosAktif: true,
-        status: "PUBLISHED",
-        priceListTl: { gt: 0 },
-      },
-      include: {
-        brand: true,
-        images: { orderBy: { order: "asc" }, take: 1 },
-      },
-      orderBy,
-    });
-    if (!loose) {
-      const catalog = await fallbackMatch(
-        urunTipi,
-        fiyatStratejisi,
-        sablonIsim,
-        notlar,
-      );
-      matchCache.set(key, catalog);
-      return catalog;
-    }
-    const matched = productToEslesmis(loose);
+  // 1. Strict Match: both pfosUrunTipi and pfosKategoriKodu match
+  const strictCandidates = allProducts.filter(
+    (p) =>
+      typesMatch(p.pfosUrunTipi, urunTipi) &&
+      p.pfosKategoriKodu === kategoriKodu
+  );
+
+  if (strictCandidates.length > 0) {
+    strictCandidates.sort(sortFn);
+    const matched = productToEslesmis(strictCandidates[0]);
     matchCache.set(key, matched);
     return matched;
   }
 
-  const matched = productToEslesmis(product);
-  matchCache.set(key, matched);
-  return matched;
+  // 2. Loose Match: only pfosUrunTipi matches
+  const looseCandidates = allProducts.filter(
+    (p) => typesMatch(p.pfosUrunTipi, urunTipi)
+  );
+
+  if (looseCandidates.length > 0) {
+    looseCandidates.sort(sortFn);
+    const matched = productToEslesmis(looseCandidates[0]);
+    matchCache.set(key, matched);
+    return matched;
+  }
+
+  // 3. Fallback: match legacy files
+  const catalog = await fallbackMatch(
+    urunTipi,
+    fiyatStratejisi,
+    sablonIsim,
+    notlar,
+  );
+  matchCache.set(key, catalog);
+  return catalog;
 }
 
 export function clearMatchProductCache(): void {
   matchCache.clear();
   dbPfosSeeded = null;
   invalidateEqustoFiyatListesiPfosCache();
+  globalProductsCache = null;
+  cacheFetchedAt = 0;
 }

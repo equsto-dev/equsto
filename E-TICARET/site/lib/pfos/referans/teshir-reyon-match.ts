@@ -11,6 +11,7 @@ import {
   isCaglayanKatalogMarka,
   isCaglayanTeshirRow,
   isPastaDolabiReferans,
+  isEtTeshirReyonReferans,
 } from "../core/caglayan-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
@@ -159,6 +160,12 @@ export async function matchTeshirReyonByReferans(
       .replace(/^ölçü:\s*/i, "")
       .trim();
   const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
+
+  if (isEtTeshirReyonReferans(isim)) {
+    const prosoMatch = await matchProsoKangarooFgPi(isim, olcuRaw, notlar, urunTipi);
+    if (prosoMatch) return prosoMatch;
+  }
+
   const target = dimsFromOlcu(olcu);
 
   const rows = (await loadLegacyCatalogRows()).filter(
@@ -220,4 +227,75 @@ export async function matchTeshirReyonByReferans(
   }
 
   return null;
+}
+
+/** Proso Kangaroo FG PI (içten motorlu) et teşhir dolabı eşleme fonksiyonu */
+export async function matchProsoKangarooFgPi(
+  isim: string,
+  olcuRaw: string,
+  notlar: string | null | undefined,
+  urunTipi?: string | null,
+): Promise<EslesmisUrun | null> {
+  const olcu =
+    olcuRaw.trim() ||
+    extractOlcuFromNotlar(notlar) ||
+    String(notlar ?? "")
+      .replace(/^ölçü:\s*/i, "")
+      .trim();
+  const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
+  const target = dimsFromOlcu(olcu);
+  let targetWidth = target ? target[0] : null;
+  if (!targetWidth) {
+    const singleMatch = olcu.match(/(\d{3,4})\b/);
+    if (singleMatch) {
+      targetWidth = Number(singleMatch[1]);
+    }
+  }
+
+  const rows = await loadLegacyCatalogRows();
+  const prosoKangaroos = rows.filter(
+    (r) =>
+      r.durum === "aktif" &&
+      r.marka_ad &&
+      /proso/i.test(r.marka_ad) &&
+      r.ad &&
+      /kangaroo/i.test(r.ad) &&
+      /fg\s*pi/i.test(r.ad)
+  );
+
+  if (!prosoKangaroos.length) return null;
+
+  let best: AdminUrunRow | null = null;
+  if (targetWidth) {
+    let minDiff = Infinity;
+    for (const row of prosoKangaroos) {
+      const w = row.olculer?.genislik_mm || dimsFromCaglayanName(row.ad)?.[0] || dimsFromOlcu(row.ad)?.[0] || 0;
+      if (w) {
+        const diff = Math.abs(w - targetWidth);
+        if (diff < minDiff) {
+          minDiff = diff;
+          best = row;
+        }
+      }
+    }
+  }
+
+  if (!best) {
+    best = prosoKangaroos.find((r) => r.sku?.endsWith("EQ3")) || prosoKangaroos[0];
+  }
+
+  const matched = katalogRowToEslesmis(best, {
+    linkMarka: "Proso Profesyonel Soğutma",
+    sablonIsim: isim,
+    urunTipi: urunTipi ?? undefined,
+  });
+
+  return {
+    ...matched,
+    ad: displayIsimFromSablon(isim),
+    marka: "Proso Profesyonel Soğutma",
+    olcu: olcuDisplay,
+    fiyat: best.fiyat_tl > 0 ? best.fiyat_tl : 0,
+    fiyatEur: best.fiyat_tl > 0 ? matched.fiyatEur : null,
+  };
 }
