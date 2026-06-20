@@ -519,8 +519,12 @@
     }
     var p = String((u && u.p) || '').trim();
     if (!p) return '';
-    if (/KDV/i.test(p)) return p.indexOf('₺') === 0 ? p : '₺' + p;
-    return '₺' + p + ' KDV dahil';
+    if (/KDV\s*dahil/i.test(p)) {
+      var norm = p.replace(/\s*KDV\s*dahil\s*/gi, " TL");
+      return norm.indexOf("₺") === 0 ? norm : "₺" + norm;
+    }
+    if (/₺/.test(p)) return p.indexOf("₺") === 0 ? p : "₺" + p;
+    return '₺' + p + ' TL';
   }
 
   function renderMxSpotlightCard(u) {

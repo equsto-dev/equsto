@@ -1,8 +1,10 @@
 /**
- * Tüketici vitrin fiyatı — tüm shop sayfalarında KDV dahil gösterim (/besos hariç).
+ * Tüketici vitrin fiyatı — shop sayfalarında ₺… TL (/besos hariç).
  */
 (function (global) {
   "use strict";
+
+  var PRICE_SUFFIX = " TL";
 
   function parseTrAmount(raw) {
     var cleaned = String(raw || "")
@@ -58,6 +60,26 @@
     return /teklif\s+için/i.test(String(row.price || ""));
   }
 
+  function normalizePriceLabel(line) {
+    if (!line) return "";
+    var s = String(line).trim();
+    if (/KDV\s*dahil/i.test(s)) {
+      return s.replace(/\s*KDV\s*dahil\s*/gi, PRICE_SUFFIX);
+    }
+    if (/₺/.test(s) && !/\bTL\s*$/i.test(s)) {
+      s = s + PRICE_SUFFIX;
+    }
+    return s;
+  }
+
+  function formatAmount(n) {
+    var formatted = n.toLocaleString("tr-TR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    return "₺" + formatted + PRICE_SUFFIX;
+  }
+
   function formatCard(row, opts) {
     opts = opts || {};
     if (isQuoteOnly(row)) {
@@ -70,13 +92,9 @@
         var netOnly = extractKdvDahilFromPriceString(fallback);
         if (netOnly > 0) n = netOnly;
       }
-      if (!(n > 0)) return fallback.split("\n")[0] || "";
+      if (!(n > 0)) return normalizePriceLabel(fallback.split("\n")[0] || "");
     }
-    var formatted = n.toLocaleString("tr-TR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-    return "₺" + formatted + " KDV dahil";
+    return formatAmount(n);
   }
 
   global.EqustoPriceDisplay = {

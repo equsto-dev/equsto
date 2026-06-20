@@ -1,4 +1,6 @@
-/** Tüketici vitrin fiyatı — KDV dahil TRY (besos hariç). */
+/** Tüketici vitrin fiyat etiketi — TRY (besos hariç; gösterim: ₺… TL). */
+
+export const CONSUMER_PRICE_SUFFIX = " TL";
 
 export type ConsumerPriceRow = {
   fiyat_tl?: number | string | null;
@@ -51,6 +53,27 @@ export function isQuoteOnlyConsumerPrice(row: ConsumerPriceRow | null | undefine
   return /teklif\s+için/i.test(String(row.price || ""));
 }
 
+export function formatConsumerPriceAmount(n: number): string {
+  const formatted = n.toLocaleString("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+  return `₺${formatted}${CONSUMER_PRICE_SUFFIX}`;
+}
+
+/** Katalog satırındaki «KDV dahil» etiketini vitrin «TL» biçimine çevirir. */
+export function normalizeConsumerPriceLabel(line: string): string {
+  if (!line) return "";
+  let s = String(line).trim();
+  if (/KDV\s*dahil/i.test(s)) {
+    return s.replace(/\s*KDV\s*dahil\s*/gi, CONSUMER_PRICE_SUFFIX);
+  }
+  if (/₺/.test(s) && !/\bTL\s*$/i.test(s)) {
+    s = s + CONSUMER_PRICE_SUFFIX;
+  }
+  return s;
+}
+
 export function formatConsumerPriceTry(
   row: ConsumerPriceRow | null | undefined,
   opts?: { quoteLabel?: string },
@@ -63,19 +86,9 @@ export function formatConsumerPriceTry(
     const fallback = String(row?.price || "");
     if (/\+?\s*K\s*D\s*V/i.test(fallback)) {
       const v = extractKdvDahilFromPriceString(fallback);
-      if (v > 0) {
-        const formatted = v.toLocaleString("tr-TR", {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        });
-        return `₺${formatted} KDV dahil`;
-      }
+      if (v > 0) return formatConsumerPriceAmount(v);
     }
-    return fallback.split("\n")[0] || "";
+    return normalizeConsumerPriceLabel(fallback.split("\n")[0] || "");
   }
-  const formatted = n.toLocaleString("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-  return `₺${formatted} KDV dahil`;
+  return formatConsumerPriceAmount(n);
 }

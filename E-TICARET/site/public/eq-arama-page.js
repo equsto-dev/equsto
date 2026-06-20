@@ -689,9 +689,20 @@
     return parsePriceFromHit(hit);
   }
 
+  function normalizePriceLabel(s) {
+    if (!s) return "";
+    var out = String(s).trim();
+    if (/KDV\s*dahil/i.test(out)) {
+      out = out.replace(/\s*KDV\s*dahil\s*/gi, " TL");
+    } else if (/₺/.test(out) && !/\bTL\s*$/i.test(out)) {
+      out = out + " TL";
+    }
+    return out;
+  }
+
   function formatPrice(hit) {
     if (!hit) return "";
-    if (hit.price_display) return hit.price_display;
+    if (hit.price_display) return normalizePriceLabel(hit.price_display);
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
       return window.EqustoPriceDisplay.formatCard(hit);
     }
@@ -706,12 +717,12 @@
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         }) +
-        " KDV dahil"
+        " TL"
       );
     }
     var line0 = String(hit.price || "").split("\n")[0] || "";
     if (/€/.test(line0)) return "";
-    return line0;
+    return normalizePriceLabel(line0);
   }
 
   function getQuery() {

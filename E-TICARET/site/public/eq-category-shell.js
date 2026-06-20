@@ -48,7 +48,7 @@
     return (
       "₺" +
       n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-      " KDV dahil"
+      " TL"
     );
   }
 

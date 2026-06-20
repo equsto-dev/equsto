@@ -99,7 +99,7 @@ export default function ShopEqustoFiyatSeriPlp({
                 ) : null}
                 <div className="eq-dept-plp-card__price">{fmtPrice(p)}</div>
                 <div className="eq-dept-plp-card__price-note">
-                  {p.vitrin ? "KDV dahil · vitrin" : "PFOS liste fiyatı"}
+                  {p.vitrin ? "TL · vitrin" : "PFOS liste fiyatı"}
                 </div>
                 {p.href ? (
                   <a className="eq-dept-plp-card__btn" href={p.href}>

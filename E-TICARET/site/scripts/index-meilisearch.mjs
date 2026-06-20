@@ -180,7 +180,7 @@ function formatPriceDisplayForIndex(row) {
   }
   const n = resolveKdvDahilTlForIndex(row);
   if (!(n > 0)) return String(row.price || "").split("\n")[0].slice(0, 120);
-  return `₺${n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} KDV dahil`;
+  return `₺${n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} TL`;
 }
 
 function rowToDoc(row, deptFallback) {
