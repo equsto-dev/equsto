@@ -1,0 +1,278 @@
+{
+  "generated": "2026-06-20T20:54:35.314Z",
+  "total": 9629,
+  "poweredChecked": 8995,
+  "missingPowered": 634,
+  "suspiciousLow": [],
+  "subsidiaryOnlyFixed": 0,
+  "missingByBrand": {
+    "Öztiryakiler Endüstriyel Mutfak": 218,
+    "PORTABIANCO": 157,
+    "Şenox": 69,
+    "İnoksan": 54,
+    "Atalay Endüstriyel Mutfak Ekipmanları": 28,
+    "Equsto": 27,
+    "Pimak": 21,
+    "Dito Sama": 17,
+    "Faema": 13,
+    "Vosco": 12,
+    "Electrolux Professional": 7,
+    "Animo": 5,
+    "Yüksel Endüstriyel": 2,
+    "Proso Profesyonel Soğutma": 2,
+    "Avatherm": 2
+  },
+  "samples": {
+    "INO_BYM102": {
+      "elektrikGucuKw": 8.7,
+      "gazGucuKw": null
+    },
+    "INO_BYM102S": {
+      "elektrikGucuKw": 11.3,
+      "gazGucuKw": null
+    }
+  },
+  "missing": [
+    {
+      "sku": "9885.EECHC.00",
+      "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "7864.10502.05",
+      "name": "KOMURLU IZGARA DAVLUMBAZLI 100*50",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "7250.2X36W.EA",
+      "name": "DAVLUMBAZ AYDINLATMASI 2*36 WATT ETANJ TIP",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.100120",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1000×1200×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.11090",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1100×900×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.125120",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1250×1200×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.15090",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1500×900×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.175120",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 1750×1200×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.20090",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2000×900×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.200120",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2000×1200×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.22590",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2250×900×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.250120",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 2500×1200×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVDTF02.30090",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.100200",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 1000×2000×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.110250",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 1100×2500×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.125200",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 1250×2000×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.150250",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 1500×2500×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.175200",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 1750×2000×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.200200",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2000×2000×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.225250",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2250×2500×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.250200",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2500×2000×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.275250",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 2750×2500×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "EQ.KDAVOTF02.300150",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1500×600 mm",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "79K3.12LMV.10",
+      "name": "GN 1200 LMV DORT YARIM KAPILI DERIN DONDURUCU  K TIP",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "79K4.12LMV.10",
+      "name": "GN 1200 LMV DORT YARIM KAPILI DERIN DONDURUCU 430 K TIP",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "9868.RTR12.0L",
+      "name": "ÖZTİRYAKİLER SICAK TEŞHİR DOLABI 120 LİTRE 678x568x686 cm RTR-120L",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "9868.RTR16.0L",
+      "name": "ÖZTİRYAKİLER SICAK TEŞHİR DOLABI 160 LİTRE 856x568x686 cm RTR-160L",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "7754.186EB.25",
+      "name": "BULASIK MAKINESI USTU EVYELI TEZG.2G/1D SAĞ DEM. 180*60",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "7754.197CB.25",
+      "name": "BULASIK MAKINESI USTU EVYELI TEZG.2G/1D SAĞ DEM. 190*70",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "7754.207CB.25",
+      "name": "BULASIK MAKINESI USTU EVYELI TEZG.2G/1D DEM. 200*70",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "922612",
+      "name": "Pişirme Aksesuarları 6 ve 10xGN1/1 fırınlar için açık tip alt stand",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "922613",
+      "name": "Pişirme Aksesuarları 6 ve 10xGN1/1 fırınlar için açık tip alt stand",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "9810.EF705.H0",
+      "name": "OZTIRYAKILER GURMEAID 6,7 LİTRE STAND MİKSER ,800W  DC MOTOR ,BEYAZ",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.20010.01",
+      "name": "MIKSER 20 LT ICIN PALET 10 LTR",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.20010.02",
+      "name": "MIKSER 20 LT ICIN S BOYNUZ 10 LTR",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.20010.00",
+      "name": "MIKSER 20 LT ICIN KAZAN 10 LTR",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.40020.03",
+      "name": "MIKSER 40 LT ICIN CIRPMA TELI 20 LTR",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.40020.01",
+      "name": "MIKSER 40 LT ICIN PALET 20 LTR.",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.40020.02",
+      "name": "MIKSER 40 LT ICIN S BOYNUZ 20 LTR.",
+      "peakKw": null,
+      "maxInText": null
+    },
+    {
+      "sku": "2810.40020.00",
+      "name": "MIKSER 40 LT ICIN KAZAN 20 LTR.",
+      "peakKw": null,
+      "maxInText": null
+    }
+  ],
+  "subsidiaryOnly": []
+}

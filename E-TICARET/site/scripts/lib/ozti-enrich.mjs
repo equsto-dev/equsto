@@ -115,9 +115,16 @@ export function parseOztiToplamGucKw(hay, kod) {
   const chunk = parts[1].slice(0, 700);
   const nextKod = chunk.match(/\n\s*78\d{2}\.[A-Z0-9][A-Z0-9.\-]{4,}/i);
   const slice = nextKod?.index ? chunk.slice(0, nextKod.index) : chunk;
-  const hits = [...slice.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:k\s*w|kw)\b/gi)]
-    .map((m) => Number(String(m[1]).replace(",", ".")))
-    .filter((n) => Number.isFinite(n) && n > 0);
+  const hits = [];
+  for (const m of slice.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:k\s*w|kw)\b/gi)) {
+    const n = Number(String(m[1]).replace(",", "."));
+    if (!Number.isFinite(n) || n <= 0 || n > 200) continue;
+    const lineStart = slice.lastIndexOf("\n", m.index ?? 0) + 1;
+    const lineEnd = slice.indexOf("\n", m.index ?? 0);
+    const line = slice.slice(lineStart, lineEnd < 0 ? undefined : lineEnd);
+    if (/pompa|pump|basinc|basınç/i.test(line) && n > 15) continue;
+    hits.push(n);
+  }
   if (!hits.length) return null;
   return String(Math.max(...hits));
 }
@@ -211,8 +218,29 @@ export function resolveOztiGucKw(row, pdfEntry, webPayload) {
   return null;
 }
 
+export function loadWebByKod() {
+  const p = path.join(ROOT, "scripts/data/ozti-web-index.json");
+  if (!fs.existsSync(p)) return new Map();
+  const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+  const map = new Map();
+  const list = raw.byKod ? Object.values(raw.byKod) : Array.isArray(raw) ? raw : [];
+  for (const e of list) {
+    const k = normKod(e.kod || e.urun_kodu);
+    if (!k) continue;
+    map.set(k, e);
+    const soft = kodSoftKey(k);
+    if (soft && !map.has(soft)) map.set(soft, e);
+  }
+  if (raw.byKodSoft) {
+    for (const [soft, e] of Object.entries(raw.byKodSoft)) {
+      if (!map.has(soft)) map.set(soft, e);
+    }
+  }
+  return map;
+}
+
 /** Katalog satırında güç alanlarını PDF/web ile senkronize et. */
-export function applyOztiGucKwFix(row, pdfByKod, webByKod) {
+export function applyOztiGucKwFix(row, pdfByKod, webByKod, opts = {}) {
   if (!isOztiBrand(row)) return false;
   const kod = normKod(row.urun_kodu || row.sku);
   if (!kod) return false;
@@ -223,12 +251,21 @@ export function applyOztiGucKwFix(row, pdfByKod, webByKod) {
   const prev = String(row.olculer?.guc_kw ?? "").replace(",", ".");
   const next = String(nextKw).replace(",", ".");
   if (prev === next) return false;
-  // Yalnızca mevcut değeri düzelt veya PDF'de ürün koduna özel toplam güç varsa yaz.
-  const pdfText = (pdfEntry?.pdf_metin_parcalari || []).join("\n");
-  const pdfToplam = pdfText ? parseOztiToplamGucKw(`${row.urun_tanimi || ""}\n${pdfText}`, kod) : null;
-  if (!prev && !pdfToplam) return false;
+  if (!opts.fillMissing) {
+    // Yalnızca mevcut değeri düzelt veya PDF'de ürün koduna özel toplam güç varsa yaz.
+    const pdfText = (pdfEntry?.pdf_metin_parcalari || []).join("\n");
+    const pdfToplam = pdfText
+      ? parseOztiToplamGucKw(`${row.urun_tanimi || ""}\n${pdfText}`, kod)
+      : null;
+    if (!prev && !pdfToplam) return false;
+  }
   syncRowGucKw(row, nextKw);
   return true;
+}
+
+/** Eksik kW — PDF/web/brülör kaynaklarından doldur. */
+export function applyOztiGucKwFill(row, pdfByKod, webByKod) {
+  return applyOztiGucKwFix(row, pdfByKod, webByKod, { fillMissing: true });
 }
 
 /** G×D×Y veya 80*90*85 gibi ölçüleri ürün adı / PDF metninden çıkar. */

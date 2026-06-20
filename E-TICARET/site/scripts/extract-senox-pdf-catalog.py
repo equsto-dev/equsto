@@ -50,7 +50,8 @@ DIM2_RE = re.compile(r"(\d{2,4})\s*[x×X*]\s*(\d{2,4})\s*[x×X*]\s*(\d{2,4})", r
 PRICE_EUR_RE = re.compile(r"(\d+(?:\.\d{3})*(?:,\d+)?)\s*EUR\b", re.I)
 GAZ_RE = re.compile(r"(?:Soğutucu\s*Gaz|Gaz)\s*:?\s*(R\d+[A-Za-z]?)", re.I)
 VOLT_RE = re.compile(r"(\d{2,3}\s*V\s*[-~]?\s*\d{0,2}\s*Hz?)", re.I)
-GUC_RE = re.compile(r"(\d+\s*W)\b", re.I)
+GUC_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*W\b", re.I)
+GUC_KW_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*kW\b", re.I)
 AGIR_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*kg\b", re.I)
 
 SKIP_CODE = {
@@ -286,9 +287,13 @@ def parse_specs(text: str, rows: list[dict] | None = None, row_idx: int | None =
     vt = VOLT_RE.search(t)
     if vt:
         specs["voltaj"] = clean_line(vt.group(1))
-    gc = GUC_RE.search(t)
-    if gc:
-        specs["elektrik_gucu"] = gc.group(1)
+    gkw = GUC_KW_RE.search(t)
+    if gkw:
+        specs["elektrik_gucu"] = f"{gkw.group(1).replace(',', '.')} kW"
+    else:
+        gw = GUC_RE.search(t)
+        if gw:
+            specs["elektrik_gucu"] = f"{gw.group(1).replace(',', '.')} W"
     ag = AGIR_RE.search(t)
     if ag:
         specs["agirlik_kg"] = ag.group(1).replace(",", ".")

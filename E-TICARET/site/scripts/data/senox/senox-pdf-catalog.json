@@ -1,7 +1,7 @@
 {
   "source": "c:\\D Disk\\FİYAT LİSTELERİ\\SENOX 2026-1 4 (1).pdf",
   "liste": "SENOX 2026-1",
-  "scrapedAt": "2026-06-19T11:46:27.020537+00:00",
+  "scrapedAt": "2026-06-20T20:49:40.165500+00:00",
   "pages": 55,
   "productCount": 245,
   "products": [
@@ -214,7 +214,7 @@
         "yukseklik_mm": 856,
         "fiyat_eur": "190",
         "voltaj": "220 V ~ 50Hz",
-        "elektrik_gucu": "110W",
+        "elektrik_gucu": "110 W",
         "agirlik_kg": "15"
       },
       "parseSource": "senox-title"
@@ -3735,7 +3735,7 @@
         "derinlik_mm": 575,
         "yukseklik_mm": 710,
         "fiyat_eur": "1600",
-        "elektrik_gucu": "500W",
+        "elektrik_gucu": "500 W",
         "agirlik_kg": "27"
       },
       "parseSource": "code-line"
@@ -3755,7 +3755,7 @@
         "derinlik_mm": 622,
         "yukseklik_mm": 726,
         "fiyat_eur": "6500",
-        "elektrik_gucu": "2500W",
+        "elektrik_gucu": "2500 W",
         "agirlik_kg": "450"
       },
       "parseSource": "code-line"
@@ -3775,7 +3775,7 @@
         "derinlik_mm": 580,
         "yukseklik_mm": 690,
         "fiyat_eur": "1800",
-        "elektrik_gucu": "500W",
+        "elektrik_gucu": "500 W",
         "agirlik_kg": "32"
       },
       "parseSource": "code-line"
@@ -3795,7 +3795,7 @@
         "derinlik_mm": 575,
         "yukseklik_mm": 710,
         "fiyat_eur": "1900",
-        "elektrik_gucu": "500W",
+        "elektrik_gucu": "500 W",
         "agirlik_kg": "40"
       },
       "parseSource": "code-line"
@@ -3815,7 +3815,7 @@
         "derinlik_mm": 580,
         "yukseklik_mm": 800,
         "fiyat_eur": "2175",
-        "elektrik_gucu": "600W",
+        "elektrik_gucu": "600 W",
         "agirlik_kg": "47"
       },
       "parseSource": "code-line"
@@ -3835,7 +3835,7 @@
         "derinlik_mm": 580,
         "yukseklik_mm": 800,
         "fiyat_eur": "2375",
-        "elektrik_gucu": "800W",
+        "elektrik_gucu": "800 W",
         "agirlik_kg": "67"
       },
       "parseSource": "code-line"
@@ -3855,7 +3855,7 @@
         "derinlik_mm": 842,
         "yukseklik_mm": 1002,
         "fiyat_eur": "1900",
-        "elektrik_gucu": "1200W",
+        "elektrik_gucu": "1200 W",
         "agirlik_kg": "175"
       },
       "parseSource": "code-line"
@@ -3875,7 +3875,7 @@
         "derinlik_mm": 600,
         "yukseklik_mm": 822,
         "fiyat_eur": "2775",
-        "elektrik_gucu": "800W",
+        "elektrik_gucu": "800 W",
         "agirlik_kg": "67"
       },
       "parseSource": "code-line"
@@ -3895,7 +3895,7 @@
         "derinlik_mm": 600,
         "yukseklik_mm": 822,
         "fiyat_eur": "3100",
-        "elektrik_gucu": "1100W",
+        "elektrik_gucu": "1100 W",
         "agirlik_kg": "85"
       },
       "parseSource": "code-line"
@@ -3915,7 +3915,7 @@
         "derinlik_mm": 622,
         "yukseklik_mm": 576,
         "fiyat_eur": "5350",
-        "elektrik_gucu": "1200W",
+        "elektrik_gucu": "1200 W",
         "agirlik_kg": "230"
       },
       "parseSource": "code-line"
@@ -3935,7 +3935,7 @@
         "derinlik_mm": 842,
         "yukseklik_mm": 1150,
         "fiyat_eur": "2100",
-        "elektrik_gucu": "2500W",
+        "elektrik_gucu": "2500 W",
         "agirlik_kg": "210"
       },
       "parseSource": "code-line"
@@ -4122,7 +4122,7 @@
         "genislik_mm": 539,
         "derinlik_mm": 442,
         "yukseklik_mm": 390,
-        "elektrik_gucu": "1000W",
+        "elektrik_gucu": "1000 W",
         "fiyat_eur": "450",
         "fiyat_eur_source": "page-order"
       },
@@ -4171,6 +4171,7 @@
         "genislik_mm": 712,
         "derinlik_mm": 528,
         "yukseklik_mm": 570,
+        "elektrik_gucu": "2.8 kW",
         "agirlik_kg": "57",
         "fiyat_eur": "2400",
         "fiyat_eur_source": "page-order"
@@ -4191,6 +4192,7 @@
         "genislik_mm": 712,
         "derinlik_mm": 528,
         "yukseklik_mm": 570,
+        "elektrik_gucu": "2.8 kW",
         "agirlik_kg": "57",
         "fiyat_eur": "4000",
         "fiyat_eur_source": "page-order"
@@ -4211,6 +4213,7 @@
         "genislik_mm": 1800,
         "derinlik_mm": 800,
         "yukseklik_mm": 1750,
+        "elektrik_gucu": "2.8 kW",
         "agirlik_kg": "113",
         "fiyat_eur": "1500",
         "fiyat_eur_source": "page-order"
@@ -4246,6 +4249,7 @@
       "anchorX": 734.4,
       "description": "9,6 kW\nBulaşık Makineleri\nInoksan - INO-BKE2000R Bulaşık Makinesi\nYıkama ve durulama sıcaklıklarını gösteren dijital termometre bulunmaktadır.\nMakine sanitasyon standartlarına uygun olarak 85°c (185°f)\nsu ile durulama sağlamaktadır.\nÇift hızlı konveyor motoru ve konveyor motorunun sıkışmasına karşı koruma\nCihazda standart aksesuar olarak; 1 adet bardak + 1 adet çatal-kaşık +\n4 adet tabak kasası bulunmaktadır.\nsu girişi: 3⁄4 “\nısı kapasitesi: boyler: 24 kw\nmax. güç tüketimi: 34 kw\n220 V - 1N\nVoltaj",
       "specs": {
+        "elektrik_gucu": "9.6 kW",
         "fiyat_eur": "5250",
         "fiyat_eur_source": "page-order"
       },

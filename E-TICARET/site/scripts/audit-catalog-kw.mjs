@@ -122,6 +122,16 @@ const report = {
   missingPowered: missing.length,
   suspiciousLow: suspiciousLow.length,
   subsidiaryOnlyFixed: subsidiaryOnly.length,
+  missingByBrand: Object.fromEntries(
+    Object.entries(
+      missing.reduce((acc, m) => {
+        const row = rows.find((r) => r.sku === m.sku);
+        const brand = row?.brand || "unknown";
+        acc[brand] = (acc[brand] || 0) + 1;
+        return acc;
+      }, {}),
+    ).sort((a, b) => b[1] - a[1]),
+  ),
   samples: {
     INO_BYM102: bym102,
     INO_BYM102S: bym102s,
