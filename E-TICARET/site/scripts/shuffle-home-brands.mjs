@@ -4,7 +4,7 @@ const brands = [
   { label: "Atalay", href: "/shop/pisirme?marka=Atalay" },
   { label: "Öztiryakiler", href: "/shop/marka/oztiryakiler" },
   { label: "Electrolux", href: "/shop/pisirme?marka=Electrolux" },
-  { label: "İnoksan", href: "/shop/sogutma?marka=%C4%B0noksan" },
+  { label: "İnoksan", href: "/shop/marka/inoksan" },
   { label: "La Cimbali", href: "/shop/kahve?marka=La%20Cimbali" },
   { label: "Faema", href: "/shop/kahve?marka=Faema" },
   { label: "Rational", href: "/shop/pisirme?marka=Rational" },
