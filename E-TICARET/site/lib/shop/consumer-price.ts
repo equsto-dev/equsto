@@ -1,4 +1,4 @@
-/** Tüketici vitrin fiyat etiketi — TRY (besos hariç; gösterim: ₺… TL). */
+/** Tüketici vitrin fiyat etiketi — TRY (gösterim: ₺… TL). */
 
 export const CONSUMER_PRICE_SUFFIX = " TL";
 
