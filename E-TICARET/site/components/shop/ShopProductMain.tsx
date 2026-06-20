@@ -55,7 +55,7 @@ export default function ShopProductMain({ ssr }: Props) {
                 <p>{ssr.description}</p>
                 {ssr.priceLabel ? <p>{ssr.priceLabel}</p> : null}
                 {ssr.priceTry ? (
-                  <p>{ssr.priceTry.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} ₺ KDV dahil</p>
+                  <p>₺{ssr.priceTry.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} TL</p>
                 ) : null}
               </article>
             ) : null}

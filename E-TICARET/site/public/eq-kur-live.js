@@ -103,7 +103,7 @@
       fiyat_tl: kdvDahil,
       fiyat_tl_net: netTl,
       kdv_oran: KDV_ORAN,
-      price: fmtTryWhole(kdvDahil) + " KDV dahil",
+      price: fmtTryWhole(kdvDahil) + " TL",
       priceShort: fmtTryWhole(kdvDahil),
     };
   }
@@ -194,7 +194,7 @@
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         }) +
-        " KDV dahil"
+        " TL"
       );
     }
     var full = String(row.price || "");
@@ -207,7 +207,7 @@
         return (
           "₺" +
           v.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-          " KDV dahil"
+          " TL"
         );
       }
     }
@@ -225,7 +225,7 @@
         return (
           "₺" +
           kdv.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-          " KDV dahil"
+          " TL"
         );
       }
     }

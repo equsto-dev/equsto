@@ -76,7 +76,7 @@
     return isNaN(n) ? 0 : n;
   }
 
-  /** KDV dahil kart fiyatı — eq-price-display yoksa da çalışır. */
+  /** Kart fiyatı — eq-price-display yoksa da çalışır. */
   function displayPriceForRow(row, opts) {
     opts = opts || {};
     if (!row) return '';
@@ -104,7 +104,7 @@
     return (
       '₺' +
       n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-      ' KDV dahil'
+      ' TL'
     );
   }
 

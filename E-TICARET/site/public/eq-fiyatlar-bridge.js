@@ -132,8 +132,8 @@
       if (row.raw) {
         row.raw.price =
           global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function'
-            ? global.EqustoKurLive.priceForRow(raw) || row.p + ' KDV dahil'
-            : row.p + ' KDV dahil';
+            ? global.EqustoKurLive.priceForRow(raw) || row.p + ' TL'
+            : row.p + ' TL';
         row.raw.fiyat_tl = v;
       }
       return row;
@@ -167,7 +167,7 @@
       item.price =
         (global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function'
           ? global.EqustoKurLive.priceForRow(item)
-          : '') || formatTl(v) + ' TL KDV dahil';
+          : '') || formatTl(v) + ' TL';
       return item;
     }
     var line = oztiPriceLine(item);
