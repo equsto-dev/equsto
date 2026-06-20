@@ -340,6 +340,12 @@ function scoreOztiPisirmeRow(
     if (/elektrik|elk|elektr/.test(refBlob) && /gazli|gazlı|\bgaz\b/.test(ad) && !/elektrik/.test(ad)) {
       score -= 5000;
     }
+    const refGn = referansIsim.match(/(\d+)\s*GN/i)?.[1] || notlar?.match(/(\d+)\s*GN/i)?.[1];
+    if (refGn) {
+      const hasGnMatch = new RegExp(`\\b${refGn}\\s*\\*?\\s*GN`, "i").test(ad) || sku.includes(`${refGn}GN`);
+      if (hasGnMatch) score += 400;
+      else score -= 150;
+    }
   }
   if (family === "mikrodalga") {
     if (/mikrodalga|microwave|menumaster/i.test(ad)) score += 120;

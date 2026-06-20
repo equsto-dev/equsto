@@ -29,6 +29,11 @@ export function isTasFirinReferans(isim: string): boolean {
   );
 }
 
+export function isPizzaFirinReferans(isim: string, urunTipi?: string | null): boolean {
+  const n = norm(`${isim} ${urunTipi ?? ""}`);
+  return n.includes("pizza") && /firin|fırın/.test(n);
+}
+
 export function isKombiKonveksiyonReferans(
   isim: string | null | undefined,
   urunTipi?: string | null,
@@ -213,4 +218,56 @@ export async function matchKonveksiyonFirinByReferans(
   if (!hits.length) return null;
   hits.sort((a, b) => a.fiyat_tl - b.fiyat_tl);
   return rowToEslesmis(hits[0]);
+}
+
+/** Atalay pizza fırını eşlemesi (APF- serisi, çift katlı veya tek katlı) */
+export async function matchAtalayPizzaFirinByReferans(
+  isim: string,
+  olcu: string,
+  notlar: string | null | undefined,
+): Promise<EslesmisUrun | null> {
+  const n = norm(`${isim} ${olcu} ${notlar ?? ""}`);
+  const isCiftKatli = /cift|çift|2\s*kat|iki\s*kat/.test(n) || n.includes("/2");
+  const isTekKatli = /tek|1\s*kat/.test(n) || n.includes("/1");
+
+  let sizeKey = "";
+  if (n.includes("9262") || n.includes("962")) {
+    sizeKey = "962";
+  } else if (n.includes("92")) {
+    sizeKey = "92";
+  } else if (n.includes("62")) {
+    sizeKey = "62";
+  } else if (n.includes("50")) {
+    sizeKey = "50";
+  } else if (n.includes("40")) {
+    sizeKey = "40";
+  } else {
+    sizeKey = "962"; // Default
+  }
+
+  const suffix = (isTekKatli && !isCiftKatli) ? "1" : "2"; // Default to double deck
+  const targetSku = `APF-${sizeKey}/${suffix}`;
+
+  const rows = await loadLegacyCatalogRows();
+  const found = rows.find(
+    (r) =>
+      r.durum === "aktif" &&
+      r.sku &&
+      r.sku.toUpperCase() === targetSku.toUpperCase()
+  );
+
+  if (found) {
+    const matched = katalogRowToEslesmis(found, {
+      linkMarka: "Atalay",
+      sablonIsim: isim,
+    });
+    return {
+      ...matched,
+      ad: displayIsimFromSablon(isim),
+      marka: "Atalay",
+      olcu: olcu || found.model || null,
+    };
+  }
+
+  return null;
 }

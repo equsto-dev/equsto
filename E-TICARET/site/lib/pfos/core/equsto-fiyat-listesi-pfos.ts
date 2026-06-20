@@ -66,6 +66,9 @@ export function invalidateEqustoFiyatListesiPfosCache(): void {
 /** Referans adından tercih edilen EQUSTO seri kodları (öncelik sırası). */
 export function inferTezgahSeriesKods(isim: string): string[] {
   const n = norm(isim);
+  if (/kutu[kg]|kütü[kg]/.test(n)) {
+    return ["KPEK"];
+  }
   if (isBulasikSiyirmaTezgahReferans(isim)) {
     return ["KBULST02", "KBULST01"];
   }
@@ -88,12 +91,27 @@ export function inferTezgahSeriesKods(isim: string): string[] {
   if (/tek\s*evyeli|\b1\s*evye/.test(n)) {
     if (/dolap|kapali|kapalı/.test(n)) return ["KTEVDT02", "KTEVDT01"];
     if (/makine\s*giris|makine\s*giriş/.test(n)) return ["KMGT02", "KMGT01"];
-    return ["KTEVT02", "KTEVT01"];
+    return ["KTEVT02"];
+  }
+  if (/kasa\s*tezgah/.test(n)) {
+    return ["KDCT02", "KDCT03"];
+  }
+  if (/servis/.test(n)) {
+    if (/sicak|sıcak/.test(n)) {
+      return ["KSRVB02", "KSRVB01"];
+    }
+    return ["KSRVB", "KSRVB02", "KSRVB01"];
   }
   if (/dolapli|dolaplı|dolap|kapali|kapalı/.test(n) && /calisma|çalışma|tezgah/.test(n)) {
-    return ["KDCT02", "KDCT01", "KDCT03"];
+    if (/cekmeceli|çekmeceli/.test(n)) {
+      return ["KDCT02", "KDCT03"];
+    }
+    return ["KDCT01"];
   }
   if (/set\s*alti|setalti/.test(n)) {
+    if (/taban\s*rafl/.test(n)) {
+      return ["KCT04", "KCT05", "KCT06", "KCT02", "KCT01"];
+    }
     return ["KSADT02", "KSADT01"];
   }
   if (

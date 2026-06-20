@@ -32,10 +32,11 @@ export function parseOcakBurnerCount(...parts: Array<string | null | undefined>)
     /(\d+)\s*(?:acik alev|açık alev|gozlu|gözlü|goz|göz|brulor|brülör|plaka|gobek|göbek)/,
   );
   if (direct) return Number(direct[1]);
-  if (/\bdort\b|\bdört\b|\b4\s*goz|\b4\s*gözlü/.test(n)) return 4;
-  if (/\biki\b|\b2\s*goz|\b2\s*gözlü/.test(n)) return 2;
-  if (/\buc\b|\büç\b|\b3\s*goz/.test(n)) return 3;
-  if (/\balti\b|\baltı\b|\b6\s*goz/.test(n)) return 6;
+  if (/dortlu|dort|dört|4\s*goz|4\s*göz/.test(n)) return 4;
+  if (/ikili|iki|2\s*goz|2\s*göz/.test(n)) return 2;
+  if (/uclu|uc|üç|3\s*goz|3\s*göz/.test(n)) return 3;
+  if (/altili|alti|altı|6\s*goz|6\s*göz/.test(n)) return 6;
+  if (/tekli|tek|1\s*goz|1\s*göz/.test(n)) return 1;
   return null;
 }
 
@@ -99,6 +100,12 @@ export function ocakBurnerCountFromRow(row: {
   kategori?: string | null;
 }): number | null {
   const blob = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
+  if (/\bdortlu\b|\bdort\b|\bdort\s*goz|\bdortlu\s*ocak/.test(blob)) return 4;
+  if (/\bikili\b|\biki\b|\biki\s*goz|\bikili\s*ocak/.test(blob)) return 2;
+  if (/\baltili\b|\balti\b|\balti\s*goz|\baltili\s*ocak/.test(blob)) return 6;
+  if (/\btekli\b|\btek\b|\btek\s*goz|\btekli\s*ocak/.test(blob)) return 1;
+  if (/\buclu\b|\buc\b|\buclu\s*ocak/.test(blob)) return 3;
+
   const plaka = blob.match(/plaka:\s*(\d+)/);
   if (plaka) return Number(plaka[1]);
   const inline = String(row.ad).match(/-\s*\d+\s+(\d)\s+\d{3,4}\s*x/i);

@@ -40,6 +40,45 @@ function scoreServisRafRow(
   return score;
 }
 
+/** İnoksan paslanmaz çelik çift sıra servis rafı eşlemesi */
+export async function matchInoksanServisRafi(
+  isim: string,
+  olcu: string,
+  notlar: string | null | undefined,
+): Promise<EslesmisUrun | null> {
+  const n = norm(isim);
+  const olcuBlob = olcu || extractOlcuFromNotlar(notlar) || "";
+  const nums = [...olcuBlob.matchAll(/(\d+)/g)].map((x) => Number(x[1]));
+  if (!nums.length) return null;
+  const widthCm = nums[0];
+  const roundedWidth = Math.round(widthCm / 10) * 10;
+  const targetWidth = Math.min(240, Math.max(60, roundedWidth));
+
+  const targetSku = `INO-KRC${String(targetWidth).padStart(3, "0")}`;
+
+  const rows = await loadLegacyCatalogRows();
+  const found = rows.find(
+    (r) =>
+      r.durum === "aktif" &&
+      r.sku &&
+      r.sku.toUpperCase() === targetSku.toUpperCase()
+  );
+
+  if (found) {
+    const matched = katalogRowToEslesmis(found, {
+      linkMarka: "İnoksan",
+      sablonIsim: isim,
+    });
+    return {
+      ...matched,
+      ad: matched.ad,
+      marka: "İnoksan",
+      olcu: olcu || found.model || null,
+    };
+  }
+  return null;
+}
+
 export async function matchServisRafiByReferans(
   isim: string,
   olcu: string,
@@ -49,10 +88,13 @@ export async function matchServisRafiByReferans(
   if (!isServisRafiReferans(isim)) return null;
 
   const olcuBlob =
-    olcu ||
+    olcu.trim() ||
     extractOlcuFromNotlar(notlar) ||
     String(notlar ?? "").match(/(\d+\s*[*xX×]\s*\d+(?:\s*[*xX×]\s*\d+)?)/)?.[1] ||
     "";
+
+  const inoMatch = await matchInoksanServisRafi(isim, olcuBlob, notlar);
+  if (inoMatch) return inoMatch;
 
   const targetSku = oztiServisRafSkuFromOlcu(olcuBlob, isim);
   if (targetSku) {

@@ -139,6 +139,10 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "sise-sogutucu-tek-kapili": "sise_sogutucu_1k",
   "kahve-posa-cekmece": "kahve_posa_cekmece",
   "konik-yuvarlama-makinesi": "konik_yuvarlama",
+  "filtre_kahve": "filter_coffee",
+  "filtre-kahve": "filter_coffee",
+  "filtre-kahve-makinesi": "filter_coffee",
+  "filtre_kahve_makinasi": "filter_coffee",
 };
 
 /** tip_kodu → ekipmanlar.json adında aranacak kelimeler */

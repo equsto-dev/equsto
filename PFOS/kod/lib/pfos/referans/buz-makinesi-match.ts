@@ -58,7 +58,14 @@ export async function matchBuzMakinesiByReferans(
     .map((row) => {
       const kg = kgFromRow(row.ad);
       if (kg == null) return { row, score: -9999 };
-      return { row, score: 200 - Math.abs(kg - wantKg) * 4 };
+      let score = 200 - Math.abs(kg - wantKg) * 4;
+
+      const brand = norm(row.marka_ad || "");
+      const ad = norm(row.ad);
+      if (brand.includes("brema") || ad.includes("brema")) {
+        score += 80;
+      }
+      return { row, score };
     })
     .filter((x) => x.score > 80)
     .sort((a, b) => b.score - a.score);

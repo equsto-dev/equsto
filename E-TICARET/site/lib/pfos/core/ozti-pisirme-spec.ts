@@ -23,8 +23,18 @@ function olcuParts(olcu: string): number[] {
 }
 
 function oztiOcakBase(olcu: string): string {
-  const d = olcuParts(olcu)[1] ?? 70;
-  return d >= 85 ? "7865.N1.80903" : "7865.N1.80703";
+  const parts = olcuParts(olcu);
+  const w = parts[0] ?? 80;
+  const d = parts[1] ?? 70;
+  const is900 = d >= 85;
+
+  let widthKey = "80";
+  if (w <= 45) widthKey = "40";
+  else if (w >= 115) widthKey = "12";
+  else widthKey = "80";
+
+  const depthKey = is900 ? "903" : "703";
+  return `7865.N1.${widthKey}${depthKey}`;
 }
 
 function oztiBainMarieBase(olcu: string): string {
@@ -81,6 +91,7 @@ export function scoreOztiOcakRow(
   const refBurners = parseOcakBurnerCount(blob);
   const rowBurners = ocakBurnerCountFromRow(row);
   if (refBurners && rowBurners === refBurners) score += 150;
+  else if (refBurners && rowBurners && Math.abs(refBurners - rowBurners) >= 2) return -9999;
 
   return score;
 }
