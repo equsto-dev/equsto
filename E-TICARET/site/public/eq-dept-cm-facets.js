@@ -1,5 +1,6 @@
 /**
  * Cafemarkt tarzı departman filtreleri sol filtre (Kategoriler, Marka, Ölçü, Enerji, Fiyat).
+ * Kilit (marka PLP): public/marka-plp-facets-KILIT.txt — hideBrands, showPisirmeTip
  */
 (function (global) {
   'use strict';
