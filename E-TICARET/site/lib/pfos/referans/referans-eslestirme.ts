@@ -162,6 +162,7 @@ export type ReferansMatchInput = {
   referansPoz?: string;
   referansListeKey?: string;
   notlar?: string | null;
+  olcu?: string | null;
   fiyatStratejisi: FiyatStratejisi;
   sku?: string | null;
 };
