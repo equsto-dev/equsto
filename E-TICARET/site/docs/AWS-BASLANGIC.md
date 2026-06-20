@@ -1,7 +1,7 @@
 # AWS başlangıç — Equsto için adım adım
 
 **Önce okuyun:** Equsto’da AWS’den ihtiyacınız olan şey **görsel/PDF depolama** (S3 + CloudFront).  
-**Amazon Aurora PostgreSQL kullanmayın** — veritabanı zaten **Supabase Postgres** (`gmnbhmwcmxukebulqwbn`).
+**Amazon Aurora PostgreSQL kullanmayın** — veritabanı **Supabase Postgres** (`lxwwbuvbaejtlqmzoykx`, Frankfurt).
 
 ```
 Equsto mimarisi
@@ -259,7 +259,7 @@ Diskte dosyalar **kalır**; sadece Git takibi biter.
 
 Veritabanı **Supabase Dashboard** üzerinden:
 
-1. https://supabase.com/dashboard/project/gmnbhmwcmxukebulqwbn
+1. https://supabase.com/dashboard/project/lxwwbuvbaejtlqmzoykx
 2. **Database** → **Reset database password**
 3. Connection string → Transaction (6543) + Session (5432) → `.env.local`
 4. `copy .env.local .env`

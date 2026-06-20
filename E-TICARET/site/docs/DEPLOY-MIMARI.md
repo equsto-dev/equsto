@@ -10,7 +10,7 @@ equsto.com (Hetzner — Docker)
 └── Görseller + PDF (~2 GB şimdi, ~20 GB hedef)
     → AWS S3 (equsto-assets) → CloudFront → NEXT_PUBLIC_ASSET_CDN_URL
 
-Supabase (gmnbhmwcmxukebulqwbn)
+Supabase (lxwwbuvbaejtlqmzoykx · eu-central-1)
 └── Postgres only (Prisma) — admin ürün, müşteri lead, PFOS eşleme, TCMB cron
     Auth / Storage kullanılmıyor
 ```

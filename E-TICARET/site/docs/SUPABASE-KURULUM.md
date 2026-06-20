@@ -2,8 +2,10 @@
 
 **Rol:** Yalnızca **Postgres** — admin ürün, müşteri lead, PFOS eşleme. Görseller/PDF **AWS S3** (bkz. `docs/DEPLOY-MIMARI.md`).
 
-Proje ref: **gmnbhmwcmxukebulqwbn**  
-Dashboard: https://supabase.com/dashboard/project/gmnbhmwcmxukebulqwbn
+Proje ref: **lxwwbuvbaejtlqmzoykx** (Frankfurt · **eu-central-1** — Türkiye’ye en yakın Supabase bölgesi)  
+Dashboard: https://supabase.com/dashboard/project/lxwwbuvbaejtlqmzoykx
+
+Eski Tokyo projesi (`gmnbhmwcmxukebulqwbn`) kullanımdan kaldırıldı — bkz. `docs/SUPABASE-BOLGE.md`
 
 ---
 
@@ -93,7 +95,7 @@ npm run dev
 İleride Supabase Auth kullanırsanız `.env.local`’e eklenebilir; **şimdi zorunlu değil**:
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://gmnbhmwcmxukebulqwbn.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://lxwwbuvbaejtlqmzoykx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...   # Settings → API → anon public
 ```
 

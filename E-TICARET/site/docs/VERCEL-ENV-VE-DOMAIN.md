@@ -20,7 +20,7 @@ Her satır için **Environments:** Production **ve** Preview işaretli.
 | `EQUSTO_ADMIN_RECOVERY_CODE` | `.env.local` — `eq_rc_...` (admin «Şifremi unuttum») |
 | `LEGACY_DATA_BASE` | `https://equsto.com` |
 | `NEXT_PUBLIC_SITE_URL` | `https://equsto.com` |
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://gmnbhmwcmxukebulqwbn.supabase.co` (Auth hazırlığı) |
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://lxwwbuvbaejtlqmzoykx.supabase.co` (Auth hazırlığı) |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → **Settings → API** → anon public key |
 | `CRON_SECRET` | Vercel Cron → otomatik üretilir veya elle; `/api/cron/tcmb-kur` için |
 | `EQUSTO_EUR_TRY_FALLBACK` | (Opsiyonel) TCMB kapalıyken yedek EUR/TRY, varsayılan `36` |
