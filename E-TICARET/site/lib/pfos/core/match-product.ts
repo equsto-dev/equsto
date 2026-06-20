@@ -27,6 +27,7 @@ async function getCachedPfosProducts(): Promise<CachedProduct[]> {
 
   const products = await db.product.findMany({
     where: {
+      pfosUrunTipi: { not: null },
       pfosAktif: true,
       status: "PUBLISHED",
       priceListTl: { gt: 0 },

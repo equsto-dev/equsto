@@ -1,0 +1,596 @@
+{
+  "https://yukselsatis.com/portabianco-bar-blender-kapaksiz/": {
+    "ok": true,
+    "sku": "251.1280",
+    "name": "Portabianco 1280 Bar Blender, 2.5 L, 1680 W, Siyah",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": 1.68,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:45.581Z"
+  },
+  "https://yukselsatis.com/portabianco-bar-blender-manuel-kapakli/": {
+    "ok": true,
+    "sku": "251.1280K",
+    "name": "Portabianco 1280K Bar Blender, Gürültü Önleyici Kapaklı, 2.5 L, 1680 W, Siyah",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": 1.68,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:47.110Z"
+  },
+  "https://yukselsatis.com/portabianco-bar-blender-hazne-cubuk/": {
+    "ok": true,
+    "sku": "TMHAZ01",
+    "name": "PORTABIANCO – BAR BLENDER HAZNE & ÇUBUK",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:48.485Z"
+  },
+  "https://yukselsatis.com/portabianco-espresso-kahve-makinesi/": {
+    "ok": true,
+    "sku": "portabianco-espresso-kahve-makinesi",
+    "name": "PORTABIANCO – ESPRESSO KAHVE MAKİNESİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": 4.13,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:49.769Z"
+  },
+  "https://yukselsatis.com/portabianco-filtre-kahve-makinesi/": {
+    "ok": true,
+    "sku": "portabianco-filtre-kahve-makinesi",
+    "name": "PORTABIANCO – FİLTRE KAHVE MAKİNESİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": 1.386,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:51.311Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-monoblok-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-monoblok-uc-kapili-buzdol",
+    "name": "PORTABIANCO – CİHAZ ALTI MONOBLOK ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:53.074Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-monoblok-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-monoblok-iki-kapili-buzdo",
+    "name": "PORTABIANCO – CİHAZ ALTI MONOBLOK İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:54.666Z"
+  },
+  "https://yukselsatis.com/portabianco-soguk-servis-buzdolabi-5/": {
+    "ok": true,
+    "sku": "portabianco-soguk-servis-buzdolabi-5",
+    "name": "PORTABIANCO – SOĞUK SERVİS BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:56.435Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-alti-slim-buzdolabi-2/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-alti-slim-buzdolabi-2",
+    "name": "PORTABIANCO – TEZGAH ALTI SLIM BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:57.976Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-alti-slim-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-alti-slim-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH ALTI SLIM BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:49:59.624Z"
+  },
+  "https://yukselsatis.com/portabianco-teshir-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-teshir-buzdolabi",
+    "name": "PORTABIANCO – TEŞHİR BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:01.317Z"
+  },
+  "https://yukselsatis.com/portabianco-granit-pizza-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-granit-pizza-buzdolabi",
+    "name": "PORTABIANCO – GRANİT PİZZA BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:03.401Z"
+  },
+  "https://yukselsatis.com/portabianco-pizza-buzdolabi-dort-kapili/": {
+    "ok": true,
+    "sku": "portabianco-pizza-buzdolabi-dort-kapili",
+    "name": "PORTABIANCO – PİZZA BUZDOLABI DÖRT KAPILI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:06.296Z"
+  },
+  "https://yukselsatis.com/portabianco-pizza-buzdolabi-uc-kapili/": {
+    "ok": true,
+    "sku": "portabianco-pizza-buzdolabi-uc-kapili",
+    "name": "PORTABIANCO – PİZZA BUZDOLABI ÜÇ KAPILI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:07.874Z"
+  },
+  "https://yukselsatis.com/portabianco-pizza-buzdolabi-iki-kapili/": {
+    "ok": true,
+    "sku": "portabianco-pizza-buzdolabi-iki-kapili",
+    "name": "PORTABIANCO – PİZZA BUZDOLABI İKİ KAPILI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:09.462Z"
+  },
+  "https://yukselsatis.com/portabianco-pizza-buzdolabi-tek-kapili/": {
+    "ok": true,
+    "sku": "portabianco-pizza-buzdolabi-tek-kapili",
+    "name": "PORTABIANCO – PİZZA BUZDOLABI TEK KAPILI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:11.151Z"
+  },
+  "https://yukselsatis.com/portabianco-bar-tipi-sise-sogutucu-2/": {
+    "ok": true,
+    "sku": "portabianco-bar-tipi-sise-sogutucu-2",
+    "name": "PORTABIANCO – BAR TİPİ ŞİŞE SOĞUTUCU",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:12.784Z"
+  },
+  "https://yukselsatis.com/portabianco-bar-tipi-sise-sogutucu/": {
+    "ok": true,
+    "sku": "portabianco-bar-tipi-sise-sogutucu",
+    "name": "PORTABIANCO – BAR TİPİ ŞİŞE SOĞUTUCU",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:14.378Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tipi-remote/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tipi-remote",
+    "name": "PORTABIANCO – TEZGAH TİPİ – REMOTE",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:15.953Z"
+  },
+  "https://yukselsatis.com/portabianco-soguk-servis-buzdolabi-4/": {
+    "ok": true,
+    "sku": "portabianco-soguk-servis-buzdolabi-4",
+    "name": "PORTABIANCO – SOĞUK SERVİS BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:17.835Z"
+  },
+  "https://yukselsatis.com/portabianco-soguk-servis-buzdolabi-3/": {
+    "ok": true,
+    "sku": "portabianco-soguk-servis-buzdolabi-3",
+    "name": "PORTABIANCO – SOĞUK SERVİS BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:19.837Z"
+  },
+  "https://yukselsatis.com/portabianco-soguk-servis-buzdolabi-2/": {
+    "ok": true,
+    "sku": "portabianco-soguk-servis-buzdolabi-2",
+    "name": "PORTABIANCO – SOĞUK SERVİS BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:21.800Z"
+  },
+  "https://yukselsatis.com/portabianco-soguk-servis-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-soguk-servis-buzdolabi",
+    "name": "PORTABIANCO – SOĞUK SERVİS BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:23.699Z"
+  },
+  "https://yukselsatis.com/portabianco-barista-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-barista-buzdolabi",
+    "name": "PORTABIANCO – BARİSTA BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:25.492Z"
+  },
+  "https://yukselsatis.com/portabianco-evyeli-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-evyeli-buzdolabi",
+    "name": "PORTABIANCO – EVYELİ BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:27.352Z"
+  },
+  "https://yukselsatis.com/portabianco-mermer-tablali-make-up-buzdolabi-2/": {
+    "ok": true,
+    "sku": "portabianco-mermer-tablali-make-up-buzdolabi-2",
+    "name": "PORTABIANCO – MERMER TABLALI MAKE UP BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:29.028Z"
+  },
+  "https://yukselsatis.com/portabianco-mermer-tablali-make-up-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-mermer-tablali-make-up-buzdolabi",
+    "name": "PORTABIANCO – MERMER TABLALI MAKE UP BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:30.836Z"
+  },
+  "https://yukselsatis.com/portabianco-make-up-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-make-up-buzdolabi",
+    "name": "PORTABIANCO – MAKE UP BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:32.696Z"
+  },
+  "https://yukselsatis.com/portabianco-make-up-yuksek-borulu-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-make-up-yuksek-borulu-buzdolabi",
+    "name": "PORTABIANCO – MAKE UP YÜKSEK BORULU BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:34.433Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-kisa-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-kisa-dort-kapili-buzdolab",
+    "name": "PORTABIANCO – CİHAZ ALTI KISA DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:36.176Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-kisa-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-kisa-uc-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI KISA ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:38.055Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-kisa-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-kisa-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI KISA İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:40.042Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-kisa-tek-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-kisa-tek-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI KISA TEK KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:42.111Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-uzun-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-uzun-dort-kapili-buzdolab",
+    "name": "PORTABIANCO – CİHAZ ALTI UZUN DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:44.144Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-uzun-3-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-uzun-3-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI UZUN 3 KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:45.877Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-uzun-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-uzun-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI UZUN İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:47.419Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-uzun-tek-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-uzun-tek-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI UZUN TEK KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:49.113Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-dort-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:50.814Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-uc-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:52.419Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:54.089Z"
+  },
+  "https://yukselsatis.com/portabianco-cihaz-alti-tek-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-cihaz-alti-tek-kapili-buzdolabi",
+    "name": "PORTABIANCO – CİHAZ ALTI TEK KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:55.622Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-iki-kapili-40x60-tepsi-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-iki-kapili-40x60-tepsi-buzdo",
+    "name": "PORTABIANCO – DİK TİP İKİ KAPILI 40X60 TEPSİ BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:57.285Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-tek-kapili-40x60-tepsi-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-tek-kapili-40x60-tepsi-buzdo",
+    "name": "PORTABIANCO – DİK TİP TEK KAPILI 40X60 TEPSİ BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:50:59.055Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-mix-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-mix-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – DİK TİP MIX İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:00.768Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-iki-kapili-monoblok-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-iki-kapili-monoblok-buzdolab",
+    "name": "PORTABIANCO – DİK TİP İKİ KAPILI MONOBLOK BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:02.283Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-tek-kapili-monoblok-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-tek-kapili-monoblok-buzdolab",
+    "name": "PORTABIANCO – DİK TİP TEK KAPILI MONOBLOK BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:04.024Z"
+  },
+  "https://yukselsatis.com/portabianco-dik-tip-iki-kapili-eko-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-dik-tip-iki-kapili-eko-buzdolabi",
+    "name": "PORTABIANCO – DİK TİP İKİ KAPILI EKO BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:05.602Z"
+  },
+  "https://yukselsatis.com/portabianco-ada-tipi-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-ada-tipi-buzdolabi",
+    "name": "PORTABIANCO – ADA TİPİ BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:07.356Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-kisa-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-kisa-dort-kapili-buzdolab",
+    "name": "PORTABIANCO – TEZGAH TİP KISA DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:09.220Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-kisa-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-kisa-uc-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP KISA ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:10.723Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-kisa-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-kisa-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP KISA İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:12.361Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-kisa-tek-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-kisa-tek-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP KISA TEK KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:13.995Z"
+  },
+  "https://yukselsatis.com/portabianco-monoblok-tezgah-tip-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-monoblok-tezgah-tip-uc-kapili-buzdol",
+    "name": "PORTABIANCO – MONOBLOK TEZGAH TİP ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:15.828Z"
+  },
+  "https://yukselsatis.com/portabianco-monoblok-tezgah-tip-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-monoblok-tezgah-tip-iki-kapili-buzdo",
+    "name": "PORTABIANCO – MONOBLOK TEZGAH TİP İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:17.387Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-mix-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-mix-dort-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP MİX DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:18.817Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-mix-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-mix-uc-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP MİX ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:20.342Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-mix-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-mix-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP MİX İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:22.162Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-dort-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-dort-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP DÖRT KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:23.761Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-uc-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-uc-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP ÜÇ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:25.698Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-iki-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-iki-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP İKİ KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:27.321Z"
+  },
+  "https://yukselsatis.com/portabianco-tezgah-tip-tek-kapili-buzdolabi/": {
+    "ok": true,
+    "sku": "portabianco-tezgah-tip-tek-kapili-buzdolabi",
+    "name": "PORTABIANCO – TEZGAH TİP TEK KAPILI BUZDOLABI",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:29.234Z"
+  },
+  "https://yukselsatis.com/ust-izgara/": {
+    "ok": true,
+    "sku": "M13",
+    "name": "ÜST IZGARA",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:31.613Z"
+  },
+  "https://yukselsatis.com/d-serisi-yandan-cikisli-ortadan-sifonlu-yer-gideri/": {
+    "ok": true,
+    "sku": "d-serisi-yandan-cikisli-ortadan-sifonlu-yer-gide",
+    "name": "D SERİSİ – YANDAN ÇIKIŞLI ORTADAN SİFONLU YER GİDERİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:34.304Z"
+  },
+  "https://yukselsatis.com/c-serisi-yandan-cikisli-kenardan-sifonlu-yer-gideri/": {
+    "ok": true,
+    "sku": "c-serisi-yandan-cikisli-kenardan-sifonlu-yer-gid",
+    "name": "C SERİSİ – YANDAN ÇIKIŞLI KENARDAN SİFONLU YER GİDERİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:36.668Z"
+  },
+  "https://yukselsatis.com/b-serisi-alttan-cikisli-ortadan-sifonlu-yer-gideri/": {
+    "ok": true,
+    "sku": "b-serisi-alttan-cikisli-ortadan-sifonlu-yer-gide",
+    "name": "B SERİSİ – ALTTAN ÇIKIŞLI ORTADAN SİFONLU YER GİDERİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:39.293Z"
+  },
+  "https://yukselsatis.com/a-serisi-alttan-cikis-kenardan-sifonlu-yer-gideri/": {
+    "ok": true,
+    "sku": "a-serisi-alttan-cikis-kenardan-sifonlu-yer-gider",
+    "name": "A SERİSİ – ALTTAN ÇIKIŞLI KENARDAN SİFONLU YER GİDERİ",
+    "brand": "PORTABIANCO",
+    "elektrikGucuKw": null,
+    "gazGucuKw": null,
+    "at": "2026-06-20T20:51:41.965Z"
+  }
+}

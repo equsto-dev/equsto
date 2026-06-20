@@ -452,10 +452,37 @@ export function resolveKwFromSources(src: KwTextSources): ResolvedKw {
 }
 
 const PASIF_RE =
-  /istif\s*raf|duvar\s*raf|servis\s*raf|tava\s*raf|basket\s*raf|\bcop\s*arab|tepsi\s*tasi|firin\s*standi|yer\s*izgar|kokteyl\s*istasyon|notr\s*ara\s*tezgah|nötr\s*ara\s*tezgah|calisma\s*tezgah|çalisma\s*tezgah|evyeli\s*calisma|tek\s*evyeli|çift\s*evyeli|cift\s*evyeli|mermer\s*tablali|polietilen\s*tablali|bym\s*giris|bym\s*cikis|bulasik\s*siyirma|siyirma\s*tezgah|montaj|nakliye|davlumbaz\s*stand/i;
+  /istif\s*raf|duvar\s*raf|servis\s*raf|tava\s*raf|basket\s*raf|\bcop\s*arab|tepsi\s*tasi|firin\s*standi|yer\s*izgar|kokteyl\s*istasyon|notr\s*ara\s*tezgah|nötr\s*ara\s*tezgah|calisma\s*tezgah|çalisma\s*tezgah|evyeli\s*calisma|evyeli\s*tezgah|tek\s*evyeli|çift\s*evyeli|cift\s*evyeli|mermer\s*tablali|polietilen\s*tablali|bym\s*giris|bym\s*cikis|bulasik\s*siyirma|siyirma\s*tezgah|montaj|nakliye|davlumbaz\s*stand|mikser\s*aksesuar|mutfak\s*aksesuar|bar\s*blender\s*hazne|hazne\s*&\s*çubuk|hazne\s*&\s*cubuk|yedek\s*parca|aksesuar\s*paket/i;
 
 const POWERED_RE =
   /buzdolab|donduruc|soguk\s*oda|derin\s*dondurucu|panel\s*tip|(^|[^a-z])firin|rational|unox|pizza\s*firin|\bocak\b|izgar|fritoz|makarna|salamander|tost\s*mak|mikser|hamur|dograma|bula[sş]ik\s*(?:mak|yikama)|kahve|espresso|degirmen|değirmen|blender|buz\s*makin|sikma|sikac|induksiyon|make.?up|sicak\s*dolap|sushi|rice\s*cooker|spiral|vakum|konveksiyon|davlumbaz|ice\s*maker|sogutma\s*tezgah|tezgah\s*tip\s*buz|cihazalti\s*buz|depo\s*tip\s*buz|çay\s*otomat|cay\s*otomat|on\s*yikama|yikama\s*dusu|sebze\s*yikama|vakum\s*mak|kombi\s*firin|kombine\s*firin|elektrikli\s*firin|gazli\s*ocak|gazli\s*izgara|gazli\s*fritoz|teshir|teşhir|reyon|vitrin|display/i;
+
+/** Nötr / filtresiz davlumbaz — fan motoru yok, kW yok */
+function isNeutralDavlumbaz(opts: {
+  isim?: string | null;
+  urunTipi?: string | null;
+  sku?: string | null;
+  urunAd?: string | null;
+}): boolean {
+  const blob = foldTr(
+    [opts.isim, opts.urunTipi, opts.sku, opts.urunAd].filter(Boolean).join(" "),
+  );
+  if (!/davlumbaz/.test(blob)) return false;
+  if (
+    /fan|motor|aspir|santrif|egzoz\s*fan|elektrikli\s*davlumbaz|davlumbaz\s*motor|santrifuj/.test(
+      blob,
+    )
+  ) {
+    return false;
+  }
+  if (/n[oö]tr|filtresiz|pasif/.test(blob)) return true;
+  if (/^7885\./.test(String(opts.sku ?? "").trim())) return true;
+  if (/^pimak\./i.test(String(opts.sku ?? "").trim())) return true;
+  if (/davlumbazlar-/.test(String(opts.urunTipi ?? ""))) return true;
+  if (/davlumbaz\s*filtre|filtresi,\s*\d+/i.test(blob)) return true;
+  if (/^118\.dvf/i.test(String(opts.sku ?? "").trim())) return true;
+  return false;
+}
 
 /** Raf, tezgah, araç vb. — kW yazılmaz */
 export function isPasifPfosEkipman(opts: {
@@ -467,14 +494,15 @@ export function isPasifPfosEkipman(opts: {
   const blob = foldTr(
     [opts.isim, opts.urunTipi, opts.sku, opts.urunAd].filter(Boolean).join(" "),
   );
-  if (POWERED_RE.test(blob)) return false;
   if (PASIF_RE.test(blob)) return true;
   if (/^7897\./.test(String(opts.sku ?? "").trim())) return true;
+  if (isNeutralDavlumbaz(opts)) return true;
   if (/^equsto\.\d{5}\./i.test(String(opts.sku ?? "").trim()) && /tezgah|raf/i.test(blob)) {
     return true;
   }
   if (/^53-x-/i.test(String(opts.sku ?? "").trim())) return true;
   if (/^mb\d/i.test(String(opts.sku ?? "").trim())) return true;
+  if (POWERED_RE.test(blob)) return false;
   return false;
 }
 
