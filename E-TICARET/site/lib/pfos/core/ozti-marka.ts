@@ -45,7 +45,7 @@ export function isOztiPisirmeRow(row: {
   }
   const ad = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
   if (/buzdolab|donduruc|davlumbaz|bulasik|bulaşık|yikama|tezgah|raf|dolap|vitrin|teshir/.test(ad)) {
-    if (!/fritoz|fritöz|ocak|izgar|firin|fırın|salamander|makarna|wok|kuzine/.test(ad)) {
+    if (!/fritoz|fritöz|ocak|izgar|firin|fırın|salamander|makarna|wok|kuzine|benmari|bain/.test(ad)) {
       return false;
     }
   }

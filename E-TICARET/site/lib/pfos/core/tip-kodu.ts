@@ -52,6 +52,8 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "yer-yikama-hortumu": "yer_yikama_hortumu",
   "bym-cikis-tezgahi": "bym_cikis_tez",
   "bulasik-cikis-tezgahi": "bym_cikis_tez",
+  "benmari-mobil": "benmari_mobil",
+  "banket-arabasi": "banket_arabasi",
   "spiral-mikser-hamur": "spiral_hamur",
   "hamur-yogurma-35lt": "spiral_hamur",
   "hamur-yogurma-50lt": "spiral_hamur",
@@ -92,6 +94,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "tezgah-rafli-dolapli": "tezgah_rafli_dol",
   "balik-hazirlik-tezgah": "balik_hazirlik_tezgah",
   "firin-standi-taban-rafli": "tezgah_taban_rafli",
+  "firin-tezgahi": "tezgah_taban_rafli",
   "firin-davlumbazi-dekoratif": "davlumbaz_dekoratif",
   "firin-davlumbazi": "davlumbaz_dekoratif",
   "davlumbaz-dekoratif": "davlumbaz_dekoratif",
@@ -283,6 +286,8 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
     "cihazalti buzdolab",
   ],
   icecek_havuzu_soguk: ["icecek havuzu", "içecek havuzu", "soguk havuz", "soğuk havuz"],
+  benmari_mobil: ["bain marie", "benmari", "bainmarie", "hareketli bain", "hareketli benmari"],
+  banket_arabasi: ["banket arabası", "banket arabasi", "sıcak banket", "sicak banket", "ısıtmalı banket", "isitmali banket"],
 };
 
 export const TIP_SHOP_CATS: Record<string, string[]> = {
@@ -333,6 +338,8 @@ export const TIP_SHOP_CATS: Record<string, string[]> = {
   balik_hazirlik_tezgah: ["tezgah", "hazirlik"],
   davlumbaz_dekoratif: ["davlumbaz", "tezgah"],
   davlumbaz_duvar: ["davlumbaz", "tezgah"],
+  benmari_mobil: ["servis", "tasima"],
+  banket_arabasi: ["servis", "tasima"],
 };
 
 export function normalizeTipKodu(value: string): string {

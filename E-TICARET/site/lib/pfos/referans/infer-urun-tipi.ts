@@ -259,7 +259,7 @@ const TIP_RULES: TipRule[] = [
   },
   {
     tip: "bar-kuvet",
-    test: (n) => n.includes("kuvet"),
+    test: (n) => n.includes("kuvet") && !/benmari|bainmarie|bain|servis|display|vitrin/.test(n),
   },
   {
     tip: "firin-standi-taban-rafli",
@@ -296,9 +296,23 @@ const TIP_RULES: TipRule[] = [
   {
     tip: "firin-tezgahi",
     test: (n) =>
-      /firin\s*tezgah|fırın\s*tezgah/.test(n) &&
+      (/(firin|fırın).*(tezgah|stand|sehpa|alt)/.test(n) || /firin\s*tezgah|fırın\s*tezgah/.test(n)) &&
       !/alt\s*tezgah/.test(n) &&
       !/patisserie|pizza|pide/.test(n),
+  },
+  {
+    tip: "benmari-mobil",
+    test: (n) =>
+      /benmari|bainmarie|bain\s*marie/.test(n) &&
+      !/kuvet|kapak|sos/.test(n.replace(/kuvetler?\s*hari[cç]/g, "")),
+  },
+  {
+    tip: "banket-arabasi",
+    test: (n) => /banket/.test(n) && /araba|sicak|isitmali/.test(n),
+  },
+  {
+    tip: "bym-cikis-tezgahi",
+    test: (n) => (/cikis\s*tezgah|bym\s*cikis/i.test(n) || (n.includes("bym") && n.includes("cikis"))) && !n.includes("giris"),
   },
   {
     tip: "konveksiyon-firin-unox",
@@ -424,7 +438,7 @@ const TIP_RULES: TipRule[] = [
         !n.includes("unox") &&
         !n.includes("tas") &&
         !n.includes("taş") &&
-        !/firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah|firin\s*stand|fırın\s*stand/.test(n) &&
+        !/(firin|fırın).*(alt|stand|tezgah|sehpa|araba|trolley)/.test(n) &&
         !/firin\s*davlumbaz|fırın\s*davlumbaz/.test(n) &&
         n.length > 12),
   },

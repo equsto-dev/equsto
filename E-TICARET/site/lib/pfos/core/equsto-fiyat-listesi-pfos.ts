@@ -96,7 +96,10 @@ export function inferTezgahSeriesKods(isim: string): string[] {
   if (/set\s*alti|setalti/.test(n)) {
     return ["KSADT02", "KSADT01"];
   }
-  if (/firin\s*stand|fırın\s*stand|firin\s*alt|fırın\s*alt/.test(n)) {
+  if (
+    /firin\s*stand|fırın\s*stand|firin\s*alt|fırın\s*alt/.test(n) ||
+    (/(firin|fırın).*(stand|alt|tezgah|sehpa)/.test(n))
+  ) {
     return ["KSAT02", "KSAT01"];
   }
   if (/taban\s*ve\s*ara\s*rafl/.test(n)) {
