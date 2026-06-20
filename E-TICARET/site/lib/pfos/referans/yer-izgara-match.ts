@@ -59,7 +59,11 @@ export function extractOlcuFromNotlar(notlar?: string | null): string {
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  return katalogRowToEslesmis(row);
+  const res = katalogRowToEslesmis(row);
+  if (res) {
+    res.marka = "Portashelf";
+  }
+  return res;
 }
 
 function scoreYerIzgarasiRow(row: AdminUrunRow, lenMm: number): number {
@@ -84,23 +88,30 @@ export async function matchYerIzgarasiByOlcu(
   fiyatStratejisi: FiyatStratejisi,
 ): Promise<EslesmisUrun | null> {
   const olcuText = olcu.trim() || extractOlcuFromNotlar(notlar);
+  
+  let res: EslesmisUrun | null = null;
   if (!olcuText) {
-    return matchShopCatalog("yer_izgara", fiyatStratejisi);
+    res = await matchShopCatalog("yer_izgara", fiyatStratejisi);
+  } else {
+    const lenMm = yerIzgarasiCatalogLenMm(olcuText);
+    const rows = (await loadLegacyCatalogRows()).filter(
+      (r) => r.fiyat_tl > 0 && r.durum === "aktif",
+    );
+
+    const scored = rows
+      .map((row) => ({ row, score: scoreYerIzgarasiRow(row, lenMm) }))
+      .filter((x) => x.score >= 100)
+      .sort((a, b) => b.score - a.score);
+
+    if (scored.length > 0) {
+      res = rowToEslesmis(scored[0].row);
+    } else {
+      res = await matchShopCatalog(`yer-izgara-${lenMm}`, fiyatStratejisi);
+    }
   }
 
-  const lenMm = yerIzgarasiCatalogLenMm(olcuText);
-  const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.fiyat_tl > 0 && r.durum === "aktif",
-  );
-
-  const scored = rows
-    .map((row) => ({ row, score: scoreYerIzgarasiRow(row, lenMm) }))
-    .filter((x) => x.score >= 100)
-    .sort((a, b) => b.score - a.score);
-
-  if (scored.length > 0) {
-    return rowToEslesmis(scored[0].row);
+  if (res) {
+    res.marka = "Portashelf";
   }
-
-  return matchShopCatalog(`yer-izgara-${lenMm}`, fiyatStratejisi);
+  return res;
 }

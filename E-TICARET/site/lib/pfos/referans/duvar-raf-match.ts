@@ -32,11 +32,14 @@ export async function matchDuvarRafiByReferans(
     urunTipi ?? undefined,
   );
   if (matched) {
+    const isTavaRafi = String(isim).toLowerCase().includes("tava");
     return {
       ...matched,
       ad: displayIsimFromSablon(isim),
       marka: DUVAR_RAF_MARKA,
       olcu: toOlcuMmDisplay(olcuBlob) ?? matched.olcu,
+      fiyat: isTavaRafi ? matched.fiyat * 4 : matched.fiyat,
+      fiyatEur: isTavaRafi && matched.fiyatEur ? matched.fiyatEur * 4 : matched.fiyatEur,
     };
   }
 

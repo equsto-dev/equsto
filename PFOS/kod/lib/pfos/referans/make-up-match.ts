@@ -80,19 +80,28 @@ function preferredMakeUpSkus(
   depth: 60 | 70,
   widthCm = 140,
 ): string[] {
-  const p = oztiNtvPrefix(kapi, widthCm);
-  switch (variant) {
-    case "yuksek":
-      return [`7919.${p}NTV.S0`, `7919.37NTV.S0`];
-    case "camli":
-      return [`7919.${p}NTV.24`, `7919.${p}NTV.S0`];
-    case "mermer":
-      return [`7919.${p}NTV.S0`, `7919.38NTV.PJ`];
-    case "pizza":
-      return [`7919.${p}NTV.PJ`, `7919.38NTV.PJ`, `7919.48NTV.PJ`];
-    default:
-      return [`7919.28NTV.PJ`, `7919.${p}NTV.PJ`, `7919.38NTV.PJ`];
+  if (variant === "pizza" || variant === "mermer") {
+    if (kapi === 2) return ["PZAG-280", "PZAG-280-E"];
+    if (kapi === 3) return ["PZAG-380", "PZAG-380-E"];
+    if (kapi === 4) return ["PZAG-480", "PZAG-480-E"];
+    return ["PZAG-380"];
   }
+  if (variant === "yuksek") {
+    if (kapi === 2) return ["SBB-2N70"];
+    if (kapi === 3) return ["SBB-3N70"];
+    return ["SBB-2N70"];
+  }
+  if (kapi === 2) return ["SBT-2N70", "SBT-2N70E"];
+  if (kapi === 3) return ["SBT-3N70", "SBT-3N70E"];
+  if (kapi === 4) return ["SBT-4N70", "SBT-4N70E"];
+  return ["SBT-2N70"];
+}
+
+function isPortabiancoMakeUpRow(row: AdminUrunRow): boolean {
+  const brand = norm(row.marka_ad || "");
+  if (brand.includes("portabianco")) return true;
+  const sku = String(row.sku ?? "").toUpperCase();
+  return /^SBT-|^PZAG-|^SBB-|^PZA-|^PZAD-/i.test(sku) || /make.?up|makeup/i.test(row.ad || "");
 }
 
 function isOztiMakeUpRow(row: AdminUrunRow): boolean {
@@ -129,20 +138,18 @@ function scoreMakeUpRow(
   targetSkus: string[],
 ): number {
   const refN = norm(referansIsim);
-  const pizzaRef = variant === "pizza";
-
-  if (pizzaRef) {
-    if (!isOztiPizzaMakeUpRow(row) && !isOztiMakeUpRow(row)) return -9999;
-  } else if (!isOztiMakeUpRow(row)) {
-    return -9999;
-  }
+  const isPB = isPortabiancoMakeUpRow(row);
+  const isOz = isOztiPizzaMakeUpRow(row) || isOztiMakeUpRow(row);
+  if (!isPB && !isOz) return -9999;
 
   const ad = norm(row.ad);
   const sku = String(row.sku ?? "").toUpperCase();
   let score = 50;
 
+  if (isPB) score += 250;
+
   if (/make.?up|makeup/.test(ad)) score += 40;
-  if (targetSkus.some((s) => sku === s.toUpperCase())) score += 200;
+  if (targetSkus.some((s) => sku === s.toUpperCase())) score += 500;
 
   if (variant === "yuksek" && /yuksek|yüksek|sbb-/.test(ad)) score += 60;
   if (variant === "camli" && /camli|camlı|sbtg-/.test(ad)) score += 60;
@@ -225,7 +232,8 @@ export async function matchMakeUpByReferans(
       (r) => String(r.sku ?? "").toUpperCase() === sku.toUpperCase(),
     );
     if (exact) {
-      return toEslesmis(exact, isim, olcuDisplay, urunTipi, OZTI_MARKA);
+      const brand = exact.marka_ad || "Portabianco";
+      return toEslesmis(exact, isim, olcuDisplay, urunTipi, brand);
     }
   }
 
@@ -246,5 +254,6 @@ export async function matchMakeUpByReferans(
 
   if (!scored.length) return null;
   const pick = scored[0].row;
-  return toEslesmis(pick, isim, olcuDisplay, urunTipi, OZTI_MARKA);
+  const brand = pick.marka_ad || "Portabianco";
+  return toEslesmis(pick, isim, olcuDisplay, urunTipi, brand);
 }

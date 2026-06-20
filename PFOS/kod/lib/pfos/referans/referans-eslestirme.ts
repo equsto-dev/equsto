@@ -102,6 +102,8 @@ import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
 import {
   isKombiKonveksiyonReferans,
   isTasFirinReferans,
+  isPizzaFirinReferans,
+  matchAtalayPizzaFirinByReferans,
   matchKombiFirinByReferans,
   matchKonveksiyonFirinByReferans,
   matchTasFirinByReferans,
@@ -162,6 +164,7 @@ export type ReferansMatchInput = {
   referansPoz?: string;
   referansListeKey?: string;
   notlar?: string | null;
+  olcu?: string | null;
   fiyatStratejisi: FiyatStratejisi;
   sku?: string | null;
 };
@@ -250,6 +253,34 @@ export function referansKatalogUyumsuz(
   const s = norm(sablonIsim);
   const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
+
+  // Filter coffee capacity mismatch (e.g. 20 LT urn vs standard coffee brewer)
+  if (
+    /filtre\s*kahve|filter\s*coffee/i.test(s) &&
+    !/20\s*lt|40\s*lt|10\s*lt|5\s*lt|lt\b/i.test(s) &&
+    !/20\s*lt|40\s*lt|10\s*lt|5\s*lt|lt\b/i.test(notlar ?? "") &&
+    /20\s*lt|40\s*lt|10\s*lt|5\s*lt/i.test(k)
+  ) {
+    return true;
+  }
+
+  // Cocktail station must be neutral (non-refrigerated) unless explicitly requested
+  if (
+    /kokteyl|cocktail/i.test(s) &&
+    /sogutu|soğutu|buzdolab|dolabi|dolabı|sogutma|soğutma/i.test(k) &&
+    !/sogutucu|soğutucu|buzdolab/i.test(s) &&
+    !/sogutucu|soğutucu|buzdolab/i.test(notlar ?? "")
+  ) {
+    return true;
+  }
+
+  // GN 2/1 vs GN 1/1 mismatch
+  const hasRef21 = /(2\/1|2-1)\b/.test(sablonIsim) || /(2\/1|2-1)\b/.test(notlar ?? "");
+  const hasRef11 = /(1\/1|1-1)\b/.test(sablonIsim) || /(1\/1|1-1)\b/.test(notlar ?? "");
+  const hasKat21 = /(2\/1|2-1)\b/.test(katalogAd) || /(2\/1|2-1)\b/.test(katalogSku ?? "");
+  const hasKat11 = /(1\/1|1-1)\b/.test(katalogAd) || /(1\/1|1-1)\b/.test(katalogSku ?? "");
+  if (hasRef21 && hasKat11 && !hasKat21) return true;
+  if (hasRef11 && hasKat21 && !hasKat11) return true;
 
   // 10. Tost makinesi vs döner sarma/kesme/döner
   const isKatTost = k.includes("tost") || /^aktm|^akek-0|^atm-|^vbl-/i.test(katalogSku ?? "");
@@ -995,7 +1026,8 @@ async function matchByFamilyRules(
       input.urunTipi === "konveksiyon-firin-unox" ||
       (isGenericReferansIsim(input.isim) && /firin|fırın/.test(norm(input.isim)))) &&
     input.urunTipi !== "firin-arabasi" &&
-    !/araba|trolley/.test(norm(input.isim))
+    input.urunTipi !== "firin-tezgahi" &&
+    !/araba|trolley|tezgah|sehpa|stand/.test(norm(input.isim))
   ) {
     return matchKonveksiyonFirinByReferans(
       input.isim,
@@ -1018,6 +1050,9 @@ async function matchStrictCatalog(
   if (familyTip === "firin_arabasi") {
     return null;
   }
+  const tipLinks = await loadTipShopLinks();
+  const preferredSku = familyTip ? tipLinks[familyTip]?.sku : null;
+
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
@@ -1107,6 +1142,9 @@ async function matchStrictCatalog(
         return { row, score: -9999 };
       }
       let score = isimScore;
+      if (preferredSku && row.sku === preferredSku) {
+        score += 150;
+      }
       if (olcu) score += olcuEslesmeSkoru(olcu, row.ad);
       if (familyTip && !familyTip.startsWith("pfos_")) {
         if (productMatchesTipKodu(row, familyTip)) score += 40;
@@ -1381,6 +1419,11 @@ export async function matchReferansKalem(
     if (teshir) return teshir;
   }
 
+  if (isPizzaFirinReferans(input.isim, input.urunTipi)) {
+    const pizza = await matchAtalayPizzaFirinByReferans(input.isim, olcu, input.notlar);
+    if (pizza) return pizza;
+  }
+
   if (isKombiKonveksiyonReferans(input.isim, input.urunTipi)) {
     const kombi = await matchKombiFirinByReferans(
       input.isim,
@@ -1484,6 +1527,8 @@ export async function matchReferansKalem(
   }
 
   if (/ara\s*tezgah|notr\s*ara|notr\s*tezgah|nötr\s*ara|nötr\s*tezgah/.test(String(input.isim).toLowerCase())) {
+    const oztiAra = await matchOztiAraTezgahByReferans(input.isim, olcu);
+    if (oztiAra) return oztiAra;
     const atalayAra = await matchAtalayAraTezgahByReferans(input.isim, olcu);
     if (atalayAra) return atalayAra;
   }
@@ -1658,5 +1703,51 @@ export async function matchAtalayAraTezgahByReferans(
       olcu: olcu || `${width}*${depth}*30`,
     };
   }
+  return null;
+}
+
+/** Öztiryakiler setüstü nötr ara tezgah eşlemesi */
+export async function matchOztiAraTezgahByReferans(
+  isim: string,
+  olcu: string,
+): Promise<EslesmisUrun | null> {
+  const width = extractWidth(olcu || isim);
+  const depth = extractDepth(olcu || isim) || 70;
+
+  let sku = "";
+  if (depth === 70) {
+    if (width >= 80) sku = "7911.N1.80703.00";
+    else sku = "7911.N1.40703.00";
+  } else if (depth === 90) {
+    if (width >= 80) sku = "7911.N1.80903.00";
+    else sku = "7911.N1.40903.00";
+  } else if (depth === 60) {
+    if (width >= 60) sku = "7911.N1.60603.00";
+    else sku = "7911.N1.40603.00";
+  } else {
+    sku = "7911.N1.40703.00";
+  }
+
+  const rows = await loadLegacyCatalogRows();
+  const found = rows.find(
+    (r) =>
+      r.durum === "aktif" &&
+      r.sku &&
+      r.sku.replace(/\s+/g, "").toUpperCase() === sku.toUpperCase()
+  );
+
+  if (found) {
+    const matched = katalogRowToEslesmis(found, {
+      linkMarka: "Öztiryakiler",
+      sablonIsim: isim,
+    });
+    return {
+      ...matched,
+      ad: matched.ad,
+      marka: "Öztiryakiler",
+      olcu: olcu || `${width}*${depth}*30`,
+    };
+  }
+
   return null;
 }

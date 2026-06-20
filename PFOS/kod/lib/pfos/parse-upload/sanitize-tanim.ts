@@ -82,7 +82,7 @@ export function expandProformaAbbreviations(raw: string): string {
   return String(raw ?? "")
     .replace(/\bRFLI\b/gi, "RAFLI")
     .replace(/\bKAY\b|\bKAY\./gi, "KAYDIRMA")
-    .replace(/\bMOB\b|\bMOB\./gi, "MOBİLYA")
+    .replace(/(?<![a-zA-Z0-9İĞÜŞÖÇışğüöç])MOB(?![a-zA-Z0-9İĞÜŞÖÇışğüöç])|\bMOB\./gi, "MOBİLYA")
     .replace(/\bPOWER\s+GRILL\b/gi, "POWERGRILL")
     .replace(/\bSKTÜRK\b/gi, "")
     .replace(/\bSKTURK\b/gi, "");

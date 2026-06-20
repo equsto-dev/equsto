@@ -17,6 +17,9 @@ export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "tezgah_taban_rafli",
   "tezgah_rafli_dol",
   "balik_hazirlik_tezgah",
+  "setalti_tezgah",
+  "servis_tezgahi",
+  "et_kutugu",
 ]);
 
 /** Bulaşık sıyırma / hunili alma tezgahı — bulaşık yıkama makinesi değil */
@@ -54,10 +57,11 @@ export function isCalismaTezgahiReferansIsim(
   if (
     /set\s*ustu|setüstü|set alti|setalti|ara\s*tezgah|bym\s*giris|bym\s*cikis|bulasik.*giris|on\s*yikama|kokteyl\s*istasyon|servis\s*tezgah.*sicak|buzdolab|donduruc|sogutuc|soğutuc/i.test(
       n,
-    )
+    ) && !/kutu[kg]|kütü[kg]/.test(n)
   ) {
     return false;
   }
+  if (/kutu[kg]|kütü[kg]/.test(n)) return true;
   if (/evyeli|evye\s*li|çift\s*evye|cift\s*evye|tek\s*evye|üç\s*evye|uc\s*evye/.test(n)) {
     return true;
   }

@@ -252,6 +252,18 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
       (name.includes("derin dondurucu") && !name.includes("panel"))
     );
   },
+  benmari_mobil: (name) => {
+    return (
+      (name.includes("benmari") || name.includes("bain marie") || name.includes("bainmarie")) &&
+      (name.includes("hareket") || name.includes("mobil") || name.includes("taban raf"))
+    );
+  },
+  banket_arabasi: (name) => {
+    return (
+      name.includes("banket") &&
+      (name.includes("araba") || name.includes("isitmali") || name.includes("ısıtmalı") || name.includes("sıcak") || name.includes("sicak"))
+    );
+  },
 };
 
 function isExcludedForTip(name: string, tip: string): boolean {
@@ -261,6 +273,9 @@ function isExcludedForTip(name: string, tip: string): boolean {
   }
   if (tip === "derin_dondurucu_dik") {
     return n.includes("panel") || n.includes("split");
+  }
+  if (tip === "benmari_mobil") {
+    return n.replace(/kuvetler?\s*hari[cç]/g, "").includes("kuvet") || n.includes("kapak") || n.includes("sos");
   }
   if (tip === "kahve_degirmeni") {
     return n.includes("kahve makin") || n.includes("espresso") || /wmf 1[13]00/.test(n);
