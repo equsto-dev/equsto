@@ -61,7 +61,10 @@
   /** Departman sayfaları: Amazon refine başlığı + alt-tip listesi */
   function injectDeptChrome() {
     var col = document.getElementById("eq-filter-col");
-    if (!col || !document.body || !document.body.classList.contains("eq-dept")) return;
+    if (!col || !document.body) return;
+    var isDept = document.body.classList.contains("eq-dept");
+    var isMarkaPlp = document.body.classList.contains("eq-marka-plp-shop");
+    if (!isDept && !isMarkaPlp) return;
 
     if (!col.querySelector(".eq-filter-col-hd")) {
       var hd = document.createElement("div");

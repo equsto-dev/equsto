@@ -138,6 +138,12 @@
       typeof opts.productSorter === "function" ? opts.productSorter : null;
     var productSortList =
       typeof opts.productSortList === "function" ? opts.productSortList : null;
+    var getPlpFilterFn =
+      typeof opts.getPlpFilterFn === "function"
+        ? opts.getPlpFilterFn
+        : function () {
+            return typeof opts.plpFilterFn === "function" ? opts.plpFilterFn : null;
+          };
 
     var state = {
       active: plpMode ? "" : tiles.length ? String(tiles[0].slug || "") : "",
@@ -150,6 +156,10 @@
       var out = list.filter(function (x) { return x && predicate(x); });
       if (!plpMode && state.active) {
         out = out.filter(function (x) { return String(x.category || "") === state.active; });
+      }
+      var extraFilter = getPlpFilterFn();
+      if (typeof extraFilter === "function") {
+        out = out.filter(extraFilter);
       }
       if (productSortList) out = productSortList(out);
       else if (productSorter) out.sort(productSorter);
@@ -354,6 +364,12 @@
       .catch(function () {
         root.innerHTML = '<section class="eq-cat-hero"><h1>' + esc(catLabel) + '</h1><p>Ürünler yüklenemedi.</p></section>';
       });
+
+    return {
+      refresh: function () {
+        render(catalogAll);
+      },
+    };
   }
 
   global.EqCategoryShell = { mount: mount };
