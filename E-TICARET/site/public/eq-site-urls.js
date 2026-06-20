@@ -485,7 +485,7 @@
     electrolux: { markaHub: true, facet: "Electrolux Professional" },
     senox: { markaHub: true, facet: "Şenox" },
     vosco: { markaHub: true, facet: "Vosco" },
-    inoksan: { dept: "sogutma", facet: "İnoksan" },
+    inoksan: { markaHub: true, facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
     sanremo: { dept: "kahve", facet: "Sanremo" },
@@ -636,6 +636,11 @@
       if (!/öztiryakiler|oztiryakiler/i.test(b)) return false;
       if (!oem || oem === "Öztiryakiler") return true;
       return false;
+    }
+
+    if (slug === "inoksan") {
+      var rowId = String(row.id || "");
+      if (rowId.indexOf("inoksan__") === 0) return true;
     }
 
     if (facetLc) {

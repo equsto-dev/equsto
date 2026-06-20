@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync } from "fs";
 
 const brands = [
-  { label: "İnoksan", href: "/shop/sogutma?marka=%C4%B0noksan" },
+  { label: "İnoksan", href: "/shop/marka/inoksan" },
   { label: "Electrolux Professional", href: "/shop/pisirme?marka=Electrolux+Professional" },
   { label: "Şenox", href: "/shop/sogutma?marka=Senox" },
   { label: "Rational", href: "/shop/pisirme?marka=Rational" },

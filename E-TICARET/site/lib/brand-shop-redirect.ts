@@ -75,7 +75,7 @@ const BRAND_SHOP_TARGET: Record<string, BrandTarget> = {
   blanco: { markaHub: true, facet: "Blanco" },
   simag: { markaHub: true, facet: "SIMAG" },
   electrolux: { dept: "pisirme", facet: "Electrolux" },
-  inoksan: { dept: "sogutma", facet: "İnoksan" },
+  inoksan: { markaHub: true, facet: "İnoksan" },
   "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
   faema: { dept: "kahve", facet: "Faema" },
   empero: { dept: "yikama", facet: "Empero" },

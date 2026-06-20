@@ -1283,7 +1283,18 @@
       var sp = new URLSearchParams(location.search);
       var markaRaw = sp.get('marka') || sp.get('brand');
       if (markaRaw) {
-        var facet = resolveMarkaFacetLabel(decodeURIComponent(markaRaw));
+        var decodedMarka = decodeURIComponent(markaRaw);
+        try {
+          if (typeof window.eqBrandSlug === 'function' && typeof window.eqBrandPath === 'function') {
+            var hubSlug = window.eqBrandSlug(decodedMarka) || decodedMarka;
+            var hubPath = window.eqBrandPath(hubSlug);
+            if (hubPath && /\/shop\/marka\//i.test(hubPath) && (location.pathname || '').indexOf('/shop/marka/') < 0) {
+              location.replace(hubPath);
+              return;
+            }
+          }
+        } catch (_) {}
+        var facet = resolveMarkaFacetLabel(decodedMarka);
         if (facet) state.brands = [facet];
       }
       var tip = normalizeUrlTip(sp.get('tip'));
