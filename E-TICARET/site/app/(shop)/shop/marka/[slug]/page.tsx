@@ -5,6 +5,8 @@ import VitrinShell from "@/components/vitrin/VitrinShell";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { brandHubLabel, getBrandHubMeta } from "@/lib/shop/brand-hub";
 
+/** Kilit: public/marka-plp-facets-KILIT.txt — #eq-marka-plp-facets sol filtre host */
+
 const MARKA_PLP_CSS = `
 body.eq-marka-plp .pg{width:1500px;max-width:100%;margin:0 auto;font-size:13px;background:var(--eq-surface);}
 body.eq-marka-plp .breadcrumb{padding:10px 20px;font-size:11px;color:var(--eq-text-muted);border-bottom:1px solid var(--eq-border);}

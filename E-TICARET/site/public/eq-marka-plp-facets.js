@@ -1,5 +1,6 @@
 /**
  * Marka PLP — çok departmanlı ürün havuzu için sol filtre (kategori, pişirme tipi, enerji, fiyat).
+ * Kilit: public/marka-plp-facets-KILIT.txt
  */
 (function (global) {
   "use strict";

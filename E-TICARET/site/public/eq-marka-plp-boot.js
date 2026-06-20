@@ -1,5 +1,6 @@
 /**
  * Marka slug PLP — mağaza grid (kategori kutuları yok), öncelikli karışık sıra.
+ * Kilit: public/marka-plp-facets-KILIT.txt
  */
 (function () {
   "use strict";

@@ -1,6 +1,6 @@
 /**
  * Marka PLP — scriptleri sırayla yükler (bootstrap → shell → boot).
- * Next.js Script onReady zinciri bazen bootstrap'i çalıştırmadan boot'u tetikliyordu.
+ * Kilit: public/marka-plp-facets-KILIT.txt
  */
 (function () {
   "use strict";

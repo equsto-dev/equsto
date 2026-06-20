@@ -1,4 +1,5 @@
 // Ortak: katalog sayfalarında #eq-filter-brands marka düğümleri
+// Kilit (marka PLP): public/marka-plp-facets-KILIT.txt — injectDeptChrome eq-marka-plp-shop
 (function () {
   /**
    * «Markalarımız» altında gösterilen örnek üretici markalar (ürün filtresi değil).

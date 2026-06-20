@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — /shop/marka/[slug] marka PLP sol filtre paneli
+Onay: 2026-06-19 · Commit referans: 7161b659
+═══════════════════════════════════════════════════════════════════════════
+
+Marka vitrin sayfalarında (ör. /shop/marka/inoksan) sol sütunda ürün
+filtreleri görünmelidir. «Markalarımız» çekmeceye taşındığında aside boş
+kalıp gizlenmemeli — doğrudan .eq-filter-sec--marka-facets kalmalı.
+
+── Beklenen davranış ─────────────────────────────────────────────────────
+1. Sol aside: Filtreler başlığı + kategori / pişirme tipi / enerji / fiyat.
+2. Kategoriler: çok departmanlı havuz (pisirme, sogutma, tezgah, yikama…).
+3. Marka sayfasında marka facet'i YOK (hideBrands).
+4. Pişirme tipi facet'i havuzda pişirme ürünü varsa gösterilir.
+5. Filtre değişince ürün grid'i EqCategoryShell.refresh ile güncellenir.
+6. Script zinciri: pisirme-facets → dept-cm-facets → marka-plp-facets → boot.
+
+YASAK (onay olmadan):
+  • #eq-marka-plp-facets host'unu kaldırmak
+  • eq-filter-sec--marka-facets olmadan yalnızca Markalarımız bırakmak
+  • EqMarkaPlpFacets veya facet script yüklemesini kaldırmak
+  • injectDeptChrome'dan eq-marka-plp-shop desteğini geri almak
+  • getPlpFilterFn / shell refresh bağlantısını koparmak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  app/(shop)/shop/marka/[slug]/page.tsx   — #eq-marka-plp-facets host
+  public/eq-marka-plp-facets.js           — EqMarkaPlpFacets.create
+  public/eq-marka-plp-boot.js             — facet ↔ shell bağlantısı
+  public/eq-marka-scripts-loader.js       — facet script sırası
+  public/eq-category-shell.js             — getPlpFilterFn + refresh
+  public/eq-dept-cm-facets.js             — hideBrands, showPisirmeTip
+  public/eq-filter-column.js              — injectDeptChrome marka PLP
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:marka-plp-facets-kilit
+  Canlı: /shop/marka/inoksan → sol filtre + 947 ürün grid
+
+═══════════════════════════════════════════════════════════════════════════

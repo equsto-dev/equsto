@@ -1,8 +1,6 @@
 /**
  * EqCategoryShell — marka sayfası için ürün listeleyici.
- * Kaynak veri: EqustoShopCatalog.load() (data/ekipmanlar.json).
- *
- * Sadece marka.html tarafından kullanılır.
+ * Kilit: public/marka-plp-facets-KILIT.txt (getPlpFilterFn + refresh)
  */
 (function (global) {
   "use strict";

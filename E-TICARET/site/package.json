@@ -113,6 +113,7 @@
     "verify:pfos-uye-auth-kilit": "node scripts/verify-pfos-uye-auth-kilit.mjs",
     "verify:pfos-liste-upload-rail-kilit": "node scripts/verify-pfos-liste-upload-rail-kilit.mjs",
     "verify:inoksan-istif-images-kilit": "node scripts/verify-inoksan-istif-images-kilit.mjs",
+    "verify:marka-plp-facets-kilit": "node scripts/verify-marka-plp-facets-kilit.mjs",
     "verify:yukselendustriyel-araba-kilit": "node scripts/verify-yukselendustriyel-araba-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
     "seo:audit": "node scripts/audit-seo-geo.mjs",

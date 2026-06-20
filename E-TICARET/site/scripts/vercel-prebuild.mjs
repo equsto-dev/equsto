@@ -227,6 +227,12 @@ if (fs.existsSync(verifyBesosUrbanBarImages)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyMarkaPlpFacets = path.join(siteDir, "scripts/verify-marka-plp-facets-kilit.mjs");
+if (fs.existsSync(verifyMarkaPlpFacets)) {
+  const r = spawnSync(process.execPath, [verifyMarkaPlpFacets], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });
