@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-19T20:53:00.353Z",
+  "updated_at": "2026-06-20T09:21:27.574Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -367,14 +367,14 @@
         },
         {
           "id": "150-300",
-          "label": "150–300 m² (Havelka)",
+          "label": "150–300 m²",
           "referansM2": 225,
           "meta": {
             "listeDosya": "all-day-dining-cafe-150-300.json",
-            "kalemSayisi": 47,
-            "toplamAdet": 51,
-            "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
-            "yukleme": "2026-06-16T10:05:51.463Z"
+            "kalemSayisi": 89,
+            "toplamAdet": 104,
+            "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
+            "yukleme": "2026-06-20T09:21:27.549Z"
           }
         },
         {
@@ -1056,7 +1056,7 @@
             "kalemSayisi": 21,
             "toplamAdet": 26,
             "kaynakDosya": "2017-058 LAGUNA THERMAL PERSONEL YEMEKHANESİ/2017-058.xlsx",
-            "yukleme": "2026-06-16T09:25:05.178Z",
+            "yukleme": "2026-06-20T08:54:39.029Z",
             "konseptSinif": "personel-yemekhane-laguna"
           }
         }

@@ -155,6 +155,11 @@ export function preferredOztiPisirmeSkus(
   }
   if (family === "bainmarie") {
     const blob = norm(`${referansIsim} ${notlar ?? ""}`);
+    const isMobile = /hareket|mobil|servis|kaydirma|stand|kuver/.test(blob);
+    if (isMobile) {
+      const gn = referansIsim.match(/(\d+)\s*GN/i)?.[1] || notlar?.match(/(\d+)\s*GN/i)?.[1] || "3";
+      return [`7854.${gn}GN11.00`];
+    }
     const wantsGaz = /gazli|gazlı|\bgaz\b/.test(blob);
     const wantsElk = /elektrik|elk|elektr/.test(blob);
     const base = oztiBainMarieBase(olcu);

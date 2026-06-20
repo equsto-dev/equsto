@@ -252,6 +252,14 @@ export function referansKatalogUyumsuz(
   const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
 
+  // GN 2/1 vs GN 1/1 mismatch
+  const hasRef21 = /(2\/1|2-1)\b/.test(sablonIsim) || /(2\/1|2-1)\b/.test(notlar ?? "");
+  const hasRef11 = /(1\/1|1-1)\b/.test(sablonIsim) || /(1\/1|1-1)\b/.test(notlar ?? "");
+  const hasKat21 = /(2\/1|2-1)\b/.test(katalogAd) || /(2\/1|2-1)\b/.test(katalogSku ?? "");
+  const hasKat11 = /(1\/1|1-1)\b/.test(katalogAd) || /(1\/1|1-1)\b/.test(katalogSku ?? "");
+  if (hasRef21 && hasKat11 && !hasKat21) return true;
+  if (hasRef11 && hasKat21 && !hasKat11) return true;
+
   // 10. Tost makinesi vs döner sarma/kesme/döner
   const isKatTost = k.includes("tost") || /^aktm|^akek-0|^atm-|^vbl-/i.test(katalogSku ?? "");
   if (s.includes("tost") && (k.includes("doner") || k.includes("döner") || k.includes("sarma") || !isKatTost)) {
@@ -996,7 +1004,8 @@ async function matchByFamilyRules(
       input.urunTipi === "konveksiyon-firin-unox" ||
       (isGenericReferansIsim(input.isim) && /firin|fırın/.test(norm(input.isim)))) &&
     input.urunTipi !== "firin-arabasi" &&
-    !/araba|trolley/.test(norm(input.isim))
+    input.urunTipi !== "firin-tezgahi" &&
+    !/araba|trolley|tezgah|sehpa|stand/.test(norm(input.isim))
   ) {
     return matchKonveksiyonFirinByReferans(
       input.isim,
