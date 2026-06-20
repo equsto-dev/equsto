@@ -11,7 +11,7 @@ function parseTrAmount(fragment: string): number {
   return Number.isFinite(n) && n > 0 ? Math.round(n) : 0;
 }
 
-/** Client-safe — Urban Bar fiyat_tl veya ₺… KDV dahil etiketinden toplam TRY */
+/** Client-safe — Urban Bar fiyat_tl veya ₺… TL etiketinden toplam TRY */
 export function resolveUrbanBarTotalTry(input: {
   fiyat_tl?: number;
   price?: string;
@@ -20,7 +20,7 @@ export function resolveUrbanBarTotalTry(input: {
   if (Number.isFinite(fiyatTl) && fiyatTl > 0) return Math.round(fiyatTl);
 
   const raw = String(input.price || "");
-  const dahil = raw.match(/₺?\s*([\d.,]+)\s*(?:KDV\s*dahil|Incl\.?\s*VAT)/i);
+  const dahil = raw.match(/₺?\s*([\d.,]+)\s*(?:KDV\s*dahil|Incl\.?\s*VAT|\bTL\b)/i);
   if (dahil) {
     const v = parseTrAmount(dahil[1]);
     if (v > 0) return v;
@@ -67,7 +67,7 @@ export function resolveUrbanBarPriceDisplay(
 
   const packQty = urbanBarPackQtyFromProduct(product);
   const unitTl = Math.round(totalTl / packQty);
-  const vat = locale === "en" ? "Incl. VAT" : "KDV dahil";
+  const vat = "TL";
   const unitFmt = formatUrbanBarTry(unitTl);
   const totalFmt = formatUrbanBarTry(totalTl);
   const unitSuffix = locale === "en" ? "/ each" : "/ adet";
@@ -96,20 +96,18 @@ export function splitUrbanBarPrice(
   const raw = String(priceLabel || "").trim();
   if (!raw) return { amount: "", vat: "" };
 
-  const vatTr = /\s*KDV dahil\s*$/i;
+  const vatTr = /\s*KDV\s*dahil\s*$/i;
   const vatEn = /\s*Incl\.?\s*VAT\s*$/i;
+  const vatTl = /\s*TL\s*$/i;
 
   if (vatTr.test(raw)) {
-    return {
-      amount: raw.replace(vatTr, "").trim(),
-      vat: locale === "en" ? "Incl. VAT" : "KDV dahil",
-    };
+    return { amount: raw.replace(vatTr, "").trim(), vat: "TL" };
   }
   if (vatEn.test(raw)) {
-    return {
-      amount: raw.replace(vatEn, "").trim(),
-      vat: "Incl. VAT",
-    };
+    return { amount: raw.replace(vatEn, "").trim(), vat: "TL" };
   }
-  return { amount: raw, vat: locale === "en" ? "Incl. VAT" : "KDV dahil" };
+  if (vatTl.test(raw)) {
+    return { amount: raw.replace(vatTl, "").trim(), vat: "TL" };
+  }
+  return { amount: raw, vat: "TL" };
 }

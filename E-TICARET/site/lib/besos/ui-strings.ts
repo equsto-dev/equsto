@@ -46,7 +46,7 @@ const UI = {
     tr: "Katalogdan diğer modüller",
     en: "Other modules from the catalogue",
   },
-  priceVatIncluded: { tr: "KDV dahil", en: "incl. VAT" },
+  priceVatIncluded: { tr: "TL", en: "TL" },
 } as const;
 
 export type BesosUiKey = keyof typeof UI;
