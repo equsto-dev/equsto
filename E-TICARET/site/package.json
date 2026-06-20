@@ -192,6 +192,7 @@
     "catalog:missing:images": "node scripts/fetch-missing-product-images.mjs",
     "db:migrate:deploy": "node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate deploy",
     "db:verify": "node --import ./scripts/load-env.mjs scripts/verify-db.mjs",
+    "catalog:audit:kw": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/audit-catalog-kw.mjs",
     "admin:config": "node scripts/generate-admin-config.mjs",
     "pfos:referans:extract": "python scripts/extract-pfos-referans-projeler.py",
     "pfos:referans:all-day-dining": "python scripts/build-all-day-dining-referanslar.py",
