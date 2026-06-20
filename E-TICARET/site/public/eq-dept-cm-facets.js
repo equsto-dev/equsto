@@ -539,7 +539,7 @@
       });
     }
 
-    if (dept === 'pisirme' && global.EqPisirmeFacets) {
+    if ((dept === 'pisirme' || opts.showPisirmeTip) && global.EqPisirmeFacets) {
       var pisPool = getPool('pisirmeTip');
       var pisCounts = global.EqPisirmeFacets.countFacets(
         pisPool.map(function (u) {
@@ -579,38 +579,40 @@
       html += '</ul></div></details>';
     }
 
-    html +=
-      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
-      esc(__facetT('plp.facet_brand', 'Marka')) +
-      '</summary>' +
-      '<div class="eq-cm-facet__body">' +
-      '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="' +
-      esc(__facetT('plp.facet_brand_ph', 'Marka ara')) +
-      '" autocomplete="off">' +
-      '<ul class="eq-cm-facet__list" id="eq-dept-cm-brand-list">';
-    brands.slice(0, 80).forEach(function (b) {
-      var label = facetBrandKey(b);
-      var checked =
-        (state.brands || []).some(function (sb) {
-          return facetBrandKey(sb) === label;
-        })
-          ? ' checked'
-          : '';
+    if (!opts.hideBrands) {
       html +=
-        '<li class="eq-cm-facet__item" data-brand-label="' +
-        esc(lc(label)) +
-        '"><label class="eq-cm-facet__label">' +
-        '<input type="checkbox" name="eq-dept-cm-brand" value="' +
-        esc(label) +
-        '"' +
-        checked +
-        '><span>' +
-        esc(label) +
-        '</span><span class="eq-cm-facet__count">(' +
-        brandCounts[b] +
-        ')</span></label></li>';
-    });
-    html += '</ul></div></details>';
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__facetT('plp.facet_brand', 'Marka')) +
+        '</summary>' +
+        '<div class="eq-cm-facet__body">' +
+        '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="' +
+        esc(__facetT('plp.facet_brand_ph', 'Marka ara')) +
+        '" autocomplete="off">' +
+        '<ul class="eq-cm-facet__list" id="eq-dept-cm-brand-list">';
+      brands.slice(0, 80).forEach(function (b) {
+        var label = facetBrandKey(b);
+        var checked =
+          (state.brands || []).some(function (sb) {
+            return facetBrandKey(sb) === label;
+          })
+            ? ' checked'
+            : '';
+        html +=
+          '<li class="eq-cm-facet__item" data-brand-label="' +
+          esc(lc(label)) +
+          '"><label class="eq-cm-facet__label">' +
+          '<input type="checkbox" name="eq-dept-cm-brand" value="' +
+          esc(label) +
+          '"' +
+          checked +
+          '><span>' +
+          esc(label) +
+          '</span><span class="eq-cm-facet__count">(' +
+          brandCounts[b] +
+          ')</span></label></li>';
+      });
+      html += '</ul></div></details>';
+    }
 
     if ((dept === 'tezgah' || dept === 'davlumbaz') && global.EqOlcuFacets) {
       var olcuPool = getPool('olcu');

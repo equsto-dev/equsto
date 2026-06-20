@@ -143,13 +143,27 @@
 
     window.EqustoShopCatalog.loadMergedCatalog()
       .then(function (all) {
-        var total = (all || []).filter(predicate).length;
-        window.EqCategoryShell.mount({
+        var brandRows = (all || []).filter(predicate);
+        var total = brandRows.length;
+        var shellApi = null;
+        var facetCtrl = null;
+        if (window.EqMarkaPlpFacets && typeof window.EqMarkaPlpFacets.create === "function") {
+          facetCtrl = window.EqMarkaPlpFacets.create({
+            products: brandRows,
+            onChange: function () {
+              if (shellApi && typeof shellApi.refresh === "function") shellApi.refresh();
+            },
+          });
+        }
+        shellApi = window.EqCategoryShell.mount({
           root: root,
           catLabel: displayName,
           catDesc: total ? total + " ürün" : "",
           plpMode: true,
           productPredicate: predicate,
+          getPlpFilterFn: function () {
+            return facetCtrl ? facetCtrl.getFilterFn() : null;
+          },
           productSorter: slug === "robot-coupe" ? null : brandProductSorter,
           productSortList:
             slug === "robot-coupe" &&
@@ -164,6 +178,7 @@
               ? window.EqustoShopCatalog.loadMergedCatalog.bind(window.EqustoShopCatalog)
               : null,
         });
+        if (facetCtrl) facetCtrl.mount();
       })
       .catch(function () {
         root.innerHTML =

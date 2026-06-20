@@ -16,8 +16,11 @@
     "eq-price-display.js",
     "eq-display-terminology.js",
     "eq-shop-catalog-bootstrap.js",
+    "eq-pisirme-facets.js",
+    "eq-dept-cm-facets.js",
     "eq-filter-column.js",
     "eq-category-shell.js",
+    "eq-marka-plp-facets.js",
     "eq-marka-plp-boot.js",
   ];
 

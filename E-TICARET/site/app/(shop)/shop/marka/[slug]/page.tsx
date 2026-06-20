@@ -13,6 +13,9 @@ body.eq-marka-plp .right-col{flex:1;min-width:0;display:flex;flex-direction:colu
 body.eq-marka-plp-shop .eq-cat-tiles{display:none!important;}
 body.eq-marka-plp-shop .eq-cat-shell{padding:12px 16px 28px;}
 body.eq-marka-plp-shop .eq-cat-hero h1{font-size:20px;}
+body.eq-marka-plp-shop .eq-filter-sec--marka-facets{padding:0;border-bottom:none;}
+body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-facet{border-bottom:1px solid var(--eq-border-soft);}
+body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-selected{margin:0 0 8px;}
 `;
 
 export async function generateMetadata({
@@ -79,6 +82,9 @@ export async function MarkaSlugPageInner({
           <div className="body">
             <aside className="eq-filter-col eq-refine-amazon" id="eq-filter-col" aria-label="Filtreler">
               <nav className="sidebar" id="eq-sidebar" aria-label="Kategoriler" />
+              <div className="eq-filter-sec eq-filter-sec--marka-facets">
+                <div id="eq-marka-plp-facets" />
+              </div>
               <div className="eq-filter-sec">
                 <div className="eq-filter-sec-lbl eq-filter-sec-lbl--markalarimiz">Markalarımız</div>
                 <div id="eq-filter-brands" className="eq-filter-brands" />
