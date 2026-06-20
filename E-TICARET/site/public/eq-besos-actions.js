@@ -124,7 +124,7 @@
             priceLine =
               "₺" +
               formatTryAmount(tl) +
-              " TL (≈ " +
+              " (≈ " +
               priceEur +
               ", kur: " +
               kur.toLocaleString("tr-TR", { maximumFractionDigits: 4 }) +

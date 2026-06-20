@@ -67,7 +67,6 @@ export function resolveUrbanBarPriceDisplay(
 
   const packQty = urbanBarPackQtyFromProduct(product);
   const unitTl = Math.round(totalTl / packQty);
-  const vat = "TL";
   const unitFmt = formatUrbanBarTry(unitTl);
   const totalFmt = formatUrbanBarTry(totalTl);
   const unitSuffix = locale === "en" ? "/ each" : "/ adet";
@@ -75,9 +74,9 @@ export function resolveUrbanBarPriceDisplay(
   const secondaryLine =
     packQty > 1
       ? locale === "en"
-        ? `Box of ${packQty}: ${totalFmt} · ${vat}`
-        : `${packQty}'li kutu: ${totalFmt} · ${vat}`
-      : vat;
+        ? `Box of ${packQty}: ${totalFmt}`
+        : `${packQty}'li kutu: ${totalFmt}`
+      : "";
 
   return {
     packQty,
@@ -101,13 +100,13 @@ export function splitUrbanBarPrice(
   const vatTl = /\s*TL\s*$/i;
 
   if (vatTr.test(raw)) {
-    return { amount: raw.replace(vatTr, "").trim(), vat: "TL" };
+    return { amount: raw.replace(vatTr, "").trim(), vat: "" };
   }
   if (vatEn.test(raw)) {
-    return { amount: raw.replace(vatEn, "").trim(), vat: "TL" };
+    return { amount: raw.replace(vatEn, "").trim(), vat: "" };
   }
   if (vatTl.test(raw)) {
-    return { amount: raw.replace(vatTl, "").trim(), vat: "TL" };
+    return { amount: raw.replace(vatTl, "").trim(), vat: "" };
   }
-  return { amount: raw, vat: "TL" };
+  return { amount: raw, vat: "" };
 }

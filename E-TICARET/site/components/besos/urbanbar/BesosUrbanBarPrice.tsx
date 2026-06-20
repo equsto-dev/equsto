@@ -53,7 +53,9 @@ export default function BesosUrbanBarPrice({
         {display.amount}
         <span className={unitClass}>{display.unitSuffix}</span>
       </span>
-      <span className={packClass}>{display.secondaryLine}</span>
+      {display.secondaryLine ? (
+        <span className={packClass}>{display.secondaryLine}</span>
+      ) : null}
     </div>
   );
 }

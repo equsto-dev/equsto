@@ -32,18 +32,16 @@
     if (!p) return opts.fallback || "";
     var formatted = formatEurKdvDahil(p.fiyatEurKdvDahil);
     if (!formatted) return opts.fallback || "";
-    var kdvNote = opts.hideKdv ? "" : " TL";
     if (opts.style === "html") {
       return (
         '<span class="bes-price">' +
-        '<strong>' +
+        "<strong>" +
         formatted +
         "</strong>" +
-        (kdvNote ? '<span class="bes-price-kdv">' + kdvNote + "</span>" : "") +
         "</span>"
       );
     }
-    return formatted + kdvNote;
+    return formatted;
   }
 
   window.EqBesosPricing = {
