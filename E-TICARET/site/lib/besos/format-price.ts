@@ -1,5 +1,4 @@
 import type { BesosLocale } from "./locale";
-import { besosUi } from "./ui-strings";
 import type { BesosProduct } from "./types";
 
 /** 8221.5 → "8.221,50 €" */
@@ -20,9 +19,8 @@ export function getBesosPricing(product: BesosProduct | null | undefined) {
   return null;
 }
 
-export function besosPriceLabel(product: BesosProduct, locale: BesosLocale = "tr"): string {
+export function besosPriceLabel(product: BesosProduct, _locale: BesosLocale = "tr"): string {
   const p = getBesosPricing(product);
   if (!p) return "";
-  const formatted = formatEurKdvDahil(p.fiyatEurKdvDahil);
-  return formatted ? `${formatted} ${besosUi("priceVatIncluded", locale)}` : "";
+  return formatEurKdvDahil(p.fiyatEurKdvDahil);
 }

@@ -131,7 +131,7 @@ function pricingFromGbp(gbpInclVat, gbpTry, eurTry, satisOran) {
   const satisEur = Math.round(((satisGbp * gbpTry) / eurTry) * 100) / 100;
   const fiyatTl = Math.round(satisGbp * gbpTry);
   return {
-    price: `₺${fiyatTl.toLocaleString("tr-TR")} TL`,
+    price: `₺${fiyatTl.toLocaleString("tr-TR")}`,
     fiyat_tl: fiyatTl,
     liste_fiyati_gbp: listeGbp,
     satis_fiyati_gbp: satisGbp,
