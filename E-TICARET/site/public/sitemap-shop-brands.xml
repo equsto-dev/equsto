@@ -433,6 +433,18 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://equsto.com/shop/marka/npicco</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/shop/marka/npicco</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
     <loc>https://equsto.com/shop/marka/vosco</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>

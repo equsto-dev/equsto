@@ -446,6 +446,7 @@
     senox: "Şenox",
     vosco: "Vosco",
     sparo: "Sparo",
+    npicco: "Npicco",
   };
 
   /**
@@ -487,6 +488,7 @@
     senox: { markaHub: true, facet: "Şenox" },
     vosco: { markaHub: true, facet: "Vosco" },
     sparo: { markaHub: true, facet: "Sparo" },
+    npicco: { markaHub: true, facet: "Npicco" },
     inoksan: { markaHub: true, facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
