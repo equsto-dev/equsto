@@ -2879,10 +2879,10 @@ html[data-theme="dark"] .cat-drawer.eq-mcat-drawer .eq-mcat-search-input {
   bottom: auto;
   height: auto;
   max-height: calc(100% - var(--eq-drill-top, 0px));
-  width: 240px;
+  width: var(--eq-drawer-drill-w);
   flex: 0 0 auto;
-  min-width: 240px;
-  max-width: 240px;
+  min-width: var(--eq-drawer-drill-w);
+  max-width: var(--eq-drawer-drill-w);
   align-self: flex-start;
   background: var(--eq-surface);
   border: 1px solid var(--eq-border-soft);
@@ -2910,6 +2910,7 @@ html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row >
   --eq-drawer-row-py: 6px;
   --eq-drawer-row-px: 16px;
   --eq-drawer-chev-slot: 48px; /* › sütunu — dallı/dallısız aynı metin hizası */
+  --eq-drawer-drill-w: 300px; /* flyout sütunu — "Endüstriyel Ocaklar" vb. tek satır */
 }
 .cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon {
   display: block;
