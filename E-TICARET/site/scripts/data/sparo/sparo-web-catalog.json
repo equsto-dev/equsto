@@ -1,0 +1,3399 @@
+{
+  "source": "sparo.com.tr",
+  "api": "https://sparo.com.tr/wp-json/wc/store/products",
+  "scraped_at": "2026-06-21T19:33:29.627Z",
+  "product_count": 41,
+  "variant_count": 108,
+  "products": [
+    {
+      "wc_id": 8509,
+      "name": "Gazlı Smoker",
+      "slug": "gazli-smoker",
+      "url": "https://sparo.com.tr/produit/gazli-smoker/",
+      "categories": [
+        {
+          "slug": "gas-smoker",
+          "name": "GAS SMOKER"
+        },
+        {
+          "slug": "gas-smoker-tr",
+          "name": "GAS SMOKER"
+        },
+        {
+          "slug": "smoker-izgara",
+          "name": "SMOKER IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Gaz yakıtlı",
+        "Yüksek ısı yalıtımlı",
+        "Duman odası sıcaklık göstergesi",
+        "Tüm iç ve dış gövdeler 430 kalite paslanmazdan imal edilir",
+        "4 kat raf",
+        "2/1 Gn küvet uyumlu raflar",
+        "Paslanmaz yuvarlak mil ızgara",
+        "Doğal hava akışı kontrolü",
+        "Duman çıkış kontrolü",
+        "Tekerlek veya sabit ayak seçeneği",
+        "2-3 saat pişirme ve tütsüleme özelliği",
+        "Maksimum 80 kg et kapasitesi",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR63.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "175",
+          "izgara_olcusu": "53×65 4 adet",
+          "dinlendirme_olcusu": "53×65 opsiyonel",
+          "agirlik_kg": "170"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Gas-fuel-smoking.png",
+          "local": "scripts/data/sparo/images/sparo-8509-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8509-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Gas-fuel-smoking-1.png",
+          "local": "scripts/data/sparo/images/sparo-8509-1.png",
+          "publicPath": "images/catalog/sparo/sparo-8509-1.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:07.805Z"
+    },
+    {
+      "wc_id": 8506,
+      "name": "Paslanmaz Gazlı smoker",
+      "slug": "paslanmaz-gazli-smoker",
+      "url": "https://sparo.com.tr/produit/paslanmaz-gazli-smoker/",
+      "categories": [
+        {
+          "slug": "gas-smoker",
+          "name": "GAS SMOKER"
+        },
+        {
+          "slug": "gas-smoker-inox-tr",
+          "name": "GAS SMOKER INOX"
+        },
+        {
+          "slug": "smoker-izgara",
+          "name": "SMOKER IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Gaz yakıtlı",
+        "Yüksek ısı yalıtımlı",
+        "Duman odası sıcaklık göstergesi",
+        "Tüm iç ve dış gövdeler 430 kalite paslanmazdan imal edilir",
+        "4 kat raf",
+        "2/1 Gn küvet uyumlu raflar",
+        "Paslanmaz yuvarlak mil ızgara",
+        "Doğal hava akışı kontrolü",
+        "Duman çıkış kontrolü",
+        "Tekerlek veya sabit ayak seçeneği",
+        "2-3 saat pişirme ve tütsüleme özelliği",
+        "Maksimum 80 kg et kapasitesi",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR62.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "175",
+          "izgara_olcusu": "53×65 4 adet",
+          "dinlendirme_olcusu": "53×65 opsiyonel",
+          "agirlik_kg": "170"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Inox-Gas-fuel-smoking.png",
+          "local": "scripts/data/sparo/images/sparo-8506-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8506-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:08.129Z"
+    },
+    {
+      "wc_id": 8503,
+      "name": "Robata ızgara",
+      "slug": "robata-izgara",
+      "url": "https://sparo.com.tr/produit/robata-izgara/",
+      "categories": [
+        {
+          "slug": "robata-grill-tr-robata-grill-tr",
+          "name": "ROBATA GRILL"
+        },
+        {
+          "slug": "robata-grill",
+          "name": "ROBATA GRILL"
+        },
+        {
+          "slug": "robata-grill-tr",
+          "name": "ROBATA GRILL"
+        },
+        {
+          "slug": "robata-izgara",
+          "name": "ROBATA IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz gövde",
+        "Her türlü kebap şişine uyumlu aparat",
+        "Tel ızgara ve Milli dinlendirme aparatları",
+        "Döküm ateş ızgarası",
+        "Kül çekmeceleri",
+        "Doğal hava perdesi",
+        "Su kabları"
+      ],
+      "variants": [
+        {
+          "kod": "SPR81.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 1 adet",
+          "dinlendirme_olcusu": "52×19 1 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR81.2",
+          "uzunluk_cm": "120",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 2 adet",
+          "dinlendirme_olcusu": "52×19 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR81.3",
+          "uzunluk_cm": "170",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 3 adet",
+          "dinlendirme_olcusu": "52×19 3 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR81.4",
+          "uzunluk_cm": "220",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 4 adet",
+          "dinlendirme_olcusu": "52×19 4 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Robata-grill-2.png",
+          "local": "scripts/data/sparo/images/sparo-8503-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8503-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:08.453Z"
+    },
+    {
+      "wc_id": 8499,
+      "name": "Paslanmaz Robata ızgara",
+      "slug": "paslanmaz-robata-izgara",
+      "url": "https://sparo.com.tr/produit/paslanmaz-robata-izgara/",
+      "categories": [
+        {
+          "slug": "robata-grill-tr-robata-grill-tr",
+          "name": "ROBATA GRILL"
+        },
+        {
+          "slug": "robata-grill-tr",
+          "name": "ROBATA GRILL"
+        },
+        {
+          "slug": "robata-grill-inox",
+          "name": "ROBATA GRILL INOX"
+        },
+        {
+          "slug": "robata-izgara",
+          "name": "ROBATA IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz gövde",
+        "Her türlü kebap şişine uyumlu aparat",
+        "Tel ızgara ve Milli dinlendirme aparatları",
+        "Döküm ateş ızgarası",
+        "Kül çekmeceleri",
+        "Doğal hava perdesi",
+        "Su kabları"
+      ],
+      "variants": [
+        {
+          "kod": "SPR80.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 1 adet",
+          "dinlendirme_olcusu": "52×19 1 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR80.2",
+          "uzunluk_cm": "120",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 2 adet",
+          "dinlendirme_olcusu": "52×19 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR80.3",
+          "uzunluk_cm": "170",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 3 adet",
+          "dinlendirme_olcusu": "52×19 3 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR80.4",
+          "uzunluk_cm": "220",
+          "genislik_cm": "40",
+          "yukseklik_cm": "65",
+          "izgara_olcusu": "52×19 4 adet",
+          "dinlendirme_olcusu": "52×19 4 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/ROBATA-GRILL-1.png",
+          "local": "scripts/data/sparo/images/sparo-8499-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8499-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:08.778Z"
+    },
+    {
+      "wc_id": 8495,
+      "name": "Alttan 2 Volanlı Mangal ve Sparo kömürlü fırın kombin",
+      "slug": "alttan-2-volanli-mangal-ve-sparo-komurlu-firin-kombin",
+      "url": "https://sparo.com.tr/produit/alttan-2-volanli-mangal-ve-sparo-komurlu-firin-kombin/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "forza-tr-forza-tr",
+          "name": "FORZA"
+        },
+        {
+          "slug": "forza-tr",
+          "name": "FORZA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [],
+      "variants": [
+        {
+          "kod": "SPR71.3",
+          "uzunluk_cm": "85",
+          "genislik_cm": "70",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR74.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 2 adet",
+          "dinlendirme_olcusu": "60X25 2 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Barbecuetwo-flywheels.png",
+          "local": "scripts/data/sparo/images/sparo-8495-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8495-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Alttan-2-Volanli-Mangal-ve-Sparo-komurlu-firin-kombi-scaled.jpg",
+          "local": "scripts/data/sparo/images/sparo-8495-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8495-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Alttan-2-Volanli-Mangal-ve-Sparo-komurlu-firin-kombin.png",
+          "local": "scripts/data/sparo/images/sparo-8495-2.png",
+          "publicPath": "images/catalog/sparo/sparo-8495-2.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:10.913Z"
+    },
+    {
+      "wc_id": 8492,
+      "name": "Paslanmaz Alttan 2 Volanlı Mangal",
+      "slug": "paslanmaz-alttan-2-volanli-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-alttan-2-volanli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "forza-tr",
+          "name": "FORZA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sökülebilir yağ kanalı",
+        "Döküm kül ızgarası",
+        "Yanma ve kül kontrol kolu",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR75.1",
+          "uzunluk_cm": "110",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 1 adet",
+          "dinlendirme_olcusu": "60X25 1 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR75.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 2 adet",
+          "dinlendirme_olcusu": "60X25 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR75.3",
+          "uzunluk_cm": "275",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 3 adet",
+          "dinlendirme_olcusu": "60X25 3 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Inox-Barbecue.png",
+          "local": "scripts/data/sparo/images/sparo-8492-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8492-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:11.228Z"
+    },
+    {
+      "wc_id": 8490,
+      "name": "Alttan 2 Volanlı Mangal",
+      "slug": "alttan-2-volanli-mangal",
+      "url": "https://sparo.com.tr/produit/alttan-2-volanli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "forza-tr",
+          "name": "FORZA"
+        },
+        {
+          "slug": "forza-tr-forza-tr",
+          "name": "FORZA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sökülebilir yağ kanalı",
+        "Döküm kül ızgarası",
+        "Yanma ve kül kontrol kolu",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR74.1",
+          "uzunluk_cm": "110",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 1 adet",
+          "dinlendirme_olcusu": "60X25 1 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR74.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 2 adet",
+          "dinlendirme_olcusu": "60X25 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR74.3",
+          "uzunluk_cm": "275",
+          "genislik_cm": "90",
+          "yukseklik_cm": "90/155",
+          "izgara_olcusu": "70X50 3 adet",
+          "dinlendirme_olcusu": "60X25 3 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/FORZA.png",
+          "local": "scripts/data/sparo/images/sparo-8490-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8490-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Alttan-2-Volanli-Mangal.jpg",
+          "local": "scripts/data/sparo/images/sparo-8490-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8490-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Volanli-Mangal.png",
+          "local": "scripts/data/sparo/images/sparo-8490-2.png",
+          "publicPath": "images/catalog/sparo/sparo-8490-2.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:12.742Z"
+    },
+    {
+      "wc_id": 8484,
+      "name": "Paslanmaz Set üstü steak mangal",
+      "slug": "paslanmaz-set-ustu-steak-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-set-ustu-steak-mangal/",
+      "categories": [
+        {
+          "slug": "kebap-ve-steak-izgarasi",
+          "name": "KEBAP VE STEAK IZGARASI"
+        },
+        {
+          "slug": "tornado-tr",
+          "name": "TORNADO"
+        },
+        {
+          "slug": "tornado-inox",
+          "name": "TORNADO INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Paslanmaz mil dinlendirme rafları",
+        "İç hazne ateş tuğla kaplı .",
+        "Kül çekmecesi",
+        "Gizli yağ kanalı ve yağ çekmecesi ."
+      ],
+      "variants": [
+        {
+          "kod": "SPR18.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "40×50 2 adet",
+          "dinlendirme_olcusu": "32×25 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR18.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "43×50 3 adet",
+          "dinlendirme_olcusu": "37×25 3 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR18.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "45×50 4 adet",
+          "dinlendirme_olcusu": "40×25 4 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR18.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "46×50 5 adet",
+          "dinlendirme_olcusu": "42×25 5 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Inox-Stovetop-steak-grill.png",
+          "local": "scripts/data/sparo/images/sparo-8484-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8484-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:13.087Z"
+    },
+    {
+      "wc_id": 8475,
+      "name": "Set üstü steak mangal",
+      "slug": "set-ustu-steak-mangal",
+      "url": "https://sparo.com.tr/produit/set-ustu-steak-mangal/",
+      "categories": [
+        {
+          "slug": "kebap-ve-steak-izgarasi",
+          "name": "KEBAP VE STEAK IZGARASI"
+        },
+        {
+          "slug": "tornado-tr-tornado-tr",
+          "name": "TORNADO"
+        },
+        {
+          "slug": "tornado-tr",
+          "name": "TORNADO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Paslanmaz mil dinlendirme rafları",
+        "İç hazne ateş tuğla kaplı .",
+        "Kül çekmecesi",
+        "Gizli yağ kanalı ve yağ çekmecesi .",
+        "Farklı renk seçenekleri"
+      ],
+      "variants": [
+        {
+          "kod": "SPR17.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "40×50 2 adet",
+          "dinlendirme_olcusu": "32×25 2 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR17.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "43×50 3 adet",
+          "dinlendirme_olcusu": "37×25 3 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR17.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "45×50 4 adet",
+          "dinlendirme_olcusu": "40×25 4 adet",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR17.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30-65",
+          "izgara_olcusu": "46×50 5 adet",
+          "dinlendirme_olcusu": "42×25 5 adet",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/10/Stovetop-steak-grill.png",
+          "local": "scripts/data/sparo/images/sparo-8475-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8475-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:13.437Z"
+    },
+    {
+      "wc_id": 8349,
+      "name": "Paslanmaz Sparo kömürlü fırın dolaplı",
+      "slug": "paslanmaz-sparo-komurlu-firin-dolapli",
+      "url": "https://sparo.com.tr/produit/paslanmaz-sparo-komurlu-firin-dolapli/",
+      "categories": [
+        {
+          "slug": "komurlu-firinlar",
+          "name": "KÖMÜRLÜ FIRINLAR"
+        },
+        {
+          "slug": "sparo-komurlu-dolapli-firin",
+          "name": "SPARO Kömürlü Dolaplı Fırın"
+        },
+        {
+          "slug": "sparo-komurlu-dolapli-firin-inox",
+          "name": "SPARO Kömürlü Dolaplı Fırın INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sabit yağ kanalı ve kül çekmecesi",
+        "3 kademeli yangın önleyici filitreli baca",
+        "Döküm kül ızgarası",
+        "Atık ısı kullanımında dinlendirme rafları",
+        "Yanma kontrol kolu",
+        "Isı yakalama ve duman çıkış ayarı",
+        "Kapı , baca kapak ve çekmecelerde farklı renk seçenekleri",
+        "Tekerlek veya sabit ayak seçeneği"
+      ],
+      "variants": [
+        {
+          "kod": "SPR73.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "70",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "55×33 2 adet",
+          "dinlendirme_olcusu": "1/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR73.2",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "55×66 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR73.3",
+          "uzunluk_cm": "85",
+          "genislik_cm": "70",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR73.4",
+          "uzunluk_cm": "85",
+          "genislik_cm": "85",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Inox-Sparo-cabin-coal-oven.png",
+          "local": "scripts/data/sparo/images/sparo-8349-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8349-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:13.729Z"
+    },
+    {
+      "wc_id": 8340,
+      "name": "Sparo kömürlü fırın dolaplı",
+      "slug": "sparo-komurlu-firin-dolapli",
+      "url": "https://sparo.com.tr/produit/sparo-komurlu-firin-dolapli/",
+      "categories": [
+        {
+          "slug": "komurlu-firinlar",
+          "name": "KÖMÜRLÜ FIRINLAR"
+        },
+        {
+          "slug": "sparo-komurlu-dolapli-firin",
+          "name": "SPARO Kömürlü Dolaplı Fırın"
+        },
+        {
+          "slug": "sparo-komurlu-dolapli-firin-tr",
+          "name": "SPARO Kömürlü Dolaplı Fırın"
+        },
+        {
+          "slug": "sparokomurlu-firin-tr",
+          "name": "SPARO Kömürlü Fırın"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sabit yağ kanalı ve kül çekmecesi",
+        "3 kademeli yangın önleyici filitreli baca",
+        "Döküm kül ızgarası",
+        "Atık ısı kullanımında dinlendirme rafları",
+        "Yanma kontrol kolu",
+        "Isı yakalama ve duman çıkış ayarı",
+        "Kapı , baca kapak ve çekmecelerde farklı renk seçenekleri",
+        "Tekerlek veya sabit ayak seçeneği"
+      ],
+      "variants": [
+        {
+          "kod": "SPR71.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "70",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "55×33 2 adet",
+          "dinlendirme_olcusu": "1/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR71.2",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "55×66 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR71.3",
+          "uzunluk_cm": "85",
+          "genislik_cm": "70",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR71.4",
+          "uzunluk_cm": "85",
+          "genislik_cm": "85",
+          "yukseklik_cm": "170",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Sparo-cabin-coal-oven.png",
+          "local": "scripts/data/sparo/images/sparo-8340-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8340-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Sparo-komurlu-firin-dolapl-scaled.jpg",
+          "local": "scripts/data/sparo/images/sparo-8340-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8340-1.jpg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:14.445Z"
+    },
+    {
+      "wc_id": 8337,
+      "name": "Paslanmaz Sparo kömürlü fırın",
+      "slug": "paslanmaz-sparo-komurlu-firin",
+      "url": "https://sparo.com.tr/produit/paslanmaz-sparo-komurlu-firin/",
+      "categories": [
+        {
+          "slug": "komurlu-firinlar",
+          "name": "KÖMÜRLÜ FIRINLAR"
+        },
+        {
+          "slug": "sparokomurlu-firin-tr",
+          "name": "SPARO Kömürlü Fırın"
+        },
+        {
+          "slug": "sparo-komurlu-firin-inox",
+          "name": "SPARO Kömürlü Fırın INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sabit yağ kanalı ve kül çekmecesi",
+        "3 kademeli yangın önleyici filitreli baca",
+        "Döküm kül ızgarası",
+        "Atık ısı kullanımında dinlendirme rafları",
+        "Yanma kontrol kolu",
+        "Isı yakalama ve duman çıkış ayarı",
+        "Kapı , baca kapak ve çekmecelerde farklı renk seçenekleri",
+        "Yükseklik ayarlı ayaklar"
+      ],
+      "variants": [
+        {
+          "kod": "SPR72.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "70",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "55×33 2 adet",
+          "dinlendirme_olcusu": "1/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR72.2",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "55×66 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR72.3",
+          "uzunluk_cm": "85",
+          "genislik_cm": "70",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR72.4",
+          "uzunluk_cm": "85",
+          "genislik_cm": "85",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Inox-Sparo-coal-oven.png",
+          "local": "scripts/data/sparo/images/sparo-8337-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8337-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/InoxSparocoaloven.jpg",
+          "local": "scripts/data/sparo/images/sparo-8337-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8337-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Inox-Sparo-coal.jpg",
+          "local": "scripts/data/sparo/images/sparo-8337-2.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8337-2.jpg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:15.444Z"
+    },
+    {
+      "wc_id": 8336,
+      "name": "Sparo kömürlü fırın",
+      "slug": "sparo-komurlu-firin",
+      "url": "https://sparo.com.tr/produit/sparo-komurlu-firin/",
+      "categories": [
+        {
+          "slug": "komurlu-firinlar",
+          "name": "KÖMÜRLÜ FIRINLAR"
+        },
+        {
+          "slug": "sparo-komurlu-firin",
+          "name": "SPARO Kömürlü Fırın"
+        },
+        {
+          "slug": "sparokomurlu-firin-tr",
+          "name": "SPARO Kömürlü Fırın"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Sökülebilir ateş haznesi.",
+        "Paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Sabit yağ kanalı ve kül çekmecesi",
+        "3 kademeli yangın önleyici filitreli baca",
+        "Döküm kül ızgarası",
+        "Atık ısı kullanımında dinlendirme rafları",
+        "Yanma kontrol kolu",
+        "Isı yakalama ve duman çıkış ayarı",
+        "Kapı , baca kapak ve çekmecelerde farklı renk seçenekleri",
+        "Yükseklik ayarlı ayaklar"
+      ],
+      "variants": [
+        {
+          "kod": "SPR70.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "70",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "55×33 2 adet",
+          "dinlendirme_olcusu": "1/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR70.2",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "55×66 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR70.3",
+          "uzunluk_cm": "85",
+          "genislik_cm": "70",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        },
+        {
+          "kod": "SPR70.4",
+          "uzunluk_cm": "85",
+          "genislik_cm": "85",
+          "yukseklik_cm": "115",
+          "izgara_olcusu": "66X55 2 adet",
+          "dinlendirme_olcusu": "2/1 Gn",
+          "agirlik_kg": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Sparo-coal-oven.png",
+          "local": "scripts/data/sparo/images/sparo-8336-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8336-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Sparo-coal-oven.jpg",
+          "local": "scripts/data/sparo/images/sparo-8336-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8336-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Sparo-coal-oven-1.jpg",
+          "local": "scripts/data/sparo/images/sparo-8336-2.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8336-2.jpg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:16.370Z"
+    },
+    {
+      "wc_id": 8331,
+      "name": "Setüstü çok yönlü mangal",
+      "slug": "setustu-cok-yonlu-mangal",
+      "url": "https://sparo.com.tr/produit/setustu-cok-yonlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "versatil-tr-tr",
+          "name": "VERSATIL"
+        },
+        {
+          "slug": "versatil-tr",
+          "name": "VERSATIL"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Yükseklik ayarlı ayaklar",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türlü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "İsteğe bağlı manuel veya otomatik şiş çevirme çihazı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR14",
+          "uzunluk_cm": "200",
+          "genislik_cm": "90",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "48×63 2 adet 34×34 2 adet",
+          "dinlendirme_olcusu": "50×19 2 adet",
+          "agirlik_kg": "230"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Versatile-stovetop-barbecue.png",
+          "local": "scripts/data/sparo/images/sparo-8331-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8331-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Versatile-stovetop-barbecuesparo.jpeg",
+          "local": "scripts/data/sparo/images/sparo-8331-1.jpeg",
+          "publicPath": "images/catalog/sparo/sparo-8331-1.jpeg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/09/Versatile-stovetop-barbecue.jpeg",
+          "local": "scripts/data/sparo/images/sparo-8331-2.jpeg",
+          "publicPath": "images/catalog/sparo/sparo-8331-2.jpeg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:17.771Z"
+    },
+    {
+      "wc_id": 8324,
+      "name": "Inox 2 Asansörlü elips steak mangal",
+      "slug": "inox-2-asansorlu-elips-steak-mangal",
+      "url": "https://sparo.com.tr/produit/inox-2-asansorlu-elips-steak-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "bolide-inox",
+          "name": "BOLIDE INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "2 adet kömür arabası",
+        "1 adet sökülebilir dinlendirme rafı",
+        "Çevreleyen et askı demirleri"
+      ],
+      "variants": [
+        {
+          "kod": "SPR59",
+          "uzunluk_cm": "146",
+          "genislik_cm": "146",
+          "yukseklik_cm": "100/185",
+          "izgara_olcusu": "70×35 4 adet",
+          "dinlendirme_olcusu": "113*113",
+          "agirlik_kg": "420"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Inox-Ellipse-steak-barbecue-with-2-lifts.png",
+          "local": "scripts/data/sparo/images/sparo-8324-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8324-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:18.336Z"
+    },
+    {
+      "wc_id": 8321,
+      "name": "2 Asansörlü elips steak mangal",
+      "slug": "2-asansorlu-elips-steak-mangal",
+      "url": "https://sparo.com.tr/produit/2-asansorlu-elips-steak-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "bolittle-tr-tr-tr",
+          "name": "BOLITTLE"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "2 adet kömür arabası",
+        "1 adet sökülebilir dinlendirme rafı",
+        "Çevreleyen et askı demirleri"
+      ],
+      "variants": [
+        {
+          "kod": "SPR58",
+          "uzunluk_cm": "146",
+          "genislik_cm": "146",
+          "yukseklik_cm": "100/185",
+          "izgara_olcusu": "70×35 4 adet",
+          "dinlendirme_olcusu": "113*113",
+          "agirlik_kg": "420"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Ellipse-steak-barbecue-with-2-lifts.png",
+          "local": "scripts/data/sparo/images/sparo-8321-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8321-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:18.738Z"
+    },
+    {
+      "wc_id": 8307,
+      "name": "Modular kebap istasyonu",
+      "slug": "modular-kebap-istasyonu",
+      "url": "https://sparo.com.tr/produit/modular-kebap-istasyonu/",
+      "categories": [
+        {
+          "slug": "modular-station-tr-tr",
+          "name": "MODULAR STATION"
+        },
+        {
+          "slug": "modular-station",
+          "name": "MODULAR STATION"
+        },
+        {
+          "slug": "moduler-sistemler",
+          "name": "MODÜLER SİSTEMLER"
+        }
+      ],
+      "short_description": "",
+      "intro": "Ürün Özellikleri Otel mutfaklarında açık pişirme alanı olarak kullanılır 430 kalite paslanmaz ve boyalı gövde Kullanıcı isteğine göre kebap, yatık döner, asansörlü mangal, ve kabap ocağı uygulanabilir. Lütfen istasyon için gerekli ölçü ve üniteleri bildirin.",
+      "features": [
+        "Otel mutfaklarında açık pişirme alanı olarak kullanılır",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kullanıcı isteğine göre kebap, yatık döner, asansörlü mangal, ve kabap ocağı uygulanabilir.",
+        "Lütfen istasyon için gerekli ölçü ve üniteleri bildirin."
+      ],
+      "variants": [],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Modular-kebap-station.png",
+          "local": "scripts/data/sparo/images/sparo-8307-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8307-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/MODULAR.jpg",
+          "local": "scripts/data/sparo/images/sparo-8307-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8307-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Modular-kebap-station.jpg",
+          "local": "scripts/data/sparo/images/sparo-8307-2.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8307-2.jpg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:19.820Z"
+    },
+    {
+      "wc_id": 8290,
+      "name": "Set üstü kebap mangal",
+      "slug": "set-ustu-kebap-mangal",
+      "url": "https://sparo.com.tr/produit/set-ustu-kebap-mangal/",
+      "categories": [
+        {
+          "slug": "kebap-ve-steak-izgarasi",
+          "name": "KEBAP VE STEAK IZGARASI"
+        },
+        {
+          "slug": "rapido-tr-tr",
+          "name": "RAPIDO"
+        },
+        {
+          "slug": "rapido-tr",
+          "name": "RAPIDO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz gövde",
+        "Her türlü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR14.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "101×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "120"
+        },
+        {
+          "kod": "SPR14.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "101×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "150"
+        },
+        {
+          "kod": "SPR14.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "181×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "180"
+        },
+        {
+          "kod": "SPR14.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "231×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "200"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Stovetop-kebab-grill.png",
+          "local": "scripts/data/sparo/images/sparo-8290-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8290-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:20.340Z"
+    },
+    {
+      "wc_id": 8288,
+      "name": "Paslanmaz Set üstü kebap mangal",
+      "slug": "paslanmaz-set-ustu-kebap-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-set-ustu-kebap-mangal/",
+      "categories": [
+        {
+          "slug": "kebap-ve-steak-izgarasi",
+          "name": "KEBAP VE STEAK IZGARASI"
+        },
+        {
+          "slug": "rapido-tr-tr",
+          "name": "RAPIDO"
+        },
+        {
+          "slug": "rapido-inox",
+          "name": "RAPIDO INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "430 kalite paslanmaz gövde",
+        "Her türlü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR16.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "101×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "120"
+        },
+        {
+          "kod": "SPR16.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "101×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "150"
+        },
+        {
+          "kod": "SPR16.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "181×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "180"
+        },
+        {
+          "kod": "SPR16.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "65",
+          "yukseklik_cm": "35",
+          "izgara_olcusu": "231×43",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "200"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Inox-Stovetop-kebab-grill.png",
+          "local": "scripts/data/sparo/images/sparo-8288-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8288-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:20.711Z"
+    },
+    {
+      "wc_id": 8278,
+      "name": "Açık hava pişirme istasyonu",
+      "slug": "acik-hava-pisirme-istasyonu",
+      "url": "https://sparo.com.tr/produit/acik-hava-pisirme-istasyonu/",
+      "categories": [
+        {
+          "slug": "edera-tr-tr",
+          "name": "EDERA"
+        },
+        {
+          "slug": "edera-tr",
+          "name": "EDERA"
+        },
+        {
+          "slug": "special-izgaralar",
+          "name": "SPECIAL IZGARALAR"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Odun ve kömür ile kullanılır",
+        "2 adet pleyt ızgara",
+        "3 adet biftek ızgarası",
+        "1 adet odun kutusu",
+        "Et askı kancaları"
+      ],
+      "variants": [
+        {
+          "kod": "SPR120.1",
+          "uzunluk_cm": "150",
+          "genislik_cm": "150",
+          "yukseklik_cm": "225",
+          "izgara_olcusu": "",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "240"
+        },
+        {
+          "kod": "SPR120.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "200225",
+          "yukseklik_cm": "",
+          "izgara_olcusu": "",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "290"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Outdoor-cooking-station.png",
+          "local": "scripts/data/sparo/images/sparo-8278-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8278-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:21.070Z"
+    },
+    {
+      "wc_id": 8277,
+      "name": "5 li odunlu döner ocağı",
+      "slug": "5-li-odunlu-doner-ocagi",
+      "url": "https://sparo.com.tr/produit/5-li-odunlu-doner-ocagi/",
+      "categories": [
+        {
+          "slug": "crapico-tr-tr",
+          "name": "CRAPICO"
+        },
+        {
+          "slug": "diger-urunler",
+          "name": "DİĞER ÜRÜNLER"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Odun ve kömür ile kullanılır",
+        "Alev verici ile erken yanış imkanı sunar",
+        "430 kalite paslanmaz gövde",
+        "2 adet döner şiş",
+        "1 adet yağ tepsisi",
+        "Şiş boyları istenilen ölçülerde yapılabilir.",
+        "İç gövde tamamı ateş tuğlası",
+        "Yanma rafları döküm ızgarası",
+        "Yüksek ısı yalıtımlı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR110.1",
+          "uzunluk_cm": "50-62",
+          "genislik_cm": "80-100",
+          "yukseklik_cm": "105",
+          "izgara_olcusu": "66X66X4 1 adet",
+          "dinlendirme_olcusu": "86",
+          "agirlik_kg": "125"
+        },
+        {
+          "kod": "SPR110.2",
+          "uzunluk_cm": "50-62",
+          "genislik_cm": "80-100",
+          "yukseklik_cm": "125",
+          "izgara_olcusu": "66X66X4 1 adet",
+          "dinlendirme_olcusu": "105",
+          "agirlik_kg": "135"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/5-layer-wood-burning-doner-stove-1.png",
+          "local": "scripts/data/sparo/images/sparo-8277-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8277-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/5-layer-wood-burning-doner-stovesparo.jpg",
+          "local": "scripts/data/sparo/images/sparo-8277-1.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8277-1.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/5-layer-wood-burning-doner-stovesparotr.jpg",
+          "local": "scripts/data/sparo/images/sparo-8277-2.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8277-2.jpg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/5-layer-wood-burning-doner-stovetr.jpg",
+          "local": "scripts/data/sparo/images/sparo-8277-3.jpg",
+          "publicPath": "images/catalog/sparo/sparo-8277-3.jpg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:22.596Z"
+    },
+    {
+      "wc_id": 8270,
+      "name": "Paslanmaz demonte kuzu çevirme makinası",
+      "slug": "paslanmaz-demonte-kuzu-cevirme-makinasi",
+      "url": "https://sparo.com.tr/produit/paslanmaz-demonte-kuzu-cevirme-makinasi/",
+      "categories": [
+        {
+          "slug": "corderos-tr",
+          "name": "CORDEROS"
+        },
+        {
+          "slug": "corderos-tr-tr",
+          "name": "CORDEROS"
+        },
+        {
+          "slug": "diger-urunler",
+          "name": "DİĞER ÜRÜNLER"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "430 kalite paslanmaz gövde .",
+        "3-4 adet ahşap şiş.",
+        "1 adet yağ tepsisi",
+        "Şiş boyları istenilen ölçülerde yapılabilir.",
+        "Motor tipi : 230v / 40 w",
+        "Zincir ve dişli ile güç aktarımı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR100.1",
+          "uzunluk_cm": "40",
+          "genislik_cm": "30",
+          "yukseklik_cm": "150",
+          "izgara_olcusu": "132X50X7 1 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "90"
+        },
+        {
+          "kod": "SPR100.2",
+          "uzunluk_cm": "40",
+          "genislik_cm": "30",
+          "yukseklik_cm": "180",
+          "izgara_olcusu": "132X50X7 1 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "105"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Inox-disassembled-lamb-turning-machine.png",
+          "local": "scripts/data/sparo/images/sparo-8270-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8270-0.png"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Inox-disassembled-lamb-turning-machine.jpeg",
+          "local": "scripts/data/sparo/images/sparo-8270-1.jpeg",
+          "publicPath": "images/catalog/sparo/sparo-8270-1.jpeg"
+        },
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/08/Inox-disassembled-lamb-turnin-machine.jpeg",
+          "local": "scripts/data/sparo/images/sparo-8270-2.jpeg",
+          "publicPath": "images/catalog/sparo/sparo-8270-2.jpeg"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:23.562Z"
+    },
+    {
+      "wc_id": 8195,
+      "name": "Buzdolabı bölmeli mangal",
+      "slug": "buzdolabi-bolmeli-mangal-2",
+      "url": "https://sparo.com.tr/produit/buzdolabi-bolmeli-mangal-2/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "neon-tr-tr",
+          "name": "NEON"
+        },
+        {
+          "slug": "neon-inox",
+          "name": "NEON INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Buzdolabı bölmesi",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Katlanır servis rafı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR1.1",
+          "uzunluk_cm": "165",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "56×62 2 adet",
+          "dinlendirme_olcusu": "57×23 2 adet",
+          "agirlik_kg": "350"
+        },
+        {
+          "kod": "SPR1.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "73×62 adet",
+          "dinlendirme_olcusu": "74×23 2 adet",
+          "agirlik_kg": "390"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-refrigerator-compartment-and-elevator.png",
+          "local": "scripts/data/sparo/images/sparo-8195-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8195-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:23.971Z"
+    },
+    {
+      "wc_id": 8193,
+      "name": "Buzdolabı bölmeli mangal",
+      "slug": "buzdolabi-bolmeli-mangal",
+      "url": "https://sparo.com.tr/produit/buzdolabi-bolmeli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "neon-tr",
+          "name": "NEON"
+        },
+        {
+          "slug": "neon-tr-tr",
+          "name": "NEON"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Buzdolabı bölmesi",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Katlanır servis rafı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR2.1",
+          "uzunluk_cm": "165",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "56×62 2 adet",
+          "dinlendirme_olcusu": "57×23 2 adet",
+          "agirlik_kg": "350"
+        },
+        {
+          "kod": "SPR2.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "73×62 adet",
+          "dinlendirme_olcusu": "74×23 2 adet",
+          "agirlik_kg": "390"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-refrigerator-compartment-and-elevator-sapro.png",
+          "local": "scripts/data/sparo/images/sparo-8193-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8193-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:24.254Z"
+    },
+    {
+      "wc_id": 8192,
+      "name": "2 Asansörlü altı raflı mangal",
+      "slug": "2-asansorlu-alti-rafli-mangal",
+      "url": "https://sparo.com.tr/produit/2-asansorlu-alti-rafli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "punto-tr-tr",
+          "name": "PUNTO"
+        },
+        {
+          "slug": "punto-tr",
+          "name": "PUNTO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Katlanır servis rafı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "2 katlı tabak rafı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR7.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 2 adet",
+          "dinlendirme_olcusu": "57×19 2 adet",
+          "agirlik_kg": "230"
+        },
+        {
+          "kod": "SPR7.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "48×62 adet",
+          "dinlendirme_olcusu": "50×19 2 adet",
+          "agirlik_kg": "350"
+        },
+        {
+          "kod": "SPR7.3",
+          "uzunluk_cm": "165",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 adet",
+          "dinlendirme_olcusu": "57×19 2 adet",
+          "agirlik_kg": "370"
+        },
+        {
+          "kod": "SPR7.4",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 adet",
+          "dinlendirme_olcusu": "47×19 2 adet",
+          "agirlik_kg": "410"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/BBQ-with-2-lifts-and-shelves-1.png",
+          "local": "scripts/data/sparo/images/sparo-8192-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8192-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:24.596Z"
+    },
+    {
+      "wc_id": 8191,
+      "name": "Kebap ve steak istasyonu",
+      "slug": "kebap-ve-steak-istasyonu",
+      "url": "https://sparo.com.tr/produit/kebap-ve-steak-istasyonu/",
+      "categories": [
+        {
+          "slug": "kebap-ve-steak-izgarasi",
+          "name": "KEBAP VE STEAK IZGARASI"
+        },
+        {
+          "slug": "vizyon-tr",
+          "name": "VİZYON"
+        },
+        {
+          "slug": "vizyon-trt-tr",
+          "name": "VİZYON"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Buzdolabı bölmesi",
+        "Temiz hava ve emiş davlunbazı",
+        "Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türlü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Ön kenar cam kaplı",
+        "Yükseklik ayarlı asansörlü ızgar",
+        "Şiş arabası",
+        "Kül arabası",
+        "Polietilen servis tablası"
+      ],
+      "variants": [
+        {
+          "kod": "SPR50",
+          "uzunluk_cm": "330",
+          "genislik_cm": "100",
+          "yukseklik_cm": "1050/240",
+          "izgara_olcusu": "53×65 1 adet",
+          "dinlendirme_olcusu": "208×42",
+          "agirlik_kg": "750"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Kebab-and-steak-station.png",
+          "local": "scripts/data/sparo/images/sparo-8191-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8191-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:24.895Z"
+    },
+    {
+      "wc_id": 8190,
+      "name": "Setüstü asansörlü mangal",
+      "slug": "setustu-asansorlu-mangal",
+      "url": "https://sparo.com.tr/produit/setustu-asansorlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "negro-tr",
+          "name": "NEGRO"
+        },
+        {
+          "slug": "negro-tr-tr",
+          "name": "NEGRO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Yükseklik ayarlı ayaklar",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türLü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "İsteğe bağlı manuel veya otomatik şiş çevirme çihazı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR6.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 1 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "150"
+        },
+        {
+          "kod": "SPR6.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "48×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "180"
+        },
+        {
+          "kod": "SPR6.3",
+          "uzunluk_cm": "165",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "200"
+        },
+        {
+          "kod": "SPR6.4",
+          "uzunluk_cm": "200",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "72×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "230"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-stove-top-lift-turkish-1.png",
+          "local": "scripts/data/sparo/images/sparo-8190-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8190-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:25.204Z"
+    },
+    {
+      "wc_id": 8189,
+      "name": "Setüstü asansörlü mangal1",
+      "slug": "setustu-asansorlu-mangal1-2",
+      "url": "https://sparo.com.tr/produit/setustu-asansorlu-mangal1-2/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "negro-tr-tr",
+          "name": "NEGRO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Yükseklik ayarlı ayaklar",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türLü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "İsteğe bağlı manuel veya otomatik şiş çevirme çihazı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR5.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 1 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "150"
+        },
+        {
+          "kod": "SPR5.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "48×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "180"
+        },
+        {
+          "kod": "SPR5.3",
+          "uzunluk_cm": "165",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "200"
+        },
+        {
+          "kod": "SPR5.4",
+          "uzunluk_cm": "200",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "72×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "230"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-stove-top-lift.png",
+          "local": "scripts/data/sparo/images/sparo-8189-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8189-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:25.587Z"
+    },
+    {
+      "wc_id": 8187,
+      "name": "Setüstü asansörlü mangal1",
+      "slug": "setustu-asansorlu-mangal1",
+      "url": "https://sparo.com.tr/produit/setustu-asansorlu-mangal1/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "negro-tr-tr",
+          "name": "NEGRO"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Yükseklik ayarlı ayaklar",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türLü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "İsteğe bağlı manuel veya otomatik şiş çevirme çihazı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR5.",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 1 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "150"
+        },
+        {
+          "kod": "SPR5.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "48×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "180"
+        },
+        {
+          "kod": "SPR5.3",
+          "uzunluk_cm": "165",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "55×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "200"
+        },
+        {
+          "kod": "SPR5.4",
+          "uzunluk_cm": "200",
+          "genislik_cm": "70",
+          "yukseklik_cm": "30/120",
+          "izgara_olcusu": "72×48 2 adet",
+          "dinlendirme_olcusu": "57×19 1 adet",
+          "agirlik_kg": "230"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-stove-top-lift-sparo-1.png",
+          "local": "scripts/data/sparo/images/sparo-8187-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8187-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:25.879Z"
+    },
+    {
+      "wc_id": 8186,
+      "name": "Balık mangal",
+      "slug": "balik-mangal",
+      "url": "https://sparo.com.tr/produit/balik-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "fisher-tr-tr",
+          "name": "FISHER"
+        },
+        {
+          "slug": "fisher-tr",
+          "name": "FISHER"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "*Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz Gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Her türlü kebap şişine uyumlu aparat",
+        "İç hazne ateş tuğla kaplı",
+        "Yağ un ve süzgeç çekmece rafı",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "İki kapaklı iki adet saklama dolabı",
+        "Kül arabası"
+      ],
+      "variants": [
+        {
+          "kod": "SPR55",
+          "uzunluk_cm": "330",
+          "genislik_cm": "100",
+          "yukseklik_cm": "105/240",
+          "izgara_olcusu": "172×76 1 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "650"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Fish-Barbeque.png",
+          "local": "scripts/data/sparo/images/sparo-8186-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8186-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:26.179Z"
+    },
+    {
+      "wc_id": 8185,
+      "name": "Katı yakıtlı tütsüleme",
+      "slug": "kati-yakitli-tutsuleme-2",
+      "url": "https://sparo.com.tr/produit/kati-yakitli-tutsuleme-2/",
+      "categories": [
+        {
+          "slug": "smoker-tr",
+          "name": "SMOKER"
+        },
+        {
+          "slug": "smoker-tr-tr",
+          "name": "SMOKER"
+        },
+        {
+          "slug": "smoker-izgara",
+          "name": "SMOKER IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Katı yakıt",
+        "Yüksek ısı yalıtımlı",
+        "Duman odası sıcaklık göstergesi",
+        "İç gövde 430 kalite paslanmaz",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "4 kat raf",
+        "2/1 Gn küvet uyumlu raflar",
+        "Paslanmaz yuvarlak mil ızgara",
+        "Doğal hava akışı kontrolü",
+        "Duman çıkış kontrolü",
+        "Tekerlek veya sabit ayak seçeneği",
+        "2-3 saat pişirme ve tütsüleme özelliği",
+        "Maksimum 80 kg et kapasitesi",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR61.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "175",
+          "izgara_olcusu": "53×65 4 adet",
+          "dinlendirme_olcusu": "53×65 opsiyonel",
+          "agirlik_kg": "170"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Solid-fuel-smoking.png",
+          "local": "scripts/data/sparo/images/sparo-8185-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8185-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:26.511Z"
+    },
+    {
+      "wc_id": 8184,
+      "name": "Buzdolabı bölmeli davlunbazlı mangal",
+      "slug": "buzdolabi-bolmeli-davlunbazli-mangal",
+      "url": "https://sparo.com.tr/produit/buzdolabi-bolmeli-davlunbazli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "neon-tr-tr",
+          "name": "NEON"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Emiş sistemli filitreli davlunbaz",
+        "3 taraflı cam duvar",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Ekstra eğimli balık ızgarası",
+        "Manuel et çevirme aparatı",
+        "Dinlenmeye takılabilen şiş aparatı",
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Katlanır servis rafı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR3.1",
+          "uzunluk_cm": "165",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "56×62 2 adet",
+          "dinlendirme_olcusu": "57×23 2 adet",
+          "agirlik_kg": "380"
+        },
+        {
+          "kod": "SPR3.2",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85-105",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "73×62 adet",
+          "dinlendirme_olcusu": "74×23 2 adet",
+          "agirlik_kg": "430"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-with-hood-and-refrigerator-compartment-1.png",
+          "local": "scripts/data/sparo/images/sparo-8184-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8184-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:26.796Z"
+    },
+    {
+      "wc_id": 8183,
+      "name": "Katı yakıtlı tütsüleme",
+      "slug": "kati-yakitli-tutsuleme",
+      "url": "https://sparo.com.tr/produit/kati-yakitli-tutsuleme/",
+      "categories": [
+        {
+          "slug": "smoker-tr-tr",
+          "name": "SMOKER"
+        },
+        {
+          "slug": "smoker-inox",
+          "name": "SMOKER INOX"
+        },
+        {
+          "slug": "smoker-izgara",
+          "name": "SMOKER IZGARA"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Katı yakıt",
+        "Yüksek ısı yalıtımlı",
+        "Duman odası sıcaklık göstergesi",
+        "Tüm iç ve dış gövdeler 430 kalite paslanmazdan imal edilir",
+        "4 kat raf",
+        "2/1 Gn küvet uyumlu raflar",
+        "Paslanmaz yuvarlak mil ızgara",
+        "Doğal hava akışı kontrolü",
+        "Duman çıkış kontrolü",
+        "Tekerlek veya sabit ayak seçeneği",
+        "2-3 saat pişirme ve tütsüleme özelliği",
+        "Maksimum 80 kg et kapasitesi",
+        "Kül çekmecesi"
+      ],
+      "variants": [
+        {
+          "kod": "SPR60.1",
+          "uzunluk_cm": "70",
+          "genislik_cm": "85",
+          "yukseklik_cm": "175",
+          "izgara_olcusu": "53×65 4 adet",
+          "dinlendirme_olcusu": "53×65 opsiyonel",
+          "agirlik_kg": "170"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Solid-fuel-smoking-sparo.png",
+          "local": "scripts/data/sparo/images/sparo-8183-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8183-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:27.064Z"
+    },
+    {
+      "wc_id": 8182,
+      "name": "Paslanmaz camlı alttan volanlı tek asansörlü mangal",
+      "slug": "paslanmaz-camli-alttan-volanli-tek-asansorlu-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-camli-alttan-volanli-tek-asansorlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "lotti-tr-tr",
+          "name": "LOTTI"
+        },
+        {
+          "slug": "lotti-glazed-inox",
+          "name": "LOTTI GLAZED INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "2 katlı tabak rafı",
+        "Yalnızca SPR 13.1 için asansörlü dinlendirme rafı",
+        "3 cephe camlı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR13.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "80×62 2 adet",
+          "dinlendirme_olcusu": "79×30 1 adet",
+          "agirlik_kg": "260"
+        },
+        {
+          "kod": "SPR13.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "51×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "320"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/LOTTI-GLAZED-INOX-SPR-13.1-1.png",
+          "local": "scripts/data/sparo/images/sparo-8182-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8182-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:27.347Z"
+    },
+    {
+      "wc_id": 8180,
+      "name": "Inox 4 Asansörlü elips steak mangal",
+      "slug": "inox-4-asansorlu-elips-steak-mangal",
+      "url": "https://sparo.com.tr/produit/inox-4-asansorlu-elips-steak-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "bolide-tr",
+          "name": "BOLIDE"
+        },
+        {
+          "slug": "bolide-inox",
+          "name": "BOLIDE INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Arka cephenin tamamı tabak koyma rafı",
+        "4 adet sökülebilir dinlendirme rafı",
+        "Çevreleyen et askı demirleri",
+        "2 katlı 3 adet tabak rafı",
+        "Çift taraflı servis çıkış hattı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR57",
+          "uzunluk_cm": "320",
+          "genislik_cm": "100-215",
+          "yukseklik_cm": "90/185",
+          "izgara_olcusu": "100×35 4 adet",
+          "dinlendirme_olcusu": "155×155",
+          "agirlik_kg": "750"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Inox-Ellipse-steak-barbecue-with-4-lifts.png",
+          "local": "scripts/data/sparo/images/sparo-8180-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8180-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:27.648Z"
+    },
+    {
+      "wc_id": 8179,
+      "name": "Setüstü asansörlü mangal sistem",
+      "slug": "setustu-asansorlu-mangal-sistem",
+      "url": "https://sparo.com.tr/produit/setustu-asansorlu-mangal-sistem/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "vizor-tr",
+          "name": "VIZOR"
+        },
+        {
+          "slug": "vizor-tr-tr",
+          "name": "VIZOR"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Ateş haznesi üzerine kolayca monte edilir.",
+        "Paslanmaz Gövde",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "Dinlendirme rafı",
+        "Her türlü kebap şişine uyumlu aparat",
+        "Yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "İsteğe bağlı manuel veya otomatik şiş çevirme çihazı",
+        "Et askı çubukları"
+      ],
+      "variants": [
+        {
+          "kod": "SPR20.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "70",
+          "yukseklik_cm": "100",
+          "izgara_olcusu": "50×60 1 adet",
+          "dinlendirme_olcusu": "57×28 1 adet",
+          "agirlik_kg": "90"
+        },
+        {
+          "kod": "SPR20.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "100",
+          "izgara_olcusu": "48×60 2 adet",
+          "dinlendirme_olcusu": "50×28 2 adet",
+          "agirlik_kg": "140"
+        },
+        {
+          "kod": "SPR20.3",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "100",
+          "izgara_olcusu": "55×60 2 adet",
+          "dinlendirme_olcusu": "57×28 2 adet",
+          "agirlik_kg": "155"
+        },
+        {
+          "kod": "SPR20.4",
+          "uzunluk_cm": "150",
+          "genislik_cm": "70",
+          "yukseklik_cm": "100",
+          "izgara_olcusu": "72×60 2 adet",
+          "dinlendirme_olcusu": "74×28 2 adet",
+          "agirlik_kg": "180"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Barbecue-system-with-cooktop-lift.png",
+          "local": "scripts/data/sparo/images/sparo-8179-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8179-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:27.989Z"
+    },
+    {
+      "wc_id": 8178,
+      "name": "Paslanmaz alttan volanlı tek asansörlü mangal",
+      "slug": "paslanmaz-alttan-volanli-tek-asansorlu-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-alttan-volanli-tek-asansorlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "lotti-tr-tr",
+          "name": "LOTTI"
+        },
+        {
+          "slug": "lotti-inox",
+          "name": "LOTTI INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "2 katlı tabak rafı",
+        "Yalnızca SPR 11.1 için asansörlü dinlendirme rafı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR11.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "80×62 2 adet",
+          "dinlendirme_olcusu": "79×30 1 adet",
+          "agirlik_kg": "230"
+        },
+        {
+          "kod": "SPR11.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "51×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "280"
+        },
+        {
+          "kod": "SPR11.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "75×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "360"
+        },
+        {
+          "kod": "SPR11.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "64×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "430"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/LOTTI-INOX-SPR-11.1-1.png",
+          "local": "scripts/data/sparo/images/sparo-8178-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8178-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:28.271Z"
+    },
+    {
+      "wc_id": 8177,
+      "name": "Paslanmaz 2 Asansörlü altı raflı mangal",
+      "slug": "paslanmaz-2-asansorlu-alti-rafli-mangal",
+      "url": "https://sparo.com.tr/produit/paslanmaz-2-asansorlu-alti-rafli-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "punto-tr-tr",
+          "name": "PUNTO"
+        },
+        {
+          "slug": "punto-inox",
+          "name": "PUNTO INOX"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Katlanır servis rafı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "2 katlı tabak rafı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR8.1",
+          "uzunluk_cm": "100",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 2 adet",
+          "dinlendirme_olcusu": "57×19 2 adet",
+          "agirlik_kg": "230"
+        },
+        {
+          "kod": "SPR8.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "48×62 adet",
+          "dinlendirme_olcusu": "50×19 2 adet",
+          "agirlik_kg": "350"
+        },
+        {
+          "kod": "SPR8.3",
+          "uzunluk_cm": "165",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 adet",
+          "dinlendirme_olcusu": "57×19 2 adet",
+          "agirlik_kg": "370"
+        },
+        {
+          "kod": "SPR8.4",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85",
+          "yukseklik_cm": "90/180",
+          "izgara_olcusu": "55×62 adet",
+          "dinlendirme_olcusu": "47×19 2 adet",
+          "agirlik_kg": "410"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Inox-BBQ-with-2-lifts-and-shelves.png",
+          "local": "scripts/data/sparo/images/sparo-8177-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8177-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:28.645Z"
+    },
+    {
+      "wc_id": 8176,
+      "name": "Alttan volanlı tek asansörlü mangal",
+      "slug": "alttan-volanli-tek-asansorlu-mangal",
+      "url": "https://sparo.com.tr/produit/alttan-volanli-tek-asansorlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "lotti-tr",
+          "name": "LOTTI"
+        },
+        {
+          "slug": "lotti-tr-tr",
+          "name": "LOTTI"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Gizli yağ kanalı ve yağ çekmecesi",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "2 katlı tabak rafı",
+        "Yalnızca SPR 10.1 için asansörlü dinlendirme rafı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR10.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "80×62 2 adet",
+          "dinlendirme_olcusu": "79×30 1 adet",
+          "agirlik_kg": "230"
+        },
+        {
+          "kod": "SPR10.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "51×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "280"
+        },
+        {
+          "kod": "SPR10.3",
+          "uzunluk_cm": "200",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "75×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "360"
+        },
+        {
+          "kod": "SPR10.4",
+          "uzunluk_cm": "250",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "64×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "430"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Single-elevator-barbecue-with-bottom-fly-wheel.png",
+          "local": "scripts/data/sparo/images/sparo-8176-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8176-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:28.947Z"
+    },
+    {
+      "wc_id": 8175,
+      "name": "4 Asansörlü elips steak mangal",
+      "slug": "4-asansorlu-elips-steak-mangal",
+      "url": "https://sparo.com.tr/produit/4-asansorlu-elips-steak-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "bolide-tr",
+          "name": "BOLIDE"
+        },
+        {
+          "slug": "bolide-tr-bolide-tr",
+          "name": "BOLIDE"
+        }
+      ],
+      "short_description": "",
+      "intro": ">",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "Yükseklik ayarlı asansörlü ızgara",
+        "Arka cephenin tamamı tabak koyma rafı",
+        "4 adet sökülebilir dinlendirme rafı",
+        "Çevreleyen et askı demirleri",
+        "2 katlı 3 adet tabak rafı",
+        "Çift taraflı servis çıkış hattı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR56",
+          "uzunluk_cm": "320",
+          "genislik_cm": "100-215",
+          "yukseklik_cm": "90/185",
+          "izgara_olcusu": "100×35 4 adet",
+          "dinlendirme_olcusu": "155×155",
+          "agirlik_kg": "750"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/Ellipse-steak-barbecue-with-4-lifts.png",
+          "local": "scripts/data/sparo/images/sparo-8175-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8175-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:29.254Z"
+    },
+    {
+      "wc_id": 8101,
+      "name": "Camlı alttan volanlı tek asansörlü mangal",
+      "slug": "camli-alttan-volanli-tek-asansorlu-mangal",
+      "url": "https://sparo.com.tr/produit/camli-alttan-volanli-tek-asansorlu-mangal/",
+      "categories": [
+        {
+          "slug": "asansorlu-izgara",
+          "name": "ASANSÖRLÜ IZGARA"
+        },
+        {
+          "slug": "lotti-tr-tr",
+          "name": "LOTTI"
+        },
+        {
+          "slug": "lotti-glazed",
+          "name": "LOTTI GLAZED"
+        }
+      ],
+      "short_description": "",
+      "intro": "",
+      "features": [
+        "Yüksek ısı yalıtımlı",
+        "Tekerlek veya sabit ayak seçeneği",
+        "Makine zinciri ile asansöre güç aktarımı",
+        "430 kalite paslanmaz ve boyalı gövde",
+        "Her türLü kebap şişine uyumlu aparat",
+        "Kanal, mil ve kare ızgara seçenekleri",
+        "İç hazne ateş tuğla kaplı",
+        "*Gizli yağ kanalı ve yağ çekmecesi",
+        "*Yükseklik ayarlı asansörlü ızgara",
+        "Kül çekmecesi",
+        "*2 katlı tabak rafı",
+        "Yalnızca SPR 12.1 için asansörlü dinlendirme rafı",
+        "3 cephe camlı"
+      ],
+      "variants": [
+        {
+          "kod": "SPR12.1",
+          "uzunluk_cm": "120",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "80×62 2 adet",
+          "dinlendirme_olcusu": "79×30 1 adet",
+          "agirlik_kg": "260"
+        },
+        {
+          "kod": "SPR12.2",
+          "uzunluk_cm": "150",
+          "genislik_cm": "85",
+          "yukseklik_cm": "100/160",
+          "izgara_olcusu": "51×62 adet",
+          "dinlendirme_olcusu": "",
+          "agirlik_kg": "320"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://sparo.com.tr/wp-content/uploads/2024/05/LOTTI-GLAZED-SPR-12.1-1.png",
+          "local": "scripts/data/sparo/images/sparo-8101-0.png",
+          "publicPath": "images/catalog/sparo/sparo-8101-0.png"
+        }
+      ],
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ".",
+        "currency_thousand_separator": ",",
+        "currency_prefix": "$",
+        "currency_suffix": ""
+      },
+      "scraped_at": "2026-06-21T19:33:29.626Z"
+    }
+  ]
+}

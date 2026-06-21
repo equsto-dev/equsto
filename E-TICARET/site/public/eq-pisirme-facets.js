@@ -30,6 +30,7 @@
     "elektrikli-setustu-dinlendirme-ocagi": "ocaklar",
     "yer-izgaralari": "izgaralar",
     "sanayi-tipi-izgaralar": "izgaralar",
+    "kati-yakitli-izgaralar": "izgaralar",
     izgaralar: "izgaralar",
     "sulu-izgaralar": "izgaralar",
     "gazli-izgaralar": "izgaralar",

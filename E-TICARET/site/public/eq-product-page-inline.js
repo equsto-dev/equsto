@@ -1140,6 +1140,7 @@ window.searchFilter = window.searchFilter || function () {};
     var CAT_RAIL_LABEL = {
       "sanayi-ocaklari": "Ocak",
       "sanayi-tipi-izgaralar": "Izgara",
+      "kati-yakitli-izgaralar": "Izgara",
       "kuzineler": "Kuzine",
       "fritozler": "Fritöz",
       "doner-ocaklari-": "Döner Ocağı",

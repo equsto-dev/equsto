@@ -83,7 +83,7 @@
         { label: "Kuzineler", tip: "kuzineler" },
         { label: "Fritözler", tip: "fritozler" },
         { label: "Döner Ocakları", tip: "doner-ocaklari" },
-        { label: "Tost Makineleri", tip: "tost-makineleri" },
+        { label: "Izgaralar", labelKey: "nav.sub.kati_yakitli_izgaralar", tip: "kati-yakitli-izgaralar" },
         { label: "Piliç Çevirme", tip: "pilic-cevirme-makineleri" },
       ],
     },
@@ -843,13 +843,23 @@
       colEl.appendChild(body);
     }
 
-    /** frame = stack[fi]; highlightChildLabel = stack[fi+1].title (varsa). */
+  /** Flyout drill sütun genişliği (theme.css --eq-drawer-drill-w ile senkron). */
+  function __eqDrawerDrillW() {
+    var drawer = document.getElementById("catDrawer");
+    if (drawer && typeof getComputedStyle === "function") {
+      var w = parseFloat(getComputedStyle(drawer).getPropertyValue("--eq-drawer-drill-w"));
+      if (w > 0) return w;
+    }
+    return 300;
+  }
+
+  /** frame = stack[fi]; highlightChildLabel = stack[fi+1].title (varsa). */
     function appendMegaDrillColumn(rowEl, frame, fi, highlightChildLabel) {
       var col = el("div", { class: "eq-drawer-column eq-drawer-column--mega" });
       if (__eqIsMobileNav()) {
         col.classList.add("eq-drawer-column--mobile-panel");
       } else {
-        col.style.left = "calc(100% + " + fi * 240 + "px)";
+        col.style.left = "calc(100% + " + fi * __eqDrawerDrillW() + "px)";
         var drillTop = typeof frame.__top === "number" && frame.__top > 0 ? frame.__top : 0;
         col.style.top = drillTop + "px";
         col.style.setProperty("--eq-drill-top", drillTop + "px");

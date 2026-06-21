@@ -1,0 +1,50 @@
+# Sparo web katalog
+
+- Kaynak: https://sparo.com.tr/wp-json/wc/store/products
+- Ürün sayfası: 41
+- Varyant satırı (tablo): 108
+- Görseller: indirildi
+- Tarih: 2026-06-21T19:33:29.626Z
+
+## Ürünler
+- Gazlı Smoker (1 model) — https://sparo.com.tr/produit/gazli-smoker/
+- Paslanmaz Gazlı smoker (1 model) — https://sparo.com.tr/produit/paslanmaz-gazli-smoker/
+- Robata ızgara (4 model) — https://sparo.com.tr/produit/robata-izgara/
+- Paslanmaz Robata ızgara (4 model) — https://sparo.com.tr/produit/paslanmaz-robata-izgara/
+- Alttan 2 Volanlı Mangal ve Sparo kömürlü fırın kombin (2 model) — https://sparo.com.tr/produit/alttan-2-volanli-mangal-ve-sparo-komurlu-firin-kombin/
+- Paslanmaz Alttan 2 Volanlı Mangal (3 model) — https://sparo.com.tr/produit/paslanmaz-alttan-2-volanli-mangal/
+- Alttan 2 Volanlı Mangal (3 model) — https://sparo.com.tr/produit/alttan-2-volanli-mangal/
+- Paslanmaz Set üstü steak mangal (4 model) — https://sparo.com.tr/produit/paslanmaz-set-ustu-steak-mangal/
+- Set üstü steak mangal (4 model) — https://sparo.com.tr/produit/set-ustu-steak-mangal/
+- Paslanmaz Sparo kömürlü fırın dolaplı (4 model) — https://sparo.com.tr/produit/paslanmaz-sparo-komurlu-firin-dolapli/
+- Sparo kömürlü fırın dolaplı (4 model) — https://sparo.com.tr/produit/sparo-komurlu-firin-dolapli/
+- Paslanmaz Sparo kömürlü fırın (4 model) — https://sparo.com.tr/produit/paslanmaz-sparo-komurlu-firin/
+- Sparo kömürlü fırın (4 model) — https://sparo.com.tr/produit/sparo-komurlu-firin/
+- Setüstü çok yönlü mangal (1 model) — https://sparo.com.tr/produit/setustu-cok-yonlu-mangal/
+- Inox 2 Asansörlü elips steak mangal (1 model) — https://sparo.com.tr/produit/inox-2-asansorlu-elips-steak-mangal/
+- 2 Asansörlü elips steak mangal (1 model) — https://sparo.com.tr/produit/2-asansorlu-elips-steak-mangal/
+- Modular kebap istasyonu (1 model) — https://sparo.com.tr/produit/modular-kebap-istasyonu/
+- Set üstü kebap mangal (4 model) — https://sparo.com.tr/produit/set-ustu-kebap-mangal/
+- Paslanmaz Set üstü kebap mangal (4 model) — https://sparo.com.tr/produit/paslanmaz-set-ustu-kebap-mangal/
+- Açık hava pişirme istasyonu (2 model) — https://sparo.com.tr/produit/acik-hava-pisirme-istasyonu/
+- 5 li odunlu döner ocağı (2 model) — https://sparo.com.tr/produit/5-li-odunlu-doner-ocagi/
+- Paslanmaz demonte kuzu çevirme makinası (2 model) — https://sparo.com.tr/produit/paslanmaz-demonte-kuzu-cevirme-makinasi/
+- Buzdolabı bölmeli mangal (2 model) — https://sparo.com.tr/produit/buzdolabi-bolmeli-mangal-2/
+- Buzdolabı bölmeli mangal (2 model) — https://sparo.com.tr/produit/buzdolabi-bolmeli-mangal/
+- 2 Asansörlü altı raflı mangal (4 model) — https://sparo.com.tr/produit/2-asansorlu-alti-rafli-mangal/
+- Kebap ve steak istasyonu (1 model) — https://sparo.com.tr/produit/kebap-ve-steak-istasyonu/
+- Setüstü asansörlü mangal (4 model) — https://sparo.com.tr/produit/setustu-asansorlu-mangal/
+- Setüstü asansörlü mangal1 (4 model) — https://sparo.com.tr/produit/setustu-asansorlu-mangal1-2/
+- Setüstü asansörlü mangal1 (4 model) — https://sparo.com.tr/produit/setustu-asansorlu-mangal1/
+- Balık mangal (1 model) — https://sparo.com.tr/produit/balik-mangal/
+- Katı yakıtlı tütsüleme (1 model) — https://sparo.com.tr/produit/kati-yakitli-tutsuleme-2/
+- Buzdolabı bölmeli davlunbazlı mangal (2 model) — https://sparo.com.tr/produit/buzdolabi-bolmeli-davlunbazli-mangal/
+- Katı yakıtlı tütsüleme (1 model) — https://sparo.com.tr/produit/kati-yakitli-tutsuleme/
+- Paslanmaz camlı alttan volanlı tek asansörlü mangal (2 model) — https://sparo.com.tr/produit/paslanmaz-camli-alttan-volanli-tek-asansorlu-mangal/
+- Inox 4 Asansörlü elips steak mangal (1 model) — https://sparo.com.tr/produit/inox-4-asansorlu-elips-steak-mangal/
+- Setüstü asansörlü mangal sistem (4 model) — https://sparo.com.tr/produit/setustu-asansorlu-mangal-sistem/
+- Paslanmaz alttan volanlı tek asansörlü mangal (4 model) — https://sparo.com.tr/produit/paslanmaz-alttan-volanli-tek-asansorlu-mangal/
+- Paslanmaz 2 Asansörlü altı raflı mangal (4 model) — https://sparo.com.tr/produit/paslanmaz-2-asansorlu-alti-rafli-mangal/
+- Alttan volanlı tek asansörlü mangal (4 model) — https://sparo.com.tr/produit/alttan-volanli-tek-asansorlu-mangal/
+- 4 Asansörlü elips steak mangal (1 model) — https://sparo.com.tr/produit/4-asansorlu-elips-steak-mangal/
+- Camlı alttan volanlı tek asansörlü mangal (2 model) — https://sparo.com.tr/produit/camli-alttan-volanli-tek-asansorlu-mangal/

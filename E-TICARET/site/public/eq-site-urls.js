@@ -445,6 +445,7 @@
     simag: "SIMAG",
     senox: "Şenox",
     vosco: "Vosco",
+    sparo: "Sparo",
   };
 
   /**
@@ -485,6 +486,7 @@
     electrolux: { markaHub: true, facet: "Electrolux Professional" },
     senox: { markaHub: true, facet: "Şenox" },
     vosco: { markaHub: true, facet: "Vosco" },
+    sparo: { markaHub: true, facet: "Sparo" },
     inoksan: { markaHub: true, facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
