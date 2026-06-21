@@ -587,36 +587,6 @@
     else __eqToggleDrawer(false);
   }
 
-  function __eqMcatDrawerWireSearch() {
-    var drawer = document.getElementById("catDrawer");
-    if (!drawer || drawer.__eqMcatSearchWired) return;
-    drawer.__eqMcatSearchWired = true;
-    drawer.addEventListener("input", function (ev) {
-      var t = ev.target;
-      if (!t || t.id !== "eq-mcat-drawer-search") return;
-      var q = String(t.value || "")
-        .trim()
-        .toLowerCase();
-      drawer.querySelectorAll(".eq-mcat-list [data-eq-cat-label]").forEach(function (card) {
-        var lab = (card.getAttribute("data-eq-cat-label") || "").toLowerCase();
-        card.style.display = !q || lab.indexOf(q) >= 0 ? "" : "none";
-      });
-    });
-    drawer.addEventListener("keydown", function (ev) {
-      if (ev.key !== "Enter" || !ev.target || ev.target.id !== "eq-mcat-drawer-search") return;
-      var v = String(ev.target.value || "").trim();
-      if (!v) return;
-      ev.preventDefault();
-      try {
-        var base = typeof window.equstoUrl === "function" ? window.equstoUrl("shop") : "index.html";
-        var sep = base.indexOf("?") >= 0 ? "&" : "?";
-        window.location.href = base + sep + "q=" + encodeURIComponent(v);
-      } catch (eQ) {
-        window.location.href = "index.html?q=" + encodeURIComponent(v);
-      }
-    });
-  }
-
   /** «Markalarımız» .eq-filter-sec DOM’da kalsın (#eq-filter-brands); kök listede yinelenmesin — gizli tutucu. */
   function ensureMarkalarSecHostInInner(inner) {
     if (!inner || inner.querySelector("#eq-drawer-markalar-sec-host")) return;
@@ -656,20 +626,7 @@
     bar.appendChild(title);
     bar.appendChild(btnTheme);
 
-    var search = el("div", { class: "eq-mcat-search" });
-    var __searchPh = __navT("nav.drawer_search_placeholder", "Equsto'da ara — ürün, marka, kategori\u2026").replace(/"/g, "&quot;");
-    var __searchAria = __navT("common.search_aria", "Ara").replace(/"/g, "&quot;");
-    var __camAria = __navT("nav.drawer_search_camera", "Görsel ile ara").replace(/"/g, "&quot;");
-    search.innerHTML =
-      '<svg class="eq-mcat-search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20.5 20.5-3.7-3.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
-      '<input id="eq-mcat-drawer-search" class="eq-mcat-search-input" type="search" placeholder="' + __searchPh + '" autocomplete="off" aria-label="' + __searchAria + '" />' +
-      '<button type="button" class="eq-mcat-search-cam" aria-label="' + __camAria + '">' +
-      '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 7h3l2-3h8l2 3h3v13H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>' +
-      "</button>";
-    /* Kamera: eq-photo-search.js — doğrudan dosya seçici (mobilde proxy click iOS'ta çalışmaz) */
-
     hdr.appendChild(bar);
-    hdr.appendChild(search);
 
     var scroll = el("div", { class: "eq-drawer-scroll eq-mcat-scroll" });
     var stage = el("div", {
@@ -683,7 +640,6 @@
     inner.appendChild(scroll);
     ensureMarkalarSecHostInInner(inner);
     drawer.appendChild(inner);
-    __eqMcatDrawerWireSearch();
   }
 
   /** Markalar çekmece drill’inde kullanılacak yedek isim listesi (sayfada #eq-filter-brands yoksa). */
