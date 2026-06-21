@@ -9,7 +9,7 @@ export type KategoriKodu = z.infer<typeof KategoriKoduEnum>;
 
 export const KATEGORI_LABELS: Record<KategoriKodu, string> = {
   A: "Bar & Kahve",
-  B: "Sıcak Servis",
+  B: "Pişirme",
   C: "Hazırlık",
   D: "Pastane & Tatlı Hazırlık",
   E: "Soğuk Hazırlık & Salata",

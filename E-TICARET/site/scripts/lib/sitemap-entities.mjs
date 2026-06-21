@@ -60,7 +60,8 @@ export function foldTr(s) {
     .replace(/ş/g, "s")
     .replace(/ö/g, "o")
     .replace(/ç/g, "c")
-    .replace(/ı/g, "i");
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i");
 }
 
 export function slugifyPart(s) {
@@ -72,9 +73,27 @@ export function slugifyPart(s) {
     .substring(0, 100);
 }
 
+export function skuPathSlug(sku) {
+  return foldTr(String(sku || "").trim())
+    .replace(/\./g, "-")
+    .replace(/[^a-z0-9+\-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80);
+}
+
 export function catalogSlug(row) {
+  const sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
+  if (sku) {
+    const fromSku = skuPathSlug(sku);
+    if (fromSku) return fromSku;
+  }
   const id = String(row.id || "").trim();
-  if (id) return id.toLowerCase();
+  if (id) {
+    const tail = id.includes("__") ? id.split("__").pop() || "" : "";
+    if (tail) return tail.toLowerCase();
+    return id.toLowerCase();
+  }
   const b = slugifyPart(row.brand);
   const n = slugifyPart(row.name);
   return (b ? `${b}-` : "") + n;
@@ -125,7 +144,10 @@ export function brandSlugFromName(brandName) {
 }
 
 export function loadEkipmanlar(publicDir) {
-  const p = path.join(publicDir, "data", "ekipmanlar.json");
+  let p = path.join(publicDir, "data", "ekipmanlar.json");
+  if (!fs.existsSync(p)) {
+    p = path.join(publicDir, "..", "var", "catalog", "ekipmanlar.json");
+  }
   if (!fs.existsSync(p)) return [];
   const rows = JSON.parse(fs.readFileSync(p, "utf8"));
   return Array.isArray(rows) ? rows : [];
