@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260619-kdv-dahil-v4";
+  var CATALOG_V = "20260621-sparo-izgaralar";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
