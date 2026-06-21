@@ -70,23 +70,39 @@ export async function findProductForPdp(
   }
 
   let ekipRows: CatalogRow[] | null = null;
+  try {
+    if (!ekipRows) {
+      const raw = await loadEkipmanlarJson();
+      ekipRows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
+    }
+  } catch {
+    /* ekipmanlar.json yoksa dept dosyası yeterli */
+  }
+
+  const matchEkipRow = (row: CatalogRow, slug: string) => {
+    const cid = String(row.id || "").trim().toLowerCase();
+    if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) return true;
+    if (catalogUrlSlug(row).toLowerCase() === slug) return true;
+    return matchCatalogRowByPathSlug(row, slug);
+  };
+
   for (const slug of slugCandidates) {
-    try {
-      if (!ekipRows) {
-        const raw = await loadEkipmanlarJson();
-        ekipRows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
-      }
-      for (const row of ekipRows) {
-        if (!row || isBarDesignShopProduct(row) || resolveShopDept(row) !== urlDept) continue;
-        const cid = String(row.id || "").trim().toLowerCase();
-        if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {
-          return { row, dept: urlDept };
-        }
-        if (catalogUrlSlug(row).toLowerCase() === slug) return { row, dept: urlDept };
-        if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
-      }
-    } catch {
-      /* ekipmanlar.json yoksa dept dosyası yeterli */
+    if (!ekipRows) break;
+    for (const row of ekipRows) {
+      if (!row || isBarDesignShopProduct(row)) continue;
+      const rowDept = resolveShopDept(row);
+      if (!rowDept || !isShopDeptSlug(rowDept) || rowDept !== urlDept) continue;
+      if (matchEkipRow(row, slug)) return { row, dept: urlDept };
+    }
+  }
+
+  for (const slug of slugCandidates) {
+    if (!ekipRows) break;
+    for (const row of ekipRows) {
+      if (!row || isBarDesignShopProduct(row)) continue;
+      const rowDept = resolveShopDept(row);
+      if (!rowDept || !isShopDeptSlug(rowDept)) continue;
+      if (matchEkipRow(row, slug)) return { row, dept: rowDept };
     }
   }
 

@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { PUBLIC_BLOCKED_DATA_PATHS } from "@/lib/catalog-paths";
+import {
+  resolveLegacyPdpRedirect,
+  resolveLegacySiteRedirect,
+} from "@/lib/shop/legacy-pdp-redirect";
 import { resolveBrandRedirectPath } from "./lib/brand-shop-redirect";
 
 /** Eski ?b= / ?slug= marka sorguları → /shop/marka/{slug} veya departman ?marka= */
@@ -100,6 +104,25 @@ function legacyHazirlikPzcSogutmaRedirect(request: NextRequest): NextResponse | 
   return NextResponse.redirect(dest, 308);
 }
 
+/** Eski WordPress / vitrin yolları → kanonik sayfalar */
+function legacySiteRedirect(request: NextRequest): NextResponse | null {
+  const destPath = resolveLegacySiteRedirect(request.nextUrl.pathname);
+  if (!destPath) return null;
+  const dest = request.nextUrl.clone();
+  dest.pathname = destPath;
+  dest.search = "";
+  return NextResponse.redirect(dest, 308);
+}
+
+/** GSC 404 — eski ürün slug → /shop/{dept}/{sku-slug} */
+function legacyPdpSlugRedirect(request: NextRequest): NextResponse | null {
+  const destPath = resolveLegacyPdpRedirect(request.nextUrl.pathname);
+  if (!destPath) return null;
+  const dest = request.nextUrl.clone();
+  dest.pathname = destPath;
+  return NextResponse.redirect(dest, 308);
+}
+
 /** www → apex (tek kanonik host + geçerli SSL). */
 function wwwToApexRedirect(request: NextRequest): NextResponse | null {
   const host = (request.headers.get("host") || "").split(":")[0].toLowerCase();
@@ -129,6 +152,12 @@ export function proxy(request: NextRequest) {
   const wwwRedir = wwwToApexRedirect(request);
   if (wwwRedir) return wwwRedir;
 
+  const siteRedir = legacySiteRedirect(request);
+  if (siteRedir) return siteRedir;
+
+  const pdpRedir = legacyPdpSlugRedirect(request);
+  if (pdpRedir) return pdpRedir;
+
   const markaRedir = legacyMarkaRedirect(request);
   if (markaRedir) return markaRedir;
 
@@ -145,6 +174,7 @@ export function proxy(request: NextRequest) {
 
   const res = NextResponse.next();
   const p = request.nextUrl.pathname;
+  res.headers.set("x-pathname", p);
 
   if ((p.startsWith("/i18n/") || p.startsWith("/locales/")) && p.endsWith(".json")) {
     res.headers.set("Content-Type", "application/json; charset=utf-8");
