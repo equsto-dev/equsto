@@ -40,6 +40,16 @@ export async function GET(req: NextRequest) {
   }
 
   const kur = await getTcmbEurEfektifSatis();
+  const isRaw = req.nextUrl.searchParams.get("format") === "raw" || req.nextUrl.searchParams.get("raw") === "true";
+  if (isRaw) {
+    return new Response(String(kur.rate), {
+      status: 200,
+      headers: {
+        "Content-Type": "text/plain",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
   const body = kurToApiPayload(kur);
   const maxAge = REVALIDATE_SEC > 0 ? REVALIDATE_SEC : 0;
   return Response.json(body, {

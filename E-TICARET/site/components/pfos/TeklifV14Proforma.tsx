@@ -369,15 +369,27 @@ export default function TeklifV14Proforma({
       .slice(0, 24);
 
   return (
-    <div style={{ fontFamily: "Arial, system-ui, sans-serif" }}>
+    <div
+      style={{
+        fontFamily: "Arial, system-ui, sans-serif",
+        background: "rgba(255, 255, 255, 0.45)",
+        backdropFilter: "blur(12px) saturate(120%)",
+        WebkitBackdropFilter: "blur(12px) saturate(120%)",
+        border: "1px solid rgba(255, 255, 255, 0.3)",
+        borderRadius: "16px",
+        padding: "24px",
+        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.03)",
+        color: "#1e293b",
+      }}
+    >
       <span style={{ display: "none" }} aria-hidden="true">
         {eqSk}
       </span>
       <div
         style={{
-          borderBottom: "2px solid #000",
-          paddingBottom: 12,
-          marginBottom: 12,
+          borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
+          paddingBottom: 16,
+          marginBottom: 16,
         }}
       >
         <div
@@ -749,22 +761,24 @@ const table: CSSProperties = {
 
 const thStyle: CSSProperties = {
   textAlign: "center",
-  padding: "6px 4px",
-  borderBottom: "1px solid #ccc",
-  fontWeight: 700,
+  padding: "10px 8px",
+  borderBottom: "2px solid #cbd5e1",
+  background: "rgba(241, 245, 249, 0.45)",
+  fontWeight: 600,
   fontSize: 10,
+  color: "#475569",
   whiteSpace: "nowrap",
 };
 
 const thMarkaOlcu: CSSProperties = {
   ...thStyle,
-  padding: "6px 4px",
+  padding: "10px 8px",
 };
 
 const td: CSSProperties = {
-  padding: "5px 4px",
-  borderBottom: "1px solid #eee",
-  verticalAlign: "top",
+  padding: "10px 8px",
+  borderBottom: "1px solid rgba(0, 0, 0, 0.04)",
+  verticalAlign: "middle",
 };
 
 const tdStok: CSSProperties = {
@@ -788,7 +802,7 @@ const tdMarka: CSSProperties = {
   ...td,
   textAlign: "center",
   fontSize: 10,
-  padding: "5px 2px",
+  padding: "10px 4px",
 };
 
 const tdOlcu: CSSProperties = {
@@ -796,7 +810,7 @@ const tdOlcu: CSSProperties = {
   textAlign: "center",
   fontSize: 10,
   whiteSpace: "nowrap",
-  padding: "5px 6px",
+  padding: "10px 8px",
 };
 
 const tdBolPoz: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
@@ -805,16 +819,18 @@ const tdC: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 
 const tdFiyat: CSSProperties = {
   ...tdC,
-  padding: "5px 8px",
+  padding: "10px 10px",
   fontVariantNumeric: "tabular-nums",
 };
 
 const sectionTd: CSSProperties = {
-  padding: "8px 4px",
+  padding: "10px 12px",
   fontWeight: 700,
-  background: TEKLIF_BOLUM_ROW_FILL,
+  background: "linear-gradient(90deg, #e6f4ea 0%, rgba(230, 244, 234, 0.4) 100%)",
   borderBottom: "1px solid #b7dfc5",
-  color: "#1e4620",
+  borderLeft: "4px solid #34a853",
+  color: "#137333",
+  borderRadius: "4px 4px 0 0",
 };
 
 const specTd: CSSProperties = {

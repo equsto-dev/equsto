@@ -4,7 +4,29 @@ import {
   ArrowLeftOutlined,
   CalculatorOutlined,
   ReloadOutlined,
+  CoffeeOutlined,
+  ShopOutlined,
+  RestOutlined,
+  CrownOutlined,
+  FireOutlined,
+  CompassOutlined,
+  ThunderboltOutlined,
+  HomeOutlined,
+  PartitionOutlined,
+  AppstoreOutlined,
 } from "@ant-design/icons";
+
+const SEGMENT_ICONS: Record<string, React.ReactNode> = {
+  CoffeeOutlined: <CoffeeOutlined />,
+  ShopOutlined: <ShopOutlined />,
+  RestOutlined: <RestOutlined />,
+  CrownOutlined: <CrownOutlined />,
+  FireOutlined: <FireOutlined />,
+  CompassOutlined: <CompassOutlined />,
+  ThunderboltOutlined: <ThunderboltOutlined />,
+  HomeOutlined: <HomeOutlined />,
+  PartitionOutlined: <PartitionOutlined />,
+};
 import {
   ProCard,
   ProForm,
@@ -102,6 +124,8 @@ export default function PfosProWizard() {
     { id: string; baslik: string; zoneCount: number; dwgUrl?: string | null }[]
   >([]);
   const [referansYukleniyor, setReferansYukleniyor] = useState(false);
+  const [taxonomy, setTaxonomy] = useState<{ segments: any[] } | null>(null);
+  const [seciliSegment, setSeciliSegment] = useState<string | null>(null);
 
   const set = useCallback(
     (patch: Partial<PfosWizardState>) =>
@@ -129,6 +153,17 @@ export default function PfosProWizard() {
         if (!cancelled) setKonseptYukleniyor(false);
       }
     })();
+
+    (async () => {
+      try {
+        const res = await fetch("/api/pfos/taxonomy", { cache: "no-store" });
+        const data = await res.json();
+        if (!cancelled) setTaxonomy(data);
+      } catch (e) {
+        console.error("Taxonomy load failed", e);
+      }
+    })();
+
     return () => {
       cancelled = true;
     };
@@ -351,8 +386,12 @@ export default function PfosProWizard() {
           sehir: state.adres.il,
           lokasyon: state.lokasyon,
           fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
-          bolumM2: bolumM2Sayilar(),
+          bolumM2: state.detaySeviyesi === "hizli" ? {} : bolumM2Sayilar(),
           teslimatAdresi: adresOzeti(state.adres),
+          detaySeviyesi: state.detaySeviyesi,
+          teshirVitrinleriDahil: state.detaySeviyesi === "hizli" ? true : state.teshirVitrinleriDahil,
+          bulasikKapasitesiYuksek: state.detaySeviyesi === "hizli" ? false : state.bulasikKapasitesiYuksek,
+          referansId: state.detaySeviyesi === "detayli" ? (state.referansProjeId ?? undefined) : undefined,
         }),
       });
       if (!res.ok) {
@@ -629,7 +668,10 @@ export default function PfosProWizard() {
             <Button
               type="link"
               icon={<ArrowLeftOutlined />}
-              onClick={() => set({ adim: 0 })}
+              onClick={() => {
+                setSeciliSegment(null);
+                set({ adim: 0 });
+              }}
             >
               Geri
             </Button>
@@ -639,37 +681,87 @@ export default function PfosProWizard() {
             <Spin />
           ) : konseptler.length === 0 ? (
             <Empty description="Konsept listesi boş" />
-          ) : (
-            <Row gutter={[12, 12]}>
-              {konseptler.map((k) => {
-                const selected = state.konsept === k.konsept;
-                return (
-                  <Col xs={24} sm={12} lg={8} key={k.konsept}>
-                    <ProCard
-                      hoverable
-                      bordered
-                      style={{
-                        borderColor: selected ? "#1677ff" : undefined,
-                        background: selected ? "#f0f5ff" : undefined,
-                      }}
-                      onClick={() => handleKonsept(k.konsept as Konsept)}
-                    >
-                      <Typography.Text strong>{k.label}</Typography.Text>
-                      <div>
-                        <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-                          {k.ornekler.slice(0, 2).join(" · ")}
-                        </Typography.Text>
-                      </div>
-                      <div>
-                        <Typography.Text type="secondary" style={{ fontSize: 11 }}>
-                          {k.m2Min}–{k.m2Max} m² · {k.zorunluSayisi} zorunlu
-                        </Typography.Text>
-                      </div>
-                    </ProCard>
-                  </Col>
-                );
-              })}
+          ) : taxonomy && !seciliSegment ? (
+            <Row gutter={[16, 16]}>
+              {taxonomy.segments.map((s) => (
+                <Col xs={24} sm={12} lg={8} key={s.key}>
+                  <ProCard
+                    hoverable
+                    bordered
+                    onClick={() => setSeciliSegment(s.key)}
+                    style={{ height: "100%", borderRadius: "8px" }}
+                  >
+                    <Space align="center" style={{ marginBottom: 8 }}>
+                      <span style={{ fontSize: 20, color: "#34a853", display: "inline-flex" }}>
+                        {SEGMENT_ICONS[s.icon || ""] || <AppstoreOutlined />}
+                      </span>
+                      <Typography.Text strong style={{ fontSize: 14 }}>
+                        {s.label}
+                      </Typography.Text>
+                    </Space>
+                    <div>
+                      <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                        {s.description}
+                      </Typography.Text>
+                    </div>
+                  </ProCard>
+                </Col>
+              ))}
             </Row>
+          ) : (
+            <>
+              {seciliSegment && taxonomy && (
+                <div style={{ marginBottom: 16 }}>
+                  <Button
+                    icon={<ArrowLeftOutlined />}
+                    onClick={() => {
+                      setSeciliSegment(null);
+                      set({ konsept: null });
+                    }}
+                  >
+                    Tüm Segmentler
+                  </Button>
+                  <Typography.Title level={5} style={{ marginTop: 16 }}>
+                    {taxonomy.segments.find((s) => s.key === seciliSegment)?.label} Alt Konseptleri
+                  </Typography.Title>
+                </div>
+              )}
+              <Row gutter={[12, 12]}>
+                {(seciliSegment && taxonomy
+                  ? konseptler.filter((k) =>
+                      taxonomy.segments.find((s) => s.key === seciliSegment)?.concepts.includes(k.konsept)
+                    )
+                  : konseptler
+                ).map((k) => {
+                  const selected = state.konsept === k.konsept;
+                  return (
+                    <Col xs={24} sm={12} lg={8} key={k.konsept}>
+                      <ProCard
+                        hoverable
+                        bordered
+                        style={{
+                          borderColor: selected ? "#1677ff" : undefined,
+                          background: selected ? "#f0f5ff" : undefined,
+                        }}
+                        onClick={() => handleKonsept(k.konsept as Konsept)}
+                      >
+                        <Typography.Text strong>{k.label}</Typography.Text>
+                        <div>
+                          <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                            {k.ornekler.slice(0, 2).join(" · ")}
+                          </Typography.Text>
+                        </div>
+                        <div>
+                          <Typography.Text type="secondary" style={{ fontSize: 11 }}>
+                            {k.m2Min}–{k.m2Max} m² · {k.zorunluSayisi} zorunlu
+                          </Typography.Text>
+                        </div>
+                      </ProCard>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </>
           )}
           {profil && (
             <Alert
@@ -706,6 +798,36 @@ export default function PfosProWizard() {
           }
         >
           <ProForm submitter={false} layout="vertical" requiredMark={false}>
+            {!PFOS_QUICK_MODE && (
+              <ProCard
+                title="Teklif Detay Seviyesi"
+                size="small"
+                bordered
+                style={{ marginBottom: 20, background: "rgba(241, 245, 249, 0.4)", borderRadius: "8px" }}
+              >
+                <ProFormRadio.Group
+                  name="detaySeviyesi"
+                  radioType="button"
+                  fieldProps={{
+                    value: state.detaySeviyesi,
+                    onChange: (e) => {
+                      const level = e.target.value as "hizli" | "standart" | "detayli";
+                      set({
+                        detaySeviyesi: level,
+                        referansProjeId: level === "detayli" ? state.referansProjeId : null,
+                        bolumM2: level === "detayli" ? state.bolumM2 : {},
+                      });
+                    },
+                  }}
+                  options={[
+                    { label: "⚡ Hızlı Teklif", value: "hizli" },
+                    { label: "📋 Standart Teklif", value: "standart" },
+                    { label: "🔧 Detaylı Proje", value: "detayli" },
+                  ]}
+                />
+              </ProCard>
+            )}
+
             {PFOS_QUICK_MODE ? (
               <Row gutter={[16, 8]} style={{ marginBottom: 8 }}>
                 <Col xs={24} md={14} lg={12}>
@@ -759,6 +881,39 @@ export default function PfosProWizard() {
               />
             )}
 
+            {!PFOS_QUICK_MODE && state.detaySeviyesi !== "hizli" && (
+              <Row gutter={[16, 16]} style={{ marginBottom: 20, marginTop: 16 }}>
+                <Col xs={24} sm={12}>
+                  <ProCard size="small" bordered style={{ background: "#fff", borderRadius: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div>
+                        <div style={{ fontWeight: 600, fontSize: 13 }}>Teşhir Vitrinleri Dahil Edilsin mi?</div>
+                        <div style={{ fontSize: 11, color: "#666" }}>Börek, sütlü tatlı reyonları teklife eklenir.</div>
+                      </div>
+                      <Checkbox
+                        checked={state.teshirVitrinleriDahil}
+                        onChange={(e) => set({ teshirVitrinleriDahil: e.target.checked })}
+                      />
+                    </div>
+                  </ProCard>
+                </Col>
+                <Col xs={24} sm={12}>
+                  <ProCard size="small" bordered style={{ background: "#fff", borderRadius: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div>
+                        <div style={{ fontWeight: 600, fontSize: 13 }}>Yüksek Bulaşık Kapasitesi</div>
+                        <div style={{ fontSize: 11, color: "#666" }}>Standart setaltı bulaşık makinesi giyotin modelle güncellenir.</div>
+                      </div>
+                      <Checkbox
+                        checked={state.bulasikKapasitesiYuksek}
+                        onChange={(e) => set({ bulasikKapasitesiYuksek: e.target.checked })}
+                      />
+                    </div>
+                  </ProCard>
+                </Col>
+              </Row>
+            )}
+
             {PFOS_QUICK_MODE && profil && (
               <Alert
                 type="info"
@@ -771,12 +926,12 @@ export default function PfosProWizard() {
             <Alert
               type="info"
               showIcon
-              style={{ marginBottom: 16 }}
+              style={{ marginBottom: 16, marginTop: 16 }}
               message="Teklif çıktısı: Excel proforma"
               description={`13 sütun proforma (Böl · Poz · Tanım · Marka · Ölçü · Elk · Gaz · Adet · Satış EUR). ${teklifMarkaPaneliOzeti()}`}
             />
 
-            {referansProjeler.length > 0 && (
+            {!PFOS_QUICK_MODE && state.detaySeviyesi === "detayli" && referansProjeler.length > 0 && (
               <ProCard
                 size="small"
                 title="Referans mutfak projesi"
@@ -854,7 +1009,7 @@ export default function PfosProWizard() {
             </Row>
           </ProForm>
 
-          {zones.length > 0 && toplamM2 > 0 && (
+          {!PFOS_QUICK_MODE && state.detaySeviyesi === "detayli" && zones.length > 0 && toplamM2 > 0 && (
             <ProCard
               size="small"
               title="Bölüm m²"

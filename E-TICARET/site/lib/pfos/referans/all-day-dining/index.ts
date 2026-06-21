@@ -52,13 +52,17 @@ export function pickAllDayDiningReferansForM2(m2: number): ReferansProfil {
   return sorted[0] ?? getAllDayDiningReferans(ALL_DAY_DINING_DEFAULT_REFERANS_ID);
 }
 
+import { applyFranchiseOverrides } from "../franchise-overrides";
+
 export async function buildAllDayDiningTemplate(
   m2: number,
+  referansId?: string | null,
 ): Promise<ConceptTemplate> {
   const listeId = pickAllDayDiningListe(m2);
   const ref = listeId
     ? await loadReferansProfil("all-day-dining-cafe", m2, listeId)
     : pickAllDayDiningReferansForM2(m2);
+  const items = applyFranchiseOverrides(ref.kalemler, referansId);
   return {
     konsept: "all-day-dining-cafe",
     label: "All Day Dining Cafe",
@@ -69,7 +73,7 @@ export async function buildAllDayDiningTemplate(
     teklifBolum: listeId
       ? { no: "19", baslik: `19. THE HOUSE CAFE · ${ref.label.toUpperCase()}` }
       : undefined,
-    referansId: ref.id,
-    items: referansKalemlerToTemplateItems(ref.kalemler),
+    referansId: referansId || ref.id,
+    items: referansKalemlerToTemplateItems(items),
   };
 }

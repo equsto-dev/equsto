@@ -138,7 +138,7 @@ export async function resolveTemplateForQuote(
   }
   if (konsept === "steakhouse") return buildSteakhouseTemplate(m2);
   if (konsept === "balikci") return buildBalikciTemplate(m2, undefined, altTip);
-  if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);
+  if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2, referansId);
   if (konsept === "coffee-shop-yemek") return buildCoffeeShopYemekTemplate(m2);
   if (konsept === "italyan") return buildItalyanTemplate(m2);
   if (konsept === "birahane") return buildBirahaneTemplate(m2);
@@ -155,7 +155,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "kanatci-kebapci") return buildKanatciKebapciTemplate(m2);
   if (konsept === "patisserie-yemek") return buildPatisserieYemekTemplate(m2);
   if (konsept === "boyoz-pastane") return buildBoyozPastaneTemplate(m2);
-  if (konsept === "all-day-dining-cafe") return buildAllDayDiningTemplate(m2);
+  if (konsept === "all-day-dining-cafe") return buildAllDayDiningTemplate(m2, referansId);
   if (konsept === "restoran") return buildRestoranTemplate(m2);
   if (konsept === "kokteyl-kahve") return buildKokteylKahveTemplate(m2);
   if (konsept === "kahve-atolyesi") return buildKahveAtolyesiTemplate(m2);

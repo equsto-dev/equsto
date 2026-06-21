@@ -5,3 +5,4 @@ export {
   getCoffeeShopReferans,
   listCoffeeShopReferanslar,
 } from "./coffee-shop-espressolab";
+export { applyFranchiseOverrides } from "./franchise-overrides";

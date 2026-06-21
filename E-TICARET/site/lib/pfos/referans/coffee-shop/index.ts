@@ -1,11 +1,14 @@
 import type { ConceptTemplate } from "../../core/engine-types";
 import { referansKalemlerToTemplateItems } from "../build-template-items";
 import { loadReferansProfil } from "../pfos-referans-loader";
+import { applyFranchiseOverrides } from "../franchise-overrides";
 
 export async function buildCoffeeShopTemplate(
   m2: number,
+  referansId?: string | null,
 ): Promise<ConceptTemplate> {
   const ref = await loadReferansProfil("coffee-shop", m2);
+  const items = applyFranchiseOverrides(ref.kalemler, referansId);
   return {
     konsept: "coffee-shop",
     label: "Coffee Shop",
@@ -17,7 +20,7 @@ export async function buildCoffeeShopTemplate(
       no: "114",
       baslik: `114. ESPRESSOLAB WATERGARDEN · ${ref.label.toUpperCase()}`,
     },
-    referansId: ref.id,
-    items: referansKalemlerToTemplateItems(ref.kalemler),
+    referansId: referansId || ref.id,
+    items: referansKalemlerToTemplateItems(items),
   };
 }
