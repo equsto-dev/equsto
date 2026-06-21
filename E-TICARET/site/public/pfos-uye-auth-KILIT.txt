@@ -42,7 +42,7 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
   • eq-site-urls.js: account → /hesabim (EN: /en/account)
   • equsto-member.js: girişli header → equstoUrl("account"); equstoMemberHasPhone()
   • next.config: hesabim.html → /hesabim yönlendirmesi
-  • SHOP_ASSET_V = 20260621-drawer-ios-glass
+  • SHOP_ASSET_V = 20260621-drawer-glass
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   components/pfos/public/PfosPublicWizard.tsx
