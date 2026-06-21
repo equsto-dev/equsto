@@ -84,6 +84,7 @@
         { label: "Fritözler", tip: "fritozler" },
         { label: "Döner Ocakları", tip: "doner-ocaklari" },
         { label: "Izgaralar", labelKey: "nav.sub.kati_yakitli_izgaralar", tip: "kati-yakitli-izgaralar" },
+        { label: "Tost Makineleri", tip: "tost-makineleri" },
         { label: "Piliç Çevirme", tip: "pilic-cevirme-makineleri" },
       ],
     },
