@@ -30,6 +30,8 @@ export type TeklifV14Satir = {
   /** Satır toplamı (v14 L sütunu) */
   toplamSatis: number | null;
   doviz: "EUR" | "TRY" | "USD";
+  originalFiyat?: number | null;
+  originalDoviz?: "EUR" | "TRY" | "USD" | null;
   /** Katalog ürün görseli (URL) */
   fotoUrl?: string;
   /** Ürün fotoğrafı / not satırı (Excel metin yedek) */

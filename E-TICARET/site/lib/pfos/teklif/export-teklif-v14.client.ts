@@ -60,7 +60,14 @@ function fillHeader(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   ws.getCell("A3").value = `TCMB Efektif Satış Kuru – ${tarih}`;
   ws.getCell("I3").value = "EUR/TRY";
   const kurCell = ws.getCell("J3");
-  kurCell.value = kur;
+  
+  const host = typeof window !== "undefined" ? window.location.origin : "https://equsto.com";
+  const secureHost = host.includes("localhost") || host.includes("127.0.0.1") || !host ? "https://equsto.com" : host;
+  
+  kurCell.value = {
+    formula: `WEBSERVICE("${secureHost}/api/kur?format=raw")`,
+    result: kur,
+  };
   kurCell.numFmt = '"₺"#,##0.00';
 }
 
@@ -81,8 +88,17 @@ function writeDataRow(
   ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
   ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 7).value = satir.adet;
-  ws.getCell(rowNum, 8).value = Math.round(satir.birimSatis ?? 0);
+  
+  if (satir.originalDoviz === "TRY" && satir.originalFiyat && satir.originalFiyat > 0) {
+    ws.getCell(rowNum, 8).value = {
+      formula: `ROUND(${satir.originalFiyat}/J$3,0)`,
+      result: Math.round(satir.birimSatis ?? 0),
+    };
+  } else {
+    ws.getCell(rowNum, 8).value = Math.round(satir.birimSatis ?? 0);
+  }
   ws.getCell(rowNum, 8).numFmt = "#,##0";
+  
   ws.getCell(rowNum, 9).value = {
     formula: `ROUND(G${rowNum}*H${rowNum},0)`,
   };

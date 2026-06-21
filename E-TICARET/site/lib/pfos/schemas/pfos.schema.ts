@@ -135,6 +135,10 @@ export const PFOSRequestSchema = z.object({
   referansId: z.string().optional(),
   /** q_dukkan_turu → shopTypes.pfos.dukkanSecim (referans dosyası seçimi) */
   dukkanSecim: z.string().optional(),
+  /** Wizard/API detail level flow options */
+  detaySeviyesi: z.enum(["hizli", "standart", "detayli"]).default("standart").optional(),
+  teshirVitrinleriDahil: z.boolean().default(true).optional(),
+  bulasikKapasitesiYuksek: z.boolean().default(false).optional(),
 });
 
 export type PFOSRequest = z.infer<typeof PFOSRequestSchema>;

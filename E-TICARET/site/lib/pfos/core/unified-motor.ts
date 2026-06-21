@@ -87,11 +87,12 @@ export function resolveBolumM2(
 
 async function buildTemplateKalemler(
   template: ConceptTemplate,
-  m2: number,
-  fiyatStratejisi: FiyatStratejisi,
+  req: PFOSRequest,
   existingTips: Set<string>,
   referansListOnly = false,
 ): Promise<PFOSKalemi[]> {
+  const m2 = req.m2;
+  const fiyatStratejisi = req.fiyatStratejisi ?? "orta";
   const eligibleItems = template.items.filter((item) => {
     if (item.minM2 !== undefined && m2 < item.minM2) return false;
     if (item.maxM2 !== undefined && m2 >= item.maxM2) return false;
@@ -105,7 +106,13 @@ async function buildTemplateKalemler(
 
   for (let i = 0; i < eligibleItems.length; i++) {
     const item = eligibleItems[i];
-    const tipResolved = resolveTipKodu(item.urunTipi);
+    let urunTipi = item.urunTipi;
+    let isim = item.isim;
+    if (req.bulasikKapasitesiYuksek && urunTipi === "bulasik-makinesi-setalti") {
+      urunTipi = "bulasik-makinesi-giyotin";
+      isim = "Giyotin Bulaşık Makinası (1000 Tb/s)";
+    }
+    const tipResolved = resolveTipKodu(urunTipi);
     const tipKey = item.referansPoz
       ? `${tipResolved}|${item.referansPoz}`
       : tipResolved;
@@ -118,24 +125,24 @@ async function buildTemplateKalemler(
       : calcAdet(item.scale, m2, template.seatDensity);
     const urunMatched = referansListOnly
       ? await matchProductForReferansKalem({
-          urunTipi: item.urunTipi,
+          urunTipi,
           fiyatStratejisi,
-          isim: item.isim,
+          isim,
           notlar: item.notlar,
           referansPoz: item.referansPoz,
           referansListeKey:
             item.referansListeKey ?? template.referansId ?? undefined,
         })
       : await matchProductForMotor(
-          item.urunTipi,
+          urunTipi,
           item.kategoriKodu,
           fiyatStratejisi,
-          item.isim,
+          isim,
           item.notlar,
         );
     const urun = await enrichEslesmisUrunKw(urunMatched, {
-      isim: item.isim,
-      urunTipi: item.urunTipi,
+      isim,
+      urunTipi,
     });
 
     kalemler.push({
@@ -145,8 +152,8 @@ async function buildTemplateKalemler(
       altKategori: item.altKategori,
       referansBolumSira: item.referansBolumSira,
       referansBolumKey: item.referansBolumKey,
-      urunTipi: item.urunTipi,
-      isim: item.isim,
+      urunTipi,
+      isim,
       tip: item.tip,
       opsiyonelSebep: item.opsiyonelSebep,
       adet,
@@ -244,6 +251,7 @@ export async function calculateUnifiedQuote(
         zoneKeys,
         bolumM2: bolumM2Effective,
         fiyatStratejisi,
+        bulasikKapasitesiYuksek: req.bulasikKapasitesiYuksek,
       });
 
   const existingTips = new Set(
@@ -251,8 +259,7 @@ export async function calculateUnifiedQuote(
   );
   const templateKalemler = await buildTemplateKalemler(
     template,
-    req.m2,
-    fiyatStratejisi,
+    req,
     existingTips,
     referansListOnly,
   );
@@ -272,7 +279,12 @@ export async function calculateUnifiedQuote(
     sehir: sehir ?? null,
   });
 
-  const kalemlerWithGorsel = await enrichPfosKalemlerGorsel(kalemler);
+  const enrichmentResult = await enrichPfosKalemlerGorsel(kalemler);
+  const kalemlerWithGorsel = req.teshirVitrinleriDahil === false
+    ? enrichmentResult.filter(
+        (k) => !(/teshir|teşhir|vitrin|reyon|mostra/i.test(k.isim) || /teshir|teşhir|vitrin|reyon/i.test(k.urunTipi || ""))
+      )
+    : enrichmentResult;
 
   const zorunluKalemler = kalemlerWithGorsel.filter((k) => k.tip === "zorunlu");
   const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);

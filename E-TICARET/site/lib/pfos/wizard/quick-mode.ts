@@ -33,6 +33,9 @@ export function pfosQuickInitialState(): PfosWizardState {
     referansZoneSecimi: [],
     referansBolumM2: {},
     fiyatStratejisi,
+    detaySeviyesi: "standart",
+    teshirVitrinleriDahil: true,
+    bulasikKapasitesiYuksek: false,
   };
 }
 
@@ -51,5 +54,8 @@ export function pfosWizardInitialState(): PfosWizardState {
     referansZoneSecimi: [],
     referansBolumM2: {},
     fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
+    detaySeviyesi: "standart",
+    teshirVitrinleriDahil: true,
+    bulasikKapasitesiYuksek: false,
   };
 }

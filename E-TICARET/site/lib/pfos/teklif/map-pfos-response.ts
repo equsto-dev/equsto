@@ -182,6 +182,8 @@ export function pfosResponseToTeklifV14(
       birimSatis: birimEur,
       toplamSatis: birimEur != null ? birimEur * adet : null,
       doviz,
+      originalFiyat: u ? (u.fiyatEur && u.fiyatEur > 0 ? u.fiyatEur : u.fiyat) : null,
+      originalDoviz: u ? (u.fiyatEur && u.fiyatEur > 0 ? "EUR" : u.doviz) : "EUR",
       fotoUrl: gorselFallback ?? undefined,
       aciklama: specAciklama(k, referansListe) || undefined,
     };

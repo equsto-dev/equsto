@@ -28,6 +28,9 @@ export type PfosWizardState = {
   /** Proje snapshot — zone m² */
   referansBolumM2: Record<string, number>;
   fiyatStratejisi?: FiyatStratejisi;
+  detaySeviyesi: "hizli" | "standart" | "detayli";
+  teshirVitrinleriDahil: boolean;
+  bulasikKapasitesiYuksek: boolean;
 };
 
 export type KonseptMeta = {

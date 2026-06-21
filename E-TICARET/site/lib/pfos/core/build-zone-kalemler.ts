@@ -40,6 +40,7 @@ export async function buildZoneCatalogKalemler(opts: {
   zoneKeys: string[];
   bolumM2: Record<string, number>;
   fiyatStratejisi: FiyatStratejisi;
+  bulasikKapasitesiYuksek?: boolean;
 }): Promise<PFOSKalemi[]> {
   const bundle = await loadZoneCatalog();
   const kalemler: PFOSKalemi[] = [];
@@ -56,7 +57,16 @@ export async function buildZoneCatalogKalemler(opts: {
 
     for (const p of products) {
       if (!p.tip_kodu) continue;
-      if (p.tip_kodu === "dilimleme_makinesi") {
+      let tipKodu = p.tip_kodu;
+      let name = p.name;
+      let unitPriceTry = Number(p.unit_price_try);
+      if (opts.bulasikKapasitesiYuksek && tipKodu === "bulasik_setalti") {
+        tipKodu = "bulasik_giyotin_1000";
+        name = "Giyotin Bulaşık Makinası (1000 Tb/s)";
+        unitPriceTry = 0;
+      }
+
+      if (tipKodu === "dilimleme_makinesi") {
         if (zoneKey === "sebze_hazirlik") continue;
         if (zoneKey !== "et_hazirlik") continue;
       }
@@ -65,23 +75,23 @@ export async function buildZoneCatalogKalemler(opts: {
       if (adet <= 0) continue;
 
       let urun = await matchProductForMotor(
-        p.tip_kodu,
+        tipKodu,
         kat,
         opts.fiyatStratejisi,
-        p.name,
+        name,
         p.dimensions
           ? `ölçü: ${String(p.dimensions).replace(/×/g, "*")}`
           : null,
       );
-      if (!urun && Number(p.unit_price_try) > 0) {
-        urun = catalogToEslesmis(p);
+      if (!urun && unitPriceTry > 0) {
+        urun = catalogToEslesmis({ ...p, tip_kodu: tipKodu, name, unit_price_try: unitPriceTry });
       }
 
       kalemler.push({
         poz: "",
         kategoriKodu: kat as PFOSKalemi["kategoriKodu"],
-        urunTipi: p.tip_kodu,
-        isim: p.name,
+        urunTipi: tipKodu,
+        isim: name,
         tip: tipFromClassification(p.classification),
         adet,
         elektrikGucuKwHint:

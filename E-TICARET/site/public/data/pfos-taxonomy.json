@@ -1,0 +1,134 @@
+{
+  "segments": [
+    {
+      "key": "cafe-coffee",
+      "label": "Cafe & Coffee",
+      "icon": "CoffeeOutlined",
+      "description": "Coffee shop, kahve atölyesi ve all-day cafe taslakları",
+      "concepts": [
+        "coffee-shop",
+        "coffee-shop-yemek",
+        "kokteyl-kahve",
+        "kahve-atolyesi",
+        "kahve-duragi",
+        "kahve-duragi-pastane",
+        "kahve-tatli",
+        "harvest-cafe",
+        "all-sport-cafe",
+        "casual-cafe"
+      ]
+    },
+    {
+      "key": "bakery-dessert",
+      "label": "Bakery & Dessert",
+      "icon": "ShopOutlined",
+      "description": "Fırın, pastane, kruvasan ve tatlı konseptleri",
+      "concepts": [
+        "pastane",
+        "pastane-cafe",
+        "patisserie-yemek",
+        "boyoz-pastane",
+        "guneli-pastane",
+        "ekmek-kruvasan"
+      ]
+    },
+    {
+      "key": "breakfast-concepts",
+      "label": "Breakfast Concepts",
+      "icon": "CoffeeOutlined",
+      "description": "Kahvaltı salonları ve servis odaklı işletmeler",
+      "concepts": [
+        "kahve-duragi-pastane"
+      ]
+    },
+    {
+      "key": "casual-dining",
+      "label": "Casual Dining",
+      "icon": "RestOutlined",
+      "description": "Günlük restoran zincirleri, pizzacı ve İtalyan konseptleri",
+      "concepts": [
+        "all-day-dining-cafe",
+        "pizzaci",
+        "italyan",
+        "birahane"
+      ]
+    },
+    {
+      "key": "premium-dining",
+      "label": "Premium Dining",
+      "icon": "CrownOutlined",
+      "description": "Fine dining, brasserie, lounge, rooftop ve uzak doğu mutfakları",
+      "concepts": [
+        "restoran",
+        "inari-bar-yemek",
+        "sushi",
+        "balikci"
+      ]
+    },
+    {
+      "key": "steakhouse-grill",
+      "label": "Steakhouse & Grill",
+      "icon": "FireOutlined",
+      "description": "Et restoranları, steakhouse ve ızgara konseptleri",
+      "concepts": [
+        "steakhouse",
+        "kasap",
+        "kasap-sarkuteri",
+        "sarkuteri-restoran"
+      ]
+    },
+    {
+      "key": "turkish-cuisine",
+      "label": "Turkish Cuisine",
+      "icon": "CompassOutlined",
+      "description": "Geleneksel Türk restoranı, kebapçı, pideci ve meyhane",
+      "concepts": [
+        "turk-restoran",
+        "kebap-ortadogu",
+        "meyhane",
+        "pideci",
+        "kanatci-kebapci",
+        "mus-selinoz-turk",
+        "kiremit-akasya",
+        "donerci"
+      ]
+    },
+    {
+      "key": "fast-casual",
+      "label": "Fast Casual",
+      "icon": "ThunderboltOutlined",
+      "description": "Kiosk, burger, tavukçu ve hızlı servis mutfakları",
+      "concepts": [
+        "sarkuteri-kiosk",
+        "hamburger-kiosk",
+        "hotdog-kiosk",
+        "tavukcu",
+        "donerci"
+      ]
+    },
+    {
+      "key": "hotel-hospitality",
+      "label": "Hotel & Hospitality",
+      "icon": "HomeOutlined",
+      "description": "Otel ana mutfak, banket, resort ve catering tesisleri",
+      "concepts": [
+        "sehir-otel",
+        "tatil-otel",
+        "resort-otel",
+        "buyuk-yemekhane",
+        "personel-yemekhane"
+      ]
+    },
+    {
+      "key": "franchise-concepts",
+      "label": "Franchise Concepts",
+      "icon": "PartitionOutlined",
+      "description": "Franchise zincir standartları ve referans profili varyantları",
+      "concepts": [
+        "coffee-shop",
+        "all-day-dining-cafe",
+        "turk-restoran"
+      ]
+    }
+  ]
+}
