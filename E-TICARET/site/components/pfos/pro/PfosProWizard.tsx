@@ -66,7 +66,7 @@ import {
   type KonseptMeta,
   type PfosWizardState,
 } from "@/lib/pfos/wizard/types";
-import { dagitM2Toplam, zonesForKonsept } from "@/lib/pfos/wizard/profiles";
+import { dagitM2Toplam, mutfakM2FromToplam, zonesForKonsept } from "@/lib/pfos/wizard/profiles";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
 import { PROFIL_BY_SLUG } from "@/lib/pfos/wizard/profiles";
 import {
@@ -219,8 +219,9 @@ export default function PfosProWizard() {
       : profileZones;
   const zones = activeZones;
   const toplamM2 = parseM2(state.m2Toplam);
+  const mutfakM2 = mutfakM2FromToplam(toplamM2);
   const bolumToplam = sumBolum(state.bolumM2);
-  const m2Fark = toplamM2 > 0 ? toplamM2 - bolumToplam : 0;
+  const m2Fark = mutfakM2 > 0 ? mutfakM2 - bolumToplam : 0;
   const m2Ok =
     toplamM2 >= m2Min &&
     toplamM2 <= m2Max &&
@@ -246,7 +247,7 @@ export default function PfosProWizard() {
       referansProjeId: null,
       referansZoneSecimi: [],
       referansBolumM2: {},
-      bolumM2: t > 0 && z.length ? dagitM2Toplam(z, t) : {},
+      bolumM2: t > 0 && z.length ? dagitM2Toplam(z, t, k) : {},
     });
   }
 
@@ -352,12 +353,16 @@ export default function PfosProWizard() {
 
   function handleM2Toplam(v: number | null) {
     const val = v ?? "";
-    set({ m2Toplam: val });
     const t = parseM2(val);
     const z = zonesForKonsept(state.konsept);
-    if (t > 0 && z.length && Object.keys(state.bolumM2).length === 0) {
-      set({ bolumM2: dagitM2Toplam(z, t) });
+    if (t > 0 && z.length && !state.referansProjeId) {
+      set({
+        m2Toplam: val,
+        bolumM2: { ...state.bolumM2, ...dagitM2Toplam(z, t, state.konsept) },
+      });
+      return;
     }
+    set({ m2Toplam: val });
   }
 
   function bolumM2Sayilar(): Record<string, number> {
@@ -851,9 +856,19 @@ export default function PfosProWizard() {
                     min={m2Min}
                     max={m2Max}
                     extra={
-                      seciliKonsept
-                        ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
-                        : undefined
+                      seciliKonsept ? (
+                        <>
+                          Geçerli aralık: {m2Min}–{m2Max} m²
+                          {toplamM2 > 0 && (
+                            <>
+                              {" · "}
+                              Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
+                            </>
+                          )}
+                        </>
+                      ) : toplamM2 > 0 ? (
+                        <>Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²</>
+                      ) : undefined
                     }
                     fieldProps={{
                       value: toplamM2 || undefined,
@@ -874,9 +889,19 @@ export default function PfosProWizard() {
                   style: { maxWidth: 200 },
                 }}
                 extra={
-                  seciliKonsept
-                    ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
-                    : undefined
+                  seciliKonsept ? (
+                    <>
+                      Geçerli aralık: {m2Min}–{m2Max} m²
+                      {toplamM2 > 0 && (
+                        <>
+                          {" · "}
+                          Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
+                        </>
+                      )}
+                    </>
+                  ) : toplamM2 > 0 ? (
+                    <>Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²</>
+                  ) : undefined
                 }
               />
             )}
@@ -1028,11 +1053,16 @@ export default function PfosProWizard() {
                     }
                     const z = profileZones;
                     if (toplamM2 > 0 && z.length) {
-                      set({ bolumM2: dagitM2Toplam(z, toplamM2) });
+                      set({
+                        bolumM2: {
+                          ...state.bolumM2,
+                          ...dagitM2Toplam(z, toplamM2, state.konsept),
+                        },
+                      });
                     }
                   }}
                 >
-                  Eşit dağıt
+                  Kurala göre dağıt
                 </Button>
               }
               style={{ marginBottom: 16 }}
@@ -1060,7 +1090,7 @@ export default function PfosProWizard() {
                 <Typography.Text
                   type={Math.abs(m2Fark) < 1 ? "success" : "warning"}
                 >
-                  Bölüm toplamı: {bolumToplam} m²
+                  Bölüm toplamı: {bolumToplam} m² (mutfak hedefi: {mutfakM2} m²)
                   {Math.abs(m2Fark) >= 1 &&
                     ` · Fark: ${m2Fark > 0 ? "+" : ""}${m2Fark} m²`}
                 </Typography.Text>

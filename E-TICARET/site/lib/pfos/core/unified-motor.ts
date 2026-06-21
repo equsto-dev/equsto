@@ -78,7 +78,7 @@ export function resolveBolumM2(
   }
 
   if (m2Toplam > 0 && profileZones.length) {
-    const bolumM2 = dagitM2Toplam(profileZones, m2Toplam);
+    const bolumM2 = dagitM2Toplam(profileZones, m2Toplam, konsept);
     return { bolumM2, zonesUsed: profileZones.filter((z) => bolumM2[z] > 0) };
   }
 
