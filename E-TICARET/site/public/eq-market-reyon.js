@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-glass";
+  var CATALOG_V = "20260621-drawer-ice-blue";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
