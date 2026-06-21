@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260621-drawer-no-search";
+const SHOP_ASSET_V = "20260621-drawer-no-close";
 const WA_MODAL_BUILD = 25;
 let err = 0;
 
