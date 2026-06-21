@@ -271,6 +271,7 @@ export function buildGoogleMerchantXml(items: MerchantFeedItem[], origin: string
     lines.push(`      <g:brand>${escapeXml(item.brand)}</g:brand>`);
     if (item.mpn) lines.push(`      <g:mpn>${escapeXml(item.mpn)}</g:mpn>`);
     lines.push("      <g:identifier_exists>false</g:identifier_exists>");
+    lines.push("      <g:google_product_category>135</g:google_product_category>");
     if (item.productType) {
       lines.push(`      <g:product_type>${escapeXml(item.productType)}</g:product_type>`);
     }
