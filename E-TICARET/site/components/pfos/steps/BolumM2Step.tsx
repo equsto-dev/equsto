@@ -3,6 +3,7 @@
 import type { Konsept } from "@/lib/pfos/schemas/pfos.schema";
 import {
   dagitM2Toplam,
+  mutfakM2FromToplam,
   zonesForKonsept,
 } from "@/lib/pfos/wizard/profiles";
 import { parseM2 } from "@/lib/pfos/wizard/types";
@@ -44,8 +45,9 @@ export default function BolumM2Step({
 }: Props) {
   const zones = zonesForKonsept(konsept);
   const toplam = parseM2(m2Toplam);
+  const mutfakM2 = mutfakM2FromToplam(toplam);
   const bolumToplam = sumBolum(bolumM2);
-  const fark = toplam > 0 ? toplam - bolumToplam : 0;
+  const fark = mutfakM2 > 0 ? mutfakM2 - bolumToplam : 0;
   const ok = toplam >= 30 && (bolumToplam === 0 || Math.abs(fark) < 1);
 
   return (
@@ -55,8 +57,9 @@ export default function BolumM2Step({
       </button>
       <h2 style={pfosS.baslik}>Alan ve mutfak bölümleri</h2>
       <p style={pfosS.alt}>
-        Toplam m² girin; her mutfak bölümü için alanı ayrı belirleyin. Motor
-        her bölümün m²’sine göre ekipman adedini hesaplar.
+        Toplam m² girin; mutfak alanı toplamın 1/3&apos;ü olarak hesaplanır ve
+        bölümlere genel kurala göre dağıtılır. Motor her bölümün m²&apos;sine göre
+        ekipman adedini hesaplar.
         {m2Min != null && m2Max != null && (
           <span style={pfosS.ipucu}>
             {" "}
@@ -78,6 +81,11 @@ export default function BolumM2Step({
           value={m2Toplam}
           onChange={(e) => onM2Toplam(e.target.value)}
         />
+        {toplam > 0 && (
+          <p style={{ fontSize: 12, color: "#666", marginTop: 6 }}>
+            Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
+          </p>
+        )}
       </div>
 
       {zones.length > 0 && toplam > 0 && (
@@ -100,7 +108,7 @@ export default function BolumM2Step({
               }}
               onClick={onDagit}
             >
-              Toplamı bölümlere eşit dağıt
+              Kurala göre dağıt
             </button>
           </div>
           {zones.map((z) => (
@@ -127,9 +135,9 @@ export default function BolumM2Step({
                 marginTop: 8,
               }}
             >
-              Bölüm toplamı: {bolumToplam} m²
+              Bölüm toplamı: {bolumToplam} m² (mutfak hedefi: {mutfakM2} m²)
               {Math.abs(fark) >= 1 &&
-                ` · Toplamdan fark: ${fark > 0 ? "+" : ""}${fark} m²`}
+                ` · Mutfak hedefinden fark: ${fark > 0 ? "+" : ""}${fark} m²`}
             </p>
           )}
         </div>

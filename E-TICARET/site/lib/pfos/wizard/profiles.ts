@@ -1,4 +1,10 @@
 import type { Konsept } from "@/lib/pfos/schemas/pfos.schema";
+import {
+  dagitM2ByKural,
+  mutfakM2FromToplam,
+} from "@/lib/pfos/wizard/m2-dagitim-kurali";
+
+export { mutfakM2FromToplam } from "@/lib/pfos/wizard/m2-dagitim-kurali";
 
 export type PfosProfilMeta = {
   konsept: Konsept;
@@ -155,7 +161,6 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "ana_mutfak",
       "bar",
       "sebze_hazirlik",
-      "pastane",
       "kuru_depo",
       "bulasikhane",
       "izgara_meze",
@@ -545,17 +550,11 @@ export function zonesForKonsept(slug: Konsept | null): string[] {
   return PROFIL_BY_SLUG[slug]?.pfosZones ?? [];
 }
 
-/** Toplam m²’yi zone listesine orantılı dağıt (ilk kurulum) */
+/** Toplam m² → mutfak dağıtım kuralı (bkz. m2-dagitim-kurali.ts) */
 export function dagitM2Toplam(
   zones: string[],
   toplam: number,
+  konsept?: Konsept | null,
 ): Record<string, number> {
-  if (!zones.length || toplam <= 0) return {};
-  const pay = Math.floor(toplam / zones.length);
-  let kalan = toplam - pay * zones.length;
-  const out: Record<string, number> = {};
-  zones.forEach((z, i) => {
-    out[z] = pay + (i < kalan ? 1 : 0);
-  });
-  return out;
+  return dagitM2ByKural(zones, toplam, konsept);
 }

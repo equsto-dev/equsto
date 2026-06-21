@@ -75,13 +75,16 @@ export default function PFOSWizard() {
     : undefined;
 
   function handleM2Toplam(v: number | string) {
-    set({ m2Toplam: v });
     const toplam = parseM2(v);
     const zones = zonesForKonsept(state.konsept);
-    if (toplam > 0 && zones.length && Object.keys(state.bolumM2).length === 0) {
-      const nums = dagitM2Toplam(zones, toplam);
-      set({ bolumM2: nums });
+    if (toplam > 0 && zones.length) {
+      set({
+        m2Toplam: v,
+        bolumM2: { ...state.bolumM2, ...dagitM2Toplam(zones, toplam, state.konsept) },
+      });
+      return;
     }
+    set({ m2Toplam: v });
   }
 
   function handleKonsept(k: Konsept) {
@@ -89,7 +92,7 @@ export default function PFOSWizard() {
     const zones = zonesForKonsept(k);
     const bolumM2 =
       toplam > 0 && zones.length
-        ? dagitM2Toplam(zones, toplam)
+        ? dagitM2Toplam(zones, toplam, k)
         : {};
     set({ konsept: k, bolumM2 });
   }
@@ -98,7 +101,12 @@ export default function PFOSWizard() {
     const toplam = parseM2(state.m2Toplam);
     const zones = zonesForKonsept(state.konsept);
     if (toplam > 0 && zones.length) {
-      set({ bolumM2: dagitM2Toplam(zones, toplam) });
+      set({
+        bolumM2: {
+          ...state.bolumM2,
+          ...dagitM2Toplam(zones, toplam, state.konsept),
+        },
+      });
     }
   }
 

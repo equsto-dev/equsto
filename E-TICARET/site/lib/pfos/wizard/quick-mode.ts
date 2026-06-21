@@ -28,7 +28,7 @@ export function pfosQuickInitialState(): PfosWizardState {
     projeAdi: "Coffee Shop — PFOS taslak",
     musteri: "",
     m2Toplam: m2,
-    bolumM2: zones.length ? dagitM2Toplam(zones, m2) : {},
+    bolumM2: zones.length ? dagitM2Toplam(zones, m2, konsept) : {},
     referansProjeId: null,
     referansZoneSecimi: [],
     referansBolumM2: {},
