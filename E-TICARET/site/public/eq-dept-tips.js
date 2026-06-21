@@ -998,7 +998,9 @@
     if (tile.id === "firinlar" && isFirinliKuzineProduct(u)) return false;
 
     if (tile.id === "kati-yakitli-izgaralar") {
-      return cat === "kati-yakitli-izgaralar";
+      if (cat !== "kati-yakitli-izgaralar") return false;
+      var kaynak = u.raw && u.raw.kaynak;
+      return kaynak === "sparo-web" || kaynak === "npicco-web";
     }
 
     if (tile.id && cat === tile.id) return true;

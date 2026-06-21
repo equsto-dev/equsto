@@ -167,6 +167,16 @@
     return active.indexOf("kati-yakitli-izgaralar") >= 0;
   }
 
+  function isKomurluIzgaraKaynak(hit) {
+    var k = hit && hit.raw && hit.raw.kaynak;
+    return k === "sparo-web" || k === "npicco-web";
+  }
+
+  function isKomurluIzgaraBrand(brand) {
+    var b = String(brand || "").trim();
+    return b === "Sparo" || b === "Npicco";
+  }
+
   global.EqKomurluIzgaraFacets = {
     classifyFacet: classifyFacet,
     facetKeyFromHit: facetKeyFromHit,
@@ -178,5 +188,7 @@
     sortKeys: sortKeys,
     renderFacetListHtml: renderFacetListHtml,
     activeKomurluIzgaraTip: activeKomurluIzgaraTip,
+    isKomurluIzgaraKaynak: isKomurluIzgaraKaynak,
+    isKomurluIzgaraBrand: isKomurluIzgaraBrand,
   };
 })(typeof window !== "undefined" ? window : globalThis);

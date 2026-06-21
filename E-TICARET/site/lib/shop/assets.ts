@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260527-komurlu-izgara-filtre";
+export const SHOP_ASSET_V = "20260527-komurlu-izgara-sade";
 export const BESOS_SUBNAV_ICON_V = "ref-vitrum-strip-6";
 
 /** Dept / ekipmanlar JSON — legacy static JS */

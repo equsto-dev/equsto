@@ -413,6 +413,16 @@
       : state.activeTile
         ? [state.activeTile]
         : [];
+    var komurluIzgaraView =
+      global.EqKomurluIzgaraFacets && global.EqKomurluIzgaraFacets.activeKomurluIzgaraTip(state);
+    if (komurluIzgaraView) showEnergy = false;
+
+    function komurluBrandAllowed(brand) {
+      return (
+        global.EqKomurluIzgaraFacets &&
+        global.EqKomurluIzgaraFacets.isKomurluIzgaraBrand(brand)
+      );
+    }
 
     function tallyCounts(pool) {
       var brandCounts = {};
@@ -421,7 +431,11 @@
       var priceMaxAll = 0;
       pool.forEach(function (u) {
         var b = productBrand(u);
-        if (b && !isHiddenFacetBrand(b, dept)) brandCounts[b] = (brandCounts[b] || 0) + 1;
+        if (b && !isHiddenFacetBrand(b, dept)) {
+          if (!komurluIzgaraView || komurluBrandAllowed(b)) {
+            brandCounts[b] = (brandCounts[b] || 0) + 1;
+          }
+        }
         ENERGY_TYPES.forEach(function (e) {
           if (matchEnergy(u, e.id)) energyCounts[e.id] = (energyCounts[e.id] || 0) + 1;
         });
@@ -446,7 +460,9 @@
     var brands = Object.keys(brandCounts);
     (state.brands || []).forEach(function (b) {
       var k = facetBrandKey(b);
-      if (k && !isHiddenFacetBrand(k, dept) && brands.indexOf(k) < 0) brands.push(k);
+      if (k && !isHiddenFacetBrand(k, dept) && brands.indexOf(k) < 0) {
+        if (!komurluIzgaraView || komurluBrandAllowed(k)) brands.push(k);
+      }
     });
     brands.sort(function (a, b) {
       return (brandCounts[b] || 0) - (brandCounts[a] || 0);
@@ -487,7 +503,7 @@
       esc(__facetT('plp.facet_clear_all', 'HEPSİNİ SİL')) +
       '</button></div>';
 
-    if (tileItems.length) {
+    if (tileItems.length && !komurluIzgaraView) {
       html +=
         '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
         esc(__facetT('plp.facet_categories', 'Kategoriler')) +
@@ -570,7 +586,7 @@
         counts: komCounts,
         selected: state.komurluIzgaraGrup || [],
         inputName: 'eq-dept-cm-komurlu-grup',
-        title: __facetT('plp.facet_komurlu_grup', 'Ürün grubu'),
+        title: __facetT('plp.facet_categories', 'Kategoriler'),
       });
     }
 
@@ -818,6 +834,13 @@
     (state.brands || []).forEach(function (b) {
       var label = facetBrandKey(b);
       if (isHiddenFacetBrand(label, chipDept)) return;
+      if (
+        global.EqKomurluIzgaraFacets &&
+        global.EqKomurluIzgaraFacets.activeKomurluIzgaraTip(state) &&
+        !global.EqKomurluIzgaraFacets.isKomurluIzgaraBrand(label)
+      ) {
+        return;
+      }
       chips.push({ type: 'brand', value: label, text: label });
     });
     (state.olcu || []).forEach(function (ok) {

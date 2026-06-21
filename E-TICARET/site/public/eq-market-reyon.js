@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260527-komurlu-izgara-filtre";
+  var CATALOG_V = "20260527-komurlu-izgara-sade";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
