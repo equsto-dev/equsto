@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-sparo-izgaralar";
+  var CATALOG_V = "20260527-komurlu-izgara-filtre";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
