@@ -1,0 +1,516 @@
+{
+  "kategoriId": "all-day-dining-cafe",
+  "bantId": "2018-199",
+  "label": "All Day Dining Cafe 150–300 m² (2018-199-3)",
+  "referansM2": 275,
+  "kaynakDosya": "2018-199-3.xlsx",
+  "yukleme": "2026-06-21T21:27:08.848Z",
+  "kalemSayisi": 63,
+  "toplamAdet": 75,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A1",
+      "ad": "GAZLI VE ODUNLU DÖNER TABANLI PİZZA FIRINI",
+      "olcu": "127*175*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A2",
+      "ad": "SERVİS ÜNİTESİ DOLAPLI  ARA RAFLI",
+      "olcu": "200*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A3",
+      "ad": "ET TEŞHİR DOLABI",
+      "olcu": "200*110*130",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A4",
+      "ad": "ET TEŞHİR DOLABI",
+      "olcu": "291*110*130",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A5",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "60*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A6",
+      "ad": "DUVAR TİP DAVLUMBAZ FİLİTRELİ  TAZE HAVA ÜFLEME KANALLI",
+      "olcu": "380*95*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A7",
+      "ad": "ARA ÇALIŞMA TEZGAHI DOLAPLI",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A8",
+      "ad": "SOSBAINMARIE, dOLAPLI",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A9",
+      "ad": "ELEKTRİKLİ 4'LÜ OCAK DOLAPLI",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A10",
+      "ad": "SALAMANDER  ELEKTİRİKLİ",
+      "olcu": "60*60*60",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A11",
+      "ad": "ÇİFT SEPETLİ FRİTÖZ  ELEKTİRİKLİ",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A12",
+      "ad": "PATATES DİNLENDİRME  ELEKTİRİKLİ",
+      "olcu": "40*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A13",
+      "ad": "FIRIN ALT TEZGAHI  TEPSİ RAFLI",
+      "olcu": "100*90*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A14",
+      "ad": "RASYONEL FIRIN  10 TEPSİ KAPASİTELİ ELEKTİRİKLİ",
+      "olcu": "SCCWE101E",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A15",
+      "ad": "TEZGAH TİPİ BUZDOLABI",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A16",
+      "ad": "ET KEMİK TESTERESİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A17",
+      "ad": "ET KIYMA MAK.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A18",
+      "ad": "VAKUM MAK.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A19",
+      "ad": "STRETCH MAK.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A20",
+      "ad": "ORTA TİP DAVLUMBAZ FİLTRELİ  TAZE HAVA ÜFLEME KANALL",
+      "olcu": "230*150*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A21",
+      "ad": "ÇALIŞMA TEZGAHI TABAN VE ARA RAFLI",
+      "olcu": "200*120*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A22",
+      "ad": "KÖMÜRLÜ IZGARA",
+      "olcu": "200*80*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A23",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A24",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "140*70*95",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A25",
+      "ad": "OTOMATİK PORTAKAL SIKMA MAK.",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A26",
+      "ad": "SET ALTI ŞİŞE SOĞUTUCU 2 KAPILI",
+      "olcu": "92*50*87",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A27",
+      "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "170*70*95",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A28",
+      "ad": "SET ALTI BUZ MAK.",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A29",
+      "ad": "SET ALTI BULAŞIK YIKAMA MAK.",
+      "olcu": "500TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A30",
+      "ad": "ÇAY OCAĞI  ELEKTİRİLİ  3 DEMLİK, BAKIR - BAKIR DAVLUMBAZLI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A31",
+      "ad": "YÜKSEK MAKEUP ÜNİTESİ, MERMER TABLALI",
+      "olcu": "186*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A32",
+      "ad": "ÇİFT SIRA DUVAR RAFI",
+      "olcu": "200*30*3",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A33",
+      "ad": "ÇİFT SIRA DUVAR RAFI",
+      "olcu": "130*30*3",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "MUTFAK",
+      "poz": "A34",
+      "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "130*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B1",
+      "ad": "BULAŞIK ALMA TEZGAHI SIYIRMA HUNİLİ",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B2",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B3",
+      "ad": "ÇİFT EVİYELİ - SIYIRMA HUNİLİ BYM GİRİŞ TEZGAHI",
+      "olcu": "230*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B4",
+      "ad": "SPREY UNİTESİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B5",
+      "ad": "BYM DAVLUMBAZI",
+      "olcu": "100*100*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B6",
+      "ad": "GİYOTİN TİP BYM",
+      "olcu": "1000TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B7",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "150*75*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B8",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B9",
+      "ad": "İSTİF RAFI",
+      "olcu": "91*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B10",
+      "ad": "YER IZGARASI",
+      "olcu": "95*30*14",
+      "adet": 5
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B11",
+      "ad": "DRY AGED DOLABI",
+      "olcu": "200*90*220",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "B12",
+      "ad": "KASALAMA",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SEBZE SOĞUK ODA",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA, ZEMİNSİZ",
+      "olcu": "255*175*240",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "SEBZE SOĞUK ODA",
+      "poz": "C2",
+      "ad": "İSTİF RAFI",
+      "olcu": "107*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "ET SOĞUK ODA",
+      "poz": "D1",
+      "ad": "PANEL TİP SOĞUK ODA, ZEMİNSİZ",
+      "olcu": "240*180*240",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "ET SOĞUK ODA",
+      "poz": "D2",
+      "ad": "İSTİF RAFI",
+      "olcu": "107*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "ET SOĞUK ODA",
+      "poz": "D3",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET DERIN DONDURUCU ODA",
+      "poz": "E1",
+      "ad": "PANEL TİP DERİN DONDURUCU ODA, ZEMİNSİZ",
+      "olcu": "280*245*240",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET DERIN DONDURUCU ODA",
+      "poz": "E2",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 3
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F1",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, KIRMIZI",
+      "olcu": "110*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F2",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, YEŞİL, TABAN RAFLI",
+      "olcu": "110*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F3",
+      "ad": "KLASİK HAMUR (KÖFTE) YOĞURMA MAKİNASI",
+      "olcu": "20 kg/sefer",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F4",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "100*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F5",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "F",
+      "bolumAd": "HAZIRLIK & KURU DEPO",
+      "poz": "F6",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "X",
+      "bolumAd": "EK KALEMLER",
+      "poz": "X1",
+      "ad": "TEŞHİR DOLAPLARI SARI PASLANMAZ KAPLANMASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "X",
+      "bolumAd": "EK KALEMLER",
+      "poz": "X2",
+      "ad": "POZ C11 EVYE GÖZÜ FARKI (ÇİFT EVYE OLACAK)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "X",
+      "bolumAd": "EK KALEMLER",
+      "poz": "X3",
+      "ad": "YEDEK HELEZON (1 ad) VE TESTERE BIÇAĞI (3 ad.)",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "X",
+      "bolumAd": "EK KALEMLER",
+      "poz": "X4",
+      "ad": "BÜRO TİPİ DERİN DONDURUCU",
+      "olcu": "-",
+      "adet": 1
+    }
+  ]
+}

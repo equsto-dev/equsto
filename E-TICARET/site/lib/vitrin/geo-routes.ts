@@ -6,6 +6,8 @@ export const GEO_TR_SLUGS = [
   "cafe-kurulumu",
   "catering-mutfagi",
   "fine-dining-kurulumu",
+  "dunya-mutfak-kurulumu",
+  "italyan-restoran-kurulumu",
   "all-day-dining-kurulumu",
   "all-day-casual-cafe-kurulumu",
   "fast-food-kurulumu",

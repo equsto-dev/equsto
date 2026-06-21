@@ -58,7 +58,8 @@ export type ReferansListeId =
   | "500-2000-topkapi"
   | "500-2000-arnavutkoy"
   | "200-500"
-  | "200-5000";
+  | "200-5000"
+  | "2018-199";
 
 /** Şehir oteli — 750 / 1000 m²'de tüm referans listeleri birleştirilir */
 const SEHIR_OTEL_TUM_LISTELER: ReferansListeId[] = [
@@ -87,16 +88,19 @@ export function pickRestoranListe(m2: number): "200-500" | "500-1000" {
   return m2 <= 400 ? "200-500" : "500-1000";
 }
 
-/** İtalyan: 100–300 m² → 03-italyan referans listesi */
-export function pickItalyanListe(_m2: number): "100-300" {
-  return "100-300";
+/** İtalyan: ≤180 m² → 03-italyan; 181–320 m² → 2018-199-3; daha büyük → Havelka */
+export function pickItalyanListe(m2: number): "100-300" | "150-300" | "2018-199" {
+  if (m2 <= 180) return "100-300";
+  if (m2 <= 320) return "2018-199";
+  return "150-300";
 }
 
-/** All day dining: ≤200 → Boyoz; 201–300 → Havelka; 301–400 → THC Mavibahçe; >400 → gömülü THC */
+/** All day dining: ≤200 → Boyoz; 201–280 → 2018-199-3; 281–300 → House; 301–400 → THC */
 export function pickAllDayDiningListe(
   m2: number,
-): "100-200" | "150-300" | "200-400" | null {
+): "100-200" | "150-300" | "200-400" | "2018-199" | null {
   if (m2 <= 200) return "100-200";
+  if (m2 <= 280) return "2018-199";
   if (m2 <= 300) return "150-300";
   if (m2 <= 400) return "200-400";
   return null;
@@ -313,7 +317,8 @@ export async function loadReferansProfil(
     | "kahve-tatli"
     | "kahve-duragi-pastane"
     | "resort-otel"
-    | "turk-restoran",
+    | "turk-restoran"
+    | "dunya-mutfagi",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -393,7 +398,9 @@ export async function loadReferansProfil(
                         ? pickItalyanListe(m2)
                         : kategoriId === "all-day-dining-cafe"
                           ? pickAllDayDiningListe(m2) ?? "200-400"
-                          : kategoriId === "restoran"
+                          : kategoriId === "dunya-mutfagi"
+                            ? "2018-199"
+                            : kategoriId === "restoran"
                             ? pickRestoranListe(m2)
                             : kategoriId === "kokteyl-kahve"
                               ? "30-50"

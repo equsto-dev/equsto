@@ -274,6 +274,7 @@
     "pfos:kebap-ortadogu:meftech:80-200:import": "node scripts/import-kebap-ortadogu-meftech-konsept.mjs 80-200",
     "pfos:thehouse-150-300:import": "node scripts/import-thehouse-150-300-konsept.mjs",
     "pfos:havelka:import": "node scripts/import-havelka-2017-128-allday-italyan.mjs",
+    "pfos:2018-199:import": "node scripts/import-2018-199-3.mjs",
     "pfos:thc-mavibahce:import": "python scripts/import-thc-mavibahce-allday-2017-154.py",
     "pfos:restoran:import": "node scripts/import-restoran-konsept.mjs",
     "pfos:onnogroup-restoran:import": "node scripts/import-onnogroup-restoran-2017-142.mjs",

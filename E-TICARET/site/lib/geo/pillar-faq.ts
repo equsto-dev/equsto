@@ -49,7 +49,19 @@ export const PILLAR_FAQ: Record<string, GeoFaqItem[]> = {
   "all-day-casual-cafe-kurulumu": [
     [
       "All day casual cafe ekipman listesi nasıl oluşturulur?",
-      "equsto.com/all-day-casual-cafe-kurulumu rehberi ve equsto.com/pfos cafe konsepti gün boyu pişirme, bar ve soğutma hatlarını modeller.",
+      "equsto.com/all-day-casual-cafe-kurulumu rehberi (2018-199-3, 63 kalem) ve equsto.com/pfos all day dining cafe konsepti gün boyu pişirme, bar ve soğutma hatlarını modeller.",
+    ],
+  ],
+  "dunya-mutfak-kurulumu": [
+    [
+      "Dünya mutfağı ekipman listesi nasıl oluşturulur?",
+      "equsto.com/dunya-mutfak-kurulumu rehberi (2018-199-3 referans proforma) ve equsto.com/pfos dünya mutfağı konsepti pizza, ızgara ve soğutma hatlarını modeller.",
+    ],
+  ],
+  "italyan-restoran-kurulumu": [
+    [
+      "İtalyan restoran mutfak ekipman listesi nasıl oluşturulur?",
+      "equsto.com/italyan-restoran-kurulumu rehberi (2018-199-3) ve equsto.com/pfos İtalyan restoran konsepti pizza fırını, rational ve pasta hatlarını modeller.",
     ],
   ],
   "balik-restorani-mutfak-projesi-kurulumu": [
