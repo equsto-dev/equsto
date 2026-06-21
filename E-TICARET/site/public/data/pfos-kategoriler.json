@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-20T13:33:35.649Z",
+  "updated_at": "2026-06-21T21:27:08.861Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -147,6 +147,18 @@
             "toplamAdet": 51,
             "kaynakDosya": "2017-128 HAVELKA/2017-128.xlsx",
             "yukleme": "2026-06-16T10:05:51.486Z"
+          }
+        },
+        {
+          "id": "2018-199",
+          "label": "2018-199 · 150–300 m²",
+          "referansM2": 275,
+          "meta": {
+            "listeDosya": "italyan-2018-199.json",
+            "kalemSayisi": 63,
+            "toplamAdet": 75,
+            "kaynakDosya": "2018-199-3.xlsx",
+            "yukleme": "2026-06-21T21:27:08.846Z"
           }
         }
       ]
@@ -387,6 +399,18 @@
             "toplamAdet": 87,
             "kaynakDosya": "2017-154 THC MAVİBAHÇE/2017-154-2.pdf",
             "yukleme": "2026-06-16T12:01:03.382622Z"
+          }
+        },
+        {
+          "id": "2018-199",
+          "label": "2018-199 · 150–300 m²",
+          "referansM2": 275,
+          "meta": {
+            "listeDosya": "all-day-dining-cafe-2018-199.json",
+            "kalemSayisi": 63,
+            "toplamAdet": 75,
+            "kaynakDosya": "2018-199-3.xlsx",
+            "yukleme": "2026-06-21T21:27:08.848Z"
           }
         }
       ]
@@ -1134,6 +1158,25 @@
             "toplamAdet": 96,
             "kaynakDosya": "2018/2018-013 COFFEESHOP TRABZON/2018-013-1.xlsx",
             "yukleme": "2026-06-16T11:15:39.379Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dunya-mutfagi",
+      "label": "Dünya Mutfağı",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "2018-199",
+          "label": "2018-199 · 150–300 m²",
+          "referansM2": 275,
+          "meta": {
+            "listeDosya": "dunya-mutfagi-2018-199.json",
+            "kalemSayisi": 63,
+            "toplamAdet": 75,
+            "kaynakDosya": "2018-199-3.xlsx",
+            "yukleme": "2026-06-21T21:27:08.843Z"
           }
         }
       ]

@@ -55,6 +55,26 @@
     "skipBudget": true,
     "body": "<p>Fine dining mutfağında düşük porsiyon sıklığı geniş ocak yayılımı getirir. Steakhouse'a kıyasla dry-age ağırlığı düşük; dengeli pişirme, bitirme ve hassas muhafaza öne çıkar. Bitirme, sos ve soğuk holding hatları servis stiline göre ayrılır.</p><h2>Pişirme ve bitirme</h2><p>Sous-vide ve düşük sıcaklık pişirme modülleri ayrı elektrik hattı gerektirebilir. Mis en place alanı servis başlangıcından önce hazırlanır. Şef brifingi ekipman listesini doğrular; PFOS taslağı bu brifingle güncellenir.</p><h2>Açık mutfak ve yıkama</h2><p>Açık mutfak projelerinde ses ve koku yönetimi havalandırma tasarımına bağlıdır. Yıkama hattı düşük hacimli ama yüksek hijyen standardında planlanır. Işık planı teşhir ve pişirme zonlarını ayırır.</p><p><a href=\"/pfos\">Proje Fabrikası</a> fine dining konsepti kapasite, menü ve servis stili girdileriyle ön liste üretir. Izgara ağırlıklı konseptler için <a href=\"/steakhouse-kurulumu\">steakhouse rehberine</a> bakın.</p>"
   },
+  "dunya-mutfak-kurulumu": {
+    "profile": "dunyaMutfak",
+    "title": "Dünya mutfağı kurulum rehberi | Equsto",
+    "description": "Dünya mutfağı mutfak kurulumu: 2018-199-3 referans proforma (63 kalem), pizza fırını, ızgara, rational ve çok zonlu soğutma.",
+    "h1": "Dünya mutfağı kurulumu",
+    "lead": "2018-199-3 referans proforması: çok kültürlü menü için pişirme, teşhir, soğutma ve bulaşık hatları.",
+    "tableRef": "geo/dunya-mutfak-2018-199-3-table.json",
+    "skipBudget": true,
+    "body": "<p>Dünya mutfağı restoranında menü coğrafyası genişledikçe pişirme hatları çoğalır; pizza fırını, kömürlü ızgara, rational kombi ve fritöz aynı mutfakta eşzamanlı çalışır. Bu sayfa 2018-199-3 referans proformasından türetilmiştir; aşağıdaki tablo fiyat içermez.</p><h2>Pişirme ve teşhir</h2><p>Gazlı pizza fırını ve kömürlü ızgara açık mutfak projelerinde davlumbaz debisini belirler. Et teşhir dolapları servis koridoruna yakın konumlandırılır; salamander ve sos bain-marie bitirme hattını tamamlar. Dört gözlü ocak ve çift sepetli fritöz öğle piklerinde paralel devreye girer.</p><h2>Soğuk zincir</h2><p>Sebze, et ve derin dondurucu odaları ayrı panel setleriyle planlanır; istif rafları stok derinliğini taşır. Tezgah tipi buzdolapları günlük servis stokunu pişirme hattına yakın tutar. HACCP akışında hazırlık zonu soğuk odalardan pişirmeye tek yönlü ilerler.</p><h2>Bar ve bulaşık</h2><p>Portakal sıkacağı, buz makinesi, çay ocağı ve set altı bardak yıkama modülleri içecek trafiğini karşılar. Giyotin tip bulaşık makinesi giriş-çıkış tezgahları ve sprey ünitesiyle birlikte konumlandırılır. <a href=\"/italyan-restoran-kurulumu\">İtalyan restoran rehberi</a> pizza ağırlıklı konseptler için ayrı okunmalıdır.</p><p>Kapasite ve m² bilgisiyle <a href=\"/pfos\">Proje Fabrikası</a> dünya mutfağı konseptinden kişiselleştirilmiş liste oluşturabilirsiniz.</p>"
+  },
+  "italyan-restoran-kurulumu": {
+    "profile": "italyan",
+    "title": "İtalyan restoran mutfak kurulumu | Equsto",
+    "description": "İtalyan restoran mutfak kurulumu: 2018-199-3 referans proforma (63 kalem), pizza fırını, rational, salamander ve pasta hattı.",
+    "h1": "İtalyan restoran mutfak kurulumu",
+    "lead": "2018-199-3 referans proforması: pizza, pasta ve ızgara hatları için pişirme, soğutma ve bulaşık zonları.",
+    "tableRef": "geo/italyan-2018-199-3-table.json",
+    "skipBudget": true,
+    "body": "<p>İtalyan restoran mutfağında pizza fırını ve rational kombi omurgayı oluşturur; salamander, ocak ve fritöz servis piklerinde yan hatları besler. 2018-199-3 referans proforması trattoria ölçeğinde tam mutfak setini gösterir; tablo fiyat içermez.</p><h2>Pizza ve pasta hattı</h2><p>Gazlı döner tabanlı pizza fırını hamur hazırlığına yakın konumlandırılır; fırın alt tezgahı tepsi rafı servis hızını destekler. Hamur yoğurma makinesi ve hazırlık tezgahları kuru depo zonunda toplanır. Vakum ve streç makineleri prep ve muhafaza arasında yer alır.</p><h2>Pişirme ve bitirme</h2><p>10 tepsi kapasiteli rational fırın ana yemek ve yan ürünleri tek modülde taşır. Salamander ve sos bain-marie tabak bitirme hattını oluşturur. Kömürlü ızgara antipasti ve et grupları için ayrı yük oluşturur; davlumbaz kapasitesi bu adetle birlikte hesaplanmalıdır.</p><h2>Soğutma ve servis</h2><p>Et ve sebze soğuk odaları ile derin dondurucu panel setleri tedarik döngüsünü destekler. Servis ünitesi dolaplı ara raflı tezgah pass-through akışına göre yerleştirilir. <a href=\"/dunya-mutfak-kurulumu\">Dünya mutfağı rehberi</a> daha geniş menü profilleri için referans verir.</p><p><a href=\"/pfos\">Proje Fabrikası</a> İtalyan restoran konsepti m² ve kapasite girdileriyle listeyi ölçekler.</p>"
+  },
   "bulut-mutfak-kurulumu": {
     "profile": "bulut",
     "title": "Bulut mutfak kurulum rehberi | Equsto",
@@ -76,12 +96,12 @@
   "all-day-casual-cafe-kurulumu": {
     "profile": "houseCafe",
     "title": "All day casual cafe kurulum rehberi | Equsto",
-    "description": "All day casual cafe mutfak kurulumu: 19- THE HOUSE CAFE referans proforma (48 kalem), pişirme, bar, soğutma ve bulaşık hatları.",
+    "description": "All day casual cafe mutfak kurulumu: 2018-199-3 referans proforma (63 kalem), gün boyu pişirme, bar, soğutma ve bulaşık hatları.",
     "h1": "All day casual cafe kurulumu",
-    "lead": "19- THE HOUSE CAFE referans proforması: gün boyu cafe menüsü için pişirme, bar, soğutma ve bulaşık hatları.",
-    "tableRef": "geo/house-cafe-19-table.json",
+    "lead": "2018-199-3 referans proforması: gün boyu cafe menüsü için pişirme, bar, soğutma ve bulaşık hatları.",
+    "tableRef": "geo/allday-cafe-2018-199-3-table.json",
     "skipBudget": true,
-    "body": "<p>All day casual cafe, kahvaltıdan gece atıştırmalığına uzanan menüyü tek mutfakta taşır. House Cafe tarzı işletmelerde fırın, kuzine, ızgara ve makarna hattı gün içinde farklı yüklerle çalışır; bar ve soğuk içecek istasyonu servis koridorundan bağımsız konumlandırılır. Bu sayfa 19- THE HOUSE CAFE referans proformasından türetilmiştir; aşağıdaki tablo fiyat içermez.</p><h2>Pişirme ve fırın hattı</h2><p>Konveksiyonlu fırın ve mayalama kabini pastane ağırlıklı menülerde omurgayı oluşturur. Dört gözlü kuzine, plakalı ızgara, fritöz ve makarna haşlama modülü öğle ve akşam piklerinde eşzamanlı devreye girer. Davlumbaz kapasitesi açık alevli ocak adediyle birlikte hesaplanmalı; pişirme zonu hazırlık hattından fiziksel olarak ayrılır.</p><h2>Soğuk zincir ve depo</h2><p>Panel soğuk oda (250×200×220 cm) ve panel buz odası (200×150×220 cm) günlük tedarik döngüsünü destekler. Tezgah altı ve dik tip dolaplar salata, pizza ve bar stoklarını taşır. Soğuk zincir kesintisizliği denetim odağıdır; dijital sıcaklık kaydı ruhsat dosyasına eklenebilir.</p><h2>Bar ve içecek</h2><p>Bardak yıkama makinesi, buz makinesi, portakal ve katı meyve sıkacağı, blender ve üç adet bar buzdolabı yoğun içecek trafiğini karşılar. Bar arkası elektrik ve su noktaları modül yerleşiminden önce doğrulanmalıdır. <a href=\"/cafe-kurulumu\">Cafe kurulum rehberi</a> espresso odaklı konseptler için ayrı okunmalıdır.</p><h2>Hazırlık ve bulaşık</h2><p>Hamur yoğurma, sebze doğrama, kıyma makinesi ve el blenderi hazırlık zonunu tamamlar. Giyotin tip bulaşık makinesi giriş-çıkış tezgahları ve ön yıkama duşuyla birlikte planlanır; pik öğün yükü bulaşık kapasitesini belirler.</p><p>Kapasite ve m² bilgisiyle <a href=\"/pfos\">Proje Fabrikası</a> cafe konseptinden kişiselleştirilmiş liste oluşturabilirsiniz. Aşağıdaki tablo 48 kalemlik referans ekipman listesidir.</p>"
+    "body": "<p>All day casual cafe, kahvaltıdan gece atıştırmalığına uzanan menüyü tek mutfakta taşır. 2018-199-3 referans proforması pizza fırını, rational, ızgara ve bar modüllerini gün içi farklı yüklerle çalışacak şekilde planlar; aşağıdaki tablo fiyat içermez.</p><h2>Pişirme ve fırın hattı</h2><p>Pizza fırını ve rational kombi öğle piklerinde eşzamanlı devreye girer. Dört gözlü ocak, salamander, fritöz ve kömürlü ızgara ana yemek ve atıştırmalık gruplarını taşır. Davlumbaz kapasitesi açık alevli ocak adediyle birlikte hesaplanmalı; pişirme zonu hazırlık hattından fiziksel olarak ayrılır.</p><h2>Soğuk zincir ve depo</h2><p>Sebze, et ve derin dondurucu panel odaları günlük tedarik döngüsünü destekler. Tezgah tipi buzdolapları bar ve servis stoklarını pişirme hattına yakın tutar. Hazırlık ve kuru depo zonunda hamur yoğurma ve polietilen tezgahlar HACCP renk koduna uyar.</p><h2>Bar ve içecek</h2><p>Portakal sıkacağı, buz makinesi, çay ocağı, set altı bardak yıkama ve şişe soğutucu yoğun içecek trafiğini karşılar. Yüksek mermer tablalı makeup ünitesi servis çıkışına yakın konumlandırılır. Espresso odaklı konseptler için <a href=\"/cafe-kurulumu\">cafe kurulum rehberi</a> ayrı okunmalıdır.</p><h2>Bulaşık ve servis</h2><p>Giyotin tip bulaşık makinesi, bulaşık alma tezgahı ve sprey ünitesi pik öğün yükünü karşılar. Et teşhir dolapları ve servis ünitesi pass-through akışına göre yerleştirilir.</p><p>Kapasite ve m² bilgisiyle <a href=\"/pfos\">Proje Fabrikası</a> all day dining cafe konseptinden kişiselleştirilmiş liste oluşturabilirsiniz.</p>"
   },
   "market-kasap-sarkuteri-kurulumu": {
     "profile": "marketKasap",
@@ -317,6 +337,14 @@
           {
             "label": "Fine dining kurulumu",
             "href": "/fine-dining-kurulumu"
+          },
+          {
+            "label": "Dünya mutfağı kurulumu",
+            "href": "/dunya-mutfak-kurulumu"
+          },
+          {
+            "label": "İtalyan restoran kurulumu",
+            "href": "/italyan-restoran-kurulumu"
           },
           {
             "label": "All day dining konsept kurulumu",

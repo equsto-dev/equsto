@@ -1,3 +1,6 @@
+import dunyaMutfak2018 from "../../public/data/geo/dunya-mutfak-2018-199-3-table.json";
+import italyan2018 from "../../public/data/geo/italyan-2018-199-3-table.json";
+import alldayCafe2018 from "../../public/data/geo/allday-cafe-2018-199-3-table.json";
 import steakhouse2018 from "../../public/data/geo/steakhouse-2018-199-3-table.json";
 import balikci02 from "../../public/data/geo/balikci-02-table.json";
 import houseCafe19 from "../../public/data/geo/house-cafe-19-table.json";
@@ -32,6 +35,9 @@ export type GeoLandingTableData = {
 
 const TABLES: Record<string, GeoLandingTableData> = {
   "geo/steakhouse-2018-199-3-table.json": steakhouse2018 as GeoLandingTableData,
+  "geo/dunya-mutfak-2018-199-3-table.json": dunyaMutfak2018 as GeoLandingTableData,
+  "geo/italyan-2018-199-3-table.json": italyan2018 as GeoLandingTableData,
+  "geo/allday-cafe-2018-199-3-table.json": alldayCafe2018 as GeoLandingTableData,
   "geo/balikci-02-table.json": balikci02 as GeoLandingTableData,
   "geo/house-cafe-19-table.json": houseCafe19 as GeoLandingTableData,
 };

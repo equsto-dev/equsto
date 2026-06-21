@@ -6,7 +6,7 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260621geo-sprint3";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260621geo-2018-199";
   var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260530geo-no-table2";
 
   var UI = {
