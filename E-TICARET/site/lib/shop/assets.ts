@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260621-drawer-ice-blue";
+export const SHOP_ASSET_V = "20260621-drawer-glass";
 export const BESOS_SUBNAV_ICON_V = "ref-vitrum-strip-6";
 
 /** Dept / ekipmanlar JSON — legacy static JS */
