@@ -47,7 +47,7 @@ export default function BesosImt300Hero() {
               Sayfaya Git
             </Link>
             <p className="bd-hero-cta-price" data-i18n="besos.hero_price_hint">
-              Liste fiyatı: <strong>11.500 €</strong> · teklif için iletişim
+              11.500 € + KDV
             </p>
           </div>
         </aside>
