@@ -32,7 +32,7 @@
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
     { tip: "fritozler", dept: "pisirme", label: "Fritözler", slug: "fritozler" },
     { tip: "doner-ocaklari-", dept: "pisirme", label: "Döner Ocakları", slug: "doner-ocaklari-" },
-    { tip: "kati-yakitli-izgaralar", dept: "pisirme", label: "Kömürlü Izgaralar", slug: "kati-yakitli-izgaralar", search: "mangal|barbekü|barbeku|bbq|smoker|robata|asansörlü|asansorlu|kebap ızgara|steak mangal|kömürlü ızgara|komurlu izgara|sparo|npicco|asado|yakitori|barbekü" },
+    { tip: "kati-yakitli-izgaralar", dept: "pisirme", label: "Kömürlü Izgaralar", slug: "kati-yakitli-izgaralar" },
     { tip: "tost-makineleri", dept: "pisirme", label: "Tost Makineleri", slug: "tost-makineleri" },
     { tip: "pilic-cevirme-makineleri", dept: "pisirme", label: "Piliç Çevirme", slug: "pilic-cevirme-makineleri" },
     { tip: "ocakbasi-izgara", dept: "pisirme", label: "Ocakbaşı Izgaralar", slug: "ocakbasi-izgara" },
@@ -996,6 +996,10 @@
     }
 
     if (tile.id === "firinlar" && isFirinliKuzineProduct(u)) return false;
+
+    if (tile.id === "kati-yakitli-izgaralar") {
+      return cat === "kati-yakitli-izgaralar";
+    }
 
     if (tile.id && cat === tile.id) return true;
     if (tile.id === "self-servis" && cat === "self-servis-hatti") return true;

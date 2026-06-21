@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260621-sparo-izgaralar';
+  var CATALOG_V = '20260527-komurlu-izgara-filtre';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -48,6 +48,7 @@
     kuvetGn: [],
     buzdolapTip: [],
     pisirmeTip: [],
+    komurluIzgaraGrup: [],
     q: '',
     sort: '',
     priceMin: '',
@@ -838,6 +839,14 @@
         );
       });
     }
+    if (state.komurluIzgaraGrup.length && window.EqKomurluIzgaraFacets) {
+      list = list.filter(function (u) {
+        return window.EqKomurluIzgaraFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.komurluIzgaraGrup,
+        );
+      });
+    }
     if (state.energy.length && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -936,6 +945,14 @@
         );
       });
     }
+    if (state.komurluIzgaraGrup.length && exclude !== 'komurluIzgaraGrup' && window.EqKomurluIzgaraFacets) {
+      list = list.filter(function (u) {
+        return window.EqKomurluIzgaraFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.komurluIzgaraGrup,
+        );
+      });
+    }
     if (state.energy.length && exclude !== 'energy' && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -973,6 +990,7 @@
     state.kuvetGn = [];
     state.buzdolapTip = [];
     state.pisirmeTip = [];
+    state.komurluIzgaraGrup = [];
     state.priceMin = '';
     state.priceMax = '';
     state.loadedCount = PAGE_SIZE;
@@ -998,6 +1016,7 @@
       else if (type === 'kuvetGn') state.kuvetGn = state.kuvetGn.filter(function (k) { return k !== value; });
       else if (type === 'buzdolapTip') state.buzdolapTip = state.buzdolapTip.filter(function (k) { return k !== value; });
       else if (type === 'pisirmeTip') state.pisirmeTip = state.pisirmeTip.filter(function (k) { return k !== value; });
+      else if (type === 'komurluIzgaraGrup') state.komurluIzgaraGrup = state.komurluIzgaraGrup.filter(function (k) { return k !== value; });
       else if (type === 'priceMin') state.priceMin = '';
       else if (type === 'priceMax') state.priceMax = '';
       state.loadedCount = PAGE_SIZE;
@@ -1199,6 +1218,7 @@
         state.kuvetGn.length ||
         state.buzdolapTip.length ||
         state.pisirmeTip.length ||
+        state.komurluIzgaraGrup.length ||
         state.priceMin !== '' ||
         state.priceMax !== '';
       selWrap.hidden = !hasChip;

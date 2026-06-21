@@ -540,7 +540,11 @@
       });
     }
 
-    if ((dept === 'pisirme' || opts.showPisirmeTip) && global.EqPisirmeFacets) {
+    if (
+      (dept === 'pisirme' || opts.showPisirmeTip) &&
+      global.EqPisirmeFacets &&
+      !(global.EqKomurluIzgaraFacets && global.EqKomurluIzgaraFacets.activeKomurluIzgaraTip(state))
+    ) {
       var pisPool = getPool('pisirmeTip');
       var pisCounts = global.EqPisirmeFacets.countFacets(
         pisPool.map(function (u) {
@@ -552,6 +556,21 @@
         selected: state.pisirmeTip || [],
         inputName: 'eq-dept-cm-pisirme-tip',
         title: __facetT('plp.facet_pisirme_type', 'Pişirme tipi'),
+      });
+    }
+
+    if (global.EqKomurluIzgaraFacets && global.EqKomurluIzgaraFacets.activeKomurluIzgaraTip(state)) {
+      var komPool = getPool('komurluIzgaraGrup');
+      var komCounts = global.EqKomurluIzgaraFacets.countFacets(
+        komPool.map(function (u) {
+          return { name: u.n, n: u.n, category: u.c, raw: u.raw };
+        }),
+      );
+      html += global.EqKomurluIzgaraFacets.renderFacetListHtml({
+        counts: komCounts,
+        selected: state.komurluIzgaraGrup || [],
+        inputName: 'eq-dept-cm-komurlu-grup',
+        title: __facetT('plp.facet_komurlu_grup', 'Ürün grubu'),
       });
     }
 
@@ -748,6 +767,16 @@
       });
     });
 
+    host.querySelectorAll('input[name="eq-dept-cm-komurlu-grup"]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        state.komurluIzgaraGrup = [];
+        host.querySelectorAll('input[name="eq-dept-cm-komurlu-grup"]:checked').forEach(function (c) {
+          state.komurluIzgaraGrup.push(c.value);
+        });
+        onChange('komurluIzgaraGrup');
+      });
+    });
+
     var applyPrice = host.querySelector('#eq-dept-cm-price-apply');
     if (applyPrice) {
       applyPrice.addEventListener('click', function () {
@@ -825,6 +854,13 @@
           ? global.EqPisirmeFacets.labelFromKey(pk)
           : pk;
       chips.push({ type: 'pisirmeTip', value: pk, text: pl });
+    });
+    (state.komurluIzgaraGrup || []).forEach(function (kg) {
+      var kl =
+        global.EqKomurluIzgaraFacets && global.EqKomurluIzgaraFacets.labelFromKey
+          ? global.EqKomurluIzgaraFacets.labelFromKey(kg)
+          : kg;
+      chips.push({ type: 'komurluIzgaraGrup', value: kg, text: kl });
     });
     if (state.priceMin !== '' && state.priceMin != null) {
       chips.push({
