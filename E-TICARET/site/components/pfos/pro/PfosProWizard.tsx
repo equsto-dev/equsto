@@ -30,7 +30,6 @@ const SEGMENT_ICONS: Record<string, React.ReactNode> = {
 import {
   ProCard,
   ProForm,
-  ProFormDigit,
   ProFormRadio,
   ProFormSelect,
   ProFormText,
@@ -43,6 +42,8 @@ import {
   Checkbox,
   Col,
   Empty,
+  Form,
+  InputNumber,
   Row,
   Space,
   Spin,
@@ -353,17 +354,34 @@ export default function PfosProWizard() {
 
   function handleM2Toplam(v: number | null) {
     const val = v ?? "";
-    const t = parseM2(val);
-    const z = zonesForKonsept(state.konsept);
-    if (t > 0 && z.length && !state.referansProjeId) {
-      set({
-        m2Toplam: val,
-        bolumM2: { ...state.bolumM2, ...dagitM2Toplam(z, t, state.konsept) },
-      });
-      return;
-    }
-    set({ m2Toplam: val });
+    setState((s) => {
+      const t = parseM2(val);
+      const z = zonesForKonsept(s.konsept);
+      if (t > 0 && z.length && !s.referansProjeId) {
+        return {
+          ...s,
+          m2Toplam: val,
+          bolumM2: { ...s.bolumM2, ...dagitM2Toplam(z, t, s.konsept) },
+        };
+      }
+      return { ...s, m2Toplam: val };
+    });
   }
+
+  const m2ToplamExtra =
+    seciliKonsept ? (
+      <>
+        Geçerli aralık: {m2Min}–{m2Max} m²
+        {toplamM2 > 0 && (
+          <>
+            {" · "}
+            Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
+          </>
+        )}
+      </>
+    ) : toplamM2 > 0 ? (
+      <>Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²</>
+    ) : undefined;
 
   function bolumM2Sayilar(): Record<string, number> {
     const out: Record<string, number> = {};
@@ -851,59 +869,27 @@ export default function PfosProWizard() {
                   />
                 </Col>
                 <Col xs={24} md={10} lg={8}>
-                  <ProFormDigit
-                    label="Toplam alan (m²)"
-                    min={m2Min}
-                    max={m2Max}
-                    extra={
-                      seciliKonsept ? (
-                        <>
-                          Geçerli aralık: {m2Min}–{m2Max} m²
-                          {toplamM2 > 0 && (
-                            <>
-                              {" · "}
-                              Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
-                            </>
-                          )}
-                        </>
-                      ) : toplamM2 > 0 ? (
-                        <>Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²</>
-                      ) : undefined
-                    }
-                    fieldProps={{
-                      value: toplamM2 || undefined,
-                      onChange: handleM2Toplam,
-                      style: { width: "100%", maxWidth: 160 },
-                    }}
-                  />
+                  <Form.Item label="Toplam alan (m²)" extra={m2ToplamExtra}>
+                    <InputNumber
+                      value={toplamM2 || undefined}
+                      onChange={handleM2Toplam}
+                      precision={0}
+                      step={10}
+                      style={{ width: "100%", maxWidth: 160 }}
+                    />
+                  </Form.Item>
                 </Col>
               </Row>
             ) : (
-              <ProFormDigit
-                label="Toplam alan (m²)"
-                min={m2Min}
-                max={m2Max}
-                fieldProps={{
-                  value: toplamM2 || undefined,
-                  onChange: handleM2Toplam,
-                  style: { maxWidth: 200 },
-                }}
-                extra={
-                  seciliKonsept ? (
-                    <>
-                      Geçerli aralık: {m2Min}–{m2Max} m²
-                      {toplamM2 > 0 && (
-                        <>
-                          {" · "}
-                          Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²
-                        </>
-                      )}
-                    </>
-                  ) : toplamM2 > 0 ? (
-                    <>Mutfak alanı (toplamın 1/3&apos;ü): {mutfakM2} m²</>
-                  ) : undefined
-                }
-              />
+              <Form.Item label="Toplam alan (m²)" extra={m2ToplamExtra}>
+                <InputNumber
+                  value={toplamM2 || undefined}
+                  onChange={handleM2Toplam}
+                  precision={0}
+                  step={10}
+                  style={{ maxWidth: 200, width: "100%" }}
+                />
+              </Form.Item>
             )}
 
             {!PFOS_QUICK_MODE && state.detaySeviyesi !== "hizli" && (
@@ -1053,12 +1039,13 @@ export default function PfosProWizard() {
                     }
                     const z = profileZones;
                     if (toplamM2 > 0 && z.length) {
-                      set({
+                      setState((s) => ({
+                        ...s,
                         bolumM2: {
-                          ...state.bolumM2,
-                          ...dagitM2Toplam(z, toplamM2, state.konsept),
+                          ...s.bolumM2,
+                          ...dagitM2Toplam(z, toplamM2, s.konsept),
                         },
-                      });
+                      }));
                     }
                   }}
                 >
@@ -1070,19 +1057,20 @@ export default function PfosProWizard() {
               <Row gutter={[12, 12]}>
                 {zones.map((z) => (
                   <Col xs={24} sm={12} md={8} key={z}>
-                    <ProFormDigit
-                      label={zoneLabel(z)}
-                      min={0}
-                      max={m2Max}
-                      fieldProps={{
-                        value: parseM2(state.bolumM2[z]) || undefined,
-                        onChange: (v) =>
-                          set({
-                            bolumM2: { ...state.bolumM2, [z]: v ?? "" },
-                          }),
-                        style: { width: "100%" },
-                      }}
-                    />
+                    <Form.Item label={zoneLabel(z)}>
+                      <InputNumber
+                        value={parseM2(state.bolumM2[z]) || undefined}
+                        onChange={(v) =>
+                          setState((s) => ({
+                            ...s,
+                            bolumM2: { ...s.bolumM2, [z]: v ?? "" },
+                          }))
+                        }
+                        min={0}
+                        precision={0}
+                        style={{ width: "100%" }}
+                      />
+                    </Form.Item>
                   </Col>
                 ))}
               </Row>
