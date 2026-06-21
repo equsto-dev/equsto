@@ -7,7 +7,7 @@ import type { PfosWizardState } from "./types";
  * Geçici — PFOS hızlı deneme: 1. Adres + 2. Konsept atlanır.
  * Kapatmak için `false` yapın.
  */
-export const PFOS_QUICK_MODE = true;
+export const PFOS_QUICK_MODE = false;
 
 export const PFOS_QUICK_DEFAULTS = {
   konsept: "coffee-shop" as Konsept,
