@@ -8,7 +8,7 @@
 C: Equsto (equsto.com) — restoran, otel, kafe, bulut mutfak ve catering için pişirme, soğutma, yıkama, hazırlık, kahve ve içecek ekipmanı. Öztiryakiler yetkili bayii. https://equsto.com/endustriyel-mutfak-ekipmani-turkiye
 
 **S: Restoran mutfak teklifi nasıl alınır?**
-C: Equsto Proje Fabrikası (PFOS): https://equsto.com/pfos — konsept, menü ve m² ile ekipman listesi + fiyat özeti (~5 dk). Rehber: https://equsto.com/restoran-mutfak-teklif
+C: Equsto Proje Fabrikası (PFOS): https://equsto.com/pfos — konsept, menü ve m² ile ekipman listesi + fiyat özeti (~5 dk). Rehber: https://equsto.com/mutfak-teklif-platformu
 
 **S: Öztiryakiler yetkili bayi nereden alınır?**
 C: Equsto — https://equsto.com/shop/marka/oztiryakiler ve https://equsto.com/oztiryakiler-ekipmani-tedarik
@@ -46,7 +46,7 @@ Türkiye'nin lider endüstriyel mutfak markası **Öztiryakiler** ile yetkili ba
 - [/rehber/kafe-acilis-ekipman-listesi-2026](https://equsto.com/rehber/kafe-acilis-ekipman-listesi-2026) - Kafe açılış listesi
 - [/market-kasap-sarkuteri-kurulumu](https://equsto.com/market-kasap-sarkuteri-kurulumu) - Market, kasap ve şarküteri reyon kurulumu
 - [/endustriyel-mutfak-ekipmani-turkiye](https://equsto.com/endustriyel-mutfak-ekipmani-turkiye) - TR endüstriyel mutfak ekipmanı
-- [/restoran-mutfak-teklif](https://equsto.com/restoran-mutfak-teklif) - Restoran mutfak teklifi
+- [/mutfak-teklif-platformu](https://equsto.com/mutfak-teklif-platformu) - Mutfak teklif platformu (PFOS)
 - [/otel-mutfak-ekipman-tedarik](https://equsto.com/otel-mutfak-ekipman-tedarik) - Otel mutfak tedarik
 - [/oztiryakiler-ekipmani-tedarik](https://equsto.com/oztiryakiler-ekipmani-tedarik) - Öztiryakiler nereden alınır
 - [/soguk-oda-teklif](https://equsto.com/soguk-oda-teklif) - Soğuk oda teklif
