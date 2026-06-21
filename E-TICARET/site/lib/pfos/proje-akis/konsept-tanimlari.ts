@@ -42,7 +42,8 @@ export type ListeBantId =
   | "150-400"
   | "200-500"
   | "20-60"
-  | "200-5000";
+  | "200-5000"
+  | "2018-199";
 
 export type M2BantTanim = {
   id: ListeBantId;
