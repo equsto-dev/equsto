@@ -9,8 +9,9 @@ import {
   type SoruCevapHaritasi,
 } from "@/lib/pfos/proje-akis/soru-motor-mapping";
 import {
+  kucukAlanSegmentM2Aktif,
   otelSegmentM2Aktif,
-  PFOS_OTEL_UST_SEGMENT,
+  PFOS_Q_UST_SEGMENT,
   ustSegmentOptionsForM2,
 } from "@/lib/pfos/proje-akis/wizard-questions";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
@@ -420,11 +421,14 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setAnswers((prev) => {
       let merged = clearDownstreamAnswers({ ...prev, q_m2: value }, "q_m2");
       const m2 = Number(value);
+      const seg = String(merged.q_ust_segment ?? "").trim();
       if (
-        String(merged.q_ust_segment ?? "") === PFOS_OTEL_UST_SEGMENT &&
-        !otelSegmentM2Aktif(m2)
+        seg &&
+        Number.isFinite(m2) &&
+        !ustSegmentOptionsForM2(PFOS_Q_UST_SEGMENT, m2).includes(seg)
       ) {
-        merged = { ...merged, q_ust_segment: "" };
+        merged = clearDownstreamAnswers(merged, "q_ust_segment");
+        delete merged.q_ust_segment;
       }
       if (!bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)) {
         merged = { ...merged, q_dukkan_turu: "" };
@@ -610,6 +614,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             )}
           </p>
         ) : null}
+        {kucukAlanSegmentM2Aktif(val) ? (
+          <p className={styles.alanHint} style={{ marginBottom: 10 }}>
+            {t(
+              "40 / 80 m²: Kafe, Fast Food, Bar ve Bulut Mutfak segmentleri listelenir.",
+            )}
+          </p>
+        ) : null}
         {otelSegmentM2Aktif(val) ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
@@ -669,8 +680,18 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const twoCol = opts.length > 6;
       const bulutKompakt =
         q.id === "q_dukkan_turu" && bulutMutfakKompaktMi(answers);
+      const kucukAlanKonsept =
+        q.id === "q_ust_segment" &&
+        kucukAlanSegmentM2Aktif(Number(answers.q_m2));
       return (
         <>
+          {kucukAlanKonsept ? (
+            <p className={styles.alanHint} style={{ marginBottom: 8 }}>
+              {t(
+                "40 / 80 m² seçiminde yalnızca Kafe, Fast Food, Bar ve Bulut Mutfak gösterilir.",
+              )}
+            </p>
+          ) : null}
           {bulutKompakt ? (
             <p className={styles.alanHint} style={{ marginBottom: 8 }}>
               {t(
