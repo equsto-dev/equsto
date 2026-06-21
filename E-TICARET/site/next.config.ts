@@ -226,6 +226,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/contact", destination: "/iletisim", permanent: true },
       { source: "/balik-restorani-kurulumu", destination: "/balik-restorani-mutfak-projesi-kurulumu", permanent: true },
+      { source: "/bulut-mutfak-kurulumu", destination: "/rehber/dark-kitchen-bulut-mutfak-2026", permanent: true },
+      { source: "/restoran-mutfak-teklif", destination: "/mutfak-teklif-platformu", permanent: true },
       { source: "/balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar", destination: "/balik-restorani-mutfak-projesi-kurulumu", permanent: true },
       { source: "/en/fish-restaurant-kitchen-setup", destination: "/en/fish-restaurant-kitchen-project-and-equipment", permanent: true },
       { source: "/en/contact", destination: "/en/iletisim", permanent: true },

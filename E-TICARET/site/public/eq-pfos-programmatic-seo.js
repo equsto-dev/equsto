@@ -274,7 +274,7 @@
       return g;
     }
     var trg = [];
-    trg.push('<a href="/bulut-mutfak-kurulumu">Bulut mutfak rehberi</a>');
+    trg.push('<a href="/rehber/dark-kitchen-bulut-mutfak-2026">Bulut mutfak rehberi</a>');
     trg.push('<a href="/cafe-kurulumu">Kafe kurulum rehberi</a>');
     trg.push('<a href="/catering-mutfagi">Catering mutfağı rehberi</a>');
     if (/steak|steakhouse/.test(meslekKey)) trg.push('<a href="/steakhouse-kurulumu">Steakhouse kurulum</a>');

@@ -397,7 +397,7 @@
 
             { key: "footer.link_catering", label: "Catering mutfağı rehberi", href: "/catering-mutfagi" },
 
-            { key: "footer.link_bulut", label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" },
+            { key: "footer.link_bulut", label: "Bulut mutfak kurulumu", href: "/rehber/dark-kitchen-bulut-mutfak-2026" },
 
             { key: "footer.link_sss", label: "SSS", href: "/sss" },
 

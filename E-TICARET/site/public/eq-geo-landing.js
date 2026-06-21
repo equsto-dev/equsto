@@ -6,7 +6,7 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260530geo-no-table2";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260621geo-sprint3";
   var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260530geo-no-table2";
 
   var UI = {
@@ -131,7 +131,7 @@
         ["Kahve makinesi seçimi?", "Günlük bardak adedi ve eşzamanlı grup sayısı belirleyicidir."],
       ],
       related: [
-        { label: "Bulut mutfak rehberi", href: "/bulut-mutfak-kurulumu" },
+        { label: "Bulut mutfak rehberi", href: "/rehber/dark-kitchen-bulut-mutfak-2026" },
         { label: "Kahve vitrini", href: "/shop/kahve" },
       ],
     },
@@ -159,7 +159,7 @@
       body:
         "<p>Fast food hattında fritöz ve ızgara yoğunluğu, soğutma stok derinliği ile hızlı yıkama kritiktir. Menü karması ekipman adetlerini doğrudan etkiler; paket ağırlığı yükseldikçe hazırlık ve muhafaza modülleri artar. Servis süresi kısa olduğundan hat dizilimi paralel çalışır.</p><p>Sıcak holding ve soğuk stok aynı koridorda net ayrılır; tezgah yüksekliği ve ergonomi ekip verimini etkiler. Hızlı servis zincirlerinde standart modül seti PFOS şablonu olarak saklanır. Yeni şube açılışları aynı listeyi kopyalayıp kapasite girdisini günceller.</p><p>Paketleme istasyonu soğuk içecek ve sıcak ürün akışını ayırır. Kurye bekleme alanı mutfak çıkışına yakın planlanır. Ön teklif onayı franchise teknik şartnamesiyle karşılaştırılır.</p><p>PFOS fast food profili menü karması, günlük kapasite ve paket oranını sorarak modül adetlerini hesaplar. Davlumbaz kapasitesi fritöz ve ızgara adediyle birlikte okunmalıdır. Enerji yükü elektrik panosu boyutlandırmasını etkiler.</p><p>2026 fast food hatlarında fritöz ve ızgara yoğunluğu menü karmasıyla doğrudan orantılıdır. Canlı vitrin fiyatları KDV hariç özetlenir; proje iskontoları teklif sırasında uygulanır. Montaj ve devreye alma satış mühendisliği planıyla yürütülür.</p><p>Fast food mutfağında servis süresi kısa olduğundan hat dizilimi tamamen paralel çalışır; fritöz, ızgara ve hazırlık modülleri aynı koridorda net ayrılır. Paket ağırlığı yükseldikçe ambalajlama istasyonu ve soğuk stok derinliği artar. Kurye bekleme alanı mutfak çıkışına yakın planlanarak teslimat gecikmesi azaltılır.</p><p>Franchise teknik şartnamesi ile PFOS çıktısı karşılaştırılır; standart modül seti şube açılışlarında şablon olarak saklanır. Enerji yükü fritöz ve ızgara adediyle doğrudan orantılıdır; elektrik panosu boyutlandırması proje başında yapılmalıdır. Davlumbaz kapasitesi pişirme adediyle birlikte hesaplanır.</p><p>Hızlı servis zincirlerinde tezgah yüksekliği ve ergonomi ekip verimini etkiler; sıcak holding ve soğuk stok aynı hatta net sınırlandırılır. Montaj planı franchise açılış takvimine göre fazlanır. Equsto PFOS fast food profili menü karması ve günlük kapasite girdileriyle liste üretir.</p><p>Fast food şubelerinde dijital sipariş ekranı ile mutfak ekranı senkronizasyonu hat yoğunluğunu belirler. Gece temizliği için sökülebilir ocak ızgaraları ve yağ filtreleri bakım planına dahil edilir. Şube standardizasyonu PFOS şablon listesiyle korunur.</p><p>Paket menü ağırlığı arttıkça ambalajlama istasyonu genişler; kurye bekleme alanı mutfak çıkışına yakın konumlandırılır. Franchise teknik şartnamesi ile PFOS çıktısı karşılaştırılır.</p>",
       faq: [["Paket ağırlığı yüksekse?", "Soğutma ve hazırlık modülleri paket oranına göre artırılır."]],
-      related: [{ label: "Bulut mutfak", href: "/bulut-mutfak-kurulumu" }],
+      related: [{ label: "Bulut mutfak", href: "/rehber/dark-kitchen-bulut-mutfak-2026" }],
     },
     finedining: {
       skipBudget: true,
@@ -268,7 +268,7 @@
         ["Hesaplama aracı var mı?", "Proje Fabrikası alan ve kişi sayısı soruları aynı mantığı otomatikler."],
       ],
       related: [
-        { label: "Bulut mutfak", href: "/bulut-mutfak-kurulumu" },
+        { label: "Bulut mutfak", href: "/rehber/dark-kitchen-bulut-mutfak-2026" },
         { label: "Proje Fabrikası", href: "/pfos" },
       ],
       skipTable: true,
@@ -492,7 +492,7 @@
         ["Tek ruhsat çok marka?", "MEP ve yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır."],
         ["Paket ağırlığı?", "Yüksek paket oranı soğutma ve hazırlık modüllerini artırır."],
       ],
-      related: [{ label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" }],
+      related: [{ label: "Bulut mutfak kurulumu", href: "/rehber/dark-kitchen-bulut-mutfak-2026" }],
     },
     rehberRestoranChecklist: {
       skipBudget: true,
@@ -505,7 +505,7 @@
         ["CAD plan şart mı?", "İlk aşamada kapasite yeterli; yerleşim Gastronomi Tasarımı ile derinleşir."],
       ],
       related: [
-        { label: "Restoran teklif rehberi", href: "/restoran-mutfak-teklif" },
+        { label: "Mutfak teklif platformu", href: "/mutfak-teklif-platformu" },
         { label: "m² rehberi", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
       ],
       skipTable: true,

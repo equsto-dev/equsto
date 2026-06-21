@@ -16,16 +16,6 @@ export const PILLAR_FAQ: Record<string, GeoFaqItem[]> = {
       "equsto.com/pfos adresinde konsept ve m² girerek ekipman listesi oluşturulur; alternatif olarak equsto.com/iletisim üzerinden satış mühendisliği ile iletişime geçilir.",
     ],
   ],
-  "restoran-mutfak-teklif": [
-    [
-      "Restoran mutfak teklifi nasıl alınır?",
-      "Equsto Proje Fabrikası (PFOS) menü, kapasite ve servis stiline göre pişirme, soğutma ve yıkama hatlarını modeller; hedef süre yaklaşık 5 dakikadır. Çıktı KDV ve lojistik kalemlerini içeren ön teklif dosyasıdır.",
-    ],
-    [
-      "Equsto restoran projelerinde ne sunar?",
-      "Canlı ekipman kataloğu, kural motoru tabanlı PFOS teklif listesi, Gastronomi Tasarımı yerleşim danışmanlığı ve montaj planı.",
-    ],
-  ],
   "oztiryakiler-ekipmani-tedarik": [
     [
       "Öztiryakiler ekipmanı nereden alınır?",
@@ -40,6 +30,10 @@ export const PILLAR_FAQ: Record<string, GeoFaqItem[]> = {
     [
       "Mutfak teklif platformu nedir?",
       "Equsto Proje Fabrikası (PFOS), equsto.com/pfos adresinde konsept ve kapasite girdileriyle endüstriyel mutfak ekipman listesi ve fiyat özetini üreten B2B teklif motorudur.",
+    ],
+    [
+      "Restoran mutfak teklifi nasıl alınır?",
+      "PFOS'ta restoran konsepti seçilip menü, kapasite ve servis stili girilir; pişirme, soğutma ve yıkama hatları kural motoruyla modellenir. Çıktı ön teklif dosyasıdır; kesin fiyat saha keşfi sonrası netleşir.",
     ],
     [
       "PFOS ne kadar sürer?",
