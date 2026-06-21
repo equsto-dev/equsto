@@ -397,29 +397,11 @@ function pfosCanLivePreview() {
   return false;
 }
 
-function pfosTeklifLoadingHtml(label) {
-  var txt = escHtml(String(label || 'Teklif hesaplanıyor…'));
-  return (
-    '<div class="pfos-teklif-loading pfos-teklif-loading--card" role="status" aria-live="polite">' +
-    '<div class="pfos-teklif-loading__graphic" aria-hidden="true">' +
-    '<span class="pfos-teklif-loading__bar"></span>' +
-    '<span class="pfos-teklif-loading__bar pfos-teklif-loading__bar--mid"></span>' +
-    '<span class="pfos-teklif-loading__bar pfos-teklif-loading__bar--short"></span>' +
-    '</div>' +
-    '<span class="pfos-teklif-loading__label">' + txt + '</span></div>'
-  );
-}
-
 function pfosSetLiveStatus(msg, busy) {
   const bar = document.getElementById('pfos-live-status');
   if (bar) {
-    if (busy) {
-      bar.innerHTML = pfosTeklifLoadingHtml(msg || 'Teklif hesaplanıyor…');
-      bar.classList.add('pfos-live-status--busy');
-    } else {
-      bar.textContent = msg || '';
-      bar.classList.remove('pfos-live-status--busy');
-    }
+    bar.textContent = msg || '';
+    bar.classList.toggle('pfos-live-status--busy', !!busy);
   }
 }
 
@@ -587,11 +569,7 @@ async function pfosRunLiveRecalc(){
     pfosAgentChatRender(chat, !!typing);
     if(text){
       document.getElementById('tablo-status').textContent= role==='user'?'Seçimleriniz alındı':String(text).replace(/\*\*/g,'');
-      if (typing) {
-        pfosSetLiveStatus('Teklif hesaplanıyor…', true);
-      } else {
-        pfosSetLiveStatus(String(text).replace(/\*\*/g,''), false);
-      }
+      pfosSetLiveStatus(String(text).replace(/\*\*/g,''), !!typing);
     }
     if(typing) await pfosYieldUi();
     return gen===__pfosLiveGen;
@@ -764,7 +742,7 @@ const EQ_ITEMS = {
   // Yıkama
   BULASIK_T:  {kod:'EQ-YIK-001', ad:'Bulaşık Makinası (Tünel Tipi)',        marka:'Winterhalter PT Series',    adet:1, elk:8.7,  gaz:0,  pct:.09, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
   BULASIK_K:  {kod:'EQ-YIK-002', ad:'Bulaşık Makinası (Sepet Tipi)',        marka:'Winterhalter UC Series',    adet:1, elk:4.5,  gaz:0,  pct:.06, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
-  BARDAK_YIK: {kod:'EQ-YIK-003', ad:'Bardak Yıkayıcı (Undercounter)',       marka:'Winterhalter GS315',        adet:1, elk:2.1,  gaz:0,  pct:.04, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'BARDAK YIKAMA MAKINASI MEKANIK, (35x35 cm) OBY 500 B Plus PDT 073M.11010.AD'},
+  BARDAK_YIK: {kod:'EQ-YIK-003', ad:'Bardak Yıkayıcı (Undercounter)',       marka:'Winterhalter GS315',        adet:1, elk:2.1,  gaz:0,  pct:.04, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
   // Davlumbaz
   DAV_B:      {kod:'EQ-DAV-001', ad:'Davlumbaz (Egzoz + Kompanzasyon)',     marka:'Öztiryakiler',              adet:1, elk:2.2,  gaz:0,  pct:.06, davlumbaz:true, pfDept:'pisirme'},
   DAV_K:      {kod:'EQ-DAV-002', ad:'Davlumbaz (Küçük, Egzoz)',             marka:'Öztiryakiler',              adet:1, elk:0.75, gaz:0,  pct:.03, davlumbaz:true, pfDept:'pisirme'},
@@ -843,7 +821,7 @@ function pfosEnsureCatalogPool() {
     if (window.EqustoEcomData && typeof EqustoEcomData.loadEkipmanlar === 'function') {
       return EqustoEcomData.loadEkipmanlar();
     }
-    return Promise.reject(new Error('katalog yükleyici yok'));
+    return Promise.resolve([]);
   }
   return Promise.all([loadAll(), pfosLoadTipShopLinks()])
     .then(function (results) { applyList(results[0]); })
@@ -2130,25 +2108,13 @@ function frConfirm(){
 }
 
 // ── 04 Dükkan Türü ───────────────────────────────────────────────────────────
-function pfosFilterDukkanByM2(list) {
-  const m2 = Number(D.alan) || 0;
-  const bands = window.PFOS_M2_BY_DUKKAN || {};
-  if (!m2) return list;
-  return list.filter(function (d) {
-    if (d === "Bilmiyorum") return true;
-    const hit = bands[d] || (d === "Restoran" ? bands["Büyük Restoran"] : null);
-    if (!hit) return true;
-    return m2 >= hit.min && m2 <= hit.max;
-  });
-}
-
 function renderS4(){
   const k=D.konsept;
   const ti=document.getElementById('s4-title');
   const su=document.getElementById('s4-sub');
   const bd=document.getElementById('s4-bd');
   ti.textContent='Dükkan türü'; su.textContent='Listeden size en yakın seçeneği işaretleyin.';
-  const list=pfosFilterDukkanByM2(DUKKAN[k]||[]);
+  const list=DUKKAN[k]||[];
   bd.innerHTML=`<div class="og tall">${list.map(d=>
     `<button class="opt${D.dukkan===d?' sel':''}" data-v="${esc(d)}" onclick="setDukkan('${esc(d)}')">${d}</button>`
   ).join('')}</div>`;
@@ -2223,7 +2189,7 @@ function setAlt(val){
 // ── Konsepte göre sonraki adım ────────────────────────────────────────────────
 function afterDukkan(){
   const k=D.konsept;
-  if(D.dukkan==='Şarküteri Restoran'||D.dukkan==='Gurme Şarküteri'){ reveal('s4e'); done('s4e'); }
+  if(D.dukkan==='Gurme Şarküteri'){ reveal('s4e'); done('s4e'); }
   else hideFrom('s4e');
   if(k==='Hotel'){renderS4c_hotel();reveal('s4c');activate('s4c');}
   else if(k==='Catering'){renderS4c_catering();reveal('s4c');activate('s4c');}
@@ -2835,7 +2801,7 @@ function tahmini(){
   let m = perM2[D.konsept] || 750;
   if (d === 'Steakhouse' || D.konsept === 'Steakhouse') m = Math.max(m, 1000);
   if (d === 'Fine Dining') m = Math.max(m, 1050);
-  if (d === 'Şarküteri Restoran' || d === 'Gurme Şarküteri') m = Math.max(m, 800);
+  if (d === 'Gurme Şarküteri') m = Math.max(m, 800);
   if (d === 'Pizzacı') m = Math.max(m, 720);
   if (d === 'Dönerci') m = Math.max(m, 680);
   if (pastaneLike) m = Math.min(m, 650);
@@ -3053,12 +3019,6 @@ function __pfApiBase(){
   return '/api';
 }
 function teklifGonder(){
-  if(typeof window.equstoIsMemberLoggedIn!=='function'||!window.equstoIsMemberLoggedIn()){
-    pfModalAc('Üye girişi gerekli','Teklif göndermek için giriş yapın.',true);
-    var lh=typeof window.equstoUrl==='function'?window.equstoUrl('login'):'/login';
-    if(window.confirm('Giriş sayfasına gitmek ister misiniz?')){ location.href=lh; }
-    return;
-  }
   const ad=(window.prompt('Ad Soyad:')||'').trim();
   if (!ad){ pfModalAc('Teklif iptal','Ad gerekli.',true); return; }
   const tel=(window.prompt('Telefon (ör. 0532…):')||'').trim();
@@ -3105,15 +3065,7 @@ function teklifGonder(){
   };
   fetch(__pfApiBase()+'/teklifler',{
     method:'POST',
-    headers:(function(){
-      var h={'Content-Type':'application/json'};
-      var tok=typeof window.equstoGetMemberToken==='function'?window.equstoGetMemberToken():'';
-      if(tok){
-        h.Authorization='Bearer '+tok;
-        h['X-Equsto-Authorization']=tok;
-      }
-      return h;
-    })(),
+    headers:{'Content-Type':'application/json'},
     body:JSON.stringify(payload)
   }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
     .then(function(res){
@@ -3125,11 +3077,6 @@ function teklifGonder(){
         return;
       }
       const no=(res.j.data && (res.j.data.ref_no||res.j.data.id))||'';
-      try {
-        if (typeof window.equstoTrackConversion === 'function') {
-          window.equstoTrackConversion('quote', { kaynak: 'pfos', ref_no: no });
-        }
-      } catch (_) {}
       pfModalAc('Teklifiniz alındı','Referans: '+(no||'-')+'. Ekibimiz en kısa sürede sizinle iletişime geçecek.',true);
     })
     .catch(function(e){

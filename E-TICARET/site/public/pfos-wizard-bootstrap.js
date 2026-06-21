@@ -26,17 +26,11 @@ fetch('/data/pfos-zone-catalog.json', { cache: 'default' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (j) { window.__PFOS_KEY_KATEGORI__ = j || { keys: {} }; })
     .catch(function () {});
-  var apiBase = (function () {
-    if (typeof window.EQUSTO_API_BASE === 'string') return window.EQUSTO_API_BASE.replace(/\/$/, '');
-    var host = (location.hostname || '').toLowerCase();
-    if (host === '127.0.0.1' || host === 'localhost') return 'http://127.0.0.1:3001/api';
-    return '/api';
-  })();
-  fetch(apiBase + '/fiyatlar', { cache: 'default' })
+  fetch('/api/pfos/fiyat-map', { cache: 'default' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (j) {
-      if (j && j.success && j.data && typeof j.data === 'object') {
-        window.PFOS_EQ_FIYATLAR = j.data;
+      if (j && typeof j === 'object') {
+        window.PFOS_EQ_FIYATLAR = j;
         if (window.EqustoPfosCalc && EqustoPfosCalc.hydrateCatalogPrices) {
           EqustoPfosCalc.hydrateCatalogPrices(window.PFOS_EQ_FIYATLAR);
         }

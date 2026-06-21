@@ -2,6 +2,7 @@
  * scripts/sync-pfos-urun-tipi.ts
  * npx tsx scripts/sync-pfos-urun-tipi.ts
  */
+import "./load-env.mjs";
 import { PrismaClient, PfosKategoriKodu } from "@prisma/client";
 import { productMatchesTipKodu } from "../lib/pfos/core/shop-catalog-match";
 import { URUN_TIPI_ALIASES } from "../lib/pfos/core/tip-kodu";

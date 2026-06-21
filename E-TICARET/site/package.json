@@ -222,6 +222,8 @@
     "pfos:proje-akis:seed-set-kural": "npx tsx scripts/seed-proje-akis-set-kural.ts",
     "pfos:proje:seed-s13-117": "node scripts/seed-s13-117-proje.mjs",
     "pfos:proje-akis:sync-products": "node scripts/sync-proje-akis-products.mjs",
+    "pfos:eslesme:seed": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/seed-pfos-eslesme.mjs",
+    "pfos:products:sync": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/sync-pfos-urun-tipi.ts",
     "pfos:tip-sozluk:sync": "npx tsx scripts/sync-tip-sozlugu.ts",
     "pfos:wizard:sync": "npx tsx scripts/seed-proje-akis-konsept.ts && node scripts/build-pfos-wizard-branches.mjs",
     "pfos:wizard:extract": "node scripts/extract-pfos-wizard.mjs",

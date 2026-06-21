@@ -91,7 +91,7 @@ export function assignPozNumbersKategori(kalemler: PFOSKalemi[]): PFOSKalemi[] {
     counters[cat] = next;
     return {
       ...k,
-      poz: `${cat}${String(next).padStart(2, "0")}`,
+      poz: `${cat}${next}`,
     };
   });
 }
@@ -116,47 +116,12 @@ export function finalizeKalemlerForTeklif(
   return assignPozNumbersKategori(kalemler);
 }
 
-function excelBolumBaslik(k: PFOSKalemi): string | null {
-  const excelBolum = String(k.altKategori ?? "").split("\0")[0].trim();
-  if (excelBolum.length > 1 && !/^[A-H]$/i.test(excelBolum)) {
-    return excelBolum.replace(/\s+/g, " ").toUpperCase();
-  }
-  return null;
-}
+
 
 export function bolumForKalem(
   k: PFOSKalemi,
   layout?: TeklifLayoutMeta,
 ): { bolumNo: string; bolumBaslik: string } {
-  const referansMode =
-    layout?.pozModu === "referans" ||
-    (k.referansPoz != null && String(k.referansPoz).length > 0);
-
-  if (referansMode) {
-    const excel = excelBolumBaslik(k);
-    if (excel) {
-      return {
-        bolumNo: String((k.referansBolumSira ?? 0) + 1).padStart(2, "0"),
-        bolumBaslik: excel,
-      };
-    }
-    const alt = String(k.altKategori ?? "").trim();
-    if (alt.length > 1 && !/^[A-H]$/i.test(alt)) {
-      return {
-        bolumNo: String((k.referansBolumSira ?? 0) + 1).padStart(2, "0"),
-        bolumBaslik: alt.toUpperCase(),
-      };
-    }
-  }
-
-  const excel = excelBolumBaslik(k);
-  if (excel) {
-    const sira = bolumSiraForKalem(k);
-    return {
-      bolumNo: String(sira + 1).padStart(2, "0"),
-      bolumBaslik: excel,
-    };
-  }
   if (layout?.bolum) {
     return { bolumNo: layout.bolum.no, bolumBaslik: layout.bolum.baslik };
   }
