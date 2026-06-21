@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { catalogUrlSlug } from "@/lib/catalog-product-slug";
 import JsonLdScript from "@/components/seo/JsonLdScript";
@@ -21,6 +22,12 @@ import {
 import { findBesosUrbanBarProductByEqustoId } from "@/lib/besos/urbanbar/pdp-server";
 
 export const dynamic = "force-dynamic";
+
+async function shopLangPrefix(): Promise<string> {
+  const h = await headers();
+  const pathname = h.get("x-pathname") || "";
+  return pathname.startsWith("/en/") || pathname === "/en" ? "/en" : "";
+}
 
 export async function generateMetadata({
   params,
@@ -55,9 +62,13 @@ export default async function ShopProductPage({
   const found = await findProductForPdp(dept, slug);
   if (!found) notFound();
 
+  const langPrefix = await shopLangPrefix();
   const canonicalSlug = catalogUrlSlug(found.row).toLowerCase();
-  if (canonicalSlug && slug.toLowerCase().replace(/_/g, "-") !== canonicalSlug) {
-    redirect(`/shop/${dept}/${encodeURIComponent(canonicalSlug)}`);
+  const normalizedSlug = slug.toLowerCase().replace(/_/g, "-");
+  if (found.dept !== dept || (canonicalSlug && normalizedSlug !== canonicalSlug)) {
+    redirect(
+      `${langPrefix}/shop/${found.dept}/${encodeURIComponent(canonicalSlug)}`,
+    );
   }
 
   const ssr = rowToPdpSsr(found.row, found.dept);

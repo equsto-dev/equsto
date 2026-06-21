@@ -123,6 +123,8 @@
     "verify:marka-plp-facets-kilit": "node scripts/verify-marka-plp-facets-kilit.mjs",
     "verify:yukselendustriyel-araba-kilit": "node scripts/verify-yukselendustriyel-araba-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
+    "legacy-pdp:build": "node scripts/build-legacy-pdp-redirects.mjs",
+    "seo:build": "npm run sitemap:build && npm run legacy-pdp:build",
     "seo:audit": "node scripts/audit-seo-geo.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs && node scripts/audit-seo-geo.mjs",
     "i18n:build": "node scripts/build-i18n-en.mjs && node scripts/build-pfos-labels-en.mjs && node scripts/build-product-i18n-en.mjs",
