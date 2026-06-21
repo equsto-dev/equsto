@@ -32,18 +32,44 @@ export const PFOS_Q_UST_SEGMENT = [
 export const PFOS_OTEL_UST_SEGMENT = "Otel F&B";
 export const PFOS_OTEL_BIRLESIK_M2 = [750, 1000] as const;
 
+/** 40 / 80 m² — yalnızca kompakt konsept segmentleri */
+export const PFOS_KUCUK_ALAN_M2 = [40, 80] as const;
+
+export const PFOS_KUCUK_ALAN_UST_SEGMENT = [
+  "Kafe / Coffee Shop",
+  "Fast Food / QSR",
+  "Bar & Lounge",
+  "Bulut Mutfak",
+] as const;
+
 export function otelSegmentM2Aktif(m2: number): boolean {
   return (PFOS_OTEL_BIRLESIK_M2 as readonly number[]).includes(m2);
 }
 
-/** m² 750 veya 1000 ise konsept listesine Otel F&B eklenir */
+export function kucukAlanSegmentM2Aktif(m2: number): boolean {
+  return (PFOS_KUCUK_ALAN_M2 as readonly number[]).includes(m2);
+}
+
+/** m² alanına göre üst segment seçenekleri */
 export function ustSegmentOptionsForM2(
   base: readonly string[],
   m2: number,
 ): string[] {
-  if (!otelSegmentM2Aktif(m2)) return [...base];
-  if (base.includes(PFOS_OTEL_UST_SEGMENT)) return [...base];
-  return [...base, PFOS_OTEL_UST_SEGMENT];
+  let opts = kucukAlanSegmentM2Aktif(m2)
+    ? base.filter((o) =>
+        (PFOS_KUCUK_ALAN_UST_SEGMENT as readonly string[]).includes(o),
+      )
+    : [...base];
+
+  if (otelSegmentM2Aktif(m2)) {
+    if (!opts.includes(PFOS_OTEL_UST_SEGMENT)) {
+      opts = [...opts, PFOS_OTEL_UST_SEGMENT];
+    }
+  } else {
+    opts = opts.filter((o) => o !== PFOS_OTEL_UST_SEGMENT);
+  }
+
+  return opts;
 }
 
 /** Üst segment → dükkan türü dalları (yalnızca durum=aktif paketler) */
