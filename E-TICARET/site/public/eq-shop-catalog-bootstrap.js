@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-ice-blue";
+  var CATALOG_V = "20260621-drawer-glass";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
