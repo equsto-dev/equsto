@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-no-search";
+  var CATALOG_V = "20260621-drawer-no-close";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

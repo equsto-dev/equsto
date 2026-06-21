@@ -1034,7 +1034,7 @@
   }
 
   var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
-  var EQ_EQUSTO_FIYAT_IMG_V = "20260621-drawer-no-search";
+  var EQ_EQUSTO_FIYAT_IMG_V = "20260621-drawer-no-close";
 
   /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
   function pimakCatalogRelCandidates(rel) {

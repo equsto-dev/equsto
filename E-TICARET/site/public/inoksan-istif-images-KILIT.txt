@@ -18,7 +18,7 @@ Tarayıcı immutable önbelleği nedeniyle seri başına yeni CDN yolu kullanıl
 
 ── Cache bust ─────────────────────────────────────────────────────────────
   EQ_CATALOG_IMG_V = 20260613-tezgah-buz-3k-v1  (eq-site-urls.js)
-  SHOP_ASSET_V     = 20260621-drawer-no-search  (lib/shop/assets.ts)
+  SHOP_ASSET_V     = 20260621-drawer-no-close  (lib/shop/assets.ts)
 
 YASAK (onay olmadan):
   • IDD/IDK/IDP → fka011i alias veya tepsi istif ünitesi görseli

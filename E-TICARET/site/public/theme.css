@@ -2431,6 +2431,10 @@ body.eq-shop .eq-amazon-shop-all a.cat-drawer-item {
   display: block !important;
   pointer-events: auto;
 }
+/* Çekmece: overlay tıklanınca kapanır; sağ üst × kaldırıldı */
+body.eq-shop:not(.admin-app):not(.bd-page) .drawer-overlay-close {
+  display: none !important;
+}
 .drawer-overlay-close {
   position: fixed;
   top: calc(var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)) + 8px);
