@@ -45,20 +45,25 @@ function rowId(p, v) {
   return `${BRAND_ID}__${p.wc_id}-${suffix}`;
 }
 
-async function copyImages(p) {
-  const rel = [];
+async function resolveImages(p) {
+  const out = [];
   for (const img of p.images || []) {
-    const src = path.join(ROOT, img.local || "");
-    if (!fs.existsSync(src)) continue;
-    const fname = path.basename(src);
+    const remote = typeof img === "string" ? img : img?.src;
+    if (remote && /^https?:\/\//i.test(remote)) {
+      out.push(remote);
+      continue;
+    }
+    const localPath = path.join(ROOT, img.local || "");
+    if (!fs.existsSync(localPath)) continue;
+    const fname = path.basename(localPath);
     const dest = path.join(OUT_IMG, fname);
     if (!dryRun) {
       await fsp.mkdir(OUT_IMG, { recursive: true });
-      await fsp.copyFile(src, dest);
+      await fsp.copyFile(localPath, dest);
     }
-    rel.push(`images/catalog/sparo/${fname}`);
+    out.push(`images/catalog/sparo/${fname}`);
   }
-  return rel;
+  return out;
 }
 
 function teknikFromVariant(v, features) {
@@ -76,7 +81,7 @@ function teknikFromVariant(v, features) {
 
 async function toRows(p) {
   const mapped = mapSparoCategory(p.categories);
-  const images = await copyImages(p);
+  const images = await resolveImages(p);
   const features = p.features || [];
   const rows = [];
 
