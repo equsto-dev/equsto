@@ -5430,6 +5430,21 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__ok {
   font-family: inherit;
   cursor: pointer;
 }
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__link {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__link:hover {
+  background: #333;
+  color: #fff;
+}
 @keyframes eq-photo-srch-spin {
   to {
     transform: rotate(360deg);
