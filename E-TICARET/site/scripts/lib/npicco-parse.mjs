@@ -88,7 +88,7 @@ export function formatVariantSpecs(baseName, v, features, sourceUrl) {
 }
 
 export function mapNpiccoCategory(_categories) {
-  return { dept: "pisirme", category: "kati-yakitli-izgaralar" };
+  return { dept: "pisirme", category: "komurlu-izgara" };
 }
 
 export function npiccoCategoryLabel(categories) {

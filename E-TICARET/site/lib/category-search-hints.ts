@@ -25,7 +25,7 @@ export function isPrimaryIzgaraProduct(name: string, category: string): boolean 
   if (isIzgaraAccessory(name, category)) return false;
   const cat = foldTr(category);
   const n = foldTr(name);
-  if (/izgar|griller|salamander|kati-yakitli-izgar|sanayi-tipi-izgar|tost-mak/.test(cat)) {
+  if (/izgar|griller|salamander|komurlu-izgara|sanayi-tipi-izgar|tost-mak/.test(cat)) {
     return true;
   }
   return /\bizgara\b|\bizgaralar\b/.test(n) && !/tabl|istif raf/.test(n);

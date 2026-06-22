@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Npicco web katalog → Equsto vitrin (kati-yakitli-izgaralar / Kömürlü Izgaralar)
+ * Npicco web katalog → Equsto vitrin (komurlu-izgara / Kömürlü Izgaralar)
  *
  *   node scripts/import-npicco-to-equsto.mjs
  *   node scripts/import-npicco-to-equsto.mjs --dry-run
@@ -144,7 +144,7 @@ async function main() {
       stdio: "inherit",
     });
     console.log("\nYerel vitrin: http://localhost:3099/shop/marka/npicco");
-    console.log("Kategori: http://localhost:3099/shop/pisirme?tip=kati-yakitli-izgaralar");
+    console.log("Kategori: http://localhost:3099/shop/pisirme?tip=komurlu-izgara");
     console.log("Arama indeksi: npm run search:index");
   }
 }

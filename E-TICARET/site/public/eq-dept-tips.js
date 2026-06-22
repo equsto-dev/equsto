@@ -32,7 +32,7 @@
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
     { tip: "fritozler", dept: "pisirme", label: "Fritözler", slug: "fritozler" },
     { tip: "doner-ocaklari-", dept: "pisirme", label: "Döner Ocakları", slug: "doner-ocaklari-" },
-    { tip: "kati-yakitli-izgaralar", dept: "pisirme", label: "Kömürlü Izgaralar", slug: "kati-yakitli-izgaralar" },
+    { tip: "komurlu-izgara", dept: "pisirme", label: "Kömürlü Izgaralar", slug: "komurlu-izgara" },
     { tip: "tost-makineleri", dept: "pisirme", label: "Tost Makineleri", slug: "tost-makineleri" },
     { tip: "pilic-cevirme-makineleri", dept: "pisirme", label: "Piliç Çevirme", slug: "pilic-cevirme-makineleri" },
     { tip: "ocakbasi-izgara", dept: "pisirme", label: "Ocakbaşı Izgaralar", slug: "ocakbasi-izgara" },
@@ -997,8 +997,8 @@
 
     if (tile.id === "firinlar" && isFirinliKuzineProduct(u)) return false;
 
-    if (tile.id === "kati-yakitli-izgaralar") {
-      if (cat !== "kati-yakitli-izgaralar") return false;
+    if (tile.id === "komurlu-izgara") {
+      if (cat !== "komurlu-izgara" && cat !== "kati-yakitli-izgaralar") return false;
       var kaynak = u.raw && u.raw.kaynak;
       return kaynak === "sparo-web" || kaynak === "npicco-web";
     }
