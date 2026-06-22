@@ -297,6 +297,7 @@
     "search:up": "docker compose -f docker-compose.meilisearch.yml up -d",
     "search:health": "node --import ./scripts/load-env.mjs scripts/meili-health.mjs",
     "search:index": "node --import ./scripts/load-env.mjs scripts/index-meilisearch.mjs",
+    "search:visual-index": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/index-visual-embeddings.ts",
     "catalog:kategorizasyon:export": "node scripts/export-urun-kategorizasyon-xlsx.mjs",
     "catalog:master:import-xlsx": "node scripts/import-katalog-master-from-xlsx.mjs",
     "catalog:master:apply": "node scripts/apply-katalog-master.mjs",

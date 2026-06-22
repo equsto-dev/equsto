@@ -276,39 +276,39 @@
         });
       })
       .then(function (res) {
+        if (res.ok && res.body && res.body.ok && res.body.visualSearch && res.body.hits && res.body.hits.length) {
+          closeUploadPanel();
+          closeSearchProgress();
+          try {
+            sessionStorage.setItem(
+              "eq_visual_search_payload",
+              JSON.stringify({
+                hits: res.body.hits,
+                scores: res.body.scores || [],
+                at: Date.now(),
+              })
+            );
+          } catch (e0) {}
+          window.location.href = "/arama?gorsel=1";
+          return;
+        }
         if (res.ok && res.body && res.body.ok) {
           closeUploadPanel();
           closeSearchProgress();
-          var q = String(res.body.query || "").trim();
-          if (!q) {
-            showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
-            return;
-          }
-          if (!isValidVisualSearchQuery(q)) {
-            showVisualSearchError("Görselden geçerli bir ürün tipi çıkarılamadı.");
-            return;
-          }
           var suggestUrl = res.body.suggestUrl ? String(res.body.suggestUrl) : "";
           if (suggestUrl) {
             window.location.href = suggestUrl;
             return;
           }
-          if (res.body.catalogMatch !== true) {
-            var badQ = /```|json|\{|\}|^\s*q\s*:/i.test(q);
-            showVisualSearchError(
-              badQ
-                ? "Bu görsel Equsto kataloğunda eşleşen bir ürün bulunamadı."
-                : "Görsel «" +
-                    q +
-                    "» olarak tanımlandı; bu ürün Equsto kataloğunda bulunamadı."
-            );
-            return;
-          }
-          applySearchQuery(q);
+          showVisualSearchError("Görsel arama sonucu bulunamadı.");
           return;
         }
         closeUploadPanel();
         closeSearchProgress();
+        if (res.body && res.body.suggestUrl) {
+          window.location.href = String(res.body.suggestUrl);
+          return;
+        }
         showVisualSearchError(
           (res.body && res.body.error) || "Görsel analiz edilemedi. Lütfen tekrar deneyin."
         );
