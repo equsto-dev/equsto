@@ -65,6 +65,7 @@ yarn-error.log*
 .env.whatsapp.secrets
 .env.notify.secrets
 .env.resend.secrets
+.env.gemini.secrets
 
 # vercel
 .vercel
