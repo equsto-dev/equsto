@@ -10,7 +10,7 @@ const MAX_PDF_BYTES = 15 * 1024 * 1024;
 export type { ParseUploadOzet } from "@/lib/pfos/parse-upload/types";
 export type ParseUploadResponse = ProcessPdfUploadResult;
 
-/** POST /api/pfos/parse-upload — PDF → Claude → Meilisearch → teklif taslağı */
+/** POST /api/pfos/parse-upload — PDF → yapılandırılmış satırlar → birebir teklif */
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();

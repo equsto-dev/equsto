@@ -44,7 +44,7 @@ export default function PfosListeUploadRail({
   const formatNote = (
     <p className={styles.listeFormatNoteRail}>
       {t(
-        "Excel: P.No, ekipman adı, ölçü ve adet sütunları (Equsto referans formatı). PDF: PFOS yapay zeka ile kalemleri okur ve katalogdan fiyatlar (1–2 dakika sürebilir).",
+        "Excel: P.No, ekipman adı, ölçü ve adet sütunları. PDF: proforma listesi satır satır okunur; ürün adları ve fiyatlar dosyadan birebir aktarılır (katalog eşlemesi yok).",
       )}
     </p>
   );
@@ -57,7 +57,7 @@ export default function PfosListeUploadRail({
       >
       <span className={styles.railKicker}>{t("Liste yükleme")}</span>
       <span className={styles.railTitle}>
-        {t("Ekipman listenizi yükleyin — PFOS katalogdan fiyatlasın.")}
+        {t("Ekipman listenizi yükleyin — liste birebir teklife aktarılır.")}
       </span>
       <p className={styles.railPlaceholder}>
         {t("Excel (.xlsx) veya PDF teklif / proforma listesi")}
@@ -114,11 +114,13 @@ export default function PfosListeUploadRail({
               <>
                 <strong className={styles.listeDropTitle}>
                   {loadingKind === "pdf"
-                    ? t("PDF analiz ediliyor…")
-                    : t("Liste fiyatlandırılıyor…")}
+                    ? t("PDF okunuyor…")
+                    : t("Liste aktarılıyor…")}
                 </strong>
                 <span className={styles.listeDropHint}>
-                  {t("1–2 dakika sürebilir")}
+                  {loadingKind === "pdf"
+                    ? t("Birkaç saniye sürebilir")
+                    : t("Lütfen bekleyin")}
                 </span>
               </>
             ) : file ? (

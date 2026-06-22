@@ -21,6 +21,9 @@ export type PfosEkipmanSatir = {
   ad: string;
   olcu: string;
   adet: number | string;
+  marka?: string;
+  birim_fiyat_eur?: number | null;
+  mevcut?: boolean;
 };
 
 export type PfosKategoriListeKayit = {

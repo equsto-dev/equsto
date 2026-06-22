@@ -1,9 +1,7 @@
-import { parseWithClaude } from "./claude-proforma";
+import { analyzePdfForListe } from "@/lib/pfos/liste-pdf-analiz";
+import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { clearMatchProductCache } from "../core/match-product";
-import { eslestirProformaKalemler } from "./meili-kalem-eslestir";
-import { buildQuoteFromMeiliEslestirme } from "./build-quote";
 import type { PFOSResponse } from "../schemas/pfos.schema";
-import type { MatchedItem, ParseUploadOzet } from "./types";
 
 export type ProcessPdfUploadInput = {
   buffer: ArrayBuffer;
@@ -16,11 +14,9 @@ export type ProcessPdfUploadInput = {
 export type ProcessPdfUploadResult = PFOSResponse & {
   kaynak_dosya: string;
   toplam_kalem: number;
-  ozet_eslestirme: ParseUploadOzet;
-  eslestirme_kalemler: MatchedItem[];
 };
 
-/** PDF → Claude → Meilisearch fuzzy → PFOS teklif taslağı */
+/** PDF → yapılandırılmış satırlar → birebir teklif (katalog eşlemesi yok) */
 export async function processPdfUpload(
   input: ProcessPdfUploadInput,
 ): Promise<ProcessPdfUploadResult> {
@@ -29,40 +25,24 @@ export async function processPdfUpload(
   const baseName = input.kaynakDosya.replace(/\.pdf$/i, "");
   const projeAdi = input.projeAdi?.trim() || baseName;
 
-  const parsedItems = await parseWithClaude(input.buffer, {
+  const importKalemler = await analyzePdfForListe(input.buffer, {
     notlar: input.notlar,
   });
-  if (parsedItems.length === 0) {
+  if (importKalemler.length === 0) {
     throw new Error("PDF'den kalem çıkarılamadı. Dosya formatını kontrol edin.");
   }
 
-  const eslestirmeler = await eslestirProformaKalemler(parsedItems);
-  const matchedItems = eslestirmeler.map((e) => e.matched);
-  const quote = await buildQuoteFromMeiliEslestirme({
-    eslestirmeler,
+  const quote = await calculateListeQuote({
+    importKalemler,
     kaynakDosya: input.kaynakDosya,
+    kaynakTip: "pdf",
     projeAdi,
     sehir,
   });
 
-  const bulunan = matchedItems.filter((i) => i.eslesen_urun !== null).length;
-  const mevcut = matchedItems.filter((i) => i.mevcut).length;
-  const bulunamayan = matchedItems.filter((i) => i.not_found).length;
-  const genelToplam = matchedItems.reduce(
-    (sum, i) => sum + (i.toplam_eur ?? 0),
-    0,
-  );
-
   return {
     ...quote,
     kaynak_dosya: input.kaynakDosya,
-    toplam_kalem: parsedItems.length,
-    ozet_eslestirme: {
-      eslesen: bulunan,
-      mevcut_atlandi: mevcut,
-      bulunamayan,
-      genel_toplam_eur: Math.round(genelToplam * 100) / 100,
-    },
-    eslestirme_kalemler: matchedItems,
+    toplam_kalem: importKalemler.length,
   };
 }
