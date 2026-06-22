@@ -104,6 +104,16 @@ function legacyHazirlikPzcSogutmaRedirect(request: NextRequest): NextResponse | 
   return NextResponse.redirect(dest, 308);
 }
 
+/** Eski ?tip=kati-yakitli-izgaralar → ?tip=komurlu-izgara */
+function legacyKomurluIzgaraTipRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  if (!/^(\/en)?\/shop\/pisirme\/?$/i.test(pathname)) return null;
+  if (request.nextUrl.searchParams.get("tip") !== "kati-yakitli-izgaralar") return null;
+  const dest = request.nextUrl.clone();
+  dest.searchParams.set("tip", "komurlu-izgara");
+  return NextResponse.redirect(dest, 308);
+}
+
 /** Eski WordPress / vitrin yolları → kanonik sayfalar */
 function legacySiteRedirect(request: NextRequest): NextResponse | null {
   const destPath = resolveLegacySiteRedirect(request.nextUrl.pathname);
@@ -171,6 +181,9 @@ export function proxy(request: NextRequest) {
     legacyWrongDeptSebzeDogramaRedirect(request) ||
     legacySetUstuSebzeDogramaRedirect(request);
   if (sebzeRedir) return sebzeRedir;
+
+  const komurluIzgaraTipRedir = legacyKomurluIzgaraTipRedirect(request);
+  if (komurluIzgaraTipRedir) return komurluIzgaraTipRedir;
 
   const res = NextResponse.next();
   const p = request.nextUrl.pathname;

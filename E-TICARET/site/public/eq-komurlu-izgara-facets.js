@@ -1,5 +1,5 @@
 /**
- * Kömürlü Izgaralar (?tip=kati-yakitli-izgaralar) — ürün grubu filtreleri.
+ * Kömürlü Izgaralar (?tip=komurlu-izgara) — ürün grubu filtreleri.
  */
 (function (global) {
   "use strict";
@@ -55,7 +55,8 @@
   }
 
   function isKomurluIzgaraProduct(hit) {
-    return productCategory(hit) === "kati-yakitli-izgaralar";
+    var cat = productCategory(hit);
+    return cat === "komurlu-izgara" || cat === "kati-yakitli-izgaralar";
   }
 
   function classifySparo(hit) {
@@ -164,7 +165,7 @@
 
   function activeKomurluIzgaraTip(state) {
     var active = (state && state.activeTiles) || [];
-    return active.indexOf("kati-yakitli-izgaralar") >= 0;
+    return active.indexOf("komurlu-izgara") >= 0;
   }
 
   function isKomurluIzgaraKaynak(hit) {

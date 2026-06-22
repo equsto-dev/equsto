@@ -61,5 +61,5 @@ run("Meilisearch indeks", process.execPath, [
 ]);
 
 console.log("\n[publish-sparo] OK");
-console.log("  /shop/pisirme?tip=kati-yakitli-izgaralar");
+console.log("  /shop/pisirme?tip=komurlu-izgara");
 console.log("  /shop/marka/sparo");
