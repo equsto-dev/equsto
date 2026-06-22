@@ -38,7 +38,7 @@ export async function extractImageSearchQueryGemini(
     throw new Error("GEMINI_API_KEY yok");
   }
 
-  const model = process.env.GEMINI_VISION_MODEL?.trim() || "gemini-2.0-flash";
+  const model = process.env.GEMINI_VISION_MODEL?.trim() || "gemini-2.5-flash";
   const base64 = Buffer.from(imageBuffer).toString("base64");
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
 

@@ -51,6 +51,11 @@ const waSecrets = parseEnv(
     ? fs.readFileSync(path.join(root, ".env.whatsapp.secrets"), "utf8")
     : "",
 );
+const geminiSecrets = parseEnv(
+  fs.existsSync(path.join(root, ".env.gemini.secrets"))
+    ? fs.readFileSync(path.join(root, ".env.gemini.secrets"), "utf8")
+    : "",
+);
 
 const skip = new Set([
   "VERCEL",
@@ -62,8 +67,8 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-/** öncelik: template < example < vercel < dbSecrets < waSecrets */
-const merged = { ...template, ...example, ...vercel, ...dbSecrets, ...waSecrets };
+/** öncelik: template < example < vercel < dbSecrets < waSecrets < geminiSecrets */
+const merged = { ...template, ...example, ...vercel, ...dbSecrets, ...waSecrets, ...geminiSecrets };
 for (const k of Object.keys(merged)) {
   if ([...skip].some((p) => k.startsWith(p.replace(/_$/, "")) || k.startsWith(p))) {
     delete merged[k];
