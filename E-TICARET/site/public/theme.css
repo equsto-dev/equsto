@@ -1032,8 +1032,6 @@ body.admin-app header.hdr > a.logo .eq-logo-img {
     align-self: center;
   }
 
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-lang-switch,
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
     display: none !important;
   }
@@ -3772,7 +3770,7 @@ html[data-theme="dark"] .sb-sublist {
   z-index: 100;
 }
 
-/* Tema (açık / koyu): yalnızca mobil — geniş ekranda gizli */
+/* Tema (açık / koyu): üst şeritte TR·EN yanında */
 .theme-wrap {
   display: none !important;
   flex-direction: column;
@@ -3782,10 +3780,37 @@ html[data-theme="dark"] .sb-sublist {
   border-right: none;
 }
 
-@media (max-width: 768px) {
-  .theme-wrap {
-    display: flex !important;
-  }
+header.hdr .eq-hdr-locale-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding-right: 8px;
+  border-right: 1px solid var(--eq-hdr-bar-border);
+}
+
+header.hdr .eq-hdr-locale-bar .eq-lang-switch {
+  border-right: none !important;
+  padding-right: 0 !important;
+}
+
+header.hdr .eq-hdr-locale-bar .theme-wrap {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
+header.hdr .eq-hdr-locale-bar .theme-legend {
+  display: none !important;
+}
+
+header.hdr .eq-hdr-locale-bar .theme-toggle {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
 }
 
 /* Kategori sayfaları: ürünler sağdan sola, satırda 5 adet (desktop) */
@@ -5454,8 +5479,6 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     align-self: center;
   }
 
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-lang-switch,
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
     display: none !important;
   }

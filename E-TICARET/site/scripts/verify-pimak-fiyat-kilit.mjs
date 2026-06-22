@@ -10,7 +10,7 @@ const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const repoRoot = path.resolve(siteDir, "../..");
 const pfosPimak = path.join(repoRoot, "PFOS", "veri", "pimak");
 
-const SHOP_ASSET_V = "20260621-drawer-no-close";
+const SHOP_ASSET_V = "20260621-drawer-locale-theme";
 const KILIT_COMMIT = "c96cd6bd";
 
 /** PDF spot-check ile doğrulanmış liste EUR */

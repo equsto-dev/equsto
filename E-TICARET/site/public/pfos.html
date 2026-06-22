@@ -208,8 +208,9 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
   header.hdr .hdr-alici{display:flex !important;flex:1 1 auto;min-width:0;order:0;border-right:1px solid var(--eq-hdr-bar-border,rgba(255,255,255,.2));padding-right:10px;margin-right:4px;}
   header.hdr .srch{width:100%;max-width:100%;order:10;}
   header.hdr .hdr-right{margin-left:auto;}
-  header.hdr .hdr-right > div:not(.theme-wrap){display:none;}
-  header.hdr .hdr-right .theme-wrap{display:flex;}
+  header.hdr .hdr-right > a,
+  header.hdr .hdr-right > div:not(.eq-hdr-locale-bar){display:none;}
+  header.hdr .hdr-right .eq-hdr-locale-bar{display:inline-flex;}
 }
 /* ── Katalog ile aynı sayfa iskelesi (sol sütun + sağ içerik) ── */
 .body{display:flex;background:var(--eq-surface);position:relative;align-items:flex-start;}
@@ -1171,9 +1172,12 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
         <button type="button" class="srch-btn" aria-label="Ara" title="Ara"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
     </div>
     <div class="hdr-right">
-      <div class="theme-wrap">
+      <div class="eq-hdr-locale-bar">
+        <span data-eq-lang-slot class="eq-lang-slot"></span>
+        <div class="theme-wrap">
           <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
-        <span class="theme-legend">Sistem · Açık · Koyu</span>
+          <span class="theme-legend">Sistem · Açık · Koyu</span>
+        </div>
       </div>
         <a href="/login.html" class="eq-hdr-account" title="Üye girişi">
           <span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span>

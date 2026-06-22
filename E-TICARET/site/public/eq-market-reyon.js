@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-no-close";
+  var CATALOG_V = "20260621-drawer-locale-theme";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

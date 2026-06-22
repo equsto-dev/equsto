@@ -11,9 +11,12 @@
       <button type="button" class="srch-btn" aria-label="Ara" title="Ara" data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
     </div>
     <div class="hdr-right">
-      <div class="theme-wrap">
-        <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" data-i18n-attr="title:common.theme_title">◐</button>
-        <span class="theme-legend" data-i18n="common.theme_label">Sistem · Açık · Koyu</span>
+      <div class="eq-hdr-locale-bar">
+        <span data-eq-lang-slot class="eq-lang-slot"></span>
+        <div class="theme-wrap">
+          <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" data-i18n-attr="title:common.theme_title">◐</button>
+          <span class="theme-legend" data-i18n="common.theme_label">Sistem · Açık · Koyu</span>
+        </div>
       </div>
       <a href="/login.html" class="eq-hdr-account" title="Üye girişi" data-i18n-attr="title:common.login_title">
         <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="common.my_account">Hesabım</span>

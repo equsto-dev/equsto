@@ -36,13 +36,34 @@
     return right;
   }
 
+  function ensureLocaleBar(right) {
+    if (!right) return null;
+    var bar = right.querySelector(".eq-hdr-locale-bar");
+    if (bar) return bar;
+    bar = el("div", { class: "eq-hdr-locale-bar" });
+    var slot = right.querySelector("[data-eq-lang-slot]");
+    if (slot && slot.parentNode === right) {
+      right.insertBefore(bar, slot);
+      bar.appendChild(slot);
+    } else {
+      bar.appendChild(el("span", { "data-eq-lang-slot": "", class: "eq-lang-slot" }));
+      if (right.firstChild) right.insertBefore(bar, right.firstChild);
+      else right.appendChild(bar);
+    }
+    return bar;
+  }
+
   function ensureThemeWrap(right) {
-    if (!right) return;
-    if (right.querySelector(".theme-wrap")) return;
-    // Eski sayfalarda sadece theme-toggle var; onu wrap içine al.
-    var toggle = right.querySelector("#theme-toggle") || right.querySelector(".theme-toggle");
+    var bar = ensureLocaleBar(right);
+    if (!bar) return;
+    if (bar.querySelector(".theme-wrap")) return;
+    var toggle = right.querySelector("#theme-toggle") || right.querySelector(".theme-wrap .theme-toggle");
     var wrap = el("div", { class: "theme-wrap" });
-    if (toggle) {
+    if (toggle && toggle.parentNode) {
+      if (toggle.parentNode.classList && toggle.parentNode.classList.contains("theme-wrap")) {
+        bar.appendChild(toggle.parentNode);
+        return;
+      }
       wrap.appendChild(toggle);
     } else {
       wrap.appendChild(
@@ -51,7 +72,7 @@
           class: "theme-toggle",
           id: "theme-toggle",
           title: "Tema",
-          text: "◝",
+          text: "◐",
         })
       );
       wrap.firstChild.onclick = function () {
@@ -61,9 +82,7 @@
       };
     }
     wrap.appendChild(el("span", { class: "theme-legend", "data-i18n": "common.theme_label", text: "Sistem · Açık · Koyu" }));
-    // En başa koy
-    if (right.firstChild) right.insertBefore(wrap, right.firstChild);
-    else right.appendChild(wrap);
+    bar.appendChild(wrap);
   }
 
   function ensureAccount(right) {

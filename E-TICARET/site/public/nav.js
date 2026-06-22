@@ -544,19 +544,6 @@
     }
   }
 
-  function __eqSyncDrawerHdr() {
-    var drawer = document.getElementById("catDrawer");
-    if (!drawer) return;
-    var titleEl = drawer.querySelector(".eq-mcat-hdr-title");
-    if (!titleEl) return;
-    var depth = __eqDrawerStack.length;
-    if (__eqIsMobileNav() && depth > 0) {
-      var fr = __eqDrawerStack[depth - 1];
-      titleEl.textContent = (fr && fr.title) || __navT("nav.drawer_title_categories", "Kategoriler");
-    } else {
-      titleEl.textContent = __navT("nav.drawer_title_categories", "Kategoriler");
-    }
-  }
 
   function __eqDrawerHdrBack() {
     if (__eqIsMobileNav() && __eqDrawerStack.length > 0) {
@@ -610,24 +597,6 @@
     drawer.setAttribute("aria-label", __navT("nav.drawer_aria_categories", "Kategoriler"));
 
     var inner = el("div", { class: "eq-mcat-drawer-inner" });
-    var hdr = el("header", { class: "eq-mcat-hdr" });
-    var bar = el("div", { class: "eq-mcat-hdr-bar" });
-    var title = el("div", { class: "eq-mcat-hdr-title", text: __navT("nav.drawer_title_categories", "Kategoriler") });
-    var btnTheme = el("button", {
-      type: "button",
-      class: "eq-mcat-hdr-theme",
-      "aria-label": __navT("nav.drawer_theme", "Tema"),
-      title: __navT("nav.drawer_theme_title", "Sistem · Açık · Koyu"),
-      text: "\u25D0",
-    });
-    btnTheme.addEventListener("click", function () {
-      if (typeof window.equstoCycleTheme === "function") window.equstoCycleTheme();
-    });
-    bar.appendChild(title);
-    bar.appendChild(btnTheme);
-
-    hdr.appendChild(bar);
-
     var scroll = el("div", { class: "eq-drawer-scroll eq-mcat-scroll" });
     var stage = el("div", {
       id: "eq-drawer-slide-stage",
@@ -636,7 +605,6 @@
     var megaRow = el("div", { id: "eq-drawer-mega-row", class: "eq-drawer-mega-row" });
     stage.appendChild(megaRow);
     scroll.appendChild(stage);
-    inner.appendChild(hdr);
     inner.appendChild(scroll);
     ensureMarkalarSecHostInInner(inner);
     drawer.appendChild(inner);
@@ -685,7 +653,6 @@
     var rootCol = megaRow.querySelector(".eq-drawer-column--root");
     var rebuildRoot = !rootCol;
     if (!rebuildRoot && megaRow.getAttribute("data-eq-stack-sig") === stackSig) {
-      __eqSyncDrawerHdr();
       return;
     }
 
@@ -948,7 +915,6 @@
       }
     }
 
-    __eqSyncDrawerHdr();
     if (rebuildRoot) moveMarkalarIntoCatDrawer();
   }
 
