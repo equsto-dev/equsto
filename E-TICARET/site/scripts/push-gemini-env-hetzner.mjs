@@ -38,9 +38,10 @@ for (const line of fs.readFileSync(secretsPath, "utf8").split(/\r?\n/)) {
   if (val) parsed[key] = val;
 }
 
-if (!parsed.GEMINI_API_KEY?.startsWith("AIza")) {
+const key = parsed.GEMINI_API_KEY || "";
+if (!key || (!key.startsWith("AIza") && !key.startsWith("AQ."))) {
   console.error(
-    "[push-gemini-env] Eksik veya geçersiz: GEMINI_API_KEY (AIza… ile başlamalı)",
+    "[push-gemini-env] Eksik veya geçersiz: GEMINI_API_KEY (AIza… veya AQ.… ile başlamalı)",
   );
   process.exit(1);
 }
