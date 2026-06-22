@@ -727,9 +727,30 @@
 
   function getQuery() {
     try {
+      if (isVisualSearchMode()) return "";
       return trimQ(new URLSearchParams(location.search).get("q") || "");
     } catch (_) {
       return "";
+    }
+  }
+
+  function isVisualSearchMode() {
+    try {
+      return new URLSearchParams(location.search).get("gorsel") === "1";
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function loadVisualSearchPayload() {
+    try {
+      var raw = sessionStorage.getItem("eq_visual_search_payload");
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (!data || !Array.isArray(data.hits) || !data.hits.length) return null;
+      return data;
+    } catch (_) {
+      return null;
     }
   }
 
@@ -1242,12 +1263,18 @@
     syncPageTitle(q);
 
     if (title) {
-      title.textContent = q
-        ? __searchT("search.results_for", "Arama sonuçları")
-        : __searchT("search.title", "Arama");
+      title.textContent =
+        isVisualSearchMode() && sourceHits.length
+          ? "Görsel arama sonuçları"
+          : q
+            ? __searchT("search.results_for", "Arama sonuçları")
+            : __searchT("search.title", "Arama");
     }
     if (count) {
-      if (lastRender.err) count.textContent = lastRender.err;
+      if (isVisualSearchMode() && sourceHits.length) {
+        count.textContent =
+          "Görsel benzerlik — " + sourceHits.length + " ürün";
+      } else if (lastRender.err) count.textContent = lastRender.err;
       else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
       else if (!sourceHits.length)
         count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
@@ -1456,6 +1483,25 @@
 
   function load() {
     bindUi();
+
+    if (isVisualSearchMode()) {
+      var visualPayload = loadVisualSearchPayload();
+      if (visualPayload) {
+        preserveHitOrder = true;
+        sourceHits = visualPayload.hits;
+        lastBootQ = "__visual__";
+        lastRender = {
+          q: "",
+          total: visualPayload.hits.length,
+          err: null,
+          warning: "",
+          hasMore: false,
+        };
+        renderAll();
+        return;
+      }
+    }
+
     var q = getQuery();
     if (typeof window.eqClearHeaderSearchInput === "function") {
       window.eqClearHeaderSearchInput();
