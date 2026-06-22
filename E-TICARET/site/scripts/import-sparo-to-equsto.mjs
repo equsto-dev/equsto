@@ -159,10 +159,22 @@ async function main() {
   console.log(`[sparo-import] ${dryRun ? "DRY-RUN" : "OK"} ${rows.length} vitrin satırı (${products.length} WC ürünü)`);
 
   if (!dryRun) {
-    execFileSync(process.execPath, ["scripts/rebuild-ekipmanlar-from-dept.mjs"], {
-      cwd: ROOT,
-      stdio: "inherit",
-    });
+    let priced = false;
+    try {
+      execFileSync(process.execPath, ["scripts/apply-sparo-pdf-prices.mjs"], {
+        cwd: ROOT,
+        stdio: "inherit",
+      });
+      priced = true;
+    } catch (_) {
+      console.log("\nFiyat listesi yok — npm run catalog:sparo:pdf-prices && npm run catalog:sparo:prices");
+    }
+    if (!priced) {
+      execFileSync(process.execPath, ["scripts/rebuild-ekipmanlar-from-dept.mjs"], {
+        cwd: ROOT,
+        stdio: "inherit",
+      });
+    }
     console.log("\nYerel vitrin: http://localhost:3099/shop/marka/sparo");
     console.log("Arama indeksi: npm run search:index");
   }
