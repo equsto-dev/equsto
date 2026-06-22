@@ -17,6 +17,9 @@ export type ListePdfKalem = {
   adet?: number;
   poz?: string;
   olcu?: string;
+  marka?: string;
+  birim_fiyat_eur?: number | null;
+  mevcut?: boolean;
 };
 
 function buildSystemPrompt(): string {
@@ -29,8 +32,11 @@ KURALLAR:
 3. poz = dosyadaki poz numarası (A25A gibi).
 4. olcu = varsa 140*70*85 formatında; yoksa null.
 5. adet = dosyadaki adet sütunu.
-6. kategori = dosyadaki bölüm başlığı (sıcak mutfak, bulaşık yıkama vb.) veya poz harfine göre tahmin.
-7. tip_kodu alanını boş string bırak ("").
+6. marka = satırdaki marka (sktürk, electrolux vb.); yoksa null.
+7. birim_fiyat_eur = dosyadaki birim fiyat (EUR, sayı); yoksa null.
+8. mevcut = müşteri temini / mevcut satırlarda true.
+9. kategori = dosyadaki bölüm başlığı (sıcak mutfak, bulaşık yıkama vb.) veya poz harfine göre tahmin.
+10. tip_kodu alanını boş string bırak ("").
 
 SADECE JSON dizi döndür:
 [
@@ -40,7 +46,10 @@ SADECE JSON dizi döndür:
     "kategori": "sıcak mutfak",
     "adet": 1,
     "poz": "A1",
-    "olcu": "140*70*85/142"
+    "olcu": "140*70*85/142",
+    "marka": "sktürk",
+    "birim_fiyat_eur": 1900,
+    "mevcut": false
   }
 ]`;
 }
