@@ -3,7 +3,7 @@
 İnoksan 2026 Yurtiçi Bayi Fiyatları R1.xlsx → dept katalog (yalnız INO-* ana ürünler).
 Aksesuar / Genel Aksesuar (201–209 önekleri) dahil değil.
 
-Genel: liste × 0,73 × 1,15 · Bulaşık yıkama: liste × 0,77 × 1,15
+liste × 0,815 × 1,15 (%18,5 bayi iskonto — listenin %81,5'i)
 
   python scripts/sync-inoksan-fiyat-2026.py
   python scripts/sync-inoksan-fiyat-2026.py --dry-run
@@ -24,10 +24,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DEPT_DIR = ROOT / "public/data/dept"
 KUR_EUR_TRY = 53.2979
 KDV_ORAN = 20
-BAYI_ORAN = 0.73
+BAYI_ORAN = 0.815
+ISKONTO = 0.185
 KAR_ORAN = 1.15
-YIKAMA_BAYI_ORAN = 0.77
-YIKAMA_ISKONTO = 0.23
+INOKSAN_XLSX = Path(r"c:/D Disk/FİYAT LİSTELERİ/İNOKSAN 2026 Yurtiçi Bayi Fiyatları R1.xlsx")
 BRAND = "İnoksan"
 KAYNAK = "inoksan-fiyat-listesi-2026-r1"
 
@@ -48,6 +48,8 @@ def nf(s: str) -> str:
 
 
 def find_xlsx() -> Path:
+    if INOKSAN_XLSX.is_file():
+        return INOKSAN_XLSX
     base = Path(r"c:/D Disk")
     for d in base.iterdir():
         if "fiyat" in nf(d.name) or ("yat" in nf(d.name) and "list" in nf(d.name)):
@@ -99,9 +101,9 @@ def pricing_fields(
     dept: str = "",
 ) -> dict:
     liste = round(float(liste_eur), 2)
-    bayi = YIKAMA_BAYI_ORAN if dept == "yikama" else BAYI_ORAN
-    iskonto = YIKAMA_ISKONTO if dept == "yikama" else 0.27
-    iskonto_yuzde = int(round(iskonto * 100))
+    bayi = BAYI_ORAN
+    iskonto = ISKONTO
+    iskonto_yuzde = round(iskonto * 100, 1)
     alis = round(liste * bayi, 2)
     satis = round(alis * KAR_ORAN, 2)
     fiyat_tl_net = round(satis * KUR_EUR_TRY)
