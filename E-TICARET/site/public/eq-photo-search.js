@@ -1,5 +1,5 @@
 /**
- * Üst arama çubuğuna «fotoğrafla ara» (kamera / galeri).
+ * Üst arama çubuğuna «fotoğrafla ara» (kamera / galeri) ve «kopyala-yapıştır» (ekran görüntüsü).
  * — Barkod (BarcodeDetector) varsa otomatik metin aramasına dökülür.
  * — Yoksa önizleme + elle anahtar kelime ile mevcut searchFilter / __eqHomeSearch akışına bağlanır.
  */
@@ -10,6 +10,8 @@
   window.__eqPhotoSearchBooted = true;
 
   var globalFile = null;
+  var pasteArmed = false;
+  var pasteArmTimer = null;
 
   function bodyOk() {
     var b = document.body;
@@ -171,13 +173,8 @@
     });
   }
 
-  function onFileSelected() {
-    var f = globalFile && globalFile.files && globalFile.files[0];
-    try {
-      if (globalFile) globalFile.value = "";
-    } catch (e2) {}
+  function processImageFile(f) {
     if (!f || !f.type || f.type.indexOf("image/") !== 0) return;
-
     tryBarcodeFromFile(f).then(function (code) {
       if (code) {
         applySearchQuery(code);
@@ -186,6 +183,126 @@
       var url = URL.createObjectURL(f);
       openPhotoModal(url);
     });
+  }
+
+  function onFileSelected() {
+    var f = globalFile && globalFile.files && globalFile.files[0];
+    try {
+      if (globalFile) globalFile.value = "";
+    } catch (e2) {}
+    processImageFile(f);
+  }
+
+  function imageFromClipboardData(cd) {
+    if (!cd || !cd.items) return null;
+    for (var i = 0; i < cd.items.length; i++) {
+      var it = cd.items[i];
+      if (it.kind === "file" && it.type && it.type.indexOf("image/") === 0) {
+        return it.getAsFile();
+      }
+    }
+    return null;
+  }
+
+  function readClipboardImageAsync() {
+    if (!navigator.clipboard || typeof navigator.clipboard.read !== "function") {
+      return Promise.resolve(null);
+    }
+    return navigator.clipboard
+      .read()
+      .then(function (clipItems) {
+        var chain = Promise.resolve(null);
+        for (var i = 0; i < clipItems.length; i++) {
+          (function (ci) {
+            chain = chain.then(function (found) {
+              if (found) return found;
+              for (var j = 0; j < ci.types.length; j++) {
+                var t = ci.types[j];
+                if (t.indexOf("image/") === 0) {
+                  return ci.getType(t).then(function (blob) {
+                    try {
+                      return new File([blob], "ekran-goruntusu.png", {
+                        type: blob.type || "image/png",
+                      });
+                    } catch (e) {
+                      return blob;
+                    }
+                  });
+                }
+              }
+              return null;
+            });
+          })(clipItems[i]);
+        }
+        return chain;
+      })
+      .catch(function () {
+        return null;
+      });
+  }
+
+  function setPasteArmed(on) {
+    pasteArmed = !!on;
+    if (pasteArmTimer) {
+      clearTimeout(pasteArmTimer);
+      pasteArmTimer = null;
+    }
+    document.querySelectorAll(".eq-srch-paste-btn").forEach(function (b) {
+      if (pasteArmed) b.classList.add("eq-srch-paste-btn--armed");
+      else b.classList.remove("eq-srch-paste-btn--armed");
+    });
+    if (pasteArmed) {
+      pasteArmTimer = setTimeout(function () {
+        setPasteArmed(false);
+      }, 12000);
+    }
+  }
+
+  function isSearchInputFocused() {
+    var active = document.activeElement;
+    if (!active) return false;
+    if (active.id === "eq-mcat-drawer-search") return true;
+    return !!(active.classList && active.classList.contains("srch-input"));
+  }
+
+  function onPasteCapture(ev) {
+    if (!bodyOk()) return;
+    var f = imageFromClipboardData(ev.clipboardData);
+    if (!f) return;
+    if (!pasteArmed && !isSearchInputFocused()) return;
+    ev.preventDefault();
+    setPasteArmed(false);
+    processImageFile(f);
+  }
+
+  function onPasteButtonClick(ev) {
+    ev.preventDefault();
+    if (!bodyOk()) return;
+    readClipboardImageAsync().then(function (f) {
+      if (f) {
+        setPasteArmed(false);
+        processImageFile(f);
+        return;
+      }
+      setPasteArmed(true);
+      var inp = document.querySelector(
+        "header.hdr .srch input.srch-input, header .srch input.srch-input"
+      );
+      try {
+        if (inp) inp.focus();
+      } catch (e) {}
+    });
+  }
+
+  function createPasteButton() {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "eq-srch-paste-btn";
+    btn.setAttribute("aria-label", "Kopyala-yapıştır ile görsel ara");
+    btn.title = "Ekran görüntüsünü kopyalayıp yapıştırın (Ctrl+V)";
+    btn.textContent = "Kopyala-yapıştır";
+    btn.addEventListener("click", onPasteButtonClick);
+    return btn;
   }
 
   function ensureGlobalFileInput() {
@@ -209,28 +326,38 @@
   window.eqOpenPhotoSearch = openFilePicker;
 
   function wireSrch(root) {
-    if (!root || root.querySelector(".eq-srch-photo-slot")) return;
+    if (!root) return;
     var btnSrch = root.querySelector(".srch-btn");
     if (!btnSrch) return;
 
-    var slot = document.createElement("span");
-    slot.className = "eq-srch-photo-slot";
+    var slot = root.querySelector(".eq-srch-photo-slot");
+    if (!slot) {
+      slot = document.createElement("span");
+      slot.className = "eq-srch-photo-slot eq-srch-media-tools";
 
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "eq-srch-photo-btn";
-    btn.setAttribute("aria-label", "Fotoğrafla ara");
-    btn.title = "Fotoğrafla ara";
-    btn.innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "eq-srch-photo-btn";
+      btn.setAttribute("aria-label", "Fotoğrafla ara");
+      btn.title = "Fotoğrafla ara";
+      btn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
 
-    btn.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      openFilePicker();
-    });
+      btn.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        openFilePicker();
+      });
 
-    slot.appendChild(btn);
-    root.insertBefore(slot, btnSrch);
+      slot.appendChild(btn);
+      slot.appendChild(createPasteButton());
+      root.insertBefore(slot, btnSrch);
+      return;
+    }
+
+    slot.classList.add("eq-srch-media-tools");
+    if (!slot.querySelector(".eq-srch-paste-btn")) {
+      slot.appendChild(createPasteButton());
+    }
   }
 
   function wireHeaderButtons() {
@@ -241,6 +368,7 @@
     if (!bodyOk()) return;
     ensureGlobalFileInput();
     wireHeaderButtons();
+    document.addEventListener("paste", onPasteCapture, true);
   }
 
   document.addEventListener(
