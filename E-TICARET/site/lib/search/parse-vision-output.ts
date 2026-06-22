@@ -18,19 +18,14 @@ export function sanitizeVisionQueryText(q: string): string {
     .replace(/\bjson\b/gi, " ")
     .replace(/[{}\[\]"':]/g, " ")
     .replace(/\bq\s*:/gi, " ")
+    .replace(/[<>~=|]{1,}/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 
-  if (s.length < 3) {
+  if (!isDisplayableSearchQuery(s)) {
     throw new Error("Görselden arama ifadesi çıkarılamadı.");
   }
-  if (!/[a-zA-ZğüşıöçĞÜŞİÖÇ0-9]{3,}/.test(s)) {
-    throw new Error("Görselden arama ifadesi çıkarılamadı.");
-  }
-  if (/^[\W\d_]+$/.test(s)) {
-    throw new Error("Görselden arama ifadesi çıkarılamadı.");
-  }
-  return s.slice(0, 120);
+  return s.slice(0, 80);
 }
 
 function fromParsedObject(parsed: Record<string, unknown>): ImageVisionQuery {
@@ -73,7 +68,14 @@ export function parseVisionModelOutput(raw: string): ImageVisionQuery {
 
 export function isDisplayableSearchQuery(q: string): boolean {
   const s = String(q || "").trim();
-  if (!s || s.length < 3) return false;
+  if (!s || s.length < 3 || s.length > 80) return false;
   if (/```|json|\{|\}|^\s*q\s*:/i.test(s)) return false;
-  return /[a-zA-ZğüşıöçĞÜŞİÖÇ]{3,}/.test(s);
+  if (/[<>]|~=|==|=>|\|\|/.test(s)) return false;
+  const words = s.split(/\s+/).filter((w) => w.length >= 2);
+  if (!words.length || words.length > 8) return false;
+  const letterWords = words.filter((w) => /[a-zA-ZğüşıöçĞÜŞİÖÇ]{3,}/.test(w));
+  if (!letterWords.length) return false;
+  const junk = s.replace(/[a-zA-ZğüşıöçĞÜŞİÖÇ0-9\s.,\-+%()/]/g, "");
+  if (junk.length > 2) return false;
+  return true;
 }
