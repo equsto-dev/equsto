@@ -1486,6 +1486,7 @@
 
   var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
   var EQ_TINT_ASSET_V = "20260530prod-card-tint-v12";
+  var EQ_PHOTO_SEARCH_ASSET_V = "20260622-photo-visual-search-v2";
 
   function loadScriptSameDir(filename, flagName) {
     try {
@@ -1506,6 +1507,9 @@
       }
       if (filename === "eq-product-card-tint.js" && url) {
         url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_TINT_ASSET_V;
+      }
+      if (filename === "eq-photo-search.js" && url) {
+        url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_PHOTO_SEARCH_ASSET_V;
       }
       if (!url) {
         try {
