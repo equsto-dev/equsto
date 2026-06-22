@@ -7,6 +7,9 @@ import {
   LISTE_KONSEPT,
   LISTE_KONSEPT_LABEL,
 } from "./liste-fiyat.types";
+import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
+import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
+import { toplamAdet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
 import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { finalizeKalemlerForTeklif } from "@/lib/pfos/teklif/assign-poz";
