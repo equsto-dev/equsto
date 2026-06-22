@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
 import { IMAGE_VISION_PROMPT } from "@/lib/search/image-vision-prompt";
+import { parseVisionModelOutput } from "@/lib/search/parse-vision-output";
 
 const DEFAULT_MODEL = "claude-sonnet-4-6";
 const RETIRED = new Set([
@@ -22,10 +23,6 @@ function resolveModel(): string {
   const raw = process.env.ANTHROPIC_MODEL?.trim();
   if (!raw || RETIRED.has(raw)) return DEFAULT_MODEL;
   return raw;
-}
-
-function cleanJson(raw: string): string {
-  return raw.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
 }
 
 function visionMediaType(mime: string): "image/jpeg" | "image/png" | "image/gif" | "image/webp" {
@@ -83,24 +80,5 @@ export async function extractImageSearchQuery(
       ? (response.content.find((b) => b.type === "text") as { text: string }).text
       : "{}";
 
-  let parsed: Record<string, unknown>;
-  try {
-    parsed = JSON.parse(cleanJson(raw)) as Record<string, unknown>;
-  } catch {
-    const q = String(raw || "")
-      .replace(/[{}"\n]/g, " ")
-      .trim()
-      .slice(0, 120);
-    if (!q) throw new Error("Görselden arama ifadesi çıkarılamadı.");
-    return { q, brand: "", model: "" };
-  }
-
-  const q = String(parsed.q ?? parsed.query ?? "").trim();
-  if (!q) throw new Error("Görselden arama ifadesi çıkarılamadı.");
-
-  return {
-    q,
-    brand: String(parsed.brand ?? "").trim(),
-    model: String(parsed.model ?? "").trim(),
-  };
+  return parseVisionModelOutput(raw);
 }

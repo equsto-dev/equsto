@@ -1,32 +1,6 @@
 import type { ImageVisionQuery } from "@/lib/search/image-vision-query";
 import { IMAGE_VISION_PROMPT } from "@/lib/search/image-vision-prompt";
-
-function cleanJson(raw: string): string {
-  return raw.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
-}
-
-function parseVisionJson(raw: string): ImageVisionQuery {
-  let parsed: Record<string, unknown>;
-  try {
-    parsed = JSON.parse(cleanJson(raw)) as Record<string, unknown>;
-  } catch {
-    const q = String(raw || "")
-      .replace(/[{}"\n]/g, " ")
-      .trim()
-      .slice(0, 120);
-    if (!q) throw new Error("Görselden arama ifadesi çıkarılamadı.");
-    return { q, brand: "", model: "" };
-  }
-
-  const q = String(parsed.q ?? parsed.query ?? "").trim();
-  if (!q) throw new Error("Görselden arama ifadesi çıkarılamadı.");
-
-  return {
-    q,
-    brand: String(parsed.brand ?? "").trim(),
-    model: String(parsed.model ?? "").trim(),
-  };
-}
+import { parseVisionModelOutput } from "@/lib/search/parse-vision-output";
 
 /** Görsel → arama ifadesi (Gemini vision, isteğe bağlı yedek). */
 export async function extractImageSearchQueryGemini(
@@ -60,6 +34,7 @@ export async function extractImageSearchQueryGemini(
       generationConfig: {
         temperature: 0.1,
         maxOutputTokens: 256,
+        responseMimeType: "application/json",
       },
     }),
   });
@@ -84,5 +59,5 @@ export async function extractImageSearchQueryGemini(
       .join("")
       .trim() || "";
 
-  return parseVisionJson(raw);
+  return parseVisionModelOutput(raw);
 }

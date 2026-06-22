@@ -17,6 +17,7 @@ import {
   buildVisualSearchQuery,
   visualCatalogMatch,
 } from "@/lib/search/visual-search-query";
+import { isDisplayableSearchQuery } from "@/lib/search/parse-vision-output";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
@@ -130,6 +131,16 @@ export async function POST(req: NextRequest) {
     }
 
     const searchQ = buildSearchQ(resolved.vision);
+    if (!searchQ || !isDisplayableSearchQuery(searchQ)) {
+      return NextResponse.json(
+        {
+          ok: false,
+          fallback: "client-ocr",
+          error: "Görselden ürün tipi çıkarılamadı; görseldeki yazılar taranacak.",
+        },
+        { status: 502 },
+      );
+    }
     const { canonical, source } = await searchCatalog(searchQ);
     const catalogMatch = visualCatalogMatch(searchQ, canonical);
 
