@@ -28,9 +28,25 @@
     );
   }
 
+  function isValidVisualSearchQuery(q) {
+    var s = String(q || "").trim();
+    if (!s || s.length < 3 || s.length > 80) return false;
+    if (/```|json|\{|\}|<|>|~=|==|=>/.test(s)) return false;
+    var words = s.split(/\s+/).filter(function (w) {
+      return w.length >= 2;
+    });
+    if (!words.length || words.length > 8) return false;
+    var letterWords = words.filter(function (w) {
+      return /[a-zA-ZğüşıöçĞÜŞİÖÇ]{3,}/.test(w);
+    });
+    if (!letterWords.length) return false;
+    var junk = s.replace(/[a-zA-ZğüşıöçĞÜŞİÖÇ0-9\s.,\-+%()/]/g, "");
+    return junk.length <= 2;
+  }
+
   function applySearchQuery(q) {
     var v = String(q == null ? "" : q).trim();
-    if (!v) return false;
+    if (!v || !isValidVisualSearchQuery(v)) return false;
     var inp = document.querySelector("header.hdr .srch input.srch-input, header .srch input.srch-input");
     var drawerInp = document.getElementById("eq-mcat-drawer-search");
     if (inp) inp.value = v;
@@ -261,7 +277,11 @@
             showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
             return;
           }
-          if (res.body.catalogMatch === false) {
+          if (!isValidVisualSearchQuery(q)) {
+            showVisualSearchError("Görselden geçerli bir ürün tipi çıkarılamadı.");
+            return;
+          }
+          if (res.body.catalogMatch !== true) {
             var badQ = /```|json|\{|\}|^\s*q\s*:/i.test(q);
             showVisualSearchError(
               badQ
@@ -368,6 +388,15 @@
     processImageFile(f);
   }
 
+  function clipboardHasImage(cd) {
+    if (!cd || !cd.items) return false;
+    for (var i = 0; i < cd.items.length; i++) {
+      var it = cd.items[i];
+      if (it.kind === "file" && it.type && it.type.indexOf("image/") === 0) return true;
+    }
+    return false;
+  }
+
   function imageFromClipboardData(cd) {
     if (!cd || !cd.items) return null;
     for (var i = 0; i < cd.items.length; i++) {
@@ -411,11 +440,32 @@
 
   function onPasteCapture(ev) {
     if (!bodyOk()) return;
-    var f = imageFromClipboardData(ev.clipboardData);
-    if (!f) return;
-    if (!isUploadPanelOpen() && !pasteArmed && !isSearchInputFocused()) return;
-    ev.preventDefault();
-    processImageFile(f);
+    var cd = ev.clipboardData;
+    var visualCtx = isUploadPanelOpen() || pasteArmed || isSearchInputFocused();
+    if (!visualCtx) return;
+
+    var f = imageFromClipboardData(cd);
+    if (f) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      processImageFile(f);
+      return;
+    }
+
+    if (isUploadPanelOpen() || pasteArmed) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      showUploadError("Lütfen bir görsel yapıştırın (Ctrl+V).");
+      return;
+    }
+
+    if (isSearchInputFocused() && clipboardHasImage(cd)) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      showVisualSearchError(
+        "Görsel yapıştırılamadı. Görseli dosya olarak kaydedip «Görsel yükle» ile deneyin."
+      );
+    }
   }
 
   function setPhotoBtnOpen(on) {
