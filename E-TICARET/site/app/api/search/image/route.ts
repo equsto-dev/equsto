@@ -13,6 +13,10 @@ import {
   extractImageSearchQuery,
   type ImageVisionQuery,
 } from "@/lib/search/image-vision-query";
+import {
+  buildVisualSearchQuery,
+  visualCatalogMatch,
+} from "@/lib/search/visual-search-query";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
@@ -28,14 +32,7 @@ const ALLOWED_TYPES = new Set([
 ]);
 
 function buildSearchQ(vision: ImageVisionQuery): string {
-  let searchQ = vision.q;
-  if (vision.brand && !searchQ.toLowerCase().includes(vision.brand.toLowerCase())) {
-    searchQ = `${vision.brand} ${searchQ}`.trim();
-  }
-  if (vision.model && !searchQ.toLowerCase().includes(vision.model.toLowerCase())) {
-    searchQ = `${searchQ} ${vision.model}`.trim();
-  }
-  return searchQ;
+  return buildVisualSearchQuery(vision);
 }
 
 async function searchCatalog(searchQ: string) {
@@ -134,14 +131,16 @@ export async function POST(req: NextRequest) {
 
     const searchQ = buildSearchQ(resolved.vision);
     const { canonical, source } = await searchCatalog(searchQ);
+    const catalogMatch = visualCatalogMatch(searchQ, canonical);
 
     return NextResponse.json({
       ok: true,
       query: searchQ,
       vision: resolved.vision,
       method: resolved.method,
-      hits: canonical,
-      estimatedTotalHits: canonical.length,
+      hits: catalogMatch ? canonical : [],
+      estimatedTotalHits: catalogMatch ? canonical.length : 0,
+      catalogMatch,
       source,
     });
   } catch (err) {

@@ -322,6 +322,14 @@
             showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
             return;
           }
+          if (res.body.catalogMatch === false) {
+            showVisualSearchError(
+              "Görsel «" +
+                q +
+                "» olarak tanımlandı; bu ürün Equsto kataloğunda bulunamadı."
+            );
+            return;
+          }
           applySearchQuery(q);
           return;
         }

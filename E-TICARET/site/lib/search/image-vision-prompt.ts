@@ -1,5 +1,9 @@
-export const IMAGE_VISION_PROMPT = `Bu görsel Equsto endüstriyel mutfak ekipmanı kataloğunda aranıyor.
-Ürün tipi, marka ve görünen model/kod bilgisini kullanarak kısa bir Türkçe arama ifadesi üret.
+export const IMAGE_VISION_PROMPT = `Bu görsel bir endüstriyel mutfak / gıda ekipmanı fotoğrafı. Katalogda aranacak ürün TİPİNİ tanımla.
+Kurallar:
+- "Equsto" veya başka satıcı adını YAZMA (görselde logo/etiket yoksa brand boş kalır).
+- q alanında yalnızca ekipman tipi ve görünen model/kod (2-6 Türkçe kelime).
+- Davlumbaz, tezgah, buzdolabı, fırın, blender, liyofilizatör, vakum paketleme vb. doğru ayrım yap.
+- Cam kubbe/kapak + kompakt mobil gövde → liyofilizatör veya vakum kurutucu (davlumbaz değil).
 Sadece JSON döndür (başka metin yok):
-{"q":"2-6 kelime arama","brand":"","model":""}
-Örnek q: "soft servis dondurma makinesi", "konveksiyonel fırın", "dikey buzdolabı", "bardak yıkama makinesi"`;
+{"q":"ürün tipi araması","brand":"görselde okunan marka veya boş","model":"görünen model kodu veya boş"}
+Örnek q: "liyofilizatör", "konveksiyonel fırın", "dikey buzdolabı", "bardak yıkama makinesi", "vakum paketleme makinesi"`;
