@@ -1,5 +1,5 @@
 /**
- * Üst arama çubuğuna «fotoğrafla ara» (kamera / galeri) ve «kopyala-yapıştır» (ekran görüntüsü).
+ * Üst arama çubuğu — fotoğrafla ara (yükle / sürükle / Ctrl+V yapıştır).
  * — Barkod (BarcodeDetector) varsa otomatik metin aramasına dökülür.
  * — Yoksa önizleme + elle anahtar kelime ile mevcut searchFilter / __eqHomeSearch akışına bağlanır.
  */
@@ -12,6 +12,10 @@
   var globalFile = null;
   var pasteArmed = false;
   var pasteArmTimer = null;
+  var MAX_IMAGE_BYTES = 20 * 1024 * 1024;
+
+  var UPLOAD_SVG =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>';
 
   function bodyOk() {
     var b = document.body;
@@ -47,7 +51,7 @@
     return true;
   }
 
-  function closePhotoModal() {
+  function closePhotoResultModal() {
     var o = document.getElementById("eq-photo-srch-overlay");
     if (!o) return;
     if (o._eqOnEsc) {
@@ -64,8 +68,8 @@
     o.remove();
   }
 
-  function openPhotoModal(previewUrl) {
-    closePhotoModal();
+  function openPhotoResultModal(previewUrl) {
+    closePhotoResultModal();
     var o = document.createElement("div");
     o.id = "eq-photo-srch-overlay";
     o.className = "eq-photo-srch-overlay";
@@ -74,7 +78,7 @@
     o.setAttribute("aria-label", "Fotoğrafla ara");
     o._eqRevokeUrl = previewUrl;
     o.addEventListener("click", function (ev) {
-      if (ev.target === o) closePhotoModal();
+      if (ev.target === o) closePhotoResultModal();
     });
 
     var p = document.createElement("div");
@@ -103,7 +107,7 @@
     bClose.type = "button";
     bClose.className = "eq-photo-srch-btn eq-photo-srch-btn--ghost";
     bClose.textContent = "Kapat";
-    bClose.addEventListener("click", closePhotoModal);
+    bClose.addEventListener("click", closePhotoResultModal);
 
     var bGo = document.createElement("button");
     bGo.type = "button";
@@ -111,7 +115,7 @@
     bGo.textContent = "Ara";
     bGo.addEventListener("click", function () {
       applySearchQuery(ti.value);
-      closePhotoModal();
+      closePhotoResultModal();
     });
 
     ti.addEventListener("keydown", function (ev) {
@@ -134,7 +138,7 @@
     }, 0);
     function onEsc(ev) {
       if (ev.key !== "Escape") return;
-      closePhotoModal();
+      closePhotoResultModal();
     }
     o._eqOnEsc = onEsc;
     document.addEventListener("keydown", onEsc, true);
@@ -173,15 +177,38 @@
     });
   }
 
+  function showUploadError(msg) {
+    var err = document.querySelector(".eq-photo-upload-error");
+    if (!err) return;
+    err.textContent = msg || "";
+    err.hidden = !msg;
+  }
+
+  function acceptImageFile(f) {
+    if (!f) return false;
+    var t = f.type || "";
+    if (t.indexOf("image/") !== 0) {
+      showUploadError("Lütfen bir görsel dosyası seçin.");
+      return false;
+    }
+    if (f.size > MAX_IMAGE_BYTES) {
+      showUploadError("Dosya 20 MB sınırını aşıyor.");
+      return false;
+    }
+    showUploadError("");
+    return true;
+  }
+
   function processImageFile(f) {
-    if (!f || !f.type || f.type.indexOf("image/") !== 0) return;
+    if (!acceptImageFile(f)) return;
+    closeUploadPanel();
     tryBarcodeFromFile(f).then(function (code) {
       if (code) {
         applySearchQuery(code);
         return;
       }
       var url = URL.createObjectURL(f);
-      openPhotoModal(url);
+      openPhotoResultModal(url);
     });
   }
 
@@ -204,58 +231,27 @@
     return null;
   }
 
-  function readClipboardImageAsync() {
-    if (!navigator.clipboard || typeof navigator.clipboard.read !== "function") {
-      return Promise.resolve(null);
-    }
-    return navigator.clipboard
-      .read()
-      .then(function (clipItems) {
-        var chain = Promise.resolve(null);
-        for (var i = 0; i < clipItems.length; i++) {
-          (function (ci) {
-            chain = chain.then(function (found) {
-              if (found) return found;
-              for (var j = 0; j < ci.types.length; j++) {
-                var t = ci.types[j];
-                if (t.indexOf("image/") === 0) {
-                  return ci.getType(t).then(function (blob) {
-                    try {
-                      return new File([blob], "ekran-goruntusu.png", {
-                        type: blob.type || "image/png",
-                      });
-                    } catch (e) {
-                      return blob;
-                    }
-                  });
-                }
-              }
-              return null;
-            });
-          })(clipItems[i]);
-        }
-        return chain;
-      })
-      .catch(function () {
-        return null;
-      });
-  }
-
   function setPasteArmed(on) {
     pasteArmed = !!on;
     if (pasteArmTimer) {
       clearTimeout(pasteArmTimer);
       pasteArmTimer = null;
     }
-    document.querySelectorAll(".eq-srch-paste-btn").forEach(function (b) {
-      if (pasteArmed) b.classList.add("eq-srch-paste-btn--armed");
-      else b.classList.remove("eq-srch-paste-btn--armed");
-    });
+    var panel = document.getElementById("eq-photo-upload-panel");
+    if (panel) {
+      if (pasteArmed) panel.classList.add("eq-photo-upload-panel--paste");
+      else panel.classList.remove("eq-photo-upload-panel--paste");
+    }
     if (pasteArmed) {
       pasteArmTimer = setTimeout(function () {
-        setPasteArmed(false);
-      }, 12000);
+        if (document.getElementById("eq-photo-upload-panel")) setPasteArmed(true);
+        else setPasteArmed(false);
+      }, 60000);
     }
+  }
+
+  function isUploadPanelOpen() {
+    return !!document.getElementById("eq-photo-upload-panel");
   }
 
   function isSearchInputFocused() {
@@ -269,40 +265,166 @@
     if (!bodyOk()) return;
     var f = imageFromClipboardData(ev.clipboardData);
     if (!f) return;
-    if (!pasteArmed && !isSearchInputFocused()) return;
+    if (!isUploadPanelOpen() && !pasteArmed && !isSearchInputFocused()) return;
     ev.preventDefault();
-    setPasteArmed(false);
     processImageFile(f);
   }
 
-  function onPasteButtonClick(ev) {
-    ev.preventDefault();
-    if (!bodyOk()) return;
-    readClipboardImageAsync().then(function (f) {
-      if (f) {
-        setPasteArmed(false);
-        processImageFile(f);
-        return;
-      }
-      setPasteArmed(true);
-      var inp = document.querySelector(
-        "header.hdr .srch input.srch-input, header .srch input.srch-input"
-      );
-      try {
-        if (inp) inp.focus();
-      } catch (e) {}
+  function setPhotoBtnOpen(on) {
+    document.querySelectorAll(".eq-srch-photo-btn").forEach(function (b) {
+      if (on) b.classList.add("eq-srch-photo-btn--open");
+      else b.classList.remove("eq-srch-photo-btn--open");
     });
   }
 
-  function createPasteButton() {
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "eq-srch-paste-btn";
-    btn.setAttribute("aria-label", "Kopyala-yapıştır ile görsel ara");
-    btn.title = "Ekran görüntüsünü kopyalayıp yapıştırın (Ctrl+V)";
-    btn.textContent = "Kopyala-yapıştır";
-    btn.addEventListener("click", onPasteButtonClick);
-    return btn;
+  function onUploadPanelOutside(ev) {
+    if (!isUploadPanelOpen()) return;
+    if (ev.target.closest && ev.target.closest("#eq-photo-upload-panel")) return;
+    if (ev.target.closest && ev.target.closest(".eq-srch-photo-btn")) return;
+    closeUploadPanel();
+  }
+
+  function onUploadPanelEsc(ev) {
+    if (ev.key !== "Escape") return;
+    if (!isUploadPanelOpen()) return;
+    ev.preventDefault();
+    closeUploadPanel();
+  }
+
+  function positionUploadPanel(panel, srch) {
+    if (!panel || !srch) return;
+    var r = srch.getBoundingClientRect();
+    panel.style.top = Math.round(r.bottom + 6) + "px";
+    panel.style.left = Math.round(r.left) + "px";
+    panel.style.width = Math.round(r.width) + "px";
+  }
+
+  function closeUploadPanel() {
+    var p = document.getElementById("eq-photo-upload-panel");
+    if (p) {
+      if (p._eqReposition) {
+        try {
+          window.removeEventListener("resize", p._eqReposition);
+          window.removeEventListener("scroll", p._eqReposition, true);
+        } catch (e0) {}
+        p._eqReposition = null;
+      }
+      p.remove();
+    }
+    setPasteArmed(false);
+    setPhotoBtnOpen(false);
+    try {
+      document.removeEventListener("click", onUploadPanelOutside, true);
+      document.removeEventListener("keydown", onUploadPanelEsc, true);
+    } catch (e) {}
+  }
+
+  function bindDropZone(drop) {
+    function over(on) {
+      if (on) drop.classList.add("eq-photo-upload-drop--over");
+      else drop.classList.remove("eq-photo-upload-drop--over");
+    }
+    drop.addEventListener("dragenter", function (ev) {
+      ev.preventDefault();
+      over(true);
+    });
+    drop.addEventListener("dragover", function (ev) {
+      ev.preventDefault();
+      over(true);
+    });
+    drop.addEventListener("dragleave", function (ev) {
+      if (ev.target !== drop) return;
+      over(false);
+    });
+    drop.addEventListener("drop", function (ev) {
+      ev.preventDefault();
+      over(false);
+      var f = ev.dataTransfer && ev.dataTransfer.files && ev.dataTransfer.files[0];
+      processImageFile(f);
+    });
+  }
+
+  function openUploadPanel(anchorEl) {
+    if (!bodyOk()) return;
+    if (isUploadPanelOpen()) {
+      closeUploadPanel();
+      return;
+    }
+
+    var srch =
+      (anchorEl && anchorEl.closest && anchorEl.closest(".srch")) ||
+      document.querySelector("header.hdr .srch, header .srch");
+    if (!srch) return;
+
+    closeUploadPanel();
+
+    var panel = document.createElement("div");
+    panel.id = "eq-photo-upload-panel";
+    panel.className = "eq-photo-upload-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "Görsel yükle");
+
+    var title = document.createElement("p");
+    title.className = "eq-photo-upload-title";
+    title.textContent = "Görseli aşağıdaki yöntemlerden biriyle yükleyin";
+
+    var drop = document.createElement("div");
+    drop.className = "eq-photo-upload-drop";
+
+    var err = document.createElement("p");
+    err.className = "eq-photo-upload-error";
+    err.hidden = true;
+
+    var upBtn = document.createElement("button");
+    upBtn.type = "button";
+    upBtn.className = "eq-photo-upload-btn";
+    upBtn.innerHTML = UPLOAD_SVG + '<span>Görsel yükle</span>';
+    upBtn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      ensureGlobalFileInput().click();
+    });
+
+    var orDrag = document.createElement("p");
+    orDrag.className = "eq-photo-upload-or";
+    orDrag.textContent = "veya görseli buraya sürükleyin";
+
+    var orPaste = document.createElement("p");
+    orPaste.className = "eq-photo-upload-paste";
+    orPaste.innerHTML =
+      'veya yapıştırmak için <kbd class="eq-photo-upload-kbd">Ctrl+V</kbd> basın';
+
+    var limit = document.createElement("span");
+    limit.className = "eq-photo-upload-limit";
+    limit.textContent = "Maksimum dosya boyutu: 20 MB";
+
+    drop.appendChild(upBtn);
+    drop.appendChild(orDrag);
+    drop.appendChild(orPaste);
+    drop.appendChild(limit);
+    bindDropZone(drop);
+
+    panel.appendChild(title);
+    panel.appendChild(err);
+    panel.appendChild(drop);
+    document.body.appendChild(panel);
+    positionUploadPanel(panel, srch);
+    panel._eqReposition = function () {
+      positionUploadPanel(panel, srch);
+    };
+    window.addEventListener("resize", panel._eqReposition);
+    window.addEventListener("scroll", panel._eqReposition, true);
+
+    setPasteArmed(true);
+    setPhotoBtnOpen(true);
+    document.addEventListener("click", onUploadPanelOutside, true);
+    document.addEventListener("keydown", onUploadPanelEsc, true);
+
+    setTimeout(function () {
+      try {
+        upBtn.focus();
+      } catch (e) {}
+    }, 0);
   }
 
   function ensureGlobalFileInput() {
@@ -318,12 +440,10 @@
     return globalFile;
   }
 
-  function openFilePicker() {
-    if (!bodyOk()) return;
-    ensureGlobalFileInput().click();
-  }
-
-  window.eqOpenPhotoSearch = openFilePicker;
+  window.eqOpenPhotoSearch = function () {
+    var btn = document.querySelector(".eq-srch-photo-btn");
+    openUploadPanel(btn || document.querySelector("header .srch"));
+  };
 
   function wireSrch(root) {
     if (!root) return;
@@ -345,18 +465,28 @@
 
       btn.addEventListener("click", function (ev) {
         ev.preventDefault();
-        openFilePicker();
+        ev.stopPropagation();
+        openUploadPanel(btn);
       });
 
       slot.appendChild(btn);
-      slot.appendChild(createPasteButton());
       root.insertBefore(slot, btnSrch);
       return;
     }
 
-    slot.classList.add("eq-srch-media-tools");
-    if (!slot.querySelector(".eq-srch-paste-btn")) {
-      slot.appendChild(createPasteButton());
+    var oldPaste = slot.querySelector(".eq-srch-paste-btn");
+    if (oldPaste) oldPaste.remove();
+
+    var cam = slot.querySelector(".eq-srch-photo-btn");
+    if (cam && !cam.dataset.eqPhotoWired) {
+      var freshCam = cam.cloneNode(true);
+      freshCam.dataset.eqPhotoWired = "1";
+      cam.parentNode.replaceChild(freshCam, cam);
+      freshCam.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        openUploadPanel(freshCam);
+      });
     }
   }
 
@@ -378,7 +508,7 @@
       var cam = ev.target && ev.target.closest && ev.target.closest(".eq-mcat-search-cam");
       if (!cam) return;
       ev.preventDefault();
-      openFilePicker();
+      openUploadPanel(cam);
     },
     true
   );
