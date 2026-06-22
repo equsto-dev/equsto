@@ -11,6 +11,7 @@ const RETAILER_NAMES = new Set(["equsto"]);
 /** Meilisearch'te gürültü yapan genel sıfatlar. */
 const WEAK_TOKENS = new Set([
   "bar",
+  "moduler",
   "endustriyel",
   "sanayi",
   "tipi",
@@ -22,13 +23,18 @@ const WEAK_TOKENS = new Set([
   "model",
   "luks",
   "profesyonel",
+  "tezgah",
+  "tezgahi",
 ]);
 
 const BAR_STATION_RE =
   /kokteyl|bar\s*istasyon|bar\s*tezg|moduler\s*bar|buz\s*(kuyu|hazne|kuyusu)|speed\s*rail|kokteyl\s*tezg|kokteyl\s*bar/;
 
 const BAR_STATION_FALSE_POSITIVE_RE =
-  /blender|salat\s*bar|salad|puree|sikac|meyve\s*sik|bardak\s*yik|filtre\s*kahve|cay\s*makin/;
+  /blender|salat\s*bar|salad|puree|sikac|meyve\s*sik|bardak\s*yik|filtre\s*kahve|cay\s*makin|moduler\s*pisirme|pisirme\s*ekipman|ara\s*tezgah|makarna|konveksiyon|ocak|firin|izgara|fritoz/;
+
+const BAR_PRODUCT_NAME_RE =
+  /kokteyl|bar\s*istasyon|bar\s*tezg|buz\s*(kuyu|hazne|kuyusu)|moduler\s*bar|cocktail\s*station|speed\s*rail/;
 
 /** Görselde okunmayan satıcı / katalog adlarını ayıkla. */
 function stripRetailerTokens(text: string): string {
@@ -102,6 +108,12 @@ export function isBarStationVisualQuery(q: string): boolean {
   return BAR_STATION_RE.test(foldTr(q));
 }
 
+/** Ana katalogda gerçek bar istasyonu ürünü mü? */
+export function isBarStationCatalogHit(hit: CatalogSearchHit): boolean {
+  const blob = foldTr(`${hit.name || ""} ${hit.category || ""}`);
+  return BAR_PRODUCT_NAME_RE.test(blob);
+}
+
 /** Modüler bar istasyonları Besos vitrininde; ana katalogda yoksa yönlendir. */
 export function suggestBesosUrlForVisualQuery(q: string): string | null {
   if (!isBarStationVisualQuery(q)) return null;
@@ -155,8 +167,9 @@ export function scoreVisualHit(q: string, hit: CatalogSearchHit): number {
     else if (blob.includes(t)) score += 0.15;
   }
 
-  if (isBarStationVisualQuery(q) && BAR_STATION_FALSE_POSITIVE_RE.test(name)) {
-    score -= 5;
+  if (isBarStationVisualQuery(q)) {
+    if (BAR_STATION_FALSE_POSITIVE_RE.test(name)) score -= 6;
+    if (!isBarStationCatalogHit(hit)) score -= 4;
   }
 
   return score;
@@ -176,6 +189,16 @@ const MIN_VISUAL_MATCH_SCORE = 2.5;
 /** Üst sonuçlar sorguyla anlamlı örtüşüyor mu? */
 export function visualCatalogMatch(q: string, hits: CatalogSearchHit[]): boolean {
   if (!hits.length) return false;
+
+  if (isBarStationVisualQuery(q)) {
+    const top = hits.slice(0, 8);
+    return top.some(
+      (h) =>
+        isBarStationCatalogHit(h) &&
+        scoreVisualHit(q, h) >= MIN_VISUAL_MATCH_SCORE,
+    );
+  }
+
   const top = hits.slice(0, 8);
   const best = Math.max(...top.map((h) => scoreVisualHit(q, h)));
   if (best < MIN_VISUAL_MATCH_SCORE) return false;

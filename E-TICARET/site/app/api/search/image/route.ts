@@ -16,6 +16,7 @@ import {
 import {
   buildVisualSearchQuery,
   expandVisualSearchQueries,
+  isBarStationVisualQuery,
   rerankVisualHits,
   scoreVisualHit,
   suggestBesosUrlForVisualQuery,
@@ -164,6 +165,21 @@ export async function POST(req: NextRequest) {
         { status: 422 },
       );
     }
+
+    if (isBarStationVisualQuery(searchQ)) {
+      return NextResponse.json({
+        ok: true,
+        query: searchQ,
+        vision: resolved.vision,
+        method: resolved.method,
+        hits: [],
+        estimatedTotalHits: 0,
+        catalogMatch: false,
+        suggestUrl: "/besos/bar-istasyonlari",
+        source: "besos",
+      });
+    }
+
     const visual = await searchCatalogVisual(queries.length ? queries : [searchQ]);
     const suggestUrl = visual.catalogMatch
       ? null

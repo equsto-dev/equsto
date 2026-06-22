@@ -288,17 +288,13 @@
             showVisualSearchError("Görselden geçerli bir ürün tipi çıkarılamadı.");
             return;
           }
+          var suggestUrl = res.body.suggestUrl ? String(res.body.suggestUrl) : "";
+          if (suggestUrl) {
+            window.location.href = suggestUrl;
+            return;
+          }
           if (res.body.catalogMatch !== true) {
             var badQ = /```|json|\{|\}|^\s*q\s*:/i.test(q);
-            var suggestUrl = res.body.suggestUrl ? String(res.body.suggestUrl) : "";
-            if (suggestUrl) {
-              showVisualSearchError(
-                "Bu görsel modüler kokteyl bar istasyonuna benziyor. Bu ürünler Equsto ana kataloğunda değil; Besos Bar Design vitrininde.",
-                "Bar istasyonlarına git",
-                suggestUrl
-              );
-              return;
-            }
             showVisualSearchError(
               badQ
                 ? "Bu görsel Equsto kataloğunda eşleşen bir ürün bulunamadı."
