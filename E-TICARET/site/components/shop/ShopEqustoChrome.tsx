@@ -162,6 +162,7 @@ export default function ShopEqustoChrome({
             </div>
           </div>
           <div className="hdr-right">
+          <div className="eq-hdr-locale-bar">
             <LangSwitcherSlot />
             <div className="theme-wrap">
               <button
@@ -178,6 +179,7 @@ export default function ShopEqustoChrome({
                 {h.theme_label}
               </span>
             </div>
+          </div>
             <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
               <span className="eq-hdr-account-lines">
                 <span className="eq-hdr-account-sub" data-i18n="common.my_account">

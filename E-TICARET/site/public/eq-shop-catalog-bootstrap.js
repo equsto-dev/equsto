@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-no-close";
+  var CATALOG_V = "20260621-drawer-locale-theme";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

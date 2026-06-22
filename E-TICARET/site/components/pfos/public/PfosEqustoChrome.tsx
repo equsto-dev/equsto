@@ -89,25 +89,27 @@ export default function PfosEqustoChrome() {
           </div>
         </div>
         <div className="hdr-right">
-          <LangSwitcherSlot />
-          <div className="theme-wrap">
-            <button
-              type="button"
-              className="theme-toggle"
-              id="theme-toggle"
-              suppressHydrationWarning
-              onClick={() =>
-                (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()
-              }
-              title={h.theme_title}
-              aria-label={h.theme_title}
-              data-i18n-attr="title:common.theme_title"
-            >
-              ◐
-            </button>
-            <span className="theme-legend" data-i18n="common.theme_label">
-              {h.theme_label}
-            </span>
+          <div className="eq-hdr-locale-bar">
+            <LangSwitcherSlot />
+            <div className="theme-wrap">
+              <button
+                type="button"
+                className="theme-toggle"
+                id="theme-toggle"
+                suppressHydrationWarning
+                onClick={() =>
+                  (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()
+                }
+                title={h.theme_title}
+                aria-label={h.theme_title}
+                data-i18n-attr="title:common.theme_title"
+              >
+                ◐
+              </button>
+              <span className="theme-legend" data-i18n="common.theme_label">
+                {h.theme_label}
+              </span>
+            </div>
           </div>
           <a href="/login.html" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
             <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.my_account">

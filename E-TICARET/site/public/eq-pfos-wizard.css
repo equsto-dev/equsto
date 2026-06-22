@@ -27,8 +27,9 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
   header.hdr .hdr-alici{display:flex !important;flex:1 1 auto;min-width:0;order:0;border-right:1px solid var(--eq-hdr-bar-border,rgba(255,255,255,.2));padding-right:10px;margin-right:4px;}
   header.hdr .srch{width:100%;max-width:100%;order:10;}
   header.hdr .hdr-right{margin-left:auto;}
-  header.hdr .hdr-right > div:not(.theme-wrap){display:none;}
-  header.hdr .hdr-right .theme-wrap{display:flex;}
+  header.hdr .hdr-right > a,
+  header.hdr .hdr-right > div:not(.eq-hdr-locale-bar){display:none;}
+  header.hdr .hdr-right .eq-hdr-locale-bar{display:inline-flex;}
 }
 /* ÔöÇÔöÇ Katalog ile ayn─▒ sayfa iskelesi (sol s├╝tun + sa─ş i├ğerik) ÔöÇÔöÇ */
 .body{display:flex;background:var(--eq-surface);position:relative;align-items:flex-start;}
