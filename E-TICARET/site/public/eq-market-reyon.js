@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-drawer-locale-theme";
+  var CATALOG_V = "20260621-pfos-ice-blue";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
