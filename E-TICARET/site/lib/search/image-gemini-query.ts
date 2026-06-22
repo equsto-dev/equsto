@@ -33,7 +33,8 @@ export async function extractImageSearchQueryGemini(
       ],
       generationConfig: {
         temperature: 0.1,
-        maxOutputTokens: 256,
+        maxOutputTokens: 512,
+        thinkingConfig: { thinkingBudget: 0 },
         responseMimeType: "application/json",
       },
     }),
