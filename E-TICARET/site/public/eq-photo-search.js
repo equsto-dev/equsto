@@ -51,6 +51,82 @@
     return true;
   }
 
+  function purgeLegacyPhotoModal() {
+    var o = document.getElementById("eq-photo-srch-overlay");
+    if (o) o.remove();
+  }
+
+  function revokePanelPreview() {
+    var img = document.querySelector(".eq-photo-upload-preview");
+    if (!img) return;
+    var u = img.dataset && img.dataset.eqPreviewUrl;
+    if (u) {
+      try {
+        URL.revokeObjectURL(u);
+      } catch (e) {}
+      delete img.dataset.eqPreviewUrl;
+    }
+    img.removeAttribute("src");
+  }
+
+  function clearPanelAnalyzing() {
+    var panel = document.getElementById("eq-photo-upload-panel");
+    if (panel) panel.classList.remove("eq-photo-upload-panel--analyzing");
+    var block = document.querySelector(".eq-photo-upload-analyzing");
+    if (block) block.remove();
+    revokePanelPreview();
+  }
+
+  function setPanelAnalyzingMessage(text) {
+    var el = document.querySelector(".eq-photo-upload-analyzing__msg");
+    if (el) el.textContent = text;
+  }
+
+  function showPanelAnalyzing(file) {
+    var panel = document.getElementById("eq-photo-upload-panel");
+    if (!panel) return false;
+    panel.classList.add("eq-photo-upload-panel--analyzing");
+    var drop = panel.querySelector(".eq-photo-upload-drop");
+    if (!drop) return true;
+    var block = drop.querySelector(".eq-photo-upload-analyzing");
+    if (!block) {
+      block = document.createElement("div");
+      block.className = "eq-photo-upload-analyzing";
+      block.setAttribute("role", "status");
+      block.setAttribute("aria-live", "polite");
+      block.innerHTML =
+        '<img class="eq-photo-upload-preview" alt="">' +
+        '<div class="eq-photo-srch-busy__spin" aria-hidden="true"></div>' +
+        '<p class="eq-photo-upload-analyzing__msg">Görsel analiz ediliyor…</p>';
+      drop.appendChild(block);
+    }
+    var img = block.querySelector(".eq-photo-upload-preview");
+    if (img && file) {
+      revokePanelPreview();
+      try {
+        var url = URL.createObjectURL(file);
+        img.dataset.eqPreviewUrl = url;
+        img.src = url;
+      } catch (e2) {}
+    }
+    return true;
+  }
+
+  function showSearchProgress(file, message) {
+    if (isUploadPanelOpen() && showPanelAnalyzing(file)) {
+      if (message) setPanelAnalyzingMessage(message);
+      closeVisualSearchBusy();
+      return;
+    }
+    showVisualSearchBusy();
+    if (message) setBusyMessage(message);
+  }
+
+  function closeSearchProgress() {
+    clearPanelAnalyzing();
+    closeVisualSearchBusy();
+  }
+
   function closeVisualSearchBusy() {
     var o = document.getElementById("eq-photo-srch-busy");
     if (o) o.remove();
@@ -223,7 +299,7 @@
   }
 
   function runVisualSearch(file) {
-    showVisualSearchBusy();
+    showSearchProgress(file, "Görsel analiz ediliyor…");
     var uploadFile = null;
     resizeImageForUpload(file)
       .then(function (uf) {
@@ -239,7 +315,8 @@
       })
       .then(function (res) {
         if (res.ok && res.body && res.body.ok) {
-          closeVisualSearchBusy();
+          closeUploadPanel();
+          closeSearchProgress();
           var q = String(res.body.query || "").trim();
           if (!q) {
             showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
@@ -249,30 +326,40 @@
           return;
         }
         if (res.body && res.body.fallback === "client-ocr") {
+          setPanelAnalyzingMessage("Görseldeki yazılar taranıyor…");
+          setBusyMessage("Görseldeki yazılar taranıyor…");
           return runClientOcrSearch(uploadFile || file)
             .then(function (q) {
-              closeVisualSearchBusy();
+              closeUploadPanel();
+              closeSearchProgress();
               applySearchQuery(q);
             })
             .catch(function () {
-              closeVisualSearchBusy();
+              closeUploadPanel();
+              closeSearchProgress();
               showVisualSearchError(
-                "Görsel analiz kotası dolu ve görselde okunabilir yazı bulunamadı. Arama kutusuna ürün adını yazabilirsiniz."
+                "Görsel analiz edilemedi ve görselde okunabilir yazı bulunamadı. Lütfen başka bir görsel deneyin."
               );
             });
         }
-        closeVisualSearchBusy();
+        closeUploadPanel();
+        closeSearchProgress();
         showVisualSearchError(
           (res.body && res.body.error) || "Görsel aranamadı. Lütfen tekrar deneyin."
         );
       })
       .catch(function () {
+        setPanelAnalyzingMessage("Görseldeki yazılar taranıyor…");
+        setBusyMessage("Görseldeki yazılar taranıyor…");
         runClientOcrSearch(uploadFile || file)
           .then(function (q) {
-            closeVisualSearchBusy();
+            closeUploadPanel();
+            closeSearchProgress();
             applySearchQuery(q);
           })
           .catch(function () {
+            closeUploadPanel();
+            closeSearchProgress();
             showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
           });
       });
@@ -335,9 +422,14 @@
 
   function processImageFile(f) {
     if (!acceptImageFile(f)) return;
-    closeUploadPanel();
+    purgeLegacyPhotoModal();
+    var inPanel = isUploadPanelOpen();
+    if (inPanel) showPanelAnalyzing(f);
+    else showVisualSearchBusy();
     tryBarcodeFromFile(f).then(function (code) {
       if (code) {
+        closeUploadPanel();
+        closeSearchProgress();
         applySearchQuery(code);
         return;
       }
@@ -435,6 +527,7 @@
   function closeUploadPanel() {
     var p = document.getElementById("eq-photo-upload-panel");
     if (p) {
+      clearPanelAnalyzing();
       if (p._eqReposition) {
         try {
           window.removeEventListener("resize", p._eqReposition);
@@ -629,6 +722,7 @@
 
   function init() {
     if (!bodyOk()) return;
+    purgeLegacyPhotoModal();
     ensureGlobalFileInput();
     wireHeaderButtons();
     document.addEventListener("paste", onPasteCapture, true);

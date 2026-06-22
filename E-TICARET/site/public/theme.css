@@ -5339,6 +5339,45 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-limit {
   color: #9a9a9a;
   text-align: right;
 }
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-title,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-btn,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-or,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-paste,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-limit {
+  display: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-panel--analyzing .eq-photo-upload-drop {
+  border-style: solid;
+  border-color: var(--eq-border, #e5e5e5);
+  background: var(--eq-surface, #fff);
+  min-height: 220px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-analyzing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 0 4px;
+  box-sizing: border-box;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-preview {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--eq-border, #e5e5e5);
+  background: #fff;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-analyzing__msg {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--eq-text, #111);
+}
 
 /* Görsel arama — yükleme / hata (eq-photo-search.js) */
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy {
