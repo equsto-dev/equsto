@@ -170,7 +170,7 @@
     if (el) el.textContent = text;
   }
 
-  function showVisualSearchError(msg) {
+  function showVisualSearchError(msg, linkLabel, linkHref) {
     closeVisualSearchBusy();
     var o = document.createElement("div");
     o.id = "eq-photo-srch-busy";
@@ -180,16 +180,23 @@
     p.className = "eq-photo-srch-busy__card eq-photo-srch-busy__card--err";
     var msgP = document.createElement("p");
     msgP.textContent = String(msg || "Görsel aranamadı.");
+    p.appendChild(msgP);
+    if (linkLabel && linkHref) {
+      var linkBtn = document.createElement("a");
+      linkBtn.className = "eq-photo-srch-busy__link";
+      linkBtn.href = String(linkHref);
+      linkBtn.textContent = String(linkLabel);
+      p.appendChild(linkBtn);
+    }
     var okBtn = document.createElement("button");
     okBtn.type = "button";
     okBtn.className = "eq-photo-srch-busy__ok";
     okBtn.textContent = "Tamam";
     okBtn.addEventListener("click", closeVisualSearchBusy);
-    p.appendChild(msgP);
     p.appendChild(okBtn);
     o.appendChild(p);
     document.body.appendChild(o);
-    setTimeout(closeVisualSearchBusy, 8000);
+    setTimeout(closeVisualSearchBusy, 12000);
   }
 
   function resizeImageForUpload(file) {
@@ -283,6 +290,15 @@
           }
           if (res.body.catalogMatch !== true) {
             var badQ = /```|json|\{|\}|^\s*q\s*:/i.test(q);
+            var suggestUrl = res.body.suggestUrl ? String(res.body.suggestUrl) : "";
+            if (suggestUrl) {
+              showVisualSearchError(
+                "Bu görsel modüler kokteyl bar istasyonuna benziyor. Bu ürünler Equsto ana kataloğunda değil; Besos Bar Design vitrininde.",
+                "Bar istasyonlarına git",
+                suggestUrl
+              );
+              return;
+            }
             showVisualSearchError(
               badQ
                 ? "Bu görsel Equsto kataloğunda eşleşen bir ürün bulunamadı."

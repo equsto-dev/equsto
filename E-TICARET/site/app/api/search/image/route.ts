@@ -15,6 +15,10 @@ import {
 } from "@/lib/search/image-vision-query";
 import {
   buildVisualSearchQuery,
+  expandVisualSearchQueries,
+  rerankVisualHits,
+  scoreVisualHit,
+  suggestBesosUrlForVisualQuery,
   visualCatalogMatch,
 } from "@/lib/search/visual-search-query";
 import { isDisplayableSearchQuery } from "@/lib/search/parse-vision-output";
@@ -58,6 +62,32 @@ async function searchCatalog(searchQ: string) {
 
   const canonical = await canonicalizeSearchHits(hits.slice(0, 12));
   return { canonical, source };
+}
+
+async function searchCatalogVisual(queries: string[]) {
+  let best = {
+    canonical: [] as CatalogSearchHit[],
+    source: "meilisearch" as "meilisearch" | "fallback",
+    query: queries[0] || "",
+    score: -1,
+  };
+
+  for (const q of queries) {
+    const { canonical, source } = await searchCatalog(q);
+    const score = canonical.length
+      ? Math.max(...canonical.slice(0, 8).map((h) => scoreVisualHit(q, h)))
+      : -1;
+    if (score > best.score) {
+      best = { canonical, source, query: q, score };
+    }
+  }
+
+  const catalogMatch = visualCatalogMatch(best.query, best.canonical);
+  const hits = catalogMatch
+    ? rerankVisualHits(best.query, best.canonical)
+    : [];
+
+  return { ...best, catalogMatch, hits };
 }
 
 async function resolveVisionQuery(
@@ -123,7 +153,8 @@ export async function POST(req: NextRequest) {
 
     const resolved = await resolveVisionQuery(buffer, mime);
 
-    const searchQ = buildSearchQ(resolved.vision);
+    const queries = expandVisualSearchQueries(resolved.vision);
+    const searchQ = queries[0] || buildSearchQ(resolved.vision);
     if (!searchQ || !isDisplayableSearchQuery(searchQ)) {
       return NextResponse.json(
         {
@@ -133,18 +164,21 @@ export async function POST(req: NextRequest) {
         { status: 422 },
       );
     }
-    const { canonical, source } = await searchCatalog(searchQ);
-    const catalogMatch = visualCatalogMatch(searchQ, canonical);
+    const visual = await searchCatalogVisual(queries.length ? queries : [searchQ]);
+    const suggestUrl = visual.catalogMatch
+      ? null
+      : suggestBesosUrlForVisualQuery(visual.query || searchQ);
 
     return NextResponse.json({
       ok: true,
-      query: searchQ,
+      query: visual.query || searchQ,
       vision: resolved.vision,
       method: resolved.method,
-      hits: catalogMatch ? canonical : [],
-      estimatedTotalHits: catalogMatch ? canonical.length : 0,
-      catalogMatch,
-      source,
+      hits: visual.hits,
+      estimatedTotalHits: visual.catalogMatch ? visual.hits.length : 0,
+      catalogMatch: visual.catalogMatch,
+      suggestUrl,
+      source: visual.source,
     });
   } catch (err) {
     console.error("[api/search/image]", err);
