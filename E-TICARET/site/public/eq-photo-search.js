@@ -1,7 +1,7 @@
 /**
  * Üst arama çubuğu — fotoğrafla ara (yükle / sürükle / Ctrl+V yapıştır).
  * — Barkod (BarcodeDetector) varsa otomatik metin aramasına dökülür.
- * — Yoksa önizleme + elle anahtar kelime ile mevcut searchFilter / __eqHomeSearch akışına bağlanır.
+ * — Yoksa /api/search/image ile görsel analiz → doğrudan arama sonuçlarına gider.
  */
 ;(function () {
   "use strict";
@@ -51,97 +51,139 @@
     return true;
   }
 
-  function closePhotoResultModal() {
-    var o = document.getElementById("eq-photo-srch-overlay");
-    if (!o) return;
-    if (o._eqOnEsc) {
-      try {
-        document.removeEventListener("keydown", o._eqOnEsc, true);
-      } catch (e0) {}
-      o._eqOnEsc = null;
-    }
-    if (o._eqRevokeUrl) {
-      try {
-        URL.revokeObjectURL(o._eqRevokeUrl);
-      } catch (e) {}
-    }
-    o.remove();
+  function closeVisualSearchBusy() {
+    var o = document.getElementById("eq-photo-srch-busy");
+    if (o) o.remove();
   }
 
-  function openPhotoResultModal(previewUrl) {
-    closePhotoResultModal();
+  function showVisualSearchBusy() {
+    closeVisualSearchBusy();
     var o = document.createElement("div");
-    o.id = "eq-photo-srch-overlay";
-    o.className = "eq-photo-srch-overlay";
-    o.setAttribute("role", "dialog");
-    o.setAttribute("aria-modal", "true");
-    o.setAttribute("aria-label", "Fotoğrafla ara");
-    o._eqRevokeUrl = previewUrl;
-    o.addEventListener("click", function (ev) {
-      if (ev.target === o) closePhotoResultModal();
-    });
+    o.id = "eq-photo-srch-busy";
+    o.className = "eq-photo-srch-busy";
+    o.setAttribute("role", "status");
+    o.setAttribute("aria-live", "polite");
+    o.setAttribute("aria-label", "Görsel aranıyor");
+    o.innerHTML =
+      '<div class="eq-photo-srch-busy__card">' +
+      '<div class="eq-photo-srch-busy__spin" aria-hidden="true"></div>' +
+      "<p>Görsel analiz ediliyor…</p>" +
+      "</div>";
+    document.body.appendChild(o);
+  }
 
+  function showVisualSearchError(msg) {
+    closeVisualSearchBusy();
+    var o = document.createElement("div");
+    o.id = "eq-photo-srch-busy";
+    o.className = "eq-photo-srch-busy";
+    o.setAttribute("role", "alert");
     var p = document.createElement("div");
-    p.className = "eq-photo-srch-dialog";
-
-    var img = document.createElement("img");
-    img.className = "eq-photo-srch-preview";
-    img.src = previewUrl;
-    img.alt = "";
-
-    var hint = document.createElement("p");
-    hint.className = "eq-photo-srch-hint";
-    hint.textContent =
-      "Barkod okunamadı. Görseldeki ürünün adını veya markasını yazarak listede arayın.";
-
-    var ti = document.createElement("input");
-    ti.type = "text";
-    ti.className = "eq-photo-srch-field";
-    ti.placeholder = "ör. fırın, buzdolabı, GN 1/1";
-    ti.setAttribute("autocomplete", "off");
-
-    var row = document.createElement("div");
-    row.className = "eq-photo-srch-actions";
-
-    var bClose = document.createElement("button");
-    bClose.type = "button";
-    bClose.className = "eq-photo-srch-btn eq-photo-srch-btn--ghost";
-    bClose.textContent = "Kapat";
-    bClose.addEventListener("click", closePhotoResultModal);
-
-    var bGo = document.createElement("button");
-    bGo.type = "button";
-    bGo.className = "eq-photo-srch-btn eq-photo-srch-btn--primary";
-    bGo.textContent = "Ara";
-    bGo.addEventListener("click", function () {
-      applySearchQuery(ti.value);
-      closePhotoResultModal();
-    });
-
-    ti.addEventListener("keydown", function (ev) {
-      if (ev.key === "Enter") {
-        ev.preventDefault();
-        bGo.click();
-      }
-    });
-
-    row.appendChild(bClose);
-    row.appendChild(bGo);
-    p.appendChild(img);
-    p.appendChild(hint);
-    p.appendChild(ti);
-    p.appendChild(row);
+    p.className = "eq-photo-srch-busy__card eq-photo-srch-busy__card--err";
+    p.innerHTML =
+      "<p>" +
+      String(msg || "Görsel aranamadı.") +
+      '</p><button type="button" class="eq-photo-srch-busy__ok">Tamam</button>';
+    p.querySelector(".eq-photo-srch-busy__ok").addEventListener("click", closeVisualSearchBusy);
     o.appendChild(p);
     document.body.appendChild(o);
-    setTimeout(function () {
-      ti.focus();
-    }, 0);
-    function onEsc(ev) {
-      if (ev.key !== "Escape") return;
-      closePhotoResultModal();
-    }
-    o._eqOnEsc = onEsc;
-    document.addEventListener("keydown", onEsc, true);
+    setTimeout(closeVisualSearchBusy, 6000);
+  }
+
+  function resizeImageForUpload(file) {
+    return new Promise(function (resolve) {
+      var maxDim = 1280;
+      var url;
+      try {
+        url = URL.createObjectURL(file);
+      } catch (e) {
+        resolve(file);
+        return;
+      }
+      var img = new Image();
+      img.onload = function () {
+        try {
+          URL.revokeObjectURL(url);
+        } catch (e0) {}
+        var w = img.naturalWidth || img.width;
+        var h = img.naturalHeight || img.height;
+        if (!w || !h || (w <= maxDim && h <= maxDim && file.size < 900000)) {
+          resolve(file);
+          return;
+        }
+        var scale = Math.min(1, maxDim / Math.max(w, h));
+        var cw = Math.max(1, Math.round(w * scale));
+        var ch = Math.max(1, Math.round(h * scale));
+        var canvas = document.createElement("canvas");
+        canvas.width = cw;
+        canvas.height = ch;
+        var ctx = canvas.getContext("2d");
+        if (!ctx) {
+          resolve(file);
+          return;
+        }
+        ctx.drawImage(img, 0, 0, cw, ch);
+        canvas.toBlob(
+          function (blob) {
+            if (!blob) {
+              resolve(file);
+              return;
+            }
+            try {
+              resolve(
+                new File([blob], "gorsel-arama.jpg", {
+                  type: "image/jpeg",
+                })
+              );
+            } catch (e2) {
+              resolve(blob);
+            }
+          },
+          "image/jpeg",
+          0.86
+        );
+      };
+      img.onerror = function () {
+        try {
+          URL.revokeObjectURL(url);
+        } catch (e3) {}
+        resolve(file);
+      };
+      img.src = url;
+    });
+  }
+
+  function runVisualSearch(file) {
+    showVisualSearchBusy();
+    resizeImageForUpload(file)
+      .then(function (uploadFile) {
+        var fd = new FormData();
+        fd.append("image", uploadFile, uploadFile.name || "gorsel.jpg");
+        return fetch("/api/search/image", { method: "POST", body: fd });
+      })
+      .then(function (res) {
+        return res.json().then(function (body) {
+          return { ok: res.ok, body: body };
+        });
+      })
+      .then(function (res) {
+        closeVisualSearchBusy();
+        if (!res.ok || !res.body || !res.body.ok) {
+          showVisualSearchError(
+            (res.body && res.body.error) || "Görsel aranamadı. Lütfen tekrar deneyin."
+          );
+          return;
+        }
+        var q = String(res.body.query || "").trim();
+        if (!q) {
+          showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
+          return;
+        }
+        applySearchQuery(q);
+      })
+      .catch(function () {
+        showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
+      });
   }
 
   function tryBarcodeFromFile(file) {
@@ -207,8 +249,7 @@
         applySearchQuery(code);
         return;
       }
-      var url = URL.createObjectURL(f);
-      openPhotoResultModal(url);
+      runVisualSearch(f);
     });
   }
 

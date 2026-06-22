@@ -5339,6 +5339,63 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upload-limit {
   color: #9a9a9a;
   text-align: right;
 }
+
+/* Görsel arama — yükleme / hata (eq-photo-search.js) */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy {
+  position: fixed;
+  inset: 0;
+  z-index: 10060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--eq-overlay, rgba(0, 0, 0, 0.35));
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__card {
+  min-width: 220px;
+  max-width: 320px;
+  padding: 22px 20px;
+  border-radius: 10px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #111);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  font-family: var(--eq-font-sans, system-ui, sans-serif);
+  font-size: 14px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__card p {
+  margin: 12px 0 0;
+  line-height: 1.4;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__card--err p {
+  margin: 0 0 14px;
+  color: #b12704;
+  font-size: 13px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__spin {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  border: 3px solid #e8e8e8;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: eq-photo-srch-spin 0.75s linear infinite;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-busy__ok {
+  padding: 8px 18px;
+  border: 1px solid var(--eq-border, #ccc);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+@keyframes eq-photo-srch-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-overlay {
   position: fixed;
   inset: 0;
