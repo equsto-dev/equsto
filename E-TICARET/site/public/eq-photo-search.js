@@ -2,6 +2,7 @@
  * Üst arama çubuğu — fotoğrafla ara (yükle / sürükle / Ctrl+V yapıştır).
  * — Barkod (BarcodeDetector) varsa otomatik metin aramasına dökülür.
  * — Yoksa /api/search/image ile görsel analiz → doğrudan arama sonuçlarına gider.
+ * — Yazı okuma (OCR) kullanılmaz; yalnızca görsel tanıma.
  */
 ;(function () {
   "use strict";
@@ -175,66 +176,6 @@
     setTimeout(closeVisualSearchBusy, 8000);
   }
 
-  function loadTesseract() {
-    return new Promise(function (resolve, reject) {
-      if (window.Tesseract) return resolve(window.Tesseract);
-      var src = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
-      var existing = document.querySelector('script[data-eq-tesseract="1"]');
-      if (existing) {
-        existing.addEventListener("load", function () {
-          resolve(window.Tesseract);
-        });
-        existing.addEventListener("error", reject);
-        return;
-      }
-      var s = document.createElement("script");
-      s.src = src;
-      s.dataset.eqTesseract = "1";
-      s.onload = function () {
-        resolve(window.Tesseract);
-      };
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-
-  function buildSearchQueryFromOcr(text) {
-    var raw = String(text || "")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (!raw) return "";
-    var tokens = [];
-    var seen = {};
-    function pushToken(t) {
-      t = String(t || "").trim();
-      if (t.length < 3) return;
-      var k = t.toLowerCase();
-      if (seen[k]) return;
-      seen[k] = 1;
-      tokens.push(t);
-    }
-    raw.split(/[\n\r|,;]+/).forEach(function (line) {
-      pushToken(line);
-    });
-    raw.split(/\s+/).forEach(function (w) {
-      pushToken(w.replace(/[^\w.\-+/ğüşöçıİĞÜŞÖÇ]/gi, ""));
-    });
-    return tokens.slice(0, 8).join(" ").slice(0, 120);
-  }
-
-  function runClientOcrSearch(file) {
-    setBusyMessage("Görseldeki yazılar taranıyor…");
-    return loadTesseract().then(function (Tesseract) {
-      return Tesseract.recognize(file, "tur+eng", {
-        logger: function () {},
-      });
-    }).then(function (result) {
-      var q = buildSearchQueryFromOcr(result && result.data && result.data.text);
-      if (!q) throw new Error("ocr-empty");
-      return q;
-    });
-  }
-
   function resizeImageForUpload(file) {
     return new Promise(function (resolve) {
       var maxDim = 1280;
@@ -300,10 +241,8 @@
 
   function runVisualSearch(file) {
     showSearchProgress(file, "Görsel analiz ediliyor…");
-    var uploadFile = null;
     resizeImageForUpload(file)
       .then(function (uf) {
-        uploadFile = uf;
         var fd = new FormData();
         fd.append("image", uf, uf.name || "gorsel.jpg");
         return fetch("/api/search/image", { method: "POST", body: fd });
@@ -336,43 +275,16 @@
           applySearchQuery(q);
           return;
         }
-        if (res.body && res.body.fallback === "client-ocr") {
-          setPanelAnalyzingMessage("Görseldeki yazılar taranıyor…");
-          setBusyMessage("Görseldeki yazılar taranıyor…");
-          return runClientOcrSearch(uploadFile || file)
-            .then(function (q) {
-              closeUploadPanel();
-              closeSearchProgress();
-              applySearchQuery(q);
-            })
-            .catch(function () {
-              closeUploadPanel();
-              closeSearchProgress();
-              showVisualSearchError(
-                "Görsel analiz edilemedi ve görselde okunabilir yazı bulunamadı. Lütfen başka bir görsel deneyin."
-              );
-            });
-        }
         closeUploadPanel();
         closeSearchProgress();
         showVisualSearchError(
-          (res.body && res.body.error) || "Görsel aranamadı. Lütfen tekrar deneyin."
+          (res.body && res.body.error) || "Görsel analiz edilemedi. Lütfen tekrar deneyin."
         );
       })
       .catch(function () {
-        setPanelAnalyzingMessage("Görseldeki yazılar taranıyor…");
-        setBusyMessage("Görseldeki yazılar taranıyor…");
-        runClientOcrSearch(uploadFile || file)
-          .then(function (q) {
-            closeUploadPanel();
-            closeSearchProgress();
-            applySearchQuery(q);
-          })
-          .catch(function () {
-            closeUploadPanel();
-            closeSearchProgress();
-            showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
-          });
+        closeUploadPanel();
+        closeSearchProgress();
+        showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
       });
   }
 

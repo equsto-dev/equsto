@@ -63,7 +63,21 @@ async function searchCatalog(searchQ: string) {
 async function resolveVisionQuery(
   buffer: ArrayBuffer,
   mime: string,
-): Promise<{ vision: ImageVisionQuery; method: string } | { fallback: "client-ocr" }> {
+): Promise<{ vision: ImageVisionQuery; method: string }> {
+  const errors: string[] = [];
+
+  if (process.env.GEMINI_API_KEY?.trim()) {
+    try {
+      const vision = await extractImageSearchQueryGemini(buffer, mime);
+      return { vision, method: "gemini" };
+    } catch (geminiErr) {
+      errors.push(
+        geminiErr instanceof Error ? geminiErr.message : String(geminiErr),
+      );
+      console.warn("[api/search/image] gemini:", errors[errors.length - 1]);
+    }
+  }
+
   try {
     const vision = await extractImageSearchQuery(buffer, mime);
     return { vision, method: "anthropic" };
@@ -71,26 +85,15 @@ async function resolveVisionQuery(
     const anthropicMsg = String(
       anthropicErr instanceof Error ? anthropicErr.message : anthropicErr,
     );
+    errors.push(anthropicMsg);
     console.warn("[api/search/image] anthropic:", anthropicMsg);
-
-    if (process.env.GEMINI_API_KEY?.trim()) {
-      try {
-        const vision = await extractImageSearchQueryGemini(buffer, mime);
-        return { vision, method: "gemini" };
-      } catch (geminiErr) {
-        console.warn(
-          "[api/search/image] gemini:",
-          geminiErr instanceof Error ? geminiErr.message : geminiErr,
-        );
-      }
-    }
-
-    if (isAnthropicQuotaError(anthropicMsg) || /GEMINI_API_KEY|Gemini HTTP/i.test(anthropicMsg)) {
-      return { fallback: "client-ocr" };
-    }
-
-    return { fallback: "client-ocr" };
   }
+
+  const hint = errors[0] || "Görsel analiz edilemedi.";
+  if (isAnthropicQuotaError(hint)) {
+    throw new Error("Görsel analiz servisi geçici olarak kullanılamıyor. Lütfen biraz sonra tekrar deneyin.");
+  }
+  throw new Error("Görsel analiz edilemedi. Lütfen tekrar deneyin.");
 }
 
 export async function POST(req: NextRequest) {
@@ -119,26 +122,15 @@ export async function POST(req: NextRequest) {
     }
 
     const resolved = await resolveVisionQuery(buffer, mime);
-    if ("fallback" in resolved) {
-      return NextResponse.json(
-        {
-          ok: false,
-          fallback: "client-ocr",
-          error: "Görsel analiz kotası dolu; görseldeki yazılar taranacak.",
-        },
-        { status: 502 },
-      );
-    }
 
     const searchQ = buildSearchQ(resolved.vision);
     if (!searchQ || !isDisplayableSearchQuery(searchQ)) {
       return NextResponse.json(
         {
           ok: false,
-          fallback: "client-ocr",
-          error: "Görselden ürün tipi çıkarılamadı; görseldeki yazılar taranacak.",
+          error: "Görselden ürün tipi çıkarılamadı. Farklı bir açıdan veya daha net bir görsel deneyin.",
         },
-        { status: 502 },
+        { status: 422 },
       );
     }
     const { canonical, source } = await searchCatalog(searchQ);
@@ -157,9 +149,6 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[api/search/image]", err);
     const msg = err instanceof Error ? err.message : "Görsel arama hatası";
-    return NextResponse.json(
-      { ok: false, fallback: "client-ocr", error: msg },
-      { status: 502 },
-    );
+    return NextResponse.json({ ok: false, error: msg }, { status: 502 });
   }
 }

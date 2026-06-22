@@ -1486,7 +1486,7 @@
 
   var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
   var EQ_TINT_ASSET_V = "20260530prod-card-tint-v12";
-  var EQ_PHOTO_SEARCH_ASSET_V = "20260622-vision-json-parse";
+  var EQ_PHOTO_SEARCH_ASSET_V = "20260622-no-ocr-visual";
 
   function loadScriptSameDir(filename, flagName) {
     try {
