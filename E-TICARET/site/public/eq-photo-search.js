@@ -72,6 +72,11 @@
     document.body.appendChild(o);
   }
 
+  function setBusyMessage(text) {
+    var el = document.querySelector("#eq-photo-srch-busy p");
+    if (el) el.textContent = text;
+  }
+
   function showVisualSearchError(msg) {
     closeVisualSearchBusy();
     var o = document.createElement("div");
@@ -80,14 +85,78 @@
     o.setAttribute("role", "alert");
     var p = document.createElement("div");
     p.className = "eq-photo-srch-busy__card eq-photo-srch-busy__card--err";
-    p.innerHTML =
-      "<p>" +
-      String(msg || "Görsel aranamadı.") +
-      '</p><button type="button" class="eq-photo-srch-busy__ok">Tamam</button>';
-    p.querySelector(".eq-photo-srch-busy__ok").addEventListener("click", closeVisualSearchBusy);
+    var msgP = document.createElement("p");
+    msgP.textContent = String(msg || "Görsel aranamadı.");
+    var okBtn = document.createElement("button");
+    okBtn.type = "button";
+    okBtn.className = "eq-photo-srch-busy__ok";
+    okBtn.textContent = "Tamam";
+    okBtn.addEventListener("click", closeVisualSearchBusy);
+    p.appendChild(msgP);
+    p.appendChild(okBtn);
     o.appendChild(p);
     document.body.appendChild(o);
-    setTimeout(closeVisualSearchBusy, 6000);
+    setTimeout(closeVisualSearchBusy, 8000);
+  }
+
+  function loadTesseract() {
+    return new Promise(function (resolve, reject) {
+      if (window.Tesseract) return resolve(window.Tesseract);
+      var src = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
+      var existing = document.querySelector('script[data-eq-tesseract="1"]');
+      if (existing) {
+        existing.addEventListener("load", function () {
+          resolve(window.Tesseract);
+        });
+        existing.addEventListener("error", reject);
+        return;
+      }
+      var s = document.createElement("script");
+      s.src = src;
+      s.dataset.eqTesseract = "1";
+      s.onload = function () {
+        resolve(window.Tesseract);
+      };
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  function buildSearchQueryFromOcr(text) {
+    var raw = String(text || "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!raw) return "";
+    var tokens = [];
+    var seen = {};
+    function pushToken(t) {
+      t = String(t || "").trim();
+      if (t.length < 3) return;
+      var k = t.toLowerCase();
+      if (seen[k]) return;
+      seen[k] = 1;
+      tokens.push(t);
+    }
+    raw.split(/[\n\r|,;]+/).forEach(function (line) {
+      pushToken(line);
+    });
+    raw.split(/\s+/).forEach(function (w) {
+      pushToken(w.replace(/[^\w.\-+/ğüşöçıİĞÜŞÖÇ]/gi, ""));
+    });
+    return tokens.slice(0, 8).join(" ").slice(0, 120);
+  }
+
+  function runClientOcrSearch(file) {
+    setBusyMessage("Görseldeki yazılar taranıyor…");
+    return loadTesseract().then(function (Tesseract) {
+      return Tesseract.recognize(file, "tur+eng", {
+        logger: function () {},
+      });
+    }).then(function (result) {
+      var q = buildSearchQueryFromOcr(result && result.data && result.data.text);
+      if (!q) throw new Error("ocr-empty");
+      return q;
+    });
   }
 
   function resizeImageForUpload(file) {
@@ -155,10 +224,12 @@
 
   function runVisualSearch(file) {
     showVisualSearchBusy();
+    var uploadFile = null;
     resizeImageForUpload(file)
-      .then(function (uploadFile) {
+      .then(function (uf) {
+        uploadFile = uf;
         var fd = new FormData();
-        fd.append("image", uploadFile, uploadFile.name || "gorsel.jpg");
+        fd.append("image", uf, uf.name || "gorsel.jpg");
         return fetch("/api/search/image", { method: "POST", body: fd });
       })
       .then(function (res) {
@@ -167,22 +238,43 @@
         });
       })
       .then(function (res) {
+        if (res.ok && res.body && res.body.ok) {
+          closeVisualSearchBusy();
+          var q = String(res.body.query || "").trim();
+          if (!q) {
+            showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
+            return;
+          }
+          applySearchQuery(q);
+          return;
+        }
+        if (res.body && res.body.fallback === "client-ocr") {
+          return runClientOcrSearch(uploadFile || file)
+            .then(function (q) {
+              closeVisualSearchBusy();
+              applySearchQuery(q);
+            })
+            .catch(function () {
+              closeVisualSearchBusy();
+              showVisualSearchError(
+                "Görsel analiz kotası dolu ve görselde okunabilir yazı bulunamadı. Arama kutusuna ürün adını yazabilirsiniz."
+              );
+            });
+        }
         closeVisualSearchBusy();
-        if (!res.ok || !res.body || !res.body.ok) {
-          showVisualSearchError(
-            (res.body && res.body.error) || "Görsel aranamadı. Lütfen tekrar deneyin."
-          );
-          return;
-        }
-        var q = String(res.body.query || "").trim();
-        if (!q) {
-          showVisualSearchError("Görselden arama ifadesi çıkarılamadı.");
-          return;
-        }
-        applySearchQuery(q);
+        showVisualSearchError(
+          (res.body && res.body.error) || "Görsel aranamadı. Lütfen tekrar deneyin."
+        );
       })
       .catch(function () {
-        showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
+        runClientOcrSearch(uploadFile || file)
+          .then(function (q) {
+            closeVisualSearchBusy();
+            applySearchQuery(q);
+          })
+          .catch(function () {
+            showVisualSearchError("Bağlantı hatası. İnternet bağlantınızı kontrol edin.");
+          });
       });
   }
 

@@ -4,10 +4,15 @@ import {
   fallbackCatalogSearch,
   type CatalogSearchHit,
 } from "@/lib/catalog-search-fallback";
+import { isAnthropicQuotaError } from "@/lib/claude/anthropic-errors";
 import { getMeiliAdmin, PRODUCTS_INDEX } from "@/lib/meilisearch";
 import { meiliSearchQuery } from "@/lib/search-query";
 import { meiliSearchParams } from "@/lib/meili-search-params";
-import { extractImageSearchQuery } from "@/lib/search/image-vision-query";
+import { extractImageSearchQueryGemini } from "@/lib/search/image-gemini-query";
+import {
+  extractImageSearchQuery,
+  type ImageVisionQuery,
+} from "@/lib/search/image-vision-query";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
@@ -21,6 +26,74 @@ const ALLOWED_TYPES = new Set([
   "image/webp",
   "image/gif",
 ]);
+
+function buildSearchQ(vision: ImageVisionQuery): string {
+  let searchQ = vision.q;
+  if (vision.brand && !searchQ.toLowerCase().includes(vision.brand.toLowerCase())) {
+    searchQ = `${vision.brand} ${searchQ}`.trim();
+  }
+  if (vision.model && !searchQ.toLowerCase().includes(vision.model.toLowerCase())) {
+    searchQ = `${searchQ} ${vision.model}`.trim();
+  }
+  return searchQ;
+}
+
+async function searchCatalog(searchQ: string) {
+  const client = getMeiliAdmin();
+  let hits: CatalogSearchHit[] = [];
+  let source: "meilisearch" | "fallback" = "meilisearch";
+
+  if (client) {
+    const index = client.index(PRODUCTS_INDEX);
+    const meiliOpts = meiliSearchParams(searchQ, 16, 0);
+    const res = await index.search(meiliSearchQuery(searchQ), {
+      limit: meiliOpts.limit,
+      offset: 0,
+      ...(meiliOpts.filter ? { filter: meiliOpts.filter } : {}),
+    });
+    hits = rankSearchHitsByRelevance(searchQ, (res.hits || []) as CatalogSearchHit[]);
+  } else {
+    source = "fallback";
+    const fb = await fallbackCatalogSearch(searchQ, 16);
+    hits = fb.hits;
+  }
+
+  const canonical = await canonicalizeSearchHits(hits.slice(0, 12));
+  return { canonical, source };
+}
+
+async function resolveVisionQuery(
+  buffer: ArrayBuffer,
+  mime: string,
+): Promise<{ vision: ImageVisionQuery; method: string } | { fallback: "client-ocr" }> {
+  try {
+    const vision = await extractImageSearchQuery(buffer, mime);
+    return { vision, method: "anthropic" };
+  } catch (anthropicErr) {
+    const anthropicMsg = String(
+      anthropicErr instanceof Error ? anthropicErr.message : anthropicErr,
+    );
+    console.warn("[api/search/image] anthropic:", anthropicMsg);
+
+    if (process.env.GEMINI_API_KEY?.trim()) {
+      try {
+        const vision = await extractImageSearchQueryGemini(buffer, mime);
+        return { vision, method: "gemini" };
+      } catch (geminiErr) {
+        console.warn(
+          "[api/search/image] gemini:",
+          geminiErr instanceof Error ? geminiErr.message : geminiErr,
+        );
+      }
+    }
+
+    if (isAnthropicQuotaError(anthropicMsg) || /GEMINI_API_KEY|Gemini HTTP/i.test(anthropicMsg)) {
+      return { fallback: "client-ocr" };
+    }
+
+    return { fallback: "client-ocr" };
+  }
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -47,40 +120,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const vision = await extractImageSearchQuery(buffer, mime);
-    let searchQ = vision.q;
-    if (vision.brand && !searchQ.toLowerCase().includes(vision.brand.toLowerCase())) {
-      searchQ = `${vision.brand} ${searchQ}`.trim();
-    }
-    if (vision.model && !searchQ.toLowerCase().includes(vision.model.toLowerCase())) {
-      searchQ = `${searchQ} ${vision.model}`.trim();
-    }
-
-    const client = getMeiliAdmin();
-    let hits: CatalogSearchHit[] = [];
-    let source: "meilisearch" | "fallback" = "meilisearch";
-
-    if (client) {
-      const index = client.index(PRODUCTS_INDEX);
-      const meiliOpts = meiliSearchParams(searchQ, 16, 0);
-      const res = await index.search(meiliSearchQuery(searchQ), {
-        limit: meiliOpts.limit,
-        offset: 0,
-        ...(meiliOpts.filter ? { filter: meiliOpts.filter } : {}),
-      });
-      hits = rankSearchHitsByRelevance(searchQ, (res.hits || []) as CatalogSearchHit[]);
-    } else {
-      source = "fallback";
-      const fb = await fallbackCatalogSearch(searchQ, 16);
-      hits = fb.hits;
+    const resolved = await resolveVisionQuery(buffer, mime);
+    if ("fallback" in resolved) {
+      return NextResponse.json(
+        {
+          ok: false,
+          fallback: "client-ocr",
+          error: "Görsel analiz kotası dolu; görseldeki yazılar taranacak.",
+        },
+        { status: 502 },
+      );
     }
 
-    const canonical = await canonicalizeSearchHits(hits.slice(0, 12));
+    const searchQ = buildSearchQ(resolved.vision);
+    const { canonical, source } = await searchCatalog(searchQ);
 
     return NextResponse.json({
       ok: true,
       query: searchQ,
-      vision,
+      vision: resolved.vision,
+      method: resolved.method,
       hits: canonical,
       estimatedTotalHits: canonical.length,
       source,
@@ -88,7 +147,9 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[api/search/image]", err);
     const msg = err instanceof Error ? err.message : "Görsel arama hatası";
-    const status = /yapılandırılmamış|Anthropic|çıkarılamadı/i.test(msg) ? 502 : 500;
-    return NextResponse.json({ ok: false, error: msg }, { status });
+    return NextResponse.json(
+      { ok: false, fallback: "client-ocr", error: msg },
+      { status: 502 },
+    );
   }
 }
