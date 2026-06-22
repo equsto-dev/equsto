@@ -323,10 +323,13 @@
             return;
           }
           if (res.body.catalogMatch === false) {
+            var badQ = /```|json|\{|\}|^\s*q\s*:/i.test(q);
             showVisualSearchError(
-              "Görsel «" +
-                q +
-                "» olarak tanımlandı; bu ürün Equsto kataloğunda bulunamadı."
+              badQ
+                ? "Bu görsel Equsto kataloğunda eşleşen bir ürün bulunamadı."
+                : "Görsel «" +
+                    q +
+                    "» olarak tanımlandı; bu ürün Equsto kataloğunda bulunamadı."
             );
             return;
           }

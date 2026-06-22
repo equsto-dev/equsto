@@ -1,5 +1,6 @@
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
 import { foldTr } from "@/lib/search-query";
+import { sanitizeVisionQueryText } from "@/lib/search/parse-vision-output";
 import type { ImageVisionQuery } from "@/lib/search/image-vision-query";
 
 const RETAILER_NAMES = new Set(["equsto"]);
@@ -23,6 +24,11 @@ function sanitizeBrand(brand: string): string {
 /** Vision JSON → Meilisearch sorgusu (marka yalnızca görselde okunduysa). */
 export function buildVisualSearchQuery(vision: ImageVisionQuery): string {
   let q = stripRetailerTokens(String(vision.q || "").trim());
+  try {
+    q = sanitizeVisionQueryText(q);
+  } catch {
+    return "";
+  }
   const brand = sanitizeBrand(vision.brand || "");
   const model = String(vision.model || "").trim();
 
