@@ -41,9 +41,14 @@ export function ustSegmentOptionsForM2(
   base: readonly string[],
   m2: number,
 ): string[] {
-  if (!otelSegmentM2Aktif(m2)) return [...base];
-  if (base.includes(PFOS_OTEL_UST_SEGMENT)) return [...base];
-  return [...base, PFOS_OTEL_UST_SEGMENT];
+  let result = [...base];
+  // 120 m² ve üzeri m²'lerde bulut mutfak seçeneğini kaldıralım
+  if (m2 >= 120) {
+    result = result.filter((o) => o !== "Bulut Mutfak");
+  }
+  if (!otelSegmentM2Aktif(m2)) return result;
+  if (result.includes(PFOS_OTEL_UST_SEGMENT)) return result;
+  return [...result, PFOS_OTEL_UST_SEGMENT];
 }
 
 /** Üst segment → dükkan türü dalları (yalnızca durum=aktif paketler) */

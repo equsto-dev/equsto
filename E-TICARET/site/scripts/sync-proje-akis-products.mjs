@@ -2,11 +2,13 @@
  * proje-akis.json products[] ← public/data/ekipmanlar.json (güncel katalog)
  * Kullanım: node scripts/sync-proje-akis-products.mjs
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const EKIP = join(root, "public/data/ekipmanlar.json");
+const EKIP = existsSync(join(root, "var/catalog/ekipmanlar.json"))
+  ? join(root, "var/catalog/ekipmanlar.json")
+  : join(root, "public/data/ekipmanlar.json");
 const PROJE = join(root, "public/data/proje-akis.json");
 
 const DEPT_TO_CAT = {
