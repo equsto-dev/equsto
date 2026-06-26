@@ -751,7 +751,18 @@
     if (!overlay || !spin || !pane || !member) return;
 
     waModalDigits = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
-    if (msgEl) msgEl.value = plainText != null ? String(plainText) : "";
+    if (msgEl) {
+      var initialText = plainText != null ? String(plainText) : "";
+      var currentUrl = window.location.href;
+      if (currentUrl && !initialText.includes(currentUrl)) {
+        if (initialText) {
+          initialText += "\n\nİlgilendiğim sayfa: " + currentUrl;
+        } else {
+          initialText = "İlgilendiğim sayfa: " + currentUrl;
+        }
+      }
+      msgEl.value = initialText;
+    }
 
     spin.style.display = "flex";
     pane.style.display = "none";
