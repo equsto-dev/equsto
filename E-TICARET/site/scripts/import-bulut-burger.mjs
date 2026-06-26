@@ -18,35 +18,35 @@ const XLSX = "bulut-hamburgerci-referans.xlsx";
 const REFERANS_M2 = 60;
 
 const kalemler = [
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "A1", ad: "DİZDEN KUMANDALI EL YIKAMA LAVABOSU", olcu: "—", adet: 1, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "A2", ad: "İSTİF RAFI", olcu: "1520×460×1600", adet: 2, kategori: "tezgah" },
-  { bolum: "05", bolumAd: "05. SOĞUK HAZIRLIK & SALATA", poz: "B1", ad: "PANEL TİP SOĞUK ODA", olcu: "200×300×240", adet: 1, kategori: "diger" },
-  { bolum: "05", bolumAd: "05. SOĞUK HAZIRLIK & SALATA", poz: "B2", ad: "İSTİF RAFI", olcu: "1370×460×1600", adet: 2, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "C1", ad: "PANEL TİP SOĞUK ODA", olcu: "2000×2000×2400", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "C2", ad: "İSTİF RAFI", olcu: "1520×460×1600", adet: 2, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D1", ad: "TEK EVİYELİ ÇALIŞMA TEZGAHI", olcu: "1400×700×850", adet: 1, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D2", ad: "DEPO TİPİ BUZDOLABI, TEK KAPILI", olcu: "700×850×2050", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D3", ad: "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI", olcu: "1600×700×850", adet: 2, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D4", ad: "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ", olcu: "1400×700×850", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D5", ad: "ÇALIŞMA TEZGAHI, TABAN RAFLI", olcu: "1400×700×850", adet: 1, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D6", ad: "SET ALTI DEEP FREEZE", olcu: "600×600×850", adet: 2, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D7", ad: "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI", olcu: "1900×600×850", adet: 1, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D8", ad: "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI", olcu: "1700×600×850", adet: 1, kategori: "tezgah" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D9", ad: "4 AÇIK ALEVLİ OCAK, SETÜSTÜ", olcu: "800×700×300", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D10", ad: "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ", olcu: "800×700×300", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D11", ad: "PATATES DİNLENDİRME, ELK. SETÜSTÜ", olcu: "400×700×300", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D12", ad: "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ", olcu: "800×700×300", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D13", ad: "SETALTI BUZDOLABI, 4 KAPILI", olcu: "1400×700×600", adet: 2, kategori: "diger" },
-  { bolum: "02", bolumAd: "02. PIŞIRME", poz: "D14", ad: "DAVLUMBAZ, ORTA TİP, FİLTRELİ", olcu: "320×97×50", adet: 1, kategori: "diger" },
-  { bolum: "07", bolumAd: "07. MUTFAK", poz: "D15", ad: "SİNEK ÖLDÜRÜCÜ", olcu: "—", adet: 1, kategori: "diger" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E1", ad: "BULAŞIK SIYIRMA TEZGAHI", olcu: "1400×700×850", adet: 1, kategori: "tezgah" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E2", ad: "BASKET RAFI", olcu: "1400×400×600", adet: 1, kategori: "tezgah" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E3", ad: "ÇÖP ARABASI", olcu: "Ø40×50", adet: 1, kategori: "diger" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E4", ad: "TEK EVYELİ ÇALIŞMA TEZGAHI", olcu: "1400×700×850", adet: 1, kategori: "tezgah" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E5", ad: "BULAŞIK YIKAMA MAKİNASI", olcu: "—", adet: 1, kategori: "diger" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E6", ad: "DUVAR RAFI", olcu: "1400×300×40", adet: 1, kategori: "tezgah" },
-  { bolum: "08", bolumAd: "08. MUTFAK BULAŞIK", poz: "E7", ad: "İSTİF RAFI", olcu: "1520×460×1600", adet: 1, kategori: "tezgah" },
-  { bolum: "02", bolumAd: "02. PIŞIRME", poz: "Y1", ad: "YER IZGARASI", olcu: "300×300×140", adet: 2, kategori: "diger" }
+  { bolum: "KURU_DEPO", bolumAd: "A- KURU DEPO", poz: "A1", ad: "DİZDEN KUMANDALI EL YIKAMA LAVABOSU", olcu: "-", adet: 1, kategori: "tezgah" },
+  { bolum: "KURU_DEPO", bolumAd: "A- KURU DEPO", poz: "A2", ad: "İSTİF RAFI", olcu: "152*46*160", adet: 2, kategori: "tezgah" },
+  { bolum: "SOGUK_ODA", bolumAd: "B- SOĞUK ODA", poz: "B1", ad: "PANEL TİP SOĞUK ODA", olcu: "200*300*240", adet: 1, kategori: "diger" },
+  { bolum: "SOGUK_ODA", bolumAd: "B- SOĞUK ODA", poz: "B2", ad: "İSTİF RAFI", olcu: "137*46*160", adet: 2, kategori: "tezgah" },
+  { bolum: "DEEPFREEZE_DEPO", bolumAd: "C- DEEPFREEZE DEPO", poz: "C1", ad: "PANEL TİP SOĞUK ODA", olcu: "200*200*240", adet: 1, kategori: "diger" },
+  { bolum: "DEEPFREEZE_DEPO", bolumAd: "C- DEEPFREEZE DEPO", poz: "C2", ad: "İSTİF RAFI", olcu: "152*46*160", adet: 2, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D1", ad: "TEK EVİYELİ ÇALIŞMA TEZGAHI", olcu: "140*70*85", adet: 1, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D2", ad: "DEPO TİPİ BUZDOLABI, TEK KAPILI", olcu: "70*85*205", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D3", ad: "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI", olcu: "160*70*85", adet: 2, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D4", ad: "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ", olcu: "140*70*85", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D5", ad: "ÇALIŞMA TEZGAHI, TABAN RAFLI", olcu: "140*70*85", adet: 1, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D6", ad: "SET ALTI DEEP FREEZE", olcu: "60*60*5", adet: 2, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D7", ad: "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI", olcu: "190*60*85", adet: 1, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D8", ad: "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI", olcu: "170*60*85", adet: 1, kategori: "tezgah" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D9", ad: "4 AÇIK ALEVLİ OCAK, SETÜSTÜ", olcu: "80*70*30", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D10", ad: "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ", olcu: "80*70*30", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D11", ad: "PATATES DİNLENDİRME, ELK. SETÜSTÜ", olcu: "40*70*30", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D12", ad: "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ", olcu: "80*70*85", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D13", ad: "SETALTI BUZDOLABI, 4 KAPILI", olcu: "140*70*60", adet: 2, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D14", ad: "DAVLUMBAZ, ORTA TİP, FİLTRELİ", olcu: "320*97*50", adet: 1, kategori: "diger" },
+  { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D15", ad: "SİNEK ÖLDÜRÜCÜ", olcu: "-", adet: 1, kategori: "diger" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E1", ad: "BULAŞIK SIYIRMA TEZGAHI", olcu: "140*70*85", adet: 1, kategori: "tezgah" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E2", ad: "BASKET RAFI", olcu: "140*40*60", adet: 1, kategori: "tezgah" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E3", ad: "ÇÖP ARABASI", olcu: "Ø40*50", adet: 1, kategori: "diger" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E4", ad: "TEK EVYELİ ÇALIŞMA TEZGAHI", olcu: "140*70*85", adet: 1, kategori: "tezgah" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E5", ad: "BULAŞIK YIKAMA MAKİNASI", olcu: "500 Tb/saat", adet: 1, kategori: "diger" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E6", ad: "DUVAR RAFI", olcu: "140*30*4", adet: 1, kategori: "tezgah" },
+  { bolum: "BULASIK_YIKAMA", bolumAd: "E- BULAŞIK YIKAMA", poz: "E7", ad: "İSTİF RAFI", olcu: "152*46*160", adet: 1, kategori: "tezgah" },
+  { bolum: "YER_IZGARASI", bolumAd: "Y- YER IZGARASI", poz: "Y1", ad: "YER IZGARASI", olcu: "30*30*14", adet: 2, kategori: "diger" }
 ];
 
 async function main() {
@@ -108,7 +108,7 @@ async function main() {
       // Section header row
       ws.mergeCells(`A${rowIndex}:D${rowIndex}`);
       const secCell = ws.getCell(`A${rowIndex}`);
-      secCell.value = `${item.bolum.replace("_", " ")}`;
+      secCell.value = item.bolumAd;
       secCell.font = { name: "Arial", size: 12, bold: true, color: { argb: "FFFFFFFF" } };
       secCell.alignment = { vertical: "middle", horizontal: "center" };
       secCell.fill = {
