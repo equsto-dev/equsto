@@ -740,6 +740,11 @@
   }
 
   function equstoShowWhatsAppModal(phoneDigits, plainText) {
+    var path = window.location.pathname || "";
+    var segments = path.split("/").filter(Boolean);
+    var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
+    if (!isProduct) return;
+
     mountWaModal();
     purgeWaModalLegacyLogout();
     var overlay = document.getElementById("equsto-wa-overlay");
@@ -754,10 +759,7 @@
     if (msgEl) {
       var initialText = plainText != null ? String(plainText) : "";
       var currentUrl = window.location.href;
-      var path = window.location.pathname || "";
-      var segments = path.split("/").filter(Boolean);
-      var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
-      if (isProduct && currentUrl && !initialText.includes(currentUrl)) {
+      if (currentUrl && !initialText.includes(currentUrl)) {
         if (initialText) {
           initialText += "\n\nİlgilendiğim sayfa: " + currentUrl;
         } else {
@@ -1006,6 +1008,11 @@
    * PFOS, sepet vb.: sayfa-içi kedi sohbet (wa.me yalnızca isteğe bağlı).
    */
   window.equstoOpenWhatsAppWebWindow = function (phoneDigits, plainText) {
+    var path = window.location.pathname || "";
+    var segments = path.split("/").filter(Boolean);
+    var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
+    if (!isProduct) return null;
+
     var phone = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
     equstoShowWhatsAppModal(phone, plainText != null ? plainText : "");
     return null;
@@ -1013,6 +1020,11 @@
 
   window.equstoOpenWhatsApp = function (ev) {
     if (ev && ev.preventDefault) ev.preventDefault();
+    var path = window.location.pathname || "";
+    var segments = path.split("/").filter(Boolean);
+    var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
+    if (!isProduct) return false;
+
     var phone = equstoResolveWhatsAppDigits();
     if (!phone) {
       window.alert(
@@ -1268,6 +1280,18 @@
   };
 
   function syncFabPlacement() {
+    var path = window.location.pathname || "";
+    var segments = path.split("/").filter(Boolean);
+    var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
+
+    if (!isProduct) {
+      removeFloatingFab();
+      var slot = document.getElementById("eq-bnav-wa-slot");
+      if (slot) slot.innerHTML = "";
+      document.body.classList.remove("eq-wa-in-tabbar");
+      return;
+    }
+
     var mobile = window.matchMedia("(max-width: 768px)").matches;
     var inBar = document.body && document.body.classList.contains("eq-has-bottom-tabbar");
     if (mobile && inBar && document.getElementById("eq-bnav-wa-slot")) {
@@ -1508,6 +1532,34 @@
   }
 
   window.equstoSyncContactFab = syncFabPlacement;
+
+  try {
+    var originalPushState = window.history.pushState;
+    if (originalPushState) {
+      window.history.pushState = function () {
+        var res = originalPushState.apply(this, arguments);
+        try {
+          syncFabPlacement();
+        } catch (_) {}
+        return res;
+      };
+    }
+    var originalReplaceState = window.history.replaceState;
+    if (originalReplaceState) {
+      window.history.replaceState = function () {
+        var res = originalReplaceState.apply(this, arguments);
+        try {
+          syncFabPlacement();
+        } catch (_) {}
+        return res;
+      };
+    }
+    window.addEventListener("popstate", function () {
+      try {
+        syncFabPlacement();
+      } catch (_) {}
+    });
+  } catch (_) {}
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
