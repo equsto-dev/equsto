@@ -69,6 +69,11 @@ export function ustSegmentOptionsForM2(
     opts = opts.filter((o) => o !== PFOS_OTEL_UST_SEGMENT);
   }
 
+  // 120 m² ve üzeri m²'lerde bulut mutfak seçeneğini kaldıralım
+  if (m2 >= 120) {
+    opts = opts.filter((o) => o !== "Bulut Mutfak");
+  }
+
   return opts;
 }
 
