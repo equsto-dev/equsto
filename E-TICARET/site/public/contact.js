@@ -785,8 +785,8 @@
     if (titleEl) titleEl.textContent = __waT("wa.modal_title", "Mr. Equsto");
 
     window.setTimeout(function () {
-      spin.style.display = "none";
       ensureWaMemberSession(function () {
+        if (spin) spin.style.display = "none";
         applyWaModalView();
         syncWaModalNearFab();
         syncWaModalAuthBtn();
