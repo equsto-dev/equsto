@@ -23,6 +23,8 @@ docker compose --env-file .env.production build --pull
 docker compose --env-file .env.production up -d
 
 if [[ -d node_modules/@prisma/client ]]; then
+  echo "[hetzner-deploy] prisma generate (host scripts)..."
+  node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js generate
   echo "[hetzner-deploy] prisma migrate deploy (host)..."
   node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate deploy \
     || echo "[hetzner-deploy] migrate uyarı — DIRECT_URL kontrol edin"
