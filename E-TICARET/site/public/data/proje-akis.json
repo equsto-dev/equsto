@@ -167,6 +167,9 @@
           "Üretim / Fabrika": [
             "Fabrika Yemekhanesi",
             "Ekmek + Kruvasan"
+          ],
+          "Bulut Mutfak": [
+            "Hamburgerci"
           ]
         },
         "gosterIf": "q_ust_segment",
@@ -398,6 +401,18 @@
               "label": "100–300 m²",
               "referansM2": 200,
               "listeDosya": "pfos-referans/italyan-100-300.json"
+            },
+            {
+              "id": "150-300",
+              "label": "150–300 m² (Havelka)",
+              "referansM2": 225,
+              "listeDosya": "pfos-referans/italyan-150-300.json"
+            },
+            {
+              "id": "2018-199",
+              "label": "150–300 m² (2018-199-3)",
+              "referansM2": 275,
+              "listeDosya": "pfos-referans/italyan-2018-199.json"
             }
           ]
         },
@@ -725,8 +740,8 @@
           "dukkanSecim": "All Dining Cafe",
           "m2Min": 100,
           "m2Max": 500,
-          "bantKurali": "≤200 m² → Smyrna Boyoz; 201–300 m² → Havelka; 301–400 m² → THC Mavibahçe (2017-154)",
-          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx · proje-veri/2017-128-havelka.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
+          "bantKurali": "≤200 m² → Smyrna Boyoz; 201–280 m² → 2018-199-3; 281–300 m² → House Cafe; 301–400 m² → THC Mavibahçe",
+          "listeYolu": "veri/boyoz-pastane-2016-134.xlsx · 2018-199-3.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
@@ -737,8 +752,14 @@
               "listeDosya": "pfos-referans/all-day-dining-cafe-100-200.json"
             },
             {
+              "id": "2018-199",
+              "label": "150–300 m² (2018-199-3)",
+              "referansM2": 275,
+              "listeDosya": "pfos-referans/all-day-dining-cafe-2018-199.json"
+            },
+            {
               "id": "150-300",
-              "label": "150–300 m² (Havelka)",
+              "label": "150–300 m² (The House Cafe)",
               "referansM2": 225,
               "listeDosya": "pfos-referans/all-day-dining-cafe-150-300.json"
             },
@@ -1068,20 +1089,26 @@
         "id": "restaurant_dunya",
         "name": "Dünya Mutfağı",
         "parent": "Restoran",
-        "desc": "Dünya mutfağı · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
+        "desc": "Dünya mutfağı · 2018-199-3 (150–300 m²) ve UKA Akasya (500 m²) referans · motor: restoran",
         "pfos": {
           "motorSlug": "restoran",
           "dukkanSecim": "Dünya Mutfağı",
-          "m2Min": 500,
+          "m2Min": 150,
           "m2Max": 1000,
-          "bantKurali": "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
-          "listeYolu": "2017/2017-193 UKA AKASYA/2017-193.xlsx",
+          "bantKurali": "150–400 m² → 2018-199-3 proforma; 500–1000 m² → UKA Akasya (2017-193); m² ile adet ölçeklenir",
+          "listeYolu": "2018-199-3.xlsx · 2017/2017-193 UKA AKASYA/2017-193.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
+              "id": "2018-199",
+              "label": "150–300 m² (2018-199-3)",
+              "referansM2": 275,
+              "listeDosya": "pfos-referans/dunya-mutfagi-2018-199.json"
+            },
+            {
               "id": "500-1000",
-              "label": "500–1000 m²",
+              "label": "500–1000 m² (UKA Akasya)",
               "referansM2": 500,
               "listeDosya": "pfos-referans/uka-akasya-500-1000.json"
             }
@@ -2127,18 +2154,26 @@
       },
       {
         "id": "bulut_burger",
-        "name": "Burger",
+        "name": "Hamburgerci",
         "parent": "Bulut Mutfak",
-        "desc": "Burger · liste hazırlanıyor — genel şablon",
+        "desc": "Bulut mutfak hamburgerci · referans ekipman listesi",
         "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Burger",
+          "motorSlug": "bulut-burger",
+          "dukkanSecim": "Hamburgerci",
           "m2Min": 35,
           "m2Max": 100,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "bantKurali": "Referans hamburgerci ekipman listesi",
+          "listeYolu": "veri/bulut-hamburgerci-referans.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "35-100",
+              "label": "35–100 m² (Hamburgerci)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-burger-35-100.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -83825,6 +83860,6 @@
         "tip_kodu": "INO-BYM102T-PZ"
       }
     ],
-    "updated_at": "2026-06-26T18:56:16.743Z"
+    "updated_at": "2026-06-26T22:21:02.662Z"
   }
 }

@@ -43,7 +43,8 @@ export type ListeBantId =
   | "200-500"
   | "20-60"
   | "200-5000"
-  | "2018-199";
+  | "2018-199"
+  | "35-100";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -1348,7 +1349,26 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     35,
     100,
   ),
-  konseptPlanlanan("bulut_burger", "Burger", "Bulut Mutfak", "Burger", 35, 100),
+  {
+    id: "bulut_burger",
+    name: "Hamburgerci",
+    parent: "Bulut Mutfak",
+    desc: "Bulut mutfak hamburgerci · referans ekipman listesi",
+    pfos: {
+      motorSlug: "bulut-burger",
+      dukkanSecim: "Hamburgerci",
+      m2Min: 35,
+      m2Max: 100,
+      bantKurali: "Referans hamburgerci ekipman listesi",
+      listeYolu: "veri/bulut-hamburgerci-referans.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("35-100", "35–100 m² (Hamburgerci)", 60, "bulut-burger"),
+      ],
+    },
+    questions: [],
+  },
   konseptPlanlanan(
     "bulut_ev_yemek",
     "Ev Yemekleri",

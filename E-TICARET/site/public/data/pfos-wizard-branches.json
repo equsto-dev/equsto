@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T17:23:19.948Z",
-  "aktifPaketSayisi": 55,
+  "updated_at": "2026-06-26T22:21:02.779Z",
+  "aktifPaketSayisi": 56,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -127,6 +127,9 @@
     "Üretim / Fabrika": [
       "Fabrika Yemekhanesi",
       "Ekmek + Kruvasan"
+    ],
+    "Bulut Mutfak": [
+      "Hamburgerci"
     ],
     "Franchise": [
       "Steakhouse",
@@ -302,7 +305,7 @@
       "slug": "restoran"
     },
     "Dünya Mutfağı": {
-      "min": 500,
+      "min": 150,
       "max": 1000,
       "slug": "restoran"
     },
@@ -440,6 +443,11 @@
       "min": 150,
       "max": 250,
       "slug": "personel-yemekhane"
+    },
+    "Hamburgerci": {
+      "min": 35,
+      "max": 100,
+      "slug": "bulut-burger"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-21T21:27:08.861Z",
+  "updated_at": "2026-06-26T22:20:20.003Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -1177,6 +1177,25 @@
             "toplamAdet": 75,
             "kaynakDosya": "2018-199-3.xlsx",
             "yukleme": "2026-06-21T21:27:08.843Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-burger",
+      "label": "Hamburgerci",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "35-100",
+          "label": "35–100 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-burger-35-100.json",
+            "kalemSayisi": 29,
+            "toplamAdet": 36,
+            "kaynakDosya": "bulut-hamburgerci-referans.xlsx",
+            "yukleme": "2026-06-26T22:20:20.001Z"
           }
         }
       ]
