@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-26T22:20:20.003Z",
+  "updated_at": "2026-06-26T22:41:36.738Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -1195,7 +1195,7 @@
             "kalemSayisi": 29,
             "toplamAdet": 36,
             "kaynakDosya": "bulut-hamburgerci-referans.xlsx",
-            "yukleme": "2026-06-26T22:20:20.001Z"
+            "yukleme": "2026-06-26T22:41:36.734Z"
           }
         }
       ]

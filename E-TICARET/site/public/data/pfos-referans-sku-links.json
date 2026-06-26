@@ -149,6 +149,238 @@
       "sku": "7919.06LMV.00",
       "marka": "Öztiryakiler",
       "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
+    },
+    "bulut-burger|A1": {
+      "sku": "118.DBE.02",
+      "name": "Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02"
+    },
+    "bulut-burger-35-100|A1": {
+      "sku": "118.DBE.02",
+      "name": "Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02"
+    },
+    "bulut-burger|A2": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger-35-100|A2": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger|B1": {
+      "sku": "7919.CR3020.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+    },
+    "bulut-burger-35-100|B1": {
+      "sku": "7919.CR3020.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+    },
+    "bulut-burger|B2": {
+      "sku": "8897.14IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger-35-100|B2": {
+      "sku": "8897.14IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger|C1": {
+      "sku": "7919.CR2020.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+    },
+    "bulut-burger-35-100|C1": {
+      "sku": "7919.CR2020.00",
+      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+    },
+    "bulut-burger|C2": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger-35-100|C2": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger|D1": {
+      "sku": "7758.147C8.11",
+      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+    },
+    "bulut-burger-35-100|D1": {
+      "sku": "7758.147C8.11",
+      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+    },
+    "bulut-burger|D2": {
+      "sku": "7919.06NMV.00",
+      "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI"
+    },
+    "bulut-burger-35-100|D2": {
+      "sku": "7919.06NMV.00",
+      "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI"
+    },
+    "bulut-burger|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm"
+    },
+    "bulut-burger-35-100|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm"
+    },
+    "bulut-burger|D4": {
+      "sku": "7919.27NTV.S0",
+      "name": "TAG 270 NTV İKİ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK 142*70"
+    },
+    "bulut-burger-35-100|D4": {
+      "sku": "7919.27NTV.S0",
+      "name": "TAG 270 NTV İKİ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK 142*70"
+    },
+    "bulut-burger|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm"
+    },
+    "bulut-burger-35-100|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm"
+    },
+    "bulut-burger|D6": {
+      "sku": "118.SMF.5120.ST",
+      "name": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı"
+    },
+    "bulut-burger-35-100|D6": {
+      "sku": "118.SMF.5120.ST",
+      "name": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı"
+    },
+    "bulut-burger|D7": {
+      "sku": "7911.19060.13",
+      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 190*60"
+    },
+    "bulut-burger-35-100|D7": {
+      "sku": "7911.19060.13",
+      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 190*60"
+    },
+    "bulut-burger|D8": {
+      "sku": "7911.16060.13",
+      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 160*60"
+    },
+    "bulut-burger-35-100|D8": {
+      "sku": "7911.16060.13",
+      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 160*60"
+    },
+    "bulut-burger|D9": {
+      "sku": "AGO-870",
+      "name": "Atalay Ocaklar AGO - 870 4 x Ø80 4 x 5 kW"
+    },
+    "bulut-burger-35-100|D9": {
+      "sku": "AGO-870",
+      "name": "Atalay Ocaklar AGO - 870 4 x Ø80 4 x 5 kW"
+    },
+    "bulut-burger|D10": {
+      "sku": "AEF-870",
+      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+    },
+    "bulut-burger-35-100|D10": {
+      "sku": "AEF-870",
+      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+    },
+    "bulut-burger|D11": {
+      "sku": "APD-473",
+      "name": "Atalay Fritözler APD - 473 Yekpare 400 x 730 x 300"
+    },
+    "bulut-burger-35-100|D11": {
+      "sku": "APD-473",
+      "name": "Atalay Fritözler APD - 473 Yekpare 400 x 730 x 300"
+    },
+    "bulut-burger|D12": {
+      "sku": "AGI-870",
+      "name": "Atalay Izgaralar AGI - 870 Düz 800x700x300"
+    },
+    "bulut-burger-35-100|D12": {
+      "sku": "AGI-870",
+      "name": "Atalay Izgaralar AGI - 870 Düz 800x700x300"
+    },
+    "bulut-burger|D13": {
+      "sku": "7919.47NTV.C1",
+      "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP"
+    },
+    "bulut-burger-35-100|D13": {
+      "sku": "7919.47NTV.C1",
+      "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP"
+    },
+    "bulut-burger|D14": {
+      "sku": "7885.30155.10",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*150"
+    },
+    "bulut-burger-35-100|D14": {
+      "sku": "7885.30155.10",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*150"
+    },
+    "bulut-burger|D15": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100"
+    },
+    "bulut-burger-35-100|D15": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100"
+    },
+    "bulut-burger|E1": {
+      "sku": "7712.14070.03",
+      "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*70"
+    },
+    "bulut-burger-35-100|E1": {
+      "sku": "7712.14070.03",
+      "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*70"
+    },
+    "bulut-burger|E2": {
+      "sku": "7897.14030.31",
+      "name": "DUVAR RAFI SÜZMELİ 140*30"
+    },
+    "bulut-burger-35-100|E2": {
+      "sku": "7897.14030.31",
+      "name": "DUVAR RAFI SÜZMELİ 140*30"
+    },
+    "bulut-burger|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X"
+    },
+    "bulut-burger-35-100|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X"
+    },
+    "bulut-burger|E4": {
+      "sku": "7758.147C8.11",
+      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+    },
+    "bulut-burger-35-100|E4": {
+      "sku": "7758.147C8.11",
+      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+    },
+    "bulut-burger|E5": {
+      "sku": "075T.11110.AD",
+      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+    },
+    "bulut-burger-35-100|E5": {
+      "sku": "075T.11110.AD",
+      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+    },
+    "bulut-burger|E6": {
+      "sku": "7897.14030.30",
+      "name": "DUVAR RAFI 140*30"
+    },
+    "bulut-burger-35-100|E6": {
+      "sku": "7897.14030.30",
+      "name": "DUVAR RAFI 140*30"
+    },
+    "bulut-burger|E7": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger-35-100|E7": {
+      "sku": "8897.15IP4.07",
+      "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI"
+    },
+    "bulut-burger|Y1": {
+      "sku": "7960.02929.5Y2",
+      "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290"
+    },
+    "bulut-burger-35-100|Y1": {
+      "sku": "7960.02929.5Y2",
+      "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290"
     }
   }
 }

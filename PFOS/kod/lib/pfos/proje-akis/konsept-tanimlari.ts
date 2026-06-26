@@ -43,6 +43,7 @@ export type ListeBantId =
   | "200-500"
   | "20-60"
   | "200-5000"
+  | "2018-199"
   | "35-100";
 
 export type M2BantTanim = {
@@ -207,7 +208,11 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [liste("100-300", "100–300 m²", 200, "italyan")],
+      bantlar: [
+        liste("100-300", "100–300 m²", 200, "italyan"),
+        liste("150-300", "150–300 m² (Havelka)", 225, "italyan"),
+        liste("2018-199", "150–300 m² (2018-199-3)", 275, "italyan"),
+      ],
     },
     questions: [],
   },
@@ -449,14 +454,15 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       m2Min: 100,
       m2Max: 500,
       bantKurali:
-        "≤200 m² → Smyrna Boyoz; 201–300 m² → Havelka; 301–400 m² → THC Mavibahçe (2017-154)",
+        "≤200 m² → Smyrna Boyoz; 201–280 m² → 2018-199-3; 281–300 m² → House Cafe; 301–400 m² → THC Mavibahçe",
       listeYolu:
-        "veri/boyoz-pastane-2016-134.xlsx · proje-veri/2017-128-havelka.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
+        "veri/boyoz-pastane-2016-134.xlsx · 2018-199-3.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx · proje-veri/2017-154-thc-mavibahce-2.pdf",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
         liste("100-200", "100–200 m² (Smyrna Boyoz)", 150, "all-day-dining-cafe"),
-        liste("150-300", "150–300 m² (Havelka)", 225, "all-day-dining-cafe"),
+        liste("2018-199", "150–300 m² (2018-199-3)", 275, "all-day-dining-cafe"),
+        liste("150-300", "150–300 m² (The House Cafe)", 225, "all-day-dining-cafe"),
         liste("200-400", "200–400 m² (THC Mavibahçe)", 300, "all-day-dining-cafe"),
       ],
     },
@@ -697,17 +703,21 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_dunya",
     name: "Dünya Mutfağı",
     parent: "Restoran",
-    desc: "Dünya mutfağı · UKA Akasya (2017-193) · 500 m² referans · motor: restoran",
+    desc: "Dünya mutfağı · 2018-199-3 (150–300 m²) ve UKA Akasya (500 m²) referans · motor: restoran",
     pfos: {
       motorSlug: "restoran",
       dukkanSecim: "Dünya Mutfağı",
-      m2Min: 500,
+      m2Min: 150,
       m2Max: 1000,
-      bantKurali: "UKA Akasya referans listesi (2017-193) · 500–1000 m²; m² ile adet ölçeklenir",
-      listeYolu: "2017/2017-193 UKA AKASYA/2017-193.xlsx",
+      bantKurali:
+        "150–400 m² → 2018-199-3 proforma; 500–1000 m² → UKA Akasya (2017-193); m² ile adet ölçeklenir",
+      listeYolu: "2018-199-3.xlsx · 2017/2017-193 UKA AKASYA/2017-193.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [liste("500-1000", "500–1000 m²", 500, "uka-akasya")],
+      bantlar: [
+        liste("2018-199", "150–300 m² (2018-199-3)", 275, "dunya-mutfagi"),
+        liste("500-1000", "500–1000 m² (UKA Akasya)", 500, "uka-akasya"),
+      ],
     },
     questions: [],
   },
