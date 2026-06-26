@@ -72,12 +72,9 @@ export function greenApiInstancePhone(): string {
   return normalizeWaRecipient(raw);
 }
 
-/** Green API hattı kendine WA bildirimi alamaz (notify === instance). */
+/** Green API hattı kendine WA bildirimi alamaz (notify === instance) - Engel kaldırıldı. */
 export function isOwnerSelfWhatsAppNotifyBlocked(): boolean {
-  if (whatsAppMode() !== "green-api" || !greenApiConfigured()) return false;
-  const owner = normalizeWaRecipient(whatsAppNotifyTo());
-  const instance = greenApiInstancePhone();
-  return Boolean(owner && instance && owner === instance);
+  return false;
 }
 
 /**
