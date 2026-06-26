@@ -867,7 +867,7 @@
     var payload = {
       mesaj: text,
       kaynak: "whatsapp-modal",
-      sayfa: location.pathname || "",
+      sayfa: window.location.href || "",
       telefon: "",
     };
     if (tok) payload.token = tok;
@@ -1340,7 +1340,7 @@
     var payload = {
       ad: ad, telefon: tel, eposta: mail, mesaj: not,
       kaynak: "iletisim-fab",
-      sayfa: location.pathname || "",
+      sayfa: window.location.href || "",
     };
     fetch(eqMsgApiBase() + "/musteriler", {
       method: "POST",
@@ -1449,7 +1449,7 @@
           eposta: mail,
           mesaj: fullMesaj,
           kaynak: "iletisim-sayfa",
-          sayfa: location.pathname || "",
+          sayfa: window.location.href || "",
         }),
       })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
