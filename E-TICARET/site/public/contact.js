@@ -754,7 +754,10 @@
     if (msgEl) {
       var initialText = plainText != null ? String(plainText) : "";
       var currentUrl = window.location.href;
-      if (currentUrl && !initialText.includes(currentUrl)) {
+      var path = window.location.pathname || "";
+      var segments = path.split("/").filter(Boolean);
+      var isProduct = segments.length >= 3 && segments[segments.length - 3] === "shop";
+      if (isProduct && currentUrl && !initialText.includes(currentUrl)) {
         if (initialText) {
           initialText += "\n\nİlgilendiğim sayfa: " + currentUrl;
         } else {
