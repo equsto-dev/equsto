@@ -639,6 +639,15 @@ async function findAdminRowBySku(sku: string): Promise<AdminUrunRow | null> {
   return null;
 }
 
+async function findAdminRowByExactSku(sku: string): Promise<AdminUrunRow | null> {
+  const needle = norm(sku);
+  if (!needle) return null;
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) => r.durum === "aktif" && r.fiyat_tl > 0,
+  );
+  return rows.find((r) => norm(r.sku ?? "") === needle) ?? null;
+}
+
 async function matchByExplicitSku(
   sku: string,
   sablonIsim?: string | null,
@@ -811,8 +820,9 @@ async function matchByVerifiedLink(
   const link = links[referansLinkKey(liste, poz)];
   if (!link?.sku) return null;
 
-  const bySku = await matchByExplicitSku(link.sku, input.isim, input.notlar);
-  if (bySku) {
+  const exactRow = await findAdminRowByExactSku(link.sku);
+  if (exactRow) {
+    const bySku = rowToEslesmis(exactRow);
     if (
       isIstifRafiReferansIsim(input.isim) &&
       isOztiIstifSku(bySku.sku ?? link.sku)
@@ -1349,11 +1359,7 @@ export async function matchReferansKalem(
   }
 
   const verified = await matchByVerifiedLink(input);
-  if (verified) {
-    if (!referansKatalogUyumsuz(input.isim, verified.ad ?? "", input.notlar, verified.sku)) {
-      return verified;
-    }
-  }
+  if (verified) return verified;
 
   if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
     const tezgah = await matchCalismaTezgahiByReferans(

@@ -121,6 +121,9 @@ export function inferTezgahSeriesKods(isim: string): string[] {
     return ["KSAT02", "KSAT01"];
   }
   if (/taban\s*ve\s*ara\s*rafl/.test(n)) {
+    if (/tek\s*cekmeceli|bir\s*cekmeceli|1\s*cekmeceli/.test(n)) {
+      return ["KCT05", "KCT02", "KCT08", "KCT04", "KCT01"];
+    }
     return ["KCT08", "KCT09", "KCT04", "KCT05", "KCT02", "KCT01"];
   }
   if (/taban\s*rafl/.test(n)) {
@@ -217,6 +220,10 @@ function scoreTezgahRow(
   if (/taban\s*ve\s*ara\s*rafl/.test(n) && /taban\s*ve\s*ara\s*rafl/.test(ad)) score += 80;
   if (/taban\s*rafl/.test(n) && /taban\s*rafl/.test(ad)) score += 50;
   if (/cekmeceli|çekmeceli/.test(n) && /cekmeceli|çekmeceli/.test(ad)) score += 40;
+  if (/tek\s*cekmeceli|bir\s*cekmeceli/.test(n)) {
+    if (/dortlu|dörtlü|4\s*cekmece|dort\s*blok|dörtlü\s*blok/.test(ad)) score -= 250;
+    else if (/tek\s*cekmeceli|bir\s*cekmeceli/.test(ad)) score += 120;
+  }
   if (/evyeli|evye/.test(n) && /evyeli|evye/.test(ad)) score += 60;
   if (/dolap/.test(n) && /dolap/.test(ad)) score += 50;
   if (row.fiyat_tl > 0) score += 10;

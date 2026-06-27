@@ -183,12 +183,14 @@
       "name": "Portashelf 4 Katlı Raf 46×137×183 cm"
     },
     "bulut-burger|C1": {
-      "sku": "7919.CR2020.00",
-      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm"
     },
     "bulut-burger-35-100|C1": {
-      "sku": "7919.CR2020.00",
-      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm"
     },
     "bulut-burger|C2": {
       "sku": "46-X-152-X-183",
@@ -199,12 +201,14 @@
       "name": "Portashelf 4 Katlı Raf 46×152×183 cm"
     },
     "bulut-burger|D1": {
-      "sku": "7758.147C8.11",
-      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     },
     "bulut-burger-35-100|D1": {
-      "sku": "7758.147C8.11",
-      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     },
     "bulut-burger|D2": {
       "sku": "79K4.06NMV.00",
@@ -223,12 +227,14 @@
       "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm"
     },
     "bulut-burger|D4": {
-      "sku": "7919.27NTV.S0",
-      "name": "TAG 270 NTV İKİ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK 142*70"
+      "sku": "79E3.27NMV.03",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
     },
     "bulut-burger-35-100|D4": {
-      "sku": "7919.27NTV.S0",
-      "name": "TAG 270 NTV İKİ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK 142*70"
+      "sku": "79E3.27NMV.03",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
     },
     "bulut-burger|D5": {
       "sku": "EQ.KCT04.14070",
@@ -239,12 +245,14 @@
       "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm"
     },
     "bulut-burger|D6": {
-      "sku": "118.SMF.5120.ST",
-      "name": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı"
+      "sku": "7919.06LMV.00",
+      "marka": "Öztiryakiler",
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
     },
     "bulut-burger-35-100|D6": {
-      "sku": "118.SMF.5120.ST",
-      "name": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı"
+      "sku": "7919.06LMV.00",
+      "marka": "Öztiryakiler",
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
     },
     "bulut-burger|D7": {
       "sku": "7911.19060.13",
@@ -295,12 +303,14 @@
       "name": "Atalay Izgaralar AGI - 870 Düz 800x700x300"
     },
     "bulut-burger|D13": {
-      "sku": "7919.47NTV.C1",
-      "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP"
+      "sku": "7919.27NTV.C1",
+      "marka": "Öztiryakiler",
+      "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
     },
     "bulut-burger-35-100|D13": {
-      "sku": "7919.47NTV.C1",
-      "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP"
+      "sku": "7919.27NTV.C1",
+      "marka": "Öztiryakiler",
+      "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
     },
     "bulut-burger|D14": {
       "sku": "7885.30155.10",
@@ -343,12 +353,14 @@
       "name": "Portashelf Paslanmaz Çöp Arabası MB126X"
     },
     "bulut-burger|E4": {
-      "sku": "7758.147C8.11",
-      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     },
     "bulut-burger-35-100|E4": {
-      "sku": "7758.147C8.11",
-      "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70"
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     },
     "bulut-burger|E5": {
       "sku": "075T.11110.AD",
@@ -381,6 +393,78 @@
     "bulut-burger-35-100|Y1": {
       "sku": "7960.02929.5Y2",
       "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290"
+    },
+    "bulut-burger-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm"
+    },
+    "bulut-ev-yemek-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm"
+    },
+    "bulut-ev-yemek-40-80|D2": {
+      "sku": "EQ.KCT05.13070",
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm"
+    },
+    "bulut-ev-yemek-40-80|D4": {
+      "sku": "7865.60605.21",
+      "marka": "Öztiryakiler",
+      "name": "YER OCAĞI GAZLI ÇİFT YANIŞLI 60×60×50"
+    },
+    "bulut-ev-yemek-40-80|D15": {
+      "sku": "MT152X",
+      "marka": "Portashelf",
+      "name": "TEPSİ TAŞIMA ARABASI 15 KATLI – YÜKSEK",
+      "fiyat_try": 14395
+    },
+    "bulut-ev-yemek|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm"
+    },
+    "bulut-ev-yemek|D2": {
+      "sku": "EQ.KCT05.13070",
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm"
+    },
+    "bulut-ev-yemek|D4": {
+      "sku": "7865.60605.21",
+      "marka": "Öztiryakiler",
+      "name": "YER OCAĞI GAZLI ÇİFT YANIŞLI 60×60×50"
+    },
+    "bulut-ev-yemek|D15": {
+      "sku": "MT152X",
+      "marka": "Portashelf",
+      "name": "TEPSİ TAŞIMA ARABASI 15 KATLI – YÜKSEK",
+      "fiyat_try": 14395
+    },
+    "bulut-burger-40-80|D1": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-burger-40-80|D4": {
+      "sku": "79E3.27NMV.03",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
+    },
+    "bulut-burger-40-80|D6": {
+      "sku": "7919.06LMV.00",
+      "marka": "Öztiryakiler",
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
+    },
+    "bulut-burger-40-80|D13": {
+      "sku": "7919.27NTV.C1",
+      "marka": "Öztiryakiler",
+      "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
+    },
+    "bulut-burger-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     }
   }
 }
