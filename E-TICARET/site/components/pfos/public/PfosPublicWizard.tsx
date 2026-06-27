@@ -39,6 +39,7 @@ import PfosTeklifLoading from "./PfosTeklifLoading";
 import { usePfosListeUpload } from "./usePfosListeUpload";
 import PfosWorkspaceShell from "./workspace/PfosWorkspaceShell";
 import PfosListeWorkspace from "./workspace/PfosListeWorkspace";
+import ws from "./workspace/pfos-workspace.module.css";
 import {
   deriveListePipelineStage,
   deriveWizardPipelineStage,
@@ -67,15 +68,6 @@ import {
   pfosLoginHref,
   pfosRegisterHref,
 } from "@/lib/pfos/member-session.client";
-import { memberDisplayFirstName } from "@/lib/pfos/member-display-name.client";
-import PfosWizardStepSurface from "./wizard/PfosWizardStepSurface";
-import PfosWizardStepDone from "./wizard/PfosWizardStepDone";
-import stepStyles from "./wizard/pfos-wizard-step.module.css";
-import {
-  PFOS_MESLEK_PRIMARY,
-  PFOS_MESLEK_SECONDARY,
-  PFOS_MESLEK_SUBTITLES,
-} from "./wizard/meslek-options";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -153,7 +145,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [adresListOpen, setAdresListOpen] = useState(false);
   const [memberReady, setMemberReady] = useState(false);
   const [memberLoggedIn, setMemberLoggedIn] = useState(false);
-  const [memberFirstName, setMemberFirstName] = useState<string | null>(null);
   const [loginHref, setLoginHref] = useState("/login");
   const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const prevOpenPanelIdRef = useRef("s1");
@@ -163,10 +154,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>("wizard");
 
   useEffect(() => {
-    const syncMember = () => {
-      setMemberLoggedIn(memberLoggedInNow());
-      setMemberFirstName(memberDisplayFirstName());
-    };
+    const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
     syncMember();
     setLoginHref(pfosLoginHref());
     setRegisterHref(pfosRegisterHref());
@@ -641,81 +629,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setError(null);
   }
 
-  function panelSurfaceIntro(panel: LegacyPanelDef): string[] | undefined {
-    if (panel.id !== "s1") return undefined;
-    return [
-      memberFirstName
-        ? t(`Merhaba ${memberFirstName}.`)
-        : t("Merhaba."),
-      t("Bu proje yaklaşık 5 dakika sürecek."),
-      t("İlk olarak seni tanıyalım."),
-    ];
-  }
-
-  function panelSurfaceTitle(panel: LegacyPanelDef, _qs: WizardQuestion[]): string {
-    if (panel.id === "s1") return t("Sen kimsin?");
-    return t(panel.title);
-  }
-
-  function useChoiceStackLayout(
-    q: WizardQuestion,
-    panel: LegacyPanelDef,
-    optCount: number,
-  ): boolean {
-    if (q.id === "q_meslek") return true;
-    if (panel.id === "s3") return false;
-    if (q.type === "multi_select") return false;
-    return optCount > 0 && optCount <= 8;
-  }
-
-  function renderChoiceRow(
-    opt: string,
-    selected: string,
-    onSelect: (value: string) => void,
-    subtitle?: string,
-  ) {
-    return (
-      <button
-        key={opt}
-        type="button"
-        className={`${stepStyles.choiceRow}${selected === opt ? ` ${stepStyles.choiceRowSelected}` : ""}`}
-        onClick={() => onSelect(opt)}
-      >
-        <span className={stepStyles.choiceTitle}>{t(opt)}</span>
-        {subtitle ? (
-          <span className={stepStyles.choiceSub}>{t(subtitle)}</span>
-        ) : null}
-      </button>
-    );
-  }
-
-  function renderMeslekChoices(panel: LegacyPanelDef) {
-    const val = String(answers.q_meslek ?? "");
-    return (
-      <div className={stepStyles.choiceStack}>
-        {PFOS_MESLEK_PRIMARY.map((opt) =>
-          renderChoiceRow(
-            opt,
-            val,
-            (next) => setAnswer("q_meslek", next, panel),
-            PFOS_MESLEK_SUBTITLES[opt],
-          ),
-        )}
-        {PFOS_MESLEK_SECONDARY.length > 0 ? (
-          <p className={stepStyles.choiceSectionLabel}>{t("Diğer roller")}</p>
-        ) : null}
-        {PFOS_MESLEK_SECONDARY.map((opt) =>
-          renderChoiceRow(
-            opt,
-            val,
-            (next) => setAnswer("q_meslek", next, panel),
-            PFOS_MESLEK_SUBTITLES[opt],
-          ),
-        )}
-      </div>
-    );
-  }
-
   function renderM2Field(panel: LegacyPanelDef) {
     const raw = answers.q_m2 != null ? Number(answers.q_m2) : 80;
     const val = Number.isFinite(raw) ? raw : 80;
@@ -792,15 +705,15 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 Number(answers.q_m2),
               )
             : ((q.options as string[]) ?? []);
-      const opts = rawOpts.filter((o) => o !== "Bilmiyorum" && o !== "Boş ver");
+      const opts = rawOpts.filter((o) => o !== "Bilmiyorum");
       const val = String(answers[id] ?? "");
-      const twoCol = opts.length > 6 && !useChoiceStackLayout(q, panel, opts.length);
+      const twoCol = opts.length >= 3;
       const bulutKompakt =
         q.id === "q_dukkan_turu" && bulutMutfakKompaktMi(answers);
       const kucukAlanKonsept =
         q.id === "q_ust_segment" &&
         kucukAlanSegmentM2Aktif(Number(answers.q_m2));
-      const hints = (
+      return (
         <>
           {kucukAlanKonsept ? (
             <p className={styles.alanHint} style={{ marginBottom: 8 }}>
@@ -816,34 +729,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               )}
             </p>
           ) : null}
-        </>
-      );
-
-      if (q.id === "q_meslek") {
-        return (
-          <>
-            {hints}
-            {renderMeslekChoices(panel)}
-          </>
-        );
-      }
-
-      if (useChoiceStackLayout(q, panel, opts.length)) {
-        return (
-          <>
-            {hints}
-            <div className={stepStyles.choiceStack}>
-              {opts.map((opt) =>
-                renderChoiceRow(opt, val, (next) => setAnswer(id, next, panel)),
-              )}
-            </div>
-          </>
-        );
-      }
-
-      return (
-        <>
-          {hints}
           <div
             className={`${styles.options}${twoCol ? ` ${styles.twoCol}` : ""}${panel.id === "s3" ? ` ${styles.konseptGrid}` : ""}`}
           >
@@ -938,6 +823,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       isActive && openPanelIndex > openPanelIndexRef.current;
     const panelEntering = animatingPanelId === panel.id || panelAdvancing;
     const panelRevealing = panelEntering && animatingPanelReveal;
+    const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary
       ? summary
@@ -946,66 +832,69 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           .join(summary.includes("·") ? " · " : ", ")
       : "";
 
-    if (isDone) {
-      const doneLabel =
-        panel.id === "s1" ? t("Sen kimsin?") : t(panel.title);
-      const doneAnswer =
-        panel.id === "s1" && summaryDisplay === t("Boş ver")
-          ? t("Atlandı")
-          : summaryDisplay || t("—");
-      return (
-        <PfosWizardStepDone
-          key={panel.id}
-          label={doneLabel}
-          answer={doneAnswer}
+    return (
+      <section
+        key={panel.id}
+        id={`pfos-sec-${panel.id}`}
+        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${isDone ? ` ${styles.secKeepOpen}` : ""}${isActive && adresListOpen && qs.some((q) => q.id === "q_lokasyon") ? ` ${styles.secAdresExpanded}` : ""}${panelEntering ? ` ${styles.secPending}` : ""}${panelRevealing ? ` ${styles.secReveal}` : ""}`}
+      >
+        <button
+          type="button"
+          className={styles.secHd}
           onClick={() => {
             focusWizardPane();
-            reopenPanel(panel.id);
+            if (isDone) reopenPanel(panel.id);
           }}
-        />
-      );
-    }
-
-    if (!isActive) return null;
-
-    const surfaceTitle = panelSurfaceTitle(panel, qs);
-    const surfaceSub =
-      panel.id === "s1" ? undefined : t(panel.sub);
-    const skipPanel =
-      panel.optional &&
-      panel.id === "s1" &&
-      !String(answers.q_meslek ?? "").trim();
-
-    return (
-      <PfosWizardStepSurface
-        key={panel.id}
-        introLines={panelSurfaceIntro(panel)}
-        title={surfaceTitle}
-        subtitle={surfaceSub}
-        entering={panelEntering}
-        revealing={panelRevealing}
-        onSkip={
-          skipPanel
-            ? () => setAnswer("q_meslek", "Boş ver", panel)
-            : undefined
-        }
-        skipLabel={t("Atla →")}
-      >
-        {qs.map((q) => (
-          <div key={q.id}>
-            {q.note && q.id !== "q_meslek" ? (
-              <p className={styles.questionNote}>{t(String(q.note))}</p>
+        >
+          <span className={styles.secNum}>{isDone ? "✓" : panel.num}</span>
+          <span className={styles.secInfo}>
+            <span className={styles.secTitle}>{t(panel.title)}</span>
+            {isActive ? (
+              <span className={styles.secSub}>{t(panel.sub)}</span>
             ) : null}
-            {renderQuestion(q, panel)}
+            {summaryDisplay && isDone && !isActive ? (
+              <span className={styles.secAns}>{summaryDisplay}</span>
+            ) : null}
+          </span>
+        </button>
+        {showBody ? (
+          <div className={styles.secBd}>
+            {qs.map((q) => (
+              <div key={q.id}>
+                {q.id !== "q_m2" &&
+                q.id !== "q_lokasyon" &&
+                q.id !== "q_karar" ? (
+                  <>
+                    {q.text ? (
+                      <h3 className={styles.qInlineTitle}>{t(String(q.text))}</h3>
+                    ) : null}
+                    {q.note ? (
+                      <p className={styles.questionNote}>{t(String(q.note))}</p>
+                    ) : null}
+                  </>
+                ) : null}
+                {renderQuestion(q, panel)}
+              </div>
+            ))}
           </div>
-        ))}
-      </PfosWizardStepSurface>
+        ) : null}
+      </section>
     );
   }
 
   function renderWizardCenter() {
     return (
-      <>
+      <div className={ws.wizardWorkspace}>
+        <header className={ws.wizardIntro}>
+          <h2 className={ws.wizardIntroTitle}>
+            {t("Konsept Sihirbazı")}
+          </h2>
+          <p className={ws.wizardIntroSub}>
+            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}{" "}
+            {t("Beş dakikada yapılır, hemen teslim edilir.")}
+          </p>
+        </header>
+
         <div id="pfos-progress" className={styles.pfProgress}>
           <div className={styles.pfProgressTrack}>
             <div
@@ -1019,7 +908,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           </div>
         </div>
 
-        <div id="secs">{panels.map(renderPanel)}</div>
+        <div id="secs" className={ws.wizardSteps}>
+          {panels.map(renderPanel)}
+        </div>
 
         {error ? <div className={styles.error}>{error}</div> : null}
 
@@ -1072,7 +963,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </div>
           </>
         ) : null}
-      </>
+      </div>
     );
   }
 

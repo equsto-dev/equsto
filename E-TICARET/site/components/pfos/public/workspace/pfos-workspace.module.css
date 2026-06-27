@@ -13,24 +13,23 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 4.75rem minmax(0, 1fr) minmax(17rem, 22rem);
-  gap: 1.75rem;
+  grid-template-columns: 4.75rem minmax(0, 1fr) minmax(18rem, 24rem);
+  gap: 2rem;
   align-items: start;
 }
 
 .center {
   min-width: 0;
-  padding: 0 0.35rem;
+  padding: 0;
 }
 
 /* ── Pipeline ── */
 .pipeline {
   padding: 0.85rem 1.5rem;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #eef2f6;
-  border-radius: 0;
-  box-shadow: none;
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0, 30, 80, 0.04);
 }
 
 .pipelineTrack {
@@ -124,8 +123,8 @@
   flex-direction: column;
   gap: 0.65rem;
   padding: 0.75rem 0.5rem;
-  background: transparent;
-  border: none;
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
   border-radius: 14px;
   position: sticky;
   top: 1rem;
@@ -331,6 +330,39 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: #1a7a9e;
+}
+
+/* ── Wizard workspace (liste modülü ile aynı dil) ── */
+.wizardWorkspace {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.wizardIntro {
+  padding: 0.15rem 0 0.35rem;
+}
+
+.wizardIntroTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ws-text);
+  letter-spacing: -0.02em;
+}
+
+.wizardIntroSub {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ws-muted);
+  max-width: 42rem;
+}
+
+.wizardSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* ── Liste workspace ── */
