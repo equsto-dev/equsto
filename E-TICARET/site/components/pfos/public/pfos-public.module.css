@@ -38,8 +38,8 @@
 }
 
 .main:has([data-pfos-workspace]) {
-  max-width: min(1680px, 100vw - 2rem);
-  padding: 1.5rem clamp(1rem, 2.5vw, 2.5rem) 3.5rem;
+  max-width: min(1800px, 100vw - 1.5rem);
+  padding: 1.5rem clamp(0.75rem, 2vw, 2.25rem) 3.5rem;
 }
 
 .main:has([data-pfos-workspace]) .pfProgress {
