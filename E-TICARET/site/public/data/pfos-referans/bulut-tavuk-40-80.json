@@ -1,12 +1,12 @@
 {
-  "kategoriId": "bulut-burger",
+  "kategoriId": "bulut-tavuk",
   "bantId": "40-80",
-  "label": "HAMBURGERCİ",
+  "label": "TAVUKÇU",
   "referansM2": 60,
-  "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-  "yukleme": "2026-06-27T18:11:59.109489Z",
-  "kalemSayisi": 29,
-  "toplamAdet": 36,
+  "kaynakDosya": "BULUT MUTFAK/tavukcu.pdf",
+  "yukleme": "2026-06-27T18:11:59.674348Z",
+  "kalemSayisi": 28,
+  "toplamAdet": 33,
   "kalemler": [
     {
       "bolum": "KURU_DEPO",
@@ -60,14 +60,6 @@
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D1",
-      "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
-      "olcu": "140*70*85",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D2",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*85*205",
       "adet": 1
@@ -75,103 +67,103 @@
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
+      "poz": "D2",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "175*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
       "poz": "D3",
-      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
-      "olcu": "160*70*85",
-      "adet": 2
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D4",
-      "ad": "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ",
-      "olcu": "140*70*85",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "90*60*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D5",
-      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
-      "olcu": "140*70*85",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "125*60*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D6",
-      "ad": "SET ALTI DEEP FREEZE",
-      "olcu": "60*60*5",
+      "ad": "SETALTI DERİN DONDURUCU, LIEBHERR",
+      "olcu": "60*60*85",
       "adet": 2
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D7",
-      "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
-      "olcu": "190*60*85",
+      "ad": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "143*70*56",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D8",
-      "ad": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI",
-      "olcu": "170*60*85",
+      "ad": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "40*65*29",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D9",
-      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
-      "olcu": "80*70*30",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "40*65*29",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D10",
-      "ad": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
-      "olcu": "80*70*30",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "40*65*29",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D11",
-      "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
-      "olcu": "40*70*30",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D12",
-      "ad": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
-      "olcu": "80*70*85",
+      "ad": "PİLİÇ ÇEVİRME MAKİNASI",
+      "olcu": "-",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D13",
-      "ad": "SETALTI BUZDOLABI, 4 KAPILI",
-      "olcu": "140*70*60",
-      "adet": 2
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D14",
-      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
-      "olcu": "320*97*50",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "90*60*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D15",
+      "poz": "D14",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
       "adet": 1
@@ -237,7 +229,7 @@
       "bolumAd": "Y- YER IZGARASI",
       "poz": "Y1",
       "ad": "YER IZGARASI",
-      "olcu": "30*30*14",
+      "olcu": "-",
       "adet": 2
     }
   ]

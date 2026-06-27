@@ -335,7 +335,17 @@ export async function loadReferansProfil(
     | "turk-restoran"
     | "dunya-mutfagi"
     | "bulut-burger"
-    | "bulut-ev-yemek",
+    | "bulut-ev-yemek"
+    | "bulut-doner"
+    | "bulut-kebap"
+    | "bulut-manti"
+    | "bulut-pastane-firin"
+    | "bulut-pide"
+    | "bulut-pizza"
+    | "bulut-salata-sandvic"
+    | "bulut-tavuk"
+    | "bulut-balik"
+    | "bulut-corbaci",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -457,7 +467,7 @@ export async function loadReferansProfil(
                                                       ? "100-200"
           : kategoriId === "birahane"
           ? "100-300"
-          : kategoriId === "bulut-burger" || kategoriId === "bulut-ev-yemek"
+          : kategoriId.startsWith("bulut-")
             ? "40-80"
           : kategoriId === "balikci"
         ? pickBalikciListe(m2, altTip)

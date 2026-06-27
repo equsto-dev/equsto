@@ -1,0 +1,268 @@
+{
+  "kategoriId": "bulut-pide",
+  "bantId": "40-80",
+  "label": "PİDE & LAHMACUN",
+  "referansM2": 60,
+  "kaynakDosya": "BULUT MUTFAK/pide-lahmacun.pdf",
+  "yukleme": "2026-06-27T18:11:59.486807Z",
+  "kalemSayisi": 32,
+  "toplamAdet": 35,
+  "kalemler": [
+    {
+      "bolum": "KURU_DEPO",
+      "bolumAd": "A- KURU DEPO",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "KURU_DEPO",
+      "bolumAd": "A- KURU DEPO",
+      "poz": "A2",
+      "ad": "BLOK KAPAKLI DERİNDONDURUCU 400 lt.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "220*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*85*205",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C2",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "170*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C3",
+      "ad": "DUVAR RAFI",
+      "olcu": "170*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C4",
+      "ad": "HAMUR YOĞURMA MAKİNASI 35 KG.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C5",
+      "ad": "BIÇAK STERİL DOLABI 10 BIÇAKLIK",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C6",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+      "olcu": "195*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C7",
+      "ad": "DUVAR RAFI",
+      "olcu": "195*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C8",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C9",
+      "ad": "DUVAR RAFI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D1",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D2",
+      "ad": "SERVİS RAFI",
+      "olcu": "140*40*45",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D4",
+      "ad": "MAKE-UP ÜNİTESİ, 3 KAPILI, NEO",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D5",
+      "ad": "SİNEK ÖLDÜRÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D6",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "187*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D8",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D10",
+      "ad": "PİDE LAHMACUN FIRINI",
+      "olcu": "120*120*172",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D11",
+      "ad": "MAKE-UP ÜNİTESİ, 3 KAPILI",
+      "olcu": "145*80*100",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D12",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "80*40*100",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E1",
+      "ad": "BULAŞIK SIYIRMA TEZGAHI",
+      "olcu": "165*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E2",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E3",
+      "ad": "BASKET RAFI",
+      "olcu": "165*40*45",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E4",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "210*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E5",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- BULAŞIK YIKAMA",
+      "poz": "E6",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "YER_IZGARASI",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ]
+}

@@ -11,7 +11,7 @@ function isBuroTipiDerinDondurucuOlcu(olcu: string): boolean {
     .filter((n) => Number.isFinite(n) && n >= 8);
   if (nums.length < 2) return false;
   const [w, d, h] = [nums[0], nums[1], nums[2] ?? 0];
-  return w >= 55 && w <= 65 && d >= 55 && d <= 65 && h >= 75 && h <= 95;
+  return w >= 55 && w <= 70 && d >= 55 && d <= 70 && h >= 75 && h <= 95;
 }
 
 function norm(s: string): string {
@@ -386,20 +386,23 @@ const TIP_RULES: TipRule[] = [
   {
     tip: "buro-tipi-derin-dondurucu",
     test: (n, _poz, olcu = "") =>
-      (/derin donduruc|derindonduruc|dondurucu/.test(n) &&
-        (/buro tip|office type|slim buzdolab|tezgah alti slim/.test(n) ||
+      (/derin donduruc|derindonduruc|dondurucu|deep freeze|freezer/.test(n) &&
+        (/buro tip|office type|slim|tezgah alti slim|set alti|setalti|cihazalti|deep freeze/.test(
+          n,
+        ) ||
           isBuroTipiDerinDondurucuOlcu(olcu))) ||
       false,
   },
   {
     tip: "setalti-derin-dondurucu",
     test: (n) =>
-      (n.includes("derin donduruc") || n.includes("derindonduruc")) &&
-      !n.includes("depo") &&
-      (n.includes("setalti") ||
-        n.includes("set alti") ||
-        n.includes("cihazalti") ||
-        n.includes("60*60")),
+      (/derin donduruc|derindonduruc|deep freeze|freezer/.test(n) &&
+        !n.includes("depo") &&
+        (n.includes("setalti") ||
+          n.includes("set alti") ||
+          n.includes("cihazalti") ||
+          n.includes("60*60"))) ||
+      false,
   },
   {
     tip: "depo-derin-dondurucu",

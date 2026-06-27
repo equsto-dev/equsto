@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-27T16:43:10.956327Z",
+  "updated_at": "2026-06-27T18:11:59.786227Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -1195,7 +1195,7 @@
             "kalemSayisi": 29,
             "toplamAdet": 36,
             "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-            "yukleme": "2026-06-27T16:43:10.899290Z"
+            "yukleme": "2026-06-27T18:11:59.109489Z"
           }
         }
       ]
@@ -1214,7 +1214,197 @@
             "kalemSayisi": 24,
             "toplamAdet": 29,
             "kaynakDosya": "BULUT MUTFAK/ev-yemekleri.pdf",
-            "yukleme": "2026-06-27T16:43:10.956327Z"
+            "yukleme": "2026-06-27T18:11:59.166312Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-doner",
+      "label": "Dönerci",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-doner-40-80.json",
+            "kalemSayisi": 30,
+            "toplamAdet": 38,
+            "kaynakDosya": "BULUT MUTFAK/donerci.pdf",
+            "yukleme": "2026-06-27T18:11:59.235190Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-kebap",
+      "label": "Kebap & Türk Mutfağı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-kebap-40-80.json",
+            "kalemSayisi": 26,
+            "toplamAdet": 32,
+            "kaynakDosya": "BULUT MUTFAK/kebap-turk-mutfagi.pdf",
+            "yukleme": "2026-06-27T18:11:59.298848Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-manti",
+      "label": "Mantıcı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-manti-40-80.json",
+            "kalemSayisi": 22,
+            "toplamAdet": 28,
+            "kaynakDosya": "BULUT MUTFAK/mantici.pdf",
+            "yukleme": "2026-06-27T18:11:59.350702Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-pastane-firin",
+      "label": "Pastane & Fırın",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-pastane-firin-40-80.json",
+            "kalemSayisi": 27,
+            "toplamAdet": 33,
+            "kaynakDosya": "BULUT MUTFAK/pastane-firin.pdf",
+            "yukleme": "2026-06-27T18:11:59.414307Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-pide",
+      "label": "Pide & Lahmacun",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-pide-40-80.json",
+            "kalemSayisi": 32,
+            "toplamAdet": 35,
+            "kaynakDosya": "BULUT MUTFAK/pide-lahmacun.pdf",
+            "yukleme": "2026-06-27T18:11:59.486807Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-pizza",
+      "label": "Pizzacı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-pizza-40-80.json",
+            "kalemSayisi": 27,
+            "toplamAdet": 31,
+            "kaynakDosya": "BULUT MUTFAK/pizzaci.pdf",
+            "yukleme": "2026-06-27T18:11:59.550059Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-salata-sandvic",
+      "label": "Salata / Sandviç / Kahvaltı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-salata-sandvic-40-80.json",
+            "kalemSayisi": 22,
+            "toplamAdet": 26,
+            "kaynakDosya": "BULUT MUTFAK/salata-sandvic-kahvalti.pdf",
+            "yukleme": "2026-06-27T18:11:59.603457Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-tavuk",
+      "label": "Tavukçu",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-tavuk-40-80.json",
+            "kalemSayisi": 28,
+            "toplamAdet": 33,
+            "kaynakDosya": "BULUT MUTFAK/tavukcu.pdf",
+            "yukleme": "2026-06-27T18:11:59.674348Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-balik",
+      "label": "Balıkçı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-balik-40-80.json",
+            "kalemSayisi": 27,
+            "toplamAdet": 32,
+            "kaynakDosya": "BULUT MUTFAK/balikci.pdf",
+            "yukleme": "2026-06-27T18:11:59.734564Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-corbaci",
+      "label": "Çorbacı",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-corbaci-40-80.json",
+            "kalemSayisi": 21,
+            "toplamAdet": 27,
+            "kaynakDosya": "BULUT MUTFAK/corbaci.pdf",
+            "yukleme": "2026-06-27T18:11:59.786227Z"
           }
         }
       ]

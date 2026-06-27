@@ -1,12 +1,12 @@
 {
-  "kategoriId": "bulut-ev-yemek",
+  "kategoriId": "bulut-manti",
   "bantId": "40-80",
-  "label": "EV YEMEKLERİ",
+  "label": "MANTICI",
   "referansM2": 60,
-  "kaynakDosya": "BULUT MUTFAK/ev-yemekleri.pdf",
-  "yukleme": "2026-06-27T18:11:59.166312Z",
-  "kalemSayisi": 24,
-  "toplamAdet": 29,
+  "kaynakDosya": "BULUT MUTFAK/mantici.pdf",
+  "yukleme": "2026-06-27T18:11:59.350702Z",
+  "kalemSayisi": 22,
+  "toplamAdet": 28,
   "kalemler": [
     {
       "bolum": "KURU_DEPO",
@@ -60,8 +60,8 @@
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
       "poz": "D1",
-      "ad": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
-      "olcu": "140*85*205",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*85*205",
       "adet": 1
     },
     {
@@ -83,39 +83,23 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D4",
-      "ad": "YER OCAĞI",
-      "olcu": "60*60*50",
+      "poz": "D5",
+      "ad": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
+      "olcu": "150*60*85",
       "adet": 2
     },
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D5",
-      "ad": "KONVEKSİYONLU FIRIN, ELK. 10 GN 1/1",
-      "olcu": "-",
-      "adet": 1
-    },
-    {
-      "bolum": "MUTFAK",
-      "bolumAd": "D- MUTFAK",
       "poz": "D6",
-      "ad": "FIRIN TEZGAHI, TABAN RAFLI",
-      "olcu": "80*70*70",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "340*117*50",
       "adet": 1
     },
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
       "poz": "D7",
-      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
-      "olcu": "240*117*50",
-      "adet": 1
-    },
-    {
-      "bolum": "MUTFAK",
-      "bolumAd": "D- MUTFAK",
-      "poz": "D8",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "130*70*85",
       "adet": 1
@@ -123,7 +107,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D9",
+      "poz": "D8",
       "ad": "DUVAR RAFI",
       "olcu": "130*30*3",
       "adet": 1
@@ -131,7 +115,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D10",
+      "poz": "D9",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "100*70*85",
       "adet": 1
@@ -139,7 +123,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D11",
+      "poz": "D10",
       "ad": "DUVAR RAFI",
       "olcu": "100*30*3",
       "adet": 1
@@ -147,7 +131,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D12",
+      "poz": "D11",
       "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "190*70*85",
       "adet": 1
@@ -155,7 +139,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D13",
+      "poz": "D12",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 Tb/saat",
       "adet": 1
@@ -163,7 +147,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D14",
+      "poz": "D13",
       "ad": "DUVAR RAFI",
       "olcu": "190*30*3",
       "adet": 1
@@ -171,7 +155,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D15",
+      "poz": "D14",
       "ad": "TEPSİ TAŞIMA ARABASI 15 KATLI",
       "olcu": "-",
       "adet": 1
@@ -179,15 +163,15 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D16",
+      "poz": "D15",
       "ad": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
       "olcu": "230*70*85/140",
-      "adet": 1
+      "adet": 2
     },
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D17",
+      "poz": "D16",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
       "adet": 1
@@ -195,7 +179,7 @@
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
-      "poz": "D18",
+      "poz": "D17",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
       "adet": 2

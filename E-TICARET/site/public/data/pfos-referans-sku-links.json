@@ -151,12 +151,14 @@
       "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
     },
     "bulut-burger|A1": {
-      "sku": "118.DBE.02",
-      "name": "Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02"
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
     },
     "bulut-burger-35-100|A1": {
-      "sku": "118.DBE.02",
-      "name": "Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02"
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
     },
     "bulut-burger|A2": {
       "sku": "46-X-152-X-183",
@@ -167,12 +169,14 @@
       "name": "Portashelf 4 Katlı Raf 46×152×183 cm"
     },
     "bulut-burger|B1": {
-      "sku": "7919.CR3020.00",
-      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|B1": {
-      "sku": "7919.CR3020.00",
-      "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C"
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
     },
     "bulut-burger|B2": {
       "sku": "46-X-137-X-183",
@@ -245,62 +249,74 @@
       "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm"
     },
     "bulut-burger|D6": {
-      "sku": "7919.06LMV.00",
+      "sku": "7919.10LTS.00",
       "marka": "Öztiryakiler",
-      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
+      "name": "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)"
     },
     "bulut-burger-35-100|D6": {
-      "sku": "7919.06LMV.00",
+      "sku": "7919.10LTS.00",
       "marka": "Öztiryakiler",
-      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
+      "name": "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)"
     },
     "bulut-burger|D7": {
-      "sku": "7911.19060.13",
-      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 190*60"
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|D7": {
-      "sku": "7911.19060.13",
-      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 190*60"
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger|D8": {
-      "sku": "7911.16060.13",
-      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 160*60"
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|D8": {
-      "sku": "7911.16060.13",
-      "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 160*60"
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger|D9": {
-      "sku": "AGO-870",
-      "name": "Atalay Ocaklar AGO - 870 4 x Ø80 4 x 5 kW"
+      "sku": "7865.N1.80703.35L",
+      "name": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger-35-100|D9": {
-      "sku": "AGO-870",
-      "name": "Atalay Ocaklar AGO - 870 4 x Ø80 4 x 5 kW"
+      "sku": "7865.N1.80703.35L",
+      "name": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger|D10": {
-      "sku": "AEF-870",
-      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger-35-100|D10": {
-      "sku": "AEF-870",
-      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger|D11": {
-      "sku": "APD-473",
-      "name": "Atalay Fritözler APD - 473 Yekpare 400 x 730 x 300"
+      "sku": "7831.N1.40703.01",
+      "name": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger-35-100|D11": {
-      "sku": "APD-473",
-      "name": "Atalay Fritözler APD - 473 Yekpare 400 x 730 x 300"
+      "sku": "7831.N1.40703.01",
+      "name": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger|D12": {
-      "sku": "AGI-870",
-      "name": "Atalay Izgaralar AGI - 870 Düz 800x700x300"
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger-35-100|D12": {
-      "sku": "AGI-870",
-      "name": "Atalay Izgaralar AGI - 870 Düz 800x700x300"
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
     },
     "bulut-burger|D13": {
       "sku": "7919.27NTV.C1",
@@ -313,12 +329,14 @@
       "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
     },
     "bulut-burger|D14": {
-      "sku": "7885.30155.10",
-      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*150"
+      "sku": "EQ.KDAVOTF02.300100",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
     },
     "bulut-burger-35-100|D14": {
-      "sku": "7885.30155.10",
-      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*150"
+      "sku": "EQ.KDAVOTF02.300100",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
     },
     "bulut-burger|D15": {
       "sku": "118.YSO.100",
@@ -329,20 +347,24 @@
       "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100"
     },
     "bulut-burger|E1": {
-      "sku": "7712.14070.03",
-      "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*70"
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|E1": {
-      "sku": "7712.14070.03",
-      "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*70"
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
     },
     "bulut-burger|E2": {
-      "sku": "7897.14030.31",
-      "name": "DUVAR RAFI SÜZMELİ 140*30"
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|E2": {
-      "sku": "7897.14030.31",
-      "name": "DUVAR RAFI SÜZMELİ 140*30"
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
     },
     "bulut-burger|E3": {
       "sku": "MB126X",
@@ -363,20 +385,24 @@
       "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
     },
     "bulut-burger|E5": {
-      "sku": "075T.11110.AD",
-      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
     },
     "bulut-burger-35-100|E5": {
-      "sku": "075T.11110.AD",
-      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
     },
     "bulut-burger|E6": {
-      "sku": "7897.14030.30",
-      "name": "DUVAR RAFI 140*30"
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
     },
     "bulut-burger-35-100|E6": {
-      "sku": "7897.14030.30",
-      "name": "DUVAR RAFI 140*30"
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
     },
     "bulut-burger|E7": {
       "sku": "46-X-152-X-183",
@@ -387,12 +413,14 @@
       "name": "Portashelf 4 Katlı Raf 46×152×183 cm"
     },
     "bulut-burger|Y1": {
-      "sku": "7960.02929.5Y2",
-      "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290"
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
     },
     "bulut-burger-35-100|Y1": {
-      "sku": "7960.02929.5Y2",
-      "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290"
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
     },
     "bulut-burger-40-80|C1": {
       "sku": "7919.DF2020.00",
@@ -452,9 +480,9 @@
       "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
     },
     "bulut-burger-40-80|D6": {
-      "sku": "7919.06LMV.00",
+      "sku": "7919.10LTS.00",
       "marka": "Öztiryakiler",
-      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)"
+      "name": "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)"
     },
     "bulut-burger-40-80|D13": {
       "sku": "7919.27NTV.C1",
@@ -465,6 +493,2931 @@
       "sku": "EQ.KTEVT02.14070",
       "marka": "Equsto",
       "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-balik-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-balik|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-balik-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-balik|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-balik|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-balik-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik-40-80|D1": {
+      "sku": "EQ.KCT02.14070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|D1": {
+      "sku": "EQ.KCT02.14070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|D4": {
+      "sku": "EQ.KCT02.16070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|D4": {
+      "sku": "EQ.KCT02.16070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|D5": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D5": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D6": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|D6": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|D7": {
+      "sku": "7864.10502.05",
+      "name": "KÖMÜRLÜ IZGARA",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D7": {
+      "sku": "7864.10502.05",
+      "name": "KÖMÜRLÜ IZGARA",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D8": {
+      "sku": "7865.N1.80903.20",
+      "name": "4 AÇIK ALEVLİ OCAK, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D8": {
+      "sku": "7865.N1.80903.20",
+      "name": "4 AÇIK ALEVLİ OCAK, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D9": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D9": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D10": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D10": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D11": {
+      "sku": "7919.47NTV.C1",
+      "name": "SETALTI BUZDOLABI, 4 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik|D11": {
+      "sku": "7919.47NTV.C1",
+      "name": "SETALTI BUZDOLABI, 4 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-balik-40-80|D13": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-balik|D13": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-balik-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-balik|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-balik-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-balik|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-balik-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-balik|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-balik-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-balik-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-balik|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-burger-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-burger-40-80|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|D7": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|D8": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|D9": {
+      "sku": "7865.N1.80703.35L",
+      "name": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-burger-40-80|D10": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-burger-40-80|D11": {
+      "sku": "7831.N1.40703.01",
+      "name": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-burger-40-80|D12": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-burger-40-80|D15": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-burger-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-burger-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-burger-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-corbaci|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-corbaci-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci-40-80|D1": {
+      "sku": "79K4.12NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci|D1": {
+      "sku": "79K4.12NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci-40-80|D2": {
+      "sku": "EQ.KCT05.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D2": {
+      "sku": "EQ.KCT05.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D4": {
+      "sku": "7865.60605.21",
+      "name": "YER OCAGI GAZLI CIFT YANISLI 60*60*50",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci|D4": {
+      "sku": "7865.60605.21",
+      "name": "YER OCAGI GAZLI CIFT YANISLI 60*60*50",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci-40-80|D5": {
+      "sku": "7865.N1.40903.20",
+      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci|D5": {
+      "sku": "7865.N1.40903.20",
+      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci-40-80|D6": {
+      "sku": "EQ.KDAVDTF02.25090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D6": {
+      "sku": "EQ.KDAVDTF02.25090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D7": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D7": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D8": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D8": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D9": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D9": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D10": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D10": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D11": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D11": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D12": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-corbaci|D12": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-corbaci-40-80|D13": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci|D13": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-corbaci-40-80|D14": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-corbaci|D14": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-corbaci-40-80|D15": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci|D15": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-corbaci-40-80|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-corbaci|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-corbaci-40-80|D17": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-corbaci|D17": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-doner|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-doner-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-doner|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-doner|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-doner-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|D1": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-doner|D1": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-doner-40-80|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|D4": {
+      "sku": "79E3.27NMV.03",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
+    },
+    "bulut-doner|D4": {
+      "sku": "79E3.27NMV.03",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)"
+    },
+    "bulut-doner-40-80|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|D6": {
+      "sku": "7919.10LTS.00",
+      "marka": "Öztiryakiler",
+      "name": "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)"
+    },
+    "bulut-doner|D6": {
+      "sku": "7919.10LTS.00",
+      "marka": "Öztiryakiler",
+      "name": "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)"
+    },
+    "bulut-doner-40-80|D7": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner|D7": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|D8": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner|D8": {
+      "sku": "EQ.KDCT01.17060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1700×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|D9": {
+      "sku": "8859.OGSDK.8R",
+      "name": "OZTIRYAKILER GAZLI SIS KEBAP DONER OCAGI - 8 RADYANLI (BÜYÜK TİP)",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D9": {
+      "sku": "8859.OGSDK.8R",
+      "name": "OZTIRYAKILER GAZLI SIS KEBAP DONER OCAGI - 8 RADYANLI (BÜYÜK TİP)",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D10": {
+      "sku": "7865.N1.40703.33L",
+      "name": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D10": {
+      "sku": "7865.N1.40703.33L",
+      "name": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D11": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D11": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D12": {
+      "sku": "7831.N1.40703.01",
+      "name": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D12": {
+      "sku": "7831.N1.40703.01",
+      "name": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D13": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner|D13": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-doner-40-80|D14": {
+      "sku": "7919.27NTV.C1",
+      "marka": "Öztiryakiler",
+      "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
+    },
+    "bulut-doner|D14": {
+      "sku": "7919.27NTV.C1",
+      "marka": "Öztiryakiler",
+      "name": "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)"
+    },
+    "bulut-doner-40-80|D15": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-doner|D15": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-doner-40-80|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-doner|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-doner-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-doner|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-doner|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "marka": "Equsto",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm"
+    },
+    "bulut-doner-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-doner|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-doner-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-doner|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-doner-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-doner-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-doner|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-ev-yemek|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-ev-yemek-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek-40-80|D1": {
+      "sku": "79K4.12NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-ev-yemek|D1": {
+      "sku": "79K4.12NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-ev-yemek-40-80|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D5": {
+      "sku": "9890.X1011.E1",
+      "name": "KONVEKSİYONLU FIRIN, ELK. 10 GN 1/1",
+      "marka": "Unox"
+    },
+    "bulut-ev-yemek|D5": {
+      "sku": "9890.X1011.E1",
+      "name": "KONVEKSİYONLU FIRIN, ELK. 10 GN 1/1",
+      "marka": "Unox"
+    },
+    "bulut-ev-yemek-40-80|D6": {
+      "sku": "EQ.KSAT01.07065",
+      "name": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 700×650×600 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D6": {
+      "sku": "EQ.KSAT01.07065",
+      "name": "SET ALTI TEZGAH, ETRAFI AÇIK, TABAN RAFLI 700×650×600 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D7": {
+      "sku": "EQ.KDAVDTF02.25090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D7": {
+      "sku": "EQ.KDAVDTF02.25090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D8": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D8": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D9": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D9": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D10": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D10": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D11": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D11": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D12": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D12": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D13": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-ev-yemek|D13": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-ev-yemek-40-80|D14": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek|D14": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-ev-yemek-40-80|D16": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-ev-yemek|D16": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-ev-yemek-40-80|D17": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-ev-yemek|D17": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-ev-yemek-40-80|D18": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-ev-yemek|D18": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-kebap|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-kebap-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-kebap|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-kebap-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|D1": {
+      "sku": "EQ.KCT02.14070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|D1": {
+      "sku": "EQ.KCT02.14070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|D3": {
+      "sku": "EQ.KCT08.16070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|D4": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D4": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|D5": {
+      "sku": "EQ.KCT04.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|D6": {
+      "sku": "7864.10502.05",
+      "name": "KÖMÜRLÜ IZGARA",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D6": {
+      "sku": "7864.10502.05",
+      "name": "KÖMÜRLÜ IZGARA",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D7": {
+      "sku": "7865.N1.80703.35L",
+      "name": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D7": {
+      "sku": "7865.N1.80703.35L",
+      "name": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D8": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D8": {
+      "sku": "7856.N1.80703.11",
+      "name": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D9": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D9": {
+      "sku": "7864.N1.80703.19",
+      "name": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D10": {
+      "sku": "7919.47NTV.C1",
+      "name": "SETALTI BUZDOLABI, 4 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap|D10": {
+      "sku": "7919.47NTV.C1",
+      "name": "SETALTI BUZDOLABI, 4 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-kebap-40-80|D12": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-kebap|D12": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-kebap-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-kebap|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-kebap-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-kebap|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-kebap-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-kebap|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-manti-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-manti|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-manti-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-manti|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-manti|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-manti-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-manti-40-80|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti-40-80|D2": {
+      "sku": "EQ.KCT05.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D2": {
+      "sku": "EQ.KCT05.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI, TEK ÇEKMECELİ 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D3": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D5": {
+      "sku": "7865.N1.40903.20",
+      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti|D5": {
+      "sku": "7865.N1.40903.20",
+      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti-40-80|D7": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D7": {
+      "sku": "EQ.KCT04.13070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1300×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D8": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D8": {
+      "sku": "EQ.KDUVR01.13030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D9": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D9": {
+      "sku": "EQ.KCT04.10070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1000×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D10": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D10": {
+      "sku": "EQ.KDUVR01.10030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D11": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D11": {
+      "sku": "EQ.KCEVT02.16070",
+      "name": "ÇİFT EVYELİ TEZGAH, ETRAFI AÇIK-KÇEVT02 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D12": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-manti|D12": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-manti-40-80|D13": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti|D13": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-manti-40-80|D14": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-manti|D14": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-manti-40-80|D15": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti|D15": {
+      "sku": "7854.6GN11.00",
+      "name": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-manti-40-80|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-manti|D16": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-manti-40-80|D17": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-manti|D17": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin-40-80|B1": {
+      "sku": "EQ-SO-240x228x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|B1": {
+      "sku": "EQ-SO-240x228x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|B2": {
+      "sku": "46-X-122-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×122×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin|B2": {
+      "sku": "46-X-122-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×122×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin-40-80|B3": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin|B3": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin-40-80|C1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-pastane-firin|C1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-pastane-firin-40-80|C2": {
+      "sku": "710000",
+      "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Soğutucu - 290lt, 2-Kapılı, Üst Tablasız",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|C2": {
+      "sku": "710000",
+      "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Soğutucu - 290lt, 2-Kapılı, Üst Tablasız",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|C3": {
+      "sku": "7910.16040.00",
+      "name": "DUVAR DOLABI ARA RAFLI 160*40",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|C3": {
+      "sku": "7910.16040.00",
+      "name": "DUVAR DOLABI ARA RAFLI 160*40",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|C4": {
+      "sku": "EQ.KMERTT02.16080",
+      "name": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×800×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|C4": {
+      "sku": "EQ.KMERTT02.16080",
+      "name": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×800×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|C5": {
+      "sku": "FC-100",
+      "name": "FC-100 Un Şeker Arabası",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin|C5": {
+      "sku": "FC-100",
+      "name": "FC-100 Un Şeker Arabası",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin-40-80|C6": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-pastane-firin|C6": {
+      "sku": "9890.XBC16.EU",
+      "name": "UNOX BAKERTOP FIRIN ICIN TEPSI ARABASI",
+      "marka": "Unox"
+    },
+    "bulut-pastane-firin-40-80|C7": {
+      "sku": "BM.20S",
+      "name": "BM.20S Mikser Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pastane-firin|C7": {
+      "sku": "BM.20S",
+      "name": "BM.20S Mikser Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pastane-firin-40-80|C8": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pastane-firin|C8": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pastane-firin-40-80|C9": {
+      "sku": "CR 120",
+      "name": "CR 120 Konik Yuvarlama Makinesi",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin|C9": {
+      "sku": "CR 120",
+      "name": "CR 120 Konik Yuvarlama Makinesi",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin-40-80|C10": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|C10": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|C11": {
+      "sku": "EQ.KDUVR01.09030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|C11": {
+      "sku": "EQ.KDUVR01.09030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|D1": {
+      "sku": "9890.X0511.E1",
+      "name": "KONVEKSİYONLU FIRIN, ELK. 10",
+      "marka": "Unox"
+    },
+    "bulut-pastane-firin|D1": {
+      "sku": "9890.X0511.E1",
+      "name": "KONVEKSİYONLU FIRIN, ELK. 10",
+      "marka": "Unox"
+    },
+    "bulut-pastane-firin-40-80|D2": {
+      "sku": "EQ.KDAVDTF02.20090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|D2": {
+      "sku": "EQ.KDAVDTF02.20090",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|D3": {
+      "sku": "7865.N1.80908.10",
+      "name": "2 KATLI TAŞ FIRIN",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin|D3": {
+      "sku": "7865.N1.80908.10",
+      "name": "2 KATLI TAŞ FIRIN",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin-40-80|D4": {
+      "sku": "EQ.KCT04.12090",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1200×900×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|D4": {
+      "sku": "EQ.KCT04.12090",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1200×900×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|D5": {
+      "sku": "7919.70182.MD",
+      "name": "MAYALAMA DOLABI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin|D5": {
+      "sku": "7919.70182.MD",
+      "name": "MAYALAMA DOLABI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin-40-80|D7": {
+      "sku": "7865.N1.40903.20",
+      "name": "2'Lİ OCAK, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin|D7": {
+      "sku": "7865.N1.40903.20",
+      "name": "2'Lİ OCAK, TABAN RAFLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pastane-firin-40-80|D8": {
+      "sku": "EQ.KDAVDTF02.12580",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin|D8": {
+      "sku": "EQ.KDAVDTF02.12580",
+      "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "marka": "Equsto"
+    },
+    "bulut-pastane-firin-40-80|E1": {
+      "sku": "PIMAK.2810070",
+      "name": "Kazan ve Tencere Yıkama Tezgahı 2800×1000×70 mm",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin|E1": {
+      "sku": "PIMAK.2810070",
+      "name": "Kazan ve Tencere Yıkama Tezgahı 2800×1000×70 mm",
+      "marka": "Pimak"
+    },
+    "bulut-pastane-firin-40-80|E2": {
+      "sku": "118.DM.02",
+      "name": "ÖN YIKAMA DUŞU",
+      "marka": "Şenox"
+    },
+    "bulut-pastane-firin|E2": {
+      "sku": "118.DM.02",
+      "name": "ÖN YIKAMA DUŞU",
+      "marka": "Şenox"
+    },
+    "bulut-pastane-firin-40-80|E3": {
+      "sku": "61-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 61×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin|E3": {
+      "sku": "61-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 61×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin-40-80|Y2": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pastane-firin|Y2": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pide-40-80|A1": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide|A1": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide-40-80|A2": {
+      "sku": "79E3.27LMV.00",
+      "name": "BLOK KAPAKLI DERİNDONDURUCU 400 lt.",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide|A2": {
+      "sku": "79E3.27LMV.00",
+      "name": "BLOK KAPAKLI DERİNDONDURUCU 400 lt.",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide-40-80|B1": {
+      "sku": "EQ-SO-240x220x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pide|B1": {
+      "sku": "EQ-SO-240x220x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|B2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide|B2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide-40-80|C1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide|C1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide-40-80|C2": {
+      "sku": "EQ.KMERTT02.16070",
+      "name": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C2": {
+      "sku": "EQ.KMERTT02.16070",
+      "name": "MERMER TABLALI TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ, BİR ÇEKMECELİ 1600×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|C3": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C3": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|C4": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pide|C4": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pide-40-80|C5": {
+      "sku": "7912.N1.00014.00",
+      "name": "STERİL BIÇAK DOLABI 14 BIÇAKLIK-EKO MODEL",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide|C5": {
+      "sku": "7912.N1.00014.00",
+      "name": "STERİL BIÇAK DOLABI 14 BIÇAKLIK-EKO MODEL",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide-40-80|C6": {
+      "sku": "EQ.KNSRVB01.18070",
+      "name": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ AÇIK 1800×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C6": {
+      "sku": "EQ.KNSRVB01.18070",
+      "name": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ AÇIK 1800×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|C7": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C7": {
+      "sku": "EQ.KDUVR01.17030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|C8": {
+      "sku": "EQ.KDUVD.09030",
+      "name": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×300×600 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C8": {
+      "sku": "EQ.KDUVD.09030",
+      "name": "DUVAR DOLABI, ETRAFI KAPALI, TABAN VE ARA RAFLI 900×300×600 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|C9": {
+      "sku": "EQ.KDUVR01.09035",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide|C9": {
+      "sku": "EQ.KDUVR01.09035",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|D1": {
+      "sku": "EQ.KSRVB.14070",
+      "name": "SERVİS BANKOSU, ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ AÇIK 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|D1": {
+      "sku": "EQ.KSRVB.14070",
+      "name": "SERVİS BANKOSU, ETRAFI KAPALI, TABAN VE ARA RAFLI, ÖNÜ AÇIK 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|D2": {
+      "sku": "INO-KRC140",
+      "name": "İNOKSAN SERVIS RAFI ÇIFT SIRA",
+      "marka": "İnoksan"
+    },
+    "bulut-pide|D2": {
+      "sku": "INO-KRC140",
+      "name": "İNOKSAN SERVIS RAFI ÇIFT SIRA",
+      "marka": "İnoksan"
+    },
+    "bulut-pide-40-80|D3": {
+      "sku": "EQ.KDCT01.09070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|D3": {
+      "sku": "EQ.KDCT01.09070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|D4": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP ÜNİTESİ, 3 KAPILI, NEO",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-pide|D4": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP ÜNİTESİ, 3 KAPILI, NEO",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-pide-40-80|D5": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-pide|D5": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-pide-40-80|D6": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide|D6": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide-40-80|D7": {
+      "sku": "EQ.KDCT01.14070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|D7": {
+      "sku": "EQ.KDCT01.14070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|D8": {
+      "sku": "79E3.27NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide|D8": {
+      "sku": "79E3.27NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pide-40-80|D9": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|D9": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|D10": {
+      "sku": "9890.XEBDC.01",
+      "name": "PİDE LAHMACUN FIRINI",
+      "marka": "Unox"
+    },
+    "bulut-pide|D10": {
+      "sku": "9890.XEBDC.01",
+      "name": "PİDE LAHMACUN FIRINI",
+      "marka": "Unox"
+    },
+    "bulut-pide-40-80|D11": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP ÜNİTESİ, 3 KAPILI",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-pide|D11": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP ÜNİTESİ, 3 KAPILI",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-pide-40-80|D12": {
+      "sku": "EQ.KCT02.09060",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|D12": {
+      "sku": "EQ.KCT02.09060",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|E1": {
+      "sku": "EQ.KBULST02.16080",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1600×800×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|E1": {
+      "sku": "EQ.KBULST02.16080",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1600×800×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|E2": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-pide|E2": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-pide-40-80|E3": {
+      "sku": "EQ.KBASRAF.16050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide|E3": {
+      "sku": "EQ.KBASRAF.16050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|E4": {
+      "sku": "EQ.KNSRVB01.18070",
+      "name": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ AÇIK 1800×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide|E4": {
+      "sku": "EQ.KNSRVB01.18070",
+      "name": "NÖTR SERVİS BANKOSU, ETRAFI KAPALI, TABAN RAFLI, GN 1/1, ÖNÜ AÇIK 1800×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pide-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-pide|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-pide-40-80|E6": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide|E6": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pide-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pide|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|A1": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|A1": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|B1": {
+      "sku": "EQ-SO-280x260x240",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|B1": {
+      "sku": "EQ-SO-280x260x240",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|B2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|B2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|B3": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|B3": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|C1": {
+      "sku": "EQ-DF-280x240x160",
+      "name": "PANEL TİP DERİN DONDURUCU DEPO",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|C1": {
+      "sku": "EQ-DF-280x240x160",
+      "name": "PANEL TİP DERİN DONDURUCU DEPO",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|C2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|C2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|D1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-pizza|D1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-pizza-40-80|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pizza|D2": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pizza-40-80|D3": {
+      "sku": "APF-962/2",
+      "name": "PİZZA FIRINI, ÇİFT KATLI 9262DE",
+      "marka": "Atalay"
+    },
+    "bulut-pizza|D3": {
+      "sku": "APF-962/2",
+      "name": "PİZZA FIRINI, ÇİFT KATLI 9262DE",
+      "marka": "Atalay"
+    },
+    "bulut-pizza-40-80|D4": {
+      "sku": "EQ.KCT02.16090",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×900×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D4": {
+      "sku": "EQ.KCT02.16090",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1600×900×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|D5": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pizza|D5": {
+      "sku": "BHY.50",
+      "name": "BHY.50 Hamur Yoğurma Makinesi",
+      "marka": "Boğaziçi"
+    },
+    "bulut-pizza-40-80|D6": {
+      "sku": "APF-92/2",
+      "name": "PİZZA FIRINI DAVLUMBAZI",
+      "marka": "Atalay"
+    },
+    "bulut-pizza|D6": {
+      "sku": "APF-92/2",
+      "name": "PİZZA FIRINI DAVLUMBAZI",
+      "marka": "Atalay"
+    },
+    "bulut-pizza-40-80|D7": {
+      "sku": "79E3.37NMV.00",
+      "name": "MAKE-UP PİZZA HAZIRLIK BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pizza|D7": {
+      "sku": "79E3.37NMV.00",
+      "name": "MAKE-UP PİZZA HAZIRLIK BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-pizza-40-80|D8": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-pizza|D8": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-pizza-40-80|D9": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D9": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|D10": {
+      "sku": "EQ.KDUVR01.09030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D10": {
+      "sku": "EQ.KDUVR01.09030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|D11": {
+      "sku": "EQ.KCT04.12070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D11": {
+      "sku": "EQ.KCT04.12070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|D12": {
+      "sku": "EQ.KDUVR01.12030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D12": {
+      "sku": "EQ.KDUVR01.12030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|D13": {
+      "sku": "EQ.KCT04.09060",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|D13": {
+      "sku": "EQ.KCT04.09060",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN RAFLI 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-pizza|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-pizza-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-pizza-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza-40-80|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-pizza|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-salata-sandvic|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-salata-sandvic-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-salata-sandvic|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-salata-sandvic-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-salata-sandvic|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-salata-sandvic-40-80|D2": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|D2": {
+      "sku": "EQ.KTEVDT01.09070",
+      "name": "TEK EVYELİ DOLAPLI TEZGAH ETRAFI KAPALI, TABAN RAFSIZ - KTEVT01 900×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|D3": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-salata-sandvic|D3": {
+      "sku": "79E3.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-salata-sandvic-40-80|D4": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-salata-sandvic|D4": {
+      "sku": "SBT-3N70",
+      "name": "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ",
+      "marka": "PORTABIANCO"
+    },
+    "bulut-salata-sandvic-40-80|D5": {
+      "sku": "EQ.KCT08.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|D5": {
+      "sku": "EQ.KCT08.14070",
+      "name": "ÇALIŞMA TEZGAHI, ETRAFI AÇIK, TABAN VE ARA RAFLI 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|D6": {
+      "sku": "EQ.KCT02.12070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|D6": {
+      "sku": "EQ.KCT02.12070",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|D7": {
+      "sku": "EQ.KDCT01.12070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|D7": {
+      "sku": "EQ.KDCT01.12070",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 1200×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|D8": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-salata-sandvic|D8": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-salata-sandvic-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-salata-sandvic|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-salata-sandvic-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-salata-sandvic-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic-40-80|Y1": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290",
+      "marka": "Portashelf"
+    },
+    "bulut-salata-sandvic|Y1": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-tavuk|A1": {
+      "sku": "118.DBE.01",
+      "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+      "marka": "Şenox"
+    },
+    "bulut-tavuk-40-80|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|A2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|B1": {
+      "sku": "EQ-SO-300x240x200",
+      "name": "PANEL TİP SOĞUK ODA",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|B2": {
+      "sku": "46-X-137-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-tavuk|C1": {
+      "sku": "7919.DF2020.00",
+      "marka": "Öztiryakiler",
+      "name": "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm"
+    },
+    "bulut-tavuk-40-80|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|C2": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D1": {
+      "sku": "79K4.06NMV.00",
+      "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D2": {
+      "sku": "EQ.KTEVT02.16060",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|D2": {
+      "sku": "EQ.KTEVT02.16060",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1600×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|D3": {
+      "sku": "79E4.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D3": {
+      "sku": "79E4.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D4": {
+      "sku": "EQ.KDCT01.09060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|D4": {
+      "sku": "EQ.KDCT01.09060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|D5": {
+      "sku": "EQ.KCT02.12060",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|D5": {
+      "sku": "EQ.KCT02.12060",
+      "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|D6": {
+      "sku": "7919.10LTS.00",
+      "name": "SETALTI DERİN DONDURUCU, LIEBHERR",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D6": {
+      "sku": "7919.10LTS.00",
+      "name": "SETALTI DERİN DONDURUCU, LIEBHERR",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D7": {
+      "sku": "7919.27NTV.C1",
+      "name": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D7": {
+      "sku": "7919.27NTV.C1",
+      "name": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D8": {
+      "sku": "7865.N1.40903.20",
+      "name": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D8": {
+      "sku": "7865.N1.40903.20",
+      "name": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D9": {
+      "sku": "7856.GN120.08",
+      "name": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D9": {
+      "sku": "7856.GN120.08",
+      "name": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D10": {
+      "sku": "7864.N1.80703.72",
+      "name": "IZGARA, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D10": {
+      "sku": "7864.N1.80703.72",
+      "name": "IZGARA, GAZLI, SETÜSTÜ",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D11": {
+      "sku": "79E4.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D11": {
+      "sku": "79E4.37NMV.00",
+      "name": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D12": {
+      "sku": "8845.0CRG2.00",
+      "name": "PILIC CEVIRME MAKINASI 2 SIS 8-10  PILIC KAPASITE GAZLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk|D12": {
+      "sku": "8845.0CRG2.00",
+      "name": "PILIC CEVIRME MAKINASI 2 SIS 8-10  PILIC KAPASITE GAZLI",
+      "marka": "Öztiryakiler"
+    },
+    "bulut-tavuk-40-80|D13": {
+      "sku": "EQ.KDCT01.09060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|D13": {
+      "sku": "EQ.KDCT01.09060",
+      "name": "DOLAPLI ÇALIŞMA TEZGAHI, ETRAFI KAPALI,TABAN VE ARA RAFLI-KDÇT01 900×600×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|D14": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-tavuk|D14": {
+      "sku": "118.YSO.100",
+      "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+      "marka": "Şenox"
+    },
+    "bulut-tavuk-40-80|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|E1": {
+      "sku": "EQ.KBULST02.14070",
+      "name": "BULAŞIK SIYIRMA TEZGAHI, ETRAFI AÇIK, TABAN RAFSIZ, SIYIRMA HUNİLİ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|E2": {
+      "sku": "EQ.KBASRAF.14050",
+      "name": "BASKET RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|E3": {
+      "sku": "MB126X",
+      "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|E4": {
+      "sku": "EQ.KTEVT02.14070",
+      "name": "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-tavuk|E5": {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "marka": "Inoksan"
+    },
+    "bulut-tavuk-40-80|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk|E6": {
+      "sku": "EQ.KDUVR01.14030",
+      "name": "DUVAR RAFI",
+      "marka": "Equsto"
+    },
+    "bulut-tavuk-40-80|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|E7": {
+      "sku": "46-X-152-X-183",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×152×183 cm",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk-40-80|Y1": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290",
+      "marka": "Portashelf"
+    },
+    "bulut-tavuk|Y1": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290",
+      "marka": "Portashelf"
+    },
+    "bulut-burger-40-80|D14": {
+      "sku": "EQ.KDAVOTF02.300100",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
+    },
+    "bulut-kebap-40-80|D11": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-kebap|D11": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-balik-40-80|D12": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-balik|D12": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-manti-40-80|D6": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-manti|D6": {
+      "sku": "EQ.KDAVDTF02.30090",
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm"
+    },
+    "bulut-pastane-firin-40-80|D6": {
+      "sku": "EQ.KDAVDT01.250140",
+      "marka": "Equsto",
+      "name": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2500×1400×600 mm"
+    },
+    "bulut-pastane-firin|D6": {
+      "sku": "EQ.KDAVDT01.250140",
+      "marka": "Equsto",
+      "name": "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2500×1400×600 mm"
     }
   }
 }

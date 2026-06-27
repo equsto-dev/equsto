@@ -1,25 +1,17 @@
 {
-  "kategoriId": "bulut-burger",
+  "kategoriId": "bulut-pizza",
   "bantId": "40-80",
-  "label": "HAMBURGERCİ",
+  "label": "PİZZACI",
   "referansM2": 60,
-  "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-  "yukleme": "2026-06-27T18:11:59.109489Z",
-  "kalemSayisi": 29,
-  "toplamAdet": 36,
+  "kaynakDosya": "BULUT MUTFAK/pizzaci.pdf",
+  "yukleme": "2026-06-27T18:11:59.550059Z",
+  "kalemSayisi": 27,
+  "toplamAdet": 31,
   "kalemler": [
     {
       "bolum": "KURU_DEPO",
       "bolumAd": "A- KURU DEPO",
       "poz": "A1",
-      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
-      "olcu": "-",
-      "adet": 1
-    },
-    {
-      "bolum": "KURU_DEPO",
-      "bolumAd": "A- KURU DEPO",
-      "poz": "A2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
       "adet": 2
@@ -29,7 +21,7 @@
       "bolumAd": "B- SOĞUK ODA",
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
-      "olcu": "200*300*240",
+      "olcu": "260*280*240",
       "adet": 1
     },
     {
@@ -37,143 +29,135 @@
       "bolumAd": "B- SOĞUK ODA",
       "poz": "B2",
       "ad": "İSTİF RAFI",
-      "olcu": "137*46*160",
-      "adet": 2
-    },
-    {
-      "bolum": "DEEPFREEZE_DEPO",
-      "bolumAd": "C- DEEPFREEZE DEPO",
-      "poz": "C1",
-      "ad": "PANEL TİP SOĞUK ODA",
-      "olcu": "200*200*240",
-      "adet": 1
-    },
-    {
-      "bolum": "DEEPFREEZE_DEPO",
-      "bolumAd": "C- DEEPFREEZE DEPO",
-      "poz": "C2",
-      "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
       "adet": 2
     },
     {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B3",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- DERİN DONDURUCU",
+      "poz": "C1",
+      "ad": "PANEL TİP DERİN DONDURUCU DEPO",
+      "olcu": "160*280*240",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- DERİN DONDURUCU",
+      "poz": "C2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D1",
-      "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
-      "olcu": "140*70*85",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "-",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D2",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
-      "olcu": "70*85*205",
+      "olcu": "72*70*205",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D3",
-      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
-      "olcu": "160*70*85",
-      "adet": 2
+      "ad": "PİZZA FIRINI, ÇİFT KATLI 9262DE",
+      "olcu": "-",
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D4",
-      "ad": "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ",
-      "olcu": "140*70*85",
+      "ad": "FIRIN TEZGAHI",
+      "olcu": "160*100*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D5",
-      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
-      "olcu": "140*70*85",
+      "ad": "HAMUR YOĞURMA MAKİNASIİ 35 kg.",
+      "olcu": "-",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D6",
-      "ad": "SET ALTI DEEP FREEZE",
-      "olcu": "60*60*5",
-      "adet": 2
+      "ad": "PİZZA FIRINI DAVLUMBAZI",
+      "olcu": "122*92*20",
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D7",
-      "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
-      "olcu": "190*60*85",
+      "ad": "MAKE-UP PİZZA HAZIRLIK BUZDOLABI, 3 KAPILI",
+      "olcu": "188*70*85/135",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
       "poz": "D8",
-      "ad": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI",
-      "olcu": "170*60*85",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D9",
-      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
-      "olcu": "80*70*30",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D10",
-      "ad": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
-      "olcu": "80*70*30",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D11",
-      "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
-      "olcu": "40*70*30",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D12",
-      "ad": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
-      "olcu": "80*70*85",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D13",
-      "ad": "SETALTI BUZDOLABI, 4 KAPILI",
-      "olcu": "140*70*60",
-      "adet": 2
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D14",
-      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
-      "olcu": "320*97*50",
-      "adet": 1
-    },
-    {
-      "bolum": "PISIRME",
-      "bolumAd": "D- PİŞİRME",
-      "poz": "D15",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
+      "poz": "D9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
+      "poz": "D10",
+      "ad": "DUVAR RAFI",
+      "olcu": "70*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
+      "poz": "D11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
+      "poz": "D12",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİZZA HAZIRLIK",
+      "poz": "D13",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "80*40*85",
       "adet": 1
     },
     {

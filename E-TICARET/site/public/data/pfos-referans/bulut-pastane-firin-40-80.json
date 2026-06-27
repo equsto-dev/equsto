@@ -1,0 +1,228 @@
+{
+  "kategoriId": "bulut-pastane-firin",
+  "bantId": "40-80",
+  "label": "PASTANE & FIRIN",
+  "referansM2": 60,
+  "kaynakDosya": "BULUT MUTFAK/pastane-firin.pdf",
+  "yukleme": "2026-06-27T18:11:59.414307Z",
+  "kalemSayisi": 27,
+  "toplamAdet": 33,
+  "kalemler": [
+    {
+      "bolum": "KURU_DEPO",
+      "bolumAd": "A- UN DEPOSU",
+      "poz": "A1",
+      "ad": "PLASTİK PALET",
+      "olcu": "120*80*16",
+      "adet": 2
+    },
+    {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "228*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "SOGUK_ODA",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B3",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C1",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C2",
+      "ad": "TEZGAH TİPİ SOĞUK HAMUR DOLABI, 3 KAPILI",
+      "olcu": "187*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C3",
+      "ad": "DUVAR DOLABI",
+      "olcu": "187*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C4",
+      "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, TEK ÇEKMECELİ",
+      "olcu": "160*90*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C5",
+      "ad": "UN ŞEKER ARABASI 103 lt.",
+      "olcu": "-",
+      "adet": 3
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C6",
+      "ad": "FIRIN ARABASI 40*60 15 TEPSİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C7",
+      "ad": "PLANET MİKSER 60 lt.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C8",
+      "ad": "HAMUR YOĞURMA MAKİNASI 50 kg.",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C9",
+      "ad": "HAMUR YUVARLAMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C10",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "DEEPFREEZE_DEPO",
+      "bolumAd": "C- HAZIRLIK",
+      "poz": "C11",
+      "ad": "DUVAR RAFI",
+      "olcu": "70*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D1",
+      "ad": "KONVEKSİYONLU FIRIN, ELK. 10 -",
+      "olcu": "40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D2",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "190*117*50",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D3",
+      "ad": "2 KATLI TAŞ FIRIN",
+      "olcu": "120*120*60",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D4",
+      "ad": "FIRIN TEZGAHI, TABAN RAFLI",
+      "olcu": "120*120*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D5",
+      "ad": "MAYALAMA DOLABI",
+      "olcu": "90*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D6",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "240*140*50",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D7",
+      "ad": "2'Lİ OCAK, TABAN RAFLI",
+      "olcu": "100*60*50",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D8",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "130*80*50",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- KAZAN YIKAMA",
+      "poz": "E1",
+      "ad": "KAZAN YIKAMA EVYESİ",
+      "olcu": "100*80*57/91",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- KAZAN YIKAMA",
+      "poz": "E2",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK_YIKAMA",
+      "bolumAd": "E- KAZAN YIKAMA",
+      "poz": "E3",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*61*160",
+      "adet": 2
+    },
+    {
+      "bolum": "YER_IZGARASI",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ]
+}

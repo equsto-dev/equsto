@@ -39,6 +39,66 @@ KONFIG = [
         "manifest_label": "Ev Yemekleri",
         "konsept_title": "EV YEMEKLERİ",
     },
+    {
+        "pdf": "donerci.pdf",
+        "kategori_id": "bulut-doner",
+        "manifest_label": "Dönerci",
+        "konsept_title": "DÖNERCİ",
+    },
+    {
+        "pdf": "kebap-turk-mutfagi.pdf",
+        "kategori_id": "bulut-kebap",
+        "manifest_label": "Kebap & Türk Mutfağı",
+        "konsept_title": "KEBAP & TÜRK MUTFAĞI",
+    },
+    {
+        "pdf": "mantici.pdf",
+        "kategori_id": "bulut-manti",
+        "manifest_label": "Mantıcı",
+        "konsept_title": "MANTICI",
+    },
+    {
+        "pdf": "pastane-firin.pdf",
+        "kategori_id": "bulut-pastane-firin",
+        "manifest_label": "Pastane & Fırın",
+        "konsept_title": "PASTANE & FIRIN",
+    },
+    {
+        "pdf": "pide-lahmacun.pdf",
+        "kategori_id": "bulut-pide",
+        "manifest_label": "Pide & Lahmacun",
+        "konsept_title": "PİDE & LAHMACUN",
+    },
+    {
+        "pdf": "pizzaci.pdf",
+        "kategori_id": "bulut-pizza",
+        "manifest_label": "Pizzacı",
+        "konsept_title": "PİZZACI",
+    },
+    {
+        "pdf": "salata-sandvic-kahvalti.pdf",
+        "kategori_id": "bulut-salata-sandvic",
+        "manifest_label": "Salata / Sandviç / Kahvaltı",
+        "konsept_title": "SALATA & SANDVİÇ & KAHVALTI",
+    },
+    {
+        "pdf": "tavukcu.pdf",
+        "kategori_id": "bulut-tavuk",
+        "manifest_label": "Tavukçu",
+        "konsept_title": "TAVUKÇU",
+    },
+    {
+        "pdf": "balikci.pdf",
+        "kategori_id": "bulut-balik",
+        "manifest_label": "Balıkçı",
+        "konsept_title": "BALIKÇI",
+    },
+    {
+        "pdf": "corbaci.pdf",
+        "kategori_id": "bulut-corbaci",
+        "manifest_label": "Çorbacı",
+        "konsept_title": "ÇORBACI",
+    },
 ]
 
 SECTION_RE = re.compile(r"^([A-Z])-\s*(.+)$")

@@ -1,12 +1,12 @@
 {
-  "kategoriId": "bulut-burger",
+  "kategoriId": "bulut-doner",
   "bantId": "40-80",
-  "label": "HAMBURGERCİ",
+  "label": "DÖNERCİ",
   "referansM2": 60,
-  "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-  "yukleme": "2026-06-27T18:11:59.109489Z",
-  "kalemSayisi": 29,
-  "toplamAdet": 36,
+  "kaynakDosya": "BULUT MUTFAK/donerci.pdf",
+  "yukleme": "2026-06-27T18:11:59.235190Z",
+  "kalemSayisi": 30,
+  "toplamAdet": 38,
   "kalemler": [
     {
       "bolum": "KURU_DEPO",
@@ -124,14 +124,22 @@
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D9",
-      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
-      "olcu": "80*70*30",
-      "adet": 1
+      "ad": "DÖNER OCAĞI, 4 RADYANLI, GAZLI",
+      "olcu": "58*72*113",
+      "adet": 2
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D10",
+      "ad": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "PISIRME",
+      "bolumAd": "D- PİŞİRME",
+      "poz": "D11",
       "ad": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
       "olcu": "80*70*30",
       "adet": 1
@@ -139,7 +147,7 @@
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D11",
+      "poz": "D12",
       "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
       "olcu": "40*70*30",
       "adet": 1
@@ -147,15 +155,15 @@
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D12",
+      "poz": "D13",
       "ad": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
-      "olcu": "80*70*85",
+      "olcu": "40*70*85",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D13",
+      "poz": "D14",
       "ad": "SETALTI BUZDOLABI, 4 KAPILI",
       "olcu": "140*70*60",
       "adet": 2
@@ -163,15 +171,15 @@
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D14",
-      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
-      "olcu": "320*97*50",
+      "poz": "D15",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "240*97*50",
       "adet": 1
     },
     {
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
-      "poz": "D15",
+      "poz": "D16",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
       "adet": 1
