@@ -1173,9 +1173,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     >
       {activePane === "balanced" ? (
         <div className={ws.balancedPane} data-pfos-pane="balanced">
-          <h2 className={ws.wizardIntroTitle}>
-            {t("Konsept Sihirbazı")}
-          </h2>
+          <div className={ws.balancedPaneHeadLeft}>
+            <h2 className={ws.wizardIntroTitle}>
+              {t("Konsept Sihirbazı")}
+            </h2>
+            {renderWizardIntroExtra()}
+          </div>
           <h2 className={`${ws.uploadTitle} ${ws.uploadTitleHead}`}>
             {t("Ekipman listenizi yükleyin")}
           </h2>
@@ -1190,7 +1193,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               ref={leftColRef}
             >
               <div className={styles.paneBody} onPointerDown={engageWizardPane}>
-                {renderWizardCenter({ hideIntro: true, introExtraOnly: true })}
+                {renderWizardCenter({ hideIntro: true })}
               </div>
             </div>
           </div>
