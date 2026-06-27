@@ -162,6 +162,19 @@ function urunTipiFromSatir(s: PfosEkipmanSatir): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/ı/g, "i");
+  const bolumKod = String(s.bolum ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+  if (
+    bolumKod === "deepfreeze_depo" ||
+    /deepfreeze|deep\s*freeze/.test(bolum)
+  ) {
+    if (/panel tip|soguk oda|soğuk oda/.test(adNorm) && !/istif raf/.test(adNorm)) {
+      return "panel-derin-dondurucu-oda";
+    }
+  }
   if (
     /panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
       bolum,

@@ -101,8 +101,8 @@
       "bolumAd": "D- PİŞİRME",
       "poz": "D6",
       "ad": "SET ALTI DEEP FREEZE",
-      "olcu": "60*60*5",
-      "adet": 2
+      "olcu": "60*60*85",
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -156,7 +156,7 @@
       "bolum": "PISIRME",
       "bolumAd": "D- PİŞİRME",
       "poz": "D13",
-      "ad": "SETALTI BUZDOLABI, 4 KAPILI",
+      "ad": "SETALTI BUZDOLABI, 2 KAPILI",
       "olcu": "140*70*60",
       "adet": 2
     },
