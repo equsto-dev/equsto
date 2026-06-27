@@ -1442,20 +1442,18 @@ export function oztiWebImageRel(kod) {
 /** ax-images 404 / cafemarkt UNOX stub — NTV cihazaltı dolap aile fotoğrafı. */
 export const OZTI_AX_PROXY = {
   "2919.0B390.AD01.00": "7506.0B390.00",
-  "7919.47NTV.C2": "7919.47NTV.24",
-  "7919.46NTV.C2": "7919.47NTV.24",
-  "7919.37NTV.C2": "7919.37NTV.24",
+  "7919.47NTV.C2": "7919.37NTV.C2",
+  "7919.46NTV.C2": "7919.37NTV.C2",
+  "7919.47NTV.C1": "7919.37NTV.C1",
+  "7919.46NTV.C1": "7919.37NTV.C1",
   "7919.36NTV.C2": "7919.36NTV.24",
-  "7919.27NTV.C2": "7919.26NTV.24",
+  "7919.27NTV.C2": "7919.27NTV.24",
   "7919.26NTV.C2": "7919.26NTV.24",
-  "7919.47NTV.C1": "7919.47NTV.24",
-  "7919.46NTV.C1": "7919.47NTV.24",
-  "7919.37NTV.C1": "7919.37NTV.24",
   "7919.36NTV.C1": "7919.36NTV.24",
-  "7919.27NTV.C1": "7919.26NTV.24",
+  "7919.27NTV.C1": "7919.27NTV.24",
   "7919.26NTV.C1": "7919.26NTV.24",
-  "7919.47NTV.T1": "7919.47NTV.24",
-  "7919.37NTV.T1": "7919.37NTV.24",
+  "7919.47NTV.T1": "7919.27NTV.T1",
+  "7919.37NTV.T1": "7919.27NTV.T1",
   "9805.IM240D.NHC": "9805.IM240X.NHC",
   "9805.00IMD.00": "9805.IM45N.EHC",
   /** OTKFGE 12090 — ax-images yok; G/E kardeş SKU fotoğrafı */
@@ -1470,12 +1468,13 @@ export function oztiAxProxyKod(kod) {
   const m = k.match(/^7919\.(\d{2})NTV\.(C1|C2|T1)$/);
   if (!m) return k;
   if (m[2] === "T1" && m[1] === "27") return k;
-  if (m[2] === "T1" && m[1] === "37") return "7919.37NTV.24";
-  if (m[2] === "T1" && (m[1] === "47" || m[1] === "46")) return "7919.47NTV.24";
+  if (m[2] === "T1" && (m[1] === "37" || m[1] === "47" || m[1] === "46"))
+    return "7919.27NTV.T1";
   const series = m[1];
-  const alt24 = `7919.${series}NTV.24`;
-  if (parseInt(series, 10) >= 46) return "7919.47NTV.24";
-  return alt24;
+  if (parseInt(series, 10) >= 46)
+    return m[2] === "C1" ? "7919.37NTV.C1" : "7919.37NTV.C2";
+  if (m[2] === "C1" || m[2] === "C2") return k;
+  return `7919.${series}NTV.24`;
 }
 
 /** Yerel dosya → ax (8477 / NTV proxy) → web sentetik yol. */

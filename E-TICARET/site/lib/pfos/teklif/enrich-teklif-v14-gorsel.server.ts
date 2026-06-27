@@ -6,6 +6,7 @@ import {
 } from "../core/katalog-gorsel";
 import {
   normalizePfosGorselUrl,
+  oztiAxImageUrlFromSku,
   oztiWebImageRelFromSku,
 } from "../core/katalog-gorsel-url";
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
@@ -32,10 +33,16 @@ export async function enrichTeklifV14ModelGorsel(
 
       if (stokNo) {
         const resolved = await resolveGorselUrlBySku(stokNo, s.fotoUrl, tanim);
-        const ozti = normalizePfosGorselUrl(oztiWebImageRelFromSku(stokNo));
-        const fotoUrl = resolved ?? ozti;
-        if (fotoUrl && pfosGorselFileExists(fotoUrl)) {
-          return { ...s, fotoUrl };
+        const oztiLocal = normalizePfosGorselUrl(oztiWebImageRelFromSku(stokNo));
+        const oztiAx = normalizePfosGorselUrl(oztiAxImageUrlFromSku(stokNo));
+        if (resolved && pfosGorselFileExists(resolved)) {
+          return { ...s, fotoUrl: resolved };
+        }
+        if (oztiLocal && pfosGorselFileExists(oztiLocal)) {
+          return { ...s, fotoUrl: oztiLocal };
+        }
+        if (oztiAx) {
+          return { ...s, fotoUrl: oztiAx };
         }
       }
 
