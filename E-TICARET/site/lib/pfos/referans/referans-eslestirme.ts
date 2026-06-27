@@ -306,6 +306,12 @@ export function referansKatalogUyumsuz(
   if (hasRef21 && hasKat11 && !hasKat21) return true;
   if (hasRef11 && hasKat21 && !hasKat11) return true;
 
+  if (/mayalama\s*dolab/.test(s)) {
+    const skuNorm = norm(katalogSku ?? "");
+    if (/70182\.(00|01|03)\b/.test(skuNorm)) return true;
+    if (/banket\s*arab|isitmali\s*banket/.test(k) && !/mayalama/.test(k)) return true;
+  }
+
   // 10. Tost makinesi vs döner sarma/kesme/döner
   const isKatTost = k.includes("tost") || /^aktm|^akek-0|^atm-|^vbl-/i.test(katalogSku ?? "");
   if (s.includes("tost") && (k.includes("doner") || k.includes("döner") || k.includes("sarma") || !isKatTost)) {
@@ -865,6 +871,7 @@ async function matchByVerifiedLink(
       ad: input.isim,
       marka: link.marka?.trim() || bySku.marka,
       gorselUrl: aciklamaCeliski ? null : bySku.gorselUrl,
+      teklifAciklama: aciklamaCeliski ? null : bySku.teklifAciklama,
     };
   }
   if (link.fiyat_try && link.fiyat_try > 0) {

@@ -65,6 +65,21 @@ function cleanLines(lines: string[]): string[] {
   return dedupeLines(lines.map((l) => String(l || "").trim()).filter(Boolean));
 }
 
+function isMayalamaProduct(row: CatalogAciklamaInput): boolean {
+  const blob = `${row.aciklama ?? ""} ${row.specs ?? ""}`.toLocaleLowerCase("tr-TR");
+  return /mayalama\s*dolab/.test(blob);
+}
+
+/** Öztiryakiler 70182.MD — web metninde yanlışlıkla "banket arabası" geçer */
+function sanitizeMayalamaBullets(bullets: string[]): string[] {
+  return bullets.map((b) =>
+    b
+      .replace(/ısıtmalı banket arabası/gi, "mayalama dolabı")
+      .replace(/banket arabasının/gi, "mayalama dolabının")
+      .replace(/banket arabası/gi, "mayalama dolabı"),
+  );
+}
+
 export type CatalogAciklamaInput = {
   description?: string | null;
   ozti_web_description?: string | null;
@@ -115,7 +130,10 @@ export function buildCatalogTeklifAciklama(
   ).trim();
 
   if (shop.length >= 40) {
-    const bullets = splitShopDescriptionBullets(shop);
+    let bullets = splitShopDescriptionBullets(shop);
+    if (isMayalamaProduct(row)) {
+      bullets = sanitizeMayalamaBullets(bullets);
+    }
     if (bullets.length > 0) {
       return formatBullets(bullets, "*");
     }

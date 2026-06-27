@@ -197,6 +197,10 @@ export function referansKatalogCeliski(
     return true;
   }
 
+  if (/mayalama\s*dolab/.test(refN) && /banket\s*arab|isitmali\s*banket/.test(k) && !/mayalama/.test(k)) {
+    return true;
+  }
+
   const refKapi = kapiSayisiFromBlob(`${isim} ${notlar ?? ""}`);
   const katKapi = kapiSayisiFromBlob(katalogAd);
   if (refKapi != null && katKapi != null && refKapi !== katKapi) return true;
@@ -263,6 +267,14 @@ export function referansTeklifAciklamaCeliski(
     /470\s*ntv|47ntv/.test(`${refBlob} ${acBlob}`) &&
     /270\s*ntv|ctag\s*270/.test(acBlob) &&
     /4\s*kap|dort\s*kap/.test(refBlob)
+  ) {
+    return true;
+  }
+
+  if (
+    /mayalama\s*dolab/.test(refBlob) &&
+    /banket\s*arab|isitmali\s*banket/.test(acBlob) &&
+    !/mayalama/.test(acBlob)
   ) {
     return true;
   }
