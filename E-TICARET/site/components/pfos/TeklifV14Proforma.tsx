@@ -784,11 +784,10 @@ const td: CSSProperties = {
 const tdStok: CSSProperties = {
   ...td,
   textAlign: "left",
-  overflow: "hidden",
-  overflowWrap: "anywhere",
-  wordBreak: "break-all",
-  paddingLeft: 2,
-  maxWidth: 0,
+  whiteSpace: "nowrap",
+  fontSize: 10,
+  paddingLeft: 4,
+  paddingRight: 4,
 };
 
 const tdTanim: CSSProperties = {

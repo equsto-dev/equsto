@@ -22,7 +22,7 @@ const kalemler = [
   { bolum: "KURU_DEPO", bolumAd: "A- KURU DEPO", poz: "A2", ad: "İSTİF RAFI", olcu: "152*46*160", adet: 2, kategori: "tezgah" },
   { bolum: "SOGUK_ODA", bolumAd: "B- SOĞUK ODA", poz: "B1", ad: "PANEL TİP SOĞUK ODA", olcu: "200*300*240", adet: 1, kategori: "diger" },
   { bolum: "SOGUK_ODA", bolumAd: "B- SOĞUK ODA", poz: "B2", ad: "İSTİF RAFI", olcu: "137*46*160", adet: 2, kategori: "tezgah" },
-  { bolum: "DEEPFREEZE_DEPO", bolumAd: "C- DEEPFREEZE DEPO", poz: "C1", ad: "PANEL TİP SOĞUK ODA", olcu: "200*200*240", adet: 1, kategori: "diger" },
+  { bolum: "DEEPFREEZE_DEPO", bolumAd: "C- DEEPFREEZE DEPO", poz: "C1", ad: "PANEL TİP DERİN DONDURUCU ODA", olcu: "200*200*240", adet: 1, kategori: "diger" },
   { bolum: "DEEPFREEZE_DEPO", bolumAd: "C- DEEPFREEZE DEPO", poz: "C2", ad: "İSTİF RAFI", olcu: "152*46*160", adet: 2, kategori: "tezgah" },
   { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D1", ad: "TEK EVİYELİ ÇALIŞMA TEZGAHI", olcu: "140*70*85", adet: 1, kategori: "tezgah" },
   { bolum: "PISIRME", bolumAd: "D- PİŞİRME", poz: "D2", ad: "DEPO TİPİ BUZDOLABI, TEK KAPILI", olcu: "70*85*205", adet: 1, kategori: "diger" },
