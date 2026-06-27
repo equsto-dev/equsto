@@ -1037,6 +1037,28 @@
   min-height: 0;
 }
 
+/* Balanced ana sayfa — kompakt liste dropzone, alt hiza */
+:global([data-pfos-pane="balanced"]) .listeDropZoneRail {
+  margin-top: 0;
+  padding: 1.35rem 0.85rem;
+  min-height: 10.5rem;
+}
+
+:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropIcon {
+  font-size: 1.45rem;
+  margin-bottom: 0.35rem;
+}
+
+:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropTitle {
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropHint {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .layoutFocusWizard,
 .layoutFocusListe {
   grid-template-columns: minmax(0, 1fr);

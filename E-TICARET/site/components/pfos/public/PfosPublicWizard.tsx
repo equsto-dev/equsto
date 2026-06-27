@@ -1016,7 +1016,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }
 
   function renderListePane() {
-    const listeWide = activePane === "balanced" || activePane === "liste";
+    const listeWide = activePane === "liste";
+    const listeBalanced = activePane === "balanced";
     return (
       <aside
         className={[
@@ -1024,6 +1025,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           listePaneCollapsed ? styles.paneCollapsed : "",
           activePane === "liste" ? styles.paneExpanded : "",
           listeWide ? ws.listePaneWide : "",
+          listeBalanced ? ws.listePaneBalanced : "",
         ]
           .filter(Boolean)
           .join(" ")}
