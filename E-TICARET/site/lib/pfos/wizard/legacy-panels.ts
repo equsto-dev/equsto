@@ -27,8 +27,8 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
   {
     id: "s1",
     num: "01",
-    title: "Sen kimsin?",
-    sub: "Rolünüze göre soruları ve teknik derinliği ayarlarız.",
+    title: "Mesleğini söylemek ister misin?",
+    sub: "İsterseniz rolünüzü seçin; seçmezseniz de devam edebilirsiniz.",
     questionIds: ["q_meslek"],
     optional: true,
   },
@@ -256,8 +256,8 @@ export function wizardHint(
   if (activeId === "s1") {
     return {
       pct,
-      title: "Seni tanıyalım",
-      sub: "Rolünü seç veya atla — bir dakikadan kısa sürer.",
+      title: "Başlayalım",
+      sub: "İlk kutudan rolünüzü seçin — kısa bir soru.",
     };
   }
   if (activeId === "s2") {

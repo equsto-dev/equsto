@@ -38,16 +38,157 @@
 }
 
 .main:has([data-pfos-workspace]) {
-  max-width: min(100vw - 3rem, 1960px);
-  padding: 1.75rem 1.5rem 4rem;
-}
-
-.main:has([data-pfos-workspace]) #secs {
-  max-width: 52rem;
+  max-width: min(100vw - 2rem, 100%);
+  padding: 1.75rem 2rem 4rem;
 }
 
 .main:has([data-pfos-workspace]) .pfProgress {
   display: none;
+}
+
+/* Wizard — liste uploadCard ile aynı yüzey */
+.main:has([data-pfos-workspace]) .sec {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 30, 80, 0.04);
+  backdrop-filter: none;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+.main:has([data-pfos-workspace]) .secActive {
+  border-color: #4ab8dc;
+  box-shadow:
+    0 2px 12px rgba(0, 30, 80, 0.05),
+    0 0 0 1px rgba(74, 184, 220, 0.25);
+}
+
+.main:has([data-pfos-workspace]) .secDone {
+  border-color: #e2e8f0;
+}
+
+.main:has([data-pfos-workspace]) .secKeepOpen .secBd {
+  display: block;
+  padding-top: 0.15rem;
+}
+
+.main:has([data-pfos-workspace]) .secHd {
+  padding: 1.25rem 1.5rem 0.85rem;
+}
+
+.main:has([data-pfos-workspace]) .secActive .secHd {
+  padding-bottom: 0.5rem;
+}
+
+.main:has([data-pfos-workspace]) .secBd {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.main:has([data-pfos-workspace]) .secTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #001e50;
+}
+
+.main:has([data-pfos-workspace]) .secSub {
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+.main:has([data-pfos-workspace]) .secAns {
+  font-size: 0.88rem;
+  margin-top: 0.4rem;
+}
+
+.main:has([data-pfos-workspace]) .secNum {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.78rem;
+}
+
+.main:has([data-pfos-workspace]) .qInlineTitle {
+  font-size: 0.95rem;
+  margin-bottom: 0.65rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Geniş seçim kutucukları */
+.main:has([data-pfos-workspace]) .options {
+  gap: 0.85rem;
+}
+
+.main:has([data-pfos-workspace]) .optionBtn {
+  padding: 1.15rem 1.45rem;
+  min-height: 3.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 30, 80, 0.03);
+}
+
+.main:has([data-pfos-workspace]) .optionBtn:hover {
+  border-color: #4ab8dc;
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(0, 30, 80, 0.06);
+}
+
+.main:has([data-pfos-workspace]) .optionBtnSelected {
+  border-color: #4ab8dc;
+  background: linear-gradient(135deg, #f0f9ff 0%, #fafcff 100%);
+  box-shadow:
+    inset 0 0 0 1px #4ab8dc,
+    0 4px 14px rgba(74, 184, 220, 0.12);
+  color: #001e50;
+}
+
+.main:has([data-pfos-workspace]) .multiLabel {
+  padding: 1rem 1.25rem;
+  min-height: 3rem;
+  font-size: 0.98rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.main:has([data-pfos-workspace]) .textInput {
+  padding: 1rem 1.15rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border-color: #e2e8f0;
+}
+
+.main:has([data-pfos-workspace]) .alanInput {
+  font-size: 2.35rem;
+}
+
+.main:has([data-pfos-workspace]) .presetBtn {
+  padding: 0.75rem 1.1rem;
+  font-size: 0.92rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 720px) {
+  .main:has([data-pfos-workspace]) .options.twoCol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .main:has([data-pfos-workspace]) .options.konseptGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .main:has([data-pfos-workspace]) .options.konseptGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .modeTabs {
