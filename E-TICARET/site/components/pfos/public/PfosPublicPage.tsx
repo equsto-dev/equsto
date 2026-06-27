@@ -16,7 +16,7 @@ export default function PfosPublicPage() {
       <PfosScripts />
       <div className={styles.pfosPage}>
         <PfosEqustoChrome />
-        <div className={styles.main}>
+        <div className={`pg ${styles.main}`}>
           <h1 className={styles.srOnly}>
             {t("Proje Fabrikası — Online Endüstriyel Mutfak Teklifi")}
           </h1>
