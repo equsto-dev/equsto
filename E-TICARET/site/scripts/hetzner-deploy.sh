@@ -12,7 +12,8 @@ if [[ ! -f .env.production ]]; then
 fi
 
 echo "[hetzner-deploy] site: $SITE_DIR"
-git pull --ff-only
+git fetch origin
+git pull --ff-only origin main
 
 # Docker app nextjs (uid 1001) — public/data bind mount yazılabilir olmalı
 if [[ -d public/data ]]; then
