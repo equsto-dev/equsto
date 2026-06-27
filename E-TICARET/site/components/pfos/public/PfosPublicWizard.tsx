@@ -875,7 +875,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           <span className={styles.secNum}>{isDone ? "✓" : panel.num}</span>
           <span className={styles.secInfo}>
             <span className={styles.secTitle}>{t(panel.title)}</span>
-            {isActive ? (
+            {isActive && panel.sub ? (
               <span className={styles.secSub}>{t(panel.sub)}</span>
             ) : null}
             {summaryDisplay && isDone && !isActive ? (

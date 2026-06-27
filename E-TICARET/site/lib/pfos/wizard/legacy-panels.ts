@@ -28,7 +28,7 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     id: "s1",
     num: "01",
     title: "Mesleğini söylemek ister misin?",
-    sub: "İsterseniz rolünüzü seçin; seçmezseniz de devam edebilirsiniz.",
+    sub: "",
     questionIds: ["q_meslek"],
     optional: true,
   },
