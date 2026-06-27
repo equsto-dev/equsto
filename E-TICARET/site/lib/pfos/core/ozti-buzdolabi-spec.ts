@@ -34,13 +34,45 @@ export function isOztiEcoYataySku(sku: string | null | undefined): boolean {
   return /^79e[34]\./i.test(String(sku ?? "").trim());
 }
 
-/** Ölçü genişliği + kapı → 7919 NTV/NMV önek (27=~140cm, 37=~187cm, 47=~240cm) */
+/** Ölçü genişliği + kapı → 7919 NTV/NMV önek (tezgah/dik; cihaz altı için oztiNtvCihazaltiPrefix) */
 export function oztiNtvPrefix(kapi: number, widthCm: number): string {
   if (kapi <= 1 && widthCm < 100) return "06";
   if (kapi >= 4 || widthCm >= 220) return "47";
   if (kapi >= 3 || widthCm >= 165) return "37";
   if (kapi >= 2 || widthCm >= 105) return "27";
   return "27";
+}
+
+/**
+ * 7919 NTV tezgah altı — Öztiryakiler fiyat listesi seri kodu.
+ * 360/370 = 160/170 cm genişlik × 60 cm derinlik; 460/470 = × 70 cm derinlik.
+ */
+export function oztiNtvCihazaltiPrefix(
+  widthCm: number,
+  depthCm: 60 | 70,
+): string {
+  const w = Math.round(widthCm);
+  if (w >= 155) {
+    const wide = w >= 165;
+    if (depthCm === 70) return wide ? "47" : "46";
+    return wide ? "37" : "36";
+  }
+  return depthCm === 70 ? "27" : "26";
+}
+
+export function isCekmeceliCihazaltiReferans(isim: string): boolean {
+  const n = norm(isim);
+  if (/kapili|kapılı|kapi\s*li/.test(n) && !/cekmeceli|çekmeceli|cekmece|çekmece/.test(n)) {
+    return false;
+  }
+  return /cekmeceli|çekmeceli|cekmece|çekmece/.test(n);
+}
+
+export function isKapiliCihazaltiReferans(isim: string): boolean {
+  const n = norm(isim);
+  return /kapili|kapılı|\d\s*kapili|tek\s*kap|iki\s*kap|uc\s*kap|dort\s*kap|dört\s*kap/.test(
+    n,
+  );
 }
 
 function nmvSuffix(camKapili: boolean): string {
@@ -59,6 +91,7 @@ export function oztiPreferredBuzSkus(
   freezer: boolean,
   camKapili: boolean,
   depthCm: 60 | 70 = 70,
+  referansIsim?: string | null,
 ): string[] {
   const p = oztiNtvPrefix(kapi, widthCm);
   const depthSeries = depthCm === 60 ? "79E4" : "79E3";
@@ -70,7 +103,16 @@ export function oztiPreferredBuzSkus(
   }
 
   if (family === "cihazalti") {
-    return [`7919.${p}NTV.C1`, `7919.${p}NTV.C2`, `${depthSeries}.${p}NTV.C1`];
+    const prefix = oztiNtvCihazaltiPrefix(widthCm, depthCm);
+    const cekmeceli =
+      referansIsim != null && isCekmeceliCihazaltiReferans(referansIsim);
+    const kapili =
+      referansIsim != null && isKapiliCihazaltiReferans(referansIsim);
+    const c2 = `7919.${prefix}NTV.C2`;
+    const c1 = `7919.${prefix}NTV.C1`;
+    if (cekmeceli && !kapili) return [c2, c1];
+    if (kapili && !cekmeceli) return [c1, c2];
+    return [c2, c1];
   }
 
   if (family === "dik") {
@@ -136,6 +178,16 @@ export function scoreOztiBuzdolabiRow(
     score += 80;
   }
   if (family === "cihazalti" && /cihaz\s*alti|cihazalti/.test(ad)) score += 80;
+  if (family === "cihazalti") {
+    const refN = norm(referansIsim);
+    const wantCekmece = /cekmeceli|çekmeceli|cekmece|çekmece/.test(refN);
+    const wantKapi =
+      /kapili|kapılı|\d\s*kapili/.test(refN) && !wantCekmece;
+    if (wantCekmece && /\.C2\b/i.test(sku)) score += 350;
+    if (wantCekmece && /\.C1\b/i.test(sku)) score -= 350;
+    if (wantKapi && /\.C1\b/i.test(sku)) score += 350;
+    if (wantKapi && /\.C2\b/i.test(sku)) score -= 200;
+  }
   if (family === "dik" && /dik\s*tip/.test(ad)) score += 80;
 
   if (camKapili && /\.24\b|cam\s*kap|cift\s*inox\s*kapi/i.test(ad)) score += 35;
