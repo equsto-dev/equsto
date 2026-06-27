@@ -18,6 +18,7 @@ import {
 import { resolveTeklifMarka } from "../core/catalog-enrich";
 import {
   normalizePfosGorselUrl,
+  oztiAxImageUrlFromSku,
   oztiWebImageRelFromSku,
   portashelfGorselRelFromSku,
 } from "../core/katalog-gorsel-url";
@@ -116,7 +117,7 @@ export function pfosResponseToTeklifV14(
         equstoFiyatListesiGorselRelFromSku(stokNo) ??
         u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
-        (specCeliski || !stokNo ? null : oztiWebImageRelFromSku(stokNo));
+        (specCeliski || !stokNo ? null : oztiAxImageUrlFromSku(stokNo));
 
     const isDavlumbazSku =
       isEqustoDavlumbazRow(stokNo) || /^(7885|9885)\./i.test(stokNo);
@@ -135,7 +136,7 @@ export function pfosResponseToTeklifV14(
     ) {
       finalGorsel =
         equstoPimakGorselRelFromSku(stokNo, sablonIsim) ??
-        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
+        (stokNo ? oztiAxImageUrlFromSku(stokNo) : null);
     }
 
     const evyeGorsel = tezgahEvyeGorselRel(stokNo, sablonIsim);
