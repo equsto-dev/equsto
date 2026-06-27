@@ -10,6 +10,16 @@ function norm(s: string): string {
     .trim();
 }
 
+/** PDF referans listesi — adet/ölçü m² ile değiştirilmez */
+export const PFOS_REFERANS_OLCEK_ATLA = new Set([
+  "bulut-burger",
+  "bulut-ev-yemek",
+]);
+
+export function referansListeOlcekAtla(kategoriId: string): boolean {
+  return PFOS_REFERANS_OLCEK_ATLA.has(kategoriId);
+}
+
 /** m² / referansM² — 120/175 ≈ 0,69; tavan 1,15 */
 export function referansM2Oran(m2: number, referansM2: number): number {
   if (!Number.isFinite(m2) || m2 <= 0) return 1;

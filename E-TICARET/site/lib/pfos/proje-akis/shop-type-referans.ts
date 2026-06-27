@@ -14,7 +14,10 @@ import {
   type PfosReferansListeDosya,
   type ReferansListeId,
 } from "@/lib/pfos/referans/pfos-referans-loader";
-import { olcekReferansKalemlerForM2 } from "@/lib/pfos/referans/referans-m2-olcek";
+import {
+  olcekReferansKalemlerForM2,
+  referansListeOlcekAtla,
+} from "@/lib/pfos/referans/referans-m2-olcek";
 import type { ListeBantId, M2BantTanim, ShopTypeKayit } from "./konsept-tanimlari";
 
 export type ReferansBaglam = {
@@ -181,7 +184,7 @@ export async function buildTemplateFromShopType(
   const listeKey = `${raw.kategoriId}-${raw.bantId}`;
   let kalemler = ekipmanToReferansKalemler(raw.kalemler, listeKey);
   const refM2 = raw.referansM2 || baglam.referansM2;
-  if (refM2 > 0) {
+  if (refM2 > 0 && !referansListeOlcekAtla(raw.kategoriId)) {
     kalemler = olcekReferansKalemlerForM2(kalemler, m2, refM2);
   }
   const slug = shopType.pfos.motorSlug || shopType.id;

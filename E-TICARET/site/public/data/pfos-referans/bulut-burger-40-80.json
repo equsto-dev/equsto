@@ -1,10 +1,10 @@
 {
   "kategoriId": "bulut-burger",
   "bantId": "40-80",
-  "label": "Bulut Mutfak — Hamburgerci",
+  "label": "HAMBURGERCİ",
   "referansM2": 60,
   "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-  "yukleme": "2026-06-27T16:22:55.856719Z",
+  "yukleme": "2026-06-27T16:36:26.124563Z",
   "kalemSayisi": 29,
   "toplamAdet": 36,
   "kalemler": [
@@ -14,8 +14,7 @@
       "poz": "A1",
       "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
       "olcu": "-",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "KURU_DEPO",
@@ -23,8 +22,7 @@
       "poz": "A2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "SOGUK_ODA",
@@ -32,8 +30,7 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "200*300*240",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "SOGUK_ODA",
@@ -41,8 +38,7 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "137*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "DEEPFREEZE_DEPO",
@@ -50,8 +46,7 @@
       "poz": "C1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "200*200*240",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "DEEPFREEZE_DEPO",
@@ -59,8 +54,7 @@
       "poz": "C2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "PISIRME",
@@ -68,8 +62,7 @@
       "poz": "D1",
       "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
       "olcu": "140*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -77,8 +70,7 @@
       "poz": "D2",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*85*205",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -86,8 +78,7 @@
       "poz": "D3",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "160*70*85",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "PISIRME",
@@ -95,8 +86,7 @@
       "poz": "D4",
       "ad": "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ",
       "olcu": "140*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -104,8 +94,7 @@
       "poz": "D5",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "140*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -113,8 +102,7 @@
       "poz": "D6",
       "ad": "SET ALTI DEEP FREEZE",
       "olcu": "60*60*5",
-      "adet": 2,
-      "kategori": "diger"
+      "adet": 2
     },
     {
       "bolum": "PISIRME",
@@ -122,8 +110,7 @@
       "poz": "D7",
       "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
       "olcu": "190*60*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -131,8 +118,7 @@
       "poz": "D8",
       "ad": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI",
       "olcu": "170*60*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -140,8 +126,7 @@
       "poz": "D9",
       "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -149,8 +134,7 @@
       "poz": "D10",
       "ad": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -158,8 +142,7 @@
       "poz": "D11",
       "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -167,8 +150,7 @@
       "poz": "D12",
       "ad": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ",
       "olcu": "80*70*85",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -176,8 +158,7 @@
       "poz": "D13",
       "ad": "SETALTI BUZDOLABI, 4 KAPILI",
       "olcu": "140*70*60",
-      "adet": 2,
-      "kategori": "diger"
+      "adet": 2
     },
     {
       "bolum": "PISIRME",
@@ -185,8 +166,7 @@
       "poz": "D14",
       "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
       "olcu": "320*97*50",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "PISIRME",
@@ -194,8 +174,7 @@
       "poz": "D15",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -203,8 +182,7 @@
       "poz": "E1",
       "ad": "BULAŞIK SIYIRMA TEZGAHI",
       "olcu": "140*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -212,8 +190,7 @@
       "poz": "E2",
       "ad": "BASKET RAFI",
       "olcu": "140*40*60",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -221,8 +198,7 @@
       "poz": "E3",
       "ad": "ÇÖP ARABASI",
       "olcu": "Ø40*50",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -230,8 +206,7 @@
       "poz": "E4",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "140*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -239,8 +214,7 @@
       "poz": "E5",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 Tb/saat",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -248,8 +222,7 @@
       "poz": "E6",
       "ad": "DUVAR RAFI",
       "olcu": "140*30*4",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "BULASIK_YIKAMA",
@@ -257,8 +230,7 @@
       "poz": "E7",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "YER_IZGARASI",
@@ -266,8 +238,7 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 2,
-      "kategori": "diger"
+      "adet": 2
     }
   ]
 }

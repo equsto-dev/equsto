@@ -16,6 +16,7 @@ import { yerIzgarasiTipFromOlcu } from "./yer-izgara-match";
 import {
   filterKasapYalnizKalemler,
   olcekReferansKalemlerForM2,
+  referansListeOlcekAtla,
 } from "./referans-m2-olcek";
 
 const REF_DIR = "pfos-referans";
@@ -461,7 +462,7 @@ export async function loadReferansProfil(
   if (kategoriId === "kasap") {
     kalemler = filterKasapYalnizKalemler(kalemler);
   }
-  if (raw.referansM2 > 0) {
+  if (raw.referansM2 > 0 && !referansListeOlcekAtla(kategoriId)) {
     kalemler = olcekReferansKalemlerForM2(kalemler, m2, raw.referansM2);
   }
   return {
