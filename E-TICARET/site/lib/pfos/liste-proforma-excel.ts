@@ -418,9 +418,30 @@ function findTabularHeaderInCells(cells: string[]): Omit<TabularHeader, "headerR
   };
 }
 
+function mergeTabularHeaderRows(
+  merged: Omit<TabularHeader, "headerRow">,
+  hit: Omit<TabularHeader, "headerRow">,
+  cells: string[],
+): Omit<TabularHeader, "headerRow"> {
+  const out = { ...merged };
+  for (const key of Object.keys(hit) as Array<keyof Omit<TabularHeader, "headerRow">>) {
+    if (key === "malzeme" || key === "aciklama") {
+      if (out[key] < 0 && hit[key] >= 0) out[key] = hit[key];
+      if (key === "malzeme" && hit.malzeme >= 0 && isTanimHeaderLabel(cells[hit.malzeme] ?? "")) {
+        out.malzeme = hit.malzeme;
+      }
+      continue;
+    }
+    if (out[key] < 0 && hit[key] >= 0) out[key] = hit[key];
+  }
+  return out;
+}
+
 function findTabularHeader(ws: Worksheet): TabularHeader | null {
-  let merged: Omit<TabularHeader, "headerRow"> | null = null;
-  let headerRow = 0;
+  const acc: {
+    merged: Omit<TabularHeader, "headerRow"> | null;
+    headerRow: number;
+  } = { merged: null, headerRow: 0 };
 
   ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
     if (rowNumber > 35) return;
@@ -428,27 +449,17 @@ function findTabularHeader(ws: Worksheet): TabularHeader | null {
     if (!cells.some(Boolean)) return;
     const hit = findTabularHeaderInCells(cells);
     if (!hit) return;
-    if (!merged) {
-      merged = { ...hit };
-      headerRow = rowNumber;
+    if (!acc.merged) {
+      acc.merged = { ...hit };
+      acc.headerRow = rowNumber;
       return;
     }
-    // Çok satırlı başlık (ör. satır 17: Ürün Adı, satır 19: Poz | Ölçü | Marka)
-    headerRow = Math.min(headerRow, rowNumber);
-    for (const key of Object.keys(hit) as Array<keyof Omit<TabularHeader, "headerRow">>) {
-      if (key === "malzeme" || key === "aciklama") {
-        if (merged[key] < 0 && hit[key] >= 0) merged[key] = hit[key];
-        if (key === "malzeme" && hit.malzeme >= 0 && isTanimHeaderLabel(cells[hit.malzeme] ?? "")) {
-          merged.malzeme = hit.malzeme;
-        }
-        continue;
-      }
-      if (merged[key] < 0 && hit[key] >= 0) merged[key] = hit[key];
-    }
+    acc.headerRow = Math.min(acc.headerRow, rowNumber);
+    acc.merged = mergeTabularHeaderRows(acc.merged, hit, cells);
   });
 
-  if (!merged || merged.poz < 0 || merged.malzeme < 0) return null;
-  return { ...merged, headerRow };
+  if (!acc.merged || acc.merged.poz < 0 || acc.merged.malzeme < 0) return null;
+  return { ...acc.merged, headerRow: acc.headerRow };
 }
 
 function resolveTabularPoz(
