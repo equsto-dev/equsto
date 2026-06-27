@@ -34,10 +34,16 @@ export default function PfosWorkspaceShell({
   listeHasResult = false,
   children,
 }: Props) {
+  const showSummary = activePane !== "balanced";
+
   return (
     <div className={ws.shell} data-pfos-workspace="">
       <PfosPipeline steps={pipelineSteps} activeId={pipelineActive} />
-      <div className={ws.grid}>
+      <div
+        className={[ws.grid, !showSummary ? ws.gridNoSummary : ""]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <PfosLeftRail
           activePane={activePane}
           onWizardClick={onWizardClick}
@@ -48,7 +54,7 @@ export default function PfosWorkspaceShell({
         <main className={ws.center} aria-label="Çalışma alanı">
           {children}
         </main>
-        <PfosLiveSummary data={summary} />
+        {showSummary ? <PfosLiveSummary data={summary} /> : null}
       </div>
     </div>
   );

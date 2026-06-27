@@ -18,6 +18,10 @@
   align-items: start;
 }
 
+.gridNoSummary {
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+}
+
 .center {
   min-width: 0;
   padding: 0;
@@ -341,37 +345,6 @@
   min-height: 0;
 }
 
-:global([data-pfos-pane="balanced"]) .wizardWorkspace {
-  height: 100%;
-}
-
-:global([data-pfos-pane="balanced"]) .wizardSteps {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-
-:global([data-pfos-pane="balanced"]) .listeWorkspace {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  height: 100%;
-}
-
-:global([data-pfos-pane="balanced"]) .uploadCard:not(.uploadCardCompact) {
-  flex: 1 1 auto;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-:global([data-pfos-pane="balanced"]) .uploadCardLarge:not(.uploadCardCompact) {
-  flex: 1 1 auto;
-  min-height: 300px;
-}
-
 .wizardIntro {
   padding: 0.15rem 0 0.35rem;
 }
@@ -388,7 +361,7 @@
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.55;
-  color: var(--ws-muted);
+  color: #1a1d2b;
   max-width: 42rem;
 }
 
@@ -412,7 +385,8 @@
 .wizardIntroSparkleText {
   display: inline-block;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: 400;
+  font-style: italic;
   line-height: 1.45;
   letter-spacing: -0.01em;
   background: linear-gradient(
@@ -459,7 +433,9 @@
   .wizardIntroSparkleText {
     animation: none;
     background: none;
-    color: #1a7a9e;
+    color: #64748b;
+    font-style: italic;
+    font-weight: 400;
     -webkit-background-clip: unset;
     background-clip: unset;
   }

@@ -252,7 +252,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     (extra?: string) =>
       [
         styles.layout,
-        activePane === "balanced" ? styles.layoutBalanced : "",
         activePane === "wizard" ? styles.layoutFocusWizard : "",
         activePane === "liste" ? styles.layoutFocusListe : "",
         extra,
@@ -1010,7 +1009,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }
 
   function renderListePane() {
-    const listeWide = activePane === "balanced" || activePane === "liste";
+    const listeWide = activePane === "liste";
     return (
       <aside
         className={[
@@ -1047,7 +1046,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   function renderMemberGate() {
     return (
       <PfosWorkspaceShell
-        activePane="wizard"
+        activePane="balanced"
         onWizardClick={() => {}}
         onListeClick={() => {}}
         pipelineSteps={WIZARD_PIPELINE}
