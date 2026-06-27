@@ -13,7 +13,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M1",
-      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI, 2. EL",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*85*205",
       "adet": 1,
       "kategori": "diger"
@@ -22,7 +22,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M2",
-      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI, 2. EL",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
       "olcu": "70*85*205",
       "adet": 1,
       "kategori": "diger"
@@ -58,7 +58,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M5",
-      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ, 2. EL",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
       "olcu": "80*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -76,7 +76,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M7",
-      "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSÜ, 2. EL",
+      "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSÜ",
       "olcu": "40*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -85,7 +85,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M8",
-      "ad": "PLATE IZGARA, GAZLI, SETÜSTÜ, 2. EL",
+      "ad": "PLATE IZGARA, GAZLI, SETÜSTÜ",
       "olcu": "80*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -94,7 +94,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M9",
-      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜİ 2. EL",
+      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜİ",
       "olcu": "80*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -103,7 +103,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M10",
-      "ad": "PATATES DİNLENDİRME ÜNİTESİ, ELK., 2. EL",
+      "ad": "PATATES DİNLENDİRME ÜNİTESİ, ELK.",
       "olcu": "40*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -184,7 +184,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M19",
-      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI, 2. EL",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
       "olcu": "500 TB/S",
       "adet": 1,
       "kategori": "diger"
@@ -265,7 +265,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M28",
-      "ad": "ESPRESSO KAHVE MAKİNASI, 2. EL",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
       "olcu": "2 gruplu",
       "adet": 1,
       "kategori": "kahve"
@@ -274,7 +274,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M29",
-      "ad": "KAHVE DEĞİRMENİ, 2. EL",
+      "ad": "KAHVE DEĞİRMENİ",
       "olcu": "-",
       "adet": 1,
       "kategori": "kahve"
@@ -301,7 +301,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M30A",
-      "ad": "BUZ MAKİNASI, 2. EL",
+      "ad": "BUZ MAKİNASI",
       "olcu": "44 kg/gün",
       "adet": 1,
       "kategori": "diger"
@@ -562,7 +562,7 @@
       "bolum": "d",
       "bolumAd": "d- bulaşık yıkama",
       "poz": "D6",
-      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP, 2. EL",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
       "olcu": "1000 tb/s",
       "adet": 1,
       "kategori": "yikama"

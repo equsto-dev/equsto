@@ -149,11 +149,13 @@ export function pfosResponseToTeklifV14(
 
     const olcuTeklif =
       olcuForTeklifUrun(u, cleanObjectString(k.notlar));
-    const tanim = buzdolabiDisplayIsimFromSablon(sablonIsim, {
-      sku: u?.sku,
-      katalogAd: u?.ad,
-      olcu: olcuTeklif,
-    });
+    const tanim = referansListe
+      ? sablonIsim
+      : buzdolabiDisplayIsimFromSablon(sablonIsim, {
+          sku: u?.sku,
+          katalogAd: u?.ad,
+          olcu: olcuTeklif,
+        });
 
     return {
       bolumNo,

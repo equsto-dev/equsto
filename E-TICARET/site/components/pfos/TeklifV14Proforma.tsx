@@ -793,8 +793,8 @@ const tdStok: CSSProperties = {
 const tdTanim: CSSProperties = {
   ...td,
   wordBreak: "break-word",
-  overflow: "hidden",
-  maxWidth: 0,
+  overflowWrap: "anywhere",
+  minWidth: 120,
 };
 
 const tdMarka: CSSProperties = {

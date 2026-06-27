@@ -254,6 +254,11 @@ function referansLinkKey(listeKey: string, poz: string): string {
   return `${listeKey.trim().toLowerCase()}|${poz.trim().toUpperCase()}`;
 }
 
+/** Bulut mutfak PDF listeleri — yalnızca pfos-referans-sku-links.json (doğrulanmış) */
+export function isBulutReferansListe(listeKey?: string | null): boolean {
+  return /^bulut-/i.test(String(listeKey ?? "").trim());
+}
+
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
   return katalogRowToEslesmis(row);
 }
@@ -269,6 +274,8 @@ export function referansKatalogUyumsuz(
   const s = norm(sablonIsim);
   const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
+
+  if (/2\s*[\.\s]*el\b|ikinci\s*el\b/i.test(k)) return true;
 
   // Filter coffee capacity mismatch (e.g. 20 LT urn vs standard coffee brewer)
   if (
@@ -847,7 +854,7 @@ async function matchByVerifiedLink(
     }
     return {
       ...bySku,
-      ad: link.name ?? bySku.ad,
+      ad: input.isim,
       marka: link.marka?.trim() || bySku.marka,
     };
   }
@@ -1372,6 +1379,10 @@ export async function matchReferansKalem(
 
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
+
+  if (isBulutReferansListe(input.referansListeKey)) {
+    return null;
+  }
 
   if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
     const slim = await matchSlimSetaltiDerinDondurucu(input.isim, olcu, input.notlar);
