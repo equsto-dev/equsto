@@ -47,7 +47,8 @@ export default function PfosListeWorkspace({
   teklifV14,
   reset,
   largePane = false,
-}: Props & { largePane?: boolean }) {
+  hideTitle = false,
+}: Props & { largePane?: boolean; hideTitle?: boolean }) {
   const { t } = usePfosLabel();
   const compact = !!(file || loadingKind || sonuc);
   const uploadFlipRef = useFlipCollapse(compact);
@@ -85,9 +86,11 @@ export default function PfosListeWorkspace({
           </div>
         ) : (
           <>
-            <h2 className={ws.uploadTitle}>
-              {t("Ekipman listenizi yükleyin")}
-            </h2>
+            {!hideTitle ? (
+              <h2 className={ws.uploadTitle}>
+                {t("Ekipman listenizi yükleyin")}
+              </h2>
+            ) : null}
             {!memberLoggedIn ? (
               <p className={ws.uploadLogin}>
                 {t("Yüklemek için")}{" "}
