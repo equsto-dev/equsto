@@ -908,12 +908,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderWizardIntro() {
+  function renderWizardIntroExtra() {
     return (
-      <header className={ws.wizardIntro}>
-        <h2 className={ws.wizardIntroTitle}>
-          {t("Konsept Sihirbazı")}
-        </h2>
+      <div className={ws.wizardIntroExtra}>
         <p className={ws.wizardIntroSub}>
           {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
         </p>
@@ -922,14 +919,29 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             {t("Beş dakikada yapılır, hemen teslim edilir.")}
           </span>
         </p>
+      </div>
+    );
+  }
+
+  function renderWizardIntro() {
+    return (
+      <header className={ws.wizardIntro}>
+        <h2 className={ws.wizardIntroTitle}>
+          {t("Konsept Sihirbazı")}
+        </h2>
+        {renderWizardIntroExtra()}
       </header>
     );
   }
 
-  function renderWizardCenter(opts?: { hideIntro?: boolean }) {
+  function renderWizardCenter(opts?: {
+    hideIntro?: boolean;
+    introExtraOnly?: boolean;
+  }) {
     return (
       <div className={ws.wizardWorkspace}>
-        {!opts?.hideIntro ? renderWizardIntro() : null}
+        {opts?.introExtraOnly ? renderWizardIntroExtra() : null}
+        {!opts?.hideIntro && !opts?.introExtraOnly ? renderWizardIntro() : null}
 
         <div id="pfos-progress" className={styles.pfProgress}>
           <div className={styles.pfProgressTrack}>
@@ -1032,6 +1044,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             teklifV14={listeUpload.teklifV14}
             reset={resetListeUpload}
             largePane={listeWide}
+            hideTitle={activePane === "balanced"}
           />
         </div>
       </aside>
@@ -1159,28 +1172,52 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       summary={liveSummary}
     >
       {activePane === "balanced" ? (
-        <div className={ws.wizardIntroRow}>{renderWizardIntro()}</div>
-      ) : null}
-      <div
-        className={layoutClassName()}
-        data-pfos-pane={activePane === "balanced" ? "balanced" : activePane}
-      >
-        <div
-          className={[
-            styles.leftCol,
-            wizardPaneCollapsed ? styles.paneCollapsed : "",
-            activePane === "wizard" ? styles.paneExpanded : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-          ref={leftColRef}
-        >
-          <div className={styles.paneBody} onPointerDown={engageWizardPane}>
-            {renderWizardCenter({ hideIntro: activePane === "balanced" })}
+        <div className={ws.balancedPane} data-pfos-pane="balanced">
+          <h2 className={ws.wizardIntroTitle}>
+            {t("Konsept Sihirbazı")}
+          </h2>
+          <h2 className={`${ws.uploadTitle} ${ws.uploadTitleHead}`}>
+            {t("Ekipman listenizi yükleyin")}
+          </h2>
+          <div className={ws.balancedPaneLeft}>
+            <div
+              className={[
+                styles.leftCol,
+                styles.paneExpanded,
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              ref={leftColRef}
+            >
+              <div className={styles.paneBody} onPointerDown={engageWizardPane}>
+                {renderWizardCenter({ hideIntro: true, introExtraOnly: true })}
+              </div>
+            </div>
           </div>
+          <div className={ws.balancedPaneRight}>{renderListePane()}</div>
         </div>
-        {renderListePane()}
-      </div>
+      ) : (
+        <div
+          className={layoutClassName()}
+          data-pfos-pane={activePane}
+        >
+          <div
+            className={[
+              styles.leftCol,
+              wizardPaneCollapsed ? styles.paneCollapsed : "",
+              activePane === "wizard" ? styles.paneExpanded : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            ref={leftColRef}
+          >
+            <div className={styles.paneBody} onPointerDown={engageWizardPane}>
+              {renderWizardCenter()}
+            </div>
+          </div>
+          {renderListePane()}
+        </div>
+      )}
     </PfosWorkspaceShell>
   );
 }
