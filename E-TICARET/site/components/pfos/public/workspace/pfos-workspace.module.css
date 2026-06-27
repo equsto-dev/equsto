@@ -26,10 +26,11 @@
 /* ── Pipeline ── */
 .pipeline {
   padding: 0.85rem 1.5rem;
-  background: var(--ws-surface);
-  border: 1px solid var(--ws-border);
-  border-radius: 14px;
-  box-shadow: 0 1px 8px rgba(0, 30, 80, 0.04);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eef2f6;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .pipelineTrack {
@@ -123,8 +124,8 @@
   flex-direction: column;
   gap: 0.65rem;
   padding: 0.75rem 0.5rem;
-  background: var(--ws-surface);
-  border: 1px solid var(--ws-border);
+  background: transparent;
+  border: none;
   border-radius: 14px;
   position: sticky;
   top: 1rem;
@@ -196,10 +197,10 @@
   position: sticky;
   top: 1rem;
   padding: 1.35rem 1.35rem;
-  background: var(--ws-surface);
-  border: 1px solid var(--ws-border);
+  background: #fff;
+  border: 1px solid #eef2f6;
   border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 30, 80, 0.05);
+  box-shadow: none;
   animation: motionEnter 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
