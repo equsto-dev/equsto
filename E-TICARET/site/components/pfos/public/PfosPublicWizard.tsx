@@ -49,7 +49,6 @@ import {
   WIZARD_PIPELINE,
   summaryFromPfos,
   type LiveSummaryData,
-  type WorkspaceMode,
 } from "./workspace/pfos-workspace.types";
 import {
   defaultPublicQuestions,
@@ -151,7 +150,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const teklifRequestedRef = useRef(false);
   const enterTimerRef = useRef<number | null>(null);
   const leftColRef = useRef<HTMLDivElement>(null);
-  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>("wizard");
+  const [activePane, setActivePane] = useState<"balanced" | "wizard" | "liste">(
+    "balanced",
+  );
+
+  const wizardPaneCollapsed = activePane === "liste";
+  const listePaneCollapsed = activePane === "wizard";
 
   useEffect(() => {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
@@ -204,21 +208,58 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const wizardHasProforma = !!(finished && sonuc && teklifV14);
 
   useEffect(() => {
-    if (wizardListeMode) setWorkspaceMode("liste");
+    if (wizardListeMode) setActivePane("liste");
   }, [wizardListeMode]);
 
   useEffect(() => {
-    if (listeUpload.loadingKind) setWorkspaceMode("liste");
+    if (listeUpload.loadingKind) setActivePane("liste");
   }, [listeUpload.loadingKind]);
 
   useEffect(() => {
-    if (wizardHasProforma && !wizardListeMode) setWorkspaceMode("wizard");
+    if (wizardHasProforma && !wizardListeMode) setActivePane("wizard");
   }, [wizardHasProforma, wizardListeMode]);
 
   const resetListeUpload = useCallback(() => {
     listeUpload.reset();
-    setWorkspaceMode(wizardHasProforma ? "wizard" : "wizard");
+    setActivePane(wizardHasProforma ? "wizard" : "balanced");
   }, [listeUpload, wizardHasProforma]);
+
+  const focusWizardPane = useCallback(() => {
+    setActivePane("wizard");
+  }, []);
+
+  const focusListePane = useCallback(() => {
+    setActivePane("liste");
+  }, []);
+
+  const engageWizardPane = useCallback(() => {
+    if (activePane === "balanced") setActivePane("wizard");
+  }, [activePane]);
+
+  const engageListePane = useCallback(() => {
+    if (activePane === "balanced") setActivePane("liste");
+  }, [activePane]);
+
+  const toggleWizardPane = useCallback(() => {
+    setActivePane((p) => (p === "wizard" ? "balanced" : "wizard"));
+  }, []);
+
+  const toggleListePane = useCallback(() => {
+    setActivePane((p) => (p === "liste" ? "balanced" : "liste"));
+  }, []);
+
+  const layoutClassName = useCallback(
+    (extra?: string) =>
+      [
+        styles.layout,
+        activePane === "wizard" ? styles.layoutFocusWizard : "",
+        activePane === "liste" ? styles.layoutFocusListe : "",
+        extra,
+      ]
+        .filter(Boolean)
+        .join(" "),
+    [activePane],
+  );
 
   const openPanelIndex = useMemo(() => {
     for (let i = 0; i < panels.length; i++) {
@@ -238,10 +279,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       panels.every((p) => isLegacyPanelComplete(p, questions, answers)),
     [panels, questions, answers],
   );
-
-  const focusWizardPane = useCallback(() => {
-    setWorkspaceMode("wizard");
-  }, []);
 
   /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — pfos-progress id korunur */
   const openPanelId = panels[openPanelIndex]?.id ?? "s1";
@@ -409,9 +446,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   ]);
 
   const pipelineSteps =
-    workspaceMode === "liste" ? LISTE_PIPELINE : WIZARD_PIPELINE;
+    activePane === "liste" || wizardListeMode ? LISTE_PIPELINE : WIZARD_PIPELINE;
   const pipelineActive =
-    workspaceMode === "liste"
+    activePane === "liste" || wizardListeMode
       ? deriveListePipelineStage(listeUpload)
       : deriveWizardPipelineStage({
           openPanelId,
@@ -890,8 +927,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             {t("Konsept Sihirbazı")}
           </h2>
           <p className={ws.wizardIntroSub}>
-            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}{" "}
-            {t("Beş dakikada yapılır, hemen teslim edilir.")}
+            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
+          </p>
+          <p className={ws.wizardIntroSparkle} aria-live="polite">
+            <span className={ws.wizardIntroSparkleText}>
+              {t("Beş dakikada yapılır, hemen teslim edilir.")}
+            </span>
           </p>
         </header>
 
@@ -967,11 +1008,47 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
+  function renderListePane() {
+    const listeWide = activePane === "balanced" || activePane === "liste";
+    return (
+      <aside
+        className={[
+          styles.rightCol,
+          listePaneCollapsed ? styles.paneCollapsed : "",
+          activePane === "liste" ? styles.paneExpanded : "",
+          listeWide ? ws.listePaneWide : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        aria-label={t("Liste yükleme")}
+      >
+        <div className={styles.paneBody} onPointerDown={engageListePane}>
+          <PfosListeWorkspace
+            inputRef={listeUpload.inputRef}
+            drag={listeUpload.drag}
+            setDrag={listeUpload.setDrag}
+            file={listeUpload.file}
+            loadingKind={listeUpload.loadingKind}
+            error={listeUpload.error}
+            memberLoggedIn={listeUpload.memberLoggedIn}
+            loginHref={listeUpload.loginHref}
+            onPick={listeUpload.onPick}
+            sonuc={listeUpload.sonuc}
+            teklifV14={listeUpload.teklifV14}
+            reset={resetListeUpload}
+            largePane={listeWide}
+          />
+        </div>
+      </aside>
+    );
+  }
+
   function renderMemberGate() {
     return (
       <PfosWorkspaceShell
-        mode={workspaceMode}
-        onModeChange={setWorkspaceMode}
+        activePane="wizard"
+        onWizardClick={() => {}}
+        onListeClick={() => {}}
         pipelineSteps={WIZARD_PIPELINE}
         pipelineActive="konsept"
         summary={{
@@ -1024,8 +1101,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const secilenElkGaz = answers.q_elektrik_gaz ?? [];
     return (
       <PfosWorkspaceShell
-        mode="wizard"
-        onModeChange={setWorkspaceMode}
+        activePane="wizard"
+        onWizardClick={toggleWizardPane}
+        onListeClick={toggleListePane}
         pipelineSteps={WIZARD_PIPELINE}
         pipelineActive="teklif"
         summary={liveSummary}
@@ -1085,32 +1163,32 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   return (
     <PfosWorkspaceShell
-      mode={workspaceMode}
-      onModeChange={setWorkspaceMode}
+      activePane={activePane}
+      onWizardClick={toggleWizardPane}
+      onListeClick={toggleListePane}
       pipelineSteps={pipelineSteps}
       pipelineActive={pipelineActive}
       summary={liveSummary}
       wizardPct={hint.pct}
       listeHasResult={!!listeUpload.teklifV14}
     >
-      {workspaceMode === "liste" ? (
-        <PfosListeWorkspace
-          inputRef={listeUpload.inputRef}
-          drag={listeUpload.drag}
-          setDrag={listeUpload.setDrag}
-          file={listeUpload.file}
-          loadingKind={listeUpload.loadingKind}
-          error={listeUpload.error}
-          memberLoggedIn={listeUpload.memberLoggedIn}
-          loginHref={listeUpload.loginHref}
-          onPick={listeUpload.onPick}
-          sonuc={listeUpload.sonuc}
-          teklifV14={listeUpload.teklifV14}
-          reset={resetListeUpload}
-        />
-      ) : (
-        <div ref={leftColRef}>{renderWizardCenter()}</div>
-      )}
+      <div className={layoutClassName()}>
+        <div
+          className={[
+            styles.leftCol,
+            wizardPaneCollapsed ? styles.paneCollapsed : "",
+            activePane === "wizard" ? styles.paneExpanded : "",
+          ]
+            .filter(Boolean)
+            .join(" ")}
+          ref={leftColRef}
+        >
+          <div className={styles.paneBody} onPointerDown={engageWizardPane}>
+            {renderWizardCenter()}
+          </div>
+        </div>
+        {renderListePane()}
+      </div>
     </PfosWorkspaceShell>
   );
 }

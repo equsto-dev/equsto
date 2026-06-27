@@ -46,7 +46,8 @@ export default function PfosListeWorkspace({
   sonuc,
   teklifV14,
   reset,
-}: Props) {
+  largePane = false,
+}: Props & { largePane?: boolean }) {
   const { t } = usePfosLabel();
   const compact = !!(file || loadingKind || sonuc);
   const uploadFlipRef = useFlipCollapse(compact);
@@ -55,7 +56,7 @@ export default function PfosListeWorkspace({
     <div className={ws.listeWorkspace}>
       <div
         ref={uploadFlipRef}
-        className={`${ws.uploadCard}${compact ? ` ${ws.uploadCardCompact}` : ""}`}
+        className={`${ws.uploadCard}${compact ? ` ${ws.uploadCardCompact}` : ""}${largePane && !compact ? ` ${ws.uploadCardLarge}` : ""}`}
       >
         {compact ? (
           <div className={ws.uploadCompactRow}>
@@ -96,9 +97,10 @@ export default function PfosListeWorkspace({
                 <a href={loginHref}>{t("üye girişi")}</a>
               </p>
             ) : (
-              <div
-                className={`${styles.listeDropZone} ${styles.listeDropZoneRail}${drag ? ` ${styles.listeDropZoneDrag}` : ""}${loadingKind ? ` ${styles.listeDropZoneBusy}` : ""}`}
-                data-pfos-dropzone=""
+              <div className={largePane ? styles.uploadRailFill : undefined}>
+                <div
+                  className={`${styles.listeDropZone} ${styles.listeDropZoneRail}${drag ? ` ${styles.listeDropZoneDrag}` : ""}${loadingKind ? ` ${styles.listeDropZoneBusy}` : ""}`}
+                  data-pfos-dropzone=""
                 onDragOver={(e) => {
                   e.preventDefault();
                   setDrag(true);
@@ -126,6 +128,7 @@ export default function PfosListeWorkspace({
                   {t("Excel veya PDF sürükle veya tıkla")}
                 </span>
                 <span className={styles.listeDropHint}>.xlsx · .pdf</span>
+              </div>
               </div>
             )}
           </>

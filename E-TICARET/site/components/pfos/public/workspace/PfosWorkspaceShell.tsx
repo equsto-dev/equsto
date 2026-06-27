@@ -8,13 +8,13 @@ import type {
   LiveSummaryData,
   PipelineStageId,
   PipelineStep,
-  WorkspaceMode,
 } from "./pfos-workspace.types";
 import ws from "./pfos-workspace.module.css";
 
 type Props = {
-  mode: WorkspaceMode;
-  onModeChange: (mode: WorkspaceMode) => void;
+  activePane: "balanced" | "wizard" | "liste";
+  onWizardClick: () => void;
+  onListeClick: () => void;
   pipelineSteps: PipelineStep[];
   pipelineActive: PipelineStageId;
   summary: LiveSummaryData;
@@ -24,8 +24,9 @@ type Props = {
 };
 
 export default function PfosWorkspaceShell({
-  mode,
-  onModeChange,
+  activePane,
+  onWizardClick,
+  onListeClick,
   pipelineSteps,
   pipelineActive,
   summary,
@@ -38,8 +39,9 @@ export default function PfosWorkspaceShell({
       <PfosPipeline steps={pipelineSteps} activeId={pipelineActive} />
       <div className={ws.grid}>
         <PfosLeftRail
-          mode={mode}
-          onModeChange={onModeChange}
+          activePane={activePane}
+          onWizardClick={onWizardClick}
+          onListeClick={onListeClick}
           wizardPct={wizardPct}
           listeHasResult={listeHasResult}
         />
