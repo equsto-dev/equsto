@@ -38,8 +38,8 @@
 }
 
 .main:has([data-pfos-workspace]) {
-  max-width: min(100vw - 2rem, 100%);
-  padding: 1.75rem 2rem 4rem;
+  max-width: min(1680px, 100vw - 2rem);
+  padding: 1.5rem clamp(1rem, 2.5vw, 2.5rem) 3.5rem;
 }
 
 .main:has([data-pfos-workspace]) .pfProgress {
@@ -1006,6 +1006,42 @@
   align-items: start;
   width: 100%;
   transition: grid-template-columns 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ana sayfa — simetrik çift panel, tam genişlik */
+.layoutBalanced {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: stretch;
+}
+
+.layoutBalanced .leftCol,
+.layoutBalanced .rightCol {
+  display: flex;
+  flex-direction: column;
+  min-height: min(560px, 62vh);
+}
+
+.layoutBalanced .rightCol {
+  position: static;
+  top: auto;
+}
+
+.layoutBalanced .paneBody {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.layoutBalanced .secActive {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.layoutBalanced .secActive .secBd {
+  flex: 1 1 auto;
 }
 
 .layoutFocusWizard,

@@ -252,6 +252,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     (extra?: string) =>
       [
         styles.layout,
+        activePane === "balanced" ? styles.layoutBalanced : "",
         activePane === "wizard" ? styles.layoutFocusWizard : "",
         activePane === "liste" ? styles.layoutFocusListe : "",
         extra,
@@ -1009,7 +1010,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }
 
   function renderListePane() {
-    const listeWide = activePane === "liste";
+    const listeWide = activePane === "balanced" || activePane === "liste";
     return (
       <aside
         className={[
