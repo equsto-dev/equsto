@@ -1,5 +1,5 @@
 /**
- * Müşteri Excel/PDF listesi → PFOS teklif (birebir aktarım).
+ * Müşteri Excel/PDF listesi → PFOS katalog eşlemesi ve sistem fiyatları.
  */
 
 export type { ListeFiyatInput } from "./liste-fiyat.types";
@@ -9,13 +9,13 @@ export {
 } from "./liste-fiyat.types";
 export { calculateListeQuotePassthrough } from "./liste-passthrough-quote";
 
-import { calculateListeQuotePassthrough } from "./liste-passthrough-quote";
+import { calculateListeQuoteCatalog } from "./liste-catalog-quote";
 import type { ListeFiyatInput } from "./liste-fiyat.types";
 import type { PFOSResponse } from "./schemas/pfos.schema";
 
-/** Yüklenen listeyi katalog eşlemesi olmadan birebir teklife aktarır. */
+/** Yüklenen listeyi PFOS katalog eşlemesi ile fiyatlandırır (Excel tedarikçi fiyatı kullanılmaz). */
 export async function calculateListeQuote(
   input: ListeFiyatInput,
 ): Promise<PFOSResponse> {
-  return calculateListeQuotePassthrough(input);
+  return calculateListeQuoteCatalog(input);
 }
