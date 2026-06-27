@@ -17,7 +17,7 @@ const links = content.links;
 const deepFreezeC1 = {
   sku: "7919.DF2020.00",
   marka: "Öztiryakiler",
-  name: "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C 200×200×240 cm",
+  name: "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm",
 };
 
 for (const key of [

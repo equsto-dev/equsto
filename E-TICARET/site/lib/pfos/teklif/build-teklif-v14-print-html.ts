@@ -117,7 +117,7 @@ export function buildTeklifV14PrintHtml(
   th { text-align: center; font-size: 9px; padding: 5px 3px; border-bottom: 1px solid #999; }
   td { padding: 4px 3px; border-bottom: 1px solid #eee; vertical-align: top; }
   td.bol, td.poz { text-align: center; white-space: nowrap; }
-  td.stok { text-align: left; overflow: hidden; overflow-wrap: anywhere; word-break: break-all; max-width: 0; }
+  td.stok { text-align: left; white-space: nowrap; font-size: 10px; padding-left: 4px; padding-right: 4px; }
   td.tanim { word-break: break-word; overflow: hidden; max-width: 0; }
   td.marka, td.olcu { text-align: center; font-size: 9px; padding: 4px 2px; }
   td.num { text-align: center; white-space: nowrap; }
