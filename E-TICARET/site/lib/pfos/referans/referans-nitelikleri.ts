@@ -197,6 +197,76 @@ export function referansKatalogCeliski(
     return true;
   }
 
+  const refKapi = kapiSayisiFromBlob(`${isim} ${notlar ?? ""}`);
+  const katKapi = kapiSayisiFromBlob(katalogAd);
+  if (refKapi != null && katKapi != null && refKapi !== katKapi) return true;
+
+  const refGoz = gozBrulorSayisiFromBlob(`${isim} ${notlar ?? ""}`);
+  const katGoz = gozBrulorSayisiFromBlob(katalogAd);
+  if (refGoz != null && katGoz != null && refGoz !== katGoz) return true;
+
+  return false;
+}
+
+function kapiSayisiFromBlob(blob: string): number | null {
+  const n = norm(blob);
+  const d = n.match(/(\d)\s*kap/i);
+  if (d) return Number(d[1]);
+  if (/dort\s*kap|4\s*inox\s*kap|4\s*kap/.test(n)) return 4;
+  if (/uc\s*kap|üç\s*kap|3\s*kap/.test(n)) return 3;
+  if (/cift\s*kap|çift\s*kap|iki\s*kap|2\s*kap/.test(n)) return 2;
+  if (/tek\s*kap|1\s*kap/.test(n)) return 1;
+  return null;
+}
+
+function gozBrulorSayisiFromBlob(blob: string): number | null {
+  const n = norm(blob);
+  const g = n.match(/(\d)\s*goz/i);
+  if (g) return Number(g[1]);
+  if (/uclu|üçlü|3\s*goz|3\s*brul/.test(n)) return 3;
+  if (/ikili|iki\s*goz|2\s*goz|2\s*brul|2\s*acik/.test(n)) return 2;
+  if (/dortlu|dörtlü|4\s*acik|4\s*goz|4\s*brul/.test(n)) return 4;
+  return null;
+}
+
+/** Proforma alt satır — referans ile katalog teknik metni çelişiyorsa gösterme */
+export function referansTeklifAciklamaCeliski(
+  isim: string,
+  aciklama: string,
+  notlar?: string | null,
+): boolean {
+  const refBlob = norm(`${isim} ${notlar ?? ""}`);
+  const acBlob = norm(aciklama);
+  if (!refBlob || !acBlob) return false;
+
+  const refKapi = kapiSayisiFromBlob(refBlob);
+  const acKapi = kapiSayisiFromBlob(acBlob);
+  if (refKapi != null && acKapi != null && refKapi !== acKapi) return true;
+
+  const refGoz = gozBrulorSayisiFromBlob(refBlob);
+  const acGoz = gozBrulorSayisiFromBlob(acBlob);
+  if (refGoz != null && acGoz != null && refGoz !== acGoz) return true;
+
+  if (
+    (/cekmece|çekmece|make.?up/i.test(refBlob)) &&
+    /(cift|çift|iki)\s*kap/i.test(acBlob) &&
+    !/cekmece|çekmece/i.test(acBlob)
+  ) {
+    return true;
+  }
+
+  if (/ta[sş]\s*firin/.test(refBlob) && /kuzine|4\s*acik|acik\s*ates/.test(acBlob)) {
+    return true;
+  }
+
+  if (
+    /470\s*ntv|47ntv/.test(`${refBlob} ${acBlob}`) &&
+    /270\s*ntv|ctag\s*270/.test(acBlob) &&
+    /4\s*kap|dort\s*kap/.test(refBlob)
+  ) {
+    return true;
+  }
+
   return false;
 }
 

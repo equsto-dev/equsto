@@ -149,6 +149,7 @@ import {
 } from "./calisma-tezgah-match";
 import {
   referansKatalogCeliski,
+  referansTeklifAciklamaCeliski,
   tipShopLinkUygun,
 } from "./referans-nitelikleri";
 import {
@@ -852,10 +853,18 @@ async function matchByVerifiedLink(
     ) {
       return null;
     }
+    const aciklamaCeliski =
+      bySku.teklifAciklama &&
+      referansTeklifAciklamaCeliski(
+        input.isim,
+        bySku.teklifAciklama,
+        input.notlar,
+      );
     return {
       ...bySku,
       ad: input.isim,
       marka: link.marka?.trim() || bySku.marka,
+      gorselUrl: aciklamaCeliski ? null : bySku.gorselUrl,
     };
   }
   if (link.fiyat_try && link.fiyat_try > 0) {
