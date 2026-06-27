@@ -239,6 +239,7 @@
     "pfos:products:sync": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/sync-pfos-urun-tipi.ts",
     "pfos:tip-sozluk:sync": "npx tsx scripts/sync-tip-sozlugu.ts",
     "pfos:wizard:sync": "npx tsx scripts/seed-proje-akis-konsept.ts && node scripts/build-pfos-wizard-branches.mjs",
+    "pfos:bulut:sku-links": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/seed-bulut-sku-links.mjs && node scripts/patch-bulut-sku-links.mjs",
     "pfos:wizard:extract": "node scripts/extract-pfos-wizard.mjs",
     "pfos:buyuk-yemekhane:import": "node scripts/import-buyuk-yemekhane-konsept.mjs",
     "pfos:akademi-catering:import": "node scripts/import-akademi-catering-konsept.mjs",

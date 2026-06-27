@@ -170,7 +170,17 @@
           ],
           "Bulut Mutfak": [
             "Hamburgerci",
-            "Ev Yemekleri"
+            "Ev Yemekleri",
+            "Dönerci",
+            "Kebap & Türk Mutfağı",
+            "Mantıcı",
+            "Pastane & Fırın",
+            "Pide & Lahmacun",
+            "Pizzacı",
+            "Salata / Sandviç / Kahvaltı",
+            "Tavukçu",
+            "Balıkçı",
+            "Çorbacı"
           ]
         },
         "gosterIf": "q_ust_segment",
@@ -2103,57 +2113,6 @@
         "questions": []
       },
       {
-        "id": "bulut_doner",
-        "name": "Döner",
-        "parent": "Bulut Mutfak",
-        "desc": "Döner · liste hazırlanıyor — genel şablon",
-        "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Döner",
-          "m2Min": 40,
-          "m2Max": 120,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
-        },
-        "questions": []
-      },
-      {
-        "id": "bulut_pizza",
-        "name": "Pizza",
-        "parent": "Bulut Mutfak",
-        "desc": "Pizza · liste hazırlanıyor — genel şablon",
-        "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Pizza",
-          "m2Min": 35,
-          "m2Max": 100,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
-        },
-        "questions": []
-      },
-      {
-        "id": "bulut_pide",
-        "name": "Pide & Lahmacun",
-        "parent": "Bulut Mutfak",
-        "desc": "Pide & Lahmacun · liste hazırlanıyor — genel şablon",
-        "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Pide & Lahmacun",
-          "m2Min": 35,
-          "m2Max": 100,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
-        },
-        "questions": []
-      },
-      {
         "id": "bulut_burger",
         "name": "Hamburgerci",
         "parent": "Bulut Mutfak",
@@ -2204,19 +2163,252 @@
         "questions": []
       },
       {
+        "id": "bulut_doner",
+        "name": "Dönerci",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak dönerci · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-doner",
+          "dukkanSecim": "Dönerci",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (donerci.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/donerci.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Dönerci)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-doner-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
         "id": "bulut_kebap",
         "name": "Kebap & Türk Mutfağı",
         "parent": "Bulut Mutfak",
-        "desc": "Kebap & Türk Mutfağı · liste hazırlanıyor — genel şablon",
+        "desc": "Bulut mutfak kebap & türk mutfağı · referans ekipman listesi",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "bulut-kebap",
           "dukkanSecim": "Kebap & Türk Mutfağı",
-          "m2Min": 50,
-          "m2Max": 150,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (kebap-turk-mutfagi.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/kebap-turk-mutfagi.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Kebap & Türk Mutfağı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-kebap-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_manti",
+        "name": "Mantıcı",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak mantıcı · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-manti",
+          "dukkanSecim": "Mantıcı",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (mantici.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/mantici.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Mantıcı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-manti-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_pastane_firin",
+        "name": "Pastane & Fırın",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak pastane & fırın · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-pastane-firin",
+          "dukkanSecim": "Pastane & Fırın",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (pastane-firin.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/pastane-firin.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Pastane & Fırın)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-pastane-firin-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_pide",
+        "name": "Pide & Lahmacun",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak pide & lahmacun · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-pide",
+          "dukkanSecim": "Pide & Lahmacun",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (pide-lahmacun.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/pide-lahmacun.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Pide & Lahmacun)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-pide-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_pizza",
+        "name": "Pizzacı",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak pizzacı · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-pizza",
+          "dukkanSecim": "Pizzacı",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (pizzaci.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/pizzaci.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Pizzacı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-pizza-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_salata_sandvic",
+        "name": "Salata / Sandviç / Kahvaltı",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak salata / sandviç / kahvaltı · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-salata-sandvic",
+          "dukkanSecim": "Salata / Sandviç / Kahvaltı",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (salata-sandvic-kahvalti.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/salata-sandvic-kahvalti.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Salata / Sandviç / Kahvaltı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-salata-sandvic-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_tavuk",
+        "name": "Tavukçu",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak tavukçu · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-tavuk",
+          "dukkanSecim": "Tavukçu",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (tavukcu.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/tavukcu.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Tavukçu)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-tavuk-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_balik",
+        "name": "Balıkçı",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak balıkçı · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-balik",
+          "dukkanSecim": "Balıkçı",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (balikci.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/balikci.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Balıkçı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-balik-40-80.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_corbaci",
+        "name": "Çorbacı",
+        "parent": "Bulut Mutfak",
+        "desc": "Bulut mutfak çorbacı · referans ekipman listesi",
+        "pfos": {
+          "motorSlug": "bulut-corbaci",
+          "dukkanSecim": "Çorbacı",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (corbaci.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/corbaci.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Çorbacı)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-corbaci-40-80.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -83869,6 +84061,6 @@
         "tip_kodu": "INO-BYM102T-PZ"
       }
     ],
-    "updated_at": "2026-06-27T16:10:43.720Z"
+    "updated_at": "2026-06-27T18:12:07.412Z"
   }
 }

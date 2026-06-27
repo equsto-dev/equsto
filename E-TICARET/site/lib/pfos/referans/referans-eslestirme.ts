@@ -65,6 +65,7 @@ import {
   matchBuzdolabiByReferans,
   matchBuzdolapByReferans,
   isBuroTipiDerinDondurucuReferans,
+  matchSlimSetaltiDerinDondurucu,
 } from "./buzdolabi-match";
 import {
   matchBesosKokteylIstasyonByReferans,
@@ -177,6 +178,12 @@ type SkuLinksFile = {
 };
 
 let skuLinksCache: NonNullable<SkuLinksFile["links"]> | null = null;
+let skuLinksCacheMtimeMs = 0;
+
+export function invalidateReferansSkuLinksCache(): void {
+  skuLinksCache = null;
+  skuLinksCacheMtimeMs = 0;
+}
 
 function norm(s: string): string {
   return String(s ?? "")
@@ -191,12 +198,21 @@ function norm(s: string): string {
 async function loadReferansSkuLinks(): Promise<
   NonNullable<SkuLinksFile["links"]>
 > {
-  if (skuLinksCache) return skuLinksCache;
   try {
+    const { dataPath } = await import("@/lib/legacy-data-fs");
+    const fs = await import("node:fs/promises");
+    const abs = dataPath("pfos-referans-sku-links.json");
+    const st = await fs.stat(abs).catch(() => null);
+    const mtime = st?.mtimeMs ?? 0;
+    if (skuLinksCache && mtime > 0 && mtime === skuLinksCacheMtimeMs) {
+      return skuLinksCache;
+    }
     const raw = await readJsonFile<SkuLinksFile>("pfos-referans-sku-links.json");
     skuLinksCache = raw?.links ?? {};
+    skuLinksCacheMtimeMs = mtime;
   } catch {
     skuLinksCache = {};
+    skuLinksCacheMtimeMs = 0;
   }
   return skuLinksCache;
 }
@@ -1354,12 +1370,14 @@ export async function matchReferansKalem(
     extractOlcuFromNotlar(input.notlar) ||
     (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+(?:\s*[*xX×]\s*\d+)?)/)?.[1] ?? "");
 
-  if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
-    return null;
-  }
-
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
+
+  if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
+    const slim = await matchSlimSetaltiDerinDondurucu(input.isim, olcu, input.notlar);
+    if (slim) return slim;
+    return null;
+  }
 
   if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
     const tezgah = await matchCalismaTezgahiByReferans(

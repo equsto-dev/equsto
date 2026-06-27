@@ -1,18 +1,32 @@
+/**
+ * Bulut mutfak — doğrulanmış poz → SKU override'ları (seed sonrası).
+ * Kullanım: node scripts/patch-bulut-sku-links.mjs
+ */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const LINKS_PATH = path.join(
-  __dirname,
-  "..",
-  "public",
-  "data",
-  "pfos-referans-sku-links.json",
-);
+const SITE = path.join(__dirname, "..");
+const LINKS_PATH = path.join(SITE, "public", "data", "pfos-referans-sku-links.json");
+const REF_DIR = path.join(SITE, "public", "data", "pfos-referans");
 
 const content = JSON.parse(fs.readFileSync(LINKS_PATH, "utf8"));
 const links = content.links;
+
+function applyLinks(listeKeys, pozMap) {
+  for (const liste of listeKeys) {
+    for (const [poz, item] of Object.entries(pozMap)) {
+      links[`${liste}|${poz}`] = item;
+    }
+  }
+}
+
+function listeKeysFor(kategoriId) {
+  const keys = [`${kategoriId}-40-80`, kategoriId];
+  if (kategoriId === "bulut-burger") keys.push("bulut-burger-35-100");
+  return keys;
+}
 
 const deepFreezeC1 = {
   sku: "7919.DF2020.00",
@@ -20,12 +34,18 @@ const deepFreezeC1 = {
   name: "PANEL TİP DERİN DONDURUCU ODA — DEEP FREEZE PANEL-SPLİT -22/-18 °C 200×200×240 cm",
 };
 
-for (const key of [
-  "bulut-burger|C1",
-  "bulut-burger-35-100|C1",
-  "bulut-burger-40-80|C1",
-]) {
-  links[key] = deepFreezeC1;
+/** PDF C- bölümünde yanlışlıkla "soğuk oda" yazılmış deepfreeze satırları */
+for (const file of fs
+  .readdirSync(REF_DIR)
+  .filter((f) => f.startsWith("bulut-") && f.endsWith("-40-80.json"))) {
+  const raw = JSON.parse(fs.readFileSync(path.join(REF_DIR, file), "utf8"));
+  const c1 = raw.kalemler?.find((k) => k.poz === "C1");
+  if (
+    c1?.bolum === "DEEPFREEZE_DEPO" &&
+    /so[gğ]uk\s*oda/i.test(String(c1.ad ?? ""))
+  ) {
+    applyLinks(listeKeysFor(raw.kategoriId), { C1: deepFreezeC1 });
+  }
 }
 
 const evLinks = {
@@ -47,14 +67,10 @@ const evLinks = {
     fiyat_try: 14395,
   },
 };
+applyLinks(listeKeysFor("bulut-ev-yemek"), evLinks);
 
-for (const liste of ["bulut-ev-yemek-40-80", "bulut-ev-yemek"]) {
-  for (const [poz, item] of Object.entries(evLinks)) {
-    links[`${liste}|${poz}`] = item;
-  }
-}
-
-const burgerLinks = {
+/** Hamburger / döner — ortak pişirme hattı doğrulamaları */
+const grillPackLinks = {
   D1: {
     sku: "EQ.KTEVT02.14070",
     marka: "Equsto",
@@ -66,14 +82,9 @@ const burgerLinks = {
     name: "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)",
   },
   D6: {
-    sku: "7919.06LMV.00",
+    sku: "7919.10LTS.00",
     marka: "Öztiryakiler",
-    name: "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU (60×60 ref.)",
-  },
-  D13: {
-    sku: "7919.27NTV.C1",
-    marka: "Öztiryakiler",
-    name: "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)",
+    name: "SLIM 100 LTS INOX KAPI DERIN DONDURUCU (690×600×850 mm)",
   },
   E4: {
     sku: "EQ.KTEVT02.14070",
@@ -81,16 +92,57 @@ const burgerLinks = {
     name: "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
   },
 };
+applyLinks(listeKeysFor("bulut-burger"), {
+  ...grillPackLinks,
+  D13: {
+    sku: "7919.27NTV.C1",
+    marka: "Öztiryakiler",
+    name: "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)",
+  },
+  D14: {
+    sku: "EQ.KDAVOTF02.300100",
+    marka: "Equsto",
+    name: "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm",
+  },
+});
+applyLinks(listeKeysFor("bulut-doner"), {
+  ...grillPackLinks,
+  D14: {
+    sku: "7919.27NTV.C1",
+    marka: "Öztiryakiler",
+    name: "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)",
+  },
+  D15: {
+    sku: "EQ.KDAVDTF02.30090",
+    marka: "Equsto",
+    name: "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm",
+  },
+});
 
-for (const liste of [
-  "bulut-burger-40-80",
-  "bulut-burger",
-  "bulut-burger-35-100",
-]) {
-  for (const [poz, item] of Object.entries(burgerLinks)) {
-    links[`${liste}|${poz}`] = item;
-  }
-}
+/** Kebap / balık — geniş duvar davlumbaz */
+const duvarDavlumbaz440 = {
+  sku: "EQ.KDAVDTF02.30090",
+  marka: "Equsto",
+  name: "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm",
+};
+applyLinks(listeKeysFor("bulut-kebap"), { D11: duvarDavlumbaz440 });
+applyLinks(listeKeysFor("bulut-balik"), { D12: duvarDavlumbaz440 });
+
+applyLinks(listeKeysFor("bulut-manti"), {
+  D6: {
+    sku: "EQ.KDAVDTF02.30090",
+    marka: "Equsto",
+    name: "DAVLUMBAZ DUVAR TİPİ, FİLTRELİ 3000×900×600 mm",
+  },
+});
+
+applyLinks(listeKeysFor("bulut-pastane-firin"), {
+  D6: {
+    sku: "EQ.KDAVDT01.250140",
+    marka: "Equsto",
+    name: "FİLTRESİZ DAVLUMBAZ, DUVAR TİPİ 2500×1400×600 mm",
+  },
+});
 
 fs.writeFileSync(LINKS_PATH, `${JSON.stringify(content, null, 2)}\n`, "utf8");
-console.log("Updated bulut SKU links");
+console.log("Updated bulut SKU link overrides");

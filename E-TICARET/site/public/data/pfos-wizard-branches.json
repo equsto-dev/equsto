@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-27T16:10:44.189Z",
-  "aktifPaketSayisi": 57,
+  "updated_at": "2026-06-27T18:12:07.557Z",
+  "aktifPaketSayisi": 67,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -130,7 +130,17 @@
     ],
     "Bulut Mutfak": [
       "Hamburgerci",
-      "Ev Yemekleri"
+      "Ev Yemekleri",
+      "Dönerci",
+      "Kebap & Türk Mutfağı",
+      "Mantıcı",
+      "Pastane & Fırın",
+      "Pide & Lahmacun",
+      "Pizzacı",
+      "Salata / Sandviç / Kahvaltı",
+      "Tavukçu",
+      "Balıkçı",
+      "Çorbacı"
     ],
     "Franchise": [
       "Steakhouse",
@@ -201,9 +211,9 @@
       "slug": "inari-bar-yemek"
     },
     "Tavukçu": {
-      "min": 80,
-      "max": 150,
-      "slug": "tavukcu"
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-tavuk"
     },
     "Şarküteri Kiosk": {
       "min": 25,
@@ -226,9 +236,9 @@
       "slug": "patisserie-yemek"
     },
     "Pizzacı": {
-      "min": 80,
-      "max": 500,
-      "slug": "pizzaci"
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-pizza"
     },
     "Türk / Esnaf lokanta": {
       "min": 150,
@@ -454,6 +464,46 @@
       "min": 40,
       "max": 80,
       "slug": "bulut-ev-yemek"
+    },
+    "Dönerci": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-doner"
+    },
+    "Kebap & Türk Mutfağı": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-kebap"
+    },
+    "Mantıcı": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-manti"
+    },
+    "Pastane & Fırın": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-pastane-firin"
+    },
+    "Pide & Lahmacun": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-pide"
+    },
+    "Salata / Sandviç / Kahvaltı": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-salata-sandvic"
+    },
+    "Balıkçı": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-balik"
+    },
+    "Çorbacı": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-corbaci"
     }
   }
 }

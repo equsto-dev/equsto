@@ -65,7 +65,7 @@ function parseBuzFamily(
     return "dik";
   }
   if (
-    /setalti|setaltı|cihazalti|cihazaltı|tezgah\s*alti|tezgah\s*altı|yatay\s*tip|setalti_buz|tezgah_alti_buz/.test(
+    /setalti|setaltı|set\s*alti|set\s*altı|cihazalti|cihazaltı|cihaz\s*alti|tezgah\s*alti|tezgah\s*altı|yatay\s*tip|setalti_buz|tezgah_alti_buz/.test(
       n,
     )
   ) {
@@ -84,7 +84,11 @@ function parseBuzFamily(
 }
 
 function isDerinDondurucu(isim: string): boolean {
-  return /derin\s*donduruc|dondurucu/.test(norm(isim)) && !/buzdolab/.test(norm(isim));
+  const n = norm(isim);
+  return (
+    /derin\s*donduruc|dondurucu|deep\s*freeze|freezer/.test(n) &&
+    !/buzdolab/.test(n)
+  );
 }
 
 function kapiSayisiFromIsim(isim: string): number | null {
@@ -113,9 +117,13 @@ export function isBuroTipiDerinDondurucuReferans(
   notlar?: string | null,
 ): boolean {
   const n = norm(`${isim} ${notlar ?? ""}`);
-  if (!/derin\s*donduruc|dondurucu|freezer/.test(n)) return false;
+  if (!/derin\s*donduruc|dondurucu|deep\s*freeze|freezer/.test(n)) return false;
   if (/dik\s*tip|depo\s*tip|gn\s*600|gn\s*1200/.test(n)) return false;
-  if (/buro tip|büro tip|office type|slim buzdolab|tezgah alti slim/.test(n)) {
+  if (
+    /buro tip|büro tip|office type|slim|tezgah alti slim|set\s*alti|setalti|cihazalti|cihaz\s*alti|deep\s*freeze/.test(
+      n,
+    )
+  ) {
     return true;
   }
   const olcu =
@@ -125,7 +133,7 @@ export function isBuroTipiDerinDondurucuReferans(
   const parts = olcuParts(olcu);
   if (!parts) return false;
   const [w, d, h] = parts;
-  if (w < 55 || w > 65 || d < 55 || d > 65) return false;
+  if (w < 55 || w > 70 || d < 55 || d > 70) return false;
   if (h < 75 || h > 95) return false;
   return true;
 }
@@ -230,6 +238,8 @@ export async function matchBuzdolabiByReferans(
   const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
 
   if (isDerinDondurucu(isim) && isBuroTipiDerinDondurucuReferans(isim, olcu, notlar)) {
+    const slim = await matchSlimSetaltiDerinDondurucu(isim, olcu, notlar);
+    if (slim) return slim;
     return null;
   }
 
@@ -334,6 +344,25 @@ export async function matchBuzdolabiByReferans(
   }
 
   return null;
+}
+
+/** SLIM / setaltı kompakt derin dondurucu — 7919.10LTS / 7919.15LTS */
+export async function matchSlimSetaltiDerinDondurucu(
+  isim: string,
+  olcuRaw: string,
+  notlar?: string | null,
+): Promise<EslesmisUrun | null> {
+  const olcu =
+    olcuRaw.trim() ||
+    extractOlcuFromNotlar(notlar) ||
+    String(notlar ?? "")
+      .replace(/^ölçü:\s*/i, "")
+      .trim();
+  const parts = olcuParts(olcu);
+  const widthCm = parts?.[0] ?? 69;
+  const sku = widthCm >= 68 ? "7919.15LTS.00" : "7919.10LTS.00";
+  const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
+  return hydrateBuzdolabiFromSku(sku, isim, olcuDisplay);
 }
 
 /** Buzdolabı — Portabianco referansında Portabianco eco; aksi halde Öztiryakiler 79K4/79E3 */

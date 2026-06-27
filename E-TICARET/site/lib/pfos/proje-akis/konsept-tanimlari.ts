@@ -111,6 +111,36 @@ function liste(
   };
 }
 
+/** Bulut mutfak PDF referans listesi — 40–80 m² tek bant */
+function bulutReferansKonsept(
+  id: string,
+  name: string,
+  dukkanSecim: string,
+  motorSlug: string,
+  pdf: string,
+): ShopTypeKayit {
+  return {
+    id,
+    name,
+    parent: "Bulut Mutfak",
+    desc: `Bulut mutfak ${name.toLowerCase()} · referans ekipman listesi`,
+    pfos: {
+      motorSlug,
+      dukkanSecim,
+      m2Min: 40,
+      m2Max: 80,
+      bantKurali: `40–80 m² — tek referans liste (${pdf})`,
+      listeYolu: `proje-veri/BULUT MUTFAK/${pdf}`,
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("40-80", `40–80 m² (${dukkanSecim})`, 60, motorSlug),
+      ],
+    },
+    questions: [],
+  };
+}
+
 /** Motoru olmayan dükkan türleri — shopTypes + teklif mesajı */
 function konseptPlanlanan(
   id: string,
@@ -1340,63 +1370,89 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     15,
     "Kompakt bulut parsel — espresso + sınırlı sıcak prep",
   ),
-  konseptPlanlanan("bulut_doner", "Döner", "Bulut Mutfak", "Döner", 40, 120),
-  konseptPlanlanan("bulut_pizza", "Pizza", "Bulut Mutfak", "Pizza", 35, 100),
-  konseptPlanlanan(
-    "bulut_pide",
-    "Pide & Lahmacun",
-    "Bulut Mutfak",
-    "Pide & Lahmacun",
-    35,
-    100,
+  bulutReferansKonsept(
+    "bulut_burger",
+    "Hamburgerci",
+    "Hamburgerci",
+    "bulut-burger",
+    "hamburgerci.pdf",
   ),
-  {
-    id: "bulut_burger",
-    name: "Hamburgerci",
-    parent: "Bulut Mutfak",
-    desc: "Bulut mutfak hamburgerci · referans ekipman listesi",
-    pfos: {
-      motorSlug: "bulut-burger",
-      dukkanSecim: "Hamburgerci",
-      m2Min: 40,
-      m2Max: 80,
-      bantKurali: "40–80 m² — tek referans liste (hamburgerci.pdf)",
-      listeYolu: "proje-veri/BULUT MUTFAK/hamburgerci.pdf",
-      teklifKaynagi: "pfos-referans",
-      durum: "aktif",
-      bantlar: [
-        liste("40-80", "40–80 m² (Hamburgerci)", 60, "bulut-burger"),
-      ],
-    },
-    questions: [],
-  },
-  {
-    id: "bulut_ev_yemek",
-    name: "Ev Yemekleri",
-    parent: "Bulut Mutfak",
-    desc: "Bulut mutfak ev yemekleri · referans ekipman listesi",
-    pfos: {
-      motorSlug: "bulut-ev-yemek",
-      dukkanSecim: "Ev Yemekleri",
-      m2Min: 40,
-      m2Max: 80,
-      bantKurali: "40–80 m² — tek referans liste (ev-yemekleri.pdf)",
-      listeYolu: "proje-veri/BULUT MUTFAK/ev-yemekleri.pdf",
-      teklifKaynagi: "pfos-referans",
-      durum: "aktif",
-      bantlar: [
-        liste("40-80", "40–80 m² (Ev Yemekleri)", 60, "bulut-ev-yemek"),
-      ],
-    },
-    questions: [],
-  },
-  konseptPlanlanan(
+  bulutReferansKonsept(
+    "bulut_ev_yemek",
+    "Ev Yemekleri",
+    "Ev Yemekleri",
+    "bulut-ev-yemek",
+    "ev-yemekleri.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_doner",
+    "Dönerci",
+    "Dönerci",
+    "bulut-doner",
+    "donerci.pdf",
+  ),
+  bulutReferansKonsept(
     "bulut_kebap",
     "Kebap & Türk Mutfağı",
-    "Bulut Mutfak",
     "Kebap & Türk Mutfağı",
-    50,
-    150,
+    "bulut-kebap",
+    "kebap-turk-mutfagi.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_manti",
+    "Mantıcı",
+    "Mantıcı",
+    "bulut-manti",
+    "mantici.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_pastane_firin",
+    "Pastane & Fırın",
+    "Pastane & Fırın",
+    "bulut-pastane-firin",
+    "pastane-firin.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_pide",
+    "Pide & Lahmacun",
+    "Pide & Lahmacun",
+    "bulut-pide",
+    "pide-lahmacun.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_pizza",
+    "Pizzacı",
+    "Pizzacı",
+    "bulut-pizza",
+    "pizzaci.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_salata_sandvic",
+    "Salata / Sandviç / Kahvaltı",
+    "Salata / Sandviç / Kahvaltı",
+    "bulut-salata-sandvic",
+    "salata-sandvic-kahvalti.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_tavuk",
+    "Tavukçu",
+    "Tavukçu",
+    "bulut-tavuk",
+    "tavukcu.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_balik",
+    "Balıkçı",
+    "Balıkçı",
+    "bulut-balik",
+    "balikci.pdf",
+  ),
+  bulutReferansKonsept(
+    "bulut_corbaci",
+    "Çorbacı",
+    "Çorbacı",
+    "bulut-corbaci",
+    "corbaci.pdf",
   ),
   konseptPlanlanan(
     "uretim_500_2000",
