@@ -600,8 +600,27 @@ export function inferUrunTipiFromReferansSatir(s: PfosEkipmanSatir): string {
   const n = norm(s.ad);
   const poz = String(s.poz || "").trim().toUpperCase();
   const olcu = String(s.olcu || "").trim();
+  const bolumBlob = norm(
+    `${String(s.bolumAd ?? "").split("\0")[0]} ${String(s.bolum ?? "")}`,
+  );
+
+  if (
+    /deepfreeze|deep\s*freeze|deepfreeze-depo|deepfreeze_depo/.test(bolumBlob) &&
+    /panel tip.*soguk oda|soguk oda/.test(n)
+  ) {
+    return "panel-derin-dondurucu-oda";
+  }
 
   for (const rule of TIP_RULES) {
+    if (rule.tip === "panel-soguk-oda") {
+      if (
+        rule.test(n, poz, olcu) &&
+        !/deepfreeze|deep\s*freeze/.test(bolumBlob)
+      ) {
+        return rule.tip;
+      }
+      continue;
+    }
     if (rule.test(n, poz, olcu)) return rule.tip;
   }
 

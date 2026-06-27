@@ -139,6 +139,7 @@ async function buildTemplateKalemler(
           referansPoz: item.referansPoz,
           referansListeKey:
             item.referansListeKey ?? template.referansId ?? undefined,
+          altKategori: item.altKategori,
         })
       : await matchProductForMotor(
           urunTipi,

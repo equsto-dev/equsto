@@ -21,6 +21,63 @@ const BOLUM_BY_POZ: Record<string, string> = {
   D: "bulaşık yıkama",
 };
 
+function sectionBaslikNorm(s: string): string {
+  return String(s ?? "")
+    .split("\0")[0]
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+}
+
+/** Bölüm başlığından kalıcı bolum kodu (bulut referans listeleriyle uyumlu) */
+function bolumKodFromBaslik(baslik: string, harf: string): string {
+  const t = sectionBaslikNorm(baslik);
+  if (/deepfreeze|deep\s*freeze|derin\s*dondurucu\s*depo/.test(t)) {
+    return "DEEPFREEZE_DEPO";
+  }
+  if (/soguk\s*oda|soğuk\s*oda/.test(t) && !/deepfreeze|deep\s*freeze/.test(t)) {
+    return "SOGUK_ODA";
+  }
+  if (/kuru\s*depo/.test(t)) return "KURU_DEPO";
+  return harf.toUpperCase();
+}
+
+function resolveSatirBolumFields(
+  poz: string,
+  bolum: string,
+  bolumAd: string,
+): { bolum: string; bolumAd: string } {
+  const harf = poz.charAt(0).toUpperCase();
+  const displayBaslik = bolumAd.split("\0")[0].trim();
+  const sectionSuffix = bolumAd.includes("\0")
+    ? bolumAd.slice(bolumAd.indexOf("\0"))
+    : "";
+
+  const resolvedBolum =
+    bolum && !BOLUM_HARF_RE.test(bolum)
+      ? bolum
+      : displayBaslik
+        ? bolumKodFromBaslik(displayBaslik, harf)
+        : bolum || harf;
+
+  let resolvedBaslik = displayBaslik;
+  if (!resolvedBaslik) {
+    if (resolvedBolum === "DEEPFREEZE_DEPO") {
+      resolvedBaslik = `${harf}- DEEPFREEZE DEPO`;
+    } else if (resolvedBolum === "SOGUK_ODA") {
+      resolvedBaslik = `${harf}- SOĞUK ODA`;
+    } else {
+      resolvedBaslik = BOLUM_BY_POZ[harf] || "";
+    }
+  }
+
+  return {
+    bolum: resolvedBolum,
+    bolumAd: resolvedBaslik ? `${resolvedBaslik}${sectionSuffix}` : bolumAd,
+  };
+}
+
 function cellStr(v: unknown): string {
   if (v == null) return "";
   if (typeof v === "string") {
@@ -209,8 +266,7 @@ function parseRowFromPoz(
   if (!tanim && !meta.mevcut) return null;
 
   const row: PfosEkipmanSatir = {
-    bolum: bolum || poz.charAt(0),
-    bolumAd: bolumAd || BOLUM_BY_POZ[poz.charAt(0)] || "",
+    ...resolveSatirBolumFields(poz, bolum || poz.charAt(0), bolumAd),
     poz,
     ad: tanim || poz,
     olcu: olcu || "—",
@@ -517,7 +573,9 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       sectionIndex++;
       bolumAd = `${firstCell}\0${sectionIndex}`;
       const harf = firstCell.match(/\b([A-Z])\s*[-–]/i)?.[1] || firstCell.charAt(0).toUpperCase();
-      if (harf && BOLUM_HARF_RE.test(harf)) bolum = harf;
+      if (harf && BOLUM_HARF_RE.test(harf)) {
+        bolum = bolumKodFromBaslik(firstCell, harf);
+      }
       return;
     }
 
@@ -539,6 +597,9 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       !NUM_POZ_RE.test(noRaw.replace(/\D/g, ""))
     ) {
       bolum = pozRaw.toUpperCase();
+      if (BOLUM_HARF_RE.test(bolum)) {
+        bolum = bolumKodFromBaslik(adBase, bolum);
+      }
       sectionIndex++;
       bolumAd = `${adBase}\0${sectionIndex}`;
       return;
@@ -554,7 +615,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       sectionIndex++;
       bolumAd = `${adBase}\0${sectionIndex}`;
       const harf = adBase.match(/\b([A-Z])\s*[-–]/i)?.[1];
-      if (harf) bolum = harf.toUpperCase();
+      if (harf) bolum = bolumKodFromBaslik(adBase, harf.toUpperCase());
       return;
     }
 
@@ -619,9 +680,10 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
     }
 
     const harf = poz.charAt(0).toUpperCase();
+    const bolumFields = resolveSatirBolumFields(poz, bolum, bolumAd);
     const satir: PfosEkipmanSatir = {
-      bolum: bolum || (BOLUM_HARF_RE.test(harf) ? harf : ""),
-      bolumAd: bolumAd || BOLUM_BY_POZ[harf] || "",
+      bolum: bolumFields.bolum,
+      bolumAd: bolumFields.bolumAd,
       poz,
       ad,
       olcu,
@@ -692,7 +754,8 @@ export function parseProformaExcelWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
       ) {
         sectionIndex++;
         bolumAd = `${header}\0${sectionIndex}`;
-        bolum = header.charAt(0).toUpperCase();
+        const harf = header.charAt(0).toUpperCase();
+        bolum = bolumKodFromBaslik(header, harf);
       }
       return;
     }

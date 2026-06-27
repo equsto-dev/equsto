@@ -785,6 +785,9 @@ const tdStok: CSSProperties = {
   ...td,
   textAlign: "left",
   whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  maxWidth: 0,
   fontSize: 10,
   paddingLeft: 4,
   paddingRight: 4,
@@ -794,7 +797,8 @@ const tdTanim: CSSProperties = {
   ...td,
   wordBreak: "break-word",
   overflowWrap: "anywhere",
-  minWidth: 120,
+  overflow: "hidden",
+  minWidth: 0,
 };
 
 const tdMarka: CSSProperties = {
@@ -802,6 +806,10 @@ const tdMarka: CSSProperties = {
   textAlign: "center",
   fontSize: 10,
   padding: "10px 4px",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
+  maxWidth: 0,
 };
 
 const tdOlcu: CSSProperties = {
@@ -809,6 +817,9 @@ const tdOlcu: CSSProperties = {
   textAlign: "center",
   fontSize: 10,
   whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  maxWidth: 0,
   padding: "10px 8px",
 };
 
