@@ -73,7 +73,9 @@ if (!wizard.includes("usePfosListeUpload")) {
   fail("PfosPublicWizard: usePfosListeUpload yok");
 }
 if (!wizard.includes("renderRightRail(!wizardListeMode)")) {
-  fail("PfosPublicWizard: sağ rail sihirbazla birlikte render edilmiyor");
+  if (!wizard.includes('renderRightRail(activePane === "balanced" && !wizardListeMode)')) {
+    fail("PfosPublicWizard: sağ rail sihirbazla birlikte render edilmiyor");
+  }
 }
 if (wizard.includes("mode=liste") || wizard.includes("PfosListeUpload.tsx")) {
   fail("PfosPublicWizard: ayrı liste modu geri gelmiş");

@@ -142,6 +142,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     marginTop: number;
     height: number;
   } | null>(null);
+  const [activePane, setActivePane] = useState<"balanced" | "wizard" | "liste">(
+    "balanced",
+  );
 
   useEffect(() => {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
@@ -191,6 +194,47 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   );
 
   const wizardListeMode = !!(listeUpload.sonuc && listeUpload.teklifV14);
+  const wizardHasProforma = !!(finished && sonuc && teklifV14);
+  const wizardPaneCollapsed = activePane === "liste";
+  const listePaneCollapsed = activePane === "wizard";
+
+  useEffect(() => {
+    if (wizardListeMode) setActivePane("liste");
+  }, [wizardListeMode]);
+
+  useEffect(() => {
+    if (listeUpload.loadingKind) setActivePane("liste");
+  }, [listeUpload.loadingKind]);
+
+  useEffect(() => {
+    if (wizardHasProforma && !wizardListeMode) setActivePane("wizard");
+  }, [wizardHasProforma, wizardListeMode]);
+
+  const resetListeUpload = useCallback(() => {
+    listeUpload.reset();
+    setActivePane(wizardHasProforma ? "wizard" : "balanced");
+  }, [listeUpload, wizardHasProforma]);
+
+  const focusWizardPane = useCallback(() => {
+    setActivePane("wizard");
+  }, []);
+
+  const focusListePane = useCallback(() => {
+    setActivePane("liste");
+  }, []);
+
+  const layoutClassName = useCallback(
+    (extra?: string) =>
+      [
+        styles.layout,
+        activePane === "wizard" ? styles.layoutFocusWizard : "",
+        activePane === "liste" ? styles.layoutFocusListe : "",
+        extra,
+      ]
+        .filter(Boolean)
+        .join(" "),
+    [activePane],
+  );
 
   const openPanelIndex = useMemo(() => {
     for (let i = 0; i < panels.length; i++) {
@@ -213,7 +257,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — üst=Başlayalım, alt=meslek s1 */
   useLayoutEffect(() => {
-    if (wizardListeMode || !memberLoggedIn) {
+    if (activePane !== "balanced" || wizardListeMode || !memberLoggedIn) {
       setUploadAlign(null);
       return;
     }
@@ -250,6 +294,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       window.removeEventListener("resize", measure);
     };
   }, [
+    activePane,
     wizardListeMode,
     memberLoggedIn,
     openPanelIndex,
@@ -812,6 +857,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           type="button"
           className={styles.secHd}
           onClick={() => {
+            focusWizardPane();
             if (isDone) reopenPanel(panel.id);
           }}
         >
@@ -851,8 +897,33 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
+  function renderPaneTab(
+    side: "wizard" | "liste",
+    label: string,
+    sub?: string,
+  ) {
+    return (
+      <button
+        type="button"
+        className={styles.paneTab}
+        aria-expanded={false}
+        onClick={() => setActivePane(side)}
+      >
+        <span className={styles.paneTabIcon} aria-hidden>
+          {side === "wizard" ? "▸" : "◂"}
+        </span>
+        <span className={styles.paneTabLabel}>{label}</span>
+        {sub ? <span className={styles.paneTabSub}>{sub}</span> : null}
+      </button>
+    );
+  }
+
   function renderListeProformaRail() {
     if (!listeUpload.sonuc || !listeUpload.teklifV14) return null;
+    const proformaClass =
+      activePane === "liste"
+        ? styles.proformaWrapExpanded
+        : styles.proformaWrapRail;
 
     return (
       <>
@@ -881,12 +952,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           <button
             type="button"
             className={`${styles.btn} ${styles.btnGhost} ${styles.railListeReset}`}
-            onClick={listeUpload.reset}
+            onClick={resetListeUpload}
           >
             {t("Yeni liste yükle")}
           </button>
         </section>
-        <div className={styles.proformaWrapRail}>
+        <div className={proformaClass}>
           <TeklifV14Proforma
             model={listeUpload.teklifV14}
             deliveryOnly
@@ -898,33 +969,52 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function renderRightRail(alignUpload = false) {
     return (
-      <aside className={styles.rightCol} aria-label={t("Liste yükleme")}>
-        <div
-          className={alignUpload ? styles.uploadRailAlign : undefined}
-          style={
-            alignUpload && uploadAlign != null
-              ? {
-                  marginTop: uploadAlign.marginTop,
-                  height: uploadAlign.height,
-                }
-              : undefined
-          }
-        >
-          <PfosListeUploadRail
-            fillHeight={alignUpload && uploadAlign != null}
-            inputRef={listeUpload.inputRef}
-          drag={listeUpload.drag}
-          setDrag={listeUpload.setDrag}
-          file={listeUpload.file}
-          loadingKind={listeUpload.loadingKind}
-          error={listeUpload.error}
-          memberReady={listeUpload.memberReady}
-          memberLoggedIn={listeUpload.memberLoggedIn}
-          loginHref={listeUpload.loginHref}
-          onPick={listeUpload.onPick}
-        />
+      <aside
+        className={[
+          styles.rightCol,
+          listePaneCollapsed ? styles.paneCollapsed : "",
+          activePane === "liste" ? styles.paneExpanded : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        aria-label={t("Liste yükleme")}
+      >
+        {listePaneCollapsed
+          ? renderPaneTab(
+              "liste",
+              t("Liste yükle"),
+              listeUpload.file?.name ?? t("Excel / PDF"),
+            )
+          : null}
+        <div className={styles.paneBody}>
+          <div
+            className={alignUpload ? styles.uploadRailAlign : undefined}
+            style={
+              alignUpload && uploadAlign != null
+                ? {
+                    marginTop: uploadAlign.marginTop,
+                    height: uploadAlign.height,
+                  }
+                : undefined
+            }
+          >
+            <PfosListeUploadRail
+              fillHeight={alignUpload && uploadAlign != null}
+              inputRef={listeUpload.inputRef}
+              drag={listeUpload.drag}
+              setDrag={listeUpload.setDrag}
+              file={listeUpload.file}
+              loadingKind={listeUpload.loadingKind}
+              error={listeUpload.error}
+              memberReady={listeUpload.memberReady}
+              memberLoggedIn={listeUpload.memberLoggedIn}
+              loginHref={listeUpload.loginHref}
+              onPick={listeUpload.onPick}
+              onFocusPane={focusListePane}
+            />
+          </div>
+          {renderListeProformaRail()}
         </div>
-        {renderListeProformaRail()}
       </aside>
     );
   }
@@ -1033,8 +1123,25 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }
 
   return (
-    <div className={styles.layout}>
-      <div className={styles.leftCol} ref={leftColRef}>
+    <div className={layoutClassName()}>
+      <div
+        className={[
+          styles.leftCol,
+          wizardPaneCollapsed ? styles.paneCollapsed : "",
+          activePane === "wizard" ? styles.paneExpanded : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        ref={leftColRef}
+      >
+        {wizardPaneCollapsed
+          ? renderPaneTab(
+              "wizard",
+              t("Başlayalım"),
+              `${hint.pct}% · ${hint.title}`,
+            )
+          : null}
+        <div className={styles.paneBody}>
         <p className={styles.mreGreeting}>
           {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
         </p>
@@ -1108,9 +1215,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </div>
           </>
         ) : null}
+        </div>
       </div>
 
-      {renderRightRail(!wizardListeMode)}
+      {renderRightRail(activePane === "balanced" && !wizardListeMode)}
     </div>
   );
 }

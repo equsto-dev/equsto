@@ -21,6 +21,8 @@ type Props = Pick<
 > & {
   /** Dropzone altı meslek paneli ile hizalansın */
   fillHeight?: boolean;
+  /** Sürükle-bırak / tıklama — liste modülüne odaklan */
+  onFocusPane?: () => void;
 };
 
 /** Sağ panel — Excel/PDF liste yükleme */
@@ -36,6 +38,7 @@ export default function PfosListeUploadRail({
   loginHref,
   onPick,
   fillHeight = false,
+  onFocusPane,
 }: Props) {
   const { t } = usePfosLabel();
 
@@ -80,15 +83,22 @@ export default function PfosListeUploadRail({
             tabIndex={loadingKind ? -1 : 0}
             aria-busy={!!loadingKind}
             onClick={() => {
-              if (!loadingKind) inputRef.current?.click();
+              if (!loadingKind) {
+                onFocusPane?.();
+                inputRef.current?.click();
+              }
             }}
             onKeyDown={(e) => {
               if (loadingKind) return;
-              if (e.key === "Enter" || e.key === " ") inputRef.current?.click();
+              if (e.key === "Enter" || e.key === " ") {
+                onFocusPane?.();
+                inputRef.current?.click();
+              }
             }}
             onDragOver={(e) => {
               if (loadingKind) return;
               e.preventDefault();
+              onFocusPane?.();
               setDrag(true);
             }}
             onDragLeave={() => setDrag(false)}
@@ -96,6 +106,7 @@ export default function PfosListeUploadRail({
               if (loadingKind) return;
               e.preventDefault();
               setDrag(false);
+              onFocusPane?.();
               onPick(e.dataTransfer.files);
             }}
           >

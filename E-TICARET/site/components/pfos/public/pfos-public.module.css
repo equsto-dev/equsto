@@ -37,6 +37,11 @@
   padding: 1.25rem 1rem 3rem;
 }
 
+.main:has(.layoutFocusWizard),
+.main:has(.layoutFocusListe) {
+  max-width: min(100vw - 2rem, 1680px);
+}
+
 .modeTabs {
   display: flex;
   gap: 0.5rem;
@@ -258,6 +263,19 @@
   padding: 1rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04), 0 2px 12px rgba(0, 30, 80, 0.03);
   overflow-x: auto;
+}
+
+.proformaWrapExpanded {
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04), 0 2px 12px rgba(0, 30, 80, 0.03);
+  overflow-x: auto;
+  min-width: 0;
+  width: 100%;
 }
 
 .railSectionListeSonuc .railListeToplam {
@@ -736,10 +754,21 @@
   grid-template-columns: minmax(280px, 3fr) minmax(0, 2.8fr);
   gap: 1.25rem;
   align-items: start;
+  transition: grid-template-columns 0.48s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.leftCol {
+.layoutFocusWizard {
+  grid-template-columns: minmax(0, 1fr) minmax(4.25rem, 0.1fr);
+}
+
+.layoutFocusListe {
+  grid-template-columns: minmax(4.25rem, 0.1fr) minmax(0, 1fr);
+}
+
+.leftCol,
+.rightCol {
   min-width: 0;
+  position: relative;
 }
 
 .rightCol {
@@ -748,6 +777,118 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.paneBody {
+  min-width: 0;
+  transition:
+    opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.paneCollapsed .paneBody {
+  opacity: 0;
+  transform: scale(0.985);
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.paneTab {
+  display: none;
+}
+
+.paneCollapsed .paneTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  min-height: 11rem;
+  padding: 1rem 0.55rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 16px rgba(0, 30, 80, 0.05);
+  cursor: pointer;
+  font: inherit;
+  color: #001e50;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.paneTab:hover {
+  border-color: var(--pfos-ice);
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(74, 184, 220, 0.12);
+}
+
+.paneTabIcon {
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--pfos-ice-dark);
+}
+
+.paneTabLabel {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.paneTabSub {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #6b7280;
+  line-height: 1.35;
+  max-height: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.paneExpanded {
+  z-index: 2;
+}
+
+.layoutFocusListe .rightCol {
+  position: static;
+  top: auto;
+}
+
+.layoutFocusWizard .leftCol {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layout {
+    transition: none;
+  }
+
+  .paneBody,
+  .paneCollapsed .paneBody {
+    transition: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    height: auto;
+    pointer-events: auto;
+  }
+
+  .paneCollapsed .paneBody {
+    display: none;
+  }
 }
 
 .mreGreeting {
@@ -1363,12 +1504,39 @@
 }
 
 @media (max-width: 900px) {
-  .layout {
+  .layout,
+  .layoutFocusWizard,
+  .layoutFocusListe {
     grid-template-columns: 1fr;
   }
 
   .rightCol {
     position: static;
+  }
+
+  .paneCollapsed .paneBody {
+    display: none;
+  }
+
+  .paneCollapsed .paneTab {
+    display: flex;
+    flex-direction: row;
+    writing-mode: horizontal-tb;
+    min-height: auto;
+    width: 100%;
+    padding: 0.85rem 1rem;
+  }
+
+  .paneTabLabel,
+  .paneTabSub {
+    writing-mode: horizontal-tb;
+    transform: none;
+    max-height: none;
+  }
+
+  .paneTabSub {
+    margin-left: auto;
+    font-size: 0.75rem;
   }
 }
 
