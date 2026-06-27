@@ -1065,30 +1065,36 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-/* Balanced ana sayfa — dropzone kart yüksekliğini doldurur */
-:global([data-pfos-pane="balanced"]) .listeDropZoneRail {
+/* Balanced — kesik çizgili dropzone dış kartla aynı yükseklik */
+:global([data-pfos-pane="balanced"]) .uploadRailFill .listeDropZoneRail {
   margin-top: 0;
   padding: 1.35rem 0.85rem;
   flex: 1 1 auto;
-  min-height: 0;
+  min-height: 100%;
+  height: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  border-radius: 13px;
 }
 
-:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropIcon {
+:global([data-pfos-pane="balanced"]) .uploadRailFill .listeDropZoneRail .listeDropIcon {
   font-size: 1.45rem;
   margin-bottom: 0.35rem;
 }
 
-:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropTitle {
+:global([data-pfos-pane="balanced"]) .uploadRailFill .listeDropZoneRail .listeDropTitle {
   font-size: 0.92rem;
   line-height: 1.3;
 }
 
-:global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropHint {
+:global([data-pfos-pane="balanced"]) .uploadRailFill .listeDropZoneRail .listeDropHint {
   font-size: 0.82rem;
   line-height: 1.35;
 }

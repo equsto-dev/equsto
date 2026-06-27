@@ -52,6 +52,7 @@ export default function PfosListeWorkspace({
   const { t } = usePfosLabel();
   const compact = !!(file || loadingKind || sonuc);
   const uploadFlipRef = useFlipCollapse(compact);
+  const fillDropzone = largePane || hideTitle;
 
   return (
     <div className={ws.listeWorkspace}>
@@ -97,7 +98,7 @@ export default function PfosListeWorkspace({
                 <a href={loginHref}>{t("üye girişi")}</a>
               </p>
             ) : (
-              <div className={largePane ? styles.uploadRailFill : undefined}>
+              <div className={fillDropzone ? styles.uploadRailFill : undefined}>
                 <div
                   className={`${styles.listeDropZone} ${styles.listeDropZoneRail}${drag ? ` ${styles.listeDropZoneDrag}` : ""}${loadingKind ? ` ${styles.listeDropZoneBusy}` : ""}`}
                   data-pfos-dropzone=""
