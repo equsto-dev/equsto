@@ -404,16 +404,20 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: wizardSparkleShimmer 3.6s ease-in-out infinite;
+  animation: wizardSparkleShimmer 5s ease-out infinite;
 }
 
 @keyframes wizardSparkleShimmer {
   0%,
-  100% {
+  8% {
     background-position: 120% 50%;
   }
-  50% {
+  28% {
     background-position: -20% 50%;
+  }
+  28.01%,
+  100% {
+    background-position: 120% 50%;
   }
 }
 
