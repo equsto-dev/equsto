@@ -758,8 +758,8 @@
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  width: fit-content;
+  border-radius: 14px;
+  width: 100%;
   max-width: 100%;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 30, 80, 0.04);
@@ -818,11 +818,6 @@
   color: #fff;
 }
 
-.moduleSwitchIcon {
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
 .moduleSwitchBadge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -837,9 +832,12 @@
   border: none;
   background: transparent;
   color: #64748b;
-  font-size: 1rem;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
   line-height: 1;
-  padding: 0.45rem 0.55rem;
+  padding: 0.5rem 0.75rem;
+  margin-left: auto;
   border-radius: 999px;
   cursor: pointer;
   transition:
@@ -860,12 +858,14 @@
   transition: grid-template-columns 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.layoutFocusWizard {
-  grid-template-columns: minmax(0, 1fr) minmax(5.5rem, 5.75rem);
+.layoutFocusWizard,
+.layoutFocusListe {
+  grid-template-columns: minmax(0, 1fr);
 }
 
-.layoutFocusListe {
-  grid-template-columns: minmax(5.5rem, 5.75rem) minmax(0, 1fr);
+.layoutFocusWizard .rightCol.paneCollapsed,
+.layoutFocusListe .leftCol.paneCollapsed {
+  display: none;
 }
 
 .leftCol,
@@ -928,102 +928,6 @@
   overflow: hidden;
 }
 
-.paneRail {
-  display: none;
-}
-
-.paneCollapsed .paneRail {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.45rem;
-  width: 100%;
-  min-height: 11.5rem;
-  padding: 0.85rem 0.55rem 0.75rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-  box-shadow: 0 4px 20px rgba(0, 30, 80, 0.06);
-  cursor: pointer;
-  font: inherit;
-  color: #001e50;
-  text-align: center;
-  transition:
-    transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.28s ease,
-    border-color 0.28s ease;
-  animation: paneRailIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.paneCollapsedLeft .paneRail {
-  --pane-rail-slide: -10px;
-}
-
-.paneCollapsedRight .paneRail {
-  --pane-rail-slide: 10px;
-}
-
-@keyframes paneRailIn {
-  from {
-    opacity: 0;
-    transform: translateX(var(--pane-rail-slide, 0)) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-.paneRail:hover {
-  border-color: var(--pfos-ice);
-  box-shadow: 0 8px 28px rgba(74, 184, 220, 0.16);
-  transform: translateY(-2px);
-}
-
-.paneRail:active {
-  transform: translateY(0) scale(0.99);
-}
-
-.paneRailAccent {
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--pfos-ice), var(--pfos-ice-dark));
-  margin-bottom: 0.1rem;
-}
-
-.paneRailIcon {
-  font-size: 1.35rem;
-  line-height: 1;
-}
-
-.paneRailTitle {
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-}
-
-.paneRailMeta {
-  font-size: 0.66rem;
-  font-weight: 500;
-  color: #6b7280;
-  line-height: 1.3;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  word-break: break-word;
-}
-
-.paneRailAction {
-  margin-top: auto;
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: var(--pfos-ice-dark);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .paneExpanded {
   z-index: 2;
 }
@@ -1041,8 +945,7 @@
   .layout,
   .moduleSwitcher,
   .paneBody,
-  .paneCollapsed .paneBody,
-  .paneCollapsed .paneRail {
+  .paneCollapsed .paneBody {
     transition: none;
     animation: none;
   }
@@ -1687,28 +1590,6 @@
   }
 
   .paneCollapsed .paneBody {
-    display: none;
-  }
-
-  .paneCollapsed .paneRail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    min-height: auto;
-    width: 100%;
-    padding: 0.85rem 1rem;
-    text-align: left;
-  }
-
-  .paneRailMeta {
-    margin-left: auto;
-    -webkit-line-clamp: 1;
-    max-width: 45%;
-  }
-
-  .paneRailAction {
     display: none;
   }
 
