@@ -252,6 +252,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     (extra?: string) =>
       [
         styles.layout,
+        activePane === "balanced" ? styles.layoutBalanced : "",
         activePane === "wizard" ? styles.layoutFocusWizard : "",
         activePane === "liste" ? styles.layoutFocusListe : "",
         extra,
@@ -1172,7 +1173,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       wizardPct={hint.pct}
       listeHasResult={!!listeUpload.teklifV14}
     >
-      <div className={layoutClassName()}>
+      <div
+        className={layoutClassName()}
+        data-pfos-pane={activePane === "balanced" ? "balanced" : activePane}
+      >
         <div
           className={[
             styles.leftCol,
