@@ -35,6 +35,13 @@ function listeKeys(kategoriId, bantId) {
 }
 
 async function main() {
+  const writeLinks = process.argv.includes("--write");
+  if (!writeLinks) {
+    console.warn(
+      "Bulut otomatik SKU seed devre dışı. Yalnızca rapor. Yazmak için --write (önerilmez).",
+    );
+  }
+
   clearMatchProductCache();
   clearShopCatalogCache();
 
@@ -91,9 +98,13 @@ async function main() {
     }
   }
 
-  fs.writeFileSync(LINKS_PATH, `${JSON.stringify(content, null, 2)}\n`, "utf8");
+  if (writeLinks) {
+    fs.writeFileSync(LINKS_PATH, `${JSON.stringify(content, null, 2)}\n`, "utf8");
+  }
 
-  console.log(`Bulut SKU seed: +${added} link, ${skipped} unchanged, ${missed} eşleşmedi`);
+  console.log(
+    `Bulut SKU ${writeLinks ? "seed" : "rapor"}: +${added} link, ${skipped} unchanged, ${missed} eşleşmedi`,
+  );
   if (missLog.length) {
     console.log("\nEşleşmeyen pozlar:");
     for (const line of missLog) console.log(" ", line);

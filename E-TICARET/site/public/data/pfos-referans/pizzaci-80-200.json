@@ -13,7 +13,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M1",
-      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI, 2. EL",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*85*205",
       "adet": 1,
       "kategori": "diger"
@@ -22,7 +22,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M2",
-      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI, 2. EL",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
       "olcu": "70*85*205",
       "adet": 1,
       "kategori": "diger"
@@ -31,7 +31,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M9",
-      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜİ 2. EL",
+      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜİ",
       "olcu": "80*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -40,7 +40,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M10",
-      "ad": "PATATES DİNLENDİRME ÜNİTESİ, ELK., 2. EL",
+      "ad": "PATATES DİNLENDİRME ÜNİTESİ, ELK.",
       "olcu": "40*70*85",
       "adet": 1,
       "kategori": "diger"
@@ -112,7 +112,7 @@
       "bolum": "m",
       "bolumAd": "m- mutfak",
       "poz": "M19",
-      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI, 2. EL",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
       "olcu": "500 TB/S",
       "adet": 1,
       "kategori": "diger"
@@ -265,7 +265,7 @@
       "bolum": "d",
       "bolumAd": "d- bulaşık yıkama",
       "poz": "D6",
-      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP, 2. EL",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
       "olcu": "1000 tb/s",
       "adet": 1,
       "kategori": "yikama"

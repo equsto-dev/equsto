@@ -1,5 +1,6 @@
 /**
- * Bulut mutfak — doğrulanmış poz → SKU override'ları (seed sonrası).
+ * Bulut mutfak — yalnızca doğrulanmış poz → SKU linkleri.
+ * Önce tüm bulut-* otomatik linkleri siler, sonra override uygular.
  * Kullanım: node scripts/patch-bulut-sku-links.mjs
  */
 import fs from "node:fs";
@@ -13,6 +14,15 @@ const REF_DIR = path.join(SITE, "public", "data", "pfos-referans");
 
 const content = JSON.parse(fs.readFileSync(LINKS_PATH, "utf8"));
 const links = content.links;
+
+let pruned = 0;
+for (const key of Object.keys(links)) {
+  if (key.startsWith("bulut-")) {
+    delete links[key];
+    pruned += 1;
+  }
+}
+console.log(`Pruned ${pruned} bulut-* SKU link entries`);
 
 function applyLinks(listeKeys, pozMap) {
   for (const liste of listeKeys) {
@@ -77,9 +87,9 @@ const grillPackLinks = {
     name: "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
   },
   D4: {
-    sku: "79E3.27NMV.03",
+    sku: "79E3.27NMV.00",
     marka: "Öztiryakiler",
-    name: "TAG 270 NMV 6 ÇEKMECE YATAY TİP BUZDOLABI (make-up, 3 sıra çekmece, 142×70)",
+    name: "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ 1400×700×850 mm",
   },
   D6: {
     sku: "7919.10LTS.00",
@@ -107,6 +117,11 @@ applyLinks(listeKeysFor("bulut-burger"), {
 });
 applyLinks(listeKeysFor("bulut-doner"), {
   ...grillPackLinks,
+  D9: {
+    sku: "VKM-G4R",
+    marka: "Vosco",
+    name: "DÖNER OCAĞI, 4 RADYANLI, GAZLI",
+  },
   D14: {
     sku: "7919.27NTV.C1",
     marka: "Öztiryakiler",
@@ -144,5 +159,6 @@ applyLinks(listeKeysFor("bulut-pastane-firin"), {
   },
 });
 
+const applied = Object.keys(links).filter((k) => k.startsWith("bulut-")).length;
 fs.writeFileSync(LINKS_PATH, `${JSON.stringify(content, null, 2)}\n`, "utf8");
-console.log("Updated bulut SKU link overrides");
+console.log(`Applied ${applied} verified bulut SKU links`);
