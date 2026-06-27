@@ -19,8 +19,7 @@
           "Boş ver"
         ],
         "mapsTo": "analitik.rol",
-        "motorEtkisi": "yok — segment / ton",
-        "note": "PFOS adım 01 — mesleğe göre teknik derinlik."
+        "motorEtkisi": "yok — segment / ton"
       },
       {
         "id": "q_lokasyon",

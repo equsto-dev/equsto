@@ -88,9 +88,6 @@ export default function PfosListeWorkspace({
             <h2 className={ws.uploadTitle}>
               {t("Ekipman listenizi yükleyin")}
             </h2>
-            <p className={ws.uploadSub}>
-              {t("Excel veya PDF — katalog eşlemesi ile fiyatlandırılır")}
-            </p>
             {!memberLoggedIn ? (
               <p className={ws.uploadLogin}>
                 {t("Yüklemek için")}{" "}

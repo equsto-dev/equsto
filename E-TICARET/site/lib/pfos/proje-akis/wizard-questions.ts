@@ -148,7 +148,6 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     options: [...PFOS_Q_MESLEK],
     mapsTo: "analitik.rol",
     motorEtkisi: "yok — segment / ton",
-    note: "PFOS adım 01 — mesleğe göre teknik derinlik.",
   },
   {
     id: "q_lokasyon",
