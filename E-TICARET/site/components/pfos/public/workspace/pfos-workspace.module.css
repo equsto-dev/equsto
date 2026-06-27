@@ -14,7 +14,7 @@
 .grid {
   display: grid;
   grid-template-columns: 4.75rem minmax(0, 1fr) minmax(18rem, 24rem);
-  gap: 2rem;
+  gap: clamp(1.25rem, 2vw, 2rem);
   align-items: start;
 }
 
@@ -343,6 +343,44 @@
   gap: 1.15rem;
   flex: 1 1 auto;
   min-height: 0;
+}
+
+:global([data-pfos-pane="balanced"]) .wizardWorkspace {
+  height: 100%;
+}
+
+:global([data-pfos-pane="balanced"]) .wizardSteps {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+:global([data-pfos-pane="balanced"]) .listeWorkspace {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+:global([data-pfos-pane="balanced"]) .uploadCard:not(.uploadCardCompact) {
+  flex: 1 1 auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+:global([data-pfos-pane="balanced"]) .uploadCardLarge:not(.uploadCardCompact) {
+  flex: 1 1 auto;
+  min-height: min(420px, 52vh);
+}
+
+:global([data-pfos-pane="balanced"]) .wizardIntro,
+:global([data-pfos-pane="balanced"]) .wizardIntroTitle,
+:global([data-pfos-pane="balanced"]) .wizardIntroSub,
+:global([data-pfos-pane="balanced"]) .wizardIntroSparkle {
+  max-width: none;
 }
 
 .wizardIntro {
