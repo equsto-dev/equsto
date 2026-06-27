@@ -44,7 +44,7 @@ export default function PfosListeUploadRail({
   const formatNote = (
     <p className={styles.listeFormatNoteRail}>
       {t(
-        "Excel: Poz, ürün adı, ölçü, marka, adet ve birim fiyat sütunları okunur. PDF: proforma satırları birebir aktarılır.",
+        "Excel: Poz, ürün adı, ölçü ve adet okunur; fiyatlar Equsto katalogundan gelir. PDF: proforma satırları katalog eşlemesi ile fiyatlandırılır.",
       )}
     </p>
   );
@@ -57,7 +57,7 @@ export default function PfosListeUploadRail({
       >
       <span className={styles.railKicker}>{t("Liste yükleme")}</span>
       <span className={styles.railTitle}>
-        {t("Ekipman listenizi yükleyin — liste birebir teklife aktarılır.")}
+        {t("Ekipman listenizi yükleyin — katalog eşlemesi ile fiyatlandırılır.")}
       </span>
       <p className={styles.railPlaceholder}>
         {t("Excel (.xlsx) veya PDF teklif / proforma listesi")}

@@ -252,14 +252,21 @@ export function ekipmanToReferansKalemler(
         ? sanitizeDavlumbazOlcu(s.ad, s.olcu, urunTipi) ?? s.olcu
         : null;
 
+    const notParcalari: string[] = [];
+    if (s.marka?.trim()) notParcalari.push(`Marka: ${s.marka.trim()}`);
+    if (olcu) notParcalari.push(`Ölçü: ${olcu}`);
+    if (s.mevcut) notParcalari.push("Müşteride mevcut — fiyat beklenmez");
+
     return {
       referansPoz: s.poz,
       isim: formatPfosDisplayTanim(s.ad),
       urunTipi,
       kategoriKodu: kategoriFromReferansSatir(s),
       adet: adetSayi(s.adet),
-      tip: "zorunlu" as const,
-      notlar: olcu ? repairPfosDisplayText(`Ölçü: ${olcu}`) : undefined,
+      tip: s.mevcut ? ("opsiyonel" as const) : ("zorunlu" as const),
+      notlar: notParcalari.length
+        ? repairPfosDisplayText(notParcalari.join(" · "))
+        : undefined,
       altKategori: altKategoriFromSatir(s),
       referansBolumKey: key,
       referansBolumSira: bolumOrder.get(key)!,
