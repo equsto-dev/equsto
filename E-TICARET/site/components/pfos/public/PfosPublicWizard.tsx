@@ -228,23 +228,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setActivePane("wizard");
   }, []);
 
-  const focusListePane = useCallback(() => {
-    setActivePane("liste");
-  }, []);
-
   const engageWizardPane = useCallback(() => {
-    if (activePane === "balanced") setActivePane("wizard");
-  }, [activePane]);
-
-  const engageListePane = useCallback(() => {
-    if (activePane === "balanced") setActivePane("liste");
-  }, [activePane]);
-
-  const toggleWizardPane = useCallback(() => {
     setActivePane((p) => (p === "wizard" ? "balanced" : "wizard"));
   }, []);
 
-  const toggleListePane = useCallback(() => {
+  const engageListePane = useCallback(() => {
     setActivePane((p) => (p === "liste" ? "balanced" : "liste"));
   }, []);
 
@@ -1048,8 +1036,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     return (
       <PfosWorkspaceShell
         activePane="balanced"
-        onWizardClick={() => {}}
-        onListeClick={() => {}}
         pipelineSteps={WIZARD_PIPELINE}
         pipelineActive="konsept"
         summary={{
@@ -1103,12 +1089,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     return (
       <PfosWorkspaceShell
         activePane="wizard"
-        onWizardClick={toggleWizardPane}
-        onListeClick={toggleListePane}
         pipelineSteps={WIZARD_PIPELINE}
         pipelineActive="teklif"
         summary={liveSummary}
-        wizardPct={hint.pct}
       >
         <section className={`${styles.sec} ${styles.secVis} ${styles.secActive}`}>
           <div className={styles.secHd}>
@@ -1165,13 +1148,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   return (
     <PfosWorkspaceShell
       activePane={activePane}
-      onWizardClick={toggleWizardPane}
-      onListeClick={toggleListePane}
       pipelineSteps={pipelineSteps}
       pipelineActive={pipelineActive}
       summary={liveSummary}
-      wizardPct={hint.pct}
-      listeHasResult={!!listeUpload.teklifV14}
     >
       <div
         className={layoutClassName()}
