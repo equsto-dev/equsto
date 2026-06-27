@@ -419,12 +419,15 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   min-height: 0;
 }
 
 .balancedPaneLeft > * {
+  flex: 1 1 auto;
   width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .balancedPaneRight {
@@ -434,7 +437,6 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   min-height: 0;
 }
 
@@ -442,24 +444,48 @@
   position: static;
   top: auto;
   width: 100%;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .listePaneBalanced {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 100%;
 }
 
 .listePaneBalanced .listeWorkspace {
   gap: 0;
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .listePaneBalanced .uploadCard:not(.uploadCardCompact) {
   padding: 0.65rem 0.85rem;
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 :global([data-pfos-pane="balanced"]) .wizardWorkspace {
   gap: 0;
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:global([data-pfos-pane="balanced"]) .wizardSteps {
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .wizardIntroExtra {

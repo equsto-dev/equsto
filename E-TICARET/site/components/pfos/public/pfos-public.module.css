@@ -1034,14 +1034,48 @@
 }
 
 .layoutBalanced .paneBody {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
 }
 
-/* Balanced ana sayfa — kompakt liste dropzone, alt hiza */
+:global([data-pfos-pane="balanced"]) .paneBody {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+:global([data-pfos-pane="balanced"]) .sec.secVis {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+:global([data-pfos-pane="balanced"]) .secBd {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+:global([data-pfos-pane="balanced"]) .uploadRailFill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Balanced ana sayfa — dropzone kart yüksekliğini doldurur */
 :global([data-pfos-pane="balanced"]) .listeDropZoneRail {
   margin-top: 0;
   padding: 1.35rem 0.85rem;
-  min-height: 10.5rem;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 :global([data-pfos-pane="balanced"]) .listeDropZoneRail .listeDropIcon {
