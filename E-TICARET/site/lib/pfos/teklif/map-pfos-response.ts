@@ -19,6 +19,7 @@ import { resolveTeklifMarka } from "../core/catalog-enrich";
 import {
   normalizePfosGorselUrl,
   oztiAxImageUrlFromSku,
+  oztiPfosPreferredGorselUrl,
   oztiWebImageRelFromSku,
   portashelfGorselRelFromSku,
 } from "../core/katalog-gorsel-url";
@@ -115,6 +116,7 @@ export function pfosResponseToTeklifV14(
 
     let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
         equstoFiyatListesiGorselRelFromSku(stokNo) ??
+        oztiPfosPreferredGorselUrl(stokNo) ??
         u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
         (specCeliski || !stokNo ? null : oztiAxImageUrlFromSku(stokNo));

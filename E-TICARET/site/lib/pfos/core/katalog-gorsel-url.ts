@@ -58,6 +58,19 @@ export function oztiAxImageUrlFromSku(sku: string): string | null {
   return `https://oztiryakiler.com.tr/ax-images/images/${encodeURIComponent(proxy)}.jpg`;
 }
 
+/**
+ * PFOS proforma — Öztiryakiler ax-images tercih (CloudFront yerel kopyalar eski/stub olabilir).
+ * NTV cihazaltı C1/C2/T1 ve proxy tablosundaki kodlar için.
+ */
+export function oztiPfosPreferredGorselUrl(sku: string): string | null {
+  const k = normSku(sku);
+  if (!/^7919\./i.test(k)) return null;
+  if (OZTI_AX_PROXY[k] || /NTV\.(C1|C2|T1)/i.test(k)) {
+    return oztiAxImageUrlFromSku(k);
+  }
+  return null;
+}
+
 /** Öztiryakiler SKU → `images/catalog/ozti/web/ozti-….jpg` (ozti-enrich ile hizalı) */
 export function oztiWebImageRelFromSku(sku: string): string | null {
   const k = normSku(sku);

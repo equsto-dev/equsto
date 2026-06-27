@@ -6,6 +6,7 @@ import type { EslesmisUrun, PFOSKalemi } from "../schemas/pfos.schema";
 import {
   equstoGorselRelFromSku,
   normalizePfosGorselUrl,
+  oztiPfosPreferredGorselUrl,
   oztiWebImageRelFromSku,
   portashelfGorselRelFromSku,
 } from "./katalog-gorsel-url";
@@ -106,6 +107,9 @@ export async function resolveGorselUrlBySku(
   const evyeRel = tezgahEvyeGorselRel(key, tanim);
   if (evyeRel) return evyeRel;
 
+  const oztiPreferred = oztiPfosPreferredGorselUrl(key);
+  if (oztiPreferred) return oztiPreferred;
+
   const index = await loadSkuGorselIndex();
   const fromCatalog = index.get(key);
 
@@ -194,6 +198,11 @@ export async function enrichEslesmisGorsel(
   const evyeRel = tezgahEvyeGorselRel(sku, urun.ad);
   if (evyeRel) {
     return { ...urun, gorselUrl: evyeRel };
+  }
+
+  const oztiPreferred = sku ? oztiPfosPreferredGorselUrl(sku) : null;
+  if (oztiPreferred) {
+    return { ...urun, gorselUrl: oztiPreferred };
   }
 
   const normalizedExisting = normalizePfosGorselUrl(urun.gorselUrl);
