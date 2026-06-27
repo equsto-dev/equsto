@@ -1,10 +1,10 @@
 {
   "kategoriId": "bulut-ev-yemek",
   "bantId": "40-80",
-  "label": "Bulut Mutfak — Ev Yemekleri",
+  "label": "EV YEMEKLERİ",
   "referansM2": 60,
   "kaynakDosya": "BULUT MUTFAK/ev-yemekleri.pdf",
-  "yukleme": "2026-06-27T16:22:55.911570Z",
+  "yukleme": "2026-06-27T16:36:26.183834Z",
   "kalemSayisi": 24,
   "toplamAdet": 29,
   "kalemler": [
@@ -14,8 +14,7 @@
       "poz": "A1",
       "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
       "olcu": "-",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "KURU_DEPO",
@@ -23,8 +22,7 @@
       "poz": "A2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "SOGUK_ODA",
@@ -32,8 +30,7 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "200*300*240",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "SOGUK_ODA",
@@ -41,8 +38,7 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "137*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "DEEPFREEZE_DEPO",
@@ -50,8 +46,7 @@
       "poz": "C1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "200*200*240",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "DEEPFREEZE_DEPO",
@@ -59,8 +54,7 @@
       "poz": "C2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2,
-      "kategori": "tezgah"
+      "adet": 2
     },
     {
       "bolum": "MUTFAK",
@@ -68,8 +62,7 @@
       "poz": "D1",
       "ad": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
       "olcu": "140*85*205",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -77,8 +70,7 @@
       "poz": "D2",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI TEK ÇEKMECELİ",
       "olcu": "130*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -86,8 +78,7 @@
       "poz": "D3",
       "ad": "DUVAR RAFI",
       "olcu": "130*30*3",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -95,17 +86,15 @@
       "poz": "D4",
       "ad": "YER OCAĞI",
       "olcu": "60*60*50",
-      "adet": 2,
-      "kategori": "diger"
+      "adet": 2
     },
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
       "poz": "D5",
       "ad": "KONVEKSİYONLU FIRIN, ELK. 10 GN 1/1",
-      "olcu": "—",
-      "adet": 1,
-      "kategori": "diger"
+      "olcu": "-",
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -113,8 +102,7 @@
       "poz": "D6",
       "ad": "FIRIN TEZGAHI, TABAN RAFLI",
       "olcu": "80*70*70",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -122,8 +110,7 @@
       "poz": "D7",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "240*117*50",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -131,8 +118,7 @@
       "poz": "D8",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "130*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -140,8 +126,7 @@
       "poz": "D9",
       "ad": "DUVAR RAFI",
       "olcu": "130*30*3",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -149,8 +134,7 @@
       "poz": "D10",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "100*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -158,8 +142,7 @@
       "poz": "D11",
       "ad": "DUVAR RAFI",
       "olcu": "100*30*3",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -167,8 +150,7 @@
       "poz": "D12",
       "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "190*70*85",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -176,8 +158,7 @@
       "poz": "D13",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 Tb/saat",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -185,17 +166,15 @@
       "poz": "D14",
       "ad": "DUVAR RAFI",
       "olcu": "190*30*3",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
       "bolumAd": "D- MUTFAK",
       "poz": "D15",
       "ad": "TEPSİ TAŞIMA ARABASI 15 KATLI",
-      "olcu": "—",
-      "adet": 1,
-      "kategori": "diger"
+      "olcu": "-",
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -203,8 +182,7 @@
       "poz": "D16",
       "ad": "BAINMARIE, SERVİS RAFLI, 6 GN 1/1",
       "olcu": "230*70*85/140",
-      "adet": 1,
-      "kategori": "tezgah"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -212,8 +190,7 @@
       "poz": "D17",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1,
-      "kategori": "diger"
+      "adet": 1
     },
     {
       "bolum": "MUTFAK",
@@ -221,8 +198,7 @@
       "poz": "D18",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 2,
-      "kategori": "diger"
+      "adet": 2
     }
   ]
 }

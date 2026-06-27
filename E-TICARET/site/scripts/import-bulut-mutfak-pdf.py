@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Bulut mutfak PDF listeleri → pfos-referans + pfos-kategoriler.json
-
-Kaynak (varsayılan):
-  c:\\Users\\adema\\Desktop\\bulut mutfak\\hamburgerci.pdf
-  c:\\Users\\adema\\Desktop\\bulut mutfak\\ev-yemekleri.pdf
-
-  python scripts/import-bulut-mutfak-pdf.py
-"""
+"""Bulut mutfak PDF → pfos-referans (birebir, yorum yok)."""
 from __future__ import annotations
 
 import json
@@ -38,14 +30,12 @@ KONFIG = [
     {
         "pdf": "hamburgerci.pdf",
         "kategori_id": "bulut-burger",
-        "label": "Bulut Mutfak — Hamburgerci",
         "manifest_label": "Hamburgerci",
         "konsept_title": "HAMBURGERCİ",
     },
     {
         "pdf": "ev-yemekleri.pdf",
         "kategori_id": "bulut-ev-yemek",
-        "label": "Bulut Mutfak — Ev Yemekleri",
         "manifest_label": "Ev Yemekleri",
         "konsept_title": "EV YEMEKLERİ",
     },
@@ -69,33 +59,21 @@ BOLUM_MAP = {
 }
 
 
-def infer_kategori(ad: str) -> str:
-    u = ad.upper()
-    if any(
-        x in u
-        for x in (
-            "TEZGAH",
-            "RAF",
-            "LAVABO",
-            "EVYE",
-            "EVYEL",
-            "SIYIRMA",
-            "BASKET",
-            "ÇALIŞMA",
-            "CALISMA",
-        )
-    ):
-        return "tezgah"
-    return "diger"
+def bolum_slug(poz: str, bolum_ad: str) -> str:
+    letter = poz[0].upper()
+    slug = BOLUM_MAP.get(letter, letter)
+    if slug == "PISIRME" and "MUTFAK" in bolum_ad.upper():
+        return "MUTFAK"
+    return slug
 
 
-def parse_line(poz: str, rest: str, bolum_ad: str, bolum: str) -> dict | None:
+def parse_line(poz: str, rest: str, bolum_ad: str) -> dict | None:
     m_adet = ADET_TAIL.search(rest)
     if not m_adet:
         return None
     adet = int(m_adet.group(1))
     body = rest[: m_adet.start()].strip()
-    olcu = "—"
+    olcu = "-"
     ad = body
     m_olcu = OLCU_DIM.search(body)
     if m_olcu:
@@ -103,23 +81,19 @@ def parse_line(poz: str, rest: str, bolum_ad: str, bolum: str) -> dict | None:
         ad = body[: m_olcu.start()].strip().rstrip(",").strip()
     if not ad:
         return None
-    if bolum == "PISIRME" and "MUTFAK" in bolum_ad.upper():
-        bolum = "MUTFAK"
     return {
-        "bolum": bolum,
+        "bolum": bolum_slug(poz, bolum_ad),
         "bolumAd": bolum_ad,
         "poz": poz,
         "ad": ad,
         "olcu": olcu,
         "adet": adet,
-        "kategori": infer_kategori(ad),
     }
 
 
 def parse_pdf(path: Path) -> list[dict]:
     kalemler: list[dict] = []
     bolum_ad = ""
-    bolum = "GENEL"
     skip_titles = {"", "P.NO ÜRÜN ADI ÖLÇÜ AD.", "P.NO URUN ADI OLCU AD."}
 
     with pdfplumber.open(path) as pdf:
@@ -131,19 +105,24 @@ def parse_pdf(path: Path) -> list[dict]:
                     continue
                 if line.isupper() and " " not in line and len(line) > 3:
                     continue
-                sm = SECTION_RE.match(line)
-                if sm:
-                    letter = sm.group(1)
+                if SECTION_RE.match(line):
                     bolum_ad = line
-                    bolum = BOLUM_MAP.get(letter, letter)
                     continue
                 pm = POZ_RE.match(line)
                 if not pm:
                     continue
-                item = parse_line(pm.group(1), pm.group(2), bolum_ad, bolum)
+                item = parse_line(pm.group(1), pm.group(2), bolum_ad)
                 if item:
                     kalemler.append(item)
     return kalemler
+
+
+def pdf_kaynak(cfg: dict) -> Path:
+    for base in (DESKTOP, PROJE_VERI):
+        p = base / cfg["pdf"]
+        if p.is_file():
+            return p
+    raise FileNotFoundError(cfg["pdf"])
 
 
 def write_liste(cfg: dict, kalemler: list[dict], kaynak: str) -> dict:
@@ -153,7 +132,7 @@ def write_liste(cfg: dict, kalemler: list[dict], kaynak: str) -> dict:
     payload = {
         "kategoriId": kid,
         "bantId": BANT_ID,
-        "label": cfg["label"],
+        "label": cfg["konsept_title"],
         "referansM2": REFERANS_M2,
         "kaynakDosya": kaynak,
         "yukleme": yukleme,
@@ -208,22 +187,15 @@ def main() -> None:
     PROJE_VERI.mkdir(parents=True, exist_ok=True)
 
     for cfg in KONFIG:
-        src = DESKTOP / cfg["pdf"]
-        if not src.is_file():
-            raise FileNotFoundError(f"PDF bulunamadı: {src}")
+        src = pdf_kaynak(cfg)
         archive = PROJE_VERI / cfg["pdf"]
-        shutil.copy2(src, archive)
+        if src.resolve() != archive.resolve():
+            shutil.copy2(src, archive)
         kalemler = parse_pdf(src)
         if not kalemler:
             raise RuntimeError(f"Kalem çıkarılamadı: {src}")
         payload = write_liste(cfg, kalemler, f"BULUT MUTFAK/{cfg['pdf']}")
         upsert_manifest(cfg, payload)
-
-    # Eski bant dosyasını kaldır
-    old = OUT / "bulut-burger-35-100.json"
-    if old.is_file():
-        old.unlink()
-        print("Silindi:", old)
 
 
 if __name__ == "__main__":

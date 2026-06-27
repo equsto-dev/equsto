@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-27T16:22:55.911570Z",
+  "updated_at": "2026-06-27T16:36:26.183834Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -1195,7 +1195,7 @@
             "kalemSayisi": 29,
             "toplamAdet": 36,
             "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
-            "yukleme": "2026-06-27T16:22:55.856719Z"
+            "yukleme": "2026-06-27T16:36:26.124563Z"
           }
         }
       ]
@@ -1214,7 +1214,7 @@
             "kalemSayisi": 24,
             "toplamAdet": 29,
             "kaynakDosya": "BULUT MUTFAK/ev-yemekleri.pdf",
-            "yukleme": "2026-06-27T16:22:55.911570Z"
+            "yukleme": "2026-06-27T16:36:26.183834Z"
           }
         }
       ]
