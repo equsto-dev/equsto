@@ -44,7 +44,8 @@ export type ListeBantId =
   | "20-60"
   | "200-5000"
   | "2018-199"
-  | "35-100";
+  | "35-100"
+  | "40-80";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -1357,26 +1358,38 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     pfos: {
       motorSlug: "bulut-burger",
       dukkanSecim: "Hamburgerci",
-      m2Min: 35,
-      m2Max: 100,
-      bantKurali: "Referans hamburgerci ekipman listesi",
-      listeYolu: "veri/bulut-hamburgerci-referans.xlsx",
+      m2Min: 40,
+      m2Max: 80,
+      bantKurali: "40–80 m² — tek referans liste (hamburgerci.pdf)",
+      listeYolu: "proje-veri/BULUT MUTFAK/hamburgerci.pdf",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
-        liste("35-100", "35–100 m² (Hamburgerci)", 60, "bulut-burger"),
+        liste("40-80", "40–80 m² (Hamburgerci)", 60, "bulut-burger"),
       ],
     },
     questions: [],
   },
-  konseptPlanlanan(
-    "bulut_ev_yemek",
-    "Ev Yemekleri",
-    "Bulut Mutfak",
-    "Ev Yemekleri",
-    40,
-    120,
-  ),
+  {
+    id: "bulut_ev_yemek",
+    name: "Ev Yemekleri",
+    parent: "Bulut Mutfak",
+    desc: "Bulut mutfak ev yemekleri · referans ekipman listesi",
+    pfos: {
+      motorSlug: "bulut-ev-yemek",
+      dukkanSecim: "Ev Yemekleri",
+      m2Min: 40,
+      m2Max: 80,
+      bantKurali: "40–80 m² — tek referans liste (ev-yemekleri.pdf)",
+      listeYolu: "proje-veri/BULUT MUTFAK/ev-yemekleri.pdf",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("40-80", "40–80 m² (Ev Yemekleri)", 60, "bulut-ev-yemek"),
+      ],
+    },
+    questions: [],
+  },
   konseptPlanlanan(
     "bulut_kebap",
     "Kebap & Türk Mutfağı",

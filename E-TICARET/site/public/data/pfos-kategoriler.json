@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-26T23:08:07.490Z",
+  "updated_at": "2026-06-27T16:22:55.911570Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -1187,15 +1187,34 @@
       "ustKategori": "Bulut Mutfak",
       "bantlar": [
         {
-          "id": "35-100",
-          "label": "35–100 m²",
+          "id": "40-80",
+          "label": "40–80 m²",
           "referansM2": 60,
           "meta": {
-            "listeDosya": "bulut-burger-35-100.json",
+            "listeDosya": "bulut-burger-40-80.json",
             "kalemSayisi": 29,
             "toplamAdet": 36,
-            "kaynakDosya": "bulut-hamburgerci-referans.xlsx",
-            "yukleme": "2026-06-26T23:08:07.482Z"
+            "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
+            "yukleme": "2026-06-27T16:22:55.856719Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulut-ev-yemek",
+      "label": "Ev Yemekleri",
+      "ustKategori": "Bulut Mutfak",
+      "bantlar": [
+        {
+          "id": "40-80",
+          "label": "40–80 m²",
+          "referansM2": 60,
+          "meta": {
+            "listeDosya": "bulut-ev-yemek-40-80.json",
+            "kalemSayisi": 24,
+            "toplamAdet": 29,
+            "kaynakDosya": "BULUT MUTFAK/ev-yemekleri.pdf",
+            "yukleme": "2026-06-27T16:22:55.911570Z"
           }
         }
       ]

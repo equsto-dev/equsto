@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-06-26T23:08:19.578Z",
-  "aktifPaketSayisi": 56,
+  "updated_at": "2026-06-27T16:10:44.189Z",
+  "aktifPaketSayisi": 57,
   "segmentOrder": [
     "Restoran",
     "Kafe / Coffee Shop",
@@ -129,7 +129,8 @@
       "Ekmek + Kruvasan"
     ],
     "Bulut Mutfak": [
-      "Hamburgerci"
+      "Hamburgerci",
+      "Ev Yemekleri"
     ],
     "Franchise": [
       "Steakhouse",
@@ -445,9 +446,14 @@
       "slug": "personel-yemekhane"
     },
     "Hamburgerci": {
-      "min": 35,
-      "max": 100,
+      "min": 40,
+      "max": 80,
       "slug": "bulut-burger"
+    },
+    "Ev Yemekleri": {
+      "min": 40,
+      "max": 80,
+      "slug": "bulut-ev-yemek"
     }
   }
 }
