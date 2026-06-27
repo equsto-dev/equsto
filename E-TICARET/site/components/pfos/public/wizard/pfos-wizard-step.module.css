@@ -1,0 +1,225 @@
+/* Tek yüzey — Linear / Notion tarzı soru adımı */
+
+.surface {
+  padding: 2rem 2.25rem 2.25rem;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  margin-bottom: 0.65rem;
+}
+
+.surfacePending {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.surfaceReveal {
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.surfacePending.surfaceReveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.introBlock {
+  margin: 0 0 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.introLine {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.introLineStrong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #001e50;
+  margin-bottom: 0.15rem;
+}
+
+.surfaceTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #001e50;
+  line-height: 1.25;
+}
+
+.surfaceSub {
+  margin: 0 0 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #64748b;
+  max-width: 42rem;
+}
+
+.surfaceBody {
+  margin-top: 0.25rem;
+}
+
+.skipLink {
+  appearance: none;
+  margin-top: 1.5rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.skipLink:hover {
+  color: #001e50;
+}
+
+/* Tamamlanan adım — ince satır */
+.doneRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.7rem 0.15rem;
+  margin-bottom: 0.15rem;
+  border: none;
+  border-bottom: 1px solid #f1f5f9;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: background 0.15s ease;
+  border-radius: 8px;
+}
+
+.doneRow:hover {
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.doneCheck {
+  flex-shrink: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: #1a7a9e;
+  border-radius: 50%;
+}
+
+.doneLabel {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  min-width: 5.5rem;
+}
+
+.doneAnswer {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #001e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dikey seçim listesi */
+.choiceStack {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -0.35rem;
+}
+
+.choiceRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 1.1rem 0.35rem;
+  border: none;
+  border-top: 1px solid #eef2f6;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  border-radius: 10px;
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.choiceRow:first-child {
+  border-top: none;
+}
+
+.choiceRow:hover {
+  background: #f8fafc;
+}
+
+.choiceRowSelected {
+  background: linear-gradient(90deg, #f0f9ff 0%, #fafcff 100%);
+  box-shadow: inset 3px 0 0 #4ab8dc;
+}
+
+.choiceTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #001e50;
+  line-height: 1.3;
+}
+
+.choiceSub {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #64748b;
+}
+
+.choiceSectionLabel {
+  margin: 0.85rem 0.35rem 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surfacePending {
+    opacity: 1;
+    transform: none;
+  }
+
+  .surfaceReveal {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .surface {
+    padding: 1.35rem 1.15rem 1.5rem;
+  }
+
+  .surfaceTitle {
+    font-size: 1.25rem;
+  }
+
+  .doneLabel {
+    display: none;
+  }
+}
