@@ -40,7 +40,14 @@ const YIKAMA_TIP_KODU = new Set([
   "yer_yikama_hortumu",
 ]);
 
+function pdfReferansKalem(k: PFOSKalemi): boolean {
+  if (!k.referansPoz) return false;
+  const alt = String(k.altKategori ?? "").split("\0")[0].trim();
+  return /^[A-Z]-\s/.test(alt);
+}
+
 function normalizeKategoriKodu(k: PFOSKalemi): PFOSKalemi {
+  if (pdfReferansKalem(k)) return k;
   const tip = resolveTipKodu(k.urunTipi);
   const isim = String(k.isim || "").toLocaleLowerCase("tr");
   if (

@@ -118,12 +118,27 @@ export function finalizeKalemlerForTeklif(
 
 
 
+/** PDF bölüm başlığı (A- KURU DEPO, D- PİŞİRME …) — teklifte aynen gösterilir */
+function pdfReferansBolumBaslik(k: PFOSKalemi): string | null {
+  if (!k.referansPoz) return null;
+  const alt = String(k.altKategori ?? "").split("\0")[0].trim();
+  return /^[A-Z]-\s/.test(alt) ? alt : null;
+}
+
 export function bolumForKalem(
   k: PFOSKalemi,
   layout?: TeklifLayoutMeta,
 ): { bolumNo: string; bolumBaslik: string } {
   if (layout?.bolum) {
     return { bolumNo: layout.bolum.no, bolumBaslik: layout.bolum.baslik };
+  }
+  const pdfBolum = pdfReferansBolumBaslik(k);
+  if (pdfBolum) {
+    const no =
+      k.referansBolumSira != null
+        ? String(k.referansBolumSira + 1).padStart(2, "0")
+        : bolumNoFromKategori(k.kategoriKodu);
+    return { bolumNo: no, bolumBaslik: pdfBolum };
   }
   return {
     bolumNo: bolumNoFromKategori(k.kategoriKodu),
