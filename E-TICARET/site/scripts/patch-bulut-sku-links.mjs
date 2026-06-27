@@ -1,6 +1,5 @@
 /**
- * Bulut mutfak — yalnızca doğrulanmış poz → SKU linkleri.
- * Önce tüm bulut-* otomatik linkleri siler, sonra override uygular.
+ * Bulut mutfak — doğrulanmış poz → SKU override'ları (seed sonrası).
  * Kullanım: node scripts/patch-bulut-sku-links.mjs
  */
 import fs from "node:fs";
@@ -15,19 +14,18 @@ const REF_DIR = path.join(SITE, "public", "data", "pfos-referans");
 const content = JSON.parse(fs.readFileSync(LINKS_PATH, "utf8"));
 const links = content.links;
 
-let pruned = 0;
-for (const key of Object.keys(links)) {
-  if (key.startsWith("bulut-")) {
-    delete links[key];
-    pruned += 1;
-  }
-}
-console.log(`Pruned ${pruned} bulut-* SKU link entries`);
-
 function applyLinks(listeKeys, pozMap) {
   for (const liste of listeKeys) {
     for (const [poz, item] of Object.entries(pozMap)) {
       links[`${liste}|${poz}`] = item;
+    }
+  }
+}
+
+function unlinkPoz(listeKeys, pozList) {
+  for (const liste of listeKeys) {
+    for (const poz of pozList) {
+      delete links[`${liste}|${poz}`];
     }
   }
 }
@@ -87,7 +85,7 @@ const grillPackLinks = {
     name: "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
   },
   D4: {
-    sku: "79E3.27NMV.00",
+    sku: "79E3.27NMV.03",
     marka: "Öztiryakiler",
     name: "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ 1400×700×850 mm",
   },
@@ -102,13 +100,16 @@ const grillPackLinks = {
     name: "TEK EVYELİ TEZGAH, ETRAFI AÇIK, TABAN RAFSIZ 1400×700×850 mm",
   },
 };
+
+const setalti4Kapili140 = {
+  sku: "7919.47NTV.C1",
+  marka: "Öztiryakiler",
+  name: "470 NTV CİHAZALTI 4 KAPILI DOLAP 1400×700×600 mm",
+};
+
 applyLinks(listeKeysFor("bulut-burger"), {
   ...grillPackLinks,
-  D13: {
-    sku: "7919.27NTV.C1",
-    marka: "Öztiryakiler",
-    name: "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)",
-  },
+  D13: setalti4Kapili140,
   D14: {
     sku: "EQ.KDAVOTF02.300100",
     marka: "Equsto",
@@ -122,11 +123,7 @@ applyLinks(listeKeysFor("bulut-doner"), {
     marka: "Vosco",
     name: "DÖNER OCAĞI, 4 RADYANLI, GAZLI",
   },
-  D14: {
-    sku: "7919.27NTV.C1",
-    marka: "Öztiryakiler",
-    name: "270 NTV CİHAZALTI 2 KAPILI DOLAP (142×70 setaltı)",
-  },
+  D14: setalti4Kapili140,
   D15: {
     sku: "EQ.KDAVDTF02.30090",
     marka: "Equsto",
@@ -159,6 +156,16 @@ applyLinks(listeKeysFor("bulut-pastane-firin"), {
   },
 });
 
+/** Katalogda net karşılığı olmayan / yanlış otomatik eşleşen pozlar → fiyatsız referans */
+const fiyatsizPoz = ["D3", "D10"];
+for (const kid of [
+  "bulut-pizza",
+  "bulut-pide",
+  "bulut-pastane-firin",
+]) {
+  unlinkPoz(listeKeysFor(kid), fiyatsizPoz);
+}
+
 const applied = Object.keys(links).filter((k) => k.startsWith("bulut-")).length;
 fs.writeFileSync(LINKS_PATH, `${JSON.stringify(content, null, 2)}\n`, "utf8");
-console.log(`Applied ${applied} verified bulut SKU links`);
+console.log(`Bulut SKU overrides applied (${applied} bulut-* link entries)`);

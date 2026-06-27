@@ -1380,10 +1380,6 @@ export async function matchReferansKalem(
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
 
-  if (isBulutReferansListe(input.referansListeKey)) {
-    return null;
-  }
-
   if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
     const slim = await matchSlimSetaltiDerinDondurucu(input.isim, olcu, input.notlar);
     if (slim) return slim;
