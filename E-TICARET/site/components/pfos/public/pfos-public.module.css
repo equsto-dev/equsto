@@ -1023,6 +1023,11 @@
   align-items: start;
 }
 
+.layoutBalanced .leftCol,
+.layoutBalanced .rightCol {
+  align-self: start;
+}
+
 .layoutBalanced .rightCol {
   position: static;
   top: auto;
