@@ -42,40 +42,28 @@ if (!kilit.includes(RIGHT_COL_FR)) {
 [
   "components/pfos/public/PfosPublicWizard.tsx",
   "components/pfos/public/PfosListeUploadRail.tsx",
+  "components/pfos/public/workspace/PfosWorkspaceShell.tsx",
+  "components/pfos/public/workspace/PfosListeWorkspace.tsx",
   "components/pfos/public/usePfosListeUpload.ts",
   "components/pfos/public/pfos-public.module.css",
 ].forEach(mustExist);
 
 const wizard = read("components/pfos/public/PfosPublicWizard.tsx");
 if (!wizard.includes('id="pfos-progress"')) {
-  fail("PfosPublicWizard: pfos-progress id yok — Başlayalım üst hizası kırıldı");
+  fail("PfosPublicWizard: pfos-progress id yok — sihirbaz ilerleme korunmalı");
 }
-if (!wizard.includes('getElementById("pfos-progress")')) {
-  fail("PfosPublicWizard: pfos-progress ölçümü yok");
+if (!wizard.includes("PfosWorkspaceShell")) {
+  fail("PfosPublicWizard: workspace shell entegrasyonu yok");
 }
-if (!wizard.includes('getElementById("pfos-sec-s1")')) {
-  fail("PfosPublicWizard: pfos-sec-s1 alt hizası yok");
+const wsShell = read("components/pfos/public/workspace/PfosWorkspaceShell.tsx");
+if (!wsShell.includes("data-pfos-workspace")) {
+  fail("PfosWorkspaceShell: data-pfos-workspace işaretçisi yok");
 }
-if (!wizard.includes("uploadAlign")) fail("PfosPublicWizard: uploadAlign state yok");
-if (!wizard.includes("marginTop: uploadAlign.marginTop")) {
-  fail("PfosPublicWizard: marginTop hizalaması yok");
-}
-if (!wizard.includes("height: uploadAlign.height")) {
-  fail("PfosPublicWizard: height hizalaması yok");
-}
-if (!wizard.includes("ro.observe(progress)")) {
-  fail("PfosPublicWizard: progress ResizeObserver yok");
-}
-if (!wizard.includes("PfosListeUploadRail")) {
-  fail("PfosPublicWizard: PfosListeUploadRail entegrasyonu yok");
+if (!wizard.includes("PfosListeWorkspace")) {
+  fail("PfosPublicWizard: PfosListeWorkspace entegrasyonu yok");
 }
 if (!wizard.includes("usePfosListeUpload")) {
   fail("PfosPublicWizard: usePfosListeUpload yok");
-}
-if (!wizard.includes("renderRightRail(!wizardListeMode)")) {
-  if (!wizard.includes('renderRightRail(activePane === "balanced" && !wizardListeMode)')) {
-    fail("PfosPublicWizard: sağ rail sihirbazla birlikte render edilmiyor");
-  }
 }
 if (wizard.includes("mode=liste") || wizard.includes("PfosListeUpload.tsx")) {
   fail("PfosPublicWizard: ayrı liste modu geri gelmiş");

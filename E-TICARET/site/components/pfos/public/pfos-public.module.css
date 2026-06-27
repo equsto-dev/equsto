@@ -37,9 +37,8 @@
   padding: 1.25rem 1rem 3rem;
 }
 
-.main:has(.layoutFocusWizard),
-.main:has(.layoutFocusListe) {
-  max-width: min(100vw - 2rem, 1680px);
+.main:has([data-pfos-workspace]) {
+  max-width: min(100vw - 2rem, 1760px);
 }
 
 .modeTabs {
