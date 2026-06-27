@@ -152,11 +152,13 @@ export function kategoriFromReferansSatir(s: PfosEkipmanSatir): PfosKategoriKodu
 }
 
 function urunTipiFromSatir(s: PfosEkipmanSatir): string {
-  const bolum = String(s.bolumAd ?? "")
+  const bolumAdRaw = String(s.bolumAd ?? "")
+    .split("\0")[0]
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/ı/g, "i");
+  const bolum = bolumAdRaw;
   const adNorm = String(s.ad ?? "")
     .toLowerCase()
     .normalize("NFD")
@@ -166,10 +168,13 @@ function urunTipiFromSatir(s: PfosEkipmanSatir): string {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/ı/g, "i");
+    .replace(/ı/g, "i")
+    .replace(/_/g, "-");
+  const bolumBlob = `${bolumAdRaw} ${bolumKod}`.trim();
   if (
+    bolumKod === "deepfreeze-depo" ||
     bolumKod === "deepfreeze_depo" ||
-    /deepfreeze|deep\s*freeze/.test(bolum)
+    /deepfreeze|deep\s*freeze/.test(bolumBlob)
   ) {
     if (/panel tip|soguk oda|soğuk oda/.test(adNorm) && !/istif raf/.test(adNorm)) {
       return "panel-derin-dondurucu-oda";
@@ -186,6 +191,7 @@ function urunTipiFromSatir(s: PfosEkipmanSatir): string {
   }
   if (
     /panel tip soguk oda|panel tipi soguk oda/.test(bolum) &&
+    !/deepfreeze|deep\s*freeze|derin\s*dondurucu/.test(bolumBlob) &&
     /panel tip|soguk oda/.test(adNorm) &&
     !/istif raf/.test(adNorm)
   ) {

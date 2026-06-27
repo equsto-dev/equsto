@@ -105,6 +105,7 @@ export async function calculateListeQuoteCatalog(
       notlar: item.notlar,
       referansPoz: item.referansPoz,
       referansListeKey: item.referansListeKey ?? listeKey,
+      altKategori: item.altKategori,
       kategoriKodu: item.kategoriKodu,
     });
     const urun = await enrichEslesmisUrunKw(urunMatched, {

@@ -12,6 +12,7 @@ import {
   olcuCmToMetre,
   parseOlcuCm,
   teknikModelFromSonuc,
+  type OlcuCm,
 } from "../soguk-oda-calc";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
@@ -23,6 +24,34 @@ function norm(s: string): string {
     .replace(/ı/g, "i")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function isDeepfreezeBlob(blob: string): boolean {
+  return /deepfreeze|deep\s*freeze|derin\s*dondurucu\s*depo/.test(blob);
+}
+
+/** Panel oda ölçüsü — yük eksikse 240 cm varsay (200×200 tip listeler) */
+function parsePanelOdaOlcuCm(raw: string): OlcuCm | null {
+  const cm = parseOlcuCm(raw);
+  if (cm) return cm;
+  const nums = [...String(raw).matchAll(/(\d+(?:[.,]\d+)?)/g)]
+    .map((m) => Number(m[1].replace(",", ".")))
+    .filter((n) => Number.isFinite(n) && n >= 50);
+  if (nums.length !== 2) return null;
+  const [a, b] = nums.sort((x, y) => y - x);
+  return { en: a, boy: b, yuk: 240 };
+}
+
+function panelOdaDisplayAd(isim: string, derin: boolean): string {
+  const n = norm(isim);
+  if (
+    derin &&
+    /panel tip soguk oda|panel tipi soguk oda/.test(n) &&
+    !/derin dondurucu|dondurucu oda/.test(n)
+  ) {
+    return "PANEL TİP DERİN DONDURUCU ODA";
+  }
+  return displayIsimFromSablon(isim);
 }
 
 export function isPanelOdaReferansIsim(isim: string): boolean {
@@ -46,6 +75,8 @@ export function isPanelSogukOdaPfosKalem(opts: {
 }): boolean {
   if (isIstifRafReferans(String(opts.isim ?? ""))) return false;
   const tip = norm(String(opts.urunTipi ?? "")).replace(/_/g, "-");
+  const blob = norm(`${opts.altKategori ?? ""} ${opts.notlar ?? ""}`);
+  if (isDeepfreezeBlob(blob)) return false;
   if (/^panel-soguk-oda|^soguk-oda-panel|^soguk-oda$/.test(tip)) {
     return /panel tip|soguk oda/.test(norm(String(opts.isim ?? "")));
   }
@@ -54,7 +85,6 @@ export function isPanelSogukOdaPfosKalem(opts: {
       norm(String(opts.isim ?? "")),
     );
   }
-  const blob = norm(`${opts.altKategori ?? ""} ${opts.notlar ?? ""}`);
   if (/panel tip soguk oda|panel tipi soguk oda/.test(blob)) return true;
   return false;
 }
@@ -67,16 +97,18 @@ export function isPanelDerinDondurucuOdaPfosKalem(opts: {
 }): boolean {
   if (isIstifRafReferans(String(opts.isim ?? ""))) return false;
   const tip = norm(String(opts.urunTipi ?? "")).replace(/_/g, "-");
+  const n = norm(String(opts.isim ?? ""));
+  const blob = norm(`${opts.altKategori ?? ""} ${opts.notlar ?? ""}`);
+  if (isDeepfreezeBlob(blob) && /panel tip|soguk oda|derin|dondurucu/.test(n)) {
+    return true;
+  }
   if (
     /^panel-derin-dondurucu-oda|^derin-dondurucu-oda-panel|^panel-dondurucu-oda$/.test(
       tip,
     )
   ) {
-    return /panel tip|derin dondurucu|dondurucu oda/.test(
-      norm(String(opts.isim ?? "")),
-    );
+    return /panel tip|derin dondurucu|dondurucu oda|soguk oda/.test(n);
   }
-  const n = norm(String(opts.isim ?? ""));
   if (
     /panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
       n,
@@ -84,7 +116,6 @@ export function isPanelDerinDondurucuOdaPfosKalem(opts: {
   ) {
     return true;
   }
-  const blob = norm(`${opts.altKategori ?? ""} ${opts.notlar ?? ""}`);
   return /panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
     blob,
   );
@@ -108,8 +139,9 @@ export async function matchSogukOdaByReferans(
   notlar: string | null | undefined,
   urunTipi?: string | null,
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
+  altKategori?: string | null,
 ): Promise<EslesmisUrun | null> {
-  const opts = { isim, urunTipi, notlar };
+  const opts = { isim, urunTipi, notlar, altKategori };
   const derin = isPanelDerinDondurucuOdaPfosKalem(opts);
   const soguk = isPanelSogukOdaPfosKalem(opts);
   if (!derin && !soguk) return null;
@@ -120,7 +152,7 @@ export async function matchSogukOdaByReferans(
     String(notlar ?? "")
       .replace(/^ölçü:\s*/i, "")
       .trim();
-  const cm = parseOlcuCm(olcu);
+  const cm = parsePanelOdaOlcuCm(olcu);
   if (!cm) return null;
 
   const metre = olcuCmToMetre(cm);
@@ -136,7 +168,7 @@ export async function matchSogukOdaByReferans(
   return {
     id: `pfos-panel-oda-${sku}`,
     sku,
-    ad: displayIsimFromSablon(isim),
+    ad: panelOdaDisplayAd(isim, derin),
     marka: OZEL_IMALAT_MARKA,
     model: teknikModelFromSonuc(sonuc),
     olcu: formatOlcuCm(cm),

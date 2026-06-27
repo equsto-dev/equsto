@@ -59,6 +59,7 @@ import {
 } from "../core/portabianco-marka";
 import { isOztiBuzdolabiRow, isOztiPisirmeRow } from "../core/ozti-marka";
 import {
+  isPanelOdaReferansIsim,
   isPanelSogukOdaPfosKalemAny,
   matchSogukOdaByReferans,
 } from "./soguk-oda-match";
@@ -168,6 +169,7 @@ export type ReferansMatchInput = {
   urunTipi: string;
   referansPoz?: string;
   referansListeKey?: string;
+  altKategori?: string | null;
   notlar?: string | null;
   olcu?: string | null;
   fiyatStratejisi: FiyatStratejisi;
@@ -869,19 +871,27 @@ async function matchByVerifiedLink(
         bySku.teklifAciklama,
         input.notlar,
       );
+    const panelOdaLinkAd =
+      link.name?.trim() &&
+      isPanelOdaReferansIsim(input.isim) &&
+      /^7919\.(DF|SN)\d/i.test(link.sku ?? bySku.sku ?? "");
     return {
       ...bySku,
-      ad: input.isim,
+      ad: panelOdaLinkAd ? link.name!.trim() : input.isim,
       marka: link.marka?.trim() || bySku.marka,
       gorselUrl: aciklamaCeliski ? null : bySku.gorselUrl,
       teklifAciklama: aciklamaCeliski ? null : bySku.teklifAciklama,
     };
   }
   if (link.fiyat_try && link.fiyat_try > 0) {
+    const panelOdaLinkAd =
+      link.name?.trim() &&
+      isPanelOdaReferansIsim(input.isim) &&
+      /^7919\.(DF|SN)\d/i.test(link.sku ?? "");
     return {
       id: `ref-link-${liste}-${poz}`,
       sku: link.sku ?? null,
-      ad: link.name ?? input.isim,
+      ad: panelOdaLinkAd ? link.name!.trim() : (link.name ?? input.isim),
       marka: link.marka ?? "Öztiryakiler",
       model: link.sku ?? null,
       olcu: extractOlcuFromNotlar(input.notlar) || null,
@@ -1434,6 +1444,7 @@ export async function matchReferansKalem(
       isim: input.isim,
       urunTipi: input.urunTipi,
       notlar: input.notlar,
+      altKategori: input.altKategori,
     })
   ) {
     const panelOda = await matchSogukOdaByReferans(
@@ -1442,6 +1453,7 @@ export async function matchReferansKalem(
       input.notlar,
       input.urunTipi,
       input.fiyatStratejisi,
+      input.altKategori,
     );
     if (panelOda) return panelOda;
   }
