@@ -329,14 +329,14 @@
       "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP 1400×700×600 mm"
     },
     "bulut-burger|D14": {
-      "sku": "EQ.KDAVOTF02.300100",
-      "marka": "Equsto",
-      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
+      "sku": "7885.30155.10",
+      "marka": "Öztiryakiler",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 3000×1500 mm"
     },
     "bulut-burger-35-100|D14": {
-      "sku": "EQ.KDAVOTF02.300100",
-      "marka": "Equsto",
-      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
+      "sku": "7885.30155.10",
+      "marka": "Öztiryakiler",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 3000×1500 mm"
     },
     "bulut-burger|D15": {
       "sku": "118.YSO.100",
@@ -942,16 +942,6 @@
     "bulut-corbaci|D4": {
       "sku": "7865.60605.21",
       "name": "YER OCAGI GAZLI CIFT YANISLI 60*60*50",
-      "marka": "Öztiryakiler"
-    },
-    "bulut-corbaci-40-80|D5": {
-      "sku": "7865.N1.40903.20",
-      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
-      "marka": "Öztiryakiler"
-    },
-    "bulut-corbaci|D5": {
-      "sku": "7865.N1.40903.20",
-      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
       "marka": "Öztiryakiler"
     },
     "bulut-corbaci-40-80|D6": {
@@ -1913,16 +1903,6 @@
       "sku": "EQ.KDUVR01.13030",
       "name": "DUVAR RAFI",
       "marka": "Equsto"
-    },
-    "bulut-manti-40-80|D5": {
-      "sku": "7865.N1.40903.20",
-      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
-      "marka": "Öztiryakiler"
-    },
-    "bulut-manti|D5": {
-      "sku": "7865.N1.40903.20",
-      "name": "3 GÖZLÜ OCAK, GAZLI, TABAN RAFLI",
-      "marka": "Öztiryakiler"
     },
     "bulut-manti-40-80|D7": {
       "sku": "EQ.KCT04.13070",
@@ -3154,16 +3134,6 @@
       "name": "ÇALIŞMA TEZGAHI ETRAFI AÇIK, RAFSIZ, TEK ÇEKMECELİ 1200×600×850 mm",
       "marka": "Equsto"
     },
-    "bulut-tavuk-40-80|D6": {
-      "sku": "7919.10LTS.00",
-      "name": "SETALTI DERİN DONDURUCU, LIEBHERR",
-      "marka": "Öztiryakiler"
-    },
-    "bulut-tavuk|D6": {
-      "sku": "7919.10LTS.00",
-      "name": "SETALTI DERİN DONDURUCU, LIEBHERR",
-      "marka": "Öztiryakiler"
-    },
     "bulut-tavuk-40-80|D7": {
       "sku": "7919.27NTV.C1",
       "name": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
@@ -3325,9 +3295,9 @@
       "marka": "Portashelf"
     },
     "bulut-burger-40-80|D14": {
-      "sku": "EQ.KDAVOTF02.300100",
-      "marka": "Equsto",
-      "name": "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm"
+      "sku": "7885.30155.10",
+      "marka": "Öztiryakiler",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 3000×1500 mm"
     },
     "bulut-kebap-40-80|D11": {
       "sku": "EQ.KDAVDTF02.30090",

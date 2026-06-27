@@ -31,6 +31,7 @@ import {
   isProformaJunkText,
 } from "../parse-upload/sanitize-tanim";
 import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
+import { referansTeklifAciklamaCeliski } from "../referans/referans-nitelikleri";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { tezgahEvyeGorselRel } from "../core/tezgah-evye-gorsel";
 import { isCalismaTezgahiReferansIsim } from "../core/calisma-tezgah";
@@ -44,10 +45,19 @@ function cleanObjectString(s: string | null | undefined): string {
 
 function specAciklama(
   k: PFOSResponse["kalemler"][number],
-  _referansListe = false,
+  referansListe = false,
 ): string {
   const fromUrun = k.urun?.teklifAciklama?.trim();
-  if (fromUrun) return normalizeTeklifAciklamaText(cleanObjectString(fromUrun));
+  if (fromUrun) {
+    if (
+      referansListe &&
+      referansTeklifAciklamaCeliski(k.isim, fromUrun, k.notlar)
+    ) {
+      // Katalog teknik metni referans satırıyla çelişiyorsa gösterme
+    } else {
+      return normalizeTeklifAciklamaText(cleanObjectString(fromUrun));
+    }
+  }
   const notlar = cleanObjectString(k.notlar);
   if (isProformaJunkText(notlar)) {
     return "";
@@ -91,14 +101,23 @@ export function pfosResponseToTeklifV14(
     const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
     const stokNo = u?.sku?.trim() ?? "";
+    const sablonIsim = formatPfosDisplayTanim(k.isim);
+
+    const specCeliski =
+      referansListe &&
+      Boolean(u?.teklifAciklama?.trim()) &&
+      referansTeklifAciklamaCeliski(
+        sablonIsim,
+        String(u?.teklifAciklama ?? ""),
+        k.notlar,
+      );
 
     let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
         equstoFiyatListesiGorselRelFromSku(stokNo) ??
         u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
-        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
+        (specCeliski || !stokNo ? null : oztiWebImageRelFromSku(stokNo));
 
-    const sablonIsim = formatPfosDisplayTanim(k.isim);
     const isDavlumbazSku =
       isEqustoDavlumbazRow(stokNo) || /^(7885|9885)\./i.test(stokNo);
     if (isDavlumbazSku && !/davlumbaz/i.test(sablonIsim)) {

@@ -111,9 +111,9 @@ applyLinks(listeKeysFor("bulut-burger"), {
   ...grillPackLinks,
   D13: setalti4Kapili140,
   D14: {
-    sku: "EQ.KDAVOTF02.300100",
-    marka: "Equsto",
-    name: "DAVLUMBAZ ORTA TİP, FİLTRELİ 3000×1000×600 mm",
+    sku: "7885.30155.10",
+    marka: "Öztiryakiler",
+    name: "DAVLUMBAZ ORTA TİP FİLTRELİ 3000×1500 mm",
   },
 });
 applyLinks(listeKeysFor("bulut-doner"), {
@@ -158,12 +158,21 @@ applyLinks(listeKeysFor("bulut-pastane-firin"), {
 
 /** Katalogda net karşılığı olmayan / yanlış otomatik eşleşen pozlar → fiyatsız referans */
 const fiyatsizPoz = ["D3", "D10"];
+const fiyatsizByListe = {
+  "bulut-pastane-firin": ["D3"],
+  "bulut-tavuk": ["D6"],
+  "bulut-corbaci": ["D5"],
+  "bulut-manti": ["D5"],
+};
 for (const kid of [
   "bulut-pizza",
   "bulut-pide",
   "bulut-pastane-firin",
+  "bulut-tavuk",
+  "bulut-corbaci",
+  "bulut-manti",
 ]) {
-  unlinkPoz(listeKeysFor(kid), fiyatsizPoz);
+  unlinkPoz(listeKeysFor(kid), fiyatsizByListe[kid] ?? fiyatsizPoz);
 }
 
 const applied = Object.keys(links).filter((k) => k.startsWith("bulut-")).length;
