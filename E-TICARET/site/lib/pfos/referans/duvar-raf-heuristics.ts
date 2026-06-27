@@ -11,8 +11,15 @@ function norm(s: string): string {
 
 export function isDuvarRafiReferans(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
+  if (isSalamanderRafiReferans(isim)) return false;
   if (/basket\s*raf/.test(n) || /tava\s*raf/.test(n)) return true;
   return /duvar\s*raf/.test(n) && !/davlumbaz/.test(n);
+}
+
+/** Salamander üst rafı — duvar rafı (60×60×4); fiyat 100×30×4 referansından */
+export function isSalamanderRafiReferans(isim: string | null | undefined): boolean {
+  const n = norm(String(isim ?? ""));
+  return /salamander/.test(n) && /\braf/.test(n);
 }
 
 const DUVAR_RAF_EN_CM = [90, 100, 110, 120, 130, 140, 150, 160, 170] as const;

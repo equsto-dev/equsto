@@ -255,7 +255,7 @@ export function ekipmanToReferansKalemler(
     const notParcalari: string[] = [];
     if (s.marka?.trim()) notParcalari.push(`Marka: ${s.marka.trim()}`);
     if (olcu) notParcalari.push(`Ölçü: ${olcu}`);
-    if (s.mevcut) notParcalari.push("Müşteride mevcut — fiyat beklenmez");
+    if (s.mevcut) notParcalari.push("Müşteride mevcut — katalog referans fiyatı");
 
     return {
       referansPoz: s.poz,
@@ -263,7 +263,7 @@ export function ekipmanToReferansKalemler(
       urunTipi,
       kategoriKodu: kategoriFromReferansSatir(s),
       adet: adetSayi(s.adet),
-      tip: s.mevcut ? ("opsiyonel" as const) : ("zorunlu" as const),
+      tip: "zorunlu" as const,
       notlar: notParcalari.length
         ? repairPfosDisplayText(notParcalari.join(" · "))
         : undefined,

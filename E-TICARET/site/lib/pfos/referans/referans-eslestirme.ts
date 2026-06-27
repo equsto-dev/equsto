@@ -36,6 +36,7 @@ import {
 import { resolveTipKodu } from "../core/tip-kodu";
 import { buildOzelImalatEslesmis } from "../core/ozel-imalat-build";
 import {
+  displayIsimFromSablon,
   isOzelImalatMotor,
 } from "../core/ozel-imalat";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
@@ -92,6 +93,8 @@ import { matchPisirmeByReferans } from "./pisirme-match";
 import {
   isDuvarRafiReferans,
   matchDuvarRafiByReferans,
+  isSalamanderRafiReferans,
+  matchSalamanderRafiByReferans,
 } from "./duvar-raf-match";
 import {
   isServisRafiReferans,
@@ -1396,6 +1399,14 @@ export async function matchReferansKalem(
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
 
+  if (isSalamanderRafiReferans(input.isim)) {
+    const salamanderRaf = await matchSalamanderRafiByReferans(
+      input.isim,
+      input.fiyatStratejisi,
+    );
+    if (salamanderRaf) return salamanderRaf;
+  }
+
   if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
     const slim = await matchSlimSetaltiDerinDondurucu(input.isim, olcu, input.notlar);
     if (slim) return slim;
@@ -1713,6 +1724,10 @@ function extractDepth(s: string): number {
   const nums = s.match(/(\d+)/g)?.map(Number) || [];
   return nums[1] || 70;
 }
+function extractHeight(s: string): number {
+  const nums = s.match(/(\d+)/g)?.map(Number) || [];
+  return nums[2] || 30;
+}
 
 export async function matchAtalayAraTezgahByReferans(
   isim: string,
@@ -1753,6 +1768,14 @@ export async function matchAtalayAraTezgahByReferans(
   return null;
 }
 
+/** Öztiryakiler 7911.N1.{genişlik}{derinlik}{yükseklik}.00 — örn. 40×70×30 → 40703 */
+function oztiAraTezgahSku(width: number, depth: number, height = 30): string {
+  const w = Math.round(width / 10);
+  const d = Math.round(depth / 10);
+  const h = height === 30 ? "03" : String(Math.round(height / 10)).padStart(2, "0");
+  return `7911.N1.${w}${d}${h}.00`;
+}
+
 /** Öztiryakiler setüstü nötr ara tezgah eşlemesi */
 export async function matchOztiAraTezgahByReferans(
   isim: string,
@@ -1760,41 +1783,65 @@ export async function matchOztiAraTezgahByReferans(
 ): Promise<EslesmisUrun | null> {
   const width = extractWidth(olcu || isim);
   const depth = extractDepth(olcu || isim) || 70;
-
-  let sku = "";
-  if (depth === 70) {
-    if (width >= 80) sku = "7911.N1.80703.00";
-    else sku = "7911.N1.40703.00";
-  } else if (depth === 90) {
-    if (width >= 80) sku = "7911.N1.80903.00";
-    else sku = "7911.N1.40903.00";
-  } else if (depth === 60) {
-    if (width >= 60) sku = "7911.N1.60603.00";
-    else sku = "7911.N1.40603.00";
-  } else {
-    sku = "7911.N1.40703.00";
-  }
+  const height = extractHeight(olcu || isim) || 30;
 
   const rows = await loadLegacyCatalogRows();
-  const found = rows.find(
+  const trySkus = [
+    oztiAraTezgahSku(width, depth, height),
+    depth === 70 && width >= 80 ? "7911.N1.80703.00" : "",
+    depth === 70 && width >= 40 ? "7911.N1.40703.00" : "",
+    depth === 90 && width >= 80 ? "7911.N1.80903.00" : "",
+    depth === 90 ? "7911.N1.40903.00" : "",
+    depth === 60 && width >= 60 ? "7911.N1.60603.00" : "",
+    depth === 60 ? "7911.N1.40603.00" : "",
+  ].filter(Boolean);
+
+  let found = rows.find(
     (r) =>
       r.durum === "aktif" &&
       r.sku &&
-      r.sku.replace(/\s+/g, "").toUpperCase() === sku.toUpperCase()
+      trySkus.some(
+        (sku) =>
+          r.sku!.replace(/\s+/g, "").toUpperCase() === sku.toUpperCase(),
+      ),
   );
 
-  if (found) {
-    const matched = katalogRowToEslesmis(found, {
-      linkMarka: "Öztiryakiler",
-      sablonIsim: isim,
-    });
-    return {
-      ...matched,
-      ad: matched.ad,
-      marka: "Öztiryakiler",
-      olcu: olcu || `${width}*${depth}*30`,
-    };
+  if (!found && width > 0 && width < 40) {
+    const baseSku = oztiAraTezgahSku(40, depth, height);
+    const base = rows.find(
+      (r) =>
+        r.durum === "aktif" &&
+        r.sku?.replace(/\s+/g, "").toUpperCase() === baseSku.toUpperCase(),
+    );
+    if (base) {
+      const ratio = width / 40;
+      const matched = katalogRowToEslesmis(base, {
+        linkMarka: "Öztiryakiler",
+        sablonIsim: isim,
+      });
+      return {
+        ...matched,
+        ad: displayIsimFromSablon(isim),
+        marka: "Öztiryakiler",
+        olcu: olcu || `${width}*${depth}*${height}`,
+        fiyat: Math.round(matched.fiyat * ratio),
+        fiyatEur: matched.fiyatEur
+          ? Math.round(matched.fiyatEur * ratio * 100) / 100
+          : null,
+      };
+    }
   }
 
-  return null;
+  if (!found) return null;
+
+  const matched = katalogRowToEslesmis(found, {
+    linkMarka: "Öztiryakiler",
+    sablonIsim: isim,
+  });
+  return {
+    ...matched,
+    ad: matched.ad,
+    marka: "Öztiryakiler",
+    olcu: olcu || `${width}*${depth}*${height}`,
+  };
 }

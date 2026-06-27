@@ -134,6 +134,7 @@ function parsePisirmeFamily(isim: string, urunTipi?: string | null): PisirmeFami
   if (/fritoz|fritöz|friteuse/.test(n)) return "fritoz";
   if (/bain\s*marie|bainmarie|sos\s*bain|benmari/.test(n)) return "bainmarie";
   if (/pizza\s*firin|pizza\s*fırın/.test(n)) return "pizza_firin";
+  if (/salamander\s*raf/.test(n)) return null;
   if (/salamander/.test(n)) return "salamander";
   if (/wok/.test(n)) return "wok";
   if (/döner\s*ocak|doner\s*ocak|doner-ocak/.test(n)) return "doner";

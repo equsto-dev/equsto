@@ -4,9 +4,53 @@ import { matchEqustoFiyatListesiDuvarRaf } from "../core/equsto-fiyat-listesi-pf
 import { DUVAR_RAF_MARKA } from "../core/duvar-raf-marka";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
-import { isDuvarRafiReferans } from "./duvar-raf-heuristics";
+import {
+  isDuvarRafiReferans,
+  isSalamanderRafiReferans,
+} from "./duvar-raf-heuristics";
+import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 
-export { isDuvarRafiReferans };
+export { isDuvarRafiReferans, isSalamanderRafiReferans };
+
+const SALAMANDER_RAF_OLCU = "60*60*4";
+const SALAMANDER_RAF_FIYAT_SKU = "7897.10030.30";
+
+/**
+ * Salamander rafı — katalogda yok; 60×60×4 duvar rafı, fiyat 100×30×4 (7897.10030.30).
+ */
+export async function matchSalamanderRafiByReferans(
+  isim: string,
+  _fiyatStratejisi: FiyatStratejisi = "ekonomik",
+): Promise<EslesmisUrun | null> {
+  if (!isSalamanderRafiReferans(isim)) return null;
+
+  const rows = await loadLegacyCatalogRows();
+  const ref = rows.find(
+    (r) =>
+      r.durum === "aktif" &&
+      String(r.sku ?? "")
+        .replace(/\s+/g, "")
+        .toUpperCase() === SALAMANDER_RAF_FIYAT_SKU.toUpperCase(),
+  );
+  if (!ref) return null;
+
+  const priced = katalogRowToEslesmis(ref, {
+    linkMarka: "Öztiryakiler",
+    sablonIsim: isim,
+  });
+
+  return {
+    ...priced,
+    id: "salamander-rafi-duvar-60",
+    sku: "",
+    ad: displayIsimFromSablon(isim),
+    marka: "Öztiryakiler",
+    model: SALAMANDER_RAF_FIYAT_SKU,
+    olcu: SALAMANDER_RAF_OLCU,
+    teklifAciklama: `Duvar rafı ${SALAMANDER_RAF_OLCU} — fiyat referansı: DUVAR RAFI 100*30 (${SALAMANDER_RAF_FIYAT_SKU})`,
+  };
+}
 
 /**
  * Duvar / basket raf — EQUSTO Fiyat Listesi 2026 (EQ.KDUVR*, KBASRAF).

@@ -98,23 +98,21 @@ export async function calculateListeQuoteCatalog(
       continue;
     }
 
-    const mevcut = item.tip === "opsiyonel";
-    let urun = null;
-    if (!mevcut) {
-      const urunMatched = await matchProductForReferansKalem({
-        urunTipi: item.urunTipi,
-        fiyatStratejisi,
-        isim: item.isim,
-        notlar: item.notlar,
-        referansPoz: item.referansPoz,
-        referansListeKey: item.referansListeKey ?? listeKey,
-        kategoriKodu: item.kategoriKodu,
-      });
-      urun = await enrichEslesmisUrunKw(urunMatched, {
-        isim: item.isim,
-        urunTipi: item.urunTipi,
-      });
-    }
+    const urunMatched = await matchProductForReferansKalem({
+      urunTipi: item.urunTipi,
+      fiyatStratejisi,
+      isim: item.isim,
+      notlar: item.notlar,
+      referansPoz: item.referansPoz,
+      referansListeKey: item.referansListeKey ?? listeKey,
+      kategoriKodu: item.kategoriKodu,
+    });
+    const urun = await enrichEslesmisUrunKw(urunMatched, {
+      isim: item.isim,
+      urunTipi: item.urunTipi,
+    });
+
+    const mevcutNot = /müşteride mevcut/i.test(item.notlar ?? "");
 
     kalemlerRaw.push({
       poz: item.referansPoz ?? "",
@@ -125,8 +123,8 @@ export async function calculateListeQuoteCatalog(
       referansBolumKey: item.referansBolumKey,
       urunTipi: item.urunTipi,
       isim: formatPfosDisplayTanim(item.isim),
-      tip: mevcut ? "opsiyonel" : item.tip,
-      opsiyonelSebep: mevcut ? "Müşteride mevcut" : undefined,
+      tip: item.tip,
+      opsiyonelSebep: mevcutNot ? "Müşteride mevcut" : undefined,
       adet: item.scale.type === "fixed" ? item.scale.adet : 1,
       elektrikGucuKwHint: item.elektrikGucuKwHint,
       gazGucuKwHint: item.gazGucuKwHint,
