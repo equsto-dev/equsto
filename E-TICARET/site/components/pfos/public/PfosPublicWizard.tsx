@@ -934,9 +934,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           aria-selected={activePane === "wizard"}
           onClick={toggleWizardPane}
         >
-          <span className={styles.moduleSwitchIcon} aria-hidden>
-            ✦
-          </span>
           {t("Konsept sihirbazı")}
           {activePane === "wizard" && hint.pct > 0 ? (
             <span className={styles.moduleSwitchBadge}>{hint.pct}%</span>
@@ -955,9 +952,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           aria-selected={activePane === "liste"}
           onClick={toggleListePane}
         >
-          <span className={styles.moduleSwitchIcon} aria-hidden>
-            📋
-          </span>
           {t("Liste yükle")}
         </button>
         {activePane !== "balanced" ? (
@@ -968,37 +962,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             title={t("Her iki modülü yan yana göster")}
             aria-label={t("Her iki modülü yan yana göster")}
           >
-            ⬌
+            {t("Yan yana")}
           </button>
         ) : null}
       </div>
-    );
-  }
-
-  function renderPaneRail(
-    side: "wizard" | "liste",
-    label: string,
-    sub?: string,
-  ) {
-    const isWizard = side === "wizard";
-    return (
-      <button
-        type="button"
-        className={styles.paneRail}
-        aria-expanded={false}
-        aria-label={
-          isWizard ? t("Konsept sihirbazını genişlet") : t("Liste yüklemeyi genişlet")
-        }
-        onClick={() => setActivePane(side)}
-      >
-        <span className={styles.paneRailAccent} aria-hidden />
-        <span className={styles.paneRailIcon} aria-hidden>
-          {isWizard ? "✦" : "📋"}
-        </span>
-        <span className={styles.paneRailTitle}>{label}</span>
-        {sub ? <span className={styles.paneRailMeta}>{sub}</span> : null}
-        <span className={styles.paneRailAction}>{t("Genişlet")}</span>
-      </button>
     );
   }
 
@@ -1057,20 +1024,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         className={[
           styles.rightCol,
           listePaneCollapsed ? styles.paneCollapsed : "",
-          listePaneCollapsed ? styles.paneCollapsedRight : "",
           activePane === "liste" ? styles.paneExpanded : "",
         ]
           .filter(Boolean)
           .join(" ")}
         aria-label={t("Liste yükleme")}
       >
-        {listePaneCollapsed
-          ? renderPaneRail(
-              "liste",
-              t("Liste yükle"),
-              listeUpload.file?.name ?? t("Excel / PDF"),
-            )
-          : null}
         <div
           className={styles.paneBody}
           onPointerDown={engageListePane}
@@ -1218,20 +1177,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         className={[
           styles.leftCol,
           wizardPaneCollapsed ? styles.paneCollapsed : "",
-          wizardPaneCollapsed ? styles.paneCollapsedLeft : "",
           activePane === "wizard" ? styles.paneExpanded : "",
         ]
           .filter(Boolean)
           .join(" ")}
         ref={leftColRef}
       >
-        {wizardPaneCollapsed
-          ? renderPaneRail(
-              "wizard",
-              t("Konsept sihirbazı"),
-              `${hint.pct}% · ${hint.title}`,
-            )
-          : null}
         <div
           className={styles.paneBody}
           onPointerDown={engageWizardPane}
