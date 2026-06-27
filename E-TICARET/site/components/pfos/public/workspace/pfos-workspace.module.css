@@ -377,6 +377,14 @@
   padding: 0 0 0.15rem;
 }
 
+.wizardIntroRow {
+  margin: 0 0 calc(2 * 1.45em);
+}
+
+:global([data-pfos-pane="balanced"]) .wizardWorkspace {
+  gap: 0;
+}
+
 .wizardIntroTitle {
   margin: 0 0 0.25rem;
   font-size: 1.1rem;

@@ -908,22 +908,28 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderWizardCenter() {
+  function renderWizardIntro() {
+    return (
+      <header className={ws.wizardIntro}>
+        <h2 className={ws.wizardIntroTitle}>
+          {t("Konsept Sihirbazı")}
+        </h2>
+        <p className={ws.wizardIntroSub}>
+          {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
+        </p>
+        <p className={ws.wizardIntroSparkle} aria-live="polite">
+          <span className={ws.wizardIntroSparkleText}>
+            {t("Beş dakikada yapılır, hemen teslim edilir.")}
+          </span>
+        </p>
+      </header>
+    );
+  }
+
+  function renderWizardCenter(opts?: { hideIntro?: boolean }) {
     return (
       <div className={ws.wizardWorkspace}>
-        <header className={ws.wizardIntro}>
-          <h2 className={ws.wizardIntroTitle}>
-            {t("Konsept Sihirbazı")}
-          </h2>
-          <p className={ws.wizardIntroSub}>
-            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
-          </p>
-          <p className={ws.wizardIntroSparkle} aria-live="polite">
-            <span className={ws.wizardIntroSparkleText}>
-              {t("Beş dakikada yapılır, hemen teslim edilir.")}
-            </span>
-          </p>
-        </header>
+        {!opts?.hideIntro ? renderWizardIntro() : null}
 
         <div id="pfos-progress" className={styles.pfProgress}>
           <div className={styles.pfProgressTrack}>
@@ -1152,6 +1158,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       pipelineActive={pipelineActive}
       summary={liveSummary}
     >
+      {activePane === "balanced" ? (
+        <div className={ws.wizardIntroRow}>{renderWizardIntro()}</div>
+      ) : null}
       <div
         className={layoutClassName()}
         data-pfos-pane={activePane === "balanced" ? "balanced" : activePane}
@@ -1167,7 +1176,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           ref={leftColRef}
         >
           <div className={styles.paneBody} onPointerDown={engageWizardPane}>
-            {renderWizardCenter()}
+            {renderWizardCenter({ hideIntro: activePane === "balanced" })}
           </div>
         </div>
         {renderListePane()}
