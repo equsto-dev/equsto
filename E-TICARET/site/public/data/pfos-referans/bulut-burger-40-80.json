@@ -1,10 +1,10 @@
 {
   "kategoriId": "bulut-burger",
-  "bantId": "35-100",
-  "label": "Bulut Mutfak - Hamburgerci",
+  "bantId": "40-80",
+  "label": "Bulut Mutfak — Hamburgerci",
   "referansM2": 60,
-  "kaynakDosya": "bulut-hamburgerci-referans.xlsx",
-  "yukleme": "2026-06-26T23:08:07.482Z",
+  "kaynakDosya": "BULUT MUTFAK/hamburgerci.pdf",
+  "yukleme": "2026-06-27T16:22:55.856719Z",
   "kalemSayisi": 29,
   "toplamAdet": 36,
   "kalemler": [
@@ -96,7 +96,7 @@
       "ad": "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ",
       "olcu": "140*70*85",
       "adet": 1,
-      "kategori": "diger"
+      "kategori": "tezgah"
     },
     {
       "bolum": "PISIRME",

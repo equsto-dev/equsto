@@ -169,7 +169,8 @@
             "Ekmek + Kruvasan"
           ],
           "Bulut Mutfak": [
-            "Hamburgerci"
+            "Hamburgerci",
+            "Ev Yemekleri"
           ]
         },
         "gosterIf": "q_ust_segment",
@@ -2160,18 +2161,18 @@
         "pfos": {
           "motorSlug": "bulut-burger",
           "dukkanSecim": "Hamburgerci",
-          "m2Min": 35,
-          "m2Max": 100,
-          "bantKurali": "Referans hamburgerci ekipman listesi",
-          "listeYolu": "veri/bulut-hamburgerci-referans.xlsx",
+          "m2Min": 40,
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (hamburgerci.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/hamburgerci.pdf",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
-              "id": "35-100",
-              "label": "35–100 m² (Hamburgerci)",
+              "id": "40-80",
+              "label": "40–80 m² (Hamburgerci)",
               "referansM2": 60,
-              "listeDosya": "pfos-referans/bulut-burger-35-100.json"
+              "listeDosya": "pfos-referans/bulut-burger-40-80.json"
             }
           ]
         },
@@ -2181,16 +2182,24 @@
         "id": "bulut_ev_yemek",
         "name": "Ev Yemekleri",
         "parent": "Bulut Mutfak",
-        "desc": "Ev Yemekleri · liste hazırlanıyor — genel şablon",
+        "desc": "Bulut mutfak ev yemekleri · referans ekipman listesi",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "bulut-ev-yemek",
           "dukkanSecim": "Ev Yemekleri",
           "m2Min": 40,
-          "m2Max": 120,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Max": 80,
+          "bantKurali": "40–80 m² — tek referans liste (ev-yemekleri.pdf)",
+          "listeYolu": "proje-veri/BULUT MUTFAK/ev-yemekleri.pdf",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-80",
+              "label": "40–80 m² (Ev Yemekleri)",
+              "referansM2": 60,
+              "listeDosya": "pfos-referans/bulut-ev-yemek-40-80.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -83860,6 +83869,6 @@
         "tip_kodu": "INO-BYM102T-PZ"
       }
     ],
-    "updated_at": "2026-06-26T23:08:19.449Z"
+    "updated_at": "2026-06-27T16:10:43.720Z"
   }
 }

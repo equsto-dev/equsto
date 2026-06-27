@@ -59,7 +59,8 @@ export type ReferansListeId =
   | "500-2000-arnavutkoy"
   | "200-500"
   | "200-5000"
-  | "2018-199";
+  | "2018-199"
+  | "40-80";
 
 /** Şehir oteli — 750 / 1000 m²'de tüm referans listeleri birleştirilir */
 const SEHIR_OTEL_TUM_LISTELER: ReferansListeId[] = [
@@ -440,6 +441,8 @@ export async function loadReferansProfil(
                                                       ? "100-200"
           : kategoriId === "birahane"
           ? "100-300"
+          : kategoriId === "bulut-burger" || kategoriId === "bulut-ev-yemek"
+            ? "40-80"
           : kategoriId === "balikci"
         ? pickBalikciListe(m2, altTip)
         : pickM2Bant(m2));
