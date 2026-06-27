@@ -319,7 +319,9 @@ export async function loadReferansProfil(
     | "kahve-duragi-pastane"
     | "resort-otel"
     | "turk-restoran"
-    | "dunya-mutfagi",
+    | "dunya-mutfagi"
+    | "bulut-burger"
+    | "bulut-ev-yemek",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
