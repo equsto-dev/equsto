@@ -149,6 +149,11 @@ applyLinks(listeKeysFor("bulut-manti"), {
 });
 
 applyLinks(listeKeysFor("bulut-pastane-firin"), {
+  D5: {
+    sku: "7919.70182.MD",
+    marka: "Öztiryakiler",
+    name: "MAYALAMA DOLABI",
+  },
   D6: {
     sku: "EQ.KDAVDT01.250140",
     marka: "Equsto",

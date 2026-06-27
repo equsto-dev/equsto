@@ -77,26 +77,94 @@ function cleanProformaAd(raw: string): string {
   return formatPfosDisplayTanim(raw);
 }
 
-/** Poz sonrası hücreler — sondaki adet/fiyat/kur sütunlarını ayır (kaynak temizliği) */
-function isProformaTailCell(raw: string): boolean {
-  const s = raw.trim();
-  if (!s) return false;
-  if (/^342$/i.test(s)) return true;
-  if (/^S\d{1,3}\*[\d.,]+$/i.test(s)) return true;
-  if (/^\d+[.,]\d{6,}$/.test(s)) return true;
-  if (/^\d{2,5}$/.test(s)) return true;
-  if (/^\d{1,2}$/.test(s)) return true;
-  return false;
+function parsePriceEur(raw: string): number | null {
+  const s = raw.trim().replace(/\s/g, "");
+  if (!s || /^mevcut$/i.test(s) || s === "-") return null;
+  const n = parseFloat(s.replace(",", "."));
+  // Proforma birim fiyatları genelde ≥10 EUR; adet sütunu (1–9) ile karışmasın
+  if (!Number.isFinite(n) || n < 10 || n > 500_000) return null;
+  return Math.round(n * 100) / 100;
 }
 
-function splitProformaTailCells(cells: string[]): { head: string[]; adet: number } {
-  const rest = cells.filter(Boolean);
-  let adet = 1;
-  while (rest.length > 1 && isProformaTailCell(rest[rest.length - 1] ?? "")) {
-    const last = rest.pop()!.trim();
-    if (/^\d{1,2}$/.test(last)) adet = parseAdet(last);
+function isMevcutCell(raw: string): boolean {
+  return /^mevcut$/i.test(raw.trim());
+}
+
+function isKnownMarkaCell(raw: string): boolean {
+  const s = raw.trim();
+  if (!s || s === "-") return false;
+  if (OLCU_RE.test(s) || /^\d+$/.test(s)) return false;
+  if (
+    /^(sktürk|skturk|öztiryakiler|ozti|equsto|electrolux|senox|inoksan|simag|brema|unox|rational|fagor|atalay|vosco|portashelf)$/i.test(
+      s,
+    )
+  ) {
+    return true;
   }
-  return { head: rest, adet };
+  if (s.length > 12) return false;
+  if (/montaj|tezgah|dolab|firin|fritoz|izgar|ocak|davlumbaz|\brafi\b|\braf\b|makina|makinasi|buzdolab|salamander|davlumbaz/i.test(s)) {
+    return false;
+  }
+  return s.length <= 10;
+}
+
+/** Poz sonrası hücreler — marka, adet, birim fiyat, mevcut ayrıştır */
+function parseProformaMetaFields(cells: string[]): {
+  head: string[];
+  adet: number;
+  marka?: string;
+  birim_fiyat_eur?: number;
+  mevcut?: boolean;
+} {
+  const rest = cells.map((c) => c.trim());
+  let adet = 1;
+  let birim_fiyat_eur: number | undefined;
+  let mevcut = false;
+  const prices: number[] = [];
+
+  while (rest.length > 0) {
+    const last = rest[rest.length - 1] ?? "";
+    if (!last) {
+      rest.pop();
+      continue;
+    }
+    if (isMevcutCell(last)) {
+      mevcut = true;
+      rest.pop();
+      continue;
+    }
+    const price = parsePriceEur(last);
+    if (price != null && /^\d/.test(last)) {
+      prices.unshift(price);
+      rest.pop();
+      continue;
+    }
+    if (/^\d{1,2}$/.test(last)) {
+      adet = parseAdet(last);
+      rest.pop();
+      continue;
+    }
+    break;
+  }
+
+  if (prices.length) birim_fiyat_eur = prices[0];
+
+  const textParts = rest.filter((c) => c && c !== "-" && !OLCU_RE.test(c));
+  const markaCell = textParts.find((c) => isKnownMarkaCell(c));
+  const tanimParts = textParts.filter((c) => c !== markaCell);
+  const head = rest.filter((c) => {
+    if (!c || c === "-") return false;
+    if (OLCU_RE.test(c)) return true;
+    return tanimParts.includes(c);
+  });
+
+  return {
+    head,
+    adet,
+    marka: markaCell && markaCell !== "-" ? markaCell : undefined,
+    birim_fiyat_eur,
+    mevcut: mevcut || undefined,
+  };
 }
 
 function findPozIndex(cells: string[]): number {
@@ -124,44 +192,34 @@ function parseRowFromPoz(
   bolumAd: string,
 ): PfosEkipmanSatir | null {
   const poz = normalizePoz(cells[pozIdx]);
-  const { head: rest, adet: peeledAdet } = splitProformaTailCells(
-    cells.slice(pozIdx + 1),
-  );
-  if (!rest.length) return null;
+  const meta = parseProformaMetaFields(cells.slice(pozIdx + 1));
+  const rest = meta.head.filter(Boolean);
+  if (!rest.length && !meta.mevcut && !meta.marka) return null;
 
-  let tanim = rest.join(" ").trim();
-  let olcu = "";
-  let adet = peeledAdet;
+  let tanim = rest.filter((c) => !OLCU_RE.test(c)).join(" ").trim();
+  let olcu = rest.find((c) => OLCU_RE.test(c))?.match(OLCU_RE)?.[0] ?? "";
 
-  const olcuCell = rest.find((c) => OLCU_RE.test(c));
-  if (olcuCell) {
-    olcu = olcuCell.match(OLCU_RE)?.[0] ?? olcuCell;
-    tanim = rest
-      .filter((c) => c !== olcuCell)
-      .join(" ")
-      .trim();
-  } else {
-    const split = extractOlcu(tanim);
+  if (!tanim && !meta.mevcut) {
+    const split = extractOlcu(rest.join(" "));
     tanim = split.ad;
-    olcu = split.olcu;
+    if (!olcu) olcu = split.olcu;
   }
 
   tanim = cleanProformaAd(tanim);
+  if (!tanim && !meta.mevcut) return null;
 
-  const last = rest[rest.length - 1];
-  if (/^\d{1,2}$/.test(last) && last !== olcu.replace(/\D/g, "")) {
-    adet = parseAdet(last);
-  }
-  if (!tanim) return null;
-
-  return {
+  const row: PfosEkipmanSatir = {
     bolum: bolum || poz.charAt(0),
     bolumAd: bolumAd || BOLUM_BY_POZ[poz.charAt(0)] || "",
     poz,
-    ad: tanim,
+    ad: tanim || poz,
     olcu: olcu || "—",
-    adet,
+    adet: meta.adet,
   };
+  if (meta.marka) row.marka = meta.marka;
+  if (meta.birim_fiyat_eur != null) row.birim_fiyat_eur = meta.birim_fiyat_eur;
+  if (meta.mevcut) row.mevcut = true;
+  return row;
 }
 
 function normalizePoz(poz: string): string {
@@ -279,6 +337,10 @@ type TabularHeader = {
   aciklama: number;
   olcu: number;
   adet: number;
+  marka: number;
+  birimFiyat: number;
+  tutar: number;
+  headerRow: number;
 };
 
 function normHeaderCell(c: string): string {
@@ -290,17 +352,32 @@ function normHeaderCell(c: string): string {
     .trim();
 }
 
-function findTabularHeader(cells: string[]): TabularHeader | null {
+function isTanimHeaderLabel(c: string): boolean {
+  const n = normHeaderCell(c);
+  if (!n || /aciklama.*gorsel|gorsel.*aciklama/.test(n)) return false;
+  return (
+    n.includes("tanim") ||
+    n.includes("malzeme cinsi") ||
+    n.includes("malzeme") ||
+    n.includes("ekipman") ||
+    n.includes("urun adi") ||
+    n.includes("urun ad") ||
+    (n.includes("urun") && n.includes("adi")) ||
+    n === "cinsi"
+  );
+}
+
+function findTabularHeaderInCells(cells: string[]): Omit<TabularHeader, "headerRow"> | null {
   const lower = cells.map(normHeaderCell);
-  const malzemeIdx = lower.findIndex(
-    (c) => c.includes("malzeme cinsi") || c.includes("malzeme"),
+  const malzemeIdx = lower.findIndex((c) =>
+    c.includes("malzeme cinsi") || (c.includes("malzeme") && !c.includes("aciklama")),
   );
   const aciklamaIdx = lower.findIndex(
-    (c) => c.includes("aciklama") && !c.includes("malzeme"),
+    (c) => c.includes("aciklama") && !c.includes("malzeme") && !/gorsel/.test(c),
   );
   const pozIdx = lower.findIndex(
     (c) =>
-      c.includes("poz") ||
+      c === "poz" ||
       c === "p.no" ||
       c === "pno" ||
       c === "p.no." ||
@@ -308,21 +385,13 @@ function findTabularHeader(cells: string[]): TabularHeader | null {
       c === "poz no.",
   );
   const noIdx = lower.findIndex((c) => c === "no" || c === "sira" || c === "s.no");
-  const tanimIdx =
-    malzemeIdx >= 0
-      ? malzemeIdx
-      : lower.findIndex(
-          (c) =>
-            c.includes("tanim") ||
-            c === "aciklama" ||
-            c.includes("ekipman") ||
-            c.includes("cinsi") ||
-            c.includes("urun") ||
-            c.includes("adi"),
-        );
+  let tanimIdx = malzemeIdx;
+  if (tanimIdx < 0) {
+    tanimIdx = lower.findIndex((c) => isTanimHeaderLabel(c));
+  }
+  if (tanimIdx < 0 && aciklamaIdx >= 0) tanimIdx = aciklamaIdx;
 
   if (tanimIdx < 0) return null;
-  if (pozIdx < 0 && noIdx < 0) return null;
 
   return {
     no: noIdx,
@@ -335,7 +404,51 @@ function findTabularHeader(cells: string[]): TabularHeader | null {
     adet: lower.findIndex(
       (c) => c === "ad" || c === "ad." || c === "adet" || c === "miktar",
     ),
+    marka: lower.findIndex((c) => c.includes("marka")),
+    birimFiyat: lower.findIndex(
+      (c) =>
+        c.includes("birim fiyat") ||
+        c === "fiyat" ||
+        c.includes("birim fiyat eur") ||
+        c.includes("eur"),
+    ),
+    tutar: lower.findIndex(
+      (c) => c === "tutar" || c.includes("toplam") || c.includes("tutar eur"),
+    ),
   };
+}
+
+function findTabularHeader(ws: Worksheet): TabularHeader | null {
+  let merged: Omit<TabularHeader, "headerRow"> | null = null;
+  let headerRow = 0;
+
+  ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
+    if (rowNumber > 35) return;
+    const cells = rowCells(row);
+    if (!cells.some(Boolean)) return;
+    const hit = findTabularHeaderInCells(cells);
+    if (!hit) return;
+    if (!merged) {
+      merged = { ...hit };
+      headerRow = rowNumber;
+      return;
+    }
+    // Çok satırlı başlık (ör. satır 17: Ürün Adı, satır 19: Poz | Ölçü | Marka)
+    headerRow = Math.min(headerRow, rowNumber);
+    for (const key of Object.keys(hit) as Array<keyof Omit<TabularHeader, "headerRow">>) {
+      if (key === "malzeme" || key === "aciklama") {
+        if (merged[key] < 0 && hit[key] >= 0) merged[key] = hit[key];
+        if (key === "malzeme" && hit.malzeme >= 0 && isTanimHeaderLabel(cells[hit.malzeme] ?? "")) {
+          merged.malzeme = hit.malzeme;
+        }
+        continue;
+      }
+      if (merged[key] < 0 && hit[key] >= 0) merged[key] = hit[key];
+    }
+  });
+
+  if (!merged || merged.poz < 0 || merged.malzeme < 0) return null;
+  return { ...merged, headerRow };
 }
 
 function resolveTabularPoz(
@@ -364,19 +477,17 @@ function resolveTabularPoz(
  */
 export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
   const rows: PfosEkipmanSatir[] = [];
-  let header: TabularHeader | null = null;
+  const header = findTabularHeader(ws);
+  if (!header) return rows;
+
   let bolum = "";
   let bolumAd = "";
   let sectionIndex = 0;
 
-  ws.eachRow({ includeEmpty: false }, (row) => {
+  ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
+    if (rowNumber <= header.headerRow) return;
     const cells = rowCells(row);
     if (!cells.some(Boolean)) return;
-
-    if (!header) {
-      header = findTabularHeader(cells);
-      return;
-    }
 
     const firstCell = cells[0]?.trim();
     const isEmptyOthers = firstCell &&
@@ -479,15 +590,36 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       if (Number.isFinite(n) && n > 0) adet = Math.min(99, n);
     }
 
+    let marka: string | undefined;
+    if (header.marka >= 0) {
+      const raw = cells[header.marka]?.trim();
+      if (raw && raw !== "-") marka = raw;
+    }
+
+    let birim_fiyat_eur: number | undefined;
+    if (header.birimFiyat >= 0) {
+      const price = parsePriceEur(cells[header.birimFiyat] ?? "");
+      if (price != null) birim_fiyat_eur = price;
+    }
+
+    let mevcut = false;
+    if (header.tutar >= 0 && isMevcutCell(cells[header.tutar] ?? "")) {
+      mevcut = true;
+    }
+
     const harf = poz.charAt(0).toUpperCase();
-    rows.push({
+    const satir: PfosEkipmanSatir = {
       bolum: bolum || (BOLUM_HARF_RE.test(harf) ? harf : ""),
       bolumAd: bolumAd || BOLUM_BY_POZ[harf] || "",
       poz,
       ad,
       olcu,
       adet,
-    });
+    };
+    if (marka) satir.marka = marka;
+    if (birim_fiyat_eur != null) satir.birim_fiyat_eur = birim_fiyat_eur;
+    if (mevcut) satir.mevcut = true;
+    rows.push(satir);
   });
 
   return rows;
@@ -510,7 +642,12 @@ export function pickBestProformaRows(
     const rows = parse(ws);
     const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
     const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
-    const score = rows.length + validOlcuCount * 5 + validAdetCount * 2;
+    const fiyatCount = rows.filter((r) => (r.birim_fiyat_eur ?? 0) > 0).length;
+    const score =
+      rows.length +
+      validOlcuCount * 5 +
+      validAdetCount * 2 +
+      fiyatCount * 8;
     if (score > bestScore) {
       bestScore = score;
       best = rows;

@@ -44,7 +44,7 @@ export default function PfosListeUploadRail({
   const formatNote = (
     <p className={styles.listeFormatNoteRail}>
       {t(
-        "Excel: P.No, ekipman adı, ölçü ve adet sütunları. PDF: proforma listesi satır satır okunur; ürün adları ve fiyatlar dosyadan birebir aktarılır (katalog eşlemesi yok).",
+        "Excel: Poz, ürün adı, ölçü, marka, adet ve birim fiyat sütunları okunur. PDF: proforma satırları birebir aktarılır.",
       )}
     </p>
   );
