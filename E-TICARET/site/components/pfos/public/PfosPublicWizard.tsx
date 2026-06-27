@@ -36,8 +36,20 @@ import {
 } from "@/lib/pfos/adres/tr-adres";
 import PfosAdresAutocomplete from "./PfosAdresAutocomplete";
 import PfosTeklifLoading from "./PfosTeklifLoading";
-import PfosListeUploadRail from "./PfosListeUploadRail";
 import { usePfosListeUpload } from "./usePfosListeUpload";
+import PfosWorkspaceShell from "./workspace/PfosWorkspaceShell";
+import PfosListeWorkspace from "./workspace/PfosListeWorkspace";
+import {
+  deriveListePipelineStage,
+  deriveWizardPipelineStage,
+} from "./workspace/derive-pipeline-stage";
+import {
+  LISTE_PIPELINE,
+  WIZARD_PIPELINE,
+  summaryFromPfos,
+  type LiveSummaryData,
+  type WorkspaceMode,
+} from "./workspace/pfos-workspace.types";
 import {
   defaultPublicQuestions,
   dukkanSecenekleri,
@@ -138,13 +150,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const teklifRequestedRef = useRef(false);
   const enterTimerRef = useRef<number | null>(null);
   const leftColRef = useRef<HTMLDivElement>(null);
-  const [uploadAlign, setUploadAlign] = useState<{
-    marginTop: number;
-    height: number;
-  } | null>(null);
-  const [activePane, setActivePane] = useState<"balanced" | "wizard" | "liste">(
-    "balanced",
-  );
+  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>("wizard");
 
   useEffect(() => {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
@@ -195,63 +201,23 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const wizardListeMode = !!(listeUpload.sonuc && listeUpload.teklifV14);
   const wizardHasProforma = !!(finished && sonuc && teklifV14);
-  const wizardPaneCollapsed = activePane === "liste";
-  const listePaneCollapsed = activePane === "wizard";
 
   useEffect(() => {
-    if (wizardListeMode) setActivePane("liste");
+    if (wizardListeMode) setWorkspaceMode("liste");
   }, [wizardListeMode]);
 
   useEffect(() => {
-    if (listeUpload.loadingKind) setActivePane("liste");
+    if (listeUpload.loadingKind) setWorkspaceMode("liste");
   }, [listeUpload.loadingKind]);
 
   useEffect(() => {
-    if (wizardHasProforma && !wizardListeMode) setActivePane("wizard");
+    if (wizardHasProforma && !wizardListeMode) setWorkspaceMode("wizard");
   }, [wizardHasProforma, wizardListeMode]);
 
   const resetListeUpload = useCallback(() => {
     listeUpload.reset();
-    setActivePane(wizardHasProforma ? "wizard" : "balanced");
+    setWorkspaceMode(wizardHasProforma ? "wizard" : "wizard");
   }, [listeUpload, wizardHasProforma]);
-
-  const focusWizardPane = useCallback(() => {
-    setActivePane("wizard");
-  }, []);
-
-  const focusListePane = useCallback(() => {
-    setActivePane("liste");
-  }, []);
-
-  /** Sol modüle ilk tıklamada sağ panel küçülür */
-  const engageWizardPane = useCallback(() => {
-    if (activePane === "balanced") setActivePane("wizard");
-  }, [activePane]);
-
-  const engageListePane = useCallback(() => {
-    if (activePane === "balanced") setActivePane("liste");
-  }, [activePane]);
-
-  const toggleWizardPane = useCallback(() => {
-    setActivePane((p) => (p === "wizard" ? "balanced" : "wizard"));
-  }, []);
-
-  const toggleListePane = useCallback(() => {
-    setActivePane((p) => (p === "liste" ? "balanced" : "liste"));
-  }, []);
-
-  const layoutClassName = useCallback(
-    (extra?: string) =>
-      [
-        styles.layout,
-        activePane === "wizard" ? styles.layoutFocusWizard : "",
-        activePane === "liste" ? styles.layoutFocusListe : "",
-        extra,
-      ]
-        .filter(Boolean)
-        .join(" "),
-    [activePane],
-  );
 
   const openPanelIndex = useMemo(() => {
     for (let i = 0; i < panels.length; i++) {
@@ -272,56 +238,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [panels, questions, answers],
   );
 
-  /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — üst=Başlayalım, alt=meslek s1 */
-  useLayoutEffect(() => {
-    if (activePane !== "balanced" || wizardListeMode || !memberLoggedIn) {
-      setUploadAlign(null);
-      return;
-    }
+  const focusWizardPane = useCallback(() => {
+    setWorkspaceMode("wizard");
+  }, []);
 
-    const leftCol = leftColRef.current;
-    const progress = document.getElementById("pfos-progress");
-    const meslek = document.getElementById("pfos-sec-s1");
-    if (!leftCol || !progress || !meslek) {
-      setUploadAlign(null);
-      return;
-    }
-
-    const measure = () => {
-      const colTop = leftCol.getBoundingClientRect().top;
-      const progressTop = progress.getBoundingClientRect().top;
-      const meslekBottom = meslek.getBoundingClientRect().bottom;
-      const marginTop = Math.round(progressTop - colTop);
-      const height = Math.round(meslekBottom - progressTop);
-      setUploadAlign(
-        marginTop >= 0 && height > 120
-          ? { marginTop, height }
-          : null,
-      );
-    };
-
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(leftCol);
-    ro.observe(progress);
-    ro.observe(meslek);
-    window.addEventListener("resize", measure);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", measure);
-    };
-  }, [
-    activePane,
-    wizardListeMode,
-    memberLoggedIn,
-    openPanelIndex,
-    panels.length,
-    animatingPanelId,
-    animatingPanelReveal,
-    adresListOpen,
-    answers.q_meslek,
-  ]);
-
+  /* KİLİT: public/pfos-liste-upload-rail-KILIT.txt — pfos-progress id korunur */
   const openPanelId = panels[openPanelIndex]?.id ?? "s1";
 
   useEffect(() => {
@@ -451,6 +372,52 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const h = wizardHint(panels, donePanelIds, openPanelId);
     return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
   }, [panels, donePanelIds, openPanelId, t]);
+
+  const liveSummary = useMemo((): LiveSummaryData => {
+    if (listeUpload.sonuc) {
+      return summaryFromPfos(
+        listeUpload.sonuc,
+        listeUpload.file?.name?.replace(/\.xlsx?$/i, "") ?? undefined,
+      );
+    }
+    if (sonuc && finished) {
+      return summaryFromPfos(sonuc, sonuc.konseptLabel);
+    }
+    const dukkan = String(answers.q_dukkan_turu ?? "").trim();
+    return {
+      projeAdi: dukkan ? t(dukkan) : t("Yeni mutfak projesi"),
+      urunSayisi: 0,
+      markaSayisi: 0,
+      kategoriSayisi: 0,
+      tahminiFiyat: null,
+      doviz: "TRY",
+      eslesen: 0,
+      bekleyen: 0,
+      toplamZorunlu: 0,
+      guvenSkoru: null,
+      wizardPct: hint.pct,
+    };
+  }, [
+    listeUpload.sonuc,
+    listeUpload.file,
+    sonuc,
+    finished,
+    answers.q_dukkan_turu,
+    hint.pct,
+    t,
+  ]);
+
+  const pipelineSteps =
+    workspaceMode === "liste" ? LISTE_PIPELINE : WIZARD_PIPELINE;
+  const pipelineActive =
+    workspaceMode === "liste"
+      ? deriveListePipelineStage(listeUpload)
+      : deriveWizardPipelineStage({
+          openPanelId,
+          finished,
+          loading,
+          hasTeklif: !!(teklifV14 || listeUpload.teklifV14),
+        });
 
   const panelVisible = useCallback(
     (_panel: LegacyPanelDef, index: number) => index <= openPanelIndex,
@@ -914,279 +881,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
-  function renderModuleSwitcher() {
-    return (
-      <div
-        className={styles.moduleSwitcher}
-        role="tablist"
-        aria-label={t("Modül seçimi")}
-      >
-        <button
-          type="button"
-          role="tab"
-          className={[
-            styles.moduleSwitch,
-            activePane === "wizard" ? styles.moduleSwitchActive : "",
-            activePane === "balanced" ? styles.moduleSwitchBalanced : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-          aria-selected={activePane === "wizard"}
-          onClick={toggleWizardPane}
-        >
-          {t("Konsept sihirbazı")}
-          {activePane === "wizard" && hint.pct > 0 ? (
-            <span className={styles.moduleSwitchBadge}>{hint.pct}%</span>
-          ) : null}
-        </button>
-        <button
-          type="button"
-          role="tab"
-          className={[
-            styles.moduleSwitch,
-            activePane === "liste" ? styles.moduleSwitchActive : "",
-            activePane === "balanced" ? styles.moduleSwitchBalanced : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-          aria-selected={activePane === "liste"}
-          onClick={toggleListePane}
-        >
-          {t("Liste yükle")}
-        </button>
-        {activePane !== "balanced" ? (
-          <button
-            type="button"
-            className={styles.moduleSwitchReset}
-            onClick={() => setActivePane("balanced")}
-            title={t("Her iki modülü yan yana göster")}
-            aria-label={t("Her iki modülü yan yana göster")}
-          >
-            {t("Yan yana")}
-          </button>
-        ) : null}
-      </div>
-    );
-  }
-
-  function renderListeProformaRail() {
-    if (!listeUpload.sonuc || !listeUpload.teklifV14) return null;
-    const proformaClass =
-      activePane === "liste"
-        ? styles.proformaWrapExpanded
-        : styles.proformaWrapRail;
-
+  function renderWizardCenter() {
     return (
       <>
-        <section
-          className={`${styles.railSection} ${styles.railSectionListeSonuc}`}
-          aria-label={t("Liste fiyatlandırma sonucu")}
-        >
-          <span className={styles.railKicker}>{t("Liste yükleme")}</span>
-          <span className={styles.railTitle}>{t("Listeniz fiyatlandırıldı")}</span>
-          <p className={styles.railPlaceholder}>
-            {listeUpload.sonuc.konseptLabel} ·{" "}
-            {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
-            {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0} {t("eşleşme")}
-          </p>
-          <p className={styles.railListeToplam}>
-            {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-            <small>({t("tahmini, KDV hariç")})</small>
-          </p>
-          {listeUpload.sonuc.uyarilar?.length ? (
-            <ul className={styles.listeUyarilar}>
-              {listeUpload.sonuc.uyarilar.map((u) => (
-                <li key={u}>{u}</li>
-              ))}
-            </ul>
-          ) : null}
-          <button
-            type="button"
-            className={`${styles.btn} ${styles.btnGhost} ${styles.railListeReset}`}
-            onClick={resetListeUpload}
-          >
-            {t("Yeni liste yükle")}
-          </button>
-        </section>
-        <div className={proformaClass}>
-          <TeklifV14Proforma
-            model={listeUpload.teklifV14}
-            deliveryOnly
-          />
-        </div>
-      </>
-    );
-  }
-
-  function renderRightRail(alignUpload = false) {
-    return (
-      <aside
-        className={[
-          styles.rightCol,
-          listePaneCollapsed ? styles.paneCollapsed : "",
-          activePane === "liste" ? styles.paneExpanded : "",
-        ]
-          .filter(Boolean)
-          .join(" ")}
-        aria-label={t("Liste yükleme")}
-      >
-        <div
-          className={styles.paneBody}
-          onPointerDown={engageListePane}
-        >
-          <div
-            className={alignUpload ? styles.uploadRailAlign : undefined}
-            style={
-              alignUpload && uploadAlign != null
-                ? {
-                    marginTop: uploadAlign.marginTop,
-                    height: uploadAlign.height,
-                  }
-                : undefined
-            }
-          >
-            <PfosListeUploadRail
-              fillHeight={alignUpload && uploadAlign != null}
-              inputRef={listeUpload.inputRef}
-              drag={listeUpload.drag}
-              setDrag={listeUpload.setDrag}
-              file={listeUpload.file}
-              loadingKind={listeUpload.loadingKind}
-              error={listeUpload.error}
-              memberReady={listeUpload.memberReady}
-              memberLoggedIn={listeUpload.memberLoggedIn}
-              loginHref={listeUpload.loginHref}
-              onPick={listeUpload.onPick}
-              onFocusPane={focusListePane}
-            />
-          </div>
-          {renderListeProformaRail()}
-        </div>
-      </aside>
-    );
-  }
-
-  function renderMemberGate() {
-    return (
-      <div className={styles.layout}>
-        <div className={styles.leftCol}>
-          <p className={styles.mreGreeting}>
-            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
-          </p>
-          <p className={styles.mreMotto}>
-            {t("Beş dakikada yapılır, hemen teslim edilir.")}
-          </p>
-          <div className={styles.memberGate}>
-            <h2 className={styles.memberGateTitle}>
-              {t("Devam etmek için üye girişi")}
-            </h2>
-            <p className={styles.memberGateSub}>
-              {t(
-                "Teklif almak ve PDF'inizi e-posta veya WhatsApp ile almak için Equsto hesabınızla giriş yapın.",
-              )}
-            </p>
-            <a href={loginHref} className={styles.memberGateLink}>
-              {t("Üye Girişi")}
-            </a>
-            <p className={styles.memberGateNote}>
-              {t("Hesabınız yok mu?")}{" "}
-              <a href={registerHref} className={styles.memberGateRegisterLink}>
-                {t("Kayıt ol")}
-              </a>
-            </p>
-          </div>
-        </div>
-        {renderRightRail()}
-      </div>
-    );
-  }
-
-  if (!memberReady) {
-    return null;
-  }
-
-  if (!memberLoggedIn) {
-    return renderMemberGate();
-  }
-
-  if (finished && !sonuc && !loading) {
-    const secilenYardimci = answers.q_yardimci_ekipman ?? [];
-    const secilenElkGaz = answers.q_elektrik_gaz ?? [];
-    return (
-      <div className={styles.layout}>
-        <div className={styles.leftCol}>
-          <section className={`${styles.sec} ${styles.secVis} ${styles.secActive}`}>
-            <div className={styles.secHd}>
-              <span className={styles.secNum}>✓</span>
-              <span className={styles.secInfo}>
-                <span className={styles.secTitle}>{t("Teşekkürler")}</span>
-                <span className={styles.secSub}>
-                  {t(
-                    "Detaylandırma tercihiniz alındı; ekibimiz sizinle iletişime geçecek.",
-                  )}
-                </span>
-              </span>
-            </div>
-            {secilenYardimci.length || secilenElkGaz.length ? (
-              <div className={styles.secBd}>
-                {secilenYardimci.length ? (
-                  <>
-                    <p className={styles.detayOzetBaslik}>
-                      {t("Seçilen yardımcı ekipman")}
-                    </p>
-                    <ul className={styles.detayOzetList}>
-                      {secilenYardimci.map((item) => (
-                        <li key={item}>{t(item)}</li>
-                      ))}
-                    </ul>
-                  </>
-                ) : null}
-                {secilenElkGaz.length ? (
-                  <>
-                    <p className={styles.detayOzetBaslik}>
-                      {t("Altyapı ve bağlantı")}
-                    </p>
-                    <ul className={styles.detayOzetList}>
-                      {secilenElkGaz.map((item) => (
-                        <li key={item}>{t(item)}</li>
-                      ))}
-                    </ul>
-                  </>
-                ) : null}
-              </div>
-            ) : null}
-          </section>
-          <button
-            type="button"
-            className={`${styles.btn} ${styles.btnPrimary}`}
-            onClick={resetWizard}
-          >
-            {t("Yeni proje")}
-          </button>
-        </div>
-        {renderRightRail()}
-      </div>
-    );
-  }
-
-  return (
-    <>
-      {renderModuleSwitcher()}
-      <div className={layoutClassName()}>
-      <div
-        className={[
-          styles.leftCol,
-          wizardPaneCollapsed ? styles.paneCollapsed : "",
-          activePane === "wizard" ? styles.paneExpanded : "",
-        ]
-          .filter(Boolean)
-          .join(" ")}
-        ref={leftColRef}
-      >
-        <div
-          className={styles.paneBody}
-          onPointerDown={engageWizardPane}
-        >
         <p className={styles.mreGreeting}>
           {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
         </p>
@@ -1260,11 +957,154 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </div>
           </>
         ) : null}
-        </div>
-      </div>
+      </>
+    );
+  }
 
-      {renderRightRail(activePane === "balanced" && !wizardListeMode)}
-    </div>
-    </>
+  function renderMemberGate() {
+    return (
+      <PfosWorkspaceShell
+        mode={workspaceMode}
+        onModeChange={setWorkspaceMode}
+        pipelineSteps={WIZARD_PIPELINE}
+        pipelineActive="konsept"
+        summary={{
+          projeAdi: t("Yeni mutfak projesi"),
+          urunSayisi: 0,
+          markaSayisi: 0,
+          kategoriSayisi: 0,
+          tahminiFiyat: null,
+          doviz: "TRY",
+          eslesen: 0,
+          bekleyen: 0,
+          toplamZorunlu: 0,
+          guvenSkoru: null,
+          wizardPct: null,
+        }}
+      >
+        <div className={styles.memberGate}>
+          <h2 className={styles.memberGateTitle}>
+            {t("Devam etmek için üye girişi")}
+          </h2>
+          <p className={styles.memberGateSub}>
+            {t(
+              "Teklif almak ve PDF'inizi e-posta veya WhatsApp ile almak için Equsto hesabınızla giriş yapın.",
+            )}
+          </p>
+          <a href={loginHref} className={styles.memberGateLink}>
+            {t("Üye Girişi")}
+          </a>
+          <p className={styles.memberGateNote}>
+            {t("Hesabınız yok mu?")}{" "}
+            <a href={registerHref} className={styles.memberGateRegisterLink}>
+              {t("Kayıt ol")}
+            </a>
+          </p>
+        </div>
+      </PfosWorkspaceShell>
+    );
+  }
+
+  if (!memberReady) {
+    return null;
+  }
+
+  if (!memberLoggedIn) {
+    return renderMemberGate();
+  }
+
+  if (finished && !sonuc && !loading) {
+    const secilenYardimci = answers.q_yardimci_ekipman ?? [];
+    const secilenElkGaz = answers.q_elektrik_gaz ?? [];
+    return (
+      <PfosWorkspaceShell
+        mode="wizard"
+        onModeChange={setWorkspaceMode}
+        pipelineSteps={WIZARD_PIPELINE}
+        pipelineActive="teklif"
+        summary={liveSummary}
+        wizardPct={hint.pct}
+      >
+        <section className={`${styles.sec} ${styles.secVis} ${styles.secActive}`}>
+          <div className={styles.secHd}>
+            <span className={styles.secNum}>✓</span>
+            <span className={styles.secInfo}>
+              <span className={styles.secTitle}>{t("Teşekkürler")}</span>
+              <span className={styles.secSub}>
+                {t(
+                  "Detaylandırma tercihiniz alındı; ekibimiz sizinle iletişime geçecek.",
+                )}
+              </span>
+            </span>
+          </div>
+          {secilenYardimci.length || secilenElkGaz.length ? (
+            <div className={styles.secBd}>
+              {secilenYardimci.length ? (
+                <>
+                  <p className={styles.detayOzetBaslik}>
+                    {t("Seçilen yardımcı ekipman")}
+                  </p>
+                  <ul className={styles.detayOzetList}>
+                    {secilenYardimci.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+              {secilenElkGaz.length ? (
+                <>
+                  <p className={styles.detayOzetBaslik}>
+                    {t("Altyapı ve bağlantı")}
+                  </p>
+                  <ul className={styles.detayOzetList}>
+                    {secilenElkGaz.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+            </div>
+          ) : null}
+        </section>
+        <button
+          type="button"
+          className={`${styles.btn} ${styles.btnPrimary}`}
+          onClick={resetWizard}
+        >
+          {t("Yeni proje")}
+        </button>
+      </PfosWorkspaceShell>
+    );
+  }
+
+  return (
+    <PfosWorkspaceShell
+      mode={workspaceMode}
+      onModeChange={setWorkspaceMode}
+      pipelineSteps={pipelineSteps}
+      pipelineActive={pipelineActive}
+      summary={liveSummary}
+      wizardPct={hint.pct}
+      listeHasResult={!!listeUpload.teklifV14}
+    >
+      {workspaceMode === "liste" ? (
+        <PfosListeWorkspace
+          inputRef={listeUpload.inputRef}
+          drag={listeUpload.drag}
+          setDrag={listeUpload.setDrag}
+          file={listeUpload.file}
+          loadingKind={listeUpload.loadingKind}
+          error={listeUpload.error}
+          memberLoggedIn={listeUpload.memberLoggedIn}
+          loginHref={listeUpload.loginHref}
+          onPick={listeUpload.onPick}
+          sonuc={listeUpload.sonuc}
+          teklifV14={listeUpload.teklifV14}
+          reset={resetListeUpload}
+        />
+      ) : (
+        <div ref={leftColRef}>{renderWizardCenter()}</div>
+      )}
+    </PfosWorkspaceShell>
   );
 }
