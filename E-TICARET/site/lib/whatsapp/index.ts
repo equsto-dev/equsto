@@ -15,6 +15,7 @@ export {
   greenApiInstancePhone,
 
   ownerWhatsAppNotifyPhone,
+  ownerWhatsAppNotifyPhones,
 
   isOwnerSelfWhatsAppNotifyBlocked,
 

@@ -5,6 +5,7 @@ import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
   isOwnerSelfWhatsAppNotifyBlocked,
   ownerWhatsAppNotifyPhone,
+  ownerWhatsAppNotifyPhones,
   sendWhatsAppText,
   whatsAppNotifyTo,
   whatsAppSendConfigured,
@@ -196,25 +197,31 @@ export async function sendInstantAlert(
     }
   }
 
-  const ownerWaTo = ownerWhatsAppNotifyPhone();
-  if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && ownerWaTo) {
-    try {
-      const wa = await sendWhatsAppText(ownerWaTo, text.slice(0, 4096));
-      if (wa.ok) sent.push("whatsapp");
-      else errors.push(`whatsapp: ${wa.error || "send failed"}`);
-    } catch (e) {
-      errors.push(`whatsapp: ${e instanceof Error ? e.message : String(e)}`);
+  const ownerWaTargets = ownerWhatsAppNotifyPhones();
+  if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && ownerWaTargets.length) {
+    let anyOk = false;
+    for (const to of ownerWaTargets) {
+      try {
+        const wa = await sendWhatsAppText(to, text.slice(0, 4096));
+        if (wa.ok) anyOk = true;
+        else errors.push(`whatsapp(…${to.slice(-4)}): ${wa.error || "send failed"}`);
+      } catch (e) {
+        errors.push(
+          `whatsapp(…${to.slice(-4)}): ${e instanceof Error ? e.message : String(e)}`,
+        );
+      }
     }
+    if (anyOk) sent.push("whatsapp");
   } else if (channelEnabled("whatsapp", opts)) {
     skipped.push("whatsapp");
     if (
       whatsAppSendConfigured() &&
       whatsAppNotifyTo() &&
-      !ownerWaTo &&
+      !ownerWaTargets.length &&
       isOwnerSelfWhatsAppNotifyBlocked()
     ) {
       errors.push(
-        "whatsapp: Bildirim hedefi Green API hattıyla aynı — WHATSAPP_NOTIFY_ALT_TO (kişisel cep) tanımlayın",
+        "whatsapp: Bildirim hedefi Green API hattıyla aynı — WHATSAPP_NOTIFY_ALT_TO (ikinci hat) tanımlayın",
       );
     }
   }
@@ -268,9 +275,9 @@ export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
 export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult> {
   const title = "Equsto — WhatsApp modal mesajı";
   const body = leadBody(m);
-  const ownerTarget = ownerWhatsAppNotifyPhone();
+  const ownerTargets = ownerWhatsAppNotifyPhones();
 
-  if (isOwnerSelfWhatsAppNotifyBlocked() && !ownerTarget) {
+  if (isOwnerSelfWhatsAppNotifyBlocked() && !ownerTargets.length) {
     const push = await sendInstantAlert(title, body, {
       only: ["telegram", "email"],
     });
@@ -283,12 +290,12 @@ export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult>
     return push;
   }
 
-  const ownerWa = ownerTarget
+  const ownerWa = ownerTargets.length
     ? await sendInstantAlert(title, body, { only: ["whatsapp"] })
     : { sent: [] as string[], skipped: ["whatsapp"], errors: [] as string[] };
   const rest = await sendInstantAlert(title, body, { skip: ["whatsapp", "sms"] });
   const merged = mergeNotifyResults(ownerWa, rest);
-  if (ownerTarget && !merged.sent.includes("whatsapp")) {
+  if (ownerTargets.length && !merged.sent.includes("whatsapp")) {
     console.warn("[notify] whatsapp-modal: sahip WA bildirimi gönderilemedi", merged);
   }
   return merged;
@@ -385,7 +392,7 @@ export function notifyChannelsConfigured(): string[] {
   ) {
     out.push("sms");
   }
-  if (whatsAppSendConfigured() && ownerWhatsAppNotifyPhone()) out.push("whatsapp");
+  if (whatsAppSendConfigured() && ownerWhatsAppNotifyPhones().length) out.push("whatsapp");
   return out;
 }
 
@@ -398,6 +405,7 @@ export function notifyEnvHints() {
     EQUSTO_NOTIFY_EMAIL: env("EQUSTO_NOTIFY_EMAIL") ? "set" : "missing",
     owner_self_wa_blocked: isOwnerSelfWhatsAppNotifyBlocked() ? "yes" : "no",
     owner_wa_notify_target: ownerWhatsAppNotifyPhone() ? "set" : "missing",
+    owner_wa_notify_count: String(ownerWhatsAppNotifyPhones().length),
     WHATSAPP_NOTIFY_ALT_TO: env("WHATSAPP_NOTIFY_ALT_TO") ? "set" : "missing",
   };
 }
