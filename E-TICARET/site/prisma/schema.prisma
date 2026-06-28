@@ -186,6 +186,34 @@ model PfosUrunTipiEslesme {
   @@index([konseptSlug, pfosUrunTipi])
 }
 
+/// PFOS kullanım olayı — anonim teklif üretimi + PDF gönderimi istatistiği
+model PfosUsageEvent {
+  id             String   @id @default(cuid())
+  /// quote_generated | quote_sent
+  event          String
+  /// wizard | liste
+  source         String   @default("")
+  konsept        String   @default("")
+  konseptLabel   String   @default("") @map("konsept_label")
+  m2             Int?
+  teklifSayi     String   @default("") @map("teklif_sayi")
+  teklifRef      String   @default("") @map("teklif_ref")
+  kalemSayisi    Int      @default(0) @map("kalem_sayisi")
+  toplamTry      Decimal? @map("toplam_try") @db.Decimal(14, 2)
+  toplamEur      Decimal? @map("toplam_eur") @db.Decimal(14, 4)
+  sehir          String   @default("")
+  memberLoggedIn Boolean  @default(false) @map("member_logged_in")
+  memberId       String?  @map("member_id")
+  gonderimKanal  String?  @map("gonderim_kanal")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@index([event])
+  @@index([source])
+  @@index([createdAt])
+  @@index([teklifSayi])
+  @@map("pfos_usage_event")
+}
+
 /// Teklif / proforma anındaki fiyat kilidi
 model PfosTeklifSnapshot {
   id        String   @id @default(cuid())

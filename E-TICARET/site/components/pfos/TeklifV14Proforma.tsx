@@ -11,7 +11,11 @@ import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
 import { normalizeTeklifAciklamaText } from "@/lib/pfos/teklif/catalog-teklif-aciklama";
-import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
+import {
+  memberLoggedInNow,
+  pfosLoginHref,
+  pfosRegisterHref,
+} from "@/lib/pfos/member-session.client";
 import PfosTeklifKararBlock, {
   type TeklifKarar,
 } from "@/components/pfos/PfosTeklifKararBlock";
@@ -20,6 +24,8 @@ type Props = {
   model: TeklifModelV14;
   /** Halk PFOS: yalnızca e-posta / WhatsApp ile PDF; indirme yok */
   deliveryOnly?: boolean;
+  /** PFOS kullanım istatistiği — wizard | liste */
+  pfosSource?: "wizard" | "liste";
   /** Teklif tablosundan sonra “yeterli mi / detaylandır” sorusu */
   postQuoteKarar?: {
     dukkanTuru: string;
@@ -99,6 +105,7 @@ type EqustoMemberWindow = Window & {
 export default function TeklifV14Proforma({
   model,
   deliveryOnly = false,
+  pfosSource = "wizard",
   postQuoteKarar,
 }: Props) {
   const [exporting, setExporting] = useState(false);
@@ -108,6 +115,9 @@ export default function TeklifV14Proforma({
     DeliveryResult | { kind: "err"; message: string } | null
   >(null);
   const [teklifFeedback, setTeklifFeedback] = useState<TeklifFeedback | null>(null);
+  const [memberLoggedIn, setMemberLoggedIn] = useState(false);
+  const [loginHref, setLoginHref] = useState("/login");
+  const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const [form] = Form.useForm<{
     ad: string;
     telefon: string;
@@ -128,6 +138,20 @@ export default function TeklifV14Proforma({
       eposta: current.eposta?.trim() || saved.eposta || "",
     });
   }
+
+  useEffect(() => {
+    if (!deliveryOnly) return;
+    const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
+    syncMember();
+    setLoginHref(pfosLoginHref());
+    setRegisterHref(pfosRegisterHref());
+    document.addEventListener("equsto-member-session", syncMember);
+    document.addEventListener("equsto-member-changed", syncMember);
+    return () => {
+      document.removeEventListener("equsto-member-session", syncMember);
+      document.removeEventListener("equsto-member-changed", syncMember);
+    };
+  }, [deliveryOnly]);
 
   useEffect(() => {
     if (!deliveryOnly) return;
@@ -206,7 +230,7 @@ export default function TeklifV14Proforma({
 
   async function handleSend(kanal: SendKanal) {
     if (deliveryOnly && !memberLoggedInNow()) {
-      setSendResult({ kind: "err", message: "Üye girişi gerekli" });
+      window.location.href = pfosLoginHref();
       return;
     }
 
@@ -285,6 +309,7 @@ export default function TeklifV14Proforma({
           tahmini_toplam_tl: toplamTl,
           kalemler: slimKalemler(),
           kaynak: "pfos-v14",
+          pfos_source: pfosSource,
           teklif_sayi: ust.sayi,
           teklif_v14: slimTeklifV14ForApi(model),
           gonderim_kanali: kanal,
@@ -581,6 +606,7 @@ export default function TeklifV14Proforma({
               <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
                 PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
               </Typography.Paragraph>
+              {memberLoggedIn ? (
               <Form form={form} layout="vertical">
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                   <Button
@@ -642,6 +668,19 @@ export default function TeklifV14Proforma({
                   </div>
                 </div>
               </Form>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                  <Typography.Paragraph style={{ marginBottom: 0 }}>
+                    PDF teklifinizi almak için Equsto hesabınızla giriş yapın.
+                  </Typography.Paragraph>
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    <Button type="primary" href={loginHref}>
+                      Üye Girişi
+                    </Button>
+                    <Button href={registerHref}>Kayıt ol</Button>
+                  </div>
+                </div>
+              )}
             </div>
           ) : null}
         </>

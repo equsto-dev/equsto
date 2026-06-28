@@ -62,11 +62,7 @@ import {
   BULUT_KOMPAKT_M2_MAX,
 } from "@/lib/pfos/wizard/bulut-mutfak-kompakt";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
-import {
-  memberLoggedInNow,
-  pfosLoginHref,
-  pfosRegisterHref,
-} from "@/lib/pfos/member-session.client";
+import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -142,10 +138,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [resultReveal, setResultReveal] = useState(false);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
-  const [memberReady, setMemberReady] = useState(false);
-  const [memberLoggedIn, setMemberLoggedIn] = useState(false);
-  const [loginHref, setLoginHref] = useState("/login");
-  const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const prevOpenPanelIdRef = useRef("s1");
   const teklifRequestedRef = useRef(false);
   const enterTimerRef = useRef<number | null>(null);
@@ -156,20 +148,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const wizardPaneCollapsed = activePane === "liste";
   const listePaneCollapsed = activePane === "wizard";
-
-  useEffect(() => {
-    const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
-    syncMember();
-    setLoginHref(pfosLoginHref());
-    setRegisterHref(pfosRegisterHref());
-    setMemberReady(true);
-    document.addEventListener("equsto-member-session", syncMember);
-    document.addEventListener("equsto-member-changed", syncMember);
-    return () => {
-      document.removeEventListener("equsto-member-session", syncMember);
-      document.removeEventListener("equsto-member-changed", syncMember);
-    };
-  }, []);
 
   const clearEnterTimer = useCallback(() => {
     if (enterTimerRef.current != null) {
@@ -593,17 +571,17 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       }
       setSonuc(data as PFOSResponse);
       const snap = await fetchTcmbKurForTeklif();
-      setTeklifV14(
-        pfosResponseToTeklifV14(data as PFOSResponse, {
-          projeAdi: `${motorGirdi.dukkanSecim}${m2 ? ` · ${m2} m²` : ""}`,
-          musteri: motorGirdi.franchiseMarka ?? "",
-          teslimatAdresi:
-            [motorGirdi.lokasyon, motorGirdi.adresNot].filter(Boolean).join(" · ") ||
-            "—",
-          bolumM2: (data as PFOSResponse).bolumM2 ?? {},
-          eurTry: snap?.rate ?? null,
-        }),
-      );
+      const v14 = pfosResponseToTeklifV14(data as PFOSResponse, {
+        projeAdi: `${motorGirdi.dukkanSecim}${m2 ? ` · ${m2} m²` : ""}`,
+        musteri: motorGirdi.franchiseMarka ?? "",
+        teslimatAdresi:
+          [motorGirdi.lokasyon, motorGirdi.adresNot].filter(Boolean).join(" · ") ||
+          "—",
+        bolumM2: (data as PFOSResponse).bolumM2 ?? {},
+        eurTry: snap?.rate ?? null,
+      });
+      setTeklifV14(v14);
+      logPfosQuoteGenerated(v14, "wizard");
       setFinished(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : t("Beklenmeyen hata"));
@@ -614,7 +592,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   useEffect(() => {
     if (
-      !memberLoggedIn ||
       !allWizardComplete ||
       teklifV14 ||
       loading ||
@@ -624,7 +601,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     }
     teklifRequestedRef.current = true;
     void finalize();
-  }, [memberLoggedIn, allWizardComplete, teklifV14, loading]);
+  }, [allWizardComplete, teklifV14, loading]);
 
   function resetWizard() {
     setAnswers({});
@@ -1030,8 +1007,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             file={listeUpload.file}
             loadingKind={listeUpload.loadingKind}
             error={listeUpload.error}
-            memberLoggedIn={listeUpload.memberLoggedIn}
-            loginHref={listeUpload.loginHref}
             onPick={listeUpload.onPick}
             sonuc={listeUpload.sonuc}
             teklifV14={listeUpload.teklifV14}
@@ -1042,57 +1017,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         </div>
       </aside>
     );
-  }
-
-  function renderMemberGate() {
-    return (
-      <PfosWorkspaceShell
-        activePane="balanced"
-        pipelineSteps={WIZARD_PIPELINE}
-        pipelineActive="konsept"
-        summary={{
-          projeAdi: t("Yeni mutfak projesi"),
-          urunSayisi: 0,
-          markaSayisi: 0,
-          kategoriSayisi: 0,
-          tahminiFiyat: null,
-          doviz: "TRY",
-          eslesen: 0,
-          bekleyen: 0,
-          toplamZorunlu: 0,
-          guvenSkoru: null,
-          wizardPct: null,
-        }}
-      >
-        <div className={styles.memberGate}>
-          <h2 className={styles.memberGateTitle}>
-            {t("Devam etmek için üye girişi")}
-          </h2>
-          <p className={styles.memberGateSub}>
-            {t(
-              "Teklif almak ve PDF'inizi e-posta veya WhatsApp ile almak için Equsto hesabınızla giriş yapın.",
-            )}
-          </p>
-          <a href={loginHref} className={styles.memberGateLink}>
-            {t("Üye Girişi")}
-          </a>
-          <p className={styles.memberGateNote}>
-            {t("Hesabınız yok mu?")}{" "}
-            <a href={registerHref} className={styles.memberGateRegisterLink}>
-              {t("Kayıt ol")}
-            </a>
-          </p>
-        </div>
-      </PfosWorkspaceShell>
-    );
-  }
-
-  if (!memberReady) {
-    return null;
-  }
-
-  if (!memberLoggedIn) {
-    return renderMemberGate();
   }
 
   if (finished && !sonuc && !loading) {
