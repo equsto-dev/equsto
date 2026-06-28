@@ -388,6 +388,29 @@
   row-gap: 0;
   align-items: stretch;
   width: 100%;
+  transition: grid-template-columns 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.balancedPane[data-pfos-pane="wizard"] {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-rows: auto;
+}
+
+.balancedPane[data-pfos-pane="liste"] {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  grid-template-rows: auto;
+}
+
+.balancedPane[data-pfos-pane="wizard"] .balancedPaneLeft,
+.balancedPane[data-pfos-pane="liste"] .balancedPaneLeft {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.balancedPane[data-pfos-pane="wizard"] .balancedPaneRight,
+.balancedPane[data-pfos-pane="liste"] .balancedPaneRight {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .balancedPaneHeadLeft {
@@ -875,7 +898,8 @@
   .railBtn,
   .pipelineDot,
   .pipelineLabel,
-  .summaryProgressFill {
+  .summaryProgressFill,
+  .balancedPane {
     transition: none;
   }
 }

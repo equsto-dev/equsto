@@ -89,7 +89,7 @@ export default function PfosListeWorkspace({
           <>
             {!hideTitle ? (
               <h2 className={ws.uploadTitle}>
-                {t("Ekipman listenizi yükleyin")}
+                {t("Listeni yükle fiyatlandıralım.")}
               </h2>
             ) : null}
             {!memberLoggedIn ? (
