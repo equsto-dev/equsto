@@ -92,7 +92,7 @@ export function ownerWhatsAppNotifyPhones(): string[] {
 
   if (isOwnerSelfWhatsAppNotifyBlocked()) {
     if (alt && alt !== owner) out.push(alt);
-    if (owner) out.push(owner);
+    // owner === Green API hattı — kendine mesaj push vermez, atla
   } else {
     if (owner) out.push(owner);
     if (alt && alt !== owner) out.push(alt);
