@@ -117,6 +117,10 @@ function scoreKombiRow(row: AdminUrunRow, gn: GnSpec, referansIsim: string): num
       score += 120;
     }
   }
+  const skuUp = String(row.sku ?? "").toUpperCase();
+  if (gn.trays === 10 && gn.format === "1/1" && skuUp === "INO-FKG10") {
+    score += 700;
+  }
   const refN = norm(referansIsim);
   if (/gaz/.test(refN) && /gaz/.test(ad)) score += 40;
   if (/elektrik|elk/.test(refN) && /elektrik|elk/.test(ad)) score += 40;
