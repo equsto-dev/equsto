@@ -2,6 +2,7 @@
 
 import {
   BarChartOutlined,
+  ExperimentOutlined,
   FileTextOutlined,
   MessageOutlined,
   SettingOutlined,
@@ -44,9 +45,15 @@ const IsletmePazarlamaPanel = dynamic(
   { loading: () => null },
 );
 
+const IsletmePfosUsagePanel = dynamic(
+  () => import("@/components/pro/isletme/IsletmePfosUsagePanel"),
+  { loading: () => null },
+);
+
 const TAB_KEYS = [
   "siparisler",
   "teklifler",
+  "pfos",
   "mesajlar",
   "musteriler",
   "raporlar",
@@ -66,6 +73,8 @@ function tabPanel(key: TabKey) {
       return <IsletmeSiparislerPanel />;
     case "teklifler":
       return <IsletmeTekliflerPanel />;
+    case "pfos":
+      return <IsletmePfosUsagePanel />;
     case "mesajlar":
       return <IsletmeMesajlarPanel />;
     case "musteriler":
@@ -119,6 +128,15 @@ function IsletmePageInner() {
               </>
             ),
             children: tabPanel("teklifler"),
+          },
+          {
+            key: "pfos",
+            label: (
+              <>
+                <ExperimentOutlined /> PFOS
+              </>
+            ),
+            children: tabPanel("pfos"),
           },
           {
             key: "mesajlar",

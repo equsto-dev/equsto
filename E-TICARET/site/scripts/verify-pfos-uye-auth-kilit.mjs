@@ -58,18 +58,17 @@ if (!kilit.includes(`WA_MODAL_BUILD = ${WA_MODAL_BUILD}`)) fail("pfos-uye-auth-K
   "prisma/migrations/20260608150000_shop_member_telefon/migration.sql",
 ].forEach(mustExist);
 
-/* PFOS wizard — üye kapısı başta, sakin geçişler */
+/* PFOS wizard — sihirbaz girişsiz; PDF teslimde üye kapısı */
 const pfosWizard = read("components/pfos/public/PfosPublicWizard.tsx");
-if (!pfosWizard.includes("memberReady")) fail("PfosPublicWizard: memberReady yok");
-if (!pfosWizard.includes("renderMemberGate")) fail("PfosPublicWizard: memberGate yok");
-if (!pfosWizard.includes("pfosLoginHref")) fail("PfosPublicWizard: pfosLoginHref yok");
-if (!pfosWizard.includes("pfosRegisterHref")) fail("PfosPublicWizard: pfosRegisterHref yok");
 if (!pfosWizard.includes("deliveryOnly")) fail("PfosPublicWizard: deliveryOnly proforma yok");
 if (!pfosWizard.includes("PFOS_PANEL_FADE_MS = 580")) {
   fail("PfosPublicWizard: PFOS_PANEL_FADE_MS=580 kilidi yok");
 }
-if (!/if \(!memberLoggedIn\)[\s\S]{0,80}renderMemberGate/.test(pfosWizard)) {
-  fail("PfosPublicWizard: üye kapısı giriş kontrolünde — sihirbaz başında olmalı");
+if (/if \(!memberLoggedIn\)[\s\S]{0,120}renderMemberGate/.test(pfosWizard)) {
+  fail("PfosPublicWizard: üye kapısı sihirbaz başında olmamalı — yalnızca PDF teslimde");
+}
+if (/!memberLoggedIn[\s\S]{0,40}allWizardComplete/.test(pfosWizard)) {
+  fail("PfosPublicWizard: teklif üretimi üye girişine bağlı olmamalı");
 }
 
 const pfosCss = read("components/pfos/public/pfos-public.module.css");
@@ -81,6 +80,11 @@ const proforma = read("components/pfos/TeklifV14Proforma.tsx");
 if (!proforma.includes("deliveryOnly")) fail("TeklifV14Proforma: deliveryOnly yok");
 if (!proforma.includes("memberLoggedInNow")) fail("TeklifV14Proforma: memberLoggedInNow yok");
 if (!/deliveryOnly \?/.test(proforma)) fail("TeklifV14Proforma: deliveryOnly dalı yok");
+if (!proforma.includes("pfosLoginHref")) fail("TeklifV14Proforma: pfosLoginHref teslimat kapısı yok");
+if (!proforma.includes("pfosRegisterHref")) fail("TeklifV14Proforma: pfosRegisterHref teslimat kapısı yok");
+if (!proforma.includes("PDF teklifinizi almak için")) {
+  fail("TeklifV14Proforma: PDF teslim üye kapısı metni yok");
+}
 
 const memberSession = read("lib/pfos/member-session.client.ts");
 if (!memberSession.includes("pfosLoginHref")) fail("member-session.client: pfosLoginHref yok");
@@ -184,5 +188,5 @@ if (err) {
   process.exit(1);
 }
 console.log(
-  "[verify-pfos-uye-auth-kilit] OK — PFOS üye kapısı · PDF teslim · WA modal · giriş/kayıt · /hesabim",
+  "[verify-pfos-uye-auth-kilit] OK — PFOS girişsiz sihirbaz · PDF teslim üye kapısı · WA modal · giriş/kayıt · /hesabim",
 );

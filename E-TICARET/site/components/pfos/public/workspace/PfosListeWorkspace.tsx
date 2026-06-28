@@ -17,8 +17,6 @@ type Props = Pick<
   | "file"
   | "loadingKind"
   | "error"
-  | "memberLoggedIn"
-  | "loginHref"
   | "onPick"
   | "sonuc"
   | "teklifV14"
@@ -40,8 +38,6 @@ export default function PfosListeWorkspace({
   file,
   loadingKind,
   error,
-  memberLoggedIn,
-  loginHref,
   onPick,
   sonuc,
   teklifV14,
@@ -92,16 +88,10 @@ export default function PfosListeWorkspace({
                 {t("Listeni yükle fiyatlandıralım.")}
               </h2>
             ) : null}
-            {!memberLoggedIn ? (
-              <p className={ws.uploadLogin}>
-                {t("Yüklemek için")}{" "}
-                <a href={loginHref}>{t("üye girişi")}</a>
-              </p>
-            ) : (
-              <div className={fillDropzone ? styles.uploadRailFill : undefined}>
-                <div
-                  className={`${styles.listeDropZone} ${styles.listeDropZoneRail}${drag ? ` ${styles.listeDropZoneDrag}` : ""}${loadingKind ? ` ${styles.listeDropZoneBusy}` : ""}`}
-                  data-pfos-dropzone=""
+            <div className={fillDropzone ? styles.uploadRailFill : undefined}>
+              <div
+                className={`${styles.listeDropZone} ${styles.listeDropZoneRail}${drag ? ` ${styles.listeDropZoneDrag}` : ""}${loadingKind ? ` ${styles.listeDropZoneBusy}` : ""}`}
+                data-pfos-dropzone=""
                 onDragOver={(e) => {
                   e.preventDefault();
                   setDrag(true);
@@ -130,8 +120,7 @@ export default function PfosListeWorkspace({
                 </span>
                 <span className={styles.listeDropHint}>.xlsx · .pdf</span>
               </div>
-              </div>
-            )}
+            </div>
           </>
         )}
         <input
@@ -193,7 +182,7 @@ export default function PfosListeWorkspace({
 
       {teklifV14 ? (
         <div className={`${ws.teklifStage} ${ws.motionEnter}`}>
-          <TeklifV14Proforma model={teklifV14} deliveryOnly />
+          <TeklifV14Proforma model={teklifV14} deliveryOnly pfosSource="liste" />
         </div>
       ) : null}
     </div>

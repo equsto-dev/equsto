@@ -9,9 +9,9 @@ teklif PDF teslimi, WhatsApp modal üye kapısı, giriş sayfası vitrin bandı,
 kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
 
 ── 1. PFOS halk sihirbazı ─────────────────────────────────────────────────
-  • Üye girişi sihirbaz BAŞINDA (son adımda değil) — giriş sonrası akış sıfırlanmaz
+  • Sihirbaz ve liste yükleme GİRİŞSİZ — teklif tablosu ekranda görünür
+  • PDF gönderimi (e-posta / WhatsApp) için üye girişi — TeklifV14Proforma deliveryOnly
   • Giriş/kayıt linkleri ?next= ile PFOS'a geri döner (pfosLoginHref / pfosRegisterHref)
-  • «Üye Girişi» + «Kayıt ol» kapısı (memberGate)
   • Panel geçişleri sakin: PFOS_PANEL_FADE_MS=580, secPending/secReveal (clip-path YOK)
   • Proforma: deliveryOnly — yalnızca e-posta / WhatsApp PDF; indirme yok
   • Girişli üye bilgi formu görmez; profil equsto_member_v1 / checkout'tan gelir
@@ -68,7 +68,7 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
   prisma/migrations/20260608150000_shop_member_telefon/
 
 YASAK (onay olmadan):
-  • PFOS üye kapısını sihirbaz sonuna taşımak veya kaldırmak
+  • PFOS sihirbaz başına zorunlu üye kapısı geri getirmek
   • Halk PFOS'ta PDF indirme butonunu geri getirmek
   • Teklif/müşteri API'lerinden requireMemberSession kaldırmak
   • Kayıtta telefon veya şifre tekrar zorunluluğunu kaldırmak

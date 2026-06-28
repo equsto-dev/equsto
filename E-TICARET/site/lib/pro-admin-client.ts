@@ -1302,6 +1302,49 @@ export type RaporOzet = {
   arama: Array<{ query: string; count: number; avg_hits: number }>;
 };
 
+export type PfosUsageOzet = {
+  days: number;
+  uretildi: number;
+  gonderildi: number;
+  wizard: number;
+  liste: number;
+  uye_ile: number;
+  anonim: number;
+  donusum_yuzde: number;
+};
+
+export type PfosUsageAdminRow = {
+  id: string;
+  event: string;
+  source: string;
+  konsept: string;
+  konsept_label: string;
+  m2: number | null;
+  teklif_sayi: string;
+  teklif_ref: string;
+  kalem_sayisi: number;
+  toplam_try: number | null;
+  toplam_eur: number | null;
+  sehir: string;
+  member_logged_in: boolean;
+  gonderim_kanal: string | null;
+  created_at: string;
+};
+
+export async function fetchPfosUsage(days = 30): Promise<{
+  ozet?: PfosUsageOzet;
+  rows?: PfosUsageAdminRow[];
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: { ozet: PfosUsageOzet; rows: PfosUsageAdminRow[] };
+    error?: string;
+  }>(`/api/pfos/usage?days=${encodeURIComponent(String(days))}`);
+  if (body.error) return { error: body.error };
+  return { ozet: body.data?.ozet, rows: body.data?.rows ?? [] };
+}
+
 export async function fetchRaporlar(kind?: string): Promise<{
   data?: RaporOzet | unknown;
   error?: string;

@@ -1,6 +1,7 @@
 import type { Prisma, Teklif, TeklifDurum } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import { notifyNewTeklif } from "@/lib/notify";
+import { recordPfosUsageEvent } from "@/lib/pfos/usage-log";
 import {
   sendTeklifCustomerEmail,
   type TeklifDeliveryResult,
@@ -234,6 +235,31 @@ export async function createTeklif(
     customerWhatsApp = await sendTeklifCustomerWhatsApp(admin, body);
   } else {
     customerEmail = await sendTeklifCustomerEmail(admin, body);
+  }
+
+  if (String(data.kaynak ?? "").includes("pfos")) {
+    const proje =
+      body.proje && typeof body.proje === "object"
+        ? (body.proje as Record<string, unknown>)
+        : {};
+    void recordPfosUsageEvent({
+      event: "quote_sent",
+      source:
+        String(body.pfos_source ?? "") === "liste"
+          ? "liste"
+          : "wizard",
+      konsept: String(body.konsept ?? proje.konsept ?? data.konsept ?? ""),
+      konseptLabel: String(data.konsept ?? proje.konsept ?? ""),
+      m2: proje.alan_m2 != null ? Number(proje.alan_m2) : null,
+      teklifSayi: String(body.teklif_sayi ?? ""),
+      teklifRef: refNo,
+      kalemSayisi: Array.isArray(data.kalemler) ? data.kalemler.length : 0,
+      toplamTry: Number(data.toplam_tl ?? data.tahmini_toplam_tl ?? 0) || null,
+      sehir: String(proje.sehir ?? ""),
+      memberLoggedIn: true,
+      memberId: musteriId,
+      gonderimKanal: kanal,
+    }).catch((e) => console.error("[pfos-usage] quote_sent", e));
   }
 
   return { teklif: admin, customerEmail, customerWhatsApp };

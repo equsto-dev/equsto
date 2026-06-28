@@ -11,6 +11,7 @@ import {
   pfosRegisterHref,
 } from "@/lib/pfos/member-session.client";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
+import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 
 export function fileKind(file: File): "excel" | "pdf" | null {
   if (/\.xlsx?$/i.test(file.name)) return "excel";
@@ -89,15 +90,15 @@ export function usePfosListeUpload() {
         const pfos = data as PFOSResponse;
         setSonuc(pfos);
         const snap = await fetchTcmbKurForTeklif();
-        setTeklifV14(
-          pfosResponseToTeklifV14(pfos, {
-            projeAdi: pfos.konseptLabel,
-            musteri: "",
-            teslimatAdresi: pfos.sehir ?? "—",
-            bolumM2: {},
-            eurTry: snap?.rate ?? null,
-          }),
-        );
+        const v14 = pfosResponseToTeklifV14(pfos, {
+          projeAdi: pfos.konseptLabel,
+          musteri: "",
+          teslimatAdresi: pfos.sehir ?? "—",
+          bolumM2: {},
+          eurTry: snap?.rate ?? null,
+        });
+        setTeklifV14(v14);
+        logPfosQuoteGenerated(v14, "liste");
       } catch (e) {
         setError(e instanceof Error ? e.message : t("Beklenmeyen hata"));
       } finally {
