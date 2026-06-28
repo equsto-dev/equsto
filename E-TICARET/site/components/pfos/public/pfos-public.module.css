@@ -1154,7 +1154,10 @@
 .paneCollapsed {
   min-width: 0;
   overflow: hidden;
-  cursor: pointer;
+  pointer-events: none;
+  flex: 0 1 auto;
+  align-self: flex-start;
+  min-height: 0;
 }
 
 .paneCollapsed .paneBody {
@@ -1162,7 +1165,8 @@
   transform: scale(0.94);
   transform-origin: center top;
   filter: blur(1px);
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
   overflow: hidden;
   max-height: 100%;
 }

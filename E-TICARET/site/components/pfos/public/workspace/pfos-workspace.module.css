@@ -473,6 +473,18 @@
   flex-direction: column;
 }
 
+:global([data-pfos-pane="wizard"]) .balancedPaneRight > aside.paneCollapsed {
+  flex: 0 1 auto;
+  min-height: 0;
+  align-self: flex-start;
+}
+
+:global([data-pfos-pane="liste"]) .balancedPaneLeft > .leftCol.paneCollapsed {
+  flex: 0 1 auto;
+  min-height: 0;
+  align-self: flex-start;
+}
+
 .listePaneBalanced {
   display: flex;
   flex-direction: column;
