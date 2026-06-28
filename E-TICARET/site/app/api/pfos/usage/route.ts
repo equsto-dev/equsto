@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
     const parsed = parseBody(body);
-    if ("error" in parsed) return adminErr(parsed.error, 400);
+    if ("error" in parsed) return adminErr(parsed.error ?? "Geçersiz istek", 400);
 
     const row = await recordPfosUsageEvent(parsed.data);
     return adminOk({ data: row, deduped: row == null }, row ? 201 : 200);

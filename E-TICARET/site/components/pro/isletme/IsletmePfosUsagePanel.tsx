@@ -1,7 +1,7 @@
 "use client";
 
-import { ProTable } from "@ant-design/pro-components";
-import { App, Col, Row, StatisticCard, Tag } from "antd";
+import { ProTable, StatisticCard } from "@ant-design/pro-components";
+import { App, Col, Row, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
   fetchPfosUsage,
