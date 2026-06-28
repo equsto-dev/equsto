@@ -60,7 +60,7 @@ export default function PfosListeUploadRail({
       >
       <span className={styles.railKicker}>{t("Liste yükleme")}</span>
       <span className={styles.railTitle}>
-        {t("Ekipman listenizi yükleyin — katalog eşlemesi ile fiyatlandırılır.")}
+        {t("Listeni yükle fiyatlandıralım.")}
       </span>
       <p className={styles.railPlaceholder}>
         {t("Excel (.xlsx) veya PDF teklif / proforma listesi")}
