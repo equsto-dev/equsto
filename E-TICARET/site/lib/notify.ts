@@ -207,6 +207,16 @@ export async function sendInstantAlert(
     }
   } else if (channelEnabled("whatsapp", opts)) {
     skipped.push("whatsapp");
+    if (
+      whatsAppSendConfigured() &&
+      whatsAppNotifyTo() &&
+      !ownerWaTo &&
+      isOwnerSelfWhatsAppNotifyBlocked()
+    ) {
+      errors.push(
+        "whatsapp: Bildirim hedefi Green API hattıyla aynı — WHATSAPP_NOTIFY_ALT_TO (kişisel cep) tanımlayın",
+      );
+    }
   }
 
   return { sent, skipped, errors };
@@ -375,7 +385,7 @@ export function notifyChannelsConfigured(): string[] {
   ) {
     out.push("sms");
   }
-  if (whatsAppSendConfigured() && whatsAppNotifyTo()) out.push("whatsapp");
+  if (whatsAppSendConfigured() && ownerWhatsAppNotifyPhone()) out.push("whatsapp");
   return out;
 }
 
