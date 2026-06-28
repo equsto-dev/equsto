@@ -1016,9 +1016,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           .filter(Boolean)
           .join(" ")}
         aria-label={t("Liste yükleme")}
-        onPointerDown={engageListePane}
       >
-        <div className={styles.paneBody}>
+        <div
+          className={styles.paneBody}
+          onPointerDown={
+            activePane !== "liste" ? engageListePane : undefined
+          }
+        >
           <PfosListeWorkspace
             inputRef={listeUpload.inputRef}
             drag={listeUpload.drag}
@@ -1184,9 +1188,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               .filter(Boolean)
               .join(" ")}
             ref={leftColRef}
-            onPointerDown={engageWizardPane}
           >
-            <div className={styles.paneBody}>
+            <div
+              className={styles.paneBody}
+              onPointerDown={
+                activePane !== "wizard" ? engageWizardPane : undefined
+              }
+            >
               {renderWizardCenter({ hideIntro: activePane === "balanced" })}
             </div>
           </div>
