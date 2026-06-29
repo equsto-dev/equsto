@@ -637,12 +637,13 @@ Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda 
 
 ## 11. Uygulama fazları
 
-### Faz A — Veri katmanı (1 PR)
+### Faz A — Veri katmanı (1 PR) ✅
 
-- [ ] Prisma modelleri (`PfosFeedbackEvent`, `PfosSkuLinkOneri`, `PfosReferansSkuLink`, `PfosFiyatKurali`) + migration
-- [ ] `lib/pfos/feedback-log.ts`
-- [ ] `POST/GET /api/pfos/feedback`
-- [ ] `PfosReferansSkuLink` CRUD + `mergeDbAndJsonLinks()`
+- [x] Prisma modelleri (`PfosFeedbackEvent`, `PfosSkuLinkOneri`, `PfosReferansSkuLink`, `PfosFiyatKurali`) + migration
+- [x] `lib/pfos/feedback-log.ts`, `feedback-types.ts`
+- [x] `POST/GET /api/pfos/feedback`, `GET/PATCH …/[id]`
+- [x] `PfosReferansSkuLink` CRUD + `mergeDbAndJsonLinks()` + motor entegrasyonu
+- [x] `GET/POST /api/pfos/referans-sku-links`
 
 ### Faz B — Motor + snapshot (1 PR)
 

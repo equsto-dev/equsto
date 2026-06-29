@@ -1,7 +1,7 @@
 /**
  * Referans listesi → katalog fiyat eşlemesi (kalıcı politika).
  *
- * 1) pfos-referans-sku-links.json (listeKey|poz → SKU) — doğrulanmış
+ * 1) PfosReferansSkuLink (DB) + pfos-referans-sku-links.json (listeKey|poz → SKU)
  * 2) pfos-tip-shop-links.json (urunTipi → SKU) — doğrulanmış tip eşlemesi
  * 3) Aile kuralları (yer ızgarası, make-up, fırın, vb.)
  * 4) İsim + ölçü ile sıkı katalog araması
@@ -163,6 +163,8 @@ import {
 } from "@/lib/catalog/equsto-kod-lookup";
 import { formatPfosDisplayTanim, stripEmbeddedSupplierSku } from "../parse-upload/sanitize-tanim";
 import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
+import { mergeDbAndJsonLinks } from "./sku-link-db";
+import { referansLinkKey } from "./sku-link-key";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -189,6 +191,7 @@ let skuLinksCacheMtimeMs = 0;
 export function invalidateReferansSkuLinksCache(): void {
   skuLinksCache = null;
   skuLinksCacheMtimeMs = 0;
+  void import("./sku-link-db").then((m) => m.invalidateDbReferansSkuLinksCache());
 }
 
 function norm(s: string): string {
@@ -214,10 +217,11 @@ async function loadReferansSkuLinks(): Promise<
       return skuLinksCache;
     }
     const raw = await readJsonFile<SkuLinksFile>("pfos-referans-sku-links.json");
-    skuLinksCache = raw?.links ?? {};
+    const jsonLinks = raw?.links ?? {};
+    skuLinksCache = await mergeDbAndJsonLinks(jsonLinks);
     skuLinksCacheMtimeMs = mtime;
   } catch {
-    skuLinksCache = {};
+    skuLinksCache = await mergeDbAndJsonLinks({});
     skuLinksCacheMtimeMs = 0;
   }
   return skuLinksCache;
@@ -254,10 +258,6 @@ function referansTipKodu(input: ReferansMatchInput): string {
 function isGenericReferansIsim(isim: string): boolean {
   const n = norm(isim);
   return n.length <= 24 || /^(firin|fırın|tas firin|taş fırın)$/.test(n);
-}
-
-function referansLinkKey(listeKey: string, poz: string): string {
-  return `${listeKey.trim().toLowerCase()}|${poz.trim().toUpperCase()}`;
 }
 
 /** Bulut mutfak PDF listeleri — yalnızca pfos-referans-sku-links.json (doğrulanmış) */
