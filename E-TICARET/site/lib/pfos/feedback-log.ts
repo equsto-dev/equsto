@@ -4,6 +4,7 @@ import type {
 } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import { referansLinkKey } from "./referans/sku-link-key";
+import { oneriToRow } from "./sku-link-oneri";
 import {
   type PfosFeedbackAdminRow,
   type PfosFeedbackDurum,
@@ -222,7 +223,7 @@ export async function getPfosFeedbackById(id: string) {
   if (!row) return null;
   return {
     feedback: pfosFeedbackToAdmin(row),
-    oneriler: row.oneriler,
+    oneriler: row.oneriler.map(oneriToRow),
     snapshot: row.snapshot,
   };
 }

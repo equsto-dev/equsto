@@ -1345,6 +1345,342 @@ export async function fetchPfosUsage(days = 30): Promise<{
   return { ozet: body.data?.ozet, rows: body.data?.rows ?? [] };
 }
 
+export type PfosFeedbackOzet = {
+  days: number;
+  toplam: number;
+  down: number;
+  pending_review: number;
+  oneri_bekleyen: number;
+};
+
+export type PfosFeedbackAdminRow = {
+  id: string;
+  vote: string;
+  source: string;
+  teklif_sayi: string;
+  snapshot_id: string | null;
+  konsept: string;
+  konsept_label: string;
+  referans_id: string | null;
+  referans_liste_key: string | null;
+  m2: number | null;
+  guven_skoru: number | null;
+  genel_toplam_eur: number | null;
+  yorum: string | null;
+  kalem_duzeltmeleri: Array<{
+    poz: string;
+    referansIsim?: string;
+    yanlisSku?: string | null;
+    yanlisAd?: string | null;
+    dogruSku?: string | null;
+    sorunTipi?: string;
+    not?: string | null;
+  }> | null;
+  member_logged_in: boolean;
+  durum: string;
+  reviewed_at: string | null;
+  reviewed_by: string | null;
+  created_at: string;
+  oneri_sayisi?: number;
+};
+
+export type PfosSkuLinkOneriRow = {
+  id: string;
+  feedback_id: string | null;
+  link_key: string;
+  liste_key: string;
+  poz: string;
+  eski_sku: string | null;
+  eski_ad: string | null;
+  yeni_sku: string;
+  yeni_ad: string | null;
+  yeni_marka: string | null;
+  sorun_tipi: string;
+  durum: string;
+  onaylayan: string | null;
+  onay_notu: string | null;
+  created_at: string;
+  resolved_at: string | null;
+};
+
+export type PfosFiyatKuraliAdminRow = {
+  id: string;
+  kapsam: string;
+  konsept_slug: string | null;
+  liste_key: string | null;
+  poz: string | null;
+  urun_tipi: string | null;
+  isim_kalibi: string | null;
+  kural_tipi: string;
+  carpan: number | null;
+  baz_sku: string | null;
+  sabit_fiyat_eur: number | null;
+  aciklama: string | null;
+  kaynak: string;
+  aktif: boolean;
+  created_at: string;
+  updated_at: string;
+};
+
+export type PfosUrunTipiEslesmeRow = {
+  id: string;
+  konsept_slug: string;
+  pfos_urun_tipi: string;
+  pfos_kategori_kodu: string;
+  pfos_alt_kod: string | null;
+  product_id: string;
+  product_sku: string | null;
+  product_ad: string;
+  oncelik: number;
+  zorunlu: boolean;
+};
+
+export async function fetchPfosFeedback(opts?: {
+  days?: number;
+  durum?: string;
+  vote?: string;
+  limit?: number;
+}): Promise<{
+  ozet?: PfosFeedbackOzet;
+  rows?: PfosFeedbackAdminRow[];
+  error?: string;
+}> {
+  const params = new URLSearchParams();
+  params.set("days", String(opts?.days ?? 30));
+  if (opts?.durum) params.set("durum", opts.durum);
+  if (opts?.vote) params.set("vote", opts.vote);
+  if (opts?.limit) params.set("limit", String(opts.limit));
+
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: { ozet: PfosFeedbackOzet; rows: PfosFeedbackAdminRow[] };
+    error?: string;
+  }>(`/api/pfos/feedback?${params}`);
+  if (body.error) return { error: body.error };
+  return { ozet: body.data?.ozet, rows: body.data?.rows ?? [] };
+}
+
+export async function fetchPfosFeedbackDetail(id: string): Promise<{
+  data?: {
+    feedback: PfosFeedbackAdminRow;
+    oneriler: PfosSkuLinkOneriRow[];
+    snapshot: { kalemler?: unknown; konsept?: string | null } | null;
+  };
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: {
+      feedback: PfosFeedbackAdminRow;
+      oneriler: PfosSkuLinkOneriRow[];
+      snapshot: { kalemler?: unknown; konsept?: string | null } | null;
+    };
+    error?: string;
+  }>(`/api/pfos/feedback/${encodeURIComponent(id)}`);
+  if (body.error) return { error: body.error };
+  return { data: body.data };
+}
+
+export async function patchPfosFeedback(
+  id: string,
+  durum: "reviewed" | "dismissed",
+): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    `/api/pfos/feedback/${encodeURIComponent(id)}`,
+    {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ durum }),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Güncellenemedi" };
+  }
+  return { ok: true };
+}
+
+export async function fetchPfosSkuLinkOneri(opts?: {
+  durum?: string;
+  listeKey?: string;
+  feedbackId?: string;
+}): Promise<{ rows?: PfosSkuLinkOneriRow[]; error?: string }> {
+  const params = new URLSearchParams();
+  if (opts?.durum) params.set("durum", opts.durum);
+  if (opts?.listeKey) params.set("listeKey", opts.listeKey);
+  if (opts?.feedbackId) params.set("feedbackId", opts.feedbackId);
+
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: PfosSkuLinkOneriRow[];
+    error?: string;
+  }>(`/api/pfos/sku-link-oneri?${params}`);
+  if (body.error) return { error: body.error };
+  return { rows: body.data ?? [] };
+}
+
+export async function createPfosSkuLinkOneri(payload: {
+  listeKey: string;
+  poz: string;
+  yeniSku: string;
+  yeniAd?: string;
+  sorunTipi?: string;
+  feedbackId?: string;
+}): Promise<{ row?: PfosSkuLinkOneriRow; error?: string }> {
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: PfosSkuLinkOneriRow;
+    error?: string;
+  }>("/api/pfos/sku-link-oneri", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!body.success || body.error) {
+    return { error: body.error || "Öneri oluşturulamadı" };
+  }
+  return { row: body.data };
+}
+
+export async function approvePfosSkuLinkOneri(
+  id: string,
+  patch?: { yeniSku?: string; yeniAd?: string },
+): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    `/api/pfos/sku-link-oneri/${encodeURIComponent(id)}/onayla`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(patch ?? {}),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Onaylanamadı" };
+  }
+  return { ok: true };
+}
+
+export async function rejectPfosSkuLinkOneri(
+  id: string,
+  onayNotu: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    `/api/pfos/sku-link-oneri/${encodeURIComponent(id)}/reddet`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ onayNotu }),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Reddedilemedi" };
+  }
+  return { ok: true };
+}
+
+export async function fetchPfosFiyatKurallari(): Promise<{
+  rows?: PfosFiyatKuraliAdminRow[];
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: PfosFiyatKuraliAdminRow[];
+    error?: string;
+  }>("/api/pfos/fiyat-kurallari");
+  if (body.error) return { error: body.error };
+  return { rows: body.data ?? [] };
+}
+
+export async function createPfosFiyatKurali(payload: {
+  isimKalibi?: string;
+  kuralTipi?: string;
+  carpan?: number;
+  aciklama?: string;
+  listeKey?: string;
+  poz?: string;
+}): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    "/api/pfos/fiyat-kurallari",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Kural oluşturulamadı" };
+  }
+  return { ok: true };
+}
+
+export async function togglePfosFiyatKurali(
+  id: string,
+  aktif: boolean,
+): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    `/api/pfos/fiyat-kurallari/${encodeURIComponent(id)}`,
+    {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ aktif }),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Güncellenemedi" };
+  }
+  return { ok: true };
+}
+
+export async function fetchPfosUrunTipiEslesme(opts?: {
+  konsept?: string;
+  urunTipi?: string;
+}): Promise<{ rows?: PfosUrunTipiEslesmeRow[]; error?: string }> {
+  const params = new URLSearchParams();
+  if (opts?.konsept) params.set("konsept", opts.konsept);
+  if (opts?.urunTipi) params.set("urunTipi", opts.urunTipi);
+
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: PfosUrunTipiEslesmeRow[];
+    error?: string;
+  }>(`/api/pfos/urun-tipi-eslesme?${params}`);
+  if (body.error) return { error: body.error };
+  return { rows: body.data ?? [] };
+}
+
+export async function upsertPfosUrunTipiEslesme(payload: {
+  konseptSlug: string;
+  pfosUrunTipi: string;
+  pfosKategoriKodu: string;
+  productId: string;
+  oncelik?: number;
+}): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    "/api/pfos/urun-tipi-eslesme",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Kaydedilemedi" };
+  }
+  return { ok: true };
+}
+
+export async function deletePfosUrunTipiEslesme(
+  id: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; error?: string }>(
+    `/api/pfos/urun-tipi-eslesme/${encodeURIComponent(id)}`,
+    { method: "DELETE" },
+  );
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Silinemedi" };
+  }
+  return { ok: true };
+}
+
 export async function fetchRaporlar(kind?: string): Promise<{
   data?: RaporOzet | unknown;
   error?: string;

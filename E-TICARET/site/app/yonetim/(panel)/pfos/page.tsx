@@ -2,6 +2,7 @@
 
 import {
   AppstoreOutlined,
+  BugOutlined,
   CalculatorOutlined,
   CloudDownloadOutlined,
   CloudUploadOutlined,
@@ -15,6 +16,7 @@ import { Alert, Button, Space, Tabs, Typography } from "antd";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getProToken } from "@/lib/pro-admin-client";
+import PfosEslesmeFeedbackPanel from "@/components/pfos/pro/PfosEslesmeFeedbackPanel";
 import PfosExportPanel from "@/components/pfos/pro/PfosExportPanel";
 import PfosImportPanel from "@/components/pfos/pro/PfosImportPanel";
 import PfosKategoriPanel from "@/components/pfos/pro/PfosKategoriPanel";
@@ -224,6 +226,15 @@ export default function YonetimPfosPage() {
               </span>
             ),
             children: <PfosProjeList />,
+          },
+          {
+            key: "eslesme",
+            label: (
+              <span>
+                <BugOutlined /> Eşleşme düzeltmeleri
+              </span>
+            ),
+            children: <PfosEslesmeFeedbackPanel />,
           },
           {
             key: "ozet",
