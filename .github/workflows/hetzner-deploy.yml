@@ -1,0 +1,31 @@
+name: Hetzner deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "E-TICARET/site/**"
+      - ".github/workflows/hetzner-deploy.yml"
+
+concurrency:
+  group: hetzner-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ env.HETZNER_HOST != '' && env.HETZNER_HOST || '167.233.86.144' }}
+          username: root
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          command_timeout: 30m
+          script: |
+            set -euo pipefail
+            cd /opt/equsto/E-TICARET/site
+            bash scripts/hetzner-deploy.sh
