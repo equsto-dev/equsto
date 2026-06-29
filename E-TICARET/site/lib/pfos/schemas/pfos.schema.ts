@@ -118,6 +118,17 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
 
+export const EslesmeKatmaniEnum = z.enum([
+  "verified_db",
+  "verified_json",
+  "tip_shop_link",
+  "aile_kurali",
+  "katalog_arama",
+  "ozel_imalat",
+  "eslesmedi",
+]);
+export type EslesmeKatmani = z.infer<typeof EslesmeKatmaniEnum>;
+
 export const PFOSRequestSchema = z.object({
   konsept: z.string().min(1),
   m2: z.number().min(30).max(10000),
@@ -188,6 +199,11 @@ export const PFOSKalemiSchema = z.object({
   /** Excel bölüm sırası — teklif gruplama / sıralama */
   referansBolumSira: z.number().optional(),
   referansBolumKey: z.string().optional(),
+  /** Referans liste dosyası anahtarı (ör. s13-388-turk-220) */
+  referansListeKey: z.string().optional(),
+  /** Motor eşleme katmanı — geri bildirim / snapshot için */
+  eslesmeKatmani: EslesmeKatmaniEnum.optional(),
+  eslesmeLinkKey: z.string().optional(),
 });
 
 export type PFOSKalemi = z.infer<typeof PFOSKalemiSchema>;

@@ -1,0 +1,38 @@
+-- Varsayılan tava rafı fiyat kuralı (iyileştirme.md G14 — duvar rafı × 4)
+INSERT INTO "pfos_fiyat_kurali" (
+    "id",
+    "kapsam",
+    "konsept_slug",
+    "liste_key",
+    "poz",
+    "urun_tipi",
+    "isim_kalibi",
+    "kural_tipi",
+    "carpan",
+    "baz_sku",
+    "sabit_fiyat_eur",
+    "aciklama",
+    "kaynak",
+    "onaylayan",
+    "aktif",
+    "created_at",
+    "updated_at"
+) VALUES (
+    'pfos_fiyat_tava_raf_x4',
+    'global',
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    'tava raf',
+    'carp',
+    4,
+    NULL,
+    NULL,
+    'TAVA RAFI — duvar rafı birim fiyatının 4 katı (EQS-2026-650 G14)',
+    'import_json',
+    'system',
+    true,
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+) ON CONFLICT DO NOTHING;

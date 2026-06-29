@@ -163,8 +163,20 @@ import {
 } from "@/lib/catalog/equsto-kod-lookup";
 import { formatPfosDisplayTanim, stripEmbeddedSupplierSku } from "../parse-upload/sanitize-tanim";
 import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
-import { mergeDbAndJsonLinks } from "./sku-link-db";
+import { mergeDbAndJsonLinks, loadDbReferansSkuLinks } from "./sku-link-db";
 import { referansLinkKey } from "./sku-link-key";
+import {
+  ESLESMEDI,
+  referansMatchResult,
+  type EslesmeKatmani,
+  type ReferansMatchResult,
+} from "./referans-match-meta";
+import {
+  applyLegacyTavaRafiCarpan,
+  applyPfosFiyatKurallariCached,
+  loadCachedPfosFiyatKurallari,
+  type PfosFiyatKuraliContext,
+} from "../fiyat-kurali";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -187,10 +199,21 @@ type SkuLinksFile = {
 
 let skuLinksCache: NonNullable<SkuLinksFile["links"]> | null = null;
 let skuLinksCacheMtimeMs = 0;
+let jsonOnlyLinksCache: NonNullable<SkuLinksFile["links"]> | null = null;
+let jsonOnlyLinksCacheMtimeMs = 0;
+
+/** Eşleme katmanı — matchReferansKalemBody son cascade adımı için */
+let pendingEslesmeKatmani: EslesmeKatmani = "aile_kurali";
+
+function markEslesmeKatmani(katman: EslesmeKatmani): void {
+  pendingEslesmeKatmani = katman;
+}
 
 export function invalidateReferansSkuLinksCache(): void {
   skuLinksCache = null;
   skuLinksCacheMtimeMs = 0;
+  jsonOnlyLinksCache = null;
+  jsonOnlyLinksCacheMtimeMs = 0;
   void import("./sku-link-db").then((m) => m.invalidateDbReferansSkuLinksCache());
 }
 
@@ -225,6 +248,140 @@ async function loadReferansSkuLinks(): Promise<
     skuLinksCacheMtimeMs = 0;
   }
   return skuLinksCache;
+}
+
+async function loadJsonOnlyReferansSkuLinks(): Promise<
+  NonNullable<SkuLinksFile["links"]>
+> {
+  try {
+    const { dataPath } = await import("@/lib/legacy-data-fs");
+    const fs = await import("node:fs/promises");
+    const abs = dataPath("pfos-referans-sku-links.json");
+    const st = await fs.stat(abs).catch(() => null);
+    const mtime = st?.mtimeMs ?? 0;
+    if (jsonOnlyLinksCache && mtime > 0 && mtime === jsonOnlyLinksCacheMtimeMs) {
+      return jsonOnlyLinksCache;
+    }
+    const raw = await readJsonFile<SkuLinksFile>("pfos-referans-sku-links.json");
+    jsonOnlyLinksCache = raw?.links ?? {};
+    jsonOnlyLinksCacheMtimeMs = mtime;
+  } catch {
+    jsonOnlyLinksCache = {};
+    jsonOnlyLinksCacheMtimeMs = 0;
+  }
+  return jsonOnlyLinksCache;
+}
+
+function fiyatKuraliCtx(input: ReferansMatchInput): PfosFiyatKuraliContext {
+  return {
+    listeKey: input.referansListeKey ?? null,
+    poz: input.referansPoz ?? null,
+    urunTipi: input.urunTipi ?? null,
+    isim: input.isim,
+  };
+}
+
+async function finalizeReferansMatch(
+  result: ReferansMatchResult,
+  input: ReferansMatchInput,
+): Promise<ReferansMatchResult> {
+  if (!result.urun) return ESLESMEDI;
+  const rules = await loadCachedPfosFiyatKurallari();
+  let urun = await applyPfosFiyatKurallariCached(result.urun, fiyatKuraliCtx(input));
+  urun = applyLegacyTavaRafiCarpan(urun, input.isim, rules);
+  return { ...result, urun };
+}
+
+type SkuLinkEntry = NonNullable<SkuLinksFile["links"]>[string];
+
+async function resolveVerifiedLinkEntry(
+  input: ReferansMatchInput,
+  liste: string,
+  poz: string,
+  link: SkuLinkEntry,
+): Promise<EslesmisUrun | null> {
+  if (!link?.sku) return null;
+
+  const exactRow = await findAdminRowByExactSku(link.sku);
+  if (exactRow) {
+    const bySku = rowToEslesmis(exactRow);
+    if (
+      isIstifRafiReferansIsim(input.isim) &&
+      isOztiIstifSku(bySku.sku ?? link.sku)
+    ) {
+      return null;
+    }
+    const aciklamaCeliski =
+      bySku.teklifAciklama &&
+      referansTeklifAciklamaCeliski(
+        input.isim,
+        bySku.teklifAciklama,
+        input.notlar,
+      );
+    const panelOdaLinkAd =
+      link.name?.trim() &&
+      isPanelOdaReferansIsim(input.isim) &&
+      /^7919\.(DF|SN)\d/i.test(link.sku ?? bySku.sku ?? "");
+    return {
+      ...bySku,
+      ad: panelOdaLinkAd ? link.name!.trim() : input.isim,
+      marka: link.marka?.trim() || bySku.marka,
+      gorselUrl: aciklamaCeliski ? null : bySku.gorselUrl,
+      teklifAciklama: aciklamaCeliski ? null : bySku.teklifAciklama,
+    };
+  }
+  if (link.fiyat_try && link.fiyat_try > 0) {
+    const panelOdaLinkAd =
+      link.name?.trim() &&
+      isPanelOdaReferansIsim(input.isim) &&
+      /^7919\.(DF|SN)\d/i.test(link.sku ?? "");
+    return {
+      id: `ref-link-${liste}-${poz}`,
+      sku: link.sku ?? null,
+      ad: panelOdaLinkAd ? link.name!.trim() : (link.name ?? input.isim),
+      marka: link.marka ?? "Öztiryakiler",
+      model: link.sku ?? null,
+      olcu: extractOlcuFromNotlar(input.notlar) || null,
+      elektrikGucuKw: null,
+      gazGucuKw: null,
+      fiyat: Math.round(link.fiyat_try),
+      fiyatEur: null,
+      doviz: "TRY",
+      gorselUrl: null,
+    };
+  }
+  return null;
+}
+
+async function matchByVerifiedLinkWithMeta(
+  input: ReferansMatchInput,
+): Promise<ReferansMatchResult> {
+  if (input.sku?.trim()) {
+    const bySku = await matchByExplicitSku(input.sku, input.isim, input.notlar);
+    if (bySku) {
+      return referansMatchResult(bySku, "verified_json");
+    }
+  }
+  const liste = input.referansListeKey?.trim();
+  const poz = input.referansPoz?.trim();
+  if (!liste || !poz) return ESLESMEDI;
+
+  const key = referansLinkKey(liste, poz);
+  const dbLinks = await loadDbReferansSkuLinks();
+  const dbLink = dbLinks[key];
+  if (dbLink?.sku) {
+    const urun = await resolveVerifiedLinkEntry(input, liste, poz, dbLink);
+    if (urun) return referansMatchResult(urun, "verified_db", key);
+  }
+
+  const jsonLinks = await loadJsonOnlyReferansSkuLinks();
+  const jsonLink = jsonLinks[key];
+  if (jsonLink?.sku && !dbLink?.sku) {
+    const urun = await resolveVerifiedLinkEntry(input, liste, poz, jsonLink);
+    if (urun) return referansMatchResult(urun, "verified_json", key);
+  }
+
+  return ESLESMEDI;
 }
 
 type TipShopLinksFile = {
@@ -843,67 +1000,8 @@ async function matchByTipShopLink(
 async function matchByVerifiedLink(
   input: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
-  if (input.sku?.trim()) {
-    const bySku = await matchByExplicitSku(input.sku, input.isim, input.notlar);
-    if (bySku) return bySku;
-  }
-  const liste = input.referansListeKey?.trim();
-  const poz = input.referansPoz?.trim();
-  if (!liste || !poz) return null;
-
-  const links = await loadReferansSkuLinks();
-  const link = links[referansLinkKey(liste, poz)];
-  if (!link?.sku) return null;
-
-  const exactRow = await findAdminRowByExactSku(link.sku);
-  if (exactRow) {
-    const bySku = rowToEslesmis(exactRow);
-    if (
-      isIstifRafiReferansIsim(input.isim) &&
-      isOztiIstifSku(bySku.sku ?? link.sku)
-    ) {
-      return null;
-    }
-    const aciklamaCeliski =
-      bySku.teklifAciklama &&
-      referansTeklifAciklamaCeliski(
-        input.isim,
-        bySku.teklifAciklama,
-        input.notlar,
-      );
-    const panelOdaLinkAd =
-      link.name?.trim() &&
-      isPanelOdaReferansIsim(input.isim) &&
-      /^7919\.(DF|SN)\d/i.test(link.sku ?? bySku.sku ?? "");
-    return {
-      ...bySku,
-      ad: panelOdaLinkAd ? link.name!.trim() : input.isim,
-      marka: link.marka?.trim() || bySku.marka,
-      gorselUrl: aciklamaCeliski ? null : bySku.gorselUrl,
-      teklifAciklama: aciklamaCeliski ? null : bySku.teklifAciklama,
-    };
-  }
-  if (link.fiyat_try && link.fiyat_try > 0) {
-    const panelOdaLinkAd =
-      link.name?.trim() &&
-      isPanelOdaReferansIsim(input.isim) &&
-      /^7919\.(DF|SN)\d/i.test(link.sku ?? "");
-    return {
-      id: `ref-link-${liste}-${poz}`,
-      sku: link.sku ?? null,
-      ad: panelOdaLinkAd ? link.name!.trim() : (link.name ?? input.isim),
-      marka: link.marka ?? "Öztiryakiler",
-      model: link.sku ?? null,
-      olcu: extractOlcuFromNotlar(input.notlar) || null,
-      elektrikGucuKw: null,
-      gazGucuKw: null,
-      fiyat: Math.round(link.fiyat_try),
-      fiyatEur: null,
-      doviz: "TRY",
-      gorselUrl: null,
-    };
-  }
-  return null;
+  const meta = await matchByVerifiedLinkWithMeta(input);
+  return meta.urun;
 }
 
 async function matchMixersByReferans(
@@ -1379,10 +1477,10 @@ export async function matchUnSekerArabasiByReferans(
   return katalogRowToEslesmis(selected);
 }
 
-/** Referans satırı için güvenli katalog eşlemesi */
-export async function matchReferansKalem(
+/** Referans satırı için güvenli katalog eşlemesi (meta ile) */
+export async function matchReferansKalemWithMeta(
   rawInput: ReferansMatchInput,
-): Promise<EslesmisUrun | null> {
+): Promise<ReferansMatchResult> {
   const cleanedIsim = stripEmbeddedSupplierSku(
     formatPfosDisplayTanim(rawInput.isim),
   );
@@ -1402,12 +1500,36 @@ export async function matchReferansKalem(
     };
   }
 
+  const verified = await matchByVerifiedLinkWithMeta(input);
+  if (verified.urun) return finalizeReferansMatch(verified, input);
+
+  pendingEslesmeKatmani = "aile_kurali";
+  const urun = await matchReferansKalemBody(input);
+
+  const linkKey =
+    input.referansListeKey?.trim() && input.referansPoz?.trim()
+      ? referansLinkKey(input.referansListeKey, input.referansPoz)
+      : undefined;
+
+  return finalizeReferansMatch(
+    referansMatchResult(urun, urun ? pendingEslesmeKatmani : "eslesmedi", linkKey),
+    input,
+  );
+}
+
+/** Referans satırı için güvenli katalog eşlemesi */
+export async function matchReferansKalem(
+  rawInput: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
+  return (await matchReferansKalemWithMeta(rawInput)).urun;
+}
+
+async function matchReferansKalemBody(
+  input: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
   const olcu =
     extractOlcuFromNotlar(input.notlar) ||
     (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+(?:\s*[*xX×]\s*\d+)?)/)?.[1] ?? "");
-
-  const verified = await matchByVerifiedLink(input);
-  if (verified) return verified;
 
   if (isSalamanderRafiReferans(input.isim)) {
     const salamanderRaf = await matchSalamanderRafiByReferans(
@@ -1611,15 +1733,18 @@ export async function matchReferansKalem(
 
   const family = await matchByFamilyRules(input, olcu);
   if (family && !referansKatalogUyumsuz(input.isim, family.ad, input.notlar, family.sku)) {
+    markEslesmeKatmani("aile_kurali");
     return family;
   }
 
+  markEslesmeKatmani("katalog_arama");
   const strict = await matchStrictCatalog(input, olcu);
   if (strict) return strict;
 
   const byMasterEq = await matchByMasterEqustoKod(input);
   if (byMasterEq) return byMasterEq;
 
+  markEslesmeKatmani("tip_shop_link");
   const tipLinked = await matchByTipShopLink(input);
   if (
     tipLinked &&
@@ -1632,6 +1757,7 @@ export async function matchReferansKalem(
     isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi }) ||
     isOzelImalatMotor({ sablonIsim: input.isim })
   ) {
+    markEslesmeKatmani("ozel_imalat");
     if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
       const tezgah = await matchCalismaTezgahiByReferans(
         input.isim,
@@ -1725,6 +1851,7 @@ export async function matchReferansKalem(
     if (buz) return buz;
   }
 
+  markEslesmeKatmani("ozel_imalat");
   return await fallbackOzelImalat(input);
 }
 

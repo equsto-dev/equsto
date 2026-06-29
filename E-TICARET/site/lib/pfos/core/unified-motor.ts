@@ -23,7 +23,7 @@ import { enrichEslesmisUrunKw } from "./enrich-eslesmis-kw";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import type { KategoriKodu } from "../schemas/pfos.schema";
 import { isDynamicKonsept } from "./templates";
-import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
+import { matchProductForReferansKalemWithMeta, metaFromReferansMatch } from "../referans/match-referans-kalem";
 import { resetTeshirReyonSeriesPin } from "../referans/teshir-reyon-match";
 import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
 
@@ -130,17 +130,21 @@ async function buildTemplateKalemler(
         ? item.scale.adet
         : calcAdet(item.scale, m2, template.seatDensity)
       : calcAdet(item.scale, m2, template.seatDensity);
-    const urunMatched = referansListOnly
-      ? await matchProductForReferansKalem({
+    const listeKey =
+      item.referansListeKey ?? template.referansId ?? undefined;
+    const referansMatch = referansListOnly
+      ? await matchProductForReferansKalemWithMeta({
           urunTipi,
           fiyatStratejisi,
           isim,
           notlar: item.notlar,
           referansPoz: item.referansPoz,
-          referansListeKey:
-            item.referansListeKey ?? template.referansId ?? undefined,
+          referansListeKey: listeKey,
           altKategori: item.altKategori,
         })
+      : null;
+    const urunMatched = referansListOnly
+      ? referansMatch?.urun ?? null
       : await matchProductForMotor(
           urunTipi,
           item.kategoriKodu,
@@ -152,6 +156,9 @@ async function buildTemplateKalemler(
       isim,
       urunTipi,
     });
+    const matchMeta = referansMatch
+      ? metaFromReferansMatch(referansMatch, listeKey)
+      : null;
 
     kalemler.push({
       poz: item.referansPoz ?? "",
@@ -160,6 +167,7 @@ async function buildTemplateKalemler(
       altKategori: item.altKategori,
       referansBolumSira: item.referansBolumSira,
       referansBolumKey: item.referansBolumKey,
+      referansListeKey: listeKey,
       urunTipi,
       isim,
       tip: item.tip,
@@ -171,6 +179,8 @@ async function buildTemplateKalemler(
       urun,
       kaynak: "template",
       sablonSira: item.sablonSira ?? i,
+      eslesmeKatmani: matchMeta?.eslesmeKatmani,
+      eslesmeLinkKey: matchMeta?.eslesmeLinkKey,
     });
     existingTips.add(tipKey);
   }
