@@ -154,7 +154,7 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ustKategori: "Bar & Lounge",
     planNot: "proje-veri/no fish today urun_listesi.xlsx",
     bantlar: [
-      { id: "30-50", label: "30–50 m²", referansM2: 40 },
+      { id: "30-50", label: "30–200 m²", referansM2: 40 },
     ],
   },
   {
