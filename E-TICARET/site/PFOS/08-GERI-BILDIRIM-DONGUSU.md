@@ -181,7 +181,51 @@ model PfosReferansSkuLink {
 }
 ```
 
-### 3.4 `PfosTeklifSnapshot` genişletmesi (opsiyonel P0.1)
+### 3.4 `PfosFiyatKurali` — fiyat hesabı kuralları (karar: ayrı tablo)
+
+Bazı hatalar **yanlış SKU** değil, **yanlış fiyat**dır: doğru ürün seçilmiş ama fiyat başka bir katalog satırından veya çarpanla türetilmeli. SKU link tablosu bunu çözmez.
+
+**Örnek (EQS-2026-650, G14):** Referansta “TAVA RAFI” var; motor duvar rafı SKU’sunu buluyor (`duvar-raf-match.ts`) ama fiyat **normal duvar rafının 4 katı** olmalı — katalogda ayrı “tava rafı” satırı yok.
+
+```prisma
+/// PFOS fiyat türetme kuralı (ürün doğru, fiyat formülü özel)
+model PfosFiyatKurali {
+  id            String   @id @default(cuid())
+  /// global | konsept | liste_key — kapsam
+  kapsam        String   @default("global")
+  konseptSlug   String?  @map("konsept_slug")
+  listeKey      String?  @map("liste_key")
+  poz           String?
+  urunTipi      String?  @map("urun_tipi")
+  /// Referans isim regex veya alt string (ör. tava raf)
+  isimKalibi    String?  @map("isim_kalibi")
+  /// carp | sabit_sku | sabit_fiyat_eur
+  kuralTipi     String   @map("kural_tipi")
+  /// carp: 4.0 — baz fiyat × çarpan
+  carpan        Float?
+  /// sabit_sku: fiyat kaynağı SKU (ör. 7897.10030.30 duvar rafı)
+  bazSku        String?  @map("baz_sku")
+  sabitFiyatEur Decimal? @map("sabit_fiyat_eur") @db.Decimal(14, 4)
+  aciklama      String?  @db.Text
+  kaynak        String   @default("feedback")
+  onaylayan     String?  @map("onaylayan")
+  aktif         Boolean  @default(true)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@index([kapsam, konseptSlug])
+  @@index([listeKey, poz])
+  @@index([urunTipi])
+  @@index([aktif])
+  @@map("pfos_fiyat_kurali")
+}
+```
+
+**Motor entegrasyonu:** `matchDuvarRafiByReferans` içindeki sabit `× 4` kodu → `applyPfosFiyatKurallari(eslesmis, context)` ile DB kurallarından okunur. Kural yoksa mevcut hard-coded davranış fallback.
+
+**Geri bildirim akışı:** `sorunTipi=fiyat_kurali` olan öneri onaylandığında `PfosFiyatKurali` insert; SKU link oluşturulmaz.
+
+### 3.5 `PfosTeklifSnapshot` genişletmesi (P0)
 
 Mevcut snapshot yalnızca `projeRef` + `kalemler` tutuyor. Geri bildirim bağlamı için quote meta eklenmeli:
 
@@ -190,7 +234,7 @@ model PfosTeklifSnapshot {
   id               String   @id @default(cuid())
   projeRef         String?
   kalemler         Json
-  /// P0.1 — quote anı meta
+  /// P0 — quote anı meta
   konsept          String?
   referansId       String?  @map("referans_id")
   referansListeKey String?  @map("referans_liste_key")
@@ -206,7 +250,7 @@ model PfosTeklifSnapshot {
 }
 ```
 
-### 3.5 `PfosUsageEvent` ilişkisi
+### 3.6 `PfosUsageEvent` ilişkisi
 
 Yeni event türü eklenmez; `PfosFeedbackEvent` ayrı tablo. İsteğe bağlı: admin panelinde `teklifSayi` ile `PfosUsageEvent` join (dönüşüm + memnuniyet birlikte görünür).
 
@@ -406,7 +450,7 @@ Mevcut endpoint’e meta alanları eklenir:
 | Quote render sonrası | `POST /api/pfos/teklif-snapshot` (zengin kalemler + meta) |
 | `snapshotId` state | Feedback isteğine eklenir |
 | `submitTeklifFeedback` | localStorage + GA **korunur**; ek olarak `POST /api/pfos/feedback` |
-| 👎 genişletme (P0.1) | “Hangi satır yanlış?” — en fazla 3 poz seçimi + opsiyonel yorum |
+| 👎 genişletme (**P0**) | “Hangi satır yanlış?” — en fazla 3 poz seçimi + opsiyonel yorum; seçilen pozlar `kalemDuzeltmeleri` olarak API’ye gider |
 
 **Yeni client modül:** `lib/pfos/log-pfos-feedback.client.ts` (`log-pfos-usage.client.ts` ile aynı kalıp)
 
@@ -426,6 +470,14 @@ Böylece admin panelinde “motor ne seçti?” sorusu snapshot’tan cevaplanı
 ## 7. Admin paneli — `/yonetim/pfos`
 
 Yeni sekme: **「Eşleşme düzeltmeleri」** (`PfosEslesmeFeedbackPanel.tsx`)
+
+Panel üç alt sekme içerir (karar: hepsi aynı sekme altında):
+
+| Alt sekme | Veri kaynağı | Onay sonucu |
+|-----------|--------------|-------------|
+| **Geri bildirimler** | `PfosFeedbackEvent` + `PfosSkuLinkOneri` | `PfosReferansSkuLink` |
+| **Tip eşlemeleri** | `PfosUrunTipiEslesme` + öneri kuyruğu | DB `PfosUrunTipiEslesme` güncelleme |
+| **Fiyat kuralları** | `PfosFiyatKurali` + öneri kuyruğu | Motor fiyat hesabı (SKU değil) |
 
 ### 7.1 Üst özet kartları
 
@@ -464,10 +516,31 @@ Filtreler: vote, durum, konsept, son 7/30/90 gün.
 ### 7.4 Hızlı işlemler
 
 - **Toplu onay:** Aynı `sorunTipi=marka_tercihi` + aynı `yeniSku` olan önerileri tek tıkla onayla (ör. tüm I12 → Brema)
-- **JSON’a export:** Onaylanan linkleri dosyaya yaz (deploy öncesi)
-- **iyileştirme.md import:** Metin dosyası parse → toplu `PfosSkuLinkOneri` (bkz. §8)
+- **Tip eşlemesi düzenle:** `konseptSlug` + `pfosUrunTipi` → katalog ürünü ata (`PfosUrunTipiEslesme` CRUD)
+- **Fiyat kuralı düzenle:** poz / `urunTipi` / isim kalıbı → çarpan veya sabit fiyat kaynağı (bkz. §9.1)
+- **iyileştirme.md import:** Metin dosyası parse → toplu `PfosSkuLinkOneri` veya `PfosFiyatKurali` önerisi (bkz. §8)
 
-### 7.5 `page.tsx` sekmesi
+### 7.5 Deploy’da otomatik JSON export (karar: evet)
+
+Onaylanmış `PfosReferansSkuLink` kayıtları canlıda DB’de kalır; **her deploy öncesi** dosyaya yazılır ki git geçmişi ve JSON fallback güncel kalsın.
+
+**Tetikleyici:** `scripts/hetzner-deploy.sh` içinde, `docker compose build` öncesi:
+
+```bash
+npm run pfos:referans-sku-links:export
+# → public/data/pfos-referans-sku-links.json (DB merge, version bump)
+```
+
+**Script davranışı:**
+
+1. DB’den tüm `PfosReferansSkuLink` oku
+2. Mevcut JSON `links` ile birleştir (**DB kazanır**)
+3. Dosyayı atomik yaz (`*.tmp` → rename)
+4. CI’da export dry-run diff kontrolü (opsiyonel)
+
+Manuel “Export” butonu admin panelde de kalır (deploy beklemeden test için).
+
+### 7.6 `page.tsx` sekmesi
 
 ```typescript
 {
@@ -526,7 +599,26 @@ export const PFOS_SORUN_TIPLERI = [
 ] as const;
 ```
 
-Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `referans-eslestirme.ts` veya aile kuralı). Admin panelinde tip seçilince uygun aksiyon gösterilir.
+Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `PfosFiyatKurali`; bkz. §9.1). Admin panelinde tip seçilince uygun alt sekme ve aksiyon gösterilir.
+
+### 9.1 `fiyat_kurali` nedir? (kısa)
+
+**SKU link:** “Bu poz için **hangi ürün** seçilsin?” (ör. I12 → Brema CB425)
+
+**Fiyat kuralı:** “Doğru ürün bulundu ama **fiyat nasıl hesaplansın**?” — katalogda birebir satır yok veya fiyat türetilmiş.
+
+| Örnek | Sorun | Kural |
+|-------|-------|-------|
+| G14 TAVA RAFI | Duvar rafı SKU’su doğru, fiyat 1 birim | Baz duvar rafı fiyatı **× 4** |
+| Salamander rafı | Katalogda yok | 60×60 raf, fiyat **100×30 duvar rafı** SKU’sundan |
+| Özel imalat tezgah | Ölçü katalogda yok | En yakın ölçü + **ölçek çarpanı** |
+
+Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda **sabit kod**. `PfosFiyatKurali` tablosu bunları DB’ye taşır; geri bildirimden onaylanınca koda deploy gerekmeden güncellenir.
+
+**SKU link vs fiyat kuralı ayrımı (admin UI):**
+
+- Yanlış marka/model → SKU önerisi sekmesi
+- Doğru ürün, yanlış fiyat → Fiyat kuralları sekmesi
 
 ---
 
@@ -547,7 +639,7 @@ Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `referans-eslestirme.t
 
 ### Faz A — Veri katmanı (1 PR)
 
-- [ ] Prisma modelleri + migration
+- [ ] Prisma modelleri (`PfosFeedbackEvent`, `PfosSkuLinkOneri`, `PfosReferansSkuLink`, `PfosFiyatKurali`) + migration
 - [ ] `lib/pfos/feedback-log.ts`
 - [ ] `POST/GET /api/pfos/feedback`
 - [ ] `PfosReferansSkuLink` CRUD + `mergeDbAndJsonLinks()`
@@ -560,27 +652,29 @@ Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `referans-eslestirme.t
 
 ### Faz C — İstemci (1 PR)
 
-- [ ] Snapshot otomatik kayıt
+- [ ] Snapshot otomatik kayıt (meta dahil)
 - [ ] `log-pfos-feedback.client.ts`
 - [ ] `TeklifV14Proforma.tsx` API entegrasyonu
+- [ ] 👎 sonrası poz seçici UI (en fazla 3 kalem + yorum) — **P0**
 
 ### Faz D — Admin panel (1 PR)
 
-- [ ] `PfosEslesmeFeedbackPanel.tsx`
-- [ ] SKU öneri onay/red API
+- [ ] `PfosEslesmeFeedbackPanel.tsx` (3 alt sekme: geri bildirim, tip eşlemesi, fiyat kuralı)
+- [ ] SKU öneri + `PfosUrunTipiEslesme` + `PfosFiyatKurali` onay/red API
 - [ ] `/yonetim/pfos` yeni sekme
 
-### Faz E — Import & bakım (1 PR)
+### Faz E — Import, export & deploy (1 PR)
 
 - [ ] `import-pfos-iyilestirme-oneri.mjs`
 - [ ] `pfos:referans-sku-links:export` script
+- [ ] `hetzner-deploy.sh` → deploy öncesi otomatik JSON export
 - [ ] Mevcut `iyileştirme.md` satırlarının import’u (EQS-2026-650)
 
 ### Faz F — P0.1 (sonraki sprint)
 
-- [ ] Kalem bazlı 👎 UI (poz seçici)
 - [ ] Düşük güven + 👎 öncelik skoru admin sıralamasında
-- [ ] `IsletmePfosUsagePanel` ile birleşik görünüm
+- [ ] `IsletmePfosUsagePanel` ile birleşik görünüm (dönüşüm + memnuniyet)
+- [ ] CI export diff kontrolü
 
 ---
 
@@ -610,12 +704,14 @@ Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `referans-eslestirme.t
 
 ---
 
-## 14. Açık kararlar (uygulama öncesi)
+## 14. Kararlar (2026-06-29 — onaylandı)
 
-- [ ] 👎 sonrası müşteriden poz seçimi P0’da mı P0.1’de mi?
-- [ ] Onaylı linkler deploy’da otomatik JSON export mu, manuel mi?
-- [ ] `PfosUrunTipiEslesme` onayı da aynı panelde mi, ayrı sekme mi?
-- [ ] `fiyat_kurali` tipi için ayrı tablo mu (`PfosFiyatKurali`)?
+| # | Soru | Karar |
+|---|------|--------|
+| 1 | 👎 sonrası poz seçimi | **P0** — en fazla 3 kalem + yorum |
+| 2 | Onaylı linkler JSON export | **Evet** — `hetzner-deploy.sh` öncesi otomatik |
+| 3 | `PfosUrunTipiEslesme` paneli | **Evet** — aynı sekme, “Tip eşlemeleri” alt sekmesi |
+| 4 | `fiyat_kurali` tablosu | **Evet** — `PfosFiyatKurali` (bkz. §9.1) |
 
 ---
 
@@ -623,7 +719,10 @@ Bazı tipler SKU link ile çözülmez (`fiyat_kurali` → `referans-eslestirme.t
 
 | Dosya | Aksiyon |
 |-------|---------|
-| `prisma/schema.prisma` | 3 model + snapshot alanları |
+| `prisma/schema.prisma` | 4 model + snapshot alanları |
+| `lib/pfos/fiyat-kurali.ts` | Kural uygulama + DB load |
+| `lib/pfos/referans/duvar-raf-match.ts` | Hard-coded ×4 → `PfosFiyatKurali` |
+| `scripts/hetzner-deploy.sh` | Deploy öncesi `pfos:referans-sku-links:export` |
 | `lib/pfos/feedback-log.ts` | Yeni |
 | `lib/pfos/referans/sku-link-db.ts` | DB load/merge/upsert |
 | `lib/pfos/referans/referans-eslestirme.ts` | DB önceliği + katman meta |
