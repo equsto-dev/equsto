@@ -652,18 +652,18 @@ Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda 
 - [x] `referans-eslestirme.ts` verified_db / verified_json ayrımı
 - [x] `PfosFiyatKurali` motor entegrasyonu + tava rafı seed + legacy fallback
 
-### Faz C — İstemci (1 PR)
+### Faz C — İstemci (1 PR) ✅
 
-- [ ] Snapshot otomatik kayıt (meta dahil)
-- [ ] `log-pfos-feedback.client.ts`
-- [ ] `TeklifV14Proforma.tsx` API entegrasyonu
-- [ ] 👎 sonrası poz seçici UI (en fazla 3 kalem + yorum) — **P0**
+- [x] Snapshot otomatik kayıt (meta dahil) — `log-pfos-snapshot.client.ts`
+- [x] `log-pfos-feedback.client.ts`
+- [x] `TeklifV14Proforma.tsx` API entegrasyonu
+- [x] 👎 sonrası poz seçici UI (en fazla 3 kalem + yorum) — **P0**
 
-### Faz D — Admin panel (1 PR)
+### Faz D — Admin panel (1 PR) ✅
 
-- [ ] `PfosEslesmeFeedbackPanel.tsx` (3 alt sekme: geri bildirim, tip eşlemesi, fiyat kuralı)
-- [ ] SKU öneri + `PfosUrunTipiEslesme` + `PfosFiyatKurali` onay/red API
-- [ ] `/yonetim/pfos` yeni sekme
+- [x] `PfosEslesmeFeedbackPanel.tsx` (3 alt sekme: geri bildirim, tip eşlemesi, fiyat kuralı)
+- [x] SKU öneri + `PfosUrunTipiEslesme` + `PfosFiyatKurali` onay/red API
+- [x] `/yonetim/pfos` yeni sekme
 
 ### Faz E — Import, export & deploy (1 PR)
 

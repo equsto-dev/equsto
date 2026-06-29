@@ -1,8 +1,8 @@
 "use client";
 
 import { DislikeOutlined, DownloadOutlined, LikeOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
-import { Button, Collapse, Form, Modal, Typography } from "antd";
-import { Fragment, useEffect, useState, type CSSProperties } from "react";
+import { Button, Checkbox, Collapse, Form, Input, Modal, Typography } from "antd";
+import { Fragment, useEffect, useMemo, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
 import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } from "@/lib/pfos/teklif/format-v14";
@@ -19,6 +19,8 @@ import {
 import PfosTeklifKararBlock, {
   type TeklifKarar,
 } from "@/components/pfos/PfosTeklifKararBlock";
+import { logPfosTeklifFeedback } from "@/lib/pfos/log-pfos-feedback.client";
+import { savePfosTeklifSnapshot } from "@/lib/pfos/log-pfos-snapshot.client";
 
 type Props = {
   model: TeklifModelV14;
@@ -115,6 +117,11 @@ export default function TeklifV14Proforma({
     DeliveryResult | { kind: "err"; message: string } | null
   >(null);
   const [teklifFeedback, setTeklifFeedback] = useState<TeklifFeedback | null>(null);
+  const [snapshotId, setSnapshotId] = useState<string | null>(null);
+  const [downModalOpen, setDownModalOpen] = useState(false);
+  const [selectedPozs, setSelectedPozs] = useState<string[]>([]);
+  const [feedbackYorum, setFeedbackYorum] = useState("");
+  const [feedbackSending, setFeedbackSending] = useState(false);
   const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [loginHref, setLoginHref] = useState("/login");
   const [registerHref, setRegisterHref] = useState("/login?mode=register");
@@ -127,6 +134,25 @@ export default function TeklifV14Proforma({
   const { ust, ozet, meta } = model;
   const blocks = groupTeklifV14Satirlar(model.satirlar);
   const tarih = formatTarihTr(ust.tarih);
+
+  const pozSecenekleri = useMemo(
+    () =>
+      model.satirlar
+        .filter((s) => s.poz.trim())
+        .map((s) => ({
+          poz: s.poz,
+          label: `${s.poz} — ${s.tanim.slice(0, 72)}${s.tanim.length > 72 ? "…" : ""}`,
+        })),
+    [model.satirlar],
+  );
+
+  useEffect(() => {
+    if (!ust.sayi?.trim()) return;
+    void savePfosTeklifSnapshot(model).then((id) => {
+      if (id) setSnapshotId(id);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- teklif no başına bir snapshot
+  }, [ust.sayi]);
 
   function applySavedCustomerContact() {
     if (!deliveryOnly) return;
@@ -176,8 +202,21 @@ export default function TeklifV14Proforma({
     }
   }, [deliveryOnly, ust.sayi]);
 
-  function submitTeklifFeedback(vote: TeklifFeedback) {
-    if (teklifFeedback) return;
+  async function sendFeedbackToApi(
+    vote: TeklifFeedback,
+    opts?: { kalemDuzeltmeleri?: { poz: string; referansIsim?: string; yanlisSku?: string | null; yanlisAd?: string | null; sorunTipi?: string }[]; yorum?: string },
+  ) {
+    await logPfosTeklifFeedback({
+      vote,
+      model,
+      source: pfosSource,
+      snapshotId,
+      yorum: opts?.yorum ?? null,
+      kalemDuzeltmeleri: opts?.kalemDuzeltmeleri,
+    });
+  }
+
+  function markFeedbackLocal(vote: TeklifFeedback) {
     setTeklifFeedback(vote);
     try {
       localStorage.setItem(`pfos_teklif_fb_${ust.sayi}`, vote);
@@ -195,6 +234,56 @@ export default function TeklifV14Proforma({
     };
     w.equstoTrackEvent?.("pfos_teklif_feedback", payload);
     w.equstoTrackConversion?.("pfos_teklif_feedback", payload);
+  }
+
+  async function submitTeklifFeedback(vote: TeklifFeedback) {
+    if (teklifFeedback) return;
+    if (vote === "down") {
+      setSelectedPozs([]);
+      setFeedbackYorum("");
+      setDownModalOpen(true);
+      return;
+    }
+    markFeedbackLocal(vote);
+    void sendFeedbackToApi(vote);
+  }
+
+  async function confirmDownFeedback() {
+    if (teklifFeedback || feedbackSending) return;
+    setFeedbackSending(true);
+    try {
+      const kalemDuzeltmeleri = selectedPozs.map((poz) => {
+        const satir = model.satirlar.find((s) => s.poz === poz);
+        const pk = model.pfos?.kalemler?.find((k) => k.poz === poz);
+        return {
+          poz,
+          referansIsim: pk?.isim ?? satir?.tanim,
+          yanlisSku: pk?.sku ?? satir?.stokNo ?? null,
+          yanlisAd: pk?.ad ?? satir?.tanim ?? null,
+          sorunTipi: "genel",
+        };
+      });
+      markFeedbackLocal("down");
+      await sendFeedbackToApi("down", {
+        kalemDuzeltmeleri,
+        yorum: feedbackYorum,
+      });
+      setDownModalOpen(false);
+    } finally {
+      setFeedbackSending(false);
+    }
+  }
+
+  async function skipDownDetails() {
+    if (teklifFeedback || feedbackSending) return;
+    setFeedbackSending(true);
+    try {
+      markFeedbackLocal("down");
+      await sendFeedbackToApi("down");
+      setDownModalOpen(false);
+    } finally {
+      setFeedbackSending(false);
+    }
   }
 
   async function handleExport() {
@@ -727,6 +816,44 @@ export default function TeklifV14Proforma({
           },
         ]}
       />
+
+      <Modal
+        title="Hangi satırlar yanlış?"
+        open={downModalOpen}
+        onCancel={() => setDownModalOpen(false)}
+        footer={[
+          <Button key="skip" onClick={skipDownDetails} disabled={feedbackSending}>
+            Atla
+          </Button>,
+          <Button
+            key="ok"
+            type="primary"
+            loading={feedbackSending}
+            onClick={() => void confirmDownFeedback()}
+          >
+            Gönder
+          </Button>,
+        ]}
+        zIndex={14000}
+        getContainer={() => document.body}
+      >
+        <Typography.Paragraph type="secondary" style={{ marginBottom: 12 }}>
+          En fazla 3 poz seçebilirsiniz (isteğe bağlı).
+        </Typography.Paragraph>
+        <Checkbox.Group
+          style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}
+          value={selectedPozs}
+          onChange={(vals) => setSelectedPozs((vals as string[]).slice(0, 3))}
+          options={pozSecenekleri.map((o) => ({ label: o.label, value: o.poz }))}
+        />
+        <Input.TextArea
+          rows={3}
+          placeholder="Kısa not (isteğe bağlı)"
+          value={feedbackYorum}
+          onChange={(e) => setFeedbackYorum(e.target.value)}
+          maxLength={500}
+        />
+      </Modal>
 
       <Modal
         title={
