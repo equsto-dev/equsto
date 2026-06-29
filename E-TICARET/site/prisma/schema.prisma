@@ -216,13 +216,137 @@ model PfosUsageEvent {
 
 /// Teklif / proforma anındaki fiyat kilidi
 model PfosTeklifSnapshot {
-  id        String   @id @default(cuid())
-  projeRef  String?
-  kalemler  Json
-  createdAt DateTime @default(now())
+  id               String   @id @default(cuid())
+  projeRef         String?
+  kalemler         Json
+  konsept          String?
+  referansId       String?  @map("referans_id")
+  referansListeKey String?  @map("referans_liste_key")
+  m2               Int?
+  guvenSkoru       Float?   @map("guven_skoru")
+  requestJson      Json?    @map("request_json")
+  createdAt        DateTime @default(now())
+
+  feedbackEvents PfosFeedbackEvent[]
 
   @@index([projeRef])
   @@index([createdAt])
+}
+
+/// PFOS teklif geri bildirimi (👍/👎 + isteğe bağlı kalem düzeltmesi)
+model PfosFeedbackEvent {
+  id               String   @id @default(cuid())
+  /// up | down
+  vote             String
+  /// wizard | liste | admin
+  source           String   @default("wizard")
+  teklifSayi       String   @default("") @map("teklif_sayi")
+  snapshotId       String?  @map("snapshot_id")
+  snapshot         PfosTeklifSnapshot? @relation(fields: [snapshotId], references: [id], onDelete: SetNull)
+  konsept          String   @default("")
+  konseptLabel     String   @default("") @map("konsept_label")
+  referansId       String?  @map("referans_id")
+  referansListeKey String?  @map("referans_liste_key")
+  m2               Int?
+  guvenSkoru       Float?   @map("guven_skoru")
+  genelToplamEur   Decimal? @map("genel_toplam_eur") @db.Decimal(14, 4)
+  yorum            String?  @db.Text
+  kalemDuzeltmeleri Json?   @map("kalem_duzeltmeleri")
+  memberLoggedIn   Boolean  @default(false) @map("member_logged_in")
+  memberId         String?  @map("member_id")
+  /// pending_review | reviewed | dismissed
+  durum            String   @default("pending_review")
+  reviewedAt       DateTime? @map("reviewed_at")
+  reviewedBy       String?  @map("reviewed_by")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  oneriler PfosSkuLinkOneri[]
+
+  @@index([vote])
+  @@index([durum])
+  @@index([teklifSayi])
+  @@index([konsept])
+  @@index([createdAt])
+  @@map("pfos_feedback_event")
+}
+
+/// Geri bildirimden veya manuel girişten üretilen SKU link önerisi
+model PfosSkuLinkOneri {
+  id         String   @id @default(cuid())
+  feedbackId String?  @map("feedback_id")
+  feedback   PfosFeedbackEvent? @relation(fields: [feedbackId], references: [id], onDelete: SetNull)
+  /// pfos-referans-sku-links anahtarı: {listeKey}|{POZ}
+  linkKey    String   @map("link_key")
+  listeKey   String   @map("liste_key")
+  poz        String
+  eskiSku    String?  @map("eski_sku")
+  eskiAd     String?  @map("eski_ad") @db.Text
+  yeniSku    String   @default("") @map("yeni_sku")
+  yeniAd     String?  @map("yeni_ad") @db.Text
+  yeniMarka  String?  @map("yeni_marka")
+  /// marka_tercihi | yanlis_model | fiyat_kurali | genel …
+  sorunTipi  String   @default("genel") @map("sorun_tipi")
+  /// pending | approved | rejected
+  durum      String   @default("pending")
+  onaylayan  String?  @map("onaylayan")
+  onayNotu   String?  @map("onay_notu") @db.Text
+  createdAt  DateTime @default(now()) @map("created_at")
+  resolvedAt DateTime? @map("resolved_at")
+
+  @@index([durum])
+  @@index([linkKey])
+  @@index([listeKey, poz])
+  @@index([createdAt])
+  @@map("pfos_sku_link_oneri")
+}
+
+/// Doğrulanmış referans poz → SKU (DB; JSON'un üzerine yazar)
+model PfosReferansSkuLink {
+  id        String   @id @default(cuid())
+  linkKey   String   @unique @map("link_key")
+  listeKey  String   @map("liste_key")
+  poz       String
+  sku       String
+  name      String?  @db.Text
+  marka     String?
+  /// feedback | manual | import_json | script
+  kaynak    String   @default("feedback")
+  oneriId   String?  @map("oneri_id")
+  onaylayan String?  @map("onaylayan")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([listeKey])
+  @@map("pfos_referans_sku_link")
+}
+
+/// PFOS fiyat türetme kuralı (ürün doğru, fiyat formülü özel)
+model PfosFiyatKurali {
+  id            String   @id @default(cuid())
+  /// global | konsept | liste_key
+  kapsam        String   @default("global")
+  konseptSlug   String?  @map("konsept_slug")
+  listeKey      String?  @map("liste_key")
+  poz           String?
+  urunTipi      String?  @map("urun_tipi")
+  isimKalibi    String?  @map("isim_kalibi")
+  /// carp | sabit_sku | sabit_fiyat_eur
+  kuralTipi     String   @map("kural_tipi")
+  carpan        Float?
+  bazSku        String?  @map("baz_sku")
+  sabitFiyatEur Decimal? @map("sabit_fiyat_eur") @db.Decimal(14, 4)
+  aciklama      String?  @db.Text
+  kaynak        String   @default("feedback")
+  onaylayan     String?  @map("onaylayan")
+  aktif         Boolean  @default(true)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@index([kapsam, konseptSlug])
+  @@index([listeKey, poz])
+  @@index([urunTipi])
+  @@index([aktif])
+  @@map("pfos_fiyat_kurali")
 }
 
 /**

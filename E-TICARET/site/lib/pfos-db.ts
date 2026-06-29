@@ -177,12 +177,31 @@ export async function pfosGetFiyatMap(): Promise<Record<string, number>> {
  */
 export async function pfosCreateTeklifSnapshot(
   projeRef: string | null,
-  kalemler: any
-): Promise<any> {
+  kalemler: unknown,
+  meta?: {
+    konsept?: string | null;
+    referansId?: string | null;
+    referansListeKey?: string | null;
+    m2?: number | null;
+    guvenSkoru?: number | null;
+    requestJson?: unknown;
+  },
+) {
   return db.pfosTeklifSnapshot.create({
     data: {
       projeRef,
-      kalemler: kalemler as any
-    }
+      kalemler: kalemler as object,
+      konsept: meta?.konsept?.trim() || null,
+      referansId: meta?.referansId?.trim() || null,
+      referansListeKey: meta?.referansListeKey?.trim() || null,
+      m2:
+        meta?.m2 != null && Number.isFinite(meta.m2) ? Math.round(meta.m2) : null,
+      guvenSkoru:
+        meta?.guvenSkoru != null && Number.isFinite(meta.guvenSkoru)
+          ? meta.guvenSkoru
+          : null,
+      requestJson:
+        meta?.requestJson != null ? (meta.requestJson as object) : undefined,
+    },
   });
 }
