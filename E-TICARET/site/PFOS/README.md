@@ -29,6 +29,7 @@ Equsto **Proforma / PFOS** motoru, referans proformalar, sektör taksonomisi ve 
 | [05-KOD-VE-VERI-HARITASI.md](./05-KOD-VE-VERI-HARITASI.md) | Dosya yolları, script’ler |
 | [06-ACIK-KARARLAR.md](./06-ACIK-KARARLAR.md) | Bekleyen kararlar checklist |
 | [07-KOMUTLAR.md](./07-KOMUTLAR.md) | npm / python komutları |
+| [08-GERI-BILDIRIM-DONGUSU.md](./08-GERI-BILDIRIM-DONGUSU.md) | P0: geri bildirim → SKU link onay hattı |
 | [kaynaklar/DOSYA-YOLLARI.md](./kaynaklar/DOSYA-YOLLARI.md) | Masaüstü PDF, arşiv xlsx tam yollar |
 
 ---
@@ -58,7 +59,8 @@ Equsto **Proforma / PFOS** motoru, referans proformalar, sektör taksonomisi ve 
 
 ## Sonraki adımlar (öneri)
 
-1. `pfos-sektor-taksonomisi.json` + wizard iki adımlı seçim  
-2. `DetaySeviyesiStep` + `PFOSRequest.detaySeviyesi`  
-3. `/yonetim/pfos` referans seçici (THC vs S13 vs Espressolab)  
-4. Teşhir vitrinleri: segment bazlı zorunlu/tavsiye kararı  
+1. **Geri bildirim döngüsü P0** — [08-GERI-BILDIRIM-DONGUSU.md](./08-GERI-BILDIRIM-DONGUSU.md) Faz A ile başla  
+2. `pfos-sektor-taksonomisi.json` + wizard iki adımlı seçim  
+3. `DetaySeviyesiStep` + `PFOSRequest.detaySeviyesi`  
+4. `/yonetim/pfos` referans seçici (THC vs S13 vs Espressolab)  
+5. Teşhir vitrinleri: segment bazlı zorunlu/tavsiye kararı  
