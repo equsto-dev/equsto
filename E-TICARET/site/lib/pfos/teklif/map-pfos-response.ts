@@ -248,6 +248,23 @@ export function pfosResponseToTeklifV14(
       bolumM2: meta.bolumM2,
       teslimatAdresi: meta.teslimatAdresi,
     },
+    pfos: {
+      guvenSkoru: res.guvenSkoru,
+      referansListeKey:
+        kalemler.find((k) => k.referansListeKey)?.referansListeKey ?? null,
+      kalemler: kalemler.map((k) => ({
+        poz: k.poz,
+        referansPoz: k.referansPoz,
+        isim: formatPfosDisplayTanim(k.isim),
+        urunTipi: k.urunTipi,
+        referansListeKey: k.referansListeKey,
+        sku: k.urun?.sku ?? null,
+        ad: k.urun?.ad ?? null,
+        marka: k.urun?.marka ?? null,
+        eslesmeKatmani: k.eslesmeKatmani,
+        eslesmeLinkKey: k.eslesmeLinkKey,
+      })),
+    },
   };
 }
 

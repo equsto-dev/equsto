@@ -62,4 +62,24 @@ export type TeklifModelV14 = {
     bolumM2: Record<string, number>;
     teslimatAdresi: string;
   };
+  /** PFOS motor meta — snapshot / geri bildirim için */
+  pfos?: {
+    guvenSkoru?: number | null;
+    referansId?: string | null;
+    referansListeKey?: string | null;
+    kalemler: TeklifPfosSnapshotKalem[];
+  };
+};
+
+export type TeklifPfosSnapshotKalem = {
+  poz: string;
+  referansPoz?: string;
+  isim: string;
+  urunTipi?: string;
+  referansListeKey?: string;
+  sku?: string | null;
+  ad?: string | null;
+  marka?: string | null;
+  eslesmeKatmani?: string;
+  eslesmeLinkKey?: string;
 };
