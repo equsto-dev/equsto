@@ -645,11 +645,12 @@ Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda 
 - [x] `PfosReferansSkuLink` CRUD + `mergeDbAndJsonLinks()` + motor entegrasyonu
 - [x] `GET/POST /api/pfos/referans-sku-links`
 
-### Faz B — Motor + snapshot (1 PR)
+### Faz B — Motor + snapshot (1 PR) ✅
 
-- [ ] `eslesmeKatmani` / `eslesmeLinkKey` motor çıktısı
-- [ ] `teklif-snapshot` meta genişletmesi
-- [ ] `referans-eslestirme.ts` DB önceliği
+- [x] `eslesmeKatmani` / `eslesmeLinkKey` motor çıktısı (`matchReferansKalemWithMeta`)
+- [x] `teklif-snapshot` meta genişletmesi (API + `pfosCreateTeklifSnapshot`)
+- [x] `referans-eslestirme.ts` verified_db / verified_json ayrımı
+- [x] `PfosFiyatKurali` motor entegrasyonu + tava rafı seed + legacy fallback
 
 ### Faz C — İstemci (1 PR)
 

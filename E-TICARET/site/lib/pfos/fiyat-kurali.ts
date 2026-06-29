@@ -104,3 +104,51 @@ export function applyPfosFiyatKurallari(
   }
   return out;
 }
+
+let rulesCache: PfosFiyatKuraliRow[] | null = null;
+let rulesCacheAt = 0;
+const RULES_TTL_MS = 60_000;
+
+export async function loadCachedPfosFiyatKurallari(): Promise<PfosFiyatKuraliRow[]> {
+  const now = Date.now();
+  if (rulesCache && now - rulesCacheAt < RULES_TTL_MS) return rulesCache;
+  rulesCache = await loadActivePfosFiyatKurallari();
+  rulesCacheAt = now;
+  return rulesCache;
+}
+
+export function invalidatePfosFiyatKurallariCache(): void {
+  rulesCache = null;
+  rulesCacheAt = 0;
+}
+
+export async function applyPfosFiyatKurallariCached(
+  urun: EslesmisUrun,
+  ctx: PfosFiyatKuraliContext,
+): Promise<EslesmisUrun> {
+  const rules = await loadCachedPfosFiyatKurallari();
+  if (rules.length === 0) return urun;
+  return applyPfosFiyatKurallari(urun, ctx, rules);
+}
+
+/** DB kuralı yoksa tava rafı için legacy ×4 (iyileştirme.md G14). */
+export function applyLegacyTavaRafiCarpan(
+  urun: EslesmisUrun,
+  isim: string,
+  rules: PfosFiyatKuraliRow[],
+): EslesmisUrun {
+  const hasTavaRule = rules.some(
+    (r) =>
+      r.aktif &&
+      r.kuralTipi === "carp" &&
+      r.isimKalibi &&
+      normTr(isim).includes(normTr(r.isimKalibi)),
+  );
+  if (hasTavaRule) return urun;
+  if (!normTr(isim).includes("tava")) return urun;
+  return {
+    ...urun,
+    fiyat: urun.fiyat * 4,
+    fiyatEur: urun.fiyatEur != null ? urun.fiyatEur * 4 : urun.fiyatEur,
+  };
+}

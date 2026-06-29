@@ -9,7 +9,7 @@ import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loa
 import { referansKalemlerToTemplateItems } from "@/lib/pfos/referans/build-template-items";
 import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
-import { matchProductForReferansKalem } from "@/lib/pfos/referans/match-referans-kalem";
+import { matchProductForReferansKalemWithMeta, metaFromReferansMatch } from "@/lib/pfos/referans/match-referans-kalem";
 import { isBuroTipiDerinDondurucuReferans } from "@/lib/pfos/referans/buzdolabi-match";
 import { extractOlcuFromNotlar } from "@/lib/pfos/referans/yer-izgara-match";
 import { clearMatchProductCache } from "@/lib/pfos/core/match-product";
@@ -98,20 +98,22 @@ export async function calculateListeQuoteCatalog(
       continue;
     }
 
-    const urunMatched = await matchProductForReferansKalem({
+    const itemListeKey = item.referansListeKey ?? listeKey;
+    const referansMatch = await matchProductForReferansKalemWithMeta({
       urunTipi: item.urunTipi,
       fiyatStratejisi,
       isim: item.isim,
       notlar: item.notlar,
       referansPoz: item.referansPoz,
-      referansListeKey: item.referansListeKey ?? listeKey,
+      referansListeKey: itemListeKey,
       altKategori: item.altKategori,
       kategoriKodu: item.kategoriKodu,
     });
-    const urun = await enrichEslesmisUrunKw(urunMatched, {
+    const urun = await enrichEslesmisUrunKw(referansMatch.urun, {
       isim: item.isim,
       urunTipi: item.urunTipi,
     });
+    const matchMeta = metaFromReferansMatch(referansMatch, itemListeKey);
 
     const mevcutNot = /müşteride mevcut/i.test(item.notlar ?? "");
 
@@ -122,6 +124,7 @@ export async function calculateListeQuoteCatalog(
       altKategori: item.altKategori,
       referansBolumSira: item.referansBolumSira,
       referansBolumKey: item.referansBolumKey,
+      referansListeKey: itemListeKey,
       urunTipi: item.urunTipi,
       isim: formatPfosDisplayTanim(item.isim),
       tip: item.tip,
@@ -133,6 +136,8 @@ export async function calculateListeQuoteCatalog(
       urun,
       kaynak: "template",
       sablonSira: item.sablonSira ?? i,
+      eslesmeKatmani: matchMeta.eslesmeKatmani,
+      eslesmeLinkKey: matchMeta.eslesmeLinkKey,
     });
   }
 
