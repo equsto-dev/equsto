@@ -13,6 +13,8 @@ import {
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import { readFetchJsonOrError } from "@/lib/pfos/fetch-json.client";
 import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
+import { trackPfosListeUpload } from "@/lib/pfos/track-pfos-analytics.client";
+import { countFiyatsizSatirlar } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
 
 export function fileKind(file: File): "excel" | "pdf" | null {
   if (/\.xlsx?$/i.test(file.name)) return "excel";
@@ -98,6 +100,15 @@ export function usePfosListeUpload() {
         });
         setTeklifV14(v14);
         logPfosQuoteGenerated(v14, "liste");
+        const fiyatsiz = countFiyatsizSatirlar(v14.satirlar);
+        const fiyatlandi = v14.satirlar.length - fiyatsiz;
+        trackPfosListeUpload({
+          kind,
+          kalemSayisi: v14.satirlar.length,
+          fiyatlandi,
+          fiyatsiz,
+          dosyaAdi: f.name,
+        });
       } catch (e) {
         setError(e instanceof Error ? e.message : t("Beklenmeyen hata"));
       } finally {

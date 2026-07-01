@@ -20,6 +20,7 @@ import PfosTeklifKararBlock, {
   type TeklifKarar,
 } from "@/components/pfos/PfosTeklifKararBlock";
 import { buildListeKalemWhatsAppUrl } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
+import { trackPfosListeWhatsApp } from "@/lib/pfos/track-pfos-analytics.client";
 import { logPfosTeklifFeedback } from "@/lib/pfos/log-pfos-feedback.client";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import { savePfosTeklifSnapshot } from "@/lib/pfos/log-pfos-snapshot.client";
@@ -656,6 +657,13 @@ export default function TeklifV14Proforma({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={listeWaCtaLink}
+                                onClick={() =>
+                                  trackPfosListeWhatsApp({
+                                    scope: "satir",
+                                    poz: row.poz,
+                                    teklifSayi: ust.sayi,
+                                  })
+                                }
                               >
                                 {t("Bu kalem için WhatsApp ile yazın")}
                               </a>

@@ -3,6 +3,7 @@
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
 import type { PfosUsageLogInput, PfosUsageSource } from "@/lib/pfos/usage-log";
+import { trackPfosQuoteGenerated } from "@/lib/pfos/track-pfos-analytics.client";
 
 const loggedSayilar = new Set<string>();
 
@@ -45,5 +46,13 @@ export function logPfosQuoteGenerated(
     toplamEur: genelEur > 0 ? genelEur : null,
     sehir: model.meta.sehir,
     memberLoggedIn: memberLoggedInNow(),
+  });
+
+  trackPfosQuoteGenerated({
+    source,
+    teklifSayi,
+    kalemSayisi: model.satirlar.length,
+    toplamTry,
+    konsept: model.meta.konsept,
   });
 }

@@ -47,6 +47,7 @@ import {
   type PfosUrunTipiEslesmeRow,
 } from "@/lib/pro-admin-client";
 import { pfosDisplayText, pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
+import { pfosFeedbackPriorityScore } from "@/lib/pfos/feedback-priority";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 function voteTag(vote: string) {
@@ -116,6 +117,17 @@ function FeedbackTab({
   };
 
   const columns: ProColumns<PfosFeedbackAdminRow>[] = [
+    {
+      title: "Öncelik",
+      width: 72,
+      render: (_, r) => {
+        const s = pfosFeedbackPriorityScore(r);
+        if (s >= 140) return <Tag color="red">Yüksek</Tag>;
+        if (s >= 90) return <Tag color="orange">Orta</Tag>;
+        if (s > 0) return <Tag>Düşük</Tag>;
+        return <Tag color="default">—</Tag>;
+      },
+    },
     {
       title: "Tarih",
       dataIndex: "created_at",
