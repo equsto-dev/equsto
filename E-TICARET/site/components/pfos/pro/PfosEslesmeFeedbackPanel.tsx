@@ -46,6 +46,7 @@ import {
   type PfosSkuLinkOneriRow,
   type PfosUrunTipiEslesmeRow,
 } from "@/lib/pro-admin-client";
+import { pfosDisplayText, pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 function voteTag(vote: string) {
@@ -130,7 +131,7 @@ function FeedbackTab({
       title: "Konsept",
       dataIndex: "konsept_label",
       ellipsis: true,
-      render: (v, r) => String(v || r.konsept || "—"),
+      render: (_, r) => pfosDisplayText(r.konsept_label ?? r.konsept),
     },
     {
       title: "m²",
@@ -142,8 +143,7 @@ function FeedbackTab({
       title: "Güven",
       dataIndex: "guven_skoru",
       width: 72,
-      render: (v) =>
-        v != null ? `${Math.round(Number(v) * 100)}%` : "—",
+      render: (v) => pfosGuvenYuzdeMetin(v != null ? Number(v) : null),
     },
     {
       title: "Oy",
@@ -246,7 +246,9 @@ function FeedbackTab({
           <>
             <Descriptions size="small" column={2} bordered style={{ marginBottom: 16 }}>
               <Descriptions.Item label="Konsept">
-                {detail.feedback.konsept_label || detail.feedback.konsept}
+                {pfosDisplayText(
+                  detail.feedback.konsept_label ?? detail.feedback.konsept,
+                )}
               </Descriptions.Item>
               <Descriptions.Item label="Oy">
                 {voteTag(detail.feedback.vote)}
@@ -255,9 +257,7 @@ function FeedbackTab({
                 {detail.feedback.m2 ?? "—"}
               </Descriptions.Item>
               <Descriptions.Item label="Güven">
-                {detail.feedback.guven_skoru != null
-                  ? `${Math.round(detail.feedback.guven_skoru * 100)}%`
-                  : "—"}
+                {pfosGuvenYuzdeMetin(detail.feedback.guven_skoru)}
               </Descriptions.Item>
               <Descriptions.Item label="Liste key" span={2}>
                 {detail.feedback.referans_liste_key || "—"}

@@ -12,6 +12,7 @@ import type {
 } from "@/lib/pfos/projects/types";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 
 export default function PfosProjeList() {
   const [bundle, setBundle] = useState<PfosProjelerResponse | null>(null);
@@ -83,6 +84,7 @@ export default function PfosProjeList() {
         dataIndex: "konsept",
         width: 110,
         ellipsis: true,
+        render: (_, r) => pfosDisplayText(r.konsept),
         valueType: "select",
         valueEnum: Object.fromEntries(
           (bundle?.stats.konseptler ?? []).map((k) => [k, { text: k }]),
@@ -319,7 +321,8 @@ function ProjeExpandDetail({
       </Typography.Paragraph>
       {profil ? (
         <Typography.Paragraph>
-          <strong>Referans profil:</strong> {profil.konsept} · {profil.dukkan}
+          <strong>Referans profil:</strong> {pfosDisplayText(profil.konsept)} ·{" "}
+          {pfosDisplayText(profil.dukkan)}
           <br />
           <strong>PFOS zones:</strong>{" "}
           {profil.pfosZones.map((z) => zoneLabel(z)).join(", ")}

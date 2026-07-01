@@ -5,6 +5,7 @@ import type { PFOSResponse, PFOSKalemi } from "@/lib/pfos/schemas/pfos.schema";
 import { KATEGORI_LABELS } from "@/lib/pfos/schemas/pfos.schema";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
 import { formatKwHucre } from "@/lib/pfos/teklif/format-v14";
+import { pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
 
 type Props = { sonuc: PFOSResponse };
 
@@ -22,7 +23,11 @@ export default function TeklifSonucu({ sonuc }: Props) {
   }, {});
 
   const skorRenk =
-    guvenSkoru >= 0.75 ? "#2d7a2d" : guvenSkoru >= 0.5 ? "#b36b00" : "#c00";
+    guvenSkoru != null && guvenSkoru >= 0.75
+      ? "#2d7a2d"
+      : guvenSkoru != null && guvenSkoru >= 0.5
+        ? "#b36b00"
+        : "#c00";
 
   return (
     <div style={s.wrap}>
@@ -35,7 +40,7 @@ export default function TeklifSonucu({ sonuc }: Props) {
         </div>
         <div style={{ textAlign: "right" }}>
           <div style={{ ...s.skor, color: skorRenk }}>
-            %{Math.round(guvenSkoru * 100)} Güven
+            {pfosGuvenYuzdeMetin(guvenSkoru)} Güven
           </div>
           <div style={s.skorAlt}>
             {ozet.eslesmisZorunluSayisi}/{ozet.zorunluKalemSayisi} zorunlu

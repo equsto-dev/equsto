@@ -55,7 +55,7 @@ export type SearchCheckResponse = {
   error?: string;
 };
 
-/** .env / Vercel satırından kopyalanan tırnakları kaldırır */
+/** .env satırından kopyalanan tırnakları kaldırır */
 export function normalizeProToken(raw: string): string {
   let s = String(raw ?? "").trim();
   if (
@@ -131,7 +131,7 @@ export async function fetchUrunler(
     return {
       rows: [],
       source: "",
-      error: res.status === 401 ? "Yetkisiz — token Vercel EQUSTO_ADMIN_BEARER ile aynı olmalı" : err,
+      error: res.status === 401 ? "Yetkisiz — token EQUSTO_ADMIN_BEARER ile aynı olmalı" : err,
       status: res.status,
     };
   }
@@ -213,7 +213,7 @@ export async function fetchBearerHint(): Promise<BearerHint> {
   return body;
 }
 
-/** Giriş öncesi — token Vercel env ile eşleşiyor mu? */
+/** Giriş öncesi — token sunucu env ile eşleşiyor mu? */
 export async function probeAdminToken(token: string): Promise<BearerCheckResult> {
   const t = normalizeProToken(token);
   if (!t) return { ok: false, error: "Token boş" };
@@ -243,8 +243,8 @@ export async function probeAdminToken(token: string): Promise<BearerCheckResult>
   const msg =
     body.hint ||
     (body.expectedLen != null && body.gotLen != null
-      ? `Token eşleşmedi (${body.gotLen} karakter, sunucu ${body.expectedLen}${body.expectedPrefix ? `, ön ek ${body.expectedPrefix}` : ""}). Vercel göz ikonundan kopyalayın — sohbetteki örnek key farklı olabilir.`
-      : "Token Vercel EQUSTO_ADMIN_BEARER ile aynı değil.");
+      ? `Token eşleşmedi (${body.gotLen} karakter, sunucu ${body.expectedLen}${body.expectedPrefix ? `, ön ek ${body.expectedPrefix}` : ""}). .env.production içindeki EQUSTO_ADMIN_BEARER değerini kopyalayın.`
+      : "Token EQUSTO_ADMIN_BEARER ile aynı değil.");
 
   return {
     ok: false,
@@ -959,7 +959,7 @@ async function fetchProjeAkisStatic(): Promise<{
   }
 }
 
-/** API (Vercel’de yavaş/boş olabilir) → CDN /data/proje-akis.json yedek */
+/** API yanıtı boşsa → CDN /data/proje-akis.json yedek */
 export async function fetchProjeAkis(): Promise<{
   data: ProjeAkisData | null;
   error?: string;
