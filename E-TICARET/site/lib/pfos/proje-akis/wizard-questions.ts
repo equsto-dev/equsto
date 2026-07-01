@@ -129,6 +129,12 @@ export const PFOS_Q_KARAR = [
   "Projeyi detaylandır (altyapı ve yardımcı ekipman)",
 ] as const;
 
+export const PFOS_Q_DETAY_SEVIYESI = [
+  "Hızlı teklif",
+  "Standart teklif",
+  "Detaylı proje",
+] as const;
+
 export const PFOS_Q_SERVIS = [
   "Masa servisi (full service)",
   "Self servis / kiosk",
@@ -286,9 +292,22 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     note: "Menü hattı — pişirme ve hazırlık ekipmanı önerisi.",
   },
   {
-    id: "q_karar",
+    id: "q_detay_seviyesi",
     step: "06",
     panel: "F",
+    text: "Bu bilgiler yeterli mi, yoksa projeyi senin için detaylandırayım mı?",
+    type: "select",
+    required: "true",
+    options: [...PFOS_Q_DETAY_SEVIYESI],
+    gosterIf: "q_dukkan_turu",
+    mapsTo: "cikti.detaySeviyesi",
+    motorEtkisi: "hizli | standart | detayli → zone m² ve referans seçimi",
+    note: "Hızlı: segment + m² ile otomatik referans. Detaylı: bölüm m² ve referans seçimi.",
+  },
+  {
+    id: "q_karar",
+    step: "07",
+    panel: "G",
     text: "Sonraki adım — tercihiniz?",
     type: "select",
     required: "true",
@@ -296,6 +315,6 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     gosterIf: "q_m2",
     mapsTo: "cikti.mod",
     motorEtkisi: "PDF teklif | detaylandır dalı",
-    note: "PFOS teklif özeti karar düğmeleri.",
+    note: "PFOS teklif özeti karar düğmeleri (proforma sonrası).",
   },
 ];

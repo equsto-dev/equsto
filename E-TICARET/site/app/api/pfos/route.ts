@@ -22,6 +22,8 @@ export async function GET(req: NextRequest) {
       concepts: "GET /api/pfos?action=concepts",
       konseptler: "GET /api/pfos?action=konseptler",
       quote: "POST /api/pfos?action=quote",
+      quotePreview: "POST /api/pfos/quote/preview",
+      referanslar: "GET /api/pfos/referanslar?konsept=&segment=",
       calculate: "POST /api/pfos?action=calculate",
       projects: "GET /api/pfos/projects",
     },
