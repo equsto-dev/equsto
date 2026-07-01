@@ -37,6 +37,10 @@ export type PfosUsageAdminRow = {
   member_logged_in: boolean;
   gonderim_kanal: string | null;
   created_at: string;
+  /** teklif_sayi ile PfosFeedbackEvent join (Faz F) */
+  feedback_vote?: string | null;
+  feedback_guven?: number | null;
+  feedback_durum?: string | null;
 };
 
 function dec(v: { toString(): string } | null | undefined): number | null {
@@ -125,6 +129,28 @@ export async function pfosUsageOzet(days = 30) {
   const donusum =
     uretildi > 0 ? Math.round((gonderildi / uretildi) * 1000) / 10 : 0;
 
+  const [feedbackToplam, feedbackUp, feedbackDown, dusukGuvenDown] =
+    await Promise.all([
+      db.pfosFeedbackEvent.count({ where: { createdAt: { gte: since } } }),
+      db.pfosFeedbackEvent.count({
+        where: { vote: "up", createdAt: { gte: since } },
+      }),
+      db.pfosFeedbackEvent.count({
+        where: { vote: "down", createdAt: { gte: since } },
+      }),
+      db.pfosFeedbackEvent.count({
+        where: {
+          vote: "down",
+          guvenSkoru: { lt: 0.55 },
+          createdAt: { gte: since },
+        },
+      }),
+    ]);
+
+  const oyToplam = feedbackUp + feedbackDown;
+  const memnuniyet_yuzde =
+    oyToplam > 0 ? Math.round((feedbackUp / oyToplam) * 1000) / 10 : null;
+
   return {
     days,
     uretildi,
@@ -134,6 +160,11 @@ export async function pfosUsageOzet(days = 30) {
     uye_ile: uyeIle,
     anonim: Math.max(0, uretildi - uyeIle),
     donusum_yuzde: donusum,
+    feedback_toplam: feedbackToplam,
+    feedback_up: feedbackUp,
+    feedback_down: feedbackDown,
+    dusuk_guven_down: dusukGuvenDown,
+    memnuniyet_yuzde,
   };
 }
 
@@ -145,4 +176,45 @@ export async function listPfosUsageEvents(limit = 200, days = 30) {
     take: Math.min(Math.max(limit, 1), 2000),
   });
   return rows.map(pfosUsageToAdmin);
+}
+
+/** Kullanım satırları + teklif_sayi ile geri bildirim join */
+export async function listPfosUsageEventsWithFeedback(
+  limit = 200,
+  days = 30,
+): Promise<PfosUsageAdminRow[]> {
+  const rows = await listPfosUsageEvents(limit, days);
+  const sayilar = [
+    ...new Set(rows.map((r) => r.teklif_sayi.trim()).filter(Boolean)),
+  ];
+  if (sayilar.length === 0) return rows;
+
+  const feedbacks = await db.pfosFeedbackEvent.findMany({
+    where: { teklifSayi: { in: sayilar } },
+    orderBy: { createdAt: "desc" },
+  });
+
+  const fbByTeklif = new Map<
+    string,
+    { vote: string; guven: number | null; durum: string }
+  >();
+  for (const f of feedbacks) {
+    const key = f.teklifSayi.trim();
+    if (!key || fbByTeklif.has(key)) continue;
+    fbByTeklif.set(key, {
+      vote: f.vote,
+      guven: f.guvenSkoru,
+      durum: f.durum,
+    });
+  }
+
+  return rows.map((r) => {
+    const fb = r.teklif_sayi.trim() ? fbByTeklif.get(r.teklif_sayi.trim()) : null;
+    return {
+      ...r,
+      feedback_vote: fb?.vote ?? null,
+      feedback_guven: fb?.guven ?? null,
+      feedback_durum: fb?.durum ?? null,
+    };
+  });
 }

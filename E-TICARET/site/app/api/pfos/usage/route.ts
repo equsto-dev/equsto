@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import {
-  listPfosUsageEvents,
+  listPfosUsageEventsWithFeedback,
   pfosUsageOzet,
   recordPfosUsageEvent,
   type PfosUsageEventKind,
@@ -75,7 +75,7 @@ export async function GET(req: NextRequest) {
   try {
     const [ozet, rows] = await Promise.all([
       pfosUsageOzet(days),
-      listPfosUsageEvents(limit, days),
+      listPfosUsageEventsWithFeedback(limit, days),
     ]);
     return adminOk({ data: { ozet, rows, count: rows.length } });
   } catch (e) {
