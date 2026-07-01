@@ -593,14 +593,16 @@ export default function TeklifV14Proforma({
                 {block.satirlar.map((row, i) => {
                   const hasKnownProduct =
                     Boolean(row.stokNo?.trim()) && row.birimSatis != null;
+                  const fiyatsizSatir = row.birimSatis == null;
                   const aciklamaMetni = normalizeTeklifAciklamaText(row.aciklama);
                   const showSpecRow =
                     Boolean(aciklamaMetni) ||
                     Boolean(row.fotoUrl) ||
-                    hasKnownProduct;
+                    hasKnownProduct ||
+                    fiyatsizSatir;
                   return (
                   <Fragment key={`${row.poz}-${i}`}>
-                    <tr>
+                    <tr style={fiyatsizSatir ? { backgroundColor: "#fffbeb" } : undefined}>
                       <td style={tdBolPoz}>{row.bolumNo}</td>
                       <td style={tdBolPoz}>{row.poz}</td>
                       <td style={tdStok}>{row.stokNo}</td>

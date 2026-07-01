@@ -9,7 +9,11 @@ import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loa
 import { referansKalemlerToTemplateItems } from "@/lib/pfos/referans/build-template-items";
 import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
-import { matchProductForReferansKalemWithMeta, metaFromReferansMatch } from "@/lib/pfos/referans/match-referans-kalem";
+import {
+  matchProductForReferansKalemWithMeta,
+  metaFromReferansMatch,
+  type ReferansKalemMatchMeta,
+} from "@/lib/pfos/referans/match-referans-kalem";
 import { isBuroTipiDerinDondurucuReferans } from "@/lib/pfos/referans/buzdolabi-match";
 import { extractOlcuFromNotlar } from "@/lib/pfos/referans/yer-izgara-match";
 import { clearMatchProductCache } from "@/lib/pfos/core/match-product";
@@ -25,6 +29,7 @@ import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import { resetTeshirReyonSeriesPin } from "@/lib/pfos/referans/teshir-reyon-match";
+import { kategoriFromBolumAd } from "@/lib/pfos/referans/kategori-from-bolum";
 import type { ListeFiyatInput } from "./liste-fiyat.types";
 import {
   LISTE_KONSEPT,
@@ -65,6 +70,55 @@ function importKalemlerToReferansKalemler(
   return ekipmanToReferansKalemler(satirlar, listeKey);
 }
 
+/** PDF/Excel'den çıkan her satır teklifte görünsün — eşleşme atlansa bile */
+function appendMissingImportKalemler(
+  kalemler: PFOSKalemi[],
+  input: ListeFiyatInput,
+  listeKey: string,
+): PFOSKalemi[] {
+  if (!input.importKalemler?.length) return kalemler;
+
+  const seen = new Set(
+    kalemler.map((k) => String(k.referansPoz ?? k.poz).trim()).filter(Boolean),
+  );
+  const extra: PFOSKalemi[] = [];
+
+  for (let i = 0; i < input.importKalemler.length; i++) {
+    const item = input.importKalemler[i];
+    const poz = item.poz?.trim() || String(i + 1);
+    if (seen.has(poz)) continue;
+    seen.add(poz);
+
+    const olcu = item.olcu?.trim();
+    const notParcalari: string[] = [];
+    if (item.marka?.trim()) notParcalari.push(`Marka: ${item.marka.trim()}`);
+    if (olcu) notParcalari.push(`Ölçü: ${olcu}`);
+    notParcalari.push("Liste satırı — katalog eşlemesi yapılamadı");
+
+    extra.push({
+      poz,
+      referansPoz: poz,
+      kategoriKodu: kategoriFromBolumAd(item.kategori?.trim() ?? "") ?? "C",
+      altKategori: item.kategori?.trim() || "Liste",
+      referansListeKey: listeKey,
+      urunTipi: "liste-import",
+      isim: formatPfosDisplayTanim(repairPfosDisplayText(item.ham_isim)),
+      tip: "zorunlu",
+      adet:
+        typeof item.adet === "number" && item.adet > 0
+          ? Math.round(item.adet)
+          : 1,
+      notlar: repairPfosDisplayText(notParcalari.join(" · ")),
+      urun: null,
+      kaynak: "template",
+      sablonSira: kalemler.length + extra.length,
+      eslesmeKatmani: "eslesmedi",
+    });
+  }
+
+  return extra.length ? [...kalemler, ...extra] : kalemler;
+}
+
 export async function calculateListeQuoteCatalog(
   input: ListeFiyatInput,
 ): Promise<PFOSResponse> {
@@ -94,28 +148,45 @@ export async function calculateListeQuoteCatalog(
   for (let i = 0; i < templateItems.length; i++) {
     const item = templateItems[i];
     const olcuHint = extractOlcuFromNotlar(item.notlar) || "";
-    if (isBuroTipiDerinDondurucuReferans(item.isim, olcuHint, item.notlar)) {
-      continue;
-    }
+    const skipCatalogMatch = isBuroTipiDerinDondurucuReferans(
+      item.isim,
+      olcuHint,
+      item.notlar,
+    );
 
     const itemListeKey = item.referansListeKey ?? listeKey;
-    const referansMatch = await matchProductForReferansKalemWithMeta({
-      urunTipi: item.urunTipi,
-      fiyatStratejisi,
-      isim: item.isim,
-      notlar: item.notlar,
-      referansPoz: item.referansPoz,
+    let urun = null;
+    let matchMeta: ReferansKalemMatchMeta = {
+      eslesmeKatmani: "eslesmedi",
+      eslesmeLinkKey: undefined,
       referansListeKey: itemListeKey,
-      altKategori: item.altKategori,
-      kategoriKodu: item.kategoriKodu,
-    });
-    const urun = await enrichEslesmisUrunKw(referansMatch.urun, {
-      isim: item.isim,
-      urunTipi: item.urunTipi,
-    });
-    const matchMeta = metaFromReferansMatch(referansMatch, itemListeKey);
+    };
+
+    if (!skipCatalogMatch) {
+      const referansMatch = await matchProductForReferansKalemWithMeta({
+        urunTipi: item.urunTipi,
+        fiyatStratejisi,
+        isim: item.isim,
+        notlar: item.notlar,
+        referansPoz: item.referansPoz,
+        referansListeKey: itemListeKey,
+        altKategori: item.altKategori,
+        kategoriKodu: item.kategoriKodu,
+      });
+      urun = await enrichEslesmisUrunKw(referansMatch.urun, {
+        isim: item.isim,
+        urunTipi: item.urunTipi,
+      });
+      matchMeta = metaFromReferansMatch(referansMatch, itemListeKey);
+    }
 
     const mevcutNot = /müşteride mevcut/i.test(item.notlar ?? "");
+    const notlar = [
+      item.notlar,
+      skipCatalogMatch ? "Otomatik katalog eşlemesi atlandı" : "",
+    ]
+      .filter(Boolean)
+      .join(" · ");
 
     kalemlerRaw.push({
       poz: item.referansPoz ?? "",
@@ -132,7 +203,7 @@ export async function calculateListeQuoteCatalog(
       adet: item.scale.type === "fixed" ? item.scale.adet : 1,
       elektrikGucuKwHint: item.elektrikGucuKwHint,
       gazGucuKwHint: item.gazGucuKwHint,
-      notlar: item.notlar,
+      notlar,
       urun,
       kaynak: "template",
       sablonSira: item.sablonSira ?? i,
@@ -141,13 +212,19 @@ export async function calculateListeQuoteCatalog(
     });
   }
 
+  const kalemlerWithImport = appendMissingImportKalemler(
+    kalemlerRaw,
+    input,
+    listeKey,
+  );
+
   const m2 = input.satirlar?.length
     ? tahminiM2(input.satirlar)
     : tahminiM2FromAdet(
         referansKalemler.reduce((t, k) => t + k.adet, 0),
       );
 
-  const kalemlerFinalized = finalizeKalemlerForTeklif(kalemlerRaw, {
+  const kalemlerFinalized = finalizeKalemlerForTeklif(kalemlerWithImport, {
     pozModu: "referans",
   });
 
@@ -159,8 +236,12 @@ export async function calculateListeQuoteCatalog(
   const kalemler = await enrichPfosKalemlerGorsel(kalemlerNakliye);
 
   const zorunluKalemler = kalemler.filter((k) => k.tip === "zorunlu");
-  const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);
-  const eslesmeToplam = kalemler.filter((k) => k.urun !== null).length;
+  const eslesmisZorunlu = zorunluKalemler.filter(
+    (k) => k.urun !== null && (k.urun.fiyat ?? 0) > 0,
+  );
+  const eslesmeToplam = kalemler.filter(
+    (k) => k.urun !== null && (k.urun.fiyat ?? 0) > 0,
+  ).length;
   const eksikZorunlu = zorunluKalemler.filter((k) => k.urun === null);
 
   const toplamElektrikKw = kalemler.reduce((sum, k) => {
