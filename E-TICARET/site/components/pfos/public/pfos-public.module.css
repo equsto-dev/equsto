@@ -1507,7 +1507,22 @@
 
 .alanUnit {
   font-size: 1.1rem;
-  color: #6b7280;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.alanEstimateBadge {
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  align-self: center;
 }
 
 .alanPresets {

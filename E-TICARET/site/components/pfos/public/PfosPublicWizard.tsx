@@ -63,6 +63,7 @@ import {
 } from "@/lib/pfos/wizard/bulut-mutfak-kompakt";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
+import { readFetchJson } from "@/lib/pfos/fetch-json.client";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -95,22 +96,6 @@ function formatTry(n: number) {
     currency: "TRY",
     maximumFractionDigits: 0,
   }).format(n);
-}
-
-async function readFetchJson<T>(
-  res: Response,
-  emptyMessage: string,
-  invalidMessage: string,
-): Promise<T> {
-  const text = await res.text();
-  if (!text.trim()) {
-    throw new Error(emptyMessage);
-  }
-  try {
-    return JSON.parse(text) as T;
-  } catch {
-    throw new Error(invalidMessage);
-  }
 }
 
 function parseKonsept(slug: string | null): string | null {
@@ -248,10 +233,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   useEffect(() => {
     if (openPanelId === "s5" && prevOpenPanelIdRef.current !== "s5") {
       setM2Touched(false);
-      setAnswers((prev) => {
-        if (prev.q_m2 != null && String(prev.q_m2).trim() !== "") return prev;
-        return { ...prev, q_m2: "80" };
-      });
     }
     prevOpenPanelIdRef.current = openPanelId;
   }, [openPanelId]);
@@ -624,13 +605,25 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }
 
   function renderM2Field(panel: LegacyPanelDef) {
-    const raw = answers.q_m2 != null ? Number(answers.q_m2) : 80;
-    const val = Number.isFinite(raw) ? raw : 80;
+    const hasM2 = isM2AnswerValid(answers);
+    const raw = hasM2 ? Number(answers.q_m2) : NaN;
+    const val = Number.isFinite(raw) ? raw : null;
     const bulutSeg =
       String(answers.q_ust_segment ?? "").trim() === "Bulut Mutfak";
     const minM2 = bulutSeg ? 8 : 20;
+    const inputDisplay =
+      m2Touched && answers.q_m2 != null && String(answers.q_m2).trim() !== ""
+        ? String(answers.q_m2)
+        : "";
     return (
       <div className={styles.alanField}>
+        {!m2Touched ? (
+          <p className={styles.alanHint} style={{ marginBottom: 10 }}>
+            {t(
+              "Dükkan veya mutfağın toplam metrekare tahmini. Emin değilseniz kabaca yazın; sonra düzeltebilirsiniz.",
+            )}
+          </p>
+        ) : null}
         {bulutSeg ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
@@ -638,14 +631,14 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             )}
           </p>
         ) : null}
-        {kucukAlanSegmentM2Aktif(val) ? (
+        {val != null && kucukAlanSegmentM2Aktif(val) ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
               "40 / 80 m²: Kafe, Fast Food, Bar ve Bulut Mutfak segmentleri listelenir.",
             )}
           </p>
         ) : null}
-        {otelSegmentM2Aktif(val) ? (
+        {val != null && otelSegmentM2Aktif(val) ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
               "750 / 1000 m²: Otel F&B segmenti ve tüm otel referans listeleri kullanılabilir.",
@@ -658,13 +651,17 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             className={styles.alanInput}
             min={minM2}
             max={10000}
-            value={val}
+            value={inputDisplay}
+            placeholder={t("ör. 80")}
             onChange={(e) => setM2Value(e.target.value)}
           />
           <span className={styles.alanUnit}>m²</span>
+          {m2Touched && hasM2 ? (
+            <span className={styles.alanEstimateBadge}>{t("Tahmini")}</span>
+          ) : null}
         </div>
         <div className={styles.alanPresets} role="group">
-          {M2_PRESETS.map((n, i) => (
+          {M2_PRESETS.map((n) => (
             <button
               key={n}
               type="button"

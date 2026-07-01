@@ -11,6 +11,7 @@ import {
   pfosRegisterHref,
 } from "@/lib/pfos/member-session.client";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
+import { readFetchJsonOrError } from "@/lib/pfos/fetch-json.client";
 import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 
 export function fileKind(file: File): "excel" | "pdf" | null {
@@ -80,14 +81,12 @@ export function usePfosListeUpload() {
           method: "POST",
           body: form,
         });
-        const data = await res.json();
-        if (!res.ok) {
-          throw new Error(
-            (data as { error?: string }).error ?? t("Liste fiyatlandırılamadı"),
-          );
-        }
-
-        const pfos = data as PFOSResponse;
+        const pfos = await readFetchJsonOrError<PFOSResponse>(
+          res,
+          t("Sunucu boş yanıt döndü. Lütfen tekrar deneyin."),
+          t("Sunucu yanıtı okunamadı. Bağlantınızı kontrol edin."),
+          t("Liste fiyatlandırılamadı"),
+        );
         setSonuc(pfos);
         const snap = await fetchTcmbKurForTeklif();
         const v14 = pfosResponseToTeklifV14(pfos, {

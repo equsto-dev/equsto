@@ -111,7 +111,7 @@ export default function PfosEqustoChrome() {
               </span>
             </div>
           </div>
-          <a href="/login.html" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
+          <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
             <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.my_account">
               {h.my_account}
             </span>
@@ -173,7 +173,7 @@ export default function PfosEqustoChrome() {
             onClick={() => goEqDept("pfos")}
             aria-current="page"
           >
-            <span data-i18n="nav.pfos">Proje Fabrikası</span>
+            <span data-i18n="nav.pfos">{h.nav_pfos}</span>
             <span className="topnav-pfos-beta" aria-label="Beta">
               BETA
             </span>
@@ -181,38 +181,38 @@ export default function PfosEqustoChrome() {
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")}>
-            Pişirme Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")} data-i18n="nav.pisirme">
+            {h.nav_pisirme}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("sogutma")}>
-            Soğutma Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("sogutma")} data-i18n="nav.sogutma">
+            {h.nav_sogutma}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("kahve")}>
-            Kahve Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("kahve")} data-i18n="nav.kahve">
+            {h.nav_kahve}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("yikama")}>
-            Yıkama Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("yikama")} data-i18n="nav.yikama">
+            {h.nav_yikama}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("hazirlik")}>
-            Hazırlık Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("hazirlik")} data-i18n="nav.hazirlik">
+            {h.nav_hazirlik}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")}>
-            İçecek Ekipmanları
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")} data-i18n="nav.icecek">
+            {h.nav_icecek}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
@@ -224,7 +224,7 @@ export default function PfosEqustoChrome() {
             onClick={() => goEqDept("besos")}
             data-i18n="nav.bar_design"
           >
-            Bar Design
+            {h.nav_bar_design}
           </div>
         </div>
       </nav>

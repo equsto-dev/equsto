@@ -289,6 +289,13 @@
     "Bulut mutfak: 15 m² ve altında yalnızca Grab&Go ve Coffee Counter konseptleri açılır.": "Cloud kitchen: at 15 m² and below, only Grab & Go and Coffee Counter concepts are available.",
     "Motor henüz bağlı değil": "Engine not connected yet",
     "Adres listesi yükleniyor…": "Loading address list…",
-    "İlçe listeden eşleşmedi — yine de devam edebilirsiniz.": "District did not match the list — you can still continue."
+    "İlçe listeden eşleşmedi — yine de devam edebilirsiniz.": "District did not match the list — you can still continue.",
+    "ör. 80": "e.g. 80",
+    "Tahmini": "Estimate",
+    "Bu kalem için WhatsApp ile yazın": "Message us on WhatsApp for this line",
+    "Yalnızca Excel (.xlsx) veya PDF (.pdf) desteklenir.": "Only Excel (.xlsx) or PDF (.pdf) files are supported.",
+    "Sunucu boş yanıt döndü. Lütfen tekrar deneyin.": "Server returned an empty response. Please try again.",
+    "Sunucu yanıtı okunamadı. Bağlantınızı kontrol edin.": "Could not read server response. Check your connection.",
+    "Liste fiyatlandırılamadı": "Could not price the list"
   }
 }
