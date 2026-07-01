@@ -1628,6 +1628,44 @@ export async function exportPfosReferansSkuLinks(): Promise<{
   return { ok: true, message: body.message };
 }
 
+export async function importPfosIyilestirme(opts?: {
+  listeKey?: string;
+  teklif?: string;
+  dryRun?: boolean;
+}): Promise<{
+  ok: boolean;
+  message?: string;
+  error?: string;
+  data?: {
+    parsed: number;
+    skuOneriCreated: number;
+    fiyatKuraliCreated: number;
+  };
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    message?: string;
+    error?: string;
+    data?: {
+      parsed: number;
+      skuOneriCreated: number;
+      fiyatKuraliCreated: number;
+    };
+  }>("/api/pfos/iyilestirme/import", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      listeKey: opts?.listeKey ?? "s13-388-turk-220",
+      teklif: opts?.teklif ?? "EQS-2026-650",
+      dryRun: opts?.dryRun ?? false,
+    }),
+  });
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Import başarısız" };
+  }
+  return { ok: true, message: body.message, data: body.data };
+}
+
 export async function togglePfosFiyatKurali(
   id: string,
   aktif: boolean,

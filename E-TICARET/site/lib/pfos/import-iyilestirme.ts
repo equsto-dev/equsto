@@ -33,6 +33,18 @@ function onayNotu(entry: IyilestirmeParsedEntry, teklifSayi?: string): string {
   return parts.join(" | ");
 }
 
+/** Eski Prisma client veya migrate eksikse anlamlı hata */
+export function assertPfosImportDbReady(): void {
+  const missing: string[] = [];
+  if (!db.pfosSkuLinkOneri) missing.push("pfosSkuLinkOneri");
+  if (!db.pfosFiyatKurali) missing.push("pfosFiyatKurali");
+  if (missing.length === 0) return;
+  throw new Error(
+    `Prisma client güncel değil (eksik: ${missing.join(", ")}). ` +
+      "Çalıştırın: npm run db:generate && npm run db:migrate:deploy",
+  );
+}
+
 async function hasPendingOneri(linkKey: string, notu: string): Promise<boolean> {
   const row = await db.pfosSkuLinkOneri.findFirst({
     where: { linkKey, durum: "pending", onayNotu: notu },
@@ -64,6 +76,10 @@ export async function importIyilestirmeMarkdown(
 ): Promise<ImportIyilestirmeResult> {
   const listeKey = opts.listeKey.trim().toLowerCase();
   if (!listeKey) throw new Error("listeKey zorunlu");
+
+  if (!opts.dryRun) {
+    assertPfosImportDbReady();
+  }
 
   const parsed = parseIyilestirmeMarkdown(opts.content);
   const result: ImportIyilestirmeResult = {
