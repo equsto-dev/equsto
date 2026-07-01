@@ -37,6 +37,7 @@ import {
   fetchPfosFiyatKurallari,
   fetchPfosSkuLinkOneri,
   fetchPfosUrunTipiEslesme,
+  exportPfosReferansSkuLinks,
   patchPfosFeedback,
   rejectPfosSkuLinkOneri,
   togglePfosFiyatKurali,
@@ -810,10 +811,28 @@ function OneriKuyrukTab() {
 }
 
 export default function PfosEslesmeFeedbackPanel() {
+  const { message } = App.useApp();
   const [days, setDays] = useState(30);
+  const [exporting, setExporting] = useState(false);
 
   return (
-    <Tabs
+    <>
+      <div style={{ marginBottom: 12, display: "flex", justifyContent: "flex-end" }}>
+        <Button
+          icon={<ReloadOutlined />}
+          loading={exporting}
+          onClick={async () => {
+            setExporting(true);
+            const res = await exportPfosReferansSkuLinks();
+            setExporting(false);
+            if (!res.ok) message.error(res.error ?? "Export başarısız");
+            else message.success(res.message ?? "SKU link JSON export edildi");
+          }}
+        >
+          SKU link JSON export
+        </Button>
+      </div>
+      <Tabs
       defaultActiveKey="feedback"
       items={[
         {
@@ -838,5 +857,6 @@ export default function PfosEslesmeFeedbackPanel() {
         },
       ]}
     />
+    </>
   );
 }
