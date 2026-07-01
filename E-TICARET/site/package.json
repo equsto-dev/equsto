@@ -13,6 +13,7 @@
     "docker:build": "docker compose build",
     "docker:up": "docker compose up -d",
     "docker:deploy": "bash scripts/hetzner-deploy.sh",
+    "deploy:canli": "node scripts/deploy-canli.mjs",
     "lint": "eslint",
     "db:generate": "prisma generate",
     "db:migrate": "node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate dev",
