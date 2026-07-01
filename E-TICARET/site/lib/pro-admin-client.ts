@@ -1612,6 +1612,22 @@ export async function createPfosFiyatKurali(payload: {
   return { ok: true };
 }
 
+export async function exportPfosReferansSkuLinks(): Promise<{
+  ok: boolean;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    message?: string;
+    error?: string;
+  }>("/api/pfos/referans-sku-links/export", { method: "POST" });
+  if (!body.success || body.error) {
+    return { ok: false, error: body.error || "Export başarısız" };
+  }
+  return { ok: true, message: body.message };
+}
+
 export async function togglePfosFiyatKurali(
   id: string,
   aktif: boolean,

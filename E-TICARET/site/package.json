@@ -222,6 +222,7 @@
     "pfos:referans": "npm run pfos:referans:extract && npm run pfos:referans:build",
     "pfos:motor:test": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/test-pfos-motor.mjs",
     "pfos:referans-sku-links:export": "node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs",
+    "pfos:iyilestirme:import": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/import-pfos-iyilestirme-oneri.mjs",
     "teklif:generate-v14": "node scripts/generate-teklif-v14-template.mjs",
     "pfos:kategoriler:seed": "node scripts/seed-pfos-kategoriler.mjs",
     "pfos:italyan:import": "node scripts/import-italyan-konsept.mjs",
