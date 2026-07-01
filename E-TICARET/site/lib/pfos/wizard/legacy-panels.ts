@@ -77,6 +77,13 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     questionIds: ["q_balik_alt", "q_fast_alt", "q_restoran_alt"],
     skipIfEmpty: true,
   },
+  {
+    id: "s6",
+    num: "06",
+    title: "Teklif detay seviyesi",
+    sub: "Hızlı teklif mi, yoksa projeyi detaylandırayım mı?",
+    questionIds: ["q_detay_seviyesi"],
+  },
 ];
 
 export function panelQuestions(
@@ -179,6 +186,8 @@ export function panelAnswerSummary(
           answers.q_restoran_alt ??
           "",
       );
+    case "s6":
+      return String(answers.q_detay_seviyesi ?? "");
     default:
       return "";
   }
@@ -196,17 +205,19 @@ const DOWNSTREAM_CLEAR: Partial<
     "q_restoran_alt",
     "q_ne_pisireceksin",
     "q_m2",
+    "q_detay_seviyesi",
     "q_karar",
   ],
-  q_lokasyon: ["q_karar"],
-  q_acik_adres: ["q_karar"],
-  q_m2: ["q_karar"],
+  q_lokasyon: ["q_detay_seviyesi", "q_karar"],
+  q_acik_adres: ["q_detay_seviyesi", "q_karar"],
+  q_m2: ["q_detay_seviyesi", "q_karar"],
   q_ust_segment: [
     "q_dukkan_turu",
     "q_balik_alt",
     "q_fast_alt",
     "q_restoran_alt",
     "q_ne_pisireceksin",
+    "q_detay_seviyesi",
     "q_karar",
   ],
   q_dukkan_turu: [
@@ -215,13 +226,15 @@ const DOWNSTREAM_CLEAR: Partial<
     "q_fast_alt",
     "q_restoran_alt",
     "q_ne_pisireceksin",
+    "q_detay_seviyesi",
     "q_karar",
   ],
-  q_servis_model: ["q_karar"],
-  q_balik_alt: ["q_karar"],
-  q_fast_alt: ["q_karar"],
-  q_restoran_alt: ["q_karar"],
-  q_ne_pisireceksin: ["q_karar"],
+  q_servis_model: ["q_detay_seviyesi", "q_karar"],
+  q_balik_alt: ["q_detay_seviyesi", "q_karar"],
+  q_fast_alt: ["q_detay_seviyesi", "q_karar"],
+  q_restoran_alt: ["q_detay_seviyesi", "q_karar"],
+  q_ne_pisireceksin: ["q_detay_seviyesi", "q_karar"],
+  q_detay_seviyesi: ["q_karar"],
 };
 
 export function clearDownstreamAnswers(
@@ -279,6 +292,13 @@ export function wizardHint(
       pct,
       title: "Konsept seçimi",
       sub: "Dükkan türü ve varsa ek soruları tamamlayın.",
+    };
+  }
+  if (activeId === "s6") {
+    return {
+      pct,
+      title: "Detay seviyesi",
+      sub: "Hızlı teklif veya detaylı proje tercihinizi seçin.",
     };
   }
   return {
