@@ -24,8 +24,21 @@ jobs:
           host: ${{ env.HETZNER_HOST != '' && env.HETZNER_HOST || '167.233.86.144' }}
           username: root
           key: ${{ secrets.HETZNER_SSH_KEY }}
+          passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             bash scripts/hetzner-deploy.sh
+
+      - name: Özet
+        if: success()
+        run: |
+          {
+            echo "## Canlı deploy tamam"
+            echo ""
+            echo "- **Site:** https://equsto.com/"
+            echo "- **Sunucu:** \`${{ env.HETZNER_HOST != '' && env.HETZNER_HOST || '167.233.86.144' }}\`"
+            echo "- **Commit:** \`${{ github.sha }}\`"
+            echo "- **Tetikleyici:** ${{ github.event_name }}"
+          } >> "$GITHUB_STEP_SUMMARY"
