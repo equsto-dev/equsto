@@ -197,7 +197,7 @@
     "restore:utf8": "node scripts/restore-public-utf8.mjs && node scripts/patch-header-utf8.mjs",
     "check:utf8": "node scripts/check-public-utf8.mjs",
     "vitrin:check": "node scripts/check-vitrin-nextjs.mjs",
-    "vitrin:build": "node scripts/vercel-ci.mjs",
+    "vitrin:build": "node scripts/docker-ci.mjs",
     "catalog:doner:images": "python scripts/extract-atalay-doner-images.py",
     "db:seed:doner": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed-atalay-doner-ocak.ts",
     "db:import:ekipmanlar": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/import-ekipmanlar-to-db.ts",
