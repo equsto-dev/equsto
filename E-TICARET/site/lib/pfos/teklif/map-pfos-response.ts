@@ -114,6 +114,11 @@ export function pfosResponseToTeklifV14(
         k.notlar,
       );
 
+    const fiyatsizKalem =
+      !u ||
+      ((u.fiyat ?? 0) <= 0 && !(u.fiyatEur && u.fiyatEur > 0));
+    const eslesmediKalem = k.eslesmeKatmani === "eslesmedi" || fiyatsizKalem;
+
     let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
         equstoFiyatListesiGorselRelFromSku(stokNo) ??
         oztiPfosPreferredGorselUrl(stokNo) ??
@@ -209,7 +214,11 @@ export function pfosResponseToTeklifV14(
       originalFiyat: u ? (u.fiyatEur && u.fiyatEur > 0 ? u.fiyatEur : u.fiyat) : null,
       originalDoviz: u ? (u.fiyatEur && u.fiyatEur > 0 ? "EUR" : u.doviz) : "EUR",
       fotoUrl: gorselFallback ?? undefined,
-      aciklama: specAciklama(k, referansListe) || undefined,
+      aciklama:
+        specAciklama(k, referansListe) ||
+        (eslesmediKalem
+          ? "Liste satırı — katalog fiyatı bulunamadı"
+          : undefined),
     };
   });
 

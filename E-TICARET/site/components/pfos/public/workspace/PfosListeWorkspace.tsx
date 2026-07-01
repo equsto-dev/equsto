@@ -161,8 +161,14 @@ export default function PfosListeWorkspace({
           </header>
           <div className={ws.matchStats}>
             <span className={ws.matchStatOk}>
-              ✔ {sonuc.ozet?.eslesmisZorunluSayisi ?? sonuc.ozet?.eslesmeSayisi ?? 0}{" "}
-              {t("eşleşti")}
+              ✔{" "}
+              {sonuc.ozet?.eslesmisZorunluSayisi ?? sonuc.ozet?.eslesmeSayisi ?? 0}
+              /{sonuc.kalemler?.length ?? sonuc.ozet?.toplamKalemSayisi ?? 0}{" "}
+              {t("fiyatlandı")}
+            </span>
+            <span className={ws.matchStatSub}>
+              {sonuc.kalemler?.length ?? sonuc.ozet?.toplamKalemSayisi ?? 0}{" "}
+              {t("kalem listelendi")}
             </span>
             {sonuc.ozet?.toplamFiyat != null ? (
               <span className={ws.matchStatPrice}>

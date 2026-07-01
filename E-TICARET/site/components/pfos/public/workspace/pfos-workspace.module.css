@@ -820,6 +820,11 @@
   font-weight: 700;
 }
 
+.matchStatSub {
+  color: var(--ws-muted, #64748b);
+  font-weight: 500;
+}
+
 .matchStatPrice {
   font-weight: 700;
   color: var(--ws-text);
