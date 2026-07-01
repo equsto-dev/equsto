@@ -20,7 +20,6 @@ export type SoruCevapHaritasi = {
   q_m2?: number | string;
   q_lokasyon?: string;
   q_acik_adres?: string;
-  q_detay_seviyesi?: string;
   q_karar?: string;
   q_yardimci_ekipman?: string[];
   q_elektrik_gaz?: string[];
