@@ -944,7 +944,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 <span className={styles.secNum}>✓</span>
                 <span className={styles.secInfo}>
                   <span className={styles.secTitle}>
-                    {t("Örnek listeniz hazır")}
+                    {t("Listen hazır.")}
                   </span>
                   <span className={styles.secSub}>
                     {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
@@ -955,15 +955,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                     <small>({t("tahmini, KDV hariç")})</small>
                   </span>
                 </span>
-              </div>
-              <div className={styles.secBd}>
-                <button
-                  type="button"
-                  className={`${styles.btn} ${styles.btnGhost}`}
-                  onClick={resetWizard}
-                >
-                  {t("Yeni proje")}
-                </button>
               </div>
             </section>
             <div
