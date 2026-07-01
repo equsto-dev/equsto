@@ -21,10 +21,24 @@ export const PFOS_M2_GENEL_ORANLARI: Readonly<Record<string, number>> = {
   kuru_depo: 10,
 };
 
-/** Konsept bazlı istisnalar — genel kuralın yerine geçer (henüz tanımlı değil) */
+/** Konsept bazlı istisnalar — genel kuralın yerine geçer */
 export const PFOS_M2_KONSEPT_ORANLARI: Partial<
   Record<Konsept, Readonly<Record<string, number>>>
-> = {};
+> = {
+  /** S13-117 steakhouse pilot — show mutfağı + ızgara/meze dahil */
+  steakhouse: {
+    show_mutfagi: 13,
+    soguk_oda: 10,
+    derin_dondurucu: 7,
+    et_hazirlik: 9,
+    ana_mutfak: 22,
+    bar: 9,
+    sebze_hazirlik: 7,
+    kuru_depo: 5,
+    bulasikhane: 10,
+    izgara_meze: 18,
+  },
+};
 
 export function oranlarForKonsept(
   konsept: Konsept | null | undefined,

@@ -73,6 +73,7 @@ import DetaySeviyesiExtras, {
   type DetaySeviyesiState,
 } from "@/components/pfos/wizard/DetaySeviyesiExtras";
 import { detaySeviyesiFromLabel } from "@/lib/pfos/wizard/detay-seviyesi";
+import { konseptBolumM2TeklifeEtki } from "@/lib/pfos/wizard/detay-konsept-mod";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -552,7 +553,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const bolumM2Payload =
         detayLevel === "hizli"
           ? undefined
-          : Object.keys(detayExtras.bolumM2).length > 0
+          : konseptBolumM2TeklifeEtki(konsept) &&
+              Object.keys(detayExtras.bolumM2).length > 0
             ? detayExtras.bolumM2
             : undefined;
       const quoteBody = {

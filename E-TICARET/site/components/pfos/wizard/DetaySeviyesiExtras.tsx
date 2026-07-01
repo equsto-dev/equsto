@@ -1,11 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ReferansListeOzet } from "@/lib/pfos/referans/list-referanslar";
 import {
   detaySeviyesiFromLabel,
   type DetaySeviyesi,
 } from "@/lib/pfos/wizard/detay-seviyesi";
+import {
+  detayModAciklama,
+  konseptBolumM2TeklifeEtki,
+  konseptReferansListeModu,
+} from "@/lib/pfos/wizard/detay-konsept-mod";
+import { mutfakM2FromToplam } from "@/lib/pfos/wizard/m2-dagitim-kurali";
 import { dagitM2Toplam, zonesForKonsept } from "@/lib/pfos/wizard/profiles";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
 import type { Konsept } from "@/lib/pfos/schemas/pfos.schema";
@@ -40,6 +46,10 @@ export function detaySeviyesiLevelFromLabel(label: string): DetaySeviyesi {
   return detaySeviyesiFromLabel(label);
 }
 
+function sumBolum(bolum: Record<string, number>): number {
+  return Object.values(bolum).reduce((s, v) => s + (Number(v) || 0), 0);
+}
+
 export default function DetaySeviyesiExtras({
   detayLabel,
   konsept,
@@ -51,6 +61,11 @@ export default function DetaySeviyesiExtras({
   const level = detaySeviyesiFromLabel(detayLabel);
   const [referanslar, setReferanslar] = useState<ReferansListeOzet[]>([]);
   const zones = zonesForKonsept(konsept as Konsept | null);
+  const mod = useMemo(() => detayModAciklama(konsept), [konsept]);
+  const mutfakHedef = mutfakM2FromToplam(m2);
+  const bolumToplam = sumBolum(state.bolumM2);
+  const zoneTeklifeEtki = konseptBolumM2TeklifeEtki(konsept);
+  const referansMod = konseptReferansListeModu(konsept);
 
   useEffect(() => {
     if (level !== "detayli" || !konsept) {
@@ -83,6 +98,10 @@ export default function DetaySeviyesiExtras({
 
   return (
     <div className={styles.detayPanel}>
+      <p className={styles.detayPanelLead}>
+        <b>{t("Teklif nasıl üretilir?")}</b> {t(mod.ozet)}
+      </p>
+
       <p className={styles.detayPanelSub}>{t("Ek tercihler")}</p>
       <div className={styles.detayCheckGrid}>
         <label
@@ -120,7 +139,9 @@ export default function DetaySeviyesiExtras({
               className={`${styles.detayChip}${!state.referansId ? ` ${styles.detayChipSelected}` : ""}`}
               onClick={() => onChange({ referansId: null })}
             >
-              <span className={styles.detayChipMark}>{!state.referansId ? "✓" : ""}</span>
+              <span className={styles.detayChipMark}>
+                {!state.referansId ? "✓" : ""}
+              </span>
               {t("Otomatik (m² bandı)")}
             </button>
             {referanslar.map((r) => (
@@ -141,9 +162,33 @@ export default function DetaySeviyesiExtras({
         </>
       ) : null}
 
+      {level === "detayli" && referansMod && referanslar.length === 0 ? (
+        <p className={styles.detayPanelLead} style={{ marginTop: "0.75rem" }}>
+          {t(
+            "Bu konsept için referans seçimi API'de yok; teklif otomatik m² bandından seçilir (ör. steakhouse 80–150 / 150–250 m²).",
+          )}
+        </p>
+      ) : null}
+
       {level === "detayli" && zones.length > 0 && m2 >= 20 ? (
         <>
-          <p className={styles.detayPanelSub}>{t("Bölüm m² (opsiyonel)")}</p>
+          <p className={styles.detayPanelSub}>
+            {zoneTeklifeEtki
+              ? t("Bölüm m²")
+              : t("Bölüm m² (planlama — teklife yansımaz)")}
+          </p>
+          <p className={styles.detayPanelLead}>
+            {t("Toplam")} {m2} m² →{" "}
+            <b>
+              {t("mutfak hedefi")} {mutfakHedef} m²
+            </b>{" "}
+            ({t("toplam alanın 1/3'ü")}).{" "}
+            {zoneTeklifeEtki
+              ? t("Dağıtım zone kataloğuna bağlanır.")
+              : t(
+                  "Steakhouse vb. konseptlerde liste referans dosyasından gelir; aşağıdaki rakamlar yerleşim taslağı içindir.",
+                )}
+          </p>
           <button
             type="button"
             className={`${styles.btn} ${styles.btnGhost} ${styles.detayPanelBtn}`}
@@ -177,6 +222,21 @@ export default function DetaySeviyesiExtras({
               </label>
             ))}
           </div>
+          {bolumToplam > 0 ? (
+            <p
+              className={styles.detayPanelLead}
+              style={{
+                color:
+                  Math.abs(bolumToplam - mutfakHedef) <= 2 ? "#2d7a2d" : "#b36b00",
+              }}
+            >
+              {t("Bölüm toplamı")}: {bolumToplam} m² · {t("mutfak hedefi")}:{" "}
+              {mutfakHedef} m²
+              {Math.abs(bolumToplam - mutfakHedef) > 2
+                ? ` · ${t("fark")}: ${bolumToplam - mutfakHedef > 0 ? "+" : ""}${bolumToplam - mutfakHedef} m²`
+                : ""}
+            </p>
+          ) : null}
         </>
       ) : null}
     </div>
