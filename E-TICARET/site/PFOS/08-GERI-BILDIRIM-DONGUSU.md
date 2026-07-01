@@ -667,10 +667,10 @@ Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda 
 
 ### Faz E — Import, export & deploy (1 PR)
 
-- [ ] `import-pfos-iyilestirme-oneri.mjs`
-- [ ] `pfos:referans-sku-links:export` script
-- [ ] `hetzner-deploy.sh` → deploy öncesi otomatik JSON export
-- [ ] Mevcut `iyileştirme.md` satırlarının import’u (EQS-2026-650)
+- [x] `import-pfos-iyilestirme-oneri.mjs`
+- [x] `pfos:referans-sku-links:export` script
+- [x] `hetzner-deploy.sh` → deploy sonrası otomatik JSON export
+- [x] Mevcut `iyileştirme.md` satırlarının import'u (EQS-2026-650)
 
 ### Faz F — P0.1 (sonraki sprint)
 
