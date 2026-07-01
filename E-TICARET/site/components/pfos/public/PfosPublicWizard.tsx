@@ -512,7 +512,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     if (!konsept) {
       setError(
         motorGirdi.dukkanSecim
-          ? `"${t(motorGirdi.dukkanSecim)}"${t("için teklif motoru henüz bağlı değil.")}`
+          ? `"${t(motorGirdi.dukkanSecim)}" ${t("için teklif motoru henüz bağlı değil.")}`
           : t("Dükkan türü seçilmedi."),
       );
       return;
@@ -675,7 +675,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </button>
           ))}
         </div>
-        {motorGirdi.dukkanSecim ? (
+        {process.env.NODE_ENV !== "production" && motorGirdi.dukkanSecim ? (
           <p className={styles.alanHint}>
             {motorSlug ? `Motor: ${motorSlug}` : "Motor henüz bağlı değil"}
           </p>
