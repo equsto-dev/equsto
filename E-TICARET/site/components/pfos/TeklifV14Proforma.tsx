@@ -16,9 +16,7 @@ import {
   pfosLoginHref,
   pfosRegisterHref,
 } from "@/lib/pfos/member-session.client";
-import PfosTeklifKararBlock, {
-  type TeklifKarar,
-} from "@/components/pfos/PfosTeklifKararBlock";
+import PfosKonseptEkipmanGrid from "@/components/pfos/PfosKonseptEkipmanGrid";
 import { buildListeKalemWhatsAppUrl } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
 import { trackPfosListeWhatsApp } from "@/lib/pfos/track-pfos-analytics.client";
 import { logPfosTeklifFeedback } from "@/lib/pfos/log-pfos-feedback.client";
@@ -31,8 +29,8 @@ type Props = {
   deliveryOnly?: boolean;
   /** PFOS kullanım istatistiği — wizard | liste */
   pfosSource?: "wizard" | "liste";
-  /** Teklif tablosundan sonra “yeterli mi / detaylandır” sorusu */
-  postQuoteKarar?: {
+  /** Şartlarımızdan sonra konsepte uygun e-ticaret vitrini */
+  projeEkipman?: {
     dukkanTuru: string;
     ustSegment?: string;
   };
@@ -111,10 +109,9 @@ export default function TeklifV14Proforma({
   model,
   deliveryOnly = false,
   pfosSource = "wizard",
-  postQuoteKarar,
+  projeEkipman,
 }: Props) {
   const [exporting, setExporting] = useState(false);
-  const [teklifKarar, setTeklifKarar] = useState<TeklifKarar>("idle");
   const [sendingKanal, setSendingKanal] = useState<SendKanal | null>(null);
   const [sendResult, setSendResult] = useState<
     DeliveryResult | { kind: "err"; message: string } | null
@@ -698,108 +695,97 @@ export default function TeklifV14Proforma({
       </div>
 
       {deliveryOnly ? (
-        <>
-          {postQuoteKarar ? (
-            <PfosTeklifKararBlock
-              dukkanTuru={postQuoteKarar.dukkanTuru}
-              ustSegment={postQuoteKarar.ustSegment}
-              onKarar={setTeklifKarar}
-            />
-          ) : null}
-          {!postQuoteKarar || teklifKarar === "yeterli" ? (
+        <div
+          style={{
+            marginTop: 20,
+            padding: 16,
+            border: "1px solid #d9f7be",
+            borderRadius: 8,
+            background: "#f6ffed",
+          }}
+        >
+          <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
+            Teklifinizi alın
+          </Typography.Title>
+          <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+            PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
+          </Typography.Paragraph>
+          {memberLoggedIn ? (
+          <Form form={form} layout="vertical">
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Button
+                type="primary"
+                icon={<MailOutlined />}
+                loading={sendingKanal === "email"}
+                disabled={sendingKanal === "whatsapp"}
+                onClick={() => void handleSend("email")}
+              >
+                E-postama gönder (PDF)
+              </Button>
+              <Button
+                style={{
+                  background: "#25D366",
+                  borderColor: "#25D366",
+                  color: "#fff",
+                }}
+                loading={sendingKanal === "whatsapp"}
+                disabled={sendingKanal === "email"}
+                onClick={() => void handleSend("whatsapp")}
+              >
+                WhatsApp&apos;ıma gönder (PDF)
+              </Button>
+            </div>
             <div
               style={{
-                marginTop: 20,
-                padding: 16,
-                border: "1px solid #d9f7be",
-                borderRadius: 8,
-                background: "#f6ffed",
+                marginTop: 14,
+                paddingTop: 14,
+                borderTop: "1px solid #d9f7be",
               }}
             >
-              <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
-                Teklifinizi alın
-              </Typography.Title>
-              <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-                PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
-              </Typography.Paragraph>
-              {memberLoggedIn ? (
-              <Form form={form} layout="vertical">
-                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                  <Button
-                    type="primary"
-                    icon={<MailOutlined />}
-                    loading={sendingKanal === "email"}
-                    disabled={sendingKanal === "whatsapp"}
-                    onClick={() => void handleSend("email")}
-                  >
-                    E-postama gönder (PDF)
-                  </Button>
-                  <Button
-                    style={{
-                      background: "#25D366",
-                      borderColor: "#25D366",
-                      color: "#fff",
-                    }}
-                    loading={sendingKanal === "whatsapp"}
-                    disabled={sendingKanal === "email"}
-                    onClick={() => void handleSend("whatsapp")}
-                  >
-                    WhatsApp&apos;ıma gönder (PDF)
-                  </Button>
-                </div>
-                <div
-                  style={{
-                    marginTop: 14,
-                    paddingTop: 14,
-                    borderTop: "1px solid #d9f7be",
-                  }}
-                >
-                  <Typography.Text
-                    type="secondary"
-                    style={{ display: "block", marginBottom: 8, fontSize: 13 }}
-                  >
-                    Bu teklif size yardımcı oldu mu?
+              <Typography.Text
+                type="secondary"
+                style={{ display: "block", marginBottom: 8, fontSize: 13 }}
+              >
+                Bu teklif size yardımcı oldu mu?
+              </Typography.Text>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                <Button
+                  icon={<LikeOutlined />}
+                  type={teklifFeedback === "up" ? "primary" : "default"}
+                  onClick={() => submitTeklifFeedback("up")}
+                  disabled={teklifFeedback !== null}
+                  aria-label="Beğendim"
+                />
+                <Button
+                  icon={<DislikeOutlined />}
+                  danger={teklifFeedback === "down"}
+                  type={teklifFeedback === "down" ? "primary" : "default"}
+                  onClick={() => submitTeklifFeedback("down")}
+                  disabled={teklifFeedback !== null}
+                  aria-label="Beğenmedim"
+                />
+                {teklifFeedback ? (
+                  <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                    Teşekkürler — geri bildiriminiz kaydedildi.
                   </Typography.Text>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-                    <Button
-                      icon={<LikeOutlined />}
-                      type={teklifFeedback === "up" ? "primary" : "default"}
-                      onClick={() => submitTeklifFeedback("up")}
-                      disabled={teklifFeedback !== null}
-                      aria-label="Beğendim"
-                    />
-                    <Button
-                      icon={<DislikeOutlined />}
-                      danger={teklifFeedback === "down"}
-                      type={teklifFeedback === "down" ? "primary" : "default"}
-                      onClick={() => submitTeklifFeedback("down")}
-                      disabled={teklifFeedback !== null}
-                      aria-label="Beğenmedim"
-                    />
-                    {teklifFeedback ? (
-                      <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-                        Teşekkürler — geri bildiriminiz kaydedildi.
-                      </Typography.Text>
-                    ) : null}
-                  </div>
-                </div>
-              </Form>
-              ) : (
-                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                  <Typography.Paragraph style={{ marginBottom: 0 }}>
-                    PDF teklifinizi almak için Equsto hesabınızla giriş yapın.
-                  </Typography.Paragraph>
-                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                    <Button type="primary" href={loginHref}>
-                      Üye Girişi
-                    </Button>
-                    <Button href={registerHref}>Kayıt ol</Button>
-                  </div>
-                </div>
-              )}
+                ) : null}
+              </div>
             </div>
-          ) : null}
-        </>
+          </Form>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <Typography.Paragraph style={{ marginBottom: 0 }}>
+                PDF teklifinizi almak için Equsto hesabınızla giriş yapın.
+              </Typography.Paragraph>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Button type="primary" href={loginHref}>
+                  Üye Girişi
+                </Button>
+                <Button href={registerHref}>Kayıt ol</Button>
+              </div>
+            </div>
+          )}
+        </div>
       ) : (
         <div
           style={{
@@ -843,6 +829,15 @@ export default function TeklifV14Proforma({
           },
         ]}
       />
+
+      {projeEkipman ? (
+        <PfosKonseptEkipmanGrid
+          dukkanTuru={projeEkipman.dukkanTuru}
+          ustSegment={projeEkipman.ustSegment}
+          layout="rows"
+          limit={5}
+        />
+      ) : null}
 
       <Modal
         title="Hangi satırlar yanlış?"

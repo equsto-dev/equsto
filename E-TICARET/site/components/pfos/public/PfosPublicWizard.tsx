@@ -944,7 +944,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 <span className={styles.secNum}>✓</span>
                 <span className={styles.secInfo}>
                   <span className={styles.secTitle}>
-                    {t("Listen hazır.")}
+                    {t("Listen hazır")}
                   </span>
                   <span className={styles.secSub}>
                     {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
@@ -952,7 +952,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                   </span>
                   <span className={styles.teklifTotalInline}>
                     {formatTry(sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-                    <small>({t("tahmini, KDV hariç")})</small>
+                    <small>({t("KDV hariç")})</small>
                   </span>
                 </span>
               </div>
@@ -963,7 +963,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               <TeklifV14Proforma
                 model={teklifV14}
                 deliveryOnly
-                postQuoteKarar={{
+                projeEkipman={{
                   dukkanTuru: String(answers.q_dukkan_turu ?? ""),
                   ustSegment: String(answers.q_ust_segment ?? ""),
                 }}
