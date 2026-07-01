@@ -38,6 +38,7 @@ import {
   fetchPfosSkuLinkOneri,
   fetchPfosUrunTipiEslesme,
   exportPfosReferansSkuLinks,
+  importPfosIyilestirme,
   patchPfosFeedback,
   rejectPfosSkuLinkOneri,
   togglePfosFiyatKurali,
@@ -814,10 +815,30 @@ export default function PfosEslesmeFeedbackPanel() {
   const { message } = App.useApp();
   const [days, setDays] = useState(30);
   const [exporting, setExporting] = useState(false);
+  const [importing, setImporting] = useState(false);
 
   return (
     <>
-      <div style={{ marginBottom: 12, display: "flex", justifyContent: "flex-end" }}>
+      <div style={{ marginBottom: 12, display: "flex", justifyContent: "flex-end", gap: 8 }}>
+        <Button
+          loading={importing}
+          onClick={async () => {
+            setImporting(true);
+            const res = await importPfosIyilestirme({
+              listeKey: "s13-388-turk-220",
+              teklif: "EQS-2026-650",
+            });
+            setImporting(false);
+            if (!res.ok) message.error(res.error ?? "Import başarısız");
+            else
+              message.success(
+                res.message ??
+                  `${res.data?.skuOneriCreated ?? 0} öneri, ${res.data?.fiyatKuraliCreated ?? 0} kural`,
+              );
+          }}
+        >
+          iyileştirme.md import
+        </Button>
         <Button
           icon={<ReloadOutlined />}
           loading={exporting}
