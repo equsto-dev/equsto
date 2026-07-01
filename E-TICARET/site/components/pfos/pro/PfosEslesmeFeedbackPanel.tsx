@@ -49,7 +49,11 @@ import {
   type PfosUrunTipiEslesmeRow,
 } from "@/lib/pro-admin-client";
 import { pfosDisplayText, pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
-import { pfosFeedbackPriorityScore } from "@/lib/pfos/feedback-priority";
+import {
+  isHighPriorityFeedback,
+  pfosFeedbackPriorityLabel,
+  pfosFeedbackPriorityScore,
+} from "@/lib/pfos/feedback-priority";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 function voteTag(vote: string) {
@@ -90,6 +94,12 @@ function FeedbackTab({
     ReturnType<typeof fetchPfosFeedbackDetail>
   >["data"] | null>(null);
   const [oneriSku, setOneriSku] = useState<Record<string, string>>({});
+  const [priorityFilter, setPriorityFilter] = useState<"all" | "high">("all");
+
+  const displayRows =
+    priorityFilter === "high"
+      ? rows.filter(isHighPriorityFeedback)
+      : rows;
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -124,9 +134,10 @@ function FeedbackTab({
       width: 72,
       render: (_, r) => {
         const s = pfosFeedbackPriorityScore(r);
-        if (s >= 140) return <Tag color="red">Yüksek</Tag>;
-        if (s >= 90) return <Tag color="orange">Orta</Tag>;
-        if (s > 0) return <Tag>Düşük</Tag>;
+        const label = pfosFeedbackPriorityLabel(s);
+        if (label === "yüksek") return <Tag color="red">Yüksek</Tag>;
+        if (label === "orta") return <Tag color="orange">Orta</Tag>;
+        if (label === "düşük") return <Tag>Düşük</Tag>;
         return <Tag color="default">—</Tag>;
       },
     },
@@ -238,11 +249,19 @@ function FeedbackTab({
           <a key="d90" onClick={() => onDaysChange(90)}>
             90 gün
           </a>,
+          <a
+            key="prio"
+            onClick={() =>
+              setPriorityFilter((p) => (p === "high" ? "all" : "high"))
+            }
+          >
+            {priorityFilter === "high" ? "Tümü" : "Yüksek öncelik"}
+          </a>,
           <Button key="reload" icon={<ReloadOutlined />} onClick={load}>
             Yenile
           </Button>,
         ]}
-        dataSource={rows}
+        dataSource={displayRows}
         columns={columns}
       />
 

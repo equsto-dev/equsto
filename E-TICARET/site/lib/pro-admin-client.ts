@@ -1311,6 +1311,11 @@ export type PfosUsageOzet = {
   uye_ile: number;
   anonim: number;
   donusum_yuzde: number;
+  feedback_toplam?: number;
+  feedback_up?: number;
+  feedback_down?: number;
+  dusuk_guven_down?: number;
+  memnuniyet_yuzde?: number | null;
 };
 
 export type PfosUsageAdminRow = {
@@ -1329,6 +1334,9 @@ export type PfosUsageAdminRow = {
   member_logged_in: boolean;
   gonderim_kanal: string | null;
   created_at: string;
+  feedback_vote?: string | null;
+  feedback_guven?: number | null;
+  feedback_durum?: string | null;
 };
 
 export async function fetchPfosUsage(days = 30): Promise<{

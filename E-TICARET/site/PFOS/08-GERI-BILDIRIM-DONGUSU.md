@@ -674,9 +674,9 @@ Bu kurallar bugün `duvar-raf-match.ts`, `ozel-imalat-build.ts` gibi dosyalarda 
 
 ### Faz F — P0.1 (sonraki sprint)
 
-- [ ] Düşük güven + 👎 öncelik skoru admin sıralamasında
-- [ ] `IsletmePfosUsagePanel` ile birleşik görünüm (dönüşüm + memnuniyet)
-- [ ] CI export diff kontrolü
+- [x] Düşük güven + 👎 öncelik skoru admin sıralamasında
+- [x] `IsletmePfosUsagePanel` ile birleşik görünüm (dönüşüm + memnuniyet)
+- [x] CI export diff kontrolü (`pfos:referans-sku-links:check`)
 
 ---
 

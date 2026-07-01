@@ -8,6 +8,7 @@ import {
   type PfosUsageAdminRow,
   type PfosUsageOzet,
 } from "@/lib/pro-admin-client";
+import { pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 function eventLabel(event: string) {
@@ -20,6 +21,12 @@ function sourceLabel(source: string) {
   if (source === "liste") return "Liste yükle";
   if (source === "wizard") return "Konsept sihirbazı";
   return source || "—";
+}
+
+function feedbackVoteTag(vote: string | null | undefined) {
+  if (vote === "up") return <Tag color="green">👍</Tag>;
+  if (vote === "down") return <Tag color="red">👎</Tag>;
+  return <Tag color="default">—</Tag>;
 }
 
 export default function IsletmePfosUsagePanel() {
@@ -80,6 +87,31 @@ export default function IsletmePfosUsagePanel() {
           <StatisticCard
             loading={loading}
             statistic={{
+              title: "Memnuniyet (👍 / oy)",
+              value:
+                ozet?.memnuniyet_yuzde != null
+                  ? `${ozet.memnuniyet_yuzde}%`
+                  : "—",
+              description: ozet
+                ? `👍 ${ozet.feedback_up ?? 0} · 👎 ${ozet.feedback_down ?? 0}`
+                : undefined,
+            }}
+          />
+        </Col>
+        <Col xs={12} md={6}>
+          <StatisticCard
+            loading={loading}
+            statistic={{
+              title: "Düşük güven + 👎",
+              value: ozet?.dusuk_guven_down ?? 0,
+              description: "Öncelikli inceleme adayı",
+            }}
+          />
+        </Col>
+        <Col xs={12} md={6}>
+          <StatisticCard
+            loading={loading}
+            statistic={{
               title: "Anonim kullanım",
               value: ozet?.anonim ?? 0,
               description: ozet
@@ -96,7 +128,7 @@ export default function IsletmePfosUsagePanel() {
         search={false}
         options={false}
         pagination={tablePagination}
-        headerTitle="PFOS kullanım günlüğü"
+        headerTitle="PFOS kullanım + geri bildirim"
         toolBarRender={() => [
           <a key="d7" onClick={() => setDays(7)}>
             7 gün
@@ -141,6 +173,19 @@ export default function IsletmePfosUsagePanel() {
             dataIndex: "konsept_label",
             ellipsis: true,
             render: (v, r) => String(v || r.konsept || "—"),
+          },
+          {
+            title: "Güven",
+            dataIndex: "feedback_guven",
+            width: 72,
+            render: (v) =>
+              pfosGuvenYuzdeMetin(v != null ? Number(v) : null),
+          },
+          {
+            title: "Oy",
+            dataIndex: "feedback_vote",
+            width: 56,
+            render: (v) => feedbackVoteTag(v != null ? String(v) : null),
           },
           {
             title: "m²",
