@@ -123,17 +123,53 @@ function deployViaSsh() {
   console.log(`[deploy:canli] SSH → ${remote}`);
   console.log(`[deploy:canli] Anahtar: ${identity}`);
 
-  run("ssh", [
+  const sshBase = [
     "-i",
     identity,
     "-o",
-    "BatchMode=no",
+    "BatchMode=yes",
+    "-o",
+    "PasswordAuthentication=no",
     "-o",
     "StrictHostKeyChecking=accept-new",
-    remote,
-    cmd,
-  ]);
+  ];
+
+  const probe = spawnSync("ssh", [...sshBase, remote, "echo OK"], {
+    encoding: "utf8",
+  });
+  if (probe.status !== 0) {
+    console.error("");
+    console.error("[deploy:canli] SSH anahtarı sunucuda tanınmıyor (parola istenmemeli).");
+    console.error("");
+    console.error("Çözüm A — GitHub Actions (önerilen, SSH gerekmez):");
+    console.error("  winget install --id GitHub.cli");
+    console.error("  gh auth login");
+    console.error("  npm run deploy:canli");
+    console.error("");
+    console.error("Çözüm B — Public key'i sunucuya ekle (Hetzner konsol veya mevcut SSH):");
+    console.error(`  type ${identity}.pub`);
+    console.error("  Sunucuda: nano ~/.ssh/authorized_keys  → satırı yapıştır");
+    console.error("");
+    console.error("Çözüm C — main'e push: GitHub Actions otomatik deploy eder.");
+    process.exit(1);
+  }
+
+  run("ssh", [...sshBase, remote, cmd]);
   console.log("[deploy:canli] Tamam — https://equsto.com/");
+}
+
+function printGhMissingHelp() {
+  console.error("[deploy:canli] GitHub CLI (gh) kurulu değil veya oturum kapalı.");
+  console.error("");
+  console.error("Önerilen:");
+  console.error("  winget install --id GitHub.cli");
+  console.error("  gh auth login");
+  console.error("  npm run deploy:canli");
+  console.error("");
+  console.error("Alternatif (SSH anahtarı sunucuda kayıtlıysa):");
+  console.error("  npm run deploy:canli -- --ssh");
+  console.error("");
+  console.error("Veya main'e push — GitHub Actions otomatik deploy eder.");
 }
 
 function printHelp() {
@@ -162,11 +198,7 @@ if (useSsh) {
   deployViaSsh();
 } else if (hasGh() && ghAuthOk()) {
   deployViaGithubActions();
-} else if (defaultIdentity()) {
-  console.log("[deploy:canli] gh yok veya oturum kapalı — SSH moduna geçiliyor (--ssh)");
-  deployViaSsh();
 } else {
-  console.error("[deploy:canli] Ne GitHub CLI (gh auth login) ne de SSH anahtarı hazır.");
-  printHelp();
+  printGhMissingHelp();
   process.exit(1);
 }
