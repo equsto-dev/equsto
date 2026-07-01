@@ -68,11 +68,6 @@ import {
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 import { readFetchJson } from "@/lib/pfos/fetch-json.client";
-import DetaySeviyesiExtras, {
-  defaultDetaySeviyesiState,
-  type DetaySeviyesiState,
-} from "@/components/pfos/wizard/DetaySeviyesiExtras";
-import { detaySeviyesiFromLabel } from "@/lib/pfos/wizard/detay-seviyesi";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -132,10 +127,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [resultReveal, setResultReveal] = useState(false);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
-  const [detayExtras, setDetayExtras] = useState<DetaySeviyesiState>(
-    defaultDetaySeviyesiState,
-  );
-  const [previewUyari, setPreviewUyari] = useState<string | null>(null);
   const prevOpenPanelIdRef = useRef("s1");
   const teklifRequestedRef = useRef(false);
   const enterTimerRef = useRef<number | null>(null);
@@ -458,7 +449,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
-    setPreviewUyari(null);
   }, []);
 
   const setAnswer = useCallback(
@@ -482,10 +472,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       setFinished(false);
       setSonuc(null);
       setTeklifV14(null);
-      setPreviewUyari(null);
-      if (id === "q_detay_seviyesi") {
-        setDetayExtras(defaultDetaySeviyesiState());
-      }
     },
     [],
   );
@@ -543,64 +529,23 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     setLoading(true);
     setError(null);
-    setPreviewUyari(null);
     try {
       const sehir = motorGirdi.lokasyon || "İstanbul";
-      const detayLevel = detaySeviyesiFromLabel(
-        String(answers.q_detay_seviyesi ?? "Standart teklif"),
-      );
-      const bolumM2Payload =
-        detayLevel === "hizli"
-          ? undefined
-          : Object.keys(detayExtras.bolumM2).length > 0
-            ? detayExtras.bolumM2
-            : undefined;
-      const quoteBody = {
-        konsept,
-        dukkanSecim: motorGirdi.dukkanSecim,
-        m2,
-        sehir,
-        fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
-        altTip: motorGirdi.altTip,
-        teslimatAdresi: [motorGirdi.lokasyon, motorGirdi.adresNot]
-          .filter(Boolean)
-          .join(" · "),
-        projeAdi: `${motorGirdi.dukkanSecim}${m2 ? ` · ${m2} m²` : ""}`,
-        detaySeviyesi: detayLevel,
-        teshirVitrinleriDahil:
-          detayLevel === "hizli" ? true : detayExtras.teshirVitrinleriDahil,
-        bulasikKapasitesiYuksek:
-          detayLevel === "hizli" ? false : detayExtras.bulasikKapasitesiYuksek,
-        referansId:
-          detayLevel === "detayli"
-            ? (detayExtras.referansId ?? undefined)
-            : undefined,
-        bolumM2: bolumM2Payload,
-      };
-
-      if (detayLevel === "hizli") {
-        const previewRes = await fetch("/api/pfos/quote/preview", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(quoteBody),
-        });
-        const previewData = (await previewRes.json()) as {
-          preview?: { onerilenDetaySeviyesi?: string | null; neden?: string[] };
-          error?: string;
-        };
-        if (
-          previewRes.ok &&
-          previewData.preview?.onerilenDetaySeviyesi === "detayli" &&
-          previewData.preview.neden?.length
-        ) {
-          setPreviewUyari(previewData.preview.neden.join(" · "));
-        }
-      }
-
       const res = await fetch("/api/pfos/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(quoteBody),
+        body: JSON.stringify({
+          konsept,
+          dukkanSecim: motorGirdi.dukkanSecim,
+          m2,
+          sehir,
+          fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
+          altTip: motorGirdi.altTip,
+          teslimatAdresi: [motorGirdi.lokasyon, motorGirdi.adresNot]
+            .filter(Boolean)
+            .join(" · "),
+          projeAdi: `${motorGirdi.dukkanSecim}${m2 ? ` · ${m2} m²` : ""}`,
+        }),
       });
       const data = await readFetchJson<PFOSResponse>(
         res,
@@ -661,8 +606,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setSonuc(null);
     setTeklifV14(null);
     setError(null);
-    setPreviewUyari(null);
-    setDetayExtras(defaultDetaySeviyesiState());
   }
 
   function renderM2Field(panel: LegacyPanelDef) {
@@ -746,39 +689,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const id = q.id as keyof SoruCevapHaritasi;
 
     if (q.id === "q_m2") return renderM2Field(panel);
-
-    if (q.id === "q_detay_seviyesi") {
-      const opts = ((q.options as string[]) ?? []).filter((o) => o !== "Bilmiyorum");
-      const val = String(answers[id] ?? "");
-      return (
-        <>
-          <div className={styles.detayChipGrid}>
-            {opts.map((opt) => (
-              <button
-                key={opt}
-                type="button"
-                className={`${styles.detayChip}${val === opt ? ` ${styles.detayChipSelected}` : ""}`}
-                onClick={() => setAnswer(id, opt, panel)}
-              >
-                <span className={styles.detayChipMark}>{val === opt ? "✓" : ""}</span>
-                {t(opt)}
-              </button>
-            ))}
-          </div>
-          {val ? (
-            <DetaySeviyesiExtras
-              detayLabel={val}
-              konsept={konsept}
-              m2={motorGirdi.m2}
-              state={detayExtras}
-              onChange={(patch) =>
-                setDetayExtras((prev) => ({ ...prev, ...patch }))
-              }
-            />
-          ) : null}
-        </>
-      );
-    }
 
     if (q.type === "select" || q.type === "select_conditional") {
       const rawOpts =
@@ -1020,13 +930,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         </div>
 
         {error ? <div className={styles.error}>{error}</div> : null}
-
-        {previewUyari ? (
-          <div className={styles.alanHint} role="status">
-            {t("Önizleme önerisi")}: {previewUyari}.{" "}
-            {t("Daha doğru teklif için «Detaylı proje» seçeneğini deneyebilirsiniz.")}
-          </div>
-        ) : null}
 
         {loading && allWizardComplete && !teklifV14 ? (
           <PfosTeklifLoading label={t("Teklif hesaplanıyor…")} />
