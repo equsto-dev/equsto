@@ -12,6 +12,11 @@ import {
   findShopTypeForQuote,
   loadProjeAkisShopTypes,
 } from "@/lib/pfos/proje-akis/load-shop-types";
+import { listPfosReferanslar } from "@/lib/pfos/referans/list-referanslar";
+import {
+  buildQuotePreviewResponse,
+  type QuotePreviewResponse,
+} from "@/lib/pfos/quote-preview";
 
 const M2_RANGES: Record<string, { min: number; max: number }> = {
   "all-day-dining-cafe": { min: 100, max: 400 },
@@ -784,6 +789,61 @@ export async function pfosPostQuote(req: NextRequest) {
       return NextResponse.json({ error: err.message }, { status: 400 });
     }
     console.error("[PFOS quote]", err);
+    const msg = err instanceof Error ? err.message : "Sunucu hatası";
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
+}
+
+export async function pfosPostQuotePreview(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const input = PFOSRequestSchema.parse(body);
+    const shopTypes = await loadProjeAkisShopTypes();
+    const shopType = findShopTypeForQuote(
+      shopTypes,
+      input.dukkanSecim ?? "",
+      input.konsept,
+      input.altTip,
+    );
+    const template = await resolveTemplateForQuote(
+      input.konsept,
+      input.m2,
+      input.altTip,
+      input.referansId,
+      shopType,
+    );
+    const response = await calculateQuote(input, template);
+    const preview: QuotePreviewResponse = buildQuotePreviewResponse(
+      response,
+      input,
+      template.referansId ?? input.referansId,
+    );
+    return NextResponse.json(preview, { status: 200 });
+  } catch (err) {
+    if (err instanceof ZodError) {
+      return NextResponse.json(
+        { error: "Geçersiz istek", details: err.flatten() },
+        { status: 400 },
+      );
+    }
+    if (err instanceof Error && err.message.startsWith("Bilinmeyen konsept")) {
+      return NextResponse.json({ error: err.message }, { status: 400 });
+    }
+    console.error("[PFOS quote/preview]", err);
+    const msg = err instanceof Error ? err.message : "Sunucu hatası";
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
+}
+
+export async function pfosGetReferanslar(req: NextRequest) {
+  try {
+    const sp = req.nextUrl.searchParams;
+    const konsept = sp.get("konsept")?.trim() || undefined;
+    const segment = sp.get("segment")?.trim() || undefined;
+    const referanslar = await listPfosReferanslar({ konsept, segment });
+    return NextResponse.json({ success: true, referanslar, filtered: referanslar.length });
+  } catch (err) {
+    console.error("[PFOS referanslar]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";
     return NextResponse.json({ error: msg }, { status: 500 });
   }
