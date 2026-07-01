@@ -1864,6 +1864,13 @@
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .main:has([data-pfos-workspace] [data-pfos-liste-ready]) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 @media (max-width: 640px) {
   .teklifKararActions {
     grid-template-columns: 1fr;
