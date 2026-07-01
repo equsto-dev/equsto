@@ -831,6 +831,52 @@
   font-variant-numeric: tabular-nums;
 }
 
+.matchStatWarn {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.fiyatsizBanner {
+  margin-top: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.fiyatsizBannerText {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #92400e;
+}
+
+.fiyatsizBannerWa {
+  align-self: flex-start;
+  display: inline-flex;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #166534;
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+  text-decoration: none;
+}
+
+.fiyatsizBannerWa:hover {
+  background: #d1fae5;
+}
+
+.teklifLoading {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--ws-muted, #64748b);
+}
+
 .matchSkeleton {
   display: flex;
   flex-direction: column;
