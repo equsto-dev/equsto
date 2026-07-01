@@ -138,6 +138,9 @@ export function defaultPublicQuestions(): WizardQuestion[] {
 }
 
 /** API’den gelen eksik/bozuk soru setine karşı — zorunlu PFOS adımları korunur */
+/** Public sihirbazda gösterilmeyen soru id'leri */
+const PUBLIC_WIZARD_OMIT_IDS = new Set(["q_karar", "q_detay_seviyesi"]);
+
 const BILMIYORUM_KALDIR_IDS = new Set(["q_karar", "q_ust_segment"]);
 
 function stripBilmiyorumBranches(
@@ -198,5 +201,9 @@ export function mergePublicWizardQuestions(
     if (!q?.id) continue;
     byId.set(q.id, mergeWizardQuestion(byId.get(q.id), q));
   }
-  return sortWizardQuestions([...byId.values()].map(stripBilmiyorum));
+  return sortWizardQuestions(
+    [...byId.values()]
+      .filter((q) => !PUBLIC_WIZARD_OMIT_IDS.has(q.id))
+      .map(stripBilmiyorum),
+  );
 }
