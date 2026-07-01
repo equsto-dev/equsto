@@ -1,11 +1,29 @@
 "use client";
 
-import TeklifV14Proforma from "@/components/pfos/TeklifV14Proforma";
+import dynamic from "next/dynamic";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import type { usePfosListeUpload } from "../usePfosListeUpload";
+import {
+  buildListeBulkWhatsAppUrl,
+} from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
+import { trackPfosListeWhatsApp } from "@/lib/pfos/track-pfos-analytics.client";
 import { useFlipCollapse } from "./useFlipCollapse";
 import ws from "./pfos-workspace.module.css";
 import styles from "../pfos-public.module.css";
+
+const TeklifV14Proforma = dynamic(() => import("@/components/pfos/TeklifV14Proforma"), {
+  loading: () => <TeklifProformaLoading />,
+  ssr: false,
+});
+
+function TeklifProformaLoading() {
+  const { t } = usePfosLabel();
+  return (
+    <p className={ws.teklifLoading} role="status">
+      {t("Teklif yükleniyor…")}
+    </p>
+  );
+}
 
 type UploadState = ReturnType<typeof usePfosListeUpload>;
 
@@ -49,6 +67,12 @@ export default function PfosListeWorkspace({
   const compact = !!(file || loadingKind || sonuc);
   const uploadFlipRef = useFlipCollapse(compact);
   const fillDropzone = largePane || hideTitle;
+
+  const fiyatsizKalemler =
+    teklifV14?.satirlar
+      .filter((s) => s.birimSatis == null)
+      .map((s) => ({ poz: s.poz, tanim: s.tanim })) ?? [];
+  const fiyatsizSayi = fiyatsizKalemler.length;
 
   return (
     <div className={ws.listeWorkspace}>
@@ -175,7 +199,40 @@ export default function PfosListeWorkspace({
                 {formatTry(sonuc.ozet.toplamFiyat)}
               </span>
             ) : null}
+            {teklifV14 && fiyatsizSayi > 0 ? (
+              <span className={ws.matchStatWarn}>
+                ⚠ {fiyatsizSayi} {t("fiyatsız")}
+              </span>
+            ) : null}
           </div>
+          {teklifV14 && fiyatsizSayi > 0 ? (
+            <div className={ws.fiyatsizBanner}>
+              <p className={ws.fiyatsizBannerText}>
+                {fiyatsizSayi}{" "}
+                {t(
+                  "kalem için katalog fiyatı bulunamadı — satırlar sarı ile işaretlidir.",
+                )}
+              </p>
+              <a
+                className={ws.fiyatsizBannerWa}
+                href={buildListeBulkWhatsAppUrl({
+                  kalemler: fiyatsizKalemler,
+                  teklifSayi: teklifV14.ust.sayi,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() =>
+                  trackPfosListeWhatsApp({
+                    scope: "toplu",
+                    fiyatsizSayi,
+                    teklifSayi: teklifV14.ust.sayi,
+                  })
+                }
+              >
+                {t("Tüm fiyatsız kalemler için WhatsApp")}
+              </a>
+            </div>
+          ) : null}
           {sonuc.uyarilar?.length ? (
             <ul className={styles.listeUyarilar}>
               {sonuc.uyarilar.map((u) => (

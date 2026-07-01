@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Konsept, PFOSResponse } from "@/lib/pfos/schemas/pfos.schema";
 import { KonseptEnum } from "@/lib/pfos/schemas/pfos.schema";
@@ -18,7 +19,10 @@ import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy
 import { fetchTcmbKurForTeklif } from "@/lib/pfos/teklif/fetch-kur.client";
 import { pfosResponseToTeklifV14 } from "@/lib/pfos/teklif/map-pfos-response";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
-import TeklifV14Proforma from "@/components/pfos/TeklifV14Proforma";
+
+const TeklifV14Proforma = dynamic(() => import("@/components/pfos/TeklifV14Proforma"), {
+  ssr: false,
+});
 import {
   clearDownstreamAnswers,
   isLegacyPanelComplete,

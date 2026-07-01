@@ -13,6 +13,7 @@ import {
   type PfosSorunTipi,
   PFOS_SORUN_TIPLERI,
 } from "./feedback-types";
+import { sortPfosFeedbackByPriority } from "./feedback-priority";
 
 export type {
   PfosFeedbackLogInput,
@@ -208,7 +209,7 @@ export async function listPfosFeedbackEvents(opts?: {
     include: { _count: { select: { oneriler: true } } },
   });
 
-  return rows.map(pfosFeedbackToAdmin);
+  return sortPfosFeedbackByPriority(rows.map(pfosFeedbackToAdmin));
 }
 
 export async function getPfosFeedbackById(id: string) {

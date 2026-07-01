@@ -296,6 +296,10 @@
     "Yalnızca Excel (.xlsx) veya PDF (.pdf) desteklenir.": "Only Excel (.xlsx) or PDF (.pdf) files are supported.",
     "Sunucu boş yanıt döndü. Lütfen tekrar deneyin.": "Server returned an empty response. Please try again.",
     "Sunucu yanıtı okunamadı. Bağlantınızı kontrol edin.": "Could not read server response. Check your connection.",
-    "Liste fiyatlandırılamadı": "Could not price the list"
+    "Liste fiyatlandırılamadı": "Could not price the list",
+    "fiyatsız": "unpriced",
+    "kalem için katalog fiyatı bulunamadı — satırlar sarı ile işaretlidir.": "lines have no catalog price — marked in yellow.",
+    "Tüm fiyatsız kalemler için WhatsApp": "WhatsApp for all unpriced lines",
+    "Teklif yükleniyor…": "Loading quote…"
   }
 }

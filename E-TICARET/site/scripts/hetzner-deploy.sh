@@ -29,6 +29,11 @@ if [[ -d node_modules/@prisma/client ]]; then
   echo "[hetzner-deploy] prisma migrate deploy (host)..."
   node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate deploy \
     || echo "[hetzner-deploy] migrate uyarı — DIRECT_URL kontrol edin"
+  if [[ -f scripts/export-pfos-referans-sku-links.mjs ]]; then
+    echo "[hetzner-deploy] referans SKU links export..."
+    node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs \
+      || echo "[hetzner-deploy] SKU export uyarı — DATABASE_URL kontrol edin"
+  fi
 else
   echo "[hetzner-deploy] migrate atlandı (node_modules yok) — npm ci && npm run db:migrate:deploy"
 fi
