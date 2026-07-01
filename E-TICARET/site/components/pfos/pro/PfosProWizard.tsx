@@ -59,6 +59,7 @@ import {
 } from "@/lib/pfos/teklif/teklif-policy";
 import { pfosResponseToTeklifV14 } from "@/lib/pfos/teklif/map-pfos-response";
 import { formatTarihTr } from "@/lib/pfos/teklif/format-v14";
+import { pfosGuvenYuzde } from "@/lib/pfos/format-display";
 import { parseConceptsResponse } from "@/lib/pfos/wizard/parse-concepts";
 import {
   adresOzeti,
@@ -453,7 +454,7 @@ export default function PfosProWizard() {
   }
 
   if (state.adim === 3 && sonuc && teklifV14) {
-    const skorPct = Math.round(sonuc.guvenSkoru * 100);
+    const skorPct = pfosGuvenYuzde(sonuc.guvenSkoru);
     const eksikZorunlu = sonuc.kalemler.filter((k) => k.tip === "zorunlu" && !k.urun);
     return (
       <div>
@@ -492,8 +493,8 @@ export default function PfosProWizard() {
             <StatisticCard
               statistic={{
                 title: "Güven skoru",
-                value: skorPct,
-                suffix: "%",
+                value: skorPct ?? "—",
+                suffix: skorPct != null ? "%" : undefined,
               }}
             />
           </Col>
