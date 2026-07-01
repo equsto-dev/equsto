@@ -893,9 +893,39 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .pipelineLabel {
     font-size: 0.65rem;
+  }
+
+  /* Liste yüklendiğinde / eşleşirken: mobilde tam genişlik */
+  .balancedPane[data-pfos-liste-ready],
+  .balancedPane[data-pfos-pane="liste"] {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .balancedPane[data-pfos-liste-ready] .balancedPaneHeadLeft,
+  .balancedPane[data-pfos-liste-ready] > .uploadTitleHead,
+  .balancedPane[data-pfos-liste-ready] .balancedPaneLeft,
+  .balancedPane[data-pfos-pane="liste"] .balancedPaneHeadLeft,
+  .balancedPane[data-pfos-pane="liste"] > .uploadTitleHead,
+  .balancedPane[data-pfos-pane="liste"] .balancedPaneLeft {
+    display: none;
+  }
+
+  .balancedPane[data-pfos-liste-ready] .balancedPaneRight,
+  .balancedPane[data-pfos-pane="liste"] .balancedPaneRight {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .balancedPane[data-pfos-liste-ready] .balancedPaneRight > aside,
+  .balancedPane[data-pfos-pane="liste"] .balancedPaneRight > aside {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

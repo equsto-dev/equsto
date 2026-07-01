@@ -184,6 +184,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const wizardListeMode = !!(listeUpload.sonuc && listeUpload.teklifV14);
   const wizardHasProforma = !!(finished && sonuc && teklifV14);
+  const listeHasContent = !!(
+    listeUpload.file ||
+    listeUpload.loadingKind ||
+    listeUpload.sonuc
+  );
 
   useEffect(() => {
     if (wizardListeMode) setActivePane("liste");
@@ -1088,7 +1093,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       pipelineActive={pipelineActive}
       summary={liveSummary}
     >
-      <div className={ws.balancedPane} data-pfos-pane={activePane}>
+      <div
+        className={ws.balancedPane}
+        data-pfos-pane={activePane}
+        data-pfos-liste-ready={listeHasContent ? "" : undefined}
+      >
         {activePane === "balanced" ? (
           <>
             <div className={ws.balancedPaneHeadLeft}>
