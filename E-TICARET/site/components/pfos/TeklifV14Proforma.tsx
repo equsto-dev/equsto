@@ -19,7 +19,9 @@ import {
 import PfosTeklifKararBlock, {
   type TeklifKarar,
 } from "@/components/pfos/PfosTeklifKararBlock";
+import { buildListeKalemWhatsAppUrl } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
 import { logPfosTeklifFeedback } from "@/lib/pfos/log-pfos-feedback.client";
+import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import { savePfosTeklifSnapshot } from "@/lib/pfos/log-pfos-snapshot.client";
 
 type Props = {
@@ -132,6 +134,7 @@ export default function TeklifV14Proforma({
     not?: string;
   }>();
   const { ust, ozet, meta } = model;
+  const { t } = usePfosLabel();
   const blocks = groupTeklifV14Satirlar(model.satirlar);
   const tarih = formatTarihTr(ust.tarih);
 
@@ -643,6 +646,20 @@ export default function TeklifV14Proforma({
                             {aciklamaMetni ? (
                               <pre style={specPre}>{aciklamaMetni}</pre>
                             ) : null}
+                            {fiyatsizSatir && pfosSource === "liste" ? (
+                              <a
+                                href={buildListeKalemWhatsAppUrl({
+                                  poz: row.poz,
+                                  tanim: row.tanim,
+                                  teklifSayi: ust.sayi,
+                                })}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={listeWaCtaLink}
+                              >
+                                {t("Bu kalem için WhatsApp ile yazın")}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>
@@ -1039,4 +1056,18 @@ const specPre: CSSProperties = {
   lineHeight: 1.45,
   wordBreak: "break-word",
   width: "100%",
+};
+
+const listeWaCtaLink: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  marginTop: 4,
+  padding: "6px 10px",
+  borderRadius: 6,
+  fontSize: 11,
+  fontWeight: 600,
+  color: "#166534",
+  background: "#ecfdf5",
+  border: "1px solid #86efac",
+  textDecoration: "none",
 };
