@@ -8,6 +8,12 @@ import styles from "@/components/pfos/public/pfos-public.module.css";
 type Props = {
   dukkanTuru: string;
   ustSegment?: string;
+  /** grid: kart vitrini; rows: kompakt satır listesi */
+  layout?: "grid" | "rows";
+  /** rows modunda gösterilecek üst sınır (varsayılan 5) */
+  limit?: number;
+  /** Başlık ve açıklama metnini gizle */
+  hideHeader?: boolean;
 };
 
 function formatFiyat(kart: YardimciKatalogKart): string {
@@ -22,6 +28,9 @@ function formatFiyat(kart: YardimciKatalogKart): string {
 export default function PfosKonseptEkipmanGrid({
   dukkanTuru,
   ustSegment = "",
+  layout = "grid",
+  limit,
+  hideHeader = false,
 }: Props) {
   const { t } = usePfosLabel();
   const [items, setItems] = useState<YardimciKatalogKart[] | null>(null);
@@ -53,25 +62,85 @@ export default function PfosKonseptEkipmanGrid({
     };
   }, [dukkanTuru, ustSegment]);
 
+  const visibleItems =
+    items == null
+      ? null
+      : layout === "rows"
+        ? items.slice(0, limit ?? 5)
+        : limit != null
+          ? items.slice(0, limit)
+          : items;
+
+  function renderRow(kart: YardimciKatalogKart) {
+    const price = formatFiyat(kart);
+    const href = kart.href ?? "#";
+    const hasProduct = Boolean(kart.ad && kart.href);
+    const title = hasProduct ? kart.ad! : kart.label;
+
+    return (
+      <article key={kart.label} className={styles.konseptEkipmanRow}>
+        {hasProduct ? (
+          <a className={styles.konseptEkipmanRowImg} href={href}>
+            {kart.gorselUrl ? (
+              <img src={kart.gorselUrl} alt="" loading="lazy" decoding="async" />
+            ) : (
+              <span className={styles.konseptEkipmanNoImg}>📷</span>
+            )}
+          </a>
+        ) : (
+          <div className={`${styles.konseptEkipmanRowImg} ${styles.konseptEkipmanPlaceholder}`}>
+            <span>{kart.label}</span>
+          </div>
+        )}
+        <div className={styles.konseptEkipmanRowBody}>
+          {hasProduct ? (
+            <a className={styles.konseptEkipmanRowName} href={href}>
+              {title}
+            </a>
+          ) : (
+            <div className={styles.konseptEkipmanRowName}>{title}</div>
+          )}
+          {kart.marka ? (
+            <div className={styles.konseptEkipmanRowBrand}>{kart.marka}</div>
+          ) : null}
+          {!hasProduct ? (
+            <div className={styles.konseptEkipmanRowNote}>
+              {t("Katalog eşlemesi hazırlanıyor")}
+            </div>
+          ) : null}
+        </div>
+        {price ? <div className={styles.konseptEkipmanRowPrice}>{price}</div> : null}
+      </article>
+    );
+  }
+
   return (
     <section
-      className={styles.konseptEkipmanPanel}
+      className={`${styles.konseptEkipmanPanel}${layout === "rows" ? ` ${styles.konseptEkipmanPanelRows}` : ""}`}
       aria-label={t("Konsept ekipman önerileri")}
     >
-      <h3 className={styles.konseptEkipmanTitle}>
-        {t("Konseptinize uygun yardımcı ekipmanlar")}
-      </h3>
-      <p className={styles.konseptEkipmanLead}>
-        {t(
-          "Aşağıdaki ürünler vitrin fiyatlarıyla gösterilir — sepete ekleyebilir veya ürün sayfasından inceleyebilirsiniz.",
-        )}
-      </p>
+      {!hideHeader ? (
+        <>
+          <h3 className={styles.konseptEkipmanTitle}>
+            {t("Konseptinize uygun yardımcı ekipmanlar")}
+          </h3>
+          <p className={styles.konseptEkipmanLead}>
+            {t(
+              "Aşağıdaki ürünler vitrin fiyatlarıyla gösterilir — sepete ekleyebilir veya ürün sayfasından inceleyebilirsiniz.",
+            )}
+          </p>
+        </>
+      ) : null}
       {error ? <p className={styles.konseptEkipmanErr}>{error}</p> : null}
-      {!items ? (
+      {!visibleItems ? (
         <p className={styles.konseptEkipmanLoading}>{t("Ürünler yükleniyor…")}</p>
+      ) : layout === "rows" ? (
+        <div className={styles.konseptEkipmanRowList}>
+          {visibleItems.map((kart) => renderRow(kart))}
+        </div>
       ) : (
         <div className={`products ${styles.konseptEkipmanGrid}`}>
-          {items.map((kart) => {
+          {visibleItems.map((kart) => {
             const price = formatFiyat(kart);
             const href = kart.href ?? "#";
             const hasProduct = Boolean(kart.ad && kart.href);
