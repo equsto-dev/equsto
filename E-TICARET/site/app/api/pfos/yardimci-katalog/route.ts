@@ -48,22 +48,29 @@ function kartFromUrun(
   };
 }
 
-/** GET /api/pfos/yardimci-katalog?dukkan=…&segment=… */
+/** GET /api/pfos/yardimci-katalog?dukkan=…&segment=…&limit=5&matched=1 */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const dukkan = url.searchParams.get("dukkan")?.trim() ?? "";
   const segment = url.searchParams.get("segment")?.trim() ?? "";
+  const matchedOnly = url.searchParams.get("matched") === "1";
+  const limitRaw = parseInt(url.searchParams.get("limit") ?? "0", 10);
+  const limit = limitRaw > 0 ? limitRaw : 0;
   const labels = yardimciEkipmanForKonsept(dukkan, segment);
   const items: YardimciKatalogKart[] = [];
 
   for (const label of labels) {
     const tipKodu = yardimciLabelToTip(label);
+    let kart: YardimciKatalogKart;
     if (!tipKodu) {
-      items.push(kartFromUrun(label, null, null));
-      continue;
+      kart = kartFromUrun(label, null, null);
+    } else {
+      const urun = await matchShopCatalog(tipKodu, "ekonomik");
+      kart = kartFromUrun(label, tipKodu, urun);
     }
-    const urun = await matchShopCatalog(tipKodu, "ekonomik");
-    items.push(kartFromUrun(label, tipKodu, urun));
+    if (matchedOnly && !kart.href) continue;
+    items.push(kart);
+    if (limit > 0 && items.length >= limit) break;
   }
 
   return NextResponse.json({ items });
