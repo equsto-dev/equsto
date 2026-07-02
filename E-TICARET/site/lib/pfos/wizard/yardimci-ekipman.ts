@@ -4,6 +4,8 @@ import {
   normalizeTipSet,
   oncelikliYardimciEtiketler,
 } from "@/lib/pfos/wizard/proje-oneri-kurallar";
+import { yardimciLabelToTip } from "@/lib/pfos/wizard/yardimci-label-tip";
+import { normalizeTipKodu } from "@/lib/pfos/core/tip-kodu";
 
 const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
   "Fine Dining": [
@@ -125,6 +127,48 @@ const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
     "Vakum makinası",
     "Tartı (hassas)",
     "Teşhir vitrin",
+    "Buz makinası",
+  ],
+  "Pastane + Cafe": [
+    "Kahve değirmeni (reserve)",
+    "Spiral hamur yoğurma",
+    "Planet mikser",
+    "Soğuk teşhir vitrini",
+    "Tartı (hassas)",
+    "Buz makinası",
+    "Bardak yıkayıcı",
+    "Blender seti",
+  ],
+  Pastane: [
+    "Spiral hamur yoğurma",
+    "Hamur açma makinesi",
+    "Planet mikser",
+    "Soğuk teşhir vitrini",
+    "Tartı (hassas)",
+    "Teşhir vitrin",
+  ],
+  "Pastane & Yerel": [
+    "Soğuk teşhir vitrini",
+    "Spiral hamur yoğurma",
+    "Tartı (hassas)",
+    "Hamur açma makinesi",
+    "Buz makinası",
+    "Planet mikser",
+  ],
+  "Pastane Cafe (Boyoz)": [
+    "Spiral hamur yoğurma",
+    "Konveksiyon fırın (yedek)",
+    "Soğuk teşhir vitrini",
+    "Tartı (hassas)",
+    "Teşhir vitrin",
+    "Buz makinası",
+  ],
+  "Kahve Durağı — Pastane & Kahvaltı": [
+    "Kahve değirmeni (reserve)",
+    "Spiral hamur yoğurma",
+    "Bardak yıkayıcı",
+    "Teşhir vitrin",
+    "Tartı (hassas)",
     "Buz makinası",
   ],
   Meyhane: [
@@ -275,9 +319,44 @@ export function yardimciEkipmanForProje(input: YardimciProjeGirdi): string[] {
 
   return oncelikliYardimciEtiketler(
     havuz,
-    { mevcutTipKodlari: mevcut, eksikZorunluTipKodlari: eksik, m2, gezilenTipKodlari: gezilen },
+    {
+      mevcutTipKodlari: mevcut,
+      eksikZorunluTipKodlari: eksik,
+      m2,
+      gezilenTipKodlari: gezilenKonseptIci(gezilen, havuz),
+      konseptTipKodlari: konseptTipSetFromHavuz(havuz),
+    },
     limit,
   );
+}
+
+function konseptTipSetFromHavuz(havuz: readonly string[]): Set<string> {
+  const tips = new Set<string>();
+  for (const label of havuz) {
+    const tip = yardimciLabelToTip(label);
+    if (tip) tips.add(normalizeTipKodu(tip));
+  }
+  return tips;
+}
+
+/** Üye geçmişi — yalnızca konsept havuzundaki tipler skorlamaya girer */
+function gezilenKonseptIci(gezilen: Set<string>, havuz: readonly string[]): Set<string> {
+  const izinli = konseptTipSetFromHavuz(havuz);
+  const filtered = new Set<string>();
+  for (const tip of gezilen) {
+    if (izinli.has(tip)) filtered.add(tip);
+  }
+  return filtered;
+}
+
+/** Konsept havuzundaki izinli tip_kodu kümesi (Faz C filtre) */
+export function yardimciKonseptTipSet(input: YardimciProjeGirdi): Set<string> {
+  const dukkanTuru = String(input.dukkanTuru ?? "").trim();
+  const ustSegment = String(input.ustSegment ?? "").trim();
+  const konseptLabel = String(input.konseptLabel ?? "").trim();
+  const key = yardimciKey(dukkanTuru, ustSegment, konseptLabel);
+  const havuz = YARDIMCI_EKIPMAN[key] ?? YARDIMCI_EKIPMAN.default;
+  return konseptTipSetFromHavuz(havuz);
 }
 
 /** @deprecated yardimciEkipmanForProje kullanın */

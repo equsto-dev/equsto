@@ -1,14 +1,19 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
 import { getMemberIdByToken } from "@/lib/member-auth";
-import { matchShopCatalog } from "@/lib/pfos/core/shop-catalog-match";
 import { normalizeTipKodu } from "@/lib/pfos/core/tip-kodu";
 import {
   browseTipKodlari,
   listMemberBrowseForOneri,
 } from "@/lib/pfos/member-browse-log";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
-import { yardimciEkipmanForProje } from "@/lib/pfos/wizard/yardimci-ekipman";
+import {
+  matchYardimciRailUrun,
+  slugRailUrun,
+} from "@/lib/pfos/wizard/yardimci-katalog-match";
+import {
+  yardimciEkipmanForProje,
+  yardimciKonseptTipSet,
+} from "@/lib/pfos/wizard/yardimci-ekipman";
 import { yardimciLabelToTip } from "@/lib/pfos/wizard/yardimci-label-tip";
 
 export type YardimciKatalogKart = {
@@ -21,7 +26,6 @@ export type YardimciKatalogKart = {
   doviz: string | null;
   gorselUrl: string | null;
   href: string | null;
-  /** Faz C — üyenin gezdiği ürün */
   memberBrowse?: boolean;
 };
 
@@ -38,22 +42,10 @@ function kartFromUrun(
   tipKodu: string | null,
   urun: EslesmisUrun | null,
   extra?: { memberBrowse?: boolean },
-): YardimciKatalogKart {
-  if (!urun) {
-    return {
-      label,
-      tipKodu,
-      id: null,
-      ad: null,
-      marka: null,
-      fiyat: null,
-      doviz: null,
-      gorselUrl: null,
-      href: null,
-      memberBrowse: extra?.memberBrowse,
-    };
-  }
+): YardimciKatalogKart | null {
+  if (!urun || !urun.gorselUrl) return null;
   const slug = String(urun.slug || urun.id || "").replace(/^ecom_/, "");
+  if (!slug || slug.startsWith("pfos-link-")) return null;
   return {
     label,
     tipKodu,
@@ -63,60 +55,18 @@ function kartFromUrun(
     fiyat: urun.fiyat > 0 ? urun.fiyat : null,
     doviz: urun.doviz,
     gorselUrl: urun.gorselUrl,
-    href: slug ? `/urun/${encodeURIComponent(slug)}` : null,
+    href: `/urun/${encodeURIComponent(slug)}`,
     memberBrowse: extra?.memberBrowse,
   };
 }
 
-function mapDoviz(currency: string | null | undefined): "EUR" | "TRY" | "USD" {
-  const c = String(currency || "TRY").toUpperCase();
-  if (c === "EUR" || c === "USD") return c;
-  return "TRY";
-}
-
-function dec(v: unknown): number | null {
-  if (v == null) return null;
-  const n = Number(v);
-  return Number.isFinite(n) ? n : null;
-}
-
-async function kartFromSlug(slug: string): Promise<YardimciKatalogKart | null> {
-  const clean = slug.replace(/^ecom_/, "").trim();
-  if (!clean) return null;
-  const product = await db.product.findFirst({
-    where: {
-      slug: clean,
-      ecommerceAktif: true,
-      status: "PUBLISHED",
-      priceListTl: { gt: 0 },
-    },
-    include: {
-      brand: true,
-      images: { where: { isPrimary: true }, take: 1, orderBy: { order: "asc" } },
-    },
-  });
-  if (!product) return null;
-  const urun: EslesmisUrun = {
-    id: product.id,
-    slug: product.slug,
-    sku: product.sku,
-    ad: product.name,
-    marka: product.brand.name,
-    model: product.model,
-    olcu: null,
-    elektrikGucuKw: dec(product.elektrikGucuKw),
-    gazGucuKw: dec(product.gazGucuKw),
-    fiyat: dec(product.priceListTl) ?? 0,
-    doviz: mapDoviz(product.priceCurrency),
-    gorselUrl: product.images[0]?.url ?? null,
-  };
-  return kartFromUrun(product.name, product.pfosUrunTipi, urun, {
-    memberBrowse: true,
-  });
-}
-
 function kartKey(kart: YardimciKatalogKart): string {
   return kart.id ?? kart.href ?? kart.label;
+}
+
+function tipKonseptIci(tip: string | null | undefined, izinli: Set<string>): boolean {
+  if (!tip) return false;
+  return izinli.has(normalizeTipKodu(tip));
 }
 
 /** GET /api/pfos/yardimci-katalog?dukkan=…&segment=…&limit=5&matched=1 */
@@ -139,10 +89,20 @@ export async function GET(req: Request) {
   const limitRaw = parseInt(url.searchParams.get("limit") ?? "0", 10);
   const limit = limitRaw > 0 ? limitRaw : 0;
 
+  const projeGirdi = {
+    dukkanTuru: dukkan,
+    ustSegment: segment,
+    konseptLabel,
+    mevcutTipKodlari: mevcutTips,
+    eksikZorunluTipKodlari: eksikTips,
+    m2,
+  };
+  const konseptTips = yardimciKonseptTipSet(projeGirdi);
   const mevcutNorm = new Set(mevcutTips.map((t) => normalizeTipKodu(t)));
+  const items: YardimciKatalogKart[] = [];
+  const seen = new Set<string>();
 
   let gezilenTipKodlari: string[] = [];
-  let browseSlugs: string[] = [];
   const token = readBearerToken(req);
   if (token) {
     const memberId = await getMemberIdByToken(token);
@@ -152,46 +112,46 @@ export async function GET(req: Request) {
         { konseptLabel, dukkanTuru: dukkan },
         limit > 0 ? Math.min(limit + 4, 12) : 10,
       );
-      gezilenTipKodlari = [...browseTipKodlari(browses)];
-      browseSlugs = browses.map((b) => b.slug);
+      gezilenTipKodlari = [...browseTipKodlari(browses)].filter((t) =>
+        konseptTips.has(t),
+      );
+
+      const browseCap = limit > 0 ? Math.min(2, limit) : 2;
+      for (const browse of browses
+        .filter((b) => tipKonseptIci(b.tipKodu, konseptTips))
+        .slice(0, browseCap)) {
+        const urun = await slugRailUrun(browse.slug);
+        if (!urun) continue;
+        const kart = kartFromUrun(urun.ad ?? browse.slug, browse.tipKodu, urun, {
+          memberBrowse: true,
+        });
+        if (!kart) continue;
+        const tipNorm = kart.tipKodu ? normalizeTipKodu(kart.tipKodu) : "";
+        if (tipNorm && mevcutNorm.has(tipNorm)) continue;
+        const key = kartKey(kart);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        items.push(kart);
+      }
     }
   }
 
   const labels = yardimciEkipmanForProje({
-    dukkanTuru: dukkan,
-    ustSegment: segment,
-    konseptLabel,
-    mevcutTipKodlari: mevcutTips,
-    eksikZorunluTipKodlari: eksikTips,
+    ...projeGirdi,
     gezilenTipKodlari,
-    m2,
-    limit: limit > 0 ? limit + 6 : 14,
+    limit: limit > 0 ? limit + 8 : 14,
   });
-  const items: YardimciKatalogKart[] = [];
-  const seen = new Set<string>();
-
-  const browseCap = limit > 0 ? Math.min(3, limit) : 3;
-  for (const slug of browseSlugs.slice(0, browseCap)) {
-    const kart = await kartFromSlug(slug);
-    if (!kart || !kart.href) continue;
-    const tipNorm = kart.tipKodu ? normalizeTipKodu(kart.tipKodu) : "";
-    if (tipNorm && mevcutNorm.has(tipNorm)) continue;
-    const key = kartKey(kart);
-    if (seen.has(key)) continue;
-    seen.add(key);
-    items.push(kart);
-  }
 
   for (const label of labels) {
     const tipKodu = yardimciLabelToTip(label);
-    let kart: YardimciKatalogKart;
-    if (!tipKodu) {
-      kart = kartFromUrun(label, null, null);
-    } else {
-      const urun = await matchShopCatalog(tipKodu, "ekonomik");
+    if (tipKodu && !tipKonseptIci(tipKodu, konseptTips)) continue;
+    let kart: YardimciKatalogKart | null = null;
+    if (tipKodu) {
+      const urun = await matchYardimciRailUrun(tipKodu);
       kart = kartFromUrun(label, tipKodu, urun);
     }
-    if (matchedOnly && !kart.href) continue;
+    if (matchedOnly && !kart) continue;
+    if (!kart) continue;
     const key = kartKey(kart);
     if (seen.has(key)) continue;
     seen.add(key);
