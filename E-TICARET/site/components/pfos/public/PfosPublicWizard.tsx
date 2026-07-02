@@ -964,7 +964,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                   dukkanTuru: String(answers.q_dukkan_turu ?? ""),
                   ustSegment: String(answers.q_ust_segment ?? ""),
                   konseptLabel: sonuc.konseptLabel ?? "",
+                  m2: motorGirdi.m2,
                   mevcutTipKodlari: (sonuc.kalemler ?? [])
+                    .map((k) => k.urunTipi)
+                    .filter((t): t is string => Boolean(String(t ?? "").trim())),
+                  eksikZorunluTipKodlari: (sonuc.kalemler ?? [])
+                    .filter((k) => k.tip === "zorunlu" && !k.urun)
                     .map((k) => k.urunTipi)
                     .filter((t): t is string => Boolean(String(t ?? "").trim())),
                 }}

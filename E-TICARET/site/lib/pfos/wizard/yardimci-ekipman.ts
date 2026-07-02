@@ -1,7 +1,9 @@
 /** Konsept / dükkan türüne göre opsiyonel yardımcı ekipman (pfos-wizard.js YARDIMCI ile uyumlu) */
 
-import { normalizeTipKodu } from "@/lib/pfos/core/tip-kodu";
-import { yardimciLabelToTip } from "@/lib/pfos/wizard/yardimci-label-tip";
+import {
+  normalizeTipSet,
+  oncelikliYardimciEtiketler,
+} from "@/lib/pfos/wizard/proje-oneri-kurallar";
 
 const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
   "Fine Dining": [
@@ -231,8 +233,11 @@ export type YardimciProjeGirdi = {
   dukkanTuru?: string;
   ustSegment?: string;
   konseptLabel?: string;
-  /** Teklifte zaten olan tip_kodu / urunTipi listesi — tekrar önerilmez */
+  /** Teklifte zaten olan tip_kodu / urunTipi listesi */
   mevcutTipKodlari?: string[];
+  /** Eşleşmemiş zorunlu kalemlerin urunTipi listesi */
+  eksikZorunluTipKodlari?: string[];
+  m2?: number;
   limit?: number;
 };
 
@@ -250,13 +255,7 @@ function yardimciKey(
   return "default";
 }
 
-function tipZatenTeklifte(label: string, mevcut: Set<string>): boolean {
-  const tip = yardimciLabelToTip(label);
-  if (!tip) return false;
-  return mevcut.has(normalizeTipKodu(tip));
-}
-
-/** Konsept + teklif bağlamına göre yardımcı ekipman etiketleri */
+/** Konsept + teklif bağlamına göre yardımcı ekipman etiketleri (Faz B skorlama) */
 export function yardimciEkipmanForProje(input: YardimciProjeGirdi): string[] {
   const dukkanTuru = String(input.dukkanTuru ?? "").trim();
   const ustSegment = String(input.ustSegment ?? "").trim();
@@ -266,16 +265,12 @@ export function yardimciEkipmanForProje(input: YardimciProjeGirdi): string[] {
   const key = yardimciKey(dukkanTuru, ustSegment, konseptLabel);
   const havuz = [...(YARDIMCI_EKIPMAN[key] ?? YARDIMCI_EKIPMAN.default)];
 
-  const mevcut = new Set(
-    (input.mevcutTipKodlari ?? [])
-      .map((t) => normalizeTipKodu(String(t ?? "").trim()))
-      .filter(Boolean),
-  );
+  const mevcut = normalizeTipSet(input.mevcutTipKodlari ?? []);
+  const eksik = normalizeTipSet(input.eksikZorunluTipKodlari ?? []);
+  const m2Raw = Number(input.m2);
+  const m2 = Number.isFinite(m2Raw) && m2Raw > 0 ? m2Raw : undefined;
 
-  const yeni = havuz.filter((label) => !tipZatenTeklifte(label, mevcut));
-  const tekrar = havuz.filter((label) => tipZatenTeklifte(label, mevcut));
-
-  return [...yeni, ...tekrar].slice(0, limit);
+  return oncelikliYardimciEtiketler(havuz, { mevcutTipKodlari: mevcut, eksikZorunluTipKodlari: eksik, m2 }, limit);
 }
 
 /** @deprecated yardimciEkipmanForProje kullanın */

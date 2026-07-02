@@ -10,8 +10,11 @@ type Props = {
   ustSegment?: string;
   /** Seçilen konsept adı (ör. Steakhouse) — rail başlığı */
   konseptLabel?: string;
-  /** Teklifte zaten olan urunTipi / tip_kodu — tekrar önerilmez */
+  /** Teklifte zaten olan urunTipi / tip_kodu */
   mevcutTipKodlari?: string[];
+  /** Eşleşmemiş zorunlu kalemlerin urunTipi listesi */
+  eksikZorunluTipKodlari?: string[];
+  m2?: number;
   /** grid: kart vitrini; rows: ürün sayfası family-rail düzeni */
   layout?: "grid" | "rows";
   /** rows modunda gösterilecek üst sınır (varsayılan 5) */
@@ -48,6 +51,8 @@ export default function PfosKonseptEkipmanGrid({
   ustSegment = "",
   konseptLabel = "",
   mevcutTipKodlari = [],
+  eksikZorunluTipKodlari = [],
+  m2,
   layout = "grid",
   limit,
   hideHeader = false,
@@ -57,6 +62,7 @@ export default function PfosKonseptEkipmanGrid({
   const [error, setError] = useState<string | null>(null);
   const rowLimit = limit ?? 5;
   const tipsKey = mevcutTipKodlari.join("|");
+  const eksikKey = eksikZorunluTipKodlari.join("|");
   const showGridHeader = !hideHeader && layout !== "rows";
 
   useEffect(() => {
@@ -66,6 +72,8 @@ export default function PfosKonseptEkipmanGrid({
     if (ustSegment) q.set("segment", ustSegment);
     if (konseptLabel) q.set("konseptLabel", konseptLabel);
     if (mevcutTipKodlari.length) q.set("tips", mevcutTipKodlari.join(","));
+    if (eksikZorunluTipKodlari.length) q.set("eksik", eksikZorunluTipKodlari.join(","));
+    if (m2 != null && m2 > 0) q.set("m2", String(Math.round(m2)));
     if (layout === "rows") {
       q.set("matched", "1");
       q.set("limit", String(rowLimit));
@@ -96,7 +104,7 @@ export default function PfosKonseptEkipmanGrid({
     return () => {
       cancelled = true;
     };
-  }, [dukkanTuru, ustSegment, konseptLabel, tipsKey, layout, rowLimit]);
+  }, [dukkanTuru, ustSegment, konseptLabel, tipsKey, eksikKey, m2, layout, rowLimit]);
 
   const visibleItems =
     items == null
