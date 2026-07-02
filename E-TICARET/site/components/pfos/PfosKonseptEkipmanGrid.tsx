@@ -27,6 +27,20 @@ function formatFiyat(kart: YardimciKatalogKart): string {
   return `${kart.fiyat.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${cur}`;
 }
 
+function isMatchedKart(kart: YardimciKatalogKart): boolean {
+  return Boolean(kart.ad && kart.href);
+}
+
+/** PDP family-rail ile aynı kısa etiket */
+function shortModelLabel(name: string, max = 56): string {
+  const s = name.trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const sp = cut.lastIndexOf(" ");
+  if (sp > max * 0.55) return `${cut.slice(0, sp)}…`;
+  return `${cut}…`;
+}
+
 export default function PfosKonseptEkipmanGrid({
   dukkanTuru,
   ustSegment = "",
@@ -38,12 +52,18 @@ export default function PfosKonseptEkipmanGrid({
   const { t } = usePfosLabel();
   const [items, setItems] = useState<YardimciKatalogKart[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const rowLimit = limit ?? 5;
+  const showGridHeader = !hideHeader && layout !== "rows";
 
   useEffect(() => {
     let cancelled = false;
     const q = new URLSearchParams();
     if (dukkanTuru) q.set("dukkan", dukkanTuru);
     if (ustSegment) q.set("segment", ustSegment);
+    if (layout === "rows") {
+      q.set("matched", "1");
+      q.set("limit", String(rowLimit));
+    }
     setItems(null);
     setError(null);
     void fetch(`/api/pfos/yardimci-katalog?${q}`)
@@ -52,7 +72,14 @@ export default function PfosKonseptEkipmanGrid({
         return res.json() as Promise<{ items: YardimciKatalogKart[] }>;
       })
       .then((data) => {
-        if (!cancelled) setItems(data.items ?? []);
+        if (!cancelled) {
+          const raw = data.items ?? [];
+          setItems(
+            layout === "rows"
+              ? raw.filter(isMatchedKart).slice(0, rowLimit)
+              : raw,
+          );
+        }
       })
       .catch((e) => {
         if (!cancelled) {
@@ -63,43 +90,36 @@ export default function PfosKonseptEkipmanGrid({
     return () => {
       cancelled = true;
     };
-  }, [dukkanTuru, ustSegment]);
+  }, [dukkanTuru, ustSegment, layout, rowLimit]);
 
   const visibleItems =
     items == null
       ? null
       : layout === "rows"
-        ? items.slice(0, limit ?? 5)
+        ? items
         : limit != null
           ? items.slice(0, limit)
           : items;
 
+  function renderRailThumb(kart: YardimciKatalogKart) {
+    if (kart.gorselUrl) {
+      return (
+        <img src={kart.gorselUrl} alt="" loading="lazy" decoding="async" />
+      );
+    }
+    return <span className="eq-img-ph" aria-hidden="true" />;
+  }
+
   function renderRailItem(kart: YardimciKatalogKart) {
-    const href = kart.href ?? "#";
-    const hasProduct = Boolean(kart.ad && kart.href);
-    const title = hasProduct ? kart.ad! : kart.label;
+    const href = kart.href!;
+    const title = shortModelLabel(kart.ad!);
 
     return (
-      <div key={kart.label} className="eq-product-family-item" role="listitem">
-        {hasProduct ? (
-          <a href={href}>
-            <div className="eq-product-family-thumb">
-              {kart.gorselUrl ? (
-                <img src={kart.gorselUrl} alt="" loading="lazy" decoding="async" />
-              ) : (
-                <span className={styles.konseptEkipmanNoImg}>📷</span>
-              )}
-            </div>
-            <div className="eq-product-family-lbl">{title}</div>
-          </a>
-        ) : (
-          <>
-            <div className={`eq-product-family-thumb ${styles.konseptEkipmanPlaceholder}`}>
-              <span>{kart.label}</span>
-            </div>
-            <div className="eq-product-family-lbl">{kart.label}</div>
-          </>
-        )}
+      <div key={kart.id ?? kart.label} className="eq-product-family-item" role="listitem">
+        <a href={href}>
+          <div className="eq-product-family-thumb">{renderRailThumb(kart)}</div>
+          <div className="eq-product-family-lbl">{title}</div>
+        </a>
       </div>
     );
   }
@@ -121,6 +141,10 @@ export default function PfosKonseptEkipmanGrid({
     );
   }
 
+  if (layout === "rows" && items && items.length === 0 && !error) {
+    return null;
+  }
+
   return (
     <section
       className={
@@ -130,7 +154,7 @@ export default function PfosKonseptEkipmanGrid({
       }
       aria-label={t("Konsept ekipman önerileri")}
     >
-      {!hideHeader ? (
+      {showGridHeader ? (
         <>
           <h3 className={styles.konseptEkipmanTitle}>
             {t("Konseptinize uygun yardımcı ekipmanlar")}
@@ -152,7 +176,7 @@ export default function PfosKonseptEkipmanGrid({
           {visibleItems.map((kart) => {
             const price = formatFiyat(kart);
             const href = kart.href ?? "#";
-            const hasProduct = Boolean(kart.ad && kart.href);
+            const hasProduct = isMatchedKart(kart);
             return (
               <article key={kart.label} className="eq-dept-plp-card">
                 {hasProduct ? (
@@ -166,7 +190,7 @@ export default function PfosKonseptEkipmanGrid({
                           decoding="async"
                         />
                       ) : (
-                        <span className={styles.konseptEkipmanNoImg}>📷</span>
+                        <span className="eq-img-ph" aria-hidden="true" />
                       )}
                     </a>
                     <a className="eq-dept-plp-card__name" href={href}>

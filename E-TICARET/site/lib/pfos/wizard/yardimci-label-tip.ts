@@ -7,9 +7,11 @@ const YARDIMCI_LABEL_TIP: Record<string, string> = {
   "Benmari (sos)": "benmari_set",
   "Salamander": "salamander",
   "Dry-aged dolabı": "dry_age_dolabi",
+  "Tartı seti": "tartim_terazi",
+  "Tartı (hassas)": "tartim_terazi",
   "Et dilimleme makinası": "dilimleme_makinesi",
   "Et dilimleme makinesi": "dilimleme_makinesi",
-  "Mutfak arabası": "cop_arabasi",
+  "Mutfak arabası": "firin_arabasi",
   "Soğutmalı teşhir vitrin": "teshir_vitrin",
   "Teşhir vitrin": "teshir_vitrin",
   "Dilimleme makinası": "dilimleme_makinesi",
@@ -48,6 +50,8 @@ export function yardimciLabelToTip(label: string): string | null {
   if (lc.includes("bardak yıka")) return "bardak_yikama";
   if (lc.includes("kahve değir")) return "kahve_degirmeni";
   if (lc.includes("fritöz") || lc.includes("fritoz")) return "fritoz_tek";
-  if (lc.includes("arabası") || lc.includes("arabasi")) return "cop_arabasi";
+  if (lc.includes("tartı") || lc.includes("tarti") || lc.includes("terazi")) return "tartim_terazi";
+  if (lc.includes("dry age") || lc.includes("dry-age") || lc.includes("dry aged")) return "dry_age_dolabi";
+  if (lc.includes("arabası") || lc.includes("arabasi")) return "firin_arabasi";
   return null;
 }
