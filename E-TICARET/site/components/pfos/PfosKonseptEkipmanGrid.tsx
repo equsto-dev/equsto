@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import type { YardimciKatalogKart } from "@/app/api/pfos/yardimci-katalog/route";
+import { ensureMemberToken } from "@/lib/account/member-profile.client";
+import { logPfosMemberBrowse } from "@/lib/pfos/log-pfos-member-browse.client";
+import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
+import { setPfosBrowseContext } from "@/lib/pfos/pfos-context.client";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import styles from "@/components/pfos/public/pfos-public.module.css";
 
@@ -66,6 +70,10 @@ export default function PfosKonseptEkipmanGrid({
   const showGridHeader = !hideHeader && layout !== "rows";
 
   useEffect(() => {
+    setPfosBrowseContext({ konseptLabel, dukkanTuru, ustSegment });
+  }, [konseptLabel, dukkanTuru, ustSegment]);
+
+  useEffect(() => {
     let cancelled = false;
     const q = new URLSearchParams();
     if (dukkanTuru) q.set("dukkan", dukkanTuru);
@@ -80,27 +88,35 @@ export default function PfosKonseptEkipmanGrid({
     }
     setItems(null);
     setError(null);
-    void fetch(`/api/pfos/yardimci-katalog?${q}`)
-      .then(async (res) => {
-        if (!res.ok) throw new Error("Katalog yüklenemedi");
-        return res.json() as Promise<{ items: YardimciKatalogKart[] }>;
-      })
-      .then((data) => {
-        if (!cancelled) {
-          const raw = data.items ?? [];
-          setItems(
-            layout === "rows"
-              ? raw.filter(isMatchedKart).slice(0, rowLimit)
-              : raw,
-          );
+
+    void (async () => {
+      const headers: Record<string, string> = {};
+      if (memberLoggedInNow()) {
+        const token = await ensureMemberToken();
+        if (token) {
+          headers.Authorization = `Bearer ${token}`;
+          headers["X-Equsto-Authorization"] = token;
         }
-      })
-      .catch((e) => {
+      }
+      try {
+        const res = await fetch(`/api/pfos/yardimci-katalog?${q}`, { headers });
+        if (!res.ok) throw new Error("Katalog yüklenemedi");
+        const data = (await res.json()) as { items: YardimciKatalogKart[] };
+        if (cancelled) return;
+        const raw = data.items ?? [];
+        setItems(
+          layout === "rows"
+            ? raw.filter(isMatchedKart).slice(0, rowLimit)
+            : raw,
+        );
+      } catch (e) {
         if (!cancelled) {
           setError(e instanceof Error ? e.message : "Hata");
           setItems([]);
         }
-      });
+      }
+    })();
+
     return () => {
       cancelled = true;
     };
@@ -128,9 +144,21 @@ export default function PfosKonseptEkipmanGrid({
     const href = kart.href!;
     const title = shortModelLabel(kart.ad!);
 
+    function onRailClick() {
+      const slug = href.replace(/^\/urun\//, "").split("?")[0];
+      logPfosMemberBrowse({
+        slug,
+        productId: kart.id,
+        tipKodu: kart.tipKodu,
+        source: "pfos_rail",
+        konseptLabel,
+        dukkanTuru,
+      });
+    }
+
     return (
       <div key={kart.id ?? kart.label} className="eq-product-family-item" role="listitem">
-        <a href={href}>
+        <a href={href} onClick={onRailClick}>
           <div className="eq-product-family-thumb">{renderRailThumb(kart)}</div>
           <div className="eq-product-family-lbl">{title}</div>
         </a>
@@ -191,11 +219,23 @@ export default function PfosKonseptEkipmanGrid({
             const price = formatFiyat(kart);
             const href = kart.href ?? "#";
             const hasProduct = isMatchedKart(kart);
+            function onGridClick() {
+              if (!hasProduct || href === "#") return;
+              const slug = href.replace(/^\/urun\//, "").split("?")[0];
+              logPfosMemberBrowse({
+                slug,
+                productId: kart.id,
+                tipKodu: kart.tipKodu,
+                source: "pfos_rail",
+                konseptLabel,
+                dukkanTuru,
+              });
+            }
             return (
               <article key={kart.label} className="eq-dept-plp-card">
                 {hasProduct ? (
                   <>
-                    <a className="eq-dept-plp-card__img" href={href}>
+                    <a className="eq-dept-plp-card__img" href={href} onClick={onGridClick}>
                       {kart.gorselUrl ? (
                         <img
                           src={kart.gorselUrl}
@@ -207,7 +247,7 @@ export default function PfosKonseptEkipmanGrid({
                         <span className="eq-img-ph" aria-hidden="true" />
                       )}
                     </a>
-                    <a className="eq-dept-plp-card__name" href={href}>
+                    <a className="eq-dept-plp-card__name" href={href} onClick={onGridClick}>
                       {kart.ad}
                     </a>
                     {kart.marka ? (

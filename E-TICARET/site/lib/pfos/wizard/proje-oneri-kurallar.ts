@@ -99,6 +99,8 @@ export type OneriBaglam = {
   mevcutTipKodlari: Set<string>;
   m2?: number;
   eksikZorunluTipKodlari: Set<string>;
+  /** Faz C — üyenin gezdiği ürün tipleri */
+  gezilenTipKodlari?: Set<string>;
 };
 
 export function normalizeTipSet(tips: string[]): Set<string> {
@@ -157,6 +159,10 @@ function etiketSkoru(
     skor += 160;
   }
 
+  if (tipNorm && baglam.gezilenTipKodlari?.has(tipNorm)) {
+    skor += 90;
+  }
+
   return skor;
 }
 
@@ -192,6 +198,12 @@ function injectBaglamsalEtiketler(
 
   for (const eksik of baglam.eksikZorunluTipKodlari) {
     ekle(eksik);
+  }
+
+  if (baglam.gezilenTipKodlari) {
+    for (const tip of baglam.gezilenTipKodlari) {
+      ekle(tip);
+    }
   }
 
   return genisletilmis;

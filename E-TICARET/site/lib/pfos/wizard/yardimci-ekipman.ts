@@ -237,6 +237,8 @@ export type YardimciProjeGirdi = {
   mevcutTipKodlari?: string[];
   /** Eşleşmemiş zorunlu kalemlerin urunTipi listesi */
   eksikZorunluTipKodlari?: string[];
+  /** Faz C — üyenin gezdiği tip_kodu listesi */
+  gezilenTipKodlari?: string[];
   m2?: number;
   limit?: number;
 };
@@ -267,10 +269,15 @@ export function yardimciEkipmanForProje(input: YardimciProjeGirdi): string[] {
 
   const mevcut = normalizeTipSet(input.mevcutTipKodlari ?? []);
   const eksik = normalizeTipSet(input.eksikZorunluTipKodlari ?? []);
+  const gezilen = normalizeTipSet(input.gezilenTipKodlari ?? []);
   const m2Raw = Number(input.m2);
   const m2 = Number.isFinite(m2Raw) && m2Raw > 0 ? m2Raw : undefined;
 
-  return oncelikliYardimciEtiketler(havuz, { mevcutTipKodlari: mevcut, eksikZorunluTipKodlari: eksik, m2 }, limit);
+  return oncelikliYardimciEtiketler(
+    havuz,
+    { mevcutTipKodlari: mevcut, eksikZorunluTipKodlari: eksik, m2, gezilenTipKodlari: gezilen },
+    limit,
+  );
 }
 
 /** @deprecated yardimciEkipmanForProje kullanın */
