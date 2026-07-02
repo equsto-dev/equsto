@@ -32,6 +32,8 @@ export default function PfosPage() {
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-pfos-public-chrome.css?v=${v}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-dept-plp.css?v=${v}`} />
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-pfos-wizard.css?v=${v}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${v}`} />
