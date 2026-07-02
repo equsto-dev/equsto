@@ -1979,96 +1979,10 @@
   padding: 8px;
 }
 
-.konseptEkipmanPanelRows {
+.konseptEkipmanRailWrap {
   margin-top: 12px;
-  padding: 12px 14px;
 }
 
-.konseptEkipmanRowList {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.konseptEkipmanRow {
-  display: grid;
-  grid-template-columns: 56px 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.konseptEkipmanRow:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.konseptEkipmanRowImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fafafa;
-  border: 1px solid #f0f0f0;
-  flex-shrink: 0;
-}
-
-.konseptEkipmanRowImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.konseptEkipmanRowBody {
-  min-width: 0;
-}
-
-.konseptEkipmanRowName {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: #001e50;
-  line-height: 1.35;
-  text-decoration: none;
-}
-
-a.konseptEkipmanRowName:hover {
-  text-decoration: underline;
-}
-
-.konseptEkipmanRowBrand {
-  font-size: 11px;
-  color: #8c8c8c;
-  margin-top: 2px;
-}
-
-.konseptEkipmanRowNote {
-  font-size: 11px;
-  color: #8c8c8c;
-  margin-top: 2px;
-}
-
-.konseptEkipmanRowPrice {
-  font-size: 12px;
-  font-weight: 600;
-  color: #001e50;
-  white-space: nowrap;
-  text-align: right;
-}
-
-@media (max-width: 480px) {
-  .konseptEkipmanRow {
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .konseptEkipmanRowPrice {
-    grid-column: 2;
-    text-align: left;
-    white-space: normal;
-  }
+.konseptEkipmanRailWrap :global(.eq-product-family) {
+  margin-bottom: 0;
 }
