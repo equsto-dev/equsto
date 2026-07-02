@@ -963,7 +963,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 projeEkipman={{
                   dukkanTuru: String(answers.q_dukkan_turu ?? ""),
                   ustSegment: String(answers.q_ust_segment ?? ""),
-                  konseptLabel: sonuc.konseptLabel ?? "",
+                  konseptLabel: String(answers.q_dukkan_turu ?? sonuc.konseptLabel ?? ""),
                   m2: motorGirdi.m2,
                   mevcutTipKodlari: (sonuc.kalemler ?? [])
                     .map((k) => k.urunTipi)

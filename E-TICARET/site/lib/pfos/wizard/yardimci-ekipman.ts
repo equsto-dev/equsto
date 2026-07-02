@@ -236,6 +236,22 @@ const YARDIMCI_EKIPMAN: Record<string, readonly string[]> = {
     "Mutfak arabası",
     "Salamander",
   ],
+  "Döner / Dürüm": [
+    "Et dilimleme makinesi",
+    "Tartı seti",
+    "Salamander",
+    "Benmari seti",
+    "Bardak yıkayıcı",
+    "Vakum makinası",
+  ],
+  "Pide / Lahmacun": [
+    "Spiral hamur yoğurma",
+    "Hamur açma makinesi",
+    "Salamander",
+    "Tartı seti",
+    "Benmari seti",
+    "Buz makinası",
+  ],
   Restaurant: [
     "Gıda dilimleme makinası",
     "Vakum makinası",
@@ -287,12 +303,29 @@ export type YardimciProjeGirdi = {
   limit?: number;
 };
 
+/** Sihirbaz dükkan seçimi → havuz anahtarı (yazım varyantları) */
+const DUKKAN_POOL_ALIASES: Record<string, keyof typeof YARDIMCI_EKIPMAN> = {
+  "döner / dürüm": "Döner / Dürüm",
+  "doner / durum": "Döner / Dürüm",
+  "döner-dürüm": "Döner / Dürüm",
+  "doner-durum": "Döner / Dürüm",
+  "döner/dürüm": "Döner / Dürüm",
+};
+
+function normalizeDukkanPoolKey(raw: string): string {
+  const t = raw.trim();
+  if (!t) return "";
+  return DUKKAN_POOL_ALIASES[t.toLocaleLowerCase("tr")] ?? t;
+}
+
 function yardimciKey(
   dukkanTuru: string,
   ustSegment: string,
   konseptLabel = "",
 ): keyof typeof YARDIMCI_EKIPMAN {
-  const candidates = [dukkanTuru, konseptLabel, ustSegment].map((s) => s.trim()).filter(Boolean);
+  const candidates = [dukkanTuru, konseptLabel, ustSegment]
+    .map((s) => normalizeDukkanPoolKey(s))
+    .filter(Boolean);
   for (const c of candidates) {
     if (YARDIMCI_EKIPMAN[c]) return c;
   }

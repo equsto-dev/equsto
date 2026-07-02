@@ -70,7 +70,11 @@ export default function PfosKonseptEkipmanGrid({
   const showGridHeader = !hideHeader && layout !== "rows";
 
   useEffect(() => {
-    setPfosBrowseContext({ konseptLabel, dukkanTuru, ustSegment });
+    setPfosBrowseContext({
+      konseptLabel: dukkanTuru || konseptLabel,
+      dukkanTuru,
+      ustSegment,
+    });
   }, [konseptLabel, dukkanTuru, ustSegment]);
 
   useEffect(() => {
@@ -167,7 +171,7 @@ export default function PfosKonseptEkipmanGrid({
   }
 
   function renderRail(items: YardimciKatalogKart[]) {
-    const lineTitle = konseptLabel.trim() || t("Konsept");
+    const lineTitle = (dukkanTuru || konseptLabel).trim() || t("Konsept");
     return (
       <div className="eq-product-family" aria-label={lineTitle}>
         <div className="eq-product-family-row">
