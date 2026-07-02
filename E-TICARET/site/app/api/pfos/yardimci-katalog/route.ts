@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { matchShopCatalog } from "@/lib/pfos/core/shop-catalog-match";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
-import { yardimciEkipmanForKonsept } from "@/lib/pfos/wizard/yardimci-ekipman";
+import { yardimciEkipmanForProje } from "@/lib/pfos/wizard/yardimci-ekipman";
 import { yardimciLabelToTip } from "@/lib/pfos/wizard/yardimci-label-tip";
 
 export type YardimciKatalogKart = {
@@ -53,10 +53,21 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const dukkan = url.searchParams.get("dukkan")?.trim() ?? "";
   const segment = url.searchParams.get("segment")?.trim() ?? "";
+  const konseptLabel = url.searchParams.get("konseptLabel")?.trim() ?? "";
+  const mevcutTips = (url.searchParams.get("tips") ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
   const matchedOnly = url.searchParams.get("matched") === "1";
   const limitRaw = parseInt(url.searchParams.get("limit") ?? "0", 10);
   const limit = limitRaw > 0 ? limitRaw : 0;
-  const labels = yardimciEkipmanForKonsept(dukkan, segment);
+  const labels = yardimciEkipmanForProje({
+    dukkanTuru: dukkan,
+    ustSegment: segment,
+    konseptLabel,
+    mevcutTipKodlari: mevcutTips,
+    limit: limit > 0 ? limit + 4 : 12,
+  });
   const items: YardimciKatalogKart[] = [];
 
   for (const label of labels) {

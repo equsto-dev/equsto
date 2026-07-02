@@ -54,7 +54,6 @@ export default function PfosLiveSummary({ data }: Props) {
 
       {data.tahminiFiyat != null && data.tahminiFiyat > 0 ? (
         <div className={ws.summaryPrice}>
-          <span className={ws.summaryPriceLabel}>{t("Tahmini")}</span>
           <strong className={ws.summaryPriceValue}>
             {formatCompactTry(data.tahminiFiyat)}
           </strong>
