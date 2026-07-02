@@ -16,6 +16,8 @@ const YARDIMCI_LABEL_TIP: Record<string, string> = {
   "Soğuk teşhir vitrini": "teshir_vitrin",
   "Teşhir vitrin": "teshir_vitrin",
   "Dilimleme makinası": "dilimleme_makinesi",
+  "Döner kesme makinesi": "dilimleme_makinesi",
+  "Döner motoru (yedek)": "komurlu_izgara",
   "Et kıyma (ilave)": "kiyma_makinesi",
   "Balık teşhir tezgahı": "sogutma_tezgah",
   "Buz makinası (ilave)": "buz_makinesi",
@@ -44,7 +46,9 @@ export function yardimciLabelToTip(label: string): string | null {
   if (YARDIMCI_LABEL_TIP[key]) return YARDIMCI_LABEL_TIP[key];
   const lc = key.toLocaleLowerCase("tr");
   if (lc.includes("vakum")) return "vakum_makinesi";
-  if (lc.includes("dilimleme")) return "dilimleme_makinesi";
+  if (lc.includes("dilimleme") || lc.includes("döner kesme") || lc.includes("doner kesme")) {
+    return "dilimleme_makinesi";
+  }
   if (lc.includes("buz makina")) return "buz_makinesi";
   if (lc.includes("salamander")) return "salamander";
   if (lc.includes("hamur yoğur") || lc.includes("spiral")) return "spiral_hamur";
