@@ -25,6 +25,7 @@ const YARDIMCI_LABEL_TIP: Record<string, string> = {
   "Hamur yoğurma (ilave)": "spiral_hamur",
   "Spiral hamur yoğurma": "spiral_hamur",
   "Hamur açma makinesi": "hamur_acma",
+  "Planet mikser": "planet_mikser",
   "Meze hazırlık tezgahı": "calisma_tezgahi",
   "Benmari seti": "benmari_set",
   "Servis arabası": "cop_arabasi",
