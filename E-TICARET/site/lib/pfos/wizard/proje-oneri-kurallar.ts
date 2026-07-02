@@ -99,8 +99,10 @@ export type OneriBaglam = {
   mevcutTipKodlari: Set<string>;
   m2?: number;
   eksikZorunluTipKodlari: Set<string>;
-  /** Faz C — üyenin gezdiği ürün tipleri */
+  /** Faz C — üyenin gezdiği ürün tipleri (konsept havuzu içinde filtrelenmiş) */
   gezilenTipKodlari?: Set<string>;
+  /** Konsept yardımcı havuzundaki izinli tip_kodu kümesi */
+  konseptTipKodlari?: Set<string>;
 };
 
 export function normalizeTipSet(tips: string[]): Set<string> {
@@ -163,6 +165,14 @@ function etiketSkoru(
     skor += 90;
   }
 
+  if (
+    tipNorm &&
+    baglam.konseptTipKodlari &&
+    !baglam.konseptTipKodlari.has(tipNorm)
+  ) {
+    skor -= 250;
+  }
+
   return skor;
 }
 
@@ -200,12 +210,6 @@ function injectBaglamsalEtiketler(
     ekle(eksik);
   }
 
-  if (baglam.gezilenTipKodlari) {
-    for (const tip of baglam.gezilenTipKodlari) {
-      ekle(tip);
-    }
-  }
-
   return genisletilmis;
 }
 
@@ -240,6 +244,13 @@ export function oncelikliYardimciEtiketler(
     if (seen.has(label)) continue;
     const tipNorm = etiketTipNorm(label);
     if (tipNorm && baglam.mevcutTipKodlari.has(tipNorm)) continue;
+    if (
+      tipNorm &&
+      baglam.konseptTipKodlari &&
+      !baglam.konseptTipKodlari.has(tipNorm)
+    ) {
+      continue;
+    }
     seen.add(label);
     result.push(label);
     if (result.length >= limit) break;
