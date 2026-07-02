@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { enrichEslesmisGorsel } from "@/lib/pfos/core/katalog-gorsel";
+import { enrichEslesmisGorsel, pfosGorselFileExists } from "@/lib/pfos/core/katalog-gorsel";
 import { matchShopCatalog } from "@/lib/pfos/core/shop-catalog-match";
 import { normalizeTipKodu, resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
@@ -56,6 +56,23 @@ function isPseudoPfosLink(urun: EslesmisUrun | null | undefined): boolean {
   return id.startsWith("pfos-link-") || slug.startsWith("pfos-link-");
 }
 
+function hasRailGorsel(urun: EslesmisUrun | null | undefined): urun is EslesmisUrun {
+  if (!urun?.gorselUrl) return false;
+  return pfosGorselFileExists(urun.gorselUrl);
+}
+
+function dbRowSkipsTip(name: string, tip: string): boolean {
+  const n = name.toLocaleLowerCase("tr");
+  const tipNorm = normalizeTipKodu(tip);
+  if (
+    tipNorm === "firin_arabasi" &&
+    /tepsi\s*arab|bakertop|fırın\s*için\s*tepsi|firin\s*icin\s*tepsi/.test(n)
+  ) {
+    return true;
+  }
+  return false;
+}
+
 async function dbUrunForTip(tipKodu: string): Promise<EslesmisUrun | null> {
   const tip = resolveTipKodu(tipKodu);
   if (!tip) return null;
@@ -73,13 +90,14 @@ async function dbUrunForTip(tipKodu: string): Promise<EslesmisUrun | null> {
       images: { orderBy: [{ isPrimary: "desc" }, { order: "asc" }], take: 1 },
     },
     orderBy: { priceListTl: "asc" },
-    take: 40,
+    take: 60,
   });
   for (const row of products) {
     if (!typesMatch(row.pfosUrunTipi, tip)) continue;
+    if (dbRowSkipsTip(row.name, tip)) continue;
     const urun = productToEslesmis(row);
     const enriched = await enrichEslesmisGorsel(urun);
-    if (enriched?.gorselUrl) return enriched;
+    if (hasRailGorsel(enriched)) return enriched;
   }
   return null;
 }
@@ -90,14 +108,13 @@ export async function matchYardimciRailUrun(tipKodu: string): Promise<EslesmisUr
   if (!tip) return null;
 
   const dbFirst = await dbUrunForTip(tip);
-  if (dbFirst?.gorselUrl) return dbFirst;
+  if (hasRailGorsel(dbFirst)) return dbFirst;
 
   const legacy = await matchShopCatalog(tip, "ekonomik");
   const enriched = legacy ? await enrichEslesmisGorsel(legacy) : null;
-  if (!enriched) return null;
-  if (enriched.gorselUrl && !isPseudoPfosLink(enriched)) return enriched;
-  if (enriched.gorselUrl) return enriched;
-  return null;
+  if (!hasRailGorsel(enriched)) return null;
+  if (isPseudoPfosLink(enriched)) return null;
+  return enriched;
 }
 
 export async function slugRailUrun(slug: string): Promise<EslesmisUrun | null> {
@@ -117,5 +134,6 @@ export async function slugRailUrun(slug: string): Promise<EslesmisUrun | null> {
   });
   if (!product) return null;
   const urun = productToEslesmis(product);
-  return (await enrichEslesmisGorsel(urun)) ?? urun;
+  const enriched = (await enrichEslesmisGorsel(urun)) ?? urun;
+  return hasRailGorsel(enriched) ? enriched : null;
 }
