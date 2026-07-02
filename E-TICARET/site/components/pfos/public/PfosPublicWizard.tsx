@@ -660,9 +660,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             onChange={(e) => setM2Value(e.target.value)}
           />
           <span className={styles.alanUnit}>m²</span>
-          {m2Touched && hasM2 ? (
-            <span className={styles.alanEstimateBadge}>{t("Tahmini")}</span>
-          ) : null}
         </div>
         <div className={styles.alanPresets} role="group">
           {M2_PRESETS.map((n) => (
@@ -967,6 +964,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                   dukkanTuru: String(answers.q_dukkan_turu ?? ""),
                   ustSegment: String(answers.q_ust_segment ?? ""),
                   konseptLabel: sonuc.konseptLabel ?? "",
+                  mevcutTipKodlari: (sonuc.kalemler ?? [])
+                    .map((k) => k.urunTipi)
+                    .filter((t): t is string => Boolean(String(t ?? "").trim())),
                 }}
               />
             </div>

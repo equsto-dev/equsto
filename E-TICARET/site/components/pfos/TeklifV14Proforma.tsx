@@ -34,6 +34,7 @@ type Props = {
     dukkanTuru: string;
     ustSegment?: string;
     konseptLabel?: string;
+    mevcutTipKodlari?: string[];
   };
 };
 
@@ -146,6 +147,14 @@ export default function TeklifV14Proforma({
           label: `${s.poz} — ${s.tanim.slice(0, 72)}${s.tanim.length > 72 ? "…" : ""}`,
         })),
     [model.satirlar],
+  );
+
+  const teklifTipKodlari = useMemo(
+    () =>
+      (model.pfos?.kalemler ?? [])
+        .map((k) => k.urunTipi)
+        .filter((t): t is string => Boolean(String(t ?? "").trim())),
+    [model.pfos?.kalemler],
   );
 
   useEffect(() => {
@@ -836,6 +845,10 @@ export default function TeklifV14Proforma({
           dukkanTuru={projeEkipman.dukkanTuru}
           ustSegment={projeEkipman.ustSegment}
           konseptLabel={projeEkipman.konseptLabel}
+          mevcutTipKodlari={[
+            ...(projeEkipman.mevcutTipKodlari ?? []),
+            ...teklifTipKodlari,
+          ]}
           layout="rows"
           limit={5}
         />
