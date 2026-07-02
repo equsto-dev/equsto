@@ -23,19 +23,22 @@ fi
 docker compose --env-file .env.production build --pull
 docker compose --env-file .env.production up -d
 
-if [[ -d node_modules/@prisma/client ]]; then
-  echo "[hetzner-deploy] prisma generate (host scripts)..."
-  node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js generate
-  echo "[hetzner-deploy] prisma migrate deploy (host)..."
-  node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate deploy \
-    || echo "[hetzner-deploy] migrate uyarı — DIRECT_URL kontrol edin"
-  if [[ -f scripts/export-pfos-referans-sku-links.mjs ]]; then
-    echo "[hetzner-deploy] referans SKU links export..."
-    node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs \
-      || echo "[hetzner-deploy] SKU export uyarı — DATABASE_URL kontrol edin"
-  fi
-else
-  echo "[hetzner-deploy] migrate atlandı (node_modules yok) — npm ci && npm run db:migrate:deploy"
+export EQUSTO_ENV_FILE=.env.production
+
+if [[ ! -d node_modules/@prisma/client ]]; then
+  echo "[hetzner-deploy] npm ci (migrate için)..."
+  npm ci --ignore-scripts
+fi
+
+echo "[hetzner-deploy] prisma generate (host)..."
+node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js generate
+echo "[hetzner-deploy] prisma migrate deploy (host)..."
+node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate deploy
+
+if [[ -f scripts/export-pfos-referans-sku-links.mjs ]]; then
+  echo "[hetzner-deploy] referans SKU links export..."
+  node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs \
+    || echo "[hetzner-deploy] SKU export uyarı — DATABASE_URL kontrol edin"
 fi
 
 echo "[hetzner-deploy] sağlık kontrolü..."

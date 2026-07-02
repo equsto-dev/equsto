@@ -214,6 +214,26 @@ model PfosUsageEvent {
   @@map("pfos_usage_event")
 }
 
+/// PFOS üye ürün gezinme — Faz C kişiselleştirme (tıklanan sayfalar)
+model PfosMemberBrowseEvent {
+  id           String   @id @default(cuid())
+  memberId     String   @map("member_id")
+  productId    String?  @map("product_id")
+  slug         String
+  tipKodu      String?  @map("tip_kodu")
+  konseptLabel String   @default("") @map("konsept_label")
+  dukkanTuru   String   @default("") @map("dukkan_turu")
+  /// pdp | pfos_rail | search
+  source       String   @default("pdp")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@index([memberId, createdAt])
+  @@index([memberId, konseptLabel])
+  @@index([memberId, dukkanTuru])
+  @@index([memberId, slug])
+  @@map("pfos_member_browse_event")
+}
+
 /// Teklif / proforma anındaki fiyat kilidi
 model PfosTeklifSnapshot {
   id               String   @id @default(cuid())
