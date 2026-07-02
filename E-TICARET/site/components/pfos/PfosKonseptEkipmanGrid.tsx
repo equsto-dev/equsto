@@ -8,7 +8,9 @@ import styles from "@/components/pfos/public/pfos-public.module.css";
 type Props = {
   dukkanTuru: string;
   ustSegment?: string;
-  /** grid: kart vitrini; rows: kompakt satır listesi */
+  /** Seçilen konsept adı (ör. Steakhouse) — rail başlığı */
+  konseptLabel?: string;
+  /** grid: kart vitrini; rows: ürün sayfası family-rail düzeni */
   layout?: "grid" | "rows";
   /** rows modunda gösterilecek üst sınır (varsayılan 5) */
   limit?: number;
@@ -28,6 +30,7 @@ function formatFiyat(kart: YardimciKatalogKart): string {
 export default function PfosKonseptEkipmanGrid({
   dukkanTuru,
   ustSegment = "",
+  konseptLabel = "",
   layout = "grid",
   limit,
   hideHeader = false,
@@ -71,52 +74,60 @@ export default function PfosKonseptEkipmanGrid({
           ? items.slice(0, limit)
           : items;
 
-  function renderRow(kart: YardimciKatalogKart) {
-    const price = formatFiyat(kart);
+  function renderRailItem(kart: YardimciKatalogKart) {
     const href = kart.href ?? "#";
     const hasProduct = Boolean(kart.ad && kart.href);
     const title = hasProduct ? kart.ad! : kart.label;
 
     return (
-      <article key={kart.label} className={styles.konseptEkipmanRow}>
+      <div key={kart.label} className="eq-product-family-item" role="listitem">
         {hasProduct ? (
-          <a className={styles.konseptEkipmanRowImg} href={href}>
-            {kart.gorselUrl ? (
-              <img src={kart.gorselUrl} alt="" loading="lazy" decoding="async" />
-            ) : (
-              <span className={styles.konseptEkipmanNoImg}>📷</span>
-            )}
+          <a href={href}>
+            <div className="eq-product-family-thumb">
+              {kart.gorselUrl ? (
+                <img src={kart.gorselUrl} alt="" loading="lazy" decoding="async" />
+              ) : (
+                <span className={styles.konseptEkipmanNoImg}>📷</span>
+              )}
+            </div>
+            <div className="eq-product-family-lbl">{title}</div>
           </a>
         ) : (
-          <div className={`${styles.konseptEkipmanRowImg} ${styles.konseptEkipmanPlaceholder}`}>
-            <span>{kart.label}</span>
-          </div>
-        )}
-        <div className={styles.konseptEkipmanRowBody}>
-          {hasProduct ? (
-            <a className={styles.konseptEkipmanRowName} href={href}>
-              {title}
-            </a>
-          ) : (
-            <div className={styles.konseptEkipmanRowName}>{title}</div>
-          )}
-          {kart.marka ? (
-            <div className={styles.konseptEkipmanRowBrand}>{kart.marka}</div>
-          ) : null}
-          {!hasProduct ? (
-            <div className={styles.konseptEkipmanRowNote}>
-              {t("Katalog eşlemesi hazırlanıyor")}
+          <>
+            <div className={`eq-product-family-thumb ${styles.konseptEkipmanPlaceholder}`}>
+              <span>{kart.label}</span>
             </div>
-          ) : null}
+            <div className="eq-product-family-lbl">{kart.label}</div>
+          </>
+        )}
+      </div>
+    );
+  }
+
+  function renderRail(items: YardimciKatalogKart[]) {
+    const lineTitle = konseptLabel.trim() || t("Konsept");
+    return (
+      <div className="eq-product-family" aria-label={lineTitle}>
+        <div className="eq-product-family-row">
+          <div className="eq-product-family-lineblock">
+            <div className="eq-product-family-line">{lineTitle}</div>
+            <div className="eq-product-family-hint">{t("Öneriler")}</div>
+          </div>
+          <div className="eq-product-family-scroll" role="list">
+            {items.map((kart) => renderRailItem(kart))}
+          </div>
         </div>
-        {price ? <div className={styles.konseptEkipmanRowPrice}>{price}</div> : null}
-      </article>
+      </div>
     );
   }
 
   return (
     <section
-      className={`${styles.konseptEkipmanPanel}${layout === "rows" ? ` ${styles.konseptEkipmanPanelRows}` : ""}`}
+      className={
+        layout === "rows"
+          ? styles.konseptEkipmanRailWrap
+          : styles.konseptEkipmanPanel
+      }
       aria-label={t("Konsept ekipman önerileri")}
     >
       {!hideHeader ? (
@@ -135,9 +146,7 @@ export default function PfosKonseptEkipmanGrid({
       {!visibleItems ? (
         <p className={styles.konseptEkipmanLoading}>{t("Ürünler yükleniyor…")}</p>
       ) : layout === "rows" ? (
-        <div className={styles.konseptEkipmanRowList}>
-          {visibleItems.map((kart) => renderRow(kart))}
-        </div>
+        renderRail(visibleItems)
       ) : (
         <div className={`products ${styles.konseptEkipmanGrid}`}>
           {visibleItems.map((kart) => {

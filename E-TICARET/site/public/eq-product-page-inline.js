@@ -2302,7 +2302,7 @@ window.searchFilter = window.searchFilter || function () {};
       var familyHint =
         pack.mode === "caglayan-catalog"
           ? __pdpT("pdp.family_hint_caglayan", "Çağlayan katalogundan diğer modeller")
-          : __pdpT("pdp.family_hint_similar", "Muadil ve benzer modeller");
+          : "";
       var curSlug = String(x.slug || x.id || "").toLowerCase();
       var scrollCls = "eq-product-family-scroll";
       var cells = items
@@ -2342,9 +2342,9 @@ window.searchFilter = window.searchFilter || function () {};
         '<div class="eq-product-family-line">' +
         lineTitle +
         "</div>" +
-        '<div class="eq-product-family-hint">' +
-        esc(familyHint) +
-        "</div>" +
+        (familyHint
+          ? '<div class="eq-product-family-hint">' + esc(familyHint) + "</div>"
+          : "") +
         "</div>" +
         '<div class="' +
         scrollCls.trim() +

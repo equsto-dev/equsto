@@ -33,6 +33,7 @@ type Props = {
   projeEkipman?: {
     dukkanTuru: string;
     ustSegment?: string;
+    konseptLabel?: string;
   };
 };
 
@@ -834,6 +835,7 @@ export default function TeklifV14Proforma({
         <PfosKonseptEkipmanGrid
           dukkanTuru={projeEkipman.dukkanTuru}
           ustSegment={projeEkipman.ustSegment}
+          konseptLabel={projeEkipman.konseptLabel}
           layout="rows"
           limit={5}
         />
