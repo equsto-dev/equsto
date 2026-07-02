@@ -297,6 +297,8 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
   icecek_havuzu_soguk: ["icecek havuzu", "içecek havuzu", "soguk havuz", "soğuk havuz"],
   benmari_mobil: ["bain marie", "benmari", "bainmarie", "hareketli bain", "hareketli benmari"],
   banket_arabasi: ["banket arabası", "banket arabasi", "sıcak banket", "sicak banket", "ısıtmalı banket", "isitmali banket"],
+  tartim_terazi: ["tartım terazi", "tartim terazi", "tartı", "terazi", "tartim"],
+  dry_age_dolabi: ["dry age", "dry-age", "dry aged", "olgunlaştırma", "olgunlastirma"],
 };
 
 export const TIP_SHOP_CATS: Record<string, string[]> = {
@@ -343,6 +345,8 @@ export const TIP_SHOP_CATS: Record<string, string[]> = {
   makarna_pisirici_elk: ["makarna", "pisir", "pişir", "fritoz"],
   tezgah_taban_rafli: ["tezgah", "pisirme", "set-ustu-mutfak"],
   firin_arabasi: ["firin", "tasima", "yardimci"],
+  tartim_terazi: ["mutfak-aksesuar", "yardimci", "hazirlik"],
+  dry_age_dolabi: ["sogutma", "buzdolabi"],
   tezgah_rafli_dol: ["tezgah"],
   balik_hazirlik_tezgah: ["tezgah", "hazirlik"],
   davlumbaz_dekoratif: ["davlumbaz", "tezgah"],
