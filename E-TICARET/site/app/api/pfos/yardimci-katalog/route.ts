@@ -58,6 +58,12 @@ export async function GET(req: Request) {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
+  const eksikTips = (url.searchParams.get("eksik") ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const m2Raw = parseInt(url.searchParams.get("m2") ?? "0", 10);
+  const m2 = m2Raw > 0 ? m2Raw : undefined;
   const matchedOnly = url.searchParams.get("matched") === "1";
   const limitRaw = parseInt(url.searchParams.get("limit") ?? "0", 10);
   const limit = limitRaw > 0 ? limitRaw : 0;
@@ -66,7 +72,9 @@ export async function GET(req: Request) {
     ustSegment: segment,
     konseptLabel,
     mevcutTipKodlari: mevcutTips,
-    limit: limit > 0 ? limit + 4 : 12,
+    eksikZorunluTipKodlari: eksikTips,
+    m2,
+    limit: limit > 0 ? limit + 6 : 14,
   });
   const items: YardimciKatalogKart[] = [];
 

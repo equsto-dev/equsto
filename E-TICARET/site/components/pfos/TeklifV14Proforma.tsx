@@ -35,6 +35,8 @@ type Props = {
     ustSegment?: string;
     konseptLabel?: string;
     mevcutTipKodlari?: string[];
+    eksikZorunluTipKodlari?: string[];
+    m2?: number;
   };
 };
 
@@ -849,6 +851,8 @@ export default function TeklifV14Proforma({
             ...(projeEkipman.mevcutTipKodlari ?? []),
             ...teklifTipKodlari,
           ]}
+          eksikZorunluTipKodlari={projeEkipman.eksikZorunluTipKodlari}
+          m2={projeEkipman.m2 ?? meta.m2Toplam}
           layout="rows"
           limit={5}
         />
