@@ -5025,6 +5025,34 @@ window.searchFilter = window.searchFilter || function () {};
                 _rv.unshift(_slug);
                 if (_rv.length > 12) _rv.length = 12;
                 localStorage.setItem(_key, JSON.stringify(_rv));
+                /* Faz C — üye gezinme kaydı (PFOS konsept bağlamı ile) */
+                try {
+                  if (typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn() && _slug) {
+                    var _ctx = {};
+                    try {
+                      _ctx = JSON.parse(sessionStorage.getItem("eq_pfos_context_v1") || "{}") || {};
+                    } catch (_) {}
+                    var _token =
+                      (typeof window.equstoGetMemberToken === "function" && window.equstoGetMemberToken()) || "";
+                    if (_token) {
+                      fetch("/api/pfos/member-browse", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                          Authorization: "Bearer " + _token,
+                          "X-Equsto-Authorization": _token,
+                        },
+                        body: JSON.stringify({
+                          slug: _slug,
+                          source: "pdp",
+                          konseptLabel: String(_ctx.konseptLabel || ""),
+                          dukkanTuru: String(_ctx.dukkanTuru || ""),
+                        }),
+                        keepalive: true,
+                      }).catch(function () {});
+                    }
+                  }
+                } catch (_) {}
               } catch (_) {}
             });
           } catch (renderErr) {
