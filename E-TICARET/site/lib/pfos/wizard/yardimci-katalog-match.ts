@@ -57,8 +57,11 @@ function isPseudoPfosLink(urun: EslesmisUrun | null | undefined): boolean {
 }
 
 function hasRailGorsel(urun: EslesmisUrun | null | undefined): urun is EslesmisUrun {
-  if (!urun?.gorselUrl) return false;
-  return pfosGorselFileExists(urun.gorselUrl);
+  const url = String(urun?.gorselUrl ?? "").trim();
+  if (!url) return false;
+  if (pfosGorselFileExists(url)) return true;
+  // Docker/CDN — dosya kontrolü başarısız olsa da geçerli yol kabul et
+  return url.startsWith("/data/") || url.startsWith("http");
 }
 
 function dbRowSkipsTip(name: string, tip: string): boolean {
