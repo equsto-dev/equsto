@@ -48,17 +48,34 @@ def ascii_key(s: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", s)
 
 
+def turkish_lower(s: str) -> str:
+    return s.translate(str.maketrans({"I": "ı", "İ": "i"})).lower()
+
+
+def turkish_upper_first(s: str) -> str:
+    if not s:
+        return s
+    first, rest = s[0], s[1:]
+    if first == "i":
+        first = "İ"
+    elif first == "ı":
+        first = "I"
+    else:
+        first = first.upper()
+    return first + turkish_lower(rest)
+
+
 def title_tr(s: str) -> str:
-    s = re.sub(r"\s+", " ", s.strip())
+    s = unicodedata.normalize("NFKC", re.sub(r"\s+", " ", s.strip()))
     if not s:
         return s
     parts = s.split(" ")
     out = []
     for p in parts:
         if p.upper() in ("VE", "DE", "DA"):
-            out.append(p.lower())
+            out.append(turkish_lower(p))
         else:
-            out.append(p[:1].upper() + p[1:].lower() if len(p) > 1 else p.upper())
+            out.append(turkish_upper_first(p) if p else p)
     return " ".join(out)
 
 
