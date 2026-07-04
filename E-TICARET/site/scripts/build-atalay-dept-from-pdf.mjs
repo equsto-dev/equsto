@@ -57,8 +57,9 @@ function priceBlock(listeEur, netEur, discountPct) {
   const netTl = Math.round(netEur * EUR_TRY);
   const kdvDahil = Math.round(netTl * 1.2);
   return {
-    price: `${fmtTry(netTl)} + KDV\nKDV Dahil ${fmtTry(kdvDahil)}`,
-    fiyat_tl: netTl,
+    price: `${fmtTry(kdvDahil)} KDV dahil`,
+    fiyat_tl: kdvDahil,
+    fiyat_tl_net: netTl,
     liste_fiyati_eur: listeEur,
     satis_eur_indirimli: Math.round(netEur * 100) / 100,
     iskonto_oran: Math.round(discountPct * 100),
