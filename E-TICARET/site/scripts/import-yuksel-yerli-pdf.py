@@ -24,7 +24,6 @@ except ImportError:
     sys.exit(1)
 
 ROOT = Path(__file__).resolve().parents[1]
-INCOMING_PDF = ROOT / "data" / "incoming" / "yuksel-yerli-2025.pdf"
 DEFAULT_PDF = Path(r"C:\D Disk\FİYAT LİSTELERİ\YÜKSEL YERLİ - 2025.pdf")
 OUT_ROOT = ROOT / "public" / "data" / "fiyat-listeleri" / "yuksel" / "2025-yerli"
 
@@ -573,20 +572,10 @@ def detect_subcat(page_text: str, prev: str) -> str:
     return prev
 
 
-def resolve_pdf_path() -> Path:
-    if len(sys.argv) > 1:
-        return Path(sys.argv[1])
-    if INCOMING_PDF.is_file():
-        return INCOMING_PDF
-    return DEFAULT_PDF
-
-
 def main() -> None:
-    pdf_path = resolve_pdf_path()
+    pdf_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_PDF
     if not pdf_path.is_file():
         print("PDF bulunamadı:", pdf_path)
-        print("Yerleştirin:", INCOMING_PDF)
-        print("veya: python scripts/import-yuksel-yerli-pdf.py /yol/YÜKSEL-YERLİ-2025.pdf")
         sys.exit(1)
 
     doc = fitz.open(pdf_path)
