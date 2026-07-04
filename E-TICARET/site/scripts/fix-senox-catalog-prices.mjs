@@ -32,7 +32,8 @@ const dryRun = process.argv.includes("--dry-run");
 const reextract = process.argv.includes("--reextract");
 
 function isSenoxRow(r) {
-  return String(r?.kaynak || "") === "senox-mutbex" || String(r?.id || "").startsWith("senox__");
+  const k = String(r?.kaynak_fiyat_listesi || r?.kaynak || "").toLowerCase();
+  return k.includes("senox") || String(r?.id || "").startsWith("senox__");
 }
 
 function targetForRow(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
