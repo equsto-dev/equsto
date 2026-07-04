@@ -65,6 +65,10 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   // SENOX 2026-1 s.10 — SDS 1510 DC 3 YF (komşu ürün 2250 € ile karışmış)
   ["SDS1510", 3000],
   ["SDS1510DC3YF", 3000],
+  // SENOX 2026-1 s.20 — Simfer SYD dondurma reyonu (çoklu ürün bloğu)
+  ["SYD310", 1300],
+  ["SYD410", 1500],
+  ["SYD510", 1600],
 ]);
 
 /** Equsto satış — sabit KDV dahil TRY (kur değişse de fiyat sabit kalır) */
@@ -141,6 +145,8 @@ function looksLikeCode(line) {
   if (/^(Fiyat|Voltaj|Ağırlık|Ebatlar|Ürün|Model|www\.|kg|220\s*V)/i.test(s)) return false;
   if (/^\d+(?:\.\d+)?\s*EUR$/i.test(s)) return false;
   if (/^\d+\s*x\s*\d+/i.test(s)) return false;
+  if (/^R\d{3,4}[A-Z]?$/i.test(s.replace(/\s/g, ""))) return false;
+  if (/^[+-]?\d+\s*[-–]\s*[+-]?\d+/i.test(s)) return false;
   return /^[A-Z][A-Z0-9][A-Z0-9\s.\-/]{0,28}$/i.test(s);
 }
 
@@ -234,7 +240,7 @@ function parseDescriptionPrices(text) {
   for (let i = 0; i < lines.length; i++) {
     const price = parseEurFromLine(lines[i]);
     if (!(price > 0)) continue;
-    for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
+    for (let j = i + 1; j < Math.min(i + 4, lines.length); j++) {
       if (looksLikeCode(lines[j])) addPrice(out, lines[j], price);
     }
     for (let j = i - 1; j >= Math.max(0, i - 5); j--) {
