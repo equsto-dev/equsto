@@ -641,14 +641,14 @@
       "anchorX": 729.6,
       "description": "Senox SDS 1510 DC 3 YF Siyah Kanopisiz\nNet Hacim 1491/1215\nRaf sayısı 4+4+4\n500ml şişe yükleme kapasitesi 200\n500ml şişe yükleme kapasitesi 620\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nDijital Termostat, Led aydınlatma\nDijital Termostat, Led aydınlatma\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nSoğutucu Gaz: R290A\nAğırlık\nEbatlar (mm)\nFiyat\nAğırlık\nVoltaj\nEbatlar (mm)\nFiyat\nVoltaj\nÜrün Kodu\n157 kg\n220 V ~ 50Hz\n980x740x2145\n2250 EUR\n3000 EUR\n1500 x 690x 2075\n220 V ~ 50Hz\nSDS 1510 DC 3 YF\n213\n157 kg\n2250 EUR\n220 V ~ 50Hz\n980x740x2145\n15\n16\nwww.senox.com.tr",
       "specs": {
-        "ebat_mm": "980 x 740 x 2145",
-        "genislik_mm": 980,
-        "derinlik_mm": 740,
-        "yukseklik_mm": 2145,
-        "fiyat_eur": "2250",
+        "ebat_mm": "1500 x 690 x 2075",
+        "genislik_mm": 1500,
+        "derinlik_mm": 690,
+        "yukseklik_mm": 2075,
+        "fiyat_eur": "3000",
         "sogutucu_gaz": "R290A",
         "voltaj": "220 V ~ 50Hz",
-        "agirlik_kg": "157"
+        "agirlik_kg": "213"
       },
       "parseSource": "senox-title"
     },

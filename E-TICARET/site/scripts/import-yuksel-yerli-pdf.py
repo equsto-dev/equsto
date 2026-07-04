@@ -43,6 +43,7 @@ DEPT_RULES: list[tuple[re.Pattern[str], str, str]] = [
     (re.compile(r"davlumbaz|filtre|hood|sterile", re.I), "davlumbaz", "davlumbaz"),
     (re.compile(r"araba|taşıma|servis araba|çamaşır|tabak otomat|muhafaza", re.I), "tasima", "tasima-arabalari"),
     (re.compile(r"yer süzgeç|gider", re.I), "yikama", "yer-gideri"),
+    (re.compile(r"bar\s*blender", re.I), "icecek", "bar-blender"),
     (re.compile(r"buzdolab|soğut|refriger|freezer|derin dondur|portabianco|barista|pizza", re.I), "sogutma", "sogutma-ekipmanlari"),
     (re.compile(r"tezgah|counter type|make up|undercounter", re.I), "sogutma", "tezgah-alti-sogutma"),
     (re.compile(r"fırın|firin|ocak|izgara|kuzine|fritöz|pişir", re.I), "pisirme", "pisirme"),
@@ -429,6 +430,37 @@ def parse_reversed_model_grid(lines: list[str]) -> list[dict]:
     return products
 
 
+def parse_bar_blender_cards(lines: list[str]) -> list[dict]:
+    """Portabianco ürün kartı: BAR BLENDER 1280 + FİYAT 238 € (tablo değil)."""
+    if not any(re.search(r"bar\s*blender", l, re.I) for l in lines):
+        return []
+    out: list[dict] = []
+    seen: set[str] = set()
+    for i, raw in enumerate(lines):
+        m = re.match(r"^BAR\s*BLENDER\s+(\d{3,4}[A-Z]*)$", raw.strip(), re.I)
+        if not m:
+            continue
+        model = m.group(1).upper().replace("İ", "I")
+        if model in seen:
+            continue
+        price: float | None = None
+        for j in range(i + 1, min(i + 28, len(lines))):
+            line = lines[j].strip()
+            if re.match(r"^BAR\s*BLENDER\s+", line, re.I):
+                break
+            if re.search(r"fiyat|price", line, re.I):
+                price = parse_euro_num(line)
+                if price:
+                    break
+            v = parse_euro_num(line)
+            if v is not None and 40 <= v <= 900 and not re.search(r"\d\s*[xX]\s*\d", line):
+                price = v
+        if price is not None:
+            seen.add(model)
+            out.append({"model_kodu": model, "fiyat_euro": f"{price:g} €"})
+    return out
+
+
 def parse_size_price_grid(lines: list[str]) -> list[dict]:
     """46 X 91 X 183 + 488 € gibi ızgara satırları."""
     out: list[dict] = []
@@ -579,6 +611,7 @@ def main() -> None:
 
         if not any(r.get("fiyat_euro") for r in recs):
             recs.extend(parse_reversed_model_grid(lines))
+        recs.extend(parse_bar_blender_cards(lines))
         recs.extend(parse_mcode_block(lines))
         if dept == "istif" or "portashelf" in subcat.lower():
             recs.extend(parse_size_price_grid(lines))
