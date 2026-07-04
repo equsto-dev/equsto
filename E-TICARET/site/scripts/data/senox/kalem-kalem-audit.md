@@ -1,6 +1,6 @@
 # Şenox kalem kalem fiyat denetimi
 
-**Tarih:** 2026-07-04T20:16:16.986Z
+**Tarih:** 2026-07-04T20:27:21.685Z
 **Kur:** 1 EUR = 53.5721 TRY
 **Formül:** liste × 0,50 × kur × 1,20 KDV → fiyat_tl
 
@@ -11,19 +11,18 @@
 | Sitede Şenox | 214 |
 | Formül uyumlu | 214 |
 | Formül sapması | 0 |
-| Güncelleme önerilen | 1 |
+| Güncelleme önerilen | 0 |
 | PDF page-order (şüpheli) | 8 |
 | Description ≠ specs fiyat | 22 |
-| PDF ≠ Mutbex (>15%) | 111 |
-| PDF düşük (Mutbex'ten) | 109 |
-| Yalnız Mutbex | 95 |
+| PDF ≠ Mutbex (>15%) | 107 |
+| PDF düşük (Mutbex'ten) | 105 |
+| Yalnız Mutbex | 98 |
 | Yalnız PDF | 2 |
 
 ## Güncelleme önerilen (site ≠ öneri)
 
 | Model | SKU | Sitede ₺ | Öneri ₺ | Fark | Site liste € | Öneri € | PDF € | Mut € | Durum |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SBCS-250 | 118.SBCS.250 | 46.985 | 46.985 | +0 | 1461.74 | 1350 | 1350 | 1806 | ok, pdf_mut_catisma, pdf_dusuk, guncelleme_oner |
 
 ## PDF description ≠ specs (parser hatası adayı)
 

@@ -52,7 +52,7 @@ function classify(row) {
   if (row.pdf_mut_pct != null && row.pdf_liste > row.mut_liste * 1.5) tags.push("pdf_yuksek");
   if (!row.pdf_liste && row.mut_liste) tags.push("mutbex_only");
   if (row.pdf_liste && !row.mut_liste) tags.push("pdf_only");
-  if (row.oneri_liste && row.oneri_liste !== row.site_liste) tags.push("guncelleme_oner");
+  if (row.oneri_liste && row.oneri_liste !== row.site_liste && !row.manual_tl) tags.push("guncelleme_oner");
   return tags;
 }
 
@@ -129,6 +129,7 @@ async function main() {
       name: String(r.name || "").slice(0, 70),
       dept: r.dept || r.dept_file?.replace(".json", ""),
       site_kaynak: r.kaynak_fiyat_listesi || r.kaynak || "",
+      manual_tl: !!manual,
       site_liste: siteListe,
       site_tl: siteTl,
       pdf_liste: pdfListe,
@@ -209,7 +210,7 @@ async function main() {
   ];
 
   const needsFix = items
-    .filter((i) => !i.formula_ok || i.durum.includes("guncelleme_oner"))
+    .filter((i) => !i.formula_ok || (i.durum.includes("guncelleme_oner") && !i.manual_tl))
     .sort((a, b) => Math.abs(b.tl_fark) - Math.abs(a.tl_fark));
 
   for (const r of needsFix) {

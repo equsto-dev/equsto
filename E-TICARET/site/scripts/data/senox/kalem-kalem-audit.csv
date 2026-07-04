@@ -89,24 +89,24 @@ sira;model;sku;site_tl;oneri_tl;tl_fark;site_liste_eur;oneri_liste_eur;pdf_liste
 88;MC-25;118.MC25;12857;12857;0;400;400;400;412.8;0;0;ok
 89;MC-30;118.MC30;10286;10286;0;320;320;320;516;1;0;ok, pdf_page_order, pdf_mut_catisma, pdf_dusuk
 90;SNX-12R;118.SNX12R;73929;73929;0;2300;2300;2300;2967;0;0;ok, pdf_mut_catisma, pdf_dusuk
-91;SBC-250;118.SBC.250;43393;43393;0;1350;1350;1350;1741.5;0;0;ok, pdf_mut_catisma, pdf_dusuk
+91;SBC-250;118.SBC.250;45001;45001;0;1400;1400;1400;1741.5;0;0;ok, pdf_mut_catisma, pdf_dusuk
 92;BBC-250;118.BBC.250;40179;40179;0;1250;1250;1250;1612.5;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
 93;SBCS-350;118.SBCS.350;54644;54644;0;1700;1700;1700;2193;0;0;ok, pdf_mut_catisma, pdf_dusuk
-94;SBCS-250;118.SBCS.250;46985;46985;0;1461.74;1350;1350;1806;0;0;ok, pdf_mut_catisma, pdf_dusuk, guncelleme_oner
+94;SBCS-250;118.SBCS.250;46985;46985;0;1461.74;1400;1400;1806;0;0;ok, pdf_mut_catisma, pdf_dusuk
 95;BBCS-250;118.BBCS.250;40179;40179;0;1250;1250;1250;1677;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
 96;BBC-350;118.BBC.350;48215;48215;0;1500;1500;1500;1935;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
-97;SBC-350;118.SBC.350;53036;53036;0;1650;1650;1650;2128.5;0;0;ok, pdf_mut_catisma, pdf_dusuk
+97;SBC-350;118.SBC.350;54644;54644;0;1700;1700;1700;2128.5;0;0;ok, pdf_mut_catisma, pdf_dusuk
 98;SDS-1510-DC-3CF;118.SDS1510.DC3CF;136834;136834;0;4257;4257;;4257;0;0;ok, mutbex_only
 99;SDS-1510-DC-3YF;118.SDS1510.DC3YF;96430;96430;0;3000;3000;3000;3870;0;0;ok, pdf_mut_catisma, pdf_dusuk
 100;BBCS-350;118.BBCS.350;48215;48215;0;1500;1500;1500;2064;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
 101;300-COMBİ;118.300.COMBİ;76710;76710;0;2386.5;2386.5;;2386.5;0;0;ok, mutbex_only
 102;SYD-310;118.SYD310;41786;41786;0;1300;1300;1300;1677;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
-103;SYD-410;118.SYD410;41786;41786;0;1300;1300;1300;1935;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
+103;SYD-410;118.SYD410;48215;48215;0;1500;1500;1500;1935;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
 104;7301-S;118.7301.S;35245;35245;0;1096.5;1096.5;;1096.5;0;0;ok, mutbex_only
-105;SYD-510;118.SYD510;48215;48215;0;1500;1500;1500;2064;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
+105;SYD-510;118.SYD510;51429;51429;0;1600;1600;1600;2064;0;1;ok, desc_specs_fark, pdf_mut_catisma, pdf_dusuk
 106;ADA-150T;118.ADA.150T;96430;96430;0;3000;3000;3000;7740;0;0;ok, pdf_mut_catisma, pdf_dusuk
-107;ADA-180T;118.ADA.180T;96430;96430;0;3000;3000;3000;9030;0;0;ok, pdf_mut_catisma, pdf_dusuk
-108;ADA-210T;118.ADA.210T;112501;112501;0;3500;3500;3500;10320;0;0;ok, pdf_mut_catisma, pdf_dusuk
+107;ADA-180T;118.ADA.180T;112501;112501;0;3500;3500;3500;9030;0;0;ok, pdf_mut_catisma, pdf_dusuk
+108;ADA-210T;118.ADA.210T;331718;331718;0;10320;10320;;10320;0;0;ok, mutbex_only
 109;BLK-01-110;118.BLK01.110;132687;132687;0;4128;4128;;4128;0;0;ok, mutbex_only
 110;BLK-01-90;118.BLK01.90;126468;126468;0;3934.5;3934.5;;3934.5;0;0;ok, mutbex_only
 111;DF-200;118.DF200;24879;24879;0;774;774;;774;0;0;ok, mutbex_only
@@ -162,11 +162,11 @@ sira;model;sku;site_tl;oneri_tl;tl_fark;site_liste_eur;oneri_liste_eur;pdf_liste
 161;SSC-900K;118.SSC.900K;97442;97442;0;3031.5;3031.5;;3031.5;0;0;ok, mutbex_only
 162;S-900K;118.S.900K;87076;87076;0;2709;2709;;2709;0;0;ok, mutbex_only
 163;KO-120T;118.KO.120T;180002;180002;0;5600;5600;5600;7224;0;0;ok, pdf_mut_catisma, pdf_dusuk
-164;KO-150T;118.KO.150T;212146;212146;0;6600;6600;6600;8514;0;0;ok, pdf_mut_catisma, pdf_dusuk
-165;KO-180T;118.KO.180T;257146;257146;0;8000;8000;8000;10320;0;0;ok, pdf_mut_catisma, pdf_dusuk
+164;KO-150T;118.KO.150T;257146;257146;0;8000;8000;8000;8514;0;0;ok
+165;KO-180T;118.KO.180T;331718;331718;0;10320;10320;;10320;0;0;ok, mutbex_only
 166;KOE-150T;118.KOE.150T;212146;212146;0;6600;6600;6600;8514;0;0;ok, pdf_mut_catisma, pdf_dusuk
 167;KOE-180T;118.KOE.180T;257146;257146;0;8000;8000;8000;10320;0;0;ok, pdf_mut_catisma, pdf_dusuk
-168;MT-123;118.MT.123;96430;96430;0;3000;3000;3000;3870;0;0;ok, pdf_mut_catisma, pdf_dusuk
+168;MT-123;118.MT.123;124394;124394;0;3870;3870;;3870;0;0;ok, mutbex_only
 169;MT-153;118.MT.153;112501;112501;0;3500;3500;3500;4515;0;0;ok, pdf_mut_catisma, pdf_dusuk
 170;MT-213;118.MT.213;228056;228056;0;7095;7095;;7095;0;0;ok, mutbex_only
 171;NRGZ-100;118.NRGZ100;41465;41465;0;1290;1290;;1290;0;0;ok, mutbex_only
@@ -182,8 +182,8 @@ sira;model;sku;site_tl;oneri_tl;tl_fark;site_liste_eur;oneri_liste_eur;pdf_liste
 181;SDS-265-DC-1-CF;118.SDS.265.DC.1.CF;41465;41465;0;1290;1290;;1290;0;0;ok, mutbex_only
 182;SDS-385-DC-1YWP;118.SDS385.DC1YWP;64270;64270;0;1999.5;1999.5;;1999.5;0;0;ok, mutbex_only
 183;SDS-710-DC;118.SDS.710.DC;60124;60124;0;1870.5;1870.5;;1870.5;0;0;ok, mutbex_only
-184;SET-67P;118.SET.67P;45001;45001;0;1400;1400;1400;1677;0;0;ok, pdf_mut_catisma, pdf_dusuk
-185;SET-85P;118.SET.85P;48215;48215;0;1500;1500;1500;1806;0;0;ok, pdf_mut_catisma, pdf_dusuk
+184;SET-67P;118.SET.67P;41786;41786;0;1300;1300;1300;1677;0;0;ok, pdf_mut_catisma, pdf_dusuk
+185;SET-85P;118.SET.85P;45001;45001;0;1400;1400;1400;1806;0;0;ok, pdf_mut_catisma, pdf_dusuk
 186;SET-E-120S;118.SET.E.120S;82930;82930;0;2580;2580;;2580;0;0;ok, mutbex_only
 187;SET-E-90C;118.SET.E.90C;64270;64270;0;1999.5;1999.5;;1999.5;0;0;ok, mutbex_only
 188;SET-E-90S;118.SET.E.90S;62197;62197;0;1935;1935;;1935;0;0;ok, mutbex_only
