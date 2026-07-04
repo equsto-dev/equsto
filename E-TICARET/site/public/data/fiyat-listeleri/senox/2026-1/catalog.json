@@ -570,14 +570,14 @@
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "specs": {
-        "ebat_mm": "980 x 740 x 2145",
-        "genislik_mm": 980,
-        "derinlik_mm": 740,
-        "yukseklik_mm": 2145,
-        "fiyat_eur": "2250",
+        "ebat_mm": "1500 x 690 x 2075",
+        "genislik_mm": 1500,
+        "derinlik_mm": 690,
+        "yukseklik_mm": 2075,
+        "fiyat_eur": "3000",
         "sogutucu_gaz": "R290A",
         "voltaj": "220 V ~ 50Hz",
-        "agirlik_kg": "157"
+        "agirlik_kg": "213"
       },
       "image": "/data/senox/images/senox-sds1510_1.jpg",
       "imageMethod": "bbox-render-v4"

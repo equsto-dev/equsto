@@ -32,7 +32,8 @@ const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
 
 function isSenoxRow(r) {
-  return String(r?.kaynak || "") === KAYNAK || String(r?.id || "").startsWith("senox__");
+  const k = String(r?.kaynak_fiyat_listesi || r?.kaynak || "").toLowerCase();
+  return k.includes("senox") || String(r?.id || "").startsWith("senox__");
 }
 
 function patchSpecsPriceBlock(specs, px, match, priceSource) {

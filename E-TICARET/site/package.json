@@ -93,6 +93,7 @@
     "catalog:cafemarkt:portabianco": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/gen-portabianco-cafemarkt-img-map.mjs && node scripts/apply-cafemarkt-portabianco-images.mjs --upgrade-b --search-missing",
     "catalog:portabianco:audit": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/audit-fix-portabianco-catalog.mjs",
     "catalog:portabianco:verify-prices": "node scripts/verify-portabianco-prices.mjs",
+    "catalog:portabianco:bar-blender-prices": "node scripts/sync-portabianco-bar-blender-prices.mjs --fetch-cm",
     "catalog:ozti:merge": "python scripts/merge-ozti-fiyat-katalog.py",
     "catalog:ozti:images": "python scripts/extract-ozti-pdf-images.py",
     "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",

@@ -1,0 +1,26 @@
+{
+  "generated": "2026-07-04T20:00:53.378Z",
+  "kur": 53.5721,
+  "formula": "liste × net çarpan × kur × 1,20 KDV → fiyat_tl (kârsız)",
+  "yuksel": {
+    "iskonto": 0.35,
+    "netMult": 0.65,
+    "pdf": "/workspace/EQUSTO-WORK/public/data/fiyat-listeleri/yuksel/2025-ithal/tum-urunler.json",
+    "pdfTotal": 331,
+    "label": "YÜKSEL İTHAL",
+    "total": 21,
+    "priced": 21,
+    "ok": 21,
+    "bad": [],
+    "missing": []
+  },
+  "senox": {
+    "satisOran": 0.5,
+    "label": "SENOX 2026-1",
+    "total": 214,
+    "priced": 214,
+    "ok": 214,
+    "bad": [],
+    "missing": []
+  }
+}
