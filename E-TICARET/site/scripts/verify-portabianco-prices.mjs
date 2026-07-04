@@ -164,13 +164,17 @@ function main() {
       continue;
     }
 
-    const diff = Math.abs(cur - exp.netTry);
+    const compareExpected =
+      row.category === "bar-blender" || row.dept === "icecek"
+        ? Math.round(exp.kdvDahil)
+        : exp.netTry;
+    const diff = Math.abs(cur - compareExpected);
     const entry = {
       sku,
       dept: row.dept,
       rule: exp.rule,
       cur,
-      expected: exp.netTry,
+      expected: compareExpected,
       kdvDahil: exp.kdvDahil,
       diff,
       cmCode: exp.cmCode,
