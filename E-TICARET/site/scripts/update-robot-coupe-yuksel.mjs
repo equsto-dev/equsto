@@ -7,10 +7,12 @@
 import { readFileSync, writeFileSync, copyFileSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
+import { EKIPMANLAR_PATH, DEPT_DIR } from "./catalog-master-paths.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const EKIPMANLAR = join(root, "public", "data", "ekipmanlar.json");
+const EKIPMANLAR = EKIPMANLAR_PATH;
 const YUKSEL_SRC = join(
   root,
   "..",
@@ -164,7 +166,7 @@ async function main() {
 
   writeFileSync(EKIPMANLAR, JSON.stringify(catalog));
 
-  const deptDir = join(root, "public", "data", "dept");
+  const deptDir = DEPT_DIR;
   const bySku = new Map(catalog.filter((p) => p.sku).map((p) => [p.sku, p]));
   let deptTotal = 0;
   for (const file of readdirSync(deptDir).filter((f) => f.endsWith(".json"))) {
@@ -187,6 +189,11 @@ async function main() {
     }
   }
   console.log(`[robot-coupe-yuksel] dept toplam: ${deptTotal}`);
+
+  execFileSync(process.execPath, ["scripts/rebuild-ekipmanlar-from-dept.mjs"], {
+    cwd: root,
+    stdio: "inherit",
+  });
 
   console.log(`\n[robot-coupe-yuksel] Güncellenen: ${updated}`);
   if (skipped.length) {
