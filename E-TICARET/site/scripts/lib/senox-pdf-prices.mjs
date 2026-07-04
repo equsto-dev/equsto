@@ -62,6 +62,9 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   // SENOX 2026-1 s.58 — Salad bar (BLK-01 sayfası tablosu)
   ["SLD03", 1800],
   ["SLD04", 2000],
+  // SENOX 2026-1 s.10 — SDS 1510 DC 3 YF (komşu ürün 2250 € ile karışmış)
+  ["SDS1510", 3000],
+  ["SDS1510DC3YF", 3000],
 ]);
 
 /** Equsto satış — sabit KDV dahil TRY (kur değişse de fiyat sabit kalır) */
@@ -141,6 +144,86 @@ function looksLikeCode(line) {
   return /^[A-Z][A-Z0-9][A-Z0-9\s.\-/]{0,28}$/i.test(s);
 }
 
+/** PDF description içinde ürün kodu satırına yakın EUR + ebat çifti */
+function extractPriceDimPairs(description) {
+  const lines = String(description || "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const pairs = [];
+  for (let i = 0; i < lines.length; i++) {
+    const price = parseEurFromLine(lines[i]);
+    if (!(price > 0)) continue;
+    let dim = "";
+    for (let j = Math.max(0, i - 2); j <= Math.min(lines.length - 1, i + 3); j++) {
+      const dm = lines[j].match(/(\d{3,4})\s*[x×X*]\s*(\d{2,4})\s*[x×X*]\s*(\d{3,4})/i);
+      if (dm) dim = `${dm[1]}x${dm[2]}x${dm[3]}`;
+    }
+    pairs.push({ price, dim, line: i });
+  }
+  return pairs;
+}
+
+function productAnchorPatterns(model, title) {
+  const patterns = [];
+  const add = (s) => {
+    const t = String(s || "").trim();
+    if (t.length < 4) return;
+    patterns.push(
+      new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+"), "i"),
+    );
+  };
+  add(model);
+  add(title);
+  const m = String(title || "").match(
+    /\b(SDS\s*\d+\s*DC\s*\d+\s*[A-Z]{2,4}|SDS[-\s]?\d+[A-Z0-9\-/]*|SNX[-\s]?\d+[A-Z0-9\-]*)\b/i,
+  );
+  if (m) add(m[1]);
+  return patterns;
+}
+
+export function extractAnchoredPriceFromDescription(description, model, title, hintDims = "") {
+  const lines = String(description || "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const patterns = productAnchorPatterns(model, title);
+  const pairs = extractPriceDimPairs(description);
+  if (!pairs.length) return 0;
+
+  const hintW = String(hintDims || title || "")
+    .match(/(\d{2,4})\s*[x×]\s*(\d{2,4})/i)
+    ?.slice(1)
+    .map((n) => String(Number(n) >= 100 ? n : Number(n) * 10));
+
+  for (let i = 0; i < lines.length; i++) {
+    if (!patterns.some((p) => p.test(lines[i]))) continue;
+
+    if (hintW?.length === 2) {
+      for (const pair of pairs) {
+        if (pair.line < i || pair.line - i > 18) continue;
+        const d = pair.dim.replace(/\s/g, "");
+        if (d.includes(hintW[0]) && d.includes(hintW[1])) return pair.price;
+      }
+    }
+
+    let best = null;
+    for (const pair of pairs) {
+      if (pair.line < i) continue;
+      const dist = pair.line - i;
+      if (dist > 18) break;
+      if (!best || dist < best.dist || (dist === best.dist && pair.price > best.price)) {
+        best = { ...pair, dist };
+      }
+    }
+    if (best?.price > 0) return best.price;
+  }
+
+  const eurInDesc = pairs.map((p) => p.price);
+  if (eurInDesc.length === 1) return eurInDesc[0];
+  return 0;
+}
+
 function parseDescriptionPrices(text) {
   const out = new Map();
   const lines = String(text || "")
@@ -207,8 +290,13 @@ export function buildSenoxPdfPriceIndex(products) {
       (modelKey && descMap.get(modelKey)) ||
       (normSenoxKey(p.title) && descMap.get(normSenoxKey(p.title))) ||
       0;
+    const fromAnchored = extractAnchoredPriceFromDescription(
+      p.description,
+      p.model,
+      p.title,
+    );
     const fromSpecs = parseEurNum(p.specs?.fiyat_eur);
-    const main = fromOverride || fromDesc || fromSpecs;
+    const main = fromOverride || fromAnchored || fromDesc || fromSpecs;
 
     if (main > 0) {
       addPrice(map, p.model, main, true);
@@ -271,6 +359,12 @@ function priceFromProduct(pp) {
   for (const [k, v] of parseDescriptionPrices(pp.description)) {
     if (k === modelKey) return v;
   }
+  const anchored = extractAnchoredPriceFromDescription(
+    pp.description,
+    pp.model,
+    pp.title,
+  );
+  if (anchored > 0) return anchored;
   return parseEurNum(pp.specs?.fiyat_eur);
 }
 
