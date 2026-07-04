@@ -105,6 +105,7 @@
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
     "catalog:atalay:web-desc": "node scripts/fetch-atalay-web-descriptions.mjs",
     "catalog:atalay:web-desc:full": "node scripts/fetch-atalay-web-descriptions.mjs --refresh-index --force",
+    "catalog:atalay:kdv-fiyat": "node scripts/fix-atalay-kdv-fiyat.mjs",
     "verify:pdp-kilit": "node scripts/verify-pdp-kilit.mjs",
     "verify:pdp-buybox-kilit": "node scripts/verify-pdp-buybox-kilit.mjs",
     "verify:topnav-kilit": "node scripts/verify-topnav-kilit.mjs",
