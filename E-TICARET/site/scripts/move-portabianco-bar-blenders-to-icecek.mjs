@@ -43,8 +43,8 @@ function priceFromCafemarkt(cmPriceKdvDahil) {
   return {
     kdvDahil,
     netTry,
-    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
-    fiyat_tl: Math.round(netTry),
+    price: `₺${fmtTry(kdvDahil)} KDV dahil`,
+    fiyat_tl: Math.round(kdvDahil),
     cm_ref: cm,
   };
 }
