@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * YÜKSEL İTHAL 2025 + SENOX 2026-1 fiyat denetimi
- * Formül: liste × (1−iskonto) × 1,10 kar × kur × 1,20 KDV → fiyat_tl (KDV dahil)
+ * Formül: liste × (1−iskonto) × kur × 1,20 KDV → fiyat_tl (KDV dahil, kârsız)
+ *   Yuksel İthal: %35 iskonto (×0,65) | Senox: ×0,50
  *
  *   node scripts/audit-yuksel-ithal-senox-prices.mjs
  */
@@ -26,9 +27,8 @@ const YUKSEL_ITHAL = [
 ].find((p) => fs.existsSync(p));
 
 const KDV = 20;
-const KAR = 0.1;
-const YUKSEL_ISK = 0.45;
-const SENOX_ISK = 0.55;
+const YUKSEL_ISK = 0.35;
+const SENOX_SATIS = 0.5;
 const TOL = 2;
 
 const SKU_TO_YUKSEL_REF = {
@@ -65,12 +65,11 @@ function normRef(s) {
   return String(s || "").toUpperCase().replace(/\s+/g, "");
 }
 
-function priceFromListe(listeEur, kur, iskonto) {
-  const alisEur = Math.round(listeEur * (1 - iskonto) * 100) / 100;
-  const satisEur = Math.round(alisEur * (1 + KAR) * 100) / 100;
-  const netTry = satisEur * kur;
+function priceFromListe(listeEur, kur, netMult) {
+  const netEur = Math.round(listeEur * netMult * 100) / 100;
+  const netTry = netEur * kur;
   const kdvDahil = Math.round(netTry * (1 + KDV / 100));
-  return { listeEur, alisEur, satisEur, kdvDahil, kur };
+  return { listeEur, netEur, kdvDahil, kur };
 }
 
 function isSenoxRow(r) {
@@ -107,7 +106,7 @@ async function auditYukselIthal(catalog, kur) {
       rows.push({ sku, name: p.name, status: "pdf-yok", yRef });
       continue;
     }
-    const exp = priceFromListe(liste, kur, YUKSEL_ISK);
+    const exp = priceFromListe(liste, kur, 1 - YUKSEL_ISK);
     const cur = Number(p.fiyat_tl) || 0;
     const diff = cur - exp.kdvDahil;
     const pct = cur > 0 ? ((diff / cur) * 100).toFixed(1) : "—";
@@ -121,8 +120,7 @@ async function auditYukselIthal(catalog, kur) {
       diff,
       pct,
       ok: Math.abs(diff) <= TOL,
-      alisEur: exp.alisEur,
-      satisEur: exp.satisEur,
+      netEur: exp.netEur,
     });
   }
   return { rows, pdfCount: pdf.length };
@@ -182,7 +180,7 @@ async function auditSenox(catalog, kur) {
       continue;
     }
 
-    const exp = priceFromListe(listeEur, kur, SENOX_ISK);
+    const exp = priceFromListe(listeEur, kur, SENOX_SATIS);
     const cur = Number(p.fiyat_tl) || 0;
     const diff = cur - exp.kdvDahil;
     rows.push({
@@ -194,8 +192,7 @@ async function auditSenox(catalog, kur) {
       diff,
       pct: cur > 0 ? ((diff / cur) * 100).toFixed(1) : "—",
       ok: Math.abs(diff) <= TOL,
-      alisEur: exp.alisEur,
-      satisEur: exp.satisEur,
+      netEur: exp.netEur,
       match: matchSrc,
       kaynak: p.kaynak_fiyat_listesi,
     });
@@ -231,10 +228,15 @@ async function main() {
       {
         generated: new Date().toISOString(),
         kur,
-        formula:
-          "liste × (1−iskonto) × 1,10 kar × kur × 1,20 KDV → fiyat_tl",
-        yuksel: { iskonto: YUKSEL_ISK, kar: KAR, pdf: YUKSEL_ITHAL, ...sy },
-        senox: { iskonto: SENOX_ISK, kar: KAR, ...ss },
+        formula: "liste × net çarpan × kur × 1,20 KDV → fiyat_tl (kârsız)",
+        yuksel: {
+          iskonto: YUKSEL_ISK,
+          netMult: 1 - YUKSEL_ISK,
+          pdf: YUKSEL_ITHAL,
+          pdfTotal: yuksel.pdfCount,
+          ...sy,
+        },
+        senox: { satisOran: SENOX_SATIS, ...ss },
       },
       null,
       2,
@@ -244,7 +246,7 @@ async function main() {
   console.log("=== Fiyat denetimi (onay öncesi) ===");
   console.log(`Kur: 1 EUR = ${kur} TRY`);
   console.log(
-    `Formül: liste × (1−iskonto) × 1,10 kar × kur × 1,20 KDV\n`,
+    `Formül: Yuksel liste×0,65 | Senox liste×0,50 → kur × 1,20 KDV\n`,
   );
 
   for (const s of [sy, ss]) {
