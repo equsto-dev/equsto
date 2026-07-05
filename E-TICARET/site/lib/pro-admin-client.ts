@@ -1782,3 +1782,95 @@ export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAy
     i18n_overrides: i18n,
   };
 }
+
+export type EnIssueSeverity = "critical" | "high" | "medium" | "low" | "info";
+
+export type EnIssue = {
+  id: string;
+  area: string;
+  severity: EnIssueSeverity;
+  type: string;
+  message: string;
+  file?: string;
+  fix?: string;
+  meta?: Record<string, unknown>;
+};
+
+export type EnImprovementAction = {
+  priority: string;
+  action: string;
+  reason: string;
+  files?: string[];
+};
+
+export type EnImprovementPlan = {
+  locale: string;
+  urlPrefix: string;
+  productCoverage: Record<string, unknown>;
+  uiParity: Record<string, unknown>;
+  recommendedCommands: string[];
+  actions: EnImprovementAction[];
+  priorityPages: Array<{ path: string; role: string }>;
+};
+
+export type EnAgentReport = {
+  generatedAt: string;
+  durationMs: number;
+  status: "ok" | "info" | "warn" | "error";
+  summary: {
+    totalIssues: number;
+    critical: number;
+    high: number;
+    medium: number;
+    low: number;
+    info: number;
+    byArea: Record<string, number>;
+  };
+  checks: Record<string, Record<string, unknown>>;
+  improvementPlan: EnImprovementPlan;
+  issues: EnIssue[];
+  issueCount: number;
+  aiSummary: string | null;
+};
+
+export async function fetchEnAgentReport(): Promise<{
+  report: EnAgentReport | null;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: EnAgentReport | null;
+    error?: string;
+  }>("/api/admin/en-agent");
+  if (body.error || body.success === false) {
+    return { report: null, error: body.error || "Rapor alınamadı" };
+  }
+  return { report: body.report ?? null };
+}
+
+export async function runEnAgent(opts?: {
+  ai?: boolean;
+  skipLive?: boolean;
+}): Promise<{
+  report?: EnAgentReport;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: EnAgentReport;
+    message?: string;
+    error?: string;
+  }>("/api/admin/en-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ai: opts?.ai === true,
+      skipLive: opts?.skipLive === true,
+    }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Denetim başarısız" };
+  }
+  return { report: body.report, message: body.message };
+}
