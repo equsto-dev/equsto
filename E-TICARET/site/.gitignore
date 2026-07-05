@@ -80,6 +80,7 @@ yarn-error.log*
 /scripts/out/
 /scripts/scratch-*
 /scripts/data/trial/
+/scripts/data/mobile-agent/latest.json
 /public/trial-*.html
 /public/data/scratch-test.json
 /public/data/*.bak
