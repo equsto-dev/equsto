@@ -4,6 +4,7 @@ import {
   CloudUploadOutlined,
   DollarOutlined,
   PictureOutlined,
+  RobotOutlined,
   SearchOutlined,
   ShopOutlined,
   TagOutlined,
@@ -39,11 +40,16 @@ const KatalogPanel = dynamic(
   () => import("@/components/pro/eticaret/KatalogPanel"),
   { loading: () => null },
 );
+const CatalogAgentPanel = dynamic(
+  () => import("@/components/pro/eticaret/CatalogAgentPanel"),
+  { loading: () => null },
+);
 
 const TAB_KEYS = [
   "ozet",
   "urunler",
   "katalog",
+  "ajan",
   "fiyat",
   "kampanya",
   "arama",
@@ -64,6 +70,8 @@ function tabPanel(key: TabKey) {
       return <UrunlerPanel />;
     case "katalog":
       return <KatalogPanel />;
+    case "ajan":
+      return <CatalogAgentPanel />;
     case "fiyat":
       return <EticaretFiyatPanel />;
     case "kampanya":
@@ -134,6 +142,15 @@ function EticaretPageInner() {
               </>
             ),
             children: tabPanel("katalog"),
+          },
+          {
+            key: "ajan",
+            label: (
+              <>
+                <RobotOutlined /> Katalog Ajanı
+              </>
+            ),
+            children: tabPanel("ajan"),
           },
           {
             key: "fiyat",

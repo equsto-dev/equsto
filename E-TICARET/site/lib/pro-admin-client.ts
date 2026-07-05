@@ -1782,3 +1782,102 @@ export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAy
     i18n_overrides: i18n,
   };
 }
+
+export type CatalogIssueSeverity = "critical" | "high" | "medium" | "low";
+
+export type CatalogIssueType =
+  | "price_mismatch"
+  | "price_update"
+  | "missing_source"
+  | "data_quality"
+  | "competitor_gap"
+  | "competitor_advantage";
+
+export type CatalogIssue = {
+  id: string;
+  brand: string;
+  severity: CatalogIssueSeverity;
+  type: CatalogIssueType;
+  sku: string;
+  model: string;
+  name?: string;
+  message: string;
+  site_tl?: number | null;
+  expected_tl?: number | null;
+  diff_tl?: number | null;
+  liste_eur?: number | null;
+  source?: string;
+  competitor?: string | null;
+  competitor_tl?: number | null;
+  meta?: Record<string, unknown>;
+};
+
+export type CatalogCheckResult = {
+  status: string;
+  total?: number;
+  ok?: number;
+  bad?: number;
+  missing?: number;
+  reason?: string;
+  formula?: string;
+  [key: string]: unknown;
+};
+
+export type CatalogAgentReport = {
+  generatedAt: string;
+  kur: number;
+  kurFallback: boolean;
+  durationMs: number;
+  status: "ok" | "info" | "warn" | "error";
+  summary: {
+    totalIssues: number;
+    critical: number;
+    high: number;
+    medium: number;
+    low: number;
+    byBrand: Record<string, number>;
+    byType: Record<string, number>;
+  };
+  checks: Record<string, CatalogCheckResult>;
+  issues: CatalogIssue[];
+  issueCount: number;
+  aiSummary: string | null;
+};
+
+export async function fetchCatalogAgentReport(): Promise<{
+  report: CatalogAgentReport | null;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: CatalogAgentReport | null;
+    error?: string;
+  }>("/api/admin/catalog-agent");
+  if (body.error || body.success === false) {
+    return { report: null, error: body.error || "Rapor alınamadı" };
+  }
+  return { report: body.report ?? null };
+}
+
+export async function runCatalogAgent(opts?: {
+  ai?: boolean;
+}): Promise<{
+  report?: CatalogAgentReport;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: CatalogAgentReport;
+    message?: string;
+    error?: string;
+  }>("/api/admin/catalog-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ai: opts?.ai === true }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Denetim başarısız" };
+  }
+  return { report: body.report, message: body.message };
+}
