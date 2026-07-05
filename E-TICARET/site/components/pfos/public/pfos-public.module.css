@@ -11,24 +11,25 @@
 }
 
 .pfosPage {
-  /* Buz mavisi vurgu — yeşil paletin ton eşlemesi */
-  --pfos-ice: #4ab8dc;
-  --pfos-ice-dark: #1a7a9e;
-  --pfos-ice-text: #1a6f94;
-  --pfos-ice-bg: #e6f4fa;
-  --pfos-ice-bg-soft: #b8dff0;
-  --pfos-ice-hover: rgba(230, 244, 250, 0.55);
-  --pfos-ice-shadow: rgba(74, 184, 220, 0.08);
-  --pfos-ice-shadow-strong: rgba(74, 184, 220, 0.12);
+  /* Buz mavisi vurgu — net kontrast */
+  --pfos-ice: #2d9cc8;
+  --pfos-ice-dark: #0f5f7a;
+  --pfos-ice-text: #0c4a6e;
+  --pfos-ice-bg: #e0f2fe;
+  --pfos-ice-bg-soft: #7dd3fc;
+  --pfos-ice-hover: #f0f9ff;
+  --pfos-ice-shadow: rgba(15, 95, 122, 0.12);
+  --pfos-ice-shadow-strong: rgba(15, 95, 122, 0.18);
+  --pfos-border: #cbd5e1;
+  --pfos-border-strong: #94a3b8;
+  --pfos-text: #0f172a;
+  --pfos-muted: #475569;
 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(at 0% 0%, rgba(224, 242, 252, 0.45) 0px, transparent 50%),
-              radial-gradient(at 50% 0%, rgba(244, 248, 255, 0.9) 0px, transparent 50%),
-              radial-gradient(at 100% 0%, rgba(224, 244, 252, 0.45) 0px, transparent 50%),
-              #f1f5f9;
-  color: #1a1d2b;
+  background: #f8fafc;
+  color: var(--pfos-text);
 }
 
 .main {
@@ -51,26 +52,28 @@
   display: none;
 }
 
-/* Wizard — liste uploadCard ile aynı yüzey */
+/* Wizard — net kart yüzeyi */
 .main:has([data-pfos-workspace]) .sec {
   background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0, 30, 80, 0.04);
+  border: 1.5px solid var(--pfos-border);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
   backdrop-filter: none;
   margin-bottom: 0;
   overflow: visible;
 }
 
 .main:has([data-pfos-workspace]) .secActive {
-  border-color: #4ab8dc;
+  border-color: var(--pfos-ice-dark);
+  border-width: 2px;
   box-shadow:
-    0 2px 12px rgba(0, 30, 80, 0.05),
-    0 0 0 1px rgba(74, 184, 220, 0.25);
+    0 4px 16px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(15, 95, 122, 0.15);
 }
 
 .main:has([data-pfos-workspace]) .secDone {
-  border-color: #e2e8f0;
+  border-color: var(--pfos-border);
+  background: #fff;
 }
 
 .main:has([data-pfos-workspace]) .secKeepOpen .secBd {
@@ -100,11 +103,49 @@
   font-size: 0.88rem;
   margin-top: 0.35rem;
   line-height: 1.5;
+  color: var(--pfos-muted);
 }
 
 .main:has([data-pfos-workspace]) .secAns {
   font-size: 0.88rem;
   margin-top: 0.4rem;
+  color: var(--pfos-ice-text);
+  font-weight: 600;
+}
+
+.main:has([data-pfos-workspace]) .qInlineTitle {
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+  color: var(--pfos-text);
+  font-weight: 600;
+}
+
+/* Seçim kutucukları — belirgin kenarlık */
+.main:has([data-pfos-workspace]) .optionBtn {
+  padding: 0.7rem 1rem;
+  min-height: 0;
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--pfos-text);
+  background: #fff;
+  border: 1.5px solid var(--pfos-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.main:has([data-pfos-workspace]) .optionBtn:hover {
+  border-color: var(--pfos-ice-dark);
+  background: var(--pfos-ice-hover);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.main:has([data-pfos-workspace]) .optionBtnSelected {
+  border: 2px solid var(--pfos-ice-dark);
+  background: var(--pfos-ice-bg);
+  box-shadow: 0 2px 10px var(--pfos-ice-shadow-strong);
+  color: var(--pfos-ice-text);
+  font-weight: 600;
 }
 
 .main:has([data-pfos-workspace]) .secNum {
@@ -113,59 +154,48 @@
   font-size: 0.78rem;
 }
 
-.main:has([data-pfos-workspace]) .qInlineTitle {
-  font-size: 0.92rem;
-  margin-bottom: 0.4rem;
-  color: #64748b;
-  font-weight: 600;
-}
-
-/* Seçim kutucukları — kompakt */
 .main:has([data-pfos-workspace]) .options {
   gap: 0.5rem;
-}
-
-.main:has([data-pfos-workspace]) .optionBtn {
-  padding: 0.62rem 0.95rem;
-  min-height: 0;
-  font-size: 0.94rem;
-  font-weight: 400;
-  line-height: 1.3;
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 30, 80, 0.03);
-}
-
-.main:has([data-pfos-workspace]) .optionBtn:hover {
-  border-color: #4ab8dc;
-  background: #f8fafc;
-  box-shadow: 0 4px 14px rgba(0, 30, 80, 0.06);
-}
-
-.main:has([data-pfos-workspace]) .optionBtnSelected {
-  border-color: #4ab8dc;
-  background: linear-gradient(135deg, #f0f9ff 0%, #fafcff 100%);
-  box-shadow:
-    inset 0 0 0 1px #4ab8dc,
-    0 4px 14px rgba(74, 184, 220, 0.12);
-  color: #001e50;
 }
 
 .main:has([data-pfos-workspace]) .multiLabel {
   padding: 1rem 1.25rem;
   min-height: 3rem;
   font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--pfos-text);
   background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1.5px solid var(--pfos-border);
+  border-radius: 10px;
 }
 
 .main:has([data-pfos-workspace]) .textInput {
-  padding: 1rem 1.15rem;
+  padding: 0.85rem 1rem;
   font-size: 1rem;
-  border-radius: 12px;
-  border-color: #e2e8f0;
+  font-weight: 500;
+  color: var(--pfos-text);
+  border-radius: 10px;
+  border: 1.5px solid var(--pfos-border-strong);
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.main:has([data-pfos-workspace]) .textInput::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.main:has([data-pfos-workspace]) .textInput:focus {
+  outline: none;
+  border-color: var(--pfos-ice-dark);
+  box-shadow: 0 0 0 3px rgba(15, 95, 122, 0.18);
+}
+
+.main:has([data-pfos-workspace]) .textInput:disabled {
+  background: #f1f5f9;
+  border-color: var(--pfos-border);
+  color: #94a3b8;
+  cursor: not-allowed;
 }
 
 .main:has([data-pfos-workspace]) .alanInput {
@@ -670,26 +700,28 @@
 .optionBtn {
   text-align: left;
   padding: 0.75rem 0.9rem;
-  border: 1px solid rgba(216, 222, 232, 0.8);
+  border: 1.5px solid var(--pfos-border);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.55);
+  background: #fff;
+  color: var(--pfos-text);
   cursor: pointer;
   font-size: 0.95rem;
+  font-weight: 500;
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, color 0.15s;
 }
 
 .optionBtn:hover {
-  border-color: var(--pfos-ice);
+  border-color: var(--pfos-ice-dark);
   background: var(--pfos-ice-hover);
-  box-shadow: 0 4px 12px var(--pfos-ice-shadow);
+  box-shadow: 0 2px 8px var(--pfos-ice-shadow);
 }
 
 .optionBtnSelected {
-  border-color: var(--pfos-ice);
+  border: 2px solid var(--pfos-ice-dark);
   background: var(--pfos-ice-bg);
-  box-shadow: inset 0 0 0 1px var(--pfos-ice), 0 4px 12px var(--pfos-ice-shadow-strong);
+  box-shadow: 0 2px 10px var(--pfos-ice-shadow-strong);
   color: var(--pfos-ice-text);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .multiGrid {
@@ -726,15 +758,29 @@
 .textInput {
   width: 100%;
   padding: 0.75rem 0.85rem;
-  border: 1px solid #d8dee8;
+  border: 1.5px solid var(--pfos-border-strong);
   border-radius: 10px;
   font-size: 1rem;
+  font-weight: 500;
+  color: var(--pfos-text);
+  background: #fff;
+}
+
+.textInput::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .textInput:focus {
   outline: none;
-  border-color: #001e50;
-  box-shadow: 0 0 0 3px rgba(0, 30, 80, 0.12);
+  border-color: var(--pfos-ice-dark);
+  box-shadow: 0 0 0 3px rgba(15, 95, 122, 0.18);
+}
+
+.textInput:disabled {
+  background: #f1f5f9;
+  border-color: var(--pfos-border);
+  color: #94a3b8;
 }
 
 .navRow {
@@ -1319,19 +1365,19 @@
 }
 
 .sec {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #fff;
+  border: 1.5px solid var(--pfos-border);
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 0.75rem;
   position: relative;
   z-index: 0;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
 }
 
 .secActive {
-  border-color: var(--pfos-ice);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06), 0 2px 12px rgba(0, 30, 80, 0.04);
+  border: 2px solid var(--pfos-ice-dark);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
   overflow: hidden;
   z-index: 4;
 }
@@ -1388,7 +1434,7 @@
 }
 
 .secDone {
-  border-color: #d8dee8;
+  border-color: var(--pfos-border);
 }
 
 .secDone:not(.secActive) .secHd {
@@ -1416,15 +1462,15 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #f4f6fa;
-  color: #7a8494;
+  background: #f1f5f9;
+  color: #475569;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   flex-shrink: 0;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid var(--pfos-border-strong);
 }
 
 .secActive .secNum {
@@ -1447,24 +1493,24 @@
 .secTitle {
   display: block;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #1a1d2b;
+  font-weight: 700;
+  color: var(--pfos-text);
 }
 
 .secSub {
   display: block;
-  font-size: 0.8rem;
-  color: #6b7280;
+  font-size: 0.82rem;
+  color: var(--pfos-muted);
   margin-top: 0.2rem;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .secAns {
   display: block;
-  font-size: 0.8rem;
-  color: #001e50;
+  font-size: 0.82rem;
+  color: var(--pfos-ice-text);
   margin-top: 0.35rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .qInlineTitle {
@@ -1597,9 +1643,9 @@
   margin-top: 4px;
   z-index: 1;
   background: #fff;
-  border: 1px solid #cdd6e4;
+  border: 1.5px solid var(--pfos-border-strong);
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 30, 80, 0.1);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
   max-height: min(320px, 50vh);
   overflow-y: auto;
   animation: pfosAcListIn 0.18s ease;
@@ -1620,13 +1666,14 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0.6rem 0.85rem;
+  padding: 0.65rem 0.9rem;
   border: none;
-  border-bottom: 1px solid #eef1f6;
+  border-bottom: 1px solid #e2e8f0;
   background: #fff;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
-  color: #1a1d2b;
+  color: var(--pfos-text);
 }
 
 .acItem:last-child {
@@ -1635,7 +1682,8 @@
 
 .acItem:hover,
 .acItemHl {
-  background: #eef3fb;
+  background: var(--pfos-ice-bg);
+  color: var(--pfos-ice-text);
 }
 
 .acEmpty {
@@ -1658,9 +1706,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #5a6270;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--pfos-text);
 }
 
 .teklifTotalInline {

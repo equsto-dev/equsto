@@ -3,9 +3,9 @@
 .shell {
   --ws-motion: 220ms cubic-bezier(0.16, 1, 0.3, 1);
   --ws-surface: rgba(255, 255, 255, 0.96);
-  --ws-border: #e2e8f0;
-  --ws-text: #001e50;
-  --ws-muted: #64748b;
+  --ws-border: #cbd5e1;
+  --ws-text: #0f172a;
+  --ws-muted: #475569;
   display: flex;
   flex-direction: column;
   gap: 1.35rem;
