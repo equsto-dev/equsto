@@ -1782,3 +1782,105 @@ export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAy
     i18n_overrides: i18n,
   };
 }
+
+export type GoogleAdsIssueSeverity = "critical" | "high" | "medium" | "low" | "info";
+
+export type GoogleAdsIssue = {
+  id: string;
+  area: string;
+  severity: GoogleAdsIssueSeverity;
+  type: string;
+  message: string;
+  file?: string;
+  fix?: string;
+  meta?: Record<string, unknown>;
+};
+
+export type GoogleAdsCampaignConfig = {
+  businessCategory: string;
+  businessType: string;
+  primaryConversion: string;
+  secondaryConversion: string;
+  suggestedCampaigns: Array<{
+    name: string;
+    type: string;
+    finalUrl: string;
+    keywords?: string[];
+    feedUrl?: string;
+    note?: string;
+  }>;
+  merchantCenter: {
+    feedUrl: string;
+    productCategory: string;
+    returnPolicyUrl: string;
+  };
+  tracking: {
+    ga4Property: string;
+    googleAdsAccount: string;
+    conversionActions: string[];
+  };
+  feedStats: Record<string, unknown> | null;
+  landings: Array<Record<string, unknown>>;
+};
+
+export type GoogleAdsAgentReport = {
+  generatedAt: string;
+  durationMs: number;
+  status: "ok" | "info" | "warn" | "error";
+  summary: {
+    totalIssues: number;
+    critical: number;
+    high: number;
+    medium: number;
+    low: number;
+    info: number;
+    byArea: Record<string, number>;
+  };
+  checks: Record<string, Record<string, unknown>>;
+  campaignConfig: GoogleAdsCampaignConfig;
+  issues: GoogleAdsIssue[];
+  issueCount: number;
+  aiSummary: string | null;
+};
+
+export async function fetchGoogleAdsAgentReport(): Promise<{
+  report: GoogleAdsAgentReport | null;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: GoogleAdsAgentReport | null;
+    error?: string;
+  }>("/api/admin/google-ads-agent");
+  if (body.error || body.success === false) {
+    return { report: null, error: body.error || "Rapor alınamadı" };
+  }
+  return { report: body.report ?? null };
+}
+
+export async function runGoogleAdsAgent(opts?: {
+  ai?: boolean;
+  skipLive?: boolean;
+}): Promise<{
+  report?: GoogleAdsAgentReport;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: GoogleAdsAgentReport;
+    message?: string;
+    error?: string;
+  }>("/api/admin/google-ads-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ai: opts?.ai === true,
+      skipLive: opts?.skipLive === true,
+    }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Denetim başarısız" };
+  }
+  return { report: body.report, message: body.message };
+}
