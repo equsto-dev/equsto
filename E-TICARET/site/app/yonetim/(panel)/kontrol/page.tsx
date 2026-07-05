@@ -3,12 +3,16 @@
 import {
   CheckCircleOutlined,
   CloseCircleOutlined,
+  GlobalOutlined,
   ReloadOutlined,
+  ToolOutlined,
 } from "@ant-design/icons";
 import { PageContainer, ProCard, ProDescriptions } from "@ant-design/pro-components";
-import { Alert, Button, Space, Tag, Typography } from "antd";
+import { Alert, Button, Space, Tabs, Tag, Typography } from "antd";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import {
   fetchCatalogStats,
   fetchKur,
@@ -19,6 +23,17 @@ import {
   clearProToken,
 } from "@/lib/pro-admin-client";
 
+const EnAgentPanel = dynamic(() => import("@/components/pro/kontrol/EnAgentPanel"), {
+  loading: () => null,
+});
+
+const TAB_KEYS = ["sistem", "en"] as const;
+type TabKey = (typeof TAB_KEYS)[number];
+
+function isTabKey(v: string | null): v is TabKey {
+  return !!v && (TAB_KEYS as readonly string[]).includes(v);
+}
+
 type CheckRow = {
   key: string;
   label: string;
@@ -26,7 +41,7 @@ type CheckRow = {
   detail: string;
 };
 
-export default function YonetimKontrolPage() {
+function SistemKontrolPanel() {
   const [loading, setLoading] = useState(true);
   const [checks, setChecks] = useState<CheckRow[]>([]);
   const [allOk, setAllOk] = useState(false);
@@ -129,15 +144,7 @@ export default function YonetimKontrolPage() {
   }, [runChecks]);
 
   return (
-    <PageContainer
-      title="Sistem kontrolü"
-      subTitle="Ant Design Pro — canlı ortam öncesi kontrol listesi"
-      extra={
-        <Button icon={<ReloadOutlined />} onClick={runChecks} loading={loading}>
-          Yeniden kontrol et
-        </Button>
-      }
-    >
+    <>
       <Alert
         type={allOk ? "success" : "warning"}
         showIcon
@@ -146,12 +153,18 @@ export default function YonetimKontrolPage() {
         description="Katalog, PFOS ve yayınlama modüllerine ana sayfadaki kartlardan veya sol menüden ulaşın."
       />
 
-      <ProCard title="Kontrol listesi" loading={loading}>
+      <ProCard
+        title="Kontrol listesi"
+        loading={loading}
+        extra={
+          <Button icon={<ReloadOutlined />} onClick={runChecks} loading={loading}>
+            Yeniden kontrol et
+          </Button>
+        }
+      >
         <ProDescriptions
           column={1}
-          dataSource={Object.fromEntries(
-            checks.map((c) => [c.key, c.detail]),
-          )}
+          dataSource={Object.fromEntries(checks.map((c) => [c.key, c.detail]))}
           columns={checks.map((c) => ({
             title: (
               <Space>
@@ -190,12 +203,70 @@ export default function YonetimKontrolPage() {
           <Button type="primary" href="/yonetim/eticaret?tab=urunler">
             Ürünlere git
           </Button>
-          <Button href="/yonetim/eticaret?tab=arama">Arama</Button>
+          <Button href="/yonetim/kontrol?tab=en">EN Ajan</Button>
           <Button href="/" target="_blank">
             Mağazayı aç
           </Button>
         </Space>
       </ProCard>
+    </>
+  );
+}
+
+function KontrolPageInner() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const rawTab = searchParams.get("tab");
+  const activeTab: TabKey = isTabKey(rawTab) ? rawTab : "sistem";
+
+  function onTabChange(key: string) {
+    const next = isTabKey(key) ? key : "sistem";
+    router.replace(`/yonetim/kontrol?tab=${next}`, { scroll: false });
+  }
+
+  return (
+    <PageContainer
+      title="Sistem kontrolü"
+      subTitle="API, katalog, arama ve İngilizce (/en) sayfa denetimi"
+      extra={
+        <Button href="/" target="_blank">
+          Mağazayı aç
+        </Button>
+      }
+    >
+      <Tabs
+        activeKey={activeTab}
+        onChange={onTabChange}
+        destroyInactiveTabPane
+        items={[
+          {
+            key: "sistem",
+            label: (
+              <>
+                <ToolOutlined /> Sistem
+              </>
+            ),
+            children: <SistemKontrolPanel />,
+          },
+          {
+            key: "en",
+            label: (
+              <>
+                <GlobalOutlined /> İngilizce Ajan
+              </>
+            ),
+            children: <EnAgentPanel />,
+          },
+        ]}
+      />
     </PageContainer>
+  );
+}
+
+export default function YonetimKontrolPage() {
+  return (
+    <Suspense fallback={null}>
+      <KontrolPageInner />
+    </Suspense>
   );
 }
