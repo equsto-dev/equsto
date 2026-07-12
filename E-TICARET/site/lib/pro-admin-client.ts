@@ -1881,3 +1881,84 @@ export async function runCatalogAgent(opts?: {
   }
   return { report: body.report, message: body.message };
 }
+
+export type MobileIssueSeverity = "critical" | "high" | "medium" | "low" | "info";
+
+export type MobileIssue = {
+  id: string;
+  platform: string;
+  severity: MobileIssueSeverity;
+  type: string;
+  area: string;
+  message: string;
+  file?: string;
+  fix?: string;
+  meta?: Record<string, unknown>;
+};
+
+export type MobileCheckResult = {
+  status: string;
+  [key: string]: unknown;
+};
+
+export type MobileAgentReport = {
+  generatedAt: string;
+  durationMs: number;
+  status: "ok" | "info" | "warn" | "error";
+  summary: {
+    totalIssues: number;
+    critical: number;
+    high: number;
+    medium: number;
+    low: number;
+    info: number;
+    byPlatform: Record<string, number>;
+    byType: Record<string, number>;
+  };
+  checks: Record<string, MobileCheckResult>;
+  issues: MobileIssue[];
+  issueCount: number;
+  aiSummary: string | null;
+};
+
+export async function fetchMobileAgentReport(): Promise<{
+  report: MobileAgentReport | null;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: MobileAgentReport | null;
+    error?: string;
+  }>("/api/admin/mobile-agent");
+  if (body.error || body.success === false) {
+    return { report: null, error: body.error || "Rapor alınamadı" };
+  }
+  return { report: body.report ?? null };
+}
+
+export async function runMobileAgent(opts?: {
+  ai?: boolean;
+  skipLive?: boolean;
+}): Promise<{
+  report?: MobileAgentReport;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: MobileAgentReport;
+    message?: string;
+    error?: string;
+  }>("/api/admin/mobile-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ai: opts?.ai === true,
+      skipLive: opts?.skipLive === true,
+    }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Denetim başarısız" };
+  }
+  return { report: body.report, message: body.message };
+}
