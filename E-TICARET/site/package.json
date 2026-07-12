@@ -23,6 +23,7 @@
     "catalog:agent:run": "node scripts/catalog-agent-run.mjs",
     "mobile:agent:run": "node scripts/mobile-agent-run.mjs",
     "google-ads:agent:run": "node scripts/google-ads-agent-run.mjs",
+    "en:agent:run": "node scripts/en-agent-run.mjs",
     "catalog:doner:parse": "node scripts/parse-atalay-doner-ocak.mjs",
     "catalog:doner:sync": "node scripts/parse-atalay-doner-ocak.mjs && node scripts/sync-doner-fiyatlar.mjs",
     "catalog:atalay:extract": "python scripts/extract-atalay-pdf-catalog.py",

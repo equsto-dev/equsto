@@ -35,7 +35,11 @@ const GoogleAdsAgentPanel = dynamic(
   { loading: () => null },
 );
 
-const TAB_KEYS = ["sistem", "mobil", "google-ads"] as const;
+const EnAgentPanel = dynamic(() => import("@/components/pro/kontrol/EnAgentPanel"), {
+  loading: () => null,
+});
+
+const TAB_KEYS = ["sistem", "mobil", "google-ads", "en"] as const;
 type TabKey = (typeof TAB_KEYS)[number];
 
 function isTabKey(v: string | null): v is TabKey {
@@ -214,6 +218,7 @@ function SistemKontrolPanel() {
           <Button href="/yonetim/eticaret?tab=arama">Arama</Button>
           <Button href="/yonetim/kontrol?tab=mobil">Mobil Ajan</Button>
           <Button href="/yonetim/kontrol?tab=google-ads">Google Ads Ajan</Button>
+          <Button href="/yonetim/kontrol?tab=en">EN Ajan</Button>
           <Button href="/" target="_blank">
             Mağazayı aç
           </Button>
@@ -237,7 +242,7 @@ function KontrolPageInner() {
   return (
     <PageContainer
       title="Sistem kontrolü"
-      subTitle="API, katalog, arama, mobil ve Google Ads denetimi"
+      subTitle="API, katalog, arama, mobil, Google Ads ve İngilizce denetimi"
       extra={
         <Button href="/" target="_blank">
           Mağazayı aç
@@ -275,6 +280,15 @@ function KontrolPageInner() {
               </>
             ),
             children: <GoogleAdsAgentPanel />,
+          },
+          {
+            key: "en",
+            label: (
+              <>
+                <GlobalOutlined /> İngilizce Ajan
+              </>
+            ),
+            children: <EnAgentPanel />,
           },
         ]}
       />
