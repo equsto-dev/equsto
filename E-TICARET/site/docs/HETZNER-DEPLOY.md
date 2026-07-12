@@ -110,6 +110,30 @@ bash scripts/hetzner-deploy.sh
 - https://equsto.com/api/kur
 - Tarayıcıda **Ctrl+F5**
 
+## Ajan cron'ları (Hetzner)
+
+Sunucuda bir kez (`.env.production` içinde `CRON_SECRET` ve isteğe bağlı `ANTHROPIC_API_KEY` tanımlı olmalı):
+
+```bash
+cd /opt/equsto/E-TICARET/site
+bash scripts/hetzner-install-cron.sh
+```
+
+| Endpoint | Zamanlama |
+|----------|-----------|
+| `/api/cron/tcmb-kur` | Her gün 12:30 UTC |
+| `/api/cron/catalog-agent` | Pazartesi 03:00 UTC |
+| `/api/cron/mobile-agent` | Pazartesi 03:15 UTC |
+| `/api/cron/google-ads-agent` | Pazartesi 03:30 UTC |
+| `/api/cron/en-agent` | Pazartesi 03:45 UTC |
+| `/api/cron/blog-agent` | Pazartesi 04:00 UTC (haftada 1 yazı taslağı) |
+
+Manuel test:
+
+```bash
+curl -fsS -H "Authorization: Bearer $CRON_SECRET" https://equsto.com/api/cron/blog-agent
+```
+
 ## Sorun giderme
 
 ```bash

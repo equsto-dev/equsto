@@ -3,6 +3,7 @@
 import {
   CheckCircleOutlined,
   CloseCircleOutlined,
+  FileTextOutlined,
   GlobalOutlined,
   GoogleOutlined,
   MobileOutlined,
@@ -39,7 +40,11 @@ const EnAgentPanel = dynamic(() => import("@/components/pro/kontrol/EnAgentPanel
   loading: () => null,
 });
 
-const TAB_KEYS = ["sistem", "mobil", "google-ads", "en"] as const;
+const BlogAgentPanel = dynamic(() => import("@/components/pro/kontrol/BlogAgentPanel"), {
+  loading: () => null,
+});
+
+const TAB_KEYS = ["sistem", "mobil", "google-ads", "en", "blog"] as const;
 type TabKey = (typeof TAB_KEYS)[number];
 
 function isTabKey(v: string | null): v is TabKey {
@@ -219,6 +224,7 @@ function SistemKontrolPanel() {
           <Button href="/yonetim/kontrol?tab=mobil">Mobil Ajan</Button>
           <Button href="/yonetim/kontrol?tab=google-ads">Google Ads Ajan</Button>
           <Button href="/yonetim/kontrol?tab=en">EN Ajan</Button>
+          <Button href="/yonetim/kontrol?tab=blog">Blog Ajan</Button>
           <Button href="/" target="_blank">
             Mağazayı aç
           </Button>
@@ -242,7 +248,7 @@ function KontrolPageInner() {
   return (
     <PageContainer
       title="Sistem kontrolü"
-      subTitle="API, katalog, arama, mobil, Google Ads ve İngilizce denetimi"
+      subTitle="API, katalog, arama, mobil, Google Ads, İngilizce ve blog denetimi"
       extra={
         <Button href="/" target="_blank">
           Mağazayı aç
@@ -289,6 +295,15 @@ function KontrolPageInner() {
               </>
             ),
             children: <EnAgentPanel />,
+          },
+          {
+            key: "blog",
+            label: (
+              <>
+                <FileTextOutlined /> Blog Ajan
+              </>
+            ),
+            children: <BlogAgentPanel />,
           },
         ]}
       />

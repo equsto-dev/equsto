@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "updated": "2026-06-29",
+  "sources": [
+    "oztiryakiler.com/blog",
+    "inoksan.com/blog",
+    "atalay.com.tr/blog",
+    "gastromix.com.tr",
+    "endustriyelmutfak.com",
+    "prosogutma.com/blog"
+  ],
+  "topics": [
+    {
+      "id": "haccp-mutfak-hijyeni",
+      "site": "oztiryakiler.com",
+      "title": "HACCP ve endüstriyel mutfak hijyen planı",
+      "keywords": ["haccp", "hijyen", "gıda güvenliği", "sanayi tipi mutfak"],
+      "category": "operasyon",
+      "priority": "high"
+    },
+    {
+      "id": "davlumbaz-kapasite-hesabi",
+      "site": "inoksan.com",
+      "title": "Davlumbaz kapasitesi nasıl hesaplanır?",
+      "keywords": ["davlumbaz", "havalandırma", "debisi", "pişirme hattı"],
+      "category": "mep",
+      "priority": "high"
+    },
+    {
+      "id": "yag-siyirici-secimi",
+      "site": "oztiryakiler.com",
+      "title": "Yağ sıyırıcı seçimi ve bakım rehberi",
+      "keywords": ["yağ sıyırıcı", "grease trap", "atık su", "fritöz"],
+      "category": "mep",
+      "priority": "high"
+    },
+    {
+      "id": "rational-vs-konveksiyon",
+      "site": "inoksan.com",
+      "title": "Kombi fırın vs konveksiyonlu fırın karşılaştırması",
+      "keywords": ["rational", "konveksiyonlu fırın", "kombi fırın", "pişirme"],
+      "category": "ekipman",
+      "priority": "medium"
+    },
+    {
+      "id": "soguk-oda-enerji",
+      "site": "prosogutma.com",
+      "title": "Soğuk oda enerji tüketimi ve izolasyon",
+      "keywords": ["soğuk oda", "enerji", "panel", "izolasyon"],
+      "category": "soğutma",
+      "priority": "medium"
+    },
+    {
+      "id": "bulaşikhane-kapasite",
+      "site": "oztiryakiler.com",
+      "title": "Bulaşıkhane kapasite planlama (tabak/saat)",
+      "keywords": ["bulaşık makinesi", "konveyörlü", "kapasite", "yıkama"],
+      "category": "ekipman",
+      "priority": "high"
+    },
+    {
+      "id": "endustriyel-kahve-secimi",
+      "site": "gastromix.com.tr",
+      "title": "Endüstriyel kahve makinesi seçim kriterleri",
+      "keywords": ["espresso", "kahve makinesi", "barista", "cafe"],
+      "category": "ekipman",
+      "priority": "medium"
+    },
+    {
+      "id": "franchise-mutfak-standard",
+      "site": "endustriyelmutfak.com",
+      "title": "Franchise mutfak standardizasyonu ve şube açılışı",
+      "keywords": ["franchise", "şube", "standart modül", "fast food"],
+      "category": "operasyon",
+      "priority": "medium"
+    },
+    {
+      "id": "restoran-ruhsat-sureci",
+      "site": "gastromix.com.tr",
+      "title": "Restoran ruhsat süreci ve belediye kontrolleri",
+      "keywords": ["ruhsat", "belediye", "gıda işletme", "açılış"],
+      "category": "operasyon",
+      "priority": "high"
+    },
+    {
+      "id": "enerji-verimli-ekipman",
+      "site": "oztiryakiler.com",
+      "title": "Enerji verimli endüstriyel mutfak ekipmanları",
+      "keywords": ["enerji", "verimlilik", "induction", "elektrik yükü"],
+      "category": "ekipman",
+      "priority": "medium"
+    },
+    {
+      "id": "fritoz-secim-rehberi",
+      "site": "atalay.com.tr",
+      "title": "Endüstriyel fritöz seçim rehberi",
+      "keywords": ["fritöz", "yağ yönetimi", "fast food", "pişirme"],
+      "category": "ekipman",
+      "priority": "medium"
+    },
+    {
+      "id": "mutfak-akisi-ergonomi",
+      "site": "gastromix.com.tr",
+      "title": "Mutfak akışı ve ergonomi planlama",
+      "keywords": ["ergonomi", "mutfak akışı", "haccp", "zon planlama"],
+      "category": "tasarım",
+      "priority": "high"
+    },
+    {
+      "id": "otel-banket-ekipman",
+      "site": "inoksan.com",
+      "title": "Otel banket ve toplu yemek ekipman planı",
+      "keywords": ["otel", "banket", "holding", "catering"],
+      "category": "konsept",
+      "priority": "medium"
+    },
+    {
+      "id": "mevsimsel-menu-ekipman",
+      "site": "oztiryakiler.com",
+      "title": "Mevsimsel menü değişiminde ekipman revizyonu",
+      "keywords": ["mevsim", "menü", "soğutma", "kapasite"],
+      "category": "operasyon",
+      "priority": "low"
+    },
+    {
+      "id": "ikinci-el-endustriyel-mutfak",
+      "site": "endustriyelmutfak.com",
+      "title": "İkinci el endüstriyel mutfak ekipmanı alırken dikkat",
+      "keywords": ["ikinci el", "garanti", "servis", "paslanmaz"],
+      "category": "satın alma",
+      "priority": "low"
+    },
+    {
+      "id": "bulut-mutfak-maliyet",
+      "site": "gastromix.com.tr",
+      "title": "Bulut mutfak maliyet analizi ve ROI",
+      "keywords": ["bulut mutfak", "dark kitchen", "maliyet", "roi"],
+      "category": "konsept",
+      "priority": "high"
+    },
+    {
+      "id": "soguk-zincir-denetim",
+      "site": "prosogutma.com",
+      "title": "Soğuk zincir denetimi ve kayıt tutma",
+      "keywords": ["soğuk zincir", "sıcaklık kaydı", "denetim", "haccp"],
+      "category": "operasyon",
+      "priority": "medium"
+    },
+    {
+      "id": "paslanmaz-tezgah-secimi",
+      "site": "atalay.com.tr",
+      "title": "Paslanmaz çelik tezgah ve dolap seçimi",
+      "keywords": ["paslanmaz", "tezgah", "aisi 304", "hazırlık"],
+      "category": "ekipman",
+      "priority": "medium"
+    },
+    {
+      "id": "gastronomi-tasarim-pfos",
+      "site": "equsto.com",
+      "title": "Gastronomi tasarımı ile PFOS teklif entegrasyonu",
+      "keywords": ["gastronomi tasarımı", "pfos", "yerleşim", "teklif"],
+      "category": "tasarım",
+      "priority": "medium"
+    },
+    {
+      "id": "endustriyel-ocak-gaz-elektrik",
+      "site": "atalay.com.tr",
+      "title": "Gazlı vs elektrikli endüstriyel ocak seçimi",
+      "keywords": ["ocak", "gaz", "induction", "tesisat"],
+      "category": "ekipman",
+      "priority": "high"
+    }
+  ]
+}
