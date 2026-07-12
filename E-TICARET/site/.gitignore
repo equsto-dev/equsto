@@ -85,6 +85,7 @@ yarn-error.log*
 /scripts/data/google-ads-agent/latest.json
 /scripts/data/en-agent/latest.json
 /scripts/data/blog-agent/latest.json
+/scripts/data/blog-agent/state.json
 /scripts/data/blog-agent/drafts/
 /public/trial-*.html
 /public/data/scratch-test.json

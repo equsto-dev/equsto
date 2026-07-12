@@ -2156,3 +2156,117 @@ export async function runEnAgent(opts?: {
   }
   return { report: body.report, message: body.message };
 }
+
+export type TopicGap = {
+  id: string;
+  title: string;
+  category: string;
+  priority: string;
+  keywords: string[];
+  competitorSites: string[];
+  rationale: string;
+  competitorCount: number;
+};
+
+export type BlogDraft = {
+  id: string;
+  slug: string;
+  geoKey: string;
+  title: string;
+  description: string;
+  h1: string;
+  lead?: string;
+  body: string;
+  profile: string;
+  topicId: string;
+  status: string;
+  createdAt: string;
+  publishedAt?: string;
+  source?: string;
+};
+
+export type BlogAgentReport = {
+  generatedAt: string;
+  durationMs: number;
+  status: "ok" | "info" | "warn" | "error";
+  summary: {
+    competitorTopics: number;
+    equstoArticles: number;
+    gapTopics: number;
+    draftsTotal: number;
+    draftsPending: number;
+    currentWeek: string;
+    weeklyDraftCreated: boolean;
+  };
+  checks: Record<string, Record<string, unknown>>;
+  gapTopics: TopicGap[];
+  latestDraft: BlogDraft | null;
+  drafts: BlogDraft[];
+  aiSummary: string | null;
+  message?: string;
+};
+
+export async function fetchBlogAgentReport(): Promise<{
+  report: BlogAgentReport | null;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: BlogAgentReport | null;
+    error?: string;
+  }>("/api/admin/blog-agent");
+  if (body.error || body.success === false) {
+    return { report: null, error: body.error || "Rapor alınamadı" };
+  }
+  return { report: body.report ?? null };
+}
+
+export async function runBlogAgent(opts?: {
+  ai?: boolean;
+  force?: boolean;
+  topicId?: string;
+}): Promise<{
+  report?: BlogAgentReport;
+  message?: string;
+  error?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    report?: BlogAgentReport;
+    message?: string;
+    error?: string;
+  }>("/api/admin/blog-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ai: opts?.ai === true,
+      force: opts?.force === true,
+      topicId: opts?.topicId,
+    }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Blog ajan başarısız" };
+  }
+  return { report: body.report, message: body.message };
+}
+
+export async function publishBlogDraft(slug: string): Promise<{
+  message?: string;
+  error?: string;
+  key?: string;
+}> {
+  const body = await adminFetch<{
+    success?: boolean;
+    message?: string;
+    error?: string;
+    key?: string;
+  }>("/api/admin/blog-agent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ action: "publish", slug }),
+  });
+  if (body.error || body.success === false) {
+    return { error: body.error || "Yayın başarısız" };
+  }
+  return { message: body.message, key: body.key };
+}
