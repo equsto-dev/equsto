@@ -81,6 +81,11 @@ yarn-error.log*
 /scripts/scratch-*
 /scripts/data/trial/
 /scripts/data/catalog-agent/latest.json
+/scripts/data/mobile-agent/latest.json
+/scripts/data/google-ads-agent/latest.json
+/scripts/data/en-agent/latest.json
+/scripts/data/blog-agent/latest.json
+/scripts/data/blog-agent/drafts/
 /public/trial-*.html
 /public/data/scratch-test.json
 /public/data/*.bak
