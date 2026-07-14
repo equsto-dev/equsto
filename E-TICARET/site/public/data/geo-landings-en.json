@@ -295,15 +295,85 @@
       }
     ]
   },
+  "en/world-cuisine-kitchen-setup": {
+    "lang": "en",
+    "profile": "dunyaMutfak",
+    "title": "World cuisine kitchen setup guide | Equsto",
+    "description": "World cuisine kitchen setup: pizza oven, charcoal grill, combi oven and multi-zone refrigeration. Reference proforma 2018-199-3 (63 items).",
+    "h1": "World cuisine kitchen setup",
+    "lead": "Multi-culture menus need parallel cooking lines, display cold stores and a wash zone sized for peak covers.",
+    "tableRef": "geo/dunya-mutfak-2018-199-3-table.json",
+    "skipBudget": true,
+    "body": "<p>In a world cuisine kitchen, cooking lines multiply as the menu map expands — pizza ovens, charcoal grills, combi ovens and fryers often run in parallel. This guide is derived from the 2018-199-3 reference proforma; the table below excludes prices.</p><p>Gas pizza ovens and charcoal grills drive hood airflow on open kitchens. Meat display cabinets sit near the pass; salamander and sauce bain-marie finish the plating line. Four-burner ranges and twin-basket fryers cover lunch peaks side by side.</p><p>Vegetable, meat and deep-freeze rooms use separate panel sets; stacking racks deepen stock. Undercounter refrigerators keep daily mise near the cook line. HACCP flow moves prep one-way from cold rooms to cooking.</p><p>Juice extractors, ice machines, tea stations and undercounter glasswashers carry beverage traffic. A guillotine dishwasher sits with in/out benches and a spray rinse. Read the Italian restaurant guide for pizza-heavy concepts.</p><p>Use Project Factory with a world-cuisine concept to generate a capacity- and m²-driven list.</p>",
+    "faq": [
+      [
+        "What is core for world cuisine?",
+        "Pizza/grill capacity, combi cooking, multi-zone cold storage and warewashing form the core package."
+      ],
+      [
+        "How do I get a quote?",
+        "Open Project Factory, pick a world-cuisine / multi-cuisine concept, or contact us with floor area and menu."
+      ]
+    ],
+    "related": [
+      {
+        "label": "Italian restaurant setup",
+        "href": "/en/italian-restaurant-kitchen-setup"
+      },
+      {
+        "label": "Fine dining setup",
+        "href": "/en/fine-dining-kitchen-setup"
+      },
+      {
+        "label": "Project Factory",
+        "href": "/en/pfos"
+      }
+    ]
+  },
+  "en/italian-restaurant-kitchen-setup": {
+    "lang": "en",
+    "profile": "italyan",
+    "title": "Italian restaurant kitchen setup guide | Equsto",
+    "description": "Italian restaurant kitchen setup: pizza oven, rational combi, salamander and pasta line. Reference proforma 2018-199-3 (63 items).",
+    "h1": "Italian restaurant kitchen setup",
+    "lead": "Pizza, pasta and grill lines with cooking, cold storage and warewashing zones for trattoria scale.",
+    "tableRef": "geo/italyan-2018-199-3-table.json",
+    "skipBudget": true,
+    "body": "<p>An Italian restaurant kitchen centres on a pizza oven and a rational combi; salamander, range and fryer feed side lines at service peaks. The 2018-199-3 reference shows a full trattoria-scale package; the table excludes prices.</p><p>A rotating gas pizza oven sits near dough prep; under-oven benches and tray racks keep pace. Spiral mixers and prep tables gather in the dry store zone. Vacuum and stretch wrappers bridge prep and holding.</p><p>A 10-pan rational oven carries mains and sides in one module. Salamander and sauce bain-marie form the plating finish. Charcoal grill loads for antipasti and meats; hood capacity must scale with open flame.</p><p>Meat and vegetable cold rooms plus deep-freeze panels support the supply cycle. A refrigerated pass-through bench follows guest flow. The world cuisine guide covers broader menu maps.</p><p>Project Factory scales the Italian restaurant concept by m² and covers.</p>",
+    "faq": [
+      [
+        "What is core for an Italian kitchen?",
+        "Pizza oven, dough prep, combi cooking, cold rooms and warewashing form the core package."
+      ],
+      [
+        "How do I get a quote?",
+        "Open Project Factory, choose the Italian / trattoria concept, or contact us with floor area and menu."
+      ]
+    ],
+    "related": [
+      {
+        "label": "World cuisine setup",
+        "href": "/en/world-cuisine-kitchen-setup"
+      },
+      {
+        "label": "Cafe setup",
+        "href": "/en/cafe-setup"
+      },
+      {
+        "label": "Project Factory",
+        "href": "/en/pfos"
+      }
+    ]
+  },
   "en/industrial-kitchen-equipment-turkey": {
     "lang": "en",
-    "profile": "seoEnIndustrial",
+    "profile": "seoTurkiye",
     "title": "Industrial kitchen equipment Turkey | Equsto",
     "description": "B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
     "h1": "Industrial kitchen equipment — Turkey",
     "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
     "skipBudget": true,
-    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Equsto supplies industrial kitchen equipment across cooking, refrigeration, warewashing, prep, coffee and beverage for restaurants, hotels, cafes and cloud kitchens in Turkey. Live catalogue and sales engineering sit in one workflow.</p><p>Authorised Öztiryakiler distribution and selected global brands share the same cart and quote flow. Single-SKU orders and turnkey projects use the same shop.</p><p>The table below links to sample SKUs. Build the full list in Project Factory; export markets are supported via contact. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -333,11 +403,11 @@
     "lang": "en",
     "profile": "seoEnIndustrial",
     "title": "Industrial kitchen supplier Turkey | Equsto",
-    "description": "Industrial kitchen supplier Turkey: B2B catalogue, Öztiryakiler distribution, Project Factory quotes, export.",
+    "description": "B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
     "h1": "Industrial kitchen supplier — Turkey",
-    "lead": "B2B industrial kitchen equipment from Turkey — catalogue, authorized Öztiryakiler, export desk.",
+    "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
     "skipBudget": true,
-    "body": "<p>Equsto is a Turkey-based B2B industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorized Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one workflow.</p><h2>Catalogue and projects</h2><p>Single-SKU orders and full turnkey lists use the same shop and quote flow. Live catalogue pricing applies EUR and TRY rates; stock is verified before order confirmation.</p><h2>Export</h2><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Proforma invoices state Incoterms on the quote cover page. Öztiryakiler spare parts ship through the authorised dealer channel.</p><h2>Quotes</h2><p><a href=\"/en/commercial-kitchen-quotation\">Commercial kitchen quotation</a> via Project Factory (PFOS) — concept and floor area inputs generate an equipment list. Site surveys close the gap between preliminary and final quotes.</p><p>Concept depth: GEO guides for steakhouse, fish restaurant, dark kitchen and hotel supply.</p>",
+    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -363,12 +433,12 @@
     "lang": "en",
     "profile": "seoEnQuotation",
     "title": "Commercial kitchen quotation platform | Equsto",
-    "description": "Commercial kitchen quotation via Project Factory (PFOS): equipment list, VAT, logistics — Turkey B2B.",
+    "description": "Project Factory (PFOS): equipment list and quote summary for commercial kitchens — about 5 minutes.",
     "h1": "Commercial kitchen quotation",
-    "lead": "PFOS quotation platform — capacity, concept, menu inputs; sales engineering sign-off.",
+    "lead": "Capacity, concept and menu inputs drive equipment selection; VAT and logistics sit in the quote file.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Project Factory (PFOS) is Equsto's B2B quotation platform for commercial kitchen projects. Capacity, concept and menu inputs drive module counts through the rule engine; VAT and logistics lines are included in the output file.</p><h2>Workflow</h2><p>Target turnaround is about five minutes for a preliminary quote summary. Quote PDFs include structured SKU and product code rows. Revisions are versioned under one project number.</p><h2>From draft to firm quote</h2><p>Preliminary lists become firm quotes after site survey and sales engineering review. Layout and MEP can be refined with gastronomy design on site. This is kitchen equipment supply, not reservation software.</p><p>Start at <a href=\"/en/pfos\">equsto.com/en/pfos</a>. Supplier overview: <a href=\"/en/industrial-kitchen-supplier-turkey\">industrial kitchen supplier Turkey</a>.</p>",
+    "body": "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file.</p><p>Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and on-site sales engineering.</p><p>This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Is this a reservation app?",
@@ -811,7 +881,7 @@
   },
   "en/blog": {
     "lang": "en",
-    "profile": "blogHubEn",
+    "profile": "blogHub",
     "title": "Equsto guides & blog | GEO index",
     "description": "Commercial kitchen guides: concept setups, SEO pages, editorials and reference projects. Not in the shop menu.",
     "h1": "Guides & blog index",
@@ -862,6 +932,14 @@
           {
             "label": "Market, butcher & deli",
             "href": "/en/market-butcher-deli-setup"
+          },
+          {
+            "label": "World cuisine setup",
+            "href": "/en/world-cuisine-kitchen-setup"
+          },
+          {
+            "label": "Italian restaurant setup",
+            "href": "/en/italian-restaurant-kitchen-setup"
           }
         ]
       },

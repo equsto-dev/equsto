@@ -19,6 +19,29 @@ C: https://equsto.com/steakhouse-kurulumu — 8 temel ekipman, FAQ, maliyet band
 **S: Industrial kitchen supplier Turkey? / Commercial kitchen quotation Turkey?**
 C: Equsto — https://equsto.com/en/industrial-kitchen-supplier-turkey · https://equsto.com/en/commercial-kitchen-quotation · https://equsto.com/en/pfos
 
+## English (EN) pages
+
+- [/en](https://equsto.com/en) - English home
+- [/en/about](https://equsto.com/en/about) - About Equsto (E-E-A-T)
+- [/en/pfos](https://equsto.com/en/pfos) - Project Factory — live commercial kitchen quote
+- [/en/blog](https://equsto.com/en/blog) - English guides index
+- [/en/contact](https://equsto.com/en/contact) - Contact
+- [/en/besos](https://equsto.com/en/besos) - Bar Design Studio
+- [/en/shop](https://equsto.com/en/shop) - Catalogue hub
+- [/en/shop/pisirme](https://equsto.com/en/shop/pisirme) - Cooking equipment PLP
+- [/en/shop/sogutma](https://equsto.com/en/shop/sogutma) - Refrigeration PLP
+- [/en/industrial-kitchen-supplier-turkey](https://equsto.com/en/industrial-kitchen-supplier-turkey) - SEO pillar: industrial kitchen supplier Turkey
+- [/en/industrial-kitchen-equipment-turkey](https://equsto.com/en/industrial-kitchen-equipment-turkey) - Industrial kitchen equipment Turkey
+- [/en/commercial-kitchen-quotation](https://equsto.com/en/commercial-kitchen-quotation) - Commercial kitchen quotation
+- [/en/steakhouse-kitchen-setup](https://equsto.com/en/steakhouse-kitchen-setup) - Steakhouse kitchen setup
+- [/en/world-cuisine-kitchen-setup](https://equsto.com/en/world-cuisine-kitchen-setup) - World cuisine kitchen setup
+- [/en/italian-restaurant-kitchen-setup](https://equsto.com/en/italian-restaurant-kitchen-setup) - Italian restaurant kitchen setup
+- [/en/cloud-kitchen-setup](https://equsto.com/en/cloud-kitchen-setup) - Cloud kitchen setup
+- [/en/cafe-setup](https://equsto.com/en/cafe-setup) - Cafe setup
+- [/en/projects](https://equsto.com/en/projects) - Reference projects
+- [/en/guides/kitchen-area-per-cover-2026](https://equsto.com/en/guides/kitchen-area-per-cover-2026) - Kitchen m² per cover
+- Updated: 2026-07-14 — full EN catalogue (9k+ products) + GEO guides live
+
 ## Hakkımızda
 Equsto, endüstriyel mutfak sektöründe **üç dikey kabiliyeti** tek platformda birleştirir:
 1. **Equsto Teknolojisi:** PFOS (Proje Fabrikası ve Online Satış) - sorulara cevap veren operatöre saniyeler içinde tam ekipman listesi ve fiyat teklifi çıkaran kural-motoru tabanlı SaaS.
@@ -87,7 +110,7 @@ Tam liste: `public/data/eq-category-seo.json` (6 departman, 16 katalog kategoris
 - **Birim sistemi:** Metrik (mm, kg, °C, m³/h)
 - **Tarih formatı:** ISO 8601 (YYYY-MM-DD)
 - **Ana dil:** Türkçe (tr-TR)
-- **Hedef ikinci dil:** İngilizce (en-US) - `/en/industrial-kitchen-supplier-turkey`, `/en/commercial-kitchen-quotation` (GEO rehber); tam vitrin EN geliştirme aşamasında
+- **Hedef ikinci dil:** İngilizce (en-US) — `/en/*` vitrin, GEO rehberler ve 9k+ ürün EN çevirisi canlı (2026-07)
 
 ## Marka Listesi (Entities)
 

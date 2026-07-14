@@ -11,7 +11,10 @@ import {
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = path.join(siteDir, "public/data/i18n/products-en-by-id.json");
-const ekipmanlarPath = path.join(siteDir, "public/data/ekipmanlar.json");
+const ekipmanlarPathCandidates = [
+  path.join(siteDir, "var/catalog/ekipmanlar.json"),
+  path.join(siteDir, "public/data/ekipmanlar.json"),
+];
 const deptDir = path.join(siteDir, "public/data/dept");
 const specTermsPath = path.join(siteDir, "public/data/i18n/spec-terms-en.json");
 
@@ -55,17 +58,19 @@ function ingestList(list, source) {
   }
 }
 
-if (fs.existsSync(ekipmanlarPath)) {
-  console.log("Reading", ekipmanlarPath);
-  ingestList(JSON.parse(fs.readFileSync(ekipmanlarPath, "utf8")), "ekipmanlar");
-}
-
 if (fs.existsSync(deptDir)) {
   for (const f of fs.readdirSync(deptDir)) {
     if (!f.endsWith(".json")) continue;
     const p = path.join(deptDir, f);
     ingestList(JSON.parse(fs.readFileSync(p, "utf8")), "dept:" + f);
   }
+}
+
+for (const ekipmanlarPath of ekipmanlarPathCandidates) {
+  if (!fs.existsSync(ekipmanlarPath)) continue;
+  console.log("Reading", ekipmanlarPath);
+  ingestList(JSON.parse(fs.readFileSync(ekipmanlarPath, "utf8")), "ekipmanlar");
+  break;
 }
 
 const compact = Object.create(null);

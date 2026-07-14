@@ -273,18 +273,49 @@ function patchSitemapPages() {
     const extra = urlEntry(`${ORIGIN}/hakkimizda`, { priority: "0.75" });
     xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
   }
-  for (const [pathSuffix, priority] of [
-    ["/pfos", "0.99"],
-    ["/kvkk", "0.5"],
-  ]) {
-    if (!xml.includes(`https://equsto.com${pathSuffix}</loc>`)) {
-      const extra = urlEntry(`${ORIGIN}${pathSuffix}`, {
-        priority,
-        changefreq: pathSuffix === "/pfos" ? "weekly" : "yearly",
-      });
-      xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
-    }
+
+  const ensure = [
+    ["/pfos", "0.99", "weekly"],
+    ["/kvkk", "0.5", "yearly"],
+    ["/en", "0.95", "weekly"],
+    ["/en/about", "0.78", "monthly"],
+    ["/en/pfos", "0.95", "weekly"],
+    ["/en/blog", "0.8", "weekly"],
+    ["/en/contact", "0.7", "monthly"],
+    ["/en/cart", "0.35", "monthly"],
+    ["/en/search", "0.55", "monthly"],
+    ["/en/besos", "0.9", "weekly"],
+    ["/en/steakhouse-kitchen-setup", "0.85", "monthly"],
+    ["/en/fish-restaurant-kitchen-project-and-equipment", "0.84", "monthly"],
+    ["/en/cloud-kitchen-setup", "0.84", "monthly"],
+    ["/en/cafe-setup", "0.84", "monthly"],
+    ["/en/catering-kitchen", "0.84", "monthly"],
+    ["/en/fast-food-kitchen-setup", "0.82", "monthly"],
+    ["/en/fine-dining-kitchen-setup", "0.82", "monthly"],
+    ["/en/all-day-dining-kitchen-setup", "0.82", "monthly"],
+    ["/en/all-day-casual-cafe-setup", "0.82", "monthly"],
+    ["/en/market-butcher-deli-setup", "0.82", "monthly"],
+    ["/en/world-cuisine-kitchen-setup", "0.82", "monthly"],
+    ["/en/italian-restaurant-kitchen-setup", "0.82", "monthly"],
+    ["/en/industrial-kitchen-equipment-turkey", "0.88", "monthly"],
+    ["/en/industrial-kitchen-supplier-turkey", "0.88", "monthly"],
+    ["/en/commercial-kitchen-quotation", "0.88", "monthly"],
+    ["/en/restaurant-kitchen-quote", "0.86", "monthly"],
+    ["/en/hotel-kitchen-equipment", "0.84", "monthly"],
+    ["/en/oztiryakiler-equipment-supply", "0.84", "monthly"],
+    ["/en/cold-room-quote", "0.8", "monthly"],
+    ["/en/deli-counter-refrigeration", "0.78", "monthly"],
+    ["/en/industrial-cooking-equipment", "0.82", "monthly"],
+    ["/en/kitchen-quote-platform", "0.86", "monthly"],
+    ["/en/bar-design-turkey", "0.82", "monthly"],
+  ];
+
+  for (const [pathSuffix, priority, changefreq] of ensure) {
+    if (xml.includes(`https://equsto.com${pathSuffix}</loc>`)) continue;
+    const extra = urlEntry(`${ORIGIN}${pathSuffix}`, { priority, changefreq });
+    xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
   }
+
   fs.writeFileSync(pagesPath, xml, "utf8");
 }
 

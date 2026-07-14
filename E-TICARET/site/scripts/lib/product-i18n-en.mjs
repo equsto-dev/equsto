@@ -5,6 +5,97 @@
 
 /** Longest phrase first */
 export const NAME_PHRASES = [
+  ["DÖNER KALIPLARI", "doner cone molds"],
+  ["Döner Kalıpları", "doner cone molds"],
+  ["DÖNER KALIBI", "doner cone mold"],
+  ["TEPSİ OTOMATI", "tray dispenser"],
+  ["TEPSI OTOMATI", "tray dispenser"],
+  ["KUVERLİ", "with cover"],
+  ["KUVERSIZ", "without cover"],
+  ["KUVERSİZ", "without cover"],
+  ["TABAK TAŞIMA", "plate transport"],
+  ["TABAK TASIMA", "plate transport"],
+  ["MUTFAK EKİPMANLARI", "kitchen equipment"],
+  ["MUTFAK EKIPMANLARI", "kitchen equipment"],
+  ["Endüstriyel Mutfak Ekipmanları", "Commercial kitchen equipment"],
+  ["ENDÜSTRİYEL MUTFAK EKİPMANLARI", "Commercial kitchen equipment"],
+  ["MODÜLER", "modular"],
+  ["Modüler", "modular"],
+  ["MODÜL", "module"],
+  ["PERDELİ", "with curtain"],
+  ["Perdeli", "with curtain"],
+  ["GAZLI", "gas"],
+  ["Gazlı", "gas"],
+  ["BULAŞIK", "dishwashing"],
+  ["Bulaşık", "dishwashing"],
+  ["SOĞUTUCU", "cooler"],
+  ["Soğutucu", "cooler"],
+  ["YIKAMA", "washing"],
+  ["Yıkama", "washing"],
+  ["TEZGAHALTI", "undercounter"],
+  ["Tezgahaltı", "undercounter"],
+  ["TEZGAHI", "work table"],
+  ["Tezgahı", "work table"],
+  ["FİLTRELİ", "filtered"],
+  ["Filtreli", "filtered"],
+  ["ÇALIŞMA", "work"],
+  ["Çalışma", "work"],
+  ["SETÜSTÜ", "countertop"],
+  ["Setüstü", "countertop"],
+  ["NERVÜRLÜ", "ribbed"],
+  ["Nervürlü", "ribbed"],
+  ["ÇEKMECELİ", "with drawers"],
+  ["Çekmeceli", "with drawers"],
+  ["RAFLI", "with shelves"],
+  ["Raflı", "with shelves"],
+  ["DOLABI", "cabinet"],
+  ["Dolabı", "cabinet"],
+  ["DOLAPLI", "with cabinet"],
+  ["Dolaplı", "with cabinet"],
+  ["ARABASI", "cart"],
+  ["Arabası", "cart"],
+  ["ARABALARI", "carts"],
+  ["Arabaları", "carts"],
+  ["TEŞHİR", "display"],
+  ["Teşhir", "display"],
+  ["SOĞUK", "cold"],
+  ["Soğuk", "cold"],
+  ["SOĞUTMALI", "refrigerated"],
+  ["Soğutmalı", "refrigerated"],
+  ["FIRIN", "oven"],
+  ["Fırın", "oven"],
+  ["HAREKETLİ", "mobile"],
+  ["Hareketli", "mobile"],
+  ["ÜNİTESİ", "unit"],
+  ["ÜNITESI", "unit"],
+  ["DÖRTLÜ", "four-burner"],
+  ["Dörtlü", "four-burner"],
+  ["POLİETİLEN", "polyethylene"],
+  ["İSTİF", "stacking"],
+  ["İSTIF", "stacking"],
+  ["KAPILI", "with door"],
+  ["Kapılı", "with door"],
+  ["AÇIK", "open"],
+  ["Açık", "open"],
+  ["DÜZ", "flat"],
+  ["Düz", "flat"],
+  ["KÖŞE", "corner"],
+  ["Köşe", "corner"],
+  ["KATLI", "tiered"],
+  ["Katlı", "tiered"],
+  ["DESENLİ", "patterned"],
+  ["Desenli", "patterned"],
+  ["ÇİFT", "twin"],
+  ["Çift", "twin"],
+  ["PİŞİRME", "cooking"],
+  ["Pişirme", "cooking"],
+  ["EKİPMANLARI", "equipment"],
+  ["Ekipmanları", "equipment"],
+  ["ICEDOLABI", "ice cabinet"],
+  ["icedolabı", "ice cabinet"],
+  ["SERİ", "series"],
+  ["ÖNÜ", "front"],
+  ["ÇEKM", "drawer"],
   ["SOGUK SERVIS BANKOSU", "cold service counter"],
   ["SOĞUK SERVİS BANKOSU", "cold service counter"],
   ["TEK CAM KAPILI BUZDOLABI", "single glass door refrigerator"],
@@ -423,6 +514,20 @@ export function translateProductName(name) {
   t = t.replace(/\b(\d+)\s*MM\b/gi, "$1 mm");
   t = t.replace(/\b(\d+)\s*KG\b/gi, "$1 kg");
   t = t.replace(/\b(\d+)\s*LT\b/gi, "$1 L");
+  // Kalan Türkçe diyakritikleri Latin'e (marka/ürün kodu artıkları)
+  t = t
+    .replace(/ğ/g, "g")
+    .replace(/Ğ/g, "G")
+    .replace(/ü/g, "u")
+    .replace(/Ü/g, "U")
+    .replace(/ş/g, "s")
+    .replace(/Ş/g, "S")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "I")
+    .replace(/ö/g, "o")
+    .replace(/Ö/g, "O")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "C");
   t = t.replace(/\s+/g, " ").trim();
   return t;
 }
