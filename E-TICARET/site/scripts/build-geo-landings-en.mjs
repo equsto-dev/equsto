@@ -236,9 +236,65 @@ const pages = {
       { label: "Guides index", href: "/en/blog" },
     ],
   },
+  "en/world-cuisine-kitchen-setup": {
+    lang: "en",
+    profile: "dunyaMutfak",
+    title: "World cuisine kitchen setup guide | Equsto",
+    description:
+      "World cuisine kitchen setup: pizza oven, charcoal grill, combi oven and multi-zone refrigeration. Reference proforma 2018-199-3 (63 items).",
+    h1: "World cuisine kitchen setup",
+    lead: "Multi-culture menus need parallel cooking lines, display cold stores and a wash zone sized for peak covers.",
+    tableRef: "geo/dunya-mutfak-2018-199-3-table.json",
+    skipBudget: true,
+    body:
+      "<p>In a world cuisine kitchen, cooking lines multiply as the menu map expands — pizza ovens, charcoal grills, combi ovens and fryers often run in parallel. This guide is derived from the 2018-199-3 reference proforma; the table below excludes prices.</p><h2>Cooking and display</h2><p>Gas pizza ovens and charcoal grills drive hood airflow on open kitchens. Meat display cabinets sit near the pass; salamander and sauce bain-marie finish the plating line. Four-burner ranges and twin-basket fryers cover lunch peaks side by side.</p><h2>Cold chain</h2><p>Vegetable, meat and deep-freeze rooms use separate panel sets; stacking racks deepen stock. Undercounter refrigerators keep daily mise near the cook line. HACCP flow moves prep one-way from cold rooms to cooking.</p><h2>Bar and warewashing</h2><p>Juice extractors, ice machines, tea stations and undercounter glasswashers carry beverage traffic. A guillotine dishwasher sits with in/out benches and a spray rinse. Read the <a href=\"/en/italian-restaurant-kitchen-setup\">Italian restaurant guide</a> for pizza-heavy concepts.</p><p>Use <a href=\"/en/pfos\">Project Factory</a> with a world-cuisine concept to generate a capacity- and m²-driven list.</p>",
+    faq: [
+      [
+        "What is core for world cuisine?",
+        "Pizza/grill capacity, combi cooking, multi-zone cold storage and warewashing form the core package.",
+      ],
+      [
+        "How do I get a quote?",
+        "Open Project Factory, pick a world-cuisine / multi-cuisine concept, or contact us with floor area and menu.",
+      ],
+    ],
+    related: [
+      { label: "Italian restaurant setup", href: "/en/italian-restaurant-kitchen-setup" },
+      { label: "Fine dining setup", href: "/en/fine-dining-kitchen-setup" },
+      { label: "Project Factory", href: "/en/pfos" },
+    ],
+  },
+  "en/italian-restaurant-kitchen-setup": {
+    lang: "en",
+    profile: "italyan",
+    title: "Italian restaurant kitchen setup guide | Equsto",
+    description:
+      "Italian restaurant kitchen setup: pizza oven, rational combi, salamander and pasta line. Reference proforma 2018-199-3 (63 items).",
+    h1: "Italian restaurant kitchen setup",
+    lead: "Pizza, pasta and grill lines with cooking, cold storage and warewashing zones for trattoria scale.",
+    tableRef: "geo/italyan-2018-199-3-table.json",
+    skipBudget: true,
+    body:
+      "<p>An Italian restaurant kitchen centres on a pizza oven and a rational combi; salamander, range and fryer feed side lines at service peaks. The 2018-199-3 reference shows a full trattoria-scale package; the table excludes prices.</p><h2>Pizza and pasta line</h2><p>A rotating gas pizza oven sits near dough prep; under-oven benches and tray racks keep pace. Spiral mixers and prep tables gather in the dry store zone. Vacuum and stretch wrappers bridge prep and holding.</p><h2>Cooking and finishing</h2><p>A 10-pan rational oven carries mains and sides in one module. Salamander and sauce bain-marie form the plating finish. Charcoal grill loads for antipasti and meats; hood capacity must scale with open flame.</p><h2>Cold storage and pass</h2><p>Meat and vegetable cold rooms plus deep-freeze panels support the supply cycle. A refrigerated pass-through bench follows guest flow. The <a href=\"/en/world-cuisine-kitchen-setup\">world cuisine guide</a> covers broader menu maps.</p><p><a href=\"/en/pfos\">Project Factory</a> scales the Italian restaurant concept by m² and covers.</p>",
+    faq: [
+      [
+        "What is core for an Italian kitchen?",
+        "Pizza oven, dough prep, combi cooking, cold rooms and warewashing form the core package.",
+      ],
+      [
+        "How do I get a quote?",
+        "Open Project Factory, choose the Italian / trattoria concept, or contact us with floor area and menu.",
+      ],
+    ],
+    related: [
+      { label: "World cuisine setup", href: "/en/world-cuisine-kitchen-setup" },
+      { label: "Cafe setup", href: "/en/cafe-setup" },
+      { label: "Project Factory", href: "/en/pfos" },
+    ],
+  },
   "en/industrial-kitchen-equipment-turkey": {
     lang: "en",
-    profile: "seoEnIndustrial",
+    profile: "seoTurkiye",
     title: "Industrial kitchen equipment Turkey | Equsto",
     description:
       "B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
@@ -593,7 +649,7 @@ const pages = {
   },
   "en/blog": {
     lang: "en",
-    profile: "blogHubEn",
+    profile: "blogHub",
     title: "Equsto guides & blog | GEO index",
     description: "Commercial kitchen guides: concept setups, SEO pages, editorials and reference projects. Not in the shop menu.",
     h1: "Guides & blog index",
@@ -629,6 +685,8 @@ const pages = {
           { label: "All day dining / hotel", href: "/en/all-day-dining-kitchen-setup" },
           { label: "All day casual cafe", href: "/en/all-day-casual-cafe-setup" },
           { label: "Market, butcher & deli", href: "/en/market-butcher-deli-setup" },
+          { label: "World cuisine setup", href: "/en/world-cuisine-kitchen-setup" },
+          { label: "Italian restaurant setup", href: "/en/italian-restaurant-kitchen-setup" },
         ],
       },
       {

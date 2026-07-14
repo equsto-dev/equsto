@@ -44,7 +44,14 @@ export async function generateMetadata({
       robots: { index: false, follow: true },
     };
   }
-  return buildProductMetadata(rowToPdpSsr(found.row, found.dept));
+  const langPrefix = await shopLangPrefix();
+  const locale = langPrefix === "/en" ? "en" : "tr";
+  return buildProductMetadata(
+    rowToPdpSsr(found.row, found.dept, {
+      langPrefix: locale === "en" ? "/en" : "",
+    }),
+    { locale },
+  );
 }
 
 export default async function ShopProductPage({
@@ -72,7 +79,9 @@ export default async function ShopProductPage({
     );
   }
 
-  const ssr = rowToPdpSsr(found.row, found.dept);
+  const ssr = rowToPdpSsr(found.row, found.dept, {
+    langPrefix: langPrefix === "/en" ? "/en" : "",
+  });
   const seed = rowToPdpClientSeed(found.row, found.dept);
   const jsonLd = buildProductJsonLd(ssr);
 

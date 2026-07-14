@@ -116,22 +116,32 @@ export function rowToPdpClientSeed(row: CatalogRow, dept: ShopDeptSlug): Catalog
   return out;
 }
 
-export function rowToPdpSsr(row: CatalogRow, dept: ShopDeptSlug): PdpSsrPayload {
+export function rowToPdpSsr(
+  row: CatalogRow,
+  dept: ShopDeptSlug,
+  opts?: { langPrefix?: "" | "/en" },
+): PdpSsrPayload {
   const origin = getSiteOrigin();
+  const prefix = opts?.langPrefix === "/en" ? "/en" : "";
   const slug = catalogUrlSlug(row);
   const name = feedTitle(row) || String(row.name || "Ürün").trim();
   const brand = String(row.brand || "").trim();
   const description = cleanDescription(row, 320);
-  const canonical = `${origin}/shop/${dept}/${encodeURIComponent(slug)}`;
+  const canonical = `${origin}${prefix}/shop/${dept}/${encodeURIComponent(slug)}`;
   const priceTry = resolveMerchantPriceTry(row);
   const img = productImagePath(row);
+  const isEn = prefix === "/en";
 
   return {
     name,
     brand,
-    description: description || `${name} — ${brand || "Equsto"} endüstriyel mutfak kataloğu.`,
+    description:
+      description ||
+      (isEn
+        ? `${name} — ${brand || "Equsto"} commercial kitchen catalogue.`
+        : `${name} — ${brand || "Equsto"} endüstriyel mutfak kataloğu.`),
     deptTitle: SHOP_DEPTS[dept].title,
-    deptHref: `/shop/${dept}`,
+    deptHref: `${prefix}/shop/${dept}`,
     slug,
     canonical,
     image: img ? absoluteAssetUrl(img, origin) : undefined,
@@ -139,27 +149,36 @@ export function rowToPdpSsr(row: CatalogRow, dept: ShopDeptSlug): PdpSsrPayload 
   };
 }
 
-export function buildProductMetadata(ssr: PdpSsrPayload): Metadata {
+export function buildProductMetadata(
+  ssr: PdpSsrPayload,
+  opts?: { locale?: "tr" | "en" },
+): Metadata {
+  const isEn = opts?.locale === "en" || ssr.canonical.includes("/en/shop/");
   const title = `${ssr.name}${ssr.brand ? ` · ${ssr.brand}` : ""} · Equsto`;
   const description =
     ssr.description.slice(0, 155) +
     (ssr.description.length > 155 ? "…" : "") +
-    " Teknik özellikler, fiyat ve teklif.";
+    (isEn ? " Specs, pricing and quote." : " Teknik özellikler, fiyat ve teklif.");
+
+  const trCanonical = ssr.canonical.replace("://equsto.com/en/", "://equsto.com/");
+  const enCanonical = trCanonical.replace("://equsto.com/", "://equsto.com/en/");
 
   return {
     title,
     description,
     alternates: {
-      canonical: ssr.canonical,
+      canonical: isEn ? enCanonical : trCanonical,
       languages: {
-        tr: ssr.canonical,
-        en: ssr.canonical.replace("://equsto.com/", "://equsto.com/en/"),
+        "tr-TR": trCanonical,
+        "en-US": enCanonical,
+        tr: trCanonical,
+        en: enCanonical,
       },
     },
     openGraph: {
       title,
       description,
-      url: ssr.canonical,
+      url: isEn ? enCanonical : trCanonical,
       type: "website",
       ...(ssr.image ? { images: [{ url: ssr.image }] } : {}),
     },
