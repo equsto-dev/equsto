@@ -41,8 +41,14 @@ node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrat
 
 if [[ -f scripts/export-pfos-referans-sku-links.mjs ]]; then
   echo "[hetzner-deploy] referans SKU links export..."
-  node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs \
-    || echo "[hetzner-deploy] SKU export uyarı — DATABASE_URL kontrol edin"
+  # .mjs → .ts import; tsx gerekli (düz node ERR_UNKNOWN_FILE_EXTENSION verir)
+  if [[ -f ./node_modules/tsx/dist/cli.mjs ]]; then
+    node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs \
+      scripts/export-pfos-referans-sku-links.mjs \
+      || echo "[hetzner-deploy] SKU export uyarı — DATABASE_URL / Prisma kontrol edin"
+  else
+    echo "[hetzner-deploy] SKU export atlandı — tsx yok (npm ci gerekir)"
+  fi
 fi
 
 echo "[hetzner-deploy] sağlık kontrolü..."

@@ -471,9 +471,11 @@ export function auditLegacyHtmlManifests() {
     }
   }
 
-  const pfosManifest = "public/assets/manifest-BfAPr90J.json";
-  if (fileExists("public/pfos.html") && !fileExists(pfosManifest)) {
-    if (!issues.some((i) => i.id.includes("pfos"))) {
+  // Eski Vite hash'leri yalnızca HTML hâlâ onları gösteriyorsa sorun say
+  if (fileExists("public/pfos.html")) {
+    const pfosHtml = readText("public/pfos.html");
+    const staleHash = "manifest-BfAPr90J.json";
+    if (pfosHtml.includes(staleHash)) {
       issues.push(
         makeIssue({
           id: "legacy:pfos_manifest_hash_stale",
@@ -483,7 +485,7 @@ export function auditLegacyHtmlManifests() {
           area: "legacy_html",
           message: "pfos.html eski hash manifest kullanıyor (manifest-BfAPr90J.json yok)",
           file: "public/pfos.html",
-          fix: "/manifest.json veya /assets/manifest-CtzHFPu3.json kullanın",
+          fix: "/manifest.json kullanın",
         }),
       );
     }
@@ -491,7 +493,9 @@ export function auditLegacyHtmlManifests() {
 
   return {
     check: {
-      status: brokenManifest > 0 ? "error" : "ok",
+      status: brokenManifest > 0 || issues.some((i) => i.id === "legacy:pfos_manifest_hash_stale")
+        ? "error"
+        : "ok",
       html_files: htmlCount,
       broken_manifest_links: brokenManifest,
     },

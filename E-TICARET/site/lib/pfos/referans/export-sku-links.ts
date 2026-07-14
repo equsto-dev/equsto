@@ -1,6 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
-import { listReferansSkuLinks } from "./sku-link-db";
+import {
+  invalidateDbReferansSkuLinksCache,
+  listReferansSkuLinks,
+} from "./sku-link-db";
 
 export type ExportSkuLinksResult = {
   dbLinkCount: number;
@@ -58,10 +61,9 @@ export async function exportReferansSkuLinksToJson(
   fs.writeFileSync(tmp, `${JSON.stringify(out, null, 2)}\n`, "utf8");
   fs.renameSync(tmp, outPath);
 
-  const { invalidateReferansSkuLinksCache } = await import(
-    "./referans-eslestirme"
-  );
-  invalidateReferansSkuLinksCache();
+  // Dosya cache (referans-eslestirme) ayrı process'te mtime ile yenilenir.
+  // Oraya dinamik import CLI+tsx altında data: URL ile ERR_UNSUPPORTED_RESOLVE_REQUEST verir.
+  invalidateDbReferansSkuLinksCache();
 
   return {
     dbLinkCount: rows.length,
