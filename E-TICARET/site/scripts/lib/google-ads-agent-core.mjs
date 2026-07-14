@@ -90,7 +90,7 @@ function envFileHas(key, files = [".env.production.example", ".env.example"]) {
   for (const f of files) {
     if (!fileExists(f)) continue;
     const content = readText(f);
-    if (new RegExp(`^${key}=`, "m").test(content)) return { file: f, found: true };
+    if (new RegExp(`^#?\\s*${key}=`, "m").test(content)) return { file: f, found: true };
   }
   return { found: false };
 }
@@ -580,15 +580,28 @@ export function auditAdLandingPages() {
   const geoPath = path.join(PUBLIC, "data/geo-landings.json");
   const geo = fs.existsSync(geoPath) ? JSON.parse(fs.readFileSync(geoPath, "utf8")) : {};
 
-  const sitemapPages = fileExists("public/sitemap-pages.xml")
-    ? readText("public/sitemap-pages.xml")
-    : "";
+  /** sitemap-pages + shop-hubs vb. — /pfos hubs sitemap'te olabilir */
+  let sitemapCorpus = "";
+  if (fs.existsSync(PUBLIC)) {
+    for (const f of fs.readdirSync(PUBLIC)) {
+      if (!/^sitemap.*\.xml$/i.test(f)) continue;
+      try {
+        sitemapCorpus += `\n${fs.readFileSync(path.join(PUBLIC, f), "utf8")}`;
+      } catch {
+        /* ignore */
+      }
+    }
+  }
 
   for (const rec of RECOMMENDED_AD_LANDINGS) {
     const slug = rec.path.replace(/^\//, "");
     const geoKey = slug.includes("/") ? null : slug;
     const geoEntry = geoKey ? geo[geoKey] : null;
-    const inSitemap = sitemapPages.includes(`equsto.com${rec.path}`) || rec.path.startsWith("/shop");
+    const inSitemap =
+      sitemapCorpus.includes(`equsto.com${rec.path}<`) ||
+      sitemapCorpus.includes(`equsto.com${rec.path}</`) ||
+      sitemapCorpus.includes(`equsto.com${rec.path}`) ||
+      rec.path.startsWith("/shop");
 
     const title = geoEntry?.title || "";
     const h1 = geoEntry?.h1 || "";
@@ -618,7 +631,7 @@ export function auditAdLandingPages() {
           area: "landing",
           severity: "medium",
           type: "seo",
-          message: `Önerilen reklam landing ${rec.path} sitemap-pages.xml içinde yok`,
+          message: `Önerilen reklam landing ${rec.path} sitemap*.xml içinde yok`,
           fix: "npm run sitemap:build",
         }),
       );
@@ -663,7 +676,11 @@ export function auditConsentAndPolicy() {
     fileExists("public/eq-footer.js") ? readText("public/eq-footer.js") : "",
   ].join("\n");
 
-  if (!/consent|ad_storage|analytics_storage|Consent Mode/i.test(repoScan)) {
+  const hasConsentMode = /consent["']?\s*,\s*["']default["']|ad_storage|analytics_storage|Consent Mode/i.test(
+    repoScan,
+  );
+
+  if (!hasConsentMode) {
     issues.push(
       makeIssue({
         id: "consent:google_consent_mode_missing",
@@ -677,7 +694,9 @@ export function auditConsentAndPolicy() {
   }
 
   const footer = fileExists("public/eq-footer.js") ? readText("public/eq-footer.js") : "";
-  if (footer.includes("cookie") && !fileExists("app/(vitrin)/kvkk/page.tsx")) {
+  const kvkkExists =
+    fileExists("app/(vitrin)/kvkk/page.tsx") || fileExists("public/kvkk.html");
+  if (footer.includes("cookie") && !kvkkExists) {
     issues.push(
       makeIssue({
         id: "consent:kvkk_page_missing",
@@ -693,7 +712,8 @@ export function auditConsentAndPolicy() {
   return {
     check: {
       status: issues.length > 0 ? "warn" : "ok",
-      consent_mode: false,
+      consent_mode: hasConsentMode,
+      kvkk_page: kvkkExists,
     },
     issues,
   };

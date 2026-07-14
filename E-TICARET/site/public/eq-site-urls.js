@@ -17,6 +17,7 @@
     yerSofrasi: "/yer-sofrasi",
     besos: "/besos",
     contact: "/iletisim",
+    kvkk: "/kvkk",
     sss: "/sss",
     login: "/login.html",
     account: "/hesabim",
