@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const siteDir = process.env.AGENT_REPO_ROOT?.trim() || path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WA_IMG = "/equsto-bize-ulasin-isimlik.png";
 let err = 0;
 

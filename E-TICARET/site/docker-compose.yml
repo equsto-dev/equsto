@@ -30,13 +30,19 @@ services:
       NODE_OPTIONS: --max-old-space-size=2560
       CHROMIUM_LOCAL_EXEC_PATH: /usr/bin/chromium
       HOME: /tmp
+      # Ajanlar kaynak dosyalarını (app/components/lib) buradan okur
+      AGENT_REPO_ROOT: /agent-repo
     depends_on:
       - meilisearch
     volumes:
       # Admin panel JSON yazımı (eticaret-icerik, tip-sozlugu, pfos-referans…) — host'ta kalıcı
       - ./public/data:/app/public/data
+      # Ajan script'leri host'tan (git pull sonrası rebuild gerekmeden)
+      - ./scripts:/app/scripts
       # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir
       - ./scripts/data:/app/scripts/data
+      # Kaynak ağaç (salt okunur) — mobil / Google Ads denetimi için
+      - ./:/agent-repo:ro
     networks:
       - web
     expose:

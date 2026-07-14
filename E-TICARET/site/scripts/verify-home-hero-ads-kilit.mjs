@@ -8,7 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
-const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const siteDir = process.env.AGENT_REPO_ROOT?.trim() || path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 let err = 0;
 
 function fail(msg) {
