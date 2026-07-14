@@ -35,6 +35,8 @@ export const GEO_EN_SLUGS = [
   "all-day-dining-kitchen-setup",
   "all-day-casual-cafe-setup",
   "market-butcher-deli-setup",
+  "world-cuisine-kitchen-setup",
+  "italian-restaurant-kitchen-setup",
   "industrial-kitchen-equipment-turkey",
   "industrial-kitchen-supplier-turkey",
   "commercial-kitchen-quotation",
