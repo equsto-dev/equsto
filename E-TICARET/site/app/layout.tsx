@@ -10,6 +10,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#001e50" },
+    { media: "(prefers-color-scheme: dark)", color: "#001e50" },
+  ],
 };
 
 const geistSans = Geist({
@@ -27,6 +31,19 @@ export const metadata: Metadata = {
   description:
     "Equsto — Türkiye endüstriyel mutfak ekipmanı, Öztiryakiler yetkili bayii, PFOS ile 5 dakikada restoran mutfak teklifi. Restoran, otel, kafe, bulut mutfak.",
   metadataBase: new URL("https://equsto.com"),
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/icons/favicon.svg", type: "image/svg+xml" },
+      { url: "/icons/icon-180.png", sizes: "180x180", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Equsto",
+  },
   alternates: {
     types: {
       "text/plain": [{ url: "/llms.txt", title: "Equsto — LLMs" }],

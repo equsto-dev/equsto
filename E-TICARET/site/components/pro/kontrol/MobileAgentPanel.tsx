@@ -110,10 +110,10 @@ export default function MobileAgentPanel() {
       title: "Platform",
       dataIndex: "platform",
       width: 100,
-      render: (v) => (
+      render: (_, r) => (
         <Space size={4}>
-          {PLATFORM_ICON[String(v)] || <MobileOutlined />}
-          {String(v)}
+          {PLATFORM_ICON[String(r.platform)] || <MobileOutlined />}
+          {String(r.platform)}
         </Space>
       ),
     },
@@ -132,14 +132,15 @@ export default function MobileAgentPanel() {
       dataIndex: "file",
       width: 160,
       ellipsis: true,
-      render: (v) => (v ? <Typography.Text code>{String(v)}</Typography.Text> : "—"),
+      render: (_, r) =>
+        r.file ? <Typography.Text code>{r.file}</Typography.Text> : "—",
     },
     {
       title: "Öneri",
       dataIndex: "fix",
       width: 180,
       ellipsis: true,
-      render: (v) => v || "—",
+      render: (_, r) => r.fix || "—",
     },
   ];
 

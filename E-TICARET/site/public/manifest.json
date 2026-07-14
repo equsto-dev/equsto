@@ -4,18 +4,25 @@
   "description": "Endüstriyel mutfak ve gastronomi ekipmanları",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#001e50",
   "theme_color": "#001e50",
   "lang": "tr",
   "icons": [
     {
-      "src": "/images/favicon.svg",
+      "src": "/icons/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/images/equsto-logo.png",
+      "src": "/icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
