@@ -537,6 +537,30 @@ model SearchQueryLog {
   @@map("search_query_log")
 }
 
+/// Ürün sayfası süre takibi (anonim + üye)
+model ProductPageView {
+  id         String   @id @default(cuid())
+  sessionId  String   @map("session_id")
+  path       String
+  productId  String?  @map("product_id")
+  slug       String
+  dept       String   @default("")
+  title      String   @default("")
+  brand      String   @default("")
+  durationMs Int      @map("duration_ms")
+  locale     String   @default("tr")
+  memberId   String?  @map("member_id")
+  referrer   String   @default("")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([createdAt])
+  @@index([slug, createdAt])
+  @@index([productId, createdAt])
+  @@index([sessionId, createdAt])
+  @@index([dept, createdAt])
+  @@map("product_page_view")
+}
+
 /// Mr. Equsto WhatsApp modal — üye telefonu ile eşleşen sohbet satırları
 model WaChatMessage {
   id          String   @id @default(cuid())

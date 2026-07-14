@@ -9,6 +9,7 @@ import {
   ShoppingOutlined,
   TagOutlined,
   TeamOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import { PageContainer } from "@ant-design/pro-components";
 import { Tabs } from "antd";
@@ -36,6 +37,10 @@ const IsletmeRaporlarPanel = dynamic(
   () => import("@/components/pro/isletme/IsletmeRaporlarPanel"),
   { loading: () => null },
 );
+const IsletmeKullaniciRaporPanel = dynamic(
+  () => import("@/components/pro/isletme/IsletmeKullaniciRaporPanel"),
+  { loading: () => null },
+);
 const IsletmeAyarlarPanel = dynamic(
   () => import("@/components/pro/isletme/IsletmeAyarlarPanel"),
   { loading: () => null },
@@ -57,6 +62,7 @@ const TAB_KEYS = [
   "mesajlar",
   "musteriler",
   "raporlar",
+  "kullanici",
   "ayarlar",
   "pazarlama",
 ] as const;
@@ -81,6 +87,8 @@ function tabPanel(key: TabKey) {
       return <IsletmeMusterilerPanel />;
     case "raporlar":
       return <IsletmeRaporlarPanel />;
+    case "kullanici":
+      return <IsletmeKullaniciRaporPanel />;
     case "ayarlar":
       return <IsletmeAyarlarPanel />;
     case "pazarlama":
@@ -104,7 +112,7 @@ function IsletmePageInner() {
   return (
     <PageContainer
       title="İşletme"
-      subTitle="Sipariş, teklif, mesaj, müşteri, rapor, ayarlar ve pazarlama"
+      subTitle="Sipariş, teklif, mesaj, müşteri, rapor, kullanıcı, ayarlar ve pazarlama"
     >
       <Tabs
         activeKey={activeTab}
@@ -164,6 +172,15 @@ function IsletmePageInner() {
               </>
             ),
             children: tabPanel("raporlar"),
+          },
+          {
+            key: "kullanici",
+            label: (
+              <>
+                <UserOutlined /> Kullanıcı raporu
+              </>
+            ),
+            children: tabPanel("kullanici"),
           },
           {
             key: "ayarlar",

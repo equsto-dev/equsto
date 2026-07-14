@@ -9,6 +9,7 @@ import ShopProductMain from "@/components/shop/ShopProductMain";
 import ShopProductPdpBoot from "@/components/shop/ShopProductPdpBoot";
 import ShopProductPdpSeed from "@/components/shop/ShopProductPdpSeed";
 import ShopProductScripts from "@/components/shop/ShopProductScripts";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import ShopStyles from "@/components/shop/ShopStyles";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { isShopDeptSlug } from "@/lib/shop/depts";
@@ -85,6 +86,13 @@ export default async function ShopProductPage({
       <ShopBodyClass className="eq-shop eq-pdp-page" />
       <ShopEqustoChrome activeDept={null} />
       <ShopProductMain ssr={ssr} />
+      <ProductDwellTracker
+        slug={ssr.slug}
+        dept={found.dept}
+        productId={String(found.row.id ?? found.row.code ?? found.row.sku ?? "")}
+        title={ssr.name}
+        brand={ssr.brand}
+      />
       <ShopProductPdpBoot />
       <ShopProductScripts />
     </>

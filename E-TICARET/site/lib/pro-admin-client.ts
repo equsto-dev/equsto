@@ -1755,6 +1755,67 @@ export async function fetchRaporlar(kind?: string): Promise<{
   return { data: body.data };
 }
 
+export type KullaniciRaporUrun = {
+  slug: string;
+  productId: string | null;
+  title: string;
+  brand: string;
+  dept: string;
+  views: number;
+  uniqueSessions: number;
+  totalMs: number;
+  avgMs: number;
+  avgLabel: string;
+  totalLabel: string;
+};
+
+export type KullaniciRaporRecent = {
+  id: string;
+  slug: string;
+  title: string;
+  brand: string;
+  dept: string;
+  durationMs: number;
+  durationLabel: string;
+  sessionId: string;
+  memberId: string | null;
+  path: string;
+  createdAt: string;
+};
+
+export type KullaniciRaporOzet = {
+  days: number;
+  views: number;
+  uniqueSessions: number;
+  uniqueProducts: number;
+  avgMs: number;
+  avgLabel: string;
+  totalMs: number;
+  totalLabel: string;
+  topByTime: KullaniciRaporUrun[];
+  topByViews: KullaniciRaporUrun[];
+  recent: KullaniciRaporRecent[];
+};
+
+export async function fetchKullaniciRaporu(opts?: {
+  days?: number;
+  limit?: number;
+}): Promise<{ data?: KullaniciRaporOzet; error?: string }> {
+  const params = new URLSearchParams();
+  if (opts?.days) params.set("days", String(opts.days));
+  if (opts?.limit) params.set("limit", String(opts.limit));
+  const qs = params.toString() ? `?${params}` : "";
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: KullaniciRaporOzet;
+    error?: string;
+  }>(`/api/admin/kullanici-raporu${qs}`);
+  if (body.error || body.success === false) {
+    return { error: body.error || "Kullanıcı raporu alınamadı" };
+  }
+  return { data: body.data };
+}
+
 export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAyarlari {
   const i18nRaw = a.i18n_overrides;
   let i18n: Record<string, Record<string, string>> = {};
