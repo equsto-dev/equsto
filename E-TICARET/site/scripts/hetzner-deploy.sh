@@ -19,6 +19,10 @@ git pull --ff-only origin main
 if [[ -d public/data ]]; then
   chown -R 1001:1001 public/data 2>/dev/null || true
 fi
+if [[ -d scripts/data ]]; then
+  mkdir -p scripts/data
+  chown -R 1001:1001 scripts/data 2>/dev/null || true
+fi
 
 docker compose --env-file .env.production build --pull
 docker compose --env-file .env.production up -d

@@ -35,6 +35,8 @@ services:
     volumes:
       # Admin panel JSON yazımı (eticaret-icerik, tip-sozlugu, pfos-referans…) — host'ta kalıcı
       - ./public/data:/app/public/data
+      # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir
+      - ./scripts/data:/app/scripts/data
     networks:
       - web
     expose:

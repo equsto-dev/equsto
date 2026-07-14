@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
       skipAi,
     });
     if (!report) {
-      return adminErr(stderr || "Blog ajan raporu oluşturulamadı", 500);
+      return adminErr(stderr || "Blog ajan raporu oluşturulamadı (scripts/?)", 500);
     }
 
     if (withAi) {

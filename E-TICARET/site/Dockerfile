@@ -62,6 +62,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/var/catalog ./var/catalog
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# Cron / admin ajanları — spawn scripts/*-agent-run.mjs
+COPY --from=builder --chown=nextjs:nodejs /app/scripts ./scripts
+RUN mkdir -p /app/scripts/data \
+  && chown -R nextjs:nodejs /app/scripts/data
 
 USER nextjs
 EXPOSE 3000
