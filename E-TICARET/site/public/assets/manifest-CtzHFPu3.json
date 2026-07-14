@@ -8,9 +8,13 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#ffffff",
+  "background_color": "#001e50",
   "theme_color": "#001e50",
-  "categories": ["business", "shopping", "productivity"],
+  "categories": [
+    "business",
+    "shopping",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='28' fill='%23001e50'/%3E%3Ctext x='96' y='112' font-family='-apple-system,Segoe UI,sans-serif' font-size='44' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EEQUSTO%3C/text%3E%3C/svg%3E",

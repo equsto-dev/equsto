@@ -104,7 +104,7 @@
   }
 
   function updateMetaThemeColor() {
-    var c = isVitrinWhiteBgLocked() || effectiveTheme() !== "dark" ? "#ffffff" : "#1a1a1a";
+    var c = "#001e50";
     var el = document.querySelector('meta[name="theme-color"]');
     if (!el) {
       el = document.createElement("meta");
