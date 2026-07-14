@@ -7,7 +7,8 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const APP_ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const ROOT = process.env.AGENT_REPO_ROOT?.trim() || APP_ROOT;
 const PUBLIC = path.join(ROOT, "public");
 
 const BRAND_THEME = "#001e50";
@@ -629,7 +630,7 @@ export function auditDeepLinks() {
 
 function runVerifyScript(scriptName) {
   return new Promise((resolve) => {
-    const scriptPath = path.join(ROOT, "scripts", scriptName);
+    const scriptPath = path.join(APP_ROOT, "scripts", scriptName);
     if (!fs.existsSync(scriptPath)) {
       resolve({ script: scriptName, ok: false, skipped: true, output: "script yok" });
       return;
@@ -637,7 +638,7 @@ function runVerifyScript(scriptName) {
     let output = "";
     const child = spawn(process.execPath, [scriptPath], {
       cwd: ROOT,
-      env: process.env,
+      env: { ...process.env, AGENT_REPO_ROOT: ROOT },
       stdio: ["ignore", "pipe", "pipe"],
     });
     child.stdout?.on("data", (c) => {
@@ -660,6 +661,19 @@ function runVerifyScript(scriptName) {
  */
 export async function auditMobileKilitScripts() {
   const issues = [];
+  if (!fileExists("components/shop/ShopEqustoChrome.tsx")) {
+    return {
+      check: {
+        status: "skipped",
+        reason: "kaynak (components/) yok — AGENT_REPO_ROOT mount edin",
+        passed: 0,
+        failed: 0,
+        skipped: VERIFY_SCRIPTS.length,
+        total: VERIFY_SCRIPTS.length,
+      },
+      issues: [],
+    };
+  }
   const results = await Promise.all(VERIFY_SCRIPTS.map(runVerifyScript));
 
   let passed = 0;

@@ -7,7 +7,8 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const APP_ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const ROOT = process.env.AGENT_REPO_ROOT?.trim() || APP_ROOT;
 const PUBLIC = path.join(ROOT, "public");
 
 const INDUSTRIAL_KEYWORDS_TR = [
@@ -438,6 +439,22 @@ export async function auditMerchantFeed() {
   let feedStats = null;
   try {
     feedStats = await runFeedStats();
+  } catch (e) {
+    issues.push(
+      makeIssue({
+        id: "merchant:feed_stats_failed",
+        area: "merchant",
+        severity: "medium",
+        type: "runtime",
+        message: `Feed stats çalıştırılamadı: ${e instanceof Error ? e.message : String(e)}`.slice(
+          0,
+          200,
+        ),
+        fix: "npm run feed:google:stats (yerelde) veya AGENT_REPO_ROOT mount",
+      }),
+    );
+  }
+  try {
     if (feedStats) {
       if ((feedStats.included || 0) < 100) {
         issues.push(
@@ -639,9 +656,11 @@ export function auditConsentAndPolicy() {
   const issues = [];
 
   const repoScan = [
-    readText("components/seo/AnalyticsScripts.tsx"),
-    readText("public/eq-analytics.js"),
-    readText("public/eq-footer.js"),
+    fileExists("components/seo/AnalyticsScripts.tsx")
+      ? readText("components/seo/AnalyticsScripts.tsx")
+      : "",
+    fileExists("public/eq-analytics.js") ? readText("public/eq-analytics.js") : "",
+    fileExists("public/eq-footer.js") ? readText("public/eq-footer.js") : "",
   ].join("\n");
 
   if (!/consent|ad_storage|analytics_storage|Consent Mode/i.test(repoScan)) {
