@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { exportReferansSkuLinksToJson } from "@/lib/pfos/referans/export-sku-links";
+import { invalidateReferansSkuLinksCache } from "@/lib/pfos/referans/referans-eslestirme";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +13,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const result = await exportReferansSkuLinksToJson();
+    invalidateReferansSkuLinksCache();
     return adminOk({
       data: result,
       message: `${result.dbLinkCount} DB link export edildi (${result.totalKeys} toplam anahtar)`,
