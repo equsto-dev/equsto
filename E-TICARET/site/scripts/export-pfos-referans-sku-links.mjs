@@ -1,6 +1,7 @@
 /**
  * DB → pfos-referans-sku-links.json (atomik yazım)
- * Kullanım: node --import ./scripts/load-env.mjs scripts/export-pfos-referans-sku-links.mjs
+ * Kullanım:
+ *   node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/export-pfos-referans-sku-links.mjs
  */
 import { exportReferansSkuLinksToJson } from "../lib/pfos/referans/export-sku-links.ts";
 
