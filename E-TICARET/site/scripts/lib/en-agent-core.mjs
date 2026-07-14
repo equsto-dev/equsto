@@ -44,6 +44,8 @@ const GEO_EN_SLUGS = [
   "all-day-dining-kitchen-setup",
   "all-day-casual-cafe-setup",
   "market-butcher-deli-setup",
+  "world-cuisine-kitchen-setup",
+  "italian-restaurant-kitchen-setup",
   "industrial-kitchen-equipment-turkey",
   "industrial-kitchen-supplier-turkey",
   "commercial-kitchen-quotation",
@@ -546,7 +548,7 @@ export function auditEnSeoCode() {
   const issues = [];
   const pdp = fileExists("lib/shop/pdp-server.ts") ? readText("lib/shop/pdp-server.ts") : "";
 
-  if (pdp.includes('canonical = `${origin}/shop/') && !pdp.includes("/en/shop")) {
+  if (pdp.includes('canonical = `${origin}/shop/') && !pdp.includes("/en/shop") && !pdp.includes("prefix}/shop/")) {
     issues.push(
       makeIssue({
         id: "seo:pdp_canonical_tr_only",
@@ -576,10 +578,17 @@ export function auditEnSeoCode() {
   }
 
   const geoMeta = fileExists("lib/geo/metadata.ts") ? readText("lib/geo/metadata.ts") : "";
-  const shopEn = fileExists("app/(shop)/en/shop/[dept]/page.tsx")
-    ? readText("app/(shop)/en/shop/[dept]/page.tsx")
-    : "";
-  if (geoMeta.includes("tr-TR") && shopEn.includes('languages: {\n        tr:')) {
+  const shopLangBlob = [
+    fileExists("app/(shop)/en/shop/[dept]/page.tsx")
+      ? readText("app/(shop)/en/shop/[dept]/page.tsx")
+      : "",
+    fileExists("lib/shop/pdp-server.ts") ? readText("lib/shop/pdp-server.ts") : "",
+  ].join("\n");
+  if (
+    geoMeta.includes("tr-TR") &&
+    /\blanguages:\s*\{[\s\S]*?\btr:/.test(shopLangBlob) &&
+    !shopLangBlob.includes("tr-TR")
+  ) {
     issues.push(
       makeIssue({
         id: "seo:hreflang_locale_inconsistent",
@@ -595,7 +604,16 @@ export function auditEnSeoCode() {
   const enPdpReexport = fileExists("app/(shop)/en/shop/[dept]/[slug]/page.tsx")
     ? readText("app/(shop)/en/shop/[dept]/[slug]/page.tsx")
     : "";
-  if (enPdpReexport.includes('from "../../../../shop/[dept]/[slug]/page"')) {
+  const sharedPdp = fileExists("app/(shop)/shop/[dept]/[slug]/page.tsx")
+    ? readText("app/(shop)/shop/[dept]/[slug]/page.tsx")
+    : "";
+  const sharedHandlesEn =
+    sharedPdp.includes("shopLangPrefix") &&
+    (sharedPdp.includes('locale === "en"') || sharedPdp.includes('langPrefix: locale === "en"'));
+  if (
+    enPdpReexport.includes('from "../../../../shop/[dept]/[slug]/page"') &&
+    !sharedHandlesEn
+  ) {
     issues.push(
       makeIssue({
         id: "seo:en_pdp_reexports_tr",
@@ -730,6 +748,7 @@ export async function auditLiveEnPages(baseUrl) {
  */
 export function buildImprovementPlan(ctx) {
   const actions = [];
+  const issueIds = new Set((ctx.issues || []).map((i) => i.id));
 
   if (ctx.productStats?.missingInEn > 0) {
     actions.push({
@@ -737,45 +756,55 @@ export function buildImprovementPlan(ctx) {
       action: "npm run i18n:products",
       reason: `${ctx.productStats.missingInEn} ürün EN çevirisi eksik`,
     });
-  } else if (ctx.productStats?.generated && ctx.productStats?.rebuiltAt) {
+  } else if (issueIds.has("products:en_stale_generated") || issueIds.has("products:turkish_residue")) {
     actions.push({
       priority: "medium",
       action: "npm run i18n:products",
-      reason: "Katalog rebuild sonrası EN JSON yenile",
+      reason: "Katalog rebuild sonrası EN JSON yenile / çeviri kalitesi",
     });
   }
 
-  actions.push({
-    priority: "high",
-    action: "PDP canonical + EN SSR metadata düzelt",
-    reason: "/en/shop/* sayfalarında TR canonical ve Türkçe title",
-    files: ["lib/shop/pdp-server.ts", "app/(shop)/en/shop/[dept]/[slug]/page.tsx"],
-  });
+  if (issueIds.has("seo:pdp_canonical_tr_only") || issueIds.has("seo:en_pdp_reexports_tr")) {
+    actions.push({
+      priority: "high",
+      action: "PDP canonical + EN SSR metadata düzelt",
+      reason: "/en/shop/* sayfalarında TR canonical ve Türkçe title",
+      files: ["lib/shop/pdp-server.ts", "app/(shop)/en/shop/[dept]/[slug]/page.tsx"],
+    });
+  }
 
-  actions.push({
-    priority: "high",
-    action: "sitemap-pages.xml — tüm GEO_EN_SLUGS + vitrin EN",
-    reason: "Google yalnızca 2 EN pillar URL indeksliyor",
-    files: ["scripts/build-sitemap.mjs"],
-  });
+  if (issueIds.has("sitemap:geo_en_missing") || issueIds.has("sitemap:vitrin_en_missing")) {
+    actions.push({
+      priority: "high",
+      action: "sitemap-pages.xml — tüm GEO_EN_SLUGS + vitrin EN",
+      reason: "EN GEO / vitrin URL'leri sitemap'te eksik",
+      files: ["scripts/build-sitemap.mjs"],
+    });
+  }
 
-  actions.push({
-    priority: "medium",
-    action: "npm run i18n:build",
-    reason: "UI + PFOS + ürün EN senkron",
-  });
+  if (issueIds.has("geo:tr_profiles_without_en") || issueIds.has("geo:known_tr_only_slugs")) {
+    actions.push({
+      priority: "medium",
+      action: "geo-landings-en.json — eksik EN GEO profilleri",
+      reason: "TR-only GEO konseptleri",
+    });
+  }
 
-  actions.push({
-    priority: "medium",
-    action: "geo-landings-en.json — dunya-mutfak / italyan-restoran EN",
-    reason: "TR-only GEO konseptleri",
-  });
+  if (issueIds.has("llms:sparse_en_links") || issueIds.has("llms:outdated_en_note")) {
+    actions.push({
+      priority: "low",
+      action: "public/llms.txt EN bölümü genişlet",
+      reason: "AI keşfi için /en/shop ve guides URL'leri",
+    });
+  }
 
-  actions.push({
-    priority: "low",
-    action: "public/llms.txt EN bölümü genişlet",
-    reason: "AI keşfi için /en/shop ve guides URL'leri",
-  });
+  if (!actions.length) {
+    actions.push({
+      priority: "low",
+      action: "EN coverage izlemeyi sürdürün",
+      reason: "Kritik EN boşlukları kapatıldı — canlı head + çeviri kalitesi cron ile izlenir",
+    });
+  }
 
   return {
     locale: "en",
@@ -785,9 +814,8 @@ export function buildImprovementPlan(ctx) {
     recommendedCommands: [
       "npm run i18n:check",
       "npm run i18n:products",
-      "npm run i18n:build",
-      "npm run seo:audit",
       "npm run sitemap:build",
+      "npm run en:agent:run",
     ],
     actions,
     priorityPages: [
@@ -872,6 +900,7 @@ export async function runEnAgentChecks(opts = {}) {
   const improvementPlan = buildImprovementPlan({
     productStats: products.stats,
     uiCheck: ui.check,
+    issues: allIssues,
   });
 
   return {
