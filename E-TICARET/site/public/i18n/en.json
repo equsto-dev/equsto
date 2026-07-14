@@ -897,7 +897,7 @@
     "form_phone": "Telefon *",
     "form_message": "Mesajınız *",
     "form_captcha": "Güvenlik Kodu *",
-    "form_privacy_html": "<a href=\"/iade-politikasi\">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.",
+    "form_privacy_html": "I have read and accept the <a href=\"/en/privacy\">Privacy &amp; cookie policy</a>.",
     "form_send": "Gönder",
     "form_clear": "Temizle",
     "quick_faq": "Sık Sorulan Sorular",

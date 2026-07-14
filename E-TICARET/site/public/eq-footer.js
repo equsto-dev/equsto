@@ -314,7 +314,7 @@
 
       legal: {
         terms: "/iletisim",
-        privacy: "/iletisim",
+        privacy: "/kvkk",
         returns: "/iade-politikasi",
         company: "Equsto Teknoloji Limited",
       },
@@ -810,7 +810,23 @@
 
         );
 
-        if (legacy && typeof legacy.click === "function") legacy.click();
+        if (legacy && typeof legacy.click === "function") {
+
+          legacy.click();
+
+          return;
+
+        }
+
+        var kvkk =
+
+          typeof window.equstoUrl === "function"
+
+            ? window.equstoUrl("kvkk")
+
+            : "/kvkk";
+
+        window.location.href = String(kvkk).indexOf("#") >= 0 ? kvkk : kvkk + "#cerezler";
 
       });
 
