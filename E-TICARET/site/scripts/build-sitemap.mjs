@@ -273,6 +273,18 @@ function patchSitemapPages() {
     const extra = urlEntry(`${ORIGIN}/hakkimizda`, { priority: "0.75" });
     xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
   }
+  for (const [pathSuffix, priority] of [
+    ["/pfos", "0.99"],
+    ["/kvkk", "0.5"],
+  ]) {
+    if (!xml.includes(`https://equsto.com${pathSuffix}</loc>`)) {
+      const extra = urlEntry(`${ORIGIN}${pathSuffix}`, {
+        priority,
+        changefreq: pathSuffix === "/pfos" ? "weekly" : "yearly",
+      });
+      xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
+    }
+  }
   fs.writeFileSync(pagesPath, xml, "utf8");
 }
 
