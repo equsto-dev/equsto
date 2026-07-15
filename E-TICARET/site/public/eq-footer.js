@@ -12,7 +12,8 @@
 
   "use strict";
 
-
+  /** Geçici: kamu telefon satırı gizle — lib/site/public-phone.ts ile senkron */
+  window.EQUSTO_HIDE_PUBLIC_PHONE = true;
 
   var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-about-trim";
 
@@ -221,7 +222,7 @@
           "</a>"
       );
     }
-    if (contact.phoneTel && contact.phoneDisplay) {
+    if (contact.phoneTel && contact.phoneDisplay && !window.EQUSTO_HIDE_PUBLIC_PHONE) {
       parts.push(
         '<a class="eq-mfoot-contact-item" href="tel:' +
           esc(String(contact.phoneTel).replace(/\s/g, "")) +

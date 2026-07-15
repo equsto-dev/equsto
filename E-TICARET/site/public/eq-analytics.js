@@ -5,6 +5,9 @@
 (function () {
   if (typeof document === "undefined") return;
 
+  /** Geçici: kamu telefon satırı (footer) — true = gizle. Geri: false */
+  window.EQUSTO_HIDE_PUBLIC_PHONE = true;
+
   var CONSENT_KEY = "equsto_cookie_consent";
 
   var ga4 =

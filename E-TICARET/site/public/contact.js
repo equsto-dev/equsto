@@ -6,6 +6,9 @@
  * Üye bayrağı: equsto-member.js → equstoSetMemberActive / equstoIsMemberLoggedIn
  */
 (function () {
+  /** Geçici: kamu telefon satırı gizle — lib/site/public-phone.ts ile senkron */
+  window.EQUSTO_HIDE_PUBLIC_PHONE = true;
+
   window.EQUSTO_WHATSAPP_E164 = window.EQUSTO_WHATSAPP_E164 || "905326840152";
 
   try {

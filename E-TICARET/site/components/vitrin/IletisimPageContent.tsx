@@ -1,5 +1,10 @@
 import ContactKonuBanner from "@/components/vitrin/ContactKonuBanner";
 import { EQUSTO_OFFICE_ADDRESS, EQUSTO_OFFICE_MAP_EMBED } from "@/lib/site/company-address";
+import {
+  HIDE_PUBLIC_PHONE,
+  PUBLIC_PHONE_DISPLAY,
+  PUBLIC_PHONE_TEL,
+} from "@/lib/site/public-phone";
 
 export default function IletisimPageContent() {
   return (
@@ -27,14 +32,16 @@ export default function IletisimPageContent() {
                   </th>
                   <td data-i18n-skip>{EQUSTO_OFFICE_ADDRESS}</td>
                 </tr>
-                <tr>
-                  <th scope="row" data-i18n="contact.info_phone_l">
-                    Telefon
-                  </th>
-                  <td>
-                    <a href="tel:+905326840152">+90 532 684 01 52</a>
-                  </td>
-                </tr>
+                {!HIDE_PUBLIC_PHONE ? (
+                  <tr>
+                    <th scope="row" data-i18n="contact.info_phone_l">
+                      Telefon
+                    </th>
+                    <td>
+                      <a href={`tel:${PUBLIC_PHONE_TEL}`}>{PUBLIC_PHONE_DISPLAY}</a>
+                    </td>
+                  </tr>
+                ) : null}
                 <tr>
                   <th scope="row" data-i18n="contact.info_email_l">
                     E-Posta
