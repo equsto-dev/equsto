@@ -1,23 +1,1652 @@
 {
-  "generatedAt": "2026-06-19T13:37:18.954Z",
-  "pdfProducts": 157,
-  "pdfIndexKeys": 142,
-  "kur_usd_try": 46.4253,
-  "kur_eur_try": 53.1848,
+  "generatedAt": "2026-07-18T21:19:51.675Z",
+  "pdfProducts": 156,
+  "pdfIndexKeys": 134,
+  "kur_usd_try": 47.1411,
+  "kur_eur_try": 53.9243,
   "satis_oran": 0.48,
   "iskonto_oran": 0.52,
   "dryRun": false,
   "summary": {
     "total": 164,
-    "fixed": 0,
-    "iskonto_fix": 0,
-    "liste_fix": 0,
+    "fixed": 150,
+    "iskonto_fix": 6,
+    "liste_fix": 136,
     "manual": 4,
     "site": 15,
     "no_price": 1,
-    "target_pdf": 144
+    "target_pdf": 142
   },
-  "fixed": [],
+  "fixed": [
+    {
+      "model": "VXY-PT965S",
+      "fix_tip": "iskonto_48",
+      "before_tl": 187662,
+      "after_tl": 162920,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 6000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-28F",
+      "fix_tip": "fiyat",
+      "before_tl": 153761,
+      "after_tl": 176496,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 6500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-32F",
+      "fix_tip": "fiyat",
+      "before_tl": 153761,
+      "after_tl": 176496,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 6500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VZM-H2",
+      "fix_tip": "fiyat",
+      "before_tl": 44123,
+      "after_tl": 25796,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-FRT2C08BB",
+      "fix_tip": "fiyat",
+      "before_tl": 30752,
+      "after_tl": 47518,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSL-FRT1C12BB",
+      "fix_tip": "fiyat",
+      "before_tl": 46797,
+      "after_tl": 31226,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1150,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAS-CME02",
+      "fix_tip": "site_tl",
+      "before_tl": 10162,
+      "after_tl": 21020,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VAF-74K",
+      "fix_tip": "iskonto_48",
+      "before_tl": 54764,
+      "after_tl": 48876,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1800,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-28T",
+      "fix_tip": "fiyat",
+      "before_tl": 160446,
+      "after_tl": 156131,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 5750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-32T",
+      "fix_tip": "fiyat",
+      "before_tl": 160446,
+      "after_tl": 156131,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 5750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHF-F4",
+      "fix_tip": "fiyat",
+      "before_tl": 6150,
+      "after_tl": 10318,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 380,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-500C",
+      "fix_tip": "fiyat",
+      "before_tl": 240669,
+      "after_tl": 244379,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 9000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWJG-5P",
+      "fix_tip": "site_tl",
+      "before_tl": 93593,
+      "after_tl": 96804,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VSC-250C",
+      "fix_tip": "fiyat",
+      "before_tl": 200557,
+      "after_tl": 203650,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 7500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-200C",
+      "fix_tip": "fiyat",
+      "before_tl": 187187,
+      "after_tl": 190073,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 7000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-150C",
+      "fix_tip": "fiyat",
+      "before_tl": 173816,
+      "after_tl": 176496,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 6500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "FT-235LB",
+      "fix_tip": "site_tl",
+      "before_tl": 68992,
+      "after_tl": 71359,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "FT-235LS",
+      "fix_tip": "site_tl",
+      "before_tl": 68992,
+      "after_tl": 71359,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VWG-8T",
+      "fix_tip": "site_tl",
+      "before_tl": 61504,
+      "after_tl": 63614,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VWJG-8P",
+      "fix_tip": "fiyat",
+      "before_tl": 121671,
+      "after_tl": 123547,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 4550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWJG-7P",
+      "fix_tip": "fiyat",
+      "before_tl": 112312,
+      "after_tl": 114044,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 4200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VST-16EB",
+      "fix_tip": "fiyat",
+      "before_tl": 102953,
+      "after_tl": 104540,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VST-16EM",
+      "fix_tip": "fiyat",
+      "before_tl": 102953,
+      "after_tl": 104540,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VST-16ES",
+      "fix_tip": "fiyat",
+      "before_tl": 102953,
+      "after_tl": 104540,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWJG-6P",
+      "fix_tip": "fiyat",
+      "before_tl": 102953,
+      "after_tl": 104540,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-120C",
+      "fix_tip": "fiyat",
+      "before_tl": 96268,
+      "after_tl": 97752,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X3S",
+      "fix_tip": "fiyat",
+      "before_tl": 93593,
+      "after_tl": 95036,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X3SR",
+      "fix_tip": "fiyat",
+      "before_tl": 93593,
+      "after_tl": 95036,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-100B",
+      "fix_tip": "fiyat",
+      "before_tl": 86908,
+      "after_tl": 88248,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-100C",
+      "fix_tip": "fiyat",
+      "before_tl": 86908,
+      "after_tl": 88248,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-100T",
+      "fix_tip": "fiyat",
+      "before_tl": 86908,
+      "after_tl": 88248,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 3250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWG-4T",
+      "fix_tip": "site_tl",
+      "before_tl": 37437,
+      "after_tl": 38722,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VALP-A83",
+      "fix_tip": "fiyat",
+      "before_tl": 9627,
+      "after_tl": 10861,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 400,
+      "pdf_eur": 0
+    },
+    {
+      "model": "FT-280LB",
+      "fix_tip": "fiyat",
+      "before_tl": 78886,
+      "after_tl": 80102,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "FT-280LS",
+      "fix_tip": "fiyat",
+      "before_tl": 78886,
+      "after_tl": 80102,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VALP-C05D",
+      "fix_tip": "fiyat",
+      "before_tl": 10696,
+      "after_tl": 9504,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 350,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWG-10T",
+      "fix_tip": "fiyat",
+      "before_tl": 76212,
+      "after_tl": 77387,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X2S",
+      "fix_tip": "fiyat",
+      "before_tl": 73538,
+      "after_tl": 74672,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X2SR",
+      "fix_tip": "fiyat",
+      "before_tl": 73538,
+      "after_tl": 74672,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAF-74B",
+      "fix_tip": "iskonto_48",
+      "before_tl": 49785,
+      "after_tl": 48876,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1800,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAF-74S",
+      "fix_tip": "iskonto_48",
+      "before_tl": 49785,
+      "after_tl": 48876,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1800,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-65/S",
+      "fix_tip": "fiyat",
+      "before_tl": 56156,
+      "after_tl": 57022,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2100,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWK-120C",
+      "fix_tip": "fiyat",
+      "before_tl": 56156,
+      "after_tl": 57022,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2100,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSL-FRT2C12B",
+      "fix_tip": "fiyat",
+      "before_tl": 54819,
+      "after_tl": 55664,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2050,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWG-6T",
+      "fix_tip": "fiyat",
+      "before_tl": 54819,
+      "after_tl": 55664,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2050,
+      "pdf_eur": 0
+    },
+    {
+      "model": "FT-100R-1",
+      "fix_tip": "fiyat",
+      "before_tl": 54819,
+      "after_tl": 55664,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2050,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X1S",
+      "fix_tip": "fiyat",
+      "before_tl": 53482,
+      "after_tl": 54307,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-SJ15X1SR",
+      "fix_tip": "fiyat",
+      "before_tl": 53482,
+      "after_tl": 54307,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 2000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-45/S",
+      "fix_tip": "fiyat",
+      "before_tl": 50808,
+      "after_tl": 51591,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1900,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VFTW-160L",
+      "fix_tip": "fiyat",
+      "before_tl": 49471,
+      "after_tl": 50234,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VFTW-160LYP",
+      "fix_tip": "fiyat",
+      "before_tl": 49471,
+      "after_tl": 50234,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-40C",
+      "fix_tip": "fiyat",
+      "before_tl": 48134,
+      "after_tl": 48876,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1800,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXB-74S",
+      "fix_tip": "fiyat",
+      "before_tl": 42786,
+      "after_tl": 43445,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXB-74K",
+      "fix_tip": "fiyat",
+      "before_tl": 42786,
+      "after_tl": 43445,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXB-74B",
+      "fix_tip": "fiyat",
+      "before_tl": 42786,
+      "after_tl": 43445,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWG-5T",
+      "fix_tip": "fiyat",
+      "before_tl": 42786,
+      "after_tl": 43445,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBBC-350S",
+      "fix_tip": "fiyat",
+      "before_tl": 45952,
+      "after_tl": 46591,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1500
+    },
+    {
+      "model": "VGBC-350G",
+      "fix_tip": "fiyat",
+      "before_tl": 45952,
+      "after_tl": 46591,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1500
+    },
+    {
+      "model": "VBBC-250S",
+      "fix_tip": "fiyat",
+      "before_tl": 44420,
+      "after_tl": 45038,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1450
+    },
+    {
+      "model": "VGBC-250G",
+      "fix_tip": "fiyat",
+      "before_tl": 44420,
+      "after_tl": 45038,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1450
+    },
+    {
+      "model": "VSC-25C",
+      "fix_tip": "fiyat",
+      "before_tl": 37437,
+      "after_tl": 38015,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1400,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKM-G5R",
+      "fix_tip": "fiyat",
+      "before_tl": 33426,
+      "after_tl": 33942,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKM-NG4R",
+      "fix_tip": "fiyat",
+      "before_tl": 33426,
+      "after_tl": 33942,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VS-ER268",
+      "fix_tip": "fiyat",
+      "before_tl": 33426,
+      "after_tl": 33942,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VCG-835B",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VA-80SR",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VA-80S",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VA-80M",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VA-80K",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VA-80B",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAF-68B",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAF-68K",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VAF-68S",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VWG-3T",
+      "fix_tip": "fiyat",
+      "before_tl": 32089,
+      "after_tl": 32584,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1200,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKM-G4R",
+      "fix_tip": "fiyat",
+      "before_tl": 30752,
+      "after_tl": 31226,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1150,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKM-NG3R",
+      "fix_tip": "fiyat",
+      "before_tl": 30752,
+      "after_tl": 31226,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1150,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKM-NG5R",
+      "fix_tip": "fiyat",
+      "before_tl": 30752,
+      "after_tl": 31226,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1150,
+      "pdf_eur": 0
+    },
+    {
+      "model": "FT-78LB",
+      "fix_tip": "fiyat",
+      "before_tl": 30752,
+      "after_tl": 31226,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1150,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSS-10H",
+      "fix_tip": "site_tl",
+      "before_tl": 13638,
+      "after_tl": 14106,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VSC-23CG",
+      "fix_tip": "fiyat",
+      "before_tl": 29415,
+      "after_tl": 29869,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1100,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-23CS",
+      "fix_tip": "fiyat",
+      "before_tl": 29415,
+      "after_tl": 29869,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1100,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBBC-150S",
+      "fix_tip": "fiyat",
+      "before_tl": 32166,
+      "after_tl": 32613,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1050
+    },
+    {
+      "model": "VGBC-150G",
+      "fix_tip": "fiyat",
+      "before_tl": 32166,
+      "after_tl": 32613,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 0,
+      "pdf_eur": 1050
+    },
+    {
+      "model": "VLJH-20",
+      "fix_tip": "fiyat",
+      "before_tl": 28078,
+      "after_tl": 28511,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1050,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-520C",
+      "fix_tip": "fiyat",
+      "before_tl": 26741,
+      "after_tl": 27153,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 1000,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-616DE",
+      "fix_tip": "fiyat",
+      "before_tl": 25404,
+      "after_tl": 25796,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-FRT1C08BB",
+      "fix_tip": "fiyat",
+      "before_tl": 25404,
+      "after_tl": 25796,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKB-450",
+      "fix_tip": "fiyat",
+      "before_tl": 25404,
+      "after_tl": 25796,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 950,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKB-300",
+      "fix_tip": "fiyat",
+      "before_tl": 22730,
+      "after_tl": 23080,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 850,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VFTW-120LYP",
+      "fix_tip": "site_tl",
+      "before_tl": 46797,
+      "after_tl": 46466,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-site-tl"
+    },
+    {
+      "model": "VAS-CME01",
+      "fix_tip": "fiyat",
+      "before_tl": 20323,
+      "after_tl": 20636,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 760,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VICM-15A",
+      "fix_tip": "fiyat",
+      "before_tl": 20056,
+      "after_tl": 20365,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 750,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-20/A",
+      "fix_tip": "fiyat",
+      "before_tl": 18719,
+      "after_tl": 19007,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 700,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBL-813E",
+      "fix_tip": "fiyat",
+      "before_tl": 17382,
+      "after_tl": 17650,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 650,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-P25B",
+      "fix_tip": "fiyat",
+      "before_tl": 16847,
+      "after_tl": 17107,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 630,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-P25S",
+      "fix_tip": "fiyat",
+      "before_tl": 16847,
+      "after_tl": 17107,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 630,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-P50B",
+      "fix_tip": "fiyat",
+      "before_tl": 16847,
+      "after_tl": 17107,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 630,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-P50S",
+      "fix_tip": "fiyat",
+      "before_tl": 16847,
+      "after_tl": 17107,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 630,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VZA-803",
+      "fix_tip": "fiyat",
+      "before_tl": 16045,
+      "after_tl": 16292,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 600,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-211E",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-212C",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12CG",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12CK",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12CS",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBL-813",
+      "fix_tip": "fiyat",
+      "before_tl": 14708,
+      "after_tl": 14934,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 550,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VXY-520",
+      "fix_tip": "fiyat",
+      "before_tl": 13370,
+      "after_tl": 13577,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12HB",
+      "fix_tip": "fiyat",
+      "before_tl": 13370,
+      "after_tl": 13577,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12HK",
+      "fix_tip": "fiyat",
+      "before_tl": 13370,
+      "after_tl": 13577,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHZB-12HS",
+      "fix_tip": "fiyat",
+      "before_tl": 13370,
+      "after_tl": 13577,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 500,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-25K",
+      "fix_tip": "fiyat",
+      "before_tl": 12836,
+      "after_tl": 13034,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 480,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-25S",
+      "fix_tip": "fiyat",
+      "before_tl": 12836,
+      "after_tl": 13034,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 480,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKD-25G",
+      "fix_tip": "fiyat",
+      "before_tl": 12836,
+      "after_tl": 13034,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 480,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-360CG",
+      "fix_tip": "iskonto_48",
+      "before_tl": 10510,
+      "after_tl": 10318,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 380,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-360CS",
+      "fix_tip": "iskonto_48",
+      "before_tl": 10510,
+      "after_tl": 10318,
+      "before_kaynak": "vosco-site-tl",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 380,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-608",
+      "fix_tip": "fiyat",
+      "before_tl": 12301,
+      "after_tl": 12491,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 460,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-608CG",
+      "fix_tip": "fiyat",
+      "before_tl": 12301,
+      "after_tl": 12491,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 460,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-608CDG",
+      "fix_tip": "fiyat",
+      "before_tl": 12301,
+      "after_tl": 12491,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 460,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSS-08C",
+      "fix_tip": "fiyat",
+      "before_tl": 12033,
+      "after_tl": 12219,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 450,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VALP-C09D",
+      "fix_tip": "fiyat",
+      "before_tl": 10028,
+      "after_tl": 10182,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 375,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VALP-DIC126",
+      "fix_tip": "fiyat",
+      "before_tl": 9359,
+      "after_tl": 9504,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 350,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBL-811E",
+      "fix_tip": "fiyat",
+      "before_tl": 8022,
+      "after_tl": 8146,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 300,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VF-2S",
+      "fix_tip": "fiyat",
+      "before_tl": 8022,
+      "after_tl": 8146,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 300,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-200EG",
+      "fix_tip": "fiyat",
+      "before_tl": 7755,
+      "after_tl": 7874,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 290,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-200EK",
+      "fix_tip": "fiyat",
+      "before_tl": 7755,
+      "after_tl": 7874,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 290,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-200ES",
+      "fix_tip": "fiyat",
+      "before_tl": 7755,
+      "after_tl": 7874,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 290,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-602CG",
+      "fix_tip": "fiyat",
+      "before_tl": 7755,
+      "after_tl": 7874,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 290,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-602CS",
+      "fix_tip": "fiyat",
+      "before_tl": 7755,
+      "after_tl": 7874,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 290,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKS-100T",
+      "fix_tip": "fiyat",
+      "before_tl": 7354,
+      "after_tl": 7467,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 275,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VBD-CG018",
+      "fix_tip": "fiyat",
+      "before_tl": 7220,
+      "after_tl": 7331,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 270,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-J606",
+      "fix_tip": "fiyat",
+      "before_tl": 6685,
+      "after_tl": 6788,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206CM",
+      "fix_tip": "fiyat",
+      "before_tl": 6685,
+      "after_tl": 6788,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-JE2106A",
+      "fix_tip": "fiyat",
+      "before_tl": 6685,
+      "after_tl": 6788,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 250,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206CK",
+      "fix_tip": "fiyat",
+      "before_tl": 5081,
+      "after_tl": 5159,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 190,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206CS",
+      "fix_tip": "fiyat",
+      "before_tl": 5081,
+      "after_tl": 5159,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 190,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206K",
+      "fix_tip": "fiyat",
+      "before_tl": 5081,
+      "after_tl": 5159,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 190,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206M",
+      "fix_tip": "fiyat",
+      "before_tl": 5081,
+      "after_tl": 5159,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 190,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VHS-206S",
+      "fix_tip": "fiyat",
+      "before_tl": 5081,
+      "after_tl": 5159,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 190,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VALP-DC50",
+      "fix_tip": "fiyat",
+      "before_tl": 4813,
+      "after_tl": 4888,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 180,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-900B",
+      "fix_tip": "fiyat",
+      "before_tl": 2032,
+      "after_tl": 2064,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 76,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VKB1-601901",
+      "fix_tip": "fiyat",
+      "before_tl": 1604,
+      "after_tl": 1629,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 60,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-7",
+      "fix_tip": "fiyat",
+      "before_tl": 1337,
+      "after_tl": 1358,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 50,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-700B",
+      "fix_tip": "fiyat",
+      "before_tl": 1337,
+      "after_tl": 1358,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 50,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-3",
+      "fix_tip": "fiyat",
+      "before_tl": 1177,
+      "after_tl": 1195,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 44,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-300B",
+      "fix_tip": "fiyat",
+      "before_tl": 1177,
+      "after_tl": 1195,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 44,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSCG-3",
+      "fix_tip": "fiyat",
+      "before_tl": 1070,
+      "after_tl": 1086,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 40,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-1",
+      "fix_tip": "fiyat",
+      "before_tl": 936,
+      "after_tl": 950,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 35,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-600B",
+      "fix_tip": "fiyat",
+      "before_tl": 936,
+      "after_tl": 950,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 35,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-6",
+      "fix_tip": "fiyat",
+      "before_tl": 669,
+      "after_tl": 679,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 25,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-TZ01",
+      "fix_tip": "fiyat",
+      "before_tl": 535,
+      "after_tl": 543,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 20,
+      "pdf_eur": 0
+    },
+    {
+      "model": "VSC-TZ02",
+      "fix_tip": "fiyat",
+      "before_tl": 535,
+      "after_tl": 543,
+      "before_iskonto": 52,
+      "before_kaynak": "vosco-pdf-2026",
+      "after_kaynak": "vosco-pdf-2026",
+      "pdf_usd": 20,
+      "pdf_eur": 0
+    }
+  ],
   "no_pdf": [
     {
       "model": "VSC-MT3",
@@ -43,11 +1672,6 @@
       "fiyat_tl": 2347
     },
     {
-      "model": "VXY-PT965S",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 187662
-    },
-    {
       "model": "VHS-J319",
       "kaynak": "vosco-site-tl",
       "fiyat_tl": 2581
@@ -56,16 +1680,6 @@
       "model": "VKM-G3R",
       "kaynak": "vosco-site-tl",
       "fiyat_tl": 31807
-    },
-    {
-      "model": "VHS-360CG",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 10510
-    },
-    {
-      "model": "VHS-360CS",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 10510
     },
     {
       "model": "VSC-70C",
@@ -93,29 +1707,54 @@
       "fiyat_tl": 42375
     },
     {
-      "model": "VAF-74B",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 49785
-    },
-    {
-      "model": "VAF-74K",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 54764
-    },
-    {
-      "model": "VAF-74S",
-      "kaynak": "vosco-site-tl",
-      "fiyat_tl": 49785
-    },
-    {
       "model": "VSC-PCS",
       "kaynak": "vosco-site-tl",
       "fiyat_tl": 1750
     },
     {
+      "model": "VSS-10H",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 14106
+    },
+    {
+      "model": "VWG-8T",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 63614
+    },
+    {
+      "model": "VAS-CME02",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 21020
+    },
+    {
+      "model": "VWJG-5P",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 96804
+    },
+    {
+      "model": "VWG-4T",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 38722
+    },
+    {
+      "model": "FT-235LB",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 71359
+    },
+    {
+      "model": "FT-235LS",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 71359
+    },
+    {
       "model": "VFTR-50L",
       "kaynak": "vosco-manual-tl",
       "fiyat_tl": 21000
+    },
+    {
+      "model": "VFTW-120LYP",
+      "kaynak": "vosco-site-tl",
+      "fiyat_tl": 46466
     }
   ]
 }
