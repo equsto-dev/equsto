@@ -34,6 +34,13 @@ CODE_RE = re.compile(
     r"^(?:V[A-Z0-9][A-Z0-9\-/]{2,28}|FT-\d+[A-Z0-9\-]*|NG[345]R)$",
     re.I,
 )
+# "Vosco" / "Vision" gibi marka satırları CODE_RE'ye uyuyor; fiyat çalıyorlardı.
+REJECT_CODES = {
+    "VOSCO",
+    "VISION",
+    "VIZYON",
+    "MISYON",
+}
 PRICE_USD_RE = re.compile(r"\$\s*([\d,]+(?:\.\d+)?)\s*USD", re.I)
 PRICE_EUR_RE = re.compile(r"€\s*([\d,]+(?:\.\d+)?)\s*EUR", re.I)
 TITLE_RE = re.compile(r"^Vosco\s+(.+)$", re.I)
@@ -52,6 +59,13 @@ SKIP_CAT = re.compile(
 
 def norm_code(code: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", str(code or "").upper())
+
+
+def is_product_code(line: str) -> bool:
+    s = str(line or "").strip()
+    if not CODE_RE.match(s):
+        return False
+    return norm_code(s) not in REJECT_CODES
 
 
 def code_sort_key(code: str) -> tuple[int, str]:
@@ -90,7 +104,7 @@ def _page_price_assignments(
         code_idxs = [
             i
             for i, p in enumerate(line_pages)
-            if p == page and CODE_RE.match(lines[i])
+            if p == page and is_product_code(lines[i])
         ]
         price_idxs: list[tuple[int, str, float]] = []
         for i, p in enumerate(line_pages):
@@ -110,35 +124,27 @@ def _page_price_assignments(
         assigned: dict[int, tuple[str, float]] = {}
         used: set[int] = set()
 
+        # Her kod için (önceki kod, sonraki kod) penceresindeki en yakın fiyat.
+        # PDF metin sırası bazen fiyatı kodun üstüne koyar ($1750 → VSL-FRT2C08B);
+        # yalnızca "koddan sonra" bakmak komşu ürün fiyatını çalıyordu ($1150).
         for ci, code_idx in enumerate(code_idxs):
-            next_code = code_idxs[ci + 1] if ci + 1 < len(code_idxs) else len(lines)
+            prev_code = code_idxs[ci - 1] if ci > 0 else -1
+            next_code = (
+                code_idxs[ci + 1] if ci + 1 < len(code_idxs) else len(lines)
+            )
+            best: tuple[int, int, str, float] | None = None
             for pidx, kind, val in price_idxs:
                 if pidx in used:
                     continue
-                if code_idx < pidx < next_code:
-                    assigned[code_idx] = (kind, val)
-                    used.add(pidx)
-                    break
-
-        for ci, code_idx in enumerate(code_idxs):
-            if code_idx in assigned:
-                continue
-            prev_code = code_idxs[ci - 1] if ci > 0 else -1
-            first_code = code_idxs[0]
-            best: tuple[int, str, float, int] | None = None
-            for pidx, kind, val in price_idxs:
-                if pidx in used or pidx >= code_idx:
+                if not (prev_code < pidx < next_code):
                     continue
-                in_between = prev_code >= 0 and prev_code < pidx < code_idx
-                orphan_before_block = ci > 0 and pidx < first_code
-                if not in_between and not orphan_before_block:
-                    continue
-                dist = code_idx - pidx
+                dist = abs(pidx - code_idx)
                 if best is None or dist < best[0]:
-                    best = (dist, kind, val, pidx)
+                    best = (dist, pidx, kind, val)
             if best:
-                assigned[code_idx] = (best[1], best[2])
-                used.add(best[3])
+                _, pidx, kind, val = best
+                assigned[code_idx] = (kind, val)
+                used.add(pidx)
 
         _page_assign_cache[page] = assigned
 
@@ -155,14 +161,14 @@ def pair_page_block_prices(lines: list[str], line_pages: list[int]) -> None:
         pi = 0
         while pi < len(page_idxs):
             i = page_idxs[pi]
-            if not CODE_RE.match(lines[i]):
+            if not is_product_code(lines[i]):
                 pi += 1
                 continue
             codes: list[str] = []
             j = i
             last = page_idxs[-1]
             while j <= last and line_pages[j] == page:
-                if CODE_RE.match(lines[j]):
+                if is_product_code(lines[j]):
                     codes.append(lines[j].upper().replace(" ", ""))
                     j += 1
                 elif TITLE_RE.match(lines[j]):
@@ -207,7 +213,7 @@ def expand_code_lines(
             out_pages.append(page)
             continue
         parts = [p.strip() for p in line.split("|") if p.strip()]
-        codes = [p.upper().replace(" ", "") for p in parts if CODE_RE.match(p.strip())]
+        codes = [p.upper().replace(" ", "") for p in parts if is_product_code(p.strip())]
         if len(codes) >= 2:
             for c in codes:
                 out_lines.append(c)
@@ -243,7 +249,7 @@ def pair_trailing_prices(lines: list[str]) -> None:
         codes = []
         k = j
         while k < len(lines) and k < j + 8:
-            if CODE_RE.match(lines[k]):
+            if is_product_code(lines[k]):
                 codes.append(lines[k].upper().replace(" ", ""))
                 k += 1
             elif codes:
@@ -259,7 +265,7 @@ def pair_trailing_prices(lines: list[str]) -> None:
                 kind, val = prices[0]
                 assigned = False
                 for back in range(i - 1, max(-1, i - 15), -1):
-                    if CODE_RE.match(lines[back]):
+                    if is_product_code(lines[back]):
                         _pending_pairs.append(
                             ("trail", lines[back].upper().replace(" ", ""), kind, val)
                         )
@@ -281,14 +287,14 @@ def pair_leading_codes_trailing_prices(lines: list[str]) -> None:
     """Aynı bloktaki kodlar (arada açıklama satırı olabilir) + sonraki fiyatlar."""
     i = 0
     while i < len(lines):
-        if not CODE_RE.match(lines[i]):
+        if not is_product_code(lines[i]):
             i += 1
             continue
 
         codes: list[str] = [lines[i].upper().replace(" ", "")]
         j = i + 1
         while j < len(lines) and j < i + 28:
-            if CODE_RE.match(lines[j]):
+            if is_product_code(lines[j]):
                 codes.append(lines[j].upper().replace(" ", ""))
                 j += 1
                 continue
@@ -347,11 +353,11 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
     category = ""
 
     for i, line in enumerate(lines):
-        if line.isupper() and len(line) > 8 and not CODE_RE.match(line):
+        if line.isupper() and len(line) > 8 and not is_product_code(line):
             if not SKIP_CAT.search(line) and not PRICE_USD_RE.search(line) and not PRICE_EUR_RE.search(line):
                 category = line.title() if line.isupper() else line
 
-        if not CODE_RE.match(line):
+        if not is_product_code(line):
             continue
 
         code = line.upper().replace(" ", "")
