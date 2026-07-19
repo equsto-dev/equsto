@@ -171,7 +171,7 @@ export default function CatalogAgentPanel() {
         showIcon
         icon={<RobotOutlined />}
         message="Katalog Ajanı"
-        description="Şenox, Yüksel İthal, Portabianco fiyat denetimi ve Rational rakip karşılaştırmasını birleştirir. TCMB kuru ile formül kontrolü yapar; Cafemarkt/Mutbex/Akakçe verilerini kullanır."
+        description="Tüm katalog: L1 formül, L2 kaynak (Electrolux/Vosco/Öztiryakiler…), L3 piyasa/oran sapması, L4 anomali + marka özel denetimler. Full rapor: scripts/data/catalog-agent/full-report.md"
       />
 
       <ProCard

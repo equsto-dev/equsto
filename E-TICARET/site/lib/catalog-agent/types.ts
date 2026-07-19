@@ -43,6 +43,7 @@ export type CatalogCheckResult = {
 export type CatalogAgentReport = {
   generatedAt: string;
   kur: number;
+  usdTry?: number;
   kurFallback: boolean;
   durationMs: number;
   status: "ok" | "info" | "warn" | "error";
@@ -54,6 +55,8 @@ export type CatalogAgentReport = {
     low: number;
     byBrand: Record<string, number>;
     byType: Record<string, number>;
+    rowCount?: number;
+    byLayer?: Record<string, number>;
   };
   checks: Record<string, CatalogCheckResult>;
   issues: CatalogIssue[];
