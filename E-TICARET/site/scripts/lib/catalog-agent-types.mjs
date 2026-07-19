@@ -31,8 +31,10 @@
  * @property {object} summary
  * @property {Record<string, object>} checks
  * @property {CatalogIssue[]} issues
+ * @property {CatalogIssue[]} [allIssues]
  * @property {number} issueCount
  * @property {string|null} aiSummary
+ * @property {number} [usdTry]
  */
 
 export {};

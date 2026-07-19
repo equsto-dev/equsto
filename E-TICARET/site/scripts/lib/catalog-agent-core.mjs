@@ -5,7 +5,7 @@ import fs from "node:fs";
 import fsp from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchTcmbEurRate } from "../fetch-tcmb-kur.mjs";
+import { fetchTcmbEurRate, fetchTcmbEurUsdRates } from "../fetch-tcmb-kur.mjs";
 import {
   extractAnchoredPriceFromDescription,
   findManualSenoxKdvDahil,
@@ -17,6 +17,7 @@ import {
   pricingFromSenoxPdfListe,
   resolveSenoxListPrice,
 } from "./senox-pdf-prices.mjs";
+import { runUniversalAudits } from "./catalog-agent-universal.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const DEPT = path.join(ROOT, "public/data/dept");
@@ -522,10 +523,8 @@ export function auditPortabianco(kur) {
       continue;
     }
 
-    const compareExpected =
-      row.category === "bar-blender" || row.dept === "icecek"
-        ? Math.round(exp.kdvDahil)
-        : exp.netTry;
+    // fiyat_tl katalog standardı: KDV dahil
+    const compareExpected = Math.round(exp.kdvDahil);
     const diff = cur - compareExpected;
 
     if (Math.abs(diff) <= TOL) {
@@ -714,8 +713,14 @@ export function summarizeIssues(issues) {
  */
 export async function runCatalogAgentChecks() {
   const started = Date.now();
-  const kurRes = await fetchTcmbEurRate();
+  const [kurRes, fx] = await Promise.all([
+    fetchTcmbEurRate(),
+    fetchTcmbEurUsdRates(),
+  ]);
   const kur = kurRes.rate;
+  const usdTry = fx.usdTry;
+
+  const universal = runUniversalAudits(kur, usdTry);
 
   const [senox, yukselIthal] = await Promise.all([
     auditSenoxDetailed(kur),
@@ -725,6 +730,7 @@ export async function runCatalogAgentChecks() {
   const rational = auditRationalCompetitors();
 
   const allIssues = sortIssues([
+    ...universal.issues,
     ...senox.issues,
     ...yukselIthal.issues,
     ...portabianco.issues,
@@ -732,6 +738,10 @@ export async function runCatalogAgentChecks() {
   ]);
 
   const checks = {
+    L1_formula: universal.l1.check,
+    L2_source: universal.l2.check,
+    L3_market: universal.l3.check,
+    L4_anomaly: universal.l4.check,
     senox: senox.check,
     yuksel_ithal: yukselIthal.check,
     portabianco: portabianco.check,
@@ -746,16 +756,29 @@ export async function runCatalogAgentChecks() {
         ? "info"
         : "ok";
 
+  const byLayer = { L1: 0, L2: 0, L3: 0, L4: 0, brand: 0 };
+  for (const i of allIssues) {
+    const layer = i.meta?.layer;
+    if (layer && byLayer[layer] != null) byLayer[layer]++;
+    else byLayer.brand++;
+  }
+
   return {
     generatedAt: new Date().toISOString(),
     kur,
-    kurFallback: !!kurRes.fallback,
+    usdTry,
+    kurFallback: !!kurRes.fallback || !!fx.fallback,
     durationMs: Date.now() - started,
     status: overallStatus,
-    summary: summarizeIssues(allIssues),
+    summary: {
+      ...summarizeIssues(allIssues),
+      rowCount: universal.rowCount,
+      byLayer,
+    },
     checks,
-    issues: allIssues.slice(0, 200),
+    issues: allIssues.slice(0, 500),
     issueCount: allIssues.length,
+    allIssues,
     aiSummary: null,
   };
 }

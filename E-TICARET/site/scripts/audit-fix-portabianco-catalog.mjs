@@ -53,7 +53,9 @@ function priceFromCafemarkt(cmPriceKdvDahil) {
     kdvDahil,
     netTry,
     price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
-    fiyat_tl: Math.round(netTry),
+    // Katalog standardı: fiyat_tl = KDV dahil
+    fiyat_tl: Math.round(kdvDahil),
+    fiyat_tl_net: Math.round(netTry),
     cm_ref: cm,
   };
 }
@@ -65,7 +67,8 @@ function priceFromEuro(listEur) {
   return {
     netEur,
     price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
-    fiyat_tl: Math.round(netTry),
+    fiyat_tl: Math.round(kdvDahil),
+    fiyat_tl_net: Math.round(netTry),
   };
 }
 
@@ -373,6 +376,7 @@ async function main() {
       stats.cmPriceExact++;
       stats.prices++;
       row.fiyat_tl = cmPrice.fiyat_tl;
+      row.fiyat_tl_net = cmPrice.fiyat_tl_net;
       row.price = cmPrice.price;
       row.fiyat_kaynak = "cafemarkt";
       row.cafemarkt_fiyat_kdv_dahil = cmPrice.cm_ref;
@@ -393,12 +397,13 @@ async function main() {
     } else if (src) {
       const listEur = Number(src.fiyat_euro);
       if (listEur > 0) {
-        const { netEur, price, fiyat_tl } = priceFromEuro(listEur);
+        const { netEur, price, fiyat_tl, fiyat_tl_net } = priceFromEuro(listEur);
         if (row.liste_fiyati_eur !== listEur || row.fiyat_tl !== fiyat_tl) {
           stats.prices++;
           row.liste_fiyati_eur = listEur;
           row.satis_eur_net = netEur;
           row.fiyat_tl = fiyat_tl;
+          row.fiyat_tl_net = fiyat_tl_net;
           row.price = price;
           row.fiyat_kaynak = "yuksel-2025-yerli";
         }
