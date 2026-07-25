@@ -1,10 +1,10 @@
 {
   "liste": "Vosco Katalog 2026",
   "source": "c:\\D Disk\\FİYAT LİSTELERİ\\Vosco_Katalog_2026.pdf",
-  "extractedAt": "2026-07-18T21:19:08.907684+00:00",
+  "extractedAt": "2026-07-25T20:35:29.598516+00:00",
   "pageCount": 96,
   "productCount": 156,
-  "pricedCount": 134,
+  "pricedCount": 125,
   "products": [
     {
       "model": "NG3R",
@@ -53,7 +53,7 @@
       "category": "Döner Maki̇nesi̇",
       "page": 45,
       "specs": {
-        "liste_usd": 1150.0,
+        "liste_usd": 1450.0,
         "liste_eur": null,
         "guc": "18 W / 220",
         "kapasite_kg": null,
@@ -93,7 +93,7 @@
       "category": "Pati̇sseri̇e Firinlar",
       "page": 74,
       "specs": {
-        "liste_usd": 2500.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "9700 W / 220",
         "kapasite_kg": null,
@@ -883,7 +883,7 @@
       "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
-        "liste_usd": 2000.0,
+        "liste_usd": 1400.0,
         "liste_eur": null,
         "guc": "2500 W / 220",
         "kapasite_kg": null,
@@ -923,7 +923,7 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 21,
       "specs": {
-        "liste_usd": 3250.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "2500 W / 220",
         "kapasite_kg": null,
@@ -1543,7 +1543,7 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 21,
       "specs": {
-        "liste_usd": 750.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "2500 W / 220",
         "kapasite_kg": 140.0,
@@ -1758,7 +1758,7 @@
       "category": "Döner Maki̇nesi̇",
       "page": 45,
       "specs": {
-        "liste_usd": 1150.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "15 W / 220",
         "kapasite_kg": null,
@@ -1778,7 +1778,7 @@
       "category": "Döner Maki̇nesi̇",
       "page": 45,
       "specs": {
-        "liste_usd": 1250.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": "18 W / 220",
         "kapasite_kg": null,
@@ -2318,7 +2318,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": 25.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2333,7 +2333,7 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": 35.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2863,7 +2863,7 @@
       "category": "Ice Slush & Buzlaş",
       "page": 27,
       "specs": {
-        "liste_usd": 2000.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
@@ -2878,7 +2878,7 @@
       "category": "Ice Slush & Buzlaş",
       "page": 27,
       "specs": {
-        "liste_usd": 2750.0,
+        "liste_usd": null,
         "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,

@@ -91,10 +91,27 @@ def parse_prices_near(
 _page_assign_cache: dict[int, dict[int, tuple[str, float]]] = {}
 
 
+def _used_price_idxs_from_assigns(
+    assigns: dict[int, tuple[str, float]],
+    price_idxs: list[tuple[int, str, float]],
+) -> set[int]:
+    """code_idx→fiyat eşlemesinden kullanılan fiyat satır indekslerini çıkar."""
+    used: set[int] = set()
+    for code_idx, (kind, val) in assigns.items():
+        candidates = [
+            (abs(pidx - code_idx), pidx)
+            for pidx, pk, pv in price_idxs
+            if pk == kind and abs(pv - val) < 1e-9 and pidx not in used
+        ]
+        if candidates:
+            used.add(min(candidates)[1])
+    return used
+
+
 def _page_price_assignments(
     lines: list[str], line_pages: list[int]
 ) -> dict[int, dict[int, tuple[str, float]]]:
-    """Sayfa bazında kod↔fiyat: önce ileri, sonra atanmamış en yakın geri."""
+    """Sayfa bazında kod↔fiyat: pencere içi en yakın; önceki ürüne ait fiyatı alma."""
     global _page_assign_cache
     if _page_assign_cache:
         return _page_assign_cache
@@ -138,6 +155,11 @@ def _page_price_assignments(
                     continue
                 if not (prev_code < pidx < next_code):
                     continue
+                # Fiyat bir önceki koda daha yakınsa bu koda verme
+                # (VSC-3 $44 → sonraki VSC-600B'ye yazılmasın).
+                if pidx < code_idx and prev_code >= 0:
+                    if (code_idx - pidx) >= (pidx - prev_code):
+                        continue
                 dist = abs(pidx - code_idx)
                 if best is None or dist < best[0]:
                     best = (dist, pidx, kind, val)
@@ -158,6 +180,23 @@ def pair_page_block_prices(lines: list[str], line_pages: list[int]) -> None:
         page_idxs = [i for i, p in enumerate(line_pages) if p == page]
         if not page_idxs:
             continue
+        assigns = _page_price_assignments(lines, line_pages).get(page, {})
+        price_idxs_on_page: list[tuple[int, str, float]] = []
+        for k in page_idxs:
+            um = PRICE_USD_RE.search(lines[k])
+            em = PRICE_EUR_RE.search(lines[k])
+            if um:
+                price_idxs_on_page.append(
+                    (k, "usd", float(um.group(1).replace(",", "")))
+                )
+            elif em:
+                price_idxs_on_page.append(
+                    (k, "eur", float(em.group(1).replace(",", "")))
+                )
+        used_price_idxs = _used_price_idxs_from_assigns(
+            assigns, price_idxs_on_page
+        )
+
         pi = 0
         while pi < len(page_idxs):
             i = page_idxs[pi]
@@ -176,16 +215,22 @@ def pair_page_block_prices(lines: list[str], line_pages: list[int]) -> None:
                 else:
                     break
             if len(codes) >= 2:
-                prices: list[tuple[str, float]] = []
+                # Önceki ürünlerin fiyatlarını çalma: yalnızca bu bloktan
+                # hemen önceki kod ile blok başı arasında kalan boş fiyatlar.
+                prev_code = -1
                 for k in page_idxs:
                     if k >= i:
                         break
-                    um = PRICE_USD_RE.search(lines[k])
-                    em = PRICE_EUR_RE.search(lines[k])
-                    if um:
-                        prices.append(("usd", float(um.group(1).replace(",", ""))))
-                    elif em:
-                        prices.append(("eur", float(em.group(1).replace(",", ""))))
+                    if is_product_code(lines[k]):
+                        prev_code = k
+
+                prices: list[tuple[str, float]] = []
+                for pidx, kind, val in price_idxs_on_page:
+                    if pidx in used_price_idxs:
+                        continue
+                    if not (prev_code < pidx < i):
+                        continue
+                    prices.append((kind, val))
                 usd_vals = sorted({v for k, v in prices if k == "usd"})
                 eur_vals = sorted({v for k, v in prices if k == "eur"})
                 sorted_codes = sorted(codes, key=code_sort_key)
@@ -224,16 +269,46 @@ def expand_code_lines(
     return out_lines, out_pages
 
 
-def pair_trailing_prices(lines: list[str]) -> None:
-    """Ardışık fiyat satırları + ardışık kod satırları → eşleştir."""
+def pair_trailing_prices(lines: list[str], line_pages: list[int]) -> None:
+    """Ardışık fiyat satırları + ardışık kod satırları → eşleştir.
+
+    Pencere atamasında zaten kullanılmış fiyat satırlarını atla; aksi halde
+    $35/$44 → sonraki VSC-600B/VSC-6'ya yazılıyordu (PDF'te 6 parça fiyatsız).
+    """
+    assigns_by_page = _page_price_assignments(lines, line_pages)
+    all_price_idxs: list[tuple[int, str, float]] = []
+    for i, line in enumerate(lines):
+        um = PRICE_USD_RE.search(line)
+        em = PRICE_EUR_RE.search(line)
+        if um:
+            all_price_idxs.append((i, "usd", float(um.group(1).replace(",", ""))))
+        elif em:
+            all_price_idxs.append((i, "eur", float(em.group(1).replace(",", ""))))
+    used_price_idxs: set[int] = set()
+    for page, assigns in assigns_by_page.items():
+        page_prices = [
+            (pidx, kind, val)
+            for pidx, kind, val in all_price_idxs
+            if line_pages[pidx] == page
+        ]
+        used_price_idxs |= _used_price_idxs_from_assigns(assigns, page_prices)
+
     i = 0
     while i < len(lines):
         if not (PRICE_USD_RE.search(lines[i]) or PRICE_EUR_RE.search(lines[i])):
             i += 1
             continue
+        if i in used_price_idxs:
+            i += 1
+            continue
         prices: list[tuple[str, float]] = []
         j = i
         while j < len(lines) and j < i + 6:
+            if j in used_price_idxs:
+                if prices:
+                    break
+                j += 1
+                continue
             um = PRICE_USD_RE.search(lines[j])
             em = PRICE_EUR_RE.search(lines[j])
             if um:
@@ -246,10 +321,13 @@ def pair_trailing_prices(lines: list[str]) -> None:
         if not prices:
             i += 1
             continue
-        codes = []
+        codes: list[str] = []
+        first_code_line: int | None = None
         k = j
         while k < len(lines) and k < j + 8:
             if is_product_code(lines[k]):
+                if first_code_line is None:
+                    first_code_line = k
                 codes.append(lines[k].upper().replace(" ", ""))
                 k += 1
             elif codes:
@@ -260,25 +338,43 @@ def pair_trailing_prices(lines: list[str]) -> None:
             if len(prices) > 1 and len(codes) < len(prices):
                 i = max(i + 1, k)
                 continue
+
+            prev_code_line: int | None = None
+            for back in range(i - 1, max(-1, i - 15), -1):
+                if is_product_code(lines[back]):
+                    prev_code_line = back
+                    break
+
+            # Fiyat kümesi önceki ürüne daha yakınsa sonraki kodlara yazma
+            # ($35/$44 → VSC-600B/VSC-6 değil; 6 parça PDF'te fiyatsız).
+            closer_to_prev = (
+                prev_code_line is not None
+                and first_code_line is not None
+                and (i - prev_code_line) <= (first_code_line - i)
+            )
+
             # Tek fiyat + hemen sonraki tek kod: fiyat önceki koda aittir (VHS-206 → $190 → VHS-206C)
-            if len(prices) == 1 and len(codes) == 1:
+            if len(prices) == 1 and (len(codes) == 1 or closer_to_prev):
                 kind, val = prices[0]
-                assigned = False
-                for back in range(i - 1, max(-1, i - 15), -1):
-                    if is_product_code(lines[back]):
-                        _pending_pairs.append(
-                            ("trail", lines[back].upper().replace(" ", ""), kind, val)
+                if prev_code_line is not None:
+                    _pending_pairs.append(
+                        (
+                            "trail",
+                            lines[prev_code_line].upper().replace(" ", ""),
+                            kind,
+                            val,
                         )
-                        assigned = True
-                        break
-                if not assigned:
+                    )
+                elif not closer_to_prev:
                     _pending_pairs.append(("trail", codes[0], kind, val))
+                i = max(i + 1, k)
+                continue
+            if closer_to_prev:
                 i = max(i + 1, k)
                 continue
             for ci, code in enumerate(codes):
                 pi = min(ci, len(prices) - 1)
                 kind, val = prices[pi]
-                # stored via global merge in extract_all
                 _pending_pairs.append(("trail", code, kind, val))
         i = max(i + 1, k)
 
@@ -346,7 +442,7 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
 
     lines, line_pages = expand_code_lines(lines, line_pages)
     pair_page_block_prices(lines, line_pages)
-    pair_trailing_prices(lines)
+    pair_trailing_prices(lines, line_pages)
     pair_leading_codes_trailing_prices(lines)
 
     products: dict[str, dict] = {}

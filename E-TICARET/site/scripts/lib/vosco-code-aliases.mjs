@@ -84,11 +84,10 @@ export const VOSCO_CODE_ALIASES = {
   VKMNG4R: "NG4R",
   VKMNG5R: "NG5R",
 
-  // Kokteyl setleri (PDF VSC-3, VSC-6 …)
+  // Kokteyl setleri (PDF VSC-3, VSC-6 …) — VSC-900B kendi PDF fiyatına sahip
   VSC300B: "VSC3",
   VSC600B: "VSC6",
   VSC700B: "VSC7",
-  VSC900B: "VSC6",
 
   // Buz makinesi — web ayrı kodlar, PDF VSC-100T/C ortak liste
   VSC100B: "VSC100TC",
