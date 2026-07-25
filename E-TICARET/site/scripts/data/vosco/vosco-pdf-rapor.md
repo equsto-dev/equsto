@@ -1,15 +1,14 @@
 # Vosco PDF katalog raporu
 
 Kaynak: `c:\D Disk\FİYAT LİSTELERİ\Vosco_Katalog_2026.pdf`
-Ürün: **156** | Fiyatlı: **134** (EUR: 8, USD: 126)
+Ürün: **156** | Fiyatlı: **125** (EUR: 8, USD: 117)
 
 | Kod | EUR | USD |
 |-----|-----|-----|
 | NG3R | — | 1150.0 |
 | NG4R | — | 1250.0 |
-| NG5R | — | 1150.0 |
+| NG5R | — | 1450.0 |
 | VACK-120 | — | 3250.0 |
-| VACK-140 | — | 2500.0 |
 | VACK-240 | — | 4250.0 |
 | VAF-68 | — | 1200.0 |
 | VAF-74 | — | 1800.0 |
@@ -30,3 +29,4 @@ Kaynak: `c:\D Disk\FİYAT LİSTELERİ\Vosco_Katalog_2026.pdf`
 | VB-2000 | — | 1000.0 |
 | VB-20S | — | 1500.0 |
 | VB-300 | — | 1150.0 |
+| VB-30S | — | 1750.0 |
