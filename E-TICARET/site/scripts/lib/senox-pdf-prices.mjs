@@ -66,9 +66,10 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["SDS1510", 3000],
   ["SDS1510DC3YF", 3000],
   // SENOX 2026-1 s.20 — Simfer SYD dondurma reyonu (çoklu ürün bloğu)
-  ["SYD310", 1300],
-  ["SYD410", 1500],
-  ["SYD510", 1600],
+  // SENOX 2026-1 s.35 — El blender BL40 L60 / L60-C
+  // Description OCR "225/250 EUR"; tablo fiyatı 450/600 EUR (kullanıcı kataloğu)
+  ["BL40L60", 450],
+  ["BL40L60C", 600],
 ]);
 
 /** Equsto satış — sabit KDV dahil TRY (kur değişse de fiyat sabit kalır) */
@@ -302,7 +303,17 @@ export function buildSenoxPdfPriceIndex(products) {
       p.title,
     );
     const fromSpecs = parseEurNum(p.specs?.fiyat_eur);
-    const main = fromOverride || fromAnchored || fromDesc || fromSpecs;
+    const fromText = fromAnchored || fromDesc || 0;
+    // Tablo specs, OCR description'dan ~1.5×+ yüksekse tabloyu tercih et
+    // (BL40L60: desc 225 vs specs 450).
+    let main = fromOverride;
+    if (!main) {
+      if (fromSpecs > 0 && fromText > 0 && fromSpecs >= fromText * 1.5) {
+        main = fromSpecs;
+      } else {
+        main = fromText || fromSpecs;
+      }
+    }
 
     if (main > 0) {
       addPrice(map, p.model, main, true);
@@ -363,14 +374,22 @@ function priceFromProduct(pp) {
     return SENOX_LISTE_OVERRIDES.get(overrideKey);
   }
   for (const [k, v] of parseDescriptionPrices(pp.description)) {
-    if (k === modelKey) return v;
+    if (k === modelKey) {
+      const fromSpecs = parseEurNum(pp.specs?.fiyat_eur);
+      if (fromSpecs > 0 && fromSpecs >= v * 1.5) return fromSpecs;
+      return v;
+    }
   }
   const anchored = extractAnchoredPriceFromDescription(
     pp.description,
     pp.model,
     pp.title,
   );
-  if (anchored > 0) return anchored;
+  if (anchored > 0) {
+    const fromSpecs = parseEurNum(pp.specs?.fiyat_eur);
+    if (fromSpecs > 0 && fromSpecs >= anchored * 1.5) return fromSpecs;
+    return anchored;
+  }
   return parseEurNum(pp.specs?.fiyat_eur);
 }
 
