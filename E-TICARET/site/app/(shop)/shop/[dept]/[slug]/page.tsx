@@ -73,16 +73,18 @@ export default async function ShopProductPage({
   const langPrefix = await shopLangPrefix();
   const canonicalSlug = catalogUrlSlug(found.row).toLowerCase();
   const normalizedSlug = slug.toLowerCase().replace(/_/g, "-");
-  if (found.dept !== dept || (canonicalSlug && normalizedSlug !== canonicalSlug)) {
+  // dolap → tezgah (next.config); asla /shop/dolap/... üretme (redirect loop)
+  const canonicalDept = found.dept === "dolap" ? "tezgah" : found.dept;
+  if (canonicalDept !== dept || (canonicalSlug && normalizedSlug !== canonicalSlug)) {
     redirect(
-      `${langPrefix}/shop/${found.dept}/${encodeURIComponent(canonicalSlug)}`,
+      `${langPrefix}/shop/${canonicalDept}/${encodeURIComponent(canonicalSlug)}`,
     );
   }
 
-  const ssr = rowToPdpSsr(found.row, found.dept, {
+  const ssr = rowToPdpSsr(found.row, canonicalDept, {
     langPrefix: langPrefix === "/en" ? "/en" : "",
   });
-  const seed = rowToPdpClientSeed(found.row, found.dept);
+  const seed = rowToPdpClientSeed(found.row, canonicalDept);
   const jsonLd = buildProductJsonLd(ssr);
 
   return (
@@ -97,7 +99,7 @@ export default async function ShopProductPage({
       <ShopProductMain ssr={ssr} />
       <ProductDwellTracker
         slug={ssr.slug}
-        dept={found.dept}
+        dept={canonicalDept}
         productId={String(found.row.id ?? found.row.code ?? found.row.sku ?? "")}
         title={ssr.name}
         brand={ssr.brand}

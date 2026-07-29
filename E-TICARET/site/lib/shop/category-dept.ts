@@ -1,4 +1,19 @@
 /** Katalog `category` → /shop/{dept} segmenti (eq-site-urls.js ile uyumlu). */
+
+/**
+ * /shop/dolap → /shop/tezgah (next.config kalıcı yönlendirme).
+ * Katalogda hâlâ dept=dolap olan ürünler URL'de tezgah altında yaşar.
+ */
+export function canonicalShopDept(dept: string | null | undefined): string | null {
+  const d = String(dept || "")
+    .trim()
+    .toLowerCase();
+  if (!d) return null;
+  if (d === "dolap") return "tezgah";
+  if (d === "market-reyon") return "market-reyonlari";
+  return d;
+}
+
 export function categoryToShopDept(category: string): string | null {
   const c = String(category || "").toLowerCase().trim();
   if (!c) return null;
@@ -32,7 +47,6 @@ export function categoryToShopDept(category: string): string | null {
 
 export function resolveShopDept(row: Record<string, unknown>): string | null {
   const dept = String(row.dept || "").trim().toLowerCase();
-  if (dept === "market-reyon") return "market-reyonlari";
-  if (dept) return dept;
-  return categoryToShopDept(String(row.category || ""));
+  if (dept) return canonicalShopDept(dept);
+  return canonicalShopDept(categoryToShopDept(String(row.category || "")));
 }
