@@ -28,6 +28,31 @@ function urlDeptToFileDept(urlDept: string): string {
   return urlDept;
 }
 
+/** tezgah PLP/PDP — eski dolap.json ürünlerini de dahil et (URL birleşik) */
+async function loadDeptCatalogRows(urlDept: string): Promise<CatalogRow[]> {
+  const fileDept = urlDeptToFileDept(urlDept);
+  const primary =
+    (await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`))) || [];
+  if (!Array.isArray(primary)) return [];
+  if (urlDept !== "tezgah") return primary;
+
+  const dolap =
+    (await readJsonFile<CatalogRow[]>(dataRel("dept", "dolap.json"))) || [];
+  if (!Array.isArray(dolap) || !dolap.length) return primary;
+
+  const seen = new Set(
+    primary.map((r) => String(r.id || r.sku || "").toLowerCase()).filter(Boolean),
+  );
+  const merged = [...primary];
+  for (const row of dolap) {
+    const key = String(row?.id || row?.sku || "").toLowerCase();
+    if (key && seen.has(key)) continue;
+    if (key) seen.add(key);
+    merged.push(row);
+  }
+  return merged;
+}
+
 function productImagePath(row: CatalogRow): string {
   return resolveCatalogImageFromRow(row);
 }
@@ -52,8 +77,7 @@ export async function findProductForPdp(
   if (!isShopDeptSlug(urlDept) || !pathSlug?.trim()) return null;
   const slugCandidates = pdpSlugAliases(pathSlug);
 
-  const fileDept = urlDeptToFileDept(urlDept);
-  const deptRows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
+  const deptRows = await loadDeptCatalogRows(urlDept);
 
   const matchInRows = (rows: CatalogRow[] | null | undefined, slug: string) => {
     if (!Array.isArray(rows)) return null;
@@ -248,8 +272,7 @@ export async function getDeptCrawlLinks(
   dept: ShopDeptSlug,
   limit = 120,
 ): Promise<{ href: string; label: string }[]> {
-  const fileDept = urlDeptToFileDept(dept);
-  let rows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
+  let rows = await loadDeptCatalogRows(dept);
   if (!Array.isArray(rows)) return [];
 
   if (dept === "yikama") {

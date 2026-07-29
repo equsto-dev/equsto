@@ -35,6 +35,35 @@ export async function loadEkipmanlarJson(): Promise<unknown> {
 export async function loadDeptJson(dept: string): Promise<unknown> {
   const safe = safeDeptSlug(dept);
   if (!safe) return [];
+  if (safe === "tezgah") {
+    const [tezgah, dolap] = await Promise.all([
+      fetchDataJson<unknown[]>(`dept/tezgah.json`).catch(() => []),
+      fetchDataJson<unknown[]>(`dept/dolap.json`).catch(() => []),
+    ]);
+    const a = Array.isArray(tezgah) ? tezgah : [];
+    const b = Array.isArray(dolap) ? dolap : [];
+    if (!b.length) return a;
+    const seen = new Set(
+      a
+        .map((r) =>
+          String((r as { id?: string; sku?: string })?.id || (r as { sku?: string })?.sku || "")
+            .toLowerCase(),
+        )
+        .filter(Boolean),
+    );
+    const merged = [...a];
+    for (const row of b) {
+      const key = String(
+        (row as { id?: string; sku?: string })?.id ||
+          (row as { sku?: string })?.sku ||
+          "",
+      ).toLowerCase();
+      if (key && seen.has(key)) continue;
+      if (key) seen.add(key);
+      merged.push(row);
+    }
+    return merged;
+  }
   return fetchDataJson(`dept/${safe}.json`);
 }
 

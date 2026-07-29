@@ -1427,7 +1427,7 @@
 
     function fetchDeptArray() {
       var catalogDept = DEPT === 'kuvetler' ? 'set-ustu-mutfak' : DEPT;
-      return fetch('/data/dept/' + catalogDept + '.json?v=' + CATALOG_V, {
+      var primary = fetch('/data/dept/' + catalogDept + '.json?v=' + CATALOG_V, {
         cache: 'default',
         headers: { Accept: 'application/json' },
       })
@@ -1439,6 +1439,41 @@
         .then(function (data) {
           return Array.isArray(data) ? data : data && data.items ? data.items : [];
         });
+
+      /* /shop/dolap → /shop/tezgah; dolap.json ürünlerini tezgah PLP'ye ekle */
+      if (DEPT !== 'tezgah') return primary;
+
+      return primary.then(function (a) {
+        return fetch('/data/dept/dolap.json?v=' + CATALOG_V, {
+          cache: 'default',
+          headers: { Accept: 'application/json' },
+        })
+          .then(function (r) {
+            if (!r.ok) return [];
+            return r.text().then(parseDeptText);
+          })
+          .then(function (data) {
+            var b = Array.isArray(data) ? data : data && data.items ? data.items : [];
+            if (!b.length) return a;
+            var seen = {};
+            var i;
+            for (i = 0; i < a.length; i++) {
+              var ka = String((a[i] && (a[i].id || a[i].sku)) || '').toLowerCase();
+              if (ka) seen[ka] = 1;
+            }
+            var merged = a.slice();
+            for (i = 0; i < b.length; i++) {
+              var kb = String((b[i] && (b[i].id || b[i].sku)) || '').toLowerCase();
+              if (kb && seen[kb]) continue;
+              if (kb) seen[kb] = 1;
+              merged.push(b[i]);
+            }
+            return merged;
+          })
+          .catch(function () {
+            return a;
+          });
+      });
     }
 
     fetchDeptArray()
