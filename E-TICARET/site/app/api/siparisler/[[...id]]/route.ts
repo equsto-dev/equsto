@@ -4,6 +4,11 @@ import { adminErr, adminOk } from "@/lib/admin-response";
 import { db } from "@/lib/db";
 import { incrementKuponUsage } from "@/lib/kupon";
 import {
+  captureSiparisOdeme,
+  clientIpFromHeaders,
+  voidSiparisOdeme,
+} from "@/lib/odeme/siparis-odeme";
+import {
   createSiparis,
   isSiparisDurum,
   siparisToAdmin,
@@ -55,7 +60,33 @@ export async function GET(req: NextRequest, ctx: Ctx) {
 
 export async function POST(req: NextRequest, ctx: Ctx) {
   const segments = await resolveSegments(ctx);
-  if (segments.length > 0) return adminErr("POST yalnızca /api/siparisler", 400);
+
+  // Admin: POST /api/siparisler/:id/odeme/capture | void
+  if (segments.length === 3 && segments[1] === "odeme") {
+    const denied = assertAdminBearer(req);
+    if (denied) return denied;
+    const id = segments[0];
+    const action = segments[2];
+    const ip = clientIpFromHeaders(req.headers);
+    try {
+      if (action === "capture") {
+        const row = await captureSiparisOdeme(id, { ip });
+        return adminOk({ data: row });
+      }
+      if (action === "void") {
+        const row = await voidSiparisOdeme(id, { ip, setIptal: true });
+        return adminOk({ data: row });
+      }
+      return adminErr("Geçersiz ödeme işlemi (capture|void)", 400);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Ödeme işlemi başarısız";
+      return adminErr(msg, 400);
+    }
+  }
+
+  if (segments.length > 0) {
+    return adminErr("POST yalnızca /api/siparisler veya …/odeme/capture|void", 400);
+  }
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
 
@@ -89,12 +120,23 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
   }
 
   try {
+    const existing = await db.siparis.findUnique({ where: { id } });
+    if (!existing) return adminErr("Sipariş bulunamadı", 404);
+
+    // Lojistik iptal + hâlâ provizyon varsa bloke kaldır
+    if (durum === "iptal" && existing.odemeDurum === "provizyon") {
+      const ip = clientIpFromHeaders(req.headers);
+      const row = await voidSiparisOdeme(id, { ip, setIptal: true });
+      return adminOk({ data: row });
+    }
+
     const row = await db.siparis.update({
       where: { id },
       data: { durum },
     });
     return adminOk({ data: siparisToAdmin(row) });
-  } catch {
-    return adminErr("Sipariş bulunamadı", 404);
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Güncellenemedi";
+    return adminErr(msg, 400);
   }
 }

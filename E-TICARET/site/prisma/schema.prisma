@@ -463,6 +463,17 @@ enum SiparisDurum {
   iptal
 }
 
+/// Kart ödemesi — lojistik `SiparisDurum` ile ayrı tutulur
+enum OdemeDurum {
+  yok
+  bekliyor
+  provizyon
+  tahsil
+  iptal
+  basarisiz
+  iade
+}
+
 enum TeklifDurum {
   taslak
   gonderildi
@@ -472,30 +483,39 @@ enum TeklifDurum {
   iptal
 }
 
-/// Vitrin sepetinden gelen sipariş talebi (B2B — ödeme yok)
+/// Vitrin sepetinden gelen sipariş (havale talebi veya TepePlatform kart ödemesi)
 model Siparis {
-  id          String       @id @default(cuid())
-  siparisNo   String       @unique @map("siparis_no")
-  musteriAd   String       @default("") @map("musteri_ad")
-  musteriTel  String       @default("") @map("musteri_tel")
-  musteriMail String       @default("") @map("musteri_mail")
-  not         String?      @db.Text
-  kalemler    Json         @default("[]")
-  toplamKalem Int          @default(0) @map("toplam_kalem")
-  toplamAdet  Int          @default(0) @map("toplam_adet")
-  toplamTl    Decimal      @default(0) @map("toplam_tl") @db.Decimal(14, 2)
-  durum       SiparisDurum @default(beklemede)
-  kaynak      String?
-  kuponKod    String?      @map("kupon_kod")
-  indirimTl   Decimal?     @map("indirim_tl") @db.Decimal(12, 2)
-  musteriId   String?      @map("musteri_id")
-  payload     Json?
-  createdAt   DateTime     @default(now()) @map("created_at")
-  updatedAt   DateTime     @updatedAt @map("updated_at")
+  id                   String       @id @default(cuid())
+  siparisNo            String       @unique @map("siparis_no")
+  musteriAd            String       @default("") @map("musteri_ad")
+  musteriTel           String       @default("") @map("musteri_tel")
+  musteriMail          String       @default("") @map("musteri_mail")
+  not                  String?      @db.Text
+  kalemler             Json         @default("[]")
+  toplamKalem          Int          @default(0) @map("toplam_kalem")
+  toplamAdet           Int          @default(0) @map("toplam_adet")
+  toplamTl             Decimal      @default(0) @map("toplam_tl") @db.Decimal(14, 2)
+  durum                SiparisDurum @default(beklemede)
+  kaynak               String?
+  kuponKod             String?      @map("kupon_kod")
+  indirimTl            Decimal?     @map("indirim_tl") @db.Decimal(12, 2)
+  musteriId            String?      @map("musteri_id")
+  payload              Json?
+  odemeDurum           OdemeDurum   @default(yok) @map("odeme_durum")
+  odemeGateway         String?      @map("odeme_gateway")
+  odemePaymentId       String?      @map("odeme_payment_id")
+  odemeConversationId  String?      @map("odeme_conversation_id")
+  odemeToken           String?      @map("odeme_token")
+  odemePaidTl          Decimal?     @map("odeme_paid_tl") @db.Decimal(14, 2)
+  odemePayload         Json?        @map("odeme_payload")
+  createdAt            DateTime     @default(now()) @map("created_at")
+  updatedAt            DateTime     @updatedAt @map("updated_at")
 
   @@index([durum])
+  @@index([odemeDurum])
   @@index([createdAt])
   @@index([musteriId])
+  @@index([odemePaymentId])
   @@map("siparis")
 }
 

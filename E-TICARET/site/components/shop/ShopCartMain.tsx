@@ -38,15 +38,25 @@ export default function ShopCartMain() {
             </button>
             <button
               type="button"
-              id="equsto-cart-order"
+              id="equsto-cart-pay"
               className="eq-cart-page__btn eq-cart-page__btn--primary"
+              data-i18n="cart.pay"
+              hidden
+            >
+              Ödeme Yap
+            </button>
+            <button
+              type="button"
+              id="equsto-cart-order"
+              className="eq-cart-page__btn eq-cart-page__btn--outline"
               data-i18n="cart.order"
             >
-              Siparişi oluştur
+              Sipariş talebi
             </button>
           </div>
           <p className="eq-cart-page__note" data-i18n="cart.note">
-            Ödeme bu sayfada alınmaz; Equsto Satış Mühendisliği teklif ve sipariş sürecini yürütür.
+            Ödeme Yap ile kart + 3D Secure TepePlatform üzerinden alınır. Sipariş talebi
+            havale / satış mühendisliği içindir.
           </p>
           
         </div>

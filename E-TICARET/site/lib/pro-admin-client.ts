@@ -1113,6 +1113,10 @@ export type SiparisAdminRow = {
   kaynak: string | null;
   kupon_kod: string | null;
   indirim_tl: number | null;
+  odeme_durum?: string;
+  odeme_gateway?: string | null;
+  odeme_payment_id?: string | null;
+  odeme_paid_tl?: number | null;
   created_at: string;
 };
 
@@ -1212,6 +1216,32 @@ export async function updateSiparisDurum(
     return { ok: false, error: body.error || `HTTP ${res.status}` };
   }
   return { ok: true };
+}
+
+export async function captureSiparisOdeme(
+  id: string,
+): Promise<{ ok: boolean; row?: SiparisAdminRow; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; data?: SiparisAdminRow; error?: string }>(
+    `/api/siparisler/${encodeURIComponent(id)}/odeme/capture`,
+    { method: "POST" },
+  );
+  if (body.error || body.success === false) {
+    return { ok: false, error: body.error || "Tahsilat başarısız" };
+  }
+  return { ok: true, row: body.data };
+}
+
+export async function voidSiparisOdeme(
+  id: string,
+): Promise<{ ok: boolean; row?: SiparisAdminRow; error?: string }> {
+  const body = await adminFetch<{ success?: boolean; data?: SiparisAdminRow; error?: string }>(
+    `/api/siparisler/${encodeURIComponent(id)}/odeme/void`,
+    { method: "POST" },
+  );
+  if (body.error || body.success === false) {
+    return { ok: false, error: body.error || "Provizyon iptali başarısız" };
+  }
+  return { ok: true, row: body.data };
 }
 
 export async function fetchTeklifler(): Promise<{
