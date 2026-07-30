@@ -53,7 +53,7 @@ fiyat_tl_kdv_dahil = equsto_net_eur × kur × 1,20
 
 JSON: `liste_fiyati_eur`, `bayi_iskonto`, `kalan_oran`, `alis_fiyati_eur` (bayi net), `satis_fiyati_eur` (Equsto net + %8).
 
-Mağaza: `ozti-enrich.mjs` (`OZTI_EQUSTO_KAR_ORAN = 0,188` — bayi net ×1,188; önceki %8’e göre satış %10 yüksek), `eq-kur-live.js`, `equsto-pricing-core.js`.
+Mağaza: `ozti-enrich.mjs` (`OZTI_EQUSTO_KAR_ORAN = 0,15236` — bayi net ×1,15236; %10 zam sonrası %3 indirim), `eq-kur-live.js`, `equsto-pricing-core.js`.
 
 ## Set üstü vitrin (sol liste)
 
