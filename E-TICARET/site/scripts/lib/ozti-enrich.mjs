@@ -1135,8 +1135,12 @@ export function oztiIskontoYuzde(bayiIsk) {
 }
 
 export const OZTI_KDV_ORAN = 20;
-/** Equsto satış: bayi net alış üzerine (varsayılan %8) */
-export const OZTI_EQUSTO_KAR_ORAN = 0.08;
+/**
+ * Equsto satış: bayi net alış üzerine kar.
+ * 2026-07-30: önceki %8 → tüm Öztiryakiler satış fiyatı ×1,10
+ * (1.08 × 1.10 = 1.188 → kar oranı 0.188)
+ */
+export const OZTI_EQUSTO_KAR_ORAN = 0.188;
 
 export function oztiFmtTry(n) {
   const v = Math.round(Number(n));
