@@ -55,8 +55,8 @@ export default function ShopCartMain() {
             </button>
           </div>
           <p className="eq-cart-page__note" data-i18n="cart.note">
-            Ödeme Yap ile kart + 3D Secure TepePlatform üzerinden alınır. Sipariş talebi
-            havale / satış mühendisliği içindir.
+            Ödeme Yap ile kart + 3D Secure güvenli ödeme alınır. Sipariş talebi havale /
+            satış mühendisliği içindir.
           </p>
           
         </div>
