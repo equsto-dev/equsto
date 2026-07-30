@@ -946,7 +946,7 @@
     "checkout_coupon": "Kupon kodu (opsiyonel)",
     "checkout_note": "Sipariş notu (opsiyonel)",
     "coupon_ok": "Kupon uygulandı",
-    "note": "Pay now opens TepePlatform card + 3D Secure checkout. Order request is for bank transfer / sales engineering.",
+    "note": "Pay now opens secure card + 3D Secure checkout. Order request is for bank transfer / sales engineering.",
     "empty": "Cart is empty.",
     "quote_empty": "Quote list is empty.",
     "product_read_fail": "Could not read product information.",

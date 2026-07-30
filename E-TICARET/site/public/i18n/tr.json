@@ -938,7 +938,7 @@
     "checkout_coupon": "Kupon kodu (opsiyonel)",
     "checkout_note": "Sipariş notu (opsiyonel)",
     "coupon_ok": "Kupon uygulandı",
-    "note": "Ödeme Yap ile kart + 3D Secure TepePlatform üzerinden alınır. Sipariş talebi havale / satış mühendisliği içindir.",
+    "note": "Ödeme Yap ile kart + 3D Secure güvenli ödeme alınır. Sipariş talebi havale / satış mühendisliği içindir.",
     "empty": "Sepet boş.",
     "quote_empty": "Teklif listesi boş.",
     "product_read_fail": "Ürün bilgisi okunamadı.",

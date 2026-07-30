@@ -220,11 +220,11 @@ export default function IsletmeSiparislerPanel() {
             )}
             {detail.odeme_gateway === "tepeplatform" && detail.odeme_durum === "bekliyor" && (
               <Typography.Text type="secondary">
-                Müşteri TepePlatform ödeme sayfasında; webhook ile güncellenir.
+                Müşteri ödeme sayfasında; sonuç webhook ile güncellenir.
               </Typography.Text>
             )}
             {detail.odeme_durum === "tahsil" && (
-              <Typography.Text type="success">Kart ödemesi alındı (TepePlatform / iyzico).</Typography.Text>
+              <Typography.Text type="success">Kart ödemesi alındı.</Typography.Text>
             )}
             <Typography.Text>
               <strong>{detail.musteri_ad}</strong>
