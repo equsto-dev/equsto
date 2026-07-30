@@ -1,4 +1,4 @@
-import type { Prisma, Siparis, SiparisDurum } from "@/lib/prisma";
+import type { OdemeDurum, Prisma, Siparis, SiparisDurum } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import { notifyNewSiparis } from "@/lib/notify";
 
@@ -18,6 +18,10 @@ export type SiparisAdminRow = {
   kupon_kod: string | null;
   indirim_tl: number | null;
   musteri_id: string | null;
+  odeme_durum: string;
+  odeme_gateway: string | null;
+  odeme_payment_id: string | null;
+  odeme_paid_tl: number | null;
   created_at: string;
   updated_at: string;
 };
@@ -57,6 +61,10 @@ export function siparisToAdmin(s: Siparis): SiparisAdminRow {
     kupon_kod: s.kuponKod,
     indirim_tl: s.indirimTl != null ? dec(s.indirimTl) : null,
     musteri_id: s.musteriId,
+    odeme_durum: s.odemeDurum ?? "yok",
+    odeme_gateway: s.odemeGateway ?? null,
+    odeme_payment_id: s.odemePaymentId ?? null,
+    odeme_paid_tl: s.odemePaidTl != null ? dec(s.odemePaidTl) : null,
     created_at: s.createdAt.toISOString(),
     updated_at: s.updatedAt.toISOString(),
   };
@@ -142,7 +150,14 @@ async function linkMusteriId(tel: string, ad: string, mail: string): Promise<str
   return row.id;
 }
 
-export async function createSiparis(body: Record<string, unknown>) {
+export async function createSiparis(
+  body: Record<string, unknown>,
+  opts?: {
+    notify?: boolean;
+    odemeDurum?: OdemeDurum;
+    odemeGateway?: string | null;
+  },
+) {
   const data = normalizeSiparisPayload(body);
   const err = validateSiparisCreate(data);
   if (err) throw new Error(err);
@@ -180,12 +195,16 @@ export async function createSiparis(body: Record<string, unknown>) {
       indirimTl: data.indirim_tl ?? null,
       musteriId,
       payload: body as Prisma.InputJsonValue,
+      odemeDurum: opts?.odemeDurum ?? "yok",
+      odemeGateway: opts?.odemeGateway ?? null,
     },
   });
 
-  void notifyNewSiparis(row).catch((e) => {
-    console.error("[notify] siparis", e);
-  });
+  if (opts?.notify !== false) {
+    void notifyNewSiparis(row).catch((e) => {
+      console.error("[notify] siparis", e);
+    });
+  }
 
   return siparisToAdmin(row);
 }

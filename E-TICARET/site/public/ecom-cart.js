@@ -1843,6 +1843,12 @@
       ordBtn.dataset.eqCartBound = '1';
       ordBtn.addEventListener('click', submitOrder);
     }
+    var payBtn = document.getElementById('equsto-cart-pay');
+    if (payBtn && payBtn.dataset.eqCartBound !== '1') {
+      payBtn.dataset.eqCartBound = '1';
+      payBtn.addEventListener('click', submitPayOrder);
+    }
+    refreshPayButton();
     var genBtn = document.getElementById('eq-cart-pair-gen-btn');
     if (genBtn && genBtn.dataset.eqCartBound !== '1') {
       genBtn.dataset.eqCartBound = '1';
@@ -2123,7 +2129,7 @@
       }).then(function (r) {
         return r.json().then(function (j) { return { ok: r.ok, j: j }; });
       }).then(function (res) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
         if (!res.ok || !(res.j && res.j.success)) {
           var msg = (res.j && (res.j.error || res.j.message)) || ('HTTP hata');
           toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + msg);
@@ -2143,7 +2149,7 @@
         clearAll();
         dismissCartUi();
       }).catch(function (e) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
         var em = e && e.message ? e.message : String(e);
         toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + em);
       });
@@ -2151,11 +2157,134 @@
 
     previewKupon(function (err, finalToplam, kuponData) {
       if (err && f.kupon) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
         toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + err);
         return;
       }
       sendOrder(finalToplam != null ? finalToplam : toplam, kuponData);
+    });
+  }
+
+  function refreshPayButton() {
+    var payBtn = document.getElementById('equsto-cart-pay');
+    if (!payBtn) return;
+    fetch(eqApiBase() + '/odeme/status', { cache: 'no-store' })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        var enabled = !!(res.ok && res.j && res.j.success && res.j.data && res.j.data.enabled);
+        payBtn.hidden = !enabled;
+      })
+      .catch(function () {
+        payBtn.hidden = true;
+      });
+  }
+
+  function submitPayOrder() {
+    var arr = load();
+    if (!arr.length) { toast('Sepet boş.'); return; }
+    if (!isLoggedIn()) {
+      toast(__cartT('cart.login_required', 'Sipariş için üye girişi gerekli.'));
+      try {
+        var loginHref =
+          typeof window.equstoUrl === 'function'
+            ? window.equstoUrl('login') + '?next=' + encodeURIComponent('/sepet')
+            : '/login?next=' + encodeURIComponent('/sepet');
+        location.href = loginHref;
+      } catch (_) {}
+      return;
+    }
+    var f = readCheckoutForm();
+    var ad = f.ad;
+    var tel = f.tel;
+    var eposta = f.eposta;
+    var not = f.not || '';
+    if (!ad || !tel) {
+      toast(
+        !tel
+          ? __cartT('cart.phone_required_account', 'Telefon gerekli — Hesabım sayfasından ekleyin.')
+          : __cartT('cart.name_required', 'Ad soyad gerekli.')
+      );
+      if (!tel) {
+        try { location.href = '/hesabim#guvenlik'; } catch (_) {}
+      }
+      return;
+    }
+    saveCheckoutStorage({ ad: ad, telefon: tel, eposta: eposta });
+    if (isLoggedIn() && typeof window.equstoSetMemberActive === 'function') {
+      window.equstoSetMemberActive({ ad: ad, telefon: tel, eposta: eposta });
+    }
+    var btn = document.getElementById('equsto-cart-pay');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = __cartT('cart.pay_sending', 'Ödeme sayfasına yönlendiriliyor…');
+    }
+    var kalemler = arr.map(function (x) {
+      var birim = parsePriceNum(x.p);
+      var adet = x.q > 0 ? x.q : 1;
+      return {
+        kategori: x.c || '',
+        marka: x.b || '',
+        ad: x.n || '',
+        birim_fiyat_tl: birim,
+        adet: adet,
+        ara_toplam_tl: birim * adet
+      };
+    });
+    var toplam = kalemler.reduce(function (s, k) { return s + (k.ara_toplam_tl || 0); }, 0);
+
+    function sendPay(finalToplam, kuponData) {
+      var payload = {
+        musteri: { ad: ad, telefon: tel, eposta: eposta },
+        not: not,
+        kalemler: kalemler,
+        toplam_kalem: kalemler.length,
+        toplam_adet: totalQty(arr),
+        toplam_tl: finalToplam,
+        kaynak: 'web-sepet-kart'
+      };
+      if (kuponData && kuponData.kod) {
+        payload.kupon_kod = kuponData.kod;
+        payload.indirim_tl = kuponData.indirim_tl || 0;
+      }
+      fetch(eqApiBase() + '/checkout/tepeplatform', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        return r.json().then(function (j) { return { ok: r.ok, j: j }; });
+      }).then(function (res) {
+        var url =
+          res.j && res.j.data && (res.j.data.checkoutUrl || res.j.data.paymentPageUrl);
+        if (!res.ok || !(res.j && res.j.success) || !url) {
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+          }
+          var msg = (res.j && (res.j.error || res.j.message)) || 'HTTP hata';
+          toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + msg);
+          return;
+        }
+        location.href = url;
+      }).catch(function (e) {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+        }
+        var em = e && e.message ? e.message : String(e);
+        toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + em);
+      });
+    }
+
+    previewKupon(function (err, finalToplam, kuponData) {
+      if (err && f.kupon) {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+        }
+        toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + err);
+        return;
+      }
+      sendPay(finalToplam != null ? finalToplam : toplam, kuponData);
     });
   }
 

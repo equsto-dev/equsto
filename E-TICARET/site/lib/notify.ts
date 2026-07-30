@@ -333,12 +333,13 @@ function siparisBody(s: Siparis): string {
     `Müşteri: ${s.musteriAd || "—"}`,
     s.musteriTel ? `Tel: ${s.musteriTel}` : "",
     s.musteriMail ? `E-posta: ${s.musteriMail}` : "",
+    `Ödeme: ${s.odemeDurum || "yok"}`,
     `Kalem: ${s.toplamKalem} · Adet: ${s.toplamAdet}`,
     `Tutar: ₺${Number(s.toplamTl)}`,
     s.kaynak ? `Kaynak: ${s.kaynak}` : "",
     ...customerWhatsAppLines(
       s.musteriTel,
-      `Sipariş ${s.siparisNo} (${Number(s.toplamTl)} TL) hakkında yazıyorum.`
+      `Sipariş ${s.siparisNo} (${Number(s.toplamTl)} TL) hakkında yazıyorum.`,
     ),
     `Panel: ${siteUrl()}/yonetim/isletme`,
   ]

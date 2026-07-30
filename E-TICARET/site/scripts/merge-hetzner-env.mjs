@@ -56,6 +56,11 @@ const geminiSecrets = parseEnv(
     ? fs.readFileSync(path.join(root, ".env.gemini.secrets"), "utf8")
     : "",
 );
+const tepeSecrets = parseEnv(
+  fs.existsSync(path.join(root, ".env.tepeplatform.secrets"))
+    ? fs.readFileSync(path.join(root, ".env.tepeplatform.secrets"), "utf8")
+    : "",
+);
 
 const skip = new Set([
   "VERCEL",
@@ -67,8 +72,16 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-/** öncelik: template < example < vercel < dbSecrets < waSecrets < geminiSecrets */
-const merged = { ...template, ...example, ...vercel, ...dbSecrets, ...waSecrets, ...geminiSecrets };
+/** öncelik: template < example < vercel < dbSecrets < waSecrets < geminiSecrets < tepeSecrets */
+const merged = {
+  ...template,
+  ...example,
+  ...vercel,
+  ...dbSecrets,
+  ...waSecrets,
+  ...geminiSecrets,
+  ...tepeSecrets,
+};
 for (const k of Object.keys(merged)) {
   if ([...skip].some((p) => k.startsWith(p.replace(/_$/, "")) || k.startsWith(p))) {
     delete merged[k];
@@ -136,6 +149,11 @@ const order = [
   "PRISMA_SKIP_POSTINSTALL_GENERATE",
   "TCMB_KUR_REVALIDATE_SEC",
   "EQUSTO_EUR_TRY_FALLBACK",
+  "TEPEPLATFORM_ENABLED",
+  "TEPEPLATFORM_BASE_URL",
+  "TEPEPLATFORM_API_KEY",
+  "TEPEPLATFORM_API_SECRET",
+  "TEPEPLATFORM_PARTNER_SLUG",
   "NODE_ENV",
 ];
 

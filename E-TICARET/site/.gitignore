@@ -66,6 +66,7 @@ yarn-error.log*
 .env.notify.secrets
 .env.resend.secrets
 .env.gemini.secrets
+.env.tepeplatform.secrets
 
 # vercel
 .vercel
