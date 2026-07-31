@@ -23,7 +23,7 @@
     return (
       '<div class="eq-mx-ticker" aria-hidden="true"><div class="eq-mx-ticker__track">' +
       '<span class="eq-mx-ticker__item"><strong>9 Taksit</strong> vade farksız</span>' +
-      '<span class="eq-mx-ticker__item"><strong>Ücretsiz kargo</strong> 5.000 ₺ üzeri</span>' +
+      '<span class="eq-mx-ticker__item"><strong>KDV dahil</strong> görünen fiyatlar</span>' +
       '</div></div>'
     );
   }

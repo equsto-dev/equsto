@@ -22,13 +22,13 @@
   }
 
   function badgesHtml() {
-    var badges = { showFreeShipping: true, showInstallments: true };
+    var badges = { showFreeShipping: false, showInstallments: true };
     if (global.EqVitrinConfig && global.EqVitrinConfig.get) {
       var b = global.EqVitrinConfig.get().productBadges;
       if (b) badges = b;
     }
     var h = '';
-    if (badges.showFreeShipping !== false) {
+    if (badges.showFreeShipping === true) {
       h +=
         '<span class="eq-mx-badge eq-mx-badge--ship">' +
         esc(badges.freeShippingLabel || 'Ücretsiz kargo') +
@@ -96,7 +96,7 @@
   function buildTickerHtml() {
     var items = [
       { strong: '9 Taksit', text: 'vade farks\u0131z' },
-      { strong: 'Ücretsiz kargo', text: '5.000 \u20ba üzeri' },
+      { strong: 'KDV dahil', text: 'g\u00f6r\u00fcnen fiyatlar' },
       { strong: 'Proje Fabrikası', text: 'anl\u0131k teklif' },
       { strong: 'Öztiryakiler', text: 'so\u011futma & pi\u015firme' },
     ];

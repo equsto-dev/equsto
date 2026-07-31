@@ -613,7 +613,7 @@
           ? global.EqVitrinConfig.get().productBadges || {}
           : {};
       var badgeHtml = '';
-      if (badges.showFreeShipping !== false) {
+      if (badges.showFreeShipping === true) {
         badgeHtml +=
           '<span class="eq-mx-badge eq-mx-badge--ship">' +
           esc(badges.freeShippingLabel || 'Ücretsiz kargo') +
