@@ -3,9 +3,10 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
+const cartV = ECOM_ASSET_V;
 
 function refreshCartUi() {
   try {
@@ -51,7 +52,7 @@ export default function ShopCartScripts() {
       <Script src={`/equsto-member.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
       <Script
-        src={`/ecom-cart.js?v=${v}`}
+        src={`/ecom-cart.js?v=${cartV}`}
         strategy="afterInteractive"
         onReady={refreshCartUi}
       />

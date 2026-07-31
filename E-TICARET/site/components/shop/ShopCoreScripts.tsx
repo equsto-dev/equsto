@@ -2,9 +2,10 @@
 
 import Script from "next/script";
 import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
+const cartV = ECOM_ASSET_V;
 
 /** Ortak vitrin JS — theme, i18n, nav, sepet rozeti */
 export default function ShopCoreScripts() {
@@ -31,7 +32,7 @@ export default function ShopCoreScripts() {
       <Script src={`/equsto-member.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/equsto-auth-client.js?v=${v}`} strategy="afterInteractive" />
       <Script
-        src={`/ecom-cart.js?v=${v}`}
+        src={`/ecom-cart.js?v=${cartV}`}
         strategy="beforeInteractive"
         onReady={() => (window as Window & { EqustoCart?: { syncBadge?: () => void } }).EqustoCart?.syncBadge?.()}
       />
