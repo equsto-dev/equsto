@@ -4120,6 +4120,9 @@ window.searchFilter = window.searchFilter || function () {};
           : '<div class="eq-cmf-price">' +
             '<span class="eq-cmf-price__amount">' +
             esc("₺" + parts.int + (parts.frac ? "," + parts.frac : ",00") + " TL") +
+            "</span>" +
+            '<span class="eq-cmf-price__vat-tag">' +
+            esc(__pdpT("pdp.vat_included", "KDV dahil")) +
             "</span></div>";
       var quoteNote = parts.quoteOnly
         ? '<p class="eq-cmf-quote-note">' +
@@ -4155,18 +4158,8 @@ window.searchFilter = window.searchFilter || function () {};
         ' aria-label="' +
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
-        '<div class="eq-cmf-topbar">' +
-        '<span class="eq-cmf-badge-ship">' +
-        esc(__pdpT("pdp.badge_free_ship", "Ücretsiz Kargo")) +
-        "</span></div>" +
         priceBlock +
         quoteNote +
-        '<div class="eq-cmf-ship-banner">' +
-        '<span class="eq-cmf-ship-banner__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6h13v9H1zM14 9h4l3 4v2h-7V9z"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.ship_banner", "Seçili bölgelerde ücretsiz teslimat")) +
-        "</div>" +
         '<div class="eq-cmf-purchase">' +
         '<div class="eq-cmf-qty" role="group" aria-label="' +
         esc(__pdpT("pdp.qty_aria", "Adet")) +

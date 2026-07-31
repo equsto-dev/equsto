@@ -15,7 +15,7 @@ export const DEFAULT_MAGAZA_AYARLARI: MagazaAyarlari = {
   whatsapp_e164:
     process.env.EQUSTO_WHATSAPP_E164?.trim() || "905326840152",
   whatsapp_prefill: "Merhaba, equsto.com üzerinden yazıyorum.",
-  ucretsiz_kargo: true,
+  ucretsiz_kargo: false,
   ucretsiz_kargo_limit_tl: 0,
   kargo_bolgeleri: ["Türkiye geneli"],
   kdv_gosterim: "dahil",

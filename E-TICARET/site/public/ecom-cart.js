@@ -1530,9 +1530,9 @@
     var unitLbl = isQuote
       ? ''
       : unit > 0
-        ? '₺' + formatMoneyTL(unit) + ' / adet'
+        ? '₺' + formatMoneyTL(unit) + ' / adet · KDV dahil'
         : 'Fiyat için teklif';
-    var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) : '';
+    var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) + ' · KDV dahil' : '';
     var totalBlock = isQuote
       ? '<div class="eq-cart-line__total eq-cart-line__total--quote">' +
         escHtml(__cartT('cart.quote_for_contact', 'Teklif için iletişim')) +

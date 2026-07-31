@@ -1,24 +1,24 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — PDP buybox (Cafemarkt tarzı satın alma alanı)
-Onay: 2026-05-27 · Referans: cafemarkt.com ürün detay satın alma şeridi
+Onay: 2026-05-27 · Güncelleme: 2026-07-31 (ücretsiz kargo kaldırıldı, KDV dahil)
+Referans: cafemarkt.com ürün detay satın alma şeridi
 ═══════════════════════════════════════════════════════════════════════════
 
 Bu dosya, onaylı PDP buybox düzeninin bozulmaması içindir.
 Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 
 ── Beklenen görünüm (canlı hero sağ sütun) ─────────────────────────────
-1. Üst rozet: «Ücretsiz Kargo» (.eq-cmf-badge-ship)
-2. Tek fiyat: turuncu «323.785,00 TL» + «KDV dahil» (.eq-cmf-price__amount)
-3. Yeşil teslimat şeridi (.eq-cmf-ship-banner)
-4. Satın alma satırı (.eq-cmf-purchase): yalnızca adet stepper
-5. Üst 2×2 satır (.eq-cmf-actions--primary):
+1. Tek fiyat: turuncu «12.580,00 TL» + «KDV dahil» (.eq-cmf-price__amount + .eq-cmf-price__vat-tag)
+2. Satın alma satırı (.eq-cmf-purchase): yalnızca adet stepper
+3. Üst 2×2 satır (.eq-cmf-actions--primary):
    • Sol: Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50)
    • Sağ: Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
-6. Alt 2×2 satır (.eq-cmf-actions--secondary):
+4. Alt 2×2 satır (.eq-cmf-actions--secondary):
    • Sol: Proje Fabrikası — beyaz zemin, mavi çerçeve (.eq-cmf-btn--pfos)
    • Sağ: Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
 
 YASAK (onay olmadan):
+  • «Ücretsiz Kargo» rozeti / teslimat şeridi geri getirmek
   • KDV hariç ikinci fiyat satırı eklemek
   • Buybox’ı eski dikey «Sepete ekle + Proje Fabrikası» yığınına döndürmek
   • Adet stepper’ı kaldırmak
