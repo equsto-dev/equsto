@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Tüm Atalay (yerli PDF) fiyatlarını yeniden hesapla:
- *   liste × (1 − iskonto) × 1,06 × kur × 1,20 → fiyat_tl (KDV dahil)
+ *   liste × (1 − iskonto) × 1,0388 × kur × 1,20 → fiyat_tl (KDV dahil)
+ *   (+%6 sonra −%2; havale ayrıca ana fiyattan %2)
  *   fiyat_havale_tl = fiyat_tl × 0,98
  *
  *   node scripts/reprice-atalay-markup-havale.mjs
@@ -18,7 +19,8 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const DRY = process.argv.includes("--dry-run");
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
-const EQUSTO_MARKUP = 0.06;
+/** +%6 × −%2 = net ×1,0388 */
+const EQUSTO_MARKUP = 0.0388;
 const HAVALE_ISKONTO = 0.02;
 
 const kur = (await fetchTcmbEurRate()).rate;
