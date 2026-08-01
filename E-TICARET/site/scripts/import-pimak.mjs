@@ -40,6 +40,11 @@ const KAR_ORAN = 0.05;
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
 
+/** Manuel KDV dahil TL (PDF formülünü ezer). */
+const PIMAK_KDV_DAHIL_TL_OVERRIDES = new Map([
+  ["BKD.100", 670000],
+]);
+
 /** Pimak web kodu → PDF liste kodu (pimak-fiyat.json) */
 const PIMAK_LISTE_ALIASES = new Map([
   ["VDD70", "PMK-HY70"],
@@ -356,11 +361,15 @@ function fmtTry(n) {
   return `${int},${parts[1]}`;
 }
 
-function pricingFromListe(listeEur, kur) {
+function pricingFromListe(listeEur, kur, kod) {
   const alis = Math.round(listeEur * ODEME_CARPANI * 100) / 100;
   const satis = Math.round(alis * (1 + KAR_ORAN) * 100) / 100;
   const netTry = satis * kur;
-  const kdvDahil = netTry * (1 + KDV / 100);
+  const formulaKdv = netTry * (1 + KDV / 100);
+  const overrideKey = normKod(kod || "");
+  const overrideTl = PIMAK_KDV_DAHIL_TL_OVERRIDES.get(overrideKey);
+  const kdvDahil = overrideTl != null ? Number(overrideTl) : formulaKdv;
+  const netOut = kdvDahil / (1 + KDV / 100);
   return {
     liste_fiyati_eur: listeEur,
     alis_fiyati_eur: alis,
@@ -371,9 +380,18 @@ function pricingFromListe(listeEur, kur) {
     equsto_kar_oran: KAR_ORAN,
     kur_eur_try: kur,
     fiyat_tl: Math.round(kdvDahil),
-    fiyat_tl_net: Math.round(netTry),
-    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    fiyat_tl_net: Math.round(netOut),
+    price:
+      overrideTl != null
+        ? `₺${fmtTry(kdvDahil)} KDV dahil`
+        : `₺${fmtTry(netOut)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
     fiyat_bekleniyor: false,
+    ...(overrideTl != null
+      ? {
+          fiyat_tl_override: Math.round(kdvDahil),
+          fiyat_tl_formul: Math.round(formulaKdv),
+        }
+      : {}),
   };
 }
 
@@ -426,6 +444,11 @@ function formatSpecs(d, px, kod) {
       `Equsto satış (EUR): ${px.satis_fiyati_eur} (+%${Math.round(KAR_ORAN * 100)} kar)`,
       `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
     );
+    if (px.fiyat_tl_override != null) {
+      lines.push(
+        `Equsto satış (TL, KDV dahil): ₺${fmtTry(px.fiyat_tl_override)} (manuel; formül ₺${fmtTry(px.fiyat_tl_formul)})`,
+      );
+    }
   } else {
     lines.push("", "Liste fiyatı: Pimak fiyat listesi bekleniyor (sitede yayınlanmıyor).");
   }
@@ -476,7 +499,7 @@ function toRow(d, bucket, priceMap, kur) {
   let price = "Teklif için iletişim";
   let fiyat_bekleniyor = true;
   if (liste > 0) {
-    px = pricingFromListe(liste, kur);
+    px = pricingFromListe(liste, kur, kod);
     price = px.price;
     fiyat_bekleniyor = false;
   }
