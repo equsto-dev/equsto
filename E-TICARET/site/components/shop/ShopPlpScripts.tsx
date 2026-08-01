@@ -2,9 +2,10 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
+const catalogV = ECOM_ASSET_V;
 
 export default function ShopPlpScripts() {
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function ShopPlpScripts() {
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-dept-plp.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-dept-plp.js?v=${catalogV}`} strategy="afterInteractive" />
     </>
   );
 }

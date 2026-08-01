@@ -13,7 +13,7 @@ export default function ShopProductScripts() {
         id="eq-pdp-page-css-bootstrap"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
-          __html: `(function(){try{if(document.querySelector('link[data-eq-pdp-page-css]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/eq-product-page.css?v=${v}';l.setAttribute('data-eq-pdp-page-css','1');document.head.appendChild(l);}catch(e){}})();`,
+          __html: `(function(){try{if(document.querySelector('link[data-eq-pdp-page-css]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/eq-product-page.css?v=${cartV}';l.setAttribute('data-eq-pdp-page-css','1');document.head.appendChild(l);}catch(e){}})();`,
         }}
       />
       <Script

@@ -11,7 +11,7 @@ import ShopProductPdpSeed from "@/components/shop/ShopProductPdpSeed";
 import ShopProductScripts from "@/components/shop/ShopProductScripts";
 import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import ShopStyles from "@/components/shop/ShopStyles";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V } from "@/lib/shop/assets";
 import { isShopDeptSlug } from "@/lib/shop/depts";
 import {
   buildProductJsonLd,
@@ -92,7 +92,7 @@ export default async function ShopProductPage({
       <ShopProductPdpSeed seed={seed} />
       <JsonLdScript data={jsonLd} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
+      <link rel="stylesheet" href={`/eq-product-page.css?v=${ECOM_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
       <ShopBodyClass className="eq-shop eq-pdp-page" />
       <ShopEqustoChrome activeDept={null} />

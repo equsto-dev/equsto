@@ -887,6 +887,14 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   color: var(--eq-text-muted, #6b7280);
 }
 
+.eq-cmf-havale-note {
+  margin: -6px 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--eq-cmf-brand, #001e50);
+}
+
 .eq-cmf-ship-banner {
   display: flex;
   align-items: center;

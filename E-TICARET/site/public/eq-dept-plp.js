@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260621-pfos-ice-blue';
+  var CATALOG_V = '20260801-atalay-havale';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -534,9 +534,22 @@
     return '';
   }
 
-  /** Fiyat altı kısa açıklama — vitrinde gösterilmez (liste/iskonto metni kaldırıldı). */
-  function formatPriceNote() {
-    return '';
+  /** Fiyat altı kısa açıklama — havale indirimi. */
+  function formatPriceNote(raw) {
+    if (!raw) return '';
+    var havaleTl = Number(raw.fiyat_havale_tl);
+    var pct = Number(raw.havale_iskonto_oran);
+    if (!(havaleTl > 0) && pct > 0 && Number(raw.fiyat_tl) > 0) {
+      havaleTl = Math.round(Number(raw.fiyat_tl) * (1 - pct / 100));
+    }
+    if (!(pct > 0) && havaleTl > 0) pct = 2;
+    if (!(havaleTl > 0) || !(pct > 0)) return '';
+    return (
+      'Havale %' +
+      Math.round(pct) +
+      ': ₺' +
+      Math.round(havaleTl).toLocaleString('tr-TR') 
+    );
   }
 
   function productUrl(item) {
