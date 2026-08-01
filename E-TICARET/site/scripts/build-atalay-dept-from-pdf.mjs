@@ -22,8 +22,8 @@ const BRAND_ID = "atalay-endustriyel-mutfak-ekipmanlari";
 const DEPT_FILES = ["pisirme", "kahve", "hazirlik", "araba"];
 const DISCOUNT_TABLE = 0.5;
 const DISCOUNT_DONER = 0.4;
-/** Bayi net sonrası Equsto zam */
-const EQUSTO_MARKUP = 0.06;
+/** Bayi net sonrası Equsto zam (önce +%6, sonra −%2 → net ×1,0388) */
+const EQUSTO_MARKUP = 0.0388;
 /** Havale / EFT gösterim indirimi (ana fiyata göre) */
 const HAVALE_ISKONTO = 0.02;
 
