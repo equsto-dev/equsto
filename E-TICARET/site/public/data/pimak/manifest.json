@@ -1,15 +1,35 @@
 {
-  "generated": "2026-06-17T09:05:28.652Z",
+  "generated": "2026-08-01T09:14:40.468Z",
   "brand": "Pimak",
-  "kaynak": "pimak-katalog-pdf",
-  "pdf_pages": "180-185",
-  "imported": 312,
-  "priced": 312,
-  "with_image": 312,
-  "depts": {
-    "tezgah": 221,
-    "davlumbaz": 91
+  "dryRun": false,
+  "kur_eur_try": 54.6641,
+  "tcmb_fallback": false,
+  "bayi_iskonto": 0.47,
+  "odeme_carpani": 0.53,
+  "equsto_kar_oran": 0.05,
+  "buckets": {
+    "pisirme": 33,
+    "hazirlik": 103,
+    "selfservis": 24,
+    "tepsi": 30,
+    "kafeterya": 20,
+    "pilic": 42,
+    "unseker": 4
   },
-  "imported_servis": 24,
-  "priced_servis": 24
+  "imported": 256,
+  "with_image": 256,
+  "with_price": 241,
+  "without_price": 15,
+  "price_file": "scripts\\data\\pimak-fiyat.json",
+  "price_map_entries": 1029,
+  "skipped_no_detail": 0,
+  "manuel": 16,
+  "depts": {
+    "pisirme": 75,
+    "hazirlik": 103,
+    "market-reyon": 24,
+    "araba": 34,
+    "set-ustu-mutfak": 20
+  },
+  "note": "Pimak web sitesi ve 2026 fiyatsız katalogda liste fiyatı yok; fiyat için scripts/data/pimak-fiyat.json ekleyin."
 }
