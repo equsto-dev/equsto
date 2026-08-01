@@ -90,6 +90,34 @@ function channelEnabled(ch: NotifyChannel, opts?: SendInstantAlertOptions): bool
   return true;
 }
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/**
+ * Telegram'da wa.me URL'sindeki %C5%9F gibi kodları gizle —
+ * tıklanabilir Türkçe etiket + doğru encode edilmiş href.
+ */
+function toTelegramHtml(title: string, body: string): string {
+  const full = `${title}\n\n${body}`.trim();
+  return full
+    .split("\n")
+    .map((line) => {
+      const m = line.match(
+        /^(WhatsApp \(müşteriye yaz\): )(https:\/\/wa\.me\/\S+)$/,
+      );
+      if (m) {
+        return `${escapeHtml(m[1])}<a href="${escapeHtml(m[2])}">Müşteriye hazır mesajla yaz</a>`;
+      }
+      return escapeHtml(line);
+    })
+    .join("\n");
+}
+
 /** Yapılandırılmış kanallara anlık uyarı (Telegram / e-posta / SMS / WhatsApp). */
 export async function sendInstantAlert(
   title: string,
@@ -112,7 +140,8 @@ export async function sendInstantAlert(
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             chat_id: tgChat,
-            text,
+            text: toTelegramHtml(title, body),
+            parse_mode: "HTML",
             disable_web_page_preview: true,
           }),
         }
@@ -229,7 +258,7 @@ export async function sendInstantAlert(
   return { sent, skipped, errors };
 }
 
-/** Telegram bildirimine tıklanabilir wa.me (müşteriye cevap). */
+/** Telegram/e-posta bildirimine tıklanabilir wa.me (müşteriye cevap). */
 function customerWhatsAppLines(
   tel: string | null | undefined,
   previewMessage?: string | null
@@ -247,7 +276,11 @@ function customerWhatsAppLines(
   const url = buildWaMeUrl(phone, text);
   if (!url) return [];
 
-  return [`WhatsApp (müşteriye yaz): ${url}`];
+  // URL teknik olarak encode kalır (wa.me için gerekli); düz metinde Türkçe önizleme ayrı satırda.
+  return [
+    `WhatsApp (müşteriye yaz): ${url}`,
+    text ? `Hazır mesaj: ${text}` : "",
+  ].filter(Boolean);
 }
 
 function leadBody(m: Musteri): string {
