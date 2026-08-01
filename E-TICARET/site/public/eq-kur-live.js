@@ -135,8 +135,13 @@
     var copy = Object.assign({}, row, {
       price: px.price,
       fiyat_tl: px.fiyat_tl,
+      fiyat_tl_net: px.fiyat_tl_net,
       kur_eur_try_canli: px.kur_eur_try,
     });
+    var havalePct = Number(row.havale_iskonto_oran);
+    if (havalePct > 0 && px.fiyat_tl > 0) {
+      copy.fiyat_havale_tl = Math.round(px.fiyat_tl * (1 - havalePct / 100));
+    }
     return copy;
   }
 

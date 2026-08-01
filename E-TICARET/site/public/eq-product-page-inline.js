@@ -4124,6 +4124,31 @@ window.searchFilter = window.searchFilter || function () {};
             '<span class="eq-cmf-price__vat-tag">' +
             esc(__pdpT("pdp.vat_included", "KDV dahil")) +
             "</span></div>";
+      var havaleNote = "";
+      if (!parts.quoteOnly && !parts.empty && x) {
+        var havaleTl = Number(x.fiyat_havale_tl);
+        var havalePct = Number(x.havale_iskonto_oran);
+        if (!(havaleTl > 0) && havalePct > 0 && Number(x.fiyat_tl) > 0) {
+          havaleTl = Math.round(Number(x.fiyat_tl) * (1 - havalePct / 100));
+        }
+        if (!(havalePct > 0) && havaleTl > 0) havalePct = 2;
+        if (havaleTl > 0 && havalePct > 0) {
+          var havaleFmt = Math.round(havaleTl).toLocaleString("tr-TR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          });
+          havaleNote =
+            '<p class="eq-cmf-havale-note">' +
+            esc(
+              "Havale / EFT ile %" +
+                Math.round(havalePct) +
+                " indirim: ₺" +
+                havaleFmt +
+                " (KDV dahil)",
+            ) +
+            "</p>";
+        }
+      }
       var quoteNote = parts.quoteOnly
         ? '<p class="eq-cmf-quote-note">' +
           esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
@@ -4159,6 +4184,7 @@ window.searchFilter = window.searchFilter || function () {};
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
         priceBlock +
+        havaleNote +
         quoteNote +
         '<div class="eq-cmf-purchase">' +
         '<div class="eq-cmf-qty" role="group" aria-label="' +
@@ -4180,7 +4206,7 @@ window.searchFilter = window.searchFilter || function () {};
         esc(__pdpT("pdp.pay_card", "Kredi kartı — 3D Secure ile güvenli ödeme")) +
         "</li>" +
         "<li>" +
-        esc(__pdpT("pdp.pay_wire", "Havale / EFT — ekstra %3 indirim")) +
+        esc(__pdpT("pdp.pay_wire", "Havale / EFT — ekstra %2 indirim")) +
         "</li>" +
         "<li>" +
         esc(__pdpT("pdp.pay_corporate", "Kurumsal fatura ve vadeli ödeme — Proje Fabrikası teklifi sonrası")) +

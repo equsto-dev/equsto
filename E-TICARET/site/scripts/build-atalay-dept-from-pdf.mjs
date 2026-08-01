@@ -22,6 +22,10 @@ const BRAND_ID = "atalay-endustriyel-mutfak-ekipmanlari";
 const DEPT_FILES = ["pisirme", "kahve", "hazirlik", "araba"];
 const DISCOUNT_TABLE = 0.5;
 const DISCOUNT_DONER = 0.4;
+/** Bayi net sonrası Equsto zam */
+const EQUSTO_MARKUP = 0.06;
+/** Havale / EFT gösterim indirimi (ana fiyata göre) */
+const HAVALE_ISKONTO = 0.02;
 
 const tcmb = await fetchTcmbEurRate();
 const EUR_TRY = Number(process.env.EQUSTO_EUR_TRY) > 0 ? Number(process.env.EQUSTO_EUR_TRY) : tcmb.rate;
@@ -53,16 +57,21 @@ function fmtTry(n) {
   return `₺${Math.round(n).toLocaleString("tr-TR")},00`;
 }
 
-function priceBlock(listeEur, netEur, discountPct) {
-  const netTl = Math.round(netEur * EUR_TRY);
+function priceBlock(listeEur, bayiNetEur, discountPct) {
+  const satisEur = Math.round(bayiNetEur * (1 + EQUSTO_MARKUP) * 100) / 100;
+  const netTl = Math.round(satisEur * EUR_TRY);
   const kdvDahil = Math.round(netTl * 1.2);
+  const havaleTl = Math.round(kdvDahil * (1 - HAVALE_ISKONTO));
   return {
     price: `${fmtTry(kdvDahil)} KDV dahil`,
     fiyat_tl: kdvDahil,
     fiyat_tl_net: netTl,
+    fiyat_havale_tl: havaleTl,
     liste_fiyati_eur: listeEur,
-    satis_eur_indirimli: Math.round(netEur * 100) / 100,
+    satis_eur_indirimli: satisEur,
     iskonto_oran: Math.round(discountPct * 100),
+    equsto_kar_oran: EQUSTO_MARKUP,
+    havale_iskonto_oran: Math.round(HAVALE_ISKONTO * 100),
   };
 }
 
@@ -96,7 +105,8 @@ function buildRow(p, discount, kaynak) {
   const kategori = String(p.kategori || p.section || "").trim();
   const seri = String(p.seri || "").trim();
   const listeEur = Number(p.euro);
-  const netEur = listeEur * (1 - discount);
+  const bayiNetEur = listeEur * (1 - discount);
+  const satisEur = bayiNetEur * (1 + EQUSTO_MARKUP);
   const dims = (p.raw_fields || []).find((x) => /\d\s*x\s*\d/.test(x)) || "";
   const titleParts = [kategori.split("/")[0]?.trim(), model, plate, dims].filter(Boolean);
   const name = `Atalay ${titleParts.join(" ")}`.replace(/\s+/g, " ").trim();
@@ -114,13 +124,15 @@ function buildRow(p, discount, kaynak) {
     `Model: ${model}`,
     plate ? `Plaka: ${plate}` : "",
     `Liste fiyatı (EUR): ${listeEur}`,
-    `Equsto fiyatı (%${Math.round(discount * 100)} indirimli EUR): ${netEur.toFixed(2)}`,
+    `Bayi net (%${Math.round(discount * 100)} iskonto EUR): ${bayiNetEur.toFixed(2)}`,
+    `Equsto satış (+%${Math.round(EQUSTO_MARKUP * 100)} EUR): ${satisEur.toFixed(2)}`,
+    `Havale / EFT: %${Math.round(HAVALE_ISKONTO * 100)} indirim`,
     `Kur: 1 EUR = ${EUR_TRY} TRY (KDV %20)`,
   ]
     .filter(Boolean)
     .join("\n");
 
-  const pricing = priceBlock(listeEur, netEur, discount);
+  const pricing = priceBlock(listeEur, bayiNetEur, discount);
   const page = p.page || 0;
 
   return {

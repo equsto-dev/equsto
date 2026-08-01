@@ -1,6 +1,6 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — PDP buybox (Cafemarkt tarzı satın alma alanı)
-Onay: 2026-05-27 · Güncelleme: 2026-07-31 (ücretsiz kargo kaldırıldı, KDV dahil)
+Onay: 2026-05-27 · Güncelleme: 2026-08-01 (havale %2 notu; ücretsiz kargo yok, KDV dahil)
 Referans: cafemarkt.com ürün detay satın alma şeridi
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -9,6 +9,7 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 
 ── Beklenen görünüm (canlı hero sağ sütun) ─────────────────────────────
 1. Tek fiyat: turuncu «12.580,00 TL» + «KDV dahil» (.eq-cmf-price__amount + .eq-cmf-price__vat-tag)
+   · Varsa havale notu (.eq-cmf-havale-note): «Havale / EFT ile %2 indirim: ₺… (KDV dahil)» — KDV hariç ikinci fiyat değil
 2. Satın alma satırı (.eq-cmf-purchase): yalnızca adet stepper
 3. Üst 2×2 satır (.eq-cmf-actions--primary):
    • Sol: Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50)
