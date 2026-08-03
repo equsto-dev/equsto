@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { notifyNewLead } from "@/lib/notify";
 import { whatsAppAppSecret } from "./config";
 import { markWhatsAppRead } from "./meta-client";
+import { extractSayfaUrlFromWhatsAppText } from "./sayfa-url";
 
 export type InboundWhatsAppMessage = {
   from: string;
@@ -100,6 +101,7 @@ export async function handleInboundWhatsAppMessage(
 
   const yetkili = msg.profileName || "WhatsApp ziyaretçi";
   const tel = msg.from.startsWith("+") ? msg.from : `+${msg.from}`;
+  const sayfa = extractSayfaUrlFromWhatsAppText(text) || "whatsapp";
 
   try {
     const row = await db.musteri.create({
@@ -109,7 +111,7 @@ export async function handleInboundWhatsAppMessage(
         tel,
         tip: "lead",
         kaynak,
-        sayfa: "whatsapp",
+        sayfa,
         mesaj: text || null,
         not: [
           text,
