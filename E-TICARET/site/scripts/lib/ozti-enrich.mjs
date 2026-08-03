@@ -1139,8 +1139,9 @@ export const OZTI_KDV_ORAN = 20;
  * Equsto satış: bayi net alış üzerine kar.
  * 2026-07-30: %8 → ×1,10 zam (0.188); ardından tüm satış %3 indirim
  * (1.188 × 0.97 = 1.15236 → kar oranı 0.15236)
+ * 2026-08-03: site geneli ×1,0388 (+%6/−%2) → 0.15236×1.0388 = 0.15827
  */
-export const OZTI_EQUSTO_KAR_ORAN = 0.15236;
+export const OZTI_EQUSTO_KAR_ORAN = 0.15827;
 
 export function oztiFmtTry(n) {
   const v = Math.round(Number(n));

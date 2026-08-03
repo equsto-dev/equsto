@@ -36,7 +36,7 @@ const BRAND_ID = "pimak";
 const KAYNAK = "pimak";
 const BAYI_ISKONTO = 0.47;
 const ODEME_CARPANI = 0.53;
-const KAR_ORAN = 0.05;
+const KAR_ORAN = 0.09074; // 1.05 × 1.0388 − 1 (site +%6/−%2)
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
 

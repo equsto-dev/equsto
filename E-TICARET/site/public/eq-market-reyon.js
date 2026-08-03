@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260621-pfos-ice-blue";
+  var CATALOG_V = "20260803-site-havale";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
