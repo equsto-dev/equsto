@@ -4,6 +4,10 @@ import { ProTable } from "@ant-design/pro-components";
 import { App, Button, Space, Tag, Tooltip, Typography } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { fetchMusteriler, type MusteriAdminRow } from "@/lib/pro-admin-client";
+import {
+  extractSayfaUrlFromWhatsAppText,
+  normalizeSayfaHref,
+} from "@/lib/whatsapp/sayfa-url";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 const KAYNAK_LABEL: Record<string, string> = {
@@ -41,6 +45,26 @@ function formatTrDate(iso: string) {
   } catch {
     return iso;
   }
+}
+
+function sayfaLabel(href: string): string {
+  try {
+    const u = new URL(href);
+    const path = `${u.pathname}${u.search}` || "/";
+    return path.length > 48 ? `${path.slice(0, 45)}…` : path;
+  } catch {
+    return href.length > 48 ? `${href.slice(0, 45)}…` : href;
+  }
+}
+
+/** Kayıtlı sayfa alanı veya mesaj içindeki handoff URL'si */
+function resolveSayfaHref(row: MusteriAdminRow): string | null {
+  const direct = normalizeSayfaHref(row.sayfa);
+  if (direct) return direct;
+  const fromMsg = extractSayfaUrlFromWhatsAppText(
+    `${row.mesaj || ""}\n${row.not || ""}`,
+  );
+  return normalizeSayfaHref(fromMsg);
 }
 
 function isInboxLead(row: MusteriAdminRow) {
@@ -166,8 +190,24 @@ export default function IsletmeMesajlarPanel() {
             title: "Sayfa",
             dataIndex: "sayfa",
             ellipsis: true,
-            width: 120,
-            render: (v) => v || "—",
+            width: 220,
+            render: (_, r) => {
+              const href = resolveSayfaHref(r);
+              if (href) {
+                return (
+                  <Tooltip title={href}>
+                    <Typography.Link href={href} target="_blank" rel="noreferrer">
+                      {sayfaLabel(href)}
+                    </Typography.Link>
+                  </Tooltip>
+                );
+              }
+              const raw = String(r.sayfa || "").trim();
+              if (!raw || raw === "whatsapp") {
+                return <Typography.Text type="secondary">WhatsApp</Typography.Text>;
+              }
+              return raw;
+            },
           },
           {
             title: "İşlem",
