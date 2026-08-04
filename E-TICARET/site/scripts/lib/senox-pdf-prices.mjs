@@ -15,61 +15,77 @@ export const SENOX_MUTBEX_CATALOG = path.join(
   "scripts/data/senox/mutbex/senox-mutbex-catalog.json",
 );
 
-/** PDF sayfa OCR / yanlış fiyat eşlemesi — doğrulanmış Şenox liste EUR */
+/** PDF sayfa OCR / yanlış fiyat eşlemesi — doğrulanmış Şenox liste EUR (SENOX 2026-2-1) */
 export const SENOX_LISTE_OVERRIDES = new Map([
-  ["YSO100", 200],
-  ["YSO200", 250],
-  // SENOX 2026-1 s.39–71 (Livagaz duş spreyi tablosu — 20 EUR filtre fiyatı ile karışmasın)
-  ["TM02", 200],
-  ["TM01", 180],
-  ["DM02", 200],
-  ["DM01", 180],
-  ["T02", 200],
-  ["118T02", 200],
-  // Geri toplanabilir ön yıkama duşu (HT 10/12/15 m)
+  // s.38 — YSO (GD dilimleyici 700/750/1200 ile karışmasın)
+  ["YSO100", 230],
+  ["YSO200", 280],
+  // s.39 — Livagaz duş spreyi (24 EUR filtre / hortum fiyatı ile karışmasın)
+  ["TM02", 240],
+  ["TM01", 220],
+  ["DM02", 240],
+  ["DM01", 220],
+  ["T02", 240],
+  ["118T02", 240],
+  // s.39 — Livagaz toplama hortumları 12/15 m (10 m listede yok; önceki liste)
   ["HT10", 1000],
   ["HT12", 1100],
-  ["HT15", 1200],
-  // SENOX 2026-1 s.41 — Isıtıcı lambalar (OCR fiyatı specs'e düşmemiş)
-  ["SNX17B", 300],
-  ["SNX17C", 300],
-  ["SNX17G", 300],
-  ["SNX17S", 300],
-  // SNX-25-G yanlışlıkla SNX-8060 1500 EUR ile eşleşmiş; SNX-25-C ile aynı liste
+  ["HT15", 1250],
+  // s.41 — Isıtıcı lambalar (SNX-8060 1500/1600 ile karışmasın)
+  ["SNX17B", 360],
+  ["SNX17C", 360],
+  ["SNX17G", 360],
+  ["SNX17S", 360],
+  // SNX-25-G yanlışlıkla SNX-8060 ile eşleşmesin
   ["SNX25G", 330],
-  // SENOX 2026-1 s.21 — Dondurma reyonları (PDF sütun eşlemesi doğrulandı)
-  ["DT6", 5000],
-  ["DT8", 6000],
-  ["DT9", 10000],
-  ["DT12", 14000],
-  ["DT13", 14000],
-  ["DT18", 18000],
-  ["DT24", 22000],
-  ["DT100", 1600],
-  ["DT200", 1800],
-  ["DT600", 10000],
-  // SENOX 2026-1 s.12 — Şarap dolabı WN 250/350 (tablo satır karışması)
-  ["WN250", 1450],
-  ["WN350", 1700],
-  // SENOX 2026-1 s.67 — Vakum makineleri (OCR komşu ürün fiyatı ile karışmış)
-  ["VM01", 300],
-  ["WM2", 1800],
-  ["WM2TEKENEVAKUMMAKNES", 1800],
-  ["DZ280", 1800],
-  ["VM3", 2400],
-  ["VM3FTENEVAKUMMAKNES", 2400],
-  ["DZ4002F", 2400],
-  // SENOX 2026-1 s.58 — Salad bar (BLK-01 sayfası tablosu)
+  // s.21 — Dondurma reyonları
+  ["DT6", 6000],
+  ["DT8", 7000],
+  ["DT9", 12500],
+  ["DT12", 17000],
+  ["DT13", 16000],
+  ["DT18", 21000],
+  ["DT24", 25000],
+  ["DT100", 1800],
+  ["DT200", 2000],
+  ["DT600", 12000],
+  // s.12 — Şarap dolabı WN 250/350
+  ["WN250", 1600],
+  ["WN350", 1750],
+  // s.37 — Vakum (Robotcoupe blender EUR ile karışmış)
+  ["VM01", 500],
+  ["WM2", 2000],
+  ["WM2TEKENEVAKUMMAKNES", 2000],
+  ["DZ280", 2000],
+  ["VM3", 2600],
+  ["VM3FTENEVAKUMMAKNES", 2600],
+  ["DZ4002F", 2600],
+  // Salad bar (önceki doğrulama; 2026-2-1’de aynı blok)
   ["SLD03", 1800],
   ["SLD04", 2000],
-  // SENOX 2026-1 s.10 — SDS 1510 DC 3 YF (komşu ürün 2250 € ile karışmış)
-  ["SDS1510", 3000],
-  ["SDS1510DC3YF", 3000],
-  // SENOX 2026-1 s.20 — Simfer SYD dondurma reyonu (çoklu ürün bloğu)
-  // SENOX 2026-1 s.35 — El blender BL40 L60 / L60-C
-  // Description OCR "225/250 EUR"; tablo fiyatı 450/600 EUR (kullanıcı kataloğu)
+  // s.10 — SDS 1510 DC 3 YF
+  ["SDS1510", 3300],
+  ["SDS1510DC3YF", 3300],
+  // s.35 — El blender BL40 L60 / L60-C (desc OCR düşük EUR)
   ["BL40L60", 450],
   ["BL40L60C", 600],
+  // s.48 — Buz makineleri (BZ12 300 EUR; FR/SB tablo sırası doğrulandı)
+  ["BZ12", 300],
+  ["SB200", 1900],
+  ["SB400", 2100],
+  ["FR25", 1500],
+  ["FR35", 1600],
+  ["FR50", 1800],
+  ["FR70", 1900],
+  ["FR90", 2175],
+  ["FR250", 2375],
+  ["FR500", 2775],
+  ["FR30", 3100],
+  ["FR40", 5350],
+  ["FR60", 6500],
+  // s.43 — Ventus KKM 01 (süt soğutucu 400 EUR ile karışmasın)
+  ["KKM01", 2000],
+  ["VENTUSKKM01KAHVEKAVURMAMAKINESI", 2000],
 ]);
 
 /** Equsto satış — sabit KDV dahil TRY (kur değişse de fiyat sabit kalır) */

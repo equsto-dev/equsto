@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SENOX 2026-1 PDF — tam katalog çıkarımı.
+SENOX PDF — tam katalog çıkarımı (varsayılan: 2026-2-1).
 
 Stratejiler:
   A) Senox … başlık satırları (+ çoklu varyant: 160/300/400/500 LK)
@@ -32,7 +32,7 @@ OUT = ROOT / "scripts" / "data" / "senox" / "senox-pdf-catalog.json"
 PDF = Path(
     os.environ.get(
         "SENOX_PDF",
-        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-1 4 (1).pdf",
+        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-2-1.pdf",
     )
 )
 
@@ -650,7 +650,7 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "source": str(PDF),
-        "liste": "SENOX 2026-1",
+        "liste": os.environ.get("SENOX_LISTE") or PDF.stem.upper().replace("_", " "),
         "scrapedAt": datetime.now(timezone.utc).isoformat(),
         "pages": page_count,
         "productCount": len(products),

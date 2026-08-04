@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260803-site-havale";
+  var CATALOG_V = "20260804-senox-2026-2-1";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

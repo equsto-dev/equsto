@@ -40,7 +40,7 @@ MAP_JSON = ROOT / "scripts" / "data" / "senox" / "pdf-images-map.json"
 PDF = Path(
     os.environ.get(
         "SENOX_PDF",
-        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-1 4 (1).pdf",
+        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-2-1.pdf",
     )
 )
 
