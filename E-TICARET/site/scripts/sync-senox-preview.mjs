@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "scripts/data/senox");
-const OUT_DATA = path.join(ROOT, "public/data/fiyat-listeleri/senox/2026-1");
+const OUT_DATA = path.join(ROOT, "public/data/fiyat-listeleri/senox/2026-2-1");
 const OUT_IMG = path.join(ROOT, "public/data/senox/images");
 
 async function copyDir(src, dest) {
@@ -70,7 +70,7 @@ async function main() {
 
   const imgCount = await copyDir(path.join(SRC, "images"), OUT_IMG);
 
-  console.log(`[senox-preview] ${products.length} ürün → public/data/fiyat-listeleri/senox/2026-1/catalog.json`);
+  console.log(`[senox-preview] ${products.length} ürün → public/data/fiyat-listeleri/senox/2026-2-1/catalog.json`);
   console.log(`[senox-preview] ${imgCount} görsel → public/data/senox/images/`);
   console.log(`[senox-preview] http://localhost:3099/senox-preview.html`);
 }

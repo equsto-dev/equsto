@@ -63,8 +63,8 @@ function targetForRow(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
     resolved.source === "mutbex"
       ? "senox-mutbex-liste"
       : resolved.source === "override"
-        ? "senox-pdf-2026-1"
-        : "senox-pdf-2026-1";
+        ? "senox-pdf-2026-2-1"
+        : "senox-pdf-2026-2-1";
   const pdfOnly = findPdfListPrice(ref, pdfIndex, pdfProducts);
   const mutOnly = findMutbexListPrice(ref, mutbexIndex);
   return {

@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260803-site-havale";
+  var CATALOG_V = "20260804-senox-2026-2-1";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

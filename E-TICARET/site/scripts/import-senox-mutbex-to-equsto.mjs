@@ -179,7 +179,7 @@ function toRow(p, kur, pdfIndex, pdfProducts) {
     senox_pdf_fuzzy: pdfMatch?.fuzzy || false,
     ...(px || {}),
     iskonto_oran: px ? Math.round(SATIS_ORAN * 100) : undefined,
-    kaynak_fiyat_listesi: px ? "senox-pdf-2026-1" : undefined,
+    kaynak_fiyat_listesi: px ? "senox-pdf-2026-2-1" : undefined,
   };
 }
 

@@ -95,6 +95,8 @@ function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
       senox_pdf_match: manualMatch.matchKey,
       senox_pdf_fuzzy: false,
       senox_mutbex_match: "",
+      equsto_site_markup: 0,
+      equsto_kar_oran: 0,
       specs: patchSpecsPriceBlock(row.specs, px, priceMatch, kaynakListe),
     };
     const teknik = [...(row.teknik_ozellikler || [])].filter(
@@ -115,9 +117,9 @@ function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
       ? "senox-mutbex-liste"
       : priceMatch?.source === "mutbex"
         ? "senox-mutbex-liste"
-        : "senox-pdf-2026-1";
+        : "senox-pdf-2026-2-1";
   const pdfMatch =
-    kaynakListe === "senox-pdf-2026-1" ? priceMatch : priceMatch?.rejectedPdf || null;
+    String(kaynakListe).includes("senox-pdf") ? priceMatch : priceMatch?.rejectedPdf || null;
   const mutbexMatch = priceMatch?.source === "mutbex" ? priceMatch : null;
   const next = {
     ...row,
@@ -127,6 +129,8 @@ function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
     senox_pdf_match: pdfMatch?.matchKey || "",
     senox_pdf_fuzzy: pdfMatch?.fuzzy || false,
     senox_mutbex_match: mutbexMatch?.mutbexCode || "",
+    equsto_site_markup: 0,
+    equsto_kar_oran: 0,
     specs: patchSpecsPriceBlock(row.specs, px, priceMatch, kaynakListe),
   };
   const teknik = [...(row.teknik_ozellikler || [])].filter(
