@@ -1,8 +1,8 @@
 {
-  "version": "2026-08-06T11-32-03",
-  "rebuiltAt": "2026-08-06T11:32:03.050Z",
-  "ekipmanlar": 9470,
-  "withImage": 9468,
+  "version": "2026-08-06T12-12-29",
+  "rebuiltAt": "2026-08-06T12:12:29.053Z",
+  "ekipmanlar": 9471,
+  "withImage": 9469,
   "brands": 22,
   "deptCounts": {
     "araba": 92,
@@ -15,7 +15,7 @@
     "market-reyon": 2009,
     "pisirme": 2403,
     "servis": 55,
-    "set-ustu-mutfak": 985,
+    "set-ustu-mutfak": 986,
     "sogutma": 854,
     "tasima": 173,
     "tezgah": 565,
