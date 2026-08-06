@@ -16,7 +16,7 @@ const IMG_SUB = "images/catalog/elektrola/web";
 const KDV = 20;
 const HAVALE_PCT = 2;
 
-/** Solo: manuel 51.600. Kit: Orka+KDV × aynı ~%7.8 indirim → 57.700. */
+/** Solo: 51.600 TL KDV dahil. Kit18: 61.375 TL KDV dahil (manuel). */
 const PRODUCTS = [
   {
     sku: "ESV2GAC2EX",
@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     sku: "ESV2GAC2EX-KIT18",
     id: "elektrola__esv2gac2ex-kit18",
-    priceTl: 57700,
+    priceTl: 61375,
     name: "Elektrola Expert Serisi Sous Vide Pişirme Kiti (Kit18)",
     orkaUrl: "https://www.orkagida.com/elektrola-expert-serisi-kit18",
     tankNote:
