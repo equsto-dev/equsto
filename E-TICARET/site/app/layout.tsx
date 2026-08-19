@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
 import SiteDiscoveryFaqJsonLd from "@/components/seo/SiteDiscoveryFaqJsonLd";
 import AnalyticsScripts from "@/components/seo/AnalyticsScripts";
+import CookieConsentBanner from "@/components/seo/CookieConsentBanner";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import "./globals.css";
 
@@ -20,7 +21,6 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -70,6 +70,7 @@ export default function RootLayout({
         <SiteDiscoveryFaqJsonLd />
         <div id="eq-shop-chrome-root" />
         {children}
+        <CookieConsentBanner />
       </body>
     </html>
   );
