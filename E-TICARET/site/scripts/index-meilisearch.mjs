@@ -332,6 +332,7 @@ async function main() {
       buzdolab: ["buzdolabi"],
       buzdolap: ["buzdolabi"],
       ozti: ["oztiryakiler"],
+      kroom: ["brema"],
       izgara: ["izgaralar", "ızgara"],
       izgaralar: ["izgara", "ızgara"],
       "ızgara": ["izgara", "izgaralar"],
