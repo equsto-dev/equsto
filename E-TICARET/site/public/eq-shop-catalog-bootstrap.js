@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260804-senox-2026-2-1";
+  var CATALOG_V = "20260822-brema-kroom-fiyat";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
