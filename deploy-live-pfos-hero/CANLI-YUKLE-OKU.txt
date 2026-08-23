@@ -1,7 +1,7 @@
 Proje Fabrikası vitrin görseli — canlı yükleme paketi
-====================================================
-Tarih: 2026-05-27
-Görsel: images/pfos/dis-mutfak-gece-render.jpg
+=====================================================
+Tarih: 2026-08-23
+Görsel: images/pfos/proje-fabrikasi-mutfak.jpg
 
 YÖNTEM A — cPanel (equsto.com klasik hosting)
 ---------------------------------------------
@@ -15,7 +15,7 @@ Yüklenecek dosyalar:
   eq-home-decor.css
   eq-home-mutbex.css
   eq-home-mutbex.js
-  images/pfos/dis-mutfak-gece-render.jpg
+  images/pfos/proje-fabrikasi-mutfak.jpg
   images/pfos/mutfak-plani-referans.jpg
 
 YÖNTEM B — Vercel (Git ile otomatik deploy)
@@ -31,9 +31,9 @@ Vercel panelden manuel redeploy (push yoksa):
 
 Kontrol
 -------
-Ana sayfa → Proje Fabrikası kartı → gece dış mutfak render görünmeli
+Ana sayfa → Proje Fabrikası kartı → endüstriyel mutfak foto görünmeli
 (plan çizimi değil).
 
-Sorun devam ederse F12 → Network → dis-mutfak-gece-render.jpg
+Sorun devam ederse F12 → Network → proje-fabrikasi-mutfak.jpg
   - 404 ise görsel yolu yanlış klasöre yüklendi
   - 200 ama eski plan ise CDN önbellek: Ctrl+Shift+R veya gizli pencere
