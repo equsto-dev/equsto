@@ -42,7 +42,7 @@ export function HomeHeroAds() {
                   src={publicAssetUrl(pillar.image)}
                   alt={
                     pillar.visual === "pfos"
-                      ? "Proje Fabrikası — endüstriyel mutfak eskizi"
+                      ? "Proje Fabrikası — endüstriyel mutfak yerleşimi"
                       : pillar.visual === "besos"
                         ? "Besos modüler kokteyl istasyonu"
                         : "Yer Sofrası — açık büfe ve chafing ekipmanları"

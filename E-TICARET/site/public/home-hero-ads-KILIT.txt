@@ -2,6 +2,12 @@
 KİLİT — Ana sayfa üst üçlü vitrin (PFOS · Yer Sofrası · Bar Design)
 Onay: 2026-06-03 · Commit referans: b04a99b5
 ═══════════════════════════════════════════════════════════════════════════
+2026-08-23 · Kullanıcının açık onayıyla (AÇIK ONAY): PFOS görselinin içeriği,
+kullanıcının verdiği mutfak fotoğrafıyla değiştirildi. Dosya yolu aynı kalır
+(proje-fabrikasi-mutfak-eskiz.png); yalnızca dosya içeriği değişmiştir. Eski
+eskiz görseli `_yedek/` klasöründe yedeklenmiştir. `imageWidth: 495` /
+`imageHeight: 394` ipuçları aynı kalır (kilit gereği).
+═══════════════════════════════════════════════════════════════════════════
 
 Bu dosya, equsto.com ana sayfasındaki «DÜNYADA BİR İLK!» altındaki üçlü
 hero kartlarının bozulmaması içindir. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
