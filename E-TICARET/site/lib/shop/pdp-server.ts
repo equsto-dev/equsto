@@ -14,6 +14,7 @@ import {
   isQuoteOnlyProduct,
   resolveMerchantPriceTry,
 } from "@/lib/google-merchant-feed";
+import { extractTechnicalDetails } from "@/lib/feed-product-details";
 import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
 import { resolveShopDept } from "@/lib/shop/category-dept";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
@@ -67,7 +68,10 @@ export type PdpSsrPayload = {
   canonical: string;
   image?: string;
   sku?: string;
+  mpn?: string;
+  gtin?: string;
   priceTry?: number;
+  breadcrumbs: { name: string; href?: string }[];
 };
 
 export async function findProductForPdp(
@@ -148,28 +152,55 @@ export function rowToPdpSsr(
   const origin = getSiteOrigin();
   const prefix = opts?.langPrefix === "/en" ? "/en" : "";
   const slug = catalogUrlSlug(row);
-  const name = feedTitle(row) || String(row.name || "Ürün").trim();
+  
+  // Use raw name, avoid duplicate brand prepending in standard UI
+  let rawName = String(row.name || "Ürün").trim();
   const brand = String(row.brand || "").trim();
-  const description = cleanDescription(row, 320);
+  
+  const productDetails = extractTechnicalDetails(row);
+  const description = cleanDescription(row, productDetails, 320);
   const canonical = `${origin}${prefix}/shop/${dept}/${encodeURIComponent(slug)}`;
   const priceTry = resolveMerchantPriceTry(row);
   const img = productImagePath(row);
   const isEn = prefix === "/en";
 
+  const mpn = String(row.model || row.sku || row.urun_kodu || "").trim();
+  const sku = String(row.sku || row.id || "").trim();
+  const gtin = String(row.barcode || row.barkod || row.gtin || "").trim();
+
+  // Better Breadcrumbs
+  const breadcrumbs: { name: string; href?: string }[] = [];
+  breadcrumbs.push({ name: isEn ? "Home" : "Ana Sayfa", href: `${prefix}/` });
+  breadcrumbs.push({ name: SHOP_DEPTS[dept].title, href: `${prefix}/shop/${dept}` });
+  
+  if (row.urun_kategori && String(row.urun_kategori).toLowerCase() !== String(SHOP_DEPTS[dept].title).toLowerCase()) {
+    breadcrumbs.push({ name: String(row.urun_kategori).trim() });
+  }
+  if (row.urun_alt_kategori) {
+    breadcrumbs.push({ name: String(row.urun_alt_kategori).trim() });
+  }
+  if (brand) {
+    breadcrumbs.push({ name: brand, href: `${prefix}/shop/marka/${brand.toLowerCase().replace(/ /g, '-')}` });
+  }
+
   return {
-    name,
+    name: rawName,
     brand,
     description:
       description ||
       (isEn
-        ? `${name} — ${brand || "Equsto"} commercial kitchen catalogue.`
-        : `${name} — ${brand || "Equsto"} endüstriyel mutfak kataloğu.`),
+        ? `${rawName} — ${brand || "Equsto"} commercial kitchen catalogue.`
+        : `${rawName} — ${brand || "Equsto"} endüstriyel mutfak kataloğu.`),
     deptTitle: SHOP_DEPTS[dept].title,
     deptHref: `${prefix}/shop/${dept}`,
     slug,
     canonical,
     image: img ? absoluteAssetUrl(img, origin) : undefined,
     priceTry: priceTry > 0 ? priceTry : undefined,
+    sku,
+    mpn,
+    gtin,
+    breadcrumbs,
   };
 }
 
@@ -178,11 +209,20 @@ export function buildProductMetadata(
   opts?: { locale?: "tr" | "en" },
 ): Metadata {
   const isEn = opts?.locale === "en" || ssr.canonical.includes("/en/shop/");
-  const title = `${ssr.name}${ssr.brand ? ` · ${ssr.brand}` : ""} · Equsto`;
+  
+  // Format: "Name - Brand | Equsto" or "Brand Name | Equsto" if brand is already in name
+  let title = ssr.name;
+  if (ssr.brand && !title.toLowerCase().includes(ssr.brand.toLowerCase())) {
+    title = `${ssr.brand} ${title}`;
+  }
+  // Remove trailing dots, etc and ensure max length
+  title = title.replace(/\.$/, "").slice(0, 60);
+  title = `${title} | Equsto`;
+  
   const description =
     ssr.description.slice(0, 155) +
     (ssr.description.length > 155 ? "…" : "") +
-    (isEn ? " Specs, pricing and quote." : " Teknik özellikler, fiyat ve teklif.");
+    (isEn ? " Specs, pricing and quote." : " Teknik özellikler ve teklif.");
 
   const trCanonical = ssr.canonical.replace("://equsto.com/en/", "://equsto.com/");
   const enCanonical = trCanonical.replace("://equsto.com/", "://equsto.com/en/");
@@ -252,15 +292,26 @@ export function buildProductJsonLd(ssr: PdpSsrPayload) {
         description: ssr.description,
         image: ssr.image ? [ssr.image] : undefined,
         sku: ssr.sku || ssr.slug,
+        ...(ssr.mpn ? { mpn: ssr.mpn } : {}),
+        ...(ssr.gtin ? { gtin: ssr.gtin } : {}),
         brand: { "@type": "Brand", name: ssr.brand || "Equsto" },
         offers: offer,
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: `${origin}/` },
-          { "@type": "ListItem", position: 2, name: ssr.deptTitle, item: deptUrl },
-          { "@type": "ListItem", position: 3, name: ssr.name, item: ssr.canonical },
+          ...ssr.breadcrumbs.map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: b.name,
+            ...(b.href ? { item: `${origin}${b.href}` } : {}),
+          })),
+          { 
+            "@type": "ListItem", 
+            position: ssr.breadcrumbs.length + 1, 
+            name: ssr.name, 
+            item: ssr.canonical 
+          },
         ],
       },
     ],

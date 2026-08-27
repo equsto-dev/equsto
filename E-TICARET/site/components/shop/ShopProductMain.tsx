@@ -7,6 +7,7 @@ type ProductSsr = {
   image?: string;
   priceTry?: number;
   priceLabel?: string;
+  breadcrumbs?: { name: string; href?: string }[];
 };
 
 type Props = {
@@ -35,22 +36,33 @@ export default function ShopProductMain({ ssr }: Props) {
         </aside>
         <div className="right-col">
           <div className="breadcrumb" id="eq-product-bc">
-            <a href="/" id="eq-product-bc-home" data-i18n="breadcrumb.home">
-              Ana Sayfa
-            </a>{" "}
-            ›{" "}
-            {ssr ? (
-              <>
-                <a href={deptHref}>{ssr.deptTitle}</a> › <span>{ssr.name}</span>
-              </>
+            {ssr?.breadcrumbs ? (
+              ssr.breadcrumbs.map((bc, i) => (
+                <span key={i}>
+                  {bc.href ? <a href={bc.href}>{bc.name}</a> : <span>{bc.name}</span>}
+                  {i < ssr.breadcrumbs!.length - 1 ? " › " : ""}
+                </span>
+              ))
             ) : (
-              <span data-i18n="pdp.breadcrumb_loading">Yükleniyor…</span>
+              <>
+                <a href="/" id="eq-product-bc-home" data-i18n="breadcrumb.home">
+                  Ana Sayfa
+                </a>{" "}
+                ›{" "}
+                {ssr ? (
+                  <>
+                    <a href={deptHref}>{ssr.deptTitle}</a> › <span>{ssr.name}</span>
+                  </>
+                ) : (
+                  <span data-i18n="pdp.breadcrumb_loading">Yükleniyor…</span>
+                )}
+              </>
             )}
           </div>
           <main className="eq-product-main eq-pdp-booting" id="eq-product-root">
             {ssr ? (
               <article className="eq-product-seo-only" aria-hidden="true">
-                <h1>{ssr.name}</h1>
+                <h1>{ssr.brand && !ssr.name.toLowerCase().includes(ssr.brand.toLowerCase()) ? `${ssr.brand} ${ssr.name}` : ssr.name}</h1>
                 {ssr.brand ? <p>{ssr.brand}</p> : null}
                 <p>{ssr.description}</p>
                 {ssr.priceLabel ? <p>{ssr.priceLabel}</p> : null}

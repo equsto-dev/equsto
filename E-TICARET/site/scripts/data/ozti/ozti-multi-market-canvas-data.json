@@ -1,0 +1,539 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-28T10:44:25.320Z",
+    "kur_eur_try": 54.0527,
+    "equsto_ozti": 3469,
+    "mutbex_catalog": 3452,
+    "cafemarkt_catalog": 2741,
+    "matched_mutbex": 792,
+    "matched_cafemarkt": 457,
+    "matched_all_three": 132,
+    "ort_eq_vs_mut_pct": -10.6,
+    "med_eq_vs_mut_pct": -16.1,
+    "ort_eq_vs_cafe_pct": -13.4,
+    "med_eq_vs_cafe_pct": -22.4,
+    "eq_cheaper_than_mut": 644,
+    "eq_cheaper_than_cafe": 448,
+    "buckets_vs_mutbex": {
+      "eq_ucuz": 513,
+      "eq_cok_ucuz": 71,
+      "eq_cok_pahali": 26,
+      "benzer": 128,
+      "eq_pahali": 54
+    },
+    "buckets_vs_cafemarkt": {
+      "eq_cok_ucuz": 245,
+      "eq_ucuz": 64,
+      "eq_pahali": 3,
+      "eq_cok_pahali": 5,
+      "benzer": 140
+    },
+    "cheapest_when_all_three": {
+      "equsto": 122,
+      "mutbex": 4,
+      "cafemarkt": 6
+    },
+    "dept_vs_mutbex": [
+      {
+        "dept": "pisirme",
+        "matched": 283,
+        "ort_eq_vs_mut_pct": -11.3,
+        "med_eq_vs_mut_pct": -16.1
+      },
+      {
+        "dept": "sogutma",
+        "matched": 228,
+        "ort_eq_vs_mut_pct": -15.2,
+        "med_eq_vs_mut_pct": -18.5
+      },
+      {
+        "dept": "set-ustu-mutfak",
+        "matched": 108,
+        "ort_eq_vs_mut_pct": -2.8,
+        "med_eq_vs_mut_pct": 0.9
+      },
+      {
+        "dept": "tasima",
+        "matched": 70,
+        "ort_eq_vs_mut_pct": -14.4,
+        "med_eq_vs_mut_pct": -20.9
+      },
+      {
+        "dept": "hazirlik",
+        "matched": 35,
+        "ort_eq_vs_mut_pct": -3.4,
+        "med_eq_vs_mut_pct": 3.2
+      },
+      {
+        "dept": "dolap",
+        "matched": 30,
+        "ort_eq_vs_mut_pct": -17.4,
+        "med_eq_vs_mut_pct": -18.6
+      },
+      {
+        "dept": "icecek",
+        "matched": 19,
+        "ort_eq_vs_mut_pct": 14.7,
+        "med_eq_vs_mut_pct": 21.2
+      },
+      {
+        "dept": "yikama",
+        "matched": 15,
+        "ort_eq_vs_mut_pct": -0.2,
+        "med_eq_vs_mut_pct": -2.6
+      },
+      {
+        "dept": "davlumbaz",
+        "matched": 3,
+        "ort_eq_vs_mut_pct": -18,
+        "med_eq_vs_mut_pct": -19
+      },
+      {
+        "dept": "kahve",
+        "matched": 1,
+        "ort_eq_vs_mut_pct": 21.3,
+        "med_eq_vs_mut_pct": 21.3
+      }
+    ],
+    "mutbex_scraped_at": "2026-07-28T10:44:21.982Z",
+    "cafemarkt_note": "Cafemarkt fiyatları EUR (KDV dahil) → TCMB kuru ile TL; kod eşlemesi ürün adı/açıklama içinde SKU araması"
+  },
+  "deptStats": [
+    {
+      "dept": "pisirme",
+      "matched": 283,
+      "ort_eq_vs_mut_pct": -11.3,
+      "med_eq_vs_mut_pct": -16.1
+    },
+    {
+      "dept": "sogutma",
+      "matched": 228,
+      "ort_eq_vs_mut_pct": -15.2,
+      "med_eq_vs_mut_pct": -18.5
+    },
+    {
+      "dept": "set-ustu-mutfak",
+      "matched": 108,
+      "ort_eq_vs_mut_pct": -2.8,
+      "med_eq_vs_mut_pct": 0.9
+    },
+    {
+      "dept": "tasima",
+      "matched": 70,
+      "ort_eq_vs_mut_pct": -14.4,
+      "med_eq_vs_mut_pct": -20.9
+    },
+    {
+      "dept": "hazirlik",
+      "matched": 35,
+      "ort_eq_vs_mut_pct": -3.4,
+      "med_eq_vs_mut_pct": 3.2
+    },
+    {
+      "dept": "dolap",
+      "matched": 30,
+      "ort_eq_vs_mut_pct": -17.4,
+      "med_eq_vs_mut_pct": -18.6
+    },
+    {
+      "dept": "icecek",
+      "matched": 19,
+      "ort_eq_vs_mut_pct": 14.7,
+      "med_eq_vs_mut_pct": 21.2
+    },
+    {
+      "dept": "yikama",
+      "matched": 15,
+      "ort_eq_vs_mut_pct": -0.2,
+      "med_eq_vs_mut_pct": -2.6
+    },
+    {
+      "dept": "davlumbaz",
+      "matched": 3,
+      "ort_eq_vs_mut_pct": -18,
+      "med_eq_vs_mut_pct": -19
+    },
+    {
+      "dept": "kahve",
+      "matched": 1,
+      "ort_eq_vs_mut_pct": 21.3,
+      "med_eq_vs_mut_pct": 21.3
+    }
+  ],
+  "outliersMut": [
+    {
+      "sku": "9890.D90D2.30",
+      "name": "OZTIRYAKILER MIKRODALGA FIRIN",
+      "equsto_tl": 21149,
+      "mutbex_tl": 5788,
+      "pct": 265.4
+    },
+    {
+      "sku": "7864.N1.80703.70",
+      "name": "700 SERİ SET ÜSTÜ DOKUM IZGARA GAZLI 80*70*30",
+      "equsto_tl": 384190,
+      "mutbex_tl": 123640,
+      "pct": 210.7
+    },
+    {
+      "sku": "0830.03216.01",
+      "name": "OZTIRYAKILER EKMEK DILIMLEME MAKINASI MONOFAZE 32D 16MM",
+      "equsto_tl": 9805,
+      "mutbex_tl": 162394,
+      "pct": -94
+    },
+    {
+      "sku": "7890.12908.54",
+      "name": "TEK KATLI FIRIN GAZ/ELEKTRİKLİ 120*90*83",
+      "equsto_tl": 193691,
+      "mutbex_tl": 146165,
+      "pct": 32.5
+    },
+    {
+      "sku": "7890.12901.55",
+      "name": "İKİ KATLI FIRIN GAZ/ELEKTRIKLİ 120*90*154",
+      "equsto_tl": 393270,
+      "mutbex_tl": 296773,
+      "pct": 32.5
+    },
+    {
+      "sku": "0820.00030.11",
+      "name": "HAMUR YOĞURMA MAKINASI 30 KG MEKANİK KONTROL PANELLİ",
+      "equsto_tl": 282844,
+      "mutbex_tl": 216725,
+      "pct": 30.5
+    },
+    {
+      "sku": "0820.00050.11",
+      "name": "HAMUR YOĞURMA MAKINASI 50 KG MEKANİK KONTROL PANELLİ",
+      "equsto_tl": 308777,
+      "mutbex_tl": 236597,
+      "pct": 30.5
+    },
+    {
+      "sku": "7506.0B390.00",
+      "name": "BUZ KONTEYNERI B 390 S",
+      "equsto_tl": 71716,
+      "mutbex_tl": 54951,
+      "pct": 30.5
+    },
+    {
+      "sku": "7959.60578.40",
+      "name": "BASKET TASIMA ARABASI KULPLU 60*60*85",
+      "equsto_tl": 13310,
+      "mutbex_tl": 18050,
+      "pct": -26.3
+    }
+  ],
+  "outliersCafe": [
+    {
+      "sku": "7864.N1.80703.70",
+      "name": "700 SERİ SET ÜSTÜ DOKUM IZGARA GAZLI 80*70*30",
+      "equsto_tl": 384190,
+      "cafemarkt_tl": 107349,
+      "pct": 257.9
+    },
+    {
+      "sku": "7912.19078.A8",
+      "name": "NOTR SERVIS UNITESI ARA RAFLI AHSAP KAPLI 190*70",
+      "equsto_tl": 49369,
+      "cafemarkt_tl": 106274,
+      "pct": -53.5
+    },
+    {
+      "sku": "0820.00050.11",
+      "name": "HAMUR YOĞURMA MAKINASI 50 KG MEKANİK KONTROL PANELLİ",
+      "equsto_tl": 308777,
+      "cafemarkt_tl": 205422,
+      "pct": 50.3
+    },
+    {
+      "sku": "7912.19070.10",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  SICAKLIK DOL.190*70",
+      "equsto_tl": 94914,
+      "cafemarkt_tl": 64018,
+      "pct": 48.3
+    },
+    {
+      "sku": "7912.19070.A1",
+      "name": "AHSAP KAPLAMALI GN SICAK SERVIS BANKOSU SICAKLIK DOLAPLI 190*70",
+      "equsto_tl": 98219,
+      "cafemarkt_tl": 68404,
+      "pct": 43.6
+    },
+    {
+      "sku": "7912.19070.A0",
+      "name": "AHSAP KAPLAMALI GN SICAK SERVIS BANKOSU 190*70",
+      "equsto_tl": 63218,
+      "cafemarkt_tl": 102699,
+      "pct": -38.4
+    },
+    {
+      "sku": "7912.19070.00",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  190*70",
+      "equsto_tl": 59165,
+      "cafemarkt_tl": 45914,
+      "pct": 28.9
+    },
+    {
+      "sku": "7897.14030.05",
+      "name": "TEPSI KAYDIRMA STANDI 140*30",
+      "equsto_tl": 4572,
+      "cafemarkt_tl": 6262,
+      "pct": -27
+    },
+    {
+      "sku": "7897.15030.05",
+      "name": "TEPSI KAYDIRMA STANDI 150*30",
+      "equsto_tl": 4668,
+      "cafemarkt_tl": 6393,
+      "pct": -27
+    },
+    {
+      "sku": "0759.40311.31",
+      "name": "EL YIKAMA EVYESİ ALT SIRTLI",
+      "equsto_tl": 2454,
+      "cafemarkt_tl": 3360,
+      "pct": -27
+    }
+  ],
+  "sampleCheapestEq": [
+    {
+      "sku": "7855.N1.80908.01",
+      "name": "900 SERİ KAYNATMA TENCERESİ İNDİREKT GAZLI 100 LT. 80*90*85",
+      "equsto_tl": 209690,
+      "mutbex_tl": 279055,
+      "cafemarkt_tl": 242286,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.N1.80908.02",
+      "name": "900 SERİ KAYNATMA TENCERESİ İNDİREKT GAZLI 150 LT. 80*90*85",
+      "equsto_tl": 219527,
+      "mutbex_tl": 292144,
+      "cafemarkt_tl": 253650,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.N1.10908.03",
+      "name": "900 SERİ KAYNATMA TENCERESİ İNDİREKT GAZLI 250 LT. 100*90*85",
+      "equsto_tl": 269413,
+      "mutbex_tl": 358533,
+      "cafemarkt_tl": 311292,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.N1.10908.13",
+      "name": "900 SERİ KAYNATMA TENCERESİ DİREKT GAZLI 250 LT. 100*90*85",
+      "equsto_tl": 206886,
+      "mutbex_tl": 275323,
+      "cafemarkt_tl": 239045,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.N1.80908.04",
+      "name": "900 SERİ KAYNATMA TENCERESİ İNDİREKT ELEKTRİKLİ 100 LT. 80*90*85",
+      "equsto_tl": 190442,
+      "mutbex_tl": 253440,
+      "cafemarkt_tl": 220046,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.00500.00",
+      "name": "KAZAN KROM CELIK BUHARLI 500 LITRE",
+      "equsto_tl": 245574,
+      "mutbex_tl": 326809,
+      "cafemarkt_tl": 283747,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7855.00400.00",
+      "name": "KAZAN KROM ÇELİK BUHARLI 400 LITRE",
+      "equsto_tl": 228458,
+      "mutbex_tl": 304031,
+      "cafemarkt_tl": 263971,
+      "vs_mut": -24.9,
+      "vs_cafe": -13.5
+    },
+    {
+      "sku": "7912.12070.10",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  SICAKLIK DOL.120*70",
+      "equsto_tl": 65773,
+      "mutbex_tl": 85568,
+      "cafemarkt_tl": 71168,
+      "vs_mut": -23.1,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.12070.A1",
+      "name": "AHSAP KAPLAMALI GN SICAK SERVIS BANKOSU SICAKLIK DOLAPLI 120*70",
+      "equsto_tl": 68251,
+      "mutbex_tl": 88778,
+      "cafemarkt_tl": 73850,
+      "vs_mut": -23.1,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.15070.A1",
+      "name": "AHSAP KAPLAMALI GN SICAK SERVIS BANKOSU SICAKLIK DOLAPLI 150*70",
+      "equsto_tl": 74303,
+      "mutbex_tl": 96652,
+      "cafemarkt_tl": 80396,
+      "vs_mut": -23.1,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.12070.A0",
+      "name": "SICAK SERVIS UNITESI ELK.AHSAP KAPLI 120*70",
+      "equsto_tl": 46871,
+      "mutbex_tl": 60878,
+      "cafemarkt_tl": 50715,
+      "vs_mut": -23,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.15070.10",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  SICAKLIK DOL.150*70",
+      "equsto_tl": 72017,
+      "mutbex_tl": 93089,
+      "cafemarkt_tl": 77923,
+      "vs_mut": -22.6,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.15070.A0",
+      "name": "SICAK SERVIS UNITESI ELEKTRIKLI AHSAP KAPLI 150*70",
+      "equsto_tl": 51712,
+      "mutbex_tl": 65694,
+      "cafemarkt_tl": 55953,
+      "vs_mut": -21.3,
+      "vs_cafe": -7.6
+    },
+    {
+      "sku": "7912.15070.O0",
+      "name": "SALAT BAR ASANSORLU OSBA 150*70 (MESE)",
+      "equsto_tl": 124727,
+      "mutbex_tl": 157676,
+      "cafemarkt_tl": 129077,
+      "vs_mut": -20.9,
+      "vs_cafe": -3.4
+    },
+    {
+      "sku": "7912.15070.00",
+      "name": "SICAK SERV.UNITESI ELEKTRİKLİ  150*70",
+      "equsto_tl": 49714,
+      "mutbex_tl": 62847,
+      "cafemarkt_tl": 53792,
+      "vs_mut": -20.9,
+      "vs_cafe": -7.6
+    }
+  ],
+  "sampleExpensiveEq": [
+    {
+      "sku": "7864.N1.80703.70",
+      "name": "700 SERİ SET ÜSTÜ DOKUM IZGARA GAZLI 80*70*30",
+      "equsto_tl": 384190,
+      "mutbex_tl": 123640,
+      "cafemarkt_tl": 107349,
+      "vs_mut": 210.7,
+      "vs_cafe": 257.9,
+      "en_ucuz": "cafemarkt"
+    },
+    {
+      "sku": "0820.00050.11",
+      "name": "HAMUR YOĞURMA MAKINASI 50 KG MEKANİK KONTROL PANELLİ",
+      "equsto_tl": 308777,
+      "mutbex_tl": 236597,
+      "cafemarkt_tl": 205422,
+      "vs_mut": 30.5,
+      "vs_cafe": 50.3,
+      "en_ucuz": "cafemarkt"
+    },
+    {
+      "sku": "071T.00000.BB",
+      "name": "GIYOTIN TIP BULASIK YIKAMA MAK. TOUCH OBM 1080T",
+      "equsto_tl": 88748,
+      "mutbex_tl": 76845,
+      "cafemarkt_tl": 91843,
+      "vs_mut": 15.5,
+      "vs_cafe": -3.4,
+      "en_ucuz": "mutbex"
+    },
+    {
+      "sku": "071T.11110.BB",
+      "name": "GIYOTIN TIP BULASIK YIKAMA MAK. TOUCH OBM 1080T PDRT",
+      "equsto_tl": 106921,
+      "mutbex_tl": 98100,
+      "cafemarkt_tl": 110650,
+      "vs_mut": 9,
+      "vs_cafe": -3.4,
+      "en_ucuz": "mutbex"
+    },
+    {
+      "sku": "8823.0HA30.00",
+      "name": "HAMUR ACMA MAKINASI HA30",
+      "equsto_tl": 58184,
+      "mutbex_tl": 56401,
+      "cafemarkt_tl": 59423,
+      "vs_mut": 3.2,
+      "vs_cafe": -2.1,
+      "en_ucuz": "mutbex"
+    },
+    {
+      "sku": "7856.GN23S.10",
+      "name": "FRITOZ GN 2/3 ELEKTRIKLI 10 LT 9 KW EF 10 S",
+      "equsto_tl": 19536,
+      "mutbex_tl": 19162,
+      "cafemarkt_tl": 20217,
+      "vs_mut": 2,
+      "vs_cafe": -3.4,
+      "en_ucuz": "mutbex"
+    },
+    {
+      "sku": "0913.00508.01",
+      "name": "SERVİS ARABASI ÜÇ KATLI 55*80 (DEMONTE)",
+      "equsto_tl": 13824,
+      "mutbex_tl": 15408,
+      "cafemarkt_tl": 13795,
+      "vs_mut": -10.3,
+      "vs_cafe": 0.2,
+      "en_ucuz": "cafemarkt"
+    },
+    {
+      "sku": "7912.19070.00",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  190*70",
+      "equsto_tl": 59165,
+      "mutbex_tl": 74795,
+      "cafemarkt_tl": 45914,
+      "vs_mut": -20.9,
+      "vs_cafe": 28.9,
+      "en_ucuz": "cafemarkt"
+    },
+    {
+      "sku": "7912.19070.10",
+      "name": "SICAK SERV.ÜNİTESİ ELEKTRİKLİ  SICAKLIK DOL.190*70",
+      "equsto_tl": 94914,
+      "mutbex_tl": 123562,
+      "cafemarkt_tl": 64018,
+      "vs_mut": -23.2,
+      "vs_cafe": 48.3,
+      "en_ucuz": "cafemarkt"
+    },
+    {
+      "sku": "7912.19070.A1",
+      "name": "AHSAP KAPLAMALI GN SICAK SERVIS BANKOSU SICAKLIK DOLAPLI 190*70",
+      "equsto_tl": 98219,
+      "mutbex_tl": 127849,
+      "cafemarkt_tl": 68404,
+      "vs_mut": -23.2,
+      "vs_cafe": 43.6,
+      "en_ucuz": "cafemarkt"
+    }
+  ]
+}
