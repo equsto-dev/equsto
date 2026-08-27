@@ -7,6 +7,7 @@ import { isShopDeptSlug } from "@/lib/shop/depts";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
 import { resolveKdvDahilTry } from "@/lib/shop/consumer-price";
+import { ProductDetail, extractTechnicalDetails } from "./feed-product-details";
 
 export { absoluteAssetUrl };
 
@@ -26,6 +27,7 @@ export type MerchantFeedItem = {
   /** Google RSS: `in stock` / `out of stock` (alt çizgi değil) */
   availability: "in stock" | "out of stock";
   productType: string;
+  productDetails: ProductDetail[];
 };
 
 export type MerchantFeedStats = {
@@ -91,17 +93,24 @@ export function sanitizeXmlText(text: string): string {
     .replace(/\uFFFE|\uFFFF/g, "");
 }
 
-export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
+export function cleanDescription(row: CatalogRow, details: ProductDetail[] = [], maxLen = 5000): string {
   const shopDesc = String(
     row.ozti_web_description || row.inoksan_shop_description || row.description || "",
   ).trim();
+  
+  let appendedDetails = "";
+  if (details.length > 0) {
+    appendedDetails = "\n\nTeknik Özellikler:\n" + details.map(d => `- ${d.attributeName}: ${d.attributeValue}`).join("\n");
+  }
+
   const parts = shopDesc.length >= 40
-    ? [shopDesc]
+    ? [shopDesc, appendedDetails]
     : [
         String(row.name || ""),
         String(row.brand || ""),
         String(row.specs || ""),
         String(row.aciklama || ""),
+        appendedDetails
       ].filter(Boolean);
   return sanitizeXmlText(
     parts
@@ -155,11 +164,13 @@ export function rowToMerchantItem(
   const link = `${origin}/shop/${dept}/${encodeURIComponent(slug)}`;
   const brand = String(row.brand || "Equsto").trim().slice(0, 70);
   const mpn = String(row.sku || row.model || slug).trim().slice(0, 70);
+  
+  const productDetails = extractTechnicalDetails(row);
 
   return {
     id: feedId(row, dept),
     title,
-    description: cleanDescription(row),
+    description: cleanDescription(row, productDetails),
     link,
     imageLink: absoluteAssetUrl(imagePath, origin),
     priceTry,
@@ -167,6 +178,7 @@ export function rowToMerchantItem(
     mpn,
     availability: "in stock",
     productType: String(row.category || dept).slice(0, 100),
+    productDetails,
   };
 }
 
@@ -275,6 +287,17 @@ export function buildGoogleMerchantXml(items: MerchantFeedItem[], origin: string
     if (item.productType) {
       lines.push(`      <g:product_type>${escapeXml(item.productType)}</g:product_type>`);
     }
+    
+    if (item.productDetails && item.productDetails.length > 0) {
+      for (const detail of item.productDetails) {
+        lines.push("      <g:product_detail>");
+        lines.push(`        <g:section_name>${escapeXml(detail.sectionName)}</g:section_name>`);
+        lines.push(`        <g:attribute_name>${escapeXml(detail.attributeName)}</g:attribute_name>`);
+        lines.push(`        <g:attribute_value>${escapeXml(detail.attributeValue)}</g:attribute_value>`);
+        lines.push("      </g:product_detail>");
+      }
+    }
+    
     lines.push("    </item>");
   }
 

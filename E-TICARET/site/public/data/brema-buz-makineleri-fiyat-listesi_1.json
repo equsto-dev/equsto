@@ -1,0 +1,618 @@
+{
+  "brand": "Brema",
+  "distributor": "Kroom (Krom Mutfak San. Tic. A.Ş.)",
+  "source_document": "Kroom_Brema_Buz_Makinesi_Fiyatlı_Katalog.pdf",
+  "price_valid_until": "2026-06-01",
+  "currency": "EUR",
+  "vat_included": false,
+  "notes": "Nakliye ve montaj Krom Mutfak San. Tic. A.Ş.'e aittir. Kırmızı yıldızlı ürünler sürekli stokta.",
+  "categories": [
+    {
+      "category": "Küp Buz Makinesi",
+      "products": [
+        {
+          "model": "CB 184 A HC",
+          "daily_capacity_kg": 23,
+          "storage_capacity_kg": 4,
+          "ice_type": "13 g",
+          "auto_clean": true,
+          "power_kw": 0.26,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "355x404x595",
+          "weight_kg": 27.5,
+          "price_eur": 1718,
+          "in_stock": true
+        },
+        {
+          "model": "CB 249 A HC",
+          "daily_capacity_kg": 32,
+          "storage_capacity_kg": 9,
+          "ice_type": "18 g",
+          "auto_clean": true,
+          "power_kw": 0.27,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "387x470x692",
+          "weight_kg": 32,
+          "price_eur": 2011,
+          "in_stock": true
+        },
+        {
+          "model": "CB 416 A HC",
+          "daily_capacity_kg": 44,
+          "storage_capacity_kg": 16,
+          "ice_type": "18 g",
+          "auto_clean": false,
+          "power_kw": 0.45,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "497x592x797",
+          "weight_kg": 43,
+          "price_eur": 2453,
+          "in_stock": true
+        },
+        {
+          "model": "CB 640 A HC",
+          "daily_capacity_kg": 73,
+          "storage_capacity_kg": 40,
+          "ice_type": "18 g",
+          "auto_clean": true,
+          "power_kw": 0.59,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "735x603x960",
+          "weight_kg": 67,
+          "price_eur": 3472,
+          "in_stock": true
+        },
+        {
+          "model": "CB 840 A HC",
+          "daily_capacity_kg": 82,
+          "storage_capacity_kg": 40,
+          "ice_type": "18 g",
+          "auto_clean": true,
+          "power_kw": 0.70,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "735x603x1020",
+          "weight_kg": 71,
+          "price_eur": 3758,
+          "in_stock": true
+        },
+        {
+          "model": "CB 955 A HC",
+          "daily_capacity_kg": 97,
+          "storage_capacity_kg": 55,
+          "ice_type": "18 g",
+          "auto_clean": true,
+          "power_kw": 0.87,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "735x603x1120",
+          "weight_kg": 74,
+          "price_eur": 3970,
+          "in_stock": true
+        },
+        {
+          "model": "CB 1565 A HC",
+          "daily_capacity_kg": 160,
+          "storage_capacity_kg": 65,
+          "ice_type": "18 g",
+          "auto_clean": false,
+          "power_kw": 1.28,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "840x740x1185",
+          "weight_kg": 118,
+          "price_eur": 5439,
+          "in_stock": true
+        },
+        {
+          "model": "C 150 A HC",
+          "daily_capacity_kg": 155,
+          "storage_capacity_kg": null,
+          "ice_type": "18 g",
+          "auto_clean": false,
+          "power_kw": 1.06,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "862x555x720",
+          "weight_kg": 110,
+          "price_eur": 5050,
+          "in_stock": true,
+          "compatible_bins": ["BIN 240PE", "BIN 200", "BIN 350"]
+        },
+        {
+          "model": "C 300 A",
+          "daily_capacity_kg": 320,
+          "storage_capacity_kg": null,
+          "ice_type": "18 g",
+          "auto_clean": false,
+          "power_kw": 3.00,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "1250x580x848",
+          "weight_kg": 152,
+          "price_eur": 8427,
+          "in_stock": true,
+          "compatible_bins": ["BIN 350"]
+        }
+      ]
+    },
+    {
+      "category": "B-Küp Buz Makinesi (B-Qube)",
+      "products": [
+        {
+          "model": "CB249 A HC B-QUBE",
+          "daily_capacity_kg": 32,
+          "storage_capacity_kg": 9,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.27,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "387x470x692",
+          "weight_kg": 32,
+          "price_eur": 2275,
+          "in_stock": true
+        },
+        {
+          "model": "CB416 A HC B-QUBE",
+          "daily_capacity_kg": 44,
+          "storage_capacity_kg": 16,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.45,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "497x592x797",
+          "weight_kg": 43,
+          "price_eur": 2798,
+          "in_stock": true
+        },
+        {
+          "model": "CB425 A HC B-QUBE",
+          "daily_capacity_kg": 54,
+          "storage_capacity_kg": 25,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.45,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "497x592x907",
+          "weight_kg": 46,
+          "price_eur": 2851,
+          "in_stock": true
+        },
+        {
+          "model": "CB640 A HC B-QUBE",
+          "daily_capacity_kg": 73,
+          "storage_capacity_kg": 40,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.59,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "735x603x960",
+          "weight_kg": 67,
+          "price_eur": 3641,
+          "in_stock": true
+        },
+        {
+          "model": "CB840 A HC B-QUBE",
+          "daily_capacity_kg": 82,
+          "storage_capacity_kg": 40,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.70,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "735x603x1020",
+          "weight_kg": 71,
+          "price_eur": 3999,
+          "in_stock": true
+        },
+        {
+          "model": "CB955 A HC B-QUBE",
+          "daily_capacity_kg": 97,
+          "storage_capacity_kg": 55,
+          "ice_type": "23 g",
+          "auto_clean": true,
+          "power_kw": 0.87,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "738x603x1120",
+          "weight_kg": 74,
+          "price_eur": 4162,
+          "in_stock": true
+        },
+        {
+          "model": "CB1565 A HC B-QUBE",
+          "daily_capacity_kg": 160,
+          "storage_capacity_kg": 65,
+          "ice_type": "23 g",
+          "auto_clean": false,
+          "power_kw": 1.15,
+          "voltage": "220/230V 1N -50Hz",
+          "dimensions_mm": "840x740x1185",
+          "weight_kg": 118,
+          "price_eur": 5814,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "category": "Hızlı Küp Buz Makinesi",
+      "products": [
+        {
+          "model": "VB 250 A HC",
+          "daily_capacity_kg": 105,
+          "storage_capacity_kg": 35,
+          "ice_type": "7 g",
+          "power_kw": 0.71,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "738x600x1085",
+          "weight_kg": 68.5,
+          "price_eur": 3902,
+          "in_stock": true
+        },
+        {
+          "model": "VM 350 A",
+          "daily_capacity_kg": 140,
+          "storage_capacity_kg": null,
+          "ice_type": "7 g",
+          "power_kw": 1.40,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "540x544x747",
+          "weight_kg": 73,
+          "price_eur": 4603,
+          "in_stock": true,
+          "compatible_bins": ["BIN 110", "BIN 200", "BIN 240PE"],
+          "compatible_dispenser": "ID70"
+        },
+        {
+          "model": "VM 500 A",
+          "daily_capacity_kg": 200,
+          "storage_capacity_kg": null,
+          "ice_type": "7 g",
+          "power_kw": 1.60,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "770x550x805",
+          "weight_kg": 90,
+          "price_eur": 5650,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "BIN 350", "DRB 100"]
+        },
+        {
+          "model": "VM 900 A",
+          "daily_capacity_kg": 400,
+          "storage_capacity_kg": null,
+          "ice_type": "7 g",
+          "power_kw": 3.00,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "770x550x805",
+          "weight_kg": 113,
+          "price_eur": 7462,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "BIN 350", "DRB 100"]
+        },
+        {
+          "model": "VM 1700 A",
+          "daily_capacity_kg": 770,
+          "storage_capacity_kg": null,
+          "ice_type": "7 g",
+          "power_kw": 4.30,
+          "voltage": "380/400V 3N ~50Hz",
+          "dimensions_mm": "1250x645x950",
+          "weight_kg": 186,
+          "price_eur": 14914,
+          "in_stock": true,
+          "compatible_bins": ["BIN 350"]
+        }
+      ]
+    },
+    {
+      "category": "Kar Buz Makinesi",
+      "products": [
+        {
+          "model": "GB 902 A HC",
+          "daily_capacity_kg": 125,
+          "storage_capacity_kg": 20,
+          "power_kw": 0.47,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "500x660x800",
+          "weight_kg": 59,
+          "price_eur": 4443,
+          "in_stock": true
+        },
+        {
+          "model": "GB 1540 A HC",
+          "daily_capacity_kg": 175,
+          "storage_capacity_kg": 40,
+          "power_kw": 0.70,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "738x690x1030",
+          "weight_kg": 85,
+          "price_eur": 5334,
+          "in_stock": true
+        },
+        {
+          "model": "G 160 A HC",
+          "daily_capacity_kg": 170,
+          "storage_capacity_kg": null,
+          "power_kw": 0.83,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "560x569x600",
+          "weight_kg": 63,
+          "price_eur": 5369,
+          "in_stock": true,
+          "compatible_bins": ["BIN 240PE", "BIN 110", "BIN 200", "RB 100"]
+        },
+        {
+          "model": "G 280 A HC",
+          "daily_capacity_kg": 300,
+          "storage_capacity_kg": null,
+          "power_kw": 1.10,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "560x569x695",
+          "weight_kg": 83,
+          "price_eur": 7200,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "BIN 350", "DRB 100", "BIN 110", "RB 100"]
+        },
+        {
+          "model": "G 510 A",
+          "daily_capacity_kg": 500,
+          "storage_capacity_kg": null,
+          "power_kw": 1.40,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "560x569x695",
+          "weight_kg": 102,
+          "price_eur": 8728,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "BIN 350", "BIN 110", "RB 100", "BIN 550 V DS", "DRB 100", "DRB 500", "DRB 1200"]
+        },
+        {
+          "model": "G 1000 A",
+          "daily_capacity_kg": 1000,
+          "storage_capacity_kg": null,
+          "power_kw": 3.20,
+          "voltage": "380/400V 3N ~50Hz",
+          "dimensions_mm": "934x684x700",
+          "weight_kg": 167,
+          "price_eur": 18407,
+          "in_stock": false,
+          "compatible_bins": ["BIN 550 V DS", "DRB 500", "DRB 1200"]
+        }
+      ]
+    },
+    {
+      "category": "Granül Buz Makinesi",
+      "products": [
+        {
+          "model": "TB 852 A HC",
+          "daily_capacity_kg": 105,
+          "storage_capacity_kg": 20,
+          "granule_size_mm": "8x16x7",
+          "power_kw": 0.44,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "500x660x800",
+          "weight_kg": 59,
+          "price_eur": 4594,
+          "in_stock": true
+        },
+        {
+          "model": "TB 1404 A HC",
+          "daily_capacity_kg": 153,
+          "storage_capacity_kg": 40,
+          "granule_size_mm": "8x16x7",
+          "power_kw": 0.72,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "738x690x962",
+          "weight_kg": 90,
+          "price_eur": 5311,
+          "in_stock": true
+        },
+        {
+          "model": "TM 250 A HC",
+          "daily_capacity_kg": 260,
+          "storage_capacity_kg": null,
+          "granule_size_mm": "13x18x13",
+          "power_kw": 1.04,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "560x569x695",
+          "weight_kg": 83,
+          "price_eur": 7797,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "BIN 350", "DRB 100", "BIN 110", "RB 100"]
+        },
+        {
+          "model": "TM 450 A HC",
+          "daily_capacity_kg": 420,
+          "storage_capacity_kg": null,
+          "granule_size_mm": "16.5x18x11",
+          "power_kw": 1.42,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "560x569x695",
+          "weight_kg": 102,
+          "price_eur": 8996,
+          "in_stock": true,
+          "compatible_bins": ["BIN 200", "BIN 240PE", "DRB 100", "DRB 500", "DRB 1200", "BIN 110", "RB 100", "BIN 350", "BIN 550 V DS"]
+        }
+      ]
+    },
+    {
+      "category": "Dispenserli Buz Makinesi",
+      "products": [
+        {
+          "model": "FRESH MAKER A",
+          "description": "Küp buz makinesi ve su dispenseri",
+          "daily_capacity_kg": 25,
+          "storage_capacity_kg": 4,
+          "ice_type": "13 g",
+          "power_kw": 0.32,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "540x430x440",
+          "weight_kg": 37.5,
+          "price_eur": 2821,
+          "in_stock": true
+        },
+        {
+          "model": "IC 18 A HC",
+          "daily_capacity_kg": 25,
+          "storage_capacity_kg": 4,
+          "ice_type": "13 g",
+          "built_in_capable": true,
+          "power_kw": 0.24,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "540x430x475",
+          "weight_kg": 32.5,
+          "price_eur": 2446,
+          "in_stock": true
+        },
+        {
+          "model": "IC 24 A HC",
+          "daily_capacity_kg": 30,
+          "storage_capacity_kg": 6,
+          "ice_type": "18 g",
+          "built_in_capable": true,
+          "power_kw": 0.28,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "595x510x507",
+          "weight_kg": 38,
+          "price_eur": 2925,
+          "in_stock": true
+        },
+        {
+          "model": "HIKU 26 A HC",
+          "description": "Küp buz makinesi dispenseri",
+          "daily_capacity_kg": 25,
+          "storage_capacity_kg": 7,
+          "ice_type": "13 g",
+          "auto_clean": true,
+          "power_kw": 0.29,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "395x530x790",
+          "weight_kg": 41,
+          "price_eur": 3681,
+          "in_stock": true
+        },
+        {
+          "model": "DSS 42 A",
+          "description": "Küp buz makinesi dispenseri",
+          "daily_capacity_kg": 48,
+          "storage_capacity_kg": 12,
+          "ice_type": "13 g",
+          "power_kw": 0.46,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "500x630x920",
+          "weight_kg": 66,
+          "price_eur": 4255,
+          "in_stock": true
+        },
+        {
+          "model": "BSF A",
+          "description": "Granül buz makinesi dispenseri",
+          "daily_capacity_kg": 105,
+          "storage_capacity_kg": 5,
+          "granule_size_mm": "8x16x7",
+          "power_kw": 0.44,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "396x708x871",
+          "weight_kg": 61,
+          "price_eur": 6815,
+          "in_stock": true
+        },
+        {
+          "model": "ID 70",
+          "description": "Buz dispenseri",
+          "storage_capacity_kg": 21,
+          "ice_type": "7g veya 13x18x13 mm",
+          "power_kw": 0.24,
+          "voltage": "220/230V 1N ~50Hz",
+          "dimensions_mm": "568x800x817",
+          "weight_kg": 58,
+          "price_eur": 4861,
+          "in_stock": true,
+          "compatible_machines": ["VM 350", "TM 250"]
+        }
+      ]
+    },
+    {
+      "category": "Buz Haznesi (Depolama Ünitesi)",
+      "products": [
+        {
+          "model": "BIN 110",
+          "storage_capacity_kg": 100,
+          "dimensions_mm": "560x815x1100",
+          "weight_kg": 53,
+          "price_eur": 2125,
+          "in_stock": true,
+          "compatible_machines": ["VM 350", "G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "BIN 200",
+          "storage_capacity_kg": 200,
+          "dimensions_mm": "870x790x1100",
+          "weight_kg": 74,
+          "price_eur": 2343,
+          "in_stock": true,
+          "compatible_machines": ["VM 350", "VM 500", "VM 900", "G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "BIN 240 PE",
+          "storage_capacity_kg": 180,
+          "dimensions_mm": "942x795x1153",
+          "weight_kg": 64,
+          "price_eur": 2229,
+          "in_stock": false,
+          "compatible_machines": ["VM 350", "VM 500", "VM 900", "G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "BIN 350",
+          "storage_capacity_kg": 350,
+          "dimensions_mm": "1250x790x1100",
+          "weight_kg": 105,
+          "price_eur": 3411,
+          "in_stock": true,
+          "compatible_machines": ["C 300", "VM 500", "VM 900", "VM 1700", "G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "RB 100",
+          "cart_capacity_kg": 108,
+          "storage_capacity_kg": 17,
+          "dimensions_mm": "795x1060x1284",
+          "weight_kg": 64,
+          "price_eur": 6068,
+          "in_stock": true,
+          "compatible_machines": ["G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "DRB 100",
+          "cart_capacity_kg": "108x2",
+          "storage_capacity_kg": 50,
+          "dimensions_mm": "1560x1060x1484",
+          "weight_kg": 135,
+          "price_eur": 9597,
+          "in_stock": true,
+          "compatible_machines": ["VM 500", "VM 900", "G 280", "G 510", "TM 250", "TM 450"]
+        },
+        {
+          "model": "DRB 500",
+          "cart_capacity_kg": "108x2",
+          "storage_capacity_kg": 300,
+          "dimensions_mm": "1560x1330x1810",
+          "weight_kg": 204,
+          "price_eur": 16691,
+          "in_stock": true,
+          "compatible_machines": ["G 510", "G 1000", "TM 450"]
+        },
+        {
+          "model": "DRB 1200",
+          "cart_capacity_kg": "108x2",
+          "storage_capacity_kg": 1000,
+          "dimensions_mm": "1560x1330x2460",
+          "weight_kg": 251,
+          "price_eur": 20383,
+          "in_stock": true,
+          "compatible_machines": ["G 510", "G 1000", "TM 450"]
+        },
+        {
+          "model": "BIN 550 V DS",
+          "storage_capacity_kg": 550,
+          "dimensions_mm": "1110x1060x1915",
+          "weight_kg": 163,
+          "price_eur": 11882,
+          "in_stock": true,
+          "compatible_machines": ["G 510", "G 1000", "TM 450"]
+        }
+      ]
+    }
+  ]
+}
