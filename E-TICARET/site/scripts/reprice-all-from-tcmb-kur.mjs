@@ -198,3 +198,27 @@ if (!DRY && changedRows > 0) {
   });
   if (r.status !== 0) process.exit(r.status || 1);
 }
+
+if (!DRY && !kurMeta.fallback && kurMeta.tcmbDate) {
+  const manifest = {
+    version: 1,
+    rate: kur,
+    type: "efektif_satis",
+    label: "TCMB Efektif Satış",
+    source: "tcmb",
+    date: kurMeta.tcmbDate,
+    updatedAt: new Date().toISOString(),
+  };
+  const manifestPaths = [
+    path.join(ROOT, "public/data/equsto-eur-try-rate.json"),
+    path.join(ROOT, "../veri/public-data/equsto-eur-try-rate.json"),
+  ];
+  for (const mp of manifestPaths) {
+    try {
+      await fsp.writeFile(mp, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
+      console.log(`→ kur manifesto: ${mp}`);
+    } catch (e) {
+      console.warn(`kur manifesto yazılamadı: ${mp} — ${e}`);
+    }
+  }
+}
