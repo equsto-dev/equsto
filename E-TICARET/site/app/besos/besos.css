@@ -240,6 +240,20 @@ body.bd-page.besos .bd-vitrum-jump {
     max-height: clamp(100px, 38vw, 200px);
   }
 }
+/* Beş görselli video altı buz / servis şeridi */
+.bd-ice-strip--five .bd-ice-strip-inner {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+@media (max-width: 1024px) {
+  .bd-ice-strip--five .bd-ice-strip-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .bd-ice-strip--five .bd-ice-strip-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
 .eq-yt {
   position: absolute;
