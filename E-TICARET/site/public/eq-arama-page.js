@@ -1547,6 +1547,9 @@
   }
 
   window.__eqAramaBoot = bootAramaPage;
+  window.__eqAramaState = filterState;
+  window.__eqAramaRender = renderAll;
+  window.__eqAramaClearFilters = resetFilters;
 
   document.addEventListener("equsto:kur-updated", function () {
     if (lastRender.q) renderAll();
