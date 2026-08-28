@@ -621,7 +621,7 @@
     "liste_fiyati_eur": 2821,
     "in_stock": true,
     "product": {
-      "description": "Kc buz makinesi ve su dispenseri",
+      "description": "Küçük buz makinesi ve su dispenseri",
       "daily_capacity_kg": 25,
       "storage_capacity_kg": 4,
       "ice_type": "13 g",
@@ -681,7 +681,7 @@
     "liste_fiyati_eur": 3681,
     "in_stock": true,
     "product": {
-      "description": "Kc buz makinesi dispenseri",
+      "description": "Küçük buz makinesi dispenseri",
       "daily_capacity_kg": 25,
       "storage_capacity_kg": 7,
       "ice_type": "13 g",
@@ -702,7 +702,7 @@
     "liste_fiyati_eur": 4255,
     "in_stock": true,
     "product": {
-      "description": "Kc buz makinesi dispenseri",
+      "description": "Küçük buz makinesi dispenseri",
       "daily_capacity_kg": 48,
       "storage_capacity_kg": 12,
       "ice_type": "13 g",
@@ -722,7 +722,7 @@
     "liste_fiyati_eur": 6815,
     "in_stock": true,
     "product": {
-      "description": "Granl buz makinesi dispenseri",
+      "description": "Granül buz makinesi dispenseri",
       "daily_capacity_kg": 105,
       "storage_capacity_kg": 5,
       "granule_size_mm": "8x16x7",
