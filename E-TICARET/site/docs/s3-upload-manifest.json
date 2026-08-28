@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-09T19:09:19.271Z",
+  "updatedAt": "2026-08-28T15:35:50.591Z",
   "bucket": "equsto-assets",
   "region": "eu-central-1",
-  "totalFiles": 21732,
-  "totalMb": 7514.3,
+  "totalFiles": 25535,
+  "totalMb": 8451.6,
   "dirs": [
     {
       "prefix": "images/",
@@ -36,5 +36,5 @@
       "ok": true
     }
   ],
-  "cdnEnvHint": "https://dqb0g8etbedva.cloudfront.net"
+  "cdnEnvHint": "(CloudFront URL → NEXT_PUBLIC_ASSET_CDN_URL)"
 }
