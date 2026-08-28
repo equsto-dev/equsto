@@ -39,6 +39,8 @@ export default function ShopPlpScripts() {
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp.js?v=${catalogV}`} strategy="afterInteractive" />
+      <Script src={`/eq-dept-plp-filter-mob.js?v=${v}`} strategy="afterInteractive" />
+      <link rel="stylesheet" href={`/eq-dept-plp-filter-mob.css?v=${v}`} />
     </>
   );
 }

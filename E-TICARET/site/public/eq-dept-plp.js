@@ -1061,13 +1061,7 @@
       tiles: deptTiles(),
       tileMatch: tileMatch,
       getPoolForCounts: poolForFacetCounts,
-      onChange: function (kind) {
-        if (kind === 'clear') clearAllFilters();
-        state.loadedCount = PAGE_SIZE;
-        document.body.classList.remove('eq-dept-filter-open');
-        syncTipInUrl();
-        render();
-      },
+      onChange: originalOnChange,
     });
     renderSelectedChips();
   }
@@ -1654,9 +1648,39 @@
 
   function boot() {
     bindSearch();
-    bindMobileFilter();
     loadDeptCover(loadCatalog);
   }
+
+  /** Expose state and helpers for mobile filter bottom sheet */
+  window.__eqDeptPlpState = state;
+  window.__eqDeptPlpRender = render;
+  window.__eqDeptPlpClearFilters = clearAllFilters;
+  window.DEPT = DEPT;
+  window.tileMatch = tileMatch;
+  window.findTile = findTile;
+  window.normalizeEnergyIds = function (ids) {
+    if (!Array.isArray(ids)) return [];
+    var out = [];
+    ids.forEach(function (id) {
+      var x = id === 'gazli' ? 'dogalgaz' : id;
+      if (x && out.indexOf(x) < 0) out.push(x);
+    });
+    return out;
+  };
+
+  /** Dispatch event when filters change for mobile badge sync */
+  function notifyFilterChange() {
+    document.dispatchEvent(new CustomEvent('equsto:plp-filters-changed'));
+  }
+
+  var originalOnChange = function (kind) {
+    if (kind === 'clear') clearAllFilters();
+    state.loadedCount = PAGE_SIZE;
+    document.body.classList.remove('eq-dept-filter-open');
+    syncTipInUrl();
+    render();
+    notifyFilterChange();
+  };
 
   function start() {
     applyPageMeta();
