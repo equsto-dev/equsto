@@ -272,16 +272,17 @@ body.bd-page.besos .footer.footer {
 
   body.bd-page.besos nav.topnav {
     display: flex !important;
-    max-height: 44px;
+    max-height: none;
+    min-height: 48px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
   body.bd-page.besos {
-    --bes-chrome-h: calc(56px + 44px);
-    --eq-filter-col-sticky-top: calc(56px + 44px);
-    --eq-drawer-chrome-top: calc(56px + 44px);
+    --bes-chrome-h: calc(56px + 48px);
+    --eq-filter-col-sticky-top: calc(56px + 48px);
+    --eq-drawer-chrome-top: calc(56px + 48px);
   }
 
   body.bd-page.besos.eq-cat-drawer-open {
@@ -324,5 +325,50 @@ body.bd-page.besos .footer.footer {
 @media (min-width: 769px) {
   body.bd-page.besos nav.topnav {
     display: flex !important;
+  }
+}
+
+/* ── Bar Design: kategori ikon şeridi + hero/video mobil ince ayar ─────────── */
+@media (max-width: 768px) {
+  /* Kategori ikonları artık kaydırılmaz; taşınca ortalanarak satırlara sarılır */
+  body.bd-page.besos .bd-besos-subnav {
+    justify-content: stretch;
+  }
+  body.bd-page.besos .bd-besos-subnav-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 6px 8px 7px;
+  }
+  body.bd-page.besos .bd-besos-subnav-link,
+  body.bd-page.besos .bd-besos-subnav a {
+    padding: 2px 10px 4px;
+    min-width: 0;
+  }
+  body.bd-page.besos .bd-besos-subnav-ico {
+    min-width: 36px;
+    height: 36px;
+  }
+  body.bd-page.besos .bd-besos-subnav-ico img {
+    height: 36px;
+    max-width: 56px;
+  }
+  body.bd-page.besos .bd-besos-subnav-label {
+    font-size: 10px;
+  }
+
+  /* Hero video: yatay (landscape) ekranda görünür yüksekliği aşmaz */
+  body.bd-page.besos .bd-hero-media {
+    height: min(480px, calc(100svh - var(--bes-chrome-h)));
+  }
+  body.bd-page.besos .bd-vitrum-mid-video-inner {
+    height: clamp(260px, 56vw, 480px);
+  }
+
+  /* Sayfada yatay kaydırma olmasın (tarayıcı kaydırma çubuğu dahil) */
+  body.bd-page.besos {
+    overflow-x: clip;
   }
 }
