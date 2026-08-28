@@ -3,13 +3,12 @@ import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { readJsonFile } from "@/lib/legacy-data";
 import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
-import { getTcmbEurEfektifSatis, kurToApiPayload } from "@/lib/tcmb-kur";
+import { tcmbKurHttpResponse } from "@/lib/tcmb-kur";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 const FIYATLAR_FILE = () => dataPath("fiyatlar.json");
-const REVALIDATE_SEC = Number(process.env.TCMB_KUR_REVALIDATE_SEC ?? "60") || 60;
 
 /** GET /api/market?kind=kur|fiyatlar — eski /api/kur ve /api/fiyatlar */
 export async function GET(req: NextRequest) {
@@ -39,27 +38,8 @@ export async function GET(req: NextRequest) {
     return adminOk({ data: {} });
   }
 
-  const kur = await getTcmbEurEfektifSatis();
-  const isRaw = req.nextUrl.searchParams.get("format") === "raw" || req.nextUrl.searchParams.get("raw") === "true";
-  if (isRaw) {
-    return new Response(String(kur.rate), {
-      status: 200,
-      headers: {
-        "Content-Type": "text/plain",
-        "Cache-Control": "no-store",
-      },
-    });
-  }
-  const body = kurToApiPayload(kur);
-  const maxAge = REVALIDATE_SEC > 0 ? REVALIDATE_SEC : 0;
-  return Response.json(body, {
-    headers: {
-      "Cache-Control":
-        maxAge > 0
-          ? `public, s-maxage=${maxAge}, stale-while-revalidate=${maxAge * 10}`
-          : "no-store",
-    },
-  });
+  const kur = await tcmbKurHttpResponse(req.nextUrl.searchParams);
+  return kur;
 }
 
 export async function POST(req: NextRequest) {

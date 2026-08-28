@@ -132,3 +132,39 @@ export function kurToApiPayload(kur: TcmbKurSnapshot) {
     fallback: kur.fallback,
   };
 }
+
+function getTcmbKurApiRevalidateSec(): number {
+  const n = Number(process.env.TCMB_KUR_REVALIDATE_SEC ?? "60");
+  return Number.isFinite(n) && n >= 0 ? n : 60;
+}
+
+/**
+ * /api/kur ile /api/market?kind=kur aynı davranışı üretir:
+ * - canlı TCMB EUR efektif satış (kısa önbellek; TCMB_KUR_REVALIDATE_SEC=0 → her istekte taze)
+ * - format=raw|raw=true → ham kur (text/plain, no-store)
+ * Yeni bülten (15:30 sonrası) today.xml üzerinden otomatik yakalanır.
+ */
+export async function tcmbKurHttpResponse(searchParams: URLSearchParams): Promise<Response> {
+  const kur = await getTcmbEurEfektifSatis();
+  const isRaw =
+    searchParams.get("format") === "raw" || searchParams.get("raw") === "true";
+  if (isRaw) {
+    return new Response(String(kur.rate), {
+      status: 200,
+      headers: {
+        "Content-Type": "text/plain",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
+  const body = kurToApiPayload(kur);
+  const maxAge = getTcmbKurApiRevalidateSec();
+  return Response.json(body, {
+    headers: {
+      "Cache-Control":
+        maxAge > 0
+          ? `public, s-maxage=${maxAge}, stale-while-revalidate=${maxAge * 10}`
+          : "no-store",
+    },
+  });
+}
