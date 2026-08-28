@@ -95,13 +95,14 @@ export function urbanBarToPdpSsr(
   const canonical = `${origin}${besosUrbanBarProductHref(sectionKey, slug, locale)}`;
   const sectionLabel =
     locale === "en" ? product.sectionLabelEn || sectionKey : product.sectionLabelTr || sectionKey;
+  const deptHref = `${prefix}/besos/${sectionKey === "bardaklar" ? "bardaklar" : "bar-ekipman"}`;
   const description =
     cleanDescription(
       {
-        aciklama: product.introHtml || product.description,
-        specs: product.description,
+        description: product.description,
         name: product.name,
       },
+      [],
       320,
     ) || `${product.name} — Urban Bar · Besos`;
 
@@ -110,12 +111,19 @@ export function urbanBarToPdpSsr(
       ? product.fiyat_tl
       : resolveMerchantPriceTry({ fiyat_tl: product.fiyat_tl, price: product.price });
 
+  const breadcrumbs: PdpSsrPayload["breadcrumbs"] = [
+    { name: locale === "en" ? "Home" : "Ana Sayfa", href: `${origin}${prefix}/` },
+    { name: locale === "en" ? "Bar Design" : "Besos", href: `${origin}${prefix}/besos` },
+    { name: sectionLabel, href: `${origin}${deptHref}` },
+  ];
+
   return {
     name: feedTitle({ name: product.name }) || product.name,
     brand: product.vendor || "Urban Bar",
     description,
     deptTitle: sectionLabel,
-    deptHref: `${prefix}/besos/${sectionKey === "bardaklar" ? "bardaklar" : "bar-ekipman"}`,
+    deptHref,
+    breadcrumbs,
     slug,
     canonical,
     image: productHeroImage(product, origin),
