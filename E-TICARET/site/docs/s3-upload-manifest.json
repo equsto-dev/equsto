@@ -36,5 +36,5 @@
       "ok": true
     }
   ],
-  "cdnEnvHint": "(CloudFront URL → NEXT_PUBLIC_ASSET_CDN_URL)"
+  "cdnEnvHint": "https://dqb0g8etbedva.cloudfront.net"
 }
