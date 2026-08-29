@@ -238,10 +238,34 @@
     document.addEventListener('keydown', onKeyDown);
 
     return sheet;
-}
   }
 
-  function openSheet() {
+  function renderFacets(container) {
+    var state = getPlpState();
+    if (!state) {
+      container.innerHTML = '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler yükleniyor…</div></div>';
+      return;
+    }
+
+    var isArama = !!global.__eqAramaState && state === global.__eqAramaState;
+    var isDeptPlp = !!global.__eqDeptPlpState && state === global.__eqDeptPlpState;
+
+    if (isDeptPlp && global.EqDeptCmFacets) {
+      var tiles = (global.EqDeptTips && global.EqDeptTips.tilesFor)
+        ? global.EqDeptTips.tilesFor(global.DEPT || 'pisirme')
+        : [];
+      var tileMatch = global.tileMatch;
+
+      var opts = {
+        dept: global.DEPT || 'pisirme',
+        allProducts: state.all || [],
+        state: state,
+        tiles: tiles,
+        tileMatch: tileMatch,
+        getPoolForCounts: function (exclude) {
+          var list = state.all || [];
+          if (state.activeTiles && state.activeTiles.length && exclude !== 'tile') {
+            list = list.filter(function (u) {
               for (var ti = 0; ti < state.activeTiles.length; ti++) {
                 var tile = tiles.find(function (t) { return t.id === state.activeTiles[ti]; });
                 if (tile && tileMatch && tileMatch(u, tile)) return true;
@@ -269,7 +293,6 @@
         },
       };
       global.EqDeptCmFacets.mount(container, opts);
-      // Apply i18n
       if (typeof global.eqI18nApply === 'function') {
         try { global.eqI18nApply(container); } catch (_) {}
       }

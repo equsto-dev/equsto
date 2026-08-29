@@ -1,0 +1,4399 @@
+{
+  "A1": {
+    "label": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+    "matches": [
+      {
+        "sku": "118.DBE.02",
+        "name": "Senox Dizden Basmalı Evye, Çift Su Girişli, DBE-02",
+        "brand": "Şenox",
+        "price": "₺9.592,00 KDV dahil",
+        "images": [
+          "images/catalog/senox/mutbex/20262.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "118.DBE.01",
+        "name": "Senox Dizden Basmalı Evye, Tek Su Girişli, DBE-01",
+        "brand": "Şenox",
+        "price": "₺7.993,00 KDV dahil",
+        "images": [
+          "images/catalog/senox/mutbex/20261.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7759.50393.90",
+        "name": "EL YIKAMA EVYESİ OVAL TİP MEKANİZMALI TEK GİRİŞ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺8.375,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-50393-90.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.50393.91",
+        "name": "EL YIKAMA EVYESİ OVAL TİP MEKANİZMALI SICAK/SOĞUK",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺9.854,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-50393-91.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.50393.92",
+        "name": "EL YIKAMA EVYESİ OVAL TİP MEKANİZMASIZ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.918,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-50393-92.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.50392.90",
+        "name": "EL YIKAMA EVYESİ OVAL TİP EĞİMLİ TEK GİRİŞ DUVARA MONTE",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.322,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-50392-90.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.40332.30",
+        "name": "EL YIKAMA EVYESİ YÜKSEK SIRTLI MEKANİZMASIZ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.764,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-40332-30.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.40332.31",
+        "name": "EL YIKAMA EVYESİ YÜKSEK SIRTLI MEKANİZMALI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺7.819,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-40332-31.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.40332.35",
+        "name": "EL YIKAMA EVYESİ YÜKSEK SIRTLI MEKANİZMALI SICAK/SOĞUK",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺8.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-40332-35.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "0759.04031.00",
+        "name": "EL YIKAMA EVYESİ STANDART",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺1.364,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-0759-04031-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "0759.40311.31",
+        "name": "EL YIKAMA EVYESİ ALT SIRTLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺2.454,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-0759-40311-31.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7759.50709.10",
+        "name": "EL VE PASPAS YIKAMA EVYESI 50*70*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.900,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7759-50709-10.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7771.12080.00",
+        "name": "KAZAN YIKAMA EVYESİ 120*80",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺32.214,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7771-12080-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7771.14080.00",
+        "name": "KAZAN YIKAMA EVYESİ 140*80",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺35.748,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7771-14080-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7771.16080.00",
+        "name": "KAZAN YIKAMA EVYESİ 160*80",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺39.610,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7771-16080-00.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "A2": {
+    "label": "İSTİF RAFI (152*46*160)",
+    "matches": [
+      {
+        "sku": "7897.19070.40",
+        "name": "ISTIF RAFI 2 DUZ,2 IZGARA TABL.190*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.926,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19070-40.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.11IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺15.847,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-11ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.12IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-12ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.13IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.594,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-13ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.14IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-14ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.15IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.061,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-15ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.16IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-16ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.19IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-19ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.20IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.828,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-20ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.21IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.567,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-21ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.22IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.790,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-22ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.23IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-23ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.24IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺27.005,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-24ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.27IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*91*183  PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.091,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-27ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.28IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-28ip4-07.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "B1": {
+    "label": "PANEL TİP SOĞUK ODA (200*300*240)",
+    "matches": [
+      {
+        "sku": "7919.CR2015.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺263.730,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2015-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.CR2020.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺286.706,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2020-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.CR2515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C  250X150X240 CM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺289.374,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2515-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.CR2520.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺304.200,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2520-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.CR2525.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺344.316,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2525-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.CR1515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺254.348,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr1515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3015.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺298.735,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3015-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3020.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺332.381,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3020-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3025.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺354.480,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3025-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3030.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺388.517,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3030-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺312.761,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3520.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺348.176,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3520-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3525.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺384.023,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3525-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3530.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺408.565,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3530-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3535.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺447.787,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3535-00.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "B2": {
+    "label": "İSTİF RAFI (137*46*160)",
+    "matches": [
+      {
+        "sku": "7897.19070.40",
+        "name": "ISTIF RAFI 2 DUZ,2 IZGARA TABL.190*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.926,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19070-40.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.11IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺15.847,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-11ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.12IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-12ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.13IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.594,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-13ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.14IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-14ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.15IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.061,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-15ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.16IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-16ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.19IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-19ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.20IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.828,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-20ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.21IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.567,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-21ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.22IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.790,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-22ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.23IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-23ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.24IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺27.005,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-24ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.27IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*91*183  PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.091,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-27ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.28IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-28ip4-07.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "C1": {
+    "label": "PANEL TİP SOĞUK ODA (200*200*240)",
+    "matches": [
+      {
+        "sku": "7919.CR1515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺254.348,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr1515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR2015.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺263.730,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2015-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR2020.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺286.706,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2020-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR2515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C  250X150X240 CM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺289.374,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR2520.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺304.200,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2520-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR2525.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺344.316,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr2525-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3015.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺298.735,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3015-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3020.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺332.381,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3020-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3025.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺354.480,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3025-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3030.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺388.517,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3030-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3515.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺312.761,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3520.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺348.176,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3520-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3525.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺384.023,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3525-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3530.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺408.565,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3530-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.CR3535.00",
+        "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺447.787,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-cr3535-00.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "C2": {
+    "label": "İSTİF RAFI (152*46*160)",
+    "matches": [
+      {
+        "sku": "7897.19070.40",
+        "name": "ISTIF RAFI 2 DUZ,2 IZGARA TABL.190*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.926,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19070-40.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.11IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺15.847,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-11ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.12IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-12ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.13IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.594,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-13ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.14IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-14ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.15IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.061,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-15ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.16IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-16ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.19IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-19ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.20IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.828,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-20ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.21IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.567,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-21ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.22IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.790,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-22ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.23IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-23ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.24IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺27.005,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-24ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.27IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*91*183  PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.091,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-27ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.28IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-28ip4-07.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D1": {
+    "label": "TEK EVİYELİ ÇALIŞMA TEZGAHI (140*70*85)",
+    "matches": [
+      {
+        "sku": "865310",
+        "name": "Giyotin tip Bulaşık Makineleri için Elleçleme Sistemi Bulaşık giriş tezgahı, Tek evyeli (500x400 mm), sıyırma hunisi, giyotin tip bulaşık makinesi için, 300 mm sırt, sağdan sola, 1400mm",
+        "brand": "Electrolux Professional",
+        "price": "₺59.087,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/865310/hero-1.jpg",
+          "images/catalog/electrolux/865310/hero-2.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.106A8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 100*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.627,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-106a8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.126A8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.286,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-126a8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.146E8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.677,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-146e8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.107C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 100*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.575,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-107c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.127C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.428,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-127c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺22.722,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147D8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.051,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147d8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.106A8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 100*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.627,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-106a8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.126A8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.383,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-126a8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.146E8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.677,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-146e8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.107C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 100*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.575,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-107c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.127C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.428,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-127c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺22.722,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147D8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.051,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147d8-15.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D2": {
+    "label": "DEPO TİPİ BUZDOLABI, TEK KAPILI (70*85*205)",
+    "matches": [
+      {
+        "sku": "7919.06LMV.00",
+        "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺81.794,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06lmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "79K3.06LMV.00",
+        "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERİN DONDURUCU K TİP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺77.971,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79k3-06lmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "79K4.06LMV.00",
+        "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU - K TİP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺71.614,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79k4-06lmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.06NMV.00",
+        "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺76.069,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06nmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "79K3.06NMV.00",
+        "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI K TİP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺70.441,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79k3-06nmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "79K4.06NMV.00",
+        "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI K TİP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺64.159,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79k4-06nmv-00.jpg"
+        ],
+        "score": 4
+      },
+      {
+        "sku": "7919.06LMV.10",
+        "name": "GN 600 LMV CIFT YARIM INOX KAPI DIK TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺87.960,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06lmv-10.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.06NMV.10",
+        "name": "GN 600 NMV CIFT YARIM INOX KAPI DIK TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺82.236,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06nmv-10.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.06NMV.01",
+        "name": "GN 600 NMV TEK CAM KAPI DIK TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺84.194,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06nmv-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.06NMV.11",
+        "name": "GN 600 NMV CIFT YARIM CAM KAPI DIK TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺90.208,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-06nmv-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "DT-1NGN-EKO",
+        "name": "Portabianco Dik Tip Buzdolabı Tek Kapılı DT-1NGN-EKO",
+        "brand": "PORTABIANCO",
+        "price": "₺47.359,00 KDV dahil",
+        "images": [
+          "images/catalog/portabianco/cafemarkt/portabianco-dt-1ngn-dik-tip-buzdolabi-tek-kapili-endustriyel-buzdolaplari-portabianco-25207-14-b.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "DT-1NGN-EKOP",
+        "name": "Portabianco Dik Tip Buzdolabı Tek Kapılı DT-1NGN-EKOP",
+        "brand": "PORTABIANCO",
+        "price": "₺44.894,00 KDV dahil",
+        "images": [
+          "images/catalog/yuksel/yuksel-dt-1ngn-ekop_1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "DT-1NGN",
+        "name": "Portabianco Dik Tip Buzdolabı Tek Kapılı DT-1NGN",
+        "brand": "PORTABIANCO",
+        "price": "₺66.911,00 KDV dahil",
+        "images": [
+          "images/catalog/portabianco/cafemarkt/portabianco-dt-1ngn-dik-tip-buzdolabi-tek-kapili-endustriyel-buzdolaplari-portabianco-25207-14-b.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "DT-1NGNE",
+        "name": "Portabianco Dik Tip Buzdolabı Tek Kapılı DT-1NGNE",
+        "brand": "PORTABIANCO",
+        "price": "₺65.547,00 KDV dahil",
+        "images": [
+          "images/catalog/portabianco/cafemarkt/portabianco-dt-1ngne-dik-tip-buzdolabi-tek-kapili-endustriyel-buzdolaplari-portabianco-25209-14-b.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.12LMV.00",
+        "name": "GN 1200 LMV CIFT INOX KAPI DIK TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺129.761,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-12lmv-00.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D3": {
+    "label": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI (160*70*85)",
+    "matches": [
+      {
+        "sku": "7911.14060.13",
+        "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺35.788,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14060-13.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7911.14070.13",
+        "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺39.880,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14070-13.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7911.12060.56",
+        "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI GR.ÇEKM.120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺58.320,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-12060-56.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7911.14060.56",
+        "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI GR.ÇEKM.140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺60.875,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14060-56.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7911.12070.56",
+        "name": "ÇAL.TEZG.DOLAPLI ARA RAFLI GR.ÇEKM.120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺60.299,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-12070-56.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.06060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 600×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺13.290,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-06060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.09060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 900×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺15.445,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-09060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.10060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1000×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺16.163,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-10060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.12060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1200×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺16.882,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-12060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.14060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1400×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺18.677,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-14060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.16060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1600×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺20.832,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-16060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.19060.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1900×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺23.706,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-19060-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.06070.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 600×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺14.367,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-06070-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.09070.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 900×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺16.343,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-09070-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "PIMAK.10070.04",
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı 1000×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺16.882,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-10070-04/p188-prod02.jpeg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D4": {
+    "label": "MAKE-UP TEZGAH TİPİ BUZDOLABI, 3 SIRA ÇEKMECELİ (140*70*85)",
+    "matches": [
+      {
+        "sku": "725188",
+        "name": "Pizza Teşhir Ünitesi Pizza hazırlık tezgahı, garnitürlüklü, 2 kapı ve 6 çekmeceli",
+        "brand": "Electrolux Professional",
+        "price": "₺293.191,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/725188/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "725189",
+        "name": "Pizza Teşhir Ünitesi Pizza hazırlık tezgahı, garnitürlüklü, 2 kapı ve 12 çekmeceli",
+        "brand": "Electrolux Professional",
+        "price": "₺362.783,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/725189/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.27NTV.C2",
+        "name": "270 NTV CİHAZALTI DOLAP - 4 ÇEKMECELİ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺93.762,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-27ntv-c2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7919.37NTV.C2",
+        "name": "370 NTV CİHAZALTI DOLAP - 6 ÇEKMECELİ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺113.816,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-37ntv-c2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7919.47NTV.C2",
+        "name": "470 NTV CİHAZALTI DOLAP - 8 ÇEKMECELİ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺133.756,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-47ntv-c2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.27NMV.02",
+        "name": "TAG 270 NMV 4  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺93.666,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-27nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.37NMV.02",
+        "name": "TAG 370 NMV 6  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺123.018,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-37nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.47NMV.02",
+        "name": "TAG 470 NMV 8  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺152.370,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-47nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E4.27NMV.02",
+        "name": "TAG 270 NMV 4  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺83.599,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-27nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E4.37NMV.02",
+        "name": "TAG 370 NMV 6  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺110.089,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-37nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E4.47NMV.02",
+        "name": "TAG 470 NMV 8  CEKMECE YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺135.331,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-47nmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.27LMV.02",
+        "name": "TAG 270 LMV 4  CEKMECE YATAY TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺103.327,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-27lmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.37LMV.02",
+        "name": "TAG 370 LMV 6  CEKMECE YATAY TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺132.103,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-37lmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E3.47LMV.02",
+        "name": "TAG 470 LMV 8  CEKMECE YATAY TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺164.338,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-47lmv-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "79E4.27LMV.02",
+        "name": "TAG 270 LMV 4  CEKMECE YATAY TIP DERIN DONDURUCU",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺89.785,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-27lmv-02.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D5": {
+    "label": "ÇALIŞMA TEZGAHI, TABAN RAFLI (140*70*85)",
+    "matches": [
+      {
+        "sku": "7911.14060.12",
+        "name": "ÇAL.TEZG.DOLAPLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺31.024,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14060-12.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7911.14070.12",
+        "name": "ÇAL.TEZG.DOLAPLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺34.327,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14070-12.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7911.12060.52",
+        "name": "ÇAL.TEZG.DOLAPLI GR.ÇEKM.120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺54.458,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-12060-52.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7911.14060.52",
+        "name": "ÇAL.TEZG.DOLAPLI GR.ÇEKM.140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺56.650,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-14060-52.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7911.12070.52",
+        "name": "ÇAL.TEZG.DOLAPLI GR.ÇEKM.120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺55.938,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7911-12070-52.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.06060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 600×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺12.212,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-06060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.09060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 900×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺13.649,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-09060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.10060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1000×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺14.367,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-10060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.12060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1200×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺15.085,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-12060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.14060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1400×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺16.522,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-14060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.16060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1600×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺17.959,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-16060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.19060.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1900×600×850 mm",
+        "brand": "Pimak",
+        "price": "₺20.473,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-19060-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.06070.08",
+        "name": "Taban Raflı Çalışma Tezgahı 600×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺12.930,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-06070-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.09070.08",
+        "name": "Taban Raflı Çalışma Tezgahı 900×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺14.367,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-09070-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "PIMAK.10070.08",
+        "name": "Taban Raflı Çalışma Tezgahı 1000×700×850 mm",
+        "brand": "Pimak",
+        "price": "₺15.085,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-10070-08/p188-prod01.jpeg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D6": {
+    "label": "SET ALTI DEEP FREEZE (60*60*85)",
+    "matches": [
+      {
+        "sku": "7919.DF1517.00",
+        "name": "DEEP FREEZER150*175*240 cm",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺293.942,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df1517-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF2020.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺344.783,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df2020-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF2022.00",
+        "name": "DEEP FREEZER200*225*240 cm",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺354.798,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df2022-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF2515.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C  250X150X240 CM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺347.300,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df2515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF2517.00",
+        "name": "DEEP FREEZER250*175*240 cm",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺363.731,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df2517-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF3025.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺434.434,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df3025-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF3515.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺374.119,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df3515-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF3017.00",
+        "name": "DEEP FREEZER300*175*240 cm",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺375.238,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df3017-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF3520.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺401.554,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df3520-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF3535.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺575.240,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df3535-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF4015.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺391.668,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df4015-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF4020.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺448.010,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df4020-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF4030.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺574.121,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df4030-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF4035.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺605.230,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df4035-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.DF4040.00",
+        "name": "DEEP FREEZE PANEL-SPLİT TİP, -22/-18 C",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺636.319,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-df4040-00.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D7": {
+    "label": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI (190*60*85)",
+    "matches": [
+      {
+        "sku": "133079",
+        "name": "Premium Serisi Tezgah-Evyeler 1000 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺53.993,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133079/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133080",
+        "name": "Premium Serisi Tezgah-Evyeler 1200 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺58.339,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133080/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133081",
+        "name": "Premium Serisi Tezgah-Evyeler 1400 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺62.281,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133081/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133082",
+        "name": "Premium Serisi Tezgah-Evyeler 1600 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺69.046,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133082/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133083",
+        "name": "Premium Serisi Tezgah-Evyeler 1800 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺72.499,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133083/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133084",
+        "name": "Premium Serisi Tezgah-Evyeler 2000 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺78.112,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133084/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133085",
+        "name": "Premium Serisi Tezgah-Evyeler 1200 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺78.486,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133085/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133086",
+        "name": "Premium Serisi Tezgah-Evyeler 1600 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺87.551,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133086/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133087",
+        "name": "Premium Serisi Tezgah-Evyeler 2000 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺90.257,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133087/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "710097",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Derin Dondurucu - 290lt, 2-Kapılı, Soğutma Ünitesi Sağda",
+        "brand": "Electrolux Professional",
+        "price": "₺188.888,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710097/hero-1.jpg",
+          "images/catalog/electrolux/710097/hero-2.jpg",
+          "images/catalog/electrolux/710097/hero-3.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371293",
+        "name": "Modüler Pişirme Ekipmanları 700XP Soğutmalı cihaz altı tezgah, 3 kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺210.992,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371293/hero-1.jpg",
+          "images/catalog/electrolux/371293/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710004",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium RTezgah Tipi Soğutucu - 290lt, 2-Kapılı, Soğutma Ünitesi Sağda",
+        "brand": "Electrolux Professional",
+        "price": "₺153.028,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710004/hero-1.jpg",
+          "images/catalog/electrolux/710004/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710014",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Refrigerated Tezgah Tipi Soğutucu - 290lt, 1-Kapılı 1/3+2/3 Çekmeceli",
+        "brand": "Electrolux Professional",
+        "price": "₺171.592,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710014/hero-1.jpg",
+          "images/catalog/electrolux/710014/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710015",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Soğutucu - 290lt, 1-Kapılı, 1/3+2/3 Çekmeceli, Sırtlı",
+        "brand": "Electrolux Professional",
+        "price": "₺174.901,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710015/hero-1.jpg",
+          "images/catalog/electrolux/710015/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710093",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Derin Dondurucu - 290lt, 2-Kapılı, Üst Tablasız",
+        "brand": "Electrolux Professional",
+        "price": "₺163.878,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710093/hero-1.jpg",
+          "images/catalog/electrolux/710093/hero-2.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D8": {
+    "label": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI (170*60*85)",
+    "matches": [
+      {
+        "sku": "133079",
+        "name": "Premium Serisi Tezgah-Evyeler 1000 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺53.993,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133079/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133080",
+        "name": "Premium Serisi Tezgah-Evyeler 1200 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺58.339,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133080/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133081",
+        "name": "Premium Serisi Tezgah-Evyeler 1400 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺62.281,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133081/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133082",
+        "name": "Premium Serisi Tezgah-Evyeler 1600 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺69.046,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133082/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133083",
+        "name": "Premium Serisi Tezgah-Evyeler 1800 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺72.499,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133083/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133084",
+        "name": "Premium Serisi Tezgah-Evyeler 2000 mm Dolaplı ve Sırtlı Çalışma Tezgahı - Kayar Kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺78.112,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133084/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133085",
+        "name": "Premium Serisi Tezgah-Evyeler 1200 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺78.486,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133085/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133086",
+        "name": "Premium Serisi Tezgah-Evyeler 1600 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺87.551,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133086/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "133087",
+        "name": "Premium Serisi Tezgah-Evyeler 2000 mm İki Taraftan Kapılı Dolaplı Çalışma Tezgahı - Pass-Through",
+        "brand": "Electrolux Professional",
+        "price": "₺90.257,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/133087/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "710097",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Derin Dondurucu - 290lt, 2-Kapılı, Soğutma Ünitesi Sağda",
+        "brand": "Electrolux Professional",
+        "price": "₺188.888,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710097/hero-1.jpg",
+          "images/catalog/electrolux/710097/hero-2.jpg",
+          "images/catalog/electrolux/710097/hero-3.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371293",
+        "name": "Modüler Pişirme Ekipmanları 700XP Soğutmalı cihaz altı tezgah, 3 kapılı",
+        "brand": "Electrolux Professional",
+        "price": "₺210.992,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371293/hero-1.jpg",
+          "images/catalog/electrolux/371293/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710004",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium RTezgah Tipi Soğutucu - 290lt, 2-Kapılı, Soğutma Ünitesi Sağda",
+        "brand": "Electrolux Professional",
+        "price": "₺153.028,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710004/hero-1.jpg",
+          "images/catalog/electrolux/710004/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710014",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Refrigerated Tezgah Tipi Soğutucu - 290lt, 1-Kapılı 1/3+2/3 Çekmeceli",
+        "brand": "Electrolux Professional",
+        "price": "₺171.592,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710014/hero-1.jpg",
+          "images/catalog/electrolux/710014/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710015",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Soğutucu - 290lt, 1-Kapılı, 1/3+2/3 Çekmeceli, Sırtlı",
+        "brand": "Electrolux Professional",
+        "price": "₺174.901,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710015/hero-1.jpg",
+          "images/catalog/electrolux/710015/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "710093",
+        "name": "Dijital Tezgahaltı Buzdolabı ecostore HP Premium Tezgah Tipi Derin Dondurucu - 290lt, 2-Kapılı, Üst Tablasız",
+        "brand": "Electrolux Professional",
+        "price": "₺163.878,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/710093/hero-1.jpg",
+          "images/catalog/electrolux/710093/hero-2.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D9": {
+    "label": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ (80*70*30)",
+    "matches": [
+      {
+        "sku": "371014",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 2-Pleytli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺34.537,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371014/hero-1.jpg",
+          "images/catalog/electrolux/371014/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371015",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 4-Pleytli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺51.517,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371015/hero-1.jpg",
+          "images/catalog/electrolux/371015/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371017",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 4-Kare Pleytli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺92.416,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371017/hero-1.jpg",
+          "images/catalog/electrolux/371017/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371024",
+        "name": "Modüler Pişirme Ekipmanları 700XP 2 Zonlu Setüstü Enfraruj Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺60.383,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371024/hero-1.jpg",
+          "images/catalog/electrolux/371024/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371025",
+        "name": "Modüler Pişirme Ekipmanları 700XP 4 Zonlu Setüstü Enfraruj Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺107.726,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371025/hero-1.jpg",
+          "images/catalog/electrolux/371025/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "9868.BT350.KCT",
+        "name": "ÖZTİRYAKİLER İNDİKSÜYONLU ISITICI-PİŞİRİCİ SETÜSTÜ 500-3500 W  33.9x42.8x11.7 CM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.034,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9868-bt350-kct.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371000",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı 2-Açık Ateşli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺40.524,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371000/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371001",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı 4-Açık Ateşli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺65.678,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371001/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371004",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı 6-Açık Ateşli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺88.933,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371004/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371007",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı Setüstü Kapalı Ateş Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺106.921,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371007/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371011",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı Setüstü Kapalı Ocak+2 Açık Ateş Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺88.012,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371011/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371012",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı Setüstü Kapalı Ocak+4 Açık Ateş Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺117.916,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371012/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371019",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 6-Pleytli Setüstü Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺83.695,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371019/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371020",
+        "name": "Modüler Pişirme Ekipmanları 700XP 2 Zonlu Setüstü Endüksiyon Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺149.027,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371020/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "371021",
+        "name": "Modüler Pişirme Ekipmanları 700XP 4 Zonlu Setüstü Endüksiyon Ocak",
+        "brand": "Electrolux Professional",
+        "price": "₺269.993,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371021/hero-1.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "D10": {
+    "label": "FRİTÖZ, İKİ HAZNELİ, ELK. SETÜSTÜ (80*70*30)",
+    "matches": [
+      {
+        "sku": "371066",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı 1 Hazneli Setüstü Fritöz-7Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺70.225,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371066/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371067",
+        "name": "Modüler Pişirme Ekipmanları 700XP Gazlı 2 Hazneli Setüstü Fritöz-2x7Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺120.592,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371067/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371074",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 2 Hazneli Setüstü Fritöz-2x5Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺99.006,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371074/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371075",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 1 Hazneli Setüstü Fritöz-7Lt",
+        "brand": "Electrolux Professional",
+        "price": "Teklif için iletişim",
+        "images": [
+          "images/catalog/electrolux/371075/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371076",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 2 Hazneli Setüstü Fritöz-2x7Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺117.916,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371076/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371079",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 1 Hazneli Setüstü Fritöz-12Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺64.296,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371079/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371080",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 2 Hazneli Setüstü Fritöz-2x12Lt",
+        "brand": "Electrolux Professional",
+        "price": "₺106.806,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/371080/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "371139",
+        "name": "Modüler Pişirme Ekipmanları 700XP Elektrikli 2 Hazneli Setüstü Fritöz-2x5Lt",
+        "brand": "Electrolux Professional",
+        "price": "Teklif için iletişim",
+        "images": [
+          "images/catalog/electrolux/371139/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "INO-7FE20S",
+        "name": "İNOKSAN FRITÖZ SETÜSTÜ, 1 MODÜL, ELEKTRIKLI",
+        "brand": "İnoksan",
+        "price": "₺124.889,00 KDV dahil",
+        "images": [
+          "images/catalog/inoksan/web/ino-7fe20s.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "INO-7FE20S-S",
+        "name": "İNOKSAN FRITÖZ SETÜSTÜ, 1M, STANDART SERI, ELK,",
+        "brand": "İnoksan",
+        "price": "₺106.532,00 KDV dahil",
+        "images": [
+          "images/catalog/inoksan/web/ino-7fe20s-s.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "INO-ZCO-7FE20S",
+        "name": "İNOKSAN FRITÖZ SETÜSTÜ, 1 MODÜL, ELEKTRIKLI",
+        "brand": "İnoksan",
+        "price": "₺124.889,00 KDV dahil",
+        "images": [
+          "images/catalog/inoksan/web/ino-zco-7fe20s.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "INO-ZCO-7FE20S-S",
+        "name": "İNOKSAN FRITÖZ SETÜSTÜ, 1M, STANDART SERI, ELK,",
+        "brand": "İnoksan",
+        "price": "₺106.532,00 KDV dahil",
+        "images": [
+          "images/catalog/inoksan/web/ino-zco-7fe20s-s.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "INO-ZMD-7FE20S-S",
+        "name": "İNOKSAN FRITÖZ SETÜSTÜ, 1M, STANDART,ELK,MADIRLI",
+        "brand": "İnoksan",
+        "price": "₺106.532,00 KDV dahil",
+        "images": [
+          "images/catalog/inoksan/web/ino-zmd-7fe20s-s.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "VSC-FRT2C08BB",
+        "name": "Vosco Çift Hazneli İndüksiyon Fritöz 8 x 2 Lt",
+        "brand": "Vosco",
+        "price": "₺30.752,00 KDV dahil",
+        "images": [
+          "images/catalog/vosco/vosco-vsc-frt2c08bb.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "VSL-FRT2C12B",
+        "name": "Vosco Çift Hazneli Indüksiyon Fritöz 12 x 2 Lt",
+        "brand": "Vosco",
+        "price": "₺54.819,00 KDV dahil",
+        "images": [
+          "images/catalog/vosco/vosco-vsl-frt2c12b.png"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D11": {
+    "label": "PATATES DİNLENDİRME, ELK. SETÜSTÜ (40*70*30)",
+    "matches": [
+      {
+        "sku": "7831.N1.40903.01",
+        "name": "900 SERİ SET ÜSTÜ PATATES DİNLENDİRME ELEKTRİKLİ 40*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.728,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7831-n1-40903-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "70S-M173",
+        "name": "70S-M173 Patates Dinlendirme Ünitesi",
+        "brand": "Pimak",
+        "price": "₺18.680,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/70s-m173-patates-dinlendirme-unitesi/70s-m173-patates-dinlendirme-unitesi.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "70SD-M173",
+        "name": "70SD-M173 Patates Dinlendirme Ünitesi",
+        "brand": "Pimak",
+        "price": "₺28.020,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/70sd-m173-patates-dinlendirme-unitesi/70sd-m173-patates-dinlendirme-unitesi.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "90SD-M168E",
+        "name": "90SD-M168E Patates Dinlendirme Ünitesi",
+        "brand": "Pimak",
+        "price": "₺32.331,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/90sd-m168e-patates-dinlendirme-unitesi/90sd-m168e-patates-dinlendirme-unitesi.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "M0168",
+        "name": "M0168 Elektrikli Patates Dinlendirme Ünitesi",
+        "brand": "Pimak",
+        "price": "₺11.495,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/m0168-elektrikli-patates-dinlendirme-unitesi/m0168-elektrikli-patates-dinlendirme-unitesi.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7831.N1.40703.01",
+        "name": "700 SERİ SET ÜSTÜ PATATES DİNLENDİRME ELEKTRİKLİ 40*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.807,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7831-n1-40703-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "9840.CL50D.00",
+        "name": "ROBOT COUPE SEBZE DOGRAMA MAKINASI CL50 BICAKSIZ",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺99.418,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9840-cl50d-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "9840.CL52D.00",
+        "name": "ROBOT COUPE SEBZE DOGRAMA MAKINESI CL52 BICAKSIZ İTME KAFALI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺168.984,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9840-cl52d-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "9840.CL55D.00",
+        "name": "ROBOT COUPE SEBZE DOGRAMA MAKINESI CL55 BICAKSIZ İTME KAFALI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺300.443,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9840-cl55d-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "9840.CL60D.00",
+        "name": "ROBOT COUPE SEBZE DOGRAMA MAKINASI CL60 BIÇAKSIZ OTOMATIK KAFALI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺617.560,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9840-cl60d-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "8840.USD01.00",
+        "name": "SEBZE DOGRAMA MAKINASI USD-01",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺61.132,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8840-usd01-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "8841.SDP10.00",
+        "name": "SEBZE DOGRAMA MAK. PARMAK PATATES KESME DISKI P10",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺3.170,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8841-sdp10-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "RC.28135",
+        "name": "ROBOT COUPE PARMAK PATATES KESME DİSKİ, 10X10 MM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.884,48 KDV dahil",
+        "images": [
+          "images/catalog/robot-coupe/cafemarkt/french-fries-kesme-diski-robot-coupe-bicaklari-robot-coupe-14308-23-o.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "RC.28158W",
+        "name": "ROBOT COUPE PARMAK PATATES KESME DİSKİ, 10X16 MM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.884,48 KDV dahil",
+        "images": [
+          "images/catalog/robot-coupe/cafemarkt/parmak-patates-bicagi-10x16-robot-coupe-bicaklari-robot-coupe-14310-97-o.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "RC.28134",
+        "name": "ROBOT COUPE PARMAK PATATES KESME DİSKİ, 8X8 MM",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.884,48 KDV dahil",
+        "images": [
+          "images/catalog/robot-coupe/cafemarkt/parmak-patates-8-mm-robot-coupe-bicaklari-robot-coupe-14265-23-o.jpg"
+        ],
+        "score": 1
+      }
+    ]
+  },
+  "D12": {
+    "label": "PLATE IZGARA, DÜZ, GAZLI, SETÜSTÜ (80*70*30)",
+    "matches": [
+      {
+        "sku": "7864.N1.40903.06",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 40*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺43.702,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-06.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.06C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 40*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺53.882,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-06c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.03",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU GAZLI 40*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺46.525,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-03.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.03C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU GAZLI 40*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺56.015,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-03c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.16",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 80*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺76.570,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-16.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.16C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 80*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺91.206,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-16c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.19",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE Y.OLUKLU GAZLI 80*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺77.664,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-19.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.19C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE Y.OLUKLU GAZLI 80*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺93.607,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-19c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.13",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU GAZLI 80*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺79.470,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-13.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.13C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU GAZLI 80*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺95.394,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-13c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.04",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ ELEKTRİKLİ 40*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺37.381,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-04.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.04C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ ELEKTRİKLİ 40*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.258,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-04c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.01",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU ELEKTRİKLİ 40*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺40.475,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.40903.01C",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE OLUKLU ELEKTRİKLİ 40*90*30-SERT KROM KAPLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺48.350,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-40903-01c.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7864.N1.80903.17",
+        "name": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ ELEKTRİKLİ  80*90*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺64.121,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-n1-80903-17.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D13": {
+    "label": "SETALTI BUZDOLABI, 4 KAPILI (140*70*60)",
+    "matches": [
+      {
+        "sku": "7919.37NTV.C1",
+        "name": "370 NTV CİHAZALTI 3 KAPILI DOLAP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺84.290,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-37ntv-c1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.47NTV.C1",
+        "name": "470 NTV CİHAZALTI 4 KAPILI DOLAP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺98.968,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-47ntv-c1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E3.37NMV.00",
+        "name": "TAG 370 NMV 3 INOX KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺86.616,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-37nmv-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E3.47NMV.00",
+        "name": "TAG 470 NMV 4 INOX KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺103.655,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-47nmv-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E4.37NMV.00",
+        "name": "TAG 370 NMV 3 INOX KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺77.146,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-37nmv-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E4.47NMV.00",
+        "name": "TAG 470 NMV 4 INOX KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺91.206,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-47nmv-00.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E3.37NMV.01",
+        "name": "TAG 370 NMV 3 CAM KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺87.730,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-37nmv-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E3.47NMV.01",
+        "name": "TAG 470 NMV 4 CAM KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺105.133,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e3-47nmv-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E4.37NMV.01",
+        "name": "TAG 370 NMV 3 CAM KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺78.932,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-37nmv-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "79E4.47NMV.01",
+        "name": "TAG 470 NMV 4 CAM KAPI YATAY TIP BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺93.570,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-79e4-47nmv-01.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.37NTV.E0",
+        "name": "TAG 370 NTV ÜÇ INOX KAPILI EVYELİ BUZDOLABI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺136.022,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-37ntv-e0.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.37NTV.S0",
+        "name": "TAG 370 NTV ÜÇ INOX KAPILI BUZDOLABI PİZZA HAZIRLIK TABLALI 188*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺131.239,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-37ntv-s0.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.47NTV.S0",
+        "name": "TAG 470 NTV DÖRT INOX KAPILI BUZDOLABI PİZZA HAZIRLIK TABLALI 240*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺152.658,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-47ntv-s0.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.37NTV.24",
+        "name": "TAG 370 NTV 3 INOX KAPI BUZDOLABI SOGUK SERVIS BANKOSU 188*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺103.519,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-37ntv-24.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7919.47NTV.24",
+        "name": "TAG 470 NTV 4 INOX KAPI BUZDOLABI SOGUK SERVIS BANKOSU 240*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺118.888,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7919-47ntv-24.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "D14": {
+    "label": "DAVLUMBAZ, ORTA TİP, FİLTRELİ (320*97*50)",
+    "matches": [
+      {
+        "sku": "9885.EECHC.00",
+        "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺94.933,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9885-eechc-00.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "9885.XEBHC.HCEU",
+        "name": "UNOX DAVLUMBAZ XEBHC-HCEU BAKERTOP",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺104.654,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-9885-xebhc-hceu.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7864.10502.05",
+        "name": "KOMURLU IZGARA DAVLUMBAZLI 100*50",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺31.518,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7864-10502-05.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.15155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 150*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺52.481,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-15155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.20155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 200*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺59.358,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-20155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.25155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 250*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺82.524,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-25155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.30155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺83.676,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-30155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.35155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 350*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺107.765,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-35155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.40155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 400*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺105.383,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-40155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.45155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 450*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺129.798,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-45155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.50155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 500*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺129.740,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-50155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.55155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 550*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺142.708,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-55155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.60155.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 600*150",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺152.831,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-60155-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.25205.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 250*200",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺88.171,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-25205-10.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7885.30205.10",
+        "name": "DAVLUMBAZ ORTA TİP FİLTRELİ 300*200",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺97.334,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7885-30205-10.jpg"
+        ],
+        "score": 1
+      }
+    ]
+  },
+  "D15": {
+    "label": "SİNEK ÖLDÜRÜCÜ",
+    "matches": [
+      {
+        "sku": "118.YSO.100",
+        "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 100",
+        "brand": "Şenox",
+        "price": "₺6.395,00 KDV dahil",
+        "images": [
+          "images/catalog/senox/mutbex/16949.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "118.YSO.200",
+        "name": "Senox Yapışkanlı Sinek Öldürücü, YSO 200",
+        "brand": "Şenox",
+        "price": "₺7.993,00 KDV dahil",
+        "images": [
+          "images/catalog/senox/mutbex/16929.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "E1": {
+    "label": "BULAŞIK SIYIRMA TEZGAHI (140*70*85)",
+    "matches": [
+      {
+        "sku": "865310",
+        "name": "Giyotin tip Bulaşık Makineleri için Elleçleme Sistemi Bulaşık giriş tezgahı, Tek evyeli (500x400 mm), sıyırma hunisi, giyotin tip bulaşık makinesi için, 300 mm sırt, sağdan sola, 1400mm",
+        "brand": "Electrolux Professional",
+        "price": "₺59.087,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/865310/hero-1.jpg",
+          "images/catalog/electrolux/865310/hero-2.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7712.12090.01",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ KASA RAFLI 120*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺38.482,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-12090-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.14090.01",
+        "name": "BUL.ALMA BANKOSU SIYIRMA HUNİLİ KASA RAFLI 140*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺41.278,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-14090-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.16090.01",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ KASA RAFLI 160*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.348,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-16090-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.19090.01",
+        "name": "BUL.ALMA BANKOSU SIYIRMA HUNİLİ KASA RAFLI 190*90",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺50.171,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-19090-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.12011.01",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ KASA RAFLI 120*110",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺41.702,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-12011-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.14011.01",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ KASA RAFLI 140*110",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺44.693,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-14011-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.16011.01",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ KASA RAFLI 160*110",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺49.090,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-16011-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.19011.01",
+        "name": "BUL.ALMA BANKOSU SIYIRMA HUNİLİ KASA RAFLI 190*110",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺54.356,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-19011-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.12060.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.052,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-12060-03.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.14060.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.209,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-14060-03.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.16060.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 160*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.176,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-16060-03.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.19060.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 190*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺24.188,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-19060-03.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.12070.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.305,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-12070-03.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7712.14070.03",
+        "name": "BUL.ALMA TEZGAHI SIYIRMA HUNİLİ 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.597,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7712-14070-03.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "E2": {
+    "label": "BASKET RAFI (140*40*60)",
+    "matches": [
+      {
+        "sku": "7856.N1.40908.02",
+        "name": "900 SERİ FRİTÖZ DOLAPLI ELEKTRİKLİ 40*90*85",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺69.404,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7856-n1-40908-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7856.N1.80908.02",
+        "name": "900 SERİ FRİTÖZ DOLAPLI ELEKTRİKLİ 80*90*85",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺123.613,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7856-n1-80908-02.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7856.N1.40908.04",
+        "name": "900 SERİ FRİTÖZ DOLAPLI GAZLI 40*90*85",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺71.171,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7856-n1-40908-04.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7856.N1.80908.14",
+        "name": "900 SERİ FRİTÖZ DOLAPLI GAZLI 80*90*85",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺123.556,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7856-n1-80908-14.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "7959.55659.01",
+        "name": "BASKET ISTIFLEME UNITESI HAREKETLI 55*65",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺39.044,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7959-55659-01.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "361251",
+        "name": "Servis Arabaları Bulaşık Sepet Arabası-6 Basketlik 2 Rafı Eğimli",
+        "brand": "Electrolux Professional",
+        "price": "₺31.658,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/361251/hero-1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "G.GN.150.D.1",
+        "name": "G.GN.150.D.1 İkili Gn Küvet Taşıma Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺25.864,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-gn-150-d-1-ikili-gn-kuvet-tasima-arabasi-150-etrafi-acik/g-gn-150-d-1-ikili-gn-kuvet-tasima-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.GN.150.S.1",
+        "name": "G.GN.150.S.1 Tekli Gn Küvet Taşıma Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺16.166,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-gn-150-s-1-tekli-gn-kuvet-tasima-arabasi-150-etrafi-acik/g-gn-150-s-1-tekli-gn-kuvet-tasima-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.GN.75.D.1",
+        "name": "G.GN.75.D.1 İkili Gn Küvet Taşıma Arabası 75 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺19.398,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-gn-75-d-1-ikili-gn-kuvet-tasima-arabasi-75-etrafi-acik/g-gn-75-d-1-ikili-gn-kuvet-tasima-arabasi-75-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.GN.75.S.1",
+        "name": "G.GN.75.S.1 Tekli Gn Küvet Taşıma Arabası 75 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺12.573,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-gn-75-s-1-tekli-gn-kuvet-tasima-arabasi-75-etrafi-acik/g-gn-75-s-1-tekli-gn-kuvet-tasima-arabasi-75-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.SS.150.D.1",
+        "name": "G.SS.150.D.1 İkili Self Servis Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺26.942,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-ss-150-d-1-ikili-self-servis-arabasi-150-etrafi-acik/g-ss-150-d-1-ikili-self-servis-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.SS.150.S.1",
+        "name": "G.SS.150.S.1 Tekli Self Servis Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺16.525,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-ss-150-s-1-tekli-self-servis-arabasi-150-etrafi-acik/g-ss-150-s-1-tekli-self-servis-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.ST.150.D.1",
+        "name": "G.ST.150.D.1 İkili Servis Tepsi Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺28.738,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-st-150-d-1-ikili-servis-tepsi-arabasi-150-etrafi-acik/g-st-150-d-1-ikili-servis-tepsi-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.ST.150.S.1",
+        "name": "G.ST.150.S.1 Tekli Servis Tepsi Arabası 150 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺16.525,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-st-150-s-1-tekli-servis-tepsi-arabasi-150-etrafi-acik/g-st-150-s-1-tekli-servis-tepsi-arabasi-150-etrafi-acik.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "G.ST.75.S.1",
+        "name": "G.ST.75.S.1 Tekli Servis Tepsi Arabası 75 (Etrafı Açık)",
+        "brand": "Pimak",
+        "price": "₺12.214,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/g-st-75-s-1-tekli-servis-tepsi-arabasi-75-etrafi-acik/g-st-75-s-1-tekli-servis-tepsi-arabasi-75-etrafi-acik.jpg"
+        ],
+        "score": 1
+      }
+    ]
+  },
+  "E3": {
+    "label": "ÇÖP ARABASI (Ø40*50)",
+    "matches": [
+      {
+        "sku": "132926",
+        "name": "Aksesuarlar Paslanmaz Çelik 50lt Çöp Kovası, tekerlekli, kapaklı",
+        "brand": "Electrolux Professional",
+        "price": "₺9.066,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/132926/hero-1.jpg",
+          "images/catalog/electrolux/132926/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "MB126X",
+        "name": "Portashelf Paslanmaz Çöp Arabası MB126X",
+        "brand": "Portashelf",
+        "price": "₺8.622,00 KDV dahil",
+        "images": [
+          "images/catalog/yuksel/web/yuksel-mb126x_1.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP206.00",
+        "name": "PEDALLI COP KONTEYNER ILAVE UST KAPAKLI 30 LT  GRI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺1.172,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up206-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP200.00",
+        "name": "PEDALLI COP KONTEYNER ILAVE UST KAPAKLI 30 LT   SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺655,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up200-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP201.00",
+        "name": "PEDALLI COP KONTEYNER ILAVE UST KAPAKLI 50 LT    SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺811,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up201-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP202.00",
+        "name": "PEDALLI COP KONTEYNER ILAVE UST KAPAKLI 70 LT  SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺678,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up202-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP203.00",
+        "name": "PEDALLI COP KONTEYNER ILAVE UST KAPAKLI 100 LT   SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺846,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up203-00.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP250.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  9 LT   GRI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺196,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up250-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP252.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  20  LT  GRI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺355,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up252-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP254.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  60  LT  GRI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺608,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up254-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP245.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  9 LT  SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺245,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up245-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP246.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  20  LT  SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺438,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up246-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8893.UP247.B0",
+        "name": "SLIM COP KOVASI YANA ACILIR KAPAKLI  60  LT  SIYAH",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺779,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8893-up247-b0.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "351156",
+        "name": "Yemek Dağıtım Sistemi Sıcak Banket Arabası-10xGN2/1",
+        "brand": "Electrolux Professional",
+        "price": "Teklif için iletişim",
+        "images": [
+          "images/catalog/electrolux/351156/hero-1.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "351157",
+        "name": "Yemek Dağıtım Sistemi Sıcak Banket Arabası-20xGN2/1",
+        "brand": "Electrolux Professional",
+        "price": "Teklif için iletişim",
+        "images": [
+          "images/catalog/electrolux/351157/hero-1.jpg"
+        ],
+        "score": 1
+      }
+    ]
+  },
+  "E4": {
+    "label": "TEK EVYELİ ÇALIŞMA TEZGAHI (140*70*85)",
+    "matches": [
+      {
+        "sku": "865310",
+        "name": "Giyotin tip Bulaşık Makineleri için Elleçleme Sistemi Bulaşık giriş tezgahı, Tek evyeli (500x400 mm), sıyırma hunisi, giyotin tip bulaşık makinesi için, 300 mm sırt, sağdan sola, 1400mm",
+        "brand": "Electrolux Professional",
+        "price": "₺59.087,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/865310/hero-1.jpg",
+          "images/catalog/electrolux/865310/hero-2.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.106A8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 100*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.627,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-106a8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.126A8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.286,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-126a8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.146E8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.677,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-146e8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.107C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 100*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.575,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-107c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.127C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.428,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-127c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147C8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺22.722,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147c8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147D8.11",
+        "name": "EVYELİ TEZG.1G/1D SOL 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.051,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147d8-11.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.106A8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 100*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.627,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-106a8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.126A8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 120*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.383,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-126a8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.146E8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*60",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.677,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-146e8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.107C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 100*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.575,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-107c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.127C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 120*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.428,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-127c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147C8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺22.722,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147c8-15.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "7758.147D8.15",
+        "name": "EVYELİ TEZG.1G/1D SAĞ 3 PERDELİ TABAN RAFLI 140*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.051,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7758-147d8-15.jpg"
+        ],
+        "score": 3
+      }
+    ]
+  },
+  "E5": {
+    "label": "BULAŞIK YIKAMA MAKİNASI (500 Tb/saat)",
+    "matches": [
+      {
+        "sku": "073M.11010.AD",
+        "name": "BARDAK YIKAMA MAKINASI OBY 500 B Plus (35x35) PDT",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺52.482,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-073m-11010-ad.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "535002",
+        "name": "Bulaşık Yıkama green&clean çoklu-dur.Konv.Bul. M,Davl.Gerektirmeyen Isı Pomp. Zero Lime,elektr,150s/sa,sağdan>sola",
+        "brand": "Electrolux Professional",
+        "price": "₺2.584.435,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/535002/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "535003",
+        "name": "Bulaşık Yıkama green&clean çoklu-dur.Konv.Bulaş.Mak,Davl.Gerektirmeyen Isı Pomp,ZERO LIME,elektr,150s/s,soldan>sağa",
+        "brand": "Electrolux Professional",
+        "price": "₺2.584.435,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/535003/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "535006",
+        "name": "Bulaşık Yıkama green&clean çoklu-dur.Konv.Bul.Mak,Davlum.Gerektirmeyen Isı Pomp,ZERO LIME,elektr,200s/s,sağdan>sola",
+        "brand": "Electrolux Professional",
+        "price": "₺2.892.880,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/535006/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "535007",
+        "name": "Bulaşık Yıkama green&clean çoklu-dur.Konv.Bul.Mak,Davlum.Gerektirmeyen Isı Pomp,ZERO LIME,elektr,200s/s,soldan>sağa",
+        "brand": "Electrolux Professional",
+        "price": "₺2.864.214,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/535007/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "535098",
+        "name": "Bulaşık Yıkama Çift durulamalı Green&Clean konveyörlü bulaşık makinası için kapılı uzun kurutma",
+        "brand": "Electrolux Professional",
+        "price": "₺335.124,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/535098/hero-1.jpg"
+        ],
+        "score": 3
+      },
+      {
+        "sku": "504251",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Automatic with ZERO LIME Device & Filtering System",
+        "brand": "Electrolux Professional",
+        "price": "₺312.244,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504251/hero-1.jpg",
+          "images/catalog/electrolux/504251/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504256",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Manual with ZERO LIME Device & Filtering System",
+        "brand": "Electrolux Professional",
+        "price": "₺298.372,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504256/hero-1.jpg",
+          "images/catalog/electrolux/504256/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504257",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Manual with Continuous Water Softener & Filtering System",
+        "brand": "Electrolux Professional",
+        "price": "₺320.590,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504257/hero-1.jpg",
+          "images/catalog/electrolux/504257/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504258",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Manual with Filtering System & Detergent Dispenser",
+        "brand": "Electrolux Professional",
+        "price": "₺265.417,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504258/hero-1.jpg",
+          "images/catalog/electrolux/504258/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504259",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Manual with Filtering System",
+        "brand": "Electrolux Professional",
+        "price": "₺260.496,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504259/hero-1.jpg",
+          "images/catalog/electrolux/504259/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504267",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher, Manual with Filtering System",
+        "brand": "Electrolux Professional",
+        "price": "₺267.547,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504267/hero-1.jpg",
+          "images/catalog/electrolux/504267/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "504292",
+        "name": "Bulaşık Yıkama green&clean Hood Type, Automatic with ZERO LIME Device, Filtering System & Detergent Dispenser",
+        "brand": "Electrolux Professional",
+        "price": "₺306.084,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/504292/hero-1.jpg",
+          "images/catalog/electrolux/504292/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "505070",
+        "name": "Bulaşık Yıkama green&clean hood type Dishwasher with Drain Pump & Detergent Dispenser",
+        "brand": "Electrolux Professional",
+        "price": "Teklif için iletişim",
+        "images": [
+          "images/catalog/electrolux/505070/hero-1.jpg",
+          "images/catalog/electrolux/505070/hero-2.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "865310",
+        "name": "Giyotin tip Bulaşık Makineleri için Elleçleme Sistemi Bulaşık giriş tezgahı, Tek evyeli (500x400 mm), sıyırma hunisi, giyotin tip bulaşık makinesi için, 300 mm sırt, sağdan sola, 1400mm",
+        "brand": "Electrolux Professional",
+        "price": "₺59.087,00 KDV dahil",
+        "images": [
+          "images/catalog/electrolux/865310/hero-1.jpg",
+          "images/catalog/electrolux/865310/hero-2.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "E6": {
+    "label": "DUVAR RAFI (140*30*4)",
+    "matches": [
+      {
+        "sku": "7897.10030.30",
+        "name": "DUVAR RAFI 100*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.110,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-10030-30.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.12030.30",
+        "name": "DUVAR RAFI 120*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.169,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-12030-30.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.14030.30",
+        "name": "DUVAR RAFI 140*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.610,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-14030-30.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.16030.30",
+        "name": "DUVAR RAFI 160*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺4.994,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-16030-30.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.19030.30",
+        "name": "DUVAR RAFI 190*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.975,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19030-30.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.10030.31",
+        "name": "DUVAR RAFI SÜZMELİ 100*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺6.071,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-10030-31.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.12030.31",
+        "name": "DUVAR RAFI SÜZMELİ 120*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺6.724,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-12030-31.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.14030.31",
+        "name": "DUVAR RAFI SÜZMELİ 140*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺7.434,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-14030-31.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.16030.31",
+        "name": "DUVAR RAFI SÜZMELİ 160*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺8.221,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-16030-31.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "7897.19030.31",
+        "name": "DUVAR RAFI SÜZMELİ 190*30",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺9.682,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19030-31.jpg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "DR04-503030.00",
+        "name": "Duvar Rafı 500×300×300 mm",
+        "brand": "Pimak",
+        "price": "₺2.873,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-dr04-503030-00/p197-prod01.jpeg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "DR04-703030.00",
+        "name": "Duvar Rafı 500×300×300 mm",
+        "brand": "Pimak",
+        "price": "₺3.592,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-dr04-703030-00/p197-prod01.jpeg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "DR04-903030.00",
+        "name": "Duvar Rafı 500×300×300 mm",
+        "brand": "Pimak",
+        "price": "₺3.951,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-dr04-903030-00/p197-prod01.jpeg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "DR04-1203030.00",
+        "name": "Duvar Rafı 500×300×300 mm",
+        "brand": "Pimak",
+        "price": "₺4.670,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-dr04-1203030-00/p197-prod01.jpeg"
+        ],
+        "score": 1
+      },
+      {
+        "sku": "DR04-1403030.00",
+        "name": "Duvar Rafı 500×300×300 mm",
+        "brand": "Pimak",
+        "price": "₺5.208,00 KDV dahil",
+        "images": [
+          "images/catalog/pimak/pimak-dr04-1403030-00/p197-prod01.jpeg"
+        ],
+        "score": 1
+      }
+    ]
+  },
+  "E7": {
+    "label": "İSTİF RAFI (152*46*160)",
+    "matches": [
+      {
+        "sku": "7897.19070.40",
+        "name": "ISTIF RAFI 2 DUZ,2 IZGARA TABL.190*70",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺45.926,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7897-19070-40.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.11IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺15.847,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-11ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.12IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-12ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.13IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.594,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-13ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.14IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-14ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.15IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.061,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-15ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.16IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 46*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-16ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.19IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*91*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺16.837,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-19ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.20IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺17.828,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-20ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.21IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*122*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺20.567,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-21ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.22IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*137*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺21.790,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-22ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.23IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*152*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺23.276,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-23ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.24IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 53*183*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺27.005,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-24ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.27IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*91*183  PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺18.091,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-27ip4-07.jpg"
+        ],
+        "score": 2
+      },
+      {
+        "sku": "8897.28IP4.07",
+        "name": "ISTIF RAFI IZGARA TABLA 61*107*183 PASLANMAZ 4 KATLI",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺19.810,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-8897-28ip4-07.jpg"
+        ],
+        "score": 2
+      }
+    ]
+  },
+  "Y1": {
+    "label": "YER IZGARASI (30*30*14)",
+    "matches": [
+      {
+        "sku": "7960.02929.5Y2",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5y2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.5Y4",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU -SOLDAN CIKISLI Q50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5y4.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.5Y5",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU -ARKADAN CIKISLI Q50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5y5.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.7Y2",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q70 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-7y2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.7Y2",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q70 PIK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-7y2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.1Y2",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU SAGDAN CIKISLI Q100 PIK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-1y2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.1Y5",
+        "name": "YER IZGARASI TAVALI KENARDAN SIFONLU -ARKADAN CIKISLI Q100 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-1y5.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.5O1",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5o1.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.5O1",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU -ALTTAN CIKISLI Q50 PIK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-5o1.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.5O2",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU SAGDAN CIKISLI Q50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5o2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.5O2",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU SAGDAN CIKISLI Q50 PIK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-5o2.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.5O3",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU -ONDEN CIKISLI Q 50 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-5o3.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.5O3",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU -ONDEN CIKISLI Q50 PIK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-5o3.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7960.02929.7O1",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU ALTTAN CIKISLI Q 70 PVC 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7960-02929-7o1.jpg"
+        ],
+        "score": 5
+      },
+      {
+        "sku": "7961.02929.7O1",
+        "name": "YER IZGARASI TAVALI ORTADAN SIFONLU -ALTAN CIKISLI Q70 PİK 290*290",
+        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "price": "₺5.225,00 KDV dahil",
+        "images": [
+          "images/catalog/ozti/web/ozti-7961-02929-7o1.jpg"
+        ],
+        "score": 5
+      }
+    ]
+  }
+}
