@@ -16,7 +16,10 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
       <link rel="stylesheet" href={`/contact.css?v=${v}`} />
       {variant === "plp" || variant === "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
-        <link rel="stylesheet" href={`/eq-dept-plp.css?v=${v}`} />
+        <>
+          <link rel="stylesheet" href={`/eq-dept-plp.css?v=${v}`} />
+          <link rel="stylesheet" href={`/eq-dept-plp-filter-mob.css?v=${v}`} />
+        </>
       ) : null}
       {variant === "product" ? (
         <>
