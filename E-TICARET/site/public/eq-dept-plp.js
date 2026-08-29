@@ -1655,6 +1655,7 @@
   window.__eqDeptPlpState = state;
   window.__eqDeptPlpRender = render;
   window.__eqDeptPlpClearFilters = clearAllFilters;
+  window.__eqDeptPlpPoolForFacetCounts = poolForFacetCounts;
   window.DEPT = DEPT;
   window.tileMatch = tileMatch;
   window.findTile = findTile;

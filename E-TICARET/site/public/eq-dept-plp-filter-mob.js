@@ -262,27 +262,7 @@
         state: state,
         tiles: tiles,
         tileMatch: tileMatch,
-        getPoolForCounts: function (exclude) {
-          var list = state.all || [];
-          if (state.activeTiles && state.activeTiles.length && exclude !== 'tile') {
-            list = list.filter(function (u) {
-              for (var ti = 0; ti < state.activeTiles.length; ti++) {
-                var tile = tiles.find(function (t) { return t.id === state.activeTiles[ti]; });
-                if (tile && tileMatch && tileMatch(u, tile)) return true;
-              }
-              return false;
-            });
-          }
-          if (state.brands && state.brands.length && exclude !== 'brand') {
-            list = list.filter(function (u) {
-              var fb = global.EqDeptCmFacets && global.EqDeptCmFacets.productBrand
-                ? global.EqDeptCmFacets.productBrand(u)
-                : '';
-              return state.brands.indexOf(fb) >= 0;
-            });
-          }
-          return list;
-        },
+        getPoolForCounts: global.__eqDeptPlpPoolForFacetCounts,
         onChange: function (kind) {
           if (kind === 'clear') {
             if (typeof global.__eqDeptPlpClearFilters === 'function') global.__eqDeptPlpClearFilters();
