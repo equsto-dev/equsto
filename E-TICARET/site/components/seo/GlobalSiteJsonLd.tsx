@@ -11,11 +11,9 @@ export default function GlobalSiteJsonLd() {
       {
         "@type": "Organization",
         "@id": `${origin}/#organization`,
-        name: "Equsto Teknoloji Limited",
-        alternateName: ["Equsto", "Equsto Endüstriyel Mutfak"],
+        name: "Equsto",
         url: origin,
         logo: publicAssetUrl("/images/equsto-logo.png"),
-        foundingDate: "2026",
         description:
           "Equsto; restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanı ve proje planlama platformudur. Öztiryakiler yetkili bayii.",
         knowsAbout: [
@@ -38,12 +36,6 @@ export default function GlobalSiteJsonLd() {
           "https://equsto.com/hakkimizda",
           "https://equsto.com/pfos",
         ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "sales",
-          url: `${origin}/iletisim`,
-          availableLanguage: ["Turkish", "English"],
-        },
       },
       {
         "@type": "WebSite",

@@ -85,7 +85,7 @@ export default async function ShopProductPage({
     langPrefix: langPrefix === "/en" ? "/en" : "",
   });
   const seed = rowToPdpClientSeed(found.row, canonicalDept);
-  const jsonLd = buildProductJsonLd(ssr);
+  const jsonLd = buildProductJsonLd(ssr, found.row);
 
   return (
     <>
