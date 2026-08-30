@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { catalogUrlSlug } from "@/lib/catalog-product-slug";
-import JsonLdScript from "@/components/seo/JsonLdScript";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopProductMain from "@/components/shop/ShopProductMain";
@@ -90,7 +89,10 @@ export default async function ShopProductPage({
   return (
     <>
       <ShopProductPdpSeed seed={seed} />
-      <JsonLdScript data={jsonLd} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${ECOM_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
