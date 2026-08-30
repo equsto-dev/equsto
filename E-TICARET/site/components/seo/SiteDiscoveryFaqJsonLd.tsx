@@ -1,4 +1,3 @@
-import JsonLdScript from "@/components/seo/JsonLdScript";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 /** Site geneli — AI arama sorgularına doğrudan yanıt (FAQPage) */
@@ -53,5 +52,10 @@ export default function SiteDiscoveryFaqJsonLd() {
     ],
   };
 
-  return <JsonLdScript data={data} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
 }

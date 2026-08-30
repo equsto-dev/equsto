@@ -1,4 +1,3 @@
-import JsonLdScript from "@/components/seo/JsonLdScript";
 import { publicAssetUrl } from "@/lib/public-asset-url";
 import { getSiteOrigin } from "@/lib/site-origin";
 
@@ -66,5 +65,10 @@ export default function GlobalSiteJsonLd() {
     ],
   };
 
-  return <JsonLdScript data={data} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
 }
