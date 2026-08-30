@@ -3,6 +3,7 @@ import {
   matchCatalogRowByPathSlug,
   pdpSlugAliases,
 } from "@/lib/catalog-product-slug";
+import { slugifyTr } from "@/lib/slug";
 import { resolveCatalogImageFromRow } from "@/lib/catalog-image-resolve";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { dataRel, readJsonFile } from "@/lib/legacy-data";
@@ -249,39 +250,66 @@ export function buildProductMetadata(
   };
 }
 
-export function buildProductJsonLd(ssr: PdpSsrPayload) {
+export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<string, unknown>) {
   const origin = getSiteOrigin();
-  const deptUrl = `${origin}${ssr.deptHref}`;
 
   const seller = {
     "@type": "Organization",
     name: "Equsto",
     url: origin,
-    areaServed: [
-      "Istanbul", "Ankara", "Izmir", "Bursa", "Antalya",
-      "Adana", "Konya", "Sanliurfa", "Gaziantep", "Kocaeli",
-      "Mersin", "Diyarbakir", "Hatay", "Manisa", "Kayseri",
-      "Samsun", "Balikesir", "Kahramanmaras", "Van", "Aydin"
-    ].map((city) => ({ "@type": "City", name: city })),
   };
 
-  const offer =
-    ssr.priceTry && ssr.priceTry > 0
-      ? {
-          "@type": "Offer",
-          price: ssr.priceTry.toFixed(2),
-          priceCurrency: "TRY",
-          availability: "https://schema.org/InStock",
-          url: ssr.canonical,
-          seller,
-        }
-      : {
-          "@type": "Offer",
-          availability: "https://schema.org/PreOrder",
-          url: ssr.canonical,
-          priceCurrency: "TRY",
-          seller,
-        };
+  let priceValue: string | undefined;
+  let availability = "https://schema.org/InStock";
+
+  if (originalRow) {
+    const fiyatTl = originalRow.fiyat_tl as number | undefined;
+    const fiyatTlNet = originalRow.fiyat_tl_net as number | undefined;
+    const priceStr = originalRow.price as string | undefined;
+    const fiyatBekleniyor = originalRow.fiyat_bekleniyor as boolean | number | undefined;
+    const stok = originalRow.stok as number | string | undefined;
+    const mutbexStok = originalRow.mutbex_stok as number | string | undefined;
+
+    if (fiyatBekleniyor) {
+      availability = "https://schema.org/PreOrder";
+    } else if (typeof stok === "number" && stok <= 0) {
+      availability = "https://schema.org/OutOfStock";
+    } else if (typeof mutbexStok === "number" && mutbexStok <= 0) {
+      availability = "https://schema.org/OutOfStock";
+    } else if (typeof stok === "string" && parseInt(stok, 10) <= 0) {
+      availability = "https://schema.org/OutOfStock";
+    } else if (typeof mutbexStok === "string" && parseInt(mutbexStok, 10) <= 0) {
+      availability = "https://schema.org/OutOfStock";
+    }
+
+    if (fiyatTl && fiyatTl > 0) {
+      priceValue = (fiyatTl / 100).toFixed(2);
+    } else if (fiyatTlNet && fiyatTlNet > 0) {
+      priceValue = (fiyatTlNet / 100).toFixed(2);
+    } else if (priceStr) {
+      const parsed = parseTrPrice(priceStr);
+      if (parsed > 0) priceValue = parsed.toFixed(2);
+    }
+  } else if (ssr.priceTry && ssr.priceTry > 0) {
+    priceValue = ssr.priceTry.toFixed(2);
+  }
+
+  const offer: Record<string, unknown> = {
+    "@type": "Offer",
+    priceCurrency: "TRY",
+    availability,
+    url: ssr.canonical,
+    seller,
+  };
+
+  if (priceValue) {
+    offer.price = priceValue;
+  }
+
+  const images = originalRow?.images as string[] | undefined;
+  const imageUrls = images?.map((img) => absoluteAssetUrl(img, origin)).filter(Boolean) ?? (ssr.image ? [ssr.image] : undefined);
+
+  const breadcrumbs = buildBreadcrumbsFromKategoriYolu(originalRow, ssr, origin);
 
   return {
     "@context": "https://schema.org",
@@ -290,7 +318,7 @@ export function buildProductJsonLd(ssr: PdpSsrPayload) {
         "@type": "Product",
         name: ssr.name,
         description: ssr.description,
-        image: ssr.image ? [ssr.image] : undefined,
+        image: imageUrls,
         sku: ssr.sku || ssr.slug,
         ...(ssr.mpn ? { mpn: ssr.mpn } : {}),
         ...(ssr.gtin ? { gtin: ssr.gtin } : {}),
@@ -299,23 +327,109 @@ export function buildProductJsonLd(ssr: PdpSsrPayload) {
       },
       {
         "@type": "BreadcrumbList",
-        itemListElement: [
-          ...ssr.breadcrumbs.map((b, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            name: b.name,
-            ...(b.href ? { item: `${origin}${b.href}` } : {}),
-          })),
-          { 
-            "@type": "ListItem", 
-            position: ssr.breadcrumbs.length + 1, 
-            name: ssr.name, 
-            item: ssr.canonical 
-          },
-        ],
+        itemListElement: breadcrumbs,
       },
     ],
   };
+}
+
+function parseTrPrice(priceStr: string): number {
+  const cleaned = String(priceStr || "")
+    .replace(/₺/g, "")
+    .replace(/\+?\s*KDV.*/gi, "")
+    .replace(/KDV\s*dahil/gi, "")
+    .trim()
+    .replace(/\.(?=\d{3}(\D|$))/g, "")
+    .replace(",", ".");
+  const n = parseFloat(cleaned);
+  return Number.isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0;
+}
+
+function buildBreadcrumbsFromKategoriYolu(
+  originalRow: Record<string, unknown> | undefined,
+  ssr: PdpSsrPayload,
+  origin: string
+): Array<{ "@type": "ListItem"; position: number; name: string; item?: string }> {
+  const breadcrumbs: Array<{ "@type": "ListItem"; position: number; name: string; item?: string }> = [];
+
+  breadcrumbs.push({
+    "@type": "ListItem",
+    position: 1,
+    name: "Ana Sayfa",
+    item: `${origin}/`,
+  });
+
+  if (ssr.deptHref) {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      position: 2,
+      name: ssr.deptTitle,
+      item: `${origin}${ssr.deptHref}`,
+    });
+  }
+
+  if (originalRow) {
+    const kategoriYolu = originalRow.kategori_yolu as string[] | undefined;
+    if (Array.isArray(kategoriYolu) && kategoriYolu.length > 1) {
+      // Skip first element (dept duplicate), start from index 1
+      // Sub-category pages don't exist, so NO item URL for them
+      for (let i = 1; i < kategoriYolu.length; i++) {
+        const trimmed = String(kategoriYolu[i]).trim();
+        if (!trimmed) continue;
+        breadcrumbs.push({
+          "@type": "ListItem",
+          position: breadcrumbs.length + 1,
+          name: trimmed,
+        });
+      }
+    } else {
+      // Fallback: urun_kategori / urun_alt_kategori (no kategori_yolu array)
+      // Sub-category pages don't exist, so NO item URL for them
+      const urunKategori = originalRow.urun_kategori as string | undefined;
+      if (urunKategori) {
+        const trimmed = String(urunKategori).trim();
+        if (trimmed && trimmed.toLowerCase() !== ssr.deptTitle.toLowerCase()) {
+          breadcrumbs.push({
+            "@type": "ListItem",
+            position: breadcrumbs.length + 1,
+            name: trimmed,
+          });
+        }
+      }
+      const urunAltKategori = originalRow.urun_alt_kategori as string | undefined;
+      if (urunAltKategori) {
+        const trimmed = String(urunAltKategori).trim();
+        if (trimmed) {
+          breadcrumbs.push({
+            "@type": "ListItem",
+            position: breadcrumbs.length + 1,
+            name: trimmed,
+          });
+        }
+      }
+    }
+  } else {
+    for (const b of ssr.breadcrumbs) {
+      if (b.name && b.name !== ssr.deptTitle && b.name !== "Ana Sayfa") {
+        breadcrumbs.push({
+          "@type": "ListItem",
+          position: breadcrumbs.length + 1,
+          name: b.name,
+          ...(b.href ? { item: `${origin}${b.href}` } : {}),
+        });
+      }
+    }
+  }
+
+  // Use the REAL canonical URL from ssr (not regenerated)
+  breadcrumbs.push({
+    "@type": "ListItem",
+    position: breadcrumbs.length + 1,
+    name: ssr.name,
+    item: ssr.canonical,
+  });
+
+  return breadcrumbs;
 }
 
 /** PLP — Google için statik iç link listesi */

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ShopDeptPage, { generateStaticParams } from "../../../shop/[dept]/page";
-import { SHOP_DEPTS, isShopDeptSlug } from "@/lib/shop/depts";
+import { SHOP_DEPTS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
 import en from "@/public/i18n/en.json";
 
 export const dynamic = "force-static";

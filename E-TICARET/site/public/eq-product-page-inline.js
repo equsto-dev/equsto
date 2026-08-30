@@ -4593,60 +4593,6 @@ window.searchFilter = window.searchFilter || function () {};
         var ogImg = document.querySelector('meta[property="og:image"]');
         if (ogImg && x.images && x.images[0]) ogImg.content = eqAbsoluteAssetUrl(x.images[0]);
 
-        /* JSON-LD Product Schema (Merchant Listing — geçerli fiyat / SKU / kargo / iade) */
-        var imgUrl = (x.images && x.images[0]) ? eqAbsoluteAssetUrl(x.images[0]) : "";
-        var schema =
-          window.EqustoMerchantSchema && typeof window.EqustoMerchantSchema.buildProductSchema === "function"
-            ? window.EqustoMerchantSchema.buildProductSchema(x, { canonUrl: canonUrl, slug: slug, imgUrl: imgUrl })
-            : {
-                "@context": "https://schema.org",
-                "@type": "Product",
-                name: x.name || "",
-                description: x.description || (x.name + " — Equsto endüstriyel mutfak ekipmanı."),
-                brand: { "@type": "Brand", name: x.brand || "Equsto" },
-                sku: String(x.sku || x.code || slug).slice(0, 50),
-                url: canonUrl,
-              };
-        if (imgUrl && !schema.image) schema.image = imgUrl;
-        var ldEl = document.getElementById('eq-product-ld');
-        if (!ldEl) {
-          ldEl = document.createElement('script');
-          ldEl.id = 'eq-product-ld';
-          ldEl.type = 'application/ld+json';
-          document.head.appendChild(ldEl);
-        }
-        ldEl.textContent = JSON.stringify(schema);
-        if (window.EqustoProductReviews && typeof window.EqustoProductReviews.applyToElement === "function") {
-          window.EqustoProductReviews.applyToElement(ldEl, schema, x, slug);
-        }
-
-        /* BreadcrumbList JSON-LD */
-        var bcSchema = {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": __pdpT("breadcrumb.home", "Ana Sayfa"), "item": "https://equsto.com/" },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": x.category || "Ekipman",
-              "item":
-                typeof window.equstoUrl === "function"
-                  ? window.equstoUrl("shop")
-                  : "https://equsto.com/shop",
-            },
-            { "@type": "ListItem", "position": 3, "name": x.name || 'Ürün', "item": canonUrl }
-          ]
-        };
-        var bcLdEl = document.getElementById('eq-product-bc-ld');
-        if (!bcLdEl) {
-          bcLdEl = document.createElement('script');
-          bcLdEl.id = 'eq-product-bc-ld';
-          bcLdEl.type = 'application/ld+json';
-          document.head.appendChild(bcLdEl);
-        }
-        bcLdEl.textContent = JSON.stringify(bcSchema);
-
         var skEl = document.getElementById("eq-product-sk");
         if (!skEl) {
           skEl = document.createElement("span");
