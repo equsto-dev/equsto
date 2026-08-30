@@ -372,7 +372,7 @@ function buildBreadcrumbsFromKategoriYolu(
     const kategoriYolu = originalRow.kategori_yolu as string[] | undefined;
     if (Array.isArray(kategoriYolu) && kategoriYolu.length > 1) {
       // Skip first element (dept duplicate), start from index 1
-      // Sub-category pages don't exist, so NO item URL for them
+      // Sub-category pages don't exist; link them to parent dept page
       for (let i = 1; i < kategoriYolu.length; i++) {
         const trimmed = String(kategoriYolu[i]).trim();
         if (!trimmed) continue;
@@ -380,11 +380,12 @@ function buildBreadcrumbsFromKategoriYolu(
           "@type": "ListItem",
           position: breadcrumbs.length + 1,
           name: trimmed,
+          item: `${origin}${ssr.deptHref}`,
         });
       }
     } else {
       // Fallback: urun_kategori / urun_alt_kategori (no kategori_yolu array)
-      // Sub-category pages don't exist, so NO item URL for them
+      // Sub-category pages don't exist; link them to parent dept page
       const urunKategori = originalRow.urun_kategori as string | undefined;
       if (urunKategori) {
         const trimmed = String(urunKategori).trim();
@@ -393,6 +394,7 @@ function buildBreadcrumbsFromKategoriYolu(
             "@type": "ListItem",
             position: breadcrumbs.length + 1,
             name: trimmed,
+            item: `${origin}${ssr.deptHref}`,
           });
         }
       }
@@ -404,6 +406,7 @@ function buildBreadcrumbsFromKategoriYolu(
             "@type": "ListItem",
             position: breadcrumbs.length + 1,
             name: trimmed,
+            item: `${origin}${ssr.deptHref}`,
           });
         }
       }
