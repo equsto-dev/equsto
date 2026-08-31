@@ -263,9 +263,6 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
   let availability = "https://schema.org/InStock";
 
   if (originalRow) {
-    const fiyatTl = originalRow.fiyat_tl as number | undefined;
-    const fiyatTlNet = originalRow.fiyat_tl_net as number | undefined;
-    const priceStr = originalRow.price as string | undefined;
     const fiyatBekleniyor = originalRow.fiyat_bekleniyor as boolean | number | undefined;
     const stok = originalRow.stok as number | string | undefined;
     const mutbexStok = originalRow.mutbex_stok as number | string | undefined;
@@ -282,15 +279,13 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
       availability = "https://schema.org/OutOfStock";
     }
 
-    if (fiyatTl && fiyatTl > 0) {
-      priceValue = (fiyatTl / 100).toFixed(2);
-    } else if (fiyatTlNet && fiyatTlNet > 0) {
-      priceValue = (fiyatTlNet / 100).toFixed(2);
-    } else if (priceStr) {
-      const parsed = parseTrPrice(priceStr);
-      if (parsed > 0) priceValue = parsed.toFixed(2);
+    // Canonical: feed ile birebir aynı hesaplama (KDV dahil TRY) — resolveMerchantPriceTry kullan
+    const canonical = resolveMerchantPriceTry(originalRow as Parameters<typeof resolveMerchantPriceTry>[0]);
+    if (canonical > 0) {
+      priceValue = canonical.toFixed(2);
     }
-  } else if (ssr.priceTry && ssr.priceTry > 0) {
+  }
+  if (!priceValue && ssr.priceTry && ssr.priceTry > 0) {
     priceValue = ssr.priceTry.toFixed(2);
   }
 
