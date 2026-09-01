@@ -57,6 +57,18 @@ export function legacyBrokenSkuPathSlug(sku: string): string {
     .substring(0, 80);
 }
 
+/** URL parametresinden gelen slug'ı canonical slug ile kıyaslamak için normalize eder.
+ *  URL'deki %2B (+) bazen boşluk olarak decode edilir; bunu + olarak düzeltir. */
+export function normalizeSlug(slug: string): string {
+  return foldTr(String(slug || "").trim())
+    .replace(/\s+/g, "+")  // URL'de %2B → + decode edilirse boşluk gelir; +'ya çevir
+    .replace(/\./g, "-")
+    .replace(/[^a-z0-9+\-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80);
+}
+
 function normPathSlug(s: string): string {
   return String(s || "")
     .toLowerCase()
