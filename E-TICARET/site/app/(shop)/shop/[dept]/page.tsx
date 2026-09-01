@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
-import JsonLdScript from "@/components/seo/JsonLdScript";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import DeptPlpCrawlLinks from "@/components/shop/DeptPlpCrawlLinks";
 import ShopDeptPlpMain from "@/components/shop/ShopDeptPlpMain";
@@ -13,10 +12,6 @@ import { buildDeptBreadcrumbJsonLd } from "@/lib/seo/schemas";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return SHOP_DEPT_SLUGS.map((dept) => ({ dept }));
-}
 
 async function getLocale(): Promise<"tr" | "en"> {
   const h = await headers();
@@ -54,7 +49,10 @@ export default async function ShopDeptPage({ params }: { params: Promise<{ dept:
 
   return (
     <>
-      <JsonLdScript data={breadcrumbJsonLd} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ShopStyles variant="plp" />
       <ShopBodyClass className="eq-shop eq-dept eq-dept-plp" dataDept={dept} />
       <ShopEqustoChrome activeDept={dept as ShopDeptSlug} />
