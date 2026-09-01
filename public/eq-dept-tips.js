@@ -635,6 +635,9 @@
     "rational-combi-master-plus": "kombi-firin",
     "rational-self-cooking-center": "kombi-firin",
     "rational-combi-pro": "kombi-firin",
+    "icombi-pro": "kombi-firin",
+    "icombi-classic": "kombi-firin",
+    "ivario": "pisirme-diger",
   };
 
   /** Öztiryakiler soğutma — Excel kategori slug → ?tip= (buz makinesi satırları) */
