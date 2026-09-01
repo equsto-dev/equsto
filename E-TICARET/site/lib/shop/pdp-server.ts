@@ -2,6 +2,7 @@ import {
   catalogUrlSlug,
   matchCatalogRowByPathSlug,
   pdpSlugAliases,
+  slugifyCatalogPart,
 } from "@/lib/catalog-product-slug";
 import { slugifyTr } from "@/lib/slug";
 import { resolveCatalogImageFromRow } from "@/lib/catalog-image-resolve";
@@ -346,86 +347,70 @@ function buildBreadcrumbsFromKategoriYolu(
   origin: string
 ): Array<{ "@type": "ListItem"; position: number; name: string; item?: string }> {
   const breadcrumbs: Array<{ "@type": "ListItem"; position: number; name: string; item?: string }> = [];
+  const seenUrls = new Set<string>();
 
-  breadcrumbs.push({
-    "@type": "ListItem",
-    position: 1,
-    name: "Ana Sayfa",
-    item: `${origin}/`,
-  });
-
-  if (ssr.deptHref) {
+  function addBreadcrumb(name: string, url: string) {
+    if (!name || !url) return;
+    if (seenUrls.has(url)) return;
+    seenUrls.add(url);
     breadcrumbs.push({
       "@type": "ListItem",
-      position: 2,
-      name: ssr.deptTitle,
-      item: `${origin}${ssr.deptHref}`,
+      position: breadcrumbs.length + 1,
+      name: name.trim(),
+      item: url,
     });
+  }
+
+  addBreadcrumb("Ana Sayfa", `${origin}/`);
+
+  if (ssr.deptHref) {
+    addBreadcrumb(ssr.deptTitle, `${origin}${ssr.deptHref}`);
   }
 
   if (originalRow) {
     const kategoriYolu = originalRow.kategori_yolu as string[] | undefined;
     if (Array.isArray(kategoriYolu) && kategoriYolu.length > 1) {
       // Skip first element (dept duplicate), start from index 1
-      // Sub-category pages don't exist; link them to parent dept page
       for (let i = 1; i < kategoriYolu.length; i++) {
         const trimmed = String(kategoriYolu[i]).trim();
         if (!trimmed) continue;
-        breadcrumbs.push({
-          "@type": "ListItem",
-          position: breadcrumbs.length + 1,
-          name: trimmed,
-          item: `${origin}${ssr.deptHref}`,
-        });
+        // Generate slug for subcategory from its name
+        const slug = slugifyCatalogPart(trimmed);
+        const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+        addBreadcrumb(trimmed, url);
       }
     } else {
       // Fallback: urun_kategori / urun_alt_kategori (no kategori_yolu array)
-      // Sub-category pages don't exist; link them to parent dept page
       const urunKategori = originalRow.urun_kategori as string | undefined;
       if (urunKategori) {
         const trimmed = String(urunKategori).trim();
         if (trimmed && trimmed.toLowerCase() !== ssr.deptTitle.toLowerCase()) {
-          breadcrumbs.push({
-            "@type": "ListItem",
-            position: breadcrumbs.length + 1,
-            name: trimmed,
-            item: `${origin}${ssr.deptHref}`,
-          });
+          const slug = slugifyCatalogPart(trimmed);
+          const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+          addBreadcrumb(trimmed, url);
         }
       }
       const urunAltKategori = originalRow.urun_alt_kategori as string | undefined;
       if (urunAltKategori) {
         const trimmed = String(urunAltKategori).trim();
         if (trimmed) {
-          breadcrumbs.push({
-            "@type": "ListItem",
-            position: breadcrumbs.length + 1,
-            name: trimmed,
-            item: `${origin}${ssr.deptHref}`,
-          });
+          const slug = slugifyCatalogPart(trimmed);
+          const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+          addBreadcrumb(trimmed, url);
         }
       }
     }
   } else {
     for (const b of ssr.breadcrumbs) {
       if (b.name && b.name !== ssr.deptTitle && b.name !== "Ana Sayfa") {
-        breadcrumbs.push({
-          "@type": "ListItem",
-          position: breadcrumbs.length + 1,
-          name: b.name,
-          ...(b.href ? { item: `${origin}${b.href}` } : {}),
-        });
+        const url = b.href ? `${origin}${b.href}` : undefined;
+        if (url) addBreadcrumb(b.name, url);
       }
     }
   }
 
   // Use the REAL canonical URL from ssr (not regenerated)
-  breadcrumbs.push({
-    "@type": "ListItem",
-    position: breadcrumbs.length + 1,
-    name: ssr.name,
-    item: ssr.canonical,
-  });
+  addBreadcrumb(ssr.name, ssr.canonical);
 
   return breadcrumbs;
 }

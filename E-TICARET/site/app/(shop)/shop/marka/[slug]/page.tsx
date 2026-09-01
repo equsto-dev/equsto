@@ -20,6 +20,34 @@ body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-facet{border-bottom:1px solid
 body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-selected{margin:0 0 8px;}
 `;
 
+function buildMarkaBreadcrumbJsonLd(slug: string, lang: "tr" | "en" = "tr") {
+  const origin = getSiteOrigin();
+  const label = brandHubLabel(slug);
+  const homeName = lang === "en" ? "Home" : "Ana Sayfa";
+  const homeUrl = lang === "en" ? `/en` : `/`;
+  const brandUrl = lang === "en" ? `/en/shop/marka/${slug}` : `/shop/marka/${slug}`;
+  const brandName = brandHubLabel(slug);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: homeName,
+        item: `${getSiteOrigin()}${homeUrl}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: brandName,
+        item: `${getSiteOrigin()}${brandUrl}`,
+      },
+    ],
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -76,9 +104,14 @@ export async function MarkaSlugPageInner({
 }) {
   const label = brandHubLabel(slug);
   const homeHref = lang === "en" ? "/en" : "/";
+  const breadcrumbJsonLd = buildMarkaBreadcrumbJsonLd(slug, lang);
   return (
     <>
       <BrandHubJsonLd slug={slug} lang={lang} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <VitrinShell bodyClass="eq-shop eq-marka eq-marka-plp" extraCss={MARKA_PLP_CSS}>
         <div className="pg">
           <div className="body">
