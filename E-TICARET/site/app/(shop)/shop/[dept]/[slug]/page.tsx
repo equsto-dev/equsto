@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { catalogUrlSlug } from "@/lib/catalog-product-slug";
+import { catalogUrlSlug, normalizeSlug } from "@/lib/catalog-product-slug";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopProductMain from "@/components/shop/ShopProductMain";
@@ -71,7 +71,7 @@ export default async function ShopProductPage({
 
   const langPrefix = await shopLangPrefix();
   const canonicalSlug = catalogUrlSlug(found.row).toLowerCase();
-  const normalizedSlug = slug.toLowerCase().replace(/_/g, "-");
+  const normalizedSlug = normalizeSlug(slug).toLowerCase();
   // dolap → tezgah (next.config); asla /shop/dolap/... üretme (redirect loop)
   const canonicalDept = found.dept === "dolap" ? "tezgah" : found.dept;
   if (canonicalDept !== dept || (canonicalSlug && normalizedSlug !== canonicalSlug)) {
