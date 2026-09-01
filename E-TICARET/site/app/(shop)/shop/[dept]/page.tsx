@@ -13,6 +13,10 @@ import { buildDeptBreadcrumbJsonLd } from "@/lib/seo/schemas";
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
+export function generateStaticParams() {
+  return SHOP_DEPT_SLUGS.map((dept) => ({ dept }));
+}
+
 async function getLocale(): Promise<"tr" | "en"> {
   const h = await headers();
   const pathname = h.get("x-pathname") || "";
