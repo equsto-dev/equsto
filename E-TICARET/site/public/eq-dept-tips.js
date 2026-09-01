@@ -6,12 +6,14 @@
   "use strict";
 
   var RAW = [
-    { tip: "firinlar", dept: "pisirme", label: "Fırınlar", search: "fırın|firin|konveksiyon|konveksiyonel|kombi|kombili|icombi|combi|pizza|mayalama|mikrodalga|microwave|pastane fırın" },
+    { tip: "firinlar", dept: "pisirme", label: "Fırınlar", search: "fırın|firin|konveksiyon|kombi|kombili|combi|pizza|mayalama|mikrodalga|microwave|pastane fırın" },
+    { tip: "kombi-firin", dept: "pisirme", label: "Kombi Fırınlar", search: "kombi|kombili|icombi|combi" },
+    { tip: "konveksiyonlu-firin", dept: "pisirme", label: "Konveksiyonlu Fırınlar", search: "konveksiyon|konveksiyonel" },
     { tip: "jet-mikrodalga-firin", dept: "pisirme", label: "Jet ve Mikrodalga Fırınlar", search: "mikrodalga|jet|microwave" },
     { tip: "komurlu-firin", dept: "pisirme", label: "Kömürlü Fırınlar", search: "kömür|komur|taş fırın|tas firin|lahmacun|pide" },
     { tip: "pizza-firinlari", dept: "pisirme", label: "Pizza Fırınları", search: "pizza|kubbe|taş taban" },
     { tip: "mayalama-dolabi", dept: "pisirme", label: "Mayalama Dolapları", search: "mayalama|prover|ferment" },
-    { tip: "induksiyonlu-ocak", dept: "pisirme", label: "İndüksiyonlu Ocaklar", search: "indüksiyon|induksiyon|endüksiyon|enduksiyon|induction" },
+    { tip: "induksiyonlu-ocak", dept: "pisirme", label: "İndüksiyonlu Ocaklar", search: "indüksiyon|induksiyon|induction" },
     { tip: "asansorlu-izgara", dept: "pisirme", label: "Asansörlü Izgaralar", search: "salamander|gratin|üst ızgara|ust izgara|gratinator|broiler" },
     { tip: "doner-ocaklari", dept: "pisirme", label: "Döner Ocakları", search: "döner|doner|kebab|kebap" },
     { tip: "pilic-cevirme", dept: "pisirme", label: "Piliç Çevirme Makineleri", search: "piliç|pilic|rotisserie|çevirme|cevirme" },
@@ -26,13 +28,12 @@
       tip: "ocak-vitrini",
       dept: "pisirme",
       label: "Ocaklar",
-      search: "set üstü ocak|setustu ocak|wok ocak|kuzine|indüksiyon|induksiyon|endüksiyon|enduksiyon|döner ocak|doner ocak",
+      search: "set üstü ocak|setustu ocak|wok ocak|kuzine|indüksiyon|induksiyon|döner ocak|doner ocak",
     },
     { tip: "sanayi-tipi-izgaralar", dept: "pisirme", label: "Endüstriyel Izgaralar", slug: "sanayi-tipi-izgaralar" },
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
     { tip: "fritozler", dept: "pisirme", label: "Fritözler", slug: "fritozler" },
     { tip: "doner-ocaklari-", dept: "pisirme", label: "Döner Ocakları", slug: "doner-ocaklari-" },
-    { tip: "komurlu-izgara", dept: "pisirme", label: "Kömürlü Izgaralar", slug: "komurlu-izgara" },
     { tip: "tost-makineleri", dept: "pisirme", label: "Tost Makineleri", slug: "tost-makineleri" },
     { tip: "pilic-cevirme-makineleri", dept: "pisirme", label: "Piliç Çevirme", slug: "pilic-cevirme-makineleri" },
     { tip: "ocakbasi-izgara", dept: "pisirme", label: "Ocakbaşı Izgaralar", slug: "ocakbasi-izgara" },
@@ -51,6 +52,7 @@
     { tip: "dry_age_dolabi", dept: "sogutma", label: "Dry-Age Dolabı", search: "dry age|dry-age|olgunlaştır" },
     { tip: "blast-chiller", dept: "sogutma", label: "Blast Chiller", search: "blast|şok|sok|chiller|shock" },
     { tip: "soguk-oda", dept: "sogutma", label: "Soğuk Odalar", search: "soğuk oda|soguk oda|cold room" },
+    { tip: "balik-teshir", dept: "sogutma", label: "Balık Teşhir Reyonları", search: "balık|balik|fish|teşhir" },
     { tip: "sarap-dolabi", dept: "sogutma", label: "Şarap Dolapları", search: "şarap|sarap|wine" },
     {
       tip: "espresso-makinesi",
@@ -159,30 +161,6 @@
     { tip: "taban-rafli", dept: "tezgah", label: "Taban Raflı", search: "taban raf|taban-raf" },
     { tip: "taban-ve-ara-rafli", dept: "tezgah", label: "Taban ve Ara Raflı", search: "taban raf|ara raf" },
     { tip: "dolapli-tezgah", dept: "tezgah", label: "Dolaplı", search: "dolapli|dolaplı|setalti dolap" },
-    {
-      tip: "orta-tip-filtreli-davlumbaz",
-      dept: "davlumbaz",
-      label: "Orta Tip Filtreli Davlumbaz",
-      search: "orta tip filtreli|orta-tip-filtreli|orta tipi filtreli",
-    },
-    {
-      tip: "orta-tip-filtresiz-davlumbaz",
-      dept: "davlumbaz",
-      label: "Orta Tip Filtresiz Davlumbaz",
-      search: "orta tip filtresiz|orta-tip-filtresiz|orta tipi filtresiz",
-    },
-    {
-      tip: "duvar-tipi-filtreli-davlumbaz",
-      dept: "davlumbaz",
-      label: "Duvar Tipi Filtreli Davlumbaz",
-      search: "duvar tip filtreli|duvar-tipi-filtreli|duvar tipi filtreli",
-    },
-    {
-      tip: "duvar-tipi-filtresiz-davlumbaz",
-      dept: "davlumbaz",
-      label: "Duvar Tipi Filtresiz Davlumbaz",
-      search: "duvar tip filtresiz|duvar-tipi-filtresiz|duvar tipi filtresiz",
-    },
     { tip: "proso-tumu", dept: "market-reyon", label: "Proso", search: "proso profesyonel|prosogutma" },
     { tip: "proso-sutluk", dept: "market-reyon", label: "Proso Sütlükler", search: "proso-sutluk|sütlük|sutluk|lion|rhino|falcon|puma|panther" },
     { tip: "proso-kisa-sutluk", dept: "market-reyon", label: "Proso Kısa Sütlük", search: "proso-kisa|kısa sütlük|kisa sutluk" },
@@ -217,13 +195,7 @@
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
     { tip: "set-ustu", dept: "market-reyon", label: "Set Üstü", search: "set-ustu|set üstü" },
-    {
-      tip: "self-servis",
-      dept: "market-reyon",
-      label: "Self Servis",
-      search:
-        "self-servis|self servis|self-servis-hatti|equsto\\.k|equsto\\.g|standart servis|gastroline|servis raf|servis tezgah|garson bankosu|kuver|salata bar|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
-    },
+    { tip: "self-servis", dept: "market-reyon", label: "Self Servis", search: "self-servis|self servis" },
     { tip: "icecek-vitrin", dept: "market-reyon", label: "İçecek & Süt", search: "icecek-vitrin|içecek|icecek|süt|sut|drink|milk" },
     { tip: "servis-gerecleri", dept: "set-ustu-mutfak", label: "Servis Gereçleri", search: "servis gereç" },
     { tip: "chafing-dish", dept: "set-ustu-mutfak", label: "Chafing Dishler", search: "chafing" },
@@ -524,15 +496,6 @@
     return false;
   }
 
-  /** Öztiryakiler markası — /shop/tezgah vitrini kapalı (Equsto + Electrolux kalır). */
-  function isOztiBrandProduct(u) {
-    if (!u) return false;
-    var id = String((u.raw && u.raw.id) || u.id || "");
-    if (/^oztiryakiler-endustriyel-mutfak__/i.test(id)) return true;
-    var b = String((u.raw && u.raw.brand) || u.b || u.brand || "");
-    return /öztiryak|oztiryak/i.test(b);
-  }
-
   /** Servis rafı aksesuarı — Excel «TEZGAH TİPİ SOĞUTUCULAR» altında yanlış sınıflanmış */
   function isOztiServisRafiProduct(u) {
     var name = productName(u);
@@ -644,26 +607,7 @@
     return false;
   }
 
-  function isYukselIstifPartProduct(u) {
-    var f = istifItemFields(u);
-    var isYuksel = /yuksel-2025-yerli|yuksel endustriyel|^yuksel/.test(
-      f.kaynak + " " + f.brand + " " + f.name
-    );
-    if (!isYuksel) return false;
-    if (/katli\s*raflar|tier\s*shelving/.test(f.name)) return false;
-    var mod = String(f.model || "").replace(/\s+/g, "");
-    if (/^\d{2}-x-\d+-x-\d+/i.test(mod)) return false;
-    if (/tel\s*raf\s*dikme|tel\s*izgara|rail\s*basket|olcu\s*\/\s*size|perfore\s*raf|epoxy/.test(f.name)) {
-      return true;
-    }
-    if (/^m\d{6,}$/i.test(mod)) return true;
-    if (/^\d{2,3}x\d{2}x\d{2,3}$/i.test(mod)) return true;
-    return true;
-  }
-
   function excludeFromDeptView(dept, u) {
-    if (dept === "tezgah" && isOztiBrandProduct(u)) return true;
-    if (dept === "istif" && isYukselIstifPartProduct(u)) return true;
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "sogutma" && (isOztiServisRafiProduct(u) || isBuzKonteynerProduct(u))) return true;
@@ -688,16 +632,12 @@
 
   /** Pişirme — JSON category slug → ?tip= */
   var PISIRME_CAT_ALIASES = {
-    "rational-combi-master-plus": "firinlar",
-    "rational-self-cooking-center": "firinlar",
-    "rational-combi-pro": "firinlar",
-    "kombi-firin": "firinlar",
-    "kombi-firinlar": "firinlar",
-    "konveksiyonlu-firin": "firinlar",
-    "konveksiyonel-firinlar": "firinlar",
-    "gazli-firinli-kuzine": "kuzineler",
-    "gazli-firinli-kuziler": "kuzineler",
-    "gazli-firinli-ve-setustu-gazli-ocaklar": "kuzineler",
+    "rational-combi-master-plus": "kombi-firin",
+    "rational-self-cooking-center": "kombi-firin",
+    "rational-combi-pro": "kombi-firin",
+    "icombi-pro": "kombi-firin",
+    "icombi-classic": "kombi-firin",
+    "ivario": "pisirme-diger",
   };
 
   /** Öztiryakiler soğutma — Excel kategori slug → ?tip= (buz makinesi satırları) */
@@ -708,15 +648,6 @@
   };
 
   /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
-  /** Davlumbaz — Öztiryakiler / Equsto kategori slug → vitrin ?tip= */
-  var DAVLUMBAZ_CAT_ALIASES = {
-    "davlumbazlar-orta-tip-alev-savar-filtreli-davlumbaz": "orta-tip-filtreli-davlumbaz",
-    "davlumbazlar-orta-tip-temiz-hava-uflemeli-filtreli-davlumbaz": "orta-tip-filtreli-davlumbaz",
-    "davlumbazlar-duvar-tip-alev-savar-tip-filtreli-davlumbaz": "duvar-tipi-filtreli-davlumbaz",
-    "davlumbazlar-duvar-tip-temiz-hava-uflemeli-filtreli-davlumbaz": "duvar-tipi-filtreli-davlumbaz",
-    "davlumbazlar-duvar-tip-filtresiz-davlumbaz": "duvar-tipi-filtresiz-davlumbaz",
-  };
-
   /** Öztiryakiler yıkama — Excel kategori slug → ?tip= (makine satırları) */
   var YIKAMA_CAT_ALIASES = {
     "setalti-bulasik": "setalti-bulasik",
@@ -828,7 +759,6 @@
     if (SOGUTMA_CAT_ALIASES[c]) return SOGUTMA_CAT_ALIASES[c];
     if (PISIRME_CAT_ALIASES[c]) return PISIRME_CAT_ALIASES[c];
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
-    if (DAVLUMBAZ_CAT_ALIASES[c]) return DAVLUMBAZ_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
   }
@@ -909,26 +839,12 @@
     if (!u) return false;
     if (isSuzgecProduct(u) || isMutfakTencereGereci(u) || isOyacakSoyacakProduct(u)) return false;
     var cat = productCategorySlug(u);
-    if (cat && /ocak|kuzine|wok|induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(cat)) return true;
+    if (cat && /ocak|kuzine|wok|induksiyon|indüksiyon/.test(cat)) return true;
     var hay = productHaystack(u);
     if (/fırın|firin|fritöz|fritoz|salamander|tost\s*mak|benmari|bain\s*marie/.test(hay)) {
-      if (!/ocak|kuzine|wok|indüksiyon|induksiyon|endüksiyon|enduksiyon/.test(hay)) return false;
+      if (!/ocak|kuzine|wok|indüksiyon|induksiyon/.test(hay)) return false;
     }
-    return /ocak|kuzine|wok|indüksiyon|induksiyon|endüksiyon|enduksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
-  }
-
-  /** Fırınlı kuzine — Fırınlar filtresinde değil, Kuzineler altında. */
-  function isFirinliKuzineProduct(u) {
-    var rawCat = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
-    if (
-      rawCat === "gazli-firinli-kuzine" ||
-      rawCat === "gazli-firinli-kuziler" ||
-      rawCat === "gazli-firinli-ve-setustu-gazli-ocaklar"
-    ) {
-      return true;
-    }
-    var hay = productHaystack(u);
-    return /fırınlı\s*kuzine|firinli\s*kuzine|kuzine\s*fırınlı|kuzine\s*firinli/i.test(hay);
+    return /ocak|kuzine|wok|indüksiyon|induksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
   }
 
   /** Kombi firin — konveksiyonlu kelimesi yuzunden yanlis tile'a dusmesin (iCombi vb.). */
@@ -995,16 +911,9 @@
       return tile.id === cat;
     }
 
-    if (tile.id === "firinlar" && isFirinliKuzineProduct(u)) return false;
-
-    if (tile.id === "komurlu-izgara") {
-      if (cat !== "komurlu-izgara" && cat !== "kati-yakitli-izgaralar") return false;
-      var kaynak = u.raw && u.raw.kaynak;
-      return kaynak === "sparo-web" || kaynak === "npicco-web";
-    }
+    if (tile.id === "konveksiyonlu-firin" && isKombiFirinProduct(u)) return false;
 
     if (tile.id && cat === tile.id) return true;
-    if (tile.id === "self-servis" && cat === "self-servis-hatti") return true;
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;
     if (tile.keys && tile.keys.length) {
@@ -1027,28 +936,9 @@
     return 1e6;
   }
 
-  function skuNormUpper(raw) {
-    return String((raw && (raw.sku || raw.model || raw.urun_kodu)) || "")
-      .toUpperCase()
-      .replace(/İ/g, "I")
-      .replace(/ı/g, "I");
-  }
-
-  /** Çok satan: BYM052S (set altı), BYM102S (giyotin) — listenin en üstü */
-  function yikamaFeaturedTier(u) {
-    if (!u) return null;
-    var sku = skuNormUpper(u.raw);
-    if (sku === "INO-BYM052S" || sku === "BYM052S") return -2;
-    if (sku === "INO-BYM102S" || sku === "BYM102S") return -1;
-    return null;
-  }
-
   /** PFOS bantları: 500 tb/s (setaltı) ve 1000 tb/s (giyotin) — yikama vitrininde önce */
   function yikamaTabakSaatTier(u) {
     if (!u) return 9;
-    var featured = yikamaFeaturedTier(u);
-    if (featured !== null) return featured;
-
     var id = lc(u.raw && u.raw.id);
     var sku = lc((u.raw && (u.raw.sku || u.raw.model || u.raw.urun_kodu)) || "");
     var hay = productHaystack(u) + " " + id + " " + sku;
@@ -1178,157 +1068,18 @@
     return arr;
   }
 
-  function robotCoupeItemFields(u) {
-    var raw = (u && u.raw) || u || {};
-    return {
-      c: lc((u && u.c) || raw.category || ""),
-      n: lc((u && u.n) || raw.name || ""),
-      sku: String(raw.sku || raw.model || raw.urun_kodu || ""),
-      oem: String(raw.oem_brand || ""),
-      brand: String((u && u.fb) || (u && u.b) || raw.brand || ""),
-    };
-  }
-
-  function isRobotCoupeItem(u) {
-    var f = robotCoupeItemFields(u);
-    if (/robot coupe/i.test(f.oem) || /robot coupe/i.test(f.brand)) return true;
-    if (/^RC\.|^9860\.(MP|CL|BLX|CMP|J)/i.test(f.sku)) return true;
-    return /robot coupe/i.test(f.n);
-  }
-
-  /** Düşük = önce (makineler); 30+ = bıçak/disk/aksesuar. */
-  function robotCoupeSortTier(u) {
-    var f = robotCoupeItemFields(u);
-    if (f.c === "robot-coupe-aksesuarlari") return 30;
-    if (
-      /bicak|bıçak|disk|aksesuar|yedek|temizleme|itme kafa|destek|firlatma|fırlatma|paslanmaz ayarlanabilir|kesme aleti|dilimleyici disk|rende|french fries/.test(
-        f.n
-      )
-    )
-      return 30;
-    if (f.c === "sebze-dograma-makineleri" || f.c === "robot-coupe") return 5;
-    if (/blixer|sebze dograma|cl50|cl55|cl60|cl 50|cl 55|cl 60|\br2\b|\br3\b|r301|j80|j100|meyve presi|sikac|narenciye/.test(f.n)) return 5;
-    if (f.c === "robot-coupe-el-mikserleri" || /el blender|el mikser|micromix|mp160|mp190|mp240|mp450|mp550|mp600|mp800|cmp/.test(f.n))
-      return 10;
-    return 15;
-  }
-
-  /** Makineler önde; bıçak/aksesuar seyrek (≈%8) serpiştirilir, kalan sonda. */
-  function mergeRobotCoupeMachineFirst(machines, accessories, dept) {
-    var shM = shuffleDeptList(dept || "hazirlik", machines, "rc-machines");
-    var shA = shuffleDeptList(dept || "hazirlik", accessories, "rc-acc");
-    var out = [];
-    var ai = 0;
-    var accSparse = Math.min(shA.length, Math.max(6, Math.ceil(shM.length * 0.08)));
-    var i;
-    for (i = 0; i < shM.length; i++) {
-      out.push(shM[i]);
-      if (ai < accSparse && (i + 1) % 10 === 0) {
-        out.push(shA[ai++]);
-      }
-    }
-    while (ai < shA.length) out.push(shA[ai++]);
-    return out;
-  }
-
-  function sortRobotCoupeProducts(list, dept) {
-    dept = dept || "hazirlik";
-    var rc = [];
-    var other = [];
-    list.forEach(function (u) {
-      if (isRobotCoupeItem(u)) rc.push(u);
-      else other.push(u);
-    });
-    if (!rc.length) return list.slice();
-
-    var machines = [];
-    var acc = [];
-    rc.forEach(function (u) {
-      if (robotCoupeSortTier(u) >= 30) acc.push(u);
-      else machines.push(u);
-    });
-    machines.sort(function (a, b) {
-      var d = robotCoupeSortTier(a) - robotCoupeSortTier(b);
-      if (d) return d;
-      return String(a.n || (a.raw && a.raw.name) || "").localeCompare(String(b.n || (b.raw && b.raw.name) || ""), "tr");
-    });
-
-    var mergedRc = mergeRobotCoupeMachineFirst(machines, acc, dept);
-    if (!other.length) return mergedRc;
-    return shuffleDeptList(dept, other, "other-brands").concat(mergedRc);
-  }
-
-  function istifItemFields(u) {
-    var raw = (u && u.raw) || u || {};
-    return {
-      model: String(raw.model || raw.sku || raw.urun_kodu || ""),
-      name: lc((u && u.n) || raw.name || ""),
-      brand: lc((u && u.fb) || (u && u.b) || raw.brand || ""),
-      kaynak: lc(raw.kaynak_fiyat_listesi || raw.kaynak || ""),
-    };
-  }
-
-  /** Düşük = önce. Yüksel katlı raf (46-X-91-X-183 vb.) → tel izgara 4 katlı → diğer Yüksel. */
-  function istifSortTier(u) {
-    var f = istifItemFields(u);
-    if (/yuksel-2025-yerli|yuksel endustriyel/.test(f.kaynak + " " + f.brand)) {
-      if (/^\d{2}-x-\d+-x-\d+/i.test(f.model) || /katli\s*raflar|tier\s*shelving/.test(f.name)) return 0;
-      return 2;
-    }
-    if (/8897\.\d+ip4/i.test(f.model) || (/izgara\s*tabl/.test(f.name) && /4\s*katli/.test(f.name))) return 1;
-    if (/istif\s*raf/.test(f.name) && /4\s*katli/.test(f.name) && /izgara/.test(f.name)) return 1;
-    return 10;
-  }
-
-  function istifDimSortKey(model) {
-    var m = String(model || "").match(/^(\d{2})-x-(\d+)-x-(\d+)/i);
-    if (!m) return model || "";
-    return (
-      String(parseInt(m[3], 10)).padStart(4, "0") +
-      String(parseInt(m[2], 10)).padStart(4, "0") +
-      String(parseInt(m[1], 10)).padStart(4, "0")
-    );
-  }
-
-  function sortIstifProducts(list) {
-    var pinned = list.slice().sort(function (a, b) {
-      var ta = istifSortTier(a);
-      var tb = istifSortTier(b);
-      if (ta !== tb) return ta - tb;
-      var fa = istifItemFields(a);
-      var fb = istifItemFields(b);
-      if (ta === 0) {
-        var ka = istifDimSortKey(fa.model);
-        var kb = istifDimSortKey(fb.model);
-        if (ka !== kb) return ka < kb ? -1 : 1;
-      }
-      return String(a.n || fa.model).localeCompare(String(b.n || fb.model), "tr");
-    });
-    var head = [];
-    var tail = [];
-    pinned.forEach(function (u) {
-      if (istifSortTier(u) <= 2) head.push(u);
-      else tail.push(u);
-    });
-    return head.concat(shuffleDeptList("istif", tail, "products-tail"));
-  }
-
-  /** Kahve: karışık vitrin; yıkama: 500/1000 tb/s + marka karışımı. */
+  /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
   function sortProductsDefault(dept, list) {
     if (dept === "yikama") {
       return sortYikamaProducts(list);
     }
-    if (dept === "istif") {
-      return sortIstifProducts(list);
-    }
-    if (dept === "hazirlik") {
-      var rcN = 0;
-      for (var ri = 0; ri < list.length; ri++) {
-        if (isRobotCoupeItem(list[ri])) rcN++;
-      }
-      if (rcN >= 10 && rcN >= list.length * 0.35) {
-        return sortRobotCoupeProducts(list, dept);
-      }
+    if (dept === "kahve") {
+      return list.slice().sort(function (a, b) {
+        var ra = productRank(dept, a);
+        var rb = productRank(dept, b);
+        if (ra !== rb) return ra - rb;
+        return String(a.n || "").localeCompare(String(b.n || ""), "tr");
+      });
     }
     return shuffleDeptList(dept, list, "products");
   }
@@ -1349,7 +1100,7 @@
         seen[t.id] = true;
       }
     });
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "davlumbaz") return out;
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return out;
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
@@ -1360,7 +1111,7 @@
 
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "davlumbaz") return tiles.slice();
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return tiles.slice();
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
@@ -1409,21 +1160,12 @@
       if (!/\b(aei|agi|ali|aaie|aaig|agl|aegl)\b/.test(lk)) return "";
       return "sanayi-tipi-izgaralar";
     }
-    if (/fırınlı\s*kuzine|firinli\s*kuzine|kuzine\s*fırınlı|kuzine\s*firinli/.test(lk)) return "kuzineler";
     if (lk.indexOf("fırın") >= 0 || lk.indexOf("firin") >= 0) return "firinlar";
     if (lk.indexOf("ocak") >= 0 && lk.indexOf("döner") < 0 && lk.indexOf("doner") < 0) return "sanayi-ocaklari";
     if (lk.indexOf("fritöz") >= 0 || lk.indexOf("fritoz") >= 0) return "fritozler";
     if (lk.indexOf("kuzine") >= 0) return "kuzineler";
     if (lk.indexOf("piliç") >= 0 || lk.indexOf("pilic") >= 0) return "pilic-cevirme-makineleri";
     if (lk.indexOf("buzdolab") >= 0 && lk.indexOf("tezgah") >= 0) return "tezgah-tipi-buzdolabi";
-    if (lk.indexOf("orta tip") >= 0 || lk.indexOf("orta-tip") >= 0 || lk.indexOf("orta tipi") >= 0) {
-      if (lk.indexOf("filtresiz") >= 0) return "orta-tip-filtresiz-davlumbaz";
-      return "orta-tip-filtreli-davlumbaz";
-    }
-    if (lk.indexOf("duvar tip") >= 0 || lk.indexOf("duvar-tip") >= 0 || lk.indexOf("duvar tipi") >= 0) {
-      if (lk.indexOf("filtresiz") >= 0) return "duvar-tipi-filtresiz-davlumbaz";
-      return "duvar-tipi-filtreli-davlumbaz";
-    }
     if (lk.indexOf("bulaşık") >= 0 || lk.indexOf("bulasik") >= 0) return "bulasik-makineleri";
     if (lk.indexOf("espresso") >= 0) return "espresso-makinesi";
     if (lk.indexOf("filtre kahve") >= 0 || lk.indexOf("fm250") >= 0 || lk.indexOf("ftl") >= 0 || lk.indexOf("bravilor") >= 0)
@@ -1515,10 +1257,6 @@
     "set-ustu-mutfak": {
       "servis-gere-leri": "servis-gerecleri",
     },
-    pisirme: {
-      "kombi-firin": "firinlar",
-      "konveksiyonlu-firin": "firinlar",
-    },
     sogutma: {
       tezgah_tipi_buzdolabi: "tezgah-tipi-buzdolabi",
       "tezgah-tipi-buzdolabi": "tezgah-tipi-buzdolabi",
@@ -1549,9 +1287,6 @@
     tileMatchProduct: tileMatchProduct,
     productRank: productRank,
     sortProductsDefault: sortProductsDefault,
-    sortRobotCoupeProducts: sortRobotCoupeProducts,
-    robotCoupeSortTier: robotCoupeSortTier,
-    isRobotCoupeItem: isRobotCoupeItem,
     resolveTipId: resolveTipId,
     normalizeTipParam: normalizeTipParam,
     deptPageHref: deptPageHref,
