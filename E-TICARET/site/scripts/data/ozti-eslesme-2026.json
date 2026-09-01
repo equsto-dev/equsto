@@ -5480,7 +5480,7 @@
     "liste_fiyati_eur": 5562.0,
     "liste_fiyati": 5562.0,
     "para_birimi": "EUR",
-    "bayi_iskonto": NaN,
+    "bayi_iskonto": 0.72315,
     "barkod": "8696676389550",
     "kategori_yolu": [
       "LAVATAŞLI & DÖKÜM IZGARALAR"
