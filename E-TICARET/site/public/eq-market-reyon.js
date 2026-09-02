@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260804-senox-2026-2-1";
+  var CATALOG_V = "20260902-cafe-equalize-214";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
