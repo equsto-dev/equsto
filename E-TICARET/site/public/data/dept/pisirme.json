@@ -8256,14 +8256,14 @@
     "category": "sanayi-tipi-izgaralar",
     "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
     "name": "Atalay ADR-C1-4E-GK 4 80x80x140 cm.",
-    "price": "₺412.157,00 + KDV\nKDV Dahil ₺494.588,00",
+    "price": "₺491.576,00 KDV dahil",
     "specs": "Atalay ADR-C1-4E-GK 4 80x80x140 cm.\nKaynak: ATALAY 2025 YERLİ\nModel: ADR-C1-4E-GK\nPlaka: 4\nListe fiyatı (EUR): 15570\nEqusto fiyatı (%50 indirimli EUR): 7785.00\nKur: 1 EUR = 52.9424 TRY (KDV %20)",
     "images": [
       "images/catalog/atalay/p116/atalay-adr-c1-4e-gk.jpg"
     ],
     "sku": "ADR-C1-4E-GK",
     "model": "ADR-C1-4E-GK",
-    "fiyat_tl": 412157,
+    "fiyat_tl": 491576,
     "liste_fiyati_eur": 15570,
     "satis_eur_indirimli": 7785,
     "iskonto_oran": 50,
