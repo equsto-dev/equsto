@@ -31,7 +31,7 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: TEPEPLATFORM_ENABLED,TEPEPLATFORM_BASE_URL,TEPEPLATFORM_API_KEY,TEPEPLATFORM_API_SECRET,TEPEPLATFORM_PARTNER_SLUG
+          envs: TEPEPLATFORM_ENABLED,TEPEPLATFORM_BASE_URL,TEPEPLATFORM_API_KEY,TEPEPLATFORM_API_SECRET,TEPEPLATFORM_PARTNER_SLUG,GITHUB_TOKEN
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
@@ -55,6 +55,8 @@ jobs:
             else
               echo "[deploy] TepePlatform secrets yok — kart ödemesi kapalı kalır"
             fi
+            # Use GITHUB_TOKEN for git authentication on server
+            git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
             bash scripts/hetzner-deploy.sh
 
       - name: Özet
