@@ -22,6 +22,7 @@ jobs:
       TEPEPLATFORM_API_KEY: ${{ secrets.TEPEPLATFORM_API_KEY }}
       TEPEPLATFORM_API_SECRET: ${{ secrets.TEPEPLATFORM_API_SECRET }}
       TEPEPLATFORM_PARTNER_SLUG: ${{ secrets.TEPEPLATFORM_PARTNER_SLUG }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
