@@ -15,6 +15,17 @@ echo "[hetzner-deploy] site: $SITE_DIR"
 git fetch origin
 git pull --ff-only origin main
 
+# Sync images to S3 for CloudFront (if AWS configured)
+if [[ -f .env.production ]]; then
+  export $(grep -v '^#' .env.production | xargs)
+  if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws &> /dev/null; then
+    echo "[hetzner-deploy] Syncing images to S3..."
+    aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
+  else
+    echo "[hetzner-deploy] S3 sync skipped (no AWS_S3_BUCKET or aws cli)"
+  fi
+fi
+
 # Docker app nextjs (uid 1001) — public/data bind mount yazılabilir olmalı
 if [[ -d public/data ]]; then
   chown -R 1001:1001 public/data 2>/dev/null || true
