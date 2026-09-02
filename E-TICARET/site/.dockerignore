@@ -23,6 +23,7 @@ scripts/audit.json
 # Büyük medya — canlıda CloudFront (NEXT_PUBLIC_ASSET_CDN_URL)
 public/images
 public/assets
+!public/images/catalog/rational
 
 # Geliştirme
 coverage
