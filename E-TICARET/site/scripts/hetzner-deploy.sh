@@ -17,7 +17,9 @@ git pull --ff-only origin main
 
 # Sync images to S3 for CloudFront (if AWS configured)
 if [[ -f .env.production ]]; then
-  export $(grep -v '^#' .env.production | xargs)
+  # Source only AWS vars to avoid issues with special chars in other vars
+  AWS_S3_BUCKET=$(grep '^AWS_S3_BUCKET=' .env.production | cut -d'=' -f2-)
+  AWS_REGION=$(grep '^AWS_REGION=' .env.production | cut -d'=' -f2-)
   if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws &> /dev/null; then
     echo "[hetzner-deploy] Syncing images to S3..."
     aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
