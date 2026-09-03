@@ -32,6 +32,8 @@ jobs:
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
+            git fetch origin
+            git pull --ff-only origin main
             bash scripts/hetzner-deploy.sh
 
       - name: Özet
