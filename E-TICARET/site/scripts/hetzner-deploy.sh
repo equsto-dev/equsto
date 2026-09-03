@@ -14,12 +14,19 @@ fi
 echo "[hetzner-deploy] site: $SITE_DIR"
 # git fetch/pull done by workflow before calling this script
 
+# Debug: check .env.production exists
+if [[ ! -f .env.production ]]; then
+  echo "[hetzner-deploy] HATA: .env.production yok"
+  exit 1
+fi
+echo "[hetzner-deploy] .env.production found"
+
 # Sync images to S3 for CloudFront (if AWS configured)
 if [[ -f .env.production ]]; then
   # Source only AWS vars to avoid issues with special chars in other vars
-  AWS_S3_BUCKET=$(grep '^AWS_S3_BUCKET=' .env.production | cut -d'=' -f2-)
-  AWS_REGION=$(grep '^AWS_REGION=' .env.production | cut -d'=' -f2-)
-  if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws &> /dev/null; then
+  AWS_S3_BUCKET=$(grep '^AWS_S3_BUCKET=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  AWS_REGION=$(grep '^AWS_REGION=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws >/dev/null 2>&1; then
     echo "[hetzner-deploy] Syncing images to S3..."
     aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
   else
