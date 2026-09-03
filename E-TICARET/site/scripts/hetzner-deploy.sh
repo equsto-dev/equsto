@@ -12,8 +12,7 @@ if [[ ! -f .env.production ]]; then
 fi
 
 echo "[hetzner-deploy] site: $SITE_DIR"
-git fetch origin
-git pull --ff-only origin main
+# git fetch/pull done by workflow before calling this script
 
 # Sync images to S3 for CloudFront (if AWS configured)
 if [[ -f .env.production ]]; then
