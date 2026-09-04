@@ -1,222 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://equsto.com/iletisim</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://equsto.com/iade-politikasi</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.55</priority></url>
-  <url><loc>https://equsto.com/hakkimizda</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://equsto.com/buradan-basladi</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.74</priority></url>
-  <url><loc>https://equsto.com/blog</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://equsto.com/steakhouse-kurulumu</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://equsto.com/rehber/dark-kitchen-bulut-mutfak-2026</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://equsto.com/cafe-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://equsto.com/catering-mutfagi</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://equsto.com/fast-food-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/fine-dining-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/dunya-mutfak-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/italyan-restoran-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/all-day-dining-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/market-kasap-sarkuteri-kurulumu</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://equsto.com/all-day-casual-cafe-kurulumu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/projeler</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/endustriyel-mutfak-ekipmani-turkiye</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://equsto.com/mutfak-teklif-platformu</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://equsto.com/otel-mutfak-ekipman-tedarik</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/oztiryakiler-ekipmani-tedarik</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://equsto.com/soguk-oda-teklif</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/havuzlu-dolap-tedarik</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://equsto.com/endustriyel-pisirme-ekipmanlari</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/bar-tasarimi-turkiye</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/rehber/mutfak-alani-kisi-basi-metrekare-2026</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://equsto.com/rehber/500-kisilik-catering-ekipman-planlama-2026</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/rehber/restoran-mutfak-kurulumu-checklist-2026</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://equsto.com/rehber/kafe-acilis-ekipman-listesi-2026</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.76</priority></url>
-  <url><loc>https://equsto.com/projeler/izmir-moduler-bar-icecek-demode</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.76</priority></url>
-  <url><loc>https://equsto.com/en/industrial-kitchen-supplier-turkey</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://equsto.com/en/commercial-kitchen-quotation</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url>
+    <loc>https://equsto.com/en/contact</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/industrial-kitchen-supplier-turkey</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/commercial-kitchen-quotation</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/hakkimizda</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
   <url>
     <loc>https://equsto.com/pfos</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.99</priority>
   </url>
   <url>
     <loc>https://equsto.com/kvkk</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://equsto.com/en</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/about</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/pfos</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://equsto.com/en/blog</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/contact</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/cart</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.35</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/search</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.55</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/besos</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://equsto.com/en/steakhouse-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/fish-restaurant-kitchen-project-and-equipment</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/cloud-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/cafe-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/catering-kitchen</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/fast-food-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/fine-dining-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/all-day-dining-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/all-day-casual-cafe-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/market-butcher-deli-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/world-cuisine-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/italian-restaurant-kitchen-setup</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/industrial-kitchen-equipment-turkey</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/restaurant-kitchen-quote</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/hotel-kitchen-equipment</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/oztiryakiler-equipment-supply</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/cold-room-quote</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/deli-counter-refrigeration</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/industrial-cooking-equipment</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/kitchen-quote-platform</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://equsto.com/en/bar-design-turkey</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
