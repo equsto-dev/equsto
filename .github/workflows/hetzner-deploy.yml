@@ -28,13 +28,13 @@ jobs:
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
           envs: GITHUB_TOKEN
-script: |
-              set -euo pipefail
-              cd /opt/equsto/E-TICARET/site
-              git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
-              git fetch origin
-              git reset --hard origin/main
-              bash scripts/hetzner-deploy.sh
+          script: |
+            set -euo pipefail
+            cd /opt/equsto/E-TICARET/site
+            git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
+            git fetch origin
+            git reset --hard origin/main
+            bash scripts/hetzner-deploy.sh
 
       - name: Özet
         if: success()
