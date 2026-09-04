@@ -88,51 +88,17 @@ function writeProductChunks(prefix, productUrls, indexFiles) {
   return productUrls.length;
 }
 
-const PSEO_COMBOS = [
-  { tr: ["restoran", "istanbul", "modern", "150m2"], en: ["restaurant", "istanbul", "modern", "150m2"] },
-  { tr: ["kafe", "istanbul", "ozgun", "80m2"], en: ["cafe", "istanbul", "signature", "80m2"] },
-  { tr: ["catering", "istanbul", "klasik", "200m2"], en: ["catering", "istanbul", "classic", "200m2"] },
-  { tr: ["steakhouse", "istanbul", "modern", "150m2"], en: ["steakhouse", "istanbul", "modern", "150m2"] },
-  { tr: ["bar", "istanbul", "ozgun", "100m2"], en: ["bar", "istanbul", "signature", "100m2"] },
-  { tr: ["bulut-mutfak", "istanbul", "modern", "120m2"], en: ["cloud-kitchen", "istanbul", "modern", "120m2"] },
-  { tr: ["restoran", "ankara", "modern", "150m2"], en: ["restaurant", "ankara", "modern", "150m2"] },
-  { tr: ["kafe", "ankara", "ozgun", "80m2"], en: ["cafe", "ankara", "signature", "80m2"] },
-  { tr: ["catering", "ankara", "klasik", "200m2"], en: ["catering", "ankara", "classic", "200m2"] },
-  { tr: ["steakhouse", "ankara", "modern", "150m2"], en: ["steakhouse", "ankara", "modern", "150m2"] },
-  { tr: ["restoran", "izmir", "modern", "120m2"], en: ["restaurant", "izmir", "modern", "120m2"] },
-  { tr: ["kafe", "izmir", "ozgun", "100m2"], en: ["cafe", "izmir", "signature", "100m2"] },
-  { tr: ["bar", "izmir", "ozgun", "80m2"], en: ["bar", "izmir", "signature", "80m2"] },
-  { tr: ["steakhouse", "izmir", "modern", "150m2"], en: ["steakhouse", "izmir", "modern", "150m2"] },
-  { tr: ["restoran", "bursa", "modern", "150m2"], en: ["restaurant", "bursa", "modern", "150m2"] },
-  { tr: ["kafe", "bursa", "ozgun", "80m2"], en: ["cafe", "bursa", "signature", "80m2"] },
-  { tr: ["catering", "bursa", "klasik", "200m2"], en: ["catering", "bursa", "classic", "200m2"] },
-  { tr: ["restoran", "antalya", "modern", "150m2"], en: ["restaurant", "antalya", "modern", "150m2"] },
-  { tr: ["kafe", "antalya", "ozgun", "100m2"], en: ["cafe", "antalya", "signature", "100m2"] },
-  { tr: ["bar", "antalya", "ozgun", "80m2"], en: ["bar", "antalya", "signature", "80m2"] },
-  { tr: ["restoran", "adana", "modern", "150m2"], en: ["restaurant", "adana", "modern", "150m2"] },
-  { tr: ["steakhouse", "adana", "modern", "150m2"], en: ["steakhouse", "adana", "modern", "150m2"] },
-  { tr: ["restoran", "gaziantep", "modern", "150m2"], en: ["restaurant", "gaziantep", "modern", "150m2"] },
-  { tr: ["kafe", "gaziantep", "ozgun", "80m2"], en: ["cafe", "gaziantep", "signature", "80m2"] },
-  { tr: ["restoran", "kocaeli", "modern", "150m2"], en: ["restaurant", "kocaeli", "modern", "150m2"] },
-  { tr: ["catering", "kocaeli", "klasik", "200m2"], en: ["catering", "kocaeli", "classic", "200m2"] }
-];
+const PSEO_COMBOS = [];
 
 function buildShopHubs() {
   const urls = [
     urlEntry(`${ORIGIN}/`, { priority: "1", changefreq: "weekly" }),
     urlEntry(`${ORIGIN}/shop`, { priority: "0.95" }),
-    urlEntry(`${ORIGIN}/pfos`, { priority: "0.99" }),
-    urlEntry(`${ORIGIN}/besos`, { priority: "0.95" }),
     urlEntry(`${ORIGIN}/besos/imt300`, { priority: "0.88" }),
-    urlEntry(`${ORIGIN}/arama`, { priority: "0.6" }),
     urlEntry(`${ORIGIN}/shop/marka`, { priority: "0.75" }),
   ];
   for (const d of SHOP_DEPTS) {
     urls.push(urlEntry(`${ORIGIN}/shop/${d}`, { priority: "0.85", changefreq: "weekly" }));
-  }
-  for (const item of PSEO_COMBOS) {
-    const path = `/pfos/${item.tr.join("/")}`;
-    urls.push(urlEntry(`${ORIGIN}${path}`, { priority: "0.78", changefreq: "monthly" }));
   }
   return urls;
 }
@@ -141,16 +107,11 @@ function buildShopEnHubs() {
   const urls = [
     urlEntry(`${ORIGIN}/en/shop`, { priority: "0.93" }),
     urlEntry(`${ORIGIN}/en/shop/marka`, { priority: "0.74" }),
-    urlEntry(`${ORIGIN}/en/sepet`, { priority: "0.35", changefreq: "monthly" }),
   ];
   for (const d of SHOP_DEPTS) {
     urls.push(
       urlEntry(`${ORIGIN}/en/shop/${d}`, { priority: "0.84", changefreq: "weekly" }),
     );
-  }
-  for (const item of PSEO_COMBOS) {
-    const path = `/en/pfos/${item.en.join("/")}`;
-    urls.push(urlEntry(`${ORIGIN}${path}`, { priority: "0.76", changefreq: "monthly" }));
   }
   return urls;
 }
@@ -194,28 +155,14 @@ function buildBrands(rows) {
 }
 
 function buildCategories(tips) {
-  const seen = new Set();
-  const urls = [];
-  for (const t of tips) {
-    const dept = tipDeptToShop(t.dept);
-    if (!SHOP_DEPTS.includes(dept)) continue;
-    const key = `${dept}:${t.tip}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    const q = `?tip=${encodeURIComponent(t.tip)}`;
-    urls.push(
-      urlEntry(`${ORIGIN}/shop/${dept}${q}`, { priority: "0.78", changefreq: "weekly" }),
-    );
-    urls.push(
-      urlEntry(`${ORIGIN}/en/shop/${dept}${q}`, { priority: "0.76", changefreq: "weekly" }),
-    );
-  }
-  return urls;
+  // Filter URLs (?tip=...) are filter states, not indexable landing pages.
+  // They canonical to parent department and should not be in sitemap.
+  // Return empty array to exclude them from sitemap.
+  return [];
 }
 
 function buildBesos() {
   const urls = [
-    urlEntry(`${ORIGIN}/besos`, { priority: "0.95" }),
     urlEntry(`${ORIGIN}/besos/bar-istasyonlari`, { priority: "0.92", changefreq: "weekly" }),
   ];
   const catPath = path.join(PUBLIC, "data", "vitrum-bars-catalogue.json");
@@ -274,17 +221,34 @@ function patchSitemapPages() {
     xml = xml.replace("</urlset>", `${extra}\n</urlset>`);
   }
 
+  // Remove noindex/redirect URLs from sitemap
+  const removeUrls = [
+    "https://equsto.com/arama",      // noindex
+    "https://equsto.com/en/cart",    // redirects to /sepet, noindex
+    "https://equsto.com/en/search",  // redirects to /arama, noindex
+    "https://equsto.com/en/iletisim", // redirects to /en/contact
+    // Missing canonical
+    "https://equsto.com/projeler",
+    "https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode",
+    "https://equsto.com/projeler/izmir-moduler-bar-icecek-demode",
+    "https://equsto.com/en/blog",
+    "https://equsto.com/besos",
+    "https://equsto.com/en/besos",
+  ];
+  for (const url of removeUrls) {
+    const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Match multiline format: <url>\n    <loc>...</loc>\n    ...\n  </url>
+    xml = xml.replace(new RegExp(`<url>[\\s\\S]*?<loc>${escaped}</loc>[\\s\\S]*?</url>\\s*`, 'g'), '');
+  }
+
+  // Ensure correct final URLs are present
   const ensure = [
     ["/pfos", "0.99", "weekly"],
     ["/kvkk", "0.5", "yearly"],
     ["/en", "0.95", "weekly"],
     ["/en/about", "0.78", "monthly"],
     ["/en/pfos", "0.95", "weekly"],
-    ["/en/blog", "0.8", "weekly"],
     ["/en/contact", "0.7", "monthly"],
-    ["/en/cart", "0.35", "monthly"],
-    ["/en/search", "0.55", "monthly"],
-    ["/en/besos", "0.9", "weekly"],
     ["/en/steakhouse-kitchen-setup", "0.85", "monthly"],
     ["/en/fish-restaurant-kitchen-project-and-equipment", "0.84", "monthly"],
     ["/en/cloud-kitchen-setup", "0.84", "monthly"],
