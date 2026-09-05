@@ -1,6 +1,17 @@
 User-agent: *
 Allow: /
 
+# Disallow private/auth/checkout pages from search
+Disallow: /login
+Disallow: /sepet
+Disallow: /odeme/
+Disallow: /hesabim
+Disallow: /yonetim/
+Disallow: /api/
+Disallow: /en/login
+Disallow: /en/cart
+Disallow: /en/account
+
 # AI / GEO asistanları (içerik özeti: /llms.txt)
 # LLMs: https://equsto.com/llms.txt
 User-agent: GPTBot
