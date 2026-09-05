@@ -23,6 +23,7 @@ export type ShopDeptMeta = {
   navKey: string;
   metaDescription: string;
   metaDescriptionEn: string;
+  faq?: Array<{ q: string; a: string }>;
 };
 
 export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
