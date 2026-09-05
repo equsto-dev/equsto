@@ -175,12 +175,23 @@ export function rowToPdpSsr(
   breadcrumbs.push({ name: isEn ? "Home" : "Ana Sayfa", href: `${prefix}/` });
   breadcrumbs.push({ name: SHOP_DEPTS[dept].title, href: `${prefix}/shop/${dept}` });
   
+  // Category (urun_kategori) - generate canonical category URL if available
   if (row.urun_kategori && String(row.urun_kategori).toLowerCase() !== String(SHOP_DEPTS[dept].title).toLowerCase()) {
-    breadcrumbs.push({ name: String(row.urun_kategori).trim() });
+    const catSlug = slugifyCatalogPart(String(row.urun_kategori).trim());
+    breadcrumbs.push({ 
+      name: String(row.urun_kategori).trim(), 
+      href: `${prefix}/shop/${dept}/${encodeURIComponent(catSlug)}` 
+    });
   }
+  // Sub-category (urun_alt_kategori)
   if (row.urun_alt_kategori) {
-    breadcrumbs.push({ name: String(row.urun_alt_kategori).trim() });
+    const subCatSlug = slugifyCatalogPart(String(row.urun_alt_kategori).trim());
+    breadcrumbs.push({ 
+      name: String(row.urun_alt_kategori).trim(), 
+      href: `${prefix}/shop/${dept}/${encodeURIComponent(subCatSlug)}` 
+    });
   }
+  // Brand
   if (brand) {
     breadcrumbs.push({ name: brand, href: `${prefix}/shop/marka/${brand.toLowerCase().replace(/ /g, '-')}` });
   }
@@ -349,15 +360,18 @@ function buildBreadcrumbsFromKategoriYolu(
   const breadcrumbs: Array<{ "@type": "ListItem"; position: number; name: string; item?: string }> = [];
   const seenUrls = new Set<string>();
 
-  function addBreadcrumb(name: string, url: string) {
-    if (!name || !url) return;
-    if (seenUrls.has(url)) return;
-    seenUrls.add(url);
+  function addBreadcrumb(name: string, url?: string) {
+    if (!name) return;
+    // Only add URL if it's a valid canonical URL (not a filter URL)
+    if (url) {
+      if (seenUrls.has(url)) return;
+      seenUrls.add(url);
+    }
     breadcrumbs.push({
       "@type": "ListItem",
       position: breadcrumbs.length + 1,
       name: name.trim(),
-      item: url,
+      ...(url ? { item: url } : {}),
     });
   }
 
@@ -374,9 +388,9 @@ function buildBreadcrumbsFromKategoriYolu(
       for (let i = 1; i < kategoriYolu.length; i++) {
         const trimmed = String(kategoriYolu[i]).trim();
         if (!trimmed) continue;
-        // Generate slug for subcategory from its name
+        // Generate canonical category URL (not filter URL)
         const slug = slugifyCatalogPart(trimmed);
-        const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+        const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
         addBreadcrumb(trimmed, url);
       }
     } else {
@@ -386,7 +400,7 @@ function buildBreadcrumbsFromKategoriYolu(
         const trimmed = String(urunKategori).trim();
         if (trimmed && trimmed.toLowerCase() !== ssr.deptTitle.toLowerCase()) {
           const slug = slugifyCatalogPart(trimmed);
-          const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+          const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
           addBreadcrumb(trimmed, url);
         }
       }
@@ -395,7 +409,7 @@ function buildBreadcrumbsFromKategoriYolu(
         const trimmed = String(urunAltKategori).trim();
         if (trimmed) {
           const slug = slugifyCatalogPart(trimmed);
-          const url = `${origin}${ssr.deptHref}?tip=${encodeURIComponent(slug)}`;
+          const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
           addBreadcrumb(trimmed, url);
         }
       }

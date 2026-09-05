@@ -64,6 +64,10 @@ export function buildMarkaMetadata(
   const hub = getBrandHubMeta(slug);
   const label = brandHubLabel(slug);
   const origin = getSiteOrigin();
+  const trPath = `/shop/marka/${slug}`;
+  const enPath = `/en/shop/marka/${slug}`;
+  const trUrl = `${origin}${trPath}`;
+  const enUrl = `${origin}${enPath}`;
   const path = lang === "en" ? `/en/shop/marka/${slug}` : `/shop/marka/${slug}`;
   const url = `${origin}${path}`;
   const title = hub ? `${hub.displayName} · Equsto` : `${label} · Equsto`;
@@ -74,7 +78,15 @@ export function buildMarkaMetadata(
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "tr-TR": trUrl,
+        "en-US": enUrl,
+        tr: trUrl,
+        en: enUrl,
+      },
+    },
     openGraph: {
       title,
       description,
