@@ -30,4 +30,5 @@ export const MARKA_HUB_SLUGS = [
   "copmak",
   "blanco",
   "simag",
+  "brema",
 ];

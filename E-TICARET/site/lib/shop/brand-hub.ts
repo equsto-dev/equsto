@@ -211,6 +211,13 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     facet: "Vosco",
     sameAs: ["https://vosco.com.tr"],
   },
+  brema: {
+    displayName: "Brema",
+    description:
+      "Brema buz makineleri, soğutma ve teşhir ekipmanları Equsto vitrininde. Endüstriyel buz üretim ve soğutma çözümleri için katalog fiyatları, teknik özellikler ve PFOS proje teklifi.",
+    facet: "Brema",
+    sameAs: ["https://www.brema.it"],
+  },
 };
 
 export function getBrandHubMeta(slug: string): BrandHubMeta | null {
