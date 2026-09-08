@@ -18,7 +18,7 @@ import {
 } from "@/lib/google-merchant-feed";
 import { extractTechnicalDetails } from "@/lib/feed-product-details";
 import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
-import { resolveShopDept } from "@/lib/shop/category-dept";
+import { resolveShopDept } from "./category-dept";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { SHOP_DEPTS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
 import type { Metadata } from "next";
@@ -175,20 +175,18 @@ export function rowToPdpSsr(
   breadcrumbs.push({ name: isEn ? "Home" : "Ana Sayfa", href: `${prefix}/` });
   breadcrumbs.push({ name: SHOP_DEPTS[dept].title, href: `${prefix}/shop/${dept}` });
   
-  // Category (urun_kategori) - generate canonical category URL if available
+  // Category (urun_kategori) - use canonical dept URL (no ?tip= filter params)
   if (row.urun_kategori && String(row.urun_kategori).toLowerCase() !== String(SHOP_DEPTS[dept].title).toLowerCase()) {
-    const catSlug = slugifyCatalogPart(String(row.urun_kategori).trim());
     breadcrumbs.push({ 
       name: String(row.urun_kategori).trim(), 
-      href: `${prefix}/shop/${dept}/${encodeURIComponent(catSlug)}` 
+      href: `${prefix}/shop/${dept}` 
     });
   }
-  // Sub-category (urun_alt_kategori)
+  // Sub-category (urun_alt_kategori) - use canonical dept URL (no ?tip= filter params)
   if (row.urun_alt_kategori) {
-    const subCatSlug = slugifyCatalogPart(String(row.urun_alt_kategori).trim());
     breadcrumbs.push({ 
       name: String(row.urun_alt_kategori).trim(), 
-      href: `${prefix}/shop/${dept}/${encodeURIComponent(subCatSlug)}` 
+      href: `${prefix}/shop/${dept}` 
     });
   }
   // Brand
@@ -385,13 +383,12 @@ function buildBreadcrumbsFromKategoriYolu(
     const kategoriYolu = originalRow.kategori_yolu as string[] | undefined;
     if (Array.isArray(kategoriYolu) && kategoriYolu.length > 1) {
       // Skip first element (dept duplicate), start from index 1
+      // Use canonical dept URL for category/subcategory (no ?tip= filter params, no invented category paths)
       for (let i = 1; i < kategoriYolu.length; i++) {
         const trimmed = String(kategoriYolu[i]).trim();
         if (!trimmed) continue;
-        // Generate canonical category URL (not filter URL)
-        const slug = slugifyCatalogPart(trimmed);
-        const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
-        addBreadcrumb(trimmed, url);
+        // Use canonical dept URL as the category URL (indexable, no filter params)
+        addBreadcrumb(trimmed, `${origin}${ssr.deptHref}`);
       }
     } else {
       // Fallback: urun_kategori / urun_alt_kategori (no kategori_yolu array)
@@ -399,18 +396,16 @@ function buildBreadcrumbsFromKategoriYolu(
       if (urunKategori) {
         const trimmed = String(urunKategori).trim();
         if (trimmed && trimmed.toLowerCase() !== ssr.deptTitle.toLowerCase()) {
-          const slug = slugifyCatalogPart(trimmed);
-          const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
-          addBreadcrumb(trimmed, url);
+          // Use canonical dept URL (no ?tip= filter params)
+          addBreadcrumb(trimmed, `${origin}${ssr.deptHref}`);
         }
       }
       const urunAltKategori = originalRow.urun_alt_kategori as string | undefined;
       if (urunAltKategori) {
         const trimmed = String(urunAltKategori).trim();
         if (trimmed) {
-          const slug = slugifyCatalogPart(trimmed);
-          const url = `${origin}${ssr.deptHref}/${encodeURIComponent(slug)}`;
-          addBreadcrumb(trimmed, url);
+          // Use canonical dept URL (no ?tip= filter params)
+          addBreadcrumb(trimmed, `${origin}${ssr.deptHref}`);
         }
       }
     }
