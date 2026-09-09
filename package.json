@@ -1,0 +1,27 @@
+{
+  "name": "equsto-work",
+  "version": "1.0.0",
+  "description": "Türkiye merkezli endüstriyel mutfak platformu — **tek kaynak klasör:** [`EQUSTO-WORK/`](EQUSTO-WORK/).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/equsto-dev/equsto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/equsto-dev/equsto/issues"
+  },
+  "homepage": "https://github.com/equsto-dev/equsto#readme",
+  "dependencies": {
+    "fast-xml-parser": "^5.11.1"
+  }
+}

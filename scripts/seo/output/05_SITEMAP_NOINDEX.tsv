@@ -1,0 +1,4 @@
+url	http_status	robots	reason
+https://equsto.com/en/cart	200	noindex, follow	meta_robots_noindex
+https://equsto.com/en/search	200	noindex, follow	meta_robots_noindex
+https://equsto.com/arama	200	noindex, follow	meta_robots_noindex

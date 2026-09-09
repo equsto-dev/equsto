@@ -27,3 +27,64 @@ export function buildDeptBreadcrumbJsonLd(dept: ShopDeptSlug, locale: "tr" | "en
     ],
   };
 }
+
+export interface SubcategoryJsonLdInput {
+  slug: string;
+  dept: string;
+  title: string;
+  description: string;
+  relatedCategories?: { slug: string; title: string; titleEn: string }[];
+  origin: string;
+  locale: "tr" | "en";
+}
+
+export function buildSubcategoryJsonLd(input: SubcategoryJsonLdInput) {
+  const { slug, dept, title, description, relatedCategories = [], origin, locale } = input;
+  const isEn = locale === "en";
+  const homeName = isEn ? "Home" : "Ana Sayfa";
+  const homeUrl = isEn ? `${origin}/en/` : `${origin}/`;
+  const deptUrl = isEn ? `${origin}/en/shop/${dept}` : `${origin}/shop/${dept}`;
+  const subcatUrl = isEn ? `${origin}/en/shop/${dept}/kategori/${slug}` : `${origin}/shop/${dept}/kategori/${slug}`;
+
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: isEn ? "Home" : "Ana Sayfa",
+      item: homeUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: isEn ? "Shop" : "Mağaza",
+      item: deptUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: title,
+      item: subcatUrl,
+    },
+  ];
+
+  const graph = [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement,
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${subcatUrl}#page`,
+      url: subcatUrl,
+      name: title,
+      description,
+      inLanguage: isEn ? "en-US" : "tr-TR",
+      isPartOf: { "@id": `${origin}/#website` },
+    },
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
+}

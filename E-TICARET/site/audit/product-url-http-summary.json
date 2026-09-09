@@ -1,0 +1,74 @@
+{
+  "total_urls": 18794,
+  "status_200": 18784,
+  "status_3xx": 10,
+  "status_4xx": 0,
+  "status_5xx": 0,
+  "timeouts": 0,
+  "connection_errors": 0,
+  "redirect_chains": 10,
+  "broken_urls": [
+    {
+      "url": "https://equsto.com/en/shop/pisirme/adg-4%2B4a",
+      "status": "307",
+      "final_url": "https://equsto.com/en/shop/pisirme/adg-4%2B4a",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/en/shop/pisirme/adg-5%2B5a",
+      "status": "307",
+      "final_url": "https://equsto.com/en/shop/pisirme/adg-5%2B5a",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/en/shop/pisirme/gn1-1150%2Bgn1-3150",
+      "status": "307",
+      "final_url": "https://equsto.com/en/shop/pisirme/gn1-1150%2Bgn1-3150",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/en/shop/pisirme/gn1-2%2Bgn1-3150",
+      "status": "307",
+      "final_url": "https://equsto.com/en/shop/pisirme/gn1-2%2Bgn1-3150",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/en/shop/pisirme/gn1-4%2Bgn1-2150",
+      "status": "307",
+      "final_url": "https://equsto.com/en/shop/pisirme/gn1-4%2Bgn1-2150",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/shop/pisirme/adg-4%2B4a",
+      "status": "307",
+      "final_url": "https://equsto.com/shop/pisirme/adg-4%2B4a",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/shop/pisirme/adg-5%2B5a",
+      "status": "307",
+      "final_url": "https://equsto.com/shop/pisirme/adg-5%2B5a",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/shop/pisirme/gn1-1150%2Bgn1-3150",
+      "status": "307",
+      "final_url": "https://equsto.com/shop/pisirme/gn1-1150%2Bgn1-3150",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/shop/pisirme/gn1-2%2Bgn1-3150",
+      "status": "307",
+      "final_url": "https://equsto.com/shop/pisirme/gn1-2%2Bgn1-3150",
+      "error": ""
+    },
+    {
+      "url": "https://equsto.com/shop/pisirme/gn1-4%2Bgn1-2150",
+      "status": "307",
+      "final_url": "https://equsto.com/shop/pisirme/gn1-4%2Bgn1-2150",
+      "error": ""
+    }
+  ],
+  "sitemap_urls": 18794,
+  "crawled_urls": 18794
+}
