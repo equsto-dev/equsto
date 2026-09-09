@@ -1,0 +1,478 @@
+{
+  "kaynak_toplam_urun": 629,
+  "dislanan_yardimci_mutfaK_urun_sayisi": 410,
+  "uyumlu_urun_sayisi": 629,
+  "benzersiz_sku": 604,
+  "equsto_da_bulunan_sku": 42,
+  "equsto_da_kismi_eslesen_sku": 0,
+  "equsto_da_bulunmayan_sku": 587,
+  "eslesen_urunler": 42,
+  "eslesmeyen_urunler": 587,
+  "fiyati_bulunan_urunler": 35,
+  "fiyati_bulunmayan_urunler": 7,
+  "departman_bazli_dagilim": {
+    "hazirlik": 110,
+    "pisirme": 249,
+    "yikama": 35,
+    "sogutma": 235
+  },
+  "kategori_bazli_eslesme": {
+    "hamur-yogurma-makineleri-hamur-isleme-makineleri-hazirlik-makineleri": {
+      "eslesen": 2,
+      "toplam": 2
+    },
+    "hamur-bolme-ve-yuvarlama-makineleri": {
+      "eslesen": 7,
+      "toplam": 7
+    },
+    "hamur-acma-makineleri-hamur-isleme-makineleri-hazirlik-makineleri": {
+      "eslesen": 8,
+      "toplam": 8
+    },
+    "planet-mikserler": {
+      "eslesen": 5,
+      "toplam": 5
+    },
+    "sanzimanli-mikserler": {
+      "eslesen": 3,
+      "toplam": 3
+    },
+    "sebze-dograma": {
+      "eslesen": 4,
+      "toplam": 4
+    },
+    "sebze-dograma-ve-parcalama": {
+      "eslesen": 2,
+      "toplam": 2
+    },
+    "sebze-parcalama": {
+      "eslesen": 2,
+      "toplam": 2
+    },
+    "el-mikserleri": {
+      "eslesen": 9,
+      "toplam": 9
+    },
+    "makarna-kesme-makineleri": {
+      "eslesen": 0,
+      "toplam": 7
+    },
+    "sebze-isleme-makineleri": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "sebze-parcalama-makineleri": {
+      "eslesen": 0,
+      "toplam": 9
+    },
+    "patates-soyma-makinesi": {
+      "eslesen": 0,
+      "toplam": 7
+    },
+    "sogan-soyma-makinesi": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "sarimsak-soyma-makinesi": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "patates-sogan-sarimsak-soyma-makineleri": {
+      "eslesen": 0,
+      "toplam": 3
+    },
+    "sebze-yikama-makineleri": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "salata-ve-sebze-kurutma-makinesi": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "robot-coupe-sebze-isleme-makineleri": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "et-kiyma-makineleri": {
+      "eslesen": 0,
+      "toplam": 11
+    },
+    "gida-dilimleme-makineleri": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "kemik-testereleri": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "mutfak-robotu": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "elektrikli-ocaklar": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "gazli-ocaklar": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "induksiyonlu-ocaklar": {
+      "eslesen": 0,
+      "toplam": 4
+    },
+    "yer-ocaklari": {
+      "eslesen": 0,
+      "toplam": 6
+    },
+    "elektrikli-fritozler": {
+      "eslesen": 0,
+      "toplam": 7
+    },
+    "kaynatma-tenceresi": {
+      "eslesen": 0,
+      "toplam": 12
+    },
+    "elektrikli-doner-makineleri": {
+      "eslesen": 0,
+      "toplam": 5
+    },
+    "gazli-doner-makineleri": {
+      "eslesen": 0,
+      "toplam": 6
+    },
+    "doner-kesme-aleti": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "tost-ve-waffle-makineleri": {
+      "eslesen": 0,
+      "toplam": 11
+    },
+    "pilic-cevirme-makineleri": {
+      "eslesen": 0,
+      "toplam": 5
+    },
+    "elektrikli-corbalik": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "unox-davlumbazlar": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "salamanderler": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "kumpir-makineleri": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "ocaklar-600-serisi": {
+      "eslesen": 0,
+      "toplam": 5
+    },
+    "fritozler-600-serisi": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "izgaralar": {
+      "eslesen": 0,
+      "toplam": 7
+    },
+    "kaynatma-tencereleri-700-serisi": {
+      "eslesen": 0,
+      "toplam": 3
+    },
+    "ocaklar-700-serisi": {
+      "eslesen": 0,
+      "toplam": 14
+    },
+    "fritozler-700-serisi": {
+      "eslesen": 0,
+      "toplam": 4
+    },
+    "izgaralar-700-serisi": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "devrilir-tavalar-700-serisi": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "ocaklar-900-serisi": {
+      "eslesen": 0,
+      "toplam": 15
+    },
+    "fritozler-900-serisi": {
+      "eslesen": 0,
+      "toplam": 4
+    },
+    "izgaralar-900-serisi": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "devrilir-tavalar": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "kaynatma-tencereleri": {
+      "eslesen": 0,
+      "toplam": 9
+    },
+    "cok-amacli-firinlar": {
+      "eslesen": 0,
+      "toplam": 9
+    },
+    "elektrikli-pizza-firinlari": {
+      "eslesen": 0,
+      "toplam": 11
+    },
+    "rational-firinlar": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "unox-firinlar": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "elektrikli-kombi-firinlar": {
+      "eslesen": 0,
+      "toplam": 3
+    },
+    "gazli-kombi-firinlar": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "elektrikli-konveksiyonlu-firinlar": {
+      "eslesen": 0,
+      "toplam": 5
+    },
+    "gazli-konveksiyonlu-firinlar": {
+      "eslesen": 0,
+      "toplam": 5
+    },
+    "pizza-firinlari-konveyorlu-firinlar": {
+      "eslesen": 0,
+      "toplam": 6
+    },
+    "menumaster": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "patiserrie-firinlari": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "mayalama-dolaplari": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "flight-tip": {
+      "eslesen": 0,
+      "toplam": 10
+    },
+    "giyotin-tip-bulasik-makineleri": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "hobart": {
+      "eslesen": 0,
+      "toplam": 6
+    },
+    "kazan-yikama-tip": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "konveyorlu-tip-bulasik-makineleri": {
+      "eslesen": 0,
+      "toplam": 6
+    },
+    "setustu-bardak-tip": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "tezgahalti-tip": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "bardak-kavanoz-yikama-duslari": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "ozti": {
+      "eslesen": 0,
+      "toplam": 11
+    },
+    "hoshizaki": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "simag": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "dikey-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 15
+    },
+    "dikey-tip-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 9
+    },
+    "yatay-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "yatay-tip-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "pizza-hazirlik-dolaplari": {
+      "eslesen": 0,
+      "toplam": 15
+    },
+    "salad-barlar-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 3
+    },
+    "soguk-servis-bankosu": {
+      "eslesen": 0,
+      "toplam": 8
+    },
+    "yatay-tip-derindondurucular-buzdolaplari": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "dikey-tip-derindondurucular": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "yatay-tip-derindondurucular": {
+      "eslesen": 0,
+      "toplam": 2
+    },
+    "sogutucu-odalar": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "derin-dondurucu-odalar": {
+      "eslesen": 0,
+      "toplam": 12
+    },
+    "yumusak-dondurma-makineleri": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "bar-tipi-sise-sogutucu-dolabi": {
+      "eslesen": 0,
+      "toplam": 3
+    },
+    "et-teshir-dolaplari": {
+      "eslesen": 0,
+      "toplam": 7
+    },
+    "icecek-teshir-dolaplari": {
+      "eslesen": 0,
+      "toplam": 1
+    },
+    "pasta-teshir-dolabi": {
+      "eslesen": 0,
+      "toplam": 16
+    },
+    "salad-barlar": {
+      "eslesen": 0,
+      "toplam": 11
+    },
+    "sutluk-dolabi-teshir-dolaplari": {
+      "eslesen": 0,
+      "toplam": 10
+    }
+  },
+  "SONRAKI_ADIM_ONERILERI": {
+    "SONRAKİ_ADIM_İÇİN_ÖNERİLEN_ÜRÜN_GRUBU": {
+      "oncelik_1": {
+        "kategori": "Hazırlık - Makarna Kesme Makineleri",
+        "neden": "Equsto'da henüz yok, talep olabilir. 7 ürün var.",
+        "urun_sayisi": 7,
+        "sku_ornekleri": []
+      },
+      "oncelik_2": {
+        "kategori": "Hazırlık - Sebze İşleme Makineleri (Genel)",
+        "neden": "Equsto'da Robot Coupe varsa da genel sebze işleme makineleri eksik. 16 ürün var.",
+        "urun_sayisi": 16,
+        "sku_ornekleri": []
+      },
+      "oncelik_3": {
+        "kategori": "Hazırlık - Et İşleme Makineleri",
+        "neden": "Et kıyma, kemik testere, gıda dilimleme - Equsto'da yok. 20 ürün var.",
+        "urun_sayisi": 20,
+        "sku_ornekleri": []
+      },
+      "oncelik_4": {
+        "kategori": "Pişirme - Fırınlar (Rational, Unox, Kombi, Konveksiyonlu)",
+        "neden": "Equsto'da pişirme departmanı var ama Öztiryakiler fırınları (özellikle Rational/Unox distribütörlüğü) güçlü. 80+ ürün.",
+        "urun_sayisi": 83,
+        "sku_ornekleri": []
+      },
+      "oncelik_5": {
+        "kategori": "Pişirme - Modüler Mutfak Serileri (600/700/900)",
+        "neden": "Tam entegre mutfak çözümleri. Ocak, fritöz, ızgara, kaynatma, devrilir tava. 100+ ürün.",
+        "urun_sayisi": 103,
+        "sku_ornekleri": []
+      },
+      "oncelik_6": {
+        "kategori": "Pişirme - Döner Makineleri, Pilîç Çevirme, Salamander",
+        "neden": "Özel pişirme ekipmanları. 15+ ürün.",
+        "urun_sayisi": 15,
+        "sku_ornekleri": []
+      },
+      "oncelik_7": {
+        "kategori": "Yıkama - Bulaşık Makineleri (Flight, Giyotin, Hobart, Konveyörlü)",
+        "neden": "Equsto'da yıkama departmanı var. 20+ ürün.",
+        "urun_sayisi": 26,
+        "sku_ornekleri": []
+      },
+      "oncelik_8": {
+        "kategori": "Soğutma - Buzdolapları, Derindondurucular, Teşhir Dolapları, Soğuk Odalar",
+        "neden": "En büyük kategori (235 ürün). Hoshizaki/Simag/Ozti buz makineleri, buzdolaplar, teşhir dolapları, soğuk muhafaza odaları. Equsto'da soğutma departmanı zaten var.",
+        "urun_sayisi": 235,
+        "sku_ornekleri": []
+      }
+    },
+    "EKLEME_SIRASI_ONERISI": [
+      "1. Hazırlık - Et İşleme ve Makarna Kesme (Equsto'ya yeni kategori ekler)",
+      "2. Pişirme - Fırınlar ve Modüler Mutfaklar (Mevcut departmanı güçlendirir, Rational/Unox yetkili distribütörlüğü vurgusu)",
+      "3. Yıkama - Bulaşık Makineleri (Mevcut departmanı genişletir)",
+      "4. Soğutma - Buzdolapları/Teşhir/Soğuk Odalar (En büyük potansiyel, Hoshizaki/Simag markaları ile)"
+    ],
+    "ESLEMELEN_KATEGORILER_100": [
+      "hamur-yogurma-makineleri-hamur-isleme-makineleri-hazirlik-makineleri (2/2)",
+      "hamur-bolme-ve-yuvarlama-makineleri (7/7)",
+      "hamur-acma-makineleri-hamur-isleme-makineleri-hazirlik-makineleri (8/8)",
+      "planet-mikserler (5/5)",
+      "sanzimanli-mikserler (3/3)",
+      "sebze-dograma (4/4)",
+      "sebze-dograma-ve-parcalama (2/2)",
+      "sebze-parcalama (2/2)",
+      "el-mikserler (9/9)"
+    ],
+    "YENI_KATEGORI_GEREKTIREN_ANA_GRUPLAR": [
+      "Pişirme > Fırınlar (Rational, Unox, Kombi, Konveksiyonlu, Pizza, Pastane, Patiserrie)",
+      "Pişirme > Modüler Mutfaklar (600/700/900 Serisi - Ocak, Fritöz, Izgara, Kaynatma, Devrilir Tava)",
+      "Pişirme > Özel Pişirme (Döner, Pilîç, Salamander, Tost/Waffle, Kumpir, Bainmarie, Davlumbaz)",
+      "Yıkama > Bulaşık Makineleri (Flight, Giyotin, Hobart, Konveyörlü, Setüstü, Tezgahaltı)",
+      "Soğutma > Buz Makineleri (Hoshizaki, Simag, Ozti)",
+      "Soğutma > Buzdolapları (Dikey, Yatay, Pizza Hazırlık, Salad Bar, Soğuk Servis Bankosu)",
+      "Soğutma > Derindondurucular (Dikey, Yatay)",
+      "Soğutma > Soğuk Muhafaza Odaları (Soğutucu, Derin Dondurucu Odaları)",
+      "Soğutma > Dondurma Makineleri (Yumuşak Dondurma)",
+      "Soğutma > Teşhir Dolapları (Bar, Et, İçecek, Pasta, Salad Bar, Şarap, Sütlük)",
+      "Hazırlık > Et İşleme (Et Kıyma, Kemik Testere, Gıda Dilimleme)",
+      "Hazırlık > Sebze İşleme Genel (Patates/Sogan/Sarımsak Soyma, Sebze Yıkama, Kurutma)",
+      "Hazırlık > Makarna Kesme",
+      "Hazırlık > Mutfak Robotu"
+    ]
+  }
+}

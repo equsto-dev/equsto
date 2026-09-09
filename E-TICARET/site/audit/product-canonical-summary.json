@@ -1,0 +1,18 @@
+{
+  "total_urls": 18794,
+  "canonical_found": 18784,
+  "canonical_missing": 10,
+  "canonical_matching": 17198,
+  "canonical_mismatch": 1586,
+  "external_canonical": 0,
+  "http_canonical": 0,
+  "redirect_canonical": 0,
+  "invalid_canonical": 0,
+  "duplicate_canonical_groups": 0,
+  "duplicate_groups": {},
+  "issue_counts": {
+    "canonical_not_match_requested": 1586,
+    "canonical_trailing_slash": 1586,
+    "canonical_missing": 10
+  }
+}

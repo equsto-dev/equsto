@@ -23,6 +23,8 @@ export const SHOP_DEPTS = [
   "market-reyonlari",
 ];
 
+export const TODAY = new Date().toISOString().slice(0, 10);
+
 const BRAND_SLUG_ALIAS = {
   atalay: "Atalay Endüstriyel Mutfak Ekipmanları",
   oztiryakiler: "Öztiryakiler Endüstriyel Mutfak",
@@ -254,4 +256,26 @@ export function parseSitemapLocs(publicDir) {
     while ((m = re.exec(xml))) locs.add(m[1].trim());
   }
   return locs;
+}
+
+// Subcategory landing definitions for sitemap
+export const SUBCATEGORY_SLUGS = [
+  // Pisirme subcategories
+  { dept: "pisirme", slug: "kombi-firinlar" },
+  { dept: "pisirme", slug: "konveksiyonel-firinlar" },
+  { dept: "pisirme", slug: "pizza-firinlari" },
+  { dept: "pisirme", slug: "sanayi-tipi-ocaklar" },
+  { dept: "pisirme", slug: "sanayi-tipi-izgaralar" },
+  { dept: "pisirme", slug: "elektrikli-kombi-firinlar" },
+  { dept: "pisirme", slug: "10-gn-1-1-kombi-firinlar" },
+  { dept: "pisirme", slug: "20-gn-2-1-kombi-firinlar" },
+];
+
+export function buildSubcategoryUrls() {
+  const urls = [];
+  for (const { dept, slug } of SUBCATEGORY_SLUGS) {
+    urls.push({ loc: `${ORIGIN}/shop/${dept}/kategori/${slug}`, lastmod: TODAY, changefreq: "monthly", priority: "0.7" });
+    urls.push({ loc: `${ORIGIN}/en/shop/${dept}/kategori/${slug}`, lastmod: TODAY, changefreq: "monthly", priority: "0.7" });
+  }
+  return urls;
 }

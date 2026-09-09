@@ -15,6 +15,8 @@ import {
   resolveDept,
   tipDeptToShop,
   uniqueBrandSlugs,
+  SUBCATEGORY_SLUGS,
+  buildSubcategoryUrls,
 } from "./lib/sitemap-entities.mjs";
 import { MARKA_HUB_SLUGS } from "./lib/brand-hub-slugs.mjs";
 
@@ -48,7 +50,12 @@ function urlEntry(loc, opts = {}) {
 }
 
 function writeUrlset(file, urls) {
-  const body = urls.join("\n");
+  const body = urls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join("\n");
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${body}
@@ -313,6 +320,10 @@ function main() {
   writeUrlset(path.join(PUBLIC, "sitemap-besos.xml"), buildBesos());
   indexFiles.push("sitemap-besos.xml");
 
+  // Subcategory landing pages
+  const subcategoryUrls = buildSubcategoryUrls();
+  const subcategoryCount = writeProductChunks("sitemap-shop-subcategories", subcategoryUrls, indexFiles);
+
   removeLegacyProductSitemaps();
 
   const productUrlsTr = buildProducts(rows, "");
@@ -331,6 +342,7 @@ function main() {
       `indexFiles=${indexFiles.length}`,
       `brands=${brands} (${brandUrls.length} urls)`,
       `categories=${categoryUrls.length / 2} tips (${categoryUrls.length} urls)`,
+      `subcategories=${subcategoryCount / 2} (${subcategoryCount} urls)`,
       `products_tr=${productCountTr}`,
       `products_en=${productCountEn}`,
     ].join(" | "),

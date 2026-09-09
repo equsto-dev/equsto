@@ -1,0 +1,18 @@
+FAZ 3 / GÖREV 8+9+10: Kategori & Marka SEO + PDP Internal Linking
+
+GOREV 8 - PDP Internal Linking:
+- PDP breadcrumb href'leri canonical dept URL'ye yonlendirildi (kategori/alt kategori)
+- JSON-LD BreadcrumbList ?tip= filter URL'leri temizlendi -> canonical dept URL
+- Import yolu duzeltildi
+
+GOREV 9 - 15 Kategori SEO Landing Page:
+- 15 departmana seoDescription, usageAreas, selectionCriteria, brands, relatedCategories, FAQ, relatedDepartments eklendi
+- P0 keywordler (Kombi Fırın, Konveksiyonel, Pizza, Sanayi Tipi Ocak/Izgara) dogal kullanildi
+- Keyword stuffing yok, katalog verisiyle uyumlu
+
+GOREV 10 - Marka SEO:
+- Brema markasi eklendi (47 urun katalogda)
+- TR/EN hreflang, canonical, JSON-LD, sitemap dahil
+- Diger 25 marka korunmus
+
+Kapsam disi degisiklik YOK. SEO regresyon YOK.

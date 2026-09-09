@@ -1,0 +1,104 @@
+{
+  "total_atalay": 575,
+  "total_hazirlik": 557,
+  "total_previous_approval": 0,
+  "total_previous_large_difference": 0,
+  "total_unique_products": 1132,
+  "total_matches": 63,
+  "high_confidence_matches": 33,
+  "medium_confidence_matches": 30,
+  "low_confidence_matches": 1069,
+  "no_match": 1069,
+  "oos": 0,
+  "equsto_cheaper": 47,
+  "match": 2,
+  "reasonable_difference": 4,
+  "large_difference": 2,
+  "anomaly": 8,
+  "mutbex_cheaper": 47,
+  "average_difference_percent": 9.78,
+  "median_difference_percent": -34.92,
+  "brand_breakdown": {
+    "Atalay Endüstriyel Mutfak Ekipmanları": {
+      "total": 575,
+      "NO_MATCH": 549,
+      "matched": 26,
+      "EQUSTO_DAHA_UCUZ": 26
+    },
+    "Animo": {
+      "total": 1,
+      "NO_MATCH": 1
+    },
+    "Dito Sama": {
+      "total": 139,
+      "NO_MATCH": 139
+    },
+    "Electrolux Professional": {
+      "total": 17,
+      "NO_MATCH": 17
+    },
+    "Öztiryakiler Endüstriyel Mutfak": {
+      "total": 210,
+      "NO_MATCH": 203,
+      "matched": 7,
+      "EQUSTO_DAHA_UCUZ": 1,
+      "BUYUK_FARK": 2,
+      "MAKUL_FARK": 4
+    },
+    "Pimak": {
+      "total": 103,
+      "NO_MATCH": 103
+    },
+    "Santos": {
+      "total": 15,
+      "NO_MATCH": 15
+    },
+    "Şenox": {
+      "total": 28,
+      "NO_MATCH": 28
+    },
+    "Vosco": {
+      "total": 30,
+      "matched": 30,
+      "EQUSTO_DAHA_UCUZ": 20,
+      "ANOMALI": 8,
+      "MATCH": 2
+    },
+    "Yüksel Endüstriyel": {
+      "total": 14,
+      "NO_MATCH": 14
+    }
+  },
+  "category_breakdown": {
+    "Pişirme": {
+      "total": 563,
+      "NO_MATCH": 538,
+      "matched": 25,
+      "EQUSTO_DAHA_UCUZ": 25
+    },
+    "Kahve": {
+      "total": 3,
+      "NO_MATCH": 2,
+      "matched": 1,
+      "EQUSTO_DAHA_UCUZ": 1
+    },
+    "Servis Arabaları": {
+      "total": 9,
+      "NO_MATCH": 9
+    },
+    "Hazırlık": {
+      "total": 556,
+      "NO_MATCH": 519,
+      "matched": 37,
+      "EQUSTO_DAHA_UCUZ": 21,
+      "BUYUK_FARK": 2,
+      "MAKUL_FARK": 4,
+      "ANOMALI": 8,
+      "MATCH": 2
+    },
+    "hazirlik": {
+      "total": 1,
+      "NO_MATCH": 1
+    }
+  }
+}
