@@ -1,4 +1,4 @@
-/** Marka hub slug listesi — lib/shop/brand-hub-slugs.ts ile senkron */
+/** Marka hub slug listesi */
 export const MARKA_HUB_SLUGS = [
   "oztiryakiler",
   "atalay",
@@ -10,7 +10,6 @@ export const MARKA_HUB_SLUGS = [
   "hoshizaki",
   "nuova-simonelli",
   "atese",
-  "unox",
   "fac",
   "santos",
   "hobart",
