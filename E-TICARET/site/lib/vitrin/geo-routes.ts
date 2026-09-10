@@ -22,6 +22,7 @@ export const GEO_TR_SLUGS = [
   "mutfak-teklif-platformu",
   "bar-tasarimi-turkiye",
   "blog",
+  "restoran-mutfagi",
 ] as const;
 
 export const GEO_EN_SLUGS = [
@@ -48,6 +49,7 @@ export const GEO_EN_SLUGS = [
   "industrial-cooking-equipment",
   "kitchen-quote-platform",
   "bar-design-turkey",
+  "restoran-mutfagi",
 ] as const;
 
 export const GEO_TR_PREFIX_ROUTES = ["projeler", "rehber"] as const;
