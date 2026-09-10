@@ -73,13 +73,9 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
       "Ateşe çay kazanları ve demleme ekipmanları Equsto vitrininde. ATS serisi çay hatları için katalog fiyatları ve proje teklifi.",
     facet: "Ateşe",
   },
-  unox: {
-    displayName: "Unox",
-    description:
-      "Unox kombi fırın ve pişirme ekipmanları Equsto katalogunda. Profesyonel mutfak pişirme hatları için canlı fiyat ve PFOS entegrasyonu.",
-    facet: "Unox",
-    sameAs: ["https://www.unox.com"],
-  },
+  // Unox: Katalogda gerçek brand değil (Öztiryakiler distribütörlüğü).
+  // Brand hub oluşturulmaz; /shop/marka/unox -> 404.
+  // Unox kombi fırınlar: kombi-firinlar landing içinde modelFamily facet ile ele alınır.
   fac: {
     displayName: "FAC",
     description:

@@ -48,15 +48,30 @@ function getHaystack(row: Record<string, unknown>): string {
   return normalizeTr(parts.join(" "));
 }
 
-/** Enerji tipi tespiti */
-function detectEnergyType(hay: string): string | null {
+/** Get product name for precise energy detection */
+function getProductName(row: Record<string, unknown>): string {
+  return normalizeTr(String(row.name || ""));
+}
+
+/** Enerji tipi tespiti - Önce ürün adı (name) üzerinden kesin eşleşme, sonra specs */
+function detectEnergyType(hay: string, productName?: string): string | null {
+  const nameHay = productName ? normalizeTr(productName) : hay;
+  
+  // 1. Önce ürün adında KESİN enerji tipi belirteci ara
+  if (/\b(indüksiyon|induction)\b/.test(nameHay)) return "indüksiyon";
+  if (/\b(elektrikli|elektrik|electric)\b/.test(nameHay) && !/\b(gaz|dogalgaz|doğalgaz|lpg)\b/.test(nameHay)) return "elektrikli";
+  if (/\b(gazlı|gazli|gaz|dogalgaz|doğalgaz|natural gas|ng\b)\b/.test(nameHay) && !/\b(elektrik|indüksiyon)\b/.test(nameHay)) return "gazlı";
+  if (/\b(lpg|tube gaz|tüp gaz)\b/.test(nameHay)) return "lpg";
+  
+  // 2. Ürün adında belirgin değilse, specs'te ara (daha geniş net)
   if (/\b(indüksiyon|induction)\b/.test(hay)) return "indüksiyon";
   if (/\b(trifaz|3\s*faz|3faz|400v|380v)\b/.test(hay) && /\b(elektrik|electric)\b/.test(hay)) return "trifaz elektrikli";
   if (/\b(monofaz|1\s*faz|1faz|230v|220v)\b/.test(hay) && /\b(elektrik|electric)\b/.test(hay)) return "monofaz elektrikli";
-  if (/\b(elektrik|electric|elektrikli)\b/.test(hay) && !/\b(gaz|dogalgaz|lpg|indüksiyon)\b/.test(hay)) return "elektrikli";
+  if (/\b(elektrik|electric|elektrikli)\b/.test(hay) && !/\b(gaz|dogalgaz|doğalgaz|lpg|indüksiyon)\b/.test(hay)) return "elektrikli";
   if (/\b(doğalgaz|dogalgaz|dgaz|natural gas|ng\b)/.test(hay)) return "doğalgazlı";
   if (/\b(lpg|tube gaz|tüp gaz)\b/.test(hay)) return "lpg";
-  if (/\b(gaz|gazli|gas\b)/.test(hay) && !/\b(elektrik|indüksiyon)\b/.test(hay)) return "gazlı";
+  if (/\b(gaz|gazli|gas)\b/.test(hay) && !/\b(elektrik|indüksiyon)\b/.test(hay)) return "gazlı";
+  
   return null;
 }
 
@@ -134,13 +149,34 @@ function detectProductType(hay: string, category: string): { productType: string
   return { productType, productTypeWithEnergy, isIndustrial };
 }
 
-/** Kapasite tespiti */
+/** Kapasite tespiti - olculer.kapasite_gn öncelikli, sonra name/specs regex */
 function detectCapacity(hay: string, row: Record<string, unknown>): string | null {
-  // GN kapasitesi: "10 GN 1/1", "20 GN 2/1", "40 GN 1/1"
-  const gnMatch = hay.match(/(\d+)\s*gn\s*(1\/?1|2\/?1|1\/?2)/i);
+  // 1. olculer.kapasite_gn alanından (en güvenilir)
+  const olculer = (row.olculer || row.olçuler || {}) as Record<string, unknown>;
+  if (olculer.kapasite_gn) {
+    const cap = String(olculer.kapasite_gn).trim();
+    // Normalize: "10 GN 1/1" formatına çevir
+    const normalized = cap
+      .replace(/\*/g, " ")
+      .replace(/\s+/g, " ")
+      .replace(/GN\s*(\d)\/(\d)/i, "GN $1/$2");
+    return normalized;
+  }
+
+  // 2. name/specs'ten regex ile (ölçü birimleri: *, /, x, ×, -)
+  // GN kapasitesi standart: "10 GN 1/1", "20 GN 2/1", "10*GN 1/1", "10GN1/1", "10 GN1/1"
+  let gnMatch = hay.match(/(\d+)\s*[\*x×]?\s*gn\s*[\*x×]?\s*(1\/?1|2\/?1|1\/?2)/i);
   if (gnMatch) {
     const count = gnMatch[1];
     const size = gnMatch[2].replace("/", "/");
+    return `${count} GN ${size}`;
+  }
+  // Rational format: "10-1/1", "10-2/1", "20-1/1", "20-2/1" (dash without GN keyword)
+  gnMatch = hay.match(/(\d+)\s*-\s*(1\/?1|2\/?1|1\/?2)/i);
+  if (gnMatch) {
+    const count = gnMatch[1];
+    const size = gnMatch[2].replace("/", "/");
+    // Determine GN size from context: 1/1 or 2/1
     return `${count} GN ${size}`;
   }
   // "10 tepsi", "20 tepsi", "6 tepsili"
@@ -161,10 +197,8 @@ function detectCapacity(hay: string, row: Record<string, unknown>): string | nul
   const dilimMatch = hay.match(/(\d+)\s*dilim/i);
   if (dilimMatch) return `${dilimMatch[1]} Dilim`;
 
-  // olculer/olçuler alanından
-  const olculer = (row.olculer || row.olçuler || {}) as Record<string, unknown>;
+  // 3. olculer.kapasite_lt fallback
   if (olculer.kapasite_lt) return `${olculer.kapasite_lt} L`;
-  if (olculer.kapasite_gn) return `${olculer.kapasite_gn}`;
 
   return null;
 }
@@ -206,7 +240,7 @@ export function extractProductSemantics(row: Record<string, unknown>): ProductSe
   const name = String(row.name || "");
 
   const productTypeResult = detectProductType(hay, category);
-  const energyType = detectEnergyType(hay);
+  const energyType = detectEnergyType(hay, name);
 
   return {
     productType: productTypeResult.productType,
