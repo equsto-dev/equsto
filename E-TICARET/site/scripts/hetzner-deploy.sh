@@ -43,7 +43,7 @@ if [[ -d scripts/data ]]; then
   chown -R 1001:1001 scripts/data 2>/dev/null || true
 fi
 
-docker compose --env-file .env.production build --pull
+docker compose --env-file .env.production build --pull --no-cache
 docker compose --env-file .env.production up -d
 
 export EQUSTO_ENV_FILE=.env.production
