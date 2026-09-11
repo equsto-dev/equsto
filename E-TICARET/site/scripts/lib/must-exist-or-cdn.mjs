@@ -1,5 +1,5 @@
 /**
- * Deploy kilidi — dosya diskte yoksa CloudFront/S3 (Faz B untrack sonrası).
+ * Deploy kilidi – dosya diskte yoksa CloudFront/S3 (Faz B untrack sonrası).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -12,7 +12,7 @@ function encodeRel(rel) {
     .join("/");
 }
 
-/** public/images/foo.png → images/foo.png */
+/** public/images/foo.png -> images/foo.png */
 function publicRel(rel) {
   return rel.replace(/^public[/\\]/, "").replace(/\\/g, "/");
 }
@@ -21,9 +21,15 @@ export async function mustExistOrCdn(siteDir, rel, fail, logPrefix = "[verify]")
   const abs = path.join(siteDir, rel);
   if (fs.existsSync(abs)) return;
 
+  // Docker build sırasında (DOCKER_BUILD=1) CDN kontrolünü atla
+  // Çünkü build sırasında CDN henüz güncellenmemiş olabilir (invalidasyondan önce)
+  if (process.env.DOCKER_BUILD === "1") {
+    return;
+  }
+
   const base = assetCdnBase(siteDir);
   if (!base) {
-    fail(`eksik dosya: ${rel} (CDN env yok — NEXT_PUBLIC_ASSET_CDN_URL veya manifest)`);
+    fail(`eksik dosya: ${rel} (CDN env yok – NEXT_PUBLIC_ASSET_CDN_URL veya manifest)`);
     return;
   }
 
