@@ -30,7 +30,7 @@ mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 
 const HERO_IMAGES = [
-  "public/images/pfos/proje-fabrikasi-ana-gorsel.png",
+  "public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
   "public/images/home/hero-bar-cocktailstation.png",
   "public/images/home/hero-bar-cocktailstation-cutout.png",
   "public/images/home/hero-bar-cocktailstation-popcat-white.png",
@@ -98,12 +98,12 @@ const content = read("lib/home-slider-content.ts");
 if (!content.includes("Projeni/ listeni gönder, fiyatlandıralım")) {
   fail("home-slider-content.ts: PFOS sketchCaption metni eksik");
 }
-if (!content.includes('path: "/images/pfos/proje-fabrikasi-ana-gorsel.png"')) {
-  fail("home-slider-content.ts: PFOS ana görsel yolu değişmiş");
-}
-if (!content.includes("width: 1920") || !content.includes("height: 1080")) {
-  fail("home-slider-content.ts: PFOS boyut 1920×1080 değil");
-}
+if (!content.includes('path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png"')) {
+    fail("home-slider-content.ts: PFOS ana görsel yolu değişmiş");
+  }
+  if (!content.includes("width: 1024") || !content.includes("height: 331")) {
+    fail("home-slider-content.ts: PFOS boyut 1024×331 değil");
+  }
 
 if (!content.includes("homeMainSliderBarImage")) {
   fail("home-slider-content.ts: homeMainSliderBarImage sabiti yok");
@@ -192,9 +192,9 @@ if (!page.includes("HomeVitrinPortalsDynamic")) fail("page.tsx: HomeVitrinPortal
 if (page.includes("ssr: false")) fail("page.tsx: ssr:false Server Component icinde olmamali");
 
 const decor = read("public/eq-home-decor.css");
-if (!decor.includes("proje-fabrikasi-ana-gorsel.png")) {
-  fail("eq-home-decor.css: PFOS ana görsel referansı yok");
-}
+if (!decor.includes("proje-fabrikasi-bar-plan-eskiz.png")) {
+    fail("eq-home-decor.css: PFOS eskiz görsel referansı yok");
+  }
 if (!decor.includes("eq-mx-hero__slide--bar")) {
   fail("eq-home-decor.css: bar slayt sınıfı yok");
 }

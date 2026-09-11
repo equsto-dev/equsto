@@ -1,9 +1,9 @@
 /** Ana sayfa alt slider — PFOS · IMT300 · Bar · Electrolux XP (kilit: public/home-main-slider-KILIT.txt) */
 
 export const homeMainSliderPfosImage = {
-  path: "/images/pfos/proje-fabrikasi-ana-gorsel.png",
-  width: 1920,
-  height: 1080,
+  path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
+  width: 1024,
+  height: 331,
 } as const;
 
 export const homeMainSliderSogutmaPisirmeImage = {
