@@ -279,6 +279,8 @@ function patchSitemapPages() {
     ["/en/industrial-cooking-equipment", "0.82", "monthly"],
     ["/en/kitchen-quote-platform", "0.86", "monthly"],
     ["/en/bar-design-turkey", "0.82", "monthly"],
+    ["/restoran-mutfagi", "0.86", "monthly"],
+    ["/en/restoran-mutfagi", "0.86", "monthly"],
   ];
 
   for (const [pathSuffix, priority, changefreq] of ensure) {
