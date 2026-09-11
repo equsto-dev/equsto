@@ -1,5 +1,5 @@
 /**
- * Deploy öncesi ana sayfa üçlü hero vitrin kilit doğrulama.
+ * Deploy öncesi ana sayfa üst hero vitrin kilit doğrulama.
  * Çıkış kodu 0 = OK, 1 = hata.
  * Kilit: public/home-hero-ads-KILIT.txt
  */
@@ -30,7 +30,7 @@ mustExist("components/home/HomeHeroAdsMount.tsx");
 
 await mustExistOrCdn(
   siteDir,
-  "public/images/pfos/proje-fabrikasi-mutfak-eskiz.png",
+  "public/images/pfos/pfos_gorsel.jpeg",
   fail,
   "[verify-home-hero-ads-kilit]",
 );
@@ -55,11 +55,11 @@ if (!hero.includes("publicAssetUrl(pillar.image)")) {
 }
 
 const home = read("lib/home-content.ts");
-if (!home.includes('image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.png"')) {
+if (!home.includes('image: "/images/pfos/pfos_gorsel.jpeg"')) {
   fail("home-content.ts: PFOS eskiz yolu değişmiş");
 }
 if (!home.includes("imageWidth: 495") || !home.includes("imageHeight: 394")) {
-  fail("home-content.ts: PFOS boyut ipuçları 495×394 değil");
+  fail("home-content.ts: PFOS boyut ipuçları 495-394 değil");
 }
 if (!/id: "pfos"[\s\S]*?id: "yer"[\s\S]*?id: "besos"/.test(home)) {
   fail("home-content.ts: pfos/yer/besos sırası veya eksik kart");
@@ -70,7 +70,7 @@ if (!indexBody.includes("eq-home-hero-mount")) {
   fail("index.ts: eq-home-hero-mount yok");
 }
 if (!indexBody.includes("eq-home-platform-hero")) {
-  fail("index.ts: eq-home-platform-hero sarmalayici yok");
+  fail("index.ts: eq-home-platform-hero sarmalayıcı yok");
 }
 if (indexBody.includes('<section class="hero eq-home-hero-ads"')) {
   fail("index.ts: gömülü hero HTML geri gelmiş (React portal kullanılmalı)");
@@ -94,7 +94,7 @@ if (!critical.includes("--eq-home-hero-visual-aspect:4/3")) {
 
 const theme = read("public/theme.css");
 if (!theme.includes(".eq-home-platform-hero > .hero-banner")) {
-  fail("theme.css: platform-hero icindeki banner secicisi yok");
+  fail("theme.css: platform-hero içindeki banner seçicisi yok");
 }
 if (!theme.includes("--eq-home-hero-visual-aspect: 4 / 3")) {
   fail("theme.css: --eq-home-hero-visual-aspect 4/3 yok");
@@ -112,7 +112,7 @@ if (/hero-card-visual--pfos[\s\S]{0,120}aspect-ratio:\s*956\s*\/\s*1024/.test(de
 }
 
 if (err) {
-  console.error("[verify-home-hero-ads-kilit] Kilit ihlali — public/home-hero-ads-KILIT.txt");
+  console.error("[verify-home-hero-ads-kilit] Kilit ihlali - public/home-hero-ads-KILIT.txt");
   process.exit(1);
 }
-console.log("[verify-home-hero-ads-kilit] OK — üçlü hero 4:3 + React portal");
+console.log("[verify-home-hero-ads-kilit] OK — Üst hero 4:3 + React portal");
