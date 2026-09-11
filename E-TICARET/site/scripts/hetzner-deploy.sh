@@ -26,7 +26,8 @@ if [[ -f .env.production ]]; then
   # Source only AWS vars to avoid issues with special chars in other vars
   AWS_S3_BUCKET=$(grep '^AWS_S3_BUCKET=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
   AWS_REGION=$(grep '^AWS_REGION=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
-  CLOUDFRONT_DISTRIBUTION_ID=$(grep '^CLOUDFRONT_DISTRIBUTION_ID=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  # CLOUDFRONT_DISTRIBUTION_ID should be set as environment variable (from GitHub secret)
+  # Not stored in .env.production for security
   if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws >/dev/null 2>&1; then
     echo "[hetzner-deploy] Syncing images to S3..."
     aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
