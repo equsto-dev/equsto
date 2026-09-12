@@ -2,7 +2,6 @@
 
 /** Kilit: public/home-hero-ads-KILIT.txt — npm run verify:home-hero-ads-kilit */
 import { heroPillars } from "@/lib/home-content";
-import { publicAssetUrl } from "@/lib/public-asset-url";
 
 function goLegacy(href: string | null, legacyKey?: string) {
   if (typeof window === "undefined") return;
@@ -18,6 +17,15 @@ function imgClass(visual: (typeof heroPillars)[number]["visual"]): string {
   if (visual === "pfos") return "hero-card-img hero-card-img--pfos-cover";
   if (visual === "besos") return "hero-card-img hero-card-img--bar-combo";
   return "hero-card-img hero-card-img--yer-bufe";
+}
+
+function getImageSrc(pillar: (typeof heroPillars)[number]): string {
+  // PFOS görseli için CDN yerine yerel public/ yolunu kullan
+  if (pillar.id === "pfos") {
+    return pillar.image; // /images/pfos/pfos_gorsel.jpeg (yerel public/ yol)
+  }
+  // Diğer görseller için CDN kullan
+  return `/images/${pillar.image.split("/").pop()}`;
 }
 
 export function HomeHeroAds() {
@@ -39,7 +47,7 @@ export function HomeHeroAds() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   className={imgClass(pillar.visual)}
-                  src={publicAssetUrl(pillar.image)}
+                  src={getImageSrc(pillar)}
                   alt={
                     pillar.visual === "pfos"
                       ? "Proje Fabrikası — endüstriyel mutfak yerleşimi"

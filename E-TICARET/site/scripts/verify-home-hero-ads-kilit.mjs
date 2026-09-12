@@ -6,7 +6,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
 const siteDir = process.env.AGENT_REPO_ROOT?.trim() || path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 let err = 0;
@@ -28,12 +27,11 @@ mustExist("public/home-hero-ads-KILIT.txt");
 mustExist("components/home/HomeHeroAds.tsx");
 mustExist("components/home/HomeHeroAdsMount.tsx");
 
-await mustExistOrCdn(
-  siteDir,
-  "public/images/pfos/pfos_gorsel.jpeg",
-  fail,
-  "[verify-home-hero-ads-kilit]",
-);
+// Yerel dosya kontrolü (CDN yerine yerel dosya kontrolü)
+const pfosLocalPath = path.join(siteDir, "public/images/pfos/pfos_gorsel.jpeg");
+if (!fs.existsSync(pfosLocalPath)) {
+  fail(`eksik dosya: public/images/pfos/pfos_gorsel.jpeg (yerel dosya bulunamadı)`);
+}
 
 const kilit = read("public/home-hero-ads-KILIT.txt");
 if (!kilit.includes("b04a99b5") || !kilit.includes("4:3")) {
@@ -47,11 +45,9 @@ if (!mount.includes("HomeHeroAds")) fail("HomeHeroAdsMount.tsx: HomeHeroAds port
 const hero = read("components/home/HomeHeroAds.tsx");
 if (!hero.includes("eq-home-hero-ads")) fail("HomeHeroAds.tsx: eq-home-hero-ads yok");
 if (!hero.includes("hero-card-img--pfos-cover")) fail("HomeHeroAds.tsx: PFOS img sınıfı yok");
-if (!hero.includes('from "@/lib/public-asset-url"')) {
-  fail("HomeHeroAds.tsx: public-asset-url import yok (cdn-asset-urls-KILIT)");
-}
-if (!hero.includes("publicAssetUrl(pillar.image)")) {
-  fail("HomeHeroAds.tsx: publicAssetUrl() kullanılmıyor");
+// publicAssetUrl importu ve kullanımı artık PFOS için yok (yerel yol kullanılıyor)
+if (hero.includes("publicAssetUrl(pillar.image)")) {
+  fail("HomeHeroAds.tsx: PFOS için publicAssetUrl() hala kullanılıyor (yerel yol bekleniyor)");
 }
 
 const home = read("lib/home-content.ts");
