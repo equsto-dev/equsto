@@ -1,11 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import type { ProcessPdfUploadResult } from "@/lib/pfos/parse-upload/process-pdf-upload";
+import { requireMemberSession } from "@/lib/member-auth";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
 const MAX_PDF_BYTES = 15 * 1024 * 1024;
+
+// Basit in-memory rate limit (sunucu bazlı geçici koruma)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
 export type { ParseUploadOzet } from "@/lib/pfos/parse-upload/types";
 export type ParseUploadResponse = ProcessPdfUploadResult;
@@ -13,6 +17,26 @@ export type ParseUploadResponse = ProcessPdfUploadResult;
 /** POST /api/pfos/parse-upload — PDF → yapılandırılmış satırlar → birebir teklif */
 export async function POST(req: NextRequest) {
   try {
+    // GÜVENLİK (K4 Kapatıldı): Üye oturumu zorunlu
+    const auth = await requireMemberSession(req, null);
+    if (auth instanceof Response) return auth;
+
+    // GÜVENLİK (K4 Kapatıldı): Üye başına Rate Limit (10 dakikada 5 dosya)
+    const memberEmail = auth.session.user.email;
+    const now = Date.now();
+    const rateLimit = rateLimitMap.get(memberEmail);
+    if (rateLimit && now < rateLimit.resetTime) {
+      if (rateLimit.count >= 5) {
+        return NextResponse.json(
+          { error: "Çok fazla dosya yüklediniz. Lütfen 10 dakika bekleyin." },
+          { status: 429 }
+        );
+      }
+      rateLimit.count++;
+    } else {
+      rateLimitMap.set(memberEmail, { count: 1, resetTime: now + 10 * 60 * 1000 });
+    }
+
     const formData = await req.formData();
     const file = formData.get("file");
 

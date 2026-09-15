@@ -41,19 +41,25 @@ async function readKey(
   const q = req.nextUrl.searchParams;
   const syncToken =
     body?.syncToken ?? q.get("syncToken") ?? req.cookies.get("equsto_cart_sync")?.value;
-  let memberEmail = body?.memberEmail ?? q.get("memberEmail");
+  
+  // GÜVENLİK (Y1 IDOR Kapatıldı): Client'tan gelen memberEmail parametresini dikkate alma!
+  // İletilen email yerine sadece doğrulanmış oturumdaki email'i kullanacağız.
+  let memberEmail: string | null = null;
+  
   const token =
     readBearerToken(req) ||
     readTokenFromBody(body as Record<string, unknown> | undefined) ||
     q.get("access_token");
+    
   let memberId: string | null = null;
   if (token) {
     const session = await getSessionByToken(token);
     if (session?.user?.email) memberEmail = session.user.email;
     memberId = await getMemberIdByToken(token);
   }
+  
   const cartKey = resolveShopCartKey(syncToken, memberEmail);
-  return { cartKey, syncToken, memberEmail: memberEmail ?? null, memberId, token };
+  return { cartKey, syncToken, memberEmail, memberId, token };
 }
 
 export async function GET(req: NextRequest) {

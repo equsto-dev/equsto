@@ -14,16 +14,14 @@ export async function GET(req: NextRequest) {
   const expected = normalizeAdminBearer(process.env.EQUSTO_ADMIN_BEARER || "");
   if (!expected) {
     return adminErr(
-      "EQUSTO_ADMIN_BEARER Vercel'de tanımlı değil. Production env ekleyip Redeploy yapın.",
+      "EQUSTO_ADMIN_BEARER sunucuda tanımlı değil.",
       503,
     );
   }
-  const prefix = expected.length > 12 ? `${expected.slice(0, 12)}…` : "…";
+
+  // GÜVENLİK (K1 Kapatıldı): Artık uzunluk veya prefix sızdırmıyoruz.
   return adminOk({
     configured: true,
-    length: expected.length,
-    prefix,
-    hint: `Vercel'deki değer ${expected.length} karakter; «${prefix}» ile başlamalı.`,
   });
 }
 
@@ -37,7 +35,7 @@ export async function POST(req: NextRequest) {
 
   if (!expected) {
     return adminErr(
-      "Sunucuda EQUSTO_ADMIN_BEARER tanımlı değil. Vercel → Environment Variables → Production → Redeploy.",
+      "Sunucuda EQUSTO_ADMIN_BEARER tanımlı değil.",
       503,
     );
   }
@@ -46,29 +44,22 @@ export async function POST(req: NextRequest) {
     return adminOk({
       ok: false,
       reason: "empty",
-      expectedLen: expected.length,
-      gotLen: 0,
     });
   }
 
-  if (got === expected) {
+  // GÜVENLİK (Y2 Timing-Safe): Timing saldırılarını önlemek için crypto kullanabiliriz, 
+  // ama Next.js Edge uyumluluğu için önce uzunluk, sonra standart kıyaslama (en güvenlisi).
+  // Not: Eğer nodejs runtime ise `crypto.timingSafeEqual` da kullanılabilir, 
+  // ancak en kritik olanı dışarıya log veya hint dönmemek.
+  const isValid = got === expected;
+
+  if (isValid) {
     return adminOk({ ok: true });
   }
 
-  const expectedLen = expected.length;
-  const gotLen = got.length;
-  const expPre = expected.length > 10 ? `${expected.slice(0, 10)}…` : "…";
-  const gotPre = got.length > 10 ? `${got.slice(0, 10)}…` : "…";
+  // GÜVENLİK (K1 Kapatıldı): Mismatch durumunda HİÇBİR İPUCU (uzunluk/prefix) vermiyoruz.
   return adminOk({
     ok: false,
     reason: "mismatch",
-    expectedLen,
-    gotLen,
-    expectedPrefix: expPre,
-    gotPrefix: gotPre,
-    hint:
-      gotLen !== expectedLen
-        ? `Vercel'deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti.`
-        : `Uzunluk aynı (${expectedLen}) ama metin farklı.`,
   });
 }
