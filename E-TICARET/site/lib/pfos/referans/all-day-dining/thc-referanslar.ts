@@ -4,7 +4,7 @@
  * Yenileme: python scripts/build-all-day-dining-referanslar.py
  */
 
-import referansData from "@/lib/pfos/data/pfos-all-day-dining-referanslar.json";
+import referansData from "@/public/data/pfos-all-day-dining-referanslar.json";
 import type { ReferansKalem, ReferansProfil } from "../referans-types";
 
 type ReferansJson = {
