@@ -299,37 +299,37 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
     priceValue = ssr.priceTry.toFixed(2);
   }
 
-  const offer: Record<string, unknown> = {
-    "@type": "Offer",
-    priceCurrency: "TRY",
-    availability,
-    url: ssr.canonical,
-    seller,
-  };
-
-  if (priceValue) {
-    offer.price = priceValue;
-  }
-
   const images = originalRow?.images as string[] | undefined;
   const imageUrls = images?.map((img) => absoluteAssetUrl(img, origin)).filter(Boolean) ?? (ssr.image ? [ssr.image] : undefined);
 
   const breadcrumbs = buildBreadcrumbsFromKategoriYolu(originalRow, ssr, origin);
 
+  const productGraph: Record<string, unknown> = {
+    "@type": "Product",
+    name: ssr.name,
+    description: ssr.description,
+    image: imageUrls,
+    sku: ssr.sku || ssr.slug,
+    ...(ssr.mpn ? { mpn: ssr.mpn } : {}),
+    ...(ssr.gtin ? { gtin: ssr.gtin } : {}),
+    brand: { "@type": "Brand", name: ssr.brand || "Equsto" },
+  };
+
+  if (priceValue) {
+    productGraph.offers = {
+      "@type": "Offer",
+      priceCurrency: "TRY",
+      price: priceValue,
+      availability,
+      url: ssr.canonical,
+      seller,
+    };
+  }
+
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Product",
-        name: ssr.name,
-        description: ssr.description,
-        image: imageUrls,
-        sku: ssr.sku || ssr.slug,
-        ...(ssr.mpn ? { mpn: ssr.mpn } : {}),
-        ...(ssr.gtin ? { gtin: ssr.gtin } : {}),
-        brand: { "@type": "Brand", name: ssr.brand || "Equsto" },
-        offers: offer,
-      },
+      productGraph,
       {
         "@type": "BreadcrumbList",
         itemListElement: breadcrumbs,
