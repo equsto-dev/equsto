@@ -84,11 +84,11 @@ yarn-error.log*
 /scripts/data/catalog-agent/latest.json
 /scripts/data/mobile-agent/latest.json
 /scripts/data/google-ads-agent/latest.json
-/scripts/data/en-agent/latest.json
+/scripts/data/blog-agent/drafts/
+/public/s/data/en-agent/latest.json
 /scripts/data/blog-agent/latest.json
 /scripts/data/blog-agent/state.json
-/scripts/data/blog-agent/drafts/
-/public/trial-*.html
+/scripttrial-*.html
 /public/data/scratch-test.json
 /public/data/*.bak
 /public/data/**/*.backup-*
@@ -102,3 +102,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# PFOS Hero Kilit Görseli İstisnası
+!public/images/pfos/pfos_gorsel.jpeg
