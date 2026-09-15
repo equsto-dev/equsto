@@ -1,4 +1,4 @@
-# Docker build context — E-TICARET/site
+﻿# Docker build context â€” E-TICARET/site
 node_modules
 .next
 .git
@@ -20,13 +20,17 @@ scripts/data/trial
 scripts/tmp-*
 scripts/audit.json
 
-# Büyük medya — canlıda CloudFront (NEXT_PUBLIC_ASSET_CDN_URL)
+# BÃ¼yÃ¼k medya â€” canlÄ±da CloudFront (NEXT_PUBLIC_ASSET_CDN_URL)
 public/images
 public/assets
 !public/images/catalog/rational
+!public/images/pfos/pfos_gorsel.jpeg
 
-# Geliştirme
+# GeliÅŸtirme
 coverage
 .turbo
 *.log
 npm-debug.log*
+
+!public/images/pfos
+
