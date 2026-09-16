@@ -1,7 +1,7 @@
 /**
  * Equsto PLP — Mobile Filter Bottom Sheet Styles
  * Breakpoint: ≤768px
- * Design: #0B0C0E bg, #5EEAD4 accent, glassmorphism
+ * Design: #0B0C0E bg, onay yeşili #18794e accent
  */
 @media (max-width: 768px) {
   /* ── Override: Show mobile filter button in toolbar ─────────────────────── */
@@ -49,8 +49,8 @@
     height: 18px;
     padding: 0 5px;
     border-radius: 999px;
-    background: var(--eq-accent, #5EEAD4);
-    color: #0B0C0E;
+    background: var(--eq-confirm, #18794e);
+    color: #fff;
     font-size: 11px;
     font-weight: 700;
     line-height: 1;
@@ -267,21 +267,21 @@
   }
 
   .eq-dept-filter-sheet__apply {
-    border: 1px solid #5EEAD4;
-    background: #5EEAD4;
-    color: #0B0C0E;
+    border: 1px solid #18794e;
+    background: #18794e;
+    color: #fff;
   }
 
   .eq-dept-filter-sheet__apply:hover,
   .eq-dept-filter-sheet__apply:focus {
-    background: #4dd9c2;
-    border-color: #4dd9c2;
+    background: #146b44;
+    border-color: #146b44;
     color: #0B0C0E;
   }
 
   .eq-dept-filter-sheet__apply:active {
-    background: #3cc9b0;
-    border-color: #3cc9b0;
+    background: #0f5c3a;
+    border-color: #0f5c3a;
   }
 
   /* ── Facet styling inside sheet (dark theme) ────────────────────────────── */
@@ -346,7 +346,7 @@
 
   .eq-dept-filter-sheet .eq-cm-facet__search:focus {
     outline: none;
-    border-color: #5EEAD4;
+    border-color: #18794e;
     box-shadow: 0 0 0 2px rgba(94, 234, 212, 0.2);
   }
 
@@ -374,7 +374,7 @@
     flex-shrink: 0;
     width: 18px;
     height: 18px;
-    accent-color: #5EEAD4;
+    accent-color: #18794e;
   }
 
   .eq-dept-filter-sheet .eq-cm-facet__count {
@@ -415,9 +415,9 @@
     width: 100%;
     min-height: 48px;
     padding: 10px 16px;
-    border: 1px solid #5EEAD4;
-    background: #5EEAD4;
-    color: #0B0C0E;
+    border: 1px solid #18794e;
+    background: #18794e;
+    color: #fff;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -428,8 +428,8 @@
   }
 
   .eq-dept-filter-sheet .eq-cm-facet__apply:hover {
-    background: #4dd9c2;
-    border-color: #4dd9c2;
+    background: #146b44;
+    border-color: #146b44;
   }
 
   .eq-dept-filter-sheet .eq-cm-facet__range-hint {
@@ -498,7 +498,7 @@
   }
 
   .eq-dept-filter-sheet .eq-cm-chip:hover span[aria-hidden="true"] {
-    color: #5EEAD4;
+    color: #18794e;
   }
 
   .eq-dept-filter-sheet .eq-cm-selected__clear {
@@ -507,7 +507,7 @@
     letter-spacing: 0.04em;
     border: none;
     background: none;
-    color: #5EEAD4;
+    color: #18794e;
     cursor: pointer;
     padding: 4px 0;
     -webkit-tap-highlight-color: transparent;
@@ -629,11 +629,11 @@
   }
 
   [data-theme="light"] .eq-dept-filter-sheet .eq-cm-chip:hover span[aria-hidden="true"] {
-    color: #5EEAD4;
+    color: #18794e;
   }
 
   [data-theme="light"] .eq-dept-filter-sheet .eq-cm-selected__clear {
-    color: #5EEAD4;
+    color: #18794e;
   }
 
   [data-theme="light"] .eq-dept-filter-sheet__actions {
@@ -653,13 +653,13 @@
   }
 
   [data-theme="light"] .eq-dept-filter-sheet__apply {
-    border-color: #5EEAD4;
-    background: #5EEAD4;
-    color: #0B0C0E;
+    border-color: #18794e;
+    background: #18794e;
+    color: #fff;
   }
 
   [data-theme="light"] .eq-dept-filter-sheet__apply:hover {
-    background: #4dd9c2;
-    border-color: #4dd9c2;
+    background: #146b44;
+    border-color: #146b44;
   }
 }

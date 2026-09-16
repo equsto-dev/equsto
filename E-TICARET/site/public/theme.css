@@ -77,6 +77,8 @@
   --eq-drawer-chrome-top: var(--eq-filter-col-sticky-top);
   /* Nötr koyu zemin (yeşilimsi #eaeded / #131921 yerine) */
   --eq-bg-neutral: #1a1a1a;
+  --eq-confirm: #18794e;
+  --eq-confirm-hover: #146b44;
 }
 
 html {
@@ -603,6 +605,7 @@ nav.topnav,
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 12px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -672,6 +675,8 @@ a.topnav-item:visited {
 .topnav-item.topnav-besos,
 .topnav-item.topnav-pfos {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   border-radius: 0;
   box-shadow: none !important;
   transition: background 0.15s ease, color 0.15s ease;
@@ -699,12 +704,13 @@ a.topnav-item:visited {
 .topnav-besos__in,
 .topnav-pfos__in {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   vertical-align: middle;
   overflow: visible;
   min-width: 0;
   min-height: 0;
-  padding: 0 2px;
+  padding: 0;
 }
 .topnav-pfos__in {
   width: max-content;
@@ -725,8 +731,10 @@ body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos .topnav-bes
 }
 .topnav-besos__face,
 .topnav-pfos__face {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
+  line-height: inherit;
 }
 .topnav-pfos__face {
   display: inline-block;
@@ -5877,7 +5885,8 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upl
   /* Mobil Bar Design: dept topnav görünür (mağaza ile aynı yatay şerit) */
   body.bd-page.besos nav.topnav {
     display: flex !important;
-    max-height: 44px;
+    max-height: none;
+    min-height: 44px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -6303,7 +6312,8 @@ html.eq-vitrin-white-lock body.bd-page {
   body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
   body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
     display: flex !important;
-    max-height: 44px;
+    max-height: none;
+    min-height: 44px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;

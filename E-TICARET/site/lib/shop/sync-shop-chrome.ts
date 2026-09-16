@@ -15,12 +15,17 @@ export function mountEqShopChromeLayout(): () => void {
     document.documentElement.style.setProperty("--eq-filter-col-sticky-top", `${h}px`);
     document.documentElement.style.setProperty("--eq-drawer-chrome-top", `${h}px`);
 
-    const besosTab = document.querySelector<HTMLElement>(".topnav-item.topnav-besos");
-    const topnav = besosTab?.closest<HTMLElement>("nav.topnav");
-    if (besosTab && topnav && topnav.scrollWidth > topnav.clientWidth + 2) {
-      const maxLeft = topnav.scrollWidth - topnav.clientWidth;
-      const left = Math.min(maxLeft, Math.max(0, besosTab.offsetLeft - 12));
-      if (Math.abs(topnav.scrollLeft - left) > 4) topnav.scrollLeft = left;
+    const topnav = document.querySelector<HTMLElement>("nav.topnav");
+    if (topnav && topnav.scrollWidth > topnav.clientWidth + 2) {
+      const active =
+        topnav.querySelector<HTMLElement>(".topnav-item.active") ||
+        topnav.querySelector<HTMLElement>(".topnav-item[aria-current='page']");
+      if (active) {
+        const pad = 12;
+        const maxLeft = topnav.scrollWidth - topnav.clientWidth;
+        const left = Math.min(maxLeft, Math.max(0, active.offsetLeft - pad));
+        if (Math.abs(topnav.scrollLeft - left) > 4) topnav.scrollLeft = left;
+      }
     }
   };
 
