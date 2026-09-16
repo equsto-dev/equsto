@@ -19,6 +19,8 @@ export function besosHeroYoutubeEmbedUrl(
     playlist: videoId,
     controls: "0",
     disablekb: "1",
+    fs: "0",
+    cc_load_policy: "0",
     iv_load_policy: "3",
   });
   return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?${q.toString()}`;
