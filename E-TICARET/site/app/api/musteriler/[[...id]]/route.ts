@@ -16,6 +16,7 @@ import {
 import { requireMemberSession, getMemberIdByToken, readBearerToken, readTokenFromBody, type MemberSessionPayload } from "@/lib/member-auth";
 import { appendWaChatMessage, normalizeChatPhone } from "@/lib/wa-chat";
 import { checkRateLimit, clientIpFromRequest } from "@/lib/rate-limit";
+import { sameSiteBrowserError } from "@/lib/same-site";
 
 export const dynamic = "force-dynamic";
 
@@ -70,6 +71,8 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   if (!rl.ok) {
     return adminErr(`Çok fazla istek. ${rl.retryAfterSec} sn sonra tekrar deneyin.`, 429);
   }
+  const originErr = sameSiteBrowserError(req);
+  if (originErr) return adminErr(originErr, 403);
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
   const kaynak = String(body.kaynak ?? "").trim();

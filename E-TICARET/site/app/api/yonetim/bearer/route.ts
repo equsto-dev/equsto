@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { normalizeAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
+import { safeEqualString } from "@/lib/safe-equal";
 
 export const runtime = "nodejs";
 
@@ -47,11 +48,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  // GÜVENLİK (Y2 Timing-Safe): Timing saldırılarını önlemek için crypto kullanabiliriz, 
-  // ama Next.js Edge uyumluluğu için önce uzunluk, sonra standart kıyaslama (en güvenlisi).
-  // Not: Eğer nodejs runtime ise `crypto.timingSafeEqual` da kullanılabilir, 
-  // ancak en kritik olanı dışarıya log veya hint dönmemek.
-  const isValid = got === expected;
+  const isValid = safeEqualString(got, expected);
 
   if (isValid) {
     return adminOk({ ok: true });

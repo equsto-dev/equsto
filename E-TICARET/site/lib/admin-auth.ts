@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { DEV_ADMIN_BEARER, normalizeAdminBearer } from "@/lib/auth";
+import { safeEqualString } from "@/lib/safe-equal";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 function adminAuthFile(): string {
@@ -61,20 +62,20 @@ export async function verifyAdminPassword(pw: string): Promise<boolean> {
   if (!plain) return false;
 
   const hash = await readAdminPwHash();
-  if (hash) return sha256AdminPassword(plain) === hash;
+  if (hash) return safeEqualString(sha256AdminPassword(plain), hash);
 
   const envPw = String(process.env.EQUSTO_ADMIN_PASSWORD || "").trim();
   if (envPw) {
     // Y2: Canlıda düz şifre fallback kapalı — yalnızca SHA-256
     if (process.env.NODE_ENV === "production") return false;
-    return plain === envPw;
+    return safeEqualString(plain, envPw);
   }
 
   if (
     process.env.NODE_ENV !== "production" &&
     process.env.EQUSTO_ALLOW_DEV_AUTH === "1"
   ) {
-    return plain === DEV_ADMIN_BEARER;
+    return safeEqualString(plain, DEV_ADMIN_BEARER);
   }
   return false;
 }
@@ -93,4 +94,10 @@ export function adminLoginToken(): string {
 
 export function adminRecoveryCode(): string {
   return String(process.env.EQUSTO_ADMIN_RECOVERY_CODE || "").trim();
+}
+
+export function verifyAdminRecoveryCode(code: string): boolean {
+  const expected = adminRecoveryCode();
+  if (!expected) return false;
+  return safeEqualString(String(code || "").trim(), expected);
 }

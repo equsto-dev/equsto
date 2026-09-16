@@ -16,6 +16,7 @@ const KEYS = [
   "EQUSTO_WHATSAPP_MODE",
   "GREEN_API_INSTANCE_ID",
   "GREEN_API_TOKEN",
+  "GREEN_API_WEBHOOK_TOKEN",
   "EQUSTO_WHATSAPP_E164",
 ];
 
@@ -64,7 +65,7 @@ const remoteScript = `
 set -euo pipefail
 ENV="${remoteEnv}"
 test -f "$ENV" || { echo "HATA: $ENV yok"; exit 1; }
-grep -v '^EQUSTO_WHATSAPP_MODE=' "$ENV" | grep -v '^GREEN_API_INSTANCE_ID=' | grep -v '^GREEN_API_TOKEN=' | grep -v '^EQUSTO_WHATSAPP_E164=' > "$ENV.tmp"
+grep -v '^EQUSTO_WHATSAPP_MODE=' "$ENV" | grep -v '^GREEN_API_INSTANCE_ID=' | grep -v '^GREEN_API_TOKEN=' | grep -v '^GREEN_API_WEBHOOK_TOKEN=' | grep -v '^EQUSTO_WHATSAPP_E164=' > "$ENV.tmp"
 cat /tmp/equsto-whatsapp.env >> "$ENV.tmp"
 mv "$ENV.tmp" "$ENV"
 rm -f /tmp/equsto-whatsapp.env
