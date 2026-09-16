@@ -176,7 +176,14 @@ function buildCategories(tips) {
 
 function buildBesos() {
   const urls = [
+    urlEntry(`${ORIGIN}/besos`, { priority: "0.95", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos`, { priority: "0.9", changefreq: "weekly" }),
     urlEntry(`${ORIGIN}/besos/bar-istasyonlari`, { priority: "0.92", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos/bar-istasyonlari`, { priority: "0.88", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/bardaklar`, { priority: "0.88", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos/bardaklar`, { priority: "0.84", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/bar-ekipman`, { priority: "0.88", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos/bar-ekipman`, { priority: "0.84", changefreq: "weekly" }),
   ];
   const catPath = path.join(PUBLIC, "data", "vitrum-bars-catalogue.json");
   if (!fs.existsSync(catPath)) return urls;
@@ -245,8 +252,6 @@ function patchSitemapPages() {
     "https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode",
     "https://equsto.com/projeler/izmir-moduler-bar-icecek-demode",
     "https://equsto.com/en/blog",
-    "https://equsto.com/besos",
-    "https://equsto.com/en/besos",
   ];
   for (const url of removeUrls) {
     const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

@@ -205,7 +205,9 @@ export function collectExpectedUrls(rows, tips) {
   add("/shop");
   add("/shop/marka");
   add("/pfos");
-  // /besos → redirect/noindex hub; /arama → noindex — sitemap'te yok (bilinçli)
+  add("/besos");
+  add("/en/besos");
+  // /arama → noindex — sitemap'te yok
 
   for (const lang of ["", "/en"]) {
     add(`${lang}/shop`);
