@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactLocalBusinessJsonLd from "@/components/seo/ContactLocalBusinessJsonLd";
 import IletisimPageContent from "@/components/vitrin/IletisimPageContent";
 import VitrinShell from "@/components/vitrin/VitrinShell";
 import { CONTACT_PAGE_CSS } from "@/lib/vitrin/page-css";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function EnIletisimPage() {
   return (
     <VitrinShell bodyClass="eq-shop eq-contact eq-iletisim" extraCss={CONTACT_PAGE_CSS}>
+      <ContactLocalBusinessJsonLd lang="en" />
       <IletisimPageContent />
     </VitrinShell>
   );

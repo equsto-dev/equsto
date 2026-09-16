@@ -215,21 +215,41 @@ export function rowToPdpSsr(
   };
 }
 
+function shortBrandLabel(brand: string): string {
+  const b = brand.trim();
+  if (!b) return "";
+  // "Atalay Endüstriyel Mutfak Ekipmanları" → "Atalay"
+  const first = b.split(/\s+/)[0] || b;
+  return first.length >= 2 ? first : b;
+}
+
 export function buildProductMetadata(
   ssr: PdpSsrPayload,
   opts?: { locale?: "tr" | "en" },
 ): Metadata {
   const isEn = opts?.locale === "en" || ssr.canonical.includes("/en/shop/");
-  
-  // Format: "Name - Brand | Equsto" or "Brand Name | Equsto" if brand is already in name
-  let title = ssr.name;
-  if (ssr.brand && !title.toLowerCase().includes(ssr.brand.toLowerCase())) {
-    title = `${ssr.brand} ${title}`;
+
+  // Unique titles: short brand + name; SKU always kept after truncation
+  let core = ssr.name.replace(/\.$/, "").trim();
+  const brandShort = shortBrandLabel(ssr.brand);
+  if (
+    brandShort &&
+    !core.toLocaleLowerCase("tr-TR").includes(brandShort.toLocaleLowerCase("tr-TR"))
+  ) {
+    core = `${brandShort} ${core}`;
   }
-  // Remove trailing dots, etc and ensure max length
-  title = title.replace(/\.$/, "").slice(0, 60);
-  title = `${title} | Equsto`;
-  
+  const code = (ssr.sku || ssr.mpn || "").trim();
+  const suffix = " | Equsto";
+  // Reserve room for SKU even when it currently sits inside the long name
+  const reservedCode = code ? ` · ${code}` : "";
+  const maxCore = Math.max(20, 70 - suffix.length - reservedCode.length);
+  if (core.length > maxCore) core = `${core.slice(0, maxCore - 1).trimEnd()}…`;
+  const finalCodePart =
+    code && !core.toLocaleLowerCase("tr-TR").includes(code.toLocaleLowerCase("tr-TR"))
+      ? ` · ${code}`
+      : "";
+  const title = `${core}${finalCodePart}${suffix}`;
+
   const description =
     ssr.description.slice(0, 155) +
     (ssr.description.length > 155 ? "…" : "") +

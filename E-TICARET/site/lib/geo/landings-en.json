@@ -81,7 +81,7 @@
     "h1": "Cloud kitchen setup",
     "lead": "Multi-brand, high-output cloud kitchens need parcelled hot/cold lines and shared wash capacity.",
     "skipBudget": true,
-    "body": "<p>In a cloud kitchen, hot and cold lines are parcelled per brand with a shared warewashing centre. In multi-brand scenarios, electrical load, ventilation and grease interceptor capacity follow the combined menu.</p><p>Parcel-based production reduces cross-traffic; shared storage and dispatch areas are clearly bounded between brands. High delivery share increases prep and refrigeration modules.</p><p>The equipment table shows sample SKUs. Use Project Factory to model multi-brand output; site dimensions are the first planning input. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>In a cloud kitchen, hot and cold lines are parcelled per brand with a shared warewashing centre. In multi-brand scenarios, electrical load, ventilation and grease interceptor capacity follow the combined menu.</p><p>Parcel-based production reduces cross-traffic; shared storage and dispatch areas are clearly bounded between brands. High delivery share increases prep and refrigeration modules.</p><p>The equipment table shows sample SKUs. Use Project Factory to model multi-brand output; site dimensions are the first planning input. For Cloud kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Can several brands share one licence?",
@@ -107,7 +107,7 @@
     "h1": "Cafe setup",
     "lead": "Espresso centre, cold milk stock and the prep bench run in parallel throughout the day.",
     "skipBudget": true,
-    "body": "<p>Cafe setup centres on the espresso station, cold milk and stock cabinets, and a prep bench used heavily all day. Water filtration and pressure should be fixed before machine selection; higher delivery share deepens refrigeration needs.</p><p>Display refrigeration, warewashing and pastry modules are added to match the menu. Daily cup count and simultaneous brewing groups drive machine choice.</p><p>Floor area and throughput are clarified in Project Factory; the table links to sample SKUs. Request a quote summary from Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Cafe setup centres on the espresso station, cold milk and stock cabinets, and a prep bench used heavily all day. Water filtration and pressure should be fixed before machine selection; higher delivery share deepens refrigeration needs.</p><p>Display refrigeration, warewashing and pastry modules are added to match the menu. Daily cup count and simultaneous brewing groups drive machine choice.</p><p>Floor area and throughput are clarified in Project Factory; the table links to sample SKUs. Request a quote summary from Project Factory or contact; site commissioning for Cafe setup is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Minimum kitchen area for a cafe?",
@@ -137,7 +137,7 @@
     "h1": "Catering kitchen setup",
     "lead": "Banqueting and bulk meal service plan hot holding, cold chain depth and wash speed together.",
     "skipBudget": true,
-    "body": "<p>Catering kitchens combine high-volume cooking, transport equipment and conveyor warewashing in one scenario. Banquet service makes hot holding time a menu engineering decision; cold chain depth follows the product mix.</p><p>Peak covers and meal intervals directly set oven, refrigeration and wash counts. Transport and hot-box capacity should be read with the dispatch plan.</p><p>The table shows sample catalogue rows. Build the full list in Project Factory with guest count and meal profile; site survey is the first scheduling step. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Catering kitchens combine high-volume cooking, transport equipment and conveyor warewashing in one scenario. Banquet service makes hot holding time a menu engineering decision; cold chain depth follows the product mix.</p><p>Peak covers and meal intervals directly set oven, refrigeration and wash counts. Transport and hot-box capacity should be read with the dispatch plan.</p><p>The table shows sample catalogue rows. Build the full list in Project Factory with guest count and meal profile; site survey is the first scheduling step. For Catering kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Can PFOS model 500 guests?",
@@ -167,7 +167,7 @@
     "h1": "Fast food kitchen setup",
     "lead": "Short service times demand parallel hot and cold lines with fast wash turnaround.",
     "skipBudget": true,
-    "body": "<p>Fast food lines depend on fryer and grill density, cold storage depth and rapid warewashing. Menu mix sets equipment counts; higher delivery share adds prep and holding modules.</p><p>Layouts run in parallel because service time is short; hot holding and cold stock stay visibly separated in the corridor. Bench height and ergonomics affect crew throughput.</p><p>Sample SKUs are in the table below. Enter capacity in Project Factory to finalise the list, or contact sales engineering. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Fast food lines depend on fryer and grill density, cold storage depth and rapid warewashing. Menu mix sets equipment counts; higher delivery share adds prep and holding modules.</p><p>Layouts run in parallel because service time is short; hot holding and cold stock stay visibly separated in the corridor. Bench height and ergonomics affect crew throughput.</p><p>Sample SKUs are in the table below. Enter capacity in Project Factory to finalise the list, or contact sales engineering. For Fast food kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "High delivery share?",
@@ -189,7 +189,7 @@
     "h1": "Fine dining kitchen setup",
     "lead": "Lower plate frequency spreads the cookline; finishing and holding follow service style.",
     "skipBudget": true,
-    "body": "<p>Fine dining spreads the cookline because covers are fewer but refinement is higher. Finishing, sauce and cold holding lines follow service style; hood and bench height follow crew ergonomics.</p><p>Compared with steakhouse, dry-age is lighter and balanced cooking with precise holding matters more. Plating rhythm and hold times align with menu design.</p><p>The table lists sample modules. Model the full layout in Project Factory by menu and capacity; gastronomy design deepens placement later. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Fine dining spreads the cookline because covers are fewer but refinement is higher. Finishing, sauce and cold holding lines follow service style; hood and bench height follow crew ergonomics.</p><p>Compared with steakhouse, dry-age is lighter and balanced cooking with precise holding matters more. Plating rhythm and hold times align with menu design.</p><p>The table lists sample modules. Model the full layout in Project Factory by menu and capacity; gastronomy design deepens placement later. For Fine dining kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Difference from steakhouse?",
@@ -211,7 +211,7 @@
     "h1": "All day dining kitchen setup",
     "lead": "Breakfast, lunch and dinner reuse the same equipment at different loads; coffee runs all day.",
     "skipBudget": true,
-    "body": "<p>All day dining and hotel kitchens run breakfast, lunch and dinner on the same equipment at shifting loads. Coffee, hot lines and cold storage operate in parallel all day; banqueting spikes capacity briefly.</p><p>Meal profile sets refrigeration depth and wash speed. Room service and buffet service can add peaks in the same footprint.</p><p>The table shows sample modules. Enter guest count and hotel segment in Project Factory to complete the list. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>All day dining and hotel kitchens run breakfast, lunch and dinner on the same equipment at shifting loads. Coffee, hot lines and cold storage operate in parallel all day; banqueting spikes capacity briefly.</p><p>Meal profile sets refrigeration depth and wash speed. Room service and buffet service can add peaks in the same footprint.</p><p>The table shows sample modules. Enter guest count and hotel segment in Project Factory to complete the list. For All day dining kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Same as hotel kitchen?",
@@ -369,11 +369,11 @@
     "lang": "en",
     "profile": "seoTurkiye",
     "title": "Industrial kitchen equipment Turkey | Equsto",
-    "description": "B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
+    "description": "B2B commercial kitchen equipment catalogue for restaurants, hotels, cloud kitchens and catering across Turkey and export markets.",
     "h1": "Industrial kitchen equipment — Turkey",
-    "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
+    "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines supplied with authorised Öztiryakiler distribution.",
     "skipBudget": true,
-    "body": "<p>Equsto supplies industrial kitchen equipment across cooking, refrigeration, warewashing, prep, coffee and beverage for restaurants, hotels, cafes and cloud kitchens in Turkey. Live catalogue and sales engineering sit in one workflow.</p><p>Authorised Öztiryakiler distribution and selected global brands share the same cart and quote flow. Single-SKU orders and turnkey projects use the same shop.</p><p>The table below links to sample SKUs. Build the full list in Project Factory; export markets are supported via contact. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Equsto supplies industrial kitchen equipment across cooking, refrigeration, warewashing, prep, coffee and beverage for restaurants, hotels, cafes and cloud kitchens in Turkey. Live catalogue and sales engineering sit in one workflow.</p><p>Authorised Öztiryakiler distribution and selected global brands share the same cart and quote flow. Single-SKU orders and turnkey projects use the same shop.</p><p>The table below links to sample SKUs. 2uild the full list in Project Factory; export markets are supported via contact. For Industrial kitchen equipment — Turkey, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -403,11 +403,11 @@
     "lang": "en",
     "profile": "seoEnIndustrial",
     "title": "Industrial kitchen supplier Turkey | Equsto",
-    "description": "B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
+    "description": "Equsto acts as a B2B commercial kitchen supplier for restaurants, hotels, cloud kitchens and catering in Turkey and export markets.",
     "h1": "Industrial kitchen supplier — Turkey",
-    "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
+    "lead": "Authorised Öztiryakiler distribution covering cooking, refrigeration, warewashing, prep, coffee and beverage lines.",
     "skipBudget": true,
-    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>qqusto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>qxport markets include selected countries in the Gulf, Central Asia and qastern qurope. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. For Industrial kitchen supplier — Turkey, build a tailored list in Project Factory or message qqusto sales engineering..</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -438,7 +438,7 @@
     "lead": "Capacity, concept and menu inputs drive equipment selection; VAT and logistics sit in the quote file.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file.</p><p>Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and on-site sales engineering.</p><p>This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file.</p><p>Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and on-site sales engineering.</p><p>This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. For Commercial kitchen quotation, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Is this a reservation app?",
@@ -464,7 +464,7 @@
     "h1": "Restaurant kitchen equipment quote",
     "lead": "Menu, capacity and service style model hot, cold and wash lines; quote summary via Project Factory.",
     "skipBudget": true,
-    "body": "<p>For a restaurant kitchen quote, enter menu, capacity and service style; PFOS applies rules to size hot, cold and wash equipment. The quote summary includes VAT and logistics; final figures are confirmed by sales engineering.</p><p>Capacity and concept are enough for the first pass; layout is refined with gastronomy design. CAD can follow in a later step.</p><p>Target time is about five minutes for a draft file. Use it internally until sales engineering approves the order. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>For a restaurant kitchen quote, enter menu, capacity and service style; PFOS applies rules to size hot, cold and wash equipment. The quote summary includes VAT and logistics; final figures are confirmed by sales engineering.</p><p>Capacity and concept are enough for the first pass; layout is refined with gastronomy design. CAD can follow in a later step.</p><p>Target time is about five minutes for a draft file. Use it internally until sales engineering approves the order. For Restaurant kitchen equipment quote, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Restaurant kitchen equipment quote is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "How fast is the draft?",
@@ -494,7 +494,7 @@
     "h1": "Hotel kitchen equipment supply",
     "lead": "All-day meal cycles and banquets load the same lines differently; PFOS models guest and meal profile.",
     "skipBudget": true,
-    "body": "<p>Hotel kitchen supply spans breakfast, lunch, dinner and banquets on shared lines at different loads. All-day service increases refrigeration depth and warewashing capacity throughout the day.</p><p>Room service, buffet and ballroom menus can peak at different times in the same kitchen. Coffee and hot beverage lines are critical at breakfast peak.</p><p>Scenarios overlap with the all day dining guide and are modelled in PFOS. The table links to sample catalogue SKUs. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Hotel kitchen supply spans breakfast, lunch, dinner and banquets on shared lines at different loads. All-day service increases refrigeration depth and warewashing capacity throughout the day.</p><p>Room service, buffet and ballroom menus can peak at different times in the same kitchen. Coffee and hot beverage lines are critical at breakfast peak.</p><p>Scenarios overlap with the all day dining guide and are modelled in PFOS. The table links to sample catalogue SKUs. For Hotel kitchen equipment supply, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Hotel kitchen equipment supply is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Difference from restaurant?",
@@ -520,7 +520,7 @@
     "h1": "Öztiryakiler equipment supply",
     "lead": "Authorised dealer channel for Öztiryakiler with live catalogue and Project Factory quotes.",
     "skipBudget": true,
-    "body": "<p>Öztiryakiler equipment is listed under cooking, refrigeration, warewashing and prep in the Equsto catalogue. The dealer relationship covers official price lists and warranty routing; live FX rates apply where relevant.</p><p>Atalay and selected brands share the same cart and quote flow; Öztiryakiler remains the core line. Technical dimensions are on product cards in millimetres.</p><p>Order a single SKU or build a full project list in the same catalogue. Expand the list in Project Factory when needed. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Öztiryakiler equipment is listed under cooking, refrigeration, warewashing and prep in the Equsto catalogue. The dealer relationship covers official price lists and warranty routing; live FX rates apply where relevant.</p><p>Atalay and selected brands share the same cart and quote flow; Öztiryakiler remains the core line. Technical dimensions are on product cards in millimetres.</p><p>Order a single SKU or build a full project list in the same catalogue. Expand the list in Project Factory when needed. For Öztiryakiler equipment supply, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Only Öztiryakiler?",
@@ -546,7 +546,7 @@
     "h1": "Cold room quote",
     "lead": "Refrigeration lines follow menu and volume; cold room projects use a dedicated engineering track.",
     "skipBudget": true,
-    "body": "<p>Cold room quotes combine capacity, product profile and MEP conditions. Counter and upright modules appear in the sample table; dedicated cold room projects follow a separate engineering workflow.</p><p>Menu and volume set refrigeration counts; blast freezing needs depend on incoming product temperature. Sales engineering performs early validation.</p><p>Complete the project list in Project Factory or via contact. The table illustrates typical catalogue modules only. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Cold room quotes combine capacity, product profile and MEP conditions. Counter and upright modules appear in the sample table; dedicated cold room projects follow a separate engineering workflow.</p><p>Menu and volume set refrigeration counts; blast freezing needs depend on incoming product temperature. Sales engineering performs early validation.</p><p>Complete the project list in Project Factory or via contact. The table illustrates typical catalogue modules only. For Cold room quote, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Cold room quote is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Only counters?",
@@ -572,7 +572,7 @@
     "h1": "Deli counter refrigeration supply",
     "lead": "External dimensions, GN pan fit and litre capacity are listed on each product card.",
     "skipBudget": true,
-    "body": "<p>Deli counter selection starts with external dimensions, GN compatibility and rated capacity on the product card. Prep and service style change how many units and wells you need; technical dimensions are in millimetres on the detail page.</p><p>Under-counter and over-counter models are planned together on one line. Energy and cooling type follow site utilities.</p><p>Compare similar modules in the refrigeration catalogue. Add lines to a quote via Project Factory or the product page. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Deli counter selection starts with external dimensions, GN compatibility and rated capacity on the product card. Prep and service style change how many units and wells you need; technical dimensions are in millimetres on the detail page.</p><p>Under-counter and over-counter models are planned together on one line. Energy and cooling type follow site utilities.</p><p>Compare similar modules in the refrigeration catalogue. Add lines to a quote via Project Factory or the product page. For Deli counter refrigeration supply, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Deli counter refrigeration supply is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Where are dimensions?",
@@ -594,7 +594,7 @@
     "h1": "Industrial cooking equipment",
     "lead": "Cooking lines are counted from menu mix and peak simultaneous production.",
     "skipBudget": true,
-    "body": "<p>Industrial cooking lines include ranges, ovens, fryers, grills and boiling modules sized to the menu. Gas and electric options are in the catalogue; site utilities determine what can be installed.</p><p>Peak output and simultaneous production spread the cookline. Hood capacity is calculated together with cooking counts.</p><p>The table links to sample SKUs. Build the full list in Project Factory by concept and capacity. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Industrial cooking lines include ranges, ovens, fryers, grills and boiling modules sized to the menu. Gas and electric options are in the catalogue; site utilities determine what can be installed.</p><p>Peak output and simultaneous production spread the cookline. Hood capacity is calculated together with cooking counts.</p><p>The table links to sample SKUs. Build the full list in Project Factory by concept and capacity. For Industrial cooking equipment, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Industrial cooking equipment is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Gas or electric?",
@@ -617,7 +617,7 @@
     "lead": "PFOS turns concept and capacity inputs into an equipment list and quote summary in one flow.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Project Factory is Equsto's quote platform: concept, capacity and menu inputs produce an equipment list and price summary. Target time is about five minutes; output is subject to sales engineering approval.</p><p>This is B2B industrial kitchen supply, not guest reservations. The rules engine sizes modules from menu and throughput assumptions.</p><p>Quote PDFs include SKU and product code rows in a structured layout. After approval, ordering and installation planning proceed. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Project Factory is Equsto's quote platform: concept, capacity and menu inputs produce an equipment list and price summary. Target time is about five minutes; output is subject to sales engineering approval.</p><p>This is B2B industrial kitchen supply, not guest reservations. The rules engine sizes modules from menu and throughput assumptions.</p><p>Quote PDFs include SKU and product code rows in a structured layout. After approval, ordering and installation planning proceed. For Fast kitchen quote platform, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "OpenTable integration?",
@@ -644,7 +644,7 @@
     "lead": "Besos modular stations are selected to floor dimensions and beverage service flow.",
     "skipBudget": true,
     "ctaBesos": true,
-    "body": "<p>Bar design at Equsto runs through Bar Design Studio with Vitrum Group modular stations sized to the floor plan and service flow. Beverage, coffee and refrigeration modules align on one bar line.</p><p>Module height and counter depth follow staff ergonomics. Ice machine and storage capacity follow daily cover counts.</p><p>Forty-two sample modules are listed in the Besos catalogue. Plan the full layout in Project Factory or on the Besos pages. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Bar design at Equsto runs through Bar Design Studio with Vitrum Group modular stations sized to the floor plan and service flow. Beverage, coffee and refrigeration modules align on one bar line.</p><p>Module height and counter depth follow staff ergonomics. Ice machine and storage capacity follow daily cover counts.</p><p>Forty-two sample modules are listed in the Besos catalogue. Plan the full layout in Project Factory or on the Besos pages. For Bar design — Turkey, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Bar design — Turkey is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Besos catalogue?",
@@ -681,7 +681,7 @@
         "href": "/en/projects/izmir-modular-bar-beverage"
       }
     ],
-    "body": "<p>Equsto reference pages present demount case studies: project lifecycle, constraints and equipment logic are transparent. Customer photography and quotes may be added as publishing continues; pages are not off-the-shelf packages.</p><p>Each case bridges to live catalogue SKUs; quotes are finalised in Project Factory or through contact. Cases illustrate thinking, not a fixed BOM.</p><p>Use the links below for Istanbul catering and Izmir modular bar examples. PFOS can regenerate the same logic as a live list. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>Equsto reference pages present demount case studies: project lifecycle, constraints and equipment logic are transparent. Customer photography and quotes may be added as publishing continues; pages are not off-the-shelf packages.</p><p>Each case bridges to live catalogue SKUs; quotes are finalised in Project Factory or through contact. Cases illustrate thinking, not a fixed BOM.</p><p>Use the links below for Istanbul catering and Izmir modular bar examples. PFOS can regenerate the same logic as a live list. For Reference projects, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Are projects fixed packages?",
@@ -707,7 +707,7 @@
     "h1": "Istanbul high-volume catering",
     "lead": "Hot banquet, volume cooking and conveyor warewashing modelled for dense urban service.",
     "skipBudget": true,
-    "body": "<p>This demount layout combines hot banquet holding, high-capacity cooking and conveyor warewashing for dense urban catering. Peak minutes set wash speed as much as oven counts.</p><p>Facade capacity and flue routes should be confirmed before ordering; survey dimensions come first. Transport and hot-box needs align with the dispatch plan.</p><p>Recreate the logic in PFOS with the Catering concept and city selection. The table shows sample SKUs only. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>This demount layout combines hot banquet holding, high-capacity cooking and conveyor warewashing for dense urban catering. Peak minutes set wash speed as much as oven counts.</p><p>Facade capacity and flue routes should be confirmed before ordering; survey dimensions come first. Transport and hot-box needs align with the dispatch plan.</p><p>Recreate the logic in PFOS with the Catering concept and city selection. The table shows sample SKUs only. For Istanbul high-volume catering, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Live quote?",
@@ -729,7 +729,7 @@
     "h1": "Izmir modular bar & beverage",
     "lead": "Besos modules and beverage equipment share one floor plan and service sequence.",
     "skipBudget": true,
-    "body": "<p>This Izmir demount aligns Besos modules with beverage equipment on one site plan. Vitrum Group bar solutions are listed under Bar Design Studio; service flow drives module choice.</p><p>Cold beverage, coffee and prep modules are parcelled to bar dimensions. Power and water points are checked before final module positions.</p><p>Forty-two sample modules appear in the Besos catalogue. Finalise the list in Project Factory or via contact. Complete the equipment list via Project Factory or contact.</p>",
+    "body": "<p>This Izmir demount aligns Besos modules with beverage equipment on one site plan. Vitrum Group bar solutions are listed under Bar Design Studio; service flow drives module choice.</p><p>Cold beverage, coffee and prep modules are parcelled to bar dimensions. Power and water points are checked before final module positions.</p><p>Forty-two sample modules appear in the Besos catalogue. Finalise the list in Project Factory or via contact. For Izmir modular bar & beverage, build a tailored list in Project Factory or message Equsto sales engineering..</p>",
     "faq": [
       [
         "Bar modules?",
@@ -756,7 +756,7 @@
     "lead": "Service style drives how many square metres you need per seat or per cover.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Per-cover kitchen area depends on service style: dine-in, delivery and banqueting use the same square metres differently. Higher delivery share deepens refrigeration; dine-in heavy sites emphasise hold times.</p><p>Service speed, menu complexity and simultaneous production all affect the result. In tight footprints, vertical storage and modular benches help.</p><p>PFOS area and cover questions automate the same logic. This editorial guide is updated for 2026; find it via footer and sitemap, not the top shop menu. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Per-cover kitchen area depends on service style: dine-in, delivery and banqueting use the same square metres differently. Higher delivery share deepens refrigeration; dine-in heavy sites emphasise hold times.</p><p>Service speed, menu complexity and simultaneous production all affect the result. In tight footprints, vertical storage and modular benches help.</p><p>PFOS area and cover questions automate the same logic. This editorial guide is updated for 2026; find it via footer and sitemap, not the top shop menu. For Kitchen area — per cover, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Kitchen area — per cover is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Updated for 2026?",
@@ -786,7 +786,7 @@
     "h1": "500-cover catering planning",
     "lead": "At ~500 guests, hot holding, cold depth and wash speed set the equipment spine.",
     "skipBudget": true,
-    "body": "<p>At roughly five hundred guests, hot banquet capacity, cold chain depth and wash speed define the equipment spine. Guest count and meal interval are modelled in PFOS; peak meal and continuous banquet are different scenarios.</p><p>Transport and prep modules follow the menu. Conveyor warewashing must not bottleneck the peak window.</p><p>Read together with the catering kitchen guide and the Istanbul demount page. Build the full list in Project Factory. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>At roughly five hundred guests, hot banquet capacity, cold chain depth and wash speed define the equipment spine. Guest count and meal interval are modelled in PFOS; peak meal and continuous banquet are different scenarios.</p><p>Transport and prep modules follow the menu. Conveyor warewashing must not bottleneck the peak window.</p><p>Read together with the catering kitchen guide and the Istanbul demount page. Build the full list in Project Factory. For 500-cover catering planning, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for 500-cover catering planning is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Single service for 500?",
@@ -812,7 +812,7 @@
     "h1": "Dark kitchen — cloud kitchen setup",
     "lead": "Parcelled hot/cold lines and a shared wash hub are planned per brand in one licence.",
     "skipBudget": true,
-    "body": "<p>Dark kitchen and cloud kitchen setup parcel hot and cold lines per brand with a shared warewashing hub. Electrical and ventilation load rises in multi-brand sites; interceptor sizing follows the combined menu.</p><p>High delivery share increases refrigeration and prep. Storage and dispatch between brands must stay clearly separated.</p><p>Steps overlap the cloud kitchen setup guide and are modelled in PFOS for multi-brand output. Site dimensions are the first input. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>Dark kitchen and cloud kitchen setup parcel hot and cold lines per brand with a shared warewashing hub. Electrical and ventilation load rises in multi-brand sites; interceptor sizing follows the combined menu.</p><p>High delivery share increases refrigeration and prep. Storage and dispatch between brands must stay clearly separated.</p><p>Steps overlap the cloud kitchen setup guide and are modelled in PFOS for multi-brand output. Site dimensions are the first input. For Dark kitchen — cloud kitchen setup, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Dark kitchen — cloud kitchen setup is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Several brands, one licence?",
@@ -835,7 +835,7 @@
     "lead": "Menu → capacity → area → hot/cold/wash counts → quote; PFOS automates the sequence.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>This checklist follows menu, capacity, floor area, hot/cold/wash counts and quote. PFOS automates the sequence; use the checklist in meetings as a manual control.</p><p>Clarify business type, dine-in vs delivery, daily meals, existing utilities, hood route and brand preferences — each step changes module counts.</p><p>CAD is not required at first; layout deepens with gastronomy design. Read with the restaurant quote guide for the same flow. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>This checklist follows menu, capacity, floor area, hot/cold/wash counts and quote. PFOS automates the sequence; use the checklist in meetings as a manual control.</p><p>Clarify business type, dine-in vs delivery, daily meals, existing utilities, hood route and brand preferences — each step changes module counts.</p><p>CAD is not required at first; layout deepens with gastronomy design. Read with the restaurant quote guide for the same flow. For Restaurant kitchen setup checklist, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Restaurant kitchen setup checklist is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "CAD on day one?",
@@ -861,7 +861,7 @@
     "h1": "Cafe opening equipment list",
     "lead": "Espresso centre, cold stock, prep bench, display fridge and wash line form the core list.",
     "skipBudget": true,
-    "body": "<p>A cafe opening list centres on espresso, refrigerated stock, a prep bench, display refrigeration and warewashing. Fix water filtration and pressure before choosing the espresso machine.</p><p>Pastry-heavy cafes add oven and prep modules. Delivery share deepens refrigeration; seat count drives daily cup assumptions.</p><p>Read with the cafe setup guide and the coffee catalogue. Complete the list in Project Factory. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
+    "body": "<p>A cafe opening list centres on espresso, refrigerated stock, a prep bench, display refrigeration and warewashing. Fix water filtration and pressure before choosing the espresso machine.</p><p>Pastry-heavy cafes add oven and prep modules. Delivery share deepens refrigeration; seat count drives daily cup assumptions.</p><p>Read with the cafe setup guide and the coffee catalogue. Complete the list in Project Factory. For Cafe opening equipment list, build a tailored list in Project Factory or message Equsto sales engineering.; site commissioning for Cafe opening equipment list is scheduled with Equsto sales engineering.</p>",
     "faq": [
       [
         "Coffee only?",
@@ -1063,38 +1063,6 @@
         "label": "Turkish index",
         "href": "/blog"
       }
-    ]
-  },
-  "restoran-mutfagi": {
-    "profile": "restoranMutfagi",
-    "lang": "en",
-    "title": "Restaurant Kitchen Equipment | Equsto",
-    "description": "Restaurant kitchen equipment: cooking, refrigeration, prep, warewashing and work tables. Equsto catalogue and PFOS quote flow by menu, capacity and service style.",
-    "h1": "Restaurant Kitchen Equipment",
-    "lead": "Restaurant kitchen planning is modeled on menu profile, peak output and floor constraints. Equsto brings cooking, refrigeration, prep, warewashing and work tables in one catalogue; PFOS delivers a quote summary in 5 minutes.",
-    "skipBudget": true,
-    "body": "<h2>Restaurant kitchen zones</h2><p>A professional restaurant kitchen is planned in functional zones. Each zone is dimensioned for menu and peak output; Equsto lists every department with live pricing and stock.</p><ul><li><strong>Cooking:</strong> Combi oven, convection oven, chargrill, heavy-duty range, fryer, bratt pan, salamander, doner. <a href=\"/en/shop/pisirme\">Cooking department</a> → subcategories: <a href=\"/en/shop/pisirme/kategori/kombi-firinlar\">Combi ovens</a>, <a href=\"/en/shop/pisirme/kategori/konveksiyonel-firinlar\">Convection ovens</a>, <a href=\"/en/shop/pisirme/kategori/sanayi-tipi-ocaklar\">Heavy-duty ranges</a>, <a href=\"/en/shop/pisirme/kategori/sanayi-tipi-izgaralar\">Heavy-duty chargrills</a>.</li><li><strong>Prep:</strong> Vegetable cutter, cutter/mixer, dough mixer, vacuum packing, meat/mincer machines. <a href=\"/en/shop/hazirlik\">Prep department</a>.</li><li><strong>Refrigeration:</strong> Undercounter/upright fridge, blast freezer, cold room/panel fridge, display cabinets (hot/cold). <a href=\"/en/shop/sogutma\">Refrigeration department</a>.</li><li><strong>Warewashing:</strong> Undercounter, hood-type, conveyor dishwashers, entry/exit benches. <a href=\"/en/shop/yikama\">Warewashing department</a>.</li><li><strong>Work tables:</strong> Stainless work tables (base shelf, mid shelf, cabinet), mobile tables, marble/polyethylene tops. <a href=\"/en/shop/tezgah\">Work tables department</a>.</li><li><strong>Service / Transport:</strong> Gastronorm pans, service trolleys, tray transport, chafing dish, bain-marie. <a href=\"/en/shop/set-ustu-mutfak\">Countertop equipment</a>, <a href=\"/en/shop/kuvetler\">Gastronorm pans</a>, <a href=\"/en/shop/tasima\">Transport</a>.</li></ul><h2>Core equipment categories for restaurant kitchens</h2><p>The categories below are the most common requirements for a restaurant kitchen fit-out. Each title links to the Equsto shop listing page.</p><ul><li><a href=\"/en/shop/pisirme/kategori/kombi-firinlar\">Combi ovens</a> — Rational, Öztiryakiler, Electrolux; 6–20 GN capacity, gas/electric.</li><li><a href=\"/en/shop/pisirme/kategori/konveksiyonel-firinlar\">Convection ovens</a> — Pimak, Öztiryakiler, Electrolux Crosswise; even heat for bakery and main kitchen.</li><li><a href=\"/en/shop/pisirme/kategori/sanayi-tipi-ocaklar\">Heavy-duty ranges</a> — Atalay, Öztiryakiler; 4–6 burner, lava stone/cast iron top, gas/electric.</li><li><a href=\"/en/shop/pisirme/kategori/sanayi-tipi-izgaralar\">Heavy-duty chargrills</a> — Atalay, Öztiryakiler; lava stone, cast iron, steel top; gas/electric/charcoal.</li><li><a href=\"/en/shop/pisirme/kategori/kombi-firinlar?marka=oztiryakiler\">Öztiryakiler combi ovens</a> — 10 GN 1/1, 20 GN 2/1; One/Plus models.</li><li><a href=\"/en/shop/pisirme/kategori/kombi-firinlar?marka=rational\">Rational combi ovens</a> — iCombi Pro/Classic; SelfCookingCenter.</li><li><a href=\"/en/shop/sogutma\">Refrigeration equipment</a> — Undercounter, upright, cold room/panel, display cabinets.</li><li><a href=\"/en/shop/hazirlik\">Prep equipment</a> — Robot Coupe, Dito Sama, Santos; cutter, mixer, vacuum, dough.</li><li><a href=\"/en/shop/yikama\">Dishwashers</a> — Electrolux Green&Clean, Öztiryakiler; undercounter, hood, conveyor.</li><li><a href=\"/en/shop/tezgah\">Stainless work tables</a> — Base shelf, mid shelf, cabinet; marble/polyethylene top options.</li><li><a href=\"/en/shop/kuvetler\">Gastronorm pans</a> — GN 1/1, 2/1, 1/2; stainless, polycarbonate, polypropylene.</li><li><a href=\"/en/shop/set-ustu-mutfak\">Service ware</a> — Chafing dish, bain-marie, tray transport, plate warmer.</li></ul><h2>Brands</h2><p>Featured brands for restaurant kitchens in the Equsto catalogue:</p><ul><li><a href=\"/en/shop/marka/oztiryakiler\">Öztiryakiler</a> — Cooking, refrigeration, warewashing, prep; authorised dealer, official price list.</li><li><a href=\"/en/shop/marka/atalay\">Atalay</a> — Heavy-duty range/chargrill, doner, fryer; domestic production.</li><li><a href=\"/en/shop/marka/electrolux\">Electrolux Professional</a> — SkyLine/700XP/900XP cooking, Green&Clean warewashing, ecostore refrigeration.</li><li><a href=\"/en/shop/marka/rational\">Rational</a> — iCombi Pro/Classic, SelfCookingCenter; combi oven leader.</li><li><a href=\"/en/shop/marka/inoksan\">İnoksan</a> — Work tables, chargrills, warewashing entry/exit, undercounter refrigeration.</li></ul><h2>Product examples</h2><p>Typical restaurant kitchen products below (live catalogue URLs):</p><ul><li><a href=\"/en/shop/pisirme/9890-x1011-eg\">UNOX CHEF TOP 10 GN 1/1 Combi Oven Gas Plus</a></li><li><a href=\"/en/shop/pisirme/9890-icpro10-1g\">RATIONAL iCombi Pro 10-1/1 Gas</a></li><li><a href=\"/en/shop/pisirme/ino-7zg20\">INOKSAN Chargrill, Wet System, 1 Module, Gas</a></li><li><a href=\"/en/shop/pisirme/eaei-660\">Atalay Chargrills E AEI - 660 Flat 600 x 600 x 300</a></li><li><a href=\"/en/shop/pisirme/7890-n1-60605-11\">600 SERIES UNDERCOUNTER OVEN ELECTRIC 60*55*61</a></li><li><a href=\"/en/shop/hazirlik/rmx60-1\">Robot Coupe R 60 V.V. Cutter Mixer</a></li><li><a href=\"/en/shop/sogutma/ecostore-670-1430-buzdolabi\">Electrolux Ecostore 670 Digital Fridge</a></li><li><a href=\"/en/shop/yikama/green-clean-giyotin-cift-cidarli\">Electrolux Green&Clean Hood Twin Hood</a></li><li><a href=\"/en/shop/tezgah/calisma-tezgahi\">Stainless Work Table Base Shelf</a></li><li><a href=\"/en/shop/kuvetler/gn-1-1-paslanmaz\">GN 1/1 Stainless Gastronorm Pan</a></li></ul><h2>Create a quote with PFOS</h2><p>Generate an equipment list and quote summary for your restaurant kitchen in 5 minutes via <a href=\"/pfos\">Project Factory (PFOS)</a>. Menu profile, covers, delivery ratio and floor area drive automatic sizing of cooking, refrigeration and warewashing modules. Use the <a href=\"/en/guides/restaurant-kitchen-checklist-2026\">Restaurant kitchen setup checklist</a> for step-by-step control.</p><h2>Related guides</h2><ul><li><a href=\"/en/guides/restaurant-kitchen-checklist-2026\">Restaurant kitchen setup checklist</a> — 5 steps to equipment list and quote.</li><li><a href=\"/en/steakhouse-kitchen-setup\">Steakhouse kitchen setup</a> — Dry-age, chargrill and holding zone for meat-centric menus.</li><li><a href=\"/en/fish-restaurant-kitchen-project-and-equipment\">Fish restaurant kitchen project</a> — Steam oven, fish prep table, waste disposer.</li><li><a href=\"/en/fast-food-kitchen-setup\">Fast food setup</a> — Fryer/chargrill density, rapid warewashing, packaging.</li><li><a href=\"/en/catering-kitchen\">Catering kitchen</a> — Banquet, conveyor warewashing, transport, GN logistics.</li><li><a href=\"/en/cafe-setup\">Cafe setup</a> — Espresso, display refrigeration, glasswasher, packaging.</li></ul>",
-    "faq": [
-      [
-        "Which oven type suits a restaurant kitchen?",
-        "Menu-driven: gas pizza oven for pizza/trattoria; combi oven (Rational/Öztiryakiler/UNOX) for main kitchen/pastry; convection oven sufficient for non-bakery menus."
-      ],
-      [
-        "Combi oven or convection oven?",
-        "Combi oven adds steam to convection (roast, steam, bake). Convection only uses hot air; preferred for bakery/bread focus."
-      ],
-      [
-        "Difference between heavy-duty range and chargrill?",
-        "Range: pan/pot heavy cooking (saute, sauce, boil). Chargrill: grilling/searing (steak, kebab, veg). Hybrid models offer both."
-      ],
-      [
-        "How fast is a PFOS quote?",
-        "After entering menu, capacity, floor area and service style, PDF quote summary is generated in ~5 minutes. Sales engineering sign-off finalizes pricing."
-      ],
-      [
-        "Which brands for a restaurant kitchen?",
-        "Cooking/refrigeration backbone: Öztiryakiler (authorised dealer, full line), Rational (combi oven leader), Atalay (heavy-duty range/chargrill), Electrolux (modular cooking/warewashing), İnoksan (work tables/chargrills/undercounter refrigeration)."
-      ]
     ]
   }
 }
