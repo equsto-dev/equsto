@@ -54,6 +54,7 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
         <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} locale={locale} />
         <BesosIceStrip />
         <BesosSignatureBars items={landing.signatureTrio} products={products} locale={locale} />
+        <BesosCatalog products={products} locale={locale} />
       </main>
       <ShopFooterHost />
     </>

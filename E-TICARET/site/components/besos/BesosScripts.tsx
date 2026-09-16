@@ -40,6 +40,7 @@ export default function BesosScripts() {
       <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/equsto-member.js?v=${v}&m=20260916-katalog-hesabim`} strategy="afterInteractive" />
       <Script
         src={`/equsto-logo.js?v=${v}`}
         strategy="afterInteractive"

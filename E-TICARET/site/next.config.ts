@@ -239,6 +239,13 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: "/docs/:path*.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
+      {
         source: "/data/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }],
       },

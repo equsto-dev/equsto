@@ -105,6 +105,10 @@ body.bd-page.besos header.hdr .hdr-right {
   visibility: visible !important;
 }
 
+body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-sub {
+  display: none !important;
+}
+
 @media (min-width: 769px) {
   body.bd-page.besos header.hdr .hdr-alici {
     display: flex !important;
