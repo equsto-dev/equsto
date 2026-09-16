@@ -31,6 +31,19 @@ mustExist("public/equsto-bize-ulasin-isimlik.png");
 mustExist("components/shop/ShopCoreScripts.tsx");
 mustExist("components/shop/ShopStyles.tsx");
 
+// Mutfak/PFOS hero ile karışmasın — kedi PNG ~100–300 KB; ana görsel ~1.9 MB
+{
+  const catPath = path.join(siteDir, "public/equsto-bize-ulasin-isimlik.png");
+  const catBytes = fs.statSync(catPath).size;
+  const kitchenPath = path.join(siteDir, "public/images/pfos/proje-fabrikasi-ana-gorsel.png");
+  if (fs.existsSync(kitchenPath) && catBytes === fs.statSync(kitchenPath).size) {
+    fail("equsto-bize-ulasin-isimlik.png PFOS mutfak görseli ile aynı — kedi PNG ezilmiş");
+  }
+  if (catBytes < 40_000 || catBytes > 500_000) {
+    fail(`equsto-bize-ulasin-isimlik.png boyut şüpheli (${catBytes} byte) — kedi PNG beklenir`);
+  }
+}
+
 const contact = read("public/contact.js");
 if (!contact.includes('WA_FAB_IMG = "' + WA_IMG + '"')) {
   fail("contact.js: WA_FAB_IMG kilit yolu eşleşmiyor");

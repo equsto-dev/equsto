@@ -1225,7 +1225,7 @@
     wrap.setAttribute("data-eq-wa-cat-kilit", "1");
     wrap.style.cssText =
       "position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));" +
-      "z-index:9999;display:flex;flex-direction:column;gap:10px;align-items:flex-end;pointer-events:none;" +
+      "z-index:10050;display:flex;flex-direction:column;gap:10px;align-items:flex-end;pointer-events:none;" +
       "width:auto;height:auto;max-width:80px;max-height:80px;box-sizing:border-box;";
 
     var btn = document.createElement("button");
@@ -1236,7 +1236,7 @@
     btn.addEventListener("click", window.equstoOpenWhatsApp);
 
     var img = document.createElement("img");
-    img.src = WA_FAB_IMG;
+    img.src = WA_FAB_IMG + "?v=20260916catfix";
     img.alt = "";
     img.width = 62;
     img.height = 62;
@@ -1251,6 +1251,16 @@
     btn.appendChild(img);
     wrap.appendChild(btn);
     document.body.appendChild(wrap);
+    syncFabCookieOffset();
+  }
+
+  function syncFabCookieOffset() {
+    var wrap = document.getElementById("equsto-contact-fab");
+    if (!wrap) return;
+    var cookie = document.querySelector('[aria-label="Çerez izni"]');
+    wrap.style.bottom = cookie
+      ? "calc(92px + env(safe-area-inset-bottom, 0px))"
+      : "max(16px, env(safe-area-inset-bottom, 0px))";
   }
 
   function mountFabInTabbar() {
@@ -1283,6 +1293,7 @@
     document.body.classList.remove("eq-wa-in-tabbar");
     removeFloatingFab();
     mountFloatingFab();
+    syncFabCookieOffset();
   }
 
   function ensureMsgModal() {
@@ -1508,6 +1519,14 @@
     }, 50);
     window.addEventListener("resize", syncFabPlacement, { passive: true });
     window.addEventListener("load", syncFabPlacement, { once: true });
+    try {
+      new MutationObserver(syncFabCookieOffset).observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class", "style"],
+      });
+    } catch (_) {}
   }
 
   window.equstoSyncContactFab = syncFabPlacement;
@@ -1527,3 +1546,21 @@
     } catch (_) {}
   });
 })();
+
+/* Bar Design: 4’lü ikon şeridini mobilde tek satıra kilitle */
+try {
+  if (document.body && document.body.classList.contains("besos")) {
+    var __eqBesosSubnav = document.createElement("script");
+    __eqBesosSubnav.src = "/eq-besos-subnav-fix.js?v=20260916f";
+    __eqBesosSubnav.defer = true;
+    document.head.appendChild(__eqBesosSubnav);
+  } else {
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!document.body || !document.body.classList.contains("besos")) return;
+      var s = document.createElement("script");
+      s.src = "/eq-besos-subnav-fix.js?v=20260916f";
+      s.defer = true;
+      document.head.appendChild(s);
+    });
+  }
+} catch (__eqBesosSubnavErr) {}
