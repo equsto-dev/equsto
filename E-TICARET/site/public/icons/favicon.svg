@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Equsto">
-  <rect width="32" height="32" rx="6" fill="#001e50"/>
-  <path fill="#ffffff" d="M9 8h14v3.2H12.4v3.2H21V17.6H12.4v3.2H23V24H9V8z"/>
+  <rect width="32" height="32" rx="6" fill="#e8e4de"/>
+  <rect x="7" y="9.5" width="18" height="2" rx="1" fill="#111111"/>
+  <rect x="7" y="15" width="18" height="2" rx="1" fill="#111111"/>
+  <rect x="7" y="20.5" width="18" height="2" rx="1" fill="#111111"/>
 </svg>
