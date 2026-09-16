@@ -17,30 +17,6 @@ const ICON_V = BESOS_SUBNAV_ICON_V;
 
 const ITEMS: SubnavItem[] = [
   {
-    key: "bardaklar",
-    href: (en) => (en ? "/en/besos/bardaklar" : "/besos/bardaklar"),
-    labelTr: "Bardaklar",
-    labelEn: "Glassware",
-    iconSrc: `/besos/subnav/glassware.png?v=${ICON_V}`,
-    isActive: (pathname) => !!pathname?.includes("/besos/bardaklar"),
-  },
-  {
-    key: "buz-makinesi",
-    href: (en) => (en ? "/en/besos/imt300" : "/besos/imt300"),
-    labelTr: "Buz Makinesi",
-    labelEn: "Ice Machine",
-    iconSrc: `/besos/subnav/ice-machine.png?v=${ICON_V}`,
-    isActive: (pathname) => !!pathname?.includes("/imt300"),
-  },
-  {
-    key: "bar-ekipman",
-    href: (en) => (en ? "/en/besos/bar-ekipman" : "/besos/bar-ekipman"),
-    labelTr: "Bar Ekipmanları",
-    labelEn: "Bar Equipment",
-    iconSrc: `/besos/subnav/bar-equipment.png?v=${ICON_V}`,
-    isActive: (pathname) => !!pathname?.includes("/besos/bar-ekipman"),
-  },
-  {
     key: "bar-istasyonlari",
     href: (en) => (en ? "/en/besos/bar-istasyonlari" : "/besos/bar-istasyonlari"),
     labelTr: "Bar İstasyonları",
@@ -54,6 +30,30 @@ const ITEMS: SubnavItem[] = [
         !!pathname.match(/\/besos(\/modul\/|$)/)
       );
     },
+  },
+  {
+    key: "buz-makinesi",
+    href: (en) => (en ? "/en/besos/imt300" : "/besos/imt300"),
+    labelTr: "Buz Makinesi",
+    labelEn: "Ice Machine",
+    iconSrc: `/besos/subnav/ice-machine.png?v=${ICON_V}`,
+    isActive: (pathname) => !!pathname?.includes("/imt300"),
+  },
+  {
+    key: "bardaklar",
+    href: (en) => (en ? "/en/besos/bardaklar" : "/besos/bardaklar"),
+    labelTr: "Bardaklar",
+    labelEn: "Glassware",
+    iconSrc: `/besos/subnav/glassware.png?v=${ICON_V}`,
+    isActive: (pathname) => !!pathname?.includes("/besos/bardaklar"),
+  },
+  {
+    key: "bar-ekipman",
+    href: (en) => (en ? "/en/besos/bar-ekipman" : "/besos/bar-ekipman"),
+    labelTr: "Bar Ekipmanları",
+    labelEn: "Bar Equipment",
+    iconSrc: `/besos/subnav/bar-equipment.png?v=${ICON_V}`,
+    isActive: (pathname) => !!pathname?.includes("/besos/bar-ekipman"),
   },
 ];
 
