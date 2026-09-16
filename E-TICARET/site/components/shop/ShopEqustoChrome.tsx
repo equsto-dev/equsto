@@ -184,8 +184,11 @@ export default function ShopEqustoChrome({
                 <span className="eq-hdr-account-sub" data-i18n="common.my_account">
                   {h.my_account}
                 </span>
-                <span className="eq-hdr-account-title" data-i18n="common.account_projects">
-                  {h.account_projects}
+                <span
+                  className="eq-hdr-account-title"
+                  data-i18n={isBesosSection ? undefined : "common.account_projects"}
+                >
+                  {isBesosSection ? (lang === "en" ? "Sign in ›" : "Giriş yap ›") : h.account_projects}
                 </span>
               </span>
               <svg

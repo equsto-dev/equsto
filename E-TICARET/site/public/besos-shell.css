@@ -388,7 +388,8 @@ body.bd-page.besos .footer.footer {
   body.bd-page.besos header.hdr > .hdr-right {
     display: flex !important;
     visibility: visible !important;
-    flex: 1 1 auto !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
     align-items: center !important;
     gap: 10px !important;
     margin-left: auto !important;
@@ -435,6 +436,10 @@ body.bd-page.besos .footer.footer {
     font-size: 13px !important;
     font-weight: 600 !important;
     color: var(--eq-hdr-bar-text, #fff) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 28vw;
   }
   body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-sub {
     display: block !important;
