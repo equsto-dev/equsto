@@ -60,7 +60,7 @@ export default function PfosScripts() {
         strategy="afterInteractive"
         onReady={() => window.EQUSTO_LOGO_REFRESH?.()}
       />
-      <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" onReady={refreshNavDrawer} />
+      <Script src={`/nav.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" onReady={refreshNavDrawer} />
       <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
       <Script
         src={`/ecom-cart.js?v=${v}`}

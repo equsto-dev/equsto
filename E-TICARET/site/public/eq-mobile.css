@@ -221,7 +221,8 @@ nav.topnav {
   }
 }
 
-@media (max-width: 380px) {
+/* Galaxy S/A kompakt (~360 CSS px): tek sütun kart */
+@media (max-width: 360px) {
   .eq-dept-plp-grid,
   .eq-arama-grid {
     grid-template-columns: 1fr !important;
@@ -524,5 +525,77 @@ nav.topnav {
     border-radius: 4px !important;
     flex: 1 1 auto !important;
     max-width: 160px !important;
+  }
+}
+
+/*
+ * Telefon CSS-px bantları (logical width, cihaz ölçeği değil)
+ * iPhone 15 / 16: 393 · 15/16 Plus·Pro Max: 430 · 16 Pro: 402 · 16 Pro Max: 440 · SE: 375
+ * Galaxy S21–S25 / A serisi (2021–2026): çoğunlukla 360 / 384 / 412
+ * Hepsi 768 mobil kırılımının içinde; bantlar taşma, safe-area ve dokunma hedefi içindir.
+ */
+@media (max-width: 440px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body.eq-shop:not(.admin-app) {
+    --eq-phone-gutter: max(10px, env(safe-area-inset-left, 0px));
+  }
+
+  header.hdr > .pg-inner,
+  header.hdr > .pg-inner.hdr-pg-inner {
+    padding-left: max(10px, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    min-width: 0;
+  }
+
+  header.hdr .srch,
+  header.hdr .srch-input,
+  nav.topnav,
+  nav.topnav .topnav-item {
+    min-width: 0;
+  }
+
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
+    min-height: calc(48px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .eq-dept-filter-sheet {
+    max-height: min(85dvh, 85vh);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .eq-dept-filter-sheet__actions {
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 393px) {
+  body.eq-shop:not(.admin-app) {
+    --eq-hdr-logo-max-w: min(120px, 28vw);
+    --eq-hdr-logo-link-max-w: 28vw;
+  }
+
+  body.eq-shop .topnav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  body.eq-shop:not(.admin-app) {
+    --eq-hdr-logo-max-w: min(104px, 26vw);
+    --eq-hdr-logo-link-max-w: 26vw;
+  }
+
+  header.hdr .srch {
+    min-width: 0;
+  }
+
+  .eq-dept-plp-toolbar {
+    gap: 6px 8px !important;
   }
 }

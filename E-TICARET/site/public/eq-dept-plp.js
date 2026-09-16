@@ -1558,18 +1558,7 @@
   };
 
   function bindMobileFilter() {
-    var mob = document.getElementById('eq-dept-plp-filter-mob');
-    var bd = document.getElementById('eq-dept-filter-backdrop');
-    if (mob) {
-      mob.addEventListener('click', function () {
-        document.body.classList.toggle('eq-dept-filter-open');
-      });
-    }
-    if (bd) {
-      bd.addEventListener('click', function () {
-        document.body.classList.remove('eq-dept-filter-open');
-      });
-    }
+    /* Mobil filtre: eq-dept-plp-filter-mob.js bottom sheet */
   }
 
   function applyPageMeta() {

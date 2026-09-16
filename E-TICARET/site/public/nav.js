@@ -1370,7 +1370,9 @@
     );
   }
   window.__eqDrawerBackdropClick = function (ev) {
-    if (!ev || ev.target !== ev.currentTarget) return;
+    if (!ev) return;
+    var t = ev.target;
+    if (t && t.closest && t.closest(".cat-drawer")) return;
     __eqToggleDrawer(false);
   };
   window.__eqDrawerCloseX = function (ev) {
@@ -1460,7 +1462,8 @@
       '<span class="eq-bottom-tabbar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>';
     btnCat.addEventListener("click", function (ev) {
       ev.preventDefault();
-      __eqToggleDrawer(true);
+      ev.stopPropagation();
+      __eqToggleDrawer();
     });
 
     var waSlot = document.createElement("div");

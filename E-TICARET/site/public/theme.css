@@ -6317,6 +6317,12 @@ html.eq-vitrin-white-lock body.bd-page {
   body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
     z-index: 400;
   }
+  body.eq-shop:not(.admin-app).eq-cat-drawer-open #eq-bottom-tabbar.eq-bottom-tabbar {
+    z-index: 620;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page).eq-cat-drawer-open .drawer-overlay-close {
+    display: flex !important;
+  }
   /* PFOS: kendi alt menüsü (pfos.html); global tabbar gizli */
   body.eq-pfos #eq-bottom-tabbar.eq-bottom-tabbar {
     display: none !important;

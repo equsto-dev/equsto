@@ -48,7 +48,7 @@ export default function BesosScripts() {
           window.setTimeout(() => window.EQUSTO_LOGO_REFRESH?.(), 120);
         }}
       />
-      <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/nav.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />
       <Script src={`/eq-bar-module-url.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-besos-pricing.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
