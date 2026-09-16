@@ -54,8 +54,12 @@ _agent-*.bat
 _agent-*.txt
 _agent-readout.txt
 
-# İç içe workspace kopyası
-EQUSTO-WORK/EQUSTO-WORK/
+# İç içe workspace kopyası — Git'te durmaz (diskte kalabilir)
+EQUSTO-WORK/
+deploy-live-pfos-hero/
+/public/
+/vercel.json
+/site/
 
 # PFOS lokal scrape / probe çıktıları
 PFOS/veri/pimak/__pycache__/
