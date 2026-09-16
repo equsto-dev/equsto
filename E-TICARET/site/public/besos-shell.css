@@ -105,15 +105,10 @@ body.bd-page.besos header.hdr .hdr-right {
   visibility: visible !important;
 }
 
-body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-sub {
+/* Teslimat Adresi: mağaza mobil düzeninde yok; flex !important ile açılmasın */
+body.bd-page.besos header.hdr .hdr-alici {
   display: none !important;
-}
-
-@media (min-width: 769px) {
-  body.bd-page.besos header.hdr .hdr-alici {
-    display: flex !important;
-    visibility: visible !important;
-  }
+  visibility: hidden !important;
 }
 
 body.bd-page.besos header.hdr .pg-inner,
@@ -141,16 +136,16 @@ body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn {
   padding: 0 10px;
   margin: 0;
   border: none;
-  border-left: 1px solid var(--bes-rule);
+  border-left: 1px solid #e5e5e5;
   background: transparent;
-  color: rgba(255, 255, 255, 0.65);
+  color: #5c5c5c;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn:hover,
 body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn--open {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: #f5f5f5;
+  color: #111;
 }
 
 /* Aktif üst tab: mağaza ile aynı inset çizgi; renk --eq-topnav-dept-active-line */
@@ -290,22 +285,105 @@ body.bd-page.besos .footer.footer {
 }
 
 @media (max-width: 768px) {
+  /* Mağaza mobil header: 1. satır logo + dil/tema/hesap/sepet, 2. satır arama */
+  body.bd-page.besos header.hdr {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    row-gap: 10px;
+    column-gap: 8px;
+    padding-top: max(6px, env(safe-area-inset-top, 0px));
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+    padding-bottom: 10px;
+  }
+
   body.bd-page.besos header.hdr > a.logo {
     display: inline-flex !important;
-    max-width: 31vw !important;
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    max-width: 44vw !important;
+    min-height: 52px;
+    padding: 10px 0;
+    margin: 0;
+    align-self: center;
   }
 
   body.bd-page.besos header.hdr .srch-cat {
     display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    border: 0 !important;
   }
 
-  /* Mağaza ile aynı: teslimat satırı mobilde yok */
   body.bd-page.besos header.hdr .hdr-alici {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Mağaza mobil: logo + hesabım/sepet; arama tam genişlik */
+  body.bd-page.besos header.hdr > .pg-inner,
+  body.bd-page.besos header.hdr > .pg-inner.hdr-pg-inner {
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  body.bd-page.besos header.hdr > .pg-inner .srch,
+  body.bd-page.besos header.hdr > .pg-inner.hdr-pg-inner .srch {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    order: unset !important;
+    margin: 0 !important;
+    min-height: 46px;
+    border-radius: 8px !important;
+    background: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    overflow: hidden;
+  }
+
+  body.bd-page.besos header.hdr input.srch-input,
+  body.bd-page.besos header.hdr .srch-input {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    color: #111 !important;
+  }
+
+  body.bd-page.besos header.hdr input.srch-input::placeholder {
+    color: #5c5c5c !important;
+  }
+
+  body.bd-page.besos header.hdr .srch-btn,
+  body.bd-page.besos header.hdr button.srch-btn {
+    min-height: 44px;
+    min-width: 48px;
+    align-self: stretch;
+    background: #eceef2 !important;
+    border-left: 1px solid #cfd6e4 !important;
+    color: #001e50 !important;
+  }
+
+  body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn {
+    min-height: 44px;
+    min-width: 44px;
+    align-self: stretch;
+  }
+
   body.bd-page.besos header.hdr .hdr-right,
   body.bd-page.besos header.hdr > .hdr-right {
     display: flex !important;
@@ -319,6 +397,7 @@ body.bd-page.besos .footer.footer {
     min-height: 52px;
     min-width: 0;
     padding: 8px 0;
+    padding-right: 0 !important;
     justify-content: flex-end;
     align-self: center;
   }
@@ -327,6 +406,57 @@ body.bd-page.besos .footer.footer {
   }
   body.bd-page.besos header.hdr .theme-legend {
     display: none !important;
+  }
+  body.bd-page.besos header.hdr .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  body.bd-page.besos header.hdr .hdr-right a.eq-hdr-account,
+  body.bd-page.besos header.hdr .hdr-right #equsto-hdr-cart {
+    display: flex !important;
+  }
+  body.bd-page.besos header.hdr a.eq-hdr-account {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    max-width: 46vw;
+    text-align: right;
+  }
+  body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-lines {
+    display: flex;
+    align-items: flex-end;
+    min-width: 0;
+    flex-direction: column-reverse;
+  }
+  body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-title {
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--eq-hdr-bar-text, #fff) !important;
+  }
+  body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-sub {
+    display: block !important;
+    font-size: 10px !important;
+    color: var(--eq-hdr-bar-muted, rgba(255, 255, 255, 0.78)) !important;
+  }
+  body.bd-page.besos header.hdr a.eq-hdr-account .eq-hdr-account-ico {
+    display: block;
+    width: 26px;
+    height: 26px;
+    color: var(--eq-hdr-bar-text, #fff);
+  }
+  body.bd-page.besos header.hdr #equsto-hdr-cart > span:nth-of-type(2) {
+    display: none !important;
+  }
+  body.bd-page.besos header.hdr #equsto-hdr-cart {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 4px;
   }
 
   /* Mobil: mağaza dept topnav ile aynı şerit yüksekliği */
@@ -354,9 +484,9 @@ body.bd-page.besos .footer.footer {
   }
 
   body.bd-page.besos {
-    --bes-chrome-h: calc(56px + 44px);
-    --eq-filter-col-sticky-top: calc(56px + 44px);
-    --eq-drawer-chrome-top: calc(56px + 44px);
+    --bes-chrome-h: calc(124px + 44px);
+    --eq-filter-col-sticky-top: calc(124px + 44px);
+    --eq-drawer-chrome-top: calc(124px + 44px);
   }
 
   body.bd-page.besos.eq-cat-drawer-open {

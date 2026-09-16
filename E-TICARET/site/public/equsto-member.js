@@ -148,13 +148,12 @@
     if (!links.length) return;
     var o = readMember();
     var logged = equstoIsMemberLoggedIn();
-    var bdPage = !!(document.body && document.body.classList.contains("bd-page"));
     links.forEach(function (a) {
       var title = a.querySelector(".eq-hdr-account-title");
       var sub = a.querySelector(".eq-hdr-account-sub") || a.querySelector("span:first-of-type");
       if (logged) {
         var label = memberFirstName(o);
-        if (title) title.textContent = bdPage ? label : label + " \u203A";
+        if (title) title.textContent = label + " \u203A";
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
         a.setAttribute("title", o.email || __memberT("member.my_account", "Hesabım"));
         a.href =
@@ -162,11 +161,7 @@
             ? window.equstoUrl("account")
             : "/hesabim";
       } else {
-        if (title) {
-          title.textContent = bdPage
-            ? __memberT("member.my_account", "Hesabım")
-            : __memberT("member.sign_in", "Giriş yap") + " \u203A";
-        }
+        if (title) title.textContent = __memberT("member.sign_in", "Giriş yap") + " \u203A";
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
         a.setAttribute("title", __memberT("member.login_title", "Üye girişi"));
         a.href =

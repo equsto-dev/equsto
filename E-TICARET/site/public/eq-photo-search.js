@@ -23,8 +23,7 @@
     return (
       b &&
       b.classList.contains("eq-shop") &&
-      !b.classList.contains("admin-app") &&
-      !b.classList.contains("bd-page")
+      !b.classList.contains("admin-app")
     );
   }
 
