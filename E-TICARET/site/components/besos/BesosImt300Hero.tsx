@@ -33,7 +33,7 @@ export default function BesosImt300Hero() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
-              loading="eager"
+              loading="lazy"
             />
           </div>
           <div className="bd-hero-overlay" aria-hidden="true" />

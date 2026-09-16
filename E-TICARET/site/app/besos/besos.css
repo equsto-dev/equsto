@@ -100,7 +100,10 @@ body.bd-page.besos .bd-vitrum-jump {
 .bd-hero-media {
   position: relative;
   width: 100%;
-  height: max(420px, calc(100svh - var(--bes-chrome-h)));
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: min(62vh, 640px);
+  min-height: 240px;
   overflow: hidden;
   background: #000;
 }
@@ -218,9 +221,9 @@ body.bd-page.besos .bd-vitrum-jump {
   padding: 0;
 }
 .bd-ice-strip-inner img {
-  width: 100%;
-  height: clamp(120px, 22vw, 280px);
-  max-height: clamp(120px, 22vw, 280px);
+  width: 100% !important;
+  height: clamp(120px, 22vw, 280px) !important;
+  max-height: 280px !important;
   object-fit: contain;
   object-position: center;
   display: block;
