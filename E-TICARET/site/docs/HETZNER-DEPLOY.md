@@ -121,7 +121,7 @@ bash scripts/hetzner-install-cron.sh
 
 | Endpoint | Zamanlama |
 |----------|-----------|
-| `/api/cron/tcmb-kur` | Her gün 12:30 UTC |
+| `/api/cron/tcmb-kur` | Hafta içi 12:40 UTC (dept JSON + Prisma) |
 | `/api/cron/catalog-agent` | Pazartesi 03:00 UTC |
 | `/api/cron/mobile-agent` | Pazartesi 03:15 UTC |
 | `/api/cron/google-ads-agent` | Pazartesi 03:30 UTC |

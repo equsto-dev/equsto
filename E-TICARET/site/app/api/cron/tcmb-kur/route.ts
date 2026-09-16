@@ -5,13 +5,14 @@ import { euroSiteToTryTl } from "@/lib/equsto-pricing";
 import { db } from "@/lib/db";
 import { parseProductSpecs } from "@/lib/product-specs";
 import { fetchTcmbEurEfektifSatis, kurToApiPayload } from "@/lib/tcmb-kur";
+import { repriceDeptCatalogFromTcmb } from "@/lib/reprice-dept-catalog";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 /**
- * Vercel Cron — TCMB kuru ile EUR bazlı ürünlerin priceListTl alanını günceller.
- * Hafta içi 15:30 TR (12:30 UTC) — bülten sonrası.
+ * TCMB kuru: Prisma priceListTl + (yazılabilirse) dept JSON vitrin fiyatları.
+ * Hafta içi 15:40 TR (12:40 UTC) — bülten sonrası.
  */
 export async function GET(req: NextRequest) {
   const denied = assertCronSecret(req);
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const kur = await fetchTcmbEurEfektifSatis();
     if (kur.fallback) {
-      return adminErr("TCMB kuru alınamadı; DB güncellenmedi", 502);
+      return adminErr("TCMB kuru alınamadı; katalog güncellenmedi", 502);
     }
 
     const products = await db.product.findMany({
@@ -43,10 +44,13 @@ export async function GET(req: NextRequest) {
       updated += 1;
     }
 
+    const catalog = await repriceDeptCatalogFromTcmb();
+
     return adminOk({
       kur: kurToApiPayload(kur),
       productsChecked: products.length,
       productsUpdated: updated,
+      catalogJson: catalog,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Cron başarısız";
