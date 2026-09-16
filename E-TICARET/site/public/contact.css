@@ -149,9 +149,9 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   right: 16px;
   bottom: 90px;
   transform: none;
-  width: min(390px, calc(100vw - 16px));
-  height: min(720px, calc(100vh - 100px));
-  max-height: min(90vh, 844px);
+  width: min(440px, calc(100vw - 16px));
+  height: min(720px, calc(100dvh - 100px));
+  max-height: min(90dvh, 932px);
   min-height: 480px;
   display: flex;
   flex-direction: column;

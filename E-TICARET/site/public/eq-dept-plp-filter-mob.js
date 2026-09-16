@@ -37,7 +37,6 @@
   function countActiveFilters(state) {
     if (!state) return 0;
     var n = 0;
-    // eq-dept-plp.js state structure
     if (Array.isArray(state.activeTiles)) n += state.activeTiles.length;
     if (Array.isArray(state.brands)) n += state.brands.length;
     if (Array.isArray(state.olcu)) n += state.olcu.length;
@@ -46,13 +45,7 @@
     if (Array.isArray(state.buzdolapTip)) n += state.buzdolapTip.length;
     if (Array.isArray(state.pisirmeTip)) n += state.pisirmeTip.length;
     if (Array.isArray(state.komurluIzgaraGrup)) n += state.komurluIzgaraGrup.length;
-    if (state.priceMin !== '' && state.priceMin != null) n++;
-    if (state.priceMax !== '' && state.priceMax != null) n++;
-    // eq-arama-page.js filterState structure
     if (Array.isArray(state.depts)) n += state.depts.length;
-    if (Array.isArray(state.kuvetGn)) n += state.kuvetGn.length;
-    if (Array.isArray(state.buzdolapTip)) n += state.buzdolapTip.length;
-    if (Array.isArray(state.pisirmeTip)) n += state.pisirmeTip.length;
     if (state.priceMin !== '' && state.priceMin != null) n++;
     if (state.priceMax !== '' && state.priceMax != null) n++;
     return n;
@@ -131,16 +124,46 @@
       return host.innerHTML;
     }
 
-    if (isArama && global.EqAramaFacets) {
-      // Arama page facets - would need separate implementation
-      // For now, return placeholder
-      return '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler (Arama sayfası için ayrı uygulanacak)</div></div>';
+    if (isArama) {
+      return '';
     }
 
     return '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler yükleniyor…</div></div>';
   }
 
+  var aramaHomeParent = null;
+  var aramaHomeNext = null;
+
+  function isAramaPage() {
+    return !!document.getElementById('eq-arama-main');
+  }
+
+  function parkAramaFacets(into) {
+    var host = document.getElementById('eq-arama-facets');
+    if (!host || !into) return;
+    if (host.parentNode === into) return;
+    aramaHomeParent = host.parentNode;
+    aramaHomeNext = host.nextSibling;
+    into.appendChild(host);
+  }
+
+  function restoreAramaFacets() {
+    var host = document.getElementById('eq-arama-facets');
+    if (!host || !aramaHomeParent) return;
+    if (aramaHomeNext && aramaHomeNext.parentNode === aramaHomeParent) {
+      aramaHomeParent.insertBefore(host, aramaHomeNext);
+    } else {
+      aramaHomeParent.appendChild(host);
+    }
+    aramaHomeParent = null;
+    aramaHomeNext = null;
+  }
+
   function openSheet() {
+    if (document.body.classList.contains(OPEN_CLASS)) {
+      closeSheet();
+      return;
+    }
     var sheet = document.getElementById(SHEET_ID);
     var backdrop = document.getElementById(BACKDROP_ID);
     if (!sheet) {
@@ -148,6 +171,15 @@
       backdrop = document.getElementById(BACKDROP_ID);
     }
     document.body.classList.add(OPEN_CLASS);
+    document.body.classList.remove('eq-dept-filter-open');
+    sheet.classList.add('open');
+    if (backdrop) backdrop.classList.add('visible');
+    var content = document.getElementById('eq-dept-filter-sheet-content');
+    if (isAramaPage()) {
+      if (content) parkAramaFacets(content);
+    } else if (content) {
+      renderFacets(content);
+    }
     // Lock scroll
     var scrollY = window.scrollY || window.pageYOffset;
     document.body.style.top = -scrollY + 'px';
@@ -163,6 +195,14 @@
 
   function closeSheet() {
     document.body.classList.remove(OPEN_CLASS);
+    restoreAramaFacets();
+    var sheet = document.getElementById(SHEET_ID);
+    var backdrop = document.getElementById(BACKDROP_ID);
+    if (sheet) {
+      sheet.classList.remove('open');
+      sheet.removeAttribute('aria-modal');
+    }
+    if (backdrop) backdrop.classList.remove('visible');
     // Restore scroll
     var scrollY = parseInt(document.body.dataset.eqScrollY || '0', 10);
     document.body.style.position = '';
@@ -170,8 +210,6 @@
     document.body.style.width = '';
     window.scrollTo(0, scrollY);
     delete document.body.dataset.eqScrollY;
-    var sheet = document.getElementById(SHEET_ID);
-    if (sheet) sheet.removeAttribute('aria-modal');
   }
 
   function createSheet() {
@@ -209,12 +247,15 @@
       '<button type="button" class="eq-dept-filter-sheet__clear" data-i18n="plp.facet_clear_all">Temizle</button>' +
       '<button type="button" class="eq-dept-filter-sheet__apply" data-i18n="plp.facet_apply">Uygula</button>';
     actions.querySelector('.eq-dept-filter-sheet__clear').addEventListener('click', function () {
-      var state = getPlpState();
-      if (state && typeof global.__eqDeptPlpClearFilters === 'function') {
+      if (isAramaPage() && typeof global.__eqAramaClearAll === 'function') {
+        global.__eqAramaClearAll();
+      } else if (typeof global.__eqDeptPlpClearFilters === 'function') {
         global.__eqDeptPlpClearFilters();
+        if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
+        var content = document.getElementById('eq-dept-filter-sheet-content');
+        if (content) renderFacets(content);
       }
       updateButtonBadge();
-      if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
     });
     actions.querySelector('.eq-dept-filter-sheet__apply').addEventListener('click', closeSheet);
 
@@ -224,18 +265,6 @@
     sheet.appendChild(actions);
     document.body.appendChild(sheet);
     document.body.appendChild(backdrop);
-
-    // Render facets into content
-    renderFacets(content);
-
-    // Handle escape key
-    function onKeyDown(e) {
-      if (e.key === 'Escape') {
-        closeSheet();
-        document.removeEventListener('keydown', onKeyDown);
-      }
-    }
-    document.addEventListener('keydown', onKeyDown);
 
     return sheet;
   }
@@ -280,7 +309,7 @@
     }
 
     if (isArama) {
-      container.innerHTML = '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd" data-i18n="plp.filters_coming_soon">Arama sayfası filtreleri yakında</div></div>';
+      parkAramaFacets(container);
       return;
     }
 
@@ -288,28 +317,27 @@
   }
 
   function init() {
-    BTN_IDS.forEach(function (id) {
-      var btn = document.getElementById(id);
+    if (global.__eqDeptPlpFilterMobBound) return;
+    global.__eqDeptPlpFilterMobBound = true;
+
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var btn = t.closest('#eq-dept-plp-filter-mob, #eq-arama-filter-mob');
       if (!btn) return;
-
-      // Remove the !important display:none from CSS by overriding inline
-      btn.style.display = 'inline-flex';
-
-      // Add click handler
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        openSheet();
-      });
+      e.preventDefault();
+      e.stopPropagation();
+      openSheet();
     });
 
-    // Expose state getter for badge updates
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.body.classList.contains(OPEN_CLASS)) {
+        closeSheet();
+      }
+    });
+
     global.__eqDeptPlpFilterMobUpdateBadge = updateButtonBadge;
-
-    // Initial badge
     updateButtonBadge();
-
-    // Listen for filter changes from desktop to update badge
     document.addEventListener('equsto:plp-filters-changed', updateButtonBadge);
   }
 

@@ -1442,15 +1442,12 @@
       });
     }
 
-    var mob = document.getElementById("eq-arama-filter-mob");
     var bd = document.getElementById("eq-arama-filter-backdrop");
-    if (mob) {
-      mob.addEventListener("click", function () {
-        document.body.classList.toggle("eq-dept-filter-open");
-      });
-    }
     if (bd) {
       bd.addEventListener("click", function () {
+        if (window.__eqDeptPlpFilterMob && typeof window.__eqDeptPlpFilterMob.close === "function") {
+          window.__eqDeptPlpFilterMob.close();
+        }
         document.body.classList.remove("eq-dept-filter-open");
       });
     }
@@ -1550,6 +1547,10 @@
   window.__eqAramaState = filterState;
   window.__eqAramaRender = renderAll;
   window.__eqAramaClearFilters = resetFilters;
+  window.__eqAramaClearAll = function () {
+    resetFilters();
+    refetchWithFilters();
+  };
 
   document.addEventListener("equsto:kur-updated", function () {
     if (lastRender.q) renderAll();

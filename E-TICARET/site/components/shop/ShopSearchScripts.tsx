@@ -22,7 +22,8 @@ export default function ShopSearchScripts() {
       <Script src={`/eq-pisirme-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-arama-page.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-arama-page.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />
+      <Script src={`/eq-dept-plp-filter-mob.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />
     </>
   );
 }
