@@ -58,6 +58,7 @@ export default function BesosScripts() {
         onReady={() => window.EqustoCart?.syncBadge?.()}
       />
       <Script src={`/eq-besos-actions.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-besos-subnav-fix.js?v=${v}-chromescan`} strategy="afterInteractive" />
       <Script
         src={`/eq-footer.js?v=${v}`}
         strategy="afterInteractive"

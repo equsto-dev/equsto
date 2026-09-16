@@ -100,10 +100,16 @@ body.bd-page.besos header.hdr > a.logo {
 
 body.bd-page.besos header.hdr .srch-cat,
 body.bd-page.besos header.hdr .eq-hdr-account,
-body.bd-page.besos header.hdr .hdr-alici,
 body.bd-page.besos header.hdr .hdr-right {
   display: flex !important;
   visibility: visible !important;
+}
+
+@media (min-width: 769px) {
+  body.bd-page.besos header.hdr .hdr-alici {
+    display: flex !important;
+    visibility: visible !important;
+  }
 }
 
 body.bd-page.besos header.hdr .pg-inner,
@@ -143,18 +149,26 @@ body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn--open {
   color: #fff;
 }
 
+/* Aktif üst tab: mağaza ile aynı inset çizgi; renk --eq-topnav-dept-active-line */
+body.bd-page.besos .topnav-item,
+body.bd-page.besos .topnav-item.topnav-besos {
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.28;
+}
 body.bd-page.besos .topnav-item.active,
 body.bd-page.besos .topnav-besos.active {
-  box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;
+  font-weight: 500;
+  background: transparent !important;
+  box-shadow: inset 0 -2px 0 0 var(--eq-topnav-dept-active-line) !important;
 }
 
-/* Bar Design alt şerit — Bardaklar / Bar Ekipmanları / Buz Makinesi / Bar İstasyonları */
+/* Bar Design alt şerit — Bardaklar / Buz Makinesi / Bar Ekipmanları / Bar İstasyonları */
 body.bd-page.besos .bd-besos-subnav {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  display: block;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -166,28 +180,32 @@ body.bd-page.besos .bd-besos-subnav::-webkit-scrollbar {
   display: none;
 }
 body.bd-page.besos .bd-besos-subnav-inner {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: 1fr !important;
+  grid-auto-flow: column !important;
+  grid-auto-rows: 0 !important;
   align-items: stretch;
-  justify-content: center;
+  justify-content: stretch;
   gap: 0;
-  width: max-content;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 5px 12px 6px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 5px 8px 6px;
   box-sizing: border-box;
 }
 body.bd-page.besos .bd-besos-subnav-link,
 body.bd-page.besos .bd-besos-subnav a {
-  flex: 0 0 auto;
-  display: inline-flex;
+  flex: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
   min-width: 0;
-  max-width: none;
-  padding: 2px 22px 4px;
+  max-width: 100%;
+  width: 100%;
+  padding: 2px 4px 4px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -195,7 +213,10 @@ body.bd-page.besos .bd-besos-subnav a {
   color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 4px;
+  box-sizing: border-box;
   transition: color 0.15s ease, background 0.15s ease;
 }
 body.bd-page.besos .bd-besos-subnav-ico {
@@ -203,7 +224,7 @@ body.bd-page.besos .bd-besos-subnav-ico {
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 44px;
+  min-width: 0;
   height: 44px;
   color: #fff;
 }
@@ -222,6 +243,10 @@ body.bd-page.besos .bd-besos-subnav-ico svg {
 body.bd-page.besos .bd-besos-subnav-label {
   line-height: 1.15;
   text-align: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body.bd-page.besos .bd-besos-subnav-link:hover,
 body.bd-page.besos .bd-besos-subnav a:hover {
@@ -270,19 +295,63 @@ body.bd-page.besos .footer.footer {
     display: none !important;
   }
 
-  body.bd-page.besos nav.topnav {
+  /* Mağaza ile aynı: teslimat satırı mobilde yok */
+  body.bd-page.besos header.hdr .hdr-alici {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Mağaza mobil: logo + hesabım/sepet; arama tam genişlik */
+  body.bd-page.besos header.hdr .hdr-right,
+  body.bd-page.besos header.hdr > .hdr-right {
     display: flex !important;
-    max-height: none;
-    min-height: 48px;
+    visibility: visible !important;
+    flex: 1 1 auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: auto !important;
+    order: 2 !important;
+    font-size: 11px !important;
+    min-height: 52px;
+    min-width: 0;
+    padding: 8px 0;
+    justify-content: flex-end;
+    align-self: center;
+  }
+  body.bd-page.besos header.hdr .hdr-right .eq-hdr-orders {
+    display: none !important;
+  }
+  body.bd-page.besos header.hdr .theme-legend {
+    display: none !important;
+  }
+
+  /* Mobil: mağaza dept topnav ile aynı şerit yüksekliği */
+  body.bd-page.besos nav.topnav,
+  body.bd-page.besos .topnav {
+    display: flex !important;
+    max-height: 44px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
+  body.bd-page.besos .topnav-item,
+  body.bd-page.besos .topnav-item.topnav-besos {
+    padding: 7px 11px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.28;
+    min-height: 44px;
+    background: transparent !important;
+  }
+  body.bd-page.besos .topnav-item.active,
+  body.bd-page.besos .topnav-besos.active {
+    background: transparent !important;
+  }
 
   body.bd-page.besos {
-    --bes-chrome-h: calc(56px + 48px);
-    --eq-filter-col-sticky-top: calc(56px + 48px);
-    --eq-drawer-chrome-top: calc(56px + 48px);
+    --bes-chrome-h: calc(56px + 44px);
+    --eq-filter-col-sticky-top: calc(56px + 44px);
+    --eq-drawer-chrome-top: calc(56px + 44px);
   }
 
   body.bd-page.besos.eq-cat-drawer-open {
@@ -311,10 +380,21 @@ body.bd-page.besos .footer.footer {
     overflow: hidden;
   }
 
+  /* Kapalı çekmece: -108% üstte bir satır sızdırıyordu (Taşıma / Markalarımız) */
+  body.bd-page.besos:not(.eq-cat-drawer-open) .cat-drawer:not(.open),
+  body.bd-page.besos:not(.eq-cat-drawer-open) .cat-drawer.eq-amazon-shop-all:not(.open) {
+    visibility: hidden !important;
+    pointer-events: none !important;
+    clip-path: inset(0 0 100% 0);
+  }
+
   body.bd-page.besos .cat-drawer.open,
   body.bd-page.besos .cat-drawer.eq-amazon-shop-all.open {
     transform: translate3d(0, 0, 0) !important;
     left: 0 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    clip-path: none;
   }
 
   body.bd-page.besos .drawer-overlay-close {
@@ -328,38 +408,96 @@ body.bd-page.besos .footer.footer {
   }
 }
 
-/* ── Bar Design: kategori ikon şeridi + hero/video mobil ince ayar ─────────── */
+/* ── Bar Design: 4 kategori — tek satır, ikon + etiket ─────────────── */
 @media (max-width: 768px) {
-  /* Kategori ikonları artık kaydırılmaz; taşınca ortalanarak satırlara sarılır */
   body.bd-page.besos .bd-besos-subnav {
-    justify-content: stretch;
+    display: block !important;
+    overflow: hidden !important;
+    background: #222 !important;
+    border-bottom: 2px solid var(--bes-gold) !important;
   }
   body.bd-page.besos .bd-besos-subnav-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-    padding: 6px 8px 7px;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-rows: 1fr !important;
+    grid-auto-flow: column !important;
+    grid-auto-rows: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    gap: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 6px 2px 8px !important;
+    box-sizing: border-box;
+    overflow: hidden !important;
   }
   body.bd-page.besos .bd-besos-subnav-link,
   body.bd-page.besos .bd-besos-subnav a {
-    padding: 2px 10px 4px;
-    min-width: 0;
+    flex: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 4px 2px !important;
+    font-size: 9px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    white-space: normal !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    border-right: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
   }
   body.bd-page.besos .bd-besos-subnav-ico {
-    min-width: 36px;
-    height: 36px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 28px !important;
+    color: #fff !important;
   }
   body.bd-page.besos .bd-besos-subnav-ico img {
-    height: 36px;
-    max-width: 56px;
+    display: block !important;
+    height: 28px !important;
+    width: auto !important;
+    max-width: 40px !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
   }
   body.bd-page.besos .bd-besos-subnav-label {
-    font-size: 10px;
+    display: block !important;
+    font-size: 9px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+    color: inherit !important;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  body.bd-page.besos .bd-besos-subnav-link:hover,
+  body.bd-page.besos .bd-besos-subnav a:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+  body.bd-page.besos .bd-besos-subnav-link.is-active,
+  body.bd-page.besos .bd-besos-subnav a.is-active {
+    color: #fff !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+    box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;
   }
 
-  /* Hero video: yatay (landscape) ekranda görünür yüksekliği aşmaz */
   body.bd-page.besos .bd-hero-media {
     height: min(480px, calc(100svh - var(--bes-chrome-h)));
   }
@@ -367,7 +505,6 @@ body.bd-page.besos .footer.footer {
     height: clamp(260px, 56vw, 480px);
   }
 
-  /* Sayfada yatay kaydırma olmasın (tarayıcı kaydırma çubuğu dahil) */
   body.bd-page.besos {
     overflow-x: clip;
   }

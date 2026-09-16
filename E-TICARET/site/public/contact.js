@@ -1551,14 +1551,14 @@
 try {
   if (document.body && document.body.classList.contains("besos")) {
     var __eqBesosSubnav = document.createElement("script");
-    __eqBesosSubnav.src = "/eq-besos-subnav-fix.js?v=20260916f";
+    __eqBesosSubnav.src = "/eq-besos-subnav-fix.js?v=20260916h";
     __eqBesosSubnav.defer = true;
     document.head.appendChild(__eqBesosSubnav);
   } else {
     document.addEventListener("DOMContentLoaded", function () {
       if (!document.body || !document.body.classList.contains("besos")) return;
       var s = document.createElement("script");
-      s.src = "/eq-besos-subnav-fix.js?v=20260916f";
+      s.src = "/eq-besos-subnav-fix.js?v=20260916h";
       s.defer = true;
       document.head.appendChild(s);
     });

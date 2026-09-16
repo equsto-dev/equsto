@@ -5874,6 +5874,7 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upl
     min-width: 48px;
   }
 
+  /* Mobil Bar Design: dept topnav görünür (mağaza ile aynı yatay şerit) */
   body.bd-page.besos nav.topnav {
     display: flex !important;
     max-height: 44px;
@@ -5887,8 +5888,7 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upl
   }
 
   body.bd-page.besos .bd-besos-subnav {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
   }
 
   body.bd-page.besos .bd-vitrum-jump {
@@ -6374,7 +6374,7 @@ html.eq-vitrin-white-lock body.bd-page {
     min-width: 0;
   }
   body.bd-page header.hdr .hdr-right {
-    display: none !important;
+    display: flex !important;
   }
   body.bd-page .pg-inner {
     padding-left: max(12px, env(safe-area-inset-left, 0px));
@@ -6387,6 +6387,10 @@ html.eq-vitrin-white-lock body.bd-page {
   }
   body.bd-page .topnav-item {
     min-height: 44px;
+    padding: 7px 11px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.28;
     touch-action: manipulation;
   }
 
