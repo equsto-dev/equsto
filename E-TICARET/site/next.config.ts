@@ -264,7 +264,6 @@ const nextConfig: NextConfig = {
       { source: "/admin", destination: "/admin.html", permanent: false },
       { source: "/en/admin", destination: "/admin.html", permanent: false },
       { source: "/shop/index.html", destination: "/", permanent: true },
-      { source: "/shop", destination: "/", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       { source: "/dolap.html", destination: "/shop/tezgah", permanent: true },
       { source: "/shop/dolap", destination: "/shop/tezgah", permanent: true },

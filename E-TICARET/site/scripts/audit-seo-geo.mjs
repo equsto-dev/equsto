@@ -44,9 +44,26 @@ function writeCsv(rows) {
 }
 
 function simulateProductTitle(row) {
-  const name = String(row.name || "").trim();
+  const name = String(row.name || "").trim().replace(/\.$/, "");
   const brand = String(row.brand || "").trim();
-  return `${name}${brand ? ` · ${brand}` : ""} · Equsto`;
+  const sku = String(row.sku || row.id || row.model || row.urun_kodu || "").trim();
+  const brandShort = brand.split(/\s+/)[0] || brand;
+  let core = name;
+  if (
+    brandShort &&
+    !core.toLocaleLowerCase("tr-TR").includes(brandShort.toLocaleLowerCase("tr-TR"))
+  ) {
+    core = `${brandShort} ${core}`;
+  }
+  const suffix = " | Equsto";
+  const reservedCode = sku ? ` · ${sku}` : "";
+  const maxCore = Math.max(20, 70 - suffix.length - reservedCode.length);
+  if (core.length > maxCore) core = `${core.slice(0, maxCore - 1).trimEnd()}…`;
+  const finalCode =
+    sku && !core.toLocaleLowerCase("tr-TR").includes(sku.toLocaleLowerCase("tr-TR"))
+      ? ` · ${sku}`
+      : "";
+  return `${core}${finalCode}${suffix}`;
 }
 
 function simulateProductDescription(row) {

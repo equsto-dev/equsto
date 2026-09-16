@@ -34,6 +34,12 @@ export default function GlobalSiteJsonLd() {
           "https://equsto.com/llms.txt",
           "https://equsto.com/hakkimizda",
           "https://equsto.com/pfos",
+          ...(process.env.NEXT_PUBLIC_EQUSTO_LINKEDIN_URL?.trim()
+            ? [process.env.NEXT_PUBLIC_EQUSTO_LINKEDIN_URL.trim()]
+            : []),
+          ...(process.env.NEXT_PUBLIC_EQUSTO_GBP_URL?.trim()
+            ? [process.env.NEXT_PUBLIC_EQUSTO_GBP_URL.trim()]
+            : []),
         ],
       },
       {
