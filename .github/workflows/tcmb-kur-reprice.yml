@@ -1,0 +1,36 @@
+name: TCMB kur katalog
+
+on:
+  schedule:
+    # Hafta içi 15:40 TR — TCMB bülteni (~15:30) sonrası
+    - cron: "40 12 * * 1-5"
+  workflow_dispatch:
+
+concurrency:
+  group: tcmb-kur-reprice
+  cancel-in-progress: false
+
+jobs:
+  reprice:
+    runs-on: ubuntu-latest
+    env:
+      HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+    steps:
+      - name: Canlı katalogu TCMB efektif satışa çek
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ env.HETZNER_HOST != '' && env.HETZNER_HOST || '167.233.86.144' }}
+          username: root
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
+          command_timeout: 10m
+          script: |
+            set -euo pipefail
+            cd /opt/equsto/E-TICARET/site
+            if [[ ! -f scripts/reprice-all-from-tcmb-kur.mjs ]]; then
+              echo "reprice script yok"
+              exit 1
+            fi
+            node scripts/reprice-all-from-tcmb-kur.mjs
+            chown -R 1001:1001 public/data 2>/dev/null || true
+            echo "[tcmb-kur] host public/data güncellendi (bind mount)"

@@ -19,11 +19,16 @@ const DRY = process.argv.includes("--dry-run");
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const HAVALE_ISKONTO = 0.02;
 
+const ALLOW_FALLBACK = process.argv.includes("--allow-fallback");
 const kurMeta = await fetchTcmbEurRate();
 const kur = Number(kurMeta.rate);
 if (!(kur > 0)) {
   console.error("TCMB kur alınamadı");
   process.exit(1);
+}
+if (kurMeta.fallback && !ALLOW_FALLBACK) {
+  console.error("TCMB fallback kur; katalog güncellenmedi");
+  process.exit(2);
 }
 
 function fmtTry(n) {

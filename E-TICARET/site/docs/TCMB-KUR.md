@@ -37,9 +37,19 @@ GET https://equsto.com/api/kur
 
 Örnek ADG-10S: 1.620 EUR katalog → 972 EUR site → × 52,9424 ≈ **51.460 TRY**
 
+## Otomatik katalog güncelleme
+
+Mağaza fiyatları `public/data/dept/*.json` içindeki `fiyat_tl` alanından gelir (Hetzner’de bind mount).
+
+Hafta içi **15:40 TR** (12:40 UTC):
+
+1. Hetzner crontab → `GET /api/cron/tcmb-kur` (Prisma + dept JSON)
+2. GitHub Actions `tcmb-kur-reprice.yml` → sunucuda `reprice-all-from-tcmb-kur.mjs`
+3. Her tam deploy (`hetzner-deploy.sh`) pull sonrası aynı scripti çalıştırır (git’teki eski kurun üzerine yazmasın)
+
 ## Vercel Cron (DB senkronu)
 
-`vercel.json` → günde **1 kez** **12:30 UTC** (15:30 TR) → `GET /api/cron/tcmb-kur` (Vercel Hobby: saatlik cron deploy’u reddeder)
+`GET /api/cron/tcmb-kur` — TCMB yoksa JSON/DB güncellenmez. Vercel’de dept dizini yazılamazsa yalnızca Prisma güncellenir.
 
 Vercel env:
 

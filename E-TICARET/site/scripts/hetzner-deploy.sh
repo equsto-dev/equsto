@@ -57,6 +57,12 @@ if [[ -d scripts/data ]]; then
   chown -R 1001:1001 scripts/data 2>/dev/null || true
 fi
 
+if [[ -f scripts/reprice-all-from-tcmb-kur.mjs ]]; then
+  echo "[hetzner-deploy] TCMB kur ile katalog TL fiyatları..."
+  node scripts/reprice-all-from-tcmb-kur.mjs || echo "[hetzner-deploy] kur reprice uyarı — devam"
+  chown -R 1001:1001 public/data 2>/dev/null || true
+fi
+
 docker compose --env-file .env.production build --pull --no-cache
 
 echo "[hetzner-deploy] eski app container adı çakışması temizliği..."
@@ -94,5 +100,10 @@ echo "[hetzner-deploy] sağlık kontrolü..."
 sleep 3
 docker compose --env-file .env.production exec -T app node -e "fetch('http://127.0.0.1:3000/').then(r=>{console.log('HTTP',r.status);process.exit(r.ok?0:1)}).catch(e=>{console.error(e);process.exit(1)})" \
   || docker compose --env-file .env.production logs --tail=30 app
+
+if [[ -f scripts/hetzner-install-cron.sh ]]; then
+  echo "[hetzner-deploy] crontab (TCMB + ajanlar)..."
+  bash scripts/hetzner-install-cron.sh || echo "[hetzner-deploy] cron kurulum uyarı"
+fi
 
 echo "[hetzner-deploy] OK"

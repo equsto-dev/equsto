@@ -31,7 +31,7 @@ fi
 AUTH="Authorization: Bearer ${CRON_SECRET}"
 
 CRON_BLOCK="# Equsto ajanları — ${BASE_URL}
-30 12 * * * curl -fsS -H \"${AUTH}\" \"${BASE_URL}/api/cron/tcmb-kur\" >/tmp/equsto-cron-tcmb.log 2>&1
+40 12 * * 1-5 curl -fsS -H \"${AUTH}\" \"${BASE_URL}/api/cron/tcmb-kur\" >/tmp/equsto-cron-tcmb.log 2>&1
 0 3 * * 1 curl -fsS -H \"${AUTH}\" \"${BASE_URL}/api/cron/catalog-agent?ai=1\" >/tmp/equsto-cron-catalog.log 2>&1
 15 3 * * 1 curl -fsS -H \"${AUTH}\" \"${BASE_URL}/api/cron/mobile-agent?ai=1\" >/tmp/equsto-cron-mobile.log 2>&1
 30 3 * * 1 curl -fsS -H \"${AUTH}\" \"${BASE_URL}/api/cron/google-ads-agent?ai=1\" >/tmp/equsto-cron-ads.log 2>&1
