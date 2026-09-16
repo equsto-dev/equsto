@@ -12,7 +12,7 @@ const PUBLIC = path.join(ROOT, "public");
 const REQUIRED_ROOT = [
   "theme.css",
   "theme.js",
-  "eq-home-mutbex.css",
+  "eq-home-equsto.css",
   "eq-home-decor.css",
   "contact.css",
   "eq-home-vitrin.js",

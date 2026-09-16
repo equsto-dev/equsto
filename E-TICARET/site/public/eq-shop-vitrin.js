@@ -1,6 +1,6 @@
 /**
  * Kategori / mağaza — Mutbex ürün kartı (rozet, sepete ekle, karşılaştır).
- * Şema HTML: EqCategoryShell + eq-home-mutbex.css
+ * Şema HTML: EqCategoryShell + eq-home-equsto.css
  */
 (function (global) {
   'use strict';

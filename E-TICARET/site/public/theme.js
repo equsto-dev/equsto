@@ -643,10 +643,10 @@
       cmp.src = "/eq-product-compare.js";
       cmp.defer = true;
       document.head.appendChild(cmp);
-      if (!document.querySelector('link[href="/eq-home-mutbex.css"]')) {
+      if (!document.querySelector('link[href="/eq-home-equsto.css"]') && !document.querySelector('link[href="/eq-home-mutbex.css"]')) {
         var lnk = document.createElement("link");
         lnk.rel = "stylesheet";
-        lnk.href = "/eq-home-mutbex.css?v=20260518r";
+        lnk.href = "/eq-home-equsto.css?v=20260518r";
         document.head.appendChild(lnk);
       }
     }

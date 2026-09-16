@@ -23,7 +23,8 @@ Oluşturulma: 2026-05-30T11:24:44.362Z
 | `theme.css/` | 1 | 0.2 |
 | `ecom-cart.js/` | 1 | 0.1 |
 | `eq-geo-landing.js/` | 1 | 0.1 |
-| `eq-home-mutbex.css/` | 1 | 0.1 |
+| `eq-home-equsto.css` | 1 | 0.1 |
+| `eq-home-mutbex.css/` (eski → rewrite) | 0 | 0 |
 | `eq-pfos-wizard.css/` | 1 | 0.1 |
 | `eq-product-page-inline.js/` | 1 | 0.1 |
 | `equsto-bize-ulasin-isimlik.png/` | 1 | 0.1 |

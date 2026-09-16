@@ -10,7 +10,7 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
       <link rel="stylesheet" href={`/theme.css?v=${v}&m=20260916-align-green`} />
       {variant !== "pfos" && variant !== "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
-        <link rel="stylesheet" href={`/eq-home-mutbex.css?v=${v}`} />
+        <link rel="stylesheet" href={`/eq-home-equsto.css?v=${v}`} />
       ) : null}
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${v}&m=20260916-phones`} />
@@ -24,7 +24,7 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
       {variant === "product" ? (
         <>
           {/* eslint-disable-next-line @next/next/no-css-tags */}
-          <link rel="stylesheet" href={`/eq-home-mutbex.css?v=${v}`} />
+          <link rel="stylesheet" href={`/eq-home-equsto.css?v=${v}`} />
           {/* eslint-disable-next-line @next/next/no-css-tags */}
           <link rel="stylesheet" href={`/eq-product-page.css?v=${pdpCssV}`} />
           {/* eslint-disable-next-line @next/next/no-css-tags */}

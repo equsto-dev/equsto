@@ -38,7 +38,7 @@ YASAK (onay olmadan):
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   public/eq-product-card-tint.js     — renk örnekleme v12, CSS değişkenleri
   public/theme.css                   — .eq-prod-tint-active + PLP ambient CSS
-  public/eq-home-mutbex.css          — ana sayfa kart hover override
+  public/eq-home-equsto.css          — ana sayfa kart hover override (eski: eq-home-mutbex.css)
   lib/vitrin/legacy-scripts.ts       — HOME_SCRIPTS → eq-product-card-tint.js
   components/shop/ShopPlpScripts.tsx
   components/shop/ShopSearchScripts.tsx
