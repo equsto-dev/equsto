@@ -178,7 +178,7 @@ const nextConfig: NextConfig = {
           "font-src 'self' data: https://fonts.gstatic.com",
           "connect-src 'self' https: wss:",
           "media-src 'self' blob: https:",
-          "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com",
+          "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com",
           "frame-ancestors 'self'",
           "base-uri 'self'",
           "form-action 'self'",

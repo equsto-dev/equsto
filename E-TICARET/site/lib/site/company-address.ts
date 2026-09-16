@@ -1,8 +1,9 @@
-/** Equsto ofis adresi — iletişim sayfası ve harita. */
+/** Equsto ofis adresi — iletişim sayfası ve harita (GBP ile hizalı). */
 export const EQUSTO_OFFICE_ADDRESS =
-  "Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane/ İstanbul";
+  "Çağlayan Mah. Fevziçakmak Cad. No: 69/1 Kağıthane/ İstanbul";
 
+/** GBP pin — www.google.com (CSP frame-src); API key gerekmez */
 export const EQUSTO_OFFICE_MAP_EMBED =
-  "https://maps.google.com/maps?q=" +
-  encodeURIComponent("Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane İstanbul") +
+  "https://www.google.com/maps?q=" +
+  encodeURIComponent("41.0823311,28.9847494") +
   "&hl=tr&z=16&output=embed";
