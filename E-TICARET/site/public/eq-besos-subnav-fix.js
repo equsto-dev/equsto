@@ -15,17 +15,28 @@
 
     var mobile = window.matchMedia("(max-width: 768px)").matches;
     if (!mobile) {
-      clearInline(nav);
-      clearInline(inner);
+      nav.style.setProperty("width", "100%", "important");
+      inner.style.setProperty("display", "flex", "important");
+      inner.style.setProperty("flex-wrap", "nowrap", "important");
+      inner.style.setProperty("justify-content", "center", "important");
+      inner.style.setProperty("align-items", "stretch", "important");
+      inner.style.setProperty("width", "100%", "important");
+      inner.style.setProperty("max-width", "none", "important");
+      inner.style.setProperty("margin", "0 auto", "important");
+      inner.style.setProperty("gap", "2px", "important");
+      inner.style.setProperty("grid-template-columns", "none", "important");
       var desktopLinks = inner.querySelectorAll("a, .bd-besos-subnav-link");
       for (var d = 0; d < desktopLinks.length; d++) {
-        clearInline(desktopLinks[d]);
+        desktopLinks[d].style.setProperty("display", "flex", "important");
+        desktopLinks[d].style.setProperty("flex", "0 0 auto", "important");
+        desktopLinks[d].style.setProperty("width", "auto", "important");
+        desktopLinks[d].style.setProperty("max-width", "none", "important");
         var dIco = desktopLinks[d].querySelector(".bd-besos-subnav-ico");
         var dImg = desktopLinks[d].querySelector(".bd-besos-subnav-ico img");
         var dLab = desktopLinks[d].querySelector(".bd-besos-subnav-label");
-        clearInline(dIco);
-        clearInline(dImg);
-        clearInline(dLab);
+        if (dIco) dIco.removeAttribute("style");
+        if (dImg) dImg.removeAttribute("style");
+        if (dLab) dLab.removeAttribute("style");
       }
       return;
     }
