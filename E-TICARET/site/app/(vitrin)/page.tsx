@@ -25,9 +25,9 @@ export default function HomePage() {
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="preload" href={`/theme.css?v=${SHOP_ASSET_V}&m=20260916-drawer-filter`} as="style" />
+      <link rel="preload" href={`/theme.css?v=${SHOP_ASSET_V}&m=20260916-align-green`} as="style" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/theme.css?v=${SHOP_ASSET_V}&m=20260916-drawer-filter`} />
+      <link rel="stylesheet" href={`/theme.css?v=${SHOP_ASSET_V}&m=20260916-align-green`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260916-phones`} />
       <style id="eq-home-critical-css" dangerouslySetInnerHTML={{ __html: HOME_CRITICAL_CSS }} />

@@ -329,7 +329,8 @@ body.bd-page.besos .footer.footer {
   body.bd-page.besos nav.topnav,
   body.bd-page.besos .topnav {
     display: flex !important;
-    max-height: 44px;
+    max-height: none;
+    min-height: 44px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
