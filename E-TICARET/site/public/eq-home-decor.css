@@ -135,10 +135,26 @@ body.eq-home-decor.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
+  position: relative;
   aspect-ratio: 1024 / 331;
   min-height: 0;
   max-height: none;
   height: auto;
+  overflow: hidden;
+}
+
+/* mutbex.css yoksa/404 olsa bile slaytlar üst üste yığılmasın — yalnız aktif görünsün */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 /* Split slaytlar (IMT300 · XP) daha yüksek kutu ister; PFOS panoramik oranı bozulmasın */
@@ -158,7 +174,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
 
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
-  .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only {
+  .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only.is-active {
   display: block !important;
   width: 100%;
   height: 100%;
@@ -342,8 +358,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
   background-color: #001e50;
 }
 
-/* Soğutma — sol metin (~34%), sağ ürün vitrin (~66%) */
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma.eq-mx-hero__slide--split {
+/* Soğutma — sol metin (~34%), sağ ürün vitrin (~66%) — yalnız aktif */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma.eq-mx-hero__slide--split.is-active {
   display: grid !important;
   grid-template-columns: minmax(200px, 34%) minmax(0, 1fr);
   gap: 0;
@@ -440,11 +456,11 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutm
   background: linear-gradient(180deg, rgba(0, 20, 50, 0.08) 0%, rgba(0, 20, 50, 0.72) 100%);
 }
 
-/* mutbex.css .eq-mx-hero__slide { display:block } dosyadan sonra gelir — yüksek özgüllük şart */
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
+/* mutbex.css .eq-mx-hero__slide { display:block } dosyadan sonra gelir — yalnız aktif slayt */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.is-active,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.is-active,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.is-active,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split.is-active {
   background-color: #001e50;
   display: flex;
   flex-direction: row;
@@ -813,10 +829,10 @@ body.eq-home-decor
   line-height: 1.2;
 }
 
-/* Split — IMT300 · Bar · Electrolux XP: 3/5 görsel · 2/5 promo */
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split {
+/* Split — IMT300 · Bar · Electrolux XP: 3/5 görsel · 2/5 promo — yalnız aktif */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split.is-active,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split.is-active,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split.is-active {
   display: grid !important;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: 0;
