@@ -50,12 +50,18 @@ function urlEntry(loc, opts = {}) {
 }
 
 function writeUrlset(file, urls) {
-  const body = urls.map(u => `  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${u.lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
-  </url>`).join("\n");
+  const body = urls
+    .map((u) => {
+      // urlEntry historically returned raw XML strings; object form is preferred
+      if (typeof u === "string") return u;
+      return `  <url>
+    <loc>${String(u.loc || "").replace(/&/g, "&amp;")}</loc>
+    <lastmod>${u.lastmod || TODAY}</lastmod>
+    <changefreq>${u.changefreq || "weekly"}</changefreq>
+    <priority>${u.priority || "0.7"}</priority>
+  </url>`;
+    })
+    .join("\n");
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${body}

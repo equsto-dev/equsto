@@ -205,8 +205,7 @@ export function collectExpectedUrls(rows, tips) {
   add("/shop");
   add("/shop/marka");
   add("/pfos");
-  add("/besos");
-  add("/arama");
+  // /besos → redirect/noindex hub; /arama → noindex — sitemap'te yok (bilinçli)
 
   for (const lang of ["", "/en"]) {
     add(`${lang}/shop`);
@@ -221,13 +220,7 @@ export function collectExpectedUrls(rows, tips) {
     add(`/en/shop/marka/${encodeURIComponent(slug)}`);
   }
 
-  for (const t of tips) {
-    const dept = tipDeptToShop(t.dept);
-    if (!SHOP_DEPTS.includes(dept)) continue;
-    const q = `?tip=${encodeURIComponent(t.tip)}`;
-    add(`/shop/${dept}${q}`);
-    add(`/en/shop/${dept}${q}`);
-  }
+  // ?tip= filtre URL'leri canonical parent'a gider — sitemap'e alınmaz (buildCategories boş)
 
   const seen = new Set();
   for (const row of rows) {
