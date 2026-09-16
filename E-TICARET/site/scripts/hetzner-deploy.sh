@@ -58,7 +58,13 @@ if [[ -d scripts/data ]]; then
 fi
 
 docker compose --env-file .env.production build --pull --no-cache
-docker compose --env-file .env.production up -d
+
+echo "[hetzner-deploy] eski app container adı çakışması temizliği..."
+docker ps -a --format '{{.Names}}' | grep -E '(^|_)equsto-app-1$' | while read -r name; do
+  docker rm -f "$name" >/dev/null 2>&1 || true
+done
+
+docker compose --env-file .env.production up -d --remove-orphans
 
 export EQUSTO_ENV_FILE=.env.production
 
