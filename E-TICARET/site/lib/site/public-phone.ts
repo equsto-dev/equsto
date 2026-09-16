@@ -5,5 +5,6 @@
  */
 export const HIDE_PUBLIC_PHONE = true;
 
-export const PUBLIC_PHONE_TEL = "+905326840152";
-export const PUBLIC_PHONE_DISPLAY = "+90 532 684 01 52";
+/** GBP ile hizalı kamu hat (şimdilik) */
+export const PUBLIC_PHONE_TEL = "+905542378532";
+export const PUBLIC_PHONE_DISPLAY = "+90 554 237 85 32";

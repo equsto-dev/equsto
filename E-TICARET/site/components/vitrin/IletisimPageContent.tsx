@@ -62,7 +62,9 @@ export default function IletisimPageContent() {
                   <th scope="row" data-i18n="contact.info_hours_l">
                     Çalışma saatleri
                   </th>
-                  <td data-i18n="contact.info_hours_v">Pazartesi–Cuma 09:00–18:00 (TR)</td>
+                  <td data-i18n="contact.info_hours_v">
+                    Pazartesi–Cuma 08:30–19:00 · Cumartesi 08:30–15:00 · Pazar kapalı
+                  </td>
                 </tr>
               </tbody>
             </table>

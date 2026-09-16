@@ -26,7 +26,7 @@ export default function ContactLocalBusinessJsonLd({ lang = "tr" }: { lang?: "tr
     description: isEn
       ? "Equsto supplies commercial kitchen equipment and project planning for restaurants, hotels, cafes and cloud kitchens. Authorized Öztiryakiler dealer."
       : "Equsto; restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanı ve proje planlama. Öztiryakiler yetkili bayii.",
-    telephone: "+90-532-684-0152",
+    telephone: "+90-554-237-8532",
     email: "info@equsto.com",
     address: {
       "@type": "PostalAddress",
@@ -36,9 +36,23 @@ export default function ContactLocalBusinessJsonLd({ lang = "tr" }: { lang?: "tr
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 41.0865,
-      longitude: 28.9784,
+      latitude: 41.0823311,
+      longitude: 28.9847494,
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:30",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:30",
+        closes: "15:00",
+      },
+    ],
     areaServed: ["TR", "AE", "QA", "SA"],
     sameAs,
     priceRange: "$$",
