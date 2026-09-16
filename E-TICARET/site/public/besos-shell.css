@@ -546,6 +546,27 @@ body.bd-page.besos .footer.footer {
   body.bd-page.besos nav.topnav {
     display: flex !important;
   }
+
+  /* 4’lü grup: masaüstünde tam genişliğe yayılma */
+  body.bd-page.besos .bd-besos-subnav-inner {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    gap: 2px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 6px 16px 8px !important;
+    grid-template-columns: none !important;
+  }
+  body.bd-page.besos .bd-besos-subnav-link,
+  body.bd-page.besos .bd-besos-subnav a {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 6px 20px 8px !important;
+  }
 }
 
 /* ── Bar Design: 4 kategori — tek satır, ikon + etiket ─────────────── */
