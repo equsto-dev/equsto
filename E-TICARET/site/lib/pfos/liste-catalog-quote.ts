@@ -25,6 +25,7 @@ import {
   invalidateKatalogGorselCache,
 } from "@/lib/pfos/core/katalog-gorsel";
 import { enrichEslesmisUrunKw } from "@/lib/pfos/core/enrich-eslesmis-kw";
+import { matchShopCatalog } from "@/lib/pfos/core/shop-catalog-match";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
@@ -178,6 +179,24 @@ export async function calculateListeQuoteCatalog(
         urunTipi: item.urunTipi,
       });
       matchMeta = metaFromReferansMatch(referansMatch, itemListeKey);
+
+      if (!urun) {
+        const tip = resolveTipKodu(item.urunTipi);
+        if (tip && !/^pfos_/i.test(tip)) {
+          const shop = await matchShopCatalog(tip, fiyatStratejisi);
+          if (shop && shop.fiyat > 0) {
+            urun = await enrichEslesmisUrunKw(shop, {
+              isim: item.isim,
+              urunTipi: item.urunTipi,
+            });
+            matchMeta = {
+              eslesmeKatmani: "katalog_arama",
+              eslesmeLinkKey: undefined,
+              referansListeKey: itemListeKey,
+            };
+          }
+        }
+      }
     }
 
     const mevcutNot = /müşteride mevcut/i.test(item.notlar ?? "");
@@ -285,7 +304,7 @@ export async function calculateListeQuoteCatalog(
   const uyarilar: string[] = [
     input.kaynakTip === "pdf"
       ? `PDF analizi ile ${kalemSayisi} kalem çıkarıldı; PFOS katalog eşlemesi uygulandı.`
-      : `Liste dosyasından ${kalemSayisi} kalem okundu; Equsto katalog fiyatları uygulandı (Excel tedarikçi fiyatları kullanılmaz).`,
+      : `Liste dosyasından ${kalemSayisi} kalem okundu; ${eslesmisZorunlu.length} kalem katalog fiyatı aldı (Excel tedarikçi fiyatları kullanılmaz).`,
   ];
 
   if (input.kaynakDosya) {

@@ -698,6 +698,43 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
   return rows;
 }
 
+function scoreProformaRows(rows: PfosEkipmanSatir[]): number {
+  const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
+  const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
+  const fiyatCount = rows.filter((r) => (r.birim_fiyat_eur ?? 0) > 0).length;
+  return (
+    rows.length + validOlcuCount * 5 + validAdetCount * 2 + fiyatCount * 8
+  );
+}
+
+/** Tüm sayfalar — anlamlı satırlar birleştirilir (yinelenen poz+ad atılır) */
+export function pickBestProformaWorkbook(
+  worksheets: Worksheet[],
+  extra: Array<(w: Worksheet) => PfosEkipmanSatir[]> = [],
+): PfosEkipmanSatir[] {
+  const merged: PfosEkipmanSatir[] = [];
+  const seen = new Set<string>();
+  let best: PfosEkipmanSatir[] = [];
+  let bestScore = -1;
+  for (const ws of worksheets) {
+    if (!ws) continue;
+    const rows = pickBestProformaRows(ws, extra);
+    const score = scoreProformaRows(rows);
+    if (score > bestScore) {
+      bestScore = score;
+      best = rows;
+    }
+    if (rows.length < 2 && score < 3) continue;
+    for (const r of rows) {
+      const key = `${r.poz}|${r.ad}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      merged.push(r);
+    }
+  }
+  return merged.length >= best.length ? merged : best;
+}
+
 /** Tüm proforma ayrıştırıcıları — en çok satırı veren seçilir */
 export function pickBestProformaRows(
   ws: Worksheet,
@@ -713,14 +750,7 @@ export function pickBestProformaRows(
   let bestScore = -1;
   for (const parse of parsers) {
     const rows = parse(ws);
-    const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
-    const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
-    const fiyatCount = rows.filter((r) => (r.birim_fiyat_eur ?? 0) > 0).length;
-    const score =
-      rows.length +
-      validOlcuCount * 5 +
-      validAdetCount * 2 +
-      fiyatCount * 8;
+    const score = scoreProformaRows(rows);
     if (score > bestScore) {
       bestScore = score;
       best = rows;

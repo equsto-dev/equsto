@@ -1,7 +1,8 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
-import { pickBestProformaRows } from "@/lib/pfos/liste-proforma-excel";
+import { parseHeaderListeWorksheet } from "@/lib/pfos/kategoriler/parse-header-liste-xlsx";
+import { pickBestProformaWorkbook } from "@/lib/pfos/liste-proforma-excel";
 import { analyzeExcelForListe } from "@/lib/pfos/liste-pdf-analiz";
 import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
@@ -20,8 +21,9 @@ function parseFiyatStratejisi(raw: string): FiyatStratejisi {
   return TEKLIF_DEFAULT_FIYAT_STRATEJISI;
 }
 
-function fileKind(name: string): "excel" | "pdf" | null {
-  if (/\.xlsx?$/i.test(name)) return "excel";
+function fileKind(name: string): "excel" | "pdf" | "xls-old" | null {
+  if (/\.xlsx$/i.test(name)) return "excel";
+  if (/\.xls$/i.test(name)) return "xls-old";
   if (/\.pdf$/i.test(name)) return "pdf";
   return null;
 }
@@ -49,9 +51,18 @@ export async function POST(req: NextRequest) {
   const name =
     file instanceof File && file.name ? file.name : "liste.xlsx";
   const kind = fileKind(name);
+  if (kind === "xls-old") {
+    return NextResponse.json(
+      {
+        error:
+          "Eski .xls desteklenmez. Excel’de Farklı Kaydet → Excel Çalışma Kitabı (.xlsx) yapıp yeniden yükleyin.",
+      },
+      { status: 400 },
+    );
+  }
   if (!kind) {
     return NextResponse.json(
-      { error: "Yalnızca .xlsx, .xls veya .pdf desteklenir" },
+      { error: "Yalnızca .xlsx veya .pdf desteklenir" },
       { status: 400 },
     );
   }
@@ -90,15 +101,17 @@ export async function POST(req: NextRequest) {
 
     const wb = new ExcelJS.Workbook();
     await wb.xlsx.load(ab);
-    const ws = wb.worksheets[0];
-    if (!ws) {
+    if (!wb.worksheets.length) {
       return NextResponse.json(
         { error: "Excel sayfası bulunamadı" },
         { status: 400 },
       );
     }
 
-    const satirlar = pickBestProformaRows(ws, [parseEkipmanWorksheet]);
+    const satirlar = pickBestProformaWorkbook(wb.worksheets, [
+      parseEkipmanWorksheet,
+      parseHeaderListeWorksheet,
+    ]);
     if (satirlar.length) {
       const response = await calculateListeQuote({
         satirlar,

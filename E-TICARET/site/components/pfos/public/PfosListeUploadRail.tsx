@@ -43,7 +43,7 @@ export default function PfosListeUploadRail({
   const formatNote = (
     <p className={styles.listeFormatNoteRail}>
       {t(
-        "Excel: Poz, ürün adı, ölçü ve adet okunur; fiyatlar Equsto katalogundan gelir. PDF: proforma satırları katalog eşlemesi ile fiyatlandırılır.",
+        "Excel (.xlsx): ürün adı, ölçü ve adet okunur; fiyatlar Equsto katalogundan gelir. Eski .xls kaydedilemez — .xlsx’e çevirin. PDF: proforma satırları katalog eşlemesi ile fiyatlandırılır.",
       )}
     </p>
   );
@@ -99,7 +99,7 @@ export default function PfosListeUploadRail({
         <input
           ref={inputRef}
           type="file"
-          accept=".xlsx,.xls,.pdf"
+          accept=".xlsx,.pdf"
           className={styles.listeDropInput}
           disabled={!!loadingKind}
           onChange={(e) => onPick(e.target.files)}

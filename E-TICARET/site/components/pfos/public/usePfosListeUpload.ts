@@ -16,8 +16,9 @@ import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 import { trackPfosListeUpload } from "@/lib/pfos/track-pfos-analytics.client";
 import { countFiyatsizSatirlar } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
 
-export function fileKind(file: File): "excel" | "pdf" | null {
-  if (/\.xlsx?$/i.test(file.name)) return "excel";
+export function fileKind(file: File): "excel" | "pdf" | "xls-old" | null {
+  if (/\.xlsx$/i.test(file.name)) return "excel";
+  if (/\.xls$/i.test(file.name)) return "xls-old";
   if (/\.pdf$/i.test(file.name)) return "pdf";
   return null;
 }
@@ -61,6 +62,14 @@ export function usePfosListeUpload() {
   const priceFile = useCallback(
     async (f: File) => {
       const kind = fileKind(f);
+      if (kind === "xls-old") {
+        setError(
+          t(
+            "Eski .xls desteklenmez. Excel’de Farklı Kaydet → .xlsx yapıp yeniden yükleyin.",
+          ),
+        );
+        return;
+      }
       if (!kind) {
         setError(t("Yalnızca Excel (.xlsx) veya PDF (.pdf) desteklenir."));
         return;

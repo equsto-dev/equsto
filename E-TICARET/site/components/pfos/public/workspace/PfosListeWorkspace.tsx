@@ -91,7 +91,7 @@ export default function PfosListeWorkspace({
                 {loadingKind
                   ? t("Eşleştiriliyor…")
                   : sonuc
-                    ? `${sonuc.kalemler?.length ?? 0} ${t("kalem")}`
+                    ? `${sonuc.ozet?.eslesmeSayisi ?? 0}/${sonuc.kalemler?.length ?? 0} ${t("fiyatlı")}`
                     : t("Hazır")}
               </span>
             </div>
@@ -150,7 +150,7 @@ export default function PfosListeWorkspace({
         <input
           ref={inputRef}
           type="file"
-          accept=".xlsx,.xls,.pdf,application/pdf"
+          accept=".xlsx,.pdf,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
           className={styles.listeDropInput}
           onChange={(e) => onPick(e.target.files)}
         />

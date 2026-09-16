@@ -27,7 +27,7 @@ function buildSystemPrompt(): string {
 PDF veya Excel proforma/teklif dosyasındaki satırları BİREBİR kopyala — yorumlama veya stok kodu ekleme.
 
 KURALLAR:
-1. Yalnızca dosyada görünen Poz satırlarını al (A1, D7, K2 vb.). Dosyada olmayan kalem UYDURMA.
+    1. Dosyadaki tüm ekipman satırlarını al. Poz (A1, D7) varsa yaz; yoksa sıra numarası kullan. Olmayan kalem UYDURMA. Başlık/toplam satırlarını alma.
 2. ham_isim = ürün tanımı (marka ve fiyat hariç), dosyadaki Türkçe metin aynen.
 3. poz = dosyadaki poz numarası (A25A gibi).
 4. olcu = varsa 140*70*85 formatında; yoksa null.
@@ -90,10 +90,11 @@ export async function analyzeExcelForListe(
 ): Promise<ListePdfKalem[]> {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.load(xlsxBuffer);
-  const ws = wb.worksheets[0];
-  if (!ws) throw new Error("Excel sayfası bulunamadı");
+  if (!wb.worksheets.length) throw new Error("Excel sayfası bulunamadı");
 
-  const plain = worksheetToPlainText(ws);
+  const plain = wb.worksheets
+    .map((ws) => `--- ${ws.name} ---\n${worksheetToPlainText(ws)}`)
+    .join("\n\n");
   const system_prompt = buildSystemPrompt();
   const trimmedNotes = opts?.notlar?.trim();
   const user_prompt = trimmedNotes
