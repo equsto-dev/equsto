@@ -547,16 +547,16 @@ body.bd-page.besos .footer.footer {
     display: flex !important;
   }
 
-  /* 4’lü grup: masaüstünde tam genişliğe yayılma */
+  /* 4’lü grup: masaüstünde yan yana, şerit ortasında */
   body.bd-page.besos .bd-besos-subnav-inner {
     display: flex !important;
     flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     align-items: stretch !important;
     gap: 2px !important;
-    width: auto !important;
+    width: 100% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 6px 16px 8px !important;
     grid-template-columns: none !important;
   }
