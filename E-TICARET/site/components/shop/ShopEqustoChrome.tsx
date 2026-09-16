@@ -47,6 +47,12 @@ function isBesosPath(pathname: string | null): boolean {
   return pathname === "/besos" || pathname.startsWith("/besos/") || pathname === "/en/besos" || pathname.startsWith("/en/besos/");
 }
 
+function isBesosHome(pathname: string | null): boolean {
+  if (!pathname) return false;
+  const p = pathname.replace(/\/+$/, "") || "/";
+  return p === "/besos" || p === "/en/besos";
+}
+
 type ShopEqustoChromeProps = {
   activeDept?: ShopDeptSlug | null;
   variant?: "shop" | "besos";
@@ -60,6 +66,7 @@ export default function ShopEqustoChrome({
   const isBesos = variant === "besos";
   const pathname = usePathname();
   const isBesosSection = isBesos || isBesosPath(pathname);
+  const besosHome = isBesosHome(pathname);
   const lang = chromeLangFromPath(pathname);
   const h = CHROME_HDR[lang];
   const searchRef = useRef<HTMLInputElement>(null);
@@ -272,8 +279,8 @@ export default function ShopEqustoChrome({
             <a
               className={`topnav-item topnav-besos${isBesosSection ? " active" : ""}`}
               href={hrefFor("besos")}
-              aria-current={isBesosSection ? "page" : undefined}
-              onClick={(e) => preventActiveNavClick(e, isBesosSection)}
+              aria-current={besosHome ? "page" : undefined}
+              onClick={(e) => preventActiveNavClick(e, besosHome)}
               data-i18n="nav.bar_design"
             >
               Bar Design

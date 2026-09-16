@@ -26,6 +26,13 @@ export default function BesosImt300Hero() {
       <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu" data-i18n-attr="aria-label:besos.hero_iframe_title">
         <div className="bd-hero-media">
           <div className="bd-hero-video">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="bd-hero-poster"
+              src={`https://i.ytimg.com/vi/${BESOS_HERO_YT_ID}/hqdefault.jpg`}
+              alt=""
+              aria-hidden="true"
+            />
             <iframe
               className="bd-hero-yt-iframe"
               src={HERO_EMBED_SRC}
@@ -33,7 +40,7 @@ export default function BesosImt300Hero() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
-              loading="lazy"
+              loading="eager"
             />
           </div>
           <div className="bd-hero-overlay" aria-hidden="true" />

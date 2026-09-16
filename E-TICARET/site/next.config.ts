@@ -177,6 +177,8 @@ const nextConfig: NextConfig = {
           "img-src 'self' data: blob: https:",
           "font-src 'self' data: https://fonts.gstatic.com",
           "connect-src 'self' https: wss:",
+          "media-src 'self' blob: https:",
+          "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com",
           "frame-ancestors 'self'",
           "base-uri 'self'",
           "form-action 'self'",
