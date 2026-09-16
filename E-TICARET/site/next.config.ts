@@ -327,6 +327,8 @@ const nextConfig: NextConfig = {
         ...(cdnBase
           ? []
           : [{ source: "/data/images/:path*", destination: "/images/:path*" }]),
+        /* Eski dosya adı — cache / bookmark */
+        { source: "/eq-home-mutbex.css", destination: "/eq-home-equsto.css" },
         /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */
         { source: "/locales/:file.json", destination: "/i18n/:file.json" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */

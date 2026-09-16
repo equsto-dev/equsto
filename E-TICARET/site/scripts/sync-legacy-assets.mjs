@@ -40,7 +40,7 @@ const LIVE_FILES = [
   "imt300.html",
   "theme.css",
   "theme.js",
-  "eq-home-mutbex.css",
+  "eq-home-equsto.css",
   "eq-home-decor.css",
   "eq-dept-plp.css",
   "eq-home-vitrin.js",
