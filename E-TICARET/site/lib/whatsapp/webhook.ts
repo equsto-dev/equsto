@@ -88,6 +88,33 @@ export function verifyWhatsAppSignature(
   }
 }
 
+/**
+ * K5: Green API webhookUrlToken doğrulaması.
+ * Green API, Authorization header'ına token koyar (Bearer opsiyonel).
+ * Token tanımlı değilse production'da reddet; dev'de uyarıyla geç.
+ */
+export function verifyGreenApiWebhookAuth(
+  authorizationHeader: string | null
+): boolean {
+  const expected = (process.env.GREEN_API_WEBHOOK_TOKEN || "").trim();
+  if (!expected) {
+    return process.env.NODE_ENV !== "production";
+  }
+  const raw = String(authorizationHeader || "").trim();
+  if (!raw) return false;
+  const got = raw.toLowerCase().startsWith("bearer ")
+    ? raw.slice(7).trim()
+    : raw;
+  try {
+    const a = Buffer.from(got);
+    const b = Buffer.from(expected);
+    if (a.length !== b.length) return false;
+    return timingSafeEqual(a, b);
+  } catch {
+    return false;
+  }
+}
+
 /** Gelen mesaj → Musteri lead + Telegram/e-posta bildirimi */
 export async function handleInboundWhatsAppMessage(
   msg: InboundWhatsAppMessage,

@@ -31,7 +31,11 @@ export function assertAdminBearer(req: NextRequest): Response | null {
 
   if (expected && token === expected) return null;
 
-  if (process.env.NODE_ENV !== "production" && (!token || token === DEV_ADMIN_BEARER)) {
+  // M8: Boş token ile geçiş yok. Dev bypass yalnızca açıkça açılır.
+  const allowDev =
+    process.env.NODE_ENV !== "production" &&
+    process.env.EQUSTO_ALLOW_DEV_AUTH === "1";
+  if (allowDev && token === DEV_ADMIN_BEARER) {
     return null;
   }
 

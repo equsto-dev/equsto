@@ -16,6 +16,7 @@ import {
   sendWhatsAppTemplate,
   sendWhatsAppText,
   verifyWhatsAppSignature,
+  verifyGreenApiWebhookAuth,
   vitrinWhatsAppE164,
   whatsAppEnvHints,
   whatsAppLinkReady,
@@ -196,6 +197,10 @@ export async function waWebhookPost(req: NextRequest) {
   const mode = whatsAppMode();
 
   if (mode === "green-api" || (body as { typeWebhook?: string }).typeWebhook) {
+    // K5: Green API webhook imza / Authorization token
+    if (!verifyGreenApiWebhookAuth(req.headers.get("authorization"))) {
+      return new Response("Invalid webhook token", { status: 401 });
+    }
     const inbound = parseGreenApiInboundMessages(body);
     const outbound = parseGreenApiOutboundMessages(body);
     const results: unknown[] = [];

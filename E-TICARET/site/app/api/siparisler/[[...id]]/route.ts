@@ -13,6 +13,7 @@ import {
   isSiparisDurum,
   siparisToAdmin,
 } from "@/lib/siparis";
+import { checkRateLimit, clientIpFromRequest } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -86,6 +87,13 @@ export async function POST(req: NextRequest, ctx: Ctx) {
 
   if (segments.length > 0) {
     return adminErr("POST yalnızca /api/siparisler veya …/odeme/capture|void", 400);
+  }
+
+  // Y3: public sipariş spam koruması — IP başına 15 dk / 10 sipariş
+  const ip = clientIpFromRequest(req);
+  const rl = checkRateLimit(`siparis-post:${ip}`, 10, 15 * 60 * 1000);
+  if (!rl.ok) {
+    return adminErr(`Çok fazla istek. ${rl.retryAfterSec} sn sonra tekrar deneyin.`, 429);
   }
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;

@@ -31,6 +31,8 @@ export {
 
   greenApiConfigured,
 
+  greenApiWebhookToken,
+
   type WhatsAppMode,
 
 } from "./config";
@@ -114,6 +116,8 @@ export {
   handleInboundWhatsAppMessage,
 
   handleGreenApiInboundMessage,
+
+  verifyGreenApiWebhookAuth,
 
   type InboundWhatsAppMessage,
 

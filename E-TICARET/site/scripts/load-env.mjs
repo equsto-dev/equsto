@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { ensureDirectUrl } from "./lib/derive-direct-url.mjs";
 
 export const envRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -33,6 +34,10 @@ for (const name of chain) {
     ) {
       val = val.slice(1, -1);
     }
-    if (val !== "" && process.env[key] == null) process.env[key] = val;
+    if (val !== "" && (process.env[key] == null || process.env[key] === "")) {
+      process.env[key] = val;
+    }
   }
 }
+
+ensureDirectUrl(process.env);

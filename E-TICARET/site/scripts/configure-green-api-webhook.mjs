@@ -10,9 +10,19 @@ const dryRun = process.argv.includes("--dry-run");
 const id = process.env.GREEN_API_INSTANCE_ID?.trim();
 const token = process.env.GREEN_API_TOKEN?.trim();
 const mode = process.env.EQUSTO_WHATSAPP_MODE?.trim() || "link";
+const webhookToken =
+  process.env.GREEN_API_WEBHOOK_TOKEN?.trim() ||
+  // yoksa deterministik ama gizli olmayan fallback üretme — zorunlu kıl
+  "";
 
 if (mode !== "green-api" || !id || !token) {
   console.error("[green-api-webhook] Eksik: EQUSTO_WHATSAPP_MODE=green-api, GREEN_API_*");
+  process.exit(1);
+}
+if (!webhookToken) {
+  console.error(
+    "[green-api-webhook] Eksik: GREEN_API_WEBHOOK_TOKEN — rastgele uzun bir secret üretip .env'e ekleyin",
+  );
   process.exit(1);
 }
 
@@ -20,7 +30,7 @@ const base = `https://api.green-api.com/waInstance${id}`;
 
 const desired = {
   webhookUrl: WEBHOOK_URL,
-  webhookUrlToken: "",
+  webhookUrlToken: webhookToken,
   incomingWebhook: "yes",
   outgoingMessageWebhook: "yes",
   outgoingAPIMessageWebhook: "yes",

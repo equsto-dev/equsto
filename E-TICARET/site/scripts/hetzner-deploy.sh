@@ -14,6 +14,9 @@ fi
 echo "[hetzner-deploy] site: $SITE_DIR"
 # git fetch/pull done by workflow before calling this script
 
+echo "[hetzner-deploy] env koruma (keep + DIRECT_URL)..."
+node scripts/protect-hetzner-env.mjs
+
 # Debug: check .env.production exists
 if [[ ! -f .env.production ]]; then
   echo "[hetzner-deploy] HATA: .env.production yok"

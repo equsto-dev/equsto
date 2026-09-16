@@ -22,6 +22,11 @@ export function greenApiConfigured(): boolean {
   return Boolean(env("GREEN_API_INSTANCE_ID") && env("GREEN_API_TOKEN"));
 }
 
+/** Green API webhookUrlToken — Authorization header ile doğrulanır */
+export function greenApiWebhookToken(): string {
+  return env("GREEN_API_WEBHOOK_TOKEN");
+}
+
 // —— Meta Cloud API (yalnızca mode=meta) ——
 
 export function whatsAppAccessToken(): string {
@@ -141,6 +146,7 @@ export function whatsAppEnvHints() {
   if (mode === "green-api") {
     hints.GREEN_API_INSTANCE_ID = env("GREEN_API_INSTANCE_ID") ? "set" : "missing";
     hints.GREEN_API_TOKEN = env("GREEN_API_TOKEN") ? "set" : "missing";
+    hints.GREEN_API_WEBHOOK_TOKEN = greenApiWebhookToken() ? "set" : "missing";
   }
 
   return hints;

@@ -64,9 +64,18 @@ export async function verifyAdminPassword(pw: string): Promise<boolean> {
   if (hash) return sha256AdminPassword(plain) === hash;
 
   const envPw = String(process.env.EQUSTO_ADMIN_PASSWORD || "").trim();
-  if (envPw) return plain === envPw;
+  if (envPw) {
+    // Y2: Canlıda düz şifre fallback kapalı — yalnızca SHA-256
+    if (process.env.NODE_ENV === "production") return false;
+    return plain === envPw;
+  }
 
-  if (process.env.NODE_ENV !== "production") return plain === DEV_ADMIN_BEARER;
+  if (
+    process.env.NODE_ENV !== "production" &&
+    process.env.EQUSTO_ALLOW_DEV_AUTH === "1"
+  ) {
+    return plain === DEV_ADMIN_BEARER;
+  }
   return false;
 }
 

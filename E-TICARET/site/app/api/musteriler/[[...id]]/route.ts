@@ -15,6 +15,7 @@ import {
 } from "@/lib/notify";
 import { requireMemberSession, getMemberIdByToken, readBearerToken, readTokenFromBody, type MemberSessionPayload } from "@/lib/member-auth";
 import { appendWaChatMessage, normalizeChatPhone } from "@/lib/wa-chat";
+import { checkRateLimit, clientIpFromRequest } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -62,6 +63,13 @@ export async function GET(req: NextRequest, ctx: Ctx) {
 export async function POST(req: NextRequest, ctx: Ctx) {
   const segment = await resolveId(ctx);
   if (segment) return adminErr("POST yalnızca /api/musteriler", 400);
+
+  // Y4: public lead spam koruması — IP başına 15 dk / 8 kayıt
+  const ip = clientIpFromRequest(req);
+  const rl = checkRateLimit(`musteri-post:${ip}`, 8, 15 * 60 * 1000);
+  if (!rl.ok) {
+    return adminErr(`Çok fazla istek. ${rl.retryAfterSec} sn sonra tekrar deneyin.`, 429);
+  }
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
   const kaynak = String(body.kaynak ?? "").trim();
