@@ -10,6 +10,7 @@ import fsp from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  decodeHtml,
   parseFeatureList,
   parseTableVariants,
   stripTags,
@@ -102,10 +103,10 @@ function normalizeProduct(raw, images) {
   const intro = stripTags(desc.split(/<table/i)[0] || "").slice(0, 500);
   return {
     wc_id: raw.id,
-    name: raw.name,
+    name: decodeHtml(raw.name),
     slug: raw.slug,
     url: raw.permalink,
-    categories: (raw.categories || []).map((c) => ({ slug: c.slug, name: c.name })),
+    categories: (raw.categories || []).map((c) => ({ slug: c.slug, name: decodeHtml(c.name) })),
     short_description: stripTags(raw.short_description || ""),
     intro,
     features,

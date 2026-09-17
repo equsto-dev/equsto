@@ -1,3 +1,5 @@
+import { encodeWaMeQueryText } from "@/lib/whatsapp/encode-text";
+
 type WaWindow = Window & { EQUSTO_WHATSAPP_E164?: string };
 
 const DEFAULT_WA = "905326840152";
@@ -50,7 +52,7 @@ export function buildListeBulkWhatsAppUrl(opts: {
   if (text.length > WA_TEXT_MAX) {
     text = `${text.slice(0, WA_TEXT_MAX - 1)}…`;
   }
-  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${phone}?text=${encodeWaMeQueryText(text)}`;
 }
 
 export function countFiyatsizSatirlar(

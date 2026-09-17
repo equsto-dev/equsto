@@ -76,6 +76,29 @@
       .replace(/"/g, "&quot;");
   }
 
+  function decodeHtmlEntitiesArama(s) {
+    if (typeof window.eqDecodeHtmlEntities === "function") {
+      return window.eqDecodeHtmlEntities(s);
+    }
+    var t = String(s == null ? "" : s)
+      .replace(/&nbsp;/gi, " ")
+      .replace(/&amp;/gi, "&")
+      .replace(/&lt;/gi, "<")
+      .replace(/&gt;/gi, ">")
+      .replace(/&quot;/gi, '"')
+      .replace(/&#(\d+);/g, function (_, n) {
+        return String.fromCharCode(Number(n));
+      })
+      .replace(/&#x([0-9a-f]+);/gi, function (_, hex) {
+        return String.fromCharCode(parseInt(hex, 16));
+      });
+    try {
+      return t.normalize("NFC");
+    } catch (_) {
+      return t;
+    }
+  }
+
   function lc(s) {
     return String(s || "").toLocaleLowerCase("tr");
   }
@@ -1223,7 +1246,7 @@
           '<a class="eq-dept-plp-card__name" href="' +
           esc(href) +
           '">' +
-          esc(h.name || "") +
+          esc(decodeHtmlEntitiesArama(h.name || "")) +
           "</a>" +
           (function () {
             var brandLab = plpBrandForHit(h);

@@ -1,6 +1,9 @@
+import { encodeWaMeQueryText } from "./encode-text";
 import { normalizeWaRecipient, vitrinWhatsAppE164 } from "./config";
 
 export type WaLinkTarget = "app" | "web";
+
+export { encodeWaMeQueryText };
 
 /** wa.me — mobil WhatsApp uygulaması */
 export function buildWaMeUrl(phoneE164: string, text?: string): string {
@@ -9,7 +12,7 @@ export function buildWaMeUrl(phoneE164: string, text?: string): string {
   const base = `https://wa.me/${phone}`;
   const msg = String(text || "").trim();
   if (!msg) return base;
-  return `${base}?text=${encodeURIComponent(msg)}`;
+  return `${base}?text=${encodeWaMeQueryText(msg)}`;
 }
 
 /** web.whatsapp.com — masaüstü tarayıcı */
@@ -19,7 +22,7 @@ export function buildWebWhatsAppUrl(phoneE164: string, text?: string): string {
   const base = `https://web.whatsapp.com/send?phone=${phone}`;
   const msg = String(text || "").trim();
   if (!msg) return base;
-  return `${base}&text=${encodeURIComponent(msg)}`;
+  return `${base}&text=${encodeWaMeQueryText(msg)}`;
 }
 
 export function buildWhatsAppLink(

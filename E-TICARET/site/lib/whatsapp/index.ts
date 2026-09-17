@@ -47,6 +47,8 @@ export {
 
   buildWhatsAppLink,
 
+  encodeWaMeQueryText,
+
   whatsAppLinkReady,
 
   type WaLinkTarget,

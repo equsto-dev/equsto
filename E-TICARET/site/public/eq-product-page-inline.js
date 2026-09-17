@@ -620,14 +620,30 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function decodeHtmlEntitiesPdp(s) {
-      return String(s || "")
+      var t = String(s || "")
         .replace(/&nbsp;/gi, " ")
         .replace(/&amp;/gi, "&")
         .replace(/&lt;/gi, "<")
         .replace(/&gt;/gi, ">")
         .replace(/&quot;/gi, '"')
+        .replace(/&apos;/gi, "'")
         .replace(/&#(\d+);/g, function (_, n) {
-          return String.fromCharCode(Number(n));
+          var c = Number(n);
+          if (!Number.isFinite(c) || c < 0) return "";
+          try {
+            return String.fromCodePoint(c);
+          } catch (e) {
+            return String.fromCharCode(c);
+          }
+        })
+        .replace(/&#x([0-9a-f]+);/gi, function (_, hex) {
+          var c = parseInt(hex, 16);
+          if (!Number.isFinite(c) || c < 0) return "";
+          try {
+            return String.fromCodePoint(c);
+          } catch (e) {
+            return String.fromCharCode(c);
+          }
         })
         .replace(/&([a-z]+);/gi, function (_, name) {
           var map = {
@@ -647,9 +663,42 @@ window.searchFilter = window.searchFilter || function () {};
             middot: "·",
             deg: "°",
             sup2: "²",
+            apos: "'",
+            rsquo: "\u2019",
+            lsquo: "\u2018",
+            ndash: "\u2013",
+            mdash: "\u2014",
+            times: "\u00d7",
+            hellip: "\u2026",
           };
           return Object.prototype.hasOwnProperty.call(map, name) ? map[name] : "&" + name + ";";
         });
+      try {
+        return t.normalize("NFC");
+      } catch (e) {
+        return t;
+      }
+    }
+
+    function sanitizeCatalogRowPdp(row) {
+      if (!row || typeof row !== "object" || row.__eqHtmlDecoded) return row;
+      row.__eqHtmlDecoded = 1;
+      if (row.name) row.name = decodeHtmlEntitiesPdp(row.name);
+      if (row.specs) row.specs = decodeHtmlEntitiesPdp(row.specs);
+      if (row.aciklama) row.aciklama = decodeHtmlEntitiesPdp(row.aciklama);
+      if (row.description) row.description = decodeHtmlEntitiesPdp(row.description);
+      if (row.olcu_etiket) row.olcu_etiket = decodeHtmlEntitiesPdp(row.olcu_etiket);
+      if (Array.isArray(row.keywords)) {
+        row.keywords = row.keywords.map(function (k) {
+          return typeof k === "string" ? decodeHtmlEntitiesPdp(k) : k;
+        });
+      }
+      if (Array.isArray(row.teknik_ozellikler)) {
+        row.teknik_ozellikler = row.teknik_ozellikler.map(function (k) {
+          return typeof k === "string" ? decodeHtmlEntitiesPdp(k) : k;
+        });
+      }
+      return row;
     }
 
     function pdpSpecKeyFromLine(line) {
@@ -1080,7 +1129,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function sanitizeDimInProductName(name) {
-      return String(name || "").replace(
+      return decodeHtmlEntitiesPdp(String(name || "")).replace(
         /(\d+)\s*[×x]\s*0(?:\s*[×x]\s*0)?\s*mm/gi,
         "$1"
       );
@@ -1112,7 +1161,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function shortModelLabel(p) {
-      var n = (p && p.name) || "";
+      var n = decodeHtmlEntitiesPdp((p && p.name) || "");
       var b = (p && p.brand) || "";
       if (b && n.indexOf(b) === 0) {
         n = n.slice(b.length).replace(/^[\s.,;:\-–—]+/, "");
@@ -1902,7 +1951,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function publicSpecsText(specs) {
-      return String(specs || "")
+      return decodeHtmlEntitiesPdp(String(specs || ""))
         .split(/\r?\n/)
         .filter(function (ln) {
           return !isInternalPriceSpecLine(ln);
@@ -1918,7 +1967,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (!s.trim()) return [];
       var lines = s.split(/\r?\n/);
       var out = [];
-      var skipHeader = /^(genel\s*özellikler|teknik\s*özellikler|özellikler|açıklama)\s*:?\s*$/i;
+      var skipHeader = /^(genel\s*özellikler|teknik\s*özellikler|özellikler|açıklama|ölçüler(?:\s*\([^)]*\))?)\s*:?\s*$/i;
       for (var i = 0; i < lines.length; i++) {
         var ln = String(lines[i] || "").trim();
         if (!ln) continue;
@@ -2109,7 +2158,7 @@ window.searchFilter = window.searchFilter || function () {};
           return '<a class="eq-mbg-card" href="' + esc(eqHtmlUrl(href)) + '">'+
             '<div class="eq-mbg-thumb">'+img+'</div>'+
             '<div class="eq-mbg-brand">'+esc(p.brand||'')+'</div>'+
-            '<div class="eq-mbg-name">'+esc((p.name||'').slice(0,55))+'</div>'+
+            '<div class="eq-mbg-name">'+esc(decodeHtmlEntitiesPdp((p.name||'')).slice(0,55))+'</div>'+
           '</a>';
         }).join('');
         return '<section class="eq-mbg-related" aria-label="' + esc(__pdpT("pdp.mbg_recent_aria", "Son görüntüledikleriniz")) + '">'+
@@ -2127,7 +2176,7 @@ window.searchFilter = window.searchFilter || function () {};
         .map(function (p) {
           var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
           var img = renderPdpThumbImg(p);
-          var lbl = esc((p.name || "").trim());
+          var lbl = esc(decodeHtmlEntitiesPdp((p.name || "").trim()));
           var price = esc(formatPdpPriceDisplay(p.price, p));
           var pHref = productSlugEq(p)
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
@@ -3809,7 +3858,14 @@ window.searchFilter = window.searchFilter || function () {};
               ? String(x.description).trim()
               : "";
       if (desc) return desc.split(/\n/)[0].slice(0, 320);
-      var bullets = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 3);
+      var acik = decodeHtmlEntitiesPdp(String(x.aciklama || "")).trim();
+      var nm = decodeHtmlEntitiesPdp(String(x.name || "")).trim();
+      if (acik && acik !== nm && acik.indexOf(nm) !== 0) {
+        return acik.split(/\n/)[0].slice(0, 320);
+      }
+      var bullets = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 3).filter(function (b) {
+        return !(nm && (b === nm || b.indexOf(nm) === 0));
+      });
       if (bullets.length) return bullets.join(" · ");
       var visBrand = pdpVisibleBrand(x.brand);
       return (visBrand ? visBrand + " — " : "") + "Equsto kataloğundan endüstriyel mutfak ekipmanı.";
@@ -4561,6 +4617,10 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpProduct(x, all) {
+      sanitizeCatalogRowPdp(x);
+      if (all && all.length) {
+        for (var si = 0; si < all.length; si++) sanitizeCatalogRowPdp(all[si]);
+      }
       clearEpdpMobileBuybar();
       var visBrandTitle = pdpVisibleBrand(x.brand);
       var prodTitle = ((visBrandTitle ? visBrandTitle + " " : "") + (x.name || "Ürün")).slice(0, 80);

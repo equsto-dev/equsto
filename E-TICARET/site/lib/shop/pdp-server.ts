@@ -21,6 +21,7 @@ import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
 import { resolveShopDept } from "./category-dept";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { SHOP_DEPTS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
+import { decodeCatalogRowText, decodeHtmlEntities } from "@/lib/text/decode-html-entities";
 import type { Metadata } from "next";
 
 type CatalogRow = Record<string, unknown>;
@@ -141,7 +142,7 @@ export async function findProductForPdp(
 
 /** Client boot — tek ürün satırı (FOUC önleme, anında E-PDP render). */
 export function rowToPdpClientSeed(row: CatalogRow, dept: ShopDeptSlug): CatalogRow {
-  const out = { ...row };
+  const out = decodeCatalogRowText({ ...row });
   if (!out.dept) out.dept = dept;
   return out;
 }
@@ -156,11 +157,11 @@ export function rowToPdpSsr(
   const slug = catalogUrlSlug(row);
   
   // Use raw name, avoid duplicate brand prepending in standard UI
-  let rawName = String(row.name || "Ürün").trim();
-  const brand = String(row.brand || "").trim();
+  let rawName = decodeHtmlEntities(String(row.name || "Ürün")).trim();
+  const brand = decodeHtmlEntities(String(row.brand || "")).trim();
   
   const productDetails = extractTechnicalDetails(row);
-  const description = cleanDescription(row, productDetails, 320);
+  const description = decodeHtmlEntities(cleanDescription(row, productDetails, 320));
   const canonical = `${origin}${prefix}/shop/${dept}/${encodeURIComponent(slug)}`;
   const priceTry = resolveMerchantPriceTry(row);
   const img = productImagePath(row);
@@ -178,14 +179,14 @@ export function rowToPdpSsr(
   // Category (urun_kategori) - use canonical dept URL (no ?tip= filter params)
   if (row.urun_kategori && String(row.urun_kategori).toLowerCase() !== String(SHOP_DEPTS[dept].title).toLowerCase()) {
     breadcrumbs.push({ 
-      name: String(row.urun_kategori).trim(), 
+      name: decodeHtmlEntities(String(row.urun_kategori).trim()), 
       href: `${prefix}/shop/${dept}` 
     });
   }
   // Sub-category (urun_alt_kategori) - use canonical dept URL (no ?tip= filter params)
   if (row.urun_alt_kategori) {
     breadcrumbs.push({ 
-      name: String(row.urun_alt_kategori).trim(), 
+      name: decodeHtmlEntities(String(row.urun_alt_kategori).trim()), 
       href: `${prefix}/shop/${dept}` 
     });
   }

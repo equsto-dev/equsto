@@ -96,7 +96,7 @@
 
   function eqPolishDisplayText(s) {
     if (s == null || s === '') return s;
-    var t = String(s);
+    var t = typeof window.eqDecodeHtmlEntities === 'function' ? window.eqDecodeHtmlEntities(s) : String(s);
     t = eqPolishOztiAsciiName(t);
     t = t.replace(/\bSanayi\s+Ocaklar[ıi]\b/gi, 'Endüstriyel Ocaklar');
     t = t.replace(/\bSanayi\s+Tipi\b/gi, 'Endüstriyel Tipi');
@@ -218,6 +218,7 @@
       window.eqSanitizeVendorProduct(x);
     }
     if (x.name) {
+      x.name = typeof window.eqDecodeHtmlEntities === 'function' ? window.eqDecodeHtmlEntities(x.name) : x.name;
       x.name = eqSimplifyTezgahDavlumbazName(x.name, { dept: x.dept || '', category: x.category || '' });
       x.name = eqPolishDisplayText(x.name);
     }
@@ -240,6 +241,7 @@
     }
     if (u.n) {
       var dept = (u.raw && u.raw.dept) || u.dept || '';
+      u.n = typeof window.eqDecodeHtmlEntities === 'function' ? window.eqDecodeHtmlEntities(u.n) : u.n;
       u.n = eqSimplifyTezgahDavlumbazName(u.n, {
         dept: dept,
         category: (u.raw && u.raw.category) || u.c || u.category || '',

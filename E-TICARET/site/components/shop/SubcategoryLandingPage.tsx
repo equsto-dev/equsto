@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { getSubcategoryLanding } from "@/lib/shop/subcategory";
 import { buildSubcategoryJsonLd } from "@/lib/seo/schemas";
 import { catalogUrlSlug } from "@/lib/catalog-product-slug";
+import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
 
 interface Props {
   landing: NonNullable<ReturnType<typeof getSubcategoryLanding>>;
@@ -152,7 +153,11 @@ export default function SubcategoryLandingPage({ landing, dept, locale, products
                       href={`/shop/${dept}/${catalogUrlSlug(product)}`}
                       className="eq-product-card"
                     >
-                      {String(product.name) && <h3 className="eq-product-card-title">{String(product.name)}</h3>}
+                      {String(product.name) && (
+                        <h3 className="eq-product-card-title">
+                          {decodeHtmlEntities(String(product.name))}
+                        </h3>
+                      )}
                       {String(product.brand) && <p className="eq-product-card-brand">{String(product.brand)}</p>}
                       {typeof product.priceTry === "number" && product.priceTry > 0 && (
                         <p className="eq-product-card-price">

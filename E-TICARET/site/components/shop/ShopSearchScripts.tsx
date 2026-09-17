@@ -15,14 +15,14 @@ export default function ShopSearchScripts() {
   return (
     <>
       <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-header-search.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-buzdolap-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-pisirme-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-arama-page.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />
+      <Script src={`/eq-arama-page.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp-filter-mob.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />
     </>
   );

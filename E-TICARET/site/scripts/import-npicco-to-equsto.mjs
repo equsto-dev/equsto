@@ -12,6 +12,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { slugify } from "./lib/ozti-enrich.mjs";
 import {
+  decodeHtml,
   formatVariantSpecs,
   mapNpiccoCategory,
   normalizeNpiccoKod,
@@ -33,8 +34,9 @@ function expandVariants(p) {
 }
 
 function rowName(p, v) {
-  if (!v.kod) return p.name;
-  return `${p.name} — ${v.kod}`;
+  const name = decodeHtml(p.name);
+  if (!v.kod) return name;
+  return `${name} — ${v.kod}`;
 }
 
 function rowId(p, v) {
@@ -64,7 +66,8 @@ function teknikFromVariant(v, features) {
 function toRows(p) {
   const mapped = mapNpiccoCategory(p.categories);
   const images = resolveImages(p);
-  const features = p.features || [];
+  const features = (p.features || []).map((f) => decodeHtml(f));
+  const baseName = decodeHtml(p.name);
   const rows = [];
 
   for (const v of expandVariants(p)) {
@@ -78,11 +81,11 @@ function toRows(p) {
       name: rowName(p, v),
       price: "Teklif için iletişim",
       fiyat_bekleniyor: true,
-      specs: formatVariantSpecs(p.name, v.kod ? v : { kod: kod || "" }, features, p.url),
-      aciklama: p.intro || p.name,
+      specs: formatVariantSpecs(baseName, v.kod ? v : { kod: kod || "" }, features, p.url),
+      aciklama: decodeHtml(p.intro || p.name),
       teknik_ozellikler: teknikFromVariant(v.kod ? v : {}, features),
       ...olcu,
-      keywords: [BRAND, kod, mapped.category, p.npicco_category, p.name].filter(Boolean),
+      keywords: [BRAND, kod, mapped.category, decodeHtml(p.npicco_category), baseName].filter(Boolean),
       images: images.length ? images : undefined,
       sku: kod || `NPICCO-${p.wc_id}`,
       model: kod || p.slug,

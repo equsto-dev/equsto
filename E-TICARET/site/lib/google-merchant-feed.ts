@@ -7,6 +7,7 @@ import { isShopDeptSlug } from "@/lib/shop/depts";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
 import { resolveKdvDahilTry } from "@/lib/shop/consumer-price";
+import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
 import { ProductDetail, extractTechnicalDetails } from "./feed-product-details";
 
 export { absoluteAssetUrl };
@@ -112,19 +113,21 @@ export function cleanDescription(row: CatalogRow, details: ProductDetail[] = [],
         String(row.aciklama || ""),
         appendedDetails
       ].filter(Boolean);
-  return sanitizeXmlText(
-    parts
-      .join("\n")
-      .replace(/<[^>]+>/g, " ")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, maxLen),
+  return decodeHtmlEntities(
+    sanitizeXmlText(
+      parts
+        .join("\n")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, maxLen),
+    ),
   );
 }
 
 export function feedTitle(row: CatalogRow): string {
-  const name = String(row.name || "").trim();
-  const brand = String(row.brand || "").trim();
+  const name = decodeHtmlEntities(String(row.name || "")).trim();
+  const brand = decodeHtmlEntities(String(row.brand || "")).trim();
   if (!name) return "";
   const combined = brand && !name.toLowerCase().includes(brand.toLowerCase().slice(0, 12))
     ? `${brand} ${name}`

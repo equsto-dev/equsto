@@ -34,9 +34,9 @@ export default function ShopProductScripts() {
       <Script src="/ecom-data.js" strategy="beforeInteractive" />
       <Script src={`/ecom-cart.js?v=${cartV}`} strategy="beforeInteractive" />
       <Script src={`/eq-shop-catalog-bootstrap.js?v=${cartV}`} strategy="beforeInteractive" />
-      <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-vendor-sanitize.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-competitor-redirects.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-display-terminology.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-display-terminology.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/equsto-pricing-core.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />

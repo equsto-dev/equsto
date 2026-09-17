@@ -277,7 +277,7 @@
       "https://web.whatsapp.com/send?phone=" +
       encodeURIComponent(String(phoneDigits).replace(/\D/g, ""));
     if (plainText != null && String(plainText).length) {
-      u += "&text=" + encodeURIComponent(String(plainText));
+      u += "&text=" + encodeURIComponent(String(plainText)).replace(/%20/g, "+");
     }
     return u;
   }
@@ -288,7 +288,7 @@
     if (!p || p.length < 10) return "";
     var u = "https://wa.me/" + p;
     if (plainText != null && String(plainText).length) {
-      u += "?text=" + encodeURIComponent(String(plainText));
+      u += "?text=" + encodeURIComponent(String(plainText)).replace(/%20/g, "+");
     }
     return u;
   }

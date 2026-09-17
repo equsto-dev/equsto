@@ -23,7 +23,7 @@ export default function ShopPlpScripts() {
     <>
       <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-display-terminology.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-display-terminology.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
@@ -36,7 +36,7 @@ export default function ShopPlpScripts() {
       <Script src={`/equsto-pricing-core.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-vendor-sanitize.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp.js?v=${catalogV}`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp-filter-mob.js?v=${v}&m=20260916-drawer-filter`} strategy="afterInteractive" />

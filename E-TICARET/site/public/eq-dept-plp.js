@@ -25,10 +25,34 @@
   function displayProductName(item) {
     var n = item && item.n != null ? String(item.n) : '';
     if (!n) return '';
+    n = decodeHtmlEntitiesPlp(n);
     if (window.eqLang === 'en' && typeof window.eqProductNameEn === 'function') {
       return window.eqProductNameEn(n, item.raw);
     }
     return n;
+  }
+
+  function decodeHtmlEntitiesPlp(s) {
+    if (typeof window.eqDecodeHtmlEntities === 'function') {
+      return window.eqDecodeHtmlEntities(s);
+    }
+    var t = String(s || '')
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&amp;/gi, '&')
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>')
+      .replace(/&quot;/gi, '"')
+      .replace(/&#(\d+);/g, function (_, n) {
+        return String.fromCharCode(Number(n));
+      })
+      .replace(/&#x([0-9a-f]+);/gi, function (_, hex) {
+        return String.fromCharCode(parseInt(hex, 16));
+      });
+    try {
+      return t.normalize('NFC');
+    } catch (_) {
+      return t;
+    }
   }
 
   var PAGE_SIZE = 24;
@@ -733,7 +757,7 @@
       window.eqSanitizeVendorProduct(x);
     }
     var b = (x.brand || '').trim();
-    var n = x.name || '';
+    var n = decodeHtmlEntitiesPlp(x.name || '');
     if (typeof window.eqSimplifyTezgahDavlumbazName === 'function') {
       n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT, category: x.category || '' });
     }

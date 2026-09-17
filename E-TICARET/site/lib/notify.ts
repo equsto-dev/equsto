@@ -1,6 +1,7 @@
 import type { Musteri, Siparis } from "@/lib/prisma";
 import { appendWaChatMessage } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
+import { encodeWaMeQueryText } from "@/lib/whatsapp/encode-text";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
   isOwnerSelfWhatsAppNotifyBlocked,
@@ -99,23 +100,60 @@ function escapeHtml(s: string): string {
 }
 
 /**
- * Telegram'da wa.me URL'sindeki %C5%9F gibi kodları gizle —
- * tıklanabilir Türkçe etiket + doğru encode edilmiş href.
+ * Telegram / HTML e-posta: wa.me satırında %20 gösterme.
+ * Görünen metin sade chat URL'si; tıklanınca hazır mesaj doldurulur.
  */
-function toTelegramHtml(title: string, body: string): string {
-  const full = `${title}\n\n${body}`.trim();
-  return full
-    .split("\n")
-    .map((line) => {
-      const m = line.match(
-        /^(WhatsApp \(müşteriye yaz\): )(https:\/\/wa\.me\/\S+)$/,
-      );
-      if (m) {
-        return `${escapeHtml(m[1])}<a href="${escapeHtml(m[2])}">Müşteriye hazır mesajla yaz</a>`;
+const WA_CHAT_LINE = /^(WhatsApp \(müşteriye yaz\): )(https:\/\/wa\.me\/\d+)(?:\?text=\S+)?$/;
+const HAZIR_PREFIX = "Hazır mesaj: ";
+const NOTIFY_FIELD =
+  /^(Panel|Zaman|Kim|Tel|E-posta|Kaynak|Referans|Müşteri|Konsept|Tutar|Sipariş|Ödeme|Kalem|Not|Mesaj|Sayfa|WhatsApp)\b/;
+
+function formatNotifyLinesHtml(raw: string, lineJoin: string): string {
+  const lines = raw.split("\n");
+  const out: string[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(WA_CHAT_LINE);
+    if (!m) {
+      out.push(escapeHtml(lines[i]));
+      continue;
+    }
+    const label = m[1];
+    const chatUrl = m[2];
+    let hazir = "";
+    if (lines[i + 1]?.startsWith(HAZIR_PREFIX)) {
+      hazir = lines[i + 1].slice(HAZIR_PREFIX.length);
+      i += 2;
+      while (i < lines.length) {
+        const next = lines[i];
+        if (NOTIFY_FIELD.test(next)) {
+          i -= 1;
+          break;
+        }
+        hazir += `\n${next}`;
+        i += 1;
       }
-      return escapeHtml(line);
-    })
-    .join("\n");
+    }
+    const msg = hazir.trim();
+    const href = msg ? `${chatUrl}?text=${encodeWaMeQueryText(msg)}` : chatUrl;
+    out.push(
+      `${escapeHtml(label)}<a href="${escapeHtml(href)}">${escapeHtml(chatUrl)}</a>`,
+    );
+    if (msg) {
+      out.push(
+        escapeHtml(`${HAZIR_PREFIX}${msg}`).replace(/\n/g, lineJoin),
+      );
+    }
+  }
+  return out.join(lineJoin);
+}
+
+function toTelegramHtml(title: string, body: string): string {
+  return formatNotifyLinesHtml(`${title}\n\n${body}`.trim(), "\n");
+}
+
+function toNotifyEmailHtml(body: string): string {
+  const inner = formatNotifyLinesHtml(body.trim(), "<br>\n");
+  return `<div style="font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111">${inner}</div>`;
 }
 
 /** Yapılandırılmış kanallara anlık uyarı (Telegram / e-posta / SMS / WhatsApp). */
@@ -175,6 +213,7 @@ export async function sendInstantAlert(
           to: [emailTo],
           subject: title,
           text: body,
+          html: toNotifyEmailHtml(body),
         }),
       });
       if (!r.ok) {
@@ -273,12 +312,12 @@ function customerWhatsAppLines(
   const intro = "Merhaba, equsto.com üzerinden yazmıştınız.";
   const msg = String(previewMessage || "").trim();
   const text = [intro, msg].filter(Boolean).join("\n\n").slice(0, 800);
-  const url = buildWaMeUrl(phone, text);
-  if (!url) return [];
+  const chatUrl = buildWaMeUrl(phone);
+  if (!chatUrl) return [];
 
-  // URL teknik olarak encode kalır (wa.me için gerekli); düz metinde Türkçe önizleme ayrı satırda.
+  // Düz metinde sorgu yok (%20 görünmesin). Tıklanabilir prefill HTML/Telegram'da.
   return [
-    `WhatsApp (müşteriye yaz): ${url}`,
+    `WhatsApp (müşteriye yaz): ${chatUrl}`,
     text ? `Hazır mesaj: ${text}` : "",
   ].filter(Boolean);
 }

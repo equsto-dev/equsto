@@ -8,6 +8,7 @@ import fsp from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  decodeHtml,
   npiccoCategoryLabel,
   parseFeatureList,
   parseTableVariants,
@@ -56,11 +57,14 @@ function normalizeProduct(raw) {
   const intro = stripTags(html.split(/<table/i)[0] || "").slice(0, 500);
   return {
     wc_id: raw.id,
-    name: raw.name,
+    name: decodeHtml(raw.name),
     slug: raw.slug,
     url: raw.permalink,
     npicco_category: npiccoCategoryLabel(raw.categories),
-    categories: (raw.categories || []).map((c) => ({ slug: c.slug, name: c.name })),
+    categories: (raw.categories || []).map((c) => ({
+      slug: c.slug,
+      name: decodeHtml(c.name),
+    })),
     intro,
     features,
     variants,

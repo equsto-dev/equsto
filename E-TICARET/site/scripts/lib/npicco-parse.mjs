@@ -104,5 +104,5 @@ export function npiccoCategoryLabel(categories) {
       "elektrikli-gazli-izgaralar",
     ].includes(c.slug),
   );
-  return root?.name?.replace(/&amp;/g, "&") || "";
+  return decodeHtml(root?.name || "");
 }

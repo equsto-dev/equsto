@@ -20,6 +20,23 @@
       .replace(/"/g, "&quot;");
   }
 
+  function decodeHtmlEntitiesSearch(s) {
+    if (typeof window.eqDecodeHtmlEntities === "function") {
+      return window.eqDecodeHtmlEntities(s);
+    }
+    var t = String(s == null ? "" : s)
+      .replace(/&nbsp;/gi, " ")
+      .replace(/&amp;/gi, "&")
+      .replace(/&#(\d+);/g, function (_, n) {
+        return String.fromCharCode(Number(n));
+      });
+    try {
+      return t.normalize("NFC");
+    } catch (_) {
+      return t;
+    }
+  }
+
   function trimQ(q) {
     return String(q == null ? "" : q).trim();
   }
@@ -200,7 +217,7 @@
         imgTag(h) +
         '<span class="eq-srch-panel__text">' +
         '<span class="eq-srch-panel__name">' +
-        esc(h.name || "") +
+        esc(decodeHtmlEntitiesSearch(h.name || "")) +
         "</span>" +
         (function () {
           var brandLab =

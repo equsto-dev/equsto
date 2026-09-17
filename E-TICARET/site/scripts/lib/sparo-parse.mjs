@@ -1,16 +1,33 @@
 /**
  * sparo.com.tr WooCommerce açıklama HTML → ölçü tablosu + özellik listesi
  */
+function fromEntityCode(n) {
+  if (!Number.isFinite(n) || n < 0 || n > 0x10ffff) return "";
+  try {
+    return String.fromCodePoint(n);
+  } catch {
+    return "";
+  }
+}
+
 export function decodeHtml(s) {
-  return String(s || "")
-    .replace(/&nbsp;/g, " ")
+  const t = String(s || "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&apos;/gi, "'")
+    .replace(/&#(\d+);/g, (_, n) => fromEntityCode(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => fromEntityCode(parseInt(hex, 16)))
     .replace(/&#215;/g, "×")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
     .replace(/\s+/g, " ")
     .trim();
+  try {
+    return t.normalize("NFC");
+  } catch {
+    return t;
+  }
 }
 
 export function stripTags(html) {
