@@ -12,6 +12,7 @@ import { sendTeklifCustomerWhatsApp } from "@/lib/teklif/customer-whatsapp";
 export type TeklifAdminRow = {
   id: string;
   ref_no: string;
+  teklif_sayi: string;
   musteri_ad: string;
   musteri_tel: string;
   musteri_mail: string;
@@ -45,11 +46,27 @@ function dec(v: Prisma.Decimal | null | undefined): number {
   return Number(v);
 }
 
+function asRecord(v: unknown): Record<string, unknown> | null {
+  if (!v || typeof v !== "object" || Array.isArray(v)) return null;
+  return v as Record<string, unknown>;
+}
+
+function teklifSayiFromPayload(payload: unknown): string {
+  const rec = asRecord(payload);
+  if (!rec) return "";
+  const direct = pfosDisplayText(rec.teklif_sayi ?? rec.teklifSayi, "");
+  if (direct) return direct;
+  const v14 = asRecord(rec.teklif_v14);
+  const ust = asRecord(v14?.ust);
+  return pfosDisplayText(ust?.sayi, "");
+}
+
 export function teklifToAdmin(t: Teklif): TeklifAdminRow {
   const kalemler = t.kalemler != null && Array.isArray(t.kalemler) ? t.kalemler : null;
   return {
     id: t.id,
     ref_no: t.refNo,
+    teklif_sayi: teklifSayiFromPayload(t.payload),
     musteri_ad: t.musteriAd,
     musteri_tel: t.musteriTel,
     musteri_mail: t.musteriMail,

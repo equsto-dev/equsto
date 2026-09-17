@@ -1,9 +1,10 @@
 "use client";
 
 import { ProTable } from "@ant-design/pro-components";
-import { App, Select, Tag } from "antd";
+import { App, Button, Select, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
+  downloadTeklifExcel,
   fetchTeklifler,
   type TeklifAdminRow,
   updateTeklifDurum,
@@ -23,6 +24,7 @@ export default function IsletmeTekliflerPanel() {
   const { message } = App.useApp();
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<TeklifAdminRow[]>([]);
+  const [excelId, setExcelId] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -50,6 +52,21 @@ export default function IsletmeTekliflerPanel() {
     load();
   }
 
+  const onExcel = useCallback(
+    async (row: TeklifAdminRow) => {
+      const hint = (row.teklif_sayi || row.ref_no || row.id).trim();
+      setExcelId(row.id);
+      try {
+        const res = await downloadTeklifExcel(row.id, hint);
+        if (res.error) message.error(res.error);
+        else message.success("Excel indirildi");
+      } finally {
+        setExcelId(null);
+      }
+    },
+    [message],
+  );
+
   return (
     <ProTable<TeklifAdminRow>
       rowKey="id"
@@ -65,7 +82,31 @@ export default function IsletmeTekliflerPanel() {
       ]}
       dataSource={rows}
       columns={[
-        { title: "Ref", dataIndex: "ref_no" },
+        {
+          title: "Teklif no",
+          dataIndex: "teklif_sayi",
+          ellipsis: true,
+          render: (_, r) => {
+            const eqs = String(r.teklif_sayi ?? "").trim();
+            const label = eqs || r.ref_no;
+            return (
+              <div>
+                <Button
+                  type="link"
+                  size="small"
+                  style={{ padding: 0, height: "auto" }}
+                  loading={excelId === r.id}
+                  onClick={() => void onExcel(r)}
+                >
+                  {label}
+                </Button>
+                {eqs && eqs !== r.ref_no ? (
+                  <div style={{ fontSize: 11, color: "#888" }}>{r.ref_no}</div>
+                ) : null}
+              </div>
+            );
+          },
+        },
         { title: "Müşteri", dataIndex: "musteri_ad" },
         { title: "Konsept", dataIndex: "konsept", ellipsis: true },
         {

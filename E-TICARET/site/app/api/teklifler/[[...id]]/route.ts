@@ -22,6 +22,42 @@ async function resolveSegments(ctx: Ctx): Promise<string[]> {
 export async function GET(req: NextRequest, ctx: Ctx) {
   const segments = await resolveSegments(ctx);
 
+  if (segments.length === 2 && segments[1] === "excel") {
+    const denied = assertAdminBearer(req);
+    if (denied) return denied;
+    const { generateTeklifV14ExcelBuffer } = await import(
+      "@/lib/pfos/teklif/export-teklif-v14.server"
+    );
+    const { resolveTeklifV14ForTeklifId } = await import(
+      "@/lib/pfos/teklif/resolve-usage-teklif-v14"
+    );
+    try {
+      const model = await resolveTeklifV14ForTeklifId(segments[0]);
+      if (!model || !model.satirlar.length) {
+        return adminErr(
+          "Bu teklifin kalem kaydı yok. Yeni üretilen teklifler Excel olarak iner.",
+          404,
+        );
+      }
+      const buffer = await generateTeklifV14ExcelBuffer(model);
+      const safe = (model.ust.sayi || segments[0])
+        .replace(/[^\w.-]+/g, "-")
+        .replace(/-+/g, "-");
+      return new Response(new Uint8Array(buffer), {
+        status: 200,
+        headers: {
+          "Content-Type":
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "Content-Disposition": `attachment; filename="equsto-teklif-${safe || "export"}.xlsx"`,
+          "Cache-Control": "no-store",
+        },
+      });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Excel oluşturulamadı";
+      return adminErr(msg, 503);
+    }
+  }
+
   if (segments.length === 1) {
     const denied = assertAdminBearer(req);
     if (denied) return denied;

@@ -1123,6 +1123,7 @@ export type SiparisAdminRow = {
 export type TeklifAdminRow = {
   id: string;
   ref_no: string;
+  teklif_sayi?: string;
   musteri_ad: string;
   konsept: string;
   toplam_tl: number;
@@ -1275,6 +1276,32 @@ export async function updateTeklifDurum(
     return { ok: false, error: body.error || `HTTP ${res.status}` };
   }
   return { ok: true };
+}
+
+/** Admin — İşletme Teklifler satırından v14 Excel indir. */
+export async function downloadTeklifExcel(
+  teklifId: string,
+  filenameHint?: string,
+): Promise<{ error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/teklifler/${encodeURIComponent(teklifId)}/excel`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    cache: "no-store",
+  });
+  const ctype = res.headers.get("content-type") || "";
+  if (!res.ok || ctype.includes("application/json")) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    return { error: body.error || "Excel oluşturulamadı" };
+  }
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  const hint = (filenameHint || teklifId).replace(/[^\w.-]+/g, "-");
+  a.download = `equsto-teklif-${hint}.xlsx`;
+  a.click();
+  URL.revokeObjectURL(url);
+  return {};
 }
 
 export async function fetchMusteriler(): Promise<{

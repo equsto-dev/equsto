@@ -193,3 +193,47 @@ export async function resolveTeklifV14ForUsageSayi(
     toplamEur: usage?.toplamEur != null ? Number(usage.toplamEur) : null,
   });
 }
+
+function teklifSayiFromPayload(payload: unknown): string {
+  const rec = asRecord(payload);
+  if (!rec) return "";
+  const direct = pfosDisplayText(rec.teklif_sayi ?? rec.teklifSayi, "");
+  if (direct) return direct;
+  const v14 = asRecord(rec.teklif_v14);
+  const ust = asRecord(v14?.ust);
+  return pfosDisplayText(ust?.sayi, "");
+}
+
+/** İşletme → Teklifler satırı (gönderilmiş kayıt) → v14 model. */
+export async function resolveTeklifV14ForTeklifId(
+  teklifId: string,
+): Promise<TeklifModelV14 | null> {
+  const id = teklifId.trim();
+  if (!id) return null;
+  const row = await db.teklif.findUnique({ where: { id } });
+  if (!row) return null;
+
+  const fromPayload = parseStoredV14(row.payload);
+  if (fromPayload?.satirlar.length) {
+    const sayi =
+      fromPayload.ust.sayi || teklifSayiFromPayload(row.payload) || row.refNo;
+    return { ...fromPayload, ust: { ...fromPayload.ust, sayi } };
+  }
+
+  const sayi = teklifSayiFromPayload(row.payload);
+  if (sayi) {
+    const fromSayi = await resolveTeklifV14ForUsageSayi(sayi);
+    if (fromSayi?.satirlar.length) return fromSayi;
+  }
+
+  return modelFromKalemler(row.kalemler, {
+    sayi: sayi || row.refNo,
+    projeAdi: pfosDisplayText(row.konsept, row.refNo),
+    konsept: pfosDisplayText(row.konsept, ""),
+    konseptLabel: pfosDisplayText(row.konsept, ""),
+    m2: 0,
+    sehir: "",
+    tarih: row.createdAt.toISOString().slice(0, 10),
+    toplamEur: Number(row.toplamTl) || null,
+  });
+}
