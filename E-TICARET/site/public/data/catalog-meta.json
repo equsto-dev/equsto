@@ -1,8 +1,8 @@
 {
-  "version": "2026-08-28T04-15-22",
-  "rebuiltAt": "2026-08-28T04:15:22.705Z",
-  "ekipmanlar": 9590,
-  "withImage": 9563,
+  "version": "2026-09-17T23-01-01",
+  "rebuiltAt": "2026-09-17T23:01:01.828Z",
+  "ekipmanlar": 8293,
+  "withImage": 8293,
   "brands": 25,
   "deptCounts": {
     "araba": 92,
@@ -11,15 +11,15 @@
     "hazirlik": 474,
     "icecek": 174,
     "istif": 276,
-    "kahve": 126,
-    "market-reyon": 2009,
-    "pisirme": 2403,
+    "kahve": 124,
+    "market-reyon": 767,
+    "pisirme": 2411,
     "servis": 55,
     "set-ustu-mutfak": 986,
-    "sogutma": 948,
+    "sogutma": 892,
     "tasima": 173,
     "tezgah": 565,
-    "yikama": 333
+    "yikama": 328
   },
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,

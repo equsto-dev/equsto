@@ -2,7 +2,6 @@
 export const MARKA_HUB_SLUGS = [
   "oztiryakiler",
   "atalay",
-  "caglayan-refrigeration",
   "proso-profesyonel-sogutma",
   "rational",
   "robot-coupe",

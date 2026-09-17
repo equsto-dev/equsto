@@ -127,9 +127,9 @@ export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
     metaDescription: "Endüstriyel soğutma ekipmanları — buzdolabı, derin dondurucu, teşhir dolabı, soğuk oda.",
     metaDescriptionEn: "Commercial refrigeration — fridges, freezers, display cases and cold-room solutions.",
     seoDescription:
-      "Equsto'da endüstriyel soğutma çözümlerinin tam yelpazesi: buzdolapları, derin dondurucular, teşhir dolapları, soğuk odalar, şok soğutucular ve ada tipi buz dolapları. Electrolux, İnoksan, Proso, Çağlayan, Hoshizaki, Vitrifrigo, Simag, Brema markalarında GN uyumlu, enerji verimli modeller. Canlı fiyat, teknik detay ve PFOS ile soğuk oda proje teklifi.",
+      "Equsto'da endüstriyel soğutma çözümlerinin tam yelpazesi: buzdolapları, derin dondurucular, teşhir dolapları, soğuk odalar, şok soğutucular ve ada tipi buz dolapları. Electrolux, İnoksan, Proso, Hoshizaki, Vitrifrigo, Simag, Brema markalarında GN uyumlu, enerji verimli modeller. Canlı fiyat, teknik detay ve PFOS ile soğuk oda proje teklifi.",
     seoDescriptionEn:
-      "Complete industrial refrigeration range at Equsto: reach-in fridges, chest freezers, display cabinets, cold rooms, blast chillers and island freezers. Electrolux, İnoksan, Proso, Çağlayan, Hoshizaki, Vitrifrigo, Simag, Brema with GN compatibility and energy efficiency. Live pricing, specs and PFOS cold room project quotes.",
+      "Complete industrial refrigeration range at Equsto: reach-in fridges, chest freezers, display cabinets, cold rooms, blast chillers and island freezers. Electrolux, İnoksan, Proso, Hoshizaki, Vitrifrigo, Simag, Brema with GN compatibility and energy efficiency. Live pricing, specs and PFOS cold room project quotes.",
     usageAreas: [
       "Restoran ve otel mutfakları",
       "Market ve süpermarket reyonları",
@@ -162,7 +162,7 @@ export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
       "Brand service network and spare parts",
       "Blast chilling speed (kg/hour)"
     ],
-    brands: ["Electrolux", "İnoksan", "Proso", "Çağlayan", "Hoshizaki", "Vitrifrigo", "Simag", "Brema", "Coldline", "Fricon"],
+    brands: ["Electrolux", "İnoksan", "Proso", "Hoshizaki", "Vitrifrigo", "Simag", "Brema", "Coldline", "Fricon"],
     relatedCategories: [
       { slug: "buzdolaplari", title: "Buzdolapları", titleEn: "Reach-In Fridges" },
       { slug: "derin-dondurucular", title: "Derin Dondurucular", titleEn: "Chest Freezers" },
@@ -914,15 +914,15 @@ export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
   },
   "market-reyonlari": {
     title: "Market Reyonları",
-    lead: "Proso ve Çağlayan market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları",
+    lead: "Proso market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları",
     leadKey: "dept.market_reyonlari_lead",
     navKey: "nav.market_reyon",
     metaDescription: "Market reyonları — sütlük, şarküteri, self-servis ve teşhir dolapları.",
     metaDescriptionEn: "Retail departments — dairy, deli, self-service and display cases.",
     seoDescription:
-      "Equsto'da market ve perakende reyon soğutma sistemleri: sütlük, şarküteri, dikey dondurucu, ada tipi teşhir, self-servis, soğuk hava depoları. Proso, Çağlayan, Carrier, Epta, Costan, Friulinox markalarında enerji verimli, R290/R600a soğutma gazlı, HACCP uyumlu modeller. Canlı fiyat ve PFOS proje teklifi.",
+      "Equsto'da market ve perakende reyon soğutma sistemleri: sütlük, şarküteri, dikey dondurucu, ada tipi teşhir, self-servis, soğuk hava depoları. Proso, Carrier, Epta, Costan, Friulinox markalarında enerji verimli, R290/R600a soğutma gazlı, HACCP uyumlu modeller. Canlı fiyat ve PFOS proje teklifi.",
     seoDescriptionEn:
-      "Retail refrigeration systems at Equsto: dairy, deli, vertical freezers, island displays, self-service, cold rooms. Proso, Çağlayan, Carrier, Epta, Costan, Friulinox with energy-efficient, R290/R600a refrigerants, HACCP compliant. Live pricing and PFOS project quotes.",
+      "Retail refrigeration systems at Equsto: dairy, deli, vertical freezers, island displays, self-service, cold rooms. Proso, Carrier, Epta, Costan, Friulinox with energy-efficient, R290/R600a refrigerants, HACCP compliant. Live pricing and PFOS project quotes.",
     usageAreas: [
       "Süpermarket ve hipermarket reyonları",
       "Kasap ve şarküteri mağazaları",
@@ -951,7 +951,7 @@ export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
       "HACCP compliant design and materials",
       "Remote monitoring and alarm systems"
     ],
-    brands: ["Proso", "Çağlayan", "Carrier", "Epta", "Costan", "Friulinox", "Hussmann", "Arneg"],
+    brands: ["Proso", "Carrier", "Epta", "Costan", "Friulinox", "Hussmann", "Arneg"],
     relatedCategories: [
       { slug: "sutluk-reyonu", title: "Sütlük Reyonu", titleEn: "Dairy Department" },
       { slug: "sarkuteri-reyonu", title: "Şarküteri Reyonu", titleEn: "Deli Department" },

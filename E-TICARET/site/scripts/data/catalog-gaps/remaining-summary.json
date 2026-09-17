@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-09-17T23:01:02.375Z",
+  "deptTotal": 8359,
+  "caglayanRows": 0,
+  "remainingNoPrice": 242,
+  "remainingNoImage": 0,
+  "brands": [
+    {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "total": 3395,
+      "noPrice": 72,
+      "noImage": 0
+    },
+    {
+      "brand": "Electrolux Professional",
+      "total": 673,
+      "noPrice": 66,
+      "noImage": 0
+    },
+    {
+      "brand": "Proso Profesyonel Soğutma",
+      "total": 743,
+      "noPrice": 52,
+      "noImage": 0
+    },
+    {
+      "brand": "Yüksel Endüstriyel",
+      "total": 82,
+      "noPrice": 30,
+      "noImage": 0
+    },
+    {
+      "brand": "Pimak",
+      "total": 256,
+      "noPrice": 12,
+      "noImage": 0
+    },
+    {
+      "brand": "Sparo",
+      "total": 108,
+      "noPrice": 8,
+      "noImage": 0
+    },
+    {
+      "brand": "Avatherm",
+      "total": 67,
+      "noPrice": 1,
+      "noImage": 0
+    },
+    {
+      "brand": "Vosco",
+      "total": 164,
+      "noPrice": 1,
+      "noImage": 0
+    }
+  ]
+}

@@ -172,24 +172,6 @@
     { tip: "proso-soguk-hava", dept: "market-reyon", label: "Proso Soğuk Hava Deposu", search: "proso-soguk-hava|soğuk hava deposu|soguk hava" },
     { tip: "proso-sogutma-sistemleri", dept: "market-reyon", label: "Proso Soğutma Sistemleri", search: "proso-sogutma|soğutma sistemi|split|endüstriyel" },
     { tip: "proso-sise-sogutucu", dept: "market-reyon", label: "Proso Şişe Soğutucu", search: "proso-sise|şişe soğutucu|sise sogutucu" },
-    { tip: "caglayan-tumu", dept: "market-reyon", label: "Çağlayan", search: "çağlayan|caglayan refrigeration" },
-    { tip: "caglayan-nilufer", dept: "market-reyon", label: "Nilüfer", search: "nilüfer|nilufer" },
-    { tip: "caglayan-lotus", dept: "market-reyon", label: "Lotus", search: "lotus" },
-    { tip: "caglayan-nergis", dept: "market-reyon", label: "Nergis", search: "nergis" },
-    { tip: "caglayan-lale", dept: "market-reyon", label: "Lale", search: "lale" },
-    { tip: "caglayan-inci", dept: "market-reyon", label: "İnci", search: "inci" },
-    { tip: "caglayan-hercai", dept: "market-reyon", label: "Hercai", search: "hercai" },
-    { tip: "caglayan-reyhan", dept: "market-reyon", label: "Reyhan", search: "reyhan" },
-    { tip: "caglayan-sardunya", dept: "market-reyon", label: "Sardunya", search: "sardunya" },
-    { tip: "caglayan-gardenya", dept: "market-reyon", label: "Gardenya", search: "gardenya" },
-    { tip: "caglayan-anemon", dept: "market-reyon", label: "Anemon", search: "anemon" },
-    { tip: "caglayan-akasya", dept: "market-reyon", label: "Akasya", search: "akasya" },
-    { tip: "caglayan-begonvil", dept: "market-reyon", label: "Begonvil", search: "begonvil|begonvıl" },
-    { tip: "caglayan-defne", dept: "market-reyon", label: "Defne", search: "defne" },
-    { tip: "caglayan-erguvan", dept: "market-reyon", label: "Erguvan", search: "erguvan" },
-    { tip: "caglayan-leylak", dept: "market-reyon", label: "Leylak", search: "leylak" },
-    { tip: "caglayan-manolya", dept: "market-reyon", label: "Manolya", search: "manolya" },
-    { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
     { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
@@ -971,7 +953,6 @@
     }
     if (tile.id && u.raw && u.raw.tileId === tile.id) return true;
     if (tile.id === "proso-tumu" && u.raw && u.raw.kaynak === "prosogutma") return true;
-    if (tile.id === "caglayan-tumu" && u.raw && u.raw.kaynak === "caglayan-refrigeration") return true;
     return false;
   }
 

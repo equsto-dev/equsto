@@ -1,10 +1,10 @@
 /**
- * Market Reyonları — Çağlayan katalog yükleyici (PLP birleşimi için).
+ * Market Reyonları — katalog yükleyici (PLP birleşimi için).
  */
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260902-cafe-equalize-214";
+  var CATALOG_V = "20260918-caglayan-out";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

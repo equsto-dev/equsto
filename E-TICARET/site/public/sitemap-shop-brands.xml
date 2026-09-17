@@ -25,18 +25,6 @@
     <priority>0.78</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/marka/caglayan-refrigeration</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/shop/marka/caglayan-refrigeration</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
-  </url>
-  <url>
     <loc>https://equsto.com/shop/marka/proso-profesyonel-sogutma</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -385,18 +373,6 @@
     <priority>0.78</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/marka/portabianco</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/shop/marka/portabianco</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
-  </url>
-  <url>
     <loc>https://equsto.com/shop/marka/pimak</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,6 +380,18 @@
   </url>
   <url>
     <loc>https://equsto.com/en/shop/marka/pimak</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/marka/portabianco</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/shop/marka/portabianco</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>

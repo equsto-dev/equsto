@@ -29,27 +29,35 @@ export function parseItemList(html) {
   for (const m of blocks) {
     try {
       const data = JSON.parse(m[1]);
-      const list = data.itemListElement;
-      if (!Array.isArray(list) || !list.length) continue;
-      const first = list[0]?.item || list[0];
-      const isProductList =
-        data["@type"] === "ItemList" &&
-        (first?.["@type"] === "Product" || first?.sku || first?.productID);
-      if (!isProductList) continue;
-      return list.map((li) => {
-        const p = li.item || li;
-        const img = p.image;
-        const image = Array.isArray(img) ? img[0] : img || "";
-        return {
-          cafemarkt_id: String(p.productID || ""),
-          name: p.name || "",
-          code: p.sku || "",
-          brand: p.brand?.name || "",
-          url: p.url || "",
-          image,
-          price_try_kdv_dahil: p.offers?.price ? Number(p.offers.price) : null,
-        };
-      });
+      const nodes = Array.isArray(data)
+        ? data
+        : Array.isArray(data["@graph"])
+          ? data["@graph"]
+          : [data];
+      for (const node of nodes) {
+        const list = node?.itemListElement;
+        if (!Array.isArray(list) || !list.length) continue;
+        const first = list[0]?.item || list[0];
+        const isProductList =
+          (node["@type"] === "ItemList" || data["@type"] === "ItemList") &&
+          (first?.["@type"] === "Product" || first?.sku || first?.productID);
+        if (!isProductList) continue;
+        return list.map((li) => {
+          const p = li.item || li;
+          const img = p.image;
+          const image = Array.isArray(img) ? img[0] : img || "";
+          return {
+            cafemarkt_id: String(p.productID || ""),
+            name: p.name || "",
+            code: p.sku || "",
+            brand: p.brand?.name || "",
+            url: p.url || "",
+            image,
+            images: Array.isArray(img) ? img : image ? [image] : [],
+            price_try_kdv_dahil: p.offers?.price ? Number(p.offers.price) : null,
+          };
+        });
+      }
     } catch (_) {}
   }
   return [];

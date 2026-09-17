@@ -105,6 +105,15 @@ sleep 3
 docker compose --env-file .env.production exec -T app node -e "fetch('http://127.0.0.1:3000/').then(r=>{console.log('HTTP',r.status);process.exit(r.ok?0:1)}).catch(e=>{console.error(e);process.exit(1)})" \
   || docker compose --env-file .env.production logs --tail=30 app
 
+if [[ -f scripts/index-meilisearch.mjs ]]; then
+  echo "[hetzner-deploy] Meilisearch indeks (katalog)..."
+  MEILI_KEY="$(grep '^MEILISEARCH_MASTER_KEY=' .env.production 2>/dev/null | cut -d'=' -f2- || true)"
+  MEILISEARCH_HOST=http://127.0.0.1:7700 \
+  MEILISEARCH_MASTER_KEY="${MEILI_KEY:-equsto-prod-meili-key}" \
+  node --import ./scripts/load-env.mjs scripts/index-meilisearch.mjs \
+    || echo "[hetzner-deploy] Meili indeks uyarı — devam"
+fi
+
 if [[ -f scripts/hetzner-install-cron.sh ]]; then
   echo "[hetzner-deploy] crontab (TCMB + ajanlar)..."
   bash scripts/hetzner-install-cron.sh || echo "[hetzner-deploy] cron kurulum uyarı"

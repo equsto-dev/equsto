@@ -22,11 +22,6 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     facet: "Atalay",
     sameAs: ["https://www.atalaymutfak.com"],
   },
-  "caglayan-refrigeration": {
-    displayName: "Çağlayan Soğutma",
-    description:
-      "Çağlayan endüstriyel soğutma ekipmanları — tezgah altı, dik tip buzdolabı ve özel imalat soğutma modülleri. Equsto katalog ve PFOS teklif akışı.",
-  },
   "proso-profesyonel-sogutma": {
     displayName: "Proso Profesyonel Soğutma",
     description:

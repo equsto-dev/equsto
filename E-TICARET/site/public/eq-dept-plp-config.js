@@ -57,7 +57,7 @@
     'market-reyon': {
       title: 'Market Reyonları',
       lead:
-        'Proso ve Çağlayan market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları',
+        'Proso market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları',
     },
     'set-ustu-mutfak': {
       title: 'Set Üstü Mutfak Ekipmanları',

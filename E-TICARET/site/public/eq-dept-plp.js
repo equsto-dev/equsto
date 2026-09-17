@@ -56,7 +56,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260902-cafe-equalize-214';
+  var CATALOG_V = '20260918-caglayan-out';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -1404,7 +1404,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260608tezgah-olcu-plp';
+  var MARKET_REYON_JSON_V = '20260918-caglayan-out';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

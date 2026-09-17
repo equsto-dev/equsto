@@ -29,6 +29,7 @@ const seen = new Set();
 
 for (const file of fs.readdirSync(DEPT_DIR).sort()) {
   if (!file.endsWith(".json")) continue;
+  if (file.includes("_items.json")) continue;
   const rows = JSON.parse(fs.readFileSync(path.join(DEPT_DIR, file), "utf8"));
   if (!Array.isArray(rows)) continue;
   for (const row of rows) {

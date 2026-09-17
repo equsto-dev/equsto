@@ -46,7 +46,6 @@ type BrandTarget = { dept?: string; facet?: string; markaHub?: boolean; oztiOwnO
 const BRAND_SHOP_TARGET: Record<string, BrandTarget> = {
   atalay: { markaHub: true, facet: "Atalay" },
   oztiryakiler: { markaHub: true, facet: "Öztiryakiler", oztiOwnOnly: true },
-  "caglayan-refrigeration": { markaHub: true },
   "proso-profesyonel-sogutma": { markaHub: true },
   rational: { markaHub: true, facet: "Rational" },
   "robot-coupe": { markaHub: true, facet: "Robot Coupe" },

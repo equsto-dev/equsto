@@ -459,7 +459,6 @@
   var EQ_BRAND_SHOP_TARGET = {
     atalay: { markaHub: true, facet: "Atalay" },
     oztiryakiler: { markaHub: true, facet: "Öztiryakiler", oztiOwnOnly: true },
-    "caglayan-refrigeration": { markaHub: true },
     "proso-profesyonel-sogutma": { markaHub: true },
     rational: { markaHub: true, facet: "Rational" },
     "robot-coupe": { markaHub: true, facet: "Robot Coupe" },

@@ -25,32 +25,24 @@
     return it.label || "";
   }
 
-  /** Çağlayan kataloğu serileri — build ile güncellenir (caglayan-market-reyon-catalogue.json → navSubs). */
+  /** Proso market reyon serileri */
   var MARKET_REYON_SUBS = [
-    { label: "NİLÜFER", href: "market-reyonlari.html?q=N%C4%B0L%C3%9CFER", search: "NİLÜFER" },
-    { label: "LOTUS", href: "market-reyonlari.html?q=LOTUS", search: "LOTUS" },
-    { label: "NERGIS", href: "market-reyonlari.html?q=NERGIS", search: "NERGIS" },
-    { label: "LALE", href: "market-reyonlari.html?q=LALE", search: "LALE" },
-    { label: "İNCİ", href: "market-reyonlari.html?q=%C4%B0NC%C4%B0", search: "İNCİ" },
-    { label: "HERCAI", href: "market-reyonlari.html?q=HERCAI", search: "HERCAI" },
-    { label: "REYHAN", href: "market-reyonlari.html?q=REYHAN", search: "REYHAN" },
-    { label: "SARDUNYA", href: "market-reyonlari.html?q=SARDUNYA", search: "SARDUNYA" },
-    { label: "GARDENYA", href: "market-reyonlari.html?q=GARDENYA", search: "GARDENYA" },
-    { label: "ANEMON", href: "market-reyonlari.html?q=ANEMON", search: "ANEMON" },
-    { label: "AKASYA", href: "market-reyonlari.html?q=AKASYA", search: "AKASYA" },
-    { label: "BEGONVİL", href: "market-reyonlari.html?q=BEGONV%C4%B0L", search: "BEGONVİL" },
-    { label: "DEFNE", href: "market-reyonlari.html?q=DEFNE", search: "DEFNE" },
-    { label: "ERGUVAN", href: "market-reyonlari.html?q=ERGUVAN", search: "ERGUVAN" },
-    { label: "LEYLAK", href: "market-reyonlari.html?q=LEYLAK", search: "LEYLAK" },
-    { label: "MANOLYA", href: "market-reyonlari.html?q=MANOLYA", search: "MANOLYA" },
-    { label: "Tüm Çağlayan kataloğu", href: "market-reyonlari.html" },
+    { label: "Tüm Proso kataloğu", tip: "proso-tumu", href: "/shop/market-reyonlari?tip=proso-tumu" },
+    { label: "Sütlükler", tip: "proso-sutluk", href: "/shop/market-reyonlari?tip=proso-sutluk" },
+    { label: "Kısa Sütlükler", tip: "proso-kisa-sutluk", href: "/shop/market-reyonlari?tip=proso-kisa-sutluk" },
+    { label: "Şarküteri Reyonları", tip: "proso-sarkuteri", href: "/shop/market-reyonlari?tip=proso-sarkuteri" },
+    { label: "Dikey Dondurucular", tip: "proso-dikey-dondurucu", href: "/shop/market-reyonlari?tip=proso-dikey-dondurucu" },
+    { label: "Ada Tipi", tip: "proso-ada-tipi", href: "/shop/market-reyonlari?tip=proso-ada-tipi" },
+    { label: "Plug-in Kabinler", tip: "proso-plugin", href: "/shop/market-reyonlari?tip=proso-plugin" },
+    { label: "Butik", tip: "proso-butik", href: "/shop/market-reyonlari?tip=proso-butik" },
+    { label: "Soğuk Hava Depoları", tip: "proso-soguk-hava", href: "/shop/market-reyonlari?tip=proso-soguk-hava" },
   ];
 
-  function hydrateCaglayanNavSubs() {
-    var url = "/data/caglayan-market-reyon-catalogue.json";
+  function hydrateMarketReyonNavSubs() {
+    var url = "/data/prosogutma-market-reyon-catalogue.json";
     try {
       if (typeof location !== "undefined" && location.protocol !== "http:" && location.protocol !== "https:") {
-        url = "./data/caglayan-market-reyon-catalogue.json";
+        url = "./data/prosogutma-market-reyon-catalogue.json";
       }
     } catch (_) {}
     return fetch(url, { cache: "no-store", headers: { Accept: "application/json" } })
@@ -58,9 +50,10 @@
         return r.ok ? r.json() : null;
       })
       .then(function (j) {
-        if (!j || !j.navSubs || !j.navSubs.length) return;
+        var list = (j && (j.subs || j.navSubs)) || [];
+        if (!list.length) return;
         MARKET_REYON_SUBS.length = 0;
-        j.navSubs.forEach(function (x) {
+        list.forEach(function (x) {
           MARKET_REYON_SUBS.push(x);
         });
       })
