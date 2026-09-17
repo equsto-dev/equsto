@@ -448,6 +448,8 @@
     vosco: "Vosco",
     sparo: "Sparo",
     npicco: "Npicco",
+    cambro: "Cambro",
+    portashelf: "Portashelf",
   };
 
   /**
@@ -491,6 +493,8 @@
     sparo: { markaHub: true, facet: "Sparo" },
     npicco: { markaHub: true, facet: "Npicco" },
     inoksan: { markaHub: true, facet: "İnoksan" },
+    cambro: { markaHub: true, facet: "Cambro" },
+    portashelf: { markaHub: true, facet: "Portashelf" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
     sanremo: { dept: "kahve", facet: "Sanremo" },
@@ -608,6 +612,7 @@
       .toUpperCase();
     if (/^8959\.BK/.test(kod)) return true;
     if (/servis\s*raf/i.test(name) && /^7897\.\d+30\./.test(kod)) return true;
+    if (typeof window.eqIsCambroIstifRow === "function" && window.eqIsCambroIstifRow(row)) return true;
     if (window.EqDeptTips) {
       if (typeof window.EqDeptTips.isOztiServisRafiProduct === "function" && window.EqDeptTips.isOztiServisRafiProduct(row)) {
         return true;
@@ -620,6 +625,36 @@
       }
     }
     return false;
+  };
+
+  /** Portashelf marka vitrini — çöp arabası (MB126X) araba dept'te kalsın */
+  window.eqPortashelfBrandHubExcludeRow = function (row) {
+    if (!row) return false;
+    if (window.EqDeptTips && typeof window.EqDeptTips.isPortashelfCopArabasi === "function") {
+      return window.EqDeptTips.isPortashelfCopArabasi(row);
+    }
+    var kod = String(row.sku || row.urun_kodu || row.model || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (kod === "MB126X") return true;
+    var name = String(row.name || row.n || "").toLocaleLowerCase("tr");
+    return /çöp\s*arab|cop\s*arab/.test(name);
+  };
+
+  /** Cambro marka vitrini — polipropilen tablalı istif (8897.*.P0) */
+  window.eqIsCambroIstifRow = function (row) {
+    if (!row) return false;
+    if (window.EqDeptTips && typeof window.EqDeptTips.isCambroIstifProduct === "function") {
+      return window.EqDeptTips.isCambroIstifProduct(row);
+    }
+    var kod = String(row.sku || row.urun_kodu || row.model || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^8897\.(36|46|56).*\.P0$/i.test(kod)) return true;
+    var cat = String(row.category || row.c || "").toLocaleLowerCase("tr");
+    if (cat === "polipropilen-tablali-istif-raflari") return true;
+    var name = String(row.name || row.n || "").toLocaleLowerCase("tr");
+    return /polipropilen/.test(name) && /tablal[ıi]|istif\s*raf/.test(name);
   };
 
   window.eqBrandMatchesRow = function (row, brandCanonical, slug) {
@@ -641,6 +676,16 @@
       if (!/öztiryakiler|oztiryakiler/i.test(b)) return false;
       if (!oem || oem === "Öztiryakiler") return true;
       return false;
+    }
+
+    if (slug === "portashelf") {
+      if (typeof window.eqPortashelfBrandHubExcludeRow === "function" && window.eqPortashelfBrandHubExcludeRow(row)) {
+        return false;
+      }
+    }
+
+    if (slug === "cambro") {
+      return typeof window.eqIsCambroIstifRow === "function" && window.eqIsCambroIstifRow(row);
     }
 
     if (slug === "inoksan") {

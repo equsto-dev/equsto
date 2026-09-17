@@ -330,6 +330,13 @@
     var n = String(name || '').trim();
     var kod = String(sku || '').trim();
     var oemField = String(oemBrand || '').trim();
+    var kodCompact = kod.replace(/\s+/g, '').toUpperCase();
+    if (
+      /^8897\.(36|46|56).*\.P0$/i.test(kodCompact) ||
+      (/polipropilen/i.test(n) && /tablal[ıi]|istif\s*raf/i.test(n))
+    ) {
+      return 'Cambro';
+    }
     if (OEM_RESELLER.test(lc(raw)) && (n || kod || oemField)) {
       if (/^9912\.|^9805\.(SDE|SV|SPN)/i.test(kod) && /\bSIMAG\b/i.test(n.toLocaleUpperCase('tr'))) return 'SIMAG';
       var oem = findOemBrandInName(n);
@@ -345,6 +352,9 @@
     if (!u) return '';
     if (window.EqDeptTips && typeof window.EqDeptTips.isSogukOdaProduct === 'function' && window.EqDeptTips.isSogukOdaProduct(u)) {
       return '';
+    }
+    if (window.EqDeptTips && typeof window.EqDeptTips.isCambroIstifProduct === 'function' && window.EqDeptTips.isCambroIstifProduct(u)) {
+      return 'Cambro';
     }
     var fb = String((u.fb || '')).trim();
     if (fb) return facetBrandKey(fb);
