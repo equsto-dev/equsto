@@ -2,10 +2,10 @@
 
 import { ProTable, StatisticCard } from "@ant-design/pro-components";
 import { App, Button, Col, Row, Tag } from "antd";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import {
   downloadPfosListeKaynak,
-  downloadPfosUsageExcel,
   fetchPfosUsage,
   type PfosUsageAdminRow,
   type PfosUsageOzet,
@@ -51,7 +51,6 @@ export default function IsletmePfosUsagePanel() {
   const [ozet, setOzet] = useState<PfosUsageOzet | null>(null);
   const [rows, setRows] = useState<PfosUsageAdminRow[]>([]);
   const [days, setDays] = useState(30);
-  const [excelSayi, setExcelSayi] = useState<string | null>(null);
   const [kaynakId, setKaynakId] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
@@ -70,25 +69,6 @@ export default function IsletmePfosUsagePanel() {
   useEffect(() => {
     load();
   }, [load]);
-
-  const onExcel = useCallback(
-    async (sayi: string) => {
-      const teklifSayi = sayi.trim();
-      if (!teklifSayi) {
-        message.warning("Teklif numarası yok");
-        return;
-      }
-      setExcelSayi(teklifSayi);
-      try {
-        const res = await downloadPfosUsageExcel(teklifSayi);
-        if (res.error) message.error(res.error);
-        else message.success("Excel indirildi");
-      } finally {
-        setExcelSayi(null);
-      }
-    },
-    [message],
-  );
 
   const onKaynak = useCallback(
     async (uploadId: string, filename?: string | null) => {
@@ -270,15 +250,12 @@ export default function IsletmePfosUsagePanel() {
               const sayi = String(r.teklif_sayi ?? "").trim();
               if (!sayi) return "—";
               return (
-                <Button
-                  type="link"
-                  size="small"
-                  style={{ padding: 0, height: "auto" }}
-                  loading={excelSayi === sayi}
-                  onClick={() => void onExcel(sayi)}
+                <Link
+                  href={`/yonetim/isletme/teklif/${encodeURIComponent(sayi)}`}
+                  style={{ fontWeight: 600 }}
                 >
                   {sayi}
-                </Button>
+                </Link>
               );
             },
           },

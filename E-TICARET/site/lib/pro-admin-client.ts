@@ -1280,6 +1280,116 @@ export async function updateTeklifDurum(
   return { ok: true };
 }
 
+export type TeklifAdminDetay = TeklifAdminRow & {
+  musteri_tel?: string;
+  musteri_mail?: string;
+  teklif_v14?: import("@/lib/pfos/teklif/teklif-v14.types").TeklifModelV14 | null;
+};
+
+export async function fetchTeklifDetay(
+  id: string,
+): Promise<{ row?: TeklifAdminDetay; error?: string }> {
+  const body = await adminFetch<{
+    success?: boolean;
+    data?: TeklifAdminDetay;
+    error?: string;
+  }>(`/api/teklifler/${encodeURIComponent(id)}`);
+  if (body.error || body.success === false) {
+    return { error: body.error || "Detay alınamadı" };
+  }
+  return { row: body.data };
+}
+
+export async function saveTeklifRevize(
+  id: string,
+  payload: {
+    teklif_v14: import("@/lib/pfos/teklif/teklif-v14.types").TeklifModelV14;
+    musteri?: { ad?: string; telefon?: string; eposta?: string };
+  },
+): Promise<{ row?: TeklifAdminRow; error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/teklifler/${encodeURIComponent(id)}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify(payload),
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    data?: TeklifAdminRow;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { row: body.data };
+}
+
+export async function sendTeklifYeniden(
+  id: string,
+  payload: {
+    kanal: "email" | "whatsapp";
+    teklif_v14: import("@/lib/pfos/teklif/teklif-v14.types").TeklifModelV14;
+    musteri?: { ad?: string; telefon?: string; eposta?: string };
+  },
+): Promise<{ error?: string; sent?: boolean }> {
+  const token = getProToken();
+  const res = await fetch(`/api/teklifler/${encodeURIComponent(id)}/gonder`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({
+      gonderim_kanali: payload.kanal,
+      teklif_v14: payload.teklif_v14,
+      musteri: payload.musteri,
+    }),
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    error?: string;
+    customer_email?: { sent?: boolean; attempted?: boolean; error?: string };
+    customer_whatsapp?: { sent?: boolean; attempted?: boolean; error?: string };
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  const delivery =
+    payload.kanal === "whatsapp" ? body.customer_whatsapp : body.customer_email;
+  if (delivery && delivery.attempted === false && !delivery.sent) {
+    return { error: delivery.error || "Gönderim yapılandırılmamış" };
+  }
+  return { sent: true };
+}
+
+export async function downloadTeklifPdf(
+  teklifId: string,
+  filenameHint?: string,
+): Promise<{ error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/teklifler/${encodeURIComponent(teklifId)}/pdf`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    cache: "no-store",
+  });
+  const ctype = res.headers.get("content-type") || "";
+  if (!res.ok || ctype.includes("application/json")) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    return { error: body.error || "PDF oluşturulamadı" };
+  }
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  const hint = (filenameHint || teklifId).replace(/[^\w.-]+/g, "-");
+  a.download = `equsto-teklif-${hint}.pdf`;
+  a.click();
+  URL.revokeObjectURL(url);
+  return {};
+}
+
 /** Admin — İşletme Teklifler satırından v14 Excel indir. */
 export async function downloadTeklifExcel(
   teklifId: string,

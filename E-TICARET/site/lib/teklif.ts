@@ -9,6 +9,9 @@ import {
   type TeklifDeliveryResult,
 } from "@/lib/teklif/customer-email";
 import { sendTeklifCustomerWhatsApp } from "@/lib/teklif/customer-whatsapp";
+import { parseTeklifV14 } from "@/lib/teklif/parse-v14";
+import { recomputeTeklifV14Ozet } from "@/lib/pfos/teklif/catalog-hit-to-satir";
+import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 
 export type TeklifAdminRow = {
   id: string;
@@ -62,6 +65,23 @@ function teklifSayiFromPayload(payload: unknown): string {
   const v14 = asRecord(rec.teklif_v14);
   const ust = asRecord(v14?.ust);
   return pfosDisplayText(ust?.sayi, "");
+}
+
+export async function findTeklifByIdOrSayi(idOrSayi: string) {
+  const key = idOrSayi.trim();
+  if (!key) return null;
+  const byId = await db.teklif.findUnique({ where: { id: key } });
+  if (byId) return byId;
+  return db.teklif.findFirst({
+    where: {
+      OR: [
+        { payload: { path: ["teklif_sayi"], equals: key } },
+        { payload: { path: ["teklif_v14", "ust", "sayi"], equals: key } },
+        { refNo: key },
+      ],
+    },
+    orderBy: { createdAt: "desc" },
+  });
 }
 
 export function teklifToAdmin(t: Teklif): TeklifAdminRow {
@@ -336,5 +356,116 @@ export async function createTeklif(
     }).catch((e) => console.error("[pfos-usage] quote_sent", e));
   }
 
+  return { teklif: admin, customerEmail, customerWhatsApp };
+}
+
+function slimKalemlerFromV14(model: TeklifModelV14) {
+  return model.satirlar.map((s) => ({
+    bolumNo: s.bolumNo,
+    bolumBaslik: s.bolumBaslik,
+    poz: s.poz,
+    stokNo: s.stokNo,
+    tanim: s.tanim,
+    marka: s.marka,
+    olcu: s.olcu,
+    adet: s.adet,
+    birimSatis: s.birimSatis,
+    toplamSatis: s.toplamSatis,
+    doviz: s.doviz,
+  }));
+}
+
+function toplamTlFromModel(model: TeklifModelV14, fallback: number): number {
+  const eurTry = model.ust.eurTry ?? 0;
+  const genelEur = model.ozet.genelToplam ?? 0;
+  if (eurTry > 0 && genelEur > 0) return Math.round(genelEur * eurTry);
+  return fallback;
+}
+
+export async function updateTeklifRevize(
+  id: string,
+  body: Record<string, unknown>,
+): Promise<TeklifAdminRow> {
+  const existing = await db.teklif.findUnique({ where: { id } });
+  if (!existing) throw new Error("Teklif bulunamadı");
+
+  const parsed = parseTeklifV14(body);
+  if (!parsed) throw new Error("Teklif modeli eksik");
+  const model = recomputeTeklifV14Ozet(parsed);
+
+  const musteri = asRecord(body.musteri) ?? {};
+  const musteriAd = String(
+    musteri.ad ?? body.musteri_ad ?? existing.musteriAd,
+  ).trim();
+  const musteriTel = String(
+    musteri.telefon ?? body.musteri_tel ?? existing.musteriTel,
+  ).trim();
+  const musteriMail = String(
+    musteri.eposta ?? body.musteri_mail ?? existing.musteriMail,
+  ).trim();
+
+  const prev = asRecord(existing.payload) ?? {};
+  const toplamTl = toplamTlFromModel(model, Number(existing.toplamTl) || 0);
+
+  const row = await db.teklif.update({
+    where: { id },
+    data: {
+      musteriAd: musteriAd || existing.musteriAd,
+      musteriTel,
+      musteriMail,
+      toplamTl,
+      durum: "revize",
+      kalemler: slimKalemlerFromV14(model) as Prisma.InputJsonValue,
+      payload: {
+        ...prev,
+        teklif_v14: model,
+        teklif_sayi: model.ust.sayi,
+        musteri: {
+          ad: musteriAd || existing.musteriAd,
+          telefon: musteriTel,
+          eposta: musteriMail,
+        },
+        tahmini_toplam_tl: toplamTl,
+      } as Prisma.InputJsonValue,
+    },
+  });
+  return teklifToAdmin(row);
+}
+
+export type ResendTeklifResult = {
+  teklif: TeklifAdminRow;
+  customerEmail: TeklifDeliveryResult;
+  customerWhatsApp: TeklifDeliveryResult;
+};
+
+export async function resendTeklif(
+  id: string,
+  kanal: "email" | "whatsapp",
+  body?: Record<string, unknown>,
+): Promise<ResendTeklifResult> {
+  let admin: TeklifAdminRow;
+  if (body && parseTeklifV14(body)) {
+    admin = await updateTeklifRevize(id, body);
+  } else {
+    const row = await db.teklif.findUnique({ where: { id } });
+    if (!row) throw new Error("Teklif bulunamadı");
+    admin = teklifToAdmin(row);
+  }
+
+  const fresh = await db.teklif.findUnique({ where: { id } });
+  if (!fresh) throw new Error("Teklif bulunamadı");
+  const payload = asRecord(fresh.payload) ?? {};
+  const sendBody: Record<string, unknown> = {
+    ...payload,
+    gonderim_kanali: kanal,
+  };
+
+  let customerEmail: TeklifDeliveryResult = { attempted: false, sent: false };
+  let customerWhatsApp: TeklifDeliveryResult = { attempted: false, sent: false };
+  if (kanal === "whatsapp") {
+    customerWhatsApp = await sendTeklifCustomerWhatsApp(admin, sendBody);
+  } else {
+    customerEmail = await sendTeklifCustomerEmail(admin, sendBody);
+  }
   return { teklif: admin, customerEmail, customerWhatsApp };
 }

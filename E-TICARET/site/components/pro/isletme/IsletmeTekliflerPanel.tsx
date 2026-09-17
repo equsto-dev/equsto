@@ -5,11 +5,11 @@ import { App, Button, Select, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
   downloadPfosListeKaynak,
-  downloadTeklifExcel,
   fetchTeklifler,
   type TeklifAdminRow,
   updateTeklifDurum,
 } from "@/lib/pro-admin-client";
+import Link from "next/link";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 const DURUM_OPTIONS = [
@@ -25,7 +25,6 @@ export default function IsletmeTekliflerPanel() {
   const { message } = App.useApp();
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<TeklifAdminRow[]>([]);
-  const [excelId, setExcelId] = useState<string | null>(null);
   const [kaynakId, setKaynakId] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
@@ -53,21 +52,6 @@ export default function IsletmeTekliflerPanel() {
     message.success("Durum güncellendi");
     load();
   }
-
-  const onExcel = useCallback(
-    async (row: TeklifAdminRow) => {
-      const hint = (row.teklif_sayi || row.ref_no || row.id).trim();
-      setExcelId(row.id);
-      try {
-        const res = await downloadTeklifExcel(row.id, hint);
-        if (res.error) message.error(res.error);
-        else message.success("Excel indirildi");
-      } finally {
-        setExcelId(null);
-      }
-    },
-    [message],
-  );
 
   const onKaynak = useCallback(
     async (uploadId: string, filename?: string | null) => {
@@ -108,20 +92,12 @@ export default function IsletmeTekliflerPanel() {
             const eqs = String(r.teklif_sayi ?? "").trim();
             const label = eqs || r.ref_no;
             return (
-              <div>
-                <Button
-                  type="link"
-                  size="small"
-                  style={{ padding: 0, height: "auto" }}
-                  loading={excelId === r.id}
-                  onClick={() => void onExcel(r)}
-                >
-                  {label}
-                </Button>
-                {eqs && eqs !== r.ref_no ? (
-                  <div style={{ fontSize: 11, color: "#888" }}>{r.ref_no}</div>
-                ) : null}
-              </div>
+              <Link
+                href={`/yonetim/isletme/teklif/${encodeURIComponent(r.id)}`}
+                style={{ fontWeight: 600 }}
+              >
+                {label}
+              </Link>
             );
           },
         },
