@@ -26,6 +26,8 @@ function snapshotKalemler(model: TeklifModelV14) {
         elkKw: satir?.elkKw,
         gazKw: satir?.gazKw,
         aciklama: satir?.aciklama,
+        fotoUrl: satir?.fotoUrl,
+        fotoNot: satir?.fotoNot,
       };
     });
   }
@@ -49,6 +51,8 @@ function snapshotKalemler(model: TeklifModelV14) {
       elkKw: s.elkKw,
       gazKw: s.gazKw,
       aciklama: s.aciklama,
+      fotoUrl: s.fotoUrl,
+      fotoNot: s.fotoNot,
     }));
 }
 

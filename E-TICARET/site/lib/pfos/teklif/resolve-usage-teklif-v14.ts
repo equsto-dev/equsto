@@ -70,6 +70,8 @@ function satirFromUnknown(item: unknown, index: number): TeklifV14Satir | null {
     toplamSatis: toplam,
     doviz,
     aciklama: pfosDisplayText(o.aciklama, "") || undefined,
+    fotoUrl: pfosDisplayText(o.fotoUrl ?? o.gorselUrl, "") || undefined,
+    fotoNot: pfosDisplayText(o.fotoNot, "") || undefined,
   };
 }
 

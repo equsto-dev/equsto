@@ -193,24 +193,10 @@ async function build() {
   ws.getCell(14, 12).value = "EUR";
   for (let c = 1; c <= COL_COUNT; c++) ws.getCell(14, c).border = borderThin();
 
-  // Rows 15-20 padding (PRODUCT_BLOCK_ROWS = 16)
+  // Rows 15-20 padding (PRODUCT_BLOCK_ROWS = 16).
+  // ŞARTLARIMIZ şablonda yok — export kodu tek blok yazar; splice merge'i bozmasın.
   for (let r = 15; r <= 20; r++) {
     for (let c = 1; c <= COL_COUNT; c++) ws.getCell(r, c).border = borderThin();
-  }
-
-  // Şartlar
-  let r = 22;
-  const sartlar = [
-    "ŞARTLARIMIZ",
-    "  01.   Teklifimiz 7 (YEDİ) gün geçerlidir.",
-    "  02.   Fiyatlarımıza KDV dahil değildir, faturada ayrıca eklenecektir.",
-    "  17.   Equsto.com yapay zekadan yardım alır; hata yapabilir. Nihai teyit satıcı onayındadır.",
-  ];
-  for (const line of sartlar) {
-    ws.getCell(r, 1).value = line;
-    ws.getCell(r, 1).font = line.startsWith("  ") ? fontNorm : fontBold;
-    mergeSafe(ws, r, 1, r, COL_COUNT);
-    r++;
   }
 
   fs.mkdirSync(path.dirname(out), { recursive: true });

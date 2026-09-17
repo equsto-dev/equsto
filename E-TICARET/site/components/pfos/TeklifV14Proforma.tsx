@@ -9,7 +9,7 @@ import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre } 
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
-import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
+import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL, uniqueTeklifV14Sartlar } from "@/lib/pfos/teklif/constants";
 import { normalizeTeklifAciklamaText } from "@/lib/pfos/teklif/catalog-teklif-aciklama";
 import {
   memberLoggedInNow,
@@ -833,7 +833,7 @@ export default function TeklifV14Proforma({
             label: "Şartlarımız",
             children: (
               <div style={{ fontSize: 12, lineHeight: 1.6 }}>
-                {model.sartlar.map((s, i) => (
+                {uniqueTeklifV14Sartlar(model.sartlar).map((s, i) => (
                   <div key={i}>{s}</div>
                 ))}
               </div>

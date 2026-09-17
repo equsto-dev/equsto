@@ -39,3 +39,23 @@ export const TEKLIF_V14_SARTLAR: string[] = [
   "  16.   Dijital mutabakatlar yazılı mutabakat gibi sonuç doğurur.",
   "  17.   Equsto.com yapay zekadan yardım alır; hata yapabilir. Nihai teyit satıcı onayındadır.",
 ];
+
+/** Tekrarlayan satırları at; başlık yoksa ekle */
+export function uniqueTeklifV14Sartlar(lines: string[] | undefined): string[] {
+  const raw = (lines?.length ? lines : TEKLIF_V14_SARTLAR)
+    .map((s) => String(s ?? "").replace(/\u00a0/g, " ").trimEnd())
+    .filter((s) => s.trim());
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const line of raw) {
+    const key = line.trim().toLocaleUpperCase("tr");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(line);
+  }
+  if (!out.length) return [...TEKLIF_V14_SARTLAR];
+  if (out[0].trim().toLocaleUpperCase("tr") !== "ŞARTLARIMIZ") {
+    out.unshift("ŞARTLARIMIZ");
+  }
+  return out;
+}

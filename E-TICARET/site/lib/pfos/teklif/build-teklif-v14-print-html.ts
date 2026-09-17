@@ -1,7 +1,7 @@
 import type { TeklifModelV14 } from "./teklif-v14.types";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
 import { formatTarihTr, formatKwHucre, formatEurHucre, formatTeklifDovizHucre, displayOlcuMm } from "./format-v14";
-import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "./constants";
+import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL, uniqueTeklifV14Sartlar } from "./constants";
 import {
   sanitizeTeklifV14SatirAciklama,
   sanitizeTeklifV14SatirTanim,
@@ -83,7 +83,7 @@ export function buildTeklifV14PrintHtml(
 
   const genel = formatTeklifDovizHucre(ozet.genelToplam, ozet.doviz, 2);
 
-  const sartlar = model.sartlar
+  const sartlar = uniqueTeklifV14Sartlar(model.sartlar)
     .map((s) => `<div class="sart">${esc(s)}</div>`)
     .join("");
 
