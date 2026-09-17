@@ -1,7 +1,6 @@
 import BesosCatalog from "@/components/besos/BesosCatalog";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import BesosImt300Hero from "@/components/besos/BesosImt300Hero";
-import BesosIceStrip from "@/components/besos/BesosIceStrip";
 import BesosMethod from "@/components/besos/BesosMethod";
 import BesosModular from "@/components/besos/BesosModular";
 import BesosProjects from "@/components/besos/BesosProjects";
@@ -52,7 +51,6 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
           <BesosMethod steps={landing.method} locale={locale} />
         </div>
         <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} locale={locale} />
-        <BesosIceStrip />
         <BesosSignatureBars items={landing.signatureTrio} products={products} locale={locale} />
       </main>
       <ShopFooterHost />
