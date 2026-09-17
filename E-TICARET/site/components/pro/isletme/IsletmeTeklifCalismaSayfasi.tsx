@@ -31,9 +31,10 @@ import {
   recomputeTeklifV14Ozet,
   type TeklifCatalogHit,
 } from "@/lib/pfos/teklif/catalog-hit-to-satir";
-import { fetchMarkaMuadil } from "@/lib/pfos/teklif/marka-degistir";
+import { fetchMarkaAdaylari, fetchMarkaMuadil } from "@/lib/pfos/teklif/marka-degistir";
 import {
   ayniMarka,
+  cozHedefMarka,
   MARKA_SINIF_LABEL,
   markaDegisimHedefleri,
   markaKapsamSayilari,
@@ -219,6 +220,10 @@ const HAZIR_MARKALAR = [
   "Equsto",
   "Vosco",
   "Nuova Simonelli",
+  "Faema",
+  "FAC",
+  "Bravilor Bonamat",
+  "Santos",
 ];
 
 const BrandCell = memo(function BrandCell({
@@ -685,6 +690,9 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     kilitli: number;
     sinif: ReturnType<typeof markaKapsamSayilari>["sinif"];
   } | null>(null);
+  const [markaAdaylar, setMarkaAdaylar] = useState<TeklifCatalogHit[]>([]);
+  const [markaAdaySku, setMarkaAdaySku] = useState<string>("");
+  const [markaAdayYukleniyor, setMarkaAdayYukleniyor] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -941,7 +949,8 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
       const current = modelRef.current;
       const satir = current?.satirlar[index];
       if (!satir) return;
-      const yeni = yeniHam.trim();
+      const counts = markaKapsamSayilari(current.satirlar, index);
+      const yeni = cozHedefMarka(yeniHam.trim(), counts.sinif);
       if (!yeni) {
         patchSatir(index, { marka: "" }, false);
         return;
@@ -950,8 +959,9 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
         if (satir.marka !== yeni) patchSatir(index, { marka: yeni }, false);
         return;
       }
-      const counts = markaKapsamSayilari(current.satirlar, index);
-      setMarkaKapsam("ayni_marka");
+      setMarkaKapsam(counts.ayniMarka <= 1 ? "satir" : "ayni_marka");
+      setMarkaAdaylar([]);
+      setMarkaAdaySku("");
       setMarkaSoru({
         index,
         eski: satir.marka || "—",
@@ -961,6 +971,30 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     },
     [patchSatir],
   );
+
+  useEffect(() => {
+    if (!markaSoru) {
+      setMarkaAdaylar([]);
+      setMarkaAdaySku("");
+      return;
+    }
+    const satir = modelRef.current?.satirlar[markaSoru.index];
+    if (!satir) return;
+    let cancelled = false;
+    setMarkaAdayYukleniyor(true);
+    void fetchMarkaAdaylari(satir, markaSoru.yeni)
+      .then((adaylar) => {
+        if (cancelled) return;
+        setMarkaAdaylar(adaylar);
+        setMarkaAdaySku(adaylar[0]?.sku || "");
+      })
+      .finally(() => {
+        if (!cancelled) setMarkaAdayYukleniyor(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [markaSoru]);
 
   async function uygulaMarka() {
     const soru = markaSoru;
@@ -973,11 +1007,16 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     );
     setMarkaBusy(true);
     try {
+      const secilen =
+        markaAdaylar.find((h) => h.sku === markaAdaySku) ?? markaAdaylar[0] ?? null;
       const updates = new Map<number, TeklifV14Satir>();
       for (const i of hedefler) {
         const satir = current.satirlar[i];
         if (!satir) continue;
-        const hit = await fetchMarkaMuadil(satir, soru.yeni);
+        const hit =
+          i === soru.index && secilen
+            ? secilen
+            : await fetchMarkaMuadil(satir, soru.yeni);
         if (hit) {
           updates.set(i, {
             ...applyCatalogHitToSatir(satir, hit),
@@ -1191,10 +1230,35 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
                 )
               </Radio>
             </Radio.Group>
-            <p style={{ marginTop: 12, color: "#888", fontSize: 12 }}>
-              Salamander gibi istisna için önce o satırı pinleyin veya “sadece bu
-              kalem” seçin.
-            </p>
+            <div style={{ marginTop: 16 }}>
+              <div style={{ fontWeight: 600, marginBottom: 8 }}>Muadil ürün</div>
+              {markaAdayYukleniyor ? (
+                <div style={{ color: "#888" }}>Katalogdan aranıyor…</div>
+              ) : markaAdaylar.length ? (
+                <Radio.Group
+                  value={markaAdaySku}
+                  onChange={(e) => setMarkaAdaySku(e.target.value)}
+                  style={{ display: "flex", flexDirection: "column", gap: 8 }}
+                >
+                  {markaAdaylar.map((h) => (
+                    <Radio key={h.sku || h.name} value={h.sku}>
+                      <span>
+                        <strong>{h.sku || "—"}</strong>
+                        {` · ${h.name}`}
+                        {h.satis_eur_indirimli
+                          ? ` · ${Math.round(h.satis_eur_indirimli)} €`
+                          : ""}
+                      </span>
+                    </Radio>
+                  ))}
+                </Radio.Group>
+              ) : (
+                <div style={{ color: "#d46b08" }}>
+                  Bu markada muadil bulunamadı. Yine de yalnızca marka adı
+                  yazılabilir.
+                </div>
+              )}
+            </div>
           </div>
         ) : null}
       </Modal>

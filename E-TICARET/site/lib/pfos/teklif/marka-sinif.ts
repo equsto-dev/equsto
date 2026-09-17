@@ -53,6 +53,9 @@ const SINIF_RULES: Array<{ sinif: MarkaSinif; re: RegExp }> = [
 ];
 
 const TIP_QUERY: Array<{ re: RegExp; query: string }> = [
+  { re: /espresso/i, query: "espresso" },
+  { re: /kahve.?makina|kahve.?makine/i, query: "espresso" },
+  { re: /de[gğ]irmen/i, query: "kahve değirmeni" },
   { re: /salamander/i, query: "salamander" },
   { re: /4\s*g[oö]z|d[oö]rtl[uü].*ocak/i, query: "4 gözlü ocak" },
   { re: /2\s*g[oö]z|iki.?g[oö]z/i, query: "2 gözlü ocak" },
@@ -82,11 +85,41 @@ export function foldMarka(s: string): string {
   return foldTr(String(s || "").replace(/endüstriyel.*$/i, "").trim());
 }
 
+export function espressoGrupSayisi(s: string): number | null {
+  const t = foldTr(s);
+  const n = t.match(/(\d)\s*grup/);
+  if (n) return Number(n[1]);
+  if (/cift\s*grup|iki\s*grup/.test(t)) return 2;
+  if (/\buc\s*grup/.test(t)) return 3;
+  if (/tek\s*grup/.test(t)) return 1;
+  return null;
+}
+
+/** Kahvede «fac» → Faema (dilimleyici FAC değil) */
+export function cozHedefMarka(raw: string, sinif: MarkaSinif): string {
+  const t = foldMarka(raw);
+  if (!t) return raw.trim();
+  if (sinif === "kahve") {
+    if (t === "fac" || t.startsWith("faem")) return "Faema";
+    if (t.includes("simonelli") || t === "appia" || t === "nuova") {
+      return "Nuova Simonelli";
+    }
+    if (t === "wmf") return "WMF";
+    if (t.includes("bravilor")) return "Bravilor Bonamat";
+  }
+  if (t === "fac") return "FAC";
+  return raw.trim();
+}
+
 export function ayniMarka(a: string, b: string): boolean {
   const x = foldMarka(a);
   const y = foldMarka(b);
   if (!x || !y) return false;
-  return x === y || x.includes(y) || y.includes(x);
+  if (x === y) return true;
+  if (x.length >= 4 && y.length >= 4 && (x.includes(y) || y.includes(x))) {
+    return true;
+  }
+  return false;
 }
 
 function satirMetin(s: TeklifV14Satir): string {
@@ -103,6 +136,10 @@ export function satirMarkaSinif(s: TeklifV14Satir): MarkaSinif {
 
 export function satirTipArama(s: TeklifV14Satir): string {
   const t = satirMetin(s);
+  const grup = espressoGrupSayisi(t);
+  if (/espresso|kahve.?makina|kahve.?makine/i.test(t)) {
+    return grup ? `espresso ${grup} gruplu` : "espresso";
+  }
   for (const row of TIP_QUERY) {
     if (row.re.test(t)) return row.query;
   }
