@@ -107,7 +107,6 @@ function buildShopHubs() {
   const urls = [
     urlEntry(`${ORIGIN}/`, { priority: "1", changefreq: "weekly" }),
     urlEntry(`${ORIGIN}/shop`, { priority: "0.95" }),
-    urlEntry(`${ORIGIN}/besos/imt300`, { priority: "0.88" }),
     urlEntry(`${ORIGIN}/shop/marka`, { priority: "0.75" }),
   ];
   for (const d of SHOP_DEPTS) {
@@ -174,34 +173,98 @@ function buildCategories(tips) {
   return [];
 }
 
+function urbanBarSectionPath(section) {
+  if (section === "bardaklar") return "bardaklar";
+  if (section === "bar-ekipman") return "bar-ekipman";
+  return "";
+}
+
+function urbanBarProductPath(product, lang) {
+  const handle = String(product.handle || "").trim();
+  const section = urbanBarSectionPath(product.section);
+  if (!handle || !section) return "";
+  const prefix = lang === "en" ? "/en" : "";
+  return `${prefix}/besos/${section}/${encodeURIComponent(handle)}`;
+}
+
 function buildBesos() {
-  const urls = [
-    urlEntry(`${ORIGIN}/besos`, { priority: "0.95", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/en/besos`, { priority: "0.9", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/besos/bar-istasyonlari`, { priority: "0.92", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/en/besos/bar-istasyonlari`, { priority: "0.88", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/besos/bardaklar`, { priority: "0.88", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/en/besos/bardaklar`, { priority: "0.84", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/besos/bar-ekipman`, { priority: "0.88", changefreq: "weekly" }),
-    urlEntry(`${ORIGIN}/en/besos/bar-ekipman`, { priority: "0.84", changefreq: "weekly" }),
-  ];
-  const catPath = path.join(PUBLIC, "data", "vitrum-bars-catalogue.json");
-  if (!fs.existsSync(catPath)) return urls;
-  const data = JSON.parse(fs.readFileSync(catPath, "utf8"));
-  const products = data.products || [];
+  const urls = [];
   const seen = new Set();
-  for (const p of products) {
-    const slug = vitrumSlugLocal(p);
-    if (!slug || seen.has(slug)) continue;
-    seen.add(slug);
-    urls.push(
-      urlEntry(`${ORIGIN}/besos/modul/${encodeURIComponent(slug)}`, {
-        priority: "0.88",
-        changefreq: "monthly",
-      }),
-    );
+  const add = (pathname, opts = {}) => {
+    if (!pathname || seen.has(pathname)) return;
+    seen.add(pathname);
+    urls.push(urlEntry(`${ORIGIN}${pathname}`, opts));
+  };
+
+  add("/besos", { priority: "0.93" });
+  add("/en/besos", { priority: "0.91" });
+  add("/besos/bar-istasyonlari", { priority: "0.92", changefreq: "weekly" });
+  add("/en/besos/bar-istasyonlari", { priority: "0.9", changefreq: "weekly" });
+  add("/besos/bardaklar", { priority: "0.9", changefreq: "weekly" });
+  add("/en/besos/bardaklar", { priority: "0.88", changefreq: "weekly" });
+  add("/besos/bar-ekipman", { priority: "0.9", changefreq: "weekly" });
+  add("/en/besos/bar-ekipman", { priority: "0.88", changefreq: "weekly" });
+  add("/besos/imt300", { priority: "0.88" });
+  add("/en/besos/imt300", { priority: "0.86" });
+
+  const catPath = path.join(PUBLIC, "data", "vitrum-bars-catalogue.json");
+  if (fs.existsSync(catPath)) {
+    const data = JSON.parse(fs.readFileSync(catPath, "utf8"));
+    const modulSeen = new Set();
+    for (const p of data.products || []) {
+      const slug = vitrumSlugLocal(p);
+      if (!slug || modulSeen.has(slug)) continue;
+      modulSeen.add(slug);
+      add(`/besos/modul/${encodeURIComponent(slug)}`, { priority: "0.88", changefreq: "monthly" });
+      add(`/en/besos/modul/${encodeURIComponent(slug)}`, { priority: "0.86", changefreq: "monthly" });
+    }
   }
+
+  const urbanPath = path.join(PUBLIC, "data", "urbanbar-besos-catalog.json");
+  if (fs.existsSync(urbanPath)) {
+    const urban = JSON.parse(fs.readFileSync(urbanPath, "utf8"));
+    for (const p of urban.products || []) {
+      const tr = urbanBarProductPath(p, "tr");
+      const en = urbanBarProductPath(p, "en");
+      if (tr) add(tr, { priority: "0.72", changefreq: "monthly" });
+      if (en) add(en, { priority: "0.7", changefreq: "monthly" });
+    }
+  }
+
   return urls;
+}
+
+function geoLandingPaths() {
+  const paths = [];
+  const skipKey = (key) =>
+    key === "version" ||
+    key === "source" ||
+    key === "blog" ||
+    key === "projeler" ||
+    key.startsWith("projeler/") ||
+    key === "en/blog";
+
+  const trFile = path.join(ROOT, "lib/geo/landings.json");
+  if (fs.existsSync(trFile)) {
+    const raw = JSON.parse(fs.readFileSync(trFile, "utf8"));
+    for (const key of Object.keys(raw)) {
+      if (skipKey(key) || key.startsWith("en/")) continue;
+      paths.push(key.startsWith("/") ? key : `/${key}`);
+    }
+  }
+
+  const enFile = path.join(ROOT, "lib/geo/landings-en.json");
+  if (fs.existsSync(enFile)) {
+    const raw = JSON.parse(fs.readFileSync(enFile, "utf8"));
+    for (const key of Object.keys(raw)) {
+      if (skipKey(key)) continue;
+      const loc = key.startsWith("en/") ? `/${key}` : key.startsWith("/") ? key : `/en/${key}`;
+      if (loc === "/en/blog" || loc === "/en/contact") continue;
+      paths.push(loc);
+    }
+  }
+
+  return [...new Set(paths)];
 }
 
 function buildProducts(rows, langPrefix = "") {
@@ -246,8 +309,7 @@ function patchSitemapPages() {
     "https://equsto.com/arama",      // noindex
     "https://equsto.com/en/cart",    // redirects to /sepet, noindex
     "https://equsto.com/en/search",  // redirects to /arama, noindex
-    "https://equsto.com/en/iletisim", // redirects to /en/contact
-    // Missing canonical
+    "https://equsto.com/en/contact", // kanonik /en/iletisim
     "https://equsto.com/projeler",
     "https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode",
     "https://equsto.com/projeler/izmir-moduler-bar-icecek-demode",
@@ -266,7 +328,7 @@ function patchSitemapPages() {
     ["/en", "0.95", "weekly"],
     ["/en/about", "0.78", "monthly"],
     ["/en/pfos", "0.95", "weekly"],
-    ["/en/contact", "0.7", "monthly"],
+    ["/en/iletisim", "0.7", "monthly"],
     ["/en/steakhouse-kitchen-setup", "0.85", "monthly"],
     ["/en/fish-restaurant-kitchen-project-and-equipment", "0.84", "monthly"],
     ["/en/cloud-kitchen-setup", "0.84", "monthly"],
@@ -292,7 +354,24 @@ function patchSitemapPages() {
     ["/en/bar-design-turkey", "0.82", "monthly"],
     ["/restoran-mutfagi", "0.86", "monthly"],
     ["/en/restoran-mutfagi", "0.86", "monthly"],
+    ["/besos", "0.93", "weekly"],
+    ["/en/besos", "0.91", "weekly"],
+    ["/iletisim", "0.8", "monthly"],
+    ["/sss", "0.7", "monthly"],
+    ["/en/sss", "0.68", "monthly"],
+    ["/rehber", "0.78", "weekly"],
+    ["/iade-politikasi", "0.5", "yearly"],
+    ["/sartlar", "0.5", "yearly"],
+    ["/kariyer", "0.55", "monthly"],
+    ["/export", "0.7", "monthly"],
+    ["/banka-bilgileri", "0.45", "yearly"],
+    ["/buradan-basladi", "0.7", "monthly"],
+    ["/en/story", "0.68", "monthly"],
   ];
+
+  for (const geoPath of geoLandingPaths()) {
+    ensure.push([geoPath, "0.8", "monthly"]);
+  }
 
   for (const [pathSuffix, priority, changefreq] of ensure) {
     if (xml.includes(`https://equsto.com${pathSuffix}</loc>`)) continue;
@@ -327,10 +406,13 @@ function main() {
   indexFiles.push("sitemap-shop-brands.xml");
 
   const categoryUrls = buildCategories(tips);
-  writeUrlset(path.join(PUBLIC, "sitemap-shop-categories.xml"), categoryUrls);
-  indexFiles.push("sitemap-shop-categories.xml");
+  if (categoryUrls.length) {
+    writeUrlset(path.join(PUBLIC, "sitemap-shop-categories.xml"), categoryUrls);
+    indexFiles.push("sitemap-shop-categories.xml");
+  }
 
-  writeUrlset(path.join(PUBLIC, "sitemap-besos.xml"), buildBesos());
+  const besosUrls = buildBesos();
+  writeUrlset(path.join(PUBLIC, "sitemap-besos.xml"), besosUrls);
   indexFiles.push("sitemap-besos.xml");
 
   // Subcategory landing pages
@@ -356,6 +438,7 @@ function main() {
       `brands=${brands} (${brandUrls.length} urls)`,
       `categories=${categoryUrls.length / 2} tips (${categoryUrls.length} urls)`,
       `subcategories=${subcategoryCount / 2} (${subcategoryCount} urls)`,
+      `besos=${besosUrls.length}`,
       `products_tr=${productCountTr}`,
       `products_en=${productCountEn}`,
     ].join(" | "),

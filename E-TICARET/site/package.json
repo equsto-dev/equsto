@@ -96,6 +96,7 @@
     "catalog:urbanbar:live": "node --import ./scripts/load-env.mjs scripts/publish-urbanbar-live.mjs",
     "catalog:urbanbar:purge-alcohol": "node scripts/purge-urbanbar-alcohol.mjs",
     "catalog:urbanbar:shopify-images": "node scripts/patch-urbanbar-shopify-images.mjs --write",
+    "catalog:urbanbar:prices": "node scripts/refresh-urbanbar-prices.mjs",
     "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",
     "catalog:cafemarkt:portabianco": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/gen-portabianco-cafemarkt-img-map.mjs && node scripts/apply-cafemarkt-portabianco-images.mjs --upgrade-b --search-missing",
     "catalog:portabianco:audit": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/audit-fix-portabianco-catalog.mjs",
