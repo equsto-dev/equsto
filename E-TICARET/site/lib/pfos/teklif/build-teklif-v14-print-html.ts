@@ -81,7 +81,19 @@ export function buildTeklifV14PrintHtml(
     }
   }
 
+  const araToplam = ozet.araToplam ?? ozet.genelToplam;
+  const iskontoYuzde = ozet.iskontoYuzde ?? 0;
+  const iskontoTutar = ozet.iskontoTutar ?? 0;
+  const araHucre = formatTeklifDovizHucre(araToplam, ozet.doviz, 2);
+  const iskHucre =
+    iskontoTutar > 0
+      ? `− ${formatTeklifDovizHucre(iskontoTutar, ozet.doviz, 2)}`
+      : formatTeklifDovizHucre(0, ozet.doviz, 2);
   const genel = formatTeklifDovizHucre(ozet.genelToplam, ozet.doviz, 2);
+  const iskEtiket =
+    iskontoYuzde > 0
+      ? `İSKONTO (%${String(iskontoYuzde).replace(".", ",")})`
+      : "İSKONTO";
 
   const sartlar = uniqueTeklifV14Sartlar(model.sartlar)
     .map((s) => `<div class="sart">${esc(s)}</div>`)
@@ -171,6 +183,16 @@ export function buildTeklifV14PrintHtml(
         <td class="num">${esc(formatKwHucre(ozet.toplamElektrikKw))}</td>
         <td class="num">${esc(formatKwHucre(ozet.toplamGazKw))}</td>
         <td></td>
+        <td style="text-align:center">TOPLAM</td>
+        <td class="num">${esc(araHucre)}</td>
+      </tr>
+      <tr class="total">
+        <td colspan="9"></td>
+        <td style="text-align:center">${esc(iskEtiket)}</td>
+        <td class="num">${esc(iskHucre)}</td>
+      </tr>
+      <tr class="total">
+        <td colspan="9"></td>
         <td style="font-weight:700;text-align:center">GENEL TOPLAM</td>
         <td class="num" style="font-weight:700">${esc(genel)}</td>
       </tr>

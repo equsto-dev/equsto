@@ -19,7 +19,8 @@ import {
   Tag,
 } from "antd";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties } from "react";
+import { flushSync } from "react-dom";
 import {
   applyCatalogHitToSatir,
   emptyTeklifSatir,
@@ -31,7 +32,6 @@ import type {
   TeklifModelV14,
   TeklifV14Satir,
 } from "@/lib/pfos/teklif/teklif-v14.types";
-import { publicAssetUrl } from "@/lib/public-asset-url";
 import {
   downloadTeklifPdf,
   fetchTeklifDetay,
@@ -48,6 +48,26 @@ type GridRow = {
   bolumBaslik?: string;
   satir?: TeklifV14Satir;
 };
+
+const editorFlushers = new Set<() => void>();
+
+function flushEditors() {
+  flushSync(() => {
+    for (const flush of editorFlushers) flush();
+  });
+}
+
+function useEditorFlusher(flush: () => void) {
+  const flushRef = useRef(flush);
+  flushRef.current = flush;
+  useEffect(() => {
+    const fn = () => flushRef.current();
+    editorFlushers.add(fn);
+    return () => {
+      editorFlushers.delete(fn);
+    };
+  }, []);
+}
 
 function nextPoz(satirlar: TeklifV14Satir[], bolumNo: string): string {
   const nums = satirlar
@@ -68,109 +88,467 @@ function satirDurum(s: TeklifV14Satir): { color: string; label: string } {
   return { color: "red", label: "Fiyatsız" };
 }
 
-function CatalogSuggest({
+const DraftInput = memo(function DraftInput({
+  value,
+  onCommit,
+  textarea,
+}: {
+  value: string;
+  onCommit: (v: string) => void;
+  textarea?: boolean;
+}) {
+  const [draft, setDraft] = useState(value);
+  const focused = useRef(false);
+  const draftRef = useRef(draft);
+  const valueRef = useRef(value);
+  const onCommitRef = useRef(onCommit);
+  draftRef.current = draft;
+  valueRef.current = value;
+  onCommitRef.current = onCommit;
+  useEditorFlusher(() => {
+    if (draftRef.current !== valueRef.current) {
+      onCommitRef.current(draftRef.current);
+    }
+  });
+  useEffect(() => {
+    if (!focused.current) setDraft(value);
+  }, [value]);
+  const common = {
+    value: draft,
+    onFocus: () => {
+      focused.current = true;
+    },
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setDraft(e.target.value);
+    },
+    onBlur: () => {
+      focused.current = false;
+      if (draft !== value) onCommit(draft);
+    },
+  };
+  if (textarea) {
+    return (
+      <Input.TextArea
+        {...common}
+        autoSize={{ minRows: 1, maxRows: 3 }}
+        placeholder="Açıklama"
+        style={{ marginTop: 4, fontSize: 11 }}
+      />
+    );
+  }
+  return (
+    <Input
+      {...common}
+      onPressEnter={() => {
+        if (draft !== value) onCommit(draft);
+      }}
+    />
+  );
+});
+
+const DraftNumber = memo(function DraftNumber({
+  value,
+  onCommit,
+  min,
+  max,
+  style,
+}: {
+  value: number | null | undefined;
+  onCommit: (v: number | null) => void;
+  min?: number;
+  max?: number;
+  style?: CSSProperties;
+}) {
+  const [draft, setDraft] = useState<number | null>(value ?? null);
+  const focused = useRef(false);
+  const draftRef = useRef(draft);
+  const valueRef = useRef(value ?? null);
+  const onCommitRef = useRef(onCommit);
+  draftRef.current = draft;
+  valueRef.current = value ?? null;
+  onCommitRef.current = onCommit;
+  useEditorFlusher(() => {
+    if (draftRef.current !== valueRef.current) {
+      onCommitRef.current(draftRef.current);
+    }
+  });
+  useEffect(() => {
+    if (!focused.current) setDraft(value ?? null);
+  }, [value]);
+  return (
+    <InputNumber
+      min={min}
+      max={max}
+      value={draft ?? undefined}
+      style={{ width: "100%", ...style }}
+      onFocus={() => {
+        focused.current = true;
+      }}
+      onChange={(v) => setDraft(typeof v === "number" ? v : null)}
+      onBlur={() => {
+        focused.current = false;
+        if (draft !== (value ?? null)) onCommit(draft);
+      }}
+    />
+  );
+});
+
+const CatalogSuggest = memo(function CatalogSuggest({
   value,
   placeholder,
-  onChange,
+  onCommit,
   onPick,
   valueKey,
 }: {
   value: string;
   placeholder: string;
-  onChange: (v: string) => void;
+  onCommit: (v: string) => void;
   onPick: (hit: TeklifCatalogHit) => void;
   valueKey: "sku" | "name";
 }) {
+  const [draft, setDraft] = useState(value);
   const [opts, setOpts] = useState<TeklifCatalogHit[]>([]);
   const [open, setOpen] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
+  const focused = useRef(false);
+  const picked = useRef(false);
+  const draftRef = useRef(draft);
+  const valueRef = useRef(value);
+  const onCommitRef = useRef(onCommit);
+  draftRef.current = draft;
+  valueRef.current = value;
+  onCommitRef.current = onCommit;
+  useEditorFlusher(() => {
+    if (!picked.current && draftRef.current !== valueRef.current) {
+      onCommitRef.current(draftRef.current);
+    }
+  });
+
+  useEffect(() => {
+    if (!focused.current) setDraft(value);
+  }, [value]);
 
   const search = useCallback((q: string) => {
     if (timer.current) clearTimeout(timer.current);
+    abortRef.current?.abort();
     const query = q.trim();
     if (query.length < 2) {
       setOpts([]);
       return;
     }
     timer.current = setTimeout(() => {
+      const ac = new AbortController();
+      abortRef.current = ac;
       void fetch(
         `/api/search?suggest=1&limit=8&q=${encodeURIComponent(query)}`,
-        { cache: "no-store" },
+        { cache: "force-cache", signal: ac.signal },
       )
         .then((r) => r.json() as Promise<{ hits?: TeklifCatalogHit[] }>)
-        .then((body) => setOpts(Array.isArray(body.hits) ? body.hits : []))
-        .catch(() => setOpts([]));
-    }, 280);
+        .then((body) => {
+          if (!ac.signal.aborted) {
+            setOpts(Array.isArray(body.hits) ? body.hits : []);
+          }
+        })
+        .catch(() => {
+          if (!ac.signal.aborted) setOpts([]);
+        });
+    }, 400);
   }, []);
 
   return (
     <AutoComplete
-      value={value}
+      value={draft}
       open={open && opts.length > 0}
       style={{ width: "100%" }}
       placeholder={placeholder}
+      filterOption={false}
+      defaultActiveFirstOption={false}
       options={opts.map((h) => ({
         value: valueKey === "sku" ? h.sku || h.name : h.name,
         hit: h,
         label: (
-          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            {h.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={publicAssetUrl(h.image)}
-                alt=""
-                width={32}
-                height={32}
-                style={{ objectFit: "contain", background: "#f5f5f5" }}
-              />
-            ) : null}
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontWeight: 600, fontSize: 12 }}>{h.sku || "—"}</div>
-              <div
-                style={{
-                  fontSize: 12,
-                  color: "#555",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {h.name}
-              </div>
-              <div style={{ fontSize: 11, color: "#888" }}>
-                {h.brand}
-                {h.satis_eur_indirimli
-                  ? ` · ${Math.round(h.satis_eur_indirimli)} €`
-                  : ""}
-              </div>
+          <div style={{ minWidth: 0, lineHeight: 1.25 }}>
+            <div style={{ fontWeight: 600, fontSize: 12 }}>{h.sku || "—"}</div>
+            <div
+              style={{
+                fontSize: 12,
+                color: "#555",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {h.name}
+            </div>
+            <div style={{ fontSize: 11, color: "#888" }}>
+              {h.brand}
+              {h.satis_eur_indirimli
+                ? ` · ${Math.round(h.satis_eur_indirimli)} €`
+                : ""}
             </div>
           </div>
         ),
       }))}
+      onChange={(q) => {
+        picked.current = false;
+        setDraft(q);
+      }}
       onSearch={(q) => {
-        onChange(q);
+        picked.current = false;
+        setDraft(q);
         search(q);
         setOpen(true);
       }}
-      onChange={(q) => {
-        onChange(q);
-        search(q);
-      }}
       onSelect={(_v, option) => {
+        picked.current = true;
         const hit = (option as { hit?: TeklifCatalogHit }).hit;
-        if (hit) onPick(hit);
+        if (hit) {
+          const next = valueKey === "sku" ? hit.sku || hit.name : hit.name;
+          setDraft(next);
+          onPick(hit);
+        }
         setOpen(false);
       }}
-      onBlur={() => setOpen(false)}
+      onBlur={() => {
+        focused.current = false;
+        setOpen(false);
+        if (!picked.current && draft !== value) onCommit(draft);
+      }}
       onFocus={() => {
-        if (value.trim().length >= 2) {
-          search(value);
+        focused.current = true;
+        picked.current = false;
+        if (draft.trim().length >= 2) {
+          search(draft);
           setOpen(true);
         }
       }}
     />
   );
-}
+});
+
+const sectionSpan = (row: GridRow) =>
+  row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 };
+
+const TeklifGrid = memo(function TeklifGrid({
+  loading,
+  gridRows,
+  patchSatir,
+  removeSatir,
+}: {
+  loading: boolean;
+  gridRows: GridRow[];
+  patchSatir: (
+    index: number,
+    patch: Partial<TeklifV14Satir> | ((s: TeklifV14Satir) => TeklifV14Satir),
+    totals?: boolean,
+  ) => void;
+  removeSatir: (index: number) => void;
+}) {
+  const columns = useMemo(
+    () => [
+      {
+        title: "Böl",
+        width: 56,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "section" ? (
+            <span>{row.bolumBaslik}</span>
+          ) : (
+            <DraftInput
+              value={row.satir?.bolumNo || ""}
+              onCommit={(v) => patchSatir(row.satirIndex!, { bolumNo: v }, false)}
+            />
+          ),
+        onCell: (row: GridRow) =>
+          row.kind === "section" ? { colSpan: 12 } : { colSpan: 1 },
+      },
+      {
+        title: "Poz",
+        width: 72,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftInput
+              value={row.satir?.poz || ""}
+              onCommit={(v) => patchSatir(row.satirIndex!, { poz: v }, false)}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Stok no",
+        width: 160,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" && row.satir ? (
+            <CatalogSuggest
+              value={row.satir.stokNo}
+              placeholder="EQ.KCT08…"
+              valueKey="sku"
+              onCommit={(v) => patchSatir(row.satirIndex!, { stokNo: v }, false)}
+              onPick={(hit) =>
+                patchSatir(row.satirIndex!, (s) => applyCatalogHitToSatir(s, hit))
+              }
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Tanımı",
+        width: 280,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" && row.satir ? (
+            <div>
+              <CatalogSuggest
+                value={row.satir.tanim}
+                placeholder="Ürün adı yazın"
+                valueKey="name"
+                onCommit={(v) => patchSatir(row.satirIndex!, { tanim: v }, false)}
+                onPick={(hit) =>
+                  patchSatir(row.satirIndex!, (s) =>
+                    applyCatalogHitToSatir(s, hit),
+                  )
+                }
+              />
+              <DraftInput
+                textarea
+                value={row.satir.aciklama || ""}
+                onCommit={(v) =>
+                  patchSatir(row.satirIndex!, { aciklama: v }, false)
+                }
+              />
+            </div>
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Ölçü",
+        width: 110,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftInput
+              value={row.satir?.olcu || ""}
+              onCommit={(v) => patchSatir(row.satirIndex!, { olcu: v }, false)}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Marka",
+        width: 100,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftInput
+              value={row.satir?.marka || ""}
+              onCommit={(v) => patchSatir(row.satirIndex!, { marka: v }, false)}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Elk",
+        width: 72,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftNumber
+              value={row.satir?.elkKw}
+              onCommit={(v) => patchSatir(row.satirIndex!, { elkKw: v })}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Gaz",
+        width: 72,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftNumber
+              value={row.satir?.gazKw}
+              onCommit={(v) => patchSatir(row.satirIndex!, { gazKw: v })}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Adet",
+        width: 72,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftNumber
+              min={1}
+              value={row.satir?.adet}
+              onCommit={(v) =>
+                patchSatir(row.satirIndex!, { adet: v != null && v > 0 ? v : 1 })
+              }
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Satış",
+        width: 90,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product" ? (
+            <DraftNumber
+              min={0}
+              value={row.satir?.birimSatis}
+              onCommit={(v) => patchSatir(row.satirIndex!, { birimSatis: v })}
+            />
+          ) : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "Toplam",
+        width: 90,
+        render: (_: unknown, row: GridRow) =>
+          row.kind === "product"
+            ? formatEurHucre(row.satir?.toplamSatis ?? null)
+            : null,
+        onCell: sectionSpan,
+      },
+      {
+        title: "",
+        width: 108,
+        render: (_: unknown, row: GridRow) => {
+          if (row.kind !== "product" || !row.satir) return null;
+          const d = satirDurum(row.satir);
+          return (
+            <Space size={4}>
+              <Tag color={d.color} style={{ margin: 0 }}>
+                {d.label}
+              </Tag>
+              <Button
+                type="text"
+                danger
+                size="small"
+                icon={<DeleteOutlined />}
+                onClick={() => removeSatir(row.satirIndex!)}
+              />
+            </Space>
+          );
+        },
+        onCell: sectionSpan,
+      },
+    ],
+    [patchSatir, removeSatir],
+  );
+
+  return (
+    <Table<GridRow>
+      rowKey="key"
+      loading={loading}
+      pagination={false}
+      size="small"
+      bordered
+      scroll={{ x: 1400 }}
+      dataSource={gridRows}
+      columns={columns}
+      onRow={(row) =>
+        row.kind === "section"
+          ? { style: { background: "#f0f0f0", fontWeight: 700 } }
+          : {}
+      }
+    />
+  );
+});
 
 export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
   const { message } = App.useApp();
@@ -180,6 +558,8 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     null,
   );
   const [model, setModel] = useState<TeklifModelV14 | null>(null);
+  const modelRef = useRef<TeklifModelV14 | null>(null);
+  modelRef.current = model;
   const [musteriAd, setMusteriAd] = useState("");
   const [musteriTel, setMusteriTel] = useState("");
   const [musteriMail, setMusteriMail] = useState("");
@@ -216,6 +596,9 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
           ozet: {
             toplamElektrikKw: 0,
             toplamGazKw: 0,
+            araToplam: null,
+            iskontoYuzde: 0,
+            iskontoTutar: 0,
             genelToplam: null,
             doviz: "EUR",
           },
@@ -240,19 +623,31 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     void load();
   }, [load]);
 
-  const patchModel = useCallback((fn: (m: TeklifModelV14) => TeklifModelV14) => {
-    setModel((prev) => (prev ? recomputeTeklifV14Ozet(fn(prev)) : prev));
-  }, []);
+  const patchModel = useCallback(
+    (fn: (m: TeklifModelV14) => TeklifModelV14, totals = true) => {
+      setModel((prev) => {
+        if (!prev) return prev;
+        const next = totals ? recomputeTeklifV14Ozet(fn(prev)) : fn(prev);
+        modelRef.current = next;
+        return next;
+      });
+    },
+    [],
+  );
 
   const patchSatir = useCallback(
-    (index: number, patch: Partial<TeklifV14Satir> | ((s: TeklifV14Satir) => TeklifV14Satir)) => {
+    (
+      index: number,
+      patch: Partial<TeklifV14Satir> | ((s: TeklifV14Satir) => TeklifV14Satir),
+      totals = true,
+    ) => {
       patchModel((m) => ({
         ...m,
         satirlar: m.satirlar.map((s, i) => {
           if (i !== index) return s;
           return typeof patch === "function" ? patch(s) : { ...s, ...patch };
         }),
-      }));
+      }), totals);
     },
     [patchModel],
   );
@@ -287,12 +682,14 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
   );
 
   async function onSave() {
-    if (!model) return;
+    flushEditors();
+    const current = modelRef.current;
+    if (!current) return;
     setSaving(true);
     try {
       const withMusteri = {
-        ...model,
-        ust: { ...model.ust, musteri: musteriAd },
+        ...current,
+        ust: { ...current.ust, musteri: musteriAd },
       };
       const res = await saveTeklifRevize(teklifId, {
         teklif_v14: withMusteri,
@@ -301,6 +698,7 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
       if (res.error) message.error(res.error);
       else {
         message.success("Revize kaydedildi");
+        modelRef.current = withMusteri;
         setModel(withMusteri);
       }
     } finally {
@@ -309,11 +707,12 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
   }
 
   async function onPdf() {
-    if (!model) return;
+    const current = modelRef.current;
+    if (!current) return;
     setSending("pdf");
     try {
       await onSave();
-      const hint = model.ust.sayi || refNo;
+      const hint = modelRef.current?.ust.sayi || current.ust.sayi || refNo;
       const res = await downloadTeklifPdf(teklifId, hint);
       if (res.error) message.error(res.error);
       else message.success("PDF indirildi");
@@ -323,7 +722,9 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
   }
 
   async function onSend(kanal: "email" | "whatsapp") {
-    if (!model) return;
+    flushEditors();
+    const current = modelRef.current;
+    if (!current) return;
     if (kanal === "email" && !musteriMail.trim()) {
       message.error("E-posta gerekli");
       return;
@@ -335,8 +736,8 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     setSending(kanal);
     try {
       const withMusteri = {
-        ...model,
-        ust: { ...model.ust, musteri: musteriAd },
+        ...current,
+        ust: { ...current.ust, musteri: musteriAd },
       };
       const res = await sendTeklifYeniden(teklifId, {
         kanal,
@@ -346,6 +747,7 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
       if (res.error) message.error(res.error);
       else {
         message.success(kanal === "email" ? "PDF e-posta ile gönderildi" : "PDF WhatsApp ile gönderildi");
+        modelRef.current = withMusteri;
         setModel(withMusteri);
       }
     } finally {
@@ -372,12 +774,28 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     });
   }
 
-  function removeSatir(index: number) {
-    patchModel((m) => ({
-      ...m,
-      satirlar: m.satirlar.filter((_, i) => i !== index),
-    }));
-  }
+  const removeSatir = useCallback(
+    (index: number) => {
+      patchModel((m) => ({
+        ...m,
+        satirlar: m.satirlar.filter((_, i) => i !== index),
+      }));
+    },
+    [patchModel],
+  );
+
+  const patchIskontoYuzde = useCallback(
+    (v: number | null) => {
+      patchModel((m) => ({
+        ...m,
+        ozet: {
+          ...m.ozet,
+          iskontoYuzde: v != null && Number.isFinite(v) ? v : 0,
+        },
+      }));
+    },
+    [patchModel],
+  );
 
   const sayi = model?.ust.sayi || refNo || teklifId;
 
@@ -441,256 +859,75 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
         />
         <span style={{ color: "#888" }}>
           Kur: {model?.ust.eurTry != null ? model.ust.eurTry.toFixed(4) : "—"} · Genel{" "}
-          {formatEurHucre(model?.ozet.genelToplam ?? null)}
+          {formatEurHucre(model?.ozet.genelToplam ?? null, 2)}
         </span>
       </Space>
 
-      <Table<GridRow>
-        rowKey="key"
+      <TeklifGrid
         loading={loading}
-        pagination={false}
-        size="small"
-        bordered
-        scroll={{ x: 1400 }}
-        dataSource={gridRows}
-        onRow={(row) =>
-          row.kind === "section"
-            ? { style: { background: "#f0f0f0", fontWeight: 700 } }
-            : {}
-        }
-        columns={[
-          {
-            title: "Böl",
-            width: 56,
-            render: (_, row) =>
-              row.kind === "section" ? (
-                <span>{row.bolumBaslik}</span>
-              ) : (
-                <Input
-                  value={row.satir?.bolumNo}
-                  onChange={(e) =>
-                    patchSatir(row.satirIndex!, { bolumNo: e.target.value })
-                  }
-                />
-              ),
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 12 } : { colSpan: 1 },
-          },
-          {
-            title: "Poz",
-            width: 72,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <Input
-                  value={row.satir?.poz}
-                  onChange={(e) =>
-                    patchSatir(row.satirIndex!, { poz: e.target.value })
-                  }
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Stok no",
-            width: 160,
-            render: (_, row) =>
-              row.kind === "product" && row.satir ? (
-                <CatalogSuggest
-                  value={row.satir.stokNo}
-                  placeholder="EQ.KCT08…"
-                  valueKey="sku"
-                  onChange={(v) => patchSatir(row.satirIndex!, { stokNo: v })}
-                  onPick={(hit) =>
-                    patchSatir(row.satirIndex!, (s) =>
-                      applyCatalogHitToSatir(s, hit),
-                    )
-                  }
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Tanımı",
-            width: 280,
-            render: (_, row) =>
-              row.kind === "product" && row.satir ? (
-                <div>
-                  <CatalogSuggest
-                    value={row.satir.tanim}
-                    placeholder="Ürün adı yazın"
-                    valueKey="name"
-                    onChange={(v) => patchSatir(row.satirIndex!, { tanim: v })}
-                    onPick={(hit) =>
-                      patchSatir(row.satirIndex!, (s) =>
-                        applyCatalogHitToSatir(s, hit),
-                      )
-                    }
-                  />
-                  <Input.TextArea
-                    autoSize={{ minRows: 1, maxRows: 3 }}
-                    value={row.satir.aciklama || ""}
-                    placeholder="Açıklama"
-                    onChange={(e) =>
-                      patchSatir(row.satirIndex!, { aciklama: e.target.value })
-                    }
-                    style={{ marginTop: 4, fontSize: 11 }}
-                  />
-                </div>
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Ölçü",
-            width: 110,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <Input
-                  value={row.satir?.olcu}
-                  onChange={(e) =>
-                    patchSatir(row.satirIndex!, { olcu: e.target.value })
-                  }
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Marka",
-            width: 100,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <Input
-                  value={row.satir?.marka}
-                  onChange={(e) =>
-                    patchSatir(row.satirIndex!, { marka: e.target.value })
-                  }
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Elk",
-            width: 72,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <InputNumber
-                  value={row.satir?.elkKw ?? undefined}
-                  onChange={(v) =>
-                    patchSatir(row.satirIndex!, {
-                      elkKw: typeof v === "number" ? v : null,
-                    })
-                  }
-                  style={{ width: "100%" }}
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Gaz",
-            width: 72,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <InputNumber
-                  value={row.satir?.gazKw ?? undefined}
-                  onChange={(v) =>
-                    patchSatir(row.satirIndex!, {
-                      gazKw: typeof v === "number" ? v : null,
-                    })
-                  }
-                  style={{ width: "100%" }}
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Adet",
-            width: 72,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <InputNumber
-                  min={1}
-                  value={row.satir?.adet}
-                  onChange={(v) =>
-                    patchSatir(row.satirIndex!, {
-                      adet: typeof v === "number" ? v : 1,
-                    })
-                  }
-                  style={{ width: "100%" }}
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Satış",
-            width: 90,
-            render: (_, row) =>
-              row.kind === "product" ? (
-                <InputNumber
-                  min={0}
-                  value={row.satir?.birimSatis ?? undefined}
-                  onChange={(v) =>
-                    patchSatir(row.satirIndex!, {
-                      birimSatis: typeof v === "number" ? v : null,
-                    })
-                  }
-                  style={{ width: "100%" }}
-                />
-              ) : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "Toplam",
-            width: 90,
-            render: (_, row) =>
-              row.kind === "product"
-                ? formatEurHucre(row.satir?.toplamSatis ?? null)
-                : null,
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-          {
-            title: "",
-            width: 108,
-            render: (_, row) => {
-              if (row.kind !== "product" || !row.satir) return null;
-              const d = satirDurum(row.satir);
-              return (
-                <Space size={4}>
-                  <Tag color={d.color} style={{ margin: 0 }}>
-                    {d.label}
-                  </Tag>
-                  <Button
-                    type="text"
-                    danger
-                    size="small"
-                    icon={<DeleteOutlined />}
-                    onClick={() => removeSatir(row.satirIndex!)}
-                  />
-                </Space>
-              );
-            },
-            onCell: (row) =>
-              row.kind === "section" ? { colSpan: 0 } : { colSpan: 1 },
-          },
-        ]}
+        gridRows={gridRows}
+        patchSatir={patchSatir}
+        removeSatir={removeSatir}
       />
 
-      <Button
-        icon={<PlusOutlined />}
-        onClick={addSatir}
-        style={{ marginTop: 12 }}
-        disabled={!model}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          gap: 24,
+          marginTop: 12,
+          flexWrap: "wrap",
+        }}
       >
-        Satır ekle
-      </Button>
+        <Button icon={<PlusOutlined />} onClick={addSatir} disabled={!model}>
+          Satır ekle
+        </Button>
+        <table style={{ minWidth: 320, fontSize: 13, borderCollapse: "collapse" }}>
+          <tbody>
+            <tr>
+              <td style={{ padding: "6px 12px 6px 0", color: "#555" }}>Toplam</td>
+              <td style={{ padding: "6px 0", textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
+                {formatEurHucre(model?.ozet.araToplam ?? model?.ozet.genelToplam ?? null, 2)}
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: "6px 12px 6px 0", color: "#555" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <span>İskonto</span>
+                  <div style={{ width: 72 }}>
+                    <DraftNumber
+                      min={0}
+                      max={100}
+                      value={model?.ozet.iskontoYuzde ?? 0}
+                      onCommit={patchIskontoYuzde}
+                    />
+                  </div>
+                  <span>%</span>
+                </div>
+              </td>
+              <td style={{ padding: "6px 0", textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
+                {(model?.ozet.iskontoTutar ?? 0) > 0
+                  ? `− ${formatEurHucre(model?.ozet.iskontoTutar ?? 0, 2)}`
+                  : formatEurHucre(0, 2)}
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: "8px 12px 6px 0", fontWeight: 700 }}>Genel toplam</td>
+              <td
+                style={{
+                  padding: "8px 0 6px",
+                  textAlign: "right",
+                  fontWeight: 700,
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {formatEurHucre(model?.ozet.genelToplam ?? null, 2)}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </PageContainer>
   );
 }

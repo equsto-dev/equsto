@@ -43,6 +43,12 @@ export type TeklifV14Satir = {
 export type TeklifV14Ozet = {
   toplamElektrikKw: number;
   toplamGazKw: number;
+  /** Satır toplamları — iskonto öncesi */
+  araToplam?: number | null;
+  /** 0–100 */
+  iskontoYuzde?: number | null;
+  iskontoTutar?: number | null;
+  /** İskonto sonrası dip toplam */
   genelToplam: number | null;
   doviz: "EUR" | "TRY" | "USD";
 };

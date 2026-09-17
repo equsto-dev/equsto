@@ -5,6 +5,7 @@ import path from "node:path";
 import chromium from "@sparticuz/chromium-min";
 import puppeteer from "puppeteer-core";
 import type { TeklifModelV14 } from "./teklif-v14.types";
+import { recomputeTeklifV14Ozet } from "./catalog-hit-to-satir";
 import { buildTeklifV14PrintHtml } from "./build-teklif-v14-print-html";
 import { enrichTeklifV14ModelGorsel } from "./enrich-teklif-v14-gorsel.server";
 import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
@@ -61,7 +62,7 @@ export async function generateTeklifV14PdfBuffer(
 ): Promise<Buffer> {
   chromium.setGraphicsMode = false;
 
-  const cleaned = sanitizeTeklifV14ModelForExport(model);
+  const cleaned = recomputeTeklifV14Ozet(sanitizeTeklifV14ModelForExport(model));
   const enriched = await enrichTeklifV14ModelGorsel(cleaned);
   const html = buildTeklifV14PrintHtml(enriched, {
     siteOrigin: siteOrigin(),

@@ -697,6 +697,31 @@ export default function TeklifV14Proforma({
               <td style={tdC}>{formatKwHucre(ozet.toplamGazKw)}</td>
               <td style={tdC} />
               <td style={{ ...td, fontWeight: 700, textAlign: "center" }}>
+                TOPLAM
+              </td>
+              <td style={{ ...tdFiyat, fontWeight: 700 }}>
+                {formatTeklifDovizHucre(
+                  ozet.araToplam ?? ozet.genelToplam,
+                  ozet.doviz,
+                )}
+              </td>
+            </tr>
+            <tr>
+              <td colSpan={9} style={td} />
+              <td style={{ ...td, textAlign: "center" }}>
+                {(ozet.iskontoYuzde ?? 0) > 0
+                  ? `İSKONTO (%${ozet.iskontoYuzde})`
+                  : "İSKONTO"}
+              </td>
+              <td style={tdFiyat}>
+                {(ozet.iskontoTutar ?? 0) > 0
+                  ? `− ${formatTeklifDovizHucre(ozet.iskontoTutar, ozet.doviz)}`
+                  : formatTeklifDovizHucre(0, ozet.doviz)}
+              </td>
+            </tr>
+            <tr>
+              <td colSpan={9} style={td} />
+              <td style={{ ...td, fontWeight: 700, textAlign: "center" }}>
                 GENEL TOPLAM
               </td>
               <td style={{ ...tdFiyat, fontWeight: 700 }}>

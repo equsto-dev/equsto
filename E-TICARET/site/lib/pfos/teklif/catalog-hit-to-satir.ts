@@ -56,7 +56,17 @@ export function recomputeTeklifV14Ozet(model: TeklifModelV14): TeklifModelV14 {
         : null;
     return { ...s, adet: adet || 1, toplamSatis: toplam };
   });
-  const genel = satirlar.reduce((n, s) => n + (s.toplamSatis ?? 0), 0);
+  const ara = satirlar.reduce((n, s) => n + (s.toplamSatis ?? 0), 0);
+  const araToplam = ara > 0 ? Math.round(ara * 100) / 100 : null;
+  const yuzdeRaw = Number(model.ozet.iskontoYuzde);
+  const iskontoYuzde = Number.isFinite(yuzdeRaw)
+    ? Math.min(100, Math.max(0, yuzdeRaw))
+    : 0;
+  const iskontoTutar =
+    araToplam != null && iskontoYuzde > 0
+      ? Math.round(((araToplam * iskontoYuzde) / 100) * 100) / 100
+      : 0;
+  const net = (araToplam ?? 0) - iskontoTutar;
   return {
     ...model,
     satirlar,
@@ -70,7 +80,11 @@ export function recomputeTeklifV14Ozet(model: TeklifModelV14): TeklifModelV14 {
         (n, s) => n + (s.gazKw ?? 0) * (s.adet || 0),
         0,
       ),
-      genelToplam: genel > 0 ? Math.round(genel * 100) / 100 : null,
+      araToplam,
+      iskontoYuzde,
+      iskontoTutar,
+      genelToplam:
+        araToplam == null ? null : Math.round(Math.max(0, net) * 100) / 100,
     },
   };
 }

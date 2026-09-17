@@ -429,14 +429,25 @@ async function buildProductBlock(
     }
   }
 
-  if (model.ozet.genelToplam != null && Number.isFinite(model.ozet.genelToplam)) {
-    genel = Math.round(model.ozet.genelToplam);
+  if (model.ozet.araToplam != null && Number.isFinite(model.ozet.araToplam)) {
+    genel = Math.round(model.ozet.araToplam);
+  } else if (model.ozet.genelToplam != null && Number.isFinite(model.ozet.genelToplam)) {
+    genel = Math.round(
+      (model.ozet.genelToplam ?? 0) + (model.ozet.iskontoTutar ?? 0),
+    );
   }
 
   const sumFormula = sumRefs.length ? sumRefs.join("+") : String(genel);
   const elkSum = elkParts.length ? elkParts.join("+") : "0";
   const gazSum = gazParts.length ? gazParts.join("+") : "0";
   const adetSum = adetRefs.length ? `SUM(${adetRefs.join(",")})` : "0";
+  const iskYuzde = Number(model.ozet.iskontoYuzde) || 0;
+  const iskTutar = Math.round(Number(model.ozet.iskontoTutar) || 0);
+  const net = Math.round(
+    model.ozet.genelToplam != null && Number.isFinite(model.ozet.genelToplam)
+      ? model.ozet.genelToplam
+      : Math.max(0, genel - iskTutar),
+  );
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, kwTpl);
@@ -463,6 +474,37 @@ async function buildProductBlock(
   rowNum++;
 
   ws.insertRow(rowNum, []);
+  applyRowStyle(ws, rowNum, subTpl);
+  try {
+    ws.mergeCells(`G${rowNum}:H${rowNum}`);
+  } catch {
+    /* */
+  }
+  ws.getCell(rowNum, 7).value = "TOPLAM";
+  ws.getCell(rowNum, 7).font = { bold: true, name: "Arial", size: 9 };
+  ws.getCell(rowNum, 7).alignment = { horizontal: "right", vertical: "middle" };
+  ws.getCell(rowNum, 9).value =
+    sumFormula.length > 8000 ? genel : { formula: sumFormula, result: genel };
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
+  const toplamRow = rowNum;
+  rowNum++;
+
+  ws.insertRow(rowNum, []);
+  applyRowStyle(ws, rowNum, subTpl);
+  try {
+    ws.mergeCells(`G${rowNum}:H${rowNum}`);
+  } catch {
+    /* */
+  }
+  ws.getCell(rowNum, 7).value =
+    iskYuzde > 0 ? `İSKONTO (%${iskYuzde})` : "İSKONTO";
+  ws.getCell(rowNum, 7).alignment = { horizontal: "right", vertical: "middle" };
+  ws.getCell(rowNum, 9).value = iskTutar > 0 ? -iskTutar : 0;
+  ws.getCell(rowNum, 9).numFmt = "#,##0";
+  const iskRow = rowNum;
+  rowNum++;
+
+  ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, grandTpl);
   try {
     ws.mergeCells(`G${rowNum}:H${rowNum}`);
@@ -472,10 +514,10 @@ async function buildProductBlock(
   ws.getCell(rowNum, 7).value = "GENEL TOPLAM";
   ws.getCell(rowNum, 7).font = { bold: true, name: "Arial", size: 9 };
   ws.getCell(rowNum, 7).alignment = { horizontal: "right", vertical: "middle" };
-  ws.getCell(rowNum, 9).value =
-    sumFormula.length > 8000
-      ? genel
-      : { formula: sumFormula, result: genel };
+  ws.getCell(rowNum, 9).value = {
+    formula: `I${toplamRow}+I${iskRow}`,
+    result: net,
+  };
   ws.getCell(rowNum, 9).numFmt = "#,##0";
   ws.getCell(rowNum, 9).font = { bold: true };
   ws.getCell(rowNum, 12).value = dovizSembol(model.ozet.doviz);
