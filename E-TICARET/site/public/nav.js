@@ -1490,7 +1490,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
+  var EQ_FOOTER_ASSET_V = "20260918-seo-footer";
   var EQ_TINT_ASSET_V = "20260530prod-card-tint-v12";
   var EQ_PHOTO_SEARCH_ASSET_V = "20260622-visual-embed";
 

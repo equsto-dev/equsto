@@ -89,7 +89,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260530footer-kilit");
+    loadScriptOnce("/eq-footer.js?v=20260918-seo-footer");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 

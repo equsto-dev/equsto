@@ -717,7 +717,10 @@
 
   function deptClickAttr(dept) {
     if (!dept) return '';
-    return ' href="#" onclick="event.preventDefault();typeof eqDeptGo===\'function\'&&eqDeptGo(\'' + esc(dept) + '\');"';
+    var d = String(dept);
+    if (d === 'market-reyon') d = 'market-reyonlari';
+    if (d === 'dolap') d = 'tezgah';
+    return ' href="/shop/' + esc(d) + '"';
   }
 
   function renderPromoCards(pool, cards) {
@@ -734,12 +737,8 @@
       var c = list[i];
       var u = c.sku ? findProduct(pool, c.sku) : null;
       var img = u && u.img ? u.img : c.image || '';
-      var href = c.href || (c.dept ? '#' : '#');
-      var onclick = c.dept
-        ? ' onclick="event.preventDefault();typeof eqDeptGo===\'function\'&&eqDeptGo(\'' +
-          esc(c.dept) +
-          '\');"'
-        : '';
+      var href = c.href || (c.dept ? '/shop/' + (c.dept === 'dolap' ? 'tezgah' : c.dept) : '#');
+      var onclick = '';
       if (u && typeof global.productHrefHome === 'function') {
         href = global.productHrefHome(u);
         onclick = '';
@@ -900,12 +899,8 @@
         esc(imgSrc(spec.headerImage)) +
         '" alt="" loading="lazy">'
       : '';
-    var ctaHref = spec.href || (spec.dept ? '#' : '/shop');
-    var ctaOnclick = spec.dept
-      ? ' onclick="event.preventDefault();typeof eqDeptGo===\'function\'&&eqDeptGo(\'' +
-        esc(spec.dept) +
-        '\');"'
-      : '';
+    var ctaHref = spec.href || (spec.dept ? '/shop/' + (spec.dept === 'dolap' ? 'tezgah' : spec.dept) : '/shop');
+    var ctaOnclick = '';
     var theme = spec.theme === 'orange' ? ' eq-mx-showcase--orange' : '';
     section.className = 'eq-mx-showcase eq-mx-o-' + (id === 'essentials' ? 'ess' : 'dept1') + theme;
     section.innerHTML =

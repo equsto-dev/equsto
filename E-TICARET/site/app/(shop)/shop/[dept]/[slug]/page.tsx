@@ -16,6 +16,7 @@ import {
   buildProductJsonLd,
   buildProductMetadata,
   findProductForPdp,
+  isIndexableProductRow,
   rowToPdpClientSeed,
   rowToPdpSsr,
 } from "@/lib/shop/pdp-server";
@@ -49,7 +50,7 @@ export async function generateMetadata({
     rowToPdpSsr(found.row, found.dept, {
       langPrefix: locale === "en" ? "/en" : "",
     }),
-    { locale },
+    { locale, indexable: locale === "tr" && isIndexableProductRow(found.row) },
   );
 }
 

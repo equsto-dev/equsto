@@ -272,7 +272,7 @@ const nextConfig: NextConfig = {
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/admin", destination: "/admin.html", permanent: false },
       { source: "/en/admin", destination: "/admin.html", permanent: false },
-      { source: "/shop/index.html", destination: "/", permanent: true },
+      { source: "/shop/index.html", destination: "/shop", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       { source: "/dolap.html", destination: "/shop/tezgah", permanent: true },
       { source: "/shop/dolap", destination: "/shop/tezgah", permanent: true },
@@ -295,19 +295,13 @@ const nextConfig: NextConfig = {
       { source: "/bar-design.html", destination: "/besos", permanent: true },
       { source: "/en/project-factory", destination: "/en/pfos", permanent: true },
       { source: "/en/project-factory/", destination: "/en/pfos", permanent: true },
-      /* Eski WordPress (GSC 404) */
-      { source: "/category/:path*", destination: "/", permanent: true },
-      { source: "/wp-content/:path*", destination: "/", permanent: true },
-      { source: "/wp-admin/:path*", destination: "/", permanent: true },
-      { source: "/wp-includes/:path*", destination: "/", permanent: true },
+      /* Eski WordPress / ölü URL — anasayfaya 301 sahte 404 üretir; 404 bırak */
       { source: "/tag/:path*", destination: "/blog", permanent: true },
-      { source: "/author/:path*", destination: "/", permanent: true },
       {
         source: "/endustriyel-mutfak-gastronomi-platformu-2",
-        destination: "/",
+        destination: "/hakkimizda",
         permanent: true,
       },
-      { source: "/urun/:path*", destination: "/shop", permanent: true },
       { source: "/teklif-geri-bildirim", destination: "/iletisim", permanent: true },
       /* Cafemarkt şablon önizleme — statik HTML yedek (App route ile birlikte deploy) */
       {

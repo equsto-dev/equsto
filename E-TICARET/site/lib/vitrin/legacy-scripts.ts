@@ -16,7 +16,7 @@ body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--ba
 export const HOME_BODY_CLASS = "eq-shop eq-home eq-home-mutbex eq-home-decor";
 
 export const HOME_EXTRA_STYLES = [
-  `/eq-home-equsto.css?v=${v}&m=20260916-equsto-rename`,
+  `/eq-home-equsto.css?v=${v}&m=20260918-seo-paths`,
   `/eq-home-decor.css?v=${v}&m=20260916-slider-restore`,
   `/eq-home-cafemarkt.css?v=${v}`,
   `/contact.css?v=${v}`,
@@ -33,7 +33,7 @@ export const HOME_SCRIPTS = [
   `/pfos-rule-engine.js`,
   `/eq-product-compare.js`,
   `/eq-vitrin-config.js?v=${v}`,
-  `/eq-home-mutbex.js?v=${v}`,
+  `/eq-home-mutbex.js?v=${v}&m=20260918-seo-href`,
   `/eq-product-card-tint.js?v=${v}`,
   `/eq-analytics.js`,
 ];

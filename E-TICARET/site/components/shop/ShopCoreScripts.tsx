@@ -36,7 +36,7 @@ export default function ShopCoreScripts() {
         strategy="beforeInteractive"
         onReady={() => (window as Window & { EqustoCart?: { syncBadge?: () => void } }).EqustoCart?.syncBadge?.()}
       />
-      <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-footer.js?v=${v}&m=20260918-seo-footer`} strategy="afterInteractive" />
       <Script
         src={`/contact.js?v=${v}`}
         strategy="afterInteractive"

@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "source": "equsto.com sitemap + llms.txt + index eq-footer-seo + llms Hakkımızda",
   "faq": {
     "title": "SSS",
@@ -84,6 +84,9 @@
         { "key": "nav.bar_design", "label": "Bar Design", "href": "/besos" },
         { "key": "footer.link_imt300", "label": "IMT300 berrak buz", "href": "/besos/imt300" },
         { "key": "nav.pfos", "label": "Proje Fabrikası", "href": "/pfos" },
+        { "key": "footer.link_equipment_tr", "label": "Endüstriyel mutfak ekipmanı", "href": "/endustriyel-mutfak-ekipmani-turkiye" },
+        { "key": "footer.link_quote_platform", "label": "Restoran mutfak teklifi", "href": "/mutfak-teklif-platformu" },
+        { "key": "footer.link_ozti_supply", "label": "Öztiryakiler tedarik", "href": "/oztiryakiler-ekipmani-tedarik" },
         { "key": "footer.link_fastfood", "label": "Fast food kurulumu", "href": "/fast-food-kurulumu" },
         { "key": "footer.link_finedining", "label": "Fine dining kurulumu", "href": "/fine-dining-kurulumu" },
         { "key": "footer.link_italyan", "label": "İtalyan restoran kurulumu", "href": "/italyan-restoran-kurulumu" },
@@ -108,7 +111,7 @@
       "title": "Size yardımcı olalım",
       "links": [
         { "key": "footer.link_quote", "label": "Teklif ve proje talebi", "href": "/iletisim" },
-        { "key": "footer.link_account", "label": "Hesabım ve siparişler", "href": "/login.html" },
+        { "key": "footer.link_account", "label": "Hesabım ve siparişler", "href": "/login" },
         { "key": "footer.link_guide_m2", "label": "Rehber: mutfak m²", "href": "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
         { "key": "footer.link_cafe", "label": "Cafe kurulum rehberi", "href": "/cafe-kurulumu" },
         { "key": "footer.link_catering", "label": "Catering mutfağı rehberi", "href": "/catering-mutfagi" },
@@ -120,10 +123,10 @@
       "titleKey": "footer.col_about",
       "title": "Hakkımızda",
       "links": [
-        { "key": "footer.link_about", "label": "Hakkımızda", "href": "/hakkimizda.html" },
-        { "key": "footer.link_bank", "label": "Banka Bilgilerimiz", "href": "#" },
-        { "key": "footer.link_export", "label": "Export", "href": "#" },
-        { "key": "footer.link_career", "label": "Kariyer", "href": "#" },
+        { "key": "footer.link_about", "label": "Hakkımızda", "href": "/hakkimizda" },
+        { "key": "footer.link_bank", "label": "Banka Bilgilerimiz", "href": "/banka-bilgileri" },
+        { "key": "footer.link_export", "label": "Export", "href": "/export" },
+        { "key": "footer.link_career", "label": "Kariyer", "href": "/kariyer" },
         { "key": "footer.link_contact", "label": "İletişim", "href": "/iletisim" },
         { "key": "footer.link_blog", "label": "Blog", "href": "/blog" }
       ]

@@ -226,9 +226,10 @@ function shortBrandLabel(brand: string): string {
 
 export function buildProductMetadata(
   ssr: PdpSsrPayload,
-  opts?: { locale?: "tr" | "en" },
+  opts?: { locale?: "tr" | "en"; indexable?: boolean },
 ): Metadata {
   const isEn = opts?.locale === "en" || ssr.canonical.includes("/en/shop/");
+  const indexable = opts?.indexable !== false && !isEn;
 
   // Unique titles: short brand + name; SKU always kept after truncation
   let core = ssr.name.replace(/\.$/, "").trim();
@@ -257,24 +258,20 @@ export function buildProductMetadata(
     (isEn ? " Specs, pricing and quote." : " Teknik özellikler ve teklif.");
 
   const trCanonical = ssr.canonical.replace("://equsto.com/en/", "://equsto.com/");
-  const enCanonical = trCanonical.replace("://equsto.com/", "://equsto.com/en/");
 
   return {
     title,
     description,
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     alternates: {
-      canonical: isEn ? enCanonical : trCanonical,
-      languages: {
-        "tr-TR": trCanonical,
-        "en-US": enCanonical,
-        tr: trCanonical,
-        en: enCanonical,
-      },
+      canonical: trCanonical,
     },
     openGraph: {
       title,
       description,
-      url: isEn ? enCanonical : trCanonical,
+      url: trCanonical,
       type: "website",
       ...(ssr.image ? { images: [{ url: ssr.image }] } : {}),
     },
@@ -465,8 +462,8 @@ export async function getDeptCrawlLinks(
   for (const row of rows) {
     if (out.length >= limit) break;
     if (!row || resolveShopDept(row) !== dept) continue;
+    if (!isIndexableProductRow(row)) continue;
     const name = String(row.name || "").trim();
-    if (!name) continue;
     const slug = catalogUrlSlug(row);
     if (!slug || seen.has(slug)) continue;
     seen.add(slug);
@@ -482,10 +479,12 @@ export async function getDeptCrawlLinks(
 export function isIndexableProductRow(row: CatalogRow): boolean {
   const name = String(row.name || "").trim();
   if (!name) return false;
+  if (isBarDesignShopProduct(row)) return false;
   const dept = resolveShopDept(row);
   if (!dept || !isShopDeptSlug(dept)) return false;
   if (!catalogUrlSlug(row)) return false;
-  return true;
+  if (isQuoteOnlyProduct(row)) return false;
+  return resolveMerchantPriceTry(row) > 0;
 }
 
 export { isQuoteOnlyProduct };

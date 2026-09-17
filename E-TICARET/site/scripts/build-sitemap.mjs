@@ -10,6 +10,7 @@ import {
   ORIGIN,
   SHOP_DEPTS,
   catalogSlug,
+  hasSellablePrice,
   loadDeptTips,
   loadEkipmanlar,
   resolveDept,
@@ -92,12 +93,18 @@ function writeProductChunks(prefix, productUrls, indexFiles) {
   for (let i = 0; i < productUrls.length; i += PRODUCT_CHUNK) {
     chunks.push(productUrls.slice(i, i + PRODUCT_CHUNK));
   }
-  if (!chunks.length) chunks.push([]);
+  const written = new Set();
   chunks.forEach((chunk, i) => {
     const name = `${prefix}-${String(i + 1).padStart(2, "0")}.xml`;
     writeUrlset(path.join(PUBLIC, name), chunk);
     indexFiles.push(name);
+    written.add(name);
   });
+  for (const f of fs.readdirSync(PUBLIC)) {
+    if (new RegExp(`^${prefix}-\\d+\\.xml$`, "i").test(f) && !written.has(f)) {
+      fs.unlinkSync(path.join(PUBLIC, f));
+    }
+  }
   return productUrls.length;
 }
 
@@ -110,6 +117,7 @@ function buildShopHubs() {
     urlEntry(`${ORIGIN}/shop/marka`, { priority: "0.75" }),
   ];
   for (const d of SHOP_DEPTS) {
+    if (d === "dolap") continue;
     urls.push(urlEntry(`${ORIGIN}/shop/${d}`, { priority: "0.85", changefreq: "weekly" }));
   }
   return urls;
@@ -121,6 +129,7 @@ function buildShopEnHubs() {
     urlEntry(`${ORIGIN}/en/shop/marka`, { priority: "0.74" }),
   ];
   for (const d of SHOP_DEPTS) {
+    if (d === "dolap") continue;
     urls.push(
       urlEntry(`${ORIGIN}/en/shop/${d}`, { priority: "0.84", changefreq: "weekly" }),
     );
@@ -274,8 +283,9 @@ function buildProducts(rows, langPrefix = "") {
   for (const row of rows) {
     const name = String(row.name || "").trim();
     if (!name) continue;
+    if (!hasSellablePrice(row)) continue;
     const dept = resolveDept(row);
-    if (!SHOP_DEPTS.includes(dept)) continue;
+    if (!SHOP_DEPTS.includes(dept) || dept === "dolap") continue;
     const slug = catalogSlug(row);
     if (!slug) continue;
     const key = `${dept}/${slug}`;
@@ -317,8 +327,22 @@ function patchSitemapPages() {
   ];
   for (const url of removeUrls) {
     const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    // Match multiline format: <url>\n    <loc>...</loc>\n    ...\n  </url>
     xml = xml.replace(new RegExp(`<url>[\\s\\S]*?<loc>${escaped}</loc>[\\s\\S]*?</url>\\s*`, 'g'), '');
+  }
+
+  const bumpPriority = [
+    ["/endustriyel-mutfak-ekipmani-turkiye", "0.94"],
+    ["/mutfak-teklif-platformu", "0.94"],
+    ["/oztiryakiler-ekipmani-tedarik", "0.92"],
+    ["/steakhouse-kurulumu", "0.9"],
+    ["/shop/marka/oztiryakiler", "0.88"],
+  ];
+  for (const [pathSuffix, priority] of bumpPriority) {
+    const loc = `https://equsto.com${pathSuffix}</loc>`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    xml = xml.replace(
+      new RegExp(`(<loc>${loc}[\\s\\S]*?<priority>)[0-9.]+(</priority>)`),
+      `$1${priority}$2`,
+    );
   }
 
   // Ensure correct final URLs are present
@@ -387,6 +411,9 @@ function removeLegacyProductSitemaps() {
     if (/^sitemap-products-\d+\.xml$/i.test(f)) {
       fs.unlinkSync(path.join(PUBLIC, f));
     }
+    if (/^sitemap-shop-products-en-\d+\.xml$/i.test(f)) {
+      fs.unlinkSync(path.join(PUBLIC, f));
+    }
   }
 }
 
@@ -423,9 +450,7 @@ function main() {
 
   const productUrlsTr = buildProducts(rows, "");
   const productCountTr = writeProductChunks("sitemap-shop-products", productUrlsTr, indexFiles);
-
-  const productUrlsEn = buildProducts(rows, "en");
-  const productCountEn = writeProductChunks("sitemap-shop-products-en", productUrlsEn, indexFiles);
+  const productCountEn = 0;
 
   writeSitemapIndex(indexFiles);
   patchSitemapPages();

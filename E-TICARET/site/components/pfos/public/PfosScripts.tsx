@@ -67,7 +67,7 @@ export default function PfosScripts() {
         strategy="afterInteractive"
         onReady={() => window.EqustoCart?.syncBadge?.()}
       />
-      <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-footer.js?v=${v}&m=20260918-seo-footer`} strategy="afterInteractive" />
       <Script src={`/equsto-member.js?v=${v}`} strategy="lazyOnload" />
       <Script src={`/contact.js?v=${v}`} strategy="lazyOnload" />
     </>

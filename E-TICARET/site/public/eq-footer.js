@@ -4,7 +4,7 @@
 
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
 
- * @version vitrum-powered 20260530footer-kilit
+ * @version vitrum-powered 20260918-seo-footer
 
  */
 
@@ -15,7 +15,7 @@
   /** Geçici: kamu telefon satırı gizle — lib/site/public-phone.ts ile senkron */
   window.EQUSTO_HIDE_PUBLIC_PHONE = true;
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-about-trim";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260918-seo-footer";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -344,6 +344,12 @@
 
             { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
 
+            { key: "footer.link_equipment_tr", label: "Endüstriyel mutfak ekipmanı", href: "/endustriyel-mutfak-ekipmani-turkiye" },
+
+            { key: "footer.link_quote_platform", label: "Restoran mutfak teklifi", href: "/mutfak-teklif-platformu" },
+
+            { key: "footer.link_ozti_supply", label: "Öztiryakiler tedarik", href: "/oztiryakiler-ekipmani-tedarik" },
+
             { key: "footer.link_fastfood", label: "Fast food kurulumu", href: "/fast-food-kurulumu" },
 
             { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
@@ -390,7 +396,7 @@
 
             { key: "footer.link_quote", label: "Teklif ve proje talebi", href: "/iletisim" },
 
-            { key: "footer.link_account", label: "Hesabım ve siparişler", href: "/login.html" },
+            { key: "footer.link_account", label: "Hesabım ve siparişler", href: "/login" },
 
             { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
 
@@ -414,13 +420,13 @@
 
           links: [
 
-            { key: "footer.link_about", label: "Hakkımızda", href: "/hakkimizda.html" },
+            { key: "footer.link_about", label: "Hakkımızda", href: "/hakkimizda" },
 
-            { key: "footer.link_bank", label: "Banka Bilgilerimiz", href: "#" },
+            { key: "footer.link_bank", label: "Banka Bilgilerimiz", href: "/banka-bilgileri" },
 
-            { key: "footer.link_export", label: "Export", href: "#" },
+            { key: "footer.link_export", label: "Export", href: "/export" },
 
-            { key: "footer.link_career", label: "Kariyer", href: "#" },
+            { key: "footer.link_career", label: "Kariyer", href: "/kariyer" },
 
             { key: "footer.link_contact", label: "İletişim", href: "/iletisim" },
 

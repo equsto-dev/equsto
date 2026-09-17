@@ -62,7 +62,7 @@ export default function BesosScripts() {
       <Script src={`/eq-besos-actions.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-besos-subnav-fix.js?v=${v}&m=20260916-subnav-center-js`} strategy="afterInteractive" />
       <Script
-        src={`/eq-footer.js?v=${v}`}
+        src={`/eq-footer.js?v=${v}&m=20260918-seo-footer`}
         strategy="afterInteractive"
         onReady={() => {
           window.__eqMountMarketFooter?.();

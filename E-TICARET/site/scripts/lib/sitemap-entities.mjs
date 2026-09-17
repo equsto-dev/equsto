@@ -104,7 +104,26 @@ export function catalogSlug(row) {
 export function resolveDept(row) {
   let d = String(row.dept || "").trim().toLowerCase();
   if (d === "market-reyon") return "market-reyonlari";
+  if (d === "dolap") return "tezgah";
   return d;
+}
+
+/** Admin Fiyat paneli / Merchant feed ile aynı eşik: satılabilir TL fiyat. */
+export function hasSellablePrice(row) {
+  if (row?.fiyat_bekleniyor) return false;
+  const n = Number(row?.fiyat_tl);
+  if (Number.isFinite(n) && n > 0) return true;
+  const p = String(row?.price || "");
+  if (
+    /teklif\s*için|fiyat\s*alınız|fiyat\s*aliniz|iletişime\s*geç|contact\s*for\s*price|price\s*on\s*request/i.test(
+      p,
+    )
+  ) {
+    return false;
+  }
+  if (/€|eur\b/i.test(p) && !/₺|tl\b|try\b/i.test(p)) return false;
+  if (/K\s*D\s*V\s*[Dd]ahil[^\d]*([\d.,]+)/.test(p)) return true;
+  return /₺/.test(p);
 }
 
 export function tipDeptToShop(dept) {
