@@ -233,6 +233,7 @@ const BrandCell = memo(function BrandCell({
   onIste: (v: string) => void;
 }) {
   const [draft, setDraft] = useState(value);
+  const focused = useRef(false);
   const picked = useRef(false);
   useEffect(() => {
     if (!focused.current) setDraft(value);
