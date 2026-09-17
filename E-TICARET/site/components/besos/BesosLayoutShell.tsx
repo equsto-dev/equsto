@@ -10,7 +10,7 @@ import "@/app/besos/besos.css";
 /** Besos /en/besos — ortak layout (CSS, body sınıfları, drawer, script) */
 export default function BesosLayoutShell({ children }: { children: ReactNode }) {
   const heroEmbed = "https://www.youtube-nocookie.com";
-  const shellCssV = "20260917-midvideo-half";
+  const shellCssV = "20260917-midvideo-hug";
   return (
     <>
       <link rel="preconnect" href={heroEmbed} />

@@ -659,9 +659,11 @@ body.bd-page.besos .footer.footer {
   body.bd-page.besos .bd-hero-media {
     height: min(480px, calc(100svh - var(--bes-chrome-h)));
   }
-  body.bd-page.besos .bd-vitrum-mid-video--overlay .bd-vitrum-mid-video-inner,
   body.bd-page.besos .bd-vitrum-mid-video-inner {
-    height: clamp(240px, 36vh, 320px);
+    height: clamp(260px, 56vw, 480px);
+  }
+  body.bd-page.besos .bd-vitrum-mid-video--overlay .bd-vitrum-mid-video-inner {
+    height: auto;
   }
 
   body.bd-page.besos {
