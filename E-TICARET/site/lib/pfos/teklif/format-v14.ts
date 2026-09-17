@@ -102,6 +102,31 @@ export function olcuForTeklifSatir(
   return "—";
 }
 
+/**
+ * Ölçü sütunu — açıklama kırıntısı ("sktürk · Ölçü: 70") değil, yalnızca boyut.
+ */
+export function olcuSutunTemiz(value: string | null | undefined): string {
+  const s = String(value ?? "").trim();
+  if (!s || s === "—") return "—";
+  const labeled = /ölçü\s*[:：]\s*(.+)$/i.exec(s);
+  const candidate = (labeled ? labeled[1] : s).trim();
+  const mm = toOlcuMmDisplay(candidate);
+  if (mm) return mm;
+  const dim =
+    /(\d{2,5}(?:[.,]\d+)?)\s*[×x*]\s*(\d{2,5}(?:[.,]\d+)?)(?:\s*[×x*]\s*(\d{2,5}(?:[.,]\d+)?))?/.exec(
+      candidate,
+    );
+  if (dim) {
+    const rebuilt = [dim[1], dim[2], dim[3]].filter(Boolean).join("×");
+    return toOlcuMmDisplay(rebuilt) ?? rebuilt.replace(/[x*]/gi, "×");
+  }
+  const stripped = stripOlcuUnitSuffix(candidate);
+  if (isOlcuMetni(stripped) && !/[a-zçğıöşü]{4,}/i.test(stripped)) {
+    return stripped;
+  }
+  return "—";
+}
+
 export { displayOlcuMm };
 
 /** Stok kodundan ve eşleşmiş ürün alanlarından v14 Ölçü */
@@ -112,12 +137,12 @@ export function olcuForTeklifUrun(
   const referansOlcu = String(notlar ?? "")
     .replace(/^ölçü:\s*/i, "")
     .trim();
-  return olcuForTeklifSatir(
-    isOlcuMetni(referansOlcu) ? referansOlcu : null,
-    urun?.olcu ?? null,
-    olcuMmFromSku(urun?.sku),
-    notlar,
-    urun?.model,
+  return olcuSutunTemiz(
+    olcuForTeklifSatir(
+      isOlcuMetni(referansOlcu) ? referansOlcu : null,
+      urun?.olcu ?? null,
+      olcuMmFromSku(urun?.sku),
+    ),
   );
 }
 

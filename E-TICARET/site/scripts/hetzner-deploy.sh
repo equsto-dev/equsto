@@ -56,6 +56,8 @@ if [[ -d scripts/data ]]; then
   mkdir -p scripts/data
   chown -R 1001:1001 scripts/data 2>/dev/null || true
 fi
+mkdir -p scripts/data/liste-uploads
+chown -R 1001:1001 scripts/data 2>/dev/null || true
 mkdir -p data/liste-uploads
 chown -R 1001:1001 data/liste-uploads 2>/dev/null || true
 

@@ -4,6 +4,7 @@ import {
 } from "../parse-upload/sanitize-tanim";
 import type { TeklifModelV14, TeklifV14Satir } from "./teklif-v14.types";
 import { normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
+import { olcuSutunTemiz } from "./format-v14";
 
 /** PDF / Excel / yazdır — tanım sütunu (proforma artığı temiz) */
 export function sanitizeTeklifV14SatirTanim(
@@ -28,6 +29,7 @@ export function sanitizeTeklifV14Satir(
     ...satir,
     tanim: sanitizeTeklifV14SatirTanim(satir.tanim),
     aciklama: sanitizeTeklifV14SatirAciklama(satir.aciklama),
+    olcu: olcuSutunTemiz(satir.olcu),
   };
 }
 

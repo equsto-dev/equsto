@@ -12,7 +12,7 @@ export type ListeUploadAdminRef = {
 function uploadRoot(): string {
   const env = process.env.PFOS_LISTE_UPLOAD_DIR?.trim();
   if (env) return path.resolve(env);
-  return path.join(process.cwd(), "data", "liste-uploads");
+  return path.join(process.cwd(), "scripts", "data", "liste-uploads");
 }
 
 function extFor(originalName: string, kind: ListeUploadKind): string {

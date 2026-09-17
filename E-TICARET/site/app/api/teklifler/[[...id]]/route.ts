@@ -7,6 +7,7 @@ import {
   createTeklif,
   isTeklifDurum,
   teklifToAdmin,
+  teklifToAdminListe,
 } from "@/lib/teklif";
 import { kaynakUploadsByTeklifSayi } from "@/lib/pfos/liste-upload-store";
 
@@ -91,9 +92,23 @@ export async function GET(req: NextRequest, ctx: Ctx) {
   try {
     const rows = await db.teklif.findMany({
       orderBy: { createdAt: "desc" },
-      take: 5000,
+      take: 800,
+      select: {
+        id: true,
+        refNo: true,
+        musteriAd: true,
+        konsept: true,
+        toplamTl: true,
+        gecerlilikBitis: true,
+        durum: true,
+        kaynak: true,
+        musteriId: true,
+        createdAt: true,
+        updatedAt: true,
+        payload: true,
+      },
     });
-    const mapped = rows.map(teklifToAdmin);
+    const mapped = rows.map(teklifToAdminListe);
     const uploads = await kaynakUploadsByTeklifSayi(
       mapped.map((r) => r.teklif_sayi),
     );

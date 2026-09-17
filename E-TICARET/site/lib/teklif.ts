@@ -86,6 +86,41 @@ export function teklifToAdmin(t: Teklif): TeklifAdminRow {
   };
 }
 
+/** İşletme listesi — kalem/payload şişirmesin */
+export function teklifToAdminListe(t: {
+  id: string;
+  refNo: string;
+  musteriAd: string;
+  konsept: string;
+  toplamTl: Prisma.Decimal | number;
+  gecerlilikBitis: Date | null;
+  durum: string;
+  kaynak: string | null;
+  musteriId: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+  payload: unknown;
+}): TeklifAdminRow {
+  return {
+    id: t.id,
+    ref_no: t.refNo,
+    teklif_sayi: teklifSayiFromPayload(t.payload),
+    musteri_ad: t.musteriAd,
+    musteri_tel: "",
+    musteri_mail: "",
+    konsept: t.konsept,
+    toplam_tl: dec(t.toplamTl as Prisma.Decimal),
+    gecerlilik_bitis: t.gecerlilikBitis?.toISOString() ?? null,
+    durum: t.durum,
+    not_: null,
+    kalemler: null,
+    kaynak: t.kaynak,
+    musteri_id: t.musteriId,
+    created_at: t.createdAt.toISOString(),
+    updated_at: t.updatedAt.toISOString(),
+  };
+}
+
 function genRefNo(): string {
   const d = new Date();
   const y = d.getFullYear();
