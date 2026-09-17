@@ -38,6 +38,10 @@ export type TeklifV14Satir = {
   fotoNot?: string;
   /** Spec satırı — ürün açıklaması maddeleri */
   aciklama?: string;
+  /** Kategori marka değişiminde bu satıra dokunma */
+  markaKilit?: boolean;
+  /** Son marka değişiminde katalog muadili bulunamadı */
+  markaEslesmedi?: boolean;
 };
 
 export type TeklifV14Ozet = {

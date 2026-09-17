@@ -5,6 +5,8 @@ import {
   DeleteOutlined,
   MailOutlined,
   PlusOutlined,
+  PushpinFilled,
+  PushpinOutlined,
   SaveOutlined,
 } from "@ant-design/icons";
 import { PageContainer } from "@ant-design/pro-components";
@@ -14,6 +16,8 @@ import {
   Button,
   Input,
   InputNumber,
+  Modal,
+  Radio,
   Space,
   Table,
   Tag,
@@ -27,6 +31,14 @@ import {
   recomputeTeklifV14Ozet,
   type TeklifCatalogHit,
 } from "@/lib/pfos/teklif/catalog-hit-to-satir";
+import { fetchMarkaMuadil } from "@/lib/pfos/teklif/marka-degistir";
+import {
+  ayniMarka,
+  MARKA_SINIF_LABEL,
+  markaDegisimHedefleri,
+  markaKapsamSayilari,
+  type MarkaKapsam,
+} from "@/lib/pfos/teklif/marka-sinif";
 import { formatEurHucre } from "@/lib/pfos/teklif/format-v14";
 import type {
   TeklifModelV14,
@@ -193,6 +205,76 @@ const DraftNumber = memo(function DraftNumber({
   );
 });
 
+const HAZIR_MARKALAR = [
+  "Öztiryakiler",
+  "Atalay",
+  "İnoksan",
+  "Electrolux",
+  "Şenox",
+  "Rational",
+  "Unox",
+  "WMF",
+  "Hoshizaki",
+  "Portashelf",
+  "Equsto",
+  "Vosco",
+  "Nuova Simonelli",
+];
+
+const BrandCell = memo(function BrandCell({
+  value,
+  options,
+  syncTick,
+  onIste,
+}: {
+  value: string;
+  options: string[];
+  syncTick: number;
+  onIste: (v: string) => void;
+}) {
+  const [draft, setDraft] = useState(value);
+  const picked = useRef(false);
+  useEffect(() => {
+    if (!focused.current) setDraft(value);
+  }, [value, syncTick]);
+  const opts = useMemo(() => {
+    const q = draft.trim().toLocaleLowerCase("tr");
+    const pool = [...new Set([...options, ...HAZIR_MARKALAR])];
+    return pool
+      .filter((b) => !q || b.toLocaleLowerCase("tr").includes(q))
+      .slice(0, 12)
+      .map((b) => ({ value: b }));
+  }, [draft, options]);
+  return (
+    <AutoComplete
+      value={draft}
+      options={opts}
+      style={{ width: "100%" }}
+      filterOption={false}
+      onFocus={() => {
+        focused.current = true;
+        picked.current = false;
+      }}
+      onChange={(q) => setDraft(q)}
+      onSelect={(q) => {
+        picked.current = true;
+        setDraft(q);
+        if (q !== value) onIste(q);
+      }}
+      onBlur={() => {
+        focused.current = false;
+        if (!picked.current && draft !== value) onIste(draft);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" && draft !== value) {
+          picked.current = true;
+          onIste(draft);
+        }
+      }}
+    />
+  );
+});
+
 const CatalogSuggest = memo(function CatalogSuggest({
   value,
   placeholder,
@@ -335,6 +417,10 @@ const TeklifGrid = memo(function TeklifGrid({
   gridRows,
   patchSatir,
   removeSatir,
+  markaOptions,
+  brandSyncTick,
+  onMarkaIste,
+  onToggleKilit,
 }: {
   loading: boolean;
   gridRows: GridRow[];
@@ -344,6 +430,10 @@ const TeklifGrid = memo(function TeklifGrid({
     totals?: boolean,
   ) => void;
   removeSatir: (index: number) => void;
+  markaOptions: string[];
+  brandSyncTick: number;
+  onMarkaIste: (index: number, yeni: string) => void;
+  onToggleKilit: (index: number) => void;
 }) {
   const columns = useMemo(
     () => [
@@ -433,13 +523,22 @@ const TeklifGrid = memo(function TeklifGrid({
       },
       {
         title: "Marka",
-        width: 100,
+        width: 128,
         render: (_: unknown, row: GridRow) =>
-          row.kind === "product" ? (
-            <DraftInput
-              value={row.satir?.marka || ""}
-              onCommit={(v) => patchSatir(row.satirIndex!, { marka: v }, false)}
-            />
+          row.kind === "product" && row.satir ? (
+            <div>
+              <BrandCell
+                value={row.satir.marka || ""}
+                options={markaOptions}
+                syncTick={brandSyncTick}
+                onIste={(v) => onMarkaIste(row.satirIndex!, v)}
+              />
+              {row.satir.markaEslesmedi ? (
+                <div style={{ fontSize: 10, color: "#d46b08", marginTop: 2 }}>
+                  Muadil yok
+                </div>
+              ) : null}
+            </div>
           ) : null,
         onCell: sectionSpan,
       },
@@ -507,28 +606,37 @@ const TeklifGrid = memo(function TeklifGrid({
       {
         title: "",
         width: 108,
-        render: (_: unknown, row: GridRow) => {
-          if (row.kind !== "product" || !row.satir) return null;
-          const d = satirDurum(row.satir);
-          return (
-            <Space size={4}>
-              <Tag color={d.color} style={{ margin: 0 }}>
-                {d.label}
-              </Tag>
-              <Button
-                type="text"
-                danger
-                size="small"
-                icon={<DeleteOutlined />}
-                onClick={() => removeSatir(row.satirIndex!)}
-              />
-            </Space>
-          );
-        },
+            render: (_: unknown, row: GridRow) => {
+              if (row.kind !== "product" || !row.satir) return null;
+              const d = satirDurum(row.satir);
+              const kilit = Boolean(row.satir.markaKilit);
+              return (
+                <Space size={4}>
+                  <Tag color={d.color} style={{ margin: 0 }}>
+                    {d.label}
+                  </Tag>
+                  <Button
+                    type="text"
+                    size="small"
+                    title={kilit ? "Kilidi aç — kategori değişimine dahil et" : "Kilitle — kategori değişiminde dokunma"}
+                    icon={kilit ? <PushpinFilled /> : <PushpinOutlined />}
+                    style={{ color: kilit ? "#1677ff" : "#999" }}
+                    onClick={() => onToggleKilit(row.satirIndex!)}
+                  />
+                  <Button
+                    type="text"
+                    danger
+                    size="small"
+                    icon={<DeleteOutlined />}
+                    onClick={() => removeSatir(row.satirIndex!)}
+                  />
+                </Space>
+              );
+            },
         onCell: sectionSpan,
       },
     ],
-    [patchSatir, removeSatir],
+    [patchSatir, removeSatir, markaOptions, brandSyncTick, onMarkaIste, onToggleKilit],
   );
 
   return (
@@ -564,6 +672,18 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
   const [musteriTel, setMusteriTel] = useState("");
   const [musteriMail, setMusteriMail] = useState("");
   const [refNo, setRefNo] = useState("");
+  const [brandSyncTick, setBrandSyncTick] = useState(0);
+  const [markaBusy, setMarkaBusy] = useState(false);
+  const [markaKapsam, setMarkaKapsam] = useState<MarkaKapsam>("ayni_marka");
+  const [markaSoru, setMarkaSoru] = useState<{
+    index: number;
+    eski: string;
+    yeni: string;
+    ayniMarka: number;
+    grup: number;
+    kilitli: number;
+    sinif: ReturnType<typeof markaKapsamSayilari>["sinif"];
+  } | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -797,6 +917,105 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
     [patchModel],
   );
 
+  const markaOptions = useMemo(() => {
+    const fromRows = (model?.satirlar ?? [])
+      .map((s) => s.marka.trim())
+      .filter(Boolean);
+    return [...new Set([...fromRows, ...HAZIR_MARKALAR])];
+  }, [model]);
+
+  const onToggleKilit = useCallback(
+    (index: number) => {
+      patchSatir(
+        index,
+        (s) => ({ ...s, markaKilit: !s.markaKilit }),
+        false,
+      );
+    },
+    [patchSatir],
+  );
+
+  const onMarkaIste = useCallback(
+    (index: number, yeniHam: string) => {
+      const current = modelRef.current;
+      const satir = current?.satirlar[index];
+      if (!satir) return;
+      const yeni = yeniHam.trim();
+      if (!yeni) {
+        patchSatir(index, { marka: "" }, false);
+        return;
+      }
+      if (ayniMarka(satir.marka, yeni)) {
+        if (satir.marka !== yeni) patchSatir(index, { marka: yeni }, false);
+        return;
+      }
+      const counts = markaKapsamSayilari(current.satirlar, index);
+      setMarkaKapsam("ayni_marka");
+      setMarkaSoru({
+        index,
+        eski: satir.marka || "—",
+        yeni,
+        ...counts,
+      });
+    },
+    [patchSatir],
+  );
+
+  async function uygulaMarka() {
+    const soru = markaSoru;
+    const current = modelRef.current;
+    if (!soru || !current) return;
+    const hedefler = markaDegisimHedefleri(
+      current.satirlar,
+      soru.index,
+      markaKapsam,
+    );
+    setMarkaBusy(true);
+    try {
+      const updates = new Map<number, TeklifV14Satir>();
+      for (const i of hedefler) {
+        const satir = current.satirlar[i];
+        if (!satir) continue;
+        const hit = await fetchMarkaMuadil(satir, soru.yeni);
+        if (hit) {
+          updates.set(i, {
+            ...applyCatalogHitToSatir(satir, hit),
+            markaKilit: markaKapsam === "satir" ? true : satir.markaKilit,
+            markaEslesmedi: false,
+          });
+        } else {
+          updates.set(i, {
+            ...satir,
+            marka: soru.yeni,
+            markaKilit: markaKapsam === "satir" ? true : satir.markaKilit,
+            markaEslesmedi: true,
+          });
+        }
+      }
+      patchModel((m) => ({
+        ...m,
+        satirlar: m.satirlar.map((s, i) => updates.get(i) ?? s),
+      }));
+      const miss = [...updates.values()].filter((s) => s.markaEslesmedi).length;
+      const ok = updates.size - miss;
+      if (miss) {
+        message.warning(
+          `${ok} kalem güncellendi, ${miss} satırda muadil bulunamadı`,
+        );
+      } else {
+        message.success(`${ok} kalem ${soru.yeni} olarak güncellendi`);
+      }
+      setMarkaSoru(null);
+    } finally {
+      setMarkaBusy(false);
+    }
+  }
+
+  function vazgecMarka() {
+    setMarkaSoru(null);
+    setBrandSyncTick((n) => n + 1);
+  }
+
   const sayi = model?.ust.sayi || refNo || teklifId;
 
   return (
@@ -868,6 +1087,10 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
         gridRows={gridRows}
         patchSatir={patchSatir}
         removeSatir={removeSatir}
+        markaOptions={markaOptions}
+        brandSyncTick={brandSyncTick}
+        onMarkaIste={onMarkaIste}
+        onToggleKilit={onToggleKilit}
       />
 
       <div
@@ -928,6 +1151,52 @@ export default function IsletmeTeklifCalismaSayfasi({ teklifId }: Props) {
           </tbody>
         </table>
       </div>
+      <Modal
+        title="Marka değişimi"
+        open={Boolean(markaSoru)}
+        onCancel={vazgecMarka}
+        onOk={() => void uygulaMarka()}
+        okText="Uygula"
+        confirmLoading={markaBusy}
+        cancelButtonProps={{ disabled: markaBusy }}
+        destroyOnHidden
+      >
+        {markaSoru ? (
+          <div>
+            <p style={{ marginBottom: 12 }}>
+              <strong>{markaSoru.eski}</strong>
+              {" → "}
+              <strong>{markaSoru.yeni}</strong>
+              {` · ${MARKA_SINIF_LABEL[markaSoru.sinif]}`}
+            </p>
+            <Radio.Group
+              value={markaKapsam}
+              onChange={(e) => setMarkaKapsam(e.target.value)}
+              style={{ display: "flex", flexDirection: "column", gap: 10 }}
+            >
+              <Radio value="satir">
+                Sadece bu kalem (kilitlenir)
+              </Radio>
+              <Radio value="ayni_marka">
+                {MARKA_SINIF_LABEL[markaSoru.sinif]} grubundaki {markaSoru.eski}{" "}
+                kalemler ({markaSoru.ayniMarka} satır)
+              </Radio>
+              <Radio value="grup">
+                Tüm {MARKA_SINIF_LABEL[markaSoru.sinif].toLocaleLowerCase("tr")}{" "}
+                ({markaSoru.grup} satır
+                {markaSoru.kilitli
+                  ? `, ${markaSoru.kilitli} kilitli hariç`
+                  : ""}
+                )
+              </Radio>
+            </Radio.Group>
+            <p style={{ marginTop: 12, color: "#888", fontSize: 12 }}>
+              Salamander gibi istisna için önce o satırı pinleyin veya “sadece bu
+              kalem” seçin.
+            </p>
+          </div>
+        ) : null}
+      </Modal>
     </PageContainer>
   );
 }
