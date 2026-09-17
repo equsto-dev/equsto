@@ -235,6 +235,9 @@
       label: "Karıştırma Kapları ve Süzgeçler",
       search: "karıştırma kap|karistirma kap|süzgeç|suzgec",
     },
+    /* İstif: Cambro = polipropilen tabla (8897.*.P0); Portashelf = metal katlı raf (çöp hariç) */
+    { tip: "cambro", dept: "istif", label: "CAMBRO", search: "cambro|polipropilen tablali|polipropilen tabla" },
+    { tip: "portashelf", dept: "istif", label: "Portashelf", search: "portashelf" },
   ];
 
   var byDept = {};
@@ -607,6 +610,47 @@
     return false;
   }
 
+  /** Portashelf MB126X çöp arabası — araba dept; istif / Portashelf raf vitrininde gösterme */
+  function isPortashelfCopArabasi(u) {
+    if (!u) return false;
+    var raw = (u && u.raw) || u || {};
+    var kod = String(raw.urun_kodu || raw.sku || raw.model || u.sku || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (kod === "MB126X") return true;
+    var hay = productHaystack(u);
+    if (/çöp\s*arab|cop\s*arab|yuvarlak\s*cop|kare\s*cop/.test(hay) && /portashelf|mb126/.test(hay))
+      return true;
+    if (/çöp\s*arab|cop\s*arab/.test(hay) && /portashelf/i.test(String(raw.brand || u.b || u.brand || "")))
+      return true;
+    return false;
+  }
+
+  /** Cambro vitrin — Öztiryakiler 8897.*.P0 polipropilen tablalı istif rafı */
+  function isCambroIstifProduct(u) {
+    if (!u) return false;
+    if (isPortashelfCopArabasi(u)) return false;
+    var raw = (u && u.raw) || u || {};
+    var cat = productCategorySlug(u);
+    if (cat === "polipropilen-tablali-istif-raflari") return true;
+    var kod = String(raw.urun_kodu || raw.sku || raw.model || u.sku || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^8897\.(36|46|56).*\.P0$/i.test(kod)) return true;
+    var hay = productHaystack(u);
+    if (/polipropilen/.test(hay) && /tablal[ıi]|istif\s*raf/.test(hay)) return true;
+    return false;
+  }
+
+  /** Portashelf metal katlı raf — çöp arabası değil */
+  function isPortashelfIstifShelf(u) {
+    if (!u || isPortashelfCopArabasi(u)) return false;
+    var br = lc((u && u.fb) || (u && u.b) || (u && u.brand) || (u.raw && u.raw.brand) || "");
+    if (br.indexOf("portashelf") >= 0) return true;
+    var hay = productHaystack(u);
+    return /portashelf/.test(hay) && /raf|shelv|katl[ıi]/.test(hay);
+  }
+
   function excludeFromDeptView(dept, u) {
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
@@ -616,6 +660,7 @@
     if (dept === "set-ustu-mutfak" && isOztiBainMarieMachineRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuArabaRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuDonerRow(u)) return true;
+    if (dept === "istif" && isPortashelfCopArabasi(u)) return true;
     if (isServisTeshirProduct(u) && DEPT_PLP_IDS.indexOf(String(dept || "")) >= 0) return true;
     return false;
   }
@@ -871,6 +916,8 @@
     if (!tile) return false;
     if (tile.id === "ocak-vitrini") return isOcakVitriniProduct(u);
     if (isSogukOdaProduct(u)) return tile.id === "soguk-oda";
+    if (tile.id === "cambro") return isCambroIstifProduct(u);
+    if (tile.id === "portashelf") return isPortashelfIstifShelf(u);
     var cat = productCategorySlug(u);
 
     if (tile.id === "taban-rafli" || tile.id === "taban-ve-ara-rafli" || tile.id === "dolapli-tezgah") {
@@ -1068,7 +1115,7 @@
     return arr;
   }
 
-  /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
+  /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı; istif: Cambro → Portashelf. */
   function sortProductsDefault(dept, list) {
     if (dept === "yikama") {
       return sortYikamaProducts(list);
@@ -1078,6 +1125,19 @@
         var ra = productRank(dept, a);
         var rb = productRank(dept, b);
         if (ra !== rb) return ra - rb;
+        return String(a.n || "").localeCompare(String(b.n || ""), "tr");
+      });
+    }
+    if (dept === "istif") {
+      return list.slice().sort(function (a, b) {
+        function tier(u) {
+          if (isCambroIstifProduct(u)) return 0;
+          if (isPortashelfIstifShelf(u)) return 1;
+          return 2;
+        }
+        var ta = tier(a);
+        var tb = tier(b);
+        if (ta !== tb) return ta - tb;
         return String(a.n || "").localeCompare(String(b.n || ""), "tr");
       });
     }
@@ -1100,7 +1160,7 @@
         seen[t.id] = true;
       }
     });
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return out;
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "istif") return out;
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
@@ -1111,7 +1171,7 @@
 
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return tiles.slice();
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "istif") return tiles.slice();
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
@@ -1124,6 +1184,10 @@
       .trim();
     var idx = labelIndex[dept];
     if (idx && idx[lk]) return idx[lk];
+    if (dept === "istif") {
+      if (lk.indexOf("cambro") >= 0 || lk.indexOf("polipropilen") >= 0) return "cambro";
+      if (lk.indexOf("portashelf") >= 0) return "portashelf";
+    }
     if (lk.indexOf("tost") >= 0 || /\batm[\s-]?\d/.test(lk)) return "tost-makineleri";
     if (/\batkm[\s-]?\d/.test(lk) || (lk.indexOf("çay") >= 0 && lk.indexOf("mak") >= 0)) return "cay-makineleri";
     if (lk.indexOf("döner") >= 0 || lk.indexOf("doner") >= 0) return "doner-ocaklari-";
@@ -1304,6 +1368,9 @@
     isSogukOdaProduct: isSogukOdaProduct,
     isOztiServisRafiProduct: isOztiServisRafiProduct,
     isServisTeshirProduct: isServisTeshirProduct,
+    isPortashelfCopArabasi: isPortashelfCopArabasi,
+    isCambroIstifProduct: isCambroIstifProduct,
+    isPortashelfIstifShelf: isPortashelfIstifShelf,
     excludeFromDeptView: excludeFromDeptView,
     isKuvetProduct: isKuvetProduct,
     all: RAW,

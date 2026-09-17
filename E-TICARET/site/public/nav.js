@@ -176,7 +176,10 @@
       labelKey: "nav.istif",
       label: "İstif Rafları",
       href: "istif.html",
-      subs: [{ label: "CAMBRO" }, { label: "Portashelf" }],
+      subs: [
+        { label: "CAMBRO", tip: "cambro" },
+        { label: "Portashelf", tip: "portashelf" },
+      ],
     },
     { id: "kuvetler", labelKey: "nav.kuvetler", label: "Küvetler", href: "kuvetler.html" },
   ];

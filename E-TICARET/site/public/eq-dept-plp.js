@@ -686,6 +686,14 @@
 
   function skipItem(item) {
     if (DEPT === 'istif' && isYukselIstifPartRow(item)) return true;
+    if (
+      DEPT === 'istif' &&
+      window.EqDeptTips &&
+      typeof window.EqDeptTips.isPortashelfCopArabasi === 'function' &&
+      window.EqDeptTips.isPortashelfCopArabasi(item)
+    ) {
+      return true;
+    }
     if (DEPT === 'kuvetler') {
       if (!(item && item.raw && isOztiRow(item.raw))) return true;
       if (window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === 'function') {
@@ -733,7 +741,13 @@
       n = window.eqPolishDisplayText(n);
     }
     var fb = b;
-    if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
+    if (
+      window.EqDeptTips &&
+      typeof window.EqDeptTips.isCambroIstifProduct === 'function' &&
+      window.EqDeptTips.isCambroIstifProduct({ n: n, b: b, raw: x, sku: x.sku || x.urun_kodu || x.model })
+    ) {
+      fb = 'Cambro';
+    } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
       fb =
         window.EqDeptCmFacets.resolveFacetBrand(
           b,

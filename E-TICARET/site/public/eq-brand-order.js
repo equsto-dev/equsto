@@ -9,6 +9,8 @@
     "Şenox",
     "Rational",
     "Öztiryakiler",
+    "Cambro",
+    "Portashelf",
     "Robot Coupe",
     "Atalay",
     "Faema",
