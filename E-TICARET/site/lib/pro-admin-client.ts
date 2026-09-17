@@ -1132,6 +1132,8 @@ export type TeklifAdminRow = {
   not_: string | null;
   kaynak: string | null;
   created_at: string;
+  kaynak_yukleme_id?: string | null;
+  kaynak_dosya?: string | null;
 };
 
 export type MusteriAdminRow = {
@@ -1304,6 +1306,40 @@ export async function downloadTeklifExcel(
   return {};
 }
 
+/** Admin — üyenin yüklediği orijinal PDF/Excel indir. */
+export async function downloadPfosListeKaynak(
+  uploadId: string,
+  filenameHint?: string,
+): Promise<{ error?: string }> {
+  const token = getProToken();
+  const res = await fetch(
+    `/api/pfos/liste-upload/${encodeURIComponent(uploadId)}`,
+    {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      cache: "no-store",
+    },
+  );
+  const ctype = res.headers.get("content-type") || "";
+  if (!res.ok || ctype.includes("application/json")) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    return { error: body.error || "Kaynak dosya indirilemedi" };
+  }
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  const cd = res.headers.get("content-disposition") || "";
+  const star = /filename\*=UTF-8''([^;]+)/i.exec(cd);
+  const quoted = /filename="([^"]+)"/i.exec(cd);
+  const fromHeader = star
+    ? decodeURIComponent(star[1])
+    : quoted?.[1];
+  a.download = fromHeader || filenameHint || "liste";
+  a.click();
+  URL.revokeObjectURL(url);
+  return {};
+}
+
 export async function fetchMusteriler(): Promise<{
   rows: MusteriAdminRow[];
   error?: string;
@@ -1394,6 +1430,8 @@ export type PfosUsageAdminRow = {
   feedback_vote?: string | null;
   feedback_guven?: number | null;
   feedback_durum?: string | null;
+  kaynak_yukleme_id?: string | null;
+  kaynak_dosya?: string | null;
 };
 
 export async function fetchPfosUsage(days = 30): Promise<{

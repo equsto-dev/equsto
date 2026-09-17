@@ -105,3 +105,7 @@ next-env.d.ts
 
 # PFOS Hero Kilit Görseli İstisnası
 !public/images/pfos/pfos_gorsel.jpeg
+
+# Üye kaynak listeleri (orijinal PDF/Excel)
+/data/liste-uploads/*
+!/data/liste-uploads/.gitkeep

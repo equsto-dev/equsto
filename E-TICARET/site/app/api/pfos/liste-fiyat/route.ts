@@ -7,6 +7,8 @@ import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type { FiyatStratejisi } from "@/lib/pfos/schemas/pfos.schema";
+import { getMemberIdByToken, readBearerToken } from "@/lib/member-auth";
+import { persistListeUpload } from "@/lib/pfos/liste-upload-store";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -24,6 +26,26 @@ function fileKind(name: string): "excel" | "pdf" | null {
   if (/\.xlsx?$/i.test(name)) return "excel";
   if (/\.pdf$/i.test(name)) return "pdf";
   return null;
+}
+
+async function withKaynak(
+  req: NextRequest,
+  name: string,
+  kind: "excel" | "pdf",
+  ab: ArrayBuffer,
+  body: object,
+) {
+  const memberId = await getMemberIdByToken(readBearerToken(req));
+  const saved = await persistListeUpload({
+    bytes: new Uint8Array(ab),
+    originalName: name,
+    kind,
+    memberId,
+  });
+  return NextResponse.json(
+    { ...body, kaynak_yukleme_id: saved?.id ?? null },
+    { status: 200 },
+  );
 }
 
 /** POST /api/pfos/liste-fiyat — multipart: file (.xlsx | .pdf), sehir?, projeAdi?, notlar? */
@@ -85,7 +107,7 @@ export async function POST(req: NextRequest) {
         sehir,
         notlar,
       });
-      return NextResponse.json(response, { status: 200 });
+      return withKaynak(req, name, kind, ab, response);
     }
 
     const wb = new ExcelJS.Workbook();
@@ -108,7 +130,7 @@ export async function POST(req: NextRequest) {
         sehir,
         fiyatStratejisi,
       });
-      return NextResponse.json(response, { status: 200 });
+      return withKaynak(req, name, kind, ab, response);
     }
 
     const importKalemler = await analyzeExcelForListe(ab, { notlar });
@@ -121,7 +143,7 @@ export async function POST(req: NextRequest) {
       fiyatStratejisi,
     });
 
-    return NextResponse.json(response, { status: 200 });
+    return withKaynak(req, name, kind, ab, response);
   } catch (err) {
     console.error("[PFOS liste-fiyat]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";

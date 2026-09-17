@@ -254,6 +254,7 @@ export function pfosResponseToTeklifV14(
       m2Toplam: res.m2,
       bolumM2: meta.bolumM2,
       teslimatAdresi: meta.teslimatAdresi,
+      kaynakYuklemeId: res.kaynak_yukleme_id?.trim() || undefined,
     },
     pfos: {
       guvenSkoru: res.guvenSkoru,

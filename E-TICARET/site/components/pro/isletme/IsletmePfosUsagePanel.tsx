@@ -4,6 +4,7 @@ import { ProTable, StatisticCard } from "@ant-design/pro-components";
 import { App, Button, Col, Row, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
+  downloadPfosListeKaynak,
   downloadPfosUsageExcel,
   fetchPfosUsage,
   type PfosUsageAdminRow,
@@ -51,6 +52,7 @@ export default function IsletmePfosUsagePanel() {
   const [rows, setRows] = useState<PfosUsageAdminRow[]>([]);
   const [days, setDays] = useState(30);
   const [excelSayi, setExcelSayi] = useState<string | null>(null);
+  const [kaynakId, setKaynakId] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -83,6 +85,22 @@ export default function IsletmePfosUsagePanel() {
         else message.success("Excel indirildi");
       } finally {
         setExcelSayi(null);
+      }
+    },
+    [message],
+  );
+
+  const onKaynak = useCallback(
+    async (uploadId: string, filename?: string | null) => {
+      const id = uploadId.trim();
+      if (!id) return;
+      setKaynakId(id);
+      try {
+        const res = await downloadPfosListeKaynak(id, filename || undefined);
+        if (res.error) message.error(res.error);
+        else message.success("Orijinal dosya indirildi");
+      } finally {
+        setKaynakId(null);
       }
     },
     [message],
@@ -260,6 +278,27 @@ export default function IsletmePfosUsagePanel() {
                   onClick={() => void onExcel(sayi)}
                 >
                   {sayi}
+                </Button>
+              );
+            },
+          },
+          {
+            title: "Orijinal",
+            dataIndex: "kaynak_dosya",
+            ellipsis: true,
+            render: (_, r) => {
+              const id = String(r.kaynak_yukleme_id ?? "").trim();
+              const name = String(r.kaynak_dosya ?? "").trim();
+              if (!id) return "—";
+              return (
+                <Button
+                  type="link"
+                  size="small"
+                  style={{ padding: 0, height: "auto" }}
+                  loading={kaynakId === id}
+                  onClick={() => void onKaynak(id, name)}
+                >
+                  {name || "İndir"}
                 </Button>
               );
             },

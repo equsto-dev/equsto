@@ -4,6 +4,7 @@ import { ProTable } from "@ant-design/pro-components";
 import { App, Button, Select, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
+  downloadPfosListeKaynak,
   downloadTeklifExcel,
   fetchTeklifler,
   type TeklifAdminRow,
@@ -25,6 +26,7 @@ export default function IsletmeTekliflerPanel() {
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<TeklifAdminRow[]>([]);
   const [excelId, setExcelId] = useState<string | null>(null);
+  const [kaynakId, setKaynakId] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -62,6 +64,22 @@ export default function IsletmeTekliflerPanel() {
         else message.success("Excel indirildi");
       } finally {
         setExcelId(null);
+      }
+    },
+    [message],
+  );
+
+  const onKaynak = useCallback(
+    async (uploadId: string, filename?: string | null) => {
+      const id = uploadId.trim();
+      if (!id) return;
+      setKaynakId(id);
+      try {
+        const res = await downloadPfosListeKaynak(id, filename || undefined);
+        if (res.error) message.error(res.error);
+        else message.success("Orijinal dosya indirildi");
+      } finally {
+        setKaynakId(null);
       }
     },
     [message],
@@ -141,6 +159,27 @@ export default function IsletmeTekliflerPanel() {
           title: "Kaynak",
           dataIndex: "kaynak",
           render: (v) => <Tag>{v || "pfos"}</Tag>,
+        },
+        {
+          title: "Orijinal",
+          dataIndex: "kaynak_dosya",
+          ellipsis: true,
+          render: (_, r) => {
+            const id = String(r.kaynak_yukleme_id ?? "").trim();
+            const name = String(r.kaynak_dosya ?? "").trim();
+            if (!id) return "—";
+            return (
+              <Button
+                type="link"
+                size="small"
+                style={{ padding: 0, height: "auto" }}
+                loading={kaynakId === id}
+                onClick={() => void onKaynak(id, name)}
+              >
+                {name || "İndir"}
+              </Button>
+            );
+          },
         },
       ]}
     />

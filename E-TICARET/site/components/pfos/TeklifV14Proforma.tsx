@@ -414,6 +414,7 @@ export default function TeklifV14Proforma({
           pfos_source: pfosSource,
           teklif_sayi: ust.sayi,
           teklif_v14: slimTeklifV14ForApi(model),
+          kaynak_yukleme_id: model.meta.kaynakYuklemeId ?? null,
           gonderim_kanali: kanal,
         }),
       });

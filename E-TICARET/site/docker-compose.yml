@@ -37,6 +37,8 @@ services:
     volumes:
       # Admin panel JSON yazımı (eticaret-icerik, tip-sozlugu, pfos-referans…) — host'ta kalıcı
       - ./public/data:/app/public/data
+      # Üye kaynak listeleri (PDF/Excel) — host'ta kalıcı, public değil
+      - ./data/liste-uploads:/app/data/liste-uploads
       # Ajan script'leri host'tan (git pull sonrası rebuild gerekmeden)
       - ./scripts:/app/scripts
       # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir

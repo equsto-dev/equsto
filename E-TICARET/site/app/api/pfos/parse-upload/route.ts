@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import type { ProcessPdfUploadResult } from "@/lib/pfos/parse-upload/process-pdf-upload";
-import { requireMemberSession } from "@/lib/member-auth";
+import { getMemberIdByToken, requireMemberSession } from "@/lib/member-auth";
+import { persistListeUpload } from "@/lib/pfos/liste-upload-store";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -75,7 +76,21 @@ export async function POST(req: NextRequest) {
       notlar,
     });
 
-    return NextResponse.json(body, { status: 200 });
+    const memberId = await getMemberIdByToken(auth.session.token);
+    const saved = await persistListeUpload({
+      bytes: new Uint8Array(buffer),
+      originalName: name,
+      kind: "pdf",
+      memberId,
+    });
+
+    return NextResponse.json(
+      {
+        ...body,
+        kaynak_yukleme_id: saved?.id ?? null,
+      },
+      { status: 200 },
+    );
   } catch (err) {
     console.error("[PFOS parse-upload]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";

@@ -15,6 +15,7 @@ import { readFetchJsonOrError } from "@/lib/pfos/fetch-json.client";
 import { logPfosQuoteGenerated } from "@/lib/pfos/log-pfos-usage.client";
 import { trackPfosListeUpload } from "@/lib/pfos/track-pfos-analytics.client";
 import { countFiyatsizSatirlar } from "@/lib/pfos/teklif/liste-kalem-whatsapp.client";
+import { getMemberToken } from "@/lib/account/member-profile.client";
 
 export function fileKind(file: File): "excel" | "pdf" | null {
   if (/\.xlsx?$/i.test(file.name)) return "excel";
@@ -79,9 +80,16 @@ export function usePfosListeUpload() {
 
         const endpoint =
           kind === "pdf" ? "/api/pfos/parse-upload" : "/api/pfos/liste-fiyat";
+        const token = getMemberToken();
         const res = await fetch(endpoint, {
           method: "POST",
           body: form,
+          headers: token
+            ? {
+                Authorization: `Bearer ${token}`,
+                "X-Equsto-Authorization": token,
+              }
+            : undefined,
         });
         const pfos = await readFetchJsonOrError<PFOSResponse>(
           res,

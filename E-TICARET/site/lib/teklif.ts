@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { notifyNewTeklif } from "@/lib/notify";
 import { recordPfosUsageEvent } from "@/lib/pfos/usage-log";
 import { pfosDisplayText } from "@/lib/pfos/format-display";
+import { linkListeUpload } from "@/lib/pfos/liste-upload-store";
 import {
   sendTeklifCustomerEmail,
   type TeklifDeliveryResult,
@@ -26,6 +27,8 @@ export type TeklifAdminRow = {
   musteri_id: string | null;
   created_at: string;
   updated_at: string;
+  kaynak_yukleme_id?: string | null;
+  kaynak_dosya?: string | null;
 };
 
 const TEKLIF_DURUM = new Set<string>([
@@ -241,6 +244,17 @@ export async function createTeklif(
     },
   });
 
+  const teklifSayi = String(body.teklif_sayi ?? "").trim();
+  const v14Meta = asRecord(asRecord(body.teklif_v14)?.meta);
+  const kaynakYuklemeId =
+    String(body.kaynak_yukleme_id ?? body.kaynakYuklemeId ?? "").trim() ||
+    pfosDisplayText(v14Meta?.kaynakYuklemeId, "") ||
+    null;
+  await linkListeUpload({
+    id: kaynakYuklemeId,
+    teklifSayi,
+  });
+
   const admin = teklifToAdmin(row);
   void notifyNewTeklif(admin).catch((e) =>
     console.error("[teklif] notify", e),
@@ -283,6 +297,7 @@ export async function createTeklif(
       memberLoggedIn: true,
       memberId: musteriId,
       gonderimKanal: kanal,
+      kaynakYuklemeId,
     }).catch((e) => console.error("[pfos-usage] quote_sent", e));
   }
 

@@ -232,6 +232,7 @@ export const PFOSResponseSchema = z.object({
   uyarilar: z.array(z.string()),
   bolumM2: z.record(z.string(), z.number()).optional(),
   zonesUsed: z.array(z.string()).optional(),
+  kaynak_yukleme_id: z.string().nullable().optional(),
   teklifLayout: z
     .object({
       pozModu: z.enum(["referans", "kategori"]),

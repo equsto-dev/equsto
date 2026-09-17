@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pfosCreateTeklifSnapshot } from "@/lib/pfos-db";
 import { pfosDisplayText } from "@/lib/pfos/format-display";
+import { linkListeUpload } from "@/lib/pfos/liste-upload-store";
 
 export const runtime = "nodejs";
 
@@ -19,6 +20,8 @@ export async function POST(req: NextRequest) {
       guven_skoru,
       requestJson,
       request_json,
+      kaynakYuklemeId,
+      kaynak_yukleme_id,
     } = body;
 
     if (!kalemler) {
@@ -48,6 +51,12 @@ export async function POST(req: NextRequest) {
             ? Number(guven_skoru)
             : null,
       requestJson: requestJson ?? request_json ?? null,
+    });
+
+    await linkListeUpload({
+      id: String(kaynakYuklemeId ?? kaynak_yukleme_id ?? "").trim() || null,
+      teklifSayi: projeRef != null ? String(projeRef) : null,
+      snapshotId: snapshot.id,
     });
 
     return NextResponse.json(

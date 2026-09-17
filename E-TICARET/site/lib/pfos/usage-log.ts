@@ -1,6 +1,7 @@
 import type { PfosUsageEvent } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import { pfosDisplayText } from "@/lib/pfos/format-display";
+import { kaynakUploadsByTeklifSayi, linkListeUpload } from "@/lib/pfos/liste-upload-store";
 
 export type PfosUsageEventKind = "quote_generated" | "quote_sent";
 export type PfosUsageSource = "wizard" | "liste";
@@ -20,6 +21,7 @@ export type PfosUsageLogInput = {
   memberLoggedIn?: boolean;
   memberId?: string | null;
   gonderimKanal?: string | null;
+  kaynakYuklemeId?: string | null;
 };
 
 export type PfosUsageAdminRow = {
@@ -42,6 +44,8 @@ export type PfosUsageAdminRow = {
   feedback_vote?: string | null;
   feedback_guven?: number | null;
   feedback_durum?: string | null;
+  kaynak_yukleme_id?: string | null;
+  kaynak_dosya?: string | null;
 };
 
 function dec(v: { toString(): string } | null | undefined): number | null {
@@ -111,6 +115,13 @@ export async function recordPfosUsageEvent(
       gonderimKanal: input.gonderimKanal?.trim() || null,
     },
   });
+
+  if (teklifSayi || input.kaynakYuklemeId) {
+    await linkListeUpload({
+      id: input.kaynakYuklemeId,
+      teklifSayi,
+    });
+  }
 
   return pfosUsageToAdmin(row);
 }
@@ -199,10 +210,13 @@ export async function listPfosUsageEventsWithFeedback(
   ];
   if (sayilar.length === 0) return rows;
 
-  const feedbacks = await db.pfosFeedbackEvent.findMany({
-    where: { teklifSayi: { in: sayilar } },
-    orderBy: { createdAt: "desc" },
-  });
+  const [feedbacks, uploads] = await Promise.all([
+    db.pfosFeedbackEvent.findMany({
+      where: { teklifSayi: { in: sayilar } },
+      orderBy: { createdAt: "desc" },
+    }),
+    kaynakUploadsByTeklifSayi(sayilar),
+  ]);
 
   const fbByTeklif = new Map<
     string,
@@ -220,11 +234,14 @@ export async function listPfosUsageEventsWithFeedback(
 
   return rows.map((r) => {
     const fb = r.teklif_sayi.trim() ? fbByTeklif.get(r.teklif_sayi.trim()) : null;
+    const up = r.teklif_sayi.trim() ? uploads.get(r.teklif_sayi.trim()) : null;
     return {
       ...r,
       feedback_vote: fb?.vote ?? null,
       feedback_guven: fb?.guven ?? null,
       feedback_durum: fb?.durum ?? null,
+      kaynak_yukleme_id: up?.id ?? null,
+      kaynak_dosya: up?.original_name ?? null,
     };
   });
 }

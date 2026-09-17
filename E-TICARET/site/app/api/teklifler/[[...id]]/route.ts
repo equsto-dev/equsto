@@ -8,6 +8,7 @@ import {
   isTeklifDurum,
   teklifToAdmin,
 } from "@/lib/teklif";
+import { kaynakUploadsByTeklifSayi } from "@/lib/pfos/liste-upload-store";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -64,7 +65,16 @@ export async function GET(req: NextRequest, ctx: Ctx) {
     try {
       const row = await db.teklif.findUnique({ where: { id: segments[0] } });
       if (!row) return adminErr("Teklif bulunamadı", 404);
-      return adminOk({ data: teklifToAdmin(row) });
+      const admin = teklifToAdmin(row);
+      const uploads = await kaynakUploadsByTeklifSayi([admin.teklif_sayi]);
+      const up = uploads.get(admin.teklif_sayi.trim());
+      return adminOk({
+        data: {
+          ...admin,
+          kaynak_yukleme_id: up?.id ?? null,
+          kaynak_dosya: up?.original_name ?? null,
+        },
+      });
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Detay alınamadı";
       return adminErr(msg, 503);
@@ -83,7 +93,19 @@ export async function GET(req: NextRequest, ctx: Ctx) {
       orderBy: { createdAt: "desc" },
       take: 5000,
     });
-    return adminOk({ data: rows.map(teklifToAdmin), count: rows.length });
+    const mapped = rows.map(teklifToAdmin);
+    const uploads = await kaynakUploadsByTeklifSayi(
+      mapped.map((r) => r.teklif_sayi),
+    );
+    const data = mapped.map((r) => {
+      const up = r.teklif_sayi.trim() ? uploads.get(r.teklif_sayi.trim()) : null;
+      return {
+        ...r,
+        kaynak_yukleme_id: up?.id ?? null,
+        kaynak_dosya: up?.original_name ?? null,
+      };
+    });
+    return adminOk({ data, count: data.length });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Liste alınamadı";
     return adminErr(msg, 503);

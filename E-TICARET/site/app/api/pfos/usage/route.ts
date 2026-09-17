@@ -48,6 +48,9 @@ function parseBody(body: Record<string, unknown>) {
           : body.gonderim_kanal != null
             ? String(body.gonderim_kanal)
             : null,
+      kaynakYuklemeId: String(
+        body.kaynakYuklemeId ?? body.kaynak_yukleme_id ?? "",
+      ).trim() || null,
     },
   };
 }

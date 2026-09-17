@@ -75,6 +75,7 @@ export async function savePfosTeklifSnapshot(
         guvenSkoru: model.pfos?.guvenSkoru ?? null,
         kalemler: snapshotKalemler(model),
         requestJson: { teklif_v14: model },
+        kaynakYuklemeId: model.meta.kaynakYuklemeId ?? null,
       }),
       keepalive: true,
     });

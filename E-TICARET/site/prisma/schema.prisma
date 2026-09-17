@@ -253,6 +253,25 @@ model PfosTeklifSnapshot {
   @@index([createdAt])
 }
 
+/// Üyenin yüklediği kaynak PDF/Excel — teklifin eki (orijinal dosya)
+model PfosListeUpload {
+  id           String   @id @default(cuid())
+  originalName String   @map("original_name")
+  storedRel    String   @map("stored_rel")
+  mime         String   @default("")
+  kind         String   @default("pdf")
+  bytes        Int      @default(0)
+  memberId     String?  @map("member_id")
+  teklifSayi   String   @default("") @map("teklif_sayi")
+  snapshotId   String?  @map("snapshot_id")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@index([teklifSayi])
+  @@index([memberId])
+  @@index([createdAt])
+  @@map("pfos_liste_upload")
+}
+
 /// PFOS teklif geri bildirimi (👍/👎 + isteğe bağlı kalem düzeltmesi)
 model PfosFeedbackEvent {
   id               String   @id @default(cuid())

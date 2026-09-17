@@ -50,6 +50,7 @@ export function logPfosQuoteGenerated(
     toplamEur: genelEur > 0 ? genelEur : null,
     sehir: model.meta.sehir,
     memberLoggedIn: memberLoggedInNow(),
+    kaynakYuklemeId: model.meta.kaynakYuklemeId,
   });
 
   trackPfosQuoteGenerated({

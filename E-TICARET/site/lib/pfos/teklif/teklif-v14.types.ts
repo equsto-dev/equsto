@@ -61,6 +61,7 @@ export type TeklifModelV14 = {
     m2Toplam: number;
     bolumM2: Record<string, number>;
     teslimatAdresi: string;
+    kaynakYuklemeId?: string;
   };
   /** PFOS motor meta — snapshot / geri bildirim için */
   pfos?: {
