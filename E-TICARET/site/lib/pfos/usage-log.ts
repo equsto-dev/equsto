@@ -1,5 +1,6 @@
 import type { PfosUsageEvent } from "@/lib/prisma";
 import { db } from "@/lib/db";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 
 export type PfosUsageEventKind = "quote_generated" | "quote_sent";
 export type PfosUsageSource = "wizard" | "liste";
@@ -87,14 +88,23 @@ export async function recordPfosUsageEvent(
     data: {
       event,
       source: input.source || "",
-      konsept: String(input.konsept ?? "").trim(),
-      konseptLabel: String(input.konseptLabel ?? input.konsept ?? "").trim(),
+      konsept: pfosDisplayText(input.konsept, ""),
+      konseptLabel: pfosDisplayText(
+        input.konseptLabel,
+        pfosDisplayText(input.konsept, ""),
+      ),
       m2: input.m2 != null && Number.isFinite(input.m2) ? Math.round(input.m2) : null,
       teklifSayi,
       teklifRef: String(input.teklifRef ?? "").trim(),
       kalemSayisi: Math.max(0, Math.round(input.kalemSayisi ?? 0)),
-      toplamTry: input.toplamTry ?? null,
-      toplamEur: input.toplamEur ?? null,
+      toplamTry:
+        input.toplamTry != null && Number.isFinite(Number(input.toplamTry))
+          ? Number(input.toplamTry)
+          : null,
+      toplamEur:
+        input.toplamEur != null && Number.isFinite(Number(input.toplamEur))
+          ? Number(input.toplamEur)
+          : null,
       sehir: String(input.sehir ?? "").trim(),
       memberLoggedIn: !!input.memberLoggedIn,
       memberId: input.memberId?.trim() || null,

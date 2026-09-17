@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 import {
   listPfosUsageEventsWithFeedback,
   pfosUsageOzet,
@@ -27,8 +28,11 @@ function parseBody(body: Record<string, unknown>) {
     data: {
       event,
       source: SOURCES.has(source) ? source : "wizard",
-      konsept: String(body.konsept ?? ""),
-      konseptLabel: String(body.konseptLabel ?? body.konsept_label ?? ""),
+      konsept: pfosDisplayText(body.konsept, ""),
+      konseptLabel: pfosDisplayText(
+        body.konseptLabel ?? body.konsept_label ?? body.konsept,
+        "",
+      ),
       m2: body.m2 != null ? Number(body.m2) : null,
       teklifSayi: String(body.teklifSayi ?? body.teklif_sayi ?? ""),
       teklifRef: String(body.teklifRef ?? body.teklif_ref ?? ""),

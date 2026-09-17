@@ -2,6 +2,7 @@ import type { Prisma, Teklif, TeklifDurum } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import { notifyNewTeklif } from "@/lib/notify";
 import { recordPfosUsageEvent } from "@/lib/pfos/usage-log";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 import {
   sendTeklifCustomerEmail,
   type TeklifDeliveryResult,
@@ -248,8 +249,14 @@ export async function createTeklif(
         String(body.pfos_source ?? "") === "liste"
           ? "liste"
           : "wizard",
-      konsept: String(body.konsept ?? proje.konsept ?? data.konsept ?? ""),
-      konseptLabel: String(data.konsept ?? proje.konsept ?? ""),
+      konsept: pfosDisplayText(
+        body.konsept ?? proje.konsept ?? data.konsept,
+        "",
+      ),
+      konseptLabel: pfosDisplayText(
+        data.konsept ?? proje.konsept,
+        pfosDisplayText(body.konsept, ""),
+      ),
       m2: proje.alan_m2 != null ? Number(proje.alan_m2) : null,
       teklifSayi: String(body.teklif_sayi ?? ""),
       teklifRef: refNo,

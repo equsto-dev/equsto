@@ -1,6 +1,7 @@
 "use client";
 
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
 import type { PfosUsageLogInput, PfosUsageSource } from "@/lib/pfos/usage-log";
 import { trackPfosQuoteGenerated } from "@/lib/pfos/track-pfos-analytics.client";
@@ -37,8 +38,11 @@ export function logPfosQuoteGenerated(
   postUsage({
     event: "quote_generated",
     source,
-    konsept: model.meta.konsept,
-    konseptLabel: model.meta.konseptLabel,
+    konsept: pfosDisplayText(model.meta.konsept, ""),
+    konseptLabel: pfosDisplayText(
+      model.meta.konseptLabel,
+      pfosDisplayText(model.meta.konsept, ""),
+    ),
     m2: model.meta.m2Toplam || null,
     teklifSayi,
     kalemSayisi: model.satirlar.length,

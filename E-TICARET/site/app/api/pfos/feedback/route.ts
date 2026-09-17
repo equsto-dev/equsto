@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 import {
   listPfosFeedbackEvents,
   pfosFeedbackOzet,
@@ -84,8 +85,11 @@ function parseBody(body: Record<string, unknown>):
           : body.snapshot_id != null
             ? String(body.snapshot_id)
             : null,
-      konsept: String(body.konsept ?? ""),
-      konseptLabel: String(body.konseptLabel ?? body.konsept_label ?? body.konsept ?? ""),
+      konsept: pfosDisplayText(body.konsept, ""),
+      konseptLabel: pfosDisplayText(
+        body.konseptLabel ?? body.konsept_label ?? body.konsept,
+        "",
+      ),
       referansId:
         body.referansId != null
           ? String(body.referansId)

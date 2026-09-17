@@ -28,10 +28,8 @@ import { equstoFiyatListesiGorselRelFromSku } from "../core/equsto-fiyat-sku";
 import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
 import { buzdolabiDisplayIsimFromSablon } from "../referans/buzdolabi-display";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
-import {
-  formatPfosDisplayTanim,
-  isProformaJunkText,
-} from "../parse-upload/sanitize-tanim";
+import { formatPfosDisplayTanim, isProformaJunkText } from "../parse-upload/sanitize-tanim";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
 import { referansTeklifAciklamaCeliski } from "../referans/referans-nitelikleri";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
@@ -250,8 +248,8 @@ export function pfosResponseToTeklifV14(
       ...TEKLIF_V14_SARTLAR,
     ],
     meta: {
-      konsept: res.konsept,
-      konseptLabel: res.konseptLabel,
+      konsept: pfosDisplayText(res.konsept, ""),
+      konseptLabel: pfosDisplayText(res.konseptLabel, pfosDisplayText(res.konsept, "")),
       sehir: res.sehir ?? "",
       m2Toplam: res.m2,
       bolumM2: meta.bolumM2,

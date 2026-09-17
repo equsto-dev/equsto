@@ -1,14 +1,15 @@
 "use client";
 
 import { ProTable, StatisticCard } from "@ant-design/pro-components";
-import { App, Col, Row, Tag } from "antd";
+import { App, Button, Col, Row, Tag } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import {
+  downloadPfosUsageExcel,
   fetchPfosUsage,
   type PfosUsageAdminRow,
   type PfosUsageOzet,
 } from "@/lib/pro-admin-client";
-import { pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
+import { pfosDisplayText, pfosGuvenYuzdeMetin } from "@/lib/pfos/format-display";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 function eventLabel(event: string) {
@@ -23,6 +24,20 @@ function sourceLabel(source: string) {
   return source || "—";
 }
 
+function konseptHucre(r: PfosUsageAdminRow) {
+  const label = pfosDisplayText(r.konsept_label, "");
+  if (label) return label;
+  const key = pfosDisplayText(r.konsept, "");
+  if (key === "yuklenen-liste") return "Yüklenen ekipman listesi";
+  return pfosDisplayText(key);
+}
+
+function tutarHucre(v: unknown) {
+  const n = Number(v);
+  if (!Number.isFinite(n)) return "—";
+  return `${n.toLocaleString("tr-TR")} ₺`;
+}
+
 function feedbackVoteTag(vote: string | null | undefined) {
   if (vote === "up") return <Tag color="green">👍</Tag>;
   if (vote === "down") return <Tag color="red">👎</Tag>;
@@ -35,6 +50,7 @@ export default function IsletmePfosUsagePanel() {
   const [ozet, setOzet] = useState<PfosUsageOzet | null>(null);
   const [rows, setRows] = useState<PfosUsageAdminRow[]>([]);
   const [days, setDays] = useState(30);
+  const [excelSayi, setExcelSayi] = useState<string | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -52,6 +68,25 @@ export default function IsletmePfosUsagePanel() {
   useEffect(() => {
     load();
   }, [load]);
+
+  const onExcel = useCallback(
+    async (sayi: string) => {
+      const teklifSayi = sayi.trim();
+      if (!teklifSayi) {
+        message.warning("Teklif numarası yok");
+        return;
+      }
+      setExcelSayi(teklifSayi);
+      try {
+        const res = await downloadPfosUsageExcel(teklifSayi);
+        if (res.error) message.error(res.error);
+        else message.success("Excel indirildi");
+      } finally {
+        setExcelSayi(null);
+      }
+    },
+    [message],
+  );
 
   return (
     <>
@@ -172,7 +207,7 @@ export default function IsletmePfosUsagePanel() {
             title: "Konsept",
             dataIndex: "konsept_label",
             ellipsis: true,
-            render: (v, r) => String(v || r.konsept || "—"),
+            render: (_, r) => konseptHucre(r),
           },
           {
             title: "Güven",
@@ -201,8 +236,7 @@ export default function IsletmePfosUsagePanel() {
           {
             title: "Tutar",
             dataIndex: "toplam_try",
-            render: (v) =>
-              v != null ? `${Number(v).toLocaleString("tr-TR")} ₺` : "—",
+            render: (v) => tutarHucre(v),
           },
           {
             title: "Üye",
@@ -214,6 +248,21 @@ export default function IsletmePfosUsagePanel() {
             title: "Teklif no",
             dataIndex: "teklif_sayi",
             ellipsis: true,
+            render: (_, r) => {
+              const sayi = String(r.teklif_sayi ?? "").trim();
+              if (!sayi) return "—";
+              return (
+                <Button
+                  type="link"
+                  size="small"
+                  style={{ padding: 0, height: "auto" }}
+                  loading={excelSayi === sayi}
+                  onClick={() => void onExcel(sayi)}
+                >
+                  {sayi}
+                </Button>
+              );
+            },
           },
         ]}
       />

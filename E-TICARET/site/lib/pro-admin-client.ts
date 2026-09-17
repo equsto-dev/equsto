@@ -1383,6 +1383,33 @@ export async function fetchPfosUsage(days = 30): Promise<{
   return { ozet: body.data?.ozet, rows: body.data?.rows ?? [] };
 }
 
+/** Admin — teklif no tıklanınca v14 Excel indir. */
+export async function downloadPfosUsageExcel(
+  teklifSayi: string,
+): Promise<{ error?: string }> {
+  const token = getProToken();
+  const res = await fetch(
+    `/api/pfos/usage/excel?teklifSayi=${encodeURIComponent(teklifSayi)}`,
+    {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      cache: "no-store",
+    },
+  );
+  const ctype = res.headers.get("content-type") || "";
+  if (!res.ok || ctype.includes("application/json")) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    return { error: body.error || "Excel oluşturulamadı" };
+  }
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `equsto-teklif-${teklifSayi.replace(/[^\w.-]+/g, "-")}.xlsx`;
+  a.click();
+  URL.revokeObjectURL(url);
+  return {};
+}
+
 export type PfosFeedbackOzet = {
   days: number;
   toplam: number;

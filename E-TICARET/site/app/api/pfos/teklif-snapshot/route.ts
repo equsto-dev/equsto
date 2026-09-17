@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pfosCreateTeklifSnapshot } from "@/lib/pfos-db";
+import { pfosDisplayText } from "@/lib/pfos/format-display";
 
 export const runtime = "nodejs";
 
@@ -31,7 +32,7 @@ export async function POST(req: NextRequest) {
     }
 
     const snapshot = await pfosCreateTeklifSnapshot(projeRef || null, kalemler, {
-      konsept: konsept != null ? String(konsept) : null,
+      konsept: konsept != null ? pfosDisplayText(konsept, "") || null : null,
       referansId: referansId != null ? String(referansId) : null,
       referansListeKey:
         referansListeKey != null

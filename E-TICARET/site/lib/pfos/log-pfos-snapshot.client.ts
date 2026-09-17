@@ -5,7 +5,30 @@ import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 const savedSnapshots = new Set<string>();
 
 function snapshotKalemler(model: TeklifModelV14) {
-  if (model.pfos?.kalemler?.length) return model.pfos.kalemler;
+  const byPoz = new Map(
+    model.satirlar.filter((s) => s.poz.trim()).map((s) => [s.poz.trim(), s]),
+  );
+  if (model.pfos?.kalemler?.length) {
+    return model.pfos.kalemler.map((k) => {
+      const satir = byPoz.get(String(k.poz ?? "").trim());
+      return {
+        ...k,
+        tanim: satir?.tanim ?? k.isim,
+        stokNo: satir?.stokNo ?? k.sku,
+        marka: satir?.marka ?? k.marka,
+        olcu: satir?.olcu,
+        adet: satir?.adet,
+        birimSatis: satir?.birimSatis,
+        toplamSatis: satir?.toplamSatis,
+        doviz: satir?.doviz,
+        bolumNo: satir?.bolumNo,
+        bolumBaslik: satir?.bolumBaslik,
+        elkKw: satir?.elkKw,
+        gazKw: satir?.gazKw,
+        aciklama: satir?.aciklama,
+      };
+    });
+  }
   return model.satirlar
     .filter((s) => s.poz.trim())
     .map((s) => ({
@@ -14,10 +37,22 @@ function snapshotKalemler(model: TeklifModelV14) {
       sku: s.stokNo || null,
       ad: s.tanim,
       marka: s.marka || null,
+      tanim: s.tanim,
+      stokNo: s.stokNo,
+      olcu: s.olcu,
+      adet: s.adet,
+      birimSatis: s.birimSatis,
+      toplamSatis: s.toplamSatis,
+      doviz: s.doviz,
+      bolumNo: s.bolumNo,
+      bolumBaslik: s.bolumBaslik,
+      elkKw: s.elkKw,
+      gazKw: s.gazKw,
+      aciklama: s.aciklama,
     }));
 }
 
-/** Teklif ekranı — anlık kalem + meta snapshot (geri bildirim bağlamı). */
+/** Teklif ekranı — anlık kalem + tam v14 model (Excel indirme). */
 export async function savePfosTeklifSnapshot(
   model: TeklifModelV14,
 ): Promise<string | null> {
@@ -35,6 +70,7 @@ export async function savePfosTeklifSnapshot(
         m2: model.meta.m2Toplam || null,
         guvenSkoru: model.pfos?.guvenSkoru ?? null,
         kalemler: snapshotKalemler(model),
+        requestJson: { teklif_v14: model },
       }),
       keepalive: true,
     });
