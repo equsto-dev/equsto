@@ -1551,7 +1551,6 @@
       enHref +
       '">EN</a>' +
       '<button type="button" class="eq-phone-drawer-tools__theme" id="eq-phone-theme-toggle">◐ Tema</button>' +
-      '<button type="button" class="eq-phone-drawer-tools__logout eq-hdr-logout" hidden>Çıkış</button>' +
       "</div>";
     drawer.appendChild(tools);
     var themeBtn = document.getElementById("eq-phone-theme-toggle");

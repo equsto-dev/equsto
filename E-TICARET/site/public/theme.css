@@ -3839,8 +3839,9 @@ header.hdr .eq-hdr-logout {
   cursor: pointer;
   white-space: nowrap;
 }
+header.hdr .eq-hdr-logout,
 header.hdr .eq-hdr-logout:not([hidden]) {
-  display: inline-flex;
+  display: none !important;
 }
 
 /* Kategori sayfaları: ürünler sağdan sola, satırda 5 adet (desktop) */

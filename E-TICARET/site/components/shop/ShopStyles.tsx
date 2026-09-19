@@ -7,7 +7,7 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/theme.css?v=${v}&m=20260916-align-green`} />
+      <link rel="stylesheet" href={`/theme.css?v=${v}&m=20260919-no-hdr-logout`} />
       {variant !== "pfos" && variant !== "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
         <link rel="stylesheet" href={`/eq-home-equsto.css?v=${v}&m=20260918-seo-paths`} />

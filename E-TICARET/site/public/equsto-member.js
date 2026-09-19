@@ -142,54 +142,12 @@
   }
   window.equstoRefreshDeliveryHeader = equstoRefreshDeliveryHeader;
 
-  function ensureHdrLogoutButtons() {
-    document.querySelectorAll("header.hdr .hdr-right, header.hdr").forEach(function (host) {
-      if (host.querySelector(".eq-hdr-logout")) return;
-      var acc = host.querySelector("a.eq-hdr-account");
-      if (!acc) return;
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "eq-hdr-logout";
-      btn.hidden = true;
-      btn.textContent = __memberT("member.logout", "Çıkış");
-      btn.title = __memberT("member.logout_title", "Çıkış yap");
-      acc.insertAdjacentElement("afterend", btn);
-    });
-  }
-
-  function bindHdrLogout() {
-    ensureHdrLogoutButtons();
-    if (window.__eqHdrLogoutBound) return;
-    window.__eqHdrLogoutBound = true;
-    document.addEventListener("click", function (ev) {
-      var t = ev.target;
-      if (!t || !t.closest) return;
-      var btn = t.closest(".eq-hdr-logout");
-      if (!btn) return;
-      ev.preventDefault();
-      var p =
-        typeof window.equstoAuthLogout === "function"
-          ? window.equstoAuthLogout()
-          : Promise.resolve();
-      p.finally(function () {
-        try {
-          if (typeof window.equstoClearMemberSession === "function") {
-            window.equstoClearMemberSession();
-          }
-        } catch (e) {}
-        location.href = typeof window.equstoUrl === "function" ? window.equstoUrl("login") : "/login";
-      });
-    });
-  }
-
   window.equstoRefreshMemberHeader = function () {
     equstoRefreshDeliveryHeader();
-    bindHdrLogout();
     var o = readMember();
     var logged = equstoIsMemberLoggedIn();
-    document.querySelectorAll(".eq-hdr-logout").forEach(function (btn) {
-      if (logged) btn.removeAttribute("hidden");
-      else btn.setAttribute("hidden", "");
+    document.querySelectorAll("header.hdr .eq-hdr-logout").forEach(function (btn) {
+      btn.setAttribute("hidden", "");
     });
     var links = document.querySelectorAll("a.eq-hdr-account");
     if (!links.length) return;
