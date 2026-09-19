@@ -36,12 +36,8 @@ jobs:
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
             git fetch origin
             git reset --hard origin/main
-            if [ -n "${GOOGLE_CLIENT_SECRET:-}" ]; then
-              grep -v '^GOOGLE_CLIENT_SECRET=' .env.production | grep -v '^EQUSTO_GOOGLE_CLIENT_SECRET=' > .env.production.tmp
-              printf 'GOOGLE_CLIENT_SECRET=%s\n' "$GOOGLE_CLIENT_SECRET" >> .env.production.tmp
-              mv .env.production.tmp .env.production
-              cp -a .env.production /opt/equsto/.env.production.keep
-            fi
+            # GOOGLE_CLIENT_SECRET appleboy env ile gelir; protect-hetzner-env.mjs
+            # keep'e merge eder. Şablon .env.production keep üzerine kopyalanmaz.
             bash scripts/hetzner-deploy.sh
 
       - name: Özet

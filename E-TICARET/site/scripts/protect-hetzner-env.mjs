@@ -4,6 +4,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { ensureDirectUrl } from "./lib/derive-direct-url.mjs";
 
@@ -48,6 +49,53 @@ function readMap(file) {
   return parseEnv(fs.readFileSync(file, "utf8"));
 }
 
+function findAppContainer() {
+  const filters = [
+    ["--filter", "ancestor=equsto-app:latest"],
+    ["--filter", "name=equsto-app-1"],
+    ["--filter", "name=equsto-app"],
+  ];
+  for (const f of filters) {
+    const r = spawnSync("docker", ["ps", "-q", ...f], { encoding: "utf8" });
+    const id = String(r.stdout || "")
+      .trim()
+      .split(/\s+/)
+      .find(Boolean);
+    if (id) return id;
+  }
+  return "";
+}
+
+function recoverSecrets() {
+  const saves = [
+    path.join(siteDir, ".env.production.save"),
+    "/opt/equsto/.env.production.keep.bak",
+    "/opt/equsto/.env.production.save",
+  ];
+  for (const file of saves) {
+    const map = readMap(file);
+    ensureDirectUrl(map);
+    if (looksReal(map)) {
+      console.log(`[protect-hetzner-env] recovered from ${path.basename(file)}`);
+      return map;
+    }
+  }
+  const cid = findAppContainer();
+  if (!cid) return {};
+  const dump = spawnSync("docker", ["exec", cid, "printenv"], {
+    encoding: "utf8",
+    maxBuffer: 2 * 1024 * 1024,
+  });
+  if (dump.status !== 0) return {};
+  const map = parseEnv(dump.stdout || "");
+  ensureDirectUrl(map);
+  if (looksReal(map)) {
+    console.log("[protect-hetzner-env] recovered from running app container");
+    return map;
+  }
+  return {};
+}
+
 function writeMerged(file, baseText, overlay) {
   const lines = fs.existsSync(file)
     ? fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "").split(/\r?\n/)
@@ -81,6 +129,15 @@ const keep = readMap(keepPath);
 ensureDirectUrl(site);
 ensureDirectUrl(keep);
 
+if (!looksReal(site) && !looksReal(keep)) {
+  const recovered = recoverSecrets();
+  if (looksReal(recovered)) {
+    fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+    writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", recovered);
+    Object.assign(keep, recovered);
+  }
+}
+
 let source = "site";
 if (!looksReal(site) && looksReal(keep)) {
   source = "keep";
@@ -100,6 +157,15 @@ if (!looksReal(site) && looksReal(keep)) {
       DIRECT_URL: ensureDirectUrl({ ...site }),
     });
   }
+}
+
+const googleSecret = String(process.env.GOOGLE_CLIENT_SECRET || process.env.EQUSTO_GOOGLE_CLIENT_SECRET || "").trim();
+if (googleSecret.length >= 16) {
+  const googleOverlay = { GOOGLE_CLIENT_SECRET: googleSecret };
+  writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", googleOverlay);
+  fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+  writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", googleOverlay);
+  console.log("[protect-hetzner-env] GOOGLE_CLIENT_SECRET merged (len ok)");
 }
 
 const final = readMap(envPath);
@@ -133,8 +199,9 @@ const okDirect = String(final.DIRECT_URL || "").startsWith("postgresql://");
 const bearerLen = String(final.EQUSTO_ADMIN_BEARER || "").length;
 
 const okMeili = String(final.MEILISEARCH_HOST || "").startsWith("http");
+const okGoogle = String(final.GOOGLE_CLIENT_SECRET || "").length >= 16;
 console.log(
-  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen}`,
+  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"}`,
 );
 
 if (!okDb || !okDirect) {
