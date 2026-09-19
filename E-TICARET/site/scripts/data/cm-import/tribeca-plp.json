@@ -1,0 +1,1952 @@
+{
+  "brand": "Tribeca",
+  "slug": "tribeca",
+  "fetchedAt": "2026-09-19T08:29:40.550Z",
+  "reportedTotal": 157,
+  "pages": 5,
+  "count": 157,
+  "items": [
+    {
+      "cafemarkt_id": "3421",
+      "name": "Tribeca Un Şeker Arabası, 102 L, 420x750x710 mm, Beyaz",
+      "code": "025.USA.102",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/un-seker-arabasi-102-lt-420x750x710-mm",
+      "image": "https://witcdn.cafemarkt.com/un-seker-arabasi-102-lt-420x750x710-mm-un-seker-arabalari-tribeca-10443-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/un-seker-arabasi-102-lt-420x750x710-mm-un-seker-arabalari-tribeca-10443-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6233.5
+    },
+    {
+      "cafemarkt_id": "2383",
+      "name": "Tribeca Bardak Basketi, 25 Bölmeli, 500x500x100 mm, Mavi",
+      "code": "025.BB.25",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-basketi-25-bolmeli-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-basketi-25-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10390-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-basketi-25-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10390-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 652.57
+    },
+    {
+      "cafemarkt_id": "2400",
+      "name": "Tribeca Tabak Yıkama Aparatı, 293x90x75 mm, Gri",
+      "code": "025.TYA.35",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tabak-yikama-aparati-293x90x75-mm",
+      "image": "https://witcdn.cafemarkt.com/tabak-yikama-aparati-293x90x75-mm-bulasik-makinesi-basketleri-tribeca-10442-24-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tabak-yikama-aparati-293x90x75-mm-bulasik-makinesi-basketleri-tribeca-10442-24-O.jpg"
+      ],
+      "price_try_kdv_dahil": 93.5
+    },
+    {
+      "cafemarkt_id": "2390",
+      "name": "Tribeca Çatal Kaşık Basketi, 500x500x100 mm, Mavi",
+      "code": "025.CKB.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/catal-kasik-basketi-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/catal-kasik-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10413-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/catal-kasik-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10413-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 545.43
+    },
+    {
+      "cafemarkt_id": "2391",
+      "name": "Tribeca Çatal Kaşık Basketi, 8 Bölmeli, 450x190x180 mm, Gri",
+      "code": "025.CKB.8",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/catal-kasik-basketi-8-bolmeli-450x250x200-mm",
+      "image": "https://witcdn.cafemarkt.com/catal-kasik-basketi-8-bolmeli-450x250x200-mm-bulasik-makinesi-basketleri-tribeca-10412-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/catal-kasik-basketi-8-bolmeli-450x250x200-mm-bulasik-makinesi-basketleri-tribeca-10412-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 486.99
+    },
+    {
+      "cafemarkt_id": "3403",
+      "name": "Tribeca Tabak Taşıma Arabası, 6 Bölmeli, 1100x710x800 mm, Siyah",
+      "code": "025.TAA.6",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tabak-tasima-arabasi-6-bolmeli-1100x710x800-mm",
+      "image": "https://witcdn.cafemarkt.com/tabak-tasima-arabasi-6-bolmeli-1100x710x800-mm-tabak-tasima-arabalari-tribeca-41377-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tabak-tasima-arabasi-6-bolmeli-1100x710x800-mm-tabak-tasima-arabalari-tribeca-41377-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31946.68
+    },
+    {
+      "cafemarkt_id": "2392",
+      "name": "Tribeca Tabak Basketi, 500x500x100 mm, Mavi",
+      "code": "025.TB.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tabak-basketi-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/tabak-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10425-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tabak-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10425-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 633.09
+    },
+    {
+      "cafemarkt_id": "2381",
+      "name": "Tribeca Açık Bölmesiz Basket Yükseltici, 500x500x40 mm, Bej",
+      "code": "025.AY.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-acik-bolmesiz-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-acik-bolmesiz-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10387-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-acik-bolmesiz-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10387-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 262.98
+    },
+    {
+      "cafemarkt_id": "2397",
+      "name": "Tribeca Bardak Yıkama Makinesi Basketi, 350x350x150 mm, Gri",
+      "code": "025.BMS.35",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-yikama-makinesi-basketi-350x350x150-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-yikama-makinesi-basketi-350x350x150-mm-bulasik-makinesi-basketleri-tribeca-12391-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-yikama-makinesi-basketi-350x350x150-mm-bulasik-makinesi-basketleri-tribeca-12391-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 301.94
+    },
+    {
+      "cafemarkt_id": "2384",
+      "name": "Tribeca Bardak Basketi, 36 Bölmeli, 500x500x100 mm, Yeşil",
+      "code": "025.BB.36",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-basketi-36-bolmeli-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-basketi-36-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10391-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-basketi-36-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10391-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 687.63
+    },
+    {
+      "cafemarkt_id": "3408",
+      "name": "Tribeca Tabak İstif Arabası, 80 Tabaklık, 720x720x1820 mm",
+      "code": "025.TIA.80",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tabak-istif-arabasi-80-tabaklik-720x720x1820-mm",
+      "image": "https://witcdn.cafemarkt.com/tabak-istif-arabasi-80-tabaklik-720x720x1820-mm-tabak-tasima-arabalari-tribeca-93196-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tabak-istif-arabasi-80-tabaklik-720x720x1820-mm-tabak-tasima-arabalari-tribeca-93196-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31946.68
+    },
+    {
+      "cafemarkt_id": "2385",
+      "name": "Tribeca Bardak Basketi, 49 Bölmeli, 500x500x100 mm, Kırmızı",
+      "code": "025.BB.49",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-basketi-49-bolmeli-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-basketi-49-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10392-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-basketi-49-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10392-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 740.23
+    },
+    {
+      "cafemarkt_id": "3405",
+      "name": "Tribeca Tepsi Taşıma Arabası, 37x53 cm Servis Tepsisi İçin, Çiftli, 870x690x1760 mm, Siyah",
+      "code": "025.TTA.3753",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/37x53-tepsi-tasima-arabasi-ciftli-870x690x1760-mm",
+      "image": "https://witcdn.cafemarkt.com/37x53-tepsi-tasima-arabasi-ciftli-870x690x1760-mm-tepsi-istif-raflari-tasima-arabalari-tribeca-10440-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/37x53-tepsi-tasima-arabasi-ciftli-870x690x1760-mm-tepsi-istif-raflari-tasima-arabalari-tribeca-10440-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 25323.58
+    },
+    {
+      "cafemarkt_id": "3407",
+      "name": "Tribeca Tabak Taşıma Arabası, 4 Bölmeli, 730x730x815 mm, Siyah",
+      "code": "025.TAA.4",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tabak-tasima-arabasi-4-bolmeli-730x730x815-mm",
+      "image": "https://witcdn.cafemarkt.com/tabak-tasima-arabasi-4-bolmeli-730x730x815-mm-tabak-tasima-arabalari-tribeca-10423-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tabak-tasima-arabasi-4-bolmeli-730x730x815-mm-tabak-tasima-arabalari-tribeca-10423-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28245.54
+    },
+    {
+      "cafemarkt_id": "2387",
+      "name": "Tribeca Basket Yükseltici, 25 Bölmeli, 500x500x40 mm, Mavi",
+      "code": "025.BY.25",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-25-bolmeli-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-25-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10405-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-25-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10405-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 340.89
+    },
+    {
+      "cafemarkt_id": "2389",
+      "name": "Tribeca Basket Yükseltici, 49 Bölmeli, 500x500x40 mm, Kırmızı",
+      "code": "025.BY.49",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-49-bolmeli-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-49-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10407-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-49-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10407-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 375.96
+    },
+    {
+      "cafemarkt_id": "2388",
+      "name": "Tribeca Basket Yükseltici, 36 Bölmeli, 500x500x40 mm, Yeşil",
+      "code": "025.BY.36",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-36-bolmeli-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-36-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10406-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-36-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10406-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 356.48
+    },
+    {
+      "cafemarkt_id": "2043",
+      "name": "Tribeca Servis Arabası, 3 Kenarı Kapalı, Monoblok, 970x580x880 mm, Siyah",
+      "code": "025.SAK.95",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/servis-arabasi-3-kenari-kapali-mnblk-970x580x880-m",
+      "image": "https://witcdn.cafemarkt.com/servis-arabasi-3-kenari-kapali-mnblk-970x580x880-m-servis-arabalari-tribeca-12465-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/servis-arabasi-3-kenari-kapali-mnblk-970x580x880-m-servis-arabalari-tribeca-12465-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20453.66
+    },
+    {
+      "cafemarkt_id": "3648",
+      "name": "Tribeca Sigara İzmarit Toplama Ünitesi, 265x210x1040 mm, Siyah",
+      "code": "025.KUL.TR",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/sigara-izmarit-toplama-unitesi-265x210x1040-mm",
+      "image": "https://witcdn.cafemarkt.com/sigara-izmarit-toplama-unitesi-265x210x1040-mm-kullukler-tribeca-10415-36-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sigara-izmarit-toplama-unitesi-265x210x1040-mm-kullukler-tribeca-10415-36-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9739.84
+    },
+    {
+      "cafemarkt_id": "2213",
+      "name": "Tribeca 600 Box, 465x610x630 mm, Mavi",
+      "code": "025.TCB.600",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-600-465x610x630-mm",
+      "image": "https://witcdn.cafemarkt.com/box-600-465x610x630-mm-termobox-tribeca-10432-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-600-465x610x630-mm-termobox-tribeca-10432-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-600-465x610x630-mm-termobox-tribeca-10431-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9350.25
+    },
+    {
+      "cafemarkt_id": "2227",
+      "name": "Tribeca Sıvı Termosu, 40 L, 410x520x650 mm, Mavi",
+      "code": "025.ST.40",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-mavi-termobox-tribeca-87582-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-mavi-termobox-tribeca-87582-22-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-mavi-termobox-tribeca-87581-22-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-mavi-termobox-tribeca-87580-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10713.82
+    },
+    {
+      "cafemarkt_id": "2226",
+      "name": "Tribeca Sıvı Termosu, 10 L, 295x430x500 mm, Mavi",
+      "code": "025.ST.10",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/sivi-termosu-10-lt-295x430x500-mm",
+      "image": "https://witcdn.cafemarkt.com/sivi-termosu-10-lt-295x430x500-mm-termobox-tribeca-10421-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sivi-termosu-10-lt-295x430x500-mm-termobox-tribeca-10421-22-O.jpg",
+        "https://witcdn.cafemarkt.com/sivi-termosu-10-lt-295x430x500-mm-termobox-tribeca-82117-22-O.jpg",
+        "https://witcdn.cafemarkt.com/sivi-termosu-10-lt-295x430x500-mm-termobox-tribeca-82119-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6817.89
+    },
+    {
+      "cafemarkt_id": "3443",
+      "name": "Tribeca Sıvı Termosu, 20 L, 295x430x675 mm, Mavi",
+      "code": "025.ST.20",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/sivi-termosu-20-lt-295x430x675-mm",
+      "image": "https://witcdn.cafemarkt.com/sivi-termosu-20-lt-295x430x675-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-3670-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sivi-termosu-20-lt-295x430x675-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-3670-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7791.87
+    },
+    {
+      "cafemarkt_id": "2393",
+      "name": "Tribeca Kollu Basket Taşıma Arabası, 580x580x220 mm, Siyah",
+      "code": "025.BTA.02",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-tasima-arabasi-kollu-580x580x220-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-tasima-arabasi-kollu-580x580x220-mm-basket-tasima-arabalari-tribeca-10401-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-tasima-arabasi-kollu-580x580x220-mm-basket-tasima-arabalari-tribeca-10401-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8376.26
+    },
+    {
+      "cafemarkt_id": "2042",
+      "name": "Tribeca Servis Arabası, Açık, 850x515x875 mm, Gri",
+      "code": "025.SAA.85",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/servis-arabasi-acik-850x515x875-mm",
+      "image": "https://witcdn.cafemarkt.com/servis-arabasi-acik-850x515x875-mm-servis-arabalari-tribeca-14709-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/servis-arabasi-acik-850x515x875-mm-servis-arabalari-tribeca-14709-20-O.jpg",
+        "https://witcdn.cafemarkt.com/servis-arabasi-acik-850x515x875-mm-servis-arabalari-tribeca-10418-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17142.12
+    },
+    {
+      "cafemarkt_id": "2048",
+      "name": "Tribeca Bulaşık Toplama Küveti, 470x390x150 mm, Siyah",
+      "code": "025.BTK.01",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bulasik-toplama-kuveti-470x390x150-mm",
+      "image": "https://witcdn.cafemarkt.com/bulasik-toplama-kuveti-470x390x150-mm-servis-arabalari-tribeca-10402-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bulasik-toplama-kuveti-470x390x150-mm-servis-arabalari-tribeca-10402-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 584.39
+    },
+    {
+      "cafemarkt_id": "3441",
+      "name": "Tribeca BK-125 İzolasyonlu Buz Konteyneri, 125 L, 605x800x745 mm, Siyah",
+      "code": "025.BK.125",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/buz-konteyneri-izolasyonlu-125-lt-605x800x745-mm",
+      "image": "https://witcdn.cafemarkt.com/buz-konteyneri-izolasyonlu-125-lt-605x800x745-mm-izolasyonlu-buz-konteyner-tribeca-10394-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/buz-konteyneri-izolasyonlu-125-lt-605x800x745-mm-izolasyonlu-buz-konteyner-tribeca-10394-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28245.54
+    },
+    {
+      "cafemarkt_id": "2047",
+      "name": "Tribeca Çöp Aparatı, 345x21x520 mm, Siyah",
+      "code": "025.CA.SA",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/cop-aparati-345x21x520-mm",
+      "image": "https://witcdn.cafemarkt.com/cop-aparati-345x21x520-mm-servis-arabalari-tribeca-10409-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cop-aparati-345x21x520-mm-servis-arabalari-tribeca-10409-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1753.17
+    },
+    {
+      "cafemarkt_id": "2228",
+      "name": "Tribeca BC-23L Sıvı Termosu, İçi Paslanmaz, 23 L, Yeşil",
+      "code": "025.BC.23L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/sivi-termosu-ici-paslanmaz-23-lt-230x483x745-mm",
+      "image": "https://witcdn.cafemarkt.com/sivi-termosu-ici-paslanmaz-23-lt-230x483x745-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-41387-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sivi-termosu-ici-paslanmaz-23-lt-230x483x745-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-41387-22-O.jpg",
+        "https://witcdn.cafemarkt.com/sivi-termosu-ici-paslanmaz-23-lt-230x483x745-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-41391-22-O.jpg",
+        "https://witcdn.cafemarkt.com/sivi-termosu-ici-paslanmaz-23-lt-230x483x745-mm-izolasyonlu-sivi-tasima-kaplari-tribeca-41393-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32725.86
+    },
+    {
+      "cafemarkt_id": "2225",
+      "name": "Tribeca Termobox Taşıma Arabası, 680x540x160 mm, Siyah",
+      "code": "025.TCB.600C",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/termobox-tasima-arabasi-680x540x160-mm",
+      "image": "https://witcdn.cafemarkt.com/termobox-tasima-arabasi-680x540x160-mm-termobox-tribeca-10433-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-tasima-arabasi-680x540x160-mm-termobox-tribeca-10433-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "22713",
+      "name": "Tribeca TCB-600EPP Thermo Box 600, Önden Yüklemeli, 86 L, Siyah",
+      "code": "025.TCB.600EPP",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-600epp-box-645440630-mm-black",
+      "image": "https://witcdn.cafemarkt.com/tribeca-600epp-box-645440630-mm-black-termobox-tribeca-41384-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-600epp-box-645440630-mm-black-termobox-tribeca-41384-22-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-600epp-box-645440630-mm-black-termobox-tribeca-41388-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9350.25
+    },
+    {
+      "cafemarkt_id": "3404",
+      "name": "Tribeca Tepsi ve Tabak Taşıma Arabası, 980x585x880 mm, Kahverengi",
+      "code": "025.TTA.3",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tepsi-tabak-tasima-arabasi-980x585x880-mm",
+      "image": "https://witcdn.cafemarkt.com/tepsi-tabak-tasima-arabasi-980x585x880-mm-tabak-tasima-arabalari-tribeca-29006-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tepsi-tabak-tasima-arabasi-980x585x880-mm-tabak-tasima-arabalari-tribeca-29006-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30777.89
+    },
+    {
+      "cafemarkt_id": "3397",
+      "name": "Tribeca Basket Taşıma Arabası, Kolsuz, 580x580x220 mm, Siyah",
+      "code": "025.BTA.01",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-tasima-arabasi-kolsuz-580x580x220-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-tasima-arabasi-kolsuz-580x580x220-mm-basket-tasima-arabalari-tribeca-10400-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-tasima-arabasi-kolsuz-580x580x220-mm-basket-tasima-arabalari-tribeca-10400-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "2211",
+      "name": "Tribeca 150 Box, Maximum GN 1/1150, 635x435x250 mm, Yeşil",
+      "code": "025.TCB.150",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-150--max-gn-11150--635x435x250-mm",
+      "image": "https://witcdn.cafemarkt.com/box-150-max-gn-11150-635x435x250-mm-termobox-tribeca-82142-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-150-max-gn-11150-635x435x250-mm-termobox-tribeca-82142-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-150-max-gn-11150-635x435x250-mm-termobox-tribeca-82140-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-150-max-gn-11150-635x435x250-mm-termobox-tribeca-82139-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "9406",
+      "name": "Tribeca Çatal Kaşık Aparatı, 280x180x360 mm, Siyah",
+      "code": "025.CKA.SA",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/catal-kasik-aparati-280x180x360-mm",
+      "image": "https://witcdn.cafemarkt.com/catal-kasik-aparati-280x180x360-mm-bulasik-makinesi-basketleri-tribeca-12366-94-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/catal-kasik-aparati-280x180x360-mm-bulasik-makinesi-basketleri-tribeca-12366-94-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1246.7
+    },
+    {
+      "cafemarkt_id": "2210",
+      "name": "Tribeca 100 Box, Maximum GN 1/1100, 635x435x200 mm, Siyah",
+      "code": "025.TCB.100",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-100--max-gn-11100--635x435x200-mm",
+      "image": "https://witcdn.cafemarkt.com/box-100-max-gn-11100-635x435x200-mm-termobox-tribeca-10426-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-100-max-gn-11100-635x435x200-mm-termobox-tribeca-10426-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-100-max-gn-11100-635x435x200-mm-termobox-tribeca-82132-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "22712",
+      "name": "Tribeca TCB-200EPP Thermo Box 200, Üstten Yüklemeli, 46 L, Siyah",
+      "code": "025.TCB.200EPP",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-box-200epp-645x440x630-mm-black",
+      "image": "https://witcdn.cafemarkt.com/tribeca-box-200epp-645x440x630-mm-black-termobox-tribeca-41385-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-box-200epp-645x440x630-mm-black-termobox-tribeca-41385-22-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-box-200epp-645x440x630-mm-black-termobox-tribeca-41389-22-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-box-200epp-645x440x630-mm-black-termobox-tribeca-41392-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1947.97
+    },
+    {
+      "cafemarkt_id": "23918",
+      "name": "Tribeca TT-5N Termo Tepsi, 5 Gözlü",
+      "code": "025.TT.5N",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tt-5n-termo-tepsi-5-gozlu",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tt-5n-termo-tepsi-5-gozlu-termo-tepsi-tribeca-41386-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tt-5n-termo-tepsi-5-gozlu-termo-tepsi-tribeca-41386-23-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tt-5n-termo-tepsi-5-gozlu-termo-tepsi-tribeca-41390-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2532.36
+    },
+    {
+      "cafemarkt_id": "2222",
+      "name": "Tribeca 200C Box, 635x435x250 mm, Yeşil",
+      "code": "025.TCB.200C",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-200c-635x435x250-mm",
+      "image": "https://witcdn.cafemarkt.com/box-200c-635x435x250-mm-termobox-tribeca-41382-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-200c-635x435x250-mm-termobox-tribeca-41382-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6281.03
+    },
+    {
+      "cafemarkt_id": "23919",
+      "name": "Tribeca TT-6N Termo Tepsi, 6 Gözlü",
+      "code": "025.TT.6N",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tt-6n-termo-tepsi-6-gozlu",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tt-6n-termo-tepsi-6-gozlu-termo-tepsi-tribeca-41394-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tt-6n-termo-tepsi-6-gozlu-termo-tepsi-tribeca-41394-23-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tt-6n-termo-tepsi-6-gozlu-termo-tepsi-tribeca-41395-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2532.36
+    },
+    {
+      "cafemarkt_id": "23917",
+      "name": "Tribeca TAA-6B Tabak Taşıma Arabası, Ayarlanabilir 6 Bölmeli, Kahverengi",
+      "code": "025.TAA.6BR",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-kahverengi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-kahverengi-tabak-tasima-arabalari-tribeca-41380-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-kahverengi-tabak-tasima-arabalari-tribeca-41380-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33115.46
+    },
+    {
+      "cafemarkt_id": "23920",
+      "name": "Tribeca TTTA-9 Termo Tepsi Arabası, 9+9 Tepsi Kapasiteli",
+      "code": "025.TTTA.99",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-ttta-9-termo-tepsi-arabasi-99-tepsi-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/tribeca-ttta-9-termo-tepsi-arabasi-99-tepsi-kapasiteli-termo-tepsi-tasima-arabalari-tribeca-41378-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-ttta-9-termo-tepsi-arabasi-99-tepsi-kapasiteli-termo-tepsi-tasima-arabalari-tribeca-41378-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37011.39
+    },
+    {
+      "cafemarkt_id": "23915",
+      "name": "Tribeca Sigara İzmarit Toplama Ünitesi, Dış Mekan, Duvara Monte, Siyah",
+      "code": "025.KUL.DT",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sigara-izmarit-toplama-unitesi-dis-mekan-duvara-monte",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sigara-izmarit-toplama-unitesi-dis-mekan-duvara-monte-kullukler-tribeca-41381-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sigara-izmarit-toplama-unitesi-dis-mekan-duvara-monte-kullukler-tribeca-41381-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7597.08
+    },
+    {
+      "cafemarkt_id": "2398",
+      "name": "Tribeca Tekli Çatal Kaşık Aparatı, 100x128 mm, Gri",
+      "code": "025.CKA.35",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/catal-kasik-aparati-tekli-100x128-mm",
+      "image": "https://witcdn.cafemarkt.com/catal-kasik-aparati-tekli-100x128-mm-bulasik-makinesi-basketleri-tribeca-10411-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/catal-kasik-aparati-tekli-100x128-mm-bulasik-makinesi-basketleri-tribeca-10411-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 64.28
+    },
+    {
+      "cafemarkt_id": "2394",
+      "name": "Tribeca Düz Bardak Basketi, 500x500x100 mm, Mavi",
+      "code": "025.DBB.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/duz-bardak-basketi-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/duz-bardak-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10414-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/duz-bardak-basketi-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10414-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 564.91
+    },
+    {
+      "cafemarkt_id": "2382",
+      "name": "Tribeca Bardak Basketi, 16 Bölmeli, 500x500x100 mm, Gri",
+      "code": "025.BB.16",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-basketi-16-bolmeli-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-basketi-16-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10389-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-basketi-16-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10389-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 603.87
+    },
+    {
+      "cafemarkt_id": "2212",
+      "name": "Tribeca 200 Box, Maximum GN 1/1200, 635x435x310 mm, Mavi",
+      "code": "025.TCB.200",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-200--max-gn-11200--635x435x310-mm",
+      "image": "https://witcdn.cafemarkt.com/box-200-max-gn-11200-635x435x310-mm-termobox-tribeca-82148-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-200-max-gn-11200-635x435x310-mm-termobox-tribeca-82148-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-200-max-gn-11200-635x435x310-mm-termobox-tribeca-82147-22-O.jpg",
+        "https://witcdn.cafemarkt.com/box-200-max-gn-11200-635x435x310-mm-termobox-tribeca-82146-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "2395",
+      "name": "Tribeca Bardak Basketi, 9 Bölmeli, 500x500x100 mm, Bej",
+      "code": "025.BB.9",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bardak-basketi-9-bolmeli-500x500x100-mm",
+      "image": "https://witcdn.cafemarkt.com/bardak-basketi-9-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10388-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bardak-basketi-9-bolmeli-500x500x100-mm-bulasik-makinesi-basketleri-tribeca-10388-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 574.65
+    },
+    {
+      "cafemarkt_id": "2386",
+      "name": "Tribeca Basket Yükseltici, 16 Bölmeli, 500x500x40 mm, Gri",
+      "code": "025.BY.16",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-16-bolmeli-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-16-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10404-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-16-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10404-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 311.67
+    },
+    {
+      "cafemarkt_id": "2396",
+      "name": "Tribeca Basket Yükseltici, 9 Bölmeli, 500x500x40 mm, Gri",
+      "code": "025.BY.9",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/basket-yukseltici-9-bolmeli-500x500x40-mm",
+      "image": "https://witcdn.cafemarkt.com/basket-yukseltici-9-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10403-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/basket-yukseltici-9-bolmeli-500x500x40-mm-bulasik-makinesi-basketleri-tribeca-10403-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 298.04
+    },
+    {
+      "cafemarkt_id": "2220",
+      "name": "Tribeca TCB-600N Önden Yüklemeli Thermobox, 475x670x635 mm, Gri",
+      "code": "025.TCB.600N",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600n-onden-yuklemeli-thermobox-475x670x635-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600n-onden-yuklemeli-thermobox-475x670x635-mm-gri-termobox-tribeca-88601-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600n-onden-yuklemeli-thermobox-475x670x635-mm-gri-termobox-tribeca-88601-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9739.84
+    },
+    {
+      "cafemarkt_id": "23916",
+      "name": "Tribeca TAA-6B Tabak Taşıma Arabası, Ayarlanabilir 6 Bölmeli, Siyah",
+      "code": "025.TAA.6BL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-siyah-tabak-tasima-arabalari-tribeca-41379-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-taa-6b-tabak-tasima-arabasi-ayarlanabilir-6-bolmeli-siyah-tabak-tasima-arabalari-tribeca-41379-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33115.46
+    },
+    {
+      "cafemarkt_id": "45796",
+      "name": "Tribeca BK-175 İzolasyonlu Buz Konteyneri, 175 L, 610x965x745 mm, Siyah",
+      "code": "025.BK.175.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-izolasyonlu-buz-konteyneri-175-l-610x965x745-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-izolasyonlu-buz-konteyneri-175-l-610x965x745-mm-siyah-izolasyonlu-buz-konteyner-tribeca-93306-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-izolasyonlu-buz-konteyneri-175-l-610x965x745-mm-siyah-izolasyonlu-buz-konteyner-tribeca-93306-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29219.52
+    },
+    {
+      "cafemarkt_id": "45742",
+      "name": "Tribeca Tabak İstif Arabası, 120 Tabaklık, 720x720x1820 mm",
+      "code": "025.TIA.120",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tabak-istif-arabasi-120-tabaklik-720x720x1820-mm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tabak-istif-arabasi-120-tabaklik-720x720x1820-mm-tabak-tasima-arabalari-tribeca-93195-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tabak-istif-arabasi-120-tabaklik-720x720x1820-mm-tabak-tasima-arabalari-tribeca-93195-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44803.27
+    },
+    {
+      "cafemarkt_id": "44356",
+      "name": "Tribeca TCB-600NW Önden Yüklemeli Tekerlekli Thermobox, 475x670x635 mm, Yeşil",
+      "code": "025.TCB.600NW.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-yesil-termobox-tribeca-88655-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-yesil-termobox-tribeca-88655-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13246.18
+    },
+    {
+      "cafemarkt_id": "44355",
+      "name": "Tribeca TCB-600NW Önden Yüklemeli Tekerlekli Thermobox, 475x670x635 mm, Mavi",
+      "code": "025.TCB.600NW.MAVI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-mavi-termobox-tribeca-88653-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-mavi-termobox-tribeca-88653-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13246.18
+    },
+    {
+      "cafemarkt_id": "44354",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Yeşil",
+      "code": "025.TCB.600NPDUO.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88647-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88647-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44353",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Siyah",
+      "code": "025.TCB.600NPDUO.MS",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88645-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88645-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44352",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Gri",
+      "code": "025.TCB.600NPDUO.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88642-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88642-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44351",
+      "name": "Tribeca TCB-600NP Önden Yüklemeli İçi Paslanmaz Thermobox, Gri",
+      "code": "025.TCB.600NP.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-gri-termobox-tribeca-88638-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-gri-termobox-tribeca-88638-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9934.64
+    },
+    {
+      "cafemarkt_id": "44350",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Gri",
+      "code": "025.TCB.600NMIXDUO.MG",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88634-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88634-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44349",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Gri",
+      "code": "025.TCB.600NMIXDUO.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88632-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88632-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44348",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Yeşil",
+      "code": "025.TCB.600NDUO.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88631-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88631-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44347",
+      "name": "Tribeca Tepsi Basketi, 50x50x10 cm, Mavi",
+      "code": "025.STP.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tepsi-basketi-50x50x10-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tepsi-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88624-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tepsi-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88624-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 681.79
+    },
+    {
+      "cafemarkt_id": "44346",
+      "name": "Tribeca SAE-A30 3 Katlı Servis Arabası",
+      "code": "025.SAE.A30",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sae-a30-3-katli-servis-arabasi-106x53x101-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sae-a30-3-katli-servis-arabasi-106x53x101-cm-siyah-servis-arabalari-tribeca-88619-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sae-a30-3-katli-servis-arabasi-106x53x101-cm-siyah-servis-arabalari-tribeca-88619-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7402.28
+    },
+    {
+      "cafemarkt_id": "44345",
+      "name": "Tribeca EPP-LT20 İçi Paslanmaz Sıvı Termosu, 31x58x67 cm, 20 L, Siyah",
+      "code": "025.EPP.LT20",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-lt20-ici-paslanmaz-sivi-termosu-31x58x67-cm-20-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-lt20-ici-paslanmaz-sivi-termosu-31x58x67-cm-20-l-siyah-termobox-tribeca-88616-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-lt20-ici-paslanmaz-sivi-termosu-31x58x67-cm-20-l-siyah-termobox-tribeca-88616-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10324.23
+    },
+    {
+      "cafemarkt_id": "44344",
+      "name": "Tribeca EPP-LT15 İçi Paslanmaz Sıvı Termosu, 31x58x44.5 cm, 15 L, Siyah",
+      "code": "025.EPP.LT15",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-lt15-ici-paslanmaz-sivi-termosu-31x58x445-cm-15-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-lt15-ici-paslanmaz-sivi-termosu-31x58x445-cm-15-l-siyah-termobox-tribeca-88615-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-lt15-ici-paslanmaz-sivi-termosu-31x58x445-cm-15-l-siyah-termobox-tribeca-88615-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9155.45
+    },
+    {
+      "cafemarkt_id": "44343",
+      "name": "Tribeca EPP-CH3 3'lü Karton Bardak Standı, 41x42x24 cm",
+      "code": "025.EPP.CH3",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-ch3-3lu-karton-bardak-standi-41x42x24-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-ch3-3lu-karton-bardak-standi-41x42x24-cm-bardak-standlari-tribeca-88613-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-ch3-3lu-karton-bardak-standi-41x42x24-cm-bardak-standlari-tribeca-88613-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 486.99
+    },
+    {
+      "cafemarkt_id": "44342",
+      "name": "Tribeca EPP-600C Thermobox Taşıma Arabası, 64x42.5x21 cm",
+      "code": "025.EPP.600C",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-600c-thermobox-tasima-arabasi-64x425x21-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-600c-thermobox-tasima-arabasi-64x425x21-cm-termobox-tribeca-88612-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-600c-thermobox-tasima-arabasi-64x425x21-cm-termobox-tribeca-88612-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "44341",
+      "name": "Tribeca EPP-200C Thermobox Taşıma Arabası, 63x42x20 cm",
+      "code": "025.EPP.200C",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-200c-thermobox-tasima-arabasi-63x42x20-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-200c-thermobox-tasima-arabasi-63x42x20-cm-termobox-tribeca-88607-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-200c-thermobox-tasima-arabasi-63x42x20-cm-termobox-tribeca-88607-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "44340",
+      "name": "Tribeca ECA-SA Çöp Kovası",
+      "code": "025.ECA.SA",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-eca-sa-cop-kovasi-405x305x54-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-eca-sa-cop-kovasi-405x305x54-cm-siyah-cop-kovalari-tribeca-88603-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-eca-sa-cop-kovasi-405x305x54-cm-siyah-cop-kovalari-tribeca-88603-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 740.23
+    },
+    {
+      "cafemarkt_id": "44339",
+      "name": "Tribeca TCB-600NW Önden Yüklemeli Tekerlekli Thermobox, 475x670x635 mm, Siyah",
+      "code": "025.TCB.600NW.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-siyah-termobox-tribeca-88654-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-siyah-termobox-tribeca-88654-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13246.18
+    },
+    {
+      "cafemarkt_id": "44338",
+      "name": "Tribeca TCB-600NW Önden Yüklemeli Tekerlekli Thermobox, 475x670x635 mm, Gri",
+      "code": "025.TCB.600NW.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-gri-termobox-tribeca-88652-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nw-onden-yuklemeli-tekerlekli-thermobox-475x670x635-mm-gri-termobox-tribeca-88652-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13246.18
+    },
+    {
+      "cafemarkt_id": "44337",
+      "name": "Tribeca TCB-600NPW Önden Yüklemeli Tekerlekli İçi Paslanmaz Thermobox, 475x670x635 mm, Siyah",
+      "code": "025.TCB.600NPW.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-siyah-termobox-tribeca-88650-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-siyah-termobox-tribeca-88650-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27661.15
+    },
+    {
+      "cafemarkt_id": "44336",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Siyah",
+      "code": "025.TCB.600NPDUO.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88646-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88646-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44335",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Gri",
+      "code": "025.TCB.600NPDUO.MG",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88644-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88644-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44334",
+      "name": "Tribeca TCB-600NP Önden Yüklemeli İçi Paslanmaz Thermobox, Yeşil",
+      "code": "025.TCB.600NP.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-yesil-termobox-tribeca-88641-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-yesil-termobox-tribeca-88641-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9934.64
+    },
+    {
+      "cafemarkt_id": "44333",
+      "name": "Tribeca TCB-600NP Önden Yüklemeli İçi Paslanmaz Thermobox, Mavi",
+      "code": "025.TCB.600NP.MAVI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-mavi-termobox-tribeca-88639-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-mavi-termobox-tribeca-88639-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9934.64
+    },
+    {
+      "cafemarkt_id": "44332",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Yeşil",
+      "code": "025.TCB.600NMIXDUO.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88637-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-yesil-termobox-tribeca-88637-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44331",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi",
+      "code": "025.TCB.600NMIXDUO.MAV",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88633-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88633-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44330",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Gri",
+      "code": "025.TCB.600NDUO.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88626-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-gri-termobox-tribeca-88626-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44329",
+      "name": "Tribeca Çatal Kaşık Basketi, 50x50x10 cm, Mavi",
+      "code": "025.SCK.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-catal-kasik-basketi-50x50x10-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-catal-kasik-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88622-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-catal-kasik-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88622-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 609.71
+    },
+    {
+      "cafemarkt_id": "44328",
+      "name": "Tribeca SAE-K34 3 Katlı Kapaklı Servis Arabası",
+      "code": "025.SAE.K34",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sae-k34-3-katli-kapakli-servis-arabasi-106x5x101-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sae-k34-3-katli-kapakli-servis-arabasi-106x5x101-cm-siyah-servis-arabalari-tribeca-88621-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sae-k34-3-katli-kapakli-servis-arabasi-106x5x101-cm-siyah-servis-arabalari-tribeca-88621-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9155.45
+    },
+    {
+      "cafemarkt_id": "44327",
+      "name": "Tribeca EPP-LT10 İçi Paslanmaz Sıvı Termosu, 31x58x43 cm, 10 L, Siyah",
+      "code": "025.EPP.LT10",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-lt10-ici-paslanmaz-sivi-termosu-31x58x43-cm-10-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-lt10-ici-paslanmaz-sivi-termosu-31x58x43-cm-10-l-siyah-termobox-tribeca-88614-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-lt10-ici-paslanmaz-sivi-termosu-31x58x43-cm-10-l-siyah-termobox-tribeca-88614-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8181.47
+    },
+    {
+      "cafemarkt_id": "44326",
+      "name": "Tribeca EPP-400 Üstten Yüklemeli Thermobox, 40x61x40 cm",
+      "code": "025.EPP.400",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-400-ustten-yuklemeli-thermobox-40x61x40-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-400-ustten-yuklemeli-thermobox-40x61x40-cm-termobox-tribeca-88611-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-400-ustten-yuklemeli-thermobox-40x61x40-cm-termobox-tribeca-88611-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2688.2
+    },
+    {
+      "cafemarkt_id": "44325",
+      "name": "Tribeca EPP-3CH3-3535L 9'lu Karton Bardak Standı, 36.5x35x17.5 cm",
+      "code": "025.EPP.3CH3.3535L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-3ch3-3535l-9lu-karton-bardak-standi-365x35x17",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-3ch3-3535l-9lu-karton-bardak-standi-365x35x17-bardak-standlari-tribeca-88606-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-3ch3-3535l-9lu-karton-bardak-standi-365x35x17-bardak-standlari-tribeca-88606-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3331.03
+    },
+    {
+      "cafemarkt_id": "44324",
+      "name": "Tribeca Düz Bardak Basketi, 20 Bölmeli, 50x51x10 cm, Turuncu",
+      "code": "025.BB.20",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-duz-bardak-basketi-20-bolmeli-50x51x10-cm-turuncu",
+      "image": "https://witcdn.cafemarkt.com/tribeca-duz-bardak-basketi-20-bolmeli-50x51x10-cm-turuncu-bulasik-makinesi-basketleri-tribeca-88656-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-duz-bardak-basketi-20-bolmeli-50x51x10-cm-turuncu-bulasik-makinesi-basketleri-tribeca-88656-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 629.19
+    },
+    {
+      "cafemarkt_id": "44321",
+      "name": "Tribeca TCB-600NPW Önden Yüklemeli Tekerlekli İçi Paslanmaz Thermobox, 475x670x635 mm, Yeşil",
+      "code": "025.TCB.600NPW.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-yesil-termobox-tribeca-88651-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-yesil-termobox-tribeca-88651-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27661.15
+    },
+    {
+      "cafemarkt_id": "44320",
+      "name": "Tribeca TCB-600NPDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi",
+      "code": "025.TCB.600NPDUO.MAV",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88643-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88643-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54543.1
+    },
+    {
+      "cafemarkt_id": "44319",
+      "name": "Tribeca TCB-600NP Önden Yüklemeli İçi Paslanmaz Thermobox, Siyah",
+      "code": "025.TCB.600NP.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-siyah-termobox-tribeca-88640-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600np-onden-yuklemeli-ici-paslanmaz-thermobox-siyah-termobox-tribeca-88640-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9934.64
+    },
+    {
+      "cafemarkt_id": "44318",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Siyah",
+      "code": "025.TCB.600NMIXDUO.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88636-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88636-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44317",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi",
+      "code": "025.TCB.600NDUO.MAV",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88627-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-termobox-tribeca-88627-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44316",
+      "name": "Tribeca Düz Bardak Basketi, 50x50x10 cm, Mavi",
+      "code": "025.SDB.50",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-duz-bardak-basketi-50x50x10-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-duz-bardak-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88623-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-duz-bardak-basketi-50x50x10-cm-mavi-bulasik-makinesi-basketleri-tribeca-88623-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 535.69
+    },
+    {
+      "cafemarkt_id": "44315",
+      "name": "Tribeca GNC-2118 Demonte 18 Tepsi Kapasiteli Tepsi Taşıma Arabası",
+      "code": "025.GNC.2118",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-gnc-2118-demonte-18-tepsi-kapasiteli-tepsi-tasima-arabasi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-gnc-2118-demonte-18-tepsi-kapasiteli-tepsi-tasima-arabasi-tepsi-istif-raflari-tasima-arabalari-tribeca-88617-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-gnc-2118-demonte-18-tepsi-kapasiteli-tepsi-tasima-arabasi-tepsi-istif-raflari-tasima-arabalari-tribeca-88617-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 19284.88
+    },
+    {
+      "cafemarkt_id": "44314",
+      "name": "Tribeca TCB-600NPW Önden Yüklemeli Tekerlekli İçi Paslanmaz Thermobox, 475x670x635 mm, Mavi",
+      "code": "025.TCB.600NPW.MAVI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-mavi-termobox-tribeca-88649-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerlekli-ici-paslanmaz-thermobox-475x670x635-mm-mavi-termobox-tribeca-88649-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27661.15
+    },
+    {
+      "cafemarkt_id": "44313",
+      "name": "Tribeca TCB-600NPW Önden Yüklemeli Tekerleki İçi Paslanmaz Thermobox, 475x670x635 mm, Gri",
+      "code": "025.TCB.600NPW.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerleki-ici-paslanmaz-thermobox-475x670x635-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerleki-ici-paslanmaz-thermobox-475x670x635-mm-gri-termobox-tribeca-88648-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600npw-onden-yuklemeli-tekerleki-ici-paslanmaz-thermobox-475x670x635-mm-gri-termobox-tribeca-88648-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27661.15
+    },
+    {
+      "cafemarkt_id": "44312",
+      "name": "Tribeca TCB-600NMIXDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Siyah",
+      "code": "025.TCB.600NMIXDUO.MS",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88635-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nmixduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88635-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42076.11
+    },
+    {
+      "cafemarkt_id": "44311",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Siyah",
+      "code": "025.TCB.600NDUO.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88630-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-siyah-termobox-tribeca-88630-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44310",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Siyah",
+      "code": "025.TCB.600NDUO.MS",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88629-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-siyah-termobox-tribeca-88629-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44309",
+      "name": "Tribeca TCB-600NDUO Önden Yüklemeli Tekerlekli Çiftli Thermobox, 95x134x127 cm, Mavi Gri",
+      "code": "025.TCB.600NDUO.MG",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88628-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-600nduo-onden-yuklemeli-tekerlekli-ciftli-thermobox-95x134x127-cm-mavi-gri-termobox-tribeca-88628-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26881.96
+    },
+    {
+      "cafemarkt_id": "44308",
+      "name": "Tribeca TC-3753-22 Demonte 37x53 cm 11+11 Tepsi Kapasiteli Taşıma Arabası, 85x58x177 cm",
+      "code": "025.TC.3753.22",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tc-3753-22-demonte-37x53-cm-1111-tepsi-kapasiteli-tasima-arabasi-85x58x177-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tc-3753-22-demonte-37x53-cm-1111-tepsi-kapasiteli-tasima-arabasi-85x58x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-88625-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tc-3753-22-demonte-37x53-cm-1111-tepsi-kapasiteli-tasima-arabasi-85x58x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-88625-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27271.55
+    },
+    {
+      "cafemarkt_id": "44307",
+      "name": "Tribeca SAE-K33 3 Katlı Servis Arabası",
+      "code": "025.SAE.K33",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sae-k33-3-katli-servis-arabasi-106x53x101-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sae-k33-3-katli-servis-arabasi-106x53x101-cm-siyah-servis-arabalari-tribeca-88620-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sae-k33-3-katli-servis-arabasi-106x53x101-cm-siyah-servis-arabalari-tribeca-88620-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8571.06
+    },
+    {
+      "cafemarkt_id": "44306",
+      "name": "Tribeca PTC-406018 Demonte 40x60 cm 18 Tepsi Kapasiteli Tepsi Taşıma Arabası, 42x68x177 cm",
+      "code": "025.PTC.406018",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-ptc-406018-demonte-40x60-cm-18-tepsi-kapasiteli-tepsi-tasima-arabasi-42x68x177-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-ptc-406018-demonte-40x60-cm-18-tepsi-kapasiteli-tepsi-tasima-arabasi-42x68x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-88618-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-ptc-406018-demonte-40x60-cm-18-tepsi-kapasiteli-tepsi-tasima-arabasi-42x68x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-88618-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9545.04
+    },
+    {
+      "cafemarkt_id": "44305",
+      "name": "Tribeca EPP-3CH3-200 15 Bardak Kapasiteli Bardak Kutusu, 60x40x31.6 cm",
+      "code": "025.EPP.3CH3.200",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-3ch3-200-15-bardak-kapasiteli-bardak-kutusu-60x40x31",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-3ch3-200-15-bardak-kapasiteli-bardak-kutusu-60x40x31-bardak-standlari-tribeca-88605-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-3ch3-200-15-bardak-kapasiteli-bardak-kutusu-60x40x31-bardak-standlari-tribeca-88605-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4382.93
+    },
+    {
+      "cafemarkt_id": "44304",
+      "name": "Tribeca EPP-320 Üstten Yüklemeli Thermobox, 40x61x32 cm",
+      "code": "025.EPP.320",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-320-ustten-yuklemeli-thermobox-40x61x32-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-320-ustten-yuklemeli-thermobox-40x61x32-cm-termobox-tribeca-88610-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-320-ustten-yuklemeli-thermobox-40x61x32-cm-termobox-tribeca-88610-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2337.56
+    },
+    {
+      "cafemarkt_id": "44303",
+      "name": "Tribeca EPP-280 Üstten Yüklemeli Thermobox, 40x61x28 cm",
+      "code": "025.EPP.280",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-280-ustten-yuklemeli-thermobox-40x61x28-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-280-ustten-yuklemeli-thermobox-40x61x28-cm-termobox-tribeca-88609-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-280-ustten-yuklemeli-thermobox-40x61x28-cm-termobox-tribeca-88609-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2240.16
+    },
+    {
+      "cafemarkt_id": "44302",
+      "name": "Tribeca EPP-230 Üstten Yüklemeli Thermobox, 40x61x23 cm",
+      "code": "025.EPP.230",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-230-ustten-yuklemeli-thermobox-40x61x23-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-230-ustten-yuklemeli-thermobox-40x61x23-cm-termobox-tribeca-88608-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-230-ustten-yuklemeli-thermobox-40x61x23-cm-termobox-tribeca-88608-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2142.76
+    },
+    {
+      "cafemarkt_id": "44301",
+      "name": "Tribeca ECKA-SA Çatal Bıçak Kovası",
+      "code": "025.ECKA.SA",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-ecka-sa-catal-bicak-kovasi-405x305x27-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-ecka-sa-catal-bicak-kovasi-405x305x27-cm-siyah-catal-kasik-bicak-standi-tribeca-88604-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-ecka-sa-catal-bicak-kovasi-405x305x27-cm-siyah-catal-kasik-bicak-standi-tribeca-88604-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 467.51
+    },
+    {
+      "cafemarkt_id": "44300",
+      "name": "Tribeca Basket Yükseltici, 20 Bölmeli, 50x51x4 cm, Turuncu",
+      "code": "025.BY.20",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-basket-yukseltici-20-bolmeli-50x51x4-cm-turuncu",
+      "image": "https://witcdn.cafemarkt.com/tribeca-basket-yukseltici-20-bolmeli-50x51x4-cm-turuncu-bulasik-makinesi-basketleri-tribeca-88657-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-basket-yukseltici-20-bolmeli-50x51x4-cm-turuncu-bulasik-makinesi-basketleri-tribeca-88657-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 327.26
+    },
+    {
+      "cafemarkt_id": "44119",
+      "name": "Tribeca FBC-17L Çok Amaçlı Termobox, 17 L, Yeşil",
+      "code": "025.FBC.17L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-fbc-17l-cok-amacli-termobox-17-l-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-fbc-17l-cok-amacli-termobox-17-l-yesil-termobox-tribeca-87594-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-fbc-17l-cok-amacli-termobox-17-l-yesil-termobox-tribeca-87594-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8765.86
+    },
+    {
+      "cafemarkt_id": "44118",
+      "name": "Tribeca TT-6NL 6 Bölmeli Kilitli Termo Tepsi",
+      "code": "025.TT.6NL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tt-6nl-6-bolmeli-kilitli-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tt-6nl-6-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87606-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tt-6nl-6-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87606-44-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tt-6nl-6-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87607-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2921.95
+    },
+    {
+      "cafemarkt_id": "44117",
+      "name": "Tribeca PDC-714 Demonte Pizza Hamur Teknesi Taşıma Arabası, 14 Raflı, 62x48x177 cm",
+      "code": "025.PDC.714",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-pdc-714-demonte-pizza-hamur-teknesi-tasima-arabasi-14-rafli-62x48x177-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-pdc-714-demonte-pizza-hamur-teknesi-tasima-arabasi-14-rafli-62x48x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87596-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-pdc-714-demonte-pizza-hamur-teknesi-tasima-arabasi-14-rafli-62x48x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87596-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 19090.09
+    },
+    {
+      "cafemarkt_id": "44116",
+      "name": "Tribeca TMB-130 Mobil Bar, 145x75x120 cm, Kahverengi",
+      "code": "025.TMB.130.KAH",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-kahverengi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-kahverengi-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87601-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-kahverengi-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87601-44-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-kahverengi-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87600-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 112982.14
+    },
+    {
+      "cafemarkt_id": "44115",
+      "name": "Tribeca TCB-85L Üstten Yüklemeli Termobox, 69.5x52.5x55.5 cm, 85 L, Mavi",
+      "code": "025.TCB.85L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tcb-85l-ustten-yuklemeli-termobox-695x525x555-cm-85-l-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tcb-85l-ustten-yuklemeli-termobox-695x525x555-cm-85-l-mavi-termobox-tribeca-87599-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tcb-85l-ustten-yuklemeli-termobox-695x525x555-cm-85-l-mavi-termobox-tribeca-87599-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12661.79
+    },
+    {
+      "cafemarkt_id": "44114",
+      "name": "Tribeca TMB-130 Mobil Bar, 145x75x120 cm, Siyah",
+      "code": "025.TMB.130.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-siyah-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87603-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-siyah-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87603-44-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tmb-130-mobil-bar-145x75x120-cm-siyah-mobil-bar-ve-kokteyl-istasyonlari-tribeca-87602-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 112982.14
+    },
+    {
+      "cafemarkt_id": "44113",
+      "name": "Tribeca TC-3753-11 Demonte Tepsi Taşıma Arabası, 37x53 cm, 11 Tepsi Kapasiteli",
+      "code": "025.TC.3753.11",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tc-3753-11-demonte-tepsi-tasima-arabasi-37x53-cm-11-tepsi-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tc-3753-11-demonte-tepsi-tasima-arabasi-37x53-cm-11-tepsi-kapasiteli-tepsi-istif-raflari-tasima-arabalari-tribeca-87598-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tc-3753-11-demonte-tepsi-tasima-arabasi-37x53-cm-11-tepsi-kapasiteli-tepsi-istif-raflari-tasima-arabalari-tribeca-87598-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17142.12
+    },
+    {
+      "cafemarkt_id": "44112",
+      "name": "Tribeca PDC-1011 Demonte Pizza Hamur Teknesi Taşıma Arabası, 11 Raflı, 62x48x177 cm",
+      "code": "025.PDC.1011",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-pdc-1011-demonte-pizza-hamur-teknesi-tasima-arabasi-11-rafli-62x48x177-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-pdc-1011-demonte-pizza-hamur-teknesi-tasima-arabasi-11-rafli-62x48x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87597-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-pdc-1011-demonte-pizza-hamur-teknesi-tasima-arabasi-11-rafli-62x48x177-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87597-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18116.1
+    },
+    {
+      "cafemarkt_id": "44111",
+      "name": "Tribeca BTA-11 Basket Taşıma Arabası, 11 Raflı, 52x58x177 cm",
+      "code": "025.BTA.11",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-bta-11-basket-tasima-arabasi-11-rafli-52x58x177-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-bta-11-basket-tasima-arabasi-11-rafli-52x58x177-cm-basket-tasima-arabalari-tribeca-87609-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-bta-11-basket-tasima-arabasi-11-rafli-52x58x177-cm-basket-tasima-arabalari-tribeca-87609-44-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-bta-11-basket-tasima-arabasi-11-rafli-52x58x177-cm-basket-tasima-arabalari-tribeca-87593-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 21427.65
+    },
+    {
+      "cafemarkt_id": "44110",
+      "name": "Tribeca TT-5NL 5 Bölmeli Kilitli Termo Tepsi",
+      "code": "025.TT.5NL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-tt-5nl-5-bolmeli-kilitli-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-tt-5nl-5-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87604-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-tt-5nl-5-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87604-44-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-tt-5nl-5-bolmeli-kilitli-termo-tepsi-termo-tepsi-tribeca-87605-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2921.95
+    },
+    {
+      "cafemarkt_id": "44109",
+      "name": "Tribeca GNC-1116 GN 1/1 8+8 Raflı Alüminyum Demonte Tepsi Taşıma Arabası, 56x77x96 cm",
+      "code": "025.GNC.1116",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-gnc-1116-gn-1-1-88-rafli-aluminyum-demonte-tepsi-tasima-arabasi-56x77x96-cm",
+      "image": "https://witcdn.cafemarkt.com/tribeca-gnc-1116-gn-1-1-88-rafli-aluminyum-demonte-tepsi-tasima-arabasi-56x77x96-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87595-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-gnc-1116-gn-1-1-88-rafli-aluminyum-demonte-tepsi-tasima-arabasi-56x77x96-cm-tepsi-istif-raflari-tasima-arabalari-tribeca-87595-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17531.71
+    },
+    {
+      "cafemarkt_id": "44108",
+      "name": "Tribeca BK-125 İzolasyonlu Buz Konteyneri, 125 L, 605x800x745 mm, Kahverengi",
+      "code": "025.BK.125.KAH",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-bk-125-izolasyonlu-buz-konteyneri-125-l-605x800x745-mm-kahverengi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-bk-125-izolasyonlu-buz-konteyneri-125-l-605x800x745-mm-kahverengi-izolasyonlu-buz-konteyner-tribeca-87608-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-bk-125-izolasyonlu-buz-konteyneri-125-l-605x800x745-mm-kahverengi-izolasyonlu-buz-konteyner-tribeca-87608-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28245.54
+    },
+    {
+      "cafemarkt_id": "42538",
+      "name": "Tribeca 150 Box, Maximum GN 1/1150, 635x435x250 mm, Gri",
+      "code": "025.TCB.150.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-gri-termobox-tribeca-82281-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-gri-termobox-tribeca-82281-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-gri-termobox-tribeca-82282-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42537",
+      "name": "Tribeca Sıvı Termosu, 20 L, 295x430x675 mm, Siyah",
+      "code": "025.ST.20.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-siyah-termobox-tribeca-82199-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-siyah-termobox-tribeca-82199-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-siyah-termobox-tribeca-82198-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-siyah-termobox-tribeca-82197-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7791.87
+    },
+    {
+      "cafemarkt_id": "42536",
+      "name": "Tribeca Sıvı Termosu, 20 L, 295x430x675 mm, Gri",
+      "code": "025.ST.20.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-gri-termobox-tribeca-82193-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-gri-termobox-tribeca-82193-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-gri-termobox-tribeca-82192-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-gri-termobox-tribeca-82191-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7791.87
+    },
+    {
+      "cafemarkt_id": "42534",
+      "name": "Tribeca Sıvı Termosu, 40 L, 410x520x650 mm, Yeşil",
+      "code": "025.ST.40.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-yesil-termobox-tribeca-82188-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-yesil-termobox-tribeca-82188-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-yesil-termobox-tribeca-82187-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-yesil-termobox-tribeca-82186-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10713.82
+    },
+    {
+      "cafemarkt_id": "42533",
+      "name": "Tribeca Sıvı Termosu, 40 L, 410x520x650 mm, Siyah",
+      "code": "025.ST.40.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-siyah-termobox-tribeca-82183-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-siyah-termobox-tribeca-82183-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-siyah-termobox-tribeca-82182-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-siyah-termobox-tribeca-82181-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10713.82
+    },
+    {
+      "cafemarkt_id": "42532",
+      "name": "Tribeca Sıvı Termosu, 40 L, 410x520x650 mm, Gri",
+      "code": "025.ST.40.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-gri-termobox-tribeca-82177-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-gri-termobox-tribeca-82177-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-gri-termobox-tribeca-82176-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-40-l-410x520x650-mm-gri-termobox-tribeca-82175-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10713.82
+    },
+    {
+      "cafemarkt_id": "42531",
+      "name": "Tribeca Sıvı Termosu, 10 L, 295x430x500 mm, Gri",
+      "code": "025.ST.10.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-gri-termobox-tribeca-82172-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-gri-termobox-tribeca-82172-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-gri-termobox-tribeca-82171-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-gri-termobox-tribeca-82169-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6817.89
+    },
+    {
+      "cafemarkt_id": "42530",
+      "name": "Tribeca 200 Box, Maximum GN 1/1200, 635x435x310 mm, Siyah",
+      "code": "025.TCB.200.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-siyah-termobox-tribeca-82286-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-siyah-termobox-tribeca-82286-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-siyah-termobox-tribeca-82285-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42529",
+      "name": "Tribeca Sıvı Termosu, 20 L, 295x430x675 mm, Yeşil",
+      "code": "025.ST.20.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-yesil-termobox-tribeca-82167-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-yesil-termobox-tribeca-82167-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-yesil-termobox-tribeca-82166-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-20-l-295x430x675-mm-yesil-termobox-tribeca-82165-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7791.87
+    },
+    {
+      "cafemarkt_id": "42528",
+      "name": "Tribeca 600 Box, 465x610x630 mm, Siyah",
+      "code": "025.TCB.600.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-600-box-465x610x630-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-siyah-termobox-tribeca-82164-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-siyah-termobox-tribeca-82164-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-siyah-termobox-tribeca-82163-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-siyah-termobox-tribeca-82162-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9350.25
+    },
+    {
+      "cafemarkt_id": "42527",
+      "name": "Tribeca 100 Box, Maximum GN 1/1100, 635x435x200 mm, Mavi",
+      "code": "025.TCB.100.MAV",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-mavi-termobox-tribeca-82287-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-mavi-termobox-tribeca-82287-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-mavi-termobox-tribeca-82288-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42526",
+      "name": "Tribeca Sıvı Termosu, 10 L, 295x430x500 mm, Siyah",
+      "code": "025.ST.10.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-siyah-termobox-tribeca-82158-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-siyah-termobox-tribeca-82158-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-siyah-termobox-tribeca-82157-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-siyah-termobox-tribeca-82156-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6817.89
+    },
+    {
+      "cafemarkt_id": "42525",
+      "name": "Tribeca 600 Box, 465x610x630 mm, Gri",
+      "code": "025.TCB.600.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-600-box-465x610x630-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-gri-termobox-tribeca-82152-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-gri-termobox-tribeca-82152-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-gri-termobox-tribeca-82151-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-600-box-465x610x630-mm-gri-termobox-tribeca-82150-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9350.25
+    },
+    {
+      "cafemarkt_id": "42524",
+      "name": "Tribeca 200 Box, Maximum GN 1/1200, 635x435x310 mm, Gri",
+      "code": "025.TCB.200.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-gri-termobox-tribeca-82284-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-200-box-maximum-gn-1-1200-635x435x310-mm-gri-termobox-tribeca-82284-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42523",
+      "name": "Tribeca 150 Box, Maximum GN 1/1150, 635x435x250 mm, Siyah",
+      "code": "025.TCB.150.SIY",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-siyah-termobox-tribeca-82205-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-siyah-termobox-tribeca-82205-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-siyah-termobox-tribeca-82204-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-siyah-termobox-tribeca-82203-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42522",
+      "name": "Tribeca 150 Box, Maximum GN 1/1150, 635x435x250 mm, Mavi",
+      "code": "025.TCB.150.MAV",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-mavi",
+      "image": "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-mavi-termobox-tribeca-82283-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-150-box-maximum-gn-1-1150-635x435x250-mm-mavi-termobox-tribeca-82283-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42520",
+      "name": "Tribeca 100 Box, Maximum GN 1/1100, 635x435x200 mm, Gri",
+      "code": "025.TCB.100.GRI",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-gri-termobox-tribeca-82130-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-gri-termobox-tribeca-82130-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-gri-termobox-tribeca-82129-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-100-box-maximum-gn-1-1100-635x435x200-mm-gri-termobox-tribeca-82128-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5843.9
+    },
+    {
+      "cafemarkt_id": "42519",
+      "name": "Tribeca Sıvı Termosu, 10 L, 295x430x500 mm, Yeşil",
+      "code": "025.ST.10.YES",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-yesil",
+      "image": "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-yesil-termobox-tribeca-82116-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-yesil-termobox-tribeca-82116-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-yesil-termobox-tribeca-82115-42-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-sivi-termosu-10-l-295x430x500-mm-yesil-termobox-tribeca-82114-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6817.89
+    },
+    {
+      "cafemarkt_id": "38701",
+      "name": "Tribeca BMS-42 Bebe Mama Sandalyesi, 565x580x760 mm, Gri",
+      "code": "025.BMS.42",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-bms-42-bebe-mama-sandalyesi-565x580x760-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/tribeca-bms-42-bebe-mama-sandalyesi-565x580x760-mm-gri-bebek-mama-sandalyeleri-tribeca-72839-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-bms-42-bebe-mama-sandalyesi-565x580x760-mm-gri-bebek-mama-sandalyeleri-tribeca-72839-38-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-bms-42-bebe-mama-sandalyesi-565x580x760-mm-gri-bebek-mama-sandalyeleri-tribeca-72840-38-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-bms-42-bebe-mama-sandalyesi-565x580x760-mm-gri-bebek-mama-sandalyeleri-tribeca-72841-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6233.5
+    },
+    {
+      "cafemarkt_id": "32384",
+      "name": "Tribeca EPP-406030TL Üstten Yüklemeli Thermobox, 81 L, Siyah",
+      "code": "025.EPP.406030TL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-406030tl-ustten-yuklemeli-thermobox-81-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-406030tl-ustten-yuklemeli-thermobox-81-l-siyah-termobox-tribeca-56409-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-406030tl-ustten-yuklemeli-thermobox-81-l-siyah-termobox-tribeca-56409-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3038.83
+    },
+    {
+      "cafemarkt_id": "32381",
+      "name": "Tribeca EPP-406020TL Üstten Yüklemeli Thermobox, 53 L , Siyah",
+      "code": "025.EPP.406020TL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-406020tl-ustten-yuklemeli-thermobox-53-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-406020tl-ustten-yuklemeli-thermobox-53-l-siyah-termobox-tribeca-56406-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-406020tl-ustten-yuklemeli-thermobox-53-l-siyah-termobox-tribeca-56406-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2649.24
+    },
+    {
+      "cafemarkt_id": "32386",
+      "name": "Tribeca EPP-4242H Thermobox, 8 Pizza Kapasiteli, 59 L, Siyah",
+      "code": "025.EPP.4242H",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-4242h-thermobox-8-pizza-kapasiteli-59-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-4242h-thermobox-8-pizza-kapasiteli-59-l-siyah-termobox-tribeca-56400-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-4242h-thermobox-8-pizza-kapasiteli-59-l-siyah-termobox-tribeca-56400-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2727.16
+    },
+    {
+      "cafemarkt_id": "32382",
+      "name": "Tribeca EPP-4060FL Önden Yüklemeli Thermobox, 126 L, Siyah",
+      "code": "025.EPP.4060FL",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-4060fl-onden-yuklemeli-thermobox-126-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-4060fl-onden-yuklemeli-thermobox-126-l-siyah-termobox-tribeca-56399-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-4060fl-onden-yuklemeli-thermobox-126-l-siyah-termobox-tribeca-56399-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10441.11
+    },
+    {
+      "cafemarkt_id": "32385",
+      "name": "Tribeca EPP-4242L Thermobox, 4 Pizza Kapasiteli, 31 L, Siyah",
+      "code": "025.EPP.4242L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-4242l-thermobox-4-pizza-kapasiteli-31-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-4242l-thermobox-4-pizza-kapasiteli-31-l-siyah-termobox-tribeca-56401-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-4242l-thermobox-4-pizza-kapasiteli-31-l-siyah-termobox-tribeca-56401-32-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-epp-4242l-thermobox-4-pizza-kapasiteli-31-l-siyah-termobox-tribeca-56407-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2259.64
+    },
+    {
+      "cafemarkt_id": "32387",
+      "name": "Tribeca EPP-MBPF Önden Yüklemeli Motor Arkası Thermobox, 100 L, Siyah",
+      "code": "025.EPP.MBPF",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-mbpf-onden-yuklemeli-motor-arkasi-thermobox-100l",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-mbpf-onden-yuklemeli-motor-arkasi-thermobox-100l-termobox-tribeca-56405-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-mbpf-onden-yuklemeli-motor-arkasi-thermobox-100l-termobox-tribeca-56405-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13947.45
+    },
+    {
+      "cafemarkt_id": "32380",
+      "name": "Tribeca EPP-3535L Üstten Yüklemeli Thermobox, 4 Pizza Kapasiteli, 22 L, Siyah",
+      "code": "025.EPP.3535L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-3535l-ustten-yuklemeli-thermobox-4-pizza-kapasiteli-22-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-3535l-ustten-yuklemeli-thermobox-4-pizza-kapasiteli-22-l-siyah-termobox-tribeca-56403-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-3535l-ustten-yuklemeli-thermobox-4-pizza-kapasiteli-22-l-siyah-termobox-tribeca-56403-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1870.05
+    },
+    {
+      "cafemarkt_id": "32383",
+      "name": "Tribeca EPP-MBP Önden Yüklemeli Motor Arkası Thermobox, 100 L, Siyah",
+      "code": "025.EPP.MBP",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-mbp-onden-yuklemeli-motor-arkasi-thermobox-100-l",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-mbp-onden-yuklemeli-motor-arkasi-thermobox-100-l-termobox-tribeca-56404-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-mbp-onden-yuklemeli-motor-arkasi-thermobox-100-l-termobox-tribeca-56404-32-O.jpg",
+        "https://witcdn.cafemarkt.com/tribeca-epp-mbp-onden-yuklemeli-motor-arkasi-thermobox-100-l-termobox-tribeca-56408-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11687.81
+    },
+    {
+      "cafemarkt_id": "32379",
+      "name": "Tribeca EPP-3535H Üst Yüklemeli Thermo Pizza Box, 43 L, Siyah",
+      "code": "025.EPP.3535H",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/tribeca-epp-3535h-ust-yuklemeli-thermo-pizza-box-43-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/tribeca-epp-3535h-ust-yuklemeli-thermo-pizza-box-43-l-siyah-termobox-tribeca-56402-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/tribeca-epp-3535h-ust-yuklemeli-thermo-pizza-box-43-l-siyah-termobox-tribeca-56402-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2259.64
+    },
+    {
+      "cafemarkt_id": "1280",
+      "name": "Tribeca Bebe Mama Sandalyesi, 500x590x860 mm, Gri",
+      "code": "025.BMS.86",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bebe-mama-sandalyesi-500x590x860",
+      "image": "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-500x590x860-bebek-mama-sandalyeleri-tribeca-34103-12-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-500x590x860-bebek-mama-sandalyeleri-tribeca-34103-12-O.jpg",
+        "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-500x590x860-bebek-mama-sandalyeleri-tribeca-34104-12-O.jpg",
+        "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-500x590x860-bebek-mama-sandalyeleri-tribeca-10398-12-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7791.87
+    },
+    {
+      "cafemarkt_id": "3442",
+      "name": "Tribeca Buz Konteyneri, İzolasyonlu, 175 L, 610x965x745 mm, Kahverengi",
+      "code": "025.BK.175",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/buz-konteyneri-izolasyonlu-175-lt-610x965x745-mm",
+      "image": "https://witcdn.cafemarkt.com/buz-konteyneri-izolasyonlu-175-lt-610x965x745-mm-izolasyonlu-buz-konteyner-tribeca-10395-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/buz-konteyneri-izolasyonlu-175-lt-610x965x745-mm-izolasyonlu-buz-konteyner-tribeca-10395-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29219.52
+    },
+    {
+      "cafemarkt_id": "2221",
+      "name": "Tribeca 200M Box, 720x420x330 mm, Mavi",
+      "code": "025.TCB.200M",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-200m-720x420x330-mm",
+      "image": "https://witcdn.cafemarkt.com/box-200m-720x420x330-mm-termobox-tribeca-41383-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-200m-720x420x330-mm-termobox-tribeca-41383-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7402.28
+    },
+    {
+      "cafemarkt_id": "2399",
+      "name": "Tribeca Çatal & Kaşıklık, 4 Gözlü, 540x325x100 mm, Gri",
+      "code": "025.KVR.4",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/catal-kasiklik-4-gozlu-540x325x100-mm",
+      "image": "https://witcdn.cafemarkt.com/catal-kasiklik-4-gozlu-540x325x100-mm-bulasik-makinesi-basketleri-tribeca-10416-23-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/catal-kasiklik-4-gozlu-540x325x100-mm-bulasik-makinesi-basketleri-tribeca-10416-23-O.jpg"
+      ],
+      "price_try_kdv_dahil": 321.41
+    },
+    {
+      "cafemarkt_id": "2223",
+      "name": "Tribeca Box, Yuvarlak, İçi Paslanmaz, 33 L, 420x54 mm, Gri",
+      "code": "025.RFC.33L",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/yuvarlak-ici-paslanmaz-box-33-lt-420x54-mm",
+      "image": "https://witcdn.cafemarkt.com/yuvarlak-ici-paslanmaz-box-33-lt-420x54-mm-termobox-tribeca-10417-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/yuvarlak-ici-paslanmaz-box-33-lt-420x54-mm-termobox-tribeca-10417-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30193.5
+    },
+    {
+      "cafemarkt_id": "1279",
+      "name": "Tribeca Bebe Mama Sandalyesi, Demonte, 540x610x770 mm, Gri",
+      "code": "025.BMS.1A",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/bebe-mama-sandalyesi-demonte-540x610x770",
+      "image": "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-demonte-540x610x770-bebek-mama-sandalyeleri-tribeca-10396-12-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bebe-mama-sandalyesi-demonte-540x610x770-bebek-mama-sandalyeleri-tribeca-10396-12-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6233.5
+    },
+    {
+      "cafemarkt_id": "2224",
+      "name": "Tribeca 600TR Box, 445x645x625 mm, Siyah",
+      "code": "025.TCB.600TR",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/box-600tr-445x645x625-mm",
+      "image": "https://witcdn.cafemarkt.com/box-600tr-445x645x625-mm-termobox-tribeca-10435-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/box-600tr-445x645x625-mm-termobox-tribeca-10435-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9350.25
+    },
+    {
+      "cafemarkt_id": "2046",
+      "name": "Tribeca Servis Arabası, Demonte, 3 Katlı, 1070x510x960 mm, Gri",
+      "code": "025.SRA.9H",
+      "brand": "Tribeca",
+      "url": "https://www.cafemarkt.com/servis-arabasi-demonte-3-katli-1070x510x960-mm",
+      "image": "https://witcdn.cafemarkt.com/servis-arabasi-demonte-3-katli-1070x510x960-mm-servis-arabalari-tribeca-10420-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/servis-arabasi-demonte-3-katli-1070x510x960-mm-servis-arabalari-tribeca-10420-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9934.64
+    }
+  ]
+}

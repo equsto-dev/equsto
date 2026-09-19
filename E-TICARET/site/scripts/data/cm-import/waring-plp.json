@@ -1,0 +1,64 @@
+{
+  "brand": "Waring",
+  "slug": "waring",
+  "fetchedAt": "2026-09-19T05:45:43.769Z",
+  "reportedTotal": 4,
+  "pages": 1,
+  "count": 4,
+  "items": [
+    {
+      "cafemarkt_id": "40075",
+      "name": "Waring MX1100XTXEE Xtreme Bar Blender, 2 L, 1500 W, Siyah",
+      "code": "162.MX1100XTXEE",
+      "brand": "Waring",
+      "url": "https://www.cafemarkt.com/waring-mx1100xtxee-xtreme-bar-blender-2-l-1500-w-siyah",
+      "image": "https://witcdn.cafemarkt.com/waring-mx1100xtxee-xtreme-bar-blender-2-l-1500-w-siyah-bar-blenderlar-waring-76873-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxee-xtreme-bar-blender-2-l-1500-w-siyah-bar-blenderlar-waring-76873-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxee-xtreme-bar-blender-2-l-1500-w-siyah-bar-blenderlar-waring-76874-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxee-xtreme-bar-blender-2-l-1500-w-siyah-bar-blenderlar-waring-76875-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54035.31
+    },
+    {
+      "cafemarkt_id": "40076",
+      "name": "Waring MX1100XTXSEE Xtreme Ses İzolasyonlu Bar Blender, 1.9 L, 1560 W, Siyah",
+      "code": "162.MX1100XTXSEE",
+      "brand": "Waring",
+      "url": "https://www.cafemarkt.com/waring-mx1100xtxsee-xtreme-ses-izolasyonlu-bar-blender-19-l-1560-w-siyah",
+      "image": "https://witcdn.cafemarkt.com/waring-mx1100xtxsee-xtreme-ses-izolasyonlu-bar-blender-19-l-1560-w-siyah-bar-blenderlar-waring-76876-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxsee-xtreme-ses-izolasyonlu-bar-blender-19-l-1560-w-siyah-bar-blenderlar-waring-76876-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxsee-xtreme-ses-izolasyonlu-bar-blender-19-l-1560-w-siyah-bar-blenderlar-waring-76877-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1100xtxsee-xtreme-ses-izolasyonlu-bar-blender-19-l-1560-w-siyah-bar-blenderlar-waring-76878-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 69686.92
+    },
+    {
+      "cafemarkt_id": "40077",
+      "name": "Waring MX1500XTXSEE Xtreme 4 Programlı Ses İzolasyonlu Bar Blender, 1.9 L, 1500 W, Siyah",
+      "code": "162.MX1500XTXSEE",
+      "brand": "Waring",
+      "url": "https://www.cafemarkt.com/waring-mx1500xtxsee-xtreme-4-programli-ses-izolasyonlu-bar-blender-19-l-1500-w-siyah",
+      "image": "https://witcdn.cafemarkt.com/waring-mx1500xtxsee-xtreme-4-programli-ses-izolasyonlu-bar-blender-19-l-1500-w-siyah-bar-blenderlar-waring-76880-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waring-mx1500xtxsee-xtreme-4-programli-ses-izolasyonlu-bar-blender-19-l-1500-w-siyah-bar-blenderlar-waring-76880-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1500xtxsee-xtreme-4-programli-ses-izolasyonlu-bar-blender-19-l-1500-w-siyah-bar-blenderlar-waring-76881-40-O.jpg",
+        "https://witcdn.cafemarkt.com/waring-mx1500xtxsee-xtreme-4-programli-ses-izolasyonlu-bar-blender-19-l-1500-w-siyah-bar-blenderlar-waring-76882-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 76394.75
+    },
+    {
+      "cafemarkt_id": "40074",
+      "name": "Waring CAC95 Raptor Blender Yedek Hazne, 2 L",
+      "code": "162.CAC95",
+      "brand": "Waring",
+      "url": "https://www.cafemarkt.com/waring-cac95-raptor-blender-yedek-hazne-2-l",
+      "image": "https://witcdn.cafemarkt.com/waring-cac95-raptor-blender-yedek-hazne-2-l-waring-yedek-parcalari-ve-aksesuarlari-waring-76884-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waring-cac95-raptor-blender-yedek-hazne-2-l-waring-yedek-parcalari-ve-aksesuarlari-waring-76884-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16098.8
+    }
+  ]
+}

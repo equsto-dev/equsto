@@ -1,0 +1,734 @@
+{
+  "brand": "Avatherm",
+  "slug": "avatherm",
+  "fetchedAt": "2026-09-19T09:13:54.377Z",
+  "reportedTotal": 57,
+  "pages": 2,
+  "count": 57,
+  "items": [
+    {
+      "cafemarkt_id": "2234",
+      "name": "Avatherm Pizza Hamur Teknesi, 45x65 cm",
+      "code": "030.100265",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-hamur-teknesi",
+      "image": "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-pizza-hamur-tekneleri-avatherm-15657-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-pizza-hamur-tekneleri-avatherm-15657-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-pizza-hamur-tekneleri-avatherm-15705-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-pizza-hamur-tekneleri-avatherm-15706-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1747.1
+    },
+    {
+      "cafemarkt_id": "2239",
+      "name": "Avatherm 660 Pastane Thermobox",
+      "code": "030.100256",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pastane-termobox-660",
+      "image": "https://witcdn.cafemarkt.com/pastane-termobox-660-termobox-avatherm-15661-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pastane-termobox-660-termobox-avatherm-15661-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 25881.5
+    },
+    {
+      "cafemarkt_id": "2207",
+      "name": "Avatherm Resital Termo Tepsi",
+      "code": "030.100446",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/resital-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/resital-termo-tepsi-termo-tepsi-avatherm-15646-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/resital-termo-tepsi-termo-tepsi-avatherm-15646-22-O.jpg",
+        "https://witcdn.cafemarkt.com/resital-termo-tepsi-termo-tepsi-avatherm-15724-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2722.23
+    },
+    {
+      "cafemarkt_id": "2205",
+      "name": "Avatherm Prestij Termo Tepsi",
+      "code": "030.100476",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/prestij-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/prestij-termo-tepsi-termo-tepsi-avatherm-15644-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/prestij-termo-tepsi-termo-tepsi-avatherm-15644-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2722.23
+    },
+    {
+      "cafemarkt_id": "6506",
+      "name": "Avatherm Prestij Termo Tepsi, Kilitli",
+      "code": "030.100491",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/prestij-kilitli-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/prestij-kilitli-termo-tepsi-termo-tepsi-avatherm-15680-65-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/prestij-kilitli-termo-tepsi-termo-tepsi-avatherm-15680-65-O.jpg",
+        "https://witcdn.cafemarkt.com/prestij-kilitli-termo-tepsi-termo-tepsi-avatherm-15727-65-O.jpg",
+        "https://witcdn.cafemarkt.com/prestij-kilitli-termo-tepsi-termo-tepsi-avatherm-15728-65-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3128.53
+    },
+    {
+      "cafemarkt_id": "2206",
+      "name": "Avatherm Resital Termo Tepsi, Kilitli",
+      "code": "030.100461",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/resital-kilitli-termo-tepsi",
+      "image": "https://witcdn.cafemarkt.com/resital-kilitli-termo-tepsi-termo-tepsi-avatherm-15645-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/resital-kilitli-termo-tepsi-termo-tepsi-avatherm-15645-22-O.jpg",
+        "https://witcdn.cafemarkt.com/resital-kilitli-termo-tepsi-termo-tepsi-avatherm-15725-22-O.jpg",
+        "https://witcdn.cafemarkt.com/resital-kilitli-termo-tepsi-termo-tepsi-avatherm-15726-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3128.53
+    },
+    {
+      "cafemarkt_id": "9890",
+      "name": "Avatherm 601M Thermobox, Menteşeli Kapak, Siyah",
+      "code": "030.100162",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-601m-menteseli-kapak-siyah",
+      "image": "https://witcdn.cafemarkt.com/thermobox-601m-menteseli-kapak-siyah-termobox-avatherm-15688-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-601m-menteseli-kapak-siyah-termobox-avatherm-15688-98-O.jpg",
+        "https://witcdn.cafemarkt.com/thermobox-601m-menteseli-kapak-siyah-termobox-avatherm-15701-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9629.38
+    },
+    {
+      "cafemarkt_id": "2238",
+      "name": "Avatherm 630 Pastane Thermobox",
+      "code": "030.100250",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pastane-termobox-630",
+      "image": "https://witcdn.cafemarkt.com/pastane-termobox-630-termobox-avatherm-15660-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pastane-termobox-630-termobox-avatherm-15660-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12839.17
+    },
+    {
+      "cafemarkt_id": "2216",
+      "name": "Avatherm Ergoline Motor Arkası Thermobox, Siyah",
+      "code": "030.100320",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/ergoline-thermobox-siyah",
+      "image": "https://witcdn.cafemarkt.com/ergoline-thermobox-siyah-termobox-avatherm-15649-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ergoline-thermobox-siyah-termobox-avatherm-15649-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "2237",
+      "name": "Avatherm Pizza Box, Kırmızı",
+      "code": "030.100305",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-box",
+      "image": "https://witcdn.cafemarkt.com/pizza-box-termobox-avatherm-8989-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-box-termobox-avatherm-8989-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-box-termobox-avatherm-8990-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-box-termobox-avatherm-8991-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "2241",
+      "name": "Avatherm 300 Thermobox, Sarı",
+      "code": "030.100120",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-300",
+      "image": "https://witcdn.cafemarkt.com/termobox-300-termobox-avatherm-15663-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-300-termobox-avatherm-15663-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-300-termobox-avatherm-15697-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-300-termobox-avatherm-24641-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9223.08
+    },
+    {
+      "cafemarkt_id": "2246",
+      "name": "Avatherm 601M Thermobox, Menteşeli Kapak, Gri",
+      "code": "030.100155",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-601m-menteseli-kapak",
+      "image": "https://witcdn.cafemarkt.com/termobox-601m-menteseli-kapak-termobox-avatherm-15668-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-601m-menteseli-kapak-termobox-avatherm-15668-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-601m-menteseli-kapak-termobox-avatherm-15700-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9629.38
+    },
+    {
+      "cafemarkt_id": "2247",
+      "name": "Avatherm 640 Thermobox, Kırmızı",
+      "code": "030.100275",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-640",
+      "image": "https://witcdn.cafemarkt.com/termobox-640-termobox-avatherm-15669-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-640-termobox-avatherm-15669-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-640-termobox-avatherm-15709-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9101.19
+    },
+    {
+      "cafemarkt_id": "2253",
+      "name": "Avatherm 50 Thermobox, Sarı",
+      "code": "030.100100",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-050",
+      "image": "https://witcdn.cafemarkt.com/termobox-050-termobox-avatherm-15675-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-050-termobox-avatherm-15675-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-050-termobox-avatherm-15694-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8207.32
+    },
+    {
+      "cafemarkt_id": "2245",
+      "name": "Avatherm 601 Thermobox, Gri",
+      "code": "030.100145",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-601",
+      "image": "https://witcdn.cafemarkt.com/termobox-601-termobox-avatherm-15667-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-601-termobox-avatherm-15667-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8613.62
+    },
+    {
+      "cafemarkt_id": "9888",
+      "name": "Avatherm 601 Thermobox, Siyah",
+      "code": "030.100147",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-601-siyah",
+      "image": "https://witcdn.cafemarkt.com/thermobox-601-siyah-termobox-avatherm-15687-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-601-siyah-termobox-avatherm-15687-98-O.jpg",
+        "https://witcdn.cafemarkt.com/thermobox-601-siyah-termobox-avatherm-15699-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8613.62
+    },
+    {
+      "cafemarkt_id": "9882",
+      "name": "Avatherm 600 Thermobox, Yeşil",
+      "code": "030.100170",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-600-yesil",
+      "image": "https://witcdn.cafemarkt.com/thermobox-600-yesil-termobox-avatherm-15685-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-600-yesil-termobox-avatherm-15685-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9629.38
+    },
+    {
+      "cafemarkt_id": "2235",
+      "name": "Avatherm Abs Pizza Hamur Tepsisi, 40x60 cm",
+      "code": "030.100260",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-hamur-tepsisi-abs-40x60-cm",
+      "image": "https://witcdn.cafemarkt.com/pizza-hamur-tepsisi-abs-40x60-cm-pizza-hamur-tekneleri-avatherm-15658-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-hamur-tepsisi-abs-40x60-cm-pizza-hamur-tekneleri-avatherm-15658-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1300.17
+    },
+    {
+      "cafemarkt_id": "2242",
+      "name": "Avatherm 400 Thermobox, Sarı",
+      "code": "030.100130",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-400",
+      "image": "https://witcdn.cafemarkt.com/termobox-400-termobox-avatherm-15664-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-400-termobox-avatherm-15664-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-400-termobox-avatherm-15698-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9751.27
+    },
+    {
+      "cafemarkt_id": "2240",
+      "name": "Avatherm 100 Thermobox, Sarı",
+      "code": "030.100110",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-100",
+      "image": "https://witcdn.cafemarkt.com/termobox-100-termobox-avatherm-15662-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-100-termobox-avatherm-15662-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-100-termobox-avatherm-15695-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8613.62
+    },
+    {
+      "cafemarkt_id": "2252",
+      "name": "Avatherm Waterbox, Musluksuz, 23 L",
+      "code": "030.100245",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/waterbox-musluksuz-23-lt",
+      "image": "https://witcdn.cafemarkt.com/waterbox-musluksuz-23-lt-termobox-avatherm-15674-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waterbox-musluksuz-23-lt-termobox-avatherm-15674-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18446.15
+    },
+    {
+      "cafemarkt_id": "2217",
+      "name": "Avatherm Ergoline Motor Arkası Thermobox, Turuncu",
+      "code": "030.100330",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/avatherm-ergoline-motor-arkasi-thermobox-turuncu",
+      "image": "https://witcdn.cafemarkt.com/avatherm-ergoline-motor-arkasi-thermobox-turuncu-termobox-avatherm-15733-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/avatherm-ergoline-motor-arkasi-thermobox-turuncu-termobox-avatherm-15733-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "8562",
+      "name": "Avatherm Pizza Box, Siyah",
+      "code": "030.100310",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-box-siyah",
+      "image": "https://witcdn.cafemarkt.com/pizza-box-siyah-termobox-avatherm-10246-85-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-box-siyah-termobox-avatherm-10246-85-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "2244",
+      "name": "Avatherm 600 Thermobox, Sarı",
+      "code": "030.100165",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-600",
+      "image": "https://witcdn.cafemarkt.com/termobox-600-termobox-avatherm-15666-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-600-termobox-avatherm-15666-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-600-termobox-avatherm-15702-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9629.38
+    },
+    {
+      "cafemarkt_id": "2214",
+      "name": "Avatherm Ergoline Motor Arkası Thermobox, Kırmızı",
+      "code": "030.100315",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/ergoline-termobox-kirmizi",
+      "image": "https://witcdn.cafemarkt.com/ergoline-termobox-kirmizi-termobox-avatherm-15647-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ergoline-termobox-kirmizi-termobox-avatherm-15647-22-O.jpg",
+        "https://witcdn.cafemarkt.com/ergoline-termobox-kirmizi-termobox-avatherm-15710-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "2215",
+      "name": "Avatherm Ergoline Motor Arkası Thermobox, Beyaz",
+      "code": "030.100325",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/ergoline-thermobox-beyaz",
+      "image": "https://witcdn.cafemarkt.com/ergoline-thermobox-beyaz-termobox-avatherm-15648-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ergoline-thermobox-beyaz-termobox-avatherm-15648-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "2053",
+      "name": "Avatherm AV14 Thermo Pizza Servis Çantası, 40x40x20 cm",
+      "code": "030.100360",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm",
+      "image": "https://witcdn.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-servis-cantalari-avatherm-15637-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-servis-cantalari-avatherm-15637-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2495.38
+    },
+    {
+      "cafemarkt_id": "2251",
+      "name": "Avatherm Waterbox, Musluklu, 23 L",
+      "code": "030.100235",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/waterbox-musluklu-23-lt",
+      "image": "https://witcdn.cafemarkt.com/waterbox-musluklu-23-lt-termobox-avatherm-15673-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/waterbox-musluklu-23-lt-termobox-avatherm-15673-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17064.72
+    },
+    {
+      "cafemarkt_id": "2058",
+      "name": "Avatherm AV12 Servis Çantası, Dikdörtgen, 35x23x23 cm",
+      "code": "030.100350",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/dikdorgen-servis-cantasi-35x23x23-cm",
+      "image": "https://witcdn.cafemarkt.com/dikdorgen-servis-cantasi-35x23x23-cm-servis-cantalari-avatherm-15642-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/dikdorgen-servis-cantasi-35x23x23-cm-servis-cantalari-avatherm-15642-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2197.42
+    },
+    {
+      "cafemarkt_id": "2055",
+      "name": "Avatherm AV16 Thermo Pide Servis Çantası, 52x23x15 cm",
+      "code": "030.100370",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pide-servis-cantasi-52x23x15-cm",
+      "image": "https://witcdn.cafemarkt.com/pide-servis-cantasi-52x23x15-cm-servis-cantalari-avatherm-15639-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pide-servis-cantasi-52x23x15-cm-servis-cantalari-avatherm-15639-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1191.82
+    },
+    {
+      "cafemarkt_id": "2056",
+      "name": "Avatherm AV18 Thermo Pizza Servis Çantası, 35x45x20 cm",
+      "code": "030.100380",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-2056",
+      "image": "https://witcdn.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-2056-servis-cantalari-avatherm-15640-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-2056-servis-cantalari-avatherm-15640-20-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-servis-cantasi-40x40x20-cm-2056-servis-cantalari-avatherm-15712-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3128.53
+    },
+    {
+      "cafemarkt_id": "2057",
+      "name": "Avatherm AV11 Servis Çantası, Kare, 38x38x25 cm",
+      "code": "030.100345",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/kare-servis-cantasi-38x38x25-cm",
+      "image": "https://witcdn.cafemarkt.com/kare-servis-cantasi-38x38x25-cm-servis-cantalari-avatherm-37145-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kare-servis-cantasi-38x38x25-cm-servis-cantalari-avatherm-37145-20-O.jpg",
+        "https://witcdn.cafemarkt.com/kare-servis-cantasi-38x38x25-cm-servis-cantalari-avatherm-37146-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2793.33
+    },
+    {
+      "cafemarkt_id": "2054",
+      "name": "Avatherm AV15 Thermo Pizza Servis Çantası, 45x45x20 cm",
+      "code": "030.100365",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-servis-cantasi-45x45x20-cm",
+      "image": "https://witcdn.cafemarkt.com/pizza-servis-cantasi-45x45x20-cm-servis-cantalari-avatherm-15638-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-servis-cantasi-45x45x20-cm-servis-cantalari-avatherm-15638-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2644.36
+    },
+    {
+      "cafemarkt_id": "2052",
+      "name": "Avatherm AV13 Thermo Pizza Servis Çantası, 35x35x20 cm",
+      "code": "030.100355",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-servis-cantasi-35x35x20-cm",
+      "image": "https://witcdn.cafemarkt.com/pizza-servis-cantasi-35x35x20-cm-servis-cantalari-avatherm-15636-20-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-servis-cantasi-35x35x20-cm-servis-cantalari-avatherm-15636-20-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2420.89
+    },
+    {
+      "cafemarkt_id": "2236",
+      "name": "Avatherm Pizza Hamur Teknesi Kapağı, 45x65 cm",
+      "code": "030.100270",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/pizza-hamur-teknesi-kapagi",
+      "image": "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-kapagi-pizza-hamur-tekneleri-avatherm-15659-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-kapagi-pizza-hamur-tekneleri-avatherm-15659-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-kapagi-pizza-hamur-tekneleri-avatherm-15707-22-O.jpg",
+        "https://witcdn.cafemarkt.com/pizza-hamur-teknesi-kapagi-pizza-hamur-tekneleri-avatherm-15708-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1056.39
+    },
+    {
+      "cafemarkt_id": "2233",
+      "name": "Avatherm AV17 Servis Çantası, Dikdörtgen, 50x36x24 cm",
+      "code": "030.100375",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/dikdortgen-servis-cantasi-50x36x24-cm",
+      "image": "https://witcdn.cafemarkt.com/dikdortgen-servis-cantasi-50x36x24-cm-servis-cantalari-avatherm-15656-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/dikdortgen-servis-cantasi-50x36x24-cm-servis-cantalari-avatherm-15656-22-O.jpg",
+        "https://witcdn.cafemarkt.com/dikdortgen-servis-cantasi-50x36x24-cm-servis-cantalari-avatherm-15711-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2346.4
+    },
+    {
+      "cafemarkt_id": "2231",
+      "name": "Avatherm 600M Double Thermobox, Tekerlekli, Sarı",
+      "code": "030.100201",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/avatherm-600m-double-thermobox-tekerlekli-sari",
+      "image": "https://witcdn.cafemarkt.com/avatherm-600m-double-thermobox-tekerlekli-sari-termobox-avatherm-47165-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/avatherm-600m-double-thermobox-tekerlekli-sari-termobox-avatherm-47165-22-O.jpg",
+        "https://witcdn.cafemarkt.com/avatherm-600m-double-thermobox-tekerlekli-sari-termobox-avatherm-47164-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45424.67
+    },
+    {
+      "cafemarkt_id": "9883",
+      "name": "Avatherm 600M Thermobox, Menteşeli Kapak, Yeşil",
+      "code": "030.100195",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-600m-menteseli-kapak-yesil",
+      "image": "https://witcdn.cafemarkt.com/thermobox-600m-menteseli-kapak-yesil-termobox-avatherm-15686-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-600m-menteseli-kapak-yesil-termobox-avatherm-15686-98-O.jpg",
+        "https://witcdn.cafemarkt.com/thermobox-600m-menteseli-kapak-yesil-termobox-avatherm-15716-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11620.26
+    },
+    {
+      "cafemarkt_id": "2243",
+      "name": "Avatherm 600x2 Thermobox, Sarı",
+      "code": "030.100210",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-600x2",
+      "image": "https://witcdn.cafemarkt.com/termobox-600x2-termobox-avatherm-15665-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-600x2-termobox-avatherm-15665-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-600x2-termobox-avatherm-15704-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29010.03
+    },
+    {
+      "cafemarkt_id": "2254",
+      "name": "Avatherm AV19 Servis Çantası, Büyük Menü, 45x45x20 cm",
+      "code": "030.100385",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/servis-cantasi-45x45x20-cm",
+      "image": "https://witcdn.cafemarkt.com/servis-cantasi-45x45x20-cm-servis-cantalari-avatherm-15676-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/servis-cantasi-45x45x20-cm-servis-cantalari-avatherm-15676-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3128.53
+    },
+    {
+      "cafemarkt_id": "3409",
+      "name": "Avatherm Trolley 20 Termo Tepsi Taşıma & Servis Arabası",
+      "code": "030.150235",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-20",
+      "image": "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-20-termo-tepsi-tasima-arabalari-avatherm-15677-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-20-termo-tepsi-tasima-arabalari-avatherm-15677-34-O.jpg",
+        "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-20-termo-tepsi-tasima-arabalari-avatherm-15730-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48878.25
+    },
+    {
+      "cafemarkt_id": "9899",
+      "name": "Avatherm F55 Medikal Thermobox, 50 L",
+      "code": "030.100425",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/medikal-thermobox-f55-50-lt",
+      "image": "https://witcdn.cafemarkt.com/medikal-thermobox-f55-50-lt-termobox-avatherm-15693-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f55-50-lt-termobox-avatherm-15693-98-O.jpg",
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f55-50-lt-termobox-avatherm-15720-98-O.jpg",
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f55-50-lt-termobox-avatherm-15721-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13854.93
+    },
+    {
+      "cafemarkt_id": "2249",
+      "name": "Avatherm Thermobox Trolley Taşıma Arabası, Kulplu, 50x55x90 cm",
+      "code": "030.150245",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-trolley-50x55x90-cm",
+      "image": "https://witcdn.cafemarkt.com/termobox-trolley-50x55x90-cm-termobox-avatherm-15671-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-trolley-50x55x90-cm-termobox-avatherm-15671-22-O.jpg",
+        "https://witcdn.cafemarkt.com/termobox-trolley-50x55x90-cm-termobox-avatherm-15731-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16252.12
+    },
+    {
+      "cafemarkt_id": "9896",
+      "name": "Avatherm F20 Medikal Thermobox, 9.5 L",
+      "code": "030.100410",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/medikal-thermobox-f20-9",
+      "image": "https://witcdn.cafemarkt.com/medikal-thermobox-f20-9-termobox-avatherm-15690-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f20-9-termobox-avatherm-15690-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7597.87
+    },
+    {
+      "cafemarkt_id": "9897",
+      "name": "Avatherm F25 Medikal Thermobox, 20 L",
+      "code": "030.100415",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/medikal-thermobox-f25-20-lt",
+      "image": "https://witcdn.cafemarkt.com/medikal-thermobox-f25-20-lt-termobox-avatherm-15691-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f25-20-lt-termobox-avatherm-15691-98-O.jpg",
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f25-20-lt-termobox-avatherm-15717-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10076.31
+    },
+    {
+      "cafemarkt_id": "9895",
+      "name": "Avatherm F10 Medikal Thermobox, 3.5 L",
+      "code": "030.100405",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/medikal-thermobox-f10-3",
+      "image": "https://witcdn.cafemarkt.com/medikal-thermobox-f10-3-termobox-avatherm-15689-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f10-3-termobox-avatherm-15689-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6338.33
+    },
+    {
+      "cafemarkt_id": "9898",
+      "name": "Avatherm F40 Medikal Thermobox, 35 L",
+      "code": "030.100420",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/medikal-thermobox-f40-35-lt",
+      "image": "https://witcdn.cafemarkt.com/medikal-thermobox-f40-35-lt-termobox-avatherm-15692-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f40-35-lt-termobox-avatherm-15692-98-O.jpg",
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f40-35-lt-termobox-avatherm-15718-98-O.jpg",
+        "https://witcdn.cafemarkt.com/medikal-thermobox-f40-35-lt-termobox-avatherm-15719-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12026.57
+    },
+    {
+      "cafemarkt_id": "9877",
+      "name": "Avatherm 50 Thermobox, Gri",
+      "code": "030.100105",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-50-gri",
+      "image": "https://witcdn.cafemarkt.com/thermobox-50-gri-termobox-avatherm-15683-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-50-gri-termobox-avatherm-15683-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8207.32
+    },
+    {
+      "cafemarkt_id": "2218",
+      "name": "Avatherm F180 Fast Food & Medikal Termobox, Kırmızı",
+      "code": "030.100395",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/fast-food-termobox",
+      "image": "https://witcdn.cafemarkt.com/fast-food-termobox-termobox-avatherm-15651-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/fast-food-termobox-termobox-avatherm-15651-22-O.jpg",
+        "https://witcdn.cafemarkt.com/fast-food-termobox-termobox-avatherm-15713-22-O.jpg",
+        "https://witcdn.cafemarkt.com/fast-food-termobox-termobox-avatherm-15714-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7069.67
+    },
+    {
+      "cafemarkt_id": "3410",
+      "name": "Avatherm Trolley 12 Termo Tepsi Taşıma & Servis Arabası",
+      "code": "030.150225",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-12",
+      "image": "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-12-termo-tepsi-tasima-arabalari-avatherm-15678-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-12-termo-tepsi-tasima-arabalari-avatherm-15678-34-O.jpg",
+        "https://witcdn.cafemarkt.com/termo-tepsi-servis-arabasi-trolley-12-termo-tepsi-tasima-arabalari-avatherm-15729-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 36364.12
+    },
+    {
+      "cafemarkt_id": "2219",
+      "name": "Avatherm 600M Thermobox, Menteşeli Kapak, Sarı",
+      "code": "030.100190",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-600m-menteseli-kapak",
+      "image": "https://witcdn.cafemarkt.com/termobox-600m-menteseli-kapak-termobox-avatherm-15652-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-600m-menteseli-kapak-termobox-avatherm-15652-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11620.26
+    },
+    {
+      "cafemarkt_id": "9879",
+      "name": "Avatherm 200 Thermobox, Gastronom Tip, Gri",
+      "code": "030.100118",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-200-gastronom-tip-gri",
+      "image": "https://witcdn.cafemarkt.com/thermobox-200-gastronom-tip-gri-termobox-avatherm-15684-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-200-gastronom-tip-gri-termobox-avatherm-15684-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12026.57
+    },
+    {
+      "cafemarkt_id": "2229",
+      "name": "Avatherm 200 Thermobox, Gastronom Tip, Sarı",
+      "code": "030.100116",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-200-gastronom-tipi",
+      "image": "https://witcdn.cafemarkt.com/thermobox-200-gastronom-tipi-termobox-avatherm-15653-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-200-gastronom-tipi-termobox-avatherm-15653-22-O.jpg",
+        "https://witcdn.cafemarkt.com/thermobox-200-gastronom-tipi-termobox-avatherm-15696-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12026.57
+    },
+    {
+      "cafemarkt_id": "9875",
+      "name": "Avatherm F180 Fast Food & Medikal Termobox, Sarı",
+      "code": "030.100400",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/f180-fast-food-medikal-termobox-sari",
+      "image": "https://witcdn.cafemarkt.com/f180-fast-food-medikal-termobox-sari-termobox-avatherm-15681-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/f180-fast-food-medikal-termobox-sari-termobox-avatherm-15681-98-O.jpg",
+        "https://witcdn.cafemarkt.com/f180-fast-food-medikal-termobox-sari-termobox-avatherm-15715-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7069.67
+    },
+    {
+      "cafemarkt_id": "2248",
+      "name": "Avatherm Thermobox Trolley Taşıma Arabası, Kuplsuz, 50x55x17 cm",
+      "code": "030.150250",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-trolley-50x55x17-cm",
+      "image": "https://witcdn.cafemarkt.com/termobox-trolley-50x55x17-cm-termobox-avatherm-15670-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-trolley-50x55x17-cm-termobox-avatherm-15670-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13529.89
+    },
+    {
+      "cafemarkt_id": "2250",
+      "name": "Avatherm 600x2 Thermobox Trolley Taşıma Arabası, 70x60x22 cm",
+      "code": "030.150255",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/termobox-600x2-trolley-70x60x22-cm",
+      "image": "https://witcdn.cafemarkt.com/termobox-600x2-trolley-70x60x22-cm-termobox-avatherm-15672-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/termobox-600x2-trolley-70x60x22-cm-termobox-avatherm-15672-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12757.91
+    },
+    {
+      "cafemarkt_id": "9876",
+      "name": "Avatherm 50 Thermobox, Yeşil",
+      "code": "030.100101",
+      "brand": "Avatherm",
+      "url": "https://www.cafemarkt.com/thermobox-50-yesil",
+      "image": "https://witcdn.cafemarkt.com/thermobox-50-yesil-termobox-avatherm-15682-98-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/thermobox-50-yesil-termobox-avatherm-15682-98-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8207.32
+    }
+  ]
+}

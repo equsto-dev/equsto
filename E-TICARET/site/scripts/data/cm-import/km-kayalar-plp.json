@@ -1,0 +1,34 @@
+{
+  "brand": "KM Kayalar",
+  "slug": "km-kayalar",
+  "fetchedAt": "2026-09-19T05:40:35.932Z",
+  "reportedTotal": 2,
+  "pages": 1,
+  "count": 2,
+  "items": [
+    {
+      "cafemarkt_id": "44912",
+      "name": "Kayalar Bardak Basketi, 16 Bölmeli, 500x500x100 mm, Kahverengi - (Outlet Ürünü)",
+      "code": "294.KBB16K",
+      "brand": "KM Kayalar",
+      "url": "https://www.cafemarkt.com/kayalar-bardak-basketi-16-bolmeli-500x500x100-mm-kahverengi-outlet-urunu",
+      "image": "https://witcdn.cafemarkt.com/kayalar-bardak-basketi-16-bolmeli-500x500x100-mm-kahverengi-outlet-urunu-outlet-urunler-km-kayalar-90101-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kayalar-bardak-basketi-16-bolmeli-500x500x100-mm-kahverengi-outlet-urunu-outlet-urunler-km-kayalar-90101-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 430
+    },
+    {
+      "cafemarkt_id": "44909",
+      "name": "Kayalar Bardak Basketi, 25 Bölmeli, 500x500x100 mm, Kahverengi - (Outlet Ürünü)",
+      "code": "294.KBB25K",
+      "brand": "KM Kayalar",
+      "url": "https://www.cafemarkt.com/kayalar-bardak-basketi-25-bolmeli-500x500x100-mm-kahverengi-outlet-urunu",
+      "image": "https://witcdn.cafemarkt.com/kayalar-bardak-basketi-25-bolmeli-500x500x100-mm-kahverengi-outlet-urunu-outlet-urunler-km-kayalar-90098-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kayalar-bardak-basketi-25-bolmeli-500x500x100-mm-kahverengi-outlet-urunu-outlet-urunler-km-kayalar-90098-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 465
+    }
+  ]
+}

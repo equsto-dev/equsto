@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import BrandHubJsonLd from "@/components/seo/BrandHubJsonLd";
 import MarkaHubScripts from "@/components/vitrin/MarkaHubScripts";
 import VitrinShell from "@/components/vitrin/VitrinShell";
@@ -122,9 +121,6 @@ export default async function MarkaSlugPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  // Unox: katalogda gerçek brand değil (Öztiryakiler distribütörlüğü).
-  // Brand hub oluşturulmaz; 404 dön.
-  if (slug === "unox") notFound();
   return <MarkaSlugPageInner slug={slug} lang="tr" />;
 }
 

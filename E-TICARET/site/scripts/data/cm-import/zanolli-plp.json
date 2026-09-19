@@ -1,0 +1,36 @@
+{
+  "brand": "Zanolli",
+  "slug": "zanolli",
+  "fetchedAt": "2026-09-19T05:46:10.979Z",
+  "reportedTotal": 2,
+  "pages": 1,
+  "count": 2,
+  "items": [
+    {
+      "cafemarkt_id": "42758",
+      "name": "Zanolli Sirio Kanatlı Set Üstü Hamur Açma Makinesi, 600/1200 mm",
+      "code": "675.SIRIO.600.1200",
+      "brand": "Zanolli",
+      "url": "https://www.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-600-1200-mm",
+      "image": "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-600-1200-mm-hamur-acma-makineleri-zanolli-83067-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-600-1200-mm-hamur-acma-makineleri-zanolli-83067-42-O.jpg",
+        "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-600-1200-mm-hamur-acma-makineleri-zanolli-83068-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 411485.25
+    },
+    {
+      "cafemarkt_id": "42757",
+      "name": "Zanolli Sirio Kanatlı Set Üstü Hamur Açma Makinesi, 500/1000 mm",
+      "code": "675.SIRIO.500.1000",
+      "brand": "Zanolli",
+      "url": "https://www.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-500-1000-mm",
+      "image": "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-500-1000-mm-hamur-acma-makineleri-zanolli-83066-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-500-1000-mm-hamur-acma-makineleri-zanolli-83066-42-O.jpg",
+        "https://witcdn.cafemarkt.com/zanolli-sirio-kanatli-set-ustu-hamur-acma-makinesi-500-1000-mm-hamur-acma-makineleri-zanolli-83065-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 311710.59
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "brand": "Pacojet",
+  "slug": "pacojet",
+  "fetchedAt": "2026-09-19T05:42:32.566Z",
+  "reportedTotal": 2,
+  "pages": 1,
+  "count": 2,
+  "items": [
+    {
+      "cafemarkt_id": "44782",
+      "name": "Pacojet Synthetic Beaker - Sentetik Pacotize Etme Haznesi",
+      "code": "594.SYNTETIC.BEAKER",
+      "brand": "Pacojet",
+      "url": "https://www.cafemarkt.com/pacojet-synthetic-beaker-sentetik-pacotize-etme-haznesi",
+      "image": "https://witcdn.cafemarkt.com/pacojet-synthetic-beaker-sentetik-pacotize-etme-haznesi-sorbe-makineleri-pacojet-89808-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pacojet-synthetic-beaker-sentetik-pacotize-etme-haznesi-sorbe-makineleri-pacojet-89808-44-O.jpg",
+        "https://witcdn.cafemarkt.com/pacojet-synthetic-beaker-sentetik-pacotize-etme-haznesi-sorbe-makineleri-pacojet-89809-44-O.jpg",
+        "https://witcdn.cafemarkt.com/pacojet-synthetic-beaker-sentetik-pacotize-etme-haznesi-sorbe-makineleri-pacojet-89810-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1863.91
+    },
+    {
+      "cafemarkt_id": "37485",
+      "name": "Pacojet 4",
+      "code": "594.PJ042011",
+      "brand": "Pacojet",
+      "url": "https://www.cafemarkt.com/pacojet-4",
+      "image": "https://witcdn.cafemarkt.com/pacojet-4-sorbe-makineleri-pacojet-89804-37-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/pacojet-4-sorbe-makineleri-pacojet-89804-37-O.jpg",
+        "https://witcdn.cafemarkt.com/pacojet-4-sorbe-makineleri-pacojet-89803-37-O.jpg",
+        "https://witcdn.cafemarkt.com/pacojet-4-sorbe-makineleri-pacojet-89802-37-O.jpg"
+      ],
+      "price_try_kdv_dahil": 528297.6
+    }
+  ]
+}

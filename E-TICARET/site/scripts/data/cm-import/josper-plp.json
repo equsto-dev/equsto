@@ -1,0 +1,66 @@
+{
+  "brand": "Josper",
+  "slug": "josper",
+  "fetchedAt": "2026-09-19T05:40:07.307Z",
+  "reportedTotal": 4,
+  "pages": 1,
+  "count": 4,
+  "items": [
+    {
+      "cafemarkt_id": "45026",
+      "name": "Josper HJX-PRO-M120-W Sıcak Tutma Bölmeli Kömürlü Izgara Fırını",
+      "code": "491.HJX.PRO.M120.W",
+      "brand": "Josper",
+      "url": "https://www.cafemarkt.com/josper-hjx-pro-m120-w-sicak-tutma-bolmeli-komurlu-izgara-firini",
+      "image": "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90573-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90573-45-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90574-45-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90575-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 845076.82
+    },
+    {
+      "cafemarkt_id": "45025",
+      "name": "Josper HJX-PRO S80 W Sıcak Tutma Bölmeli Kömürlü Izgara Fırını",
+      "code": "491.HJX.PRO.S80.W",
+      "brand": "Josper",
+      "url": "https://www.cafemarkt.com/josper-hjx-pro-s80-w-sicak-tutma-bolmeli-komurlu-izgara-firini",
+      "image": "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90570-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90570-45-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90571-45-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-w-sicak-tutma-bolmeli-komurlu-izgara-firini-konveksiyonel-firinlar-josper-90572-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 708243.09
+    },
+    {
+      "cafemarkt_id": "44231",
+      "name": "Josper HJX-PRO-S80 Kömürlü Fırın",
+      "code": "491.HJX.PRO.S80",
+      "brand": "Josper",
+      "url": "https://www.cafemarkt.com/josper-hjx-pro-s80-komurlu-firin",
+      "image": "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-komurlu-firin-konveksiyonel-firinlar-josper-88303-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-komurlu-firin-konveksiyonel-firinlar-josper-88303-44-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-komurlu-firin-konveksiyonel-firinlar-josper-88302-44-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-s80-komurlu-firin-konveksiyonel-firinlar-josper-88297-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 656233.91
+    },
+    {
+      "cafemarkt_id": "44230",
+      "name": "Josper HJX-PRO-M120 Kömürlü Fırın",
+      "code": "491.HJX.PRO.M120",
+      "brand": "Josper",
+      "url": "https://www.cafemarkt.com/josper-hjx-pro-m120-komurlu-firin",
+      "image": "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-komurlu-firin-konveksiyonel-firinlar-josper-88310-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-komurlu-firin-konveksiyonel-firinlar-josper-88310-44-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-komurlu-firin-konveksiyonel-firinlar-josper-88309-44-O.jpg",
+        "https://witcdn.cafemarkt.com/josper-hjx-pro-m120-komurlu-firin-konveksiyonel-firinlar-josper-88304-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 779699.95
+    }
+  ]
+}

@@ -1,0 +1,1510 @@
+{
+  "brand": "Meşale",
+  "slug": "mesale",
+  "fetchedAt": "2026-09-19T08:34:23.521Z",
+  "reportedTotal": 125,
+  "pages": 4,
+  "count": 125,
+  "items": [
+    {
+      "cafemarkt_id": "8826",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.CHKFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-3-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-3-demlik-cay-kazani-cay-kazanlari-mesale-10805-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-3-demlik-cay-kazani-cay-kazanlari-mesale-10805-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28123.79
+    },
+    {
+      "cafemarkt_id": "8772",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 3 Demlikli",
+      "code": "090.CHAFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10761-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10761-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39280.33
+    },
+    {
+      "cafemarkt_id": "8867",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 2 Demlikli",
+      "code": "090.AAFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10846-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10846-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41139.76
+    },
+    {
+      "cafemarkt_id": "8797",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 4 Demlikli",
+      "code": "090.ANAFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10786-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10786-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 52761.16
+    },
+    {
+      "cafemarkt_id": "8821",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Otomatik, 4 Demlikli",
+      "code": "090.INAFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10802-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10802-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48809.88
+    },
+    {
+      "cafemarkt_id": "8753",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.CHKFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10742-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10742-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28588.64
+    },
+    {
+      "cafemarkt_id": "8780",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 5 Demlikli",
+      "code": "090.ANKFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10769-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10769-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44626.18
+    },
+    {
+      "cafemarkt_id": "8791",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 4 Demlikli",
+      "code": "090.ANDFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10780-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10780-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 50901.73
+    },
+    {
+      "cafemarkt_id": "8856",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.ATFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik3-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik3-demlikli-cay-kazan-cay-kazanlari-mesale-10835-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik3-demlikli-cay-kazan-cay-kazanlari-mesale-10835-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37653.34
+    },
+    {
+      "cafemarkt_id": "8754",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.CHKFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10743-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10743-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29983.21
+    },
+    {
+      "cafemarkt_id": "8766",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 3 Demlikli",
+      "code": "090.CHDFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-3-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10755-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10755-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37188.48
+    },
+    {
+      "cafemarkt_id": "8825",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.CHKFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-2-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-2-demlik-cay-kazani-cay-kazanlari-mesale-10804-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-2-demlik-cay-kazani-cay-kazanlari-mesale-10804-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26729.22
+    },
+    {
+      "cafemarkt_id": "8892",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Elektrikli, 3 Demlikli",
+      "code": "090.IAFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-elektrikli-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10863-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10863-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40442.47
+    },
+    {
+      "cafemarkt_id": "8769",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 6 Demlikli",
+      "code": "090.CHDFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-6-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10758-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10758-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47182.88
+    },
+    {
+      "cafemarkt_id": "8801",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.INKFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10789-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10789-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30680.5
+    },
+    {
+      "cafemarkt_id": "8832",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.CHTFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik3-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik3-demlik-cay-kazan-cay-kazanlari-mesale-10811-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik3-demlik-cay-kazan-cay-kazanlari-mesale-10811-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31145.35
+    },
+    {
+      "cafemarkt_id": "11150",
+      "name": "Meşale Inox Full Otomatik Demlikli Klasik Çay Kazanı, Full Otomatik, 75 L",
+      "code": "090.INKFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-56580-11-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-56580-11-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42534.32
+    },
+    {
+      "cafemarkt_id": "8760",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.CHTFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-3-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10749-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10749-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33004.78
+    },
+    {
+      "cafemarkt_id": "8868",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 3 Demlikli",
+      "code": "090.AAFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10847-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10847-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44161.32
+    },
+    {
+      "cafemarkt_id": "8795",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 2 Demlikli",
+      "code": "090.ANAFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10784-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10784-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42999.18
+    },
+    {
+      "cafemarkt_id": "8853",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 6 Demlikli",
+      "code": "090.AKFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-6-demlikli-cay-kazani-cay-kazanlari-mesale-10832-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-6-demlikli-cay-kazani-cay-kazanlari-mesale-10832-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43464.04
+    },
+    {
+      "cafemarkt_id": "8820",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Otomatik, 3 Demlikli",
+      "code": "090.INAFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10801-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10801-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42301.9
+    },
+    {
+      "cafemarkt_id": "8893",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Elektrikli, 4 Demlikli",
+      "code": "090.IAFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-elektrikli-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10864-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10864-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46485.6
+    },
+    {
+      "cafemarkt_id": "8850",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.AKFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10829-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10829-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34166.92
+    },
+    {
+      "cafemarkt_id": "8802",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.INKFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10790-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10790-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32539.92
+    },
+    {
+      "cafemarkt_id": "8824",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 1 Demlikli",
+      "code": "090.CHKFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-1-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-1-demlik-cay-kazani-cay-kazanlari-mesale-10803-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-1-demlik-cay-kazani-cay-kazanlari-mesale-10803-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 21383.38
+    },
+    {
+      "cafemarkt_id": "8886",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Elektrikli, 3 Demlikli",
+      "code": "090.IDFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-elektrikli-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10860-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10860-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 38350.62
+    },
+    {
+      "cafemarkt_id": "8783",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.ANTFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-2-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10772-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10772-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 36956.05
+    },
+    {
+      "cafemarkt_id": "8827",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.CHKFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-4-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-4-demlik-cay-kazani-cay-kazanlari-mesale-10806-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-4-demlik-cay-kazani-cay-kazanlari-mesale-10806-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34864.2
+    },
+    {
+      "cafemarkt_id": "8781",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 6 Demlikli",
+      "code": "090.ANKFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10770-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10770-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45788.32
+    },
+    {
+      "cafemarkt_id": "8784",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.ANTFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-3-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10773-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-3-demlik-cay-kazani-cay-kazanlari-mesale-10773-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39512.76
+    },
+    {
+      "cafemarkt_id": "8855",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.ATFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik2-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik2-demlikli-cay-kazan-cay-kazanlari-mesale-10834-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik2-demlikli-cay-kazan-cay-kazanlari-mesale-10834-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35096.63
+    },
+    {
+      "cafemarkt_id": "8851",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.AKFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10830-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10830-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40907.33
+    },
+    {
+      "cafemarkt_id": "8880",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.ITFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-elektrik3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik3-demlikli-cay-kazani-cay-kazanlari-mesale-10856-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik3-demlikli-cay-kazani-cay-kazanlari-mesale-10856-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34166.92
+    },
+    {
+      "cafemarkt_id": "8885",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Elektrikli, 2 Demlikli",
+      "code": "090.IDFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-elektrikli-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10859-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10859-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35793.91
+    },
+    {
+      "cafemarkt_id": "8844",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 3 Demlikli",
+      "code": "090.CHAFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-3-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-3-demlik-cay-kazani-cay-kazanlari-mesale-10823-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-3-demlik-cay-kazani-cay-kazanlari-mesale-10823-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37420.91
+    },
+    {
+      "cafemarkt_id": "8873",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.IKFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-elektrikli-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10851-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10851-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29285.93
+    },
+    {
+      "cafemarkt_id": "8838",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 3 Demlikli",
+      "code": "090.CHDFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-3-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-3-demlik-cay-kazan-cay-kazanlari-mesale-10817-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-3-demlik-cay-kazan-cay-kazanlari-mesale-10817-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35329.06
+    },
+    {
+      "cafemarkt_id": "8891",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Elektrikli, 2 Demlikli",
+      "code": "090.IAFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-elektrikli-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10862-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10862-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37653.34
+    },
+    {
+      "cafemarkt_id": "8869",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 4 Demlikli",
+      "code": "090.AAFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10848-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10848-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 50436.88
+    },
+    {
+      "cafemarkt_id": "8808",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.INTFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10794-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10794-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35793.91
+    },
+    {
+      "cafemarkt_id": "8814",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Otomatik, 3 Demlikli",
+      "code": "090.INDFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10798-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10798-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40210.04
+    },
+    {
+      "cafemarkt_id": "8778",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 3 Demlikli",
+      "code": "090.ANKFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10767-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10767-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35793.91
+    },
+    {
+      "cafemarkt_id": "8874",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Elektrikli, 3 Demlikli",
+      "code": "090.IKFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-elektrikli-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10852-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-3-demlikli-cay-kazani-cay-kazanlari-mesale-10852-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30680.5
+    },
+    {
+      "cafemarkt_id": "8752",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 1 Demlikli",
+      "code": "090.CHKFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10741-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10741-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 23242.8
+    },
+    {
+      "cafemarkt_id": "8755",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.CHKFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10744-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10744-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37188.48
+    },
+    {
+      "cafemarkt_id": "8798",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 5 Demlikli",
+      "code": "090.ANAFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10787-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10787-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54155.72
+    },
+    {
+      "cafemarkt_id": "8879",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.ITFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-elektrik2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik2-demlikli-cay-kazani-cay-kazanlari-mesale-10855-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik2-demlikli-cay-kazani-cay-kazanlari-mesale-10855-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31377.78
+    },
+    {
+      "cafemarkt_id": "8759",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.CHTFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-2-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10748-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10748-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31145.35
+    },
+    {
+      "cafemarkt_id": "8830",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 1 Demlikli",
+      "code": "090.CHTFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik1-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik1-demlik-cay-kazan-cay-kazanlari-mesale-10809-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik1-demlik-cay-kazan-cay-kazanlari-mesale-10809-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 23707.66
+    },
+    {
+      "cafemarkt_id": "8887",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Elektrikli, 4 Demlikli",
+      "code": "090.IDFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-elektrikli-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10861-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10861-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44393.75
+    },
+    {
+      "cafemarkt_id": "8799",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 6 Demlikli",
+      "code": "090.ANAFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10788-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10788-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56247.58
+    },
+    {
+      "cafemarkt_id": "8765",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 2 Demlikli",
+      "code": "090.CHDFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-2-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10754-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-2-demlik-cay-kazani-cay-kazanlari-mesale-10754-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35561.48
+    },
+    {
+      "cafemarkt_id": "8779",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.ANKFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10768-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10768-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43231.61
+    },
+    {
+      "cafemarkt_id": "8789",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 2 Demlikli",
+      "code": "090.ANDFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10778-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10778-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41139.76
+    },
+    {
+      "cafemarkt_id": "8773",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 4 Demlikli",
+      "code": "090.CHAFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10762-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10762-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45788.32
+    },
+    {
+      "cafemarkt_id": "8831",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.CHTFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik2-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik2-demlik-cay-kazan-cay-kazanlari-mesale-10810-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik2-demlik-cay-kazan-cay-kazanlari-mesale-10810-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29518.36
+    },
+    {
+      "cafemarkt_id": "8843",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 2 Demlikli",
+      "code": "090.CHAFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-2-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-2-demlik-cay-kazani-cay-kazanlari-mesale-10822-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-2-demlik-cay-kazani-cay-kazanlari-mesale-10822-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35561.48
+    },
+    {
+      "cafemarkt_id": "8870",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 5 Demlikli",
+      "code": "090.AAFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-5-demlikli-cay-kazani-cay-kazanlari-mesale-10849-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-5-demlikli-cay-kazani-cay-kazanlari-mesale-10849-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 51831.44
+    },
+    {
+      "cafemarkt_id": "8796",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 3 Demlikli",
+      "code": "090.ANAFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10785-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10785-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45788.32
+    },
+    {
+      "cafemarkt_id": "8875",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.IKFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-elektrikli-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10853-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-elektrikli-4-demlikli-cay-kazani-cay-kazanlari-mesale-10853-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37420.91
+    },
+    {
+      "cafemarkt_id": "8819",
+      "name": "Meşale Inox Çay Kazanı, Akıllı, Full Otomatik, 2 Demlikli",
+      "code": "090.INAFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-akilli-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10800-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10800-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39512.76
+    },
+    {
+      "cafemarkt_id": "8849",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 2 Demlikli",
+      "code": "090.AKFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10828-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-2-demlikli-cay-kazani-cay-kazanlari-mesale-10828-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32772.35
+    },
+    {
+      "cafemarkt_id": "8871",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 6 Demlikli",
+      "code": "090.AAFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-6-demlikli-cay-kazani-cay-kazanlari-mesale-10850-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-6-demlikli-cay-kazani-cay-kazanlari-mesale-10850-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53458.44
+    },
+    {
+      "cafemarkt_id": "8861",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 2 Demlikli",
+      "code": "090.ADFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-2-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-2-demlikli-cay-kazan-cay-kazanlari-mesale-10840-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-2-demlikli-cay-kazan-cay-kazanlari-mesale-10840-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39512.76
+    },
+    {
+      "cafemarkt_id": "8828",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 5 Demlikli",
+      "code": "090.CHKFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-5-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-5-demlik-cay-kazani-cay-kazanlari-mesale-10807-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-5-demlik-cay-kazani-cay-kazanlari-mesale-10807-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 36258.77
+    },
+    {
+      "cafemarkt_id": "8757",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 6 Demlikli",
+      "code": "090.CHKFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10746-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10746-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39977.62
+    },
+    {
+      "cafemarkt_id": "8860",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 1 Demlikli",
+      "code": "090.ADFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-1-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-1-demlikli-cay-kazan-cay-kazanlari-mesale-10839-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-1-demlikli-cay-kazan-cay-kazanlari-mesale-10839-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31377.78
+    },
+    {
+      "cafemarkt_id": "8862",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 3 Demlikli",
+      "code": "090.ADFE3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-3-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-3-demlikli-cay-kazan-cay-kazanlari-mesale-10841-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-3-demlikli-cay-kazan-cay-kazanlari-mesale-10841-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42069.47
+    },
+    {
+      "cafemarkt_id": "8771",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 2 Demlikli",
+      "code": "090.CHAFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10760-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10760-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37188.48
+    },
+    {
+      "cafemarkt_id": "8848",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 1 Demlikli",
+      "code": "090.AKFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10827-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10827-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 24869.8
+    },
+    {
+      "cafemarkt_id": "8767",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 4 Demlikli",
+      "code": "090.CHDFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-4-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10756-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10756-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43928.89
+    },
+    {
+      "cafemarkt_id": "8777",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.ANKFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10766-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10766-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34631.77
+    },
+    {
+      "cafemarkt_id": "8833",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.CHTFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik4-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik4-demlik-cay-kazan-cay-kazanlari-mesale-10812-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik4-demlik-cay-kazan-cay-kazanlari-mesale-10812-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37188.48
+    },
+    {
+      "cafemarkt_id": "8792",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 5 Demlikli",
+      "code": "090.ANDFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10781-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10781-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 52063.87
+    },
+    {
+      "cafemarkt_id": "8809",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.INTFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10795-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10795-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42534.32
+    },
+    {
+      "cafemarkt_id": "8762",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 5 Demlikli",
+      "code": "090.CHTFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-5-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10751-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10751-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41139.76
+    },
+    {
+      "cafemarkt_id": "8884",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Elektrikli, 1 Demlikli",
+      "code": "090.IDFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-elektrikli-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10858-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10858-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29750.78
+    },
+    {
+      "cafemarkt_id": "8813",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Otomatik, 2 Demlikli",
+      "code": "090.INDFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10797-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10797-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37653.34
+    },
+    {
+      "cafemarkt_id": "8863",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 4 Demlikli",
+      "code": "090.ADFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-4-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-4-demlikli-cay-kazan-cay-kazanlari-mesale-10842-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-4-demlikli-cay-kazan-cay-kazanlari-mesale-10842-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48345.02
+    },
+    {
+      "cafemarkt_id": "8829",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Elektrikli, 6 Demlikli",
+      "code": "090.CHKFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-elektrikli-6-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-6-demlik-cay-kazani-cay-kazanlari-mesale-10808-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-elektrikli-6-demlik-cay-kazani-cay-kazanlari-mesale-10808-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37420.91
+    },
+    {
+      "cafemarkt_id": "8775",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 6 Demlikli",
+      "code": "090.CHAFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10764-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10764-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49274.74
+    },
+    {
+      "cafemarkt_id": "8803",
+      "name": "Meşale Inox Klasik Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.INKFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-klasik-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10791-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-klasik-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10791-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39977.62
+    },
+    {
+      "cafemarkt_id": "8864",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 5 Demlikli",
+      "code": "090.ADFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-5-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-5-demlikli-cay-kazan-cay-kazanlari-mesale-10843-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-5-demlikli-cay-kazan-cay-kazanlari-mesale-10843-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49739.59
+    },
+    {
+      "cafemarkt_id": "8881",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.ITFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-elektrik4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik4-demlikli-cay-kazani-cay-kazanlari-mesale-10857-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik4-demlikli-cay-kazani-cay-kazanlari-mesale-10857-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40210.04
+    },
+    {
+      "cafemarkt_id": "8756",
+      "name": "Meşale Chromat Klasik Çay Kazanı, Full Otomatik, 5 Demlikli",
+      "code": "090.CHKFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-klasik-full-otomatik-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10745-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-klasik-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10745-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 38583.05
+    },
+    {
+      "cafemarkt_id": "8790",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 3 Demlikli",
+      "code": "090.ANDFO3",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-3-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10779-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-3-demlikli-cay-kazani-cay-kazanlari-mesale-10779-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43928.89
+    },
+    {
+      "cafemarkt_id": "8839",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 4 Demlikli",
+      "code": "090.CHDFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-4-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-4-demlik-cay-kazan-cay-kazanlari-mesale-10818-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-4-demlik-cay-kazan-cay-kazanlari-mesale-10818-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41372.18
+    },
+    {
+      "cafemarkt_id": "8866",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Elektrikli, 1 Demlikli",
+      "code": "090.AAFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-elektrikli-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10845-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-elektrikli-1-demlikli-cay-kazani-cay-kazanlari-mesale-10845-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33004.78
+    },
+    {
+      "cafemarkt_id": "8854",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 1 Demlikli",
+      "code": "090.ATFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik1-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik1-demlikli-cay-kazan-cay-kazanlari-mesale-10833-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik1-demlikli-cay-kazan-cay-kazanlari-mesale-10833-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27194.08
+    },
+    {
+      "cafemarkt_id": "8788",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 1 Demlikli",
+      "code": "090.ANDFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10777-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10777-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33237.2
+    },
+    {
+      "cafemarkt_id": "8812",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Otomatik, 1 Demlikli",
+      "code": "090.INDFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10796-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10796-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31610.21
+    },
+    {
+      "cafemarkt_id": "8761",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.CHTFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-4-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10750-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10750-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 39512.76
+    },
+    {
+      "cafemarkt_id": "8774",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 5 Demlikli",
+      "code": "090.CHAFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10763-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-5-demlikli-cay-kazani-cay-kazanlari-mesale-10763-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47415.31
+    },
+    {
+      "cafemarkt_id": "8878",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Elektrikli, 1 Demlikli",
+      "code": "090.ITFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-elektrik1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik1-demlikli-cay-kazani-cay-kazanlari-mesale-10854-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-elektrik1-demlikli-cay-kazani-cay-kazanlari-mesale-10854-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 25567.08
+    },
+    {
+      "cafemarkt_id": "8794",
+      "name": "Meşale Antik Çay Kazanı, Akıllı, Full Otomatik, 1 Demlikli",
+      "code": "090.ANAFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-akilli-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10783-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-akilli-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10783-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34864.2
+    },
+    {
+      "cafemarkt_id": "8763",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 6 Demlikli",
+      "code": "090.CHTFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-6-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10752-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10752-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42534.32
+    },
+    {
+      "cafemarkt_id": "8865",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Elektrikli, 6 Demlikli",
+      "code": "090.ADFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-elektrikli-6-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-6-demlikli-cay-kazan-cay-kazanlari-mesale-10844-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-elektrikli-6-demlikli-cay-kazan-cay-kazanlari-mesale-10844-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 51366.59
+    },
+    {
+      "cafemarkt_id": "8857",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 4 Demlikli",
+      "code": "090.ATFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik4-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik4-demlikli-cay-kazan-cay-kazanlari-mesale-10836-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik4-demlikli-cay-kazan-cay-kazanlari-mesale-10836-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44161.32
+    },
+    {
+      "cafemarkt_id": "8776",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Otomatik, 1 Demlikli",
+      "code": "090.ANKFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10765-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10765-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26496.79
+    },
+    {
+      "cafemarkt_id": "8785",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 4 Demlikli",
+      "code": "090.ANTFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-4-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10774-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-4-demlik-cay-kazani-cay-kazanlari-mesale-10774-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46485.6
+    },
+    {
+      "cafemarkt_id": "8858",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 5 Demlikli",
+      "code": "090.ATFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik5-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik5-demlikli-cay-kazan-cay-kazanlari-mesale-10837-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik5-demlikli-cay-kazan-cay-kazanlari-mesale-10837-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45555.89
+    },
+    {
+      "cafemarkt_id": "8815",
+      "name": "Meşale Inox Çay Kazanı, Dijital, Full Otomatik, 4 Demlikli",
+      "code": "090.INDFO4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-dijital-full-otomatik-4-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10799-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-dijital-full-otomatik-4-demlikli-cay-kazani-cay-kazanlari-mesale-10799-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46950.46
+    },
+    {
+      "cafemarkt_id": "8845",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 4 Demlikli",
+      "code": "090.CHAFE4",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-4-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-4-demlik-cay-kazani-cay-kazanlari-mesale-10824-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-4-demlik-cay-kazani-cay-kazanlari-mesale-10824-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43464.04
+    },
+    {
+      "cafemarkt_id": "8770",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Otomatik, 1 Demlikli",
+      "code": "090.CHAFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10759-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10759-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31610.21
+    },
+    {
+      "cafemarkt_id": "8852",
+      "name": "Meşale Antik Klasik Çay Kazanı, Full Elektrikli, 5 Demlikli",
+      "code": "090.AKFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-klasik-full-elektrikli-5-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-5-demlikli-cay-kazani-cay-kazanlari-mesale-10831-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-klasik-full-elektrikli-5-demlikli-cay-kazani-cay-kazanlari-mesale-10831-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42069.47
+    },
+    {
+      "cafemarkt_id": "8807",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Otomatik, 2 Demlikli",
+      "code": "090.INTFO2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-otomatik-2-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10793-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-2-demlikli-cay-kazani-cay-kazanlari-mesale-10793-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29983.21
+    },
+    {
+      "cafemarkt_id": "8764",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 1 Demlikli",
+      "code": "090.CHDFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-1-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10753-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10753-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29983.21
+    },
+    {
+      "cafemarkt_id": "8840",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 5 Demlikli",
+      "code": "090.CHDFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-5-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-5-demlik-cay-kazan-cay-kazanlari-mesale-10819-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-5-demlik-cay-kazan-cay-kazanlari-mesale-10819-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43231.61
+    },
+    {
+      "cafemarkt_id": "8837",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 2 Demlikli",
+      "code": "090.CHDFE2",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-2-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-2-demlik-cay-kazan-cay-kazanlari-mesale-10816-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-2-demlik-cay-kazan-cay-kazanlari-mesale-10816-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33702.06
+    },
+    {
+      "cafemarkt_id": "8842",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 1 Demlikli",
+      "code": "090.CHAFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-1-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-1-demlik-cay-kazani-cay-kazanlari-mesale-10821-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-1-demlik-cay-kazani-cay-kazanlari-mesale-10821-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29750.78
+    },
+    {
+      "cafemarkt_id": "8859",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Elektrikli, 6 Demlikli",
+      "code": "090.ATFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-elektrik6-demlikli-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik6-demlikli-cay-kazan-cay-kazanlari-mesale-10838-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-elektrik6-demlikli-cay-kazan-cay-kazanlari-mesale-10838-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46718.03
+    },
+    {
+      "cafemarkt_id": "8834",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 5 Demlikli",
+      "code": "090.CHTFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik5-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik5-demlik-cay-kazan-cay-kazanlari-mesale-10813-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik5-demlik-cay-kazan-cay-kazanlari-mesale-10813-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 38815.48
+    },
+    {
+      "cafemarkt_id": "8782",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 1 Demlikli",
+      "code": "090.ANTFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-1-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10771-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10771-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28821.07
+    },
+    {
+      "cafemarkt_id": "8806",
+      "name": "Meşale Inox Turbo Max Çay Kazanı, Full Otomatik, 1 Demlikli",
+      "code": "090.INTFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/inox-turbo-max-full-otomatik-1-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10792-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/inox-turbo-max-full-otomatik-1-demlikli-cay-kazani-cay-kazanlari-mesale-10792-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 27194.08
+    },
+    {
+      "cafemarkt_id": "8768",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Otomatik, 5 Demlikli",
+      "code": "090.CHDFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-otomatik-5-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10757-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10757-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45555.89
+    },
+    {
+      "cafemarkt_id": "8786",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 5 Demlikli",
+      "code": "090.ANTFO5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-5-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10775-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-5-demlik-cay-kazani-cay-kazanlari-mesale-10775-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47880.17
+    },
+    {
+      "cafemarkt_id": "8787",
+      "name": "Meşale Antik Turbo Max Çay Kazanı, Full Otomatik, 6 Demlikli",
+      "code": "090.ANTFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-turbo-max-full-otomatik-6-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10776-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-turbo-max-full-otomatik-6-demlik-cay-kazani-cay-kazanlari-mesale-10776-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49274.74
+    },
+    {
+      "cafemarkt_id": "8846",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 5 Demlikli",
+      "code": "090.CHAFE5",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-5-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-5-demlik-cay-kazani-cay-kazanlari-mesale-10825-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-5-demlik-cay-kazani-cay-kazanlari-mesale-10825-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45091.03
+    },
+    {
+      "cafemarkt_id": "8835",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Elektrikli, 6 Demlikli",
+      "code": "090.CHTFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbo-max-full-elektrik6-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik6-demlik-cay-kazan-cay-kazanlari-mesale-10814-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbo-max-full-elektrik6-demlik-cay-kazan-cay-kazanlari-mesale-10814-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40210.04
+    },
+    {
+      "cafemarkt_id": "8847",
+      "name": "Meşale Chromat Çay Kazanı, Akıllı, Full Elektrikli, 6 Demlikli",
+      "code": "090.CHAFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-akilli-full-elektrikli-6-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-6-demlik-cay-kazani-cay-kazanlari-mesale-10826-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-akilli-full-elektrikli-6-demlik-cay-kazani-cay-kazanlari-mesale-10826-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46718.03
+    },
+    {
+      "cafemarkt_id": "8758",
+      "name": "Meşale Chromat Turbo Max Çay Kazanı, Full Otomatik, 1 Demlikli",
+      "code": "090.CHTFO1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-turbomax-full-otomatik-1-demlik-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10747-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-turbomax-full-otomatik-1-demlik-cay-kazani-cay-kazanlari-mesale-10747-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 25567.08
+    },
+    {
+      "cafemarkt_id": "8793",
+      "name": "Meşale Antik Çay Kazanı, Dijital, Full Otomatik, 6 Demlikli",
+      "code": "090.ANDFO6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/antik-dijital-full-otomatik-6-demlikli-cay-kazani",
+      "image": "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10782-87-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/antik-dijital-full-otomatik-6-demlikli-cay-kazani-cay-kazanlari-mesale-10782-87-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53923.3
+    },
+    {
+      "cafemarkt_id": "8841",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 6 Demlikli",
+      "code": "090.CHDFE6",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-6-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-6-demlik-cay-kazan-cay-kazanlari-mesale-10820-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-6-demlik-cay-kazan-cay-kazanlari-mesale-10820-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44858.6
+    },
+    {
+      "cafemarkt_id": "8836",
+      "name": "Meşale Chromat Çay Kazanı, Dijital, Full Elektrikli, 1 Demlikli",
+      "code": "090.CHDFE1",
+      "brand": "Meşale",
+      "url": "https://www.cafemarkt.com/chromat-dijital-full-elektrikli-1-demlik-cay-kazan",
+      "image": "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-1-demlik-cay-kazan-cay-kazanlari-mesale-10815-88-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/chromat-dijital-full-elektrikli-1-demlik-cay-kazan-cay-kazanlari-mesale-10815-88-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28123.79
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "brand": "Kumkaya",
+  "slug": "kumkaya",
+  "fetchedAt": "2026-09-19T05:40:53.768Z",
+  "reportedTotal": 27,
+  "pages": 1,
+  "count": 5,
+  "items": [
+    {
+      "cafemarkt_id": "30267",
+      "name": "Kumkaya SP200 Spiral Hamur Yoğurma Mikseri, 200 kg, Çift Devirli",
+      "code": "320.SP200",
+      "brand": "Kumkaya",
+      "url": "https://www.cafemarkt.com/kumkaya-sp200-spiral-hamur-yogurma-mikseri-200-kg-cift-devirli",
+      "image": "https://witcdn.cafemarkt.com/kumkaya-sp200-spiral-hamur-yogurma-mikseri-200-kg-cift-devirli-hamur-yogurma-makineleri-kumkaya-51869-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kumkaya-sp200-spiral-hamur-yogurma-mikseri-200-kg-cift-devirli-hamur-yogurma-makineleri-kumkaya-51869-30-O.jpg",
+        "https://witcdn.cafemarkt.com/kumkaya-sp200-spiral-hamur-yogurma-mikseri-200-kg-cift-devirli-hamur-yogurma-makineleri-kumkaya-51886-30-O.jpg",
+        "https://witcdn.cafemarkt.com/kumkaya-sp200-spiral-hamur-yogurma-mikseri-200-kg-cift-devirli-hamur-yogurma-makineleri-kumkaya-51892-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1473600
+    },
+    {
+      "cafemarkt_id": "30256",
+      "name": "Kumkaya DM2000 Standart Hamur Kestart Makinesi, 250-1100 gr",
+      "code": "320.D2000",
+      "brand": "Kumkaya",
+      "url": "https://www.cafemarkt.com/kumkaya-d2000-standart-hamur-kestart-makinesi-150-650-gr",
+      "image": "https://witcdn.cafemarkt.com/kumkaya-d2000-standart-hamur-kestart-makinesi-150-650-gr-hamur-kesme-tartma-makineleri-kumkaya-51861-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kumkaya-d2000-standart-hamur-kestart-makinesi-150-650-gr-hamur-kesme-tartma-makineleri-kumkaya-51861-30-O.jpg",
+        "https://witcdn.cafemarkt.com/kumkaya-d2000-standart-hamur-kestart-makinesi-150-650-gr-hamur-kesme-tartma-makineleri-kumkaya-51878-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 399600
+    },
+    {
+      "cafemarkt_id": "30247",
+      "name": "Kumkaya KLM12 İklimlendirme Makinesi Buhar Kliması",
+      "code": "320.KLM12",
+      "brand": "Kumkaya",
+      "url": "https://www.cafemarkt.com/kumkaya-klm12-iklimlendirme-makinesi-buhar-klimasi",
+      "image": "https://witcdn.cafemarkt.com/kumkaya-klm12-iklimlendirme-makinesi-buhar-klimasi-mayalama-dolaplari-kumkaya-51905-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kumkaya-klm12-iklimlendirme-makinesi-buhar-klimasi-mayalama-dolaplari-kumkaya-51905-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 134400
+    },
+    {
+      "cafemarkt_id": "30245",
+      "name": "Kumkaya LM2500 Uzun Hamur Şekil Verme Makinesi, Çift Yastıklı",
+      "code": "320.LM2500",
+      "brand": "Kumkaya",
+      "url": "https://www.cafemarkt.com/kumkaya-lm2500-uzun-hamur-sekil-verme-makinesi-cift-yastikli",
+      "image": "https://witcdn.cafemarkt.com/kumkaya-lm2500-uzun-hamur-sekil-verme-makinesi-cift-yastikli-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51865-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kumkaya-lm2500-uzun-hamur-sekil-verme-makinesi-cift-yastikli-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51865-30-O.jpg",
+        "https://witcdn.cafemarkt.com/kumkaya-lm2500-uzun-hamur-sekil-verme-makinesi-cift-yastikli-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51882-30-O.jpg",
+        "https://witcdn.cafemarkt.com/kumkaya-lm2500-uzun-hamur-sekil-verme-makinesi-cift-yastikli-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51888-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 361200
+    },
+    {
+      "cafemarkt_id": "30240",
+      "name": "Kumkaya CM3000 Standart Konik Hamur Yuvarlama Makinesi, 150-650 gr",
+      "code": "320.CM300",
+      "brand": "Kumkaya",
+      "url": "https://www.cafemarkt.com/kumkaya-cm300-standart-konik-hamur-yuvarlama-makinesi-150-700-gr",
+      "image": "https://witcdn.cafemarkt.com/kumkaya-cm300-standart-konik-hamur-yuvarlama-makinesi-150-700-gr-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51851-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/kumkaya-cm300-standart-konik-hamur-yuvarlama-makinesi-150-700-gr-hamur-bolme-ve-yuvarlama-makineleri-kumkaya-51851-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 240000
+    }
+  ]
+}

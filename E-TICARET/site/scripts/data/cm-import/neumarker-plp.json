@@ -1,0 +1,66 @@
+{
+  "brand": "Neumarker",
+  "slug": "neumarker",
+  "fetchedAt": "2026-09-19T05:42:23.718Z",
+  "reportedTotal": 4,
+  "pages": 1,
+  "count": 4,
+  "items": [
+    {
+      "cafemarkt_id": "40930",
+      "name": "Neumarker 31-40758-01 Sunny Thermocook Uyumlu Waffle Plakası",
+      "code": "524.31.40758.01",
+      "brand": "Neumarker",
+      "url": "https://www.cafemarkt.com/neumarker-31-40758-01-sunny-thermocook-uyumlu-waffle-plakasi",
+      "image": "https://witcdn.cafemarkt.com/neumarker-31-40758-01-sunny-thermocook-uyumlu-waffle-plakasi-neumarker-yedek-parcalari-ve-aksesuarlari-neumarker-78853-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/neumarker-31-40758-01-sunny-thermocook-uyumlu-waffle-plakasi-neumarker-yedek-parcalari-ve-aksesuarlari-neumarker-78853-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-31-40758-01-sunny-thermocook-uyumlu-waffle-plakasi-neumarker-yedek-parcalari-ve-aksesuarlari-neumarker-78854-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-31-40758-01-sunny-thermocook-uyumlu-waffle-plakasi-neumarker-yedek-parcalari-ve-aksesuarlari-neumarker-78855-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 31862.2
+    },
+    {
+      "cafemarkt_id": "40929",
+      "name": "Neumarker 12-20201 Galaxia Mars Waffle Makinesi",
+      "code": "524.12.20201",
+      "brand": "Neumarker",
+      "url": "https://www.cafemarkt.com/neumarker-12-20201-galaxia-mars-waffle-makinesi",
+      "image": "https://witcdn.cafemarkt.com/neumarker-12-20201-galaxia-mars-waffle-makinesi-waffle-makineleri-neumarker-78850-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/neumarker-12-20201-galaxia-mars-waffle-makinesi-waffle-makineleri-neumarker-78850-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-20201-galaxia-mars-waffle-makinesi-waffle-makineleri-neumarker-78851-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-20201-galaxia-mars-waffle-makinesi-waffle-makineleri-neumarker-78852-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 93909.65
+    },
+    {
+      "cafemarkt_id": "40928",
+      "name": "Neumarker 12-40801DT Thermocook Waffle Makinesi",
+      "code": "524.12.40801DT",
+      "brand": "Neumarker",
+      "url": "https://www.cafemarkt.com/neumarker-12-40801dt-thermocook-waffle-makinesi",
+      "image": "https://witcdn.cafemarkt.com/neumarker-12-40801dt-thermocook-waffle-makinesi-waffle-makineleri-neumarker-78842-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/neumarker-12-40801dt-thermocook-waffle-makinesi-waffle-makineleri-neumarker-78842-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-40801dt-thermocook-waffle-makinesi-waffle-makineleri-neumarker-78843-40-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-40801dt-thermocook-waffle-makinesi-waffle-makineleri-neumarker-78844-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 73786.15
+    },
+    {
+      "cafemarkt_id": "37233",
+      "name": "Neumarker 12-40733DT Dijital Zamanlayıcılı Hollanda Waffle Makinesi",
+      "code": "524.12.40733DT",
+      "brand": "Neumarker",
+      "url": "https://www.cafemarkt.com/neumarker-12-40733dt-dijital-zamanlayicili-waffle-makinesi",
+      "image": "https://witcdn.cafemarkt.com/neumarker-12-40733dt-dijital-zamanlayicili-waffle-makinesi-waffle-makineleri-neumarker-68680-37-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/neumarker-12-40733dt-dijital-zamanlayicili-waffle-makinesi-waffle-makineleri-neumarker-68680-37-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-40733dt-dijital-zamanlayicili-waffle-makinesi-waffle-makineleri-neumarker-68681-37-O.jpg",
+        "https://witcdn.cafemarkt.com/neumarker-12-40733dt-dijital-zamanlayicili-waffle-makinesi-waffle-makineleri-neumarker-68682-37-O.jpg"
+      ],
+      "price_try_kdv_dahil": 71773.8
+    }
+  ]
+}

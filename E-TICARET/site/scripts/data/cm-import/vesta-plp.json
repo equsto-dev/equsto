@@ -1,0 +1,24 @@
+{
+  "brand": "Vesta",
+  "slug": "vesta",
+  "fetchedAt": "2026-09-19T05:45:24.804Z",
+  "reportedTotal": 1,
+  "pages": 1,
+  "count": 1,
+  "items": [
+    {
+      "cafemarkt_id": "43946",
+      "name": "Vesta SV320 Imersa Expert Sous Vide Makinesi",
+      "code": "073.9991.SV320.00",
+      "brand": "Vesta",
+      "url": "https://www.cafemarkt.com/vesta-sv320-imersa-expert-sous-vide-makinesi",
+      "image": "https://witcdn.cafemarkt.com/vesta-sv320-imersa-expert-sous-vide-makinesi-sous-vide-makineleri-vesta-87125-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/vesta-sv320-imersa-expert-sous-vide-makinesi-sous-vide-makineleri-vesta-87125-43-O.jpg",
+        "https://witcdn.cafemarkt.com/vesta-sv320-imersa-expert-sous-vide-makinesi-sous-vide-makineleri-vesta-87126-43-O.jpg",
+        "https://witcdn.cafemarkt.com/vesta-sv320-imersa-expert-sous-vide-makinesi-sous-vide-makineleri-vesta-87127-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32868.38
+    }
+  ]
+}

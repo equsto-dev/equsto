@@ -1,0 +1,3430 @@
+{
+  "brand": "CSA Inox",
+  "slug": "csa-inox",
+  "fetchedAt": "2026-09-19T07:41:24.357Z",
+  "reportedTotal": 289,
+  "pages": 10,
+  "count": 285,
+  "items": [
+    {
+      "cafemarkt_id": "25986",
+      "name": "CSA CS-DBN 1400-T Dik Tip Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44193-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44193-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 138248.42
+    },
+    {
+      "cafemarkt_id": "25926",
+      "name": "CSA CS-B-150 Bar Arkası Şişe Soğutucu Dolap, 110 L, Siyah",
+      "code": "454.CS.B.150",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-b-150-bar-arkasi-sise-sogutucu-dolap-110-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-b-150-bar-arkasi-sise-sogutucu-dolap-110-l-bar-arkasi-sise-sogutucu-dolaplar-csa-inox-72667-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-b-150-bar-arkasi-sise-sogutucu-dolap-110-l-bar-arkasi-sise-sogutucu-dolaplar-csa-inox-72667-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41726.66
+    },
+    {
+      "cafemarkt_id": "26050",
+      "name": "CSA CS-TEK 3-700 Tezgah Tipi Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44247-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44247-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97835.7
+    },
+    {
+      "cafemarkt_id": "26014",
+      "name": "CSA CS-DBNK 700-T Dik Tip Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBNK.700.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44194-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44194-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 113745.1
+    },
+    {
+      "cafemarkt_id": "25936",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Buzdolabı, 3 Çekmeceli, 210 L",
+      "code": "454.CS.CIH.3.700.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-44265-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-44265-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 111720.91
+    },
+    {
+      "cafemarkt_id": "26104",
+      "name": "CSA CS-TEZ 4-600-C Tezgah Tipi Buzdolabı, 4 Cam Kapılı, 550 L",
+      "code": "454.CS.TEZ.4.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44235-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44235-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 120279.32
+    },
+    {
+      "cafemarkt_id": "25938",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Derin Dondurucu, 3 Çekmeceli, 210 L",
+      "code": "454.CS.CIH.3D.700.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-44266-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-44266-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 130400.25
+    },
+    {
+      "cafemarkt_id": "25975",
+      "name": "CSA CS-DBLK 700 Dik Tip Derin Dondurucu, 700 L",
+      "code": "454.CS.DBLK.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-700-dik-tip-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-700-dik-tip-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44175-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-700-dik-tip-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44175-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 96770.34
+    },
+    {
+      "cafemarkt_id": "25996",
+      "name": "CSA CS-DBN 1400-ST-T Dik Tip Statik Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.ST.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44340-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44340-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 135585.01
+    },
+    {
+      "cafemarkt_id": "25966",
+      "name": "CSA CS-DBL 700-T Dik Tip Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBL.700.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44191-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44191-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 103943.78
+    },
+    {
+      "cafemarkt_id": "26065",
+      "name": "CSA CS-TEK 4-700 Tezgah Tipi Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44249-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44249-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 121912.87
+    },
+    {
+      "cafemarkt_id": "25987",
+      "name": "CSA CS-DBN 600 Dik Tip Buzdolabı, 600 L",
+      "code": "454.CS.DBN.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-600-l-endustriyel-buzdolaplari-csa-inox-44154-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-600-l-endustriyel-buzdolaplari-csa-inox-44154-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 69852.21
+    },
+    {
+      "cafemarkt_id": "25945",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Derin Dondurucu, 2 Çekmeceli, 115 L",
+      "code": "454.CS.CIK.2D.600.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-44252-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-44252-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 120101.76
+    },
+    {
+      "cafemarkt_id": "25953",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 260 L",
+      "code": "454.CS.CIK.4D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-44256-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-44256-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 177276.16
+    },
+    {
+      "cafemarkt_id": "25977",
+      "name": "CSA CS-DBLK 700-M-KR Dik Tip Monoblok Derin Dondurucu, 700 L",
+      "code": "454.CS.DBLK.700.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-700-m-dik-tip-monoblok-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-700-m-dik-tip-monoblok-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44206-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-700-m-dik-tip-monoblok-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44206-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 108311.76
+    },
+    {
+      "cafemarkt_id": "25944",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Buzdolabı, 2 Çekmeceli, 135 L",
+      "code": "454.CS.CIK.2.700.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-44269-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-44269-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 102097.15
+    },
+    {
+      "cafemarkt_id": "26009",
+      "name": "CSA CS-DBNK 700-C Dik Tip Buzdolabı, Cam Kapılı, 700 L",
+      "code": "454.CS.DBNK.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-c-dik-tip-buzdolabi-cam-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-c-dik-tip-buzdolabi-cam-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44187-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-c-dik-tip-buzdolabi-cam-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44187-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98616.97
+    },
+    {
+      "cafemarkt_id": "26066",
+      "name": "CSA CS-TEK 4-700-C Tezgah Tipi Buzdolabı, 4 Cam Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-c-tezgah-tipi-buzdolabi-4-cam-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-c-tezgah-tipi-buzdolabi-4-cam-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44238-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-c-tezgah-tipi-buzdolabi-4-cam-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44238-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142332.3
+    },
+    {
+      "cafemarkt_id": "26098",
+      "name": "CSA CS-TEZ 3-700-YM Yükseltilmiş Make Up Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44302-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44302-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 116586.07
+    },
+    {
+      "cafemarkt_id": "26019",
+      "name": "CSA CS-GRN-141 Teşhir Dolabı, 141x39x46 cm",
+      "code": "454.CS.GRN.141",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grn-141-teshir-dolabi-141x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grn-141-teshir-dolabi-141x39x46-cm-saladbarlar-csa-inox-44327-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grn-141-teshir-dolabi-141x39x46-cm-saladbarlar-csa-inox-44327-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46556.3
+    },
+    {
+      "cafemarkt_id": "26090",
+      "name": "CSA CS-TEZ 3-600 Tezgah Tipi Buzdolabı, 3 Kapılı, 400 L",
+      "code": "454.CS.TEZ.3.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44226-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44226-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84341.12
+    },
+    {
+      "cafemarkt_id": "26018",
+      "name": "CSA CS-DBNLK-702 Dik Tip Buzdolabı & Derin Dondurucu, 2 Kapılı, 700 L",
+      "code": "454.CS.DBNLK.702",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnlk-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnlk-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44179-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnlk-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44179-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 133170.19
+    },
+    {
+      "cafemarkt_id": "25937",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Derin Dondurucu, 3 Çekmeceli, 180 L",
+      "code": "454.CS.CIH.3D.600.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-44260-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-44260-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 129974.11
+    },
+    {
+      "cafemarkt_id": "26023",
+      "name": "CSA CS-GRNK-141 Teşhir Dolabı, 141x39x46 cm",
+      "code": "454.CS.GRNK.141",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grnk-141-teshir-dolabi-141x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grnk-141-teshir-dolabi-141x39x46-cm-saladbarlar-csa-inox-44331-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grnk-141-teshir-dolabi-141x39x46-cm-saladbarlar-csa-inox-44331-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49006.63
+    },
+    {
+      "cafemarkt_id": "25967",
+      "name": "CSA CS-DBLK 1200 Dik Tip Derin Dondurucu, 2 Kapılı, 1200 L",
+      "code": "454.CS.DBLK.1200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44157-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44157-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 133560.83
+    },
+    {
+      "cafemarkt_id": "26026",
+      "name": "CSA CS-GRNK-210 Teşhir Dolabı, 205x39x46 cm",
+      "code": "454.CS.GRNK.210",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grnk-210-teshir-dolabi-205x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grnk-210-teshir-dolabi-205x39x46-cm-saladbarlar-csa-inox-44334-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grnk-210-teshir-dolabi-205x39x46-cm-saladbarlar-csa-inox-44334-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 57174.4
+    },
+    {
+      "cafemarkt_id": "25949",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Derin Dondurucu, 3 Çekmeceli, 180 L",
+      "code": "454.CS.CIK.3D.600.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-44254-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-44254-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136543.84
+    },
+    {
+      "cafemarkt_id": "25981",
+      "name": "CSA CS-DBN 1400 Dik Tip Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-dik-tip-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-dik-tip-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44168-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-dik-tip-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44168-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97658.14
+    },
+    {
+      "cafemarkt_id": "26067",
+      "name": "CSA CS-TEK 4-700-E Evyeli Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-e-evyeli-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-e-evyeli-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44341-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-e-evyeli-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44341-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 135123.36
+    },
+    {
+      "cafemarkt_id": "26108",
+      "name": "CSA CS-TEZ 4-700 Make Up Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-make-up-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44309-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44309-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 132530.98
+    },
+    {
+      "cafemarkt_id": "25979",
+      "name": "CSA CS-DBN 1200 Dik Tip Buzdolabı, 2 Kapılı, 1200 L",
+      "code": "454.CS.DBN.1200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44152-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44152-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97835.7
+    },
+    {
+      "cafemarkt_id": "25942",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 310 L",
+      "code": "454.CS.CIH.4D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-44268-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-44268-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 167474.84
+    },
+    {
+      "cafemarkt_id": "26008",
+      "name": "CSA CS-DBNK 700 Dik Tip Buzdolabı, 700 L",
+      "code": "454.CS.DBNK.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-dik-tip-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-dik-tip-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44171-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-dik-tip-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44171-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 83027.18
+    },
+    {
+      "cafemarkt_id": "26093",
+      "name": "CSA CS-TEZ 3-700 Tezgah Tipi Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44241-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44241-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88780.13
+    },
+    {
+      "cafemarkt_id": "25997",
+      "name": "CSA CS-DBNK 1200 Dik Tip Buzdolabı, 2 Kapılı, 1200 L",
+      "code": "454.CS.DBNK.1200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44153-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44153-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114348.81
+    },
+    {
+      "cafemarkt_id": "26016",
+      "name": "CSA CS-DBNL-702 Dik Tip Buzdolabı & Derin Dondurucu, 2 Kapılı, 700 L",
+      "code": "454.CS.DBNL.702",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnl-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnl-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44178-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnl-700-dik-tip-buzdolabi-derin-dondurucu-2-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44178-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123759.5
+    },
+    {
+      "cafemarkt_id": "25963",
+      "name": "CSA CS-DBL 700 Dik Tip Derin Dondurucu, 700 L",
+      "code": "454.CS.DBL.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-700-dik-tip-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-700-dik-tip-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44174-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-700-dik-tip-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44174-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86116.73
+    },
+    {
+      "cafemarkt_id": "25950",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Derin Dondurucu, 3 Çekmeceli, 210 L",
+      "code": "454.CS.CIK.3D.700.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-44272-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-44272-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142225.77
+    },
+    {
+      "cafemarkt_id": "25973",
+      "name": "CSA CS-DBLK 600 Dik Tip Derin Dondurucu, 600 L",
+      "code": "454.CS.DBLK.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-600-l-endustriyel-derin-dondurucular-csa-inox-44159-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-600-l-endustriyel-derin-dondurucular-csa-inox-44159-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 95385.37
+    },
+    {
+      "cafemarkt_id": "26003",
+      "name": "CSA CS-DBNK 1400-ST Dik Tip Statik Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.ST",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44196-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44196-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 129476.94
+    },
+    {
+      "cafemarkt_id": "25934",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Derin Dondurucu, 2 Çekmeceli, 135 L",
+      "code": "454.CS.CIH.2D.700.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-44264-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-44264-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109661.22
+    },
+    {
+      "cafemarkt_id": "26036",
+      "name": "CSA CS-TEK 2-700 Tezgah Tipi Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44246-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44246-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 82636.54
+    },
+    {
+      "cafemarkt_id": "26015",
+      "name": "CSA CS-DBNL-1400 Dik Tip Buzdolabı & Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNL.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnl-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnl-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44176-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnl-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44176-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 148440.38
+    },
+    {
+      "cafemarkt_id": "25941",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 260 L",
+      "code": "454.CS.CIH.4D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-44262-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-44262-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 166018.84
+    },
+    {
+      "cafemarkt_id": "25969",
+      "name": "CSA CS-DBLK 1400 Dik Tip Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBLK.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1400-dik-tip-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-dik-tip-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44173-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-dik-tip-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44173-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 141160.41
+    },
+    {
+      "cafemarkt_id": "25974",
+      "name": "CSA CS-DBLK 600 Dik Tip Derin Dondurucu, Cam Kapılı, 600 L",
+      "code": "454.CS.DBLK.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-cam-kapili-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-cam-kapili-600-l-endustriyel-derin-dondurucular-csa-inox-44167-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-600-dik-tip-derin-dondurucu-cam-kapili-600-l-endustriyel-derin-dondurucular-csa-inox-44167-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 113141.4
+    },
+    {
+      "cafemarkt_id": "26111",
+      "name": "CSA CS-TEZ 4-700-YM Yükseltilmiş Make Up Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44303-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44303-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 139065.19
+    },
+    {
+      "cafemarkt_id": "26097",
+      "name": "CSA CS-TEZ 3-700-SH Havuzlu Salad Bar, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-sh-havuzlu-salad-bar-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-sh-havuzlu-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44320-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-sh-havuzlu-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44320-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109022
+    },
+    {
+      "cafemarkt_id": "26077",
+      "name": "CSA CS-TEZ 2-600 Tezgah Tipi Buzdolabı, 2 Kapılı, 251 L",
+      "code": "454.CS.TEZ.2.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44224-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44224-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67046.75
+    },
+    {
+      "cafemarkt_id": "25948",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Buzdolabı, 3 Çekmeceli, 210 L",
+      "code": "454.CS.CIK.3.700.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-44271-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-44271-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 129974.11
+    },
+    {
+      "cafemarkt_id": "26030",
+      "name": "CSA CS-PIZ-150 Pizza Hazırlık Dolabı, Granit Tablalı, 380 L",
+      "code": "454.CS.PIZ.150",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-piz-150-pizza-hazirlik-dolabi-granit-tablali-380-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-piz-150-pizza-hazirlik-dolabi-granit-tablali-380-l-pizza-hazirlik-uniteleri-csa-inox-44323-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-piz-150-pizza-hazirlik-dolabi-granit-tablali-380-l-pizza-hazirlik-uniteleri-csa-inox-44323-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 125357.54
+    },
+    {
+      "cafemarkt_id": "25933",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Derin Dondurucu, 2 Çekmeceli, 115 L",
+      "code": "454.CS.CIH.2D.600.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-44258-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-44258-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109661.22
+    },
+    {
+      "cafemarkt_id": "26034",
+      "name": "CSA CS-TEK 2-600-C Tezgah Tipi Buzdolabı, 2 Cam Kapılı, 251 L",
+      "code": "454.CS.TEK.2.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44230-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44230-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88638.08
+    },
+    {
+      "cafemarkt_id": "26080",
+      "name": "CSA CS-TEZ 2-700 Tezgah Tipi Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44239-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44239-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 69248.5
+    },
+    {
+      "cafemarkt_id": "26055",
+      "name": "CSA CS-TEK 3-700-SH Havuzlu Salad Bar, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-sh-havuzlu-salad-bar-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-sh-havuzlu-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44317-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-sh-havuzlu-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44317-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 122729.65
+    },
+    {
+      "cafemarkt_id": "26028",
+      "name": "CSA CS-PIK-150 Pizza Hazırlık Dolabı, Granit Tablalı, 380 L",
+      "code": "454.CS.PIK.150",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-pik-150-pizza-hazirlik-dolabi-granit-tablali-380-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-pik-150-pizza-hazirlik-dolabi-granit-tablali-380-l-pizza-hazirlik-uniteleri-csa-inox-44324-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-pik-150-pizza-hazirlik-dolabi-granit-tablali-380-l-pizza-hazirlik-uniteleri-csa-inox-44324-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 131998.3
+    },
+    {
+      "cafemarkt_id": "26082",
+      "name": "CSA CS-TEZ 2-700 Make Up Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-make-up-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44307-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44307-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 102523.29
+    },
+    {
+      "cafemarkt_id": "26058",
+      "name": "CSA CS-TEK 3D-700-E Evyeli Derin Dondurucu, 3 Kapılı, 400 L",
+      "code": "454.CS.TEK.3D.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-d-700-e-evyeli-derin-dondurucu-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-d-700-e-evyeli-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44296-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-d-700-e-evyeli-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44296-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 128020.95
+    },
+    {
+      "cafemarkt_id": "26035",
+      "name": "CSA CS-TEK 2-600-E Evyeli Buzdolabı, 2 Kapılı, 251 L",
+      "code": "454.CS.TEK.2.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-600-e-evyeli-buzdolabi-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-e-evyeli-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44275-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-e-evyeli-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44275-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88602.57
+    },
+    {
+      "cafemarkt_id": "25985",
+      "name": "CSA CS-DBN 1400-ST Dik Tip Statik Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.ST",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44197-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-st-dik-tip-statik-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44197-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 115165.58
+    },
+    {
+      "cafemarkt_id": "26078",
+      "name": "CSA CS-TEZ 2-600-C Tezgah Tipi Buzdolabı, 2 Cam Kapılı, 251 L",
+      "code": "454.CS.TEZ.2.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44233-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-c-tezgah-tipi-buzdolabi-2-cam-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44233-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 78410.61
+    },
+    {
+      "cafemarkt_id": "26101",
+      "name": "CSA CS-TEZ 3D-600 Tezgah Tipi Derin Dondurucu, 3 Kapılı, 400 L",
+      "code": "454.CS.TEZ.3D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44227-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44227-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 103340.07
+    },
+    {
+      "cafemarkt_id": "25946",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Derin Dondurucu, 2 Çekmeceli, 135 L",
+      "code": "454.CS.CIK.2D.700.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-44270-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-44270-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 121912.87
+    },
+    {
+      "cafemarkt_id": "25957",
+      "name": "CSA CS-DBL 1400 Dik Tip Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBL.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1400-dik-tip-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-dik-tip-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44172-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-dik-tip-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44172-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 125641.64
+    },
+    {
+      "cafemarkt_id": "26022",
+      "name": "CSA CS-GRN-210 Teşhir Dolabı, 205x39x46 cm",
+      "code": "454.CS.GRN.210",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grn-210-teshir-dolabi-205x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grn-210-teshir-dolabi-205x39x46-cm-saladbarlar-csa-inox-44330-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grn-210-teshir-dolabi-205x39x46-cm-saladbarlar-csa-inox-44330-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54724.07
+    },
+    {
+      "cafemarkt_id": "26087",
+      "name": "CSA CS-TEZ 2D-700 Tezgah Tipi Derin Dondurucu, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44240-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44240-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85228.92
+    },
+    {
+      "cafemarkt_id": "26013",
+      "name": "CSA CS-DBNK 700-ST-T Dik Tip Statik Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBNK.700.ST.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44201-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44201-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 117189.77
+    },
+    {
+      "cafemarkt_id": "26115",
+      "name": "CSA CS-TEZ 4D-700 Tezgah Tipi Derin Dondurucu, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44244-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44244-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 134058
+    },
+    {
+      "cafemarkt_id": "25999",
+      "name": "CSA CS-DBNK 1400 Dik Tip Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-dik-tip-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-dik-tip-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44169-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-dik-tip-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44169-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 115804.8
+    },
+    {
+      "cafemarkt_id": "26025",
+      "name": "CSA CS-GRNK-186 Teşhir Dolabı, 186x39x46 cm",
+      "code": "454.CS.GRNK.186",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grnk-186-teshir-dolabi-186x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grnk-186-teshir-dolabi-186x39x46-cm-saladbarlar-csa-inox-44332-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grnk-186-teshir-dolabi-186x39x46-cm-saladbarlar-csa-inox-44332-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 55150.22
+    },
+    {
+      "cafemarkt_id": "26106",
+      "name": "CSA CS-TEZ 4-700 Tezgah Tipi Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44243-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44243-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109199.56
+    },
+    {
+      "cafemarkt_id": "26091",
+      "name": "CSA CS-TEZ 3-600-C Tezgah Tipi Buzdolabı, 3 Cam Kapılı, 400 L",
+      "code": "454.CS.TEZ.3.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44234-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44234-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94959.23
+    },
+    {
+      "cafemarkt_id": "25943",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Buzdolabı, 2 Çekmeceli, 115 L",
+      "code": "454.CS.CIK.2.600.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-44251-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-44251-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 99433.74
+    },
+    {
+      "cafemarkt_id": "26020",
+      "name": "CSA CS-GRN-151 Teşhir Dolabı, 151x39x46 cm",
+      "code": "454.CS.GRN.151",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grn-151-teshir-dolabi-151x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grn-151-teshir-dolabi-151x39x46-cm-saladbarlar-csa-inox-44329-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grn-151-teshir-dolabi-151x39x46-cm-saladbarlar-csa-inox-44329-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48402.93
+    },
+    {
+      "cafemarkt_id": "26012",
+      "name": "CSA CS-DBNK 700-ST Dik Tip Statik Buzdolabı, 700 L",
+      "code": "454.CS.DBNK.700.ST",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-st-dik-tip-statik-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-st-dik-tip-statik-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44198-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-st-dik-tip-statik-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44198-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 96770.34
+    },
+    {
+      "cafemarkt_id": "26102",
+      "name": "CSA CS-TEZ 3D-700 Tezgah Tipi Derin Dondurucu, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l-endustriyel-derin-dondurucular-csa-inox-44242-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l-endustriyel-derin-dondurucular-csa-inox-44242-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 103446.61
+    },
+    {
+      "cafemarkt_id": "26064",
+      "name": "CSA CS-TEK 4-600-E Evyeli Buzdolabı, 4 Kapılı, 550 L",
+      "code": "454.CS.TEK.4.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-600-e-evyeli-buzdolabi-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-e-evyeli-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44279-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-e-evyeli-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44279-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 131394.59
+    },
+    {
+      "cafemarkt_id": "26021",
+      "name": "CSA CS-GRN-186 Teşhir Dolabı, 186x39x46 cm",
+      "code": "454.CS.GRN.186",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grn-186-teshir-dolabi-186x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grn-186-teshir-dolabi-186x39x46-cm-saladbarlar-csa-inox-44328-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grn-186-teshir-dolabi-186x39x46-cm-saladbarlar-csa-inox-44328-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 51847.6
+    },
+    {
+      "cafemarkt_id": "26085",
+      "name": "CSA CS-TEZ 2-700-YM Yükseltilmiş Make Up Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44301-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44301-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 92686.46
+    },
+    {
+      "cafemarkt_id": "26006",
+      "name": "CSA CS-DBNK 600 Dik Tip Buzdolabı, 600 L",
+      "code": "454.CS.DBNK.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-600-l-endustriyel-buzdolaplari-csa-inox-44155-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-600-l-endustriyel-buzdolaplari-csa-inox-44155-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 81677.72
+    },
+    {
+      "cafemarkt_id": "26063",
+      "name": "CSA CS-TEK 4-600-C Tezgah Tipi Buzdolabı, 4 Cam Kapılı, 550 L",
+      "code": "454.CS.TEK.4.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44232-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-c-tezgah-tipi-buzdolabi-4-cam-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44232-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136614.86
+    },
+    {
+      "cafemarkt_id": "26046",
+      "name": "CSA CS-TEK 2D-600-E Evyeli Derin Dondurucu, 2 Kapılı, 251 L",
+      "code": "454.CS.TEK.2D.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-600-e-evyeli-derin-dondurucu-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-e-evyeli-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44276-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-e-evyeli-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44276-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 110087.36
+    },
+    {
+      "cafemarkt_id": "26037",
+      "name": "CSA CS-TEK 2-700-C Tezgah Tipi Buzdolabı, 2 Cam Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-c-tezgah-tipi-buzdolabi-2-cam-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-c-tezgah-tipi-buzdolabi-2-cam-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44236-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-c-tezgah-tipi-buzdolabi-2-cam-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44236-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94355.52
+    },
+    {
+      "cafemarkt_id": "25989",
+      "name": "CSA CS-DBN 700 Dik Tip Buzdolabı, 700 L",
+      "code": "454.CS.DBN.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-dik-tip-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-dik-tip-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44170-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-dik-tip-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44170-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 74149.16
+    },
+    {
+      "cafemarkt_id": "26048",
+      "name": "CSA CS-TEK 3-600-C Tezgah Tipi Buzdolabı, 3 Cam Kapılı, 400 L",
+      "code": "454.CS.TEK.3.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44231-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-c-tezgah-tipi-buzdolabi-3-cam-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44231-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 110691.07
+    },
+    {
+      "cafemarkt_id": "26095",
+      "name": "CSA CS-TEZ 3-700 Make Up Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-make-up-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44308-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44308-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109022
+    },
+    {
+      "cafemarkt_id": "26114",
+      "name": "CSA CS-TEZ 4D-600 Tezgah Tipi Derin Dondurucu, 4 Kapılı, 550 L",
+      "code": "454.CS.TEZ.4D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44229-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44229-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 143362.15
+    },
+    {
+      "cafemarkt_id": "25995",
+      "name": "CSA CS-DBN 700-T Dik Tip Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBN.700.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44195-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44195-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 99433.74
+    },
+    {
+      "cafemarkt_id": "25935",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Buzdolabı, 3 Çekmeceli, 180 L",
+      "code": "454.CS.CIH.3.600.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-44259-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-44259-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114668.42
+    },
+    {
+      "cafemarkt_id": "25955",
+      "name": "CSA CS-DBL 1200 Dik Tip Derin Dondurucu, 2 Kapılı, 1200 L",
+      "code": "454.CS.DBL.1200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44156-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44156-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 116195.43
+    },
+    {
+      "cafemarkt_id": "25932",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Buzdolabı, 2 Çekmeceli, 135 L",
+      "code": "454.CS.CIH.2.700.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-44263-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-44263-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 95989.08
+    },
+    {
+      "cafemarkt_id": "25998",
+      "name": "CSA CS-DBNK 1200 Dik Tip Buzdolabı, 2 Cam Kapılı, 1200 L",
+      "code": "454.CS.DBNK.1200.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44161-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44161-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 143752.79
+    },
+    {
+      "cafemarkt_id": "25980",
+      "name": "CSA CS-DBN 1200 Dik Tip Buzdolabı, 2 Cam Kapılı, 1200 L",
+      "code": "454.CS.DBN.1200.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44160-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1200-dik-tip-buzdolabi-2-cam-kapili-1200-l-endustriyel-buzdolaplari-csa-inox-44160-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 122942.72
+    },
+    {
+      "cafemarkt_id": "25994",
+      "name": "CSA CS-DBN 700-ST-T Dik Tip Statik Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBN.700.ST.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44202-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44202-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 101493.44
+    },
+    {
+      "cafemarkt_id": "25951",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Buzdolabı, 4 Çekmeceli, 260 L",
+      "code": "454.CS.CIK.4.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-44255-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-44255-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 152169.14
+    },
+    {
+      "cafemarkt_id": "25976",
+      "name": "CSA CS-DBLK 700-C Dik Tip Derin Dondurucu, Cam Kapılı, 700 L",
+      "code": "454.CS.DBLK.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l-endustriyel-derin-dondurucular-csa-inox-44183-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l-endustriyel-derin-dondurucular-csa-inox-44183-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119853.17
+    },
+    {
+      "cafemarkt_id": "26084",
+      "name": "CSA CS-TEZ 2-700-SH Havuzlu Salad Bar, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-sh-havuzlu-salad-bar-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-sh-havuzlu-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44319-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-sh-havuzlu-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44319-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90200.61
+    },
+    {
+      "cafemarkt_id": "26033",
+      "name": "CSA CS-TEK 2-600 Tezgah Tipi Buzdolabı, 2 Kapılı, 251 L",
+      "code": "454.CS.TEK.2.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44215-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-600-tezgah-tipi-buzdolabi-2-kapili-251-l-endustriyel-buzdolaplari-csa-inox-44215-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 77806.91
+    },
+    {
+      "cafemarkt_id": "26043",
+      "name": "CSA CS-TEK 2D-700 Tezgah Tipi Derin Dondurucu, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44245-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44245-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 104547.48
+    },
+    {
+      "cafemarkt_id": "25954",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 310 L",
+      "code": "454.CS.CIK.4D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-44274-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-44274-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 179300.35
+    },
+    {
+      "cafemarkt_id": "25983",
+      "name": "CSA CS-DBN 1400-M-KR Dik Tip Monoblok Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44207-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44207-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109199.56
+    },
+    {
+      "cafemarkt_id": "26061",
+      "name": "CSA CS-TEK 3D-700 Tezgah Tipi Derin Dondurucu, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l-endustriyel-derin-dondurucular-csa-inox-44248-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-3-kapili-474-l-endustriyel-derin-dondurucular-csa-inox-44248-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119249.47
+    },
+    {
+      "cafemarkt_id": "26051",
+      "name": "CSA CS-TEK 3-700-C Tezgah Tipi Buzdolabı, 3 Cam Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-c-tezgah-tipi-buzdolabi-3-cam-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-c-tezgah-tipi-buzdolabi-3-cam-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44237-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-c-tezgah-tipi-buzdolabi-3-cam-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44237-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114171.25
+    },
+    {
+      "cafemarkt_id": "25982",
+      "name": "CSA CS-DBN 1400-C Dik Tip Buzdolabı, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44184-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44184-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 127417.24
+    },
+    {
+      "cafemarkt_id": "25952",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Buzdolabı, 4 Çekmeceli, 310 L",
+      "code": "454.CS.CIK.4.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-44273-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-44273-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 167048.69
+    },
+    {
+      "cafemarkt_id": "26068",
+      "name": "CSA CS-TEK 4-700 Make Up Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-make-up-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44306-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44306-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 144782.64
+    },
+    {
+      "cafemarkt_id": "26024",
+      "name": "CSA CS-GRNK-151 Teşhir Dolabı, 151x39x46 cm",
+      "code": "454.CS.GRNK.151",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-grnk-151-teshir-dolabi-151x39x46-cm",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-grnk-151-teshir-dolabi-151x39x46-cm-saladbarlar-csa-inox-44333-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-grnk-151-teshir-dolabi-151x39x46-cm-saladbarlar-csa-inox-44333-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 51066.33
+    },
+    {
+      "cafemarkt_id": "26103",
+      "name": "CSA CS-TEZ 4-600 Tezgah Tipi Buzdolabı, 4 Kapılı, 550 L",
+      "code": "454.CS.TEZ.4.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44228-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44228-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106536.16
+    },
+    {
+      "cafemarkt_id": "25993",
+      "name": "CSA CS-DBN 700-ST Dik Tip Statik Buzdolabı, 700 L",
+      "code": "454.CS.DBN.700.ST",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-st-dik-tip-statik-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-st-dik-tip-statik-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44199-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-st-dik-tip-statik-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44199-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85584.04
+    },
+    {
+      "cafemarkt_id": "25965",
+      "name": "CSA CS-DBL 700-M-KR Dik Tip Monoblok Derin Dondurucu, 700 L",
+      "code": "454.CS.DBL.700.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-700-m-dik-tip-monoblok-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-700-m-dik-tip-monoblok-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44205-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-700-m-dik-tip-monoblok-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-44205-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97658.14
+    },
+    {
+      "cafemarkt_id": "26086",
+      "name": "CSA CS-TEZ 2D-600 Tezgah Tipi Derin Dondurucu, 2 Kapılı, 251 L",
+      "code": "454.CS.TEZ.2D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44225-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44225-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 82920.64
+    },
+    {
+      "cafemarkt_id": "25947",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Buzdolabı, 3 Çekmeceli, 180 L",
+      "code": "454.CS.CIK.3.600.3CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-44253-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-44253-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123262.33
+    },
+    {
+      "cafemarkt_id": "25961",
+      "name": "CSA CS-DBL 600 Dik Tip Derin Dondurucu, 600 L",
+      "code": "454.CS.DBL.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-600-l-endustriyel-derin-dondurucular-csa-inox-44158-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-600-l-endustriyel-derin-dondurucular-csa-inox-44158-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 87217.6
+    },
+    {
+      "cafemarkt_id": "25978",
+      "name": "CSA CS-DBLK 700-T Dik Tip Hamur Dinlendirme Dolabı, 700 L",
+      "code": "454.CS.DBLK.700.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44190-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-700-t-dik-tip-hamur-dinlendirme-dolabi-700-l-endustriyel-buzdolaplari-csa-inox-44190-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 117828.99
+    },
+    {
+      "cafemarkt_id": "26110",
+      "name": "CSA CS-TEZ 4-700-SH Havuzlu Salad Bar, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-sh-havuzlu-salad-bar-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-sh-havuzlu-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44321-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-sh-havuzlu-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44321-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 126422.9
+    },
+    {
+      "cafemarkt_id": "26054",
+      "name": "CSA CS-TEK 3-700-SH Havuzsuz Salad Bar, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44311-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44311-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 125783.69
+    },
+    {
+      "cafemarkt_id": "26070",
+      "name": "CSA CS-TEK 4-700-SH Havuzlu Salad Bar, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-sh-havuzlu-salad-bar-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-sh-havuzlu-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44318-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-sh-havuzlu-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44318-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 137147.54
+    },
+    {
+      "cafemarkt_id": "26041",
+      "name": "CSA CS-TEK 2-700-SH Havuzlu Salad Bar, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.SHS",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-sh-havuzlu-salad-bar-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-sh-havuzlu-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44316-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-sh-havuzlu-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44316-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94746.15
+    },
+    {
+      "cafemarkt_id": "26017",
+      "name": "CSA CS-DBNLK-1400 Dik Tip Buzdolabı & Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNLK.1400",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnlk-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnlk-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44177-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnlk-1400-dik-tip-buzdolabi-derin-dondurucu-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44177-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 164172.22
+    },
+    {
+      "cafemarkt_id": "25939",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Buzdolabı, 4 Çekmeceli, 260 L",
+      "code": "454.CS.CIH.4.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-44261-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-44261-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 143362.15
+    },
+    {
+      "cafemarkt_id": "26062",
+      "name": "CSA CS-TEK 4-600 Tezgah Tipi Buzdolabı, 4 Kapılı, 550 L",
+      "code": "454.CS.TEK.4.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44221-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-4-kapili-550-l-endustriyel-buzdolaplari-csa-inox-44221-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 117402.84
+    },
+    {
+      "cafemarkt_id": "26039",
+      "name": "CSA CS-TEK 2-700 Make Up Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-make-up-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44304-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44304-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 112111.55
+    },
+    {
+      "cafemarkt_id": "26056",
+      "name": "CSA CS-TEK 3-700-YM Yükseltilmiş Make Up Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44299-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44299-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 125783.69
+    },
+    {
+      "cafemarkt_id": "25990",
+      "name": "CSA CS-DBN 700-C Dik Tip Buzdolabı, Cam Kapılı, 700 L",
+      "code": "454.CS.DBN.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-c-dik-tip-buzdolabi-cam-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-c-dik-tip-buzdolabi-cam-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44186-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-c-dik-tip-buzdolabi-cam-kapili-700-l-endustriyel-buzdolaplari-csa-inox-44186-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86187.75
+    },
+    {
+      "cafemarkt_id": "26045",
+      "name": "CSA CS-TEK 2D-600 Tezgah Tipi Derin Dondurucu, 2 Kapılı, 251 L",
+      "code": "454.CS.TEK.2D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44217-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-2-kapili-251-l-endustriyel-derin-dondurucular-csa-inox-44217-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98439.41
+    },
+    {
+      "cafemarkt_id": "26044",
+      "name": "CSA CS-TEK 2D-700-E Evyeli Derin Dondurucu, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2D.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-700-e-evyeli-derin-dondurucu-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-e-evyeli-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44294-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-e-evyeli-derin-dondurucu-2-kapili-281-l-endustriyel-derin-dondurucular-csa-inox-44294-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123333.36
+    },
+    {
+      "cafemarkt_id": "26057",
+      "name": "CSA CS-TEK 3D-600-E Evyeli Derin Dondurucu, 3 Kapılı, 400 L",
+      "code": "454.CS.TEK.3D.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-d-600-e-evyeli-derin-dondurucu-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-d-600-e-evyeli-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44278-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-d-600-e-evyeli-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44278-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 124150.13
+    },
+    {
+      "cafemarkt_id": "25964",
+      "name": "CSA CS-DBL 700-C Dik Tip Derin Dondurucu, Cam Kapılı, 700 L",
+      "code": "454.CS.DBL.700.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l-endustriyel-derin-dondurucular-csa-inox-44182-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-700-c-dik-tip-derin-dondurucu-cam-kapili-700-l-endustriyel-derin-dondurucular-csa-inox-44182-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 108240.73
+    },
+    {
+      "cafemarkt_id": "26052",
+      "name": "CSA CS-TEK 3-700-E Evyeli Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-e-evyeli-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-e-evyeli-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44295-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-e-evyeli-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44295-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114171.25
+    },
+    {
+      "cafemarkt_id": "25940",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Buzdolabı, 4 Çekmeceli, 310 L",
+      "code": "454.CS.CIH.4.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-44267-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-44267-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 157566.97
+    },
+    {
+      "cafemarkt_id": "26060",
+      "name": "CSA CS-TEK 3D-600 Tezgah Tipi Derin Dondurucu, 3 Kapılı, 400 L",
+      "code": "454.CS.TEK.3D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44220-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-3-kapili-400-l-endustriyel-derin-dondurucular-csa-inox-44220-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 116586.07
+    },
+    {
+      "cafemarkt_id": "25971",
+      "name": "CSA CS-DBLK 1400-M-KR Dik Tip Monoblok Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBLK.1400.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44204-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44204-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 152701.82
+    },
+    {
+      "cafemarkt_id": "26027",
+      "name": "CSA CS-KRP 2-700 Krep Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.KRP.2.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-krp-2-700-krep-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-krp-2-700-krep-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44322-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-krp-2-700-krep-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44322-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109022
+    },
+    {
+      "cafemarkt_id": "26001",
+      "name": "CSA CS-DBNK 1400-M-KR Dik Tip Monoblok Buzdolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44208-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-m-dik-tip-monoblok-buzdolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44208-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 127417.24
+    },
+    {
+      "cafemarkt_id": "26053",
+      "name": "CSA CS-TEK 3-700 Make Up Buzdolabı, 3 Kapılı, 474 L",
+      "code": "454.CS.TEK.3.700.MAKEUP",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-make-up-buzdolabi-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44305-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-make-up-buzdolabi-3-kapili-474-l-endustriyel-buzdolaplari-csa-inox-44305-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 124363.21
+    },
+    {
+      "cafemarkt_id": "25956",
+      "name": "CSA CS-DBL 1200 Dik Tip Derin Dondurucu, 2 Cam Kapılı, 1200 L",
+      "code": "454.CS.DBL.1200.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44164-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44164-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 151920.56
+    },
+    {
+      "cafemarkt_id": "26007",
+      "name": "CSA CS-DBNK 600 Dik Tip Buzdolabı, Cam Kapılı, 600 L",
+      "code": "454.CS.DBNK.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-cam-kapili-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-cam-kapili-600-l-endustriyel-buzdolaplari-csa-inox-44163-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-600-dik-tip-buzdolabi-cam-kapili-600-l-endustriyel-buzdolaplari-csa-inox-44163-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97835.7
+    },
+    {
+      "cafemarkt_id": "25991",
+      "name": "CSA CS-DBN 700-M-KR Dik Tip Monoblok Buzdolabı, 700 L",
+      "code": "454.CS.DBN.700.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-m-dik-tip-monoblok-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-m-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44209-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-m-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44209-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85690.58
+    },
+    {
+      "cafemarkt_id": "26042",
+      "name": "CSA CS-TEK 2-700-YM Yükseltilmiş Make Up Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44298-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44298-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 102274.71
+    },
+    {
+      "cafemarkt_id": "26047",
+      "name": "CSA CS-TEK 3-600 Tezgah Tipi Buzdolabı, 3 Kapılı, 400 L",
+      "code": "454.CS.TEK.3.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44218-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44218-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94746.15
+    },
+    {
+      "cafemarkt_id": "26049",
+      "name": "CSA CS-TEK 3-600-E Evyeli Buzdolabı, 3 Kapılı, 400 L",
+      "code": "454.CS.TEK.3.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-600-e-evyeli-buzdolabi-3-kapili-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-e-evyeli-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44277-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-e-evyeli-buzdolabi-3-kapili-400-l-endustriyel-buzdolaplari-csa-inox-44277-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106997.81
+    },
+    {
+      "cafemarkt_id": "25988",
+      "name": "CSA CS-DBN 600 Dik Tip Buzdolabı, Cam Kapılı, 600 L",
+      "code": "454.CS.DBN.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-cam-kapili-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-cam-kapili-600-l-endustriyel-buzdolaplari-csa-inox-44162-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-600-dik-tip-buzdolabi-cam-kapili-600-l-endustriyel-buzdolaplari-csa-inox-44162-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85157.9
+    },
+    {
+      "cafemarkt_id": "25968",
+      "name": "CSA CS-DBLK 1200 Dik Tip Derin Dondurucu, 2 Cam Kapılı, 1200 L",
+      "code": "454.CS.DBLK.1200.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44165-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1200-dik-tip-derin-dondurucu-2-cam-kapili-1200-l-endustriyel-derin-dondurucular-csa-inox-44165-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 156004.44
+    },
+    {
+      "cafemarkt_id": "25959",
+      "name": "CSA CS-DBL 1400-M-KR Dik Tip Monoblok Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBL.1400.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44203-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-m-dik-tip-monoblok-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44203-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 137183.06
+    },
+    {
+      "cafemarkt_id": "26038",
+      "name": "CSA CS-TEK 2-700-E Evyeli Buzdolabı, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-e-evyeli-buzdolabi-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-e-evyeli-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44293-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-e-evyeli-buzdolabi-2-kapili-281-l-endustriyel-buzdolaplari-csa-inox-44293-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94355.52
+    },
+    {
+      "cafemarkt_id": "26040",
+      "name": "CSA CS-TEK 2-700-SH Havuzsuz Salad Bar, 2 Kapılı, 281 L",
+      "code": "454.CS.TEK.2.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44310-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44310-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 100854.23
+    },
+    {
+      "cafemarkt_id": "25931",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Buzdolabı, 2 Çekmeceli, 115 L",
+      "code": "454.CS.CIH.2.600.2CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-44257-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-44257-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94746.15
+    },
+    {
+      "cafemarkt_id": "26010",
+      "name": "CSA CS-DBNK 700-M-KR Dik Tip Monoblok Buzdolabı, 700 L",
+      "code": "454.CS.DBNK.700.M.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-m-dik-tip-monoblok-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-m-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44210-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-m-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44210-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94568.59
+    },
+    {
+      "cafemarkt_id": "26031",
+      "name": "CSA CS-PIZ-200 Pizza Hazırlık Dolabı, Granit Tablalı, 615 L",
+      "code": "454.CS.PIZ.200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-piz-200-pizza-hazirlik-dolabi-granit-tablali-615-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-piz-200-pizza-hazirlik-dolabi-granit-tablali-615-l-pizza-hazirlik-uniteleri-csa-inox-44325-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-piz-200-pizza-hazirlik-dolabi-granit-tablali-615-l-pizza-hazirlik-uniteleri-csa-inox-44325-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 149860.86
+    },
+    {
+      "cafemarkt_id": "26083",
+      "name": "CSA CS-TEZ 2-700-SH Havuzsuz Salad Bar, 2 Kapılı, 281 L",
+      "code": "454.CS.TEZ.2.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44313-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-sh-havuzsuz-salad-bar-2-kapili-281-l-saladbarlar-csa-inox-44313-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 89667.93
+    },
+    {
+      "cafemarkt_id": "26096",
+      "name": "CSA CS-TEZ 3-700-SH Havuzsuz Salad Bar, 3 Kapılı, 474 L",
+      "code": "454.CS.TEZ.3.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44314-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-sh-havuzsuz-salad-bar-3-kapili-474-l-saladbarlar-csa-inox-44314-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 113105.88
+    },
+    {
+      "cafemarkt_id": "25962",
+      "name": "CSA CS-DBL 600 Dik Tip Derin Dondurucu, Cam Kapılı, 600 L",
+      "code": "454.CS.DBL.600.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-cam-kapili-600-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-cam-kapili-600-l-endustriyel-derin-dondurucular-csa-inox-44166-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-600-dik-tip-derin-dondurucu-cam-kapili-600-l-endustriyel-derin-dondurucular-csa-inox-44166-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 101919.59
+    },
+    {
+      "cafemarkt_id": "26109",
+      "name": "CSA CS-TEZ 4-700-SH Havuzsuz Salad Bar, 4 Kapılı, 632 L",
+      "code": "454.CS.TEZ.4.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44315-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44315-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 129050.8
+    },
+    {
+      "cafemarkt_id": "26072",
+      "name": "CSA CS-TEK 4D 600-E Evyeli Derin Dondurucu, 4 Kapılı, 550 L",
+      "code": "454.CS.TEK.4D.600.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-d-600-e-evyeli-derin-dondurucu-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-d-600-e-evyeli-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44280-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-d-600-e-evyeli-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44280-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 164988.99
+    },
+    {
+      "cafemarkt_id": "26073",
+      "name": "CSA CS-TEK 4D 700-E Evyeli Derin Dondurucu, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4D.700.E",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-d-700-e-evyeli-derin-dondurucu-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-d-700-e-evyeli-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44297-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-d-700-e-evyeli-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44297-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 170280.29
+    },
+    {
+      "cafemarkt_id": "25970",
+      "name": "CSA CS-DBLK 1400-C Dik Tip Derin Dondurucu, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBLK.1400.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44181-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44181-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 171949.35
+    },
+    {
+      "cafemarkt_id": "26029",
+      "name": "CSA CS-PIK-200 Pizza Hazırlık Dolabı, Granit Tablalı, 615 L",
+      "code": "454.CS.PIK.200",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-pik-200-pizza-hazirlik-dolabi-granit-tablali-615-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-pik-200-pizza-hazirlik-dolabi-granit-tablali-615-l-pizza-hazirlik-uniteleri-csa-inox-44326-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-pik-200-pizza-hazirlik-dolabi-granit-tablali-615-l-pizza-hazirlik-uniteleri-csa-inox-44326-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 157424.93
+    },
+    {
+      "cafemarkt_id": "25972",
+      "name": "CSA CS-DBLK 1400-T Dik Tip Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBLK.1400.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44188-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44188-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 167616.88
+    },
+    {
+      "cafemarkt_id": "26071",
+      "name": "CSA CS-TEK 4-700-YM Yükseltilmiş Make Up Buzdolabı, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.YM",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44300-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-ym-yukseltilmis-make-up-buzdolabi-4-kapili-632-l-endustriyel-buzdolaplari-csa-inox-44300-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 151920.56
+    },
+    {
+      "cafemarkt_id": "26004",
+      "name": "CSA CS-DBNK 1400-ST-T Dik Tip Statik Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.ST.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44200-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-st-t-dik-tip-statik-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44200-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 152950.41
+    },
+    {
+      "cafemarkt_id": "26075",
+      "name": "CSA CS-TEK 4D-600 Tezgah Tipi Derin Dondurucu, 4 Kapılı, 550 L",
+      "code": "454.CS.TEK.4D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44223-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-4-kapili-550-l-endustriyel-derin-dondurucular-csa-inox-44223-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 155542.79
+    },
+    {
+      "cafemarkt_id": "25960",
+      "name": "CSA CS-DBL 1400-T Dik Tip Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBL.1400.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44189-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44189-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 148440.38
+    },
+    {
+      "cafemarkt_id": "26076",
+      "name": "CSA CS-TEK 4D-700 Tezgah Tipi Derin Dondurucu, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44250-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-4-kapili-632-l-endustriyel-derin-dondurucular-csa-inox-44250-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 148866.52
+    },
+    {
+      "cafemarkt_id": "25958",
+      "name": "CSA CS-DBL 1400-C Dik Tip Derin Dondurucu, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBL.1400.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44180-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-c-dik-tip-derin-dondurucu-2-cam-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-44180-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 161721.88
+    },
+    {
+      "cafemarkt_id": "26000",
+      "name": "CSA CS-DBNK 1400-C Dik Tip Buzdolabı, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44185-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-c-dik-tip-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44185-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 149470.23
+    },
+    {
+      "cafemarkt_id": "26005",
+      "name": "CSA CS-DBNK 1400-T Dik Tip Hamur Dinlendirme Dolabı, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.T",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44192-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-t-dik-tip-hamur-dinlendirme-dolabi-2-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44192-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 157034.29
+    },
+    {
+      "cafemarkt_id": "33205",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Derin Dondurucu, 8 Çekmeceli, 260 L",
+      "code": "454.CS.CIK.4D.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-58774-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-58774-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 194321.95
+    },
+    {
+      "cafemarkt_id": "33182",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Derin Dondurucu, 6 Çekmeceli, 210 L",
+      "code": "454.CS.CIK.3D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-58768-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-58768-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 155010.11
+    },
+    {
+      "cafemarkt_id": "33178",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Derin Dondurucu, 6 Çekmeceli, 210 L",
+      "code": "454.CS.CIH.3D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-58744-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-6-cekmeceli-210-l-endustriyel-derin-dondurucular-csa-inox-58744-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 143539.71
+    },
+    {
+      "cafemarkt_id": "33240",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 115 L",
+      "code": "454.CS.CIK.2D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-58758-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-58758-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 143184.59
+    },
+    {
+      "cafemarkt_id": "33221",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Derin Dondurucu, 6 Çekmeceli, 180 L",
+      "code": "454.CS.CIH.3D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-58742-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-58742-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142758.45
+    },
+    {
+      "cafemarkt_id": "26069",
+      "name": "CSA CS-TEK 4-700-SH Havuzsuz Salad Bar, 4 Kapılı, 632 L",
+      "code": "454.CS.TEK.4.700.SH",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44312-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-sh-havuzsuz-salad-bar-4-kapili-632-l-saladbarlar-csa-inox-44312-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 146842.33
+    },
+    {
+      "cafemarkt_id": "33223",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Derin Dondurucu, 6 Çekmeceli, 180 L",
+      "code": "454.CS.CIK.3D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-58766-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-6-cekmeceli-180-l-endustriyel-derin-dondurucular-csa-inox-58766-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 149328.18
+    },
+    {
+      "cafemarkt_id": "33279",
+      "name": "CSA CS-CIK-2 700 Alttan Motorlu Yatay Buzdolabı, 135 L",
+      "code": "454.CS.CIK.2.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-buzdolabi-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-buzdolabi-135-l-endustriyel-buzdolaplari-csa-inox-58834-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-buzdolabi-135-l-endustriyel-buzdolaplari-csa-inox-58834-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 80257.24
+    },
+    {
+      "cafemarkt_id": "33250",
+      "name": "CSA CS-TEK 4D-700 Tezgah Tipi Derin Dondurucu, 12 Çekmeceli, 632 L",
+      "code": "454.CS.TEK.4D.700.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58800-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58800-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 222731.59
+    },
+    {
+      "cafemarkt_id": "33289",
+      "name": "CSA CS-CIH 2 700 Alttan Motorlu Yatay Buzdolabı, 135 L",
+      "code": "454.CS.CIH.2.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-buzdolabi-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-buzdolabi-135-l-endustriyel-buzdolaplari-csa-inox-58837-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-buzdolabi-135-l-endustriyel-buzdolaplari-csa-inox-58837-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 74042.63
+    },
+    {
+      "cafemarkt_id": "33231",
+      "name": "CSA CS-TEK 4D-700 Tezgah Tipi Derin Dondurucu, 8 Çekmeceli, 632 L",
+      "code": "454.CS.TEK.4D.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58799-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58799-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 212077.97
+    },
+    {
+      "cafemarkt_id": "33249",
+      "name": "CSA CS-TEK 4D-600 Tezgah Tipi Derin Dondurucu, 8 Çekmeceli, 550 L",
+      "code": "454.CS.TEK.4D.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58797-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58797-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 218754.24
+    },
+    {
+      "cafemarkt_id": "33195",
+      "name": "CSA CS-TEZ 4D-600 Tezgah Tipi Derin Dondurucu, 12 Çekmeceli, 550 L",
+      "code": "454.CS.TEZ.4D.600.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58822-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58822-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 217227.22
+    },
+    {
+      "cafemarkt_id": "33202",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Derin Dondurucu, 8 Çekmeceli, 260 L",
+      "code": "454.CS.CIH.4D.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-58750-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-8-cekmeceli-260-l-endustriyel-derin-dondurucular-csa-inox-58750-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 183064.63
+    },
+    {
+      "cafemarkt_id": "33252",
+      "name": "CSA CS-TEZ 3D-600 Tezgah Tipi Derin Dondurucu, 9 Çekmeceli, 400 L",
+      "code": "454.CS.TEZ.3D.600.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58814-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58814-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 158738.87
+    },
+    {
+      "cafemarkt_id": "33260",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Derin Dondurucu, 3 Kapılı, 180 L",
+      "code": "454.CS.CIH.3D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l-endustriyel-derin-dondurucular-csa-inox-58741-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l-endustriyel-derin-dondurucular-csa-inox-58741-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 95349.86
+    },
+    {
+      "cafemarkt_id": "33247",
+      "name": "CSA CS-TEK 4-600 Tezgah Tipi Buzdolabı, 12 Çekmeceli, 550 L",
+      "code": "454.CS.TEK.4.600.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58825-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58825-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 191267.91
+    },
+    {
+      "cafemarkt_id": "33198",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 115 L",
+      "code": "454.CS.CIH.2D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-58734-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-4-cekmeceli-115-l-endustriyel-derin-dondurucular-csa-inox-58734-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 132744.05
+    },
+    {
+      "cafemarkt_id": "33272",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Derin Dondurucu, 3 Kapılı, 180 L",
+      "code": "454.CS.CIK.3D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l-endustriyel-derin-dondurucular-csa-inox-58765-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-derin-dondurucu-3-kapili-180-l-endustriyel-derin-dondurucular-csa-inox-58765-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 101919.59
+    },
+    {
+      "cafemarkt_id": "33230",
+      "name": "CSA CS-TEK 3D-600 Tezgah Tipi Derin Dondurucu, 9 Çekmeceli, 400 L",
+      "code": "454.CS.TEK.3D.600.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58792-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-9-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58792-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 171984.87
+    },
+    {
+      "cafemarkt_id": "33263",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Buzdolabı, 4 Kapılı, 310 L",
+      "code": "454.CS.CIH.4.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-kapili-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-kapili-310-l-endustriyel-buzdolaplari-csa-inox-58747-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-4-kapili-310-l-endustriyel-buzdolaplari-csa-inox-58747-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 110691.07
+    },
+    {
+      "cafemarkt_id": "33282",
+      "name": "CSA CS-CIK-4 700 Alttan Motorlu Yatay Buzdolabı, 310 L",
+      "code": "454.CS.CIK.4.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-buzdolabi-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-buzdolabi-310-l-endustriyel-buzdolaplari-csa-inox-58836-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-buzdolabi-310-l-endustriyel-buzdolaplari-csa-inox-58836-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 122339.02
+    },
+    {
+      "cafemarkt_id": "33285",
+      "name": "CSA CS-CIH3 700 Alttan Motorlu Yatay Buzdolabı, 210 L",
+      "code": "454.CS.CIH.3.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-buzdolabi-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-buzdolabi-210-l-endustriyel-buzdolaplari-csa-inox-58838-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-buzdolabi-210-l-endustriyel-buzdolaplari-csa-inox-58838-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94817.18
+    },
+    {
+      "cafemarkt_id": "33236",
+      "name": "CSA CS-TEZ 3D-600 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 400 L",
+      "code": "454.CS.TEZ.3D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58813-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58813-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 150748.66
+    },
+    {
+      "cafemarkt_id": "33203",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 135 L",
+      "code": "454.CS.CIK.2D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-58760-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-58760-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 144995.71
+    },
+    {
+      "cafemarkt_id": "33209",
+      "name": "CSA CS-TEK 2D-600 Tezgah Tipi Derin Dondurucu, 4 Çekmeceli, 251 L",
+      "code": "454.CS.TEK.2D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58783-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58783-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 133951.46
+    },
+    {
+      "cafemarkt_id": "33287",
+      "name": "CSA CS-CIH4 700 Alttan Motorlu Yatay Buzdolabı, 310 L",
+      "code": "454.CS.CIH.4.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-buzdolabi-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-buzdolabi-310-l-endustriyel-buzdolaplari-csa-inox-58839-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-buzdolabi-310-l-endustriyel-buzdolaplari-csa-inox-58839-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 111685.4
+    },
+    {
+      "cafemarkt_id": "33219",
+      "name": "CSA CS-TEZ 4D-700 Tezgah Tipi Derin Dondurucu, 12 Çekmeceli, 632 L",
+      "code": "454.CS.TEZ.4D.700.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58824-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-12-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58824-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 207923.06
+    },
+    {
+      "cafemarkt_id": "33187",
+      "name": "CSA CS-TEK 4D-600 Tezgah Tipi Derin Dondurucu, 12 Çekmeceli, 550 L",
+      "code": "454.CS.TEK.4D.600.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58798-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4d-600-tezgah-tipi-derin-dondurucu-12-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58798-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 229407.85
+    },
+    {
+      "cafemarkt_id": "33248",
+      "name": "CSA CS-TEK 4-700 Tezgah Tipi Buzdolabı, 8 Çekmeceli, 632 L",
+      "code": "454.CS.TEK.4.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58795-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58795-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 185124.33
+    },
+    {
+      "cafemarkt_id": "33211",
+      "name": "CSA CS-TEK 3D-600 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 400 L",
+      "code": "454.CS.TEK.3D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58791-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-400-l-endustriyel-derin-dondurucular-csa-inox-58791-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 163994.66
+    },
+    {
+      "cafemarkt_id": "33266",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Buzdolabı, 2 Kapılı, 115 L",
+      "code": "454.CS.CIK.2.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-kapili-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-kapili-115-l-endustriyel-buzdolaplari-csa-inox-58753-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-2-kapili-115-l-endustriyel-buzdolaplari-csa-inox-58753-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 76350.91
+    },
+    {
+      "cafemarkt_id": "33276",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Derin Dondurucu, 4 Kapılı, 260 L",
+      "code": "454.CS.CIK.4D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l-endustriyel-derin-dondurucular-csa-inox-58773-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l-endustriyel-derin-dondurucular-csa-inox-58773-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 131110.5
+    },
+    {
+      "cafemarkt_id": "33222",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Buzdolabı, 4 Çekmeceli, 115 L",
+      "code": "454.CS.CIK.2.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-58754-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-58754-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 122516.58
+    },
+    {
+      "cafemarkt_id": "33274",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Buzdolabı, 4 Kapılı, 260 L",
+      "code": "454.CS.CIK.4.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-kapili-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-kapili-260-l-endustriyel-buzdolaplari-csa-inox-58769-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-4-kapili-260-l-endustriyel-buzdolaplari-csa-inox-58769-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106003.47
+    },
+    {
+      "cafemarkt_id": "33292",
+      "name": "CSA CS-DBL 700 Dik Tip Cam Kapılı Derin Dondurucu, 700 L",
+      "code": "454.CS.DBL.700.KR",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-700-dik-tip-cam-kapili-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-700-dik-tip-cam-kapili-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-58832-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-700-dik-tip-cam-kapili-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-58832-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 94994.74
+    },
+    {
+      "cafemarkt_id": "33262",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Buzdolabı, 4 Kapılı, 260 L",
+      "code": "454.CS.CIH.4.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-kapili-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-kapili-260-l-endustriyel-buzdolaplari-csa-inox-58745-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-4-kapili-260-l-endustriyel-buzdolaplari-csa-inox-58745-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97196.49
+    },
+    {
+      "cafemarkt_id": "33268",
+      "name": "CSA CS-CIK 2-600 Cihaz Altı Derin Dondurucu, 2 Kapılı, 115 L",
+      "code": "454.CS.CIK.2D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l-endustriyel-derin-dondurucular-csa-inox-58757-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l-endustriyel-derin-dondurucular-csa-inox-58757-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97018.93
+    },
+    {
+      "cafemarkt_id": "33200",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Buzdolabı, 6 Çekmeceli, 210 L",
+      "code": "454.CS.CIH.3.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-58740-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-58740-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136046.67
+    },
+    {
+      "cafemarkt_id": "33269",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Derin Dondurucu, 2 Kapılı, 135 L",
+      "code": "454.CS.CIK.2D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l-endustriyel-derin-dondurucular-csa-inox-58759-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l-endustriyel-derin-dondurucular-csa-inox-58759-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98830.04
+    },
+    {
+      "cafemarkt_id": "33277",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Derin Dondurucu, 4 Kapılı, 310 L",
+      "code": "454.CS.CIK.4D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l-endustriyel-derin-dondurucular-csa-inox-58775-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l-endustriyel-derin-dondurucular-csa-inox-58775-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 133134.68
+    },
+    {
+      "cafemarkt_id": "33265",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Derin Dondurucu, 4 Kapılı, 310 L",
+      "code": "454.CS.CIH.4D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l-endustriyel-derin-dondurucular-csa-inox-58751-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-4-kapili-310-l-endustriyel-derin-dondurucular-csa-inox-58751-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 121309.17
+    },
+    {
+      "cafemarkt_id": "33186",
+      "name": "CSA CS-TEK 4-600 Tezgah Tipi Buzdolabı, 8 Çekmeceli, 550 L",
+      "code": "454.CS.TEK.4.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58826-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58826-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 180614.3
+    },
+    {
+      "cafemarkt_id": "33259",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Buzdolabı, 3 Kapılı, 210 L",
+      "code": "454.CS.CIH.3.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-kapili-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-kapili-210-l-endustriyel-buzdolaplari-csa-inox-58739-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-buzdolabi-3-kapili-210-l-endustriyel-buzdolaplari-csa-inox-58739-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88638.08
+    },
+    {
+      "cafemarkt_id": "33204",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Buzdolabı, 6 Çekmeceli, 210 L",
+      "code": "454.CS.CIK.3.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-58764-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-6-cekmeceli-210-l-endustriyel-buzdolaplari-csa-inox-58764-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142758.45
+    },
+    {
+      "cafemarkt_id": "33225",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Derin Dondurucu, 8 Çekmeceli, 310 L",
+      "code": "454.CS.CIK.4D.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-58776-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-58776-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 196346.13
+    },
+    {
+      "cafemarkt_id": "33239",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Derin Dondurucu, 8 Çekmeceli, 310 L",
+      "code": "454.CS.CIH.4D.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-58752-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-derin-dondurucu-8-cekmeceli-310-l-endustriyel-derin-dondurucular-csa-inox-58752-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 184520.62
+    },
+    {
+      "cafemarkt_id": "33286",
+      "name": "CSA CS-CIH3 700 Alttan Motorlu Yatay Saladbar, 632 L",
+      "code": "454.CS.CIH.3.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-saladbar-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58844-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih3-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58844-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106358.6
+    },
+    {
+      "cafemarkt_id": "33224",
+      "name": "CSA CS-CIK 4-600 Cihaz Altı Buzdolabı, 8 Çekmeceli, 260 L",
+      "code": "454.CS.CIK.4.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-58770-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-58770-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 169214.93
+    },
+    {
+      "cafemarkt_id": "33238",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Buzdolabı, 6 Çekmeceli, 180 L",
+      "code": "454.CS.CIH.3.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-58738-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-58738-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 127452.75
+    },
+    {
+      "cafemarkt_id": "33213",
+      "name": "CSA CS-TEK 4-700 Tezgah Tipi Buzdolabı, 12 Çekmeceli, 632 L",
+      "code": "454.CS.TEK.4.700.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58796-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58796-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 195777.94
+    },
+    {
+      "cafemarkt_id": "33258",
+      "name": "CSA CS-CIH 3-600 Cihaz Altı Buzdolabı, 3 Kapılı, 180 L",
+      "code": "454.CS.CIH.3.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-kapili-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-kapili-180-l-endustriyel-buzdolaplari-csa-inox-58737-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-600-cihaz-alti-buzdolabi-3-kapili-180-l-endustriyel-buzdolaplari-csa-inox-58737-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 80044.16
+    },
+    {
+      "cafemarkt_id": "33275",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Buzdolabı, 4 Kapılı, 310 L",
+      "code": "454.CS.CIK.4.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-kapili-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-kapili-310-l-endustriyel-buzdolaplari-csa-inox-58771-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-4-kapili-310-l-endustriyel-buzdolaplari-csa-inox-58771-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 120883.02
+    },
+    {
+      "cafemarkt_id": "33253",
+      "name": "CSA CS-TEZ 4-600 Tezgah Tipi Buzdolabı, 12 Çekmeceli, 550 L",
+      "code": "454.CS.TEZ.4.600.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58818-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-12-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58818-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 169747.61
+    },
+    {
+      "cafemarkt_id": "33197",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Buzdolabı, 4 Çekmeceli, 135 L",
+      "code": "454.CS.CIH.2.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-58732-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-58732-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119071.91
+    },
+    {
+      "cafemarkt_id": "33267",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Buzdolabı, 2 Kapılı, 135 L",
+      "code": "454.CS.CIK.2.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-kapili-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-kapili-135-l-endustriyel-buzdolaplari-csa-inox-58755-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-2-kapili-135-l-endustriyel-buzdolaplari-csa-inox-58755-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 79014.32
+    },
+    {
+      "cafemarkt_id": "33254",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Buzdolabı, 2 Kapılı, 115 L",
+      "code": "454.CS.CIH.2.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-kapili-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-kapili-115-l-endustriyel-buzdolaplari-csa-inox-58729-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-2-kapili-115-l-endustriyel-buzdolaplari-csa-inox-58729-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 71663.32
+    },
+    {
+      "cafemarkt_id": "33188",
+      "name": "CSA CS-TEZ 2D-600 Tezgah Tipi Derin Dondurucu, 4 Çekmeceli, 251 L",
+      "code": "454.CS.TEZ.2D.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58805-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-4-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58805-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114526.37
+    },
+    {
+      "cafemarkt_id": "33199",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Derin Dondurucu, 4 Çekmeceli, 135 L",
+      "code": "454.CS.CIH.2D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-58736-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-4-cekmeceli-135-l-endustriyel-derin-dondurucular-csa-inox-58736-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 132744.05
+    },
+    {
+      "cafemarkt_id": "33280",
+      "name": "CSA CS-CIK-3 700 Alttan Motorlu Yatay Buzdolabı, 210 L",
+      "code": "454.CS.CIK.3.700.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-buzdolabi-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-buzdolabi-210-l-endustriyel-buzdolaplari-csa-inox-58835-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-buzdolabi-210-l-endustriyel-buzdolaplari-csa-inox-58835-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 105470.79
+    },
+    {
+      "cafemarkt_id": "33242",
+      "name": "CSA CS-TEK 2-700-YM Yükseltilmiş Make Up Buzdolabı, 6 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2.700.YM.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58780-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58780-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 149683.3
+    },
+    {
+      "cafemarkt_id": "33229",
+      "name": "CSA CS-TEK 3-600 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 400 L",
+      "code": "454.CS.TEK.3.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58785-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58785-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142154.74
+    },
+    {
+      "cafemarkt_id": "33257",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Derin Dondurucu, 2 Kapılı, 135 L",
+      "code": "454.CS.CIH.2D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l-endustriyel-derin-dondurucular-csa-inox-58735-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-derin-dondurucu-2-kapili-135-l-endustriyel-derin-dondurucular-csa-inox-58735-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86578.38
+    },
+    {
+      "cafemarkt_id": "33220",
+      "name": "CSA CS-TEZ 4D-700 Tezgah Tipi Derin Dondurucu, 8 Çekmeceli, 632 L",
+      "code": "454.CS.TEZ.4D.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58823-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-700-tezgah-tipi-derin-dondurucu-8-cekmeceli-632-l-endustriyel-derin-dondurucular-csa-inox-58823-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 197269.45
+    },
+    {
+      "cafemarkt_id": "33261",
+      "name": "CSA CS-CIH 3-700 Cihaz Altı Derin Dondurucu, 3 Kapılı, 210 L",
+      "code": "454.CS.CIH.3D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l-endustriyel-derin-dondurucular-csa-inox-58743-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l-endustriyel-derin-dondurucular-csa-inox-58743-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 95776
+    },
+    {
+      "cafemarkt_id": "33232",
+      "name": "CSA CS-TEZ 2-600 Tezgah Tipi Buzdolabı, 4 Çekmeceli, 251 L",
+      "code": "454.CS.TEZ.2.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-4-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-4-cekmeceli-251-l-endustriyel-buzdolaplari-csa-inox-58801-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-4-cekmeceli-251-l-endustriyel-buzdolaplari-csa-inox-58801-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98652.48
+    },
+    {
+      "cafemarkt_id": "33251",
+      "name": "CSA CS-TEZ 2-700 Tezgah Tipi Buzdolabı, 4 Çekmeceli, 281 L",
+      "code": "454.CS.TEZ.2.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58803-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58803-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 100854.23
+    },
+    {
+      "cafemarkt_id": "33212",
+      "name": "CSA CS-TEK 3D-700 Tezgah Tipi Derin Dondurucu, 9 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3D.700.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58794-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58794-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 174648.27
+    },
+    {
+      "cafemarkt_id": "33270",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Buzdolabı, 3 Kapılı, 180 L",
+      "code": "454.CS.CIK.3.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-kapili-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-kapili-180-l-endustriyel-buzdolaplari-csa-inox-58761-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-3-kapili-180-l-endustriyel-buzdolaplari-csa-inox-58761-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88638.08
+    },
+    {
+      "cafemarkt_id": "33180",
+      "name": "CSA CS-CIK 2-700 Cihaz Altı Buzdolabı, 4 Çekmeceli, 135 L",
+      "code": "454.CS.CIK.2.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-58756-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-2-700-cihaz-alti-buzdolabi-4-cekmeceli-135-l-endustriyel-buzdolaplari-csa-inox-58756-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 125179.98
+    },
+    {
+      "cafemarkt_id": "33246",
+      "name": "CSA CS-TEK 3D-700 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58793-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58793-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 166658.06
+    },
+    {
+      "cafemarkt_id": "33264",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Derin Dondurucu, 4 Kapılı, 260 L",
+      "code": "454.CS.CIH.4D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l-endustriyel-derin-dondurucular-csa-inox-58749-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-derin-dondurucu-4-kapili-260-l-endustriyel-derin-dondurucular-csa-inox-58749-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119853.17
+    },
+    {
+      "cafemarkt_id": "33273",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Derin Dondurucu, 3 Kapılı, 210 L",
+      "code": "454.CS.CIK.3D.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l-endustriyel-derin-dondurucular-csa-inox-58767-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-derin-dondurucu-3-kapili-210-l-endustriyel-derin-dondurucular-csa-inox-58767-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 107601.52
+    },
+    {
+      "cafemarkt_id": "33196",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Buzdolabı, 4 Çekmeceli, 115 L",
+      "code": "454.CS.CIH.2.600.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-58730-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-buzdolabi-4-cekmeceli-115-l-endustriyel-buzdolaplari-csa-inox-58730-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 117828.99
+    },
+    {
+      "cafemarkt_id": "33237",
+      "name": "CSA CS-TEZ 4-700 Tezgah Tipi Buzdolabı, 12 Çekmeceli, 632 L",
+      "code": "454.CS.TEZ.4.700.12CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58820-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-12-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58820-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 183064.63
+    },
+    {
+      "cafemarkt_id": "33227",
+      "name": "CSA CS-TEK 2D-700 Tezgah Tipi Derin Dondurucu, 4 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58781-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58781-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136508.33
+    },
+    {
+      "cafemarkt_id": "33192",
+      "name": "CSA CS-TEZ 3-700 Tezgah Tipi Buzdolabı, 3 Çekmeceli, 474 L",
+      "code": "454.CS.TEZ.3.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58811-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-3-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58811-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136188.72
+    },
+    {
+      "cafemarkt_id": "33235",
+      "name": "CSA CS-TEZ 3-600 Tezgah Tipi Buzdolabı, 9 Çekmeceli, 400 L",
+      "code": "454.CS.TEZ.3.600.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58810-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58810-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 139739.92
+    },
+    {
+      "cafemarkt_id": "33245",
+      "name": "CSA CS-TEK 3-700-YM Yükseltilmiş Make Up Buzdolabı, 6 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3.700.YM.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58789-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-6-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58789-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 181182.49
+    },
+    {
+      "cafemarkt_id": "33256",
+      "name": "CSA CS-CIH 2-600 Cihaz Altı Derin Dondurucu, 2 Kapılı, 115 L",
+      "code": "454.CS.CIH.2D.600",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l-endustriyel-derin-dondurucular-csa-inox-58733-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-600-cihaz-alti-derin-dondurucu-2-kapili-115-l-endustriyel-derin-dondurucular-csa-inox-58733-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86578.38
+    },
+    {
+      "cafemarkt_id": "33288",
+      "name": "CSA CS-CIH4 700 Alttan Motorlu Yatay Saladbar, 632 L",
+      "code": "454.CS.CIH.4.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-saladbar-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58845-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih4-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58845-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123226.82
+    },
+    {
+      "cafemarkt_id": "33233",
+      "name": "CSA CS-TEZ 2-600 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 251 L",
+      "code": "454.CS.TEZ.2.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-6-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-6-cekmeceli-251-l-endustriyel-buzdolaplari-csa-inox-58802-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-600-tezgah-tipi-buzdolabi-6-cekmeceli-251-l-endustriyel-buzdolaplari-csa-inox-58802-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114455.34
+    },
+    {
+      "cafemarkt_id": "33255",
+      "name": "CSA CS-CIH 2-700 Cihaz Altı Buzdolabı, 2 Kapılı, 135 L",
+      "code": "454.CS.CIH.2.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-kapili-135-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-kapili-135-l-endustriyel-buzdolaplari-csa-inox-58731-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-2-700-cihaz-alti-buzdolabi-2-kapili-135-l-endustriyel-buzdolaplari-csa-inox-58731-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 72906.24
+    },
+    {
+      "cafemarkt_id": "33228",
+      "name": "CSA CS-TEK 2D-700 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58782-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58782-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 151956.07
+    },
+    {
+      "cafemarkt_id": "33278",
+      "name": "CSA CS-CIH-2 700 Alttan Motorlu Yatay Saladbar, 474 L",
+      "code": "454.CS.CIH.2.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-saladbar-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-saladbar-474-l-saladbarlar-csa-inox-58843-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih2-700-alttan-motorlu-yatay-saladbar-474-l-saladbarlar-csa-inox-58843-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84696.24
+    },
+    {
+      "cafemarkt_id": "33281",
+      "name": "CSA CS-CIK-3 700 Alttan Motorlu Yatay Saladbar, 632 L",
+      "code": "454.CS.CIK.3.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-saladbar-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58841-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik3-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58841-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 117544.89
+    },
+    {
+      "cafemarkt_id": "33214",
+      "name": "CSA CS-TEZ 2D-600 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 251 L",
+      "code": "454.CS.TEZ.2D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58806-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58806-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 130329.23
+    },
+    {
+      "cafemarkt_id": "33271",
+      "name": "CSA CS-CIK 3-700 Cihaz Altı Buzdolabı, 3 Kapılı, 210 L",
+      "code": "454.CS.CIK.3.700",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-kapili-210-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-kapili-210-l-endustriyel-buzdolaplari-csa-inox-58763-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-700-cihaz-alti-buzdolabi-3-kapili-210-l-endustriyel-buzdolaplari-csa-inox-58763-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 95349.86
+    },
+    {
+      "cafemarkt_id": "33189",
+      "name": "CSA CS-TEZ 2D-700 Tezgah Tipi Derin Dondurucu, 4 Çekmeceli, 281 L",
+      "code": "454.CS.TEZ.2D.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58807-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-4-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58807-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 116834.65
+    },
+    {
+      "cafemarkt_id": "33185",
+      "name": "CSA CS-TEK 3-700-YM Yükseltilmiş Make Up Buzdolabı, 9 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3.700.YM.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-9-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58790-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-ym-yukseltilmis-make-up-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58790-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 181182.49
+    },
+    {
+      "cafemarkt_id": "33218",
+      "name": "CSA CS-TEZ 4D-600 Tezgah Tipi Derin Dondurucu, 8 Çekmeceli, 550 L",
+      "code": "454.CS.TEZ.4D.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58821-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4d-600-tezgah-tipi-derin-dondurucu-8-cekmeceli-550-l-endustriyel-derin-dondurucular-csa-inox-58821-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 206573.61
+    },
+    {
+      "cafemarkt_id": "33243",
+      "name": "CSA CS-TEK 2D-600 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 251 L",
+      "code": "454.CS.TEK.2D.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58784-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2d-600-tezgah-tipi-derin-dondurucu-6-cekmeceli-251-l-endustriyel-derin-dondurucular-csa-inox-58784-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 145848
+    },
+    {
+      "cafemarkt_id": "33244",
+      "name": "CSA CS-TEK 3-600 Tezgah Tipi Buzdolabı, 9 Çekmeceli, 400 L",
+      "code": "454.CS.TEK.3.600.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58786-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-600-tezgah-tipi-buzdolabi-9-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58786-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 150144.95
+    },
+    {
+      "cafemarkt_id": "33191",
+      "name": "CSA CS-TEZ 3-600 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 400 L",
+      "code": "454.CS.TEZ.3.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58809-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-600-tezgah-tipi-buzdolabi-6-cekmeceli-400-l-endustriyel-buzdolaplari-csa-inox-58809-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 131749.71
+    },
+    {
+      "cafemarkt_id": "33201",
+      "name": "CSA CS-CIH 4-600 Cihaz Altı Buzdolabı, 8 Çekmeceli, 260 L",
+      "code": "454.CS.CIH.4.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-58746-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-600-cihaz-alti-buzdolabi-8-cekmeceli-260-l-endustriyel-buzdolaplari-csa-inox-58746-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 160407.94
+    },
+    {
+      "cafemarkt_id": "33234",
+      "name": "CSA CS-TEZ 2-700 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 281 L",
+      "code": "454.CS.TEZ.2.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58804-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58804-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 116657.09
+    },
+    {
+      "cafemarkt_id": "33217",
+      "name": "CSA CS-TEZ 4-700 Tezgah Tipi Buzdolabı, 8 Çekmeceli, 632 L",
+      "code": "454.CS.TEZ.4.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58819-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-700-tezgah-tipi-buzdolabi-8-cekmeceli-632-l-endustriyel-buzdolaplari-csa-inox-58819-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 172411.01
+    },
+    {
+      "cafemarkt_id": "33226",
+      "name": "CSA CS-TEK 2-700 Tezgah Tipi Buzdolabı, 4 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2.700.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58777-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58777-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114242.27
+    },
+    {
+      "cafemarkt_id": "33207",
+      "name": "CSA CS-TEK 2-700 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58778-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-tezgah-tipi-buzdolabi-6-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58778-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 130045.13
+    },
+    {
+      "cafemarkt_id": "33208",
+      "name": "CSA CS-TEK 2-700-YM Yükseltilmiş Make Up Buzdolabı, 4 Çekmeceli, 281 L",
+      "code": "454.CS.TEK.2.700.YM.4CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-4-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58779-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-2-700-ym-yukseltilmis-make-up-buzdolabi-4-cekmeceli-281-l-endustriyel-buzdolaplari-csa-inox-58779-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 133880.44
+    },
+    {
+      "cafemarkt_id": "33190",
+      "name": "CSA CS-TEZ 2D-700 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 281 L",
+      "code": "454.CS.TEZ.2D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58808-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-2d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-281-l-endustriyel-derin-dondurucular-csa-inox-58808-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 132637.51
+    },
+    {
+      "cafemarkt_id": "33184",
+      "name": "CSA CS-TEK 3-700 Tezgah Tipi Buzdolabı, 9 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3.700.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58788-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58788-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 153234.5
+    },
+    {
+      "cafemarkt_id": "33291",
+      "name": "CSA CS-CIK2 700 Alttan Motorlu Yatay Saladbar, 474 L",
+      "code": "454.CS.CIK.2.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-saladbar-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-saladbar-474-l-saladbarlar-csa-inox-58840-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik2-700-alttan-motorlu-yatay-saladbar-474-l-saladbarlar-csa-inox-58840-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90023.05
+    },
+    {
+      "cafemarkt_id": "33193",
+      "name": "CSA CS-TEZ 3D-700 Tezgah Tipi Derin Dondurucu, 6 Çekmeceli, 474 L",
+      "code": "454.CS.TEZ.3D.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58815-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-6-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58815-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 150855.2
+    },
+    {
+      "cafemarkt_id": "33241",
+      "name": "CSA CS-CIK 4-700 Cihaz Altı Buzdolabı, 8 Çekmeceli, 310 L",
+      "code": "454.CS.CIK.4.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-58772-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-58772-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 184094.48
+    },
+    {
+      "cafemarkt_id": "33194",
+      "name": "CSA CS-TEZ 3D-700 Tezgah Tipi Derin Dondurucu, 9 Çekmeceli, 474 L",
+      "code": "454.CS.TEZ.3D.700.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58816-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3d-700-tezgah-tipi-derin-dondurucu-9-cekmeceli-474-l-endustriyel-derin-dondurucular-csa-inox-58816-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 158845.41
+    },
+    {
+      "cafemarkt_id": "33181",
+      "name": "CSA CS-CIK 3-600 Cihaz Altı Buzdolabı, 6 Çekmeceli, 180 L",
+      "code": "454.CS.CIK.3.600.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-58762-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik-3-600-cihaz-alti-buzdolabi-6-cekmeceli-180-l-endustriyel-buzdolaplari-csa-inox-58762-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136046.67
+    },
+    {
+      "cafemarkt_id": "33210",
+      "name": "CSA CS-TEK 3-700 Tezgah Tipi Buzdolabı, 6 Çekmeceli, 474 L",
+      "code": "454.CS.TEK.3.700.6CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-6-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-6-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58787-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tek-3-700-tezgah-tipi-buzdolabi-6-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58787-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 145244.29
+    },
+    {
+      "cafemarkt_id": "33216",
+      "name": "CSA CS-TEZ 4-600 Tezgah Tipi Buzdolabı, 8 Çekmeceli, 550 L",
+      "code": "454.CS.TEZ.4.600.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58817-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-4-600-tezgah-tipi-buzdolabi-8-cekmeceli-550-l-endustriyel-buzdolaplari-csa-inox-58817-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 169747.61
+    },
+    {
+      "cafemarkt_id": "33179",
+      "name": "CSA CS-CIH 4-700 Cihaz Altı Buzdolabı, 8 Çekmeceli, 310 L",
+      "code": "454.CS.CIH.4.700.8CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-58748-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cih-4-700-cihaz-alti-buzdolabi-8-cekmeceli-310-l-endustriyel-buzdolaplari-csa-inox-58748-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 173902.52
+    },
+    {
+      "cafemarkt_id": "33283",
+      "name": "CSA CS-CIK4 700 Alttan Motorlu Yatay Saladbar, 632 L",
+      "code": "454.CS.CIK.4.700.SH.AK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-saladbar-632-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58842-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-cik4-700-alttan-motorlu-yatay-saladbar-632-l-saladbarlar-csa-inox-58842-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136543.84
+    },
+    {
+      "cafemarkt_id": "33215",
+      "name": "CSA CS-TEZ 3-700 Tezgah Tipi Buzdolabı, 9 Çekmeceli, 474 L",
+      "code": "454.CS.TEZ.3.700.9CEK",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58812-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-tez-3-700-tezgah-tipi-buzdolabi-9-cekmeceli-474-l-endustriyel-buzdolaplari-csa-inox-58812-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 136188.72
+    },
+    {
+      "cafemarkt_id": "26002",
+      "name": "CSA CS-DBNK 1400-M-C Dik Tip Monoblok Buzdolabı, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBNK.1400.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44211-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44211-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 155468.25
+    },
+    {
+      "cafemarkt_id": "25984",
+      "name": "CSA CS-DBN 1400-M-C Dik Tip Monoblok Buzdolabı, 2 Cam Kapılı, 1400 L",
+      "code": "454.CS.DBN.1400.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44212-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-1400-m-c-dik-tip-monoblok-buzdolabi-2-cam-kapili-1400-l-endustriyel-buzdolaplari-csa-inox-44212-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 139440.2
+    },
+    {
+      "cafemarkt_id": "26011",
+      "name": "CSA CS-DBNK 700-M-C Dik Tip Monoblok Buzdolabı, 700 L",
+      "code": "454.CS.DBNK.700.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbnk-700-m-c-dik-tip-monoblok-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-m-c-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44213-26-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbnk-700-m-c-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44213-26-O.jpg"
+      ],
+      "price_try_kdv_dahil": 112272.1
+    },
+    {
+      "cafemarkt_id": "25992",
+      "name": "CSA CS-DBN 700-M-C Dik Tip Monoblok Buzdolabı, 700 L",
+      "code": "454.CS.DBN.700.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbn-700-m-c-dik-tip-monoblok-buzdolabi-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbn-700-m-c-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44214-25-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbn-700-m-c-dik-tip-monoblok-buzdolabi-700-l-endustriyel-buzdolaplari-csa-inox-44214-25-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98328.08
+    },
+    {
+      "cafemarkt_id": "33293",
+      "name": "CSA CS-DBLK 1400 Dik Tip Cam Kapılı Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBLK.1400.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-58831-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-58831-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 189002.1
+    },
+    {
+      "cafemarkt_id": "33290",
+      "name": "CSA CS-DBLK 700 Dik Tip Cam Kapılı Derin Dondurucu, 700 L",
+      "code": "454.CS.DBLK.700.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dblk-700-dik-tip-cam-kapili-derin-dondurucu-700-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dblk-700-dik-tip-cam-kapili-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-58833-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dblk-700-dik-tip-cam-kapili-derin-dondurucu-700-l-endustriyel-derin-dondurucular-csa-inox-58833-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123525.83
+    },
+    {
+      "cafemarkt_id": "33284",
+      "name": "CSA CS-DBL 1400 Dik Tip Cam Kapılı Derin Dondurucu, 2 Kapılı, 1400 L",
+      "code": "454.CS.DBL.1400.M.C",
+      "brand": "CSA Inox",
+      "url": "https://www.cafemarkt.com/csa-cs-dbl-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l",
+      "image": "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-58830-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/csa-cs-dbl-1400-dik-tip-cam-kapili-derin-dondurucu-2-kapili-1400-l-endustriyel-derin-dondurucular-csa-inox-58830-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 165509.46
+    }
+  ]
+}

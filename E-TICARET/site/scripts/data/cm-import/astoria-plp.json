@@ -1,0 +1,72 @@
+{
+  "brand": "Astoria",
+  "slug": "astoria",
+  "fetchedAt": "2026-09-19T05:37:07.515Z",
+  "reportedTotal": 11,
+  "pages": 1,
+  "count": 5,
+  "items": [
+    {
+      "cafemarkt_id": "13212",
+      "name": "Astoria Start SAE 2 Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "278.START.SAE2",
+      "brand": "Astoria",
+      "url": "https://www.cafemarkt.com/astoria-start-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik",
+      "image": "https://witcdn.cafemarkt.com/astoria-start-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23173-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/astoria-start-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23173-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 164775.92
+    },
+    {
+      "cafemarkt_id": "13211",
+      "name": "Astoria Start AEP 2 Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "278.START.AEP2",
+      "brand": "Astoria",
+      "url": "https://www.cafemarkt.com/astoria-start-aep-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik",
+      "image": "https://witcdn.cafemarkt.com/astoria-start-aep-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23172-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/astoria-start-aep-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23172-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 159981.79
+    },
+    {
+      "cafemarkt_id": "13206",
+      "name": "Astoria Forma SAE 2 DSP Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "278.FORMA.SAE2.DSP",
+      "brand": "Astoria",
+      "url": "https://www.cafemarkt.com/astoria-forma-sae-2-dsp-espresso-kahve-makinesi-2-gruplu-yari-otomatik",
+      "image": "https://witcdn.cafemarkt.com/astoria-forma-sae-2-dsp-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-27728-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/astoria-forma-sae-2-dsp-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-27728-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 228804.15
+    },
+    {
+      "cafemarkt_id": "13205",
+      "name": "Astoria Forma SAE 2 Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "278.FORMA.SAE2",
+      "brand": "Astoria",
+      "url": "https://www.cafemarkt.com/astoria-forma-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik",
+      "image": "https://witcdn.cafemarkt.com/astoria-forma-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23170-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/astoria-forma-sae-2-espresso-kahve-makinesi-2-gruplu-yari-otomatik-espresso-makineleri-astoria-23170-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 205182.52
+    },
+    {
+      "cafemarkt_id": "38683",
+      "name": "Astoria Tanya R SAE/2 Tall Cup Otomatik Espresso Kahve Makinesi, 2 Gruplu, Siyah",
+      "code": "278.TANYA.SAE2.TC",
+      "brand": "Astoria",
+      "url": "https://www.cafemarkt.com/astoria-tanya-r-sae-2-tall-cup-otomatik-espresso-kahve-makinesi-2-gruplu-siyah",
+      "image": "https://witcdn.cafemarkt.com/astoria-tanya-r-sae-2-tall-cup-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-astoria-72793-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/astoria-tanya-r-sae-2-tall-cup-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-astoria-72793-38-O.jpg",
+        "https://witcdn.cafemarkt.com/astoria-tanya-r-sae-2-tall-cup-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-astoria-72794-38-O.jpg",
+        "https://witcdn.cafemarkt.com/astoria-tanya-r-sae-2-tall-cup-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-astoria-72795-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 207942.79
+    }
+  ]
+}

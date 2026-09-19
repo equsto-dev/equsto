@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import {
   buildMarkaMetadata,
   MarkaSlugPageInner,
@@ -19,8 +18,5 @@ export default async function MarkaEnSlugPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  // Unox: katalogda gerçek brand değil (Öztiryakiler distribütörlüğü).
-  // Brand hub oluşturulmaz; 404 dön.
-  if (slug === "unox") notFound();
   return <MarkaSlugPageInner slug={slug} lang="en" />;
 }

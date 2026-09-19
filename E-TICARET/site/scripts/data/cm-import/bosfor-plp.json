@@ -1,0 +1,1401 @@
+{
+  "brand": "Bosfor",
+  "slug": "bosfor",
+  "fetchedAt": "2026-09-19T08:36:09.347Z",
+  "reportedTotal": 115,
+  "pages": 4,
+  "count": 115,
+  "items": [
+    {
+      "cafemarkt_id": "9376",
+      "name": "Bosfor UPS-25 Patates Soyma Makinesi, 25 kg",
+      "code": "158.UPS.25",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-25-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-25-kg-patates-ve-sogan-soyma-makineleri-bosfor-12312-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-25-kg-patates-ve-sogan-soyma-makineleri-bosfor-12312-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85176.37
+    },
+    {
+      "cafemarkt_id": "9377",
+      "name": "Bosfor UPS-35 Patates Soyma Makinesi, 35 kg",
+      "code": "158.UPS.35",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-35-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-35-kg-patates-ve-sogan-soyma-makineleri-bosfor-12313-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-35-kg-patates-ve-sogan-soyma-makineleri-bosfor-12313-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 96266.25
+    },
+    {
+      "cafemarkt_id": "43955",
+      "name": "Bosfor UBL-190-C Combi El Blender, 150 W",
+      "code": "158.UBL.190.C",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-190-c-combi-el-blender-150-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-190-c-combi-el-blender-150-w-el-blenderlari-bosfor-87210-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-190-c-combi-el-blender-150-w-el-blenderlari-bosfor-87210-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-190-c-combi-el-blender-150-w-el-blenderlari-bosfor-87205-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-190-c-combi-el-blender-150-w-el-blenderlari-bosfor-87206-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13862.34
+    },
+    {
+      "cafemarkt_id": "9383",
+      "name": "Bosfor USO Gıda Öğütücü",
+      "code": "158.USO",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/ogutucu-9383",
+      "image": "https://witcdn.cafemarkt.com/ogutucu-9383-gida-ogutuculeri-bosfor-12308-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ogutucu-9383-gida-ogutuculeri-bosfor-12308-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20023.38
+    },
+    {
+      "cafemarkt_id": "9375",
+      "name": "Bosfor UPS-10 Patates Soyma Makinesi, 10 kg",
+      "code": "158.UPS.10",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-10-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-10-kg-patates-ve-sogan-soyma-makineleri-bosfor-93403-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-10-kg-patates-ve-sogan-soyma-makineleri-bosfor-93403-93-O.jpg",
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-10-kg-patates-ve-sogan-soyma-makineleri-bosfor-12311-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 63389.01
+    },
+    {
+      "cafemarkt_id": "9382",
+      "name": "Bosfor USD Soğan Doğrama Makinesi",
+      "code": "158.USD",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogan-dograma-makinesi-9382",
+      "image": "https://witcdn.cafemarkt.com/sogan-dograma-makinesi-9382-sebze-dograma-makineleri-bosfor-68924-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogan-dograma-makinesi-9382-sebze-dograma-makineleri-bosfor-68924-93-O.jpg",
+        "https://witcdn.cafemarkt.com/sogan-dograma-makinesi-9382-sebze-dograma-makineleri-bosfor-68923-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20023.38
+    },
+    {
+      "cafemarkt_id": "43956",
+      "name": "Bosfor UBL-250-C Combi El Blender, 300 W",
+      "code": "158.UBL.250.C",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-250-c-combi-el-blender-300-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-250-c-combi-el-blender-300-w-el-blenderlari-bosfor-87194-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-250-c-combi-el-blender-300-w-el-blenderlari-bosfor-87194-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-250-c-combi-el-blender-300-w-el-blenderlari-bosfor-87212-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-250-c-combi-el-blender-300-w-el-blenderlari-bosfor-87213-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17558.96
+    },
+    {
+      "cafemarkt_id": "22763",
+      "name": "Bosfor USH-10T Spiral Hamur Yoğurma Makinesi, 10 kg",
+      "code": "158.USH.10T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ush-10t-spiral-hamur-yogurma-makinesi-10-kg",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ush-10t-spiral-hamur-yogurma-makinesi-10-kg-hamur-yogurma-makineleri-bosfor-93401-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ush-10t-spiral-hamur-yogurma-makinesi-10-kg-hamur-yogurma-makineleri-bosfor-93401-22-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ush-10t-spiral-hamur-yogurma-makinesi-10-kg-hamur-yogurma-makineleri-bosfor-93402-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84183.29
+    },
+    {
+      "cafemarkt_id": "9352",
+      "name": "Bosfor UHMK-25M Hamur Yoğurma Makinesi, Kafesli, 25 kg, 50 L",
+      "code": "158.UHMK.25M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli-hamur-yogurma-makineleri-bosfor-12283-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli-hamur-yogurma-makineleri-bosfor-12283-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54679.23
+    },
+    {
+      "cafemarkt_id": "9337",
+      "name": "Bosfor UKM-12P No:12 Et Kıyma Makinesi, Paslanmaz Kafa",
+      "code": "158.UKM.12P",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no12-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no12-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12238-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no12-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12238-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56989.62
+    },
+    {
+      "cafemarkt_id": "9379",
+      "name": "Bosfor UHA-30 Hamur Açma Makinesi",
+      "code": "158.UHA.30",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-acma-makinesi-uha-30",
+      "image": "https://witcdn.cafemarkt.com/hamur-acma-makinesi-uha-30-hamur-acma-makineleri-bosfor-39351-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-acma-makinesi-uha-30-hamur-acma-makineleri-bosfor-39351-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43127.28
+    },
+    {
+      "cafemarkt_id": "9362",
+      "name": "Bosfor USD-01 Setüstü Sebze Doğrama Makinesi",
+      "code": "158.USD.01",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/setustu-sebze-dograma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/setustu-sebze-dograma-makinesi-sebze-dograma-makineleri-bosfor-12319-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/setustu-sebze-dograma-makinesi-sebze-dograma-makineleri-bosfor-12319-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48518.19
+    },
+    {
+      "cafemarkt_id": "9371",
+      "name": "Bosfor UHM-15M Hamur Yoğurma Makinesi, 15 kg, 30 L",
+      "code": "158.UHM.15M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-15-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-hamur-yogurma-makineleri-bosfor-12268-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-hamur-yogurma-makineleri-bosfor-12268-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40816.89
+    },
+    {
+      "cafemarkt_id": "9322",
+      "name": "Bosfor UZK-02 Set Üstü Et Sebze Parçalama ve Humus Makinesi",
+      "code": "158.UZK.02",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/set-ustu-et-sebze-parcalama-ve-humus-makinesi",
+      "image": "https://witcdn.cafemarkt.com/set-ustu-et-sebze-parcalama-ve-humus-makinesi-sebze-dograma-makineleri-bosfor-12310-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/set-ustu-et-sebze-parcalama-ve-humus-makinesi-sebze-dograma-makineleri-bosfor-12310-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 78553.26
+    },
+    {
+      "cafemarkt_id": "9380",
+      "name": "Bosfor UHA-40 Hamur Açma Makinesi",
+      "code": "158.UHA.40",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-acma-makinesi-uha-40",
+      "image": "https://witcdn.cafemarkt.com/hamur-acma-makinesi-uha-40-hamur-acma-makineleri-bosfor-12304-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-acma-makinesi-uha-40-hamur-acma-makineleri-bosfor-12304-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49288.32
+    },
+    {
+      "cafemarkt_id": "9342",
+      "name": "Bosfor UPS-10F Patates Soyma Makinesi, Filtreli, 10 kg",
+      "code": "158.UPS.10F",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-filtreli-10-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-10-kg-patates-ve-sogan-soyma-makineleri-bosfor-12315-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-10-kg-patates-ve-sogan-soyma-makineleri-bosfor-12315-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85176.37
+    },
+    {
+      "cafemarkt_id": "9344",
+      "name": "Bosfor UPS-35F Patates Soyma Makinesi, Filtreli, 35 kg",
+      "code": "158.UPS.35F",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-filtreli-35-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-35-kg-patates-ve-sogan-soyma-makineleri-bosfor-12317-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-35-kg-patates-ve-sogan-soyma-makineleri-bosfor-12317-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 114749.36
+    },
+    {
+      "cafemarkt_id": "9321",
+      "name": "Bosfor UZK-01 Standart Et Sebze Parçalama ve Humus Makinesi",
+      "code": "158.UZK.01",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/standart-et-sebze-parcalama-ve-humus-makinesi",
+      "image": "https://witcdn.cafemarkt.com/standart-et-sebze-parcalama-ve-humus-makinesi-sebze-dograma-makineleri-bosfor-12309-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/standart-et-sebze-parcalama-ve-humus-makinesi-sebze-dograma-makineleri-bosfor-12309-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 91645.47
+    },
+    {
+      "cafemarkt_id": "9360",
+      "name": "Bosfor UPM-60M Planet Mikser, Hız Kontrollü, 60 L",
+      "code": "158.UPM.60M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-hiz-kontrollu-60-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-60-lt-planet-mikserler-bosfor-12302-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-60-lt-planet-mikserler-bosfor-12302-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 213326
+    },
+    {
+      "cafemarkt_id": "9343",
+      "name": "Bosfor UPS-25F Patates Soyma Makinesi, Filtreli, 25 kg",
+      "code": "158.UPS.25F",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-filtreli-25-kg",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-25-kg-patates-ve-sogan-soyma-makineleri-bosfor-12316-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-25-kg-patates-ve-sogan-soyma-makineleri-bosfor-12316-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 105507.81
+    },
+    {
+      "cafemarkt_id": "9348",
+      "name": "Bosfor UHM-35T Hamur Yoğurma Makinesi, Trifaze, 35 kg, 80 L",
+      "code": "158.UHM.35T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-35-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-trifaze-hamur-yogurma-makineleri-bosfor-12277-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-trifaze-hamur-yogurma-makineleri-bosfor-12277-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53909.1
+    },
+    {
+      "cafemarkt_id": "9366",
+      "name": "Bosfor UPM-40T-3 Planet Mikser, 3 Devirli, 40 L",
+      "code": "158.UPM.40T.3",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-3-devirli-40-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-40-lt-planet-mikserler-bosfor-12298-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-40-lt-planet-mikserler-bosfor-12298-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 178670.15
+    },
+    {
+      "cafemarkt_id": "9358",
+      "name": "Bosfor UPM-30M Planet Mikser, Hız Kontrollü, 30 L",
+      "code": "158.UPM.30M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-hiz-kontrollu-30-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-30-lt-planet-mikserler-bosfor-12300-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-30-lt-planet-mikserler-bosfor-12300-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 165577.94
+    },
+    {
+      "cafemarkt_id": "9359",
+      "name": "Bosfor UPM-40M Planet Mikser, Hız Kontrollü, 40 L",
+      "code": "158.UPM.40M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-hiz-kontrollu-40-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-40-lt-planet-mikserler-bosfor-12301-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-hiz-kontrollu-40-lt-planet-mikserler-bosfor-12301-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 201774.05
+    },
+    {
+      "cafemarkt_id": "9368",
+      "name": "Bosfor USD-02 Sebze Doğrama Makinesi, Ayaklı",
+      "code": "158.USD.02",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/ayakli-sebze-dograma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/ayakli-sebze-dograma-makinesi-sebze-dograma-makineleri-bosfor-12320-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ayakli-sebze-dograma-makinesi-sebze-dograma-makineleri-bosfor-12320-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53909.1
+    },
+    {
+      "cafemarkt_id": "9367",
+      "name": "Bosfor UPM-60T-3 Planet Mikser, 3 Devirli, 60 L",
+      "code": "158.UPM.60T.3",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-3-devirli-60-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-60-lt-planet-mikserler-bosfor-12299-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-60-lt-planet-mikserler-bosfor-12299-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 189451.97
+    },
+    {
+      "cafemarkt_id": "9345",
+      "name": "Bosfor UHM-10T Hamur Yoğurma Makinesi, Trifaze, 10 kg, 20 L",
+      "code": "158.UHM.10T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-10-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-trifaze-hamur-yogurma-makineleri-bosfor-12271-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-trifaze-hamur-yogurma-makineleri-bosfor-12271-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35425.98
+    },
+    {
+      "cafemarkt_id": "9381",
+      "name": "Bosfor UEK-01 Ekmek Dilimleme Makinesi",
+      "code": "158.UEK.01",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/ekmek-dilimleme-makinesi-9381",
+      "image": "https://witcdn.cafemarkt.com/ekmek-dilimleme-makinesi-9381-ekmek-dilimleme-makineleri-bosfor-12305-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ekmek-dilimleme-makinesi-9381-ekmek-dilimleme-makineleri-bosfor-12305-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 77013
+    },
+    {
+      "cafemarkt_id": "9370",
+      "name": "Bosfor UHM-10M Hamur Yoğurma Makinesi, 10 kg, 20 L",
+      "code": "158.UHM.10M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-10-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-hamur-yogurma-makineleri-bosfor-12267-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-hamur-yogurma-makineleri-bosfor-12267-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35425.98
+    },
+    {
+      "cafemarkt_id": "9378",
+      "name": "Bosfor UHM-5M Hamur Yoğurma Makinesi, 5 kg, 16 L",
+      "code": "158.UHM.5M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-5-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-hamur-yogurma-makineleri-bosfor-12266-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-hamur-yogurma-makineleri-bosfor-12266-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29264.94
+    },
+    {
+      "cafemarkt_id": "9374",
+      "name": "Bosfor UHM-50M Hamur Yoğurma Makinesi, 50 kg, 130 L",
+      "code": "158.UHM.50M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-50-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-hamur-yogurma-makineleri-bosfor-12275-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-hamur-yogurma-makineleri-bosfor-12275-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88564.95
+    },
+    {
+      "cafemarkt_id": "9372",
+      "name": "Bosfor UHM-25M Hamur Yoğurma Makinesi, 25 kg, 50 L",
+      "code": "158.UHM.25M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-25-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-hamur-yogurma-makineleri-bosfor-12269-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-hamur-yogurma-makineleri-bosfor-12269-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47748.06
+    },
+    {
+      "cafemarkt_id": "9331",
+      "name": "Bosfor USH-25T Spiral Hamur Yoğurma Makinesi, Trifaze, 25 kg",
+      "code": "158.USH.25T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/spiral-hamur-yogurma-makinesi-25-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-25-kg-trifaze-hamur-yogurma-makineleri-bosfor-12293-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-25-kg-trifaze-hamur-yogurma-makineleri-bosfor-12293-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 207935.09
+    },
+    {
+      "cafemarkt_id": "9333",
+      "name": "Bosfor USH-50T Spiral Hamur Yoğurma Makinesi, Trifaze, 50 kg",
+      "code": "158.USH.50T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/spiral-hamur-yogurma-makinesi-50-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-50-kg-trifaze-hamur-yogurma-makineleri-bosfor-12295-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-50-kg-trifaze-hamur-yogurma-makineleri-bosfor-12295-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 385064.98
+    },
+    {
+      "cafemarkt_id": "9346",
+      "name": "Bosfor UHM-15T Hamur Yoğurma Makinesi, Trifaze, 15 kg, 30 L",
+      "code": "158.UHM.15T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-15-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-trifaze-hamur-yogurma-makineleri-bosfor-12272-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-trifaze-hamur-yogurma-makineleri-bosfor-12272-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40816.89
+    },
+    {
+      "cafemarkt_id": "9357",
+      "name": "Bosfor UHMK-5M Hamur Yoğurma Makinesi, Kafesli, 5 kg, 16 L",
+      "code": "158.UHMK.5M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli-hamur-yogurma-makineleri-bosfor-12280-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli-hamur-yogurma-makineleri-bosfor-12280-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34655.85
+    },
+    {
+      "cafemarkt_id": "22757",
+      "name": "Bosfor UKT-01T Et Kemik Testeresi, Trifaze",
+      "code": "158.UKT.01T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ukt-01t-et-kemik-testeresi-trifaze",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ukt-01t-et-kemik-testeresi-trifaze-et-ve-kemik-testereleri-bosfor-39356-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ukt-01t-et-kemik-testeresi-trifaze-et-ve-kemik-testereleri-bosfor-39356-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 92415.6
+    },
+    {
+      "cafemarkt_id": "9364",
+      "name": "Bosfor UHM-100M Hamur Yoğurma Makinesi, 100 kg, 160 L",
+      "code": "158.UHM.100M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-100-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-hamur-yogurma-makineleri-bosfor-12276-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-hamur-yogurma-makineleri-bosfor-12276-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119370.14
+    },
+    {
+      "cafemarkt_id": "9341",
+      "name": "Bosfor UHMK-100M Hamur Yoğurma Makinesi, Kafesli, 100 kg, 160 L",
+      "code": "158.UHMK.100M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli-hamur-yogurma-makineleri-bosfor-12289-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli-hamur-yogurma-makineleri-bosfor-12289-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 137083.13
+    },
+    {
+      "cafemarkt_id": "9349",
+      "name": "Bosfor UHM-50T Hamur Yoğurma Makinesi, Trifaze, 50 kg, 130 L",
+      "code": "158.UHM.50T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-50-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-trifaze-hamur-yogurma-makineleri-bosfor-12278-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-trifaze-hamur-yogurma-makineleri-bosfor-12278-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88564.95
+    },
+    {
+      "cafemarkt_id": "9361",
+      "name": "Bosfor UEK-02T Trabzon Ekmeği Dilimleme Makinesi",
+      "code": "158.UEK.02T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/trabzon-ekmegi-dilimleme-makinesi",
+      "image": "https://witcdn.cafemarkt.com/trabzon-ekmegi-dilimleme-makinesi-ekmek-dilimleme-makineleri-bosfor-12306-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/trabzon-ekmegi-dilimleme-makinesi-ekmek-dilimleme-makineleri-bosfor-12306-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 83174.04
+    },
+    {
+      "cafemarkt_id": "9347",
+      "name": "Bosfor UHM-25T Hamur Yoğurma Makinesi, Trifaze, 25 kg, 50 L",
+      "code": "158.UHM.25T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-25-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-trifaze-hamur-yogurma-makineleri-bosfor-12273-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-trifaze-hamur-yogurma-makineleri-bosfor-12273-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47748.06
+    },
+    {
+      "cafemarkt_id": "22752",
+      "name": "Bosfor UHA-40-Y Yatay Hamur Açma Makinesi",
+      "code": "158.UHA.40Y",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-uha-40y-yatay-hamur-acma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/bosfor-uha-40y-yatay-hamur-acma-makinesi-hamur-acma-makineleri-bosfor-39365-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-uha-40y-yatay-hamur-acma-makinesi-hamur-acma-makineleri-bosfor-39365-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49288.32
+    },
+    {
+      "cafemarkt_id": "22756",
+      "name": "Bosfor UKT-01M Et Kemik Testeresi",
+      "code": "158.UKT.01M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ukt-01m-et-kemik-testeresi",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ukt-01m-et-kemik-testeresi-et-ve-kemik-testereleri-bosfor-39357-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ukt-01m-et-kemik-testeresi-et-ve-kemik-testereleri-bosfor-39357-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97036.38
+    },
+    {
+      "cafemarkt_id": "9305",
+      "name": "Bosfor UKMS-22M No:22 Et Kıyma Makinesi, Sfero Döküm Kafa, Soğutmalı",
+      "code": "158.UKMS.22M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12247-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12247-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 89335.08
+    },
+    {
+      "cafemarkt_id": "9303",
+      "name": "Bosfor UKM-42PTA No:42 Et Kıyma Makinesi, Ayaklı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKM.42PTA",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makayakli-no42-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makayakli-no42-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12244-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makayakli-no42-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12244-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 252602.63
+    },
+    {
+      "cafemarkt_id": "22758",
+      "name": "Bosfor UPM-20M Planet Mikser, Hız Kontrollü, 20 L",
+      "code": "158.UPM.20M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-upm-20m-planet-mikser-hiz-kontrollu-20-l",
+      "image": "https://witcdn.cafemarkt.com/bosfor-upm-20m-planet-mikser-hiz-kontrollu-20-l-planet-mikserler-bosfor-39358-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-upm-20m-planet-mikser-hiz-kontrollu-20-l-planet-mikserler-bosfor-39358-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 138623.39
+    },
+    {
+      "cafemarkt_id": "22751",
+      "name": "Bosfor UHA-30-Y Yatay Hamur Açma Makinesi",
+      "code": "158.UHA.30Y",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-uha-30y-yatay-hamur-acma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/bosfor-uha-30y-yatay-hamur-acma-makinesi-hamur-acma-makineleri-bosfor-39364-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-uha-30y-yatay-hamur-acma-makinesi-hamur-acma-makineleri-bosfor-39364-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 43127.28
+    },
+    {
+      "cafemarkt_id": "22759",
+      "name": "Bosfor UPM-20T-2 Planet Mikser, 2 Devirli, 20 L",
+      "code": "158.UPM.20T.2",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-upm-20t-2-planet-mikser-2-devirli-20-l",
+      "image": "https://witcdn.cafemarkt.com/bosfor-upm-20t-2-planet-mikser-2-devirli-20-l-planet-mikserler-bosfor-65295-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-upm-20t-2-planet-mikser-2-devirli-20-l-planet-mikserler-bosfor-65295-22-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-upm-20t-2-planet-mikser-2-devirli-20-l-planet-mikserler-bosfor-65296-22-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-upm-20t-2-planet-mikser-2-devirli-20-l-planet-mikserler-bosfor-65297-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 110898.72
+    },
+    {
+      "cafemarkt_id": "9293",
+      "name": "Bosfor UKMS-22PMY No:22 Yeni Model Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa",
+      "code": "158.UKMS.22PMY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-yeni-m",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-yeni-m-et-kiyma-makineleri-bosfor-12255-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-yeni-m-et-kiyma-makineleri-bosfor-12255-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 145554.56
+    },
+    {
+      "cafemarkt_id": "22760",
+      "name": "Bosfor UPM-30T-2 Planet Mikser, Hız Kontrollü, 2 Devirli, 30 L",
+      "code": "158.UPM.30T.2",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-upm-30t-2-planet-mikser-hiz-kontrollu-2-devirli-30-l",
+      "image": "https://witcdn.cafemarkt.com/bosfor-upm-30t-2-planet-mikser-hiz-kontrollu-2-devirli-30-l-planet-mikserler-bosfor-39360-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-upm-30t-2-planet-mikser-hiz-kontrollu-2-devirli-30-l-planet-mikserler-bosfor-39360-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 138623.39
+    },
+    {
+      "cafemarkt_id": "9310",
+      "name": "Bosfor UKM-22T No:22 Et Kıyma Makinesi, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKM.22T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa-trifaze-et-kiyma-makineleri-bosfor-12235-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa-trifaze-et-kiyma-makineleri-bosfor-12235-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56989.62
+    },
+    {
+      "cafemarkt_id": "9311",
+      "name": "Bosfor UKM-32T No:32 Et Kıyma Makinesi, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKM.32T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa-trifaze-et-kiyma-makineleri-bosfor-12237-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa-trifaze-et-kiyma-makineleri-bosfor-12237-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66231.18
+    },
+    {
+      "cafemarkt_id": "22764",
+      "name": "Bosfor USH-15T Spiral Hamur Yoğurma Makinesi, 18 kg",
+      "code": "158.USH.15T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ush-15t-spiral-hamur-yogurma-makinesi-18-kg",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ush-15t-spiral-hamur-yogurma-makinesi-18-kg-hamur-yogurma-makineleri-bosfor-39353-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ush-15t-spiral-hamur-yogurma-makinesi-18-kg-hamur-yogurma-makineleri-bosfor-39353-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 101657.16
+    },
+    {
+      "cafemarkt_id": "9350",
+      "name": "Bosfor UHMK-10M Hamur Yoğurma Makinesi, Kafesli, 10 kg, 20 L",
+      "code": "158.UHMK.10M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli-hamur-yogurma-makineleri-bosfor-12281-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli-hamur-yogurma-makineleri-bosfor-12281-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40816.89
+    },
+    {
+      "cafemarkt_id": "9324",
+      "name": "Bosfor UHMK-10T Hamur Yoğurma Makinesi, Trifaze, Kafesli, 10 kg, 20 L",
+      "code": "158.UHMK.10T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12285-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-10-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12285-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 40816.89
+    },
+    {
+      "cafemarkt_id": "9299",
+      "name": "Bosfor UKMS-22PT No:22 Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKMS.22PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-trifaz",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12324-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12324-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 104737.68
+    },
+    {
+      "cafemarkt_id": "9313",
+      "name": "Bosfor UKMS-32PM No:32 Et Kıyma Makinesi, Paslanmaz Kafa, Soğutmalı",
+      "code": "158.UKMS.32PM",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no32-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no32-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12257-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no32-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12257-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 129997.94
+    },
+    {
+      "cafemarkt_id": "9291",
+      "name": "Bosfor UKMS-22PTY No:22 Yeni Model Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKMS.22PTY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-paskafa-ym-trifaze",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paskafa-ym-trifaze-et-kiyma-makineleri-bosfor-12256-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-paskafa-ym-trifaze-et-kiyma-makineleri-bosfor-12256-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 142474.04
+    },
+    {
+      "cafemarkt_id": "9317",
+      "name": "Bosfor UKM-22PT No:22 Et Kıyma Makinesi, Trifaze, Paslanmaz Kafa",
+      "code": "158.UKM.22PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12240-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12240-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 87024.69
+    },
+    {
+      "cafemarkt_id": "9319",
+      "name": "Bosfor UKM-42PT No:42 Et Kıyma Makinesi, Trifaze, Paslanmaz Kafa",
+      "code": "158.UKM.42PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no42-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no42-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12243-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no42-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12243-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 237200.03
+    },
+    {
+      "cafemarkt_id": "9339",
+      "name": "Bosfor UKM-32PM No:32 Et Kıyma Makinesi, Paslanmaz Kafa",
+      "code": "158.UKM.32PM",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa-et-kiyma-makineleri-bosfor-34799-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa-et-kiyma-makineleri-bosfor-34799-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 107048.07
+    },
+    {
+      "cafemarkt_id": "9316",
+      "name": "Bosfor UKM-130PT No:130 Et Kıyma Makinesi, Trifaze, Paslanmaz Kafa",
+      "code": "158.UKM.130PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no130-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no130-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12245-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no130-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12245-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 754727.37
+    },
+    {
+      "cafemarkt_id": "9312",
+      "name": "Bosfor UKMS-22PM No:22 Et Kıyma Makinesi, Paslanmaz Kafa, Soğutmalı",
+      "code": "158.UKMS.22PM",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-paslanmaz-kafa-et-kiyma-makineleri-bosfor-34797-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-paslanmaz-kafa-et-kiyma-makineleri-bosfor-34797-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 109358.46
+    },
+    {
+      "cafemarkt_id": "9315",
+      "name": "Bosfor UKM-42PTS No:42 Et Kıyma Makinesi, Sinir Ayıklamalı, Trifaze",
+      "code": "158.UKM.42PTS",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no42-trifaze",
+      "image": "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no42-trifaze-et-kiyma-makineleri-bosfor-12264-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no42-trifaze-et-kiyma-makineleri-bosfor-12264-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 400467.58
+    },
+    {
+      "cafemarkt_id": "9373",
+      "name": "Bosfor UHM-35M Hamur Yoğurma Makinesi, 35 kg, 80 L",
+      "code": "158.UHM.35M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-35-kg",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-hamur-yogurma-makineleri-bosfor-12274-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-hamur-yogurma-makineleri-bosfor-12274-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53909.1
+    },
+    {
+      "cafemarkt_id": "9301",
+      "name": "Bosfor UKMS-42PT No:42 Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKMS.42PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno42-paslanmaz-kafa-trifaz",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno42-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12261-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno42-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12261-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 264924.71
+    },
+    {
+      "cafemarkt_id": "9329",
+      "name": "Bosfor USH-100T Spiral Hamur Yoğurma Makinesi, Trifaze, 100 kg",
+      "code": "158.USH.100T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/spiral-hamur-yogurma-makinesi-100-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-100-kg-trifaze-hamur-yogurma-makineleri-bosfor-12296-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-100-kg-trifaze-hamur-yogurma-makineleri-bosfor-12296-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 609942.93
+    },
+    {
+      "cafemarkt_id": "9351",
+      "name": "Bosfor UHMK-15M Hamur Yoğurma Makinesi, Kafesli, 15 kg, 30 L",
+      "code": "158.UHMK.15M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli-hamur-yogurma-makineleri-bosfor-12282-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli-hamur-yogurma-makineleri-bosfor-12282-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48518.19
+    },
+    {
+      "cafemarkt_id": "9326",
+      "name": "Bosfor UHMK-25T Hamur Yoğurma Makinesi, Trifaze, Kafesli, 25 kg, 50 L",
+      "code": "158.UHMK.25T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12287-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-25-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12287-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54679.23
+    },
+    {
+      "cafemarkt_id": "9300",
+      "name": "Bosfor UKMS-32PT No:32 Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKMS.32PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-trifaz",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12258-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-trifaz-et-kiyma-makineleri-bosfor-12258-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 122296.64
+    },
+    {
+      "cafemarkt_id": "9353",
+      "name": "Bosfor UHMK-35M Hamur Yoğurma Makinesi, Kafesli, 35 kg, 80 L",
+      "code": "158.UHMK.35M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli-hamur-yogurma-makineleri-bosfor-12325-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli-hamur-yogurma-makineleri-bosfor-12325-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 63150.66
+    },
+    {
+      "cafemarkt_id": "9328",
+      "name": "Bosfor UHMK-50T Kafesli Hamur Yoğurma Makinesi, Kapasite 50 kg, Hacim 130 L, Trifaze",
+      "code": "158.UHMK.50T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12291-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12291-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106740.01
+    },
+    {
+      "cafemarkt_id": "9292",
+      "name": "Bosfor UKMS-32PTY No:32 Yeni Model Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKMS.32PTY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno32-paskafa-ym-trifaze",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paskafa-ym-trifaze-et-kiyma-makineleri-bosfor-12260-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paskafa-ym-trifaze-et-kiyma-makineleri-bosfor-12260-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 153101.84
+    },
+    {
+      "cafemarkt_id": "9340",
+      "name": "Bosfor UHM-100T Hamur Yoğurma Makinesi, Trifaze, 100 kg, 160 L",
+      "code": "158.UHM.100T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-100-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-trifaze-hamur-yogurma-makineleri-bosfor-12279-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-trifaze-hamur-yogurma-makineleri-bosfor-12279-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 119370.14
+    },
+    {
+      "cafemarkt_id": "9318",
+      "name": "Bosfor UKM-32PT No:32 Et Kıyma Makinesi, Trifaze, Paslanmaz Kafa",
+      "code": "158.UKM.32PT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12242-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12242-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 99346.77
+    },
+    {
+      "cafemarkt_id": "9332",
+      "name": "Bosfor USH-35T Spiral Hamur Yoğurma Makinesi, Trifaze, 35 kg",
+      "code": "158.USH.35T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/spiral-hamur-yogurma-makinesi-35-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-35-kg-trifaze-hamur-yogurma-makineleri-bosfor-12294-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/spiral-hamur-yogurma-makinesi-35-kg-trifaze-hamur-yogurma-makineleri-bosfor-12294-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 225648.08
+    },
+    {
+      "cafemarkt_id": "9327",
+      "name": "Bosfor UHMK-35T Hamur Yoğurma Makinesi, Trifaze, Kafesli, 35 kg, 80 L",
+      "code": "158.UHMK.35T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12290-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-35-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12290-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 63150.66
+    },
+    {
+      "cafemarkt_id": "9354",
+      "name": "Bosfor UHMK-50M Hamur Yoğurma Makinesi, Kafesli, 50 kg, 130 L",
+      "code": "158.UHMK.50M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli-hamur-yogurma-makineleri-bosfor-12288-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-50-kg-kafesli-hamur-yogurma-makineleri-bosfor-12288-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106740.01
+    },
+    {
+      "cafemarkt_id": "43962",
+      "name": "Bosfor UBL-250 Parçalayıcı El Blender, 300 W",
+      "code": "158.UBL.250",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-250-parcalayici-el-blender-300-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-250-parcalayici-el-blender-300-w-el-blenderlari-bosfor-87195-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-250-parcalayici-el-blender-300-w-el-blenderlari-bosfor-87195-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11397.92
+    },
+    {
+      "cafemarkt_id": "43961",
+      "name": "Bosfor UBL-190 Parçalayıcı El Blender, 150 W",
+      "code": "158.UBL.190",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-190-parcalayici-el-blender-150-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-190-parcalayici-el-blender-150-w-el-blenderlari-bosfor-87211-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-190-parcalayici-el-blender-150-w-el-blenderlari-bosfor-87211-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8625.46
+    },
+    {
+      "cafemarkt_id": "43959",
+      "name": "Bosfor UBL-400-C Combi El Blender, 500 W",
+      "code": "158.UBL.400.C",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-400-c-combi-el-blender-500-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-400-c-combi-el-blender-500-w-el-blenderlari-bosfor-87201-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-400-c-combi-el-blender-500-w-el-blenderlari-bosfor-87201-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-400-c-combi-el-blender-500-w-el-blenderlari-bosfor-87196-43-O.jpg",
+        "https://witcdn.cafemarkt.com/bosfor-ubl-400-c-combi-el-blender-500-w-el-blenderlari-bosfor-87197-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 22179.74
+    },
+    {
+      "cafemarkt_id": "43958",
+      "name": "Bosfor UBL-500 Parçalayıcı El Blender, 550 W",
+      "code": "158.UBL.500",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-500-parcalayici-el-blender-550-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-500-parcalayici-el-blender-550-w-el-blenderlari-bosfor-87203-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-500-parcalayici-el-blender-550-w-el-blenderlari-bosfor-87203-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17250.91
+    },
+    {
+      "cafemarkt_id": "43957",
+      "name": "Bosfor UBL-400 Parçalayıcı El Blender, 500 W",
+      "code": "158.UBL.400",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-400-parcalayici-el-blender-500-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-400-parcalayici-el-blender-500-w-el-blenderlari-bosfor-87202-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-400-parcalayici-el-blender-500-w-el-blenderlari-bosfor-87202-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16018.7
+    },
+    {
+      "cafemarkt_id": "9334",
+      "name": "Bosfor UKM-12 No:12 Sfero Et Kıyma Makinesi, Döküm Kafa",
+      "code": "158.UKM.12",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no12-sfero-dokum-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no12-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12233-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no12-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12233-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42357.15
+    },
+    {
+      "cafemarkt_id": "9307",
+      "name": "Bosfor UKMS-32M No:32 Et Kıyma Makinesi, Sfero Döküm Kafa, Soğutmalı",
+      "code": "158.UKMS.32M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9307",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9307-et-kiyma-makineleri-bosfor-12251-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9307-et-kiyma-makineleri-bosfor-12251-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 105507.81
+    },
+    {
+      "cafemarkt_id": "9302",
+      "name": "Bosfor UKMS-42PTA No:42 Et Kıyma Makinesi, Ayaklı, Paslanmaz Kafa, Soğutmalı",
+      "code": "158.UKMS.42PTA",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makayakli-no42-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makayakli-no42-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12262-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makayakli-no42-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12262-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 280327.31
+    },
+    {
+      "cafemarkt_id": "43960",
+      "name": "Bosfor UBL-600 Parçalayıcı El Blender, 600 W",
+      "code": "158.UBL.600",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ubl-600-parcalayici-el-blender-600-w",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ubl-600-parcalayici-el-blender-600-w-el-blenderlari-bosfor-87204-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ubl-600-parcalayici-el-blender-600-w-el-blenderlari-bosfor-87204-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18483.12
+    },
+    {
+      "cafemarkt_id": "9336",
+      "name": "Bosfor UKM-32M No:32 Sfero Et Kıyma Makinesi, Döküm Kafa",
+      "code": "158.UKM.32M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12236-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no32-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12236-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 73932.48
+    },
+    {
+      "cafemarkt_id": "9335",
+      "name": "Bosfor UKM-22M No:22 Sfero Et Kıyma Makinesi, Döküm Kafa",
+      "code": "158.UKM.22M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12234-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-sfero-dokum-kafa-et-kiyma-makineleri-bosfor-12234-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 61610.4
+    },
+    {
+      "cafemarkt_id": "9294",
+      "name": "Bosfor UKMS-32PMY No:32 Yeni Model Et Kıyma Makinesi, Soğutmalı, Paslanmaz Kafa",
+      "code": "158.UKMS.32PMY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-yeni-m",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-yeni-m-et-kiyma-makineleri-bosfor-12259-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno32-paslanmaz-kafa-yeni-m-et-kiyma-makineleri-bosfor-12259-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 160803.14
+    },
+    {
+      "cafemarkt_id": "9338",
+      "name": "Bosfor UKM-22PM No:22 Et Kıyma Makinesi, Paslanmaz Kafa",
+      "code": "158.UKM.22PM",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa",
+      "image": "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12239-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/et-kiyma-makinesi-no22-paslanmaz-kafa-et-kiyma-makineleri-bosfor-12239-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 91645.47
+    },
+    {
+      "cafemarkt_id": "9314",
+      "name": "Bosfor UKM-32PTS No:32 Et Kıyma Makinesi, Sinir Ayıklamalı, Trifaze",
+      "code": "158.UKM.32PTS",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no32-trifaze",
+      "image": "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no32-trifaze-et-kiyma-makineleri-bosfor-12263-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no32-trifaze-et-kiyma-makineleri-bosfor-12263-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 274166.27
+    },
+    {
+      "cafemarkt_id": "9320",
+      "name": "Bosfor UHMK-100T Hamur Yoğurma Makinesi, Trifaze, Kafesli, 100 kg, 160 L",
+      "code": "158.UHMK.100T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12292-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-100-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12292-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 137083.13
+    },
+    {
+      "cafemarkt_id": "9295",
+      "name": "Bosfor UKMS-22T No:22 Et Kıyma Makinesi, Soğutmalı, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKMS.22T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-et-kiyma-makineleri-bosfor-12248-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-et-kiyma-makineleri-bosfor-12248-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84714.3
+    },
+    {
+      "cafemarkt_id": "9297",
+      "name": "Bosfor UKMS-32T No:32 Et Kıyma Makinesi, Soğutmalı, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKMS.32T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9297",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9297-et-kiyma-makineleri-bosfor-12252-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9297-et-kiyma-makineleri-bosfor-12252-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 97806.51
+    },
+    {
+      "cafemarkt_id": "9325",
+      "name": "Bosfor UHMK-15T Hamur Yoğurma Makinesi, Trifaze, Kafesli, 15 kg, 30 L",
+      "code": "158.UHMK.15T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12286-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-15-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12286-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48518.19
+    },
+    {
+      "cafemarkt_id": "22753",
+      "name": "Bosfor UKMO-32PM Eko Paslanmaz Kafa Et Kıyma Makinesi",
+      "code": "158.UKMO.32.PM",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ukmo-32p-eko-paslanmaz-kafa-et-kiyma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ukmo-32p-eko-paslanmaz-kafa-et-kiyma-makinesi-et-kiyma-makineleri-bosfor-39355-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ukmo-32p-eko-paslanmaz-kafa-et-kiyma-makinesi-et-kiyma-makineleri-bosfor-39355-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 63150.66
+    },
+    {
+      "cafemarkt_id": "9386",
+      "name": "Bosfor Trifaze Patates Soyma Makinesi, 50 kg",
+      "code": "158.UPS.50T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-50-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-50-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-12314-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-50-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-12314-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 178670.15
+    },
+    {
+      "cafemarkt_id": "9296",
+      "name": "Bosfor No:22 Yeni Model Et Kıyma Makinesi, Soğutmalı, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKMS.22TY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9296",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9296-et-kiyma-makineleri-bosfor-12250-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9296-et-kiyma-makineleri-bosfor-12250-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 78126.51
+    },
+    {
+      "cafemarkt_id": "9306",
+      "name": "Bosfor No:22 Yeni Model Et Kıyma Makinesi, Sfero Döküm Kafa, Soğutmalı",
+      "code": "158.UKMS.22MY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9306",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9306-et-kiyma-makineleri-bosfor-12249-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9306-et-kiyma-makineleri-bosfor-12249-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 78126.51
+    },
+    {
+      "cafemarkt_id": "9304",
+      "name": "Bosfor No:130 Donuk Et Çekme Makinesi, Paslanmaz Kafa, Trifaze",
+      "code": "158.UKM.130PTD",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/donuk-et-cekme-makno130-paslanmaz-kafa-trifaze",
+      "image": "https://witcdn.cafemarkt.com/donuk-et-cekme-makno130-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12246-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/donuk-et-cekme-makno130-paslanmaz-kafa-trifaze-et-kiyma-makineleri-bosfor-12246-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 103058.82
+    },
+    {
+      "cafemarkt_id": "9298",
+      "name": "Bosfor No:32 Yeni Model Et Kıyma Makinesi, Soğutmalı, Sfero Döküm Kafa, Trifaze",
+      "code": "158.UKMS.32TY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9298",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9298-et-kiyma-makineleri-bosfor-12254-92-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makno22-sfero-dokkafa-trifaz-9298-et-kiyma-makineleri-bosfor-12254-92-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90062.51
+    },
+    {
+      "cafemarkt_id": "9308",
+      "name": "Bosfor No:32 Yeni Model Et Kıyma Makinesi, Sfero Döküm Kafa, Soğutmalı",
+      "code": "158.UKMS.32MY",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9308",
+      "image": "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9308-et-kiyma-makineleri-bosfor-12253-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sogutmali-et-kiyma-makinesi-no22-sfero-dokum-kafa-9308-et-kiyma-makineleri-bosfor-12253-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90062.51
+    },
+    {
+      "cafemarkt_id": "9309",
+      "name": "Bosfor Et Kıyma Makinesi, No:130, Sinir Ayıklamalı, Trifaze",
+      "code": "158.UKMS.130PTS",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no130-trifaze",
+      "image": "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no130-trifaze-et-kiyma-makineleri-bosfor-12265-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/sinir-ayiklamali-et-kiyma-makinesi-no130-trifaze-et-kiyma-makineleri-bosfor-12265-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 939293.77
+    },
+    {
+      "cafemarkt_id": "22754",
+      "name": "Bosfor UKMO-32 Eko Sfero Kafa Et Kıyma Makinesi",
+      "code": "158.UKMO.32M",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ukmo-32-eko-sfero-kafa-et-kiyma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ukmo-32-eko-sfero-kafa-et-kiyma-makinesi-et-kiyma-makineleri-bosfor-39354-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ukmo-32-eko-sfero-kafa-et-kiyma-makinesi-et-kiyma-makineleri-bosfor-39354-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60804.52
+    },
+    {
+      "cafemarkt_id": "22755",
+      "name": "Bosfor UKM-130PTD Donuk Et Çekme Makinesi, Paslanmaz Kafa, Soğutmalı",
+      "code": "158.UKMS.130PTD",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ukm-130ptd-donuk-et-cekme-makinesi-paslanmaz-kafa-sogutmali",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ukm-130ptd-donuk-et-cekme-makinesi-paslanmaz-kafa-sogutmali-et-kiyma-makineleri-bosfor-39363-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ukm-130ptd-donuk-et-cekme-makinesi-paslanmaz-kafa-sogutmali-et-kiyma-makineleri-bosfor-39363-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 112941.18
+    },
+    {
+      "cafemarkt_id": "9365",
+      "name": "Bosfor Planet Mikser, 3 Devirli, 30 L",
+      "code": "158.UPM.30T.3",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/planet-mikser-3-devirli-30-lt",
+      "image": "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-30-lt-planet-mikserler-bosfor-12297-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/planet-mikser-3-devirli-30-lt-planet-mikserler-bosfor-12297-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17647.06
+    },
+    {
+      "cafemarkt_id": "9323",
+      "name": "Bosfor Patates Soyma Makinesi, Trifaze, Filtreli, 50 kg",
+      "code": "158.UPS.50FT",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/patates-soyma-makinesi-filtreli-50-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-50-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-12318-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/patates-soyma-makinesi-filtreli-50-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-12318-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 194072.75
+    },
+    {
+      "cafemarkt_id": "9363",
+      "name": "Bosfor Yeni Model Sebze Doğrama Makinesi, Setüstü",
+      "code": "158.USD.01Y",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/setustu-sebze-dograma-makinesi-9363",
+      "image": "https://witcdn.cafemarkt.com/setustu-sebze-dograma-makinesi-9363-sebze-dograma-makineleri-bosfor-12321-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/setustu-sebze-dograma-makinesi-9363-sebze-dograma-makineleri-bosfor-12321-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 48518.19
+    },
+    {
+      "cafemarkt_id": "9369",
+      "name": "Bosfor Yeni Model Sebze Doğrama Makinesi, Ayaklı",
+      "code": "158.USD.02Y",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/ayakli-sebze-dograma-makinesi-9369",
+      "image": "https://witcdn.cafemarkt.com/ayakli-sebze-dograma-makinesi-9369-sebze-dograma-makineleri-bosfor-12322-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ayakli-sebze-dograma-makinesi-9369-sebze-dograma-makineleri-bosfor-12322-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53909.1
+    },
+    {
+      "cafemarkt_id": "22762",
+      "name": "Bosfor UPS-25T Patates Soyma Makinesi, 25 kg, Trifaze",
+      "code": "158.UPS.25T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ups-25t-patates-soyma-makinesi-25-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ups-25t-patates-soyma-makinesi-25-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-39362-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ups-25t-patates-soyma-makinesi-25-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-39362-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85176.37
+    },
+    {
+      "cafemarkt_id": "22761",
+      "name": "Bosfor UPS-10T Patates Soyma Makinesi, 10 kg, Trifaze",
+      "code": "158.UPS.10T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/bosfor-ups-10t-patates-soyma-makinesi-10-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/bosfor-ups-10t-patates-soyma-makinesi-10-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-39361-22-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/bosfor-ups-10t-patates-soyma-makinesi-10-kg-trifaze-patates-ve-sogan-soyma-makineleri-bosfor-39361-22-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66693.26
+    },
+    {
+      "cafemarkt_id": "9356",
+      "name": "Bosfor Hamur Yoğurma Makinesi, Trifaze, 5 kg, 16 L",
+      "code": "158.UHM.5T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-5-kg-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-trifaze-hamur-yogurma-makineleri-bosfor-12270-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-trifaze-hamur-yogurma-makineleri-bosfor-12270-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 29264.94
+    },
+    {
+      "cafemarkt_id": "9330",
+      "name": "Bosfor Hamur Yoğurma Makinesi, Trifaze, Kafesli, 5 kg, 16 L",
+      "code": "158.UHMK.5T",
+      "brand": "Bosfor",
+      "url": "https://www.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli-trifaze",
+      "image": "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12284-93-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/hamur-yogurma-makinesi-5-kg-kafesli-trifaze-hamur-yogurma-makineleri-bosfor-12284-93-O.jpg"
+      ],
+      "price_try_kdv_dahil": 34655.85
+    }
+  ]
+}

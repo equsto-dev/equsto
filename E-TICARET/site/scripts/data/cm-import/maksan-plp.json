@@ -1,0 +1,73 @@
+{
+  "brand": "Maksan",
+  "slug": "maksan",
+  "fetchedAt": "2026-09-19T05:41:11.138Z",
+  "reportedTotal": 5,
+  "pages": 1,
+  "count": 5,
+  "items": [
+    {
+      "cafemarkt_id": "13025",
+      "name": "Maksan DW-500 Set Altı Bulaşık Yıkama Makinesi",
+      "code": "220.DW.500",
+      "brand": "Maksan",
+      "url": "https://www.cafemarkt.com/maksan-dw-500-bulasik-yikama-makinesi-set-alti-304",
+      "image": "https://witcdn.cafemarkt.com/maksan-dw-500-bulasik-yikama-makinesi-set-alti-304-set-alti-bulasik-makineleri-maksan-46069-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/maksan-dw-500-bulasik-yikama-makinesi-set-alti-304-set-alti-bulasik-makineleri-maksan-46069-13-O.jpg",
+        "https://witcdn.cafemarkt.com/maksan-dw-500-bulasik-yikama-makinesi-set-alti-304-set-alti-bulasik-makineleri-maksan-46070-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 74042.63
+    },
+    {
+      "cafemarkt_id": "13027",
+      "name": "Maksan GW 535 Bardak Yıkama Makinesi",
+      "code": "220.GW.535",
+      "brand": "Maksan",
+      "url": "https://www.cafemarkt.com/maksan-gw-535-bardak-yikama-makinesi",
+      "image": "https://witcdn.cafemarkt.com/maksan-gw-535-bardak-yikama-makinesi-bardak-yikama-makineleri-maksan-46067-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/maksan-gw-535-bardak-yikama-makinesi-bardak-yikama-makineleri-maksan-46067-13-O.jpg",
+        "https://witcdn.cafemarkt.com/maksan-gw-535-bardak-yikama-makinesi-bardak-yikama-makineleri-maksan-46068-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 65043.12
+    },
+    {
+      "cafemarkt_id": "13021",
+      "name": "Maksan DW-1000 Giyotin Tip Bulaşık Yıkama Makinesi, 1080 Tabak/Saat",
+      "code": "220.DW.1000",
+      "brand": "Maksan",
+      "url": "https://www.cafemarkt.com/maksan-dw-1000-bulasik-yikama-makinesi-giyotin-tip-304",
+      "image": "https://witcdn.cafemarkt.com/maksan-dw-1000-bulasik-yikama-makinesi-giyotin-tip-304-giyotin-tip-bulasik-makineleri-maksan-46073-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/maksan-dw-1000-bulasik-yikama-makinesi-giyotin-tip-304-giyotin-tip-bulasik-makineleri-maksan-46073-13-O.jpg",
+        "https://witcdn.cafemarkt.com/maksan-dw-1000-bulasik-yikama-makinesi-giyotin-tip-304-giyotin-tip-bulasik-makineleri-maksan-46074-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 110087.36
+    },
+    {
+      "cafemarkt_id": "13023",
+      "name": "Maksan DW 2000 Konveyörlü Tip Bulaşık Yıkama Makinesi, Kurutmalı",
+      "code": "220.DW.2000",
+      "brand": "Maksan",
+      "url": "https://www.cafemarkt.com/maksan-dw-2000-bulasik-yikama-makinesi-konveyorlu-tip",
+      "image": "https://witcdn.cafemarkt.com/maksan-dw-2000-bulasik-yikama-makinesi-konveyorlu-tip-konveyorlu-bulasik-makineleri-maksan-46075-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/maksan-dw-2000-bulasik-yikama-makinesi-konveyorlu-tip-konveyorlu-bulasik-makineleri-maksan-46075-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 451003.06
+    },
+    {
+      "cafemarkt_id": "13024",
+      "name": "Maksan DW 3000 Konveyörlü Tip Bulaşık Yıkama Makinesi, Kurutmalı",
+      "code": "220.DW.3000",
+      "brand": "Maksan",
+      "url": "https://www.cafemarkt.com/maksan-dw-3000-bulasik-yikama-makinesi-konveyorlu-tip",
+      "image": "https://witcdn.cafemarkt.com/maksan-dw-3000-bulasik-yikama-makinesi-konveyorlu-tip-konveyorlu-bulasik-makineleri-maksan-46076-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/maksan-dw-3000-bulasik-yikama-makinesi-konveyorlu-tip-konveyorlu-bulasik-makineleri-maksan-46076-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 497168.72
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "brand": "Plastport",
+  "slug": "plastport",
+  "fetchedAt": "2026-09-19T05:42:41.388Z",
+  "reportedTotal": 6,
+  "pages": 1,
+  "count": 6,
+  "items": [
+    {
+      "cafemarkt_id": "45665",
+      "name": "Plastport Sebze Kurutucu, 20 L",
+      "code": "211.46700020",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-sebze-kurutucu-20-l",
+      "image": "https://witcdn.cafemarkt.com/plastport-sebze-kurutucu-20-l-sebze-kurutma-makineleri-plastport-93043-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-sebze-kurutucu-20-l-sebze-kurutma-makineleri-plastport-93043-45-O.jpg",
+        "https://witcdn.cafemarkt.com/plastport-sebze-kurutucu-20-l-sebze-kurutma-makineleri-plastport-93042-45-O.jpg",
+        "https://witcdn.cafemarkt.com/plastport-sebze-kurutucu-20-l-sebze-kurutma-makineleri-plastport-93041-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5692.65
+    },
+    {
+      "cafemarkt_id": "45664",
+      "name": "Plastport 5 Katlı Kapalı Plastik Servis Arabası, 160x80x50 cm, Siyah",
+      "code": "211.46011030",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-5-katli-kapali-plastik-servis-arabasi-160x80x50-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/plastport-5-katli-kapali-plastik-servis-arabasi-160x80x50-cm-siyah-servis-arabalari-plastport-93040-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-5-katli-kapali-plastik-servis-arabasi-160x80x50-cm-siyah-servis-arabalari-plastport-93040-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13851.92
+    },
+    {
+      "cafemarkt_id": "45663",
+      "name": "Plastport Thermobox 600 Menteşeli Kapak, 640x440x610 mm, Gri",
+      "code": "211.46011600.GRI",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-thermobox-600-menteseli-kapak-640x440x610-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/plastport-thermobox-600-menteseli-kapak-640x440x610-mm-gri-termobox-plastport-93039-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-thermobox-600-menteseli-kapak-640x440x610-mm-gri-termobox-plastport-93039-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9909.09
+    },
+    {
+      "cafemarkt_id": "45662",
+      "name": "Plastport Thermobox 600, 640x440x610 mm, Gri",
+      "code": "211.46010600.GRI",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-thermobox-600-640x440x610-mm-gri",
+      "image": "https://witcdn.cafemarkt.com/plastport-thermobox-600-640x440x610-mm-gri-termobox-plastport-93038-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-thermobox-600-640x440x610-mm-gri-termobox-plastport-93038-45-O.jpg",
+        "https://witcdn.cafemarkt.com/plastport-thermobox-600-640x440x610-mm-gri-termobox-plastport-93037-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9633.84
+    },
+    {
+      "cafemarkt_id": "45660",
+      "name": "Plastport 5 Katlı Açık Plastik Servis Arabası, 160x80x50 cm, Siyah",
+      "code": "211.46011029",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-5-katli-acik-plastik-servis-arabasi-160x80x50-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/plastport-5-katli-acik-plastik-servis-arabasi-160x80x50-cm-siyah-servis-arabalari-plastport-93036-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-5-katli-acik-plastik-servis-arabasi-160x80x50-cm-siyah-servis-arabalari-plastport-93036-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10681.33
+    },
+    {
+      "cafemarkt_id": "45658",
+      "name": "Plastport 3 Katlı Açık Plastik Servis Arabası, 107x52x96 cm, Kahverengi",
+      "code": "211.46110028",
+      "brand": "Plastport",
+      "url": "https://www.cafemarkt.com/plastport-3-katli-acik-plastik-servis-arabasi-107x52x96-cm-kahverengi",
+      "image": "https://witcdn.cafemarkt.com/plastport-3-katli-acik-plastik-servis-arabasi-107x52x96-cm-kahverengi-servis-arabalari-plastport-93035-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/plastport-3-katli-acik-plastik-servis-arabasi-107x52x96-cm-kahverengi-servis-arabalari-plastport-93035-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6317.16
+    }
+  ]
+}

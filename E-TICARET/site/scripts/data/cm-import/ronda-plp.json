@@ -1,0 +1,58 @@
+{
+  "brand": "Ronda",
+  "slug": "ronda",
+  "fetchedAt": "2026-09-19T05:42:58.771Z",
+  "reportedTotal": 4,
+  "pages": 1,
+  "count": 4,
+  "items": [
+    {
+      "cafemarkt_id": "11101",
+      "name": "Ronda AG 12 Devirmeli Kahve Posa Çekmecesi",
+      "code": "201.AG12",
+      "brand": "Ronda",
+      "url": "https://www.cafemarkt.com/ronda-ag-12-devrilir-kahve-posa-cekmecesi",
+      "image": "https://witcdn.cafemarkt.com/ronda-ag-12-devrilir-kahve-posa-cekmecesi-posalik-kahve-cekmecesi-ronda-19085-11-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ronda-ag-12-devrilir-kahve-posa-cekmecesi-posalik-kahve-cekmecesi-ronda-19085-11-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20123.5
+    },
+    {
+      "cafemarkt_id": "35007",
+      "name": "Ronda AP-2812 Kilitli Kasa Çekmecesi, 37x43x16 cm",
+      "code": "201.AP2812",
+      "brand": "Ronda",
+      "url": "https://www.cafemarkt.com/ronda-ap-2812-kilitli-kasa-cekmecesi",
+      "image": "https://witcdn.cafemarkt.com/ronda-ap-2812-kilitli-kasa-cekmecesi-barista-malzemeleri-ronda-63392-35-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ronda-ap-2812-kilitli-kasa-cekmecesi-barista-malzemeleri-ronda-63392-35-O.jpg"
+      ],
+      "price_try_kdv_dahil": 17389.07
+    },
+    {
+      "cafemarkt_id": "35012",
+      "name": "Ronda AP-272 Kahve Posa Çekmecesi, 37x43x16 cm, Siyah",
+      "code": "201.AP272",
+      "brand": "Ronda",
+      "url": "https://www.cafemarkt.com/ronda-ap-272-kahve-posa-cekmecesi-siyah",
+      "image": "https://witcdn.cafemarkt.com/ronda-ap-272-kahve-posa-cekmecesi-siyah-posalik-kahve-cekmecesi-ronda-63390-35-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ronda-ap-272-kahve-posa-cekmecesi-siyah-posalik-kahve-cekmecesi-ronda-63390-35-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13439.34
+    },
+    {
+      "cafemarkt_id": "35006",
+      "name": "Ronda AU-12 Devirmeli Çöp Çekmecesi, 47x32x63 cm",
+      "code": "201.AU12",
+      "brand": "Ronda",
+      "url": "https://www.cafemarkt.com/ronda-au-12-devirmeli-cop-cekmecesi",
+      "image": "https://witcdn.cafemarkt.com/ronda-au-12-devirmeli-cop-cekmecesi-posalik-kahve-cekmecesi-ronda-63391-35-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/ronda-au-12-devirmeli-cop-cekmecesi-posalik-kahve-cekmecesi-ronda-63391-35-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32777.62
+    }
+  ]
+}

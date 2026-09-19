@@ -1,0 +1,22 @@
+{
+  "brand": "Çağdaş",
+  "slug": "cagdas",
+  "fetchedAt": "2026-09-19T05:38:15.965Z",
+  "reportedTotal": 1,
+  "pages": 1,
+  "count": 1,
+  "items": [
+    {
+      "cafemarkt_id": "24846",
+      "name": "Çağdaş KTS 240210 Set Üstü Kemik Testeresi",
+      "code": "447.KTS.240210",
+      "brand": "Çağdaş",
+      "url": "https://www.cafemarkt.com/cagdas-kts-240210-set-ustu-kemik-testeresi",
+      "image": "https://witcdn.cafemarkt.com/cagdas-kts-240210-set-ustu-kemik-testeresi-et-ve-kemik-testereleri-cagdas-42848-24-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cagdas-kts-240210-set-ustu-kemik-testeresi-et-ve-kemik-testereleri-cagdas-42848-24-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7600
+    }
+  ]
+}

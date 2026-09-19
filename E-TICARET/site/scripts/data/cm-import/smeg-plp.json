@@ -1,0 +1,34 @@
+{
+  "brand": "Smeg",
+  "slug": "smeg",
+  "fetchedAt": "2026-09-19T05:44:13.000Z",
+  "reportedTotal": 2,
+  "pages": 1,
+  "count": 2,
+  "items": [
+    {
+      "cafemarkt_id": "13006",
+      "name": "Smeg Alfa 144 GH1 Patisserie Fırın, 2700 W",
+      "code": "218.ALFA.144.GH1",
+      "brand": "Smeg",
+      "url": "https://www.cafemarkt.com/smeg-patisserie-firin-2700-w",
+      "image": "https://witcdn.cafemarkt.com/smeg-patisserie-firin-2700-w-unlu-mamul-firinlari-smeg-22836-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/smeg-patisserie-firin-2700-w-unlu-mamul-firinlari-smeg-22836-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 107325.31
+    },
+    {
+      "cafemarkt_id": "13007",
+      "name": "Smeg Alfa 43 GH Patisserie Fırın, 2800 W",
+      "code": "218.ALFA.43.GH",
+      "brand": "Smeg",
+      "url": "https://www.cafemarkt.com/smeg-patisserie-firin-2800-w",
+      "image": "https://witcdn.cafemarkt.com/smeg-patisserie-firin-2800-w-unlu-mamul-firinlari-smeg-22835-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/smeg-patisserie-firin-2800-w-unlu-mamul-firinlari-smeg-22835-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 83847.9
+    }
+  ]
+}

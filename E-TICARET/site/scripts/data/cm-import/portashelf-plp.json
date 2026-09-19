@@ -1,0 +1,94 @@
+{
+  "brand": "PortaShelf",
+  "slug": "portashelf",
+  "fetchedAt": "2026-09-19T05:42:50.092Z",
+  "reportedTotal": 7,
+  "pages": 1,
+  "count": 7,
+  "items": [
+    {
+      "cafemarkt_id": "45767",
+      "name": "Portashelf Plastik Raf, 53x137 cm",
+      "code": "135.M06282154",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-plastik-raf-53x137-cm-45767",
+      "image": "https://witcdn.cafemarkt.com/portashelf-plastik-raf-53x137-cm-45767-depolama-ve-istif-raflari-portashelf-93261-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-plastik-raf-53x137-cm-45767-depolama-ve-istif-raflari-portashelf-93261-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5165.03
+    },
+    {
+      "cafemarkt_id": "45765",
+      "name": "Portashelf Paslanmaz Çelik Ayak, 160 cm",
+      "code": "135.M0687160",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-paslanmaz-celik-ayak-160-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-ayak-160-cm-depolama-ve-istif-raflari-portashelf-93262-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-ayak-160-cm-depolama-ve-istif-raflari-portashelf-93262-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2280.66
+    },
+    {
+      "cafemarkt_id": "43927",
+      "name": "Portashelf Paslanmaz Çelik Ayak, 183 cm",
+      "code": "135.M0617183",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-paslanmaz-celik-ayak-183-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-ayak-183-cm-depolama-ve-istif-raflari-portashelf-86835-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-ayak-183-cm-depolama-ve-istif-raflari-portashelf-86835-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1697.6
+    },
+    {
+      "cafemarkt_id": "43923",
+      "name": "Portashelf Paslanmaz Çelik Perfore Raf, 107x46 cm",
+      "code": "135.M0611842P",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-paslanmaz-celik-perfore-raf-107x46-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-perfore-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86834-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-perfore-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86834-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3973.1
+    },
+    {
+      "cafemarkt_id": "43920",
+      "name": "Portashelf Boyalı Plastik Raf, 107x46 cm",
+      "code": "135.M06231842",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-boyali-plastik-raf-107x46-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-boyali-plastik-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86836-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-boyali-plastik-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86836-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1191.93
+    },
+    {
+      "cafemarkt_id": "43919",
+      "name": "Portashelf Paslanmaz Çelik Düz Raf, 107x46 cm",
+      "code": "135.M0611842D",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-paslanmaz-celik-duz-raf-107x46-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-duz-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86833-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-duz-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86833-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3828.62
+    },
+    {
+      "cafemarkt_id": "43918",
+      "name": "Portashelf Paslanmaz Çelik Tel Raf, 107x46 cm",
+      "code": "135.M0611842",
+      "brand": "PortaShelf",
+      "url": "https://www.cafemarkt.com/portashelf-paslanmaz-celik-tel-raf-107x46-cm",
+      "image": "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-tel-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86841-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/portashelf-paslanmaz-celik-tel-raf-107x46-cm-depolama-ve-istif-raflari-portashelf-86841-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3106.24
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "brand": "Magister",
+  "slug": "magister",
+  "fetchedAt": "2026-09-19T05:41:02.460Z",
+  "reportedTotal": 3,
+  "pages": 1,
+  "count": 3,
+  "items": [
+    {
+      "cafemarkt_id": "17645",
+      "name": "Magister Tall Cup Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "334.GT.2V.TC",
+      "brand": "Magister",
+      "url": "https://www.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-tam-otomatik-2-gruplu",
+      "image": "https://witcdn.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-tam-otomatik-2-gruplu-espresso-makineleri-magister-kahve-makinesi-alana-su-filtrasyon-indirimi-30945-17-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-tam-otomatik-2-gruplu-espresso-makineleri-magister-kahve-makinesi-alana-su-filtrasyon-indirimi-30945-17-O.jpg"
+      ],
+      "price_try_kdv_dahil": 140864.47
+    },
+    {
+      "cafemarkt_id": "40924",
+      "name": "Magister Tall Cup Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+      "code": "334.ES100",
+      "brand": "Magister",
+      "url": "https://www.cafemarkt.com/magister-tall-cup-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "image": "https://witcdn.cafemarkt.com/magister-tall-cup-tam-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-magister-78733-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/magister-tall-cup-tam-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-magister-78733-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 220174.72
+    },
+    {
+      "cafemarkt_id": "17644",
+      "name": "Magister Tall Cup Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+      "code": "334.GT.2M.TC",
+      "brand": "Magister",
+      "url": "https://www.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-yari-otomatik-2-gruplu",
+      "image": "https://witcdn.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-yari-otomatik-2-gruplu-espresso-makineleri-magister-30944-17-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/magister-espresso-kahve-makinesi-tall-cup-yari-otomatik-2-gruplu-espresso-makineleri-magister-30944-17-O.jpg"
+      ],
+      "price_try_kdv_dahil": 141609.79
+    }
+  ]
+}

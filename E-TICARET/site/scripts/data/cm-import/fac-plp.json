@@ -1,0 +1,58 @@
+{
+  "brand": "Fac",
+  "slug": "fac",
+  "fetchedAt": "2026-09-19T05:38:42.402Z",
+  "reportedTotal": 4,
+  "pages": 1,
+  "count": 4,
+  "items": [
+    {
+      "cafemarkt_id": "41459",
+      "name": "Fac S AF220 AF Gıda Dilimleme Makinesi, 220 mm",
+      "code": "149.9830.S220A.F0",
+      "brand": "Fac",
+      "url": "https://www.cafemarkt.com/fac-s-af220-af-gida-dilimleme-makinesi-220-mm",
+      "image": "https://witcdn.cafemarkt.com/fac-s-af220-af-gida-dilimleme-makinesi-220-mm-gida-dilimleme-makineleri-fac-80506-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/fac-s-af220-af-gida-dilimleme-makinesi-220-mm-gida-dilimleme-makineleri-fac-80506-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33539.16
+    },
+    {
+      "cafemarkt_id": "41456",
+      "name": "Fac F 250 R Gıda Dilimleme Makinesi, 250 mm",
+      "code": "149.9830.F250E.00",
+      "brand": "Fac",
+      "url": "https://www.cafemarkt.com/fac-f-250-r-gida-dilimleme-makinesi-250-mm",
+      "image": "https://witcdn.cafemarkt.com/fac-f-250-r-gida-dilimleme-makinesi-250-mm-gida-dilimleme-makineleri-fac-80507-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/fac-f-250-r-gida-dilimleme-makinesi-250-mm-gida-dilimleme-makineleri-fac-80507-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37228.47
+    },
+    {
+      "cafemarkt_id": "41458",
+      "name": "Fac F 300 R Gıda Dilimleme Makinesi, 300 mm",
+      "code": "149.9830.F300E.00",
+      "brand": "Fac",
+      "url": "https://www.cafemarkt.com/fac-f-300-r-gida-dilimleme-makinesi-300-mm",
+      "image": "https://witcdn.cafemarkt.com/fac-f-300-r-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-fac-80509-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/fac-f-300-r-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-fac-80509-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 51068.96
+    },
+    {
+      "cafemarkt_id": "41457",
+      "name": "Fac F 275 E Gıda Dilimleme Makinesi, 270 mm",
+      "code": "149.9830.F275E.00",
+      "brand": "Fac",
+      "url": "https://www.cafemarkt.com/fac-f-275-e-gida-dilimleme-makinesi-270-mm",
+      "image": "https://witcdn.cafemarkt.com/fac-f-275-e-gida-dilimleme-makinesi-270-mm-gida-dilimleme-makineleri-fac-80508-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/fac-f-275-e-gida-dilimleme-makinesi-270-mm-gida-dilimleme-makineleri-fac-80508-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 36281.92
+    }
+  ]
+}

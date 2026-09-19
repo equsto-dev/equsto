@@ -1,0 +1,1874 @@
+{
+  "brand": "Senox",
+  "slug": "senox",
+  "fetchedAt": "2026-09-19T08:27:34.454Z",
+  "reportedTotal": 161,
+  "pages": 6,
+  "count": 151,
+  "items": [
+    {
+      "cafemarkt_id": "13734",
+      "name": "Senox VM 01 Mini Vakum Makinesi",
+      "code": "231.VM.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-vm-01-vakum-makinesi-mini",
+      "image": "https://witcdn.cafemarkt.com/senox-vm-01-vakum-makinesi-mini-vakumlama-makineleri-senox-24289-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-vm-01-vakum-makinesi-mini-vakumlama-makineleri-senox-24289-13-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-vm-01-vakum-makinesi-mini-vakumlama-makineleri-senox-25446-13-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-vm-01-vakum-makinesi-mini-vakumlama-makineleri-senox-25447-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18865.78
+    },
+    {
+      "cafemarkt_id": "29577",
+      "name": "Senox BBC-150 Bar Tipi Şişe Soğutucu Dolap, Tek Kapılı, 138 L",
+      "code": "231.BBC.150",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-tipi-sise-sogutucu-dolap-tek-kapili-138-l",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-tipi-sise-sogutucu-dolap-tek-kapili-138-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86179-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-tipi-sise-sogutucu-dolap-tek-kapili-138-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86179-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "29554",
+      "name": "Senox BBC-250 Bar Arkası Şişe Soğutucu Dolap, 2 Kapılı",
+      "code": "231.BBC.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bbc-250-bar-arkasi-sise-sogutucu-dolap-2-kapili",
+      "image": "https://witcdn.cafemarkt.com/senox-bbc-250-bar-arkasi-sise-sogutucu-dolap-2-kapili-bar-arkasi-sise-sogutucu-dolaplar-senox-86183-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bbc-250-bar-arkasi-sise-sogutucu-dolap-2-kapili-bar-arkasi-sise-sogutucu-dolaplar-senox-86183-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "33090",
+      "name": "Senox BZ12 Hazneli Ev Tipi Küp Buz Makinesi, 12 kg/gün Kapasiteli",
+      "code": "231.BZ12",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli-kup-buz-makineleri-senox-58479-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli-kup-buz-makineleri-senox-58479-33-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli-kup-buz-makineleri-senox-58480-33-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli-kup-buz-makineleri-senox-58716-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11319.47
+    },
+    {
+      "cafemarkt_id": "29555",
+      "name": "Senox BBC-350 Bar Arkası Şişe Soğutucu Dolap, 3 Kapılı",
+      "code": "231.BBC.350",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bbc-350-bar-arkasi-sise-sogutucu-dolap-3-kapili",
+      "image": "https://witcdn.cafemarkt.com/senox-bbc-350-bar-arkasi-sise-sogutucu-dolap-3-kapili-bar-arkasi-sise-sogutucu-dolaplar-senox-86180-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bbc-350-bar-arkasi-sise-sogutucu-dolap-3-kapili-bar-arkasi-sise-sogutucu-dolaplar-senox-86180-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56597.33
+    },
+    {
+      "cafemarkt_id": "13695",
+      "name": "Senox BS 01 Bıçak Sterilizatörü",
+      "code": "231.BS.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bs-01-bicak-sterilizatoru",
+      "image": "https://witcdn.cafemarkt.com/senox-bs-01-bicak-sterilizatoru-bicak-steril-dolaplari-senox-24250-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bs-01-bicak-sterilizatoru-bicak-steril-dolaplari-senox-24250-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 13206.04
+    },
+    {
+      "cafemarkt_id": "13694",
+      "name": "Senox BL 40 El Blender",
+      "code": "231.BL.40",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bl-40-el-blender",
+      "image": "https://witcdn.cafemarkt.com/senox-bl-40-el-blender-el-blenderlari-senox-64500-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bl-40-el-blender-el-blenderlari-senox-64500-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 15092.62
+    },
+    {
+      "cafemarkt_id": "13693",
+      "name": "Senox BL 25 El Blender",
+      "code": "231.BL.25",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bl-25-el-blender",
+      "image": "https://witcdn.cafemarkt.com/senox-bl-25-el-blender-el-blenderlari-senox-70879-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bl-25-el-blender-el-blenderlari-senox-70879-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10942.15
+    },
+    {
+      "cafemarkt_id": "13703",
+      "name": "Senox DS-01 Üstten Damacanalı Sıcak Soğuk Su Sebili, Inox",
+      "code": "231.DS01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ds-01-su-sebili-sicak-soguk-su",
+      "image": "https://witcdn.cafemarkt.com/senox-ds-01-su-sebili-sicak-soguk-su-su-sebilleri-senox-90539-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ds-01-su-sebili-sicak-soguk-su-su-sebilleri-senox-90539-13-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-01-su-sebili-sicak-soguk-su-su-sebilleri-senox-90541-13-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-01-su-sebili-sicak-soguk-su-su-sebilleri-senox-90542-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8678.26
+    },
+    {
+      "cafemarkt_id": "30275",
+      "name": "Senox IC80A Buz Kırıcı, 3 L",
+      "code": "231.IC80A",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ic80a-buz-kirici-3-l",
+      "image": "https://witcdn.cafemarkt.com/senox-ic80a-buz-kirici-3-l-buz-kiricilar-senox-52015-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ic80a-buz-kirici-3-l-buz-kiricilar-senox-52015-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 33958.4
+    },
+    {
+      "cafemarkt_id": "13723",
+      "name": "Senox SB 400LK Su Sebili, Krom, 400 L",
+      "code": "231.SB400.LK",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-400lk-su-sebili-krom-400-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-400lk-su-sebili-krom-400-l-su-sebilleri-senox-24278-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-400lk-su-sebili-krom-400-l-su-sebilleri-senox-24278-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 79236.27
+    },
+    {
+      "cafemarkt_id": "29636",
+      "name": "Senox WN-150 Tezgah Altı Sarap Soğutma Dolabı, 125 L",
+      "code": "231.WN.150",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-tezgah-alti-sarap-sogutma-dolabi-125-l",
+      "image": "https://witcdn.cafemarkt.com/senox-tezgah-alti-sarap-sogutma-dolabi-125-l-sarap-dolaplari-senox-50214-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-tezgah-alti-sarap-sogutma-dolabi-125-l-sarap-dolaplari-senox-50214-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56597.33
+    },
+    {
+      "cafemarkt_id": "30285",
+      "name": "Senox MC30 Mikrodalga Fırın, 30 L",
+      "code": "231.MC30",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-mc30-mikrodalga-firin-30-l",
+      "image": "https://witcdn.cafemarkt.com/senox-mc30-mikrodalga-firin-30-l-mikrodalga-firinlar-senox-80867-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-mc30-mikrodalga-firin-30-l-mikrodalga-firinlar-senox-80867-30-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-mc30-mikrodalga-firin-30-l-mikrodalga-firinlar-senox-83591-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 15092.62
+    },
+    {
+      "cafemarkt_id": "30278",
+      "name": "Senox DBE-01 Dizden Basmalı Tek Su Girişli Paslanmaz Evye",
+      "code": "231.DBE.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dizden-basmali-paslanmaz-evye",
+      "image": "https://witcdn.cafemarkt.com/senox-dizden-basmali-paslanmaz-evye-evyeler-senox-52016-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dizden-basmali-paslanmaz-evye-evyeler-senox-52016-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10564.84
+    },
+    {
+      "cafemarkt_id": "29613",
+      "name": "Senox SBCS-350 Bar Arkası Şişe Soğutucu Dolap, 3 Sürgülü Kapılı, 338 L, Krom",
+      "code": "231.SBCS.350",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86184-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86184-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 64143.64
+    },
+    {
+      "cafemarkt_id": "29637",
+      "name": "Senox WN-250 Şarap Soğutma Dolabı, 3 Raflı",
+      "code": "231.WN.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sarap-sogutma-dolabi-3-rafli",
+      "image": "https://witcdn.cafemarkt.com/senox-sarap-sogutma-dolabi-3-rafli-sarap-dolaplari-senox-50215-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sarap-sogutma-dolabi-3-rafli-sarap-dolaplari-senox-50215-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "29583",
+      "name": "Senox BBCS-250 Bar Arkası Şişe Soğutucu Dolap, 2 Sürgülü Kapılı, 238 L",
+      "code": "231.BBCS.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86189-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86189-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 49051.02
+    },
+    {
+      "cafemarkt_id": "29609",
+      "name": "Senox SBC150 Bar Arkası Şişe Soğutucu Dolap, Tek Kapılı, 138 L, Krom",
+      "code": "231.SBC.150",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-tek-kapili-138-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-tek-kapili-138-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86187-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-tek-kapili-138-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86187-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45277.87
+    },
+    {
+      "cafemarkt_id": "29584",
+      "name": "Senox BBCS-350 Bar Arkası Şişe Soğutucu Dolap, 3 Sürgülü Kapılı, 338 L",
+      "code": "231.BBCS.350",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86191-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-surgulu-kapili-338-l-bar-arkasi-sise-sogutucu-dolaplar-senox-86191-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "29638",
+      "name": "Senox WN-350 Şarap Soğutma Dolabı, 3 Raflı, 245 Şişe Kapasite",
+      "code": "231.WN.350",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-wn-350-sarap-sogutma-dolabi-3-rafli",
+      "image": "https://witcdn.cafemarkt.com/senox-wn-350-sarap-sogutma-dolabi-3-rafli-sarap-dolaplari-senox-50216-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-wn-350-sarap-sogutma-dolabi-3-rafli-sarap-dolaplari-senox-50216-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 71689.95
+    },
+    {
+      "cafemarkt_id": "29626",
+      "name": "Senox Askı Tip Asansörlü Isıtıcı Lamba, 200 W, Krom",
+      "code": "231.SNX.17.C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-krom-sicak-tutucu-lambalar-senox-50255-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-krom-sicak-tutucu-lambalar-senox-50255-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12451.41
+    },
+    {
+      "cafemarkt_id": "29612",
+      "name": "Senox SBCS-250 Bar Arkası Şişe Soğutucu Dolap, 2 Sürgülü Kapılı, 238 L, Krom",
+      "code": "231.SBCS.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86186-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-surgulu-kapili-238-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86186-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 52824.18
+    },
+    {
+      "cafemarkt_id": "29625",
+      "name": "Senox Askı Tip Asansörlü Isıtıcı Lamba, 200 W, Bakır",
+      "code": "231.SNX.17.B",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-bakir",
+      "image": "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-bakir-sicak-tutucu-lambalar-senox-50257-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-bakir-sicak-tutucu-lambalar-senox-50257-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12451.41
+    },
+    {
+      "cafemarkt_id": "29611",
+      "name": "Senox SBC-350 Bar Arkası Şişe Soğutucu Dolap, 3 Kapılı, 338 L, Krom",
+      "code": "231.SBC.350",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-kapili-338-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-kapili-338-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86185-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-3-kapili-338-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86185-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 62257.07
+    },
+    {
+      "cafemarkt_id": "29627",
+      "name": "Senox Askı Tip Asansörlü Isıtıcı Lamba, 200 W, Altın",
+      "code": "231.SNX.17.G",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-altin",
+      "image": "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-altin-sicak-tutucu-lambalar-senox-50256-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-aski-tip-isitici-lamba-200-w-altin-sicak-tutucu-lambalar-senox-50256-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12451.41
+    },
+    {
+      "cafemarkt_id": "30353",
+      "name": "Senox TM-02 Tezgaha Monte Ön Yıkama Sprey Ünitesi, Ara Musluklu",
+      "code": "231.TM.02",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-tm-02-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluklu",
+      "image": "https://witcdn.cafemarkt.com/senox-tm-02-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluklu-dus-su-sprey-uniteleri-senox-69493-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-tm-02-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluklu-dus-su-sprey-uniteleri-senox-69493-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9055.57
+    },
+    {
+      "cafemarkt_id": "30348",
+      "name": "Senox TM-01 Tezgaha Monte Ön Yıkama Sprey Ünitesi, Ara Musluksuz",
+      "code": "231.TM.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-tm-01-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluksuz",
+      "image": "https://witcdn.cafemarkt.com/senox-tm-01-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluksuz-dus-su-sprey-uniteleri-senox-52167-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-tm-01-tezgaha-monte-on-yikama-sprey-unitesi-ara-musluksuz-dus-su-sprey-uniteleri-senox-52167-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8300.94
+    },
+    {
+      "cafemarkt_id": "30338",
+      "name": "Senox DM-02 Duvara Monte Ön Yıkama Sprey Ünitesi, Ara Musluklu",
+      "code": "231.DM.02",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dm-02-duvara-monte-on-yikama-sprey-unitesi-ara-musluklu",
+      "image": "https://witcdn.cafemarkt.com/senox-dm-02-duvara-monte-on-yikama-sprey-unitesi-ara-musluklu-dus-su-sprey-uniteleri-senox-69494-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dm-02-duvara-monte-on-yikama-sprey-unitesi-ara-musluklu-dus-su-sprey-uniteleri-senox-69494-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9055.57
+    },
+    {
+      "cafemarkt_id": "29621",
+      "name": "Senox Set Üstü Sıcak Teşhir Dolabı, Dik Camlı, 90 L",
+      "code": "231.SET.90C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-90-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-90-l-sicak-teshir-uniteleri-senox-50242-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-90-l-sicak-teshir-uniteleri-senox-50242-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 62257.07
+    },
+    {
+      "cafemarkt_id": "45057",
+      "name": "Senox PLM 20 Profesyonel Planet Mikser, 20 L",
+      "code": "231.PLM20",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-plm-20-profesyonel-planet-mikser-20-l",
+      "image": "https://witcdn.cafemarkt.com/senox-plm-20-profesyonel-planet-mikser-20-l-planet-mikserler-senox-90752-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-plm-20-profesyonel-planet-mikser-20-l-planet-mikserler-senox-90752-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-20-profesyonel-planet-mikser-20-l-planet-mikserler-senox-90753-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-20-profesyonel-planet-mikser-20-l-planet-mikserler-senox-90754-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 52824.18
+    },
+    {
+      "cafemarkt_id": "45054",
+      "name": "Senox PLM 30 Profesyonel Planet Mikser, 30 L",
+      "code": "231.PLM30",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-plm-30-profesyonel-planet-mikser-30-l",
+      "image": "https://witcdn.cafemarkt.com/senox-plm-30-profesyonel-planet-mikser-30-l-planet-mikserler-senox-90757-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-plm-30-profesyonel-planet-mikser-30-l-planet-mikserler-senox-90757-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-30-profesyonel-planet-mikser-30-l-planet-mikserler-senox-90758-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-30-profesyonel-planet-mikser-30-l-planet-mikserler-senox-90759-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67916.8
+    },
+    {
+      "cafemarkt_id": "45005",
+      "name": "Senox DS-02 Alttan Damacanalı Sıcak Normal Soğuk Su Sebili, Siyah",
+      "code": "231.VN25HA",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ds-02-alttan-damacanali-sicak-normal-soguk-su-sebili-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-ds-02-alttan-damacanali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90537-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ds-02-alttan-damacanali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90537-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-02-alttan-damacanali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90544-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-02-alttan-damacanali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90543-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 14337.99
+    },
+    {
+      "cafemarkt_id": "45004",
+      "name": "Senox DS-04 Sıcak Soğuk Buz Yapan Su Sebili, Siyah",
+      "code": "231.WD737",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ds-04-sicak-soguk-buz-yapan-su-sebili-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-ds-04-sicak-soguk-buz-yapan-su-sebili-siyah-su-sebilleri-senox-90535-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ds-04-sicak-soguk-buz-yapan-su-sebili-siyah-su-sebilleri-senox-90535-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-04-sicak-soguk-buz-yapan-su-sebili-siyah-su-sebilleri-senox-90549-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-04-sicak-soguk-buz-yapan-su-sebili-siyah-su-sebilleri-senox-90550-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30185.24
+    },
+    {
+      "cafemarkt_id": "45003",
+      "name": "Senox DS-03 Arıtmalı Sıcak Normal Soğuk Su Sebili, Siyah",
+      "code": "231.VN25RO",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ds-03-aritmali-sicak-normal-soguk-su-sebili-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-ds-03-aritmali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90533-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ds-03-aritmali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90533-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-03-aritmali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90548-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ds-03-aritmali-sicak-normal-soguk-su-sebili-siyah-su-sebilleri-senox-90547-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26412.09
+    },
+    {
+      "cafemarkt_id": "43832",
+      "name": "Senox CF 6600 Blok Kapaklı Sandık Tipi Derin Dondurucu, 600 L, Inox",
+      "code": "231.CF.6600",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-6600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-6600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-inox-endustriyel-derin-dondurucular-senox-86570-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-6600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-inox-endustriyel-derin-dondurucular-senox-86570-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56597.33
+    },
+    {
+      "cafemarkt_id": "43831",
+      "name": "Senox CF 6650 Blok Kapaklı Sandık Tipi Derin Dondurucu, 650 L, Inox",
+      "code": "231.CF.6650",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox-endustriyel-derin-dondurucular-senox-86571-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox-endustriyel-derin-dondurucular-senox-86571-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "43830",
+      "name": "Senox CF6650 Blok Kapaklı Sandık Tipi Derin Dondurucu, 650 L, Inox",
+      "code": "231.CF6650KROM",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox-endustriyel-derin-dondurucular-senox-86572-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf6650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-inox-endustriyel-derin-dondurucular-senox-86572-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "43184",
+      "name": "Senox SMR-5120 ST Tek Kapılı Set Altı Derin Dondurucu, 118 L",
+      "code": "231.SMR.5120ST.D",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-smr-5120-st-tek-kapili-derin-dondurucu-118-l",
+      "image": "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-derin-dondurucu-118-l-endustriyel-derin-dondurucular-senox-84326-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-derin-dondurucu-118-l-endustriyel-derin-dondurucular-senox-84326-43-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-derin-dondurucu-118-l-endustriyel-derin-dondurucular-senox-84325-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30185.24
+    },
+    {
+      "cafemarkt_id": "43183",
+      "name": "Senox SMR-5120 ST Tek Set Altı Kapılı Buzdolabı, 118 L",
+      "code": "231.SMR.5120ST.B",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-smr-5120-st-tek-kapili-buzdolabi-118-l",
+      "image": "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-buzdolabi-118-l-endustriyel-buzdolaplari-senox-84328-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-buzdolabi-118-l-endustriyel-buzdolaplari-senox-84328-43-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-smr-5120-st-tek-kapili-buzdolabi-118-l-endustriyel-buzdolaplari-senox-84327-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18865.78
+    },
+    {
+      "cafemarkt_id": "43169",
+      "name": "Senox SDS-770 DC 2 DF Dik Tip Şişe Soğutucu Dolap, Siyah",
+      "code": "231.SDS.770.DC.2.DF.SIY",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-sise-sogutucu-dolap-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-sise-sogutucu-dolap-siyah-dik-tip-sise-sogutucu-dolaplar-senox-84324-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-sise-sogutucu-dolap-siyah-dik-tip-sise-sogutucu-dolaplar-senox-84324-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86782.58
+    },
+    {
+      "cafemarkt_id": "42748",
+      "name": "Senox SDS 385 DC 1 YW-P Şarap Dolabı, 150 Şişe Kapasiteli",
+      "code": "231.SDS385.DC1.YW.P",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-385-dc-1-yw-p-sarap-dolabi-150-sise-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-yw-p-sarap-dolabi-150-sise-kapasiteli-sarap-dolaplari-senox-83035-42-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-yw-p-sarap-dolabi-150-sise-kapasiteli-sarap-dolaplari-senox-83035-42-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66030.22
+    },
+    {
+      "cafemarkt_id": "41331",
+      "name": "Senox DBE-02 Dizden Basmalı Çift Su Girişli Paslanmaz Evye",
+      "code": "231.DBE.02",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dbe-02-dizden-basmali-cift-su-girisli-paslanmaz-evye",
+      "image": "https://witcdn.cafemarkt.com/senox-dbe-02-dizden-basmali-cift-su-girisli-paslanmaz-evye-evyeler-senox-80315-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dbe-02-dizden-basmali-cift-su-girisli-paslanmaz-evye-evyeler-senox-80315-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12451.41
+    },
+    {
+      "cafemarkt_id": "40926",
+      "name": "Senox SDS 385 DC 1 YW-P Şarap Dolabı, 150 Şişe Kapasiteli",
+      "code": "231.SDS.385.DC.1.YW.P",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-385-dc-1-yw-p-5-rafli-sarap-dolabi-150-sise-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-yw-p-5-rafli-sarap-dolabi-150-sise-kapasiteli-sarap-dolaplari-senox-78773-40-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-yw-p-5-rafli-sarap-dolabi-150-sise-kapasiteli-sarap-dolaplari-senox-78773-40-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66030.22
+    },
+    {
+      "cafemarkt_id": "39801",
+      "name": "Senox CF6600 Blok Kapaklı Sandık Tipi Derin Dondurucu, 600 L, Krom",
+      "code": "231.CF6600KROM",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-df-600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-krom-endustriyel-derin-dondurucular-senox-76300-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-600-blok-kapakli-sandik-tipi-derin-dondurucu-600-l-krom-endustriyel-derin-dondurucular-senox-76300-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56597.33
+    },
+    {
+      "cafemarkt_id": "39800",
+      "name": "Senox CF5500 Blok Kapaklı Sandık Tipi Derin Dondurucu, 500 L, Krom",
+      "code": "231.CF5500KROM",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-df-500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-krom-endustriyel-derin-dondurucular-senox-76299-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-krom-endustriyel-derin-dondurucular-senox-76299-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "39799",
+      "name": "Senox CF 6550 Blok Kapaklı Sandık Tipi Derin Dondurucu, 650 L, Beyaz",
+      "code": "231.CF.6550.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-endustriyel-derin-dondurucular-senox-76298-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-650-blok-kapakli-sandik-tipi-derin-dondurucu-650-l-endustriyel-derin-dondurucular-senox-76298-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "39797",
+      "name": "Senox CF 2220 Blok Kapaklı Sandık Tipi Derin Dondurucu, 200 L, Beyaz",
+      "code": "231.CF.2220.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-200-blok-kapakli-sandik-tipi-derin-dondurucu-200-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-200-blok-kapakli-sandik-tipi-derin-dondurucu-200-l-endustriyel-derin-dondurucular-senox-76296-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-200-blok-kapakli-sandik-tipi-derin-dondurucu-200-l-endustriyel-derin-dondurucular-senox-76296-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26412.09
+    },
+    {
+      "cafemarkt_id": "39796",
+      "name": "Senox CF 3320 Blok Kapaklı Sandık Tipi Derin Dondurucu, 300 L, Beyaz",
+      "code": "231.CF.3320.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-300-blok-kapakli-sandik-tipi-derin-dondurucu-300-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-300-blok-kapakli-sandik-tipi-derin-dondurucu-300-l-endustriyel-derin-dondurucular-senox-76295-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-300-blok-kapakli-sandik-tipi-derin-dondurucu-300-l-endustriyel-derin-dondurucular-senox-76295-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28298.67
+    },
+    {
+      "cafemarkt_id": "38192",
+      "name": "Senox SNX-35SC Cam Kapılı Minibar Buzdolabı, 35 L, Siyah",
+      "code": "231.SNX.35SC",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-snx-35sc-cam-kapili-minibar-buzdolabi-35-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-snx-35sc-cam-kapili-minibar-buzdolabi-35-l-siyah-minibar-buzdolaplari-senox-70968-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-snx-35sc-cam-kapili-minibar-buzdolabi-35-l-siyah-minibar-buzdolaplari-senox-70968-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12074.1
+    },
+    {
+      "cafemarkt_id": "38180",
+      "name": "Senox SDS385-DC PF Dik Tip Şişe Soğutucu Dolap, 345 L, Siyah",
+      "code": "231.SDS385.DC.PF",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds385-dc-pf-dik-tip-sise-sogutucu-dolap-345-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-sds385-dc-pf-dik-tip-sise-sogutucu-dolap-345-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-70941-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds385-dc-pf-dik-tip-sise-sogutucu-dolap-345-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-70941-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "38171",
+      "name": "Senox BL 25C Combi El Blender + Çırpıcı, 25 cm",
+      "code": "231.BL.25C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bl-25c-combi-el-blender-cirpici-25-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-bl-25c-combi-el-blender-cirpici-25-cm-el-blenderlari-senox-70878-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bl-25c-combi-el-blender-cirpici-25-cm-el-blenderlari-senox-70878-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 15847.25
+    },
+    {
+      "cafemarkt_id": "38019",
+      "name": "Senox CF 6600 Blok Kapaklı Sandık Tipi Derin Dondurucu, 600 L, Beyaz",
+      "code": "231.CF.6600.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-600-blok-kapakli-derin-dondurucu-600-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-600-blok-kapakli-derin-dondurucu-600-l-endustriyel-derin-dondurucular-senox-76294-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-600-blok-kapakli-derin-dondurucu-600-l-endustriyel-derin-dondurucular-senox-76294-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "38018",
+      "name": "Senox SDS-1510 Dik Tip Kanopili Market Teşhir Dolabı, 3 Kapılı",
+      "code": "231.SDS.1510.DC3.YF",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-1510-dik-tip-kanopili-market-teshir-dolabi-3-kapili",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-1510-dik-tip-kanopili-market-teshir-dolabi-3-kapili-dik-tip-sise-sogutucu-dolaplar-senox-70935-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-1510-dik-tip-kanopili-market-teshir-dolabi-3-kapili-dik-tip-sise-sogutucu-dolaplar-senox-70935-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 124514.13
+    },
+    {
+      "cafemarkt_id": "35456",
+      "name": "Senox BL 40C Combi El Blender",
+      "code": "231.BL.40C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bl-40c-combi-el-blender",
+      "image": "https://witcdn.cafemarkt.com/senox-bl-40c-combi-el-blender-el-blenderlari-senox-64501-35-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bl-40c-combi-el-blender-el-blenderlari-senox-64501-35-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20752.36
+    },
+    {
+      "cafemarkt_id": "34078",
+      "name": "Senox ADY-30 Set Üstü Köpüklü Ayran Makinesi, 30 L",
+      "code": "231.ADY.30",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ady-30-set-ustu-kopuklu-ayran-makinesi-30-l",
+      "image": "https://witcdn.cafemarkt.com/senox-ady-30-set-ustu-kopuklu-ayran-makinesi-30-l-limonata-serbet-ayran-makineleri-senox-85134-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ady-30-set-ustu-kopuklu-ayran-makinesi-30-l-limonata-serbet-ayran-makineleri-senox-85134-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84896
+    },
+    {
+      "cafemarkt_id": "29610",
+      "name": "Senox SBC-250 Bar Arkası Şişe Soğutucu Dolap, 2 Kapılı, 238 L, Krom",
+      "code": "231.SBC.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-kapili-238-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-kapili-238-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86188-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-arkasi-sise-sogutucu-dolap-2-kapili-238-l-krom-bar-arkasi-sise-sogutucu-dolaplar-senox-86188-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 50937.6
+    },
+    {
+      "cafemarkt_id": "29604",
+      "name": "Senox Eko Seri El Blender, 250 W, Sarı",
+      "code": "231.S.25",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-eko-seri-el-blender-250-w-sari",
+      "image": "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-250-w-sari-el-blenderlari-senox-75532-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-250-w-sari-el-blenderlari-senox-75532-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-250-w-sari-el-blenderlari-senox-75533-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11319.47
+    },
+    {
+      "cafemarkt_id": "29628",
+      "name": "Senox Set Üstü Sıcak Servis Lamba Ünitesi, Ahşap Gövdeli, 2/1 Model",
+      "code": "231.SNX.806.MCC",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-ahsap-govdeli-2-1-model",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-ahsap-govdeli-2-1-model-sicak-tutucu-lambalar-senox-50254-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-ahsap-govdeli-2-1-model-sicak-tutucu-lambalar-senox-50254-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 56597.33
+    },
+    {
+      "cafemarkt_id": "29586",
+      "name": "Senox Gıda Dilimleme Makinesi, 220 mm",
+      "code": "231.GD.220",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-gida-dilimleme-makinesi-220-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-220-mm-gida-dilimleme-makineleri-senox-50247-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-220-mm-gida-dilimleme-makineleri-senox-50247-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26412.09
+    },
+    {
+      "cafemarkt_id": "38020",
+      "name": "Senox SDS-1010 Kanopili Market Teşhir Dolabı, 2 Çarpma Kapılı, Beyaz",
+      "code": "231.SDS.1010.DC.2.CF",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-carpma-kapili-beyaz",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-carpma-kapili-beyaz-dik-tip-sise-sogutucu-dolaplar-senox-70936-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-carpma-kapili-beyaz-dik-tip-sise-sogutucu-dolaplar-senox-70936-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 77140.07
+    },
+    {
+      "cafemarkt_id": "29587",
+      "name": "Senox Gıda Dilimleme Makinesi, 250 mm",
+      "code": "231.GD.250",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-gida-dilimleme-makinesi-250-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-250-mm-gida-dilimleme-makineleri-senox-50248-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-250-mm-gida-dilimleme-makineleri-senox-50248-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28298.67
+    },
+    {
+      "cafemarkt_id": "29623",
+      "name": "Senox Granit Kaplama Soğutuculu Salad Bar, 500 L",
+      "code": "231.SLD.03",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-500-l",
+      "image": "https://witcdn.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-500-l-saladbarlar-senox-50234-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-500-l-saladbarlar-senox-50234-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 83009.42
+    },
+    {
+      "cafemarkt_id": "29588",
+      "name": "Senox Gıda Dilimleme Makinesi, 300 mm",
+      "code": "231.GD.300",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-gida-dilimleme-makinesi-300-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-senox-50249-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-senox-50249-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45277.87
+    },
+    {
+      "cafemarkt_id": "29629",
+      "name": "Senox Set Üstü Sıcak Servis Lamba Ünitesi, 2/1 Model",
+      "code": "231.SNX.806.PPNC",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-2-1-model",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-2-1-model-sicak-tutucu-lambalar-senox-50253-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-servis-lamba-unitesi-2-1-model-sicak-tutucu-lambalar-senox-50253-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 60370.49
+    },
+    {
+      "cafemarkt_id": "29624",
+      "name": "Senox Granit Kaplama Soğutuculu Salad Bar, 532 L",
+      "code": "231.SLD.04",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-532-l",
+      "image": "https://witcdn.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-532-l-saladbarlar-senox-50235-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-granit-kaplama-sogutuculu-salad-bar-532-l-saladbarlar-senox-50235-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90555.73
+    },
+    {
+      "cafemarkt_id": "34084",
+      "name": "Senox SDS-385 DC 1 CF Dik Tip Kanopili Şişe Soğutucu Dolap, 345 L",
+      "code": "231.SDS.385DC",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-385-dc-1-cf-dik-tip-sise-sogutucu-dolap-345-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-cf-dik-tip-sise-sogutucu-dolap-345-l-dik-tip-sise-sogutucu-dolaplar-senox-71607-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-385-dc-1-cf-dik-tip-sise-sogutucu-dolap-345-l-dik-tip-sise-sogutucu-dolaplar-senox-71607-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 32071.82
+    },
+    {
+      "cafemarkt_id": "34081",
+      "name": "Senox WN-770 Şarap Soğutma Dolabı, 5 Raflı, Siyah",
+      "code": "231.WN.770",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-wn-770-sarap-sogutma-dolabi-3-rafli-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-wn-770-sarap-sogutma-dolabi-3-rafli-siyah-sarap-dolaplari-senox-60043-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-wn-770-sarap-sogutma-dolabi-3-rafli-siyah-sarap-dolaplari-senox-60043-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 113194.67
+    },
+    {
+      "cafemarkt_id": "29585",
+      "name": "Senox FLT120 Coffeedio Filtre Kahve Makinesi, 1.8 L",
+      "code": "231.FLT120",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-coffeedio-filtre-kahve-makinesi-1-8-l",
+      "image": "https://witcdn.cafemarkt.com/senox-coffeedio-filtre-kahve-makinesi-1-8-l-filtre-kahve-makineleri-senox-70939-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-coffeedio-filtre-kahve-makinesi-1-8-l-filtre-kahve-makineleri-senox-70939-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 14204.82
+    },
+    {
+      "cafemarkt_id": "13726",
+      "name": "Senox SB 80LK Su Sebili, Soğuk Su, 80 L",
+      "code": "231.SB80.LK",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-80lk-su-sebili-soguk-su-80-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-80lk-su-sebili-soguk-su-80-l-su-sebilleri-senox-50464-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-80lk-su-sebili-soguk-su-80-l-su-sebilleri-senox-50464-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 36893.08
+    },
+    {
+      "cafemarkt_id": "30339",
+      "name": "Senox Set Üstü Pasta Teşhir Dolabı, Panaromik Cam, 90 cm",
+      "code": "231.SET.P90S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-90-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-90-cm-soguk-teshir-dolaplari-senox-52177-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-90-cm-soguk-teshir-dolaplari-senox-52177-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 62047.45
+    },
+    {
+      "cafemarkt_id": "30289",
+      "name": "Senox Köpüklü Ayran Makinesi, 40 L",
+      "code": "231.KAM",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-kopuklu-ayran-makinesi-40-l",
+      "image": "https://witcdn.cafemarkt.com/senox-kopuklu-ayran-makinesi-40-l-limonata-serbet-ayran-makineleri-senox-52006-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-kopuklu-ayran-makinesi-40-l-limonata-serbet-ayran-makineleri-senox-52006-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 90555.73
+    },
+    {
+      "cafemarkt_id": "30342",
+      "name": "Senox Set Üstü Pasta Teşhir Dolabı, Panaromik Cam, 75 cm",
+      "code": "231.SET.P75S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-75-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-75-cm-soguk-teshir-dolaplari-senox-52175-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-pasta-teshir-dolabi-panaromik-cam-75-cm-soguk-teshir-dolaplari-senox-52175-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 58693.53
+    },
+    {
+      "cafemarkt_id": "29620",
+      "name": "Senox Set Üstü Soğuk Pasta Teşhir Dolabı, Dik Camlı, 120 L",
+      "code": "231.SET.120S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-120-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-120-l-soguk-teshir-dolaplari-senox-50241-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-120-l-soguk-teshir-dolaplari-senox-50241-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 75463.11
+    },
+    {
+      "cafemarkt_id": "13716",
+      "name": "Senox MS Mutfak Şefi, 7 L",
+      "code": "231.MS.07",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ms-mutfak-sefi-7-l",
+      "image": "https://witcdn.cafemarkt.com/senox-ms-mutfak-sefi-7-l-stand-mikserler-senox-24271-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ms-mutfak-sefi-7-l-stand-mikserler-senox-24271-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30185.24
+    },
+    {
+      "cafemarkt_id": "13717",
+      "name": "Senox MS Mutfak Şefi, 10 L",
+      "code": "231.MS.10",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ms-mutfak-sefi-10-l",
+      "image": "https://witcdn.cafemarkt.com/senox-ms-mutfak-sefi-10-l-stand-mikserler-senox-24272-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ms-mutfak-sefi-10-l-stand-mikserler-senox-24272-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37731.56
+    },
+    {
+      "cafemarkt_id": "13742",
+      "name": "Senox YSO 100 Sinek Öldürücü, Yapışkanlı",
+      "code": "231.YSO.100",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-yso-100-sinek-oldurucu-yapiskanli",
+      "image": "https://witcdn.cafemarkt.com/senox-yso-100-sinek-oldurucu-yapiskanli-sinek-oldurucu-cihazlar-senox-24297-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-yso-100-sinek-oldurucu-yapiskanli-sinek-oldurucu-cihazlar-senox-24297-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8678.26
+    },
+    {
+      "cafemarkt_id": "13743",
+      "name": "Senox YSO 200 Sinek Öldürücü, Yapışkanlı",
+      "code": "231.YSO.200",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-yso-200-sinek-oldurucu-yapiskanli",
+      "image": "https://witcdn.cafemarkt.com/senox-yso-200-sinek-oldurucu-yapiskanli-sinek-oldurucu-cihazlar-senox-24298-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-yso-200-sinek-oldurucu-yapiskanli-sinek-oldurucu-cihazlar-senox-24298-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10564.84
+    },
+    {
+      "cafemarkt_id": "29632",
+      "name": "Senox Blok Kapılı Mini Buzdolabı, 85 L, Beyaz",
+      "code": "231.TEK.65",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-blok-kapili-mini-buzdolabi-85-l-beyaz",
+      "image": "https://witcdn.cafemarkt.com/senox-blok-kapili-mini-buzdolabi-85-l-beyaz-minibar-buzdolaplari-senox-50225-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-blok-kapili-mini-buzdolabi-85-l-beyaz-minibar-buzdolaplari-senox-50225-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 21307.23
+    },
+    {
+      "cafemarkt_id": "31676",
+      "name": "Senox EMH15 Dondurma Makinesi, 1.5 L",
+      "code": "231.EMH15",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-emh15-dondurma-makinesi-1",
+      "image": "https://witcdn.cafemarkt.com/senox-emh15-dondurma-makinesi-1-dondurma-makineleri-senox-55751-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-emh15-dondurma-makinesi-1-dondurma-makineleri-senox-55751-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-emh15-dondurma-makinesi-1-dondurma-makineleri-senox-55731-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-emh15-dondurma-makinesi-1-dondurma-makineleri-senox-55752-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28409.64
+    },
+    {
+      "cafemarkt_id": "13724",
+      "name": "Senox SB 500LK Su Sebili, Krom, 500 L",
+      "code": "231.SB500.LK",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-500lk-su-sebili-krom-500-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-500lk-su-sebili-krom-500-l-su-sebilleri-senox-24279-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-500lk-su-sebili-krom-500-l-su-sebilleri-senox-24279-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 207523.55
+    },
+    {
+      "cafemarkt_id": "29635",
+      "name": "Senox Dik Tip Derin Dondurucu, 5 Raflı",
+      "code": "231.WF377",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-derin-dondurucu-5-rafli",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-derin-dondurucu-5-rafli-endustriyel-derin-dondurucular-senox-50231-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-derin-dondurucu-5-rafli-endustriyel-derin-dondurucular-senox-50231-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 71689.95
+    },
+    {
+      "cafemarkt_id": "13722",
+      "name": "Senox SB 300LK Su Sebili, Krom, 300 L",
+      "code": "231.SB300.LK",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-300lk-su-sebili-krom-300-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-300lk-su-sebili-krom-300-l-su-sebilleri-senox-24277-13-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-300lk-su-sebili-krom-300-l-su-sebilleri-senox-24277-13-O.jpg"
+      ],
+      "price_try_kdv_dahil": 160359.11
+    },
+    {
+      "cafemarkt_id": "29622",
+      "name": "Senox Set Üstü Soğuk Pasta Teşhir Dolabı, Dik Camlı, 90 L",
+      "code": "231.SET.90S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-90-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-90-l-soguk-teshir-dolaplari-senox-50240-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-soguk-pasta-teshir-dolabi-dik-camli-90-l-soguk-teshir-dolaplari-senox-50240-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66030.22
+    },
+    {
+      "cafemarkt_id": "29593",
+      "name": "Senox KSC-390 Dik Tip Şişe Soğutucu Dolap, 390 L, Krom",
+      "code": "231.KSC.390",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-390-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-390-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50285-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-390-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50285-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "29631",
+      "name": "Senox SSC-1600 Dik Tip Şişe Soğutucu Dolap, 3 Kapılı, 1153 L",
+      "code": "231.SSC.1600",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-3-kapili-1153-l",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-3-kapili-1153-l-dik-tip-sise-sogutucu-dolaplar-senox-50210-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-3-kapili-1153-l-dik-tip-sise-sogutucu-dolaplar-senox-50210-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 139606.75
+    },
+    {
+      "cafemarkt_id": "29639",
+      "name": "Senox WN-375S Dik Tip Şarap Soğutma Dolabı, 377 L, 150 Şişe",
+      "code": "231.WN.375S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sarap-sogutma-dolabi-377-l",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sarap-sogutma-dolabi-377-l-sarap-dolaplari-senox-60035-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sarap-sogutma-dolabi-377-l-sarap-dolaplari-senox-60035-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 54710.75
+    },
+    {
+      "cafemarkt_id": "30279",
+      "name": "Senox KM-01 Katı Meyve Sıkacağı, Gri",
+      "code": "231.KM01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-km-01-kati-meyve-sikacagi-gri",
+      "image": "https://witcdn.cafemarkt.com/senox-km-01-kati-meyve-sikacagi-gri-kati-meyve-ve-narenciye-sikacaklari-senox-52011-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-km-01-kati-meyve-sikacagi-gri-kati-meyve-ve-narenciye-sikacaklari-senox-52011-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 14086.45
+    },
+    {
+      "cafemarkt_id": "29630",
+      "name": "Senox SSC-1500 Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 1077 L",
+      "code": "231.SSC.1500",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-1077-l",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-1077-l-dik-tip-sise-sogutucu-dolaplar-senox-50209-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-1077-l-dik-tip-sise-sogutucu-dolaplar-senox-50209-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 132060.44
+    },
+    {
+      "cafemarkt_id": "30281",
+      "name": "Senox PS-01 Motorlu Portakal Sıkma Makinesi",
+      "code": "231.PSM",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-motorlu-portakal-sikma-makinesi",
+      "image": "https://witcdn.cafemarkt.com/senox-motorlu-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-senox-52012-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-motorlu-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-senox-52012-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8703.41
+    },
+    {
+      "cafemarkt_id": "29607",
+      "name": "Senox SB 160LK Su Sebili, 160 L",
+      "code": "231.SB160.LK",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-160lk-su-sebili-160-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-160lk-su-sebili-160-l-su-sebilleri-senox-50196-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-160lk-su-sebili-160-l-su-sebilleri-senox-50196-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 98102.04
+    },
+    {
+      "cafemarkt_id": "29633",
+      "name": "Senox Türk Kahvesi Öğütme Makinesi, 30 kg/saat, Kırmızı",
+      "code": "231.TKO.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-30-kg-saati-kirmizi",
+      "image": "https://witcdn.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-30-kg-saati-kirmizi-kahve-ogutucu-degirmenleri-senox-50258-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-30-kg-saati-kirmizi-kahve-ogutucu-degirmenleri-senox-50258-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 62146.09
+    },
+    {
+      "cafemarkt_id": "29615",
+      "name": "Senox SC-900 Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 683 L",
+      "code": "231.SC.900",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-683-l",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-683-l-dik-tip-sise-sogutucu-dolaplar-senox-50208-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-683-l-dik-tip-sise-sogutucu-dolaplar-senox-50208-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 79236.27
+    },
+    {
+      "cafemarkt_id": "29608",
+      "name": "Senox SB 80LK AS Arıtmalı Su Sebili, Soğuk Su, 80 L",
+      "code": "231.SB80.LK.AS",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sb-80lk-as-aritmali-su-sebili-soguk-su-80-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sb-80lk-as-aritmali-su-sebili-soguk-su-80-l-su-sebilleri-senox-50465-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sb-80lk-as-aritmali-su-sebili-soguk-su-80-l-su-sebilleri-senox-50465-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 46954.82
+    },
+    {
+      "cafemarkt_id": "29576",
+      "name": "Senox 300 Combi Bar Tipi Soğutucu Dolap, 145 L, Inox",
+      "code": "231.300.COMBI",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-300-combi-bar-tipi-sogutucu-dolap-145-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-300-combi-bar-tipi-sogutucu-dolap-145-l-inox-bar-arkasi-sise-sogutucu-dolaplar-senox-50205-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-300-combi-bar-tipi-sogutucu-dolap-145-l-inox-bar-arkasi-sise-sogutucu-dolaplar-senox-50205-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 65149.82
+    },
+    {
+      "cafemarkt_id": "29616",
+      "name": "Senox SC-900K Kanopili Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 683 L",
+      "code": "231.SC.900K",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-kanopili-dik-tip-sise-sogutucu-dolap-2-kapili-683-l",
+      "image": "https://witcdn.cafemarkt.com/senox-kanopili-dik-tip-sise-sogutucu-dolap-2-kapili-683-l-dik-tip-sise-sogutucu-dolaplar-senox-50207-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-kanopili-dik-tip-sise-sogutucu-dolap-2-kapili-683-l-dik-tip-sise-sogutucu-dolaplar-senox-50207-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 79236.27
+    },
+    {
+      "cafemarkt_id": "29619",
+      "name": "Senox Set Üstü Sıcak Teşhir Dolabı, Dik Camlı, 120 L",
+      "code": "231.SET.120C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-120-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-120-l-sicak-teshir-uniteleri-senox-50243-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pasta-teshir-dolabi-dik-camli-120-l-sicak-teshir-uniteleri-senox-50243-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67916.8
+    },
+    {
+      "cafemarkt_id": "30283",
+      "name": "Senox Barmix Bar Mikseri, 1.2 L, Kırmızı",
+      "code": "231.BM.K",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-mikseri-12-l-kirmizi",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-mikseri-12-l-kirmizi-bar-mikserleri-senox-53312-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-mikseri-12-l-kirmizi-bar-mikserleri-senox-53312-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20752.36
+    },
+    {
+      "cafemarkt_id": "30276",
+      "name": "Senox Su Yumuşatıcı Filtre, 8 L",
+      "code": "231.LT.8",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-su-yumusatici-filtre-8-l",
+      "image": "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-8-l-su-aritma-cihazlari-senox-90509-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-8-l-su-aritma-cihazlari-senox-90509-30-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-8-l-su-aritma-cihazlari-senox-90512-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8531.52
+    },
+    {
+      "cafemarkt_id": "30352",
+      "name": "Senox Set Üstü Sıcak Teşhir Dolabı, Panaromik Cam, 75 cm",
+      "code": "231.SET.P75C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-75-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-75-cm-sicak-teshir-uniteleri-senox-52162-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-75-cm-sicak-teshir-uniteleri-senox-52162-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 52824.18
+    },
+    {
+      "cafemarkt_id": "30288",
+      "name": "Senox Davlumbaz Filtresi, 50x50 cm",
+      "code": "231.DVF.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-davlumbaz-filtresi-50x50-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-davlumbaz-filtresi-50x50-cm-davlumbazlar-senox-52017-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-davlumbaz-filtresi-50x50-cm-davlumbazlar-senox-52017-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 905.56
+    },
+    {
+      "cafemarkt_id": "30290",
+      "name": "Senox Su Yumuşatıcı Filtre, 12 L",
+      "code": "231.LT.12",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-su-yumusatici-filtre-12-l",
+      "image": "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-12-l-su-aritma-cihazlari-senox-52019-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-12-l-su-aritma-cihazlari-senox-52019-30-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-12-l-su-aritma-cihazlari-senox-90510-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 10145.6
+    },
+    {
+      "cafemarkt_id": "29617",
+      "name": "Senox Set Üstü Sıcak Pizza Teşhir Dolabı, Düz Camlı, 90 L",
+      "code": "231.SET.100C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-90-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-90-l-sicak-teshir-uniteleri-senox-50245-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-90-l-sicak-teshir-uniteleri-senox-50245-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67916.8
+    },
+    {
+      "cafemarkt_id": "29634",
+      "name": "Senox Türk Kahvesi Öğütme Makinesi, 1100 W",
+      "code": "231.TKO.02",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-1100-w",
+      "image": "https://witcdn.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-1100-w-kahve-ogutucu-degirmenleri-senox-50259-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-turk-kahvesi-ogutme-makinesi-1100-w-kahve-ogutucu-degirmenleri-senox-50259-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42614.46
+    },
+    {
+      "cafemarkt_id": "30274",
+      "name": "Senox Barmix Bar Mikseri, 1.2 L, Sarı",
+      "code": "231.BM.S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bar-mikseri-12-l-sari",
+      "image": "https://witcdn.cafemarkt.com/senox-bar-mikseri-12-l-sari-bar-mikserleri-senox-53311-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bar-mikseri-12-l-sari-bar-mikserleri-senox-53311-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 20752.36
+    },
+    {
+      "cafemarkt_id": "30343",
+      "name": "Senox Set Üstü Sıcak Teşhir Dolabı, Panaromik Cam, 90 cm",
+      "code": "231.SET.P90C",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-90-cm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-90-cm-sicak-teshir-uniteleri-senox-52173-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-teshir-dolabi-panaromik-cam-90-cm-sicak-teshir-uniteleri-senox-52173-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 58483.91
+    },
+    {
+      "cafemarkt_id": "30351",
+      "name": "Senox DM-01 Duvara Monte Ön Yıkama Sprey Ünitesi, Ara Musluksuz",
+      "code": "231.DM.01",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dm-01-duvara-monte-on-yikama-sprey-unitesi-ara-musluksuz",
+      "image": "https://witcdn.cafemarkt.com/senox-dm-01-duvara-monte-on-yikama-sprey-unitesi-ara-musluksuz-dus-su-sprey-uniteleri-senox-52163-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dm-01-duvara-monte-on-yikama-sprey-unitesi-ara-musluksuz-dus-su-sprey-uniteleri-senox-52163-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8300.94
+    },
+    {
+      "cafemarkt_id": "30284",
+      "name": "Senox Su Yumuşatıcı Filtre, 16 L",
+      "code": "231.LT.16",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-su-yumusatici-filtre-16-l",
+      "image": "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-16-l-su-aritma-cihazlari-senox-90508-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-16-l-su-aritma-cihazlari-senox-90508-30-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-su-yumusatici-filtre-16-l-su-aritma-cihazlari-senox-90511-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11759.67
+    },
+    {
+      "cafemarkt_id": "45056",
+      "name": "Senox PLM 10 Profesyonel Planet Mikser, 10 L",
+      "code": "231.PLM10",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-plm-10-profesyonel-planet-mikser-10-l",
+      "image": "https://witcdn.cafemarkt.com/senox-plm-10-profesyonel-planet-mikser-10-l-planet-mikserler-senox-90747-45-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-plm-10-profesyonel-planet-mikser-10-l-planet-mikserler-senox-90747-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-10-profesyonel-planet-mikser-10-l-planet-mikserler-senox-90748-45-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-plm-10-profesyonel-planet-mikser-10-l-planet-mikserler-senox-90749-45-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "43833",
+      "name": "Senox CF 2220 Blok Kapaklı Sandık Tipi Derin Dondurucu, 200 L, Inox",
+      "code": "231.CF.2220",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-2220-blok-kapakli-sandik-tipi-derin-dondurucu-200-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-2220-blok-kapakli-sandik-tipi-derin-dondurucu-200-l-inox-endustriyel-derin-dondurucular-senox-86573-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-2220-blok-kapakli-sandik-tipi-derin-dondurucu-200-l-inox-endustriyel-derin-dondurucular-senox-86573-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 24525.51
+    },
+    {
+      "cafemarkt_id": "43829",
+      "name": "Senox CF 5500 Blok Kapaklı Sandık Tipi Derin Dondurucu, 500 L, Inox",
+      "code": "231.CF.5500",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-5500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-5500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-inox-endustriyel-derin-dondurucular-senox-86569-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-5500-blok-kapakli-sandik-tipi-derin-dondurucu-500-l-inox-endustriyel-derin-dondurucular-senox-86569-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "43828",
+      "name": "Senox CF 4420 Blok Kapaklı Sandık Tipi Derin Dondurucu, 400 L, Inox",
+      "code": "231.CF.4420",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-4420-blok-kapakli-sandik-tipi-derin-dondurucu-400-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-4420-blok-kapakli-sandik-tipi-derin-dondurucu-400-l-inox-endustriyel-derin-dondurucular-senox-86568-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-4420-blok-kapakli-sandik-tipi-derin-dondurucu-400-l-inox-endustriyel-derin-dondurucular-senox-86568-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30185.24
+    },
+    {
+      "cafemarkt_id": "43827",
+      "name": "Senox CF 3320 Blok Kapaklı Sandık Tipi Derin Dondurucu, 300 L, Inox",
+      "code": "231.CF.3320",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cf-3320-blok-kapakli-sandik-tipi-derin-dondurucu-300-l-inox",
+      "image": "https://witcdn.cafemarkt.com/senox-cf-3320-blok-kapakli-sandik-tipi-derin-dondurucu-300-l-inox-endustriyel-derin-dondurucular-senox-86567-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cf-3320-blok-kapakli-sandik-tipi-derin-dondurucu-300-l-inox-endustriyel-derin-dondurucular-senox-86567-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26412.09
+    },
+    {
+      "cafemarkt_id": "43170",
+      "name": "Senox SDS-770 DC 2 DF Dik Tip Kanopili Sürgü Kapılı Şişe Soğutucu Dolap, Siyah",
+      "code": "231.SDS.770.DC.2.DFK.SIY",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-kanopili-surgu-kapili-sise-sogutucu-dolap-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-kanopili-surgu-kapili-sise-sogutucu-dolap-siyah-dik-tip-sise-sogutucu-dolaplar-senox-84322-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-770-dc-2-df-dik-tip-kanopili-surgu-kapili-sise-sogutucu-dolap-siyah-dik-tip-sise-sogutucu-dolaplar-senox-84322-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 86782.58
+    },
+    {
+      "cafemarkt_id": "41352",
+      "name": "Senox SDS-385 DC1 CF Dik Tip Şişe Soğutucu Dolap, 345 L, Gri",
+      "code": "231.SDS385.DC1.CF",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-385-dc1-cf-dik-tip-sise-sogutucu-dolap-345-l-gri",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-385-dc1-cf-dik-tip-sise-sogutucu-dolap-345-l-gri-dik-tip-sise-sogutucu-dolaplar-senox-80401-41-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-385-dc1-cf-dik-tip-sise-sogutucu-dolap-345-l-gri-dik-tip-sise-sogutucu-dolaplar-senox-80401-41-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "39798",
+      "name": "Senox CF 4420 Blok Kapaklı Sandık Tipi Derin Dondurucu, 400 L, Beyaz",
+      "code": "231.CF.4420.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-400-blok-kapakli-sandik-tipi-derin-dondurucu-400-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-400-blok-kapakli-sandik-tipi-derin-dondurucu-400-l-endustriyel-derin-dondurucular-senox-76297-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-400-blok-kapakli-sandik-tipi-derin-dondurucu-400-l-endustriyel-derin-dondurucular-senox-76297-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28298.67
+    },
+    {
+      "cafemarkt_id": "39673",
+      "name": "Senox SYD-510 8 Gözlü Dondurma Teşhir Reyonu, 300 L",
+      "code": "231.SYD.510",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-syd-510-8-gozlu-dondurma-teshir-reyonu-300-l",
+      "image": "https://witcdn.cafemarkt.com/senox-syd-510-8-gozlu-dondurma-teshir-reyonu-300-l-soguk-servis-uniteleri-senox-75894-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-syd-510-8-gozlu-dondurma-teshir-reyonu-300-l-soguk-servis-uniteleri-senox-75894-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 71689.95
+    },
+    {
+      "cafemarkt_id": "38017",
+      "name": "Senox CF 5500 Blok Kapaklı Sandık Tipi Derin Dondurucu, 500 L, Beyaz",
+      "code": "231.CF.5500.BYZ",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-df-500-blok-kapakli-derin-dondurucu-500-l",
+      "image": "https://witcdn.cafemarkt.com/senox-df-500-blok-kapakli-derin-dondurucu-500-l-endustriyel-derin-dondurucular-senox-76293-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-df-500-blok-kapakli-derin-dondurucu-500-l-endustriyel-derin-dondurucular-senox-76293-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30185.24
+    },
+    {
+      "cafemarkt_id": "34077",
+      "name": "Senox KA-18 Set Üstü Köpüklü Ayran Makinesi, 18 L",
+      "code": "231.KA18",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ka-18-set-ustu-kopuklu-ayran-makinesi-18-l",
+      "image": "https://witcdn.cafemarkt.com/senox-ka-18-set-ustu-kopuklu-ayran-makinesi-18-l-limonata-serbet-ayran-makineleri-senox-60047-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ka-18-set-ustu-kopuklu-ayran-makinesi-18-l-limonata-serbet-ayran-makineleri-senox-60047-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 70935.32
+    },
+    {
+      "cafemarkt_id": "29603",
+      "name": "Senox S15 Eko Seri El Blender, 150 mm, 200 W, Sarı",
+      "code": "231.S.15",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-eko-seri-el-blender-200-w-sari",
+      "image": "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-200-w-sari-el-blenderlari-senox-75534-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-200-w-sari-el-blenderlari-senox-75534-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-200-w-sari-el-blenderlari-senox-75535-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9810.2
+    },
+    {
+      "cafemarkt_id": "31672",
+      "name": "Senox Set Üstü Balık Soğutucu Teşhir Vitrini, 695x882x417 cm",
+      "code": "231.TKVNR108E",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-balik-sogutucu-teshir-vitrini-695x882x417-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-balik-sogutucu-teshir-vitrini-695x882x417-mm-soguk-teshir-dolaplari-senox-55737-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-balik-sogutucu-teshir-vitrini-695x882x417-mm-soguk-teshir-dolaplari-senox-55737-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-set-ustu-balik-sogutucu-teshir-vitrini-695x882x417-mm-soguk-teshir-dolaplari-senox-55738-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 53268.08
+    },
+    {
+      "cafemarkt_id": "29600",
+      "name": "Senox Nergiz Pasta Teşhir Dolabı, 98 L",
+      "code": "231.NERGIZ.100",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-nergiz-pasta-teshir-dolabi-98-l",
+      "image": "https://witcdn.cafemarkt.com/senox-nergiz-pasta-teshir-dolabi-98-l-soguk-teshir-dolaplari-senox-50239-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-nergiz-pasta-teshir-dolabi-98-l-soguk-teshir-dolaplari-senox-50239-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37731.56
+    },
+    {
+      "cafemarkt_id": "31682",
+      "name": "Senox ZPEC.O Narenciye Sıkma Makinesi, 570 W, Turuncu",
+      "code": "231.ZPEC.O",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpeco-narenciye-sikma-makinesi-570-w-turuncu",
+      "image": "https://witcdn.cafemarkt.com/senox-zpeco-narenciye-sikma-makinesi-570-w-turuncu-soguk-teshir-dolaplari-senox-55743-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpeco-narenciye-sikma-makinesi-570-w-turuncu-soguk-teshir-dolaplari-senox-55743-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpeco-narenciye-sikma-makinesi-570-w-turuncu-soguk-teshir-dolaplari-senox-55744-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpeco-narenciye-sikma-makinesi-570-w-turuncu-soguk-teshir-dolaplari-senox-55745-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 28409.64
+    },
+    {
+      "cafemarkt_id": "29618",
+      "name": "Senox Set Üstü Sıcak Pizza Teşhir Dolabı, Düz Camlı, 120 L",
+      "code": "231.SET.100S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-120-l",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-120-l-sicak-teshir-uniteleri-senox-50244-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-camli-120-l-sicak-teshir-uniteleri-senox-50244-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67916.8
+    },
+    {
+      "cafemarkt_id": "29606",
+      "name": "Senox Sardunya Pasta Teşhir Dolabı, 215 L",
+      "code": "231.SARDUNYA.215",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sardunya-pasta-teshir-dolabi-215-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sardunya-pasta-teshir-dolabi-215-l-soguk-teshir-dolaplari-senox-50238-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sardunya-pasta-teshir-dolabi-215-l-soguk-teshir-dolaplari-senox-50238-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 67916.8
+    },
+    {
+      "cafemarkt_id": "29605",
+      "name": "Senox Eko Seri El Blender, 300 W, Sarı",
+      "code": "231.S.40",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-eko-seri-el-blender-300-w-sari",
+      "image": "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-300-w-sari-el-blenderlari-senox-75530-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-300-w-sari-el-blenderlari-senox-75530-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-300-w-sari-el-blenderlari-senox-75531-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16979.2
+    },
+    {
+      "cafemarkt_id": "38021",
+      "name": "Senox SDS-1010 Kanopili Market Teşhir Dolabı, 2 Sürgü Kapılı, Beyaz",
+      "code": "231.SDS.1010.SC.2.CF",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-surgu-kapili-beyaz",
+      "image": "https://witcdn.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-surgu-kapili-beyaz-dik-tip-sise-sogutucu-dolaplar-senox-70937-38-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds-1010-kanopili-market-teshir-dolabi-2-surgu-kapili-beyaz-dik-tip-sise-sogutucu-dolaplar-senox-70937-38-O.jpg"
+      ],
+      "price_try_kdv_dahil": 84896
+    },
+    {
+      "cafemarkt_id": "30280",
+      "name": "Senox MC25 Mikrodalga Fırın, 25 L",
+      "code": "231.MC25",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-mc25-mikrodalga-firin-25-l",
+      "image": "https://witcdn.cafemarkt.com/senox-mc25-mikrodalga-firin-25-l-mikrodalga-firinlar-senox-52003-30-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-mc25-mikrodalga-firin-25-l-mikrodalga-firinlar-senox-52003-30-O.jpg"
+      ],
+      "price_try_kdv_dahil": 12074.1
+    },
+    {
+      "cafemarkt_id": "29589",
+      "name": "Senox HT-10 Geri Toplamalı Ön Yıkama Duşu, 10 M",
+      "code": "231.HT.10",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-10-m",
+      "image": "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-10-m-dus-su-sprey-uniteleri-senox-82087-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-10-m-dus-su-sprey-uniteleri-senox-82087-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-10-m-dus-su-sprey-uniteleri-senox-82089-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-10-m-dus-su-sprey-uniteleri-senox-82088-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 37731.56
+    },
+    {
+      "cafemarkt_id": "33332",
+      "name": "Senox S15 Eko Seri El Blender, 150 mm, 200 W, Yeşil",
+      "code": "231.S.15.YES",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-eko-seri-el-blender-200-w-yesil",
+      "image": "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-200-w-yesil-el-blenderlari-senox-59054-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-eko-seri-el-blender-200-w-yesil-el-blenderlari-senox-59054-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9810.2
+    },
+    {
+      "cafemarkt_id": "29597",
+      "name": "Senox Cam Kapılı Minibar Buzdolabı, 40 L",
+      "code": "231.MB.40",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-cam-kapili-minibar-buzdolabi-40-l",
+      "image": "https://witcdn.cafemarkt.com/senox-cam-kapili-minibar-buzdolabi-40-l-minibar-buzdolaplari-senox-50223-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-cam-kapili-minibar-buzdolabi-40-l-minibar-buzdolaplari-senox-50223-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11442.76
+    },
+    {
+      "cafemarkt_id": "29594",
+      "name": "Senox KSC-458 Dik Tip Şişe Soğutucu Dolap, 2 Kapılı, 458 L, Krom",
+      "code": "231.KSC.458",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-458-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-458-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50213-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-2-kapili-458-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50213-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 75463.11
+    },
+    {
+      "cafemarkt_id": "29598",
+      "name": "Senox Blok Kapılı Otel Minibar Buzdolabı, 40 L",
+      "code": "231.MBC.40",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-blok-kapili-otel-minibar-buzdolabi-40-l",
+      "image": "https://witcdn.cafemarkt.com/senox-blok-kapili-otel-minibar-buzdolabi-40-l-minibar-buzdolaplari-senox-50224-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-blok-kapili-otel-minibar-buzdolabi-40-l-minibar-buzdolaplari-senox-50224-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 11048.13
+    },
+    {
+      "cafemarkt_id": "32425",
+      "name": "Senox AAMH300 Otomatik Gıda Dilimleme Makinesi, 300 mm",
+      "code": "231.AAMH300",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-aamh300-otomatik-gida-dilimleme-makinesi-300-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-aamh300-otomatik-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-senox-56529-32-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-aamh300-otomatik-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-senox-56529-32-O.jpg"
+      ],
+      "price_try_kdv_dahil": 66910.62
+    },
+    {
+      "cafemarkt_id": "29591",
+      "name": "Senox HT-15 Geri Toplamalı Ön Yıkama Duşu, 15 M",
+      "code": "231.HT.15",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-15-m",
+      "image": "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-15-m-dus-su-sprey-uniteleri-senox-82081-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-15-m-dus-su-sprey-uniteleri-senox-82081-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-15-m-dus-su-sprey-uniteleri-senox-82083-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-15-m-dus-su-sprey-uniteleri-senox-82082-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 45277.87
+    },
+    {
+      "cafemarkt_id": "29592",
+      "name": "Senox KSC-293 Dik Tip Şişe Soğutucu Dolap, 293 L, Krom",
+      "code": "231.KSC.293",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-293-l-krom",
+      "image": "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-293-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50212-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-dik-tip-sise-sogutucu-dolap-293-l-krom-dik-tip-sise-sogutucu-dolaplar-senox-50212-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "29590",
+      "name": "Senox HT-12 Geri Toplamalı Ön Yıkama Duşu, 12 M",
+      "code": "231.HT.12",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-12-m",
+      "image": "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-12-m-dus-su-sprey-uniteleri-senox-82084-29-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-12-m-dus-su-sprey-uniteleri-senox-82084-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-12-m-dus-su-sprey-uniteleri-senox-82086-29-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-ht-10-geri-toplamali-on-yikama-dusu-12-m-dus-su-sprey-uniteleri-senox-82085-29-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "31677",
+      "name": "Senox SEMG-16K Soft Dondurma Makinesi, 16 L, Tek Kollu",
+      "code": "231.SEMG.16K",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-semg-16k-soft-dondurma-makinesi-16-l-tek-kollu",
+      "image": "https://witcdn.cafemarkt.com/senox-semg-16k-soft-dondurma-makinesi-16-l-tek-kollu-dondurma-makineleri-senox-55729-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-semg-16k-soft-dondurma-makinesi-16-l-tek-kollu-dondurma-makineleri-senox-55729-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-semg-16k-soft-dondurma-makinesi-16-l-tek-kollu-dondurma-makineleri-senox-55730-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 159804.23
+    },
+    {
+      "cafemarkt_id": "31681",
+      "name": "Senox ZPDC.Y Narenciye Sıkma Makinesi, 570 W, Sarı",
+      "code": "231.ZPDC.Y",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpdcy-narenciye-sikma-makinesi-570-w-sari",
+      "image": "https://witcdn.cafemarkt.com/senox-zpdcy-narenciye-sikma-makinesi-570-w-sari-otomatik-portakal-sikma-makineleri-senox-55719-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpdcy-narenciye-sikma-makinesi-570-w-sari-otomatik-portakal-sikma-makineleri-senox-55719-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpdcy-narenciye-sikma-makinesi-570-w-sari-otomatik-portakal-sikma-makineleri-senox-55720-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44390.06
+    },
+    {
+      "cafemarkt_id": "31680",
+      "name": "Senox Set Üstü Sushi Teşhir Vitrini, 1000x870x410 mm",
+      "code": "231.SUSTV.1008741",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-set-ustu-sushi-teshir-vitrini-1000x870x410-mm",
+      "image": "https://witcdn.cafemarkt.com/senox-set-ustu-sushi-teshir-vitrini-1000x870x410-mm-sushi-teshir-dolaplari-senox-55724-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sushi-teshir-vitrini-1000x870x410-mm-sushi-teshir-dolaplari-senox-55724-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-set-ustu-sushi-teshir-vitrini-1000x870x410-mm-sushi-teshir-dolaplari-senox-55725-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 85228.92
+    },
+    {
+      "cafemarkt_id": "31673",
+      "name": "Senox ZPEC.G Narenciye Sıkma Makinesi, Altın",
+      "code": "231.ZPEC.G",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpecg-narenciye-sikma-makinesi-altin",
+      "image": "https://witcdn.cafemarkt.com/senox-zpecg-narenciye-sikma-makinesi-altin-otomatik-portakal-sikma-makineleri-senox-55739-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpecg-narenciye-sikma-makinesi-altin-otomatik-portakal-sikma-makineleri-senox-55739-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpecg-narenciye-sikma-makinesi-altin-otomatik-portakal-sikma-makineleri-senox-55740-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpecg-narenciye-sikma-makinesi-altin-otomatik-portakal-sikma-makineleri-senox-55741-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 42614.46
+    },
+    {
+      "cafemarkt_id": "31674",
+      "name": "Senox SEMG-32K Soft Dondurma Makinesi, 32 L, Çift Kollu",
+      "code": "231.SEMG.32K",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-semg-32k-soft-dondurma-makinesi-32-l-cift-kollu",
+      "image": "https://witcdn.cafemarkt.com/senox-semg-32k-soft-dondurma-makinesi-32-l-cift-kollu-dondurma-makineleri-senox-55735-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-semg-32k-soft-dondurma-makinesi-32-l-cift-kollu-dondurma-makineleri-senox-55735-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-semg-32k-soft-dondurma-makinesi-32-l-cift-kollu-dondurma-makineleri-senox-55736-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 284096.41
+    },
+    {
+      "cafemarkt_id": "31675",
+      "name": "Senox ZPDC.O Narenciye Sıkma Makinesi, 570 W, Turuncu",
+      "code": "231.ZPDC.O",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpdco-narenciye-sikma-makinesi-570-w-turuncu",
+      "image": "https://witcdn.cafemarkt.com/senox-zpdco-narenciye-sikma-makinesi-570-w-turuncu-otomatik-portakal-sikma-makineleri-senox-55732-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpdco-narenciye-sikma-makinesi-570-w-turuncu-otomatik-portakal-sikma-makineleri-senox-55732-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpdco-narenciye-sikma-makinesi-570-w-turuncu-otomatik-portakal-sikma-makineleri-senox-55733-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpdco-narenciye-sikma-makinesi-570-w-turuncu-otomatik-portakal-sikma-makineleri-senox-55734-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44390.06
+    },
+    {
+      "cafemarkt_id": "31683",
+      "name": "Senox ZPEC.S Narenciye Sıkma Makinesi, 570 W, Gümüş",
+      "code": "231.ZPEC.S",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpecs-narenciye-sikma-makinesi-570-w-gumus",
+      "image": "https://witcdn.cafemarkt.com/senox-zpecs-narenciye-sikma-makinesi-570-w-gumus-otomatik-portakal-sikma-makineleri-senox-55747-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpecs-narenciye-sikma-makinesi-570-w-gumus-otomatik-portakal-sikma-makineleri-senox-55747-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpecs-narenciye-sikma-makinesi-570-w-gumus-otomatik-portakal-sikma-makineleri-senox-55748-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpecs-narenciye-sikma-makinesi-570-w-gumus-otomatik-portakal-sikma-makineleri-senox-55749-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 35512.05
+    },
+    {
+      "cafemarkt_id": "31678",
+      "name": "Senox ZPDC.W Narenciye Sıkma Makinesi, 570 W, Beyaz",
+      "code": "231.ZPDC.W",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-zpdcw-narenciye-sikma-makinesi-570-w-beyaz",
+      "image": "https://witcdn.cafemarkt.com/senox-zpdcw-narenciye-sikma-makinesi-570-w-beyaz-otomatik-portakal-sikma-makineleri-senox-55726-31-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-zpdcw-narenciye-sikma-makinesi-570-w-beyaz-otomatik-portakal-sikma-makineleri-senox-55726-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpdcw-narenciye-sikma-makinesi-570-w-beyaz-otomatik-portakal-sikma-makineleri-senox-55727-31-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-zpdcw-narenciye-sikma-makinesi-570-w-beyaz-otomatik-portakal-sikma-makineleri-senox-55728-31-O.jpg"
+      ],
+      "price_try_kdv_dahil": 44390.06
+    },
+    {
+      "cafemarkt_id": "34079",
+      "name": "Senox SDS385-DC Dik Tip Şişe Soğutucu Dolap, 345 L",
+      "code": "231.SDS385.DC",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-sds385-dc-dik-tip-sise-sogutucu-dolap-345-l",
+      "image": "https://witcdn.cafemarkt.com/senox-sds385-dc-dik-tip-sise-sogutucu-dolap-345-l-dik-tip-sise-sogutucu-dolaplar-senox-60045-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-sds385-dc-dik-tip-sise-sogutucu-dolap-345-l-dik-tip-sise-sogutucu-dolaplar-senox-60045-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "34080",
+      "name": "Senox SSC-900K Kanopili Dik Tip Şişe Soğutucu Dolap, 683 L, Siyah",
+      "code": "231.SSC.900K",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ssc-900k-kanopili-dik-tip-sise-sogutucu-dolap-683-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-ssc-900k-kanopili-dik-tip-sise-sogutucu-dolap-683-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-60044-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ssc-900k-kanopili-dik-tip-sise-sogutucu-dolap-683-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-60044-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 88669.15
+    },
+    {
+      "cafemarkt_id": "34086",
+      "name": "Senox SSC-510 Dik Tip Şişe Soğutucu Dolap, 445 L, Siyah",
+      "code": "231.SSC.510",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-ssc-510-dik-tip-sise-sogutucu-dolap-445-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-ssc-510-dik-tip-sise-sogutucu-dolap-445-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-60039-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-ssc-510-dik-tip-sise-sogutucu-dolap-445-l-siyah-dik-tip-sise-sogutucu-dolaplar-senox-60039-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 47164.44
+    },
+    {
+      "cafemarkt_id": "34085",
+      "name": "Senox WN-385 Şarap Soğutma Dolabı, 3 Raflı, Siyah",
+      "code": "231.WN.385",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-wn-385-sarap-sogutma-dolabi-3-rafli-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-wn-385-sarap-sogutma-dolabi-3-rafli-siyah-sarap-dolaplari-senox-70673-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-wn-385-sarap-sogutma-dolabi-3-rafli-siyah-sarap-dolaplari-senox-70673-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 57016.57
+    },
+    {
+      "cafemarkt_id": "34083",
+      "name": "Senox 7000 Silver Statik Dik Tip Derin Dondurucu, 7 Çekmeceli, Gri",
+      "code": "231.7000.SILVER",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-7000-silver-statik-dik-tip-derin-dondurucu-7-cekmeceli-gri",
+      "image": "https://witcdn.cafemarkt.com/senox-7000-silver-statik-dik-tip-derin-dondurucu-7-cekmeceli-gri-endustriyel-derin-dondurucular-senox-60041-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-7000-silver-statik-dik-tip-derin-dondurucu-7-cekmeceli-gri-endustriyel-derin-dondurucular-senox-60041-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30646.41
+    },
+    {
+      "cafemarkt_id": "34082",
+      "name": "Senox WN-180 Şarap Soğutma Dolabı, Siyah",
+      "code": "231.WN180",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-wn-180-sarap-sogutma-dolabi-siyah",
+      "image": "https://witcdn.cafemarkt.com/senox-wn-180-sarap-sogutma-dolabi-siyah-sarap-dolaplari-senox-60042-34-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-wn-180-sarap-sogutma-dolabi-siyah-sarap-dolaplari-senox-60042-34-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41504.71
+    },
+    {
+      "cafemarkt_id": "33091",
+      "name": "Senox BZ15 Hazneli Parmak Buz Makinesi, 15 kg/gün Kapasiteli",
+      "code": "231.BZ15",
+      "brand": "Senox",
+      "url": "https://www.cafemarkt.com/senox-bz15-buz-makinesi-15-kg-gun-kapasiteli",
+      "image": "https://witcdn.cafemarkt.com/senox-bz15-buz-makinesi-15-kg-gun-kapasiteli-kup-buz-makineleri-senox-58721-33-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/senox-bz15-buz-makinesi-15-kg-gun-kapasiteli-kup-buz-makineleri-senox-58721-33-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-bz15-buz-makinesi-15-kg-gun-kapasiteli-kup-buz-makineleri-senox-58576-33-O.jpg",
+        "https://witcdn.cafemarkt.com/senox-bz15-buz-makinesi-15-kg-gun-kapasiteli-kup-buz-makineleri-senox-58722-33-O.jpg"
+      ],
+      "price_try_kdv_dahil": 24858.43
+    }
+  ]
+}
