@@ -1,34 +1,40 @@
-User-agent: *
+User-agent: Googlebot
 Allow: /
-
-# Yönetim ve API — tarama kapalı
 Disallow: /yonetim/
 Disallow: /api/
 
-# Giriş / sepet / ödeme / hesap robots ile kapatılmaz.
-# Google noindex meta'sını ancak tarayınca görür; aksi halde
-# Search Console "engellenmesine rağmen dizine eklendi" üretir.
+User-agent: Googlebot-Image
+Allow: /
 
-# AI / GEO asistanları (içerik özeti: /llms.txt)
-# LLMs: https://equsto.com/llms.txt
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /yonetim/
+Disallow: /api/
+
+# AI / GEO crawlers
 User-agent: GPTBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: anthropic-ai
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
-# Blog/rehber hub — vitrin menüsünde yok; dizinlenebilir
-Allow: /blog
-Allow: /rehber/
-Allow: /projeler
-
 Sitemap: https://equsto.com/sitemap.xml
+Sitemap: https://equsto.com/sitemap-videos.xml

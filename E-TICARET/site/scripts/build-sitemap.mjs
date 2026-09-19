@@ -88,6 +88,59 @@ ${entries}
   fs.writeFileSync(path.join(PUBLIC, "sitemap.xml"), xml, "utf8");
 }
 
+function writeVideoSitemap(file) {
+  const videos = [
+    {
+      loc: `${ORIGIN}/videolar/imt300-berrak-buz`,
+      title: "IMT300 ticari berrak buz makinesi",
+      description:
+        "Skyra IMT300 berrak buz makinesi: kesim gerektirmeden küp, küre, çubuk ve elmas buz.",
+      thumbnail: "https://i.ytimg.com/vi/cOVgfu2o4h4/hqdefault.jpg",
+      player: "https://www.youtube.com/embed/cOVgfu2o4h4",
+      pub: "2024-06-01T00:00:00+00:00",
+    },
+    {
+      loc: `${ORIGIN}/videolar/besos-bar-modulleri`,
+      title: "Besos modüler bar hatları",
+      description:
+        "Besos · Bar Design Studio modüler kokteyl bar istasyonları.",
+      thumbnail:
+        "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-poster-00001.jpg",
+      content:
+        "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-transcode.mp4",
+      pub: "2026-06-13T00:00:00+00:00",
+    },
+  ];
+  const body = videos
+    .map((v) => {
+      const player = v.player
+        ? `      <video:player_loc>${v.player}</video:player_loc>\n`
+        : "";
+      const content = v.content
+        ? `      <video:content_loc>${v.content}</video:content_loc>\n`
+        : "";
+      return `  <url>
+    <loc>${v.loc}</loc>
+    <video:video>
+      <video:thumbnail_loc>${v.thumbnail}</video:thumbnail_loc>
+      <video:title>${v.title}</video:title>
+      <video:description>${v.description}</video:description>
+${player}${content}      <video:publication_date>${v.pub}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>`;
+    })
+    .join("\n");
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+${body}
+</urlset>
+`;
+  fs.writeFileSync(file, xml, "utf8");
+}
+
 function writeProductChunks(prefix, productUrls, indexFiles) {
   const chunks = [];
   for (let i = 0; i < productUrls.length; i += PRODUCT_CHUNK) {
@@ -391,6 +444,9 @@ function patchSitemapPages() {
     ["/banka-bilgileri", "0.45", "yearly"],
     ["/buradan-basladi", "0.7", "monthly"],
     ["/en/story", "0.68", "monthly"],
+    ["/videolar", "0.8", "weekly"],
+    ["/videolar/imt300-berrak-buz", "0.78", "monthly"],
+    ["/videolar/besos-bar-modulleri", "0.78", "monthly"],
   ];
 
   for (const geoPath of geoLandingPaths()) {
@@ -441,6 +497,9 @@ function main() {
   const besosUrls = buildBesos();
   writeUrlset(path.join(PUBLIC, "sitemap-besos.xml"), besosUrls);
   indexFiles.push("sitemap-besos.xml");
+
+  writeVideoSitemap(path.join(PUBLIC, "sitemap-videos.xml"));
+  indexFiles.push("sitemap-videos.xml");
 
   // Subcategory landing pages
   const subcategoryUrls = buildSubcategoryUrls();

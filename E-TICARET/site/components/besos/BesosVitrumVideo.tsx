@@ -58,6 +58,9 @@ export default function BesosVitrumVideo({ video, hero, stats, locale = "tr" }: 
             <Link className="bd-btn" href={projectHref}>
               {h.ctaProject ?? besosUi("requestQuote", locale)}
             </Link>
+            <Link className="bd-btn" href="/videolar/besos-bar-modulleri">
+              {locale === "en" ? "Watch video" : "Videoyu izle"}
+            </Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://equsto.com/videolar/imt300-berrak-buz</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/cOVgfu2o4h4/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>IMT300 ticari berrak buz makinesi</video:title>
+      <video:description>Skyra IMT300 berrak buz makinesi: kesim gerektirmeden küp, küre, çubuk ve elmas buz.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/cOVgfu2o4h4</video:player_loc>
+      <video:publication_date>2024-06-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://equsto.com/videolar/besos-bar-modulleri</loc>
+    <video:video>
+      <video:thumbnail_loc>https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-poster-00001.jpg</video:thumbnail_loc>
+      <video:title>Besos modüler bar hatları</video:title>
+      <video:description>Besos · Bar Design Studio modüler kokteyl bar istasyonları.</video:description>
+      <video:content_loc>https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-transcode.mp4</video:content_loc>
+      <video:publication_date>2026-06-13T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+</urlset>

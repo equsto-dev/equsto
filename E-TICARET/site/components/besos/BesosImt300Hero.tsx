@@ -53,6 +53,9 @@ export default function BesosImt300Hero() {
             <Link className="bd-hero-cta-btn" href={imt300Href} data-i18n="besos.hero_go_page">
               Sayfaya Git
             </Link>
+            <Link className="bd-hero-cta-price" href="/videolar/imt300-berrak-buz">
+              Videoyu izle
+            </Link>
             <p className="bd-hero-cta-price" data-i18n="besos.hero_price_hint">
               11.500 € + KDV . Teklif için iletişime geçin.
             </p>

@@ -342,6 +342,8 @@
 
             },
 
+            { key: "footer.link_videos", label: "Videolar", href: "/videolar" },
+
             { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
 
             { key: "footer.link_equipment_tr", label: "Endüstriyel mutfak ekipmanı", href: "/endustriyel-mutfak-ekipmani-turkiye" },

@@ -30,6 +30,7 @@ export async function loadBesosHeroVideo(): Promise<BesosHeroVideo> {
   const raw = await readJson<{ local?: BesosHeroVideo } & BesosHeroVideo>(
     "vitrum-bars-hero-video.json",
   );
+  if (raw.mp4) return raw;
   if (raw.local?.mp4) return raw.local;
   return raw;
 }
@@ -40,9 +41,9 @@ export async function loadBesosPageData() {
     loadBesosCatalogue(),
     loadBesosProjects(),
     loadBesosHeroVideo().catch(() => ({
-      mp4: "/besos/vitrum-bars-hero.mp4",
-      webm: "/besos/vitrum-bars-hero.webm",
-      poster: "/besos/vitrum-bars-hero-poster.jpg",
+      mp4: "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-transcode.mp4",
+      webm: "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-transcode.webm",
+      poster: "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-poster-00001.jpg",
     })),
   ]);
   return { landing, catalogue, projects, heroVideo };
