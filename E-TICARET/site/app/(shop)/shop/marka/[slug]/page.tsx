@@ -19,6 +19,23 @@ body.eq-marka-plp-shop .eq-cat-hero h1{font-size:20px;}
 body.eq-marka-plp-shop .eq-filter-sec--marka-facets{padding:0;border-bottom:none;}
 body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-facet{border-bottom:1px solid var(--eq-border-soft);}
 body.eq-marka-plp-shop #eq-marka-plp-facets .eq-cm-selected{margin:0 0 8px;}
+@media (max-width:768px){
+  body.eq-marka-plp .body{flex-direction:column;}
+  body.eq-marka-plp .eq-filter-col.eq-refine-amazon{
+    position:fixed!important;left:0;top:0;bottom:0;z-index:1200;
+    width:min(300px,88vw)!important;max-width:88vw!important;max-height:none!important;
+    transform:translateX(-105%);transition:transform .22s ease;
+    overflow-y:auto;-webkit-overflow-scrolling:touch;background:#fff;
+    box-shadow:4px 0 24px rgba(0,0,0,.12);
+  }
+  body.eq-marka-plp.eq-dept-filter-open .eq-filter-col.eq-refine-amazon{transform:translateX(0);}
+  body.eq-marka-plp .eq-dept-filter-backdrop{display:none;}
+  body.eq-marka-plp.eq-dept-filter-open .eq-dept-filter-backdrop{
+    display:block!important;position:fixed;inset:0;z-index:1190;background:rgba(0,30,80,.35);
+  }
+  body.eq-marka-plp .eq-dept-plp-toolbar--marka{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:8px 10px;padding:12px 0;}
+  body.eq-marka-plp .eq-marka-plp-filter-mob{display:inline-flex!important;}
+}
 `;
 
 function buildMarkaBreadcrumbJsonLd(slug: string, lang: "tr" | "en" = "tr") {
@@ -141,6 +158,7 @@ export async function MarkaSlugPageInner({
                 <div id="eq-filter-brands" className="eq-filter-brands" />
               </div>
             </aside>
+            <div className="eq-dept-filter-backdrop" id="eq-marka-filter-backdrop" aria-hidden="true" />
             <div className="right-col">
               <div className="breadcrumb">
                 <a href={homeHref}>Ana Sayfa</a> › <span id="eq-brand-crumb">{label}</span>

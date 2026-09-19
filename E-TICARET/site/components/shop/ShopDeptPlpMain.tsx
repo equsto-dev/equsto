@@ -5,8 +5,8 @@ export default function ShopDeptPlpMain({ meta }: { meta: ShopDeptMeta }) {
     <div className="pg">
       <div className="eq-dept-plp-layout">
         <aside className="eq-dept-plp-aside" id="eq-dept-plp-aside" aria-label="Filtreler" data-i18n-attr="aria-label:plp.filters_aria">
-          <div className="eq-dept-plp-aside__hd" data-i18n={meta.navKey}>
-            {meta.title}
+          <div className="eq-dept-plp-aside__hd" data-i18n="plp.filters">
+            Filtreler
           </div>
           <div id="eq-dept-plp-facets" />
         </aside>

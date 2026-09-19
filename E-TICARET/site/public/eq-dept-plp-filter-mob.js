@@ -1,36 +1,20 @@
 /**
- * Equsto PLP — Mobile Filter Bottom Sheet
- * Breakpoint: ≤768px
- * Pattern: Fixed "Filtrele (N)" button in toolbar → bottom sheet with same facets
- * Design: #0B0C0E bg, #5EEAD4 accent, glassmorphism backdrop-filter
- * State: Shared with desktop (eq-dept-plp.js state object)
+ * Equsto PLP — Mobile Filter Left Drawer (CafeMarkt tarzı)
+ * Breakpoint: ≤900px
+ * Filtrele → soldan kayan aside (#eq-dept-plp-aside / #eq-arama-aside / #eq-filter-col)
+ * Kategoriler accordion açık gelir.
  */
 (function (global) {
   'use strict';
 
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&')
-      .replace(/</g, '<')
-      .replace(/>/g, '>')
-      .replace(/"/g, '"');
-  }
-
-  function lc(s) {
-    return String(s || '').toLocaleLowerCase('tr');
-  }
-
-  var SHEET_ID = 'eq-dept-filter-sheet';
-  var BACKDROP_ID = 'eq-dept-filter-sheet-backdrop';
-  var BTN_IDS = ['eq-dept-plp-filter-mob', 'eq-arama-filter-mob'];
+  var BTN_IDS = ['eq-dept-plp-filter-mob', 'eq-arama-filter-mob', 'eq-marka-plp-filter-mob'];
   var COUNT_ATTR = 'data-active-count';
-  var OPEN_CLASS = 'eq-dept-filter-sheet-open';
+  var OPEN_CLASS = 'eq-dept-filter-open';
+  var SHEET_OPEN_CLASS = 'eq-dept-filter-sheet-open';
 
   function getPlpState() {
-    // Try to get state from eq-dept-plp.js closure via window exposure
     if (global.__eqDeptPlpState) return global.__eqDeptPlpState;
     if (global.__eqAramaState) return global.__eqAramaState;
-    // Fallback: read from DOM chips
     return null;
   }
 
@@ -54,6 +38,15 @@
   function updateButtonBadge() {
     var state = getPlpState();
     var count = state ? countActiveFilters(state) : 0;
+    // Marka PLP: chip sayısını facet host'tan tahmin et
+    if (!state) {
+      var markaHost = document.getElementById('eq-marka-plp-facets');
+      if (markaHost) {
+        count = markaHost.querySelectorAll('.eq-cm-facet__label input:checked').length;
+        if (markaHost.querySelector('#eq-dept-cm-price-min') && markaHost.querySelector('#eq-dept-cm-price-min').value) count++;
+        if (markaHost.querySelector('#eq-dept-cm-price-max') && markaHost.querySelector('#eq-dept-cm-price-max').value) count++;
+      }
+    }
     BTN_IDS.forEach(function (id) {
       var btn = document.getElementById(id);
       if (!btn) return;
@@ -72,138 +65,100 @@
     });
   }
 
-  function buildSheetContent() {
-    var state = getPlpState();
-    if (!state) return '';
+  function getDrawerAside() {
+    return (
+      document.getElementById('eq-dept-plp-aside') ||
+      document.getElementById('eq-arama-aside') ||
+      document.getElementById('eq-filter-col')
+    );
+  }
 
-    // Detect page type
-    var isArama = !!global.__eqAramaState && state === global.__eqAramaState;
-    var isDeptPlp = !!global.__eqDeptPlpState && state === global.__eqDeptPlpState;
+  function getBackdrop() {
+    return (
+      document.getElementById('eq-dept-filter-backdrop') ||
+      document.getElementById('eq-arama-filter-backdrop') ||
+      document.getElementById('eq-marka-filter-backdrop')
+    );
+  }
 
-    if (isDeptPlp && global.EqDeptCmFacets) {
-      // Use existing department PLP facet rendering
-      var host = document.createElement('div');
-      var tiles = (global.EqDeptTips && global.EqDeptTips.tilesFor)
-        ? global.EqDeptTips.tilesFor(global.DEPT || 'pisirme')
-        : [];
-      var tileMatch = global.tileMatch;
+  function ensureBackdrop() {
+    var backdrop = getBackdrop();
+    if (backdrop) return backdrop;
+    var aside = getDrawerAside();
+    if (!aside || !aside.parentNode) return null;
+    backdrop = document.createElement('div');
+    backdrop.className = 'eq-dept-filter-backdrop';
+    backdrop.id = document.body.classList.contains('eq-marka-plp')
+      ? 'eq-marka-filter-backdrop'
+      : 'eq-dept-filter-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    aside.parentNode.insertBefore(backdrop, aside.nextSibling);
+    return backdrop;
+  }
 
-      var opts = {
-        dept: global.DEPT || 'pisirme',
-        allProducts: state.all || [],
-        state: state,
-        tiles: tiles,
-        tileMatch: tileMatch,
-        getPoolForCounts: function (exclude) {
-          var list = state.all || [];
-          if (state.activeTiles && state.activeTiles.length && exclude !== 'tile') {
-            list = list.filter(function (u) {
-              for (var ti = 0; ti < state.activeTiles.length; ti++) {
-                var tile = tiles.find(function (t) { return t.id === state.activeTiles[ti]; });
-                if (tile && tileMatch && tileMatch(u, tile)) return true;
-              }
-              return false;
-            });
-          }
-          if (state.brands && state.brands.length && exclude !== 'brand') {
-            list = list.filter(function (u) {
-              var fb = global.EqDeptCmFacets && global.EqDeptCmFacets.productBrand
-                ? global.EqDeptCmFacets.productBrand(u)
-                : '';
-              return state.brands.indexOf(fb) >= 0;
-            });
-          }
-          return list;
-        },
-        onChange: function () {
-          if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
-          updateButtonBadge();
-        },
-      };
-      global.EqDeptCmFacets.mount(host, opts);
-      return host.innerHTML;
+  function expandFacetAccordions(root) {
+    if (!root) return;
+    root.querySelectorAll('details.eq-cm-facet').forEach(function (el) {
+      el.open = true;
+      el.setAttribute('open', '');
+    });
+  }
+
+  function refreshFacetsInDrawer() {
+    var isArama = !!document.getElementById('eq-arama-main');
+    var isDept = !!global.__eqDeptPlpState;
+    var isMarka = document.body.classList.contains('eq-marka-plp-shop') || document.body.classList.contains('eq-marka-plp');
+
+    if (isDept && typeof global.__eqDeptPlpRender === 'function') {
+      // Facets already live in aside; remount via existing render path if exposed
+      var host = document.getElementById('eq-dept-plp-facets');
+      if (host && global.EqDeptCmFacets && global.__eqDeptPlpPoolForFacetCounts) {
+        var state = global.__eqDeptPlpState;
+        var tiles =
+          global.EqDeptTips && typeof global.EqDeptTips.tilesFor === 'function'
+            ? global.EqDeptTips.tilesFor(global.DEPT || 'pisirme')
+            : [];
+        global.EqDeptCmFacets.mount(host, {
+          dept: global.DEPT || 'pisirme',
+          allProducts: (state && state.all) || [],
+          state: state,
+          tiles: tiles,
+          tileMatch: global.tileMatch,
+          getPoolForCounts: global.__eqDeptPlpPoolForFacetCounts,
+          onChange: function (kind) {
+            if (kind === 'clear' && typeof global.__eqDeptPlpClearFilters === 'function') {
+              global.__eqDeptPlpClearFilters();
+            }
+            if (state) state.loadedCount = 24;
+            if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
+            updateButtonBadge();
+            expandFacetAccordions(host);
+          },
+        });
+      }
+      expandFacetAccordions(document.getElementById('eq-dept-plp-aside'));
+      return;
     }
 
     if (isArama) {
-      return '';
-    }
-
-    return '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler yükleniyor…</div></div>';
-  }
-
-  var aramaHomeParent = null;
-  var aramaHomeNext = null;
-
-  function isAramaPage() {
-    return !!document.getElementById('eq-arama-main');
-  }
-
-  function parkAramaFacets(into) {
-    var host = document.getElementById('eq-arama-facets');
-    if (!host || !into) return;
-    if (host.parentNode === into) return;
-    aramaHomeParent = host.parentNode;
-    aramaHomeNext = host.nextSibling;
-    into.appendChild(host);
-  }
-
-  function restoreAramaFacets() {
-    var host = document.getElementById('eq-arama-facets');
-    if (!host || !aramaHomeParent) return;
-    if (aramaHomeNext && aramaHomeNext.parentNode === aramaHomeParent) {
-      aramaHomeParent.insertBefore(host, aramaHomeNext);
-    } else {
-      aramaHomeParent.appendChild(host);
-    }
-    aramaHomeParent = null;
-    aramaHomeNext = null;
-  }
-
-  function openSheet() {
-    if (document.body.classList.contains(OPEN_CLASS)) {
-      closeSheet();
+      expandFacetAccordions(document.getElementById('eq-arama-aside'));
       return;
     }
-    var sheet = document.getElementById(SHEET_ID);
-    var backdrop = document.getElementById(BACKDROP_ID);
-    if (!sheet) {
-      sheet = createSheet();
-      backdrop = document.getElementById(BACKDROP_ID);
+
+    if (isMarka) {
+      expandFacetAccordions(document.getElementById('eq-filter-col'));
     }
-    document.body.classList.add(OPEN_CLASS);
-    document.body.classList.remove('eq-dept-filter-open');
-    sheet.classList.add('open');
-    if (backdrop) backdrop.classList.add('visible');
-    var content = document.getElementById('eq-dept-filter-sheet-content');
-    if (isAramaPage()) {
-      if (content) parkAramaFacets(content);
-    } else if (content) {
-      renderFacets(content);
-    }
-    // Lock scroll
+  }
+
+  function lockScroll() {
     var scrollY = window.scrollY || window.pageYOffset;
     document.body.style.top = -scrollY + 'px';
     document.body.style.position = 'fixed';
     document.body.style.width = '100%';
     document.body.dataset.eqScrollY = String(scrollY);
-    // Focus trap
-    sheet.setAttribute('aria-modal', 'true');
-    sheet.setAttribute('role', 'dialog');
-    var firstFocusable = sheet.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    if (firstFocusable) firstFocusable.focus();
   }
 
-  function closeSheet() {
-    document.body.classList.remove(OPEN_CLASS);
-    restoreAramaFacets();
-    var sheet = document.getElementById(SHEET_ID);
-    var backdrop = document.getElementById(BACKDROP_ID);
-    if (sheet) {
-      sheet.classList.remove('open');
-      sheet.removeAttribute('aria-modal');
-    }
-    if (backdrop) backdrop.classList.remove('visible');
-    // Restore scroll
+  function unlockScroll() {
     var scrollY = parseInt(document.body.dataset.eqScrollY || '0', 10);
     document.body.style.position = '';
     document.body.style.top = '';
@@ -212,127 +167,140 @@
     delete document.body.dataset.eqScrollY;
   }
 
-  function createSheet() {
-    var sheet = document.createElement('div');
-    sheet.id = SHEET_ID;
-    sheet.className = 'eq-dept-filter-sheet';
-    sheet.setAttribute('role', 'dialog');
-    sheet.setAttribute('aria-modal', 'false');
-    sheet.setAttribute('aria-label', 'Filtreler');
+  function openDrawer() {
+    if (document.body.classList.contains(OPEN_CLASS)) {
+      closeDrawer();
+      return;
+    }
+    // Eski bottom sheet kalıntısını kapat
+    document.body.classList.remove(SHEET_OPEN_CLASS);
+    var oldSheet = document.getElementById('eq-dept-filter-sheet');
+    if (oldSheet) oldSheet.classList.remove('open');
+    var oldBd = document.getElementById('eq-dept-filter-sheet-backdrop');
+    if (oldBd) oldBd.classList.remove('visible');
 
-    var backdrop = document.createElement('div');
-    backdrop.id = BACKDROP_ID;
-    backdrop.className = 'eq-dept-filter-sheet-backdrop';
-    backdrop.setAttribute('aria-hidden', 'true');
-    backdrop.addEventListener('click', closeSheet);
+    var aside = getDrawerAside();
+    var backdrop = ensureBackdrop();
+    if (!aside) return;
 
-    var handle = document.createElement('div');
-    handle.className = 'eq-dept-filter-sheet__handle';
-    handle.setAttribute('aria-hidden', 'true');
+    document.body.classList.add(OPEN_CLASS);
+    if (backdrop) {
+      backdrop.classList.add('visible');
+      backdrop.setAttribute('aria-hidden', 'false');
+    }
+    aside.setAttribute('aria-modal', 'true');
+    aside.setAttribute('role', 'dialog');
 
-    var header = document.createElement('div');
-    header.className = 'eq-dept-filter-sheet__hd';
-    header.innerHTML =
-      '<h2 class="eq-dept-filter-sheet__title" data-i18n="plp.filters_mob">Filtreler</h2>' +
-      '<button type="button" class="eq-dept-filter-sheet__close" aria-label="Kapat" data-i18n-attr="aria-label:common.close">×</button>';
-    header.querySelector('.eq-dept-filter-sheet__close').addEventListener('click', closeSheet);
+    refreshFacetsInDrawer();
+    expandFacetAccordions(aside);
+    lockScroll();
 
-    var content = document.createElement('div');
-    content.className = 'eq-dept-filter-sheet__content';
-    content.id = 'eq-dept-filter-sheet-content';
-
-    var actions = document.createElement('div');
-    actions.className = 'eq-dept-filter-sheet__actions';
-    actions.innerHTML =
-      '<button type="button" class="eq-dept-filter-sheet__clear" data-i18n="plp.facet_clear_all">Temizle</button>' +
-      '<button type="button" class="eq-dept-filter-sheet__apply" data-i18n="plp.facet_apply">Uygula</button>';
-    actions.querySelector('.eq-dept-filter-sheet__clear').addEventListener('click', function () {
-      if (isAramaPage() && typeof global.__eqAramaClearAll === 'function') {
-        global.__eqAramaClearAll();
-      } else if (typeof global.__eqDeptPlpClearFilters === 'function') {
-        global.__eqDeptPlpClearFilters();
-        if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
-        var content = document.getElementById('eq-dept-filter-sheet-content');
-        if (content) renderFacets(content);
-      }
-      updateButtonBadge();
-    });
-    actions.querySelector('.eq-dept-filter-sheet__apply').addEventListener('click', closeSheet);
-
-    sheet.appendChild(handle);
-    sheet.appendChild(header);
-    sheet.appendChild(content);
-    sheet.appendChild(actions);
-    document.body.appendChild(sheet);
-    document.body.appendChild(backdrop);
-
-    return sheet;
+    var closeBtn = aside.querySelector('.eq-dept-plp-aside__close, .eq-filter-drawer-close');
+    var focusEl =
+      closeBtn ||
+      aside.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusEl) {
+      try {
+        focusEl.focus();
+      } catch (_) {}
+    }
   }
 
-  function renderFacets(container) {
-    var state = getPlpState();
-    if (!state) {
-      container.innerHTML = '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler yükleniyor…</div></div>';
-      return;
+  function closeDrawer() {
+    document.body.classList.remove(OPEN_CLASS);
+    document.body.classList.remove(SHEET_OPEN_CLASS);
+    var aside = getDrawerAside();
+    var backdrop = getBackdrop();
+    if (aside) {
+      aside.removeAttribute('aria-modal');
+      aside.removeAttribute('role');
+    }
+    if (backdrop) {
+      backdrop.classList.remove('visible');
+      backdrop.setAttribute('aria-hidden', 'true');
+    }
+    unlockScroll();
+  }
+
+  function ensureAsideCloseButton(aside) {
+    if (!aside || aside.querySelector('.eq-dept-plp-aside__close, .eq-filter-drawer-close')) return;
+
+    var hd =
+      aside.querySelector('.eq-dept-plp-aside__hd') ||
+      aside.querySelector('.eq-filter-col-hd') ||
+      null;
+
+    if (!hd) {
+      hd = document.createElement('div');
+      hd.className = aside.id === 'eq-filter-col' ? 'eq-filter-col-hd' : 'eq-dept-plp-aside__hd';
+      var title = document.createElement('span');
+      title.className = aside.id === 'eq-filter-col' ? 'eq-filter-col-hd__title' : 'eq-dept-plp-aside__title';
+      title.setAttribute('data-i18n', 'plp.filters');
+      title.textContent = 'Filtreler';
+      hd.appendChild(title);
+      aside.insertBefore(hd, aside.firstChild);
+    } else if (hd.classList.contains('eq-dept-plp-aside__hd') && !hd.querySelector('.eq-dept-plp-aside__title')) {
+      var existing = (hd.textContent || '').trim();
+      hd.textContent = '';
+      var t = document.createElement('span');
+      t.className = 'eq-dept-plp-aside__title';
+      t.setAttribute('data-i18n', 'plp.filters');
+      t.textContent = existing && existing !== 'Filtreler' ? 'Filtreler' : existing || 'Filtreler';
+      hd.appendChild(t);
     }
 
-    var isArama = !!global.__eqAramaState && state === global.__eqAramaState;
-    var isDeptPlp = !!global.__eqDeptPlpState && state === global.__eqDeptPlpState;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = aside.id === 'eq-filter-col' ? 'eq-filter-drawer-close' : 'eq-dept-plp-aside__close';
+    btn.setAttribute('aria-label', 'Kapat');
+    btn.setAttribute('data-i18n-attr', 'aria-label:common.close');
+    btn.textContent = '×';
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      closeDrawer();
+    });
+    hd.appendChild(btn);
+    hd.style.display = 'flex';
+    hd.style.alignItems = 'center';
+    hd.style.justifyContent = 'space-between';
+    hd.style.gap = '8px';
+  }
 
-    if (isDeptPlp && global.EqDeptCmFacets) {
-      var tiles = (global.EqDeptTips && global.EqDeptTips.tilesFor)
-        ? global.EqDeptTips.tilesFor(global.DEPT || 'pisirme')
-        : [];
-      var tileMatch = global.tileMatch;
-
-      var opts = {
-        dept: global.DEPT || 'pisirme',
-        allProducts: state.all || [],
-        state: state,
-        tiles: tiles,
-        tileMatch: tileMatch,
-        getPoolForCounts: global.__eqDeptPlpPoolForFacetCounts,
-        onChange: function (kind) {
-          if (kind === 'clear') {
-            if (typeof global.__eqDeptPlpClearFilters === 'function') global.__eqDeptPlpClearFilters();
-          }
-          state.loadedCount = 24;
-          if (typeof global.__eqDeptPlpRender === 'function') global.__eqDeptPlpRender();
-          updateButtonBadge();
-        },
-      };
-      global.EqDeptCmFacets.mount(container, opts);
-      if (typeof global.eqI18nApply === 'function') {
-        try { global.eqI18nApply(container); } catch (_) {}
+  function bindBackdropClick() {
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      if (t.closest('.eq-dept-filter-backdrop')) {
+        e.preventDefault();
+        closeDrawer();
       }
-      return;
-    }
-
-    if (isArama) {
-      parkAramaFacets(container);
-      return;
-    }
-
-    container.innerHTML = '<div class="eq-cm-facet" open><div class="eq-cm-facet__hd">Filtreler yükleniyor…</div></div>';
+    });
   }
 
   function init() {
     if (global.__eqDeptPlpFilterMobBound) return;
     global.__eqDeptPlpFilterMobBound = true;
 
+    var aside = getDrawerAside();
+    if (aside) ensureAsideCloseButton(aside);
+    ensureBackdrop();
+    bindBackdropClick();
+
     document.addEventListener('click', function (e) {
       var t = e.target;
       if (!t || !t.closest) return;
-      var btn = t.closest('#eq-dept-plp-filter-mob, #eq-arama-filter-mob');
+      var btn = t.closest(
+        '#eq-dept-plp-filter-mob, #eq-arama-filter-mob, #eq-marka-plp-filter-mob',
+      );
       if (!btn) return;
       e.preventDefault();
       e.stopPropagation();
-      openSheet();
+      openDrawer();
     });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && document.body.classList.contains(OPEN_CLASS)) {
-        closeSheet();
+        closeDrawer();
       }
     });
 
@@ -341,15 +309,13 @@
     document.addEventListener('equsto:plp-filters-changed', updateButtonBadge);
   }
 
-  // Expose for eq-dept-plp.js to call
   global.__eqDeptPlpFilterMob = {
     init: init,
-    open: openSheet,
-    close: closeSheet,
+    open: openDrawer,
+    close: closeDrawer,
     updateBadge: updateButtonBadge,
   };
 
-  // Auto-init
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

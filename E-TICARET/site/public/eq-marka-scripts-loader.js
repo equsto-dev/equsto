@@ -22,6 +22,7 @@
     "eq-category-shell.js",
     "eq-marka-plp-facets.js",
     "eq-marka-plp-boot.js",
+    "eq-dept-plp-filter-mob.js",
   ];
 
   var idx = 0;
