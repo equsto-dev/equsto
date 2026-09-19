@@ -184,6 +184,7 @@
     "catalog:electrolux:discover": "node scripts/scrape-electrolux-professional.mjs --discover-only",
     "catalog:electrolux:cek": "node scripts/scrape-electrolux-professional.mjs --resume",
     "catalog:electrolux:import": "node scripts/import-electrolux-professional.mjs",
+    "catalog:electrolux:docs": "node scripts/fill-electrolux-documents.mjs",
     "catalog:pimak:fiyat": "python scripts/sync-pimak-fiyat-pdf.py",
     "catalog:pimak:import": "node scripts/import-pimak.mjs",
     "catalog:equsto:p188-197": "node scripts/import-equsto-p188-197.mjs",

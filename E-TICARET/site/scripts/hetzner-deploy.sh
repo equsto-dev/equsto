@@ -29,6 +29,9 @@ if [[ -f .env.production ]]; then
   # Source only AWS vars to avoid issues with special chars in other vars
   AWS_S3_BUCKET=$(grep '^AWS_S3_BUCKET=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
   AWS_REGION=$(grep '^AWS_REGION=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  AWS_ACCESS_KEY_ID=$(grep '^AWS_ACCESS_KEY_ID=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  AWS_SECRET_ACCESS_KEY=$(grep '^AWS_SECRET_ACCESS_KEY=' .env.production 2>/dev/null | cut -d'=' -f2- || true)
+  export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
   # CLOUDFRONT_DISTRIBUTION_ID should be set as environment variable (from GitHub secret)
   # Not stored in .env.production for security
   if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws >/dev/null 2>&1; then
@@ -40,7 +43,11 @@ if [[ -f .env.production ]]; then
       echo "[hetzner-deploy] Creating CloudFront invalidation..."
       aws cloudfront create-invalidation \
         --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
-        --paths "/images/pfos/pfos_gorsel.jpeg" "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png" "/images/pfos/proje-fabrikasi-ana-gorsel.png" \
+        --paths \
+          "/images/pfos/pfos_gorsel.jpeg" \
+          "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png" \
+          "/images/pfos/proje-fabrikasi-ana-gorsel.png" \
+          "/images/catalog/cafemarkt/*" \
         --region "${AWS_REGION:-eu-central-1}" || echo "[hetzner-deploy] CloudFront invalidation failed (non-fatal)"
     fi
   else

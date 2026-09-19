@@ -29,6 +29,7 @@ import {
 
 const dryRun = !process.argv.includes("--apply");
 const keepReview = process.argv.includes("--keep-review");
+const skipPdp = process.argv.includes("--no-pdp");
 
 function arg(name, fallback = "") {
   const i = process.argv.indexOf(name);
@@ -312,6 +313,15 @@ function mapGenericDept(cls, cm) {
   if (/bula[sş][ıi]k|y[ıi]kama/i.test(hay)) {
     return { dept: "yikama", category: "bulasik-makineleri", alt: "yikama", altLabel: "Yıkama" };
   }
+  // soğutmalı kıyma / donuk et çekme → hazırlık (soğutma regex'ine düşmesin)
+  if (/k[ıi]yma|donuk et|[cç]ekme makine|et [cç]ekme/i.test(hay)) {
+    return {
+      dept: "hazirlik",
+      category: "et-kiyma-makineleri",
+      alt: "et-kiyma",
+      altLabel: "Et Kıyma",
+    };
+  }
   if (/buz|ice maker|so[gğ]ut|dondur|buzdolab/i.test(hay)) {
     return { dept: "sogutma", category: "sogutma", alt: "sogutma", altLabel: "Soğutma" };
   }
@@ -451,7 +461,7 @@ async function main() {
   let i = 0;
   for (const item of toAdd) {
     i += 1;
-    if (!dryRun && item.cm.url) {
+    if (!dryRun && !skipPdp && item.cm.url) {
       console.log(`[cm-apply] pdp ${i}/${toAdd.length}`);
       await sleep(DELAY_PAGE_MS);
       const pdp = await fetchProductDetail(item.cm.url);
