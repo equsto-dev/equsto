@@ -608,39 +608,6 @@ html:not(.eq-device-phone) body.eq-shop:not(.admin-app).eq-has-bottom-tabbar {
   padding-bottom: 0 !important;
 }
 
-html.eq-device-phone {
-  font-synthesis: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-alici,
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-orders,
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-locale-bar,
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
-  display: none !important;
-}
-
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right,
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  margin-left: auto !important;
-}
-
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account,
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-logout:not([hidden]) {
-  display: inline-flex !important;
-  min-height: 48px;
-  align-items: center;
-}
-
-html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-logout:not([hidden]) {
-  min-width: 48px;
-  padding: 0 12px;
-  font-size: 13px;
-}
-
 html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
 html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
   overflow-x: auto;

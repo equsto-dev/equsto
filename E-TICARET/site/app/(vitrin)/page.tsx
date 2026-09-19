@@ -29,7 +29,7 @@ export default function HomePage() {
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/theme.css?v=${SHOP_ASSET_V}&m=20260916-align-green`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-paint`} />
+      <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-hdr`} />
       <style id="eq-home-critical-css" dangerouslySetInnerHTML={{ __html: HOME_CRITICAL_CSS }} />
       <Script id="home-body-class-boot" strategy="beforeInteractive">
         {`(function(){try{var p=${JSON.stringify(HOME_BODY_CLASS)}.split(/\\s+/);for(var i=0;i<p.length;i++)if(p[i])document.body.classList.add(p[i]);}catch(e){}})();`}
