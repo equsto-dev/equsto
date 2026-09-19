@@ -328,7 +328,25 @@ function mapGenericDept(cls, cm) {
   if (/davlumbaz/i.test(hay)) {
     return { dept: "davlumbaz", category: "davlumbaz", alt: "davlumbaz", altLabel: "Davlumbaz" };
   }
-  if (/chafing|küvet|kuvet|gastronorm|\bgn\b|servis/i.test(hay) && /servis|chafing|küvet|kuvet|gn/i.test(hay)) {
+  if (/chafing|küvet|kuvet|gastronorm|\bgn\b/i.test(hay)) {
+    const brand = String(cm.brand || cls.reason || "").toLowerCase();
+    const isCg = /cambro|gastro\s*plast|gastroplast/.test(brand + " " + hay);
+    if (isCg || /küvet|kuvet|gastronorm|\bgn\b/i.test(hay)) {
+      let category = "standart-gastronorm-kuvetler";
+      if (/karıştırma|karistirma|ölçü kab|olcu kab|süzgeç|suzgec/i.test(hay)) category = "karistirma-kaplari-ve-suzgecler";
+      else if (/kapak/i.test(hay)) category = "gastronorm-kapaklar";
+      else if (/polikarbon|polycarbon|camwear/i.test(hay)) category = "polikarbonat-gastronorm-kuvetler";
+      else if (/polipropilen|polypropylen/i.test(hay)) category = "polipropilen-gastronorm-kuvetler";
+      else if (/sapl[ıi]|kulplu/i.test(hay)) category = "sapli-gastronorm-kuvetler";
+      return {
+        dept: "set-ustu-mutfak",
+        category,
+        alt: "kuvet",
+        altLabel: "Küvetler",
+      };
+    }
+  }
+  if (/servis|chafing/i.test(hay)) {
     return { dept: "servis", category: "servis", alt: "servis", altLabel: "Servis" };
   }
   if (/f[ıi]r[ıi]n|kombi|ocak|frit|[ıi]zgara|kuzine|mangal|pi[sş]ir/i.test(hay)) {

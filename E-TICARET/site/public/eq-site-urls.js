@@ -684,7 +684,11 @@
     }
 
     if (slug === "cambro") {
-      return typeof window.eqIsCambroIstifRow === "function" && window.eqIsCambroIstifRow(row);
+      // Gerçek Cambro katalog (CM import). Ozti 8897 istif vitrini /shop/istif?tip=cambro’da kalır.
+      var cambroId = String(row.id || "");
+      if (cambroId.indexOf("cambro__") === 0) return true;
+      if (/^cambro$/i.test(b) || /\bcambro\b/i.test(b)) return true;
+      return false;
     }
 
     if (slug === "inoksan") {

@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları (pfos-uye-auth-KILIT kilitli) */
-export const SHOP_ASSET_V = "20260621-pfos-ice-blue";
+export const SHOP_ASSET_V = "20260919-cambro-kuvet";
 /** ecom-cart / PDP inline — serbest cache bust (SHOP_ASSET_V kilidine bağlı değil) */
 export const ECOM_ASSET_V = "20260918-caglayan-out";
 export const BESOS_SUBNAV_ICON_V = "ref-vitrum-strip-6";
