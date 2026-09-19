@@ -26,7 +26,12 @@ async function main() {
 
   console.log("Loading Brema products from JSON...");
   const rawProducts = JSON.parse(fs.readFileSync(SOGUTMA_JSON, "utf8")) as any[];
-  const bremaRaw = rawProducts.filter((p: any) => p.oem_brand === "Brema" || p.brand === "Krom Mutfak San. Tic. A.Ş.");
+  const bremaRaw = rawProducts.filter(
+    (p: any) =>
+      p.oem_brand === "Brema" ||
+      p.brand === "Kroom" ||
+      p.brand === "Krom Mutfak San. Tic. A.Ş.",
+  );
 
   if (bremaRaw.length === 0) {
     console.warn("No Brema products found in sogutma.json. Run import script first.");

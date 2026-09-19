@@ -827,6 +827,40 @@ function slugify(text) {
     .replace(/\-\-+/g, "-");
 }
 
+function normImgKey(s) {
+  return String(s || "")
+    .toLocaleLowerCase("tr")
+    .replace(/b-?küp|b-?kup/gi, "")
+    .replace(/[^a-z0-9]+/g, "")
+    .trim();
+}
+
+function resolveBremaImagePath(item) {
+  const files = fs
+    .readdirSync(PLACEHOLDER_IMG_DEST_DIR)
+    .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !/placeholder/i.test(f));
+  const candidates = [item.model, item.sku, item.name]
+    .filter(Boolean)
+    .map((x) =>
+      String(x)
+        .replace(/^BREMA\s+/i, "")
+        .replace(/^BRE-/i, "")
+        .replace(/\s*KÜP.*$/i, "")
+        .replace(/\s*BUZ.*$/i, "")
+        .trim(),
+    );
+  const norms = candidates.map(normImgKey).filter(Boolean);
+  for (const f of files) {
+    const fn = normImgKey(f.replace(/\.(jpe?g|png|webp)$/i, ""));
+    for (const n of norms) {
+      if (fn === n || fn.includes(n) || n.includes(fn)) {
+        return `images/catalog/brema/${f}`;
+      }
+    }
+  }
+  return "";
+}
+
 function processImport() {
   console.log("Reading existing sogutma.json...");
   let currentProducts = [];
@@ -834,11 +868,16 @@ function processImport() {
     currentProducts = JSON.parse(fs.readFileSync(SOGUTMA_JSON, "utf8"));
   }
 
-  const brandName = "Krom Mutfak San. Tic. A.Ş.";
+  const brandName = "Kroom";
   const oemBrand = "Brema";
   
-  // Filter out any existing Brema products to prevent duplication
-  currentProducts = currentProducts.filter(p => p.brand !== brandName && p.oem_brand !== oemBrand);
+  // Filter out any existing Brema/Kroom list rows to prevent duplication
+  currentProducts = currentProducts.filter(
+    (p) =>
+      p.brand !== brandName &&
+      p.brand !== "Krom Mutfak San. Tic. A.Ş." &&
+      p.oem_brand !== oemBrand,
+  );
 
   console.log(`Adding ${bremaProducts.length} Brema products with 48% discount...`);
   
@@ -907,7 +946,7 @@ function processImport() {
         item.name,
       ],
       images: [
-        "images/catalog/brema/placeholder.png"
+        resolveBremaImagePath(item) || "images/catalog/brema/placeholder.png"
       ],
       sku: item.sku,
       model: item.model,

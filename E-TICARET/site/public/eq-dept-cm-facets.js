@@ -207,6 +207,11 @@
     rational: 'Rational',
     santos: 'SANTOS',
     'robot coupe': 'Robot Coupe',
+    kroom: 'Kroom',
+    'krom mutfak': 'Kroom',
+    'krom mutfak san. tic. a.ş.': 'Kroom',
+    'krom mutfak san tic a.ş.': 'Kroom',
+    'krom mutfak san. tic. a.s.': 'Kroom',
   };
   /** Kısa önekler yalnızca ad başında; uzun markalar ad içinde de aranır. */
   var OEM_WORD_BOUNDARY_MIN = 4;
@@ -250,6 +255,7 @@
     if (bl.indexOf('oztiryakiler') === 0 || bl.indexOf('öztiryakiler') === 0) return 'Öztiryakiler';
     if (bl.indexOf('proso') === 0) return 'Proso';
     if (bl.indexOf('caglayan') === 0 || bl.indexOf('çağlayan') === 0) return 'Çağlayan';
+    if (bl.indexOf('krom mutfak') === 0 || bl === 'kroom') return 'Kroom';
     return b;
   }
 
