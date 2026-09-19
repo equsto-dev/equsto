@@ -109,7 +109,7 @@
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === 'function') {
       return window.EqustoPriceDisplay.formatCard(row, opts);
     }
-    if (row.fiyat_bekleniyor || /teklif\s+için/i.test(String(row.price || ''))) {
+    if (row.fiyat_bekleniyor || /teklif\s+iste|teklif\s+için/i.test(String(row.price || ''))) {
       return opts.quoteLabel || __plpT('plp.quote_contact', 'Teklif için iletişim');
     }
     var n = 0;

@@ -65,6 +65,14 @@ export function classifyProduct(p, brandHint = "") {
     return classifyAtese(hay, name, code);
   }
 
+  if (/cambro/i.test(brand) || /cambro/i.test(hay)) {
+    return classifyCambroGastro(hay, name, "Cambro");
+  }
+
+  if (/gastro\s*plast|gastroplast/i.test(brand) || /gastro\s*plast|gastroplast/i.test(hay)) {
+    return classifyCambroGastro(hay, name, "GastroPlast");
+  }
+
   if (!isCapacityTepsi(hay) && isAccessory(hay)) {
     return { verdict: "drop", reason: accessoryReason(hay), group: accessoryGroup(hay) };
   }
@@ -397,6 +405,14 @@ function classifyRemta(hay, name, code) {
     return { verdict: "keep", reason: "Remta ana ekipman", group, name };
   }
   return { verdict: "review", reason: "Remta — grup belirsiz", group: "diger" };
+}
+
+/** Cambro / GastroPlast: GN küvet, kap, saklama, tepsi — servis */
+function classifyCambroGastro(hay, name, label) {
+  if (/yedek par[cç]a|conta seti|vida|conta\b/i.test(hay) && !/küvet|kuvet|gn|kap|kutu|box|pan|tepsi/i.test(hay)) {
+    return { verdict: "drop", reason: `${label} — yedek/conta`, group: "aksesuar" };
+  }
+  return { verdict: "keep", reason: `${label} saklama / GN / servis`, group: "servis", name };
 }
 
 /** Kapp: yalnızca küvet + chafing */

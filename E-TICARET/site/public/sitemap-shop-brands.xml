@@ -385,6 +385,18 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://equsto.com/shop/marka/gastroplast</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/shop/marka/gastroplast</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
     <loc>https://equsto.com/shop/marka/remta</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -620,6 +632,18 @@
   </url>
   <url>
     <loc>https://equsto.com/en/shop/marka/yuksel-endustriyel</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/marka/cambro</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/shop/marka/cambro</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>

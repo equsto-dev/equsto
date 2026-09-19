@@ -50,7 +50,7 @@ export function resolveKdvDahilTry(row: ConsumerPriceRow | null | undefined): nu
 export function isQuoteOnlyConsumerPrice(row: ConsumerPriceRow | null | undefined): boolean {
   if (!row) return false;
   if (row.fiyat_bekleniyor) return true;
-  return /teklif\s+için/i.test(String(row.price || ""));
+  return /teklif\s+iste|teklif\s+için/i.test(String(row.price || ""));
 }
 
 export function formatConsumerPriceAmount(n: number): string {

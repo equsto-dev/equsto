@@ -166,7 +166,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function buyboxPriceParts(x) {
-      var quoteOnly = !!(x && x.fiyat_bekleniyor) || /teklif\s+için/i.test(String((x && x.price) || ""));
+      var quoteOnly = !!(x && x.fiyat_bekleniyor) || /teklif\s+iste|teklif\s+için/i.test(String((x && x.price) || ""));
       if (quoteOnly) return { quoteOnly: true };
       var n = parsePriceTlNumber(x && x.price, x);
       if (!(n > 0) && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
@@ -2506,6 +2506,8 @@ window.searchFilter = window.searchFilter || function () {};
 
     function electroluxDocHref(doc) {
       if (!doc) return "";
+      // tools.electroluxprofessional.com herkese açık; yerel/CDN yolu S3'te yoksa AccessDenied verir
+      if (doc.url) return String(doc.url);
       if (doc.local) {
         if (typeof window.equstoDataAssetHref === "function") {
           try {
@@ -2515,7 +2517,6 @@ window.searchFilter = window.searchFilter || function () {};
         }
         return eqHtmlUrl("/" + String(doc.local).replace(/^\/+/, ""));
       }
-      if (doc.url) return String(doc.url);
       return "";
     }
 

@@ -52,9 +52,10 @@ export function resolveMerchantPriceTry(row: CatalogRow): number {
 
 export function isQuoteOnlyProduct(row: CatalogRow): boolean {
   const p = String(row.price || "").toLowerCase();
-  if (/teklif\s*için|fiyat\s*alınız|fiyat\s*aliniz|iletişime\s*geç|contact\s*for\s*price|price\s*on\s*request/i.test(p)) {
+  if (/teklif\s*iste|teklif\s*için|fiyat\s*alınız|fiyat\s*aliniz|iletişime\s*geç|contact\s*for\s*price|price\s*on\s*request/i.test(p)) {
     return true;
   }
+  if (row.fiyat_bekleniyor === true || row.fiyat_bekleniyor === 1) return true;
   if (/€|eur\b/.test(p) && !/₺|tl\b|try\b/i.test(p)) return true;
   return false;
 }

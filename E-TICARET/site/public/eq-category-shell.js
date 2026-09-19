@@ -18,7 +18,7 @@
       return global.EqustoPriceDisplay.formatCard(x);
     }
     if (!x) return "";
-    if (x.fiyat_bekleniyor || /teklif\s+için/i.test(String(x.price || ""))) {
+    if (x.fiyat_bekleniyor || /teklif\s+iste|teklif\s+için/i.test(String(x.price || ""))) {
       return "Teklif için iletişim";
     }
     var n = 0;

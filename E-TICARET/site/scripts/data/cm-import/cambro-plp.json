@@ -1,0 +1,1399 @@
+{
+  "brand": "Cambro",
+  "slug": "cambro",
+  "fetchedAt": "2026-09-19T17:04:27.713Z",
+  "reportedTotal": 114,
+  "pages": 4,
+  "count": 114,
+  "items": [
+    {
+      "cafemarkt_id": "14574",
+      "name": "Cambro KD Servis Arabası, Çevresi Açık, Büyük, Gri",
+      "code": "105.BC340KD",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-kd-servis-arabasi-cevresi-acik-buyuk-gri",
+      "image": "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cevresi-acik-buyuk-gri-servis-arabalari-cambro-28993-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cevresi-acik-buyuk-gri-servis-arabalari-cambro-28993-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cevresi-acik-buyuk-gri-servis-arabalari-cambro-28994-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cevresi-acik-buyuk-gri-servis-arabalari-cambro-28995-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 18634
+    },
+    {
+      "cafemarkt_id": "14075",
+      "name": "Cambro GN 1/2 Kulplu Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.20CWCH135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-12-kulplu",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-12-kulplu-gastronorm-kuvet-kapaklari-cambro-83698-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-12-kulplu-gastronorm-kuvet-kapaklari-cambro-83698-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 457.38
+    },
+    {
+      "cafemarkt_id": "14046",
+      "name": "Cambro Camwear Ölçü Kabı, Polikarbon, 1 L",
+      "code": "105.100MCCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-1-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-1-l-olcek-kaplari-cambro-24706-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-1-l-olcek-kaplari-cambro-24706-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1409.41
+    },
+    {
+      "cafemarkt_id": "14062",
+      "name": "Cambro Camtread Servis Tepsisi, Kaymaz, 35.5 cm",
+      "code": "105.1400CT110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-35",
+      "image": "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-35-servis-tepsileri-cambro-24656-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-35-servis-tepsileri-cambro-24656-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 907.05
+    },
+    {
+      "cafemarkt_id": "14120",
+      "name": "Cambro Termobox, Üstten Yüklemeli, 22.3 L",
+      "code": "105.EPP280",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-ustten-yuklemeli-22",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-22-termobox-cambro-24713-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-22-termobox-cambro-24713-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2527.45
+    },
+    {
+      "cafemarkt_id": "14071",
+      "name": "Cambro Camtread Servis Tepsisi, Kaymaz, 45x65 cm",
+      "code": "105.1826CT110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-45x65-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-45x65-cm-servis-tepsileri-cambro-24658-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-45x65-cm-servis-tepsileri-cambro-24658-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1991.53
+    },
+    {
+      "cafemarkt_id": "14048",
+      "name": "Cambro GN 1/1 Mühürlü Hava Aldırmaz Polipropilen Gastronorm Küvet Kapak",
+      "code": "105.10PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-11-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-11-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-83700-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-11-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-83700-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 620
+    },
+    {
+      "cafemarkt_id": "14084",
+      "name": "Cambro GN 1/3 Kulplu Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.30CWCH135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-13-kulplu",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-13-kulplu-gastronorm-kuvet-kapaklari-cambro-83699-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-13-kulplu-gastronorm-kuvet-kapaklari-cambro-83699-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 338.8
+    },
+    {
+      "cafemarkt_id": "14098",
+      "name": "Cambro GN 1/6 Mühürlü Hava Aldırmaz Polipropilen Gastronorm Küvet Kapak",
+      "code": "105.60PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-16-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-16-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-83701-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-16-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-83701-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 128.74
+    },
+    {
+      "cafemarkt_id": "14085",
+      "name": "Cambro GN 1/3 Mühürlü Hava Aldırmaz Polipropilen Gastronorm Küvet Kapak",
+      "code": "105.30PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-13-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-13-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24676-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-13-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24676-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 223.61
+    },
+    {
+      "cafemarkt_id": "14128",
+      "name": "Cambro Termobox, Üstten Yüklemeli, 80 L",
+      "code": "105.EPP4060T300",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-ustten-yuklemeli-80-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-80-l-termobox-cambro-24721-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-80-l-termobox-cambro-24721-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4536.53
+    },
+    {
+      "cafemarkt_id": "14119",
+      "name": "Cambro Termobox, Üstten Yüklemeli, 46 L",
+      "code": "105.EPP180",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-ustten-yuklemeli-46-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-46-l-termobox-cambro-24714-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-46-l-termobox-cambro-24714-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3486.25
+    },
+    {
+      "cafemarkt_id": "14082",
+      "name": "Cambro Camtread Kaymaz Oval Servis Tepsisi, 73.5x60 cm",
+      "code": "105.2900CT110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-oval-735x60-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-oval-735x60-cm-servis-tepsileri-cambro-24659-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-oval-735x60-cm-servis-tepsileri-cambro-24659-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 8057.47
+    },
+    {
+      "cafemarkt_id": "14074",
+      "name": "Cambro Camwear Ölçü Kabı, Polikarbon, 2 L",
+      "code": "105.200MCCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-2-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-2-l-olcek-kaplari-cambro-24707-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camwear-olcu-kabi-polikarbon-2-l-olcek-kaplari-cambro-24707-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1941.32
+    },
+    {
+      "cafemarkt_id": "14064",
+      "name": "Cambro Camtread Kaymaz Servis Tepsisi, 40.5 cm",
+      "code": "105.1600CT110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-40",
+      "image": "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-40-servis-tepsileri-cambro-24657-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camtread-servis-tepsisi-kaymaz-40-servis-tepsileri-cambro-24657-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1052.68
+    },
+    {
+      "cafemarkt_id": "14117",
+      "name": "Cambro Pizza Hamur Kutusu, Poliproplen",
+      "code": "105.DB18263P",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-pizza-hamur-kutusu-poliproplen",
+      "image": "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-poliproplen-pizza-hamur-tekneleri-cambro-24752-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-poliproplen-pizza-hamur-tekneleri-cambro-24752-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-poliproplen-pizza-hamur-tekneleri-cambro-24764-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-poliproplen-pizza-hamur-tekneleri-cambro-24765-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2744.28
+    },
+    {
+      "cafemarkt_id": "14102",
+      "name": "Cambro Camsquare Saklama Kabı, 5.7 L",
+      "code": "105.6SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-5",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-5-saklama-kaplari-cambro-24698-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-5-saklama-kaplari-cambro-24698-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1419.57
+    },
+    {
+      "cafemarkt_id": "14145",
+      "name": "Cambro Thermobox, Elektrik Isıtmalı, 6 Küvet",
+      "code": "105.UPCH4002401",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-thermobox-elektrik-isitmali-6-kuvet",
+      "image": "https://witcdn.cafemarkt.com/cambro-thermobox-elektrik-isitmali-6-kuvet-termobox-cambro-24750-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-thermobox-elektrik-isitmali-6-kuvet-termobox-cambro-24750-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-thermobox-elektrik-isitmali-6-kuvet-termobox-cambro-24761-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 123916.1
+    },
+    {
+      "cafemarkt_id": "14143",
+      "name": "Cambro Thermobox, 6 Küvet",
+      "code": "105.UPC400401",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-thermobox-6-kuvet",
+      "image": "https://witcdn.cafemarkt.com/cambro-thermobox-6-kuvet-termobox-cambro-24749-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-thermobox-6-kuvet-termobox-cambro-24749-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-thermobox-6-kuvet-termobox-cambro-24760-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 41069.34
+    },
+    {
+      "cafemarkt_id": "14133",
+      "name": "Cambro Buz Taşıma Arabası, Sürgülü, 57 kg",
+      "code": "105.ICS125L401",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-buz-tasima-arabasi-surgulu-57-kg",
+      "image": "https://witcdn.cafemarkt.com/cambro-buz-tasima-arabasi-surgulu-57-kg-izolasyonlu-buz-konteyner-cambro-24748-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-buz-tasima-arabasi-surgulu-57-kg-izolasyonlu-buz-konteyner-cambro-24748-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-buz-tasima-arabasi-surgulu-57-kg-izolasyonlu-buz-konteyner-cambro-24757-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-buz-tasima-arabasi-surgulu-57-kg-izolasyonlu-buz-konteyner-cambro-24758-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 80313.56
+    },
+    {
+      "cafemarkt_id": "14132",
+      "name": "Cambro Kuru Gıda Arabası, Tekerlekli",
+      "code": "105.IBS27",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-kuru-gida-arabasi-tekerlekli",
+      "image": "https://witcdn.cafemarkt.com/cambro-kuru-gida-arabasi-tekerlekli-un-seker-arabalari-cambro-24695-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-kuru-gida-arabasi-tekerlekli-un-seker-arabalari-cambro-24695-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 26969.97
+    },
+    {
+      "cafemarkt_id": "14051",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kırmızı",
+      "code": "105.1216FF163",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kirmizi",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kirmizi-servis-tepsileri-cambro-24745-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kirmizi-servis-tepsileri-cambro-24745-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kirmizi-servis-tepsileri-cambro-24755-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 369.29
+    },
+    {
+      "cafemarkt_id": "14144",
+      "name": "Cambro Thermobox, Mobil Tekerlekli, 12 Küvet",
+      "code": "105.UPC800401",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-12-kuvet",
+      "image": "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-12-kuvet-termobox-cambro-24751-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-12-kuvet-termobox-cambro-24751-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-12-kuvet-termobox-cambro-24762-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-12-kuvet-termobox-cambro-24763-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 138908
+    },
+    {
+      "cafemarkt_id": "14110",
+      "name": "Cambro S-Serisi Tabak Taşıma Arabası, Ayarlanabilir",
+      "code": "105.ADCS",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-s-serisi-tabak-tasima-arabasi-ayarlanabilir",
+      "image": "https://witcdn.cafemarkt.com/cambro-s-serisi-tabak-tasima-arabasi-ayarlanabilir-tabak-tasima-arabalari-cambro-24694-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-s-serisi-tabak-tasima-arabasi-ayarlanabilir-tabak-tasima-arabalari-cambro-24694-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 106554.04
+    },
+    {
+      "cafemarkt_id": "14127",
+      "name": "Cambro Termobox, Üstten Yüklemeli, 53 L",
+      "code": "105.EPP4060T200",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-ustten-yuklemeli-53-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-53-l-termobox-cambro-24720-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-ustten-yuklemeli-53-l-termobox-cambro-24720-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4011.39
+    },
+    {
+      "cafemarkt_id": "14141",
+      "name": "Cambro Camsquare Gıda Saklama Kabı Kapağı, Orta Boy",
+      "code": "105.SFC6",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-orta-boy",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-orta-boy-saklama-kaplari-cambro-24705-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-orta-boy-saklama-kaplari-cambro-24705-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 379.46
+    },
+    {
+      "cafemarkt_id": "14573",
+      "name": "Cambro KD Servis Arabası Çöp Kovası",
+      "code": "105.BC331KDTC",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-kd-servis-arabasi-cop-kovasi",
+      "image": "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cop-kovasi-servis-arabalari-cambro-25432-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-cop-kovasi-servis-arabalari-cambro-25432-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4878.72
+    },
+    {
+      "cafemarkt_id": "14137",
+      "name": "Cambro Camwear Sürahi, 1.9 L",
+      "code": "105.PC64CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camwear-surahi-1",
+      "image": "https://witcdn.cafemarkt.com/cambro-camwear-surahi-1-kirilmaz-surahiler-cambro-24733-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camwear-surahi-1-kirilmaz-surahiler-cambro-24733-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1555.09
+    },
+    {
+      "cafemarkt_id": "14140",
+      "name": "Cambro Camsquare Küçük Boy Gıda Saklama Kabı Kapağı",
+      "code": "105.SFC2",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-kucuk-boy",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-kucuk-boy-saklama-kaplari-cambro-24704-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-kucuk-boy-saklama-kaplari-cambro-24704-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 301.53
+    },
+    {
+      "cafemarkt_id": "14054",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kızılcık",
+      "code": "105.1216FF416",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kizilcik",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kizilcik-servis-tepsileri-cambro-24746-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kizilcik-servis-tepsileri-cambro-24746-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kizilcik-servis-tepsileri-cambro-24756-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 369.29
+    },
+    {
+      "cafemarkt_id": "14049",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Siyah",
+      "code": "105.1216FF110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-siyah-servis-tepsileri-cambro-24642-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-siyah-servis-tepsileri-cambro-24642-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 369.29
+    },
+    {
+      "cafemarkt_id": "14125",
+      "name": "Cambro Termobox, Önden Yüklemeli, 155 L",
+      "code": "105.EPP4060FADJR",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l-termobox-cambro-29762-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l-termobox-cambro-29762-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 30153.2
+    },
+    {
+      "cafemarkt_id": "14131",
+      "name": "Cambro Huntington Bardak, Polikarbonat, Kırılmaz, 355 ml",
+      "code": "105.HT12CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-huntington-bardak-polikarbonat-kirilmaz-355-ml",
+      "image": "https://witcdn.cafemarkt.com/cambro-huntington-bardak-polikarbonat-kirilmaz-355-ml-kirilmaz-su-ve-mesrubat-bardaklari-cambro-24731-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-huntington-bardak-polikarbonat-kirilmaz-355-ml-kirilmaz-su-ve-mesrubat-bardaklari-cambro-24731-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 304.92
+    },
+    {
+      "cafemarkt_id": "14057",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kulplu, Mavi",
+      "code": "105.1217FFH186",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-mavi",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-mavi-servis-tepsileri-cambro-24647-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-mavi-servis-tepsileri-cambro-24647-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 447.22
+    },
+    {
+      "cafemarkt_id": "14139",
+      "name": "Cambro Camsquare Gıda Saklama Kabı Kapağı, Büyük Boy",
+      "code": "105.SFC12",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-buyuk-boy",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-buyuk-boy-saklama-kaplari-cambro-24703-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-gida-saklama-kabi-kapagi-buyuk-boy-saklama-kaplari-cambro-24703-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 552.24
+    },
+    {
+      "cafemarkt_id": "14122",
+      "name": "Cambro Termobox, Önden Yüklemeli, 86 L",
+      "code": "105.EPP400",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-86-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-86-l-termobox-cambro-24716-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-86-l-termobox-cambro-24716-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-86-l-termobox-cambro-28044-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-86-l-termobox-cambro-28045-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 19108.32
+    },
+    {
+      "cafemarkt_id": "14142",
+      "name": "Cambro Thermobox, Mobil Tekerlekli, 24 Küvet",
+      "code": "105.UPC1600401",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-24-kuvet",
+      "image": "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-24-kuvet-termobox-cambro-24693-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-thermobox-mobil-tekerlekli-24-kuvet-termobox-cambro-24693-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 210056
+    },
+    {
+      "cafemarkt_id": "14575",
+      "name": "Cambro KD Servis Arabası Panel Seti",
+      "code": "105.BC340KDP",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-kd-servis-arabasi-panel-seti",
+      "image": "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-panel-seti-cambro-yedek-parcalari-ve-aksesuarlari-cambro-25434-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-panel-seti-cambro-yedek-parcalari-ve-aksesuarlari-cambro-25434-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-panel-seti-cambro-yedek-parcalari-ve-aksesuarlari-cambro-25437-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3388
+    },
+    {
+      "cafemarkt_id": "14073",
+      "name": "Cambro Camsquare Saklama Kabı, 17.2 L",
+      "code": "105.18SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-17",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-17-saklama-kaplari-cambro-24701-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-17-saklama-kaplari-cambro-24701-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 3347.34
+    },
+    {
+      "cafemarkt_id": "14115",
+      "name": "Cambro Camdolly Termobox Taşıma Arabası, 60x40 cm",
+      "code": "105.CD4060EPP",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camdolly-termobox-tasima-arabasi-60x40-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-camdolly-termobox-tasima-arabasi-60x40-cm-termobox-cambro-24726-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camdolly-termobox-tasima-arabasi-60x40-cm-termobox-cambro-24726-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9621.92
+    },
+    {
+      "cafemarkt_id": "14095",
+      "name": "Cambro Camsquare Saklama Kabı, 3.8 L",
+      "code": "105.4SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-3",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-3-saklama-kaplari-cambro-24697-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-3-saklama-kaplari-cambro-24697-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1084.16
+    },
+    {
+      "cafemarkt_id": "14135",
+      "name": "Cambro Newport SAN Bardak, 275 ml",
+      "code": "105.NT9",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-newport-san-bardak-275-ml",
+      "image": "https://witcdn.cafemarkt.com/cambro-newport-san-bardak-275-ml-kirilmaz-su-ve-mesrubat-bardaklari-cambro-24732-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-newport-san-bardak-275-ml-kirilmaz-su-ve-mesrubat-bardaklari-cambro-24732-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 186.34
+    },
+    {
+      "cafemarkt_id": "14053",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Mavi",
+      "code": "105.1216FF168",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-mavi",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-mavi-servis-tepsileri-cambro-24644-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-mavi-servis-tepsileri-cambro-24644-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 369.29
+    },
+    {
+      "cafemarkt_id": "14126",
+      "name": "Cambro Termobox, Önden Yüklemeli, 155 L, Raysız",
+      "code": "105.EPP4060FNR",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l-raysiz",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l-raysiz-termobox-cambro-24724-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-155-l-raysiz-termobox-cambro-24724-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 19582.64
+    },
+    {
+      "cafemarkt_id": "14069",
+      "name": "Cambro Gıda Kutusu, Polikarbon, 49.2 L",
+      "code": "105.18269CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gida-kutusu-polikarbon-49",
+      "image": "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-49-saklama-kaplari-cambro-24709-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-49-saklama-kaplari-cambro-24709-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6111.95
+    },
+    {
+      "cafemarkt_id": "14050",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Yeşil",
+      "code": "105.1216FF119",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-yesil",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-yesil-servis-tepsileri-cambro-24744-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-yesil-servis-tepsileri-cambro-24744-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-yesil-servis-tepsileri-cambro-24754-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 369.29
+    },
+    {
+      "cafemarkt_id": "14124",
+      "name": "Cambro Termobox, Önden Yüklemeli, 126 L, 9 Raylı",
+      "code": "105.EPP4060F9R",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-9-rayli",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-9-rayli-termobox-cambro-24723-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-9-rayli-termobox-cambro-24723-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 21344.4
+    },
+    {
+      "cafemarkt_id": "14067",
+      "name": "Cambro Gıda Kutusu, Polikarbon, 83.3 L",
+      "code": "105.182615CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gida-kutusu-polikarbon-83",
+      "image": "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-83-saklama-kaplari-cambro-24711-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-83-saklama-kaplari-cambro-24711-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 9171.32
+    },
+    {
+      "cafemarkt_id": "14118",
+      "name": "Cambro Pizza Hamur Kutusu Kapağı, Poliproplen",
+      "code": "105.DBC1826P",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-pizza-hamur-kutusu-kapagi-poliproplen",
+      "image": "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-kapagi-poliproplen-pizza-hamur-tekneleri-cambro-24753-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-kapagi-poliproplen-pizza-hamur-tekneleri-cambro-24753-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-kapagi-poliproplen-pizza-hamur-tekneleri-cambro-24767-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-pizza-hamur-kutusu-kapagi-poliproplen-pizza-hamur-tekneleri-cambro-24768-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2022.64
+    },
+    {
+      "cafemarkt_id": "14123",
+      "name": "Cambro Termobox, Önden Yüklemeli, 126 L, 6 Raylı",
+      "code": "105.EPP4060F6R",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-6-rayli",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-6-rayli-termobox-cambro-24722-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-126-l-6-rayli-termobox-cambro-24722-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 21005.6
+    },
+    {
+      "cafemarkt_id": "14121",
+      "name": "Cambro Termobox, Önden Yüklemeli, 60 L",
+      "code": "105.EPP300",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-termobox-onden-yuklemeli-60-l",
+      "image": "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-60-l-termobox-cambro-24715-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-termobox-onden-yuklemeli-60-l-termobox-cambro-24715-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16059.12
+    },
+    {
+      "cafemarkt_id": "14130",
+      "name": "Cambro Camchiller Isıtıcı Plaka",
+      "code": "105.HP3253",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camchiller-isitici-plaka",
+      "image": "https://witcdn.cafemarkt.com/cambro-camchiller-isitici-plaka-termobox-cambro-24718-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camchiller-isitici-plaka-termobox-cambro-24718-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5227.68
+    },
+    {
+      "cafemarkt_id": "14572",
+      "name": "Cambro KD Servis Arabası Çatal Bıçaklık",
+      "code": "105.BC331KDSH",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-kd-servis-arabasi-catal-bicaklik",
+      "image": "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-catal-bicaklik-servis-arabalari-cambro-25431-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-kd-servis-arabasi-catal-bicaklik-servis-arabalari-cambro-25431-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2236.08
+    },
+    {
+      "cafemarkt_id": "14060",
+      "name": "Cambro Camsquare Saklama Kabı, 11.4 L",
+      "code": "105.12SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-11",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-11-saklama-kaplari-cambro-24700-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-11-saklama-kaplari-cambro-24700-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2317.39
+    },
+    {
+      "cafemarkt_id": "14058",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kulplu, Kızılcık",
+      "code": "105.1217FFH416",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kizilcik",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kizilcik-servis-tepsileri-cambro-24747-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kizilcik-servis-tepsileri-cambro-24747-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 447.22
+    },
+    {
+      "cafemarkt_id": "14116",
+      "name": "Cambro Camchiller Soğutucu Plaka",
+      "code": "105.CP3253",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camchiller-sogutucu-plaka",
+      "image": "https://witcdn.cafemarkt.com/cambro-camchiller-sogutucu-plaka-termobox-cambro-24717-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camchiller-sogutucu-plaka-termobox-cambro-24717-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 5227.68
+    },
+    {
+      "cafemarkt_id": "14571",
+      "name": "Cambro Cambox Bulaşık Taşıma Kutusu, 4 Bölmeli, Polietilen",
+      "code": "105.1120CBP",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-cambox-bulasik-tasima-kutusu-4-bolmeli-polietilen",
+      "image": "https://witcdn.cafemarkt.com/cambro-cambox-bulasik-tasima-kutusu-4-bolmeli-polietilen-servis-arabalari-cambro-25430-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-cambox-bulasik-tasima-kutusu-4-bolmeli-polietilen-servis-arabalari-cambro-25430-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1981.98
+    },
+    {
+      "cafemarkt_id": "14083",
+      "name": "Cambro Camsquare Saklama Kabı, 1.9 L",
+      "code": "105.2SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-1",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-1-saklama-kaplari-cambro-24696-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-1-saklama-kaplari-cambro-24696-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 708.09
+    },
+    {
+      "cafemarkt_id": "14078",
+      "name": "Cambro Camsquare Saklama Kabı, 20.8 L",
+      "code": "105.22SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-20",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-20-saklama-kaplari-cambro-24702-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-20-saklama-kaplari-cambro-24702-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4187.57
+    },
+    {
+      "cafemarkt_id": "14056",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kulplu, Kahverengi",
+      "code": "105.1217FFH167",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kahverengi",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kahverengi-servis-tepsileri-cambro-24646-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-kahverengi-servis-tepsileri-cambro-24646-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 447.22
+    },
+    {
+      "cafemarkt_id": "14099",
+      "name": "Cambro GN 1/6-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.62CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-6-polikarbon-gastronorm-kuvetler-cambro-24683-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-6-polikarbon-gastronorm-kuvetler-cambro-24683-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 247.32
+    },
+    {
+      "cafemarkt_id": "14068",
+      "name": "Cambro Gıda Kutusu, Polikarbon, 33.1 L",
+      "code": "105.18266CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gida-kutusu-polikarbon-33",
+      "image": "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-33-saklama-kaplari-cambro-24708-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-33-saklama-kaplari-cambro-24708-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4600.9
+    },
+    {
+      "cafemarkt_id": "14104",
+      "name": "Cambro Camsquare Saklama Kabı, 7.6 L",
+      "code": "105.8SFSCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camsquare-saklama-kabi-7",
+      "image": "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-7-saklama-kaplari-cambro-24699-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camsquare-saklama-kabi-7-saklama-kaplari-cambro-24699-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1660.12
+    },
+    {
+      "cafemarkt_id": "14114",
+      "name": "Cambro Camdolly Taşıyıcı Araba, GN Modeller İçin",
+      "code": "105.CD3253EPP",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camdolly-tasiyici-araba-gn-modeller-icin",
+      "image": "https://witcdn.cafemarkt.com/cambro-camdolly-tasiyici-araba-gn-modeller-icin-basket-tasima-arabalari-cambro-24719-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camdolly-tasiyici-araba-gn-modeller-icin-basket-tasima-arabalari-cambro-24719-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 6979.28
+    },
+    {
+      "cafemarkt_id": "14134",
+      "name": "Cambro Camwear Kepçe, 26.8 cm",
+      "code": "105.LD105",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camwear-kepce-26",
+      "image": "https://witcdn.cafemarkt.com/cambro-camwear-kepce-26-kepceler-cambro-24737-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camwear-kepce-26-kepceler-cambro-24737-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 372.68
+    },
+    {
+      "cafemarkt_id": "14061",
+      "name": "Cambro Lugano Maşa, 30.5 cm",
+      "code": "105.12TGS",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-lugano-masa-30",
+      "image": "https://witcdn.cafemarkt.com/cambro-lugano-masa-30-masalar-cambro-24736-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-lugano-masa-30-masalar-cambro-24736-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 664.05
+    },
+    {
+      "cafemarkt_id": "14070",
+      "name": "Cambro Gıda Kutusu İçin Kapak, Polikarbon",
+      "code": "105.1826CCW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gida-kutusu-icin-kapak-polikarbon",
+      "image": "https://witcdn.cafemarkt.com/cambro-gida-kutusu-icin-kapak-polikarbon-saklama-kaplari-cambro-24712-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gida-kutusu-icin-kapak-polikarbon-saklama-kaplari-cambro-24712-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 2425.81
+    },
+    {
+      "cafemarkt_id": "14103",
+      "name": "Cambro Lugano Maşa, 15 cm",
+      "code": "105.6TGS",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-lugano-masa-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-lugano-masa-15-cm-masalar-cambro-85499-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-lugano-masa-15-cm-masalar-cambro-85499-14-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-lugano-masa-15-cm-masalar-cambro-85498-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 291.37
+    },
+    {
+      "cafemarkt_id": "14066",
+      "name": "Cambro Gıda Kutusu, Polikarbon, 64.4 L",
+      "code": "105.182612CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gida-kutusu-polikarbon-64",
+      "image": "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-64-saklama-kaplari-cambro-24710-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gida-kutusu-polikarbon-64-saklama-kaplari-cambro-24710-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 7609.45
+    },
+    {
+      "cafemarkt_id": "14092",
+      "name": "Cambro GN 1/4-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.42CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-6-polikarbon-gastronorm-kuvetler-cambro-24678-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-6-polikarbon-gastronorm-kuvetler-cambro-24678-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 379.46
+    },
+    {
+      "cafemarkt_id": "14087",
+      "name": "Cambro GN 1/3-100 mm Polikarbon Gastronorm Küvet",
+      "code": "105.34CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-10-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-10-cm-polikarbon-gastronorm-kuvetler-cambro-24673-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-10-cm-polikarbon-gastronorm-kuvetler-cambro-24673-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 565.8
+    },
+    {
+      "cafemarkt_id": "14108",
+      "name": "Cambro GN 1/9-105 mm Polikarbon Gastronorm Küvet",
+      "code": "105.94CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-10",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-10-polikarbon-gastronorm-kuvetler-cambro-24689-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-10-polikarbon-gastronorm-kuvetler-cambro-24689-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 332.02
+    },
+    {
+      "cafemarkt_id": "14047",
+      "name": "Cambro GN 1/1 Kulplu Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.10CWCH135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-11-kulplu",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-11-kulplu-gastronorm-kuvet-kapaklari-cambro-83702-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-11-kulplu-gastronorm-kuvet-kapaklari-cambro-83702-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 958.8
+    },
+    {
+      "cafemarkt_id": "14081",
+      "name": "Cambro GN 1/2-200 mm Polikarbon Gastronorm Küvet",
+      "code": "105.28CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-20-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-20-cm-polikarbon-gastronorm-kuvetler-cambro-24669-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-20-cm-polikarbon-gastronorm-kuvetler-cambro-24669-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1057.06
+    },
+    {
+      "cafemarkt_id": "14086",
+      "name": "Cambro GN 1/3-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.32CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-6-polikarbon-gastronorm-kuvetler-cambro-24672-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-6-polikarbon-gastronorm-kuvetler-cambro-24672-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 477.71
+    },
+    {
+      "cafemarkt_id": "14100",
+      "name": "Cambro GN 1/6-100 mm Polikarbon Gastronorm Küvet",
+      "code": "105.64CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-10-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-10-cm-polikarbon-gastronorm-kuvetler-cambro-24684-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-10-cm-polikarbon-gastronorm-kuvetler-cambro-24684-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 338.8
+    },
+    {
+      "cafemarkt_id": "14079",
+      "name": "Cambro GN 1/2-100 mm Polikarbon Gastronorm Küvet",
+      "code": "105.24CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-10-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-10-cm-polikarbon-gastronorm-kuvetler-cambro-24667-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-10-cm-polikarbon-gastronorm-kuvetler-cambro-24667-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 704.7
+    },
+    {
+      "cafemarkt_id": "14107",
+      "name": "Cambro GN 1/9-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.92CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-6-polikarbon-gastronorm-kuvetler-cambro-24688-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-19-6-polikarbon-gastronorm-kuvetler-cambro-24688-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 311.7
+    },
+    {
+      "cafemarkt_id": "14059",
+      "name": "Cambro GN 1/1-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.12CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-6-polikarbon-gastronorm-kuvetler-cambro-24660-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-6-polikarbon-gastronorm-kuvetler-cambro-24660-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 968.97
+    },
+    {
+      "cafemarkt_id": "14097",
+      "name": "Cambro GN 1/6 Kulplu Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.60CWCH135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-16-kulplu",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-16-kulplu-gastronorm-kuvet-kapaklari-cambro-83703-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-16-kulplu-gastronorm-kuvet-kapaklari-cambro-83703-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 267.65
+    },
+    {
+      "cafemarkt_id": "44829",
+      "name": "Cambro 41076 BC340KD Servis Arabası Tekerlek",
+      "code": "105.41076",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-41076-bc340kd-servis-arabasi-tekerlek",
+      "image": "https://witcdn.cafemarkt.com/cambro-41076-bc340kd-servis-arabasi-tekerlek-cambro-yedek-parcalari-ve-aksesuarlari-cambro-89899-44-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-41076-bc340kd-servis-arabasi-tekerlek-cambro-yedek-parcalari-ve-aksesuarlari-cambro-89899-44-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-41076-bc340kd-servis-arabasi-tekerlek-cambro-yedek-parcalari-ve-aksesuarlari-cambro-89900-44-O.jpg",
+        "https://witcdn.cafemarkt.com/cambro-41076-bc340kd-servis-arabasi-tekerlek-cambro-yedek-parcalari-ve-aksesuarlari-cambro-89901-44-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1250
+    },
+    {
+      "cafemarkt_id": "43397",
+      "name": "Cambro 3753 PP110 Polipropilen Tepsi, 37x53 cm, Siyah",
+      "code": "105.3753PP110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-3753-pp110-polipropilen-tepsi-37x53-cm-siyah",
+      "image": "https://witcdn.cafemarkt.com/cambro-3753-pp110-polipropilen-tepsi-37x53-cm-siyah-servis-tepsileri-cambro-84902-43-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-3753-pp110-polipropilen-tepsi-37x53-cm-siyah-servis-tepsileri-cambro-84902-43-O.jpg"
+      ],
+      "price_try_kdv_dahil": 494.65
+    },
+    {
+      "cafemarkt_id": "39675",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kulplu, Yeşil",
+      "code": "105.1217FFH119",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-yesil",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-yesil-servis-tepsileri-cambro-75901-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-yesil-servis-tepsileri-cambro-75901-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 447.22
+    },
+    {
+      "cafemarkt_id": "39609",
+      "name": "Cambro Camwear Kepçe, 26.8 cm, Beyaz",
+      "code": "105.LD105.148",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camwear-kepce-268-cm-beyaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-camwear-kepce-268-cm-beyaz-kepceler-cambro-75683-39-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camwear-kepce-268-cm-beyaz-kepceler-cambro-75683-39-O.jpg"
+      ],
+      "price_try_kdv_dahil": 373.12
+    },
+    {
+      "cafemarkt_id": "14101",
+      "name": "Cambro GN 1/6-150 mm Polikarbon Gastronorm Küvet",
+      "code": "105.66CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-15-cm-polikarbon-gastronorm-kuvetler-cambro-24685-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-16-15-cm-polikarbon-gastronorm-kuvetler-cambro-24685-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 467.54
+    },
+    {
+      "cafemarkt_id": "14093",
+      "name": "Cambro GN 1/4-100 mm Polikarbon Gastronorm Küvet",
+      "code": "105.44CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-10-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-10-cm-polikarbon-gastronorm-kuvetler-cambro-24679-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-10-cm-polikarbon-gastronorm-kuvetler-cambro-24679-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 423.5
+    },
+    {
+      "cafemarkt_id": "14091",
+      "name": "Cambro GN 1/4 Mühürlü Hava Aldırmaz Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.40PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-14-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-14-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24681-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-14-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24681-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 189.73
+    },
+    {
+      "cafemarkt_id": "14090",
+      "name": "Cambro GN 1/4 Kulplu Polikarbon Gastronorm Kapak",
+      "code": "105.40CWCH135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-14-kulplu",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-14-kulplu-gastronorm-kuvet-kapaklari-cambro-24682-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-14-kulplu-gastronorm-kuvet-kapaklari-cambro-24682-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 315.08
+    },
+    {
+      "cafemarkt_id": "14088",
+      "name": "Cambro GN 1/3-150 mm Polikarbon Gastronorm Küvet",
+      "code": "105.36CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-15-cm-polikarbon-gastronorm-kuvetler-cambro-24674-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-15-cm-polikarbon-gastronorm-kuvetler-cambro-24674-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 728.42
+    },
+    {
+      "cafemarkt_id": "14080",
+      "name": "Cambro GN 1/2-150 mm Polikarbon Gastronorm Küvet",
+      "code": "105.26CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-15-cm-polikarbon-gastronorm-kuvetler-cambro-24668-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-15-cm-polikarbon-gastronorm-kuvetler-cambro-24668-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 924.92
+    },
+    {
+      "cafemarkt_id": "14072",
+      "name": "Cambro GN 1/1-200 mm Polikarbon Gastronorm Küvet",
+      "code": "105.18CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-20-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-20-cm-polikarbon-gastronorm-kuvetler-cambro-24663-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-20-cm-polikarbon-gastronorm-kuvetler-cambro-24663-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1995.53
+    },
+    {
+      "cafemarkt_id": "14065",
+      "name": "Cambro GN 1/1-150 mm Polikarbon Gastronorm Küvet",
+      "code": "105.16CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-15-cm-polikarbon-gastronorm-kuvetler-cambro-24662-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-15-cm-polikarbon-gastronorm-kuvetler-cambro-24662-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1721.1
+    },
+    {
+      "cafemarkt_id": "14063",
+      "name": "Cambro GN 1/1-100 mm Polikarbon Gastronorm Küvet",
+      "code": "105.14CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-10-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-10-cm-polikarbon-gastronorm-kuvetler-cambro-24661-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-11-10-cm-polikarbon-gastronorm-kuvetler-cambro-24661-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1290.83
+    },
+    {
+      "cafemarkt_id": "14106",
+      "name": "Cambro GN 1/9 Mühürlü Hava Aldırmaz Polipropilen Gastronorm Küvet Kapak",
+      "code": "105.90PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-19-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-19-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24690-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-19-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24690-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 121.97
+    },
+    {
+      "cafemarkt_id": "14076",
+      "name": "Cambro GN 1/2 Mühürlü Hava Aldırmaz Polipropilen Gastronorm Küvet Kapak",
+      "code": "105.20PPCWSC190",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-12-hava-aldirmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-12-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24670-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-muhurlu-kapak-polikarbon-gn-12-hava-aldirmaz-gastronorm-kuvet-kapaklari-cambro-24670-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 328.64
+    },
+    {
+      "cafemarkt_id": "14105",
+      "name": "Cambro GN 1/9 Polikarbon Gastronorm Küvet Kapak",
+      "code": "105.90CWC135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-19",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-19-gastronorm-kuvet-kapaklari-cambro-24691-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-kapak-polikarbon-gn-19-gastronorm-kuvet-kapaklari-cambro-24691-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 213.44
+    },
+    {
+      "cafemarkt_id": "14077",
+      "name": "Cambro GN 1/2-65 mm Polikarbon Gastronorm Küvet",
+      "code": "105.22CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-6",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-6-polikarbon-gastronorm-kuvetler-cambro-24666-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-12-6-polikarbon-gastronorm-kuvetler-cambro-24666-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 620
+    },
+    {
+      "cafemarkt_id": "14094",
+      "name": "Cambro GN 1/4-150 mm Polikarbon Gastronorm Küvet",
+      "code": "105.46CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-15-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-15-cm-polikarbon-gastronorm-kuvetler-cambro-24680-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-14-15-cm-polikarbon-gastronorm-kuvetler-cambro-24680-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 552.24
+    },
+    {
+      "cafemarkt_id": "14089",
+      "name": "Cambro GN 1/3-200 mm Polikarbon Gastronorm Küvet",
+      "code": "105.38CW135",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-20-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-20-cm-polikarbon-gastronorm-kuvetler-cambro-24675-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-gastronom-kuvet-polikarbon-gn-13-20-cm-polikarbon-gastronorm-kuvetler-cambro-24675-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 860.55
+    },
+    {
+      "cafemarkt_id": "14136",
+      "name": "Cambro Polyform Ekonomik Catering Tepsi, 37x53 cm",
+      "code": "105.OZAY.3753PEKD",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-polyform-ekonomik-catering-tepsi-37x53-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-polyform-ekonomik-catering-tepsi-37x53-cm-servis-tepsileri-cambro-24648-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-polyform-ekonomik-catering-tepsi-37x53-cm-servis-tepsileri-cambro-24648-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 449.68
+    },
+    {
+      "cafemarkt_id": "14043",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, Kaymaz, 43x61 cm",
+      "code": "105.011KE76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-43x61-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-43x61-cm-servis-tepsileri-cambro-24651-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-43x61-cm-servis-tepsileri-cambro-24651-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1562
+    },
+    {
+      "cafemarkt_id": "14045",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, Kaymaz, 37x53 cm",
+      "code": "105.012KE76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-37x53-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-37x53-cm-servis-tepsileri-cambro-24653-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-37x53-cm-servis-tepsileri-cambro-24653-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1129.04
+    },
+    {
+      "cafemarkt_id": "14055",
+      "name": "Cambro Fast Food Tepsi, 30x41 cm, Kulplu, Siyah",
+      "code": "105.1217FFH110",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-siyah",
+      "image": "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-siyah-servis-tepsileri-cambro-24645-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-fast-food-tepsi-30x41-cm-kulplu-siyah-servis-tepsileri-cambro-24645-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 447.22
+    },
+    {
+      "cafemarkt_id": "14112",
+      "name": "Cambro Aliso Pilsner Kokteyl Bardak, Polikarbonat, Kırılmaz",
+      "code": "105.BWP14CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-aliso-pilsner-kokteyl-bardak-polikarbonat-kirilmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-aliso-pilsner-kokteyl-bardak-polikarbonat-kirilmaz-kirilmaz-kokteyl-bardaklari-cambro-24728-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-aliso-pilsner-kokteyl-bardak-polikarbonat-kirilmaz-kirilmaz-kokteyl-bardaklari-cambro-24728-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 778.25
+    },
+    {
+      "cafemarkt_id": "14138",
+      "name": "Cambro Woodofrm Kayın Tepsi, Kaymaz Yüzey, 75x122 cm",
+      "code": "105.PH556056",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-woodofrm-kayin-tepsi-kaymaz-yuzey-75x122-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-woodofrm-kayin-tepsi-kaymaz-yuzey-75x122-cm-servis-tepsileri-cambro-24649-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-woodofrm-kayin-tepsi-kaymaz-yuzey-75x122-cm-servis-tepsileri-cambro-24649-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 4871.94
+    },
+    {
+      "cafemarkt_id": "14129",
+      "name": "Cambro Aliso Kokteyl Bardak, Polikarbonat, Kırılmaz",
+      "code": "105.GB1200CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-aliso-kokteyl-bardak-polikarbonat-kirilmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-aliso-kokteyl-bardak-polikarbonat-kirilmaz-kirilmaz-kokteyl-bardaklari-cambro-24730-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-aliso-kokteyl-bardak-polikarbonat-kirilmaz-kirilmaz-kokteyl-bardaklari-cambro-24730-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 431.75
+    },
+    {
+      "cafemarkt_id": "14111",
+      "name": "Cambro Aliso Bira Bardak, Polikarbonat, Kırılmaz",
+      "code": "105.BWB16CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-aliso-bira-bardak-polikarbonat-kirilmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-aliso-bira-bardak-polikarbonat-kirilmaz-kirilmaz-bira-bardaklari-cambro-24727-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-aliso-bira-bardak-polikarbonat-kirilmaz-kirilmaz-bira-bardaklari-cambro-24727-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 662.75
+    },
+    {
+      "cafemarkt_id": "14113",
+      "name": "Cambro Aliso Şarap Bardak, Polikarbonat, Kırılmaz",
+      "code": "105.BWW10CW",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-aliso-sarap-bardak-polikarbonat-kirilmaz",
+      "image": "https://witcdn.cafemarkt.com/cambro-aliso-sarap-bardak-polikarbonat-kirilmaz-kirilmaz-sarap-kadehleri-cambro-24729-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-aliso-sarap-bardak-polikarbonat-kirilmaz-kirilmaz-sarap-kadehleri-cambro-24729-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 533.5
+    },
+    {
+      "cafemarkt_id": "14042",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, 43x61 cm",
+      "code": "105.011E76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-43x61-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-43x61-cm-servis-tepsileri-cambro-24650-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-43x61-cm-servis-tepsileri-cambro-24650-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1158.08
+    },
+    {
+      "cafemarkt_id": "14109",
+      "name": "Cambro Lugano Maşa, 23 cm",
+      "code": "105.9TGS",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-lugano-masa-23-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-lugano-masa-23-cm-masalar-cambro-24735-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-lugano-masa-23-cm-masalar-cambro-24735-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 437.05
+    },
+    {
+      "cafemarkt_id": "14096",
+      "name": "Cambro Camtainer Likit Termobox, 17.9 L",
+      "code": "105.500LCD157",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-camtainer-likit-termobox-17",
+      "image": "https://witcdn.cafemarkt.com/cambro-camtainer-likit-termobox-17-termobox-cambro-24692-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-camtainer-likit-termobox-17-termobox-cambro-24692-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 16638.47
+    },
+    {
+      "cafemarkt_id": "14041",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, Kaymaz, 32.5x53 cm",
+      "code": "105.007KE76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-325x53-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-325x53-cm-servis-tepsileri-cambro-24655-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-kaymaz-325x53-cm-servis-tepsileri-cambro-24655-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 1102.64
+    },
+    {
+      "cafemarkt_id": "14044",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, 37x53 cm",
+      "code": "105.012E76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-37x53-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-37x53-cm-servis-tepsileri-cambro-24652-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-37x53-cm-servis-tepsileri-cambro-24652-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 863.28
+    },
+    {
+      "cafemarkt_id": "14040",
+      "name": "Cambro Selform Ceviz Lamine Tepsi, Dikdörtgen, 32.5x53 cm",
+      "code": "105.007E76",
+      "brand": "Cambro",
+      "url": "https://www.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-325x53-cm",
+      "image": "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-325x53-cm-servis-tepsileri-cambro-24654-14-O.jpg",
+      "images": [
+        "https://witcdn.cafemarkt.com/cambro-selform-ceviz-lamine-tepsi-dikdortgen-325x53-cm-servis-tepsileri-cambro-24654-14-O.jpg"
+      ],
+      "price_try_kdv_dahil": 882.64
+    }
+  ]
+}

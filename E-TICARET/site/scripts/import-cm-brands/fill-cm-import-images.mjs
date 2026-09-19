@@ -5,6 +5,7 @@
  *   node scripts/import-cm-brands/fill-cm-import-images.mjs
  *   node scripts/import-cm-brands/fill-cm-import-images.mjs --dry-run --limit 20
  */
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import {
@@ -128,7 +129,10 @@ async function main() {
         skipped++;
         continue;
       }
-      const rel = `${DEST_SUB}/${fn}`.replace(/\\/g, "/");
+      // Short hash names (Windows/git path limits); stable from witcdn filename.
+      const ext = (path.extname(fn) || ".jpg").toLowerCase();
+      const shortFn = crypto.createHash("sha1").update(fn).digest("hex").slice(0, 16) + ext;
+      const rel = `${DEST_SUB}/${shortFn}`.replace(/\\/g, "/");
       const abs = path.join(ROOT, "public", rel);
 
       if (!dryRun) {
