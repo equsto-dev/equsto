@@ -15,13 +15,14 @@ body.eq-marka-hub #eq-filter-col{display:none!important;}
 
 export default function MarkaHubScripts() {
   const v = SHOP_ASSET_V;
+  const markaV = `${v}&m=20260919-cambro-hub`;
   return (
     <>
       <style id="eq-marka-hub-page-css">{MARKA_HUB_CSS}</style>
       <AssetCdnConfigScript />
       <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-marka-scripts-loader.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-site-urls.js?v=${markaV}`} strategy="beforeInteractive" />
+      <Script src={`/eq-marka-scripts-loader.js?v=${markaV}`} strategy="afterInteractive" />
     </>
   );
 }
