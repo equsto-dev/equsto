@@ -1325,9 +1325,14 @@
   }
   ensureRenderDrawer();
   try {
+    var chromeMoPend = 0;
     new MutationObserver(function () {
-      installEqBottomTabbar();
-      eqSyncMobileChrome();
+      if (chromeMoPend) return;
+      chromeMoPend = window.setTimeout(function () {
+        chromeMoPend = 0;
+        installEqBottomTabbar();
+        eqSyncMobileChrome();
+      }, 50);
     }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
   } catch (eMo) {}
   window.addEventListener("load", function () {

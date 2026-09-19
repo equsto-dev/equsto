@@ -5,12 +5,12 @@
 
 /* ── Temel: yatay taşma ve güvenli alan ─────────────────────────────────── */
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
   width: 100%;
 }
 
 body {
-  overflow-x: clip;
+  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
   min-width: 0;

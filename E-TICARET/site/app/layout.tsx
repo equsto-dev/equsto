@@ -74,7 +74,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <AnalyticsScripts />
         {/* eslint-disable-next-line @next/next/no-css-tags */}
-        <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-shell`} />
+        <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-paint`} />
         <GlobalSiteJsonLd />
         <SiteDiscoveryFaqJsonLd />
         <div id="eq-shop-chrome-root" />

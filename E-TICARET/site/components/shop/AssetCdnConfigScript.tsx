@@ -8,8 +8,8 @@ export default function AssetCdnConfigScript() {
   const v = SHOP_ASSET_V;
   return (
     <>
-      <Script src={`/eq-asset-cdn-config.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-brand-order.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-asset-cdn-config.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-brand-order.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }

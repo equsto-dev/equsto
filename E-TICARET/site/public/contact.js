@@ -1268,9 +1268,13 @@
     var slot = document.getElementById("eq-bnav-wa-slot");
     if (!slot) return false;
     removeFloatingFab();
-    slot.innerHTML = "";
-    slot.appendChild(createWaTabbarButton());
-    document.body.classList.add("eq-wa-in-tabbar");
+    if (!slot.querySelector(".equsto-contact-wa-fab--tabbar")) {
+      slot.innerHTML = "";
+      slot.appendChild(createWaTabbarButton());
+    }
+    if (document.body && !document.body.classList.contains("eq-wa-in-tabbar")) {
+      document.body.classList.add("eq-wa-in-tabbar");
+    }
     return true;
   }
 
@@ -1520,11 +1524,18 @@
     window.addEventListener("resize", syncFabPlacement, { passive: true });
     window.addEventListener("load", syncFabPlacement, { once: true });
     try {
-      new MutationObserver(syncFabCookieOffset).observe(document.body, {
-        childList: true,
-        subtree: true,
+      var fabCookiePend = 0;
+      new MutationObserver(function () {
+        if (fabCookiePend) return;
+        fabCookiePend = window.setTimeout(function () {
+          fabCookiePend = 0;
+          syncFabCookieOffset();
+        }, 80);
+      }).observe(document.body, {
+        childList: false,
+        subtree: false,
         attributes: true,
-        attributeFilter: ["class", "style"],
+        attributeFilter: ["class"],
       });
     } catch (_) {}
   }
