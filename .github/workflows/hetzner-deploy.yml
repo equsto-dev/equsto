@@ -19,6 +19,7 @@ jobs:
       HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -28,13 +29,19 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
             git fetch origin
             git reset --hard origin/main
+            if [ -n "${GOOGLE_CLIENT_SECRET:-}" ]; then
+              grep -v '^GOOGLE_CLIENT_SECRET=' .env.production | grep -v '^EQUSTO_GOOGLE_CLIENT_SECRET=' > .env.production.tmp
+              printf 'GOOGLE_CLIENT_SECRET=%s\n' "$GOOGLE_CLIENT_SECRET" >> .env.production.tmp
+              mv .env.production.tmp .env.production
+              cp -a .env.production /opt/equsto/.env.production.keep
+            fi
             bash scripts/hetzner-deploy.sh
 
       - name: Özet
