@@ -67,6 +67,8 @@ function findAppContainer() {
 }
 
 function recoverSecrets() {
+  const merged = {};
+  const sources = [];
   const saves = [
     path.join(siteDir, ".env.production.save"),
     "/opt/equsto/.env.production.keep.bak",
@@ -74,24 +76,26 @@ function recoverSecrets() {
   ];
   for (const file of saves) {
     const map = readMap(file);
-    ensureDirectUrl(map);
-    if (looksReal(map)) {
-      console.log(`[protect-hetzner-env] recovered from ${path.basename(file)}`);
-      return map;
+    if (Object.keys(map).length) {
+      Object.assign(merged, map);
+      sources.push(path.basename(file));
     }
   }
   const cid = findAppContainer();
-  if (!cid) return {};
-  const dump = spawnSync("docker", ["exec", cid, "printenv"], {
-    encoding: "utf8",
-    maxBuffer: 2 * 1024 * 1024,
-  });
-  if (dump.status !== 0) return {};
-  const map = parseEnv(dump.stdout || "");
-  ensureDirectUrl(map);
-  if (looksReal(map)) {
-    console.log("[protect-hetzner-env] recovered from running app container");
-    return map;
+  if (cid) {
+    const dump = spawnSync("docker", ["exec", cid, "printenv"], {
+      encoding: "utf8",
+      maxBuffer: 2 * 1024 * 1024,
+    });
+    if (dump.status === 0) {
+      Object.assign(merged, parseEnv(dump.stdout || ""));
+      sources.push("container");
+    }
+  }
+  ensureDirectUrl(merged);
+  if (looksReal(merged)) {
+    console.log(`[protect-hetzner-env] recovered from ${sources.join("+") || "none"}`);
+    return merged;
   }
   return {};
 }
@@ -160,12 +164,26 @@ if (!looksReal(site) && looksReal(keep)) {
 }
 
 const googleSecret = String(process.env.GOOGLE_CLIENT_SECRET || process.env.EQUSTO_GOOGLE_CLIENT_SECRET || "").trim();
-if (googleSecret.length >= 16) {
-  const googleOverlay = { GOOGLE_CLIENT_SECRET: googleSecret };
+const googleId = String(
+  process.env.EQUSTO_GOOGLE_CLIENT_ID ||
+    process.env.GOOGLE_CLIENT_ID ||
+    process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
+    "",
+).trim();
+const googleOverlay = {};
+if (googleSecret.length >= 16) googleOverlay.GOOGLE_CLIENT_SECRET = googleSecret;
+if (googleId.length >= 16) {
+  googleOverlay.GOOGLE_CLIENT_ID = googleId;
+  googleOverlay.NEXT_PUBLIC_GOOGLE_CLIENT_ID = googleId;
+  googleOverlay.EQUSTO_GOOGLE_CLIENT_ID = googleId;
+}
+if (Object.keys(googleOverlay).length) {
   writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", googleOverlay);
   fs.mkdirSync(path.dirname(keepPath), { recursive: true });
   writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", googleOverlay);
-  console.log("[protect-hetzner-env] GOOGLE_CLIENT_SECRET merged (len ok)");
+  console.log(
+    `[protect-hetzner-env] google oauth merged secret=${googleSecret.length >= 16 ? "ok" : "MISSING"} clientId=${googleId.length >= 16 ? "ok" : "MISSING"}`,
+  );
 }
 
 const final = readMap(envPath);
@@ -200,8 +218,9 @@ const bearerLen = String(final.EQUSTO_ADMIN_BEARER || "").length;
 
 const okMeili = String(final.MEILISEARCH_HOST || "").startsWith("http");
 const okGoogle = String(final.GOOGLE_CLIENT_SECRET || "").length >= 16;
+const okGoogleId = String(final.GOOGLE_CLIENT_ID || final.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "").length >= 16;
 console.log(
-  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"}`,
+  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"} GOOGLE_CLIENT_ID=${okGoogleId ? "ok" : "MISSING"}`,
 );
 
 if (!okDb || !okDirect) {
