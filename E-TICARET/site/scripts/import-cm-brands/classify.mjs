@@ -417,22 +417,25 @@ function classifyCambroGastro(hay, name, label) {
 
 /** Kapp: yalnızca küvet + chafing */
 function classifyKapp(hay, name, code) {
-  if (/chafing|küvet|kuvet|gn\s*[0-9¼½⅓]|gastronorm/i.test(hay)) {
-    return { verdict: "keep", reason: "Kapp küvet / chafing", group: "servis", name };
+  if (/chafing/i.test(hay)) {
+    return { verdict: "keep", reason: "Kapp chafing", group: "servis", name };
+  }
+  if (/küvet|kuvet|gn\s*[0-9¼½⅓]|gastronorm/i.test(hay)) {
+    return { verdict: "keep", reason: "Kapp küvet", group: "kuvet", name };
   }
   return { verdict: "drop", reason: "Kapp — küvet/chafing dışı", group: "diger" };
 }
 
 /** Bilge: yalnızca küvet */
 function classifyBilge(hay, name, code) {
-  if (/kapak|conta|izgara teli|[ıi]zgara teli|s[uü]zge[cç]/i.test(hay)) {
+  if (/kapak|conta|izgara teli|[ıi]zgara teli|s[uü]zge[cç]/i.test(hay) && !/küvet|kuvet|gn\s/i.test(hay)) {
     return { verdict: "drop", reason: "Bilge küvet aksesuarı", group: "aksesuar" };
   }
   if (/küvet|kuvet/i.test(hay) || (/gastronorm|gn\s*[0-9¼½⅓]/i.test(hay) && /mm|lt|l\b|hacim/i.test(hay))) {
-    return { verdict: "keep", reason: "Bilge küvet", group: "servis", name };
+    return { verdict: "keep", reason: "Bilge küvet", group: "kuvet", name };
   }
   if (/gn\s*[0-9¼½⅓].*\d+\s*mm/i.test(hay)) {
-    return { verdict: "keep", reason: "Bilge GN küvet", group: "servis", name };
+    return { verdict: "keep", reason: "Bilge GN küvet", group: "kuvet", name };
   }
   return { verdict: "drop", reason: "Bilge — küvet dışı", group: "diger" };
 }
