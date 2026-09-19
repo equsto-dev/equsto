@@ -615,6 +615,84 @@ html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
   flex-wrap: nowrap;
 }
 
+/* Üst bar: TR·EN, tema, turuncu sepet — çekmecede değil header’da */
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
+  max-width: min(132px, 30vw) !important;
+  flex: 0 0 auto !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 6px !important;
+  min-width: 0;
+  overflow: visible !important;
+  white-space: nowrap;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-locale-bar {
+  display: inline-flex !important;
+  visibility: visible !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  padding-right: 6px !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-locale-bar .theme-wrap {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-locale-bar .theme-toggle {
+  display: inline-flex !important;
+  visibility: visible !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+  display: flex !important;
+  visibility: visible !important;
+  flex-shrink: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart .eq-hdr-cart-badge {
+  display: inline-block !important;
+  visibility: visible !important;
+  min-width: 18px;
+  padding: 0 5px;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 9px;
+  background: #e85d04 !important;
+  color: #fff !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account {
+  max-width: min(32vw, 120px) !important;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+html.eq-device-phone .eq-phone-drawer-tools {
+  display: none !important;
+}
+
 html.eq-device-phone body.eq-shop.eq-home .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
 html.eq-device-phone body.eq-shop.eq-home .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner .eq-wf-headline,
 html.eq-device-phone body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
@@ -635,15 +713,12 @@ html.eq-device-phone body.eq-auth .auth-page {
   padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
 }
 
-html.eq-device-phone .eq-phone-drawer-tools {
-  display: flex;
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
-  margin-top: auto;
-  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
-  background: var(--eq-surface, #fff);
-  border-top: 1px solid var(--eq-border, #e7e7e7);
+html.eq-device-phone .eq-phone-drawer-tools,
+html.eq-device-phone .eq-phone-drawer-tools__row,
+html.eq-device-phone .eq-phone-drawer-tools__lang,
+html.eq-device-phone .eq-phone-drawer-tools__theme,
+html.eq-device-phone .eq-phone-drawer-tools__logout {
+  display: none !important;
 }
 
 html:not(.eq-device-phone) .eq-phone-drawer-tools {

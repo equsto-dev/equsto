@@ -1519,49 +1519,9 @@
   }
 
   function eqEnsurePhoneDrawerTools() {
-    var drawer = document.getElementById("catDrawer");
-    if (!drawer) return;
-    var phone =
-      typeof window.eqIsPhoneShell === "function"
-        ? window.eqIsPhoneShell()
-        : document.documentElement.classList.contains("eq-device-phone");
+    /* TR·EN / tema / sepet üst barda; çekmece satırını kaldır */
     var existing = document.getElementById("eq-phone-drawer-tools");
-    if (!phone) {
-      if (existing) existing.remove();
-      return;
-    }
-    if (existing) return;
-    var path = location.pathname || "/";
-    var isEn = path === "/en" || path.indexOf("/en/") === 0;
-    var trHref = isEn ? path.replace(/^\/en(?=\/|$)/, "") || "/" : path;
-    var enHref = isEn ? path : path === "/" ? "/en" : "/en" + path;
-    var tools = document.createElement("div");
-    tools.id = "eq-phone-drawer-tools";
-    tools.className = "eq-phone-drawer-tools";
-    tools.innerHTML =
-      '<div class="eq-phone-drawer-tools__row">' +
-      '<a class="eq-phone-drawer-tools__lang' +
-      (isEn ? "" : " is-active") +
-      '" href="' +
-      trHref +
-      '">TR</a>' +
-      '<a class="eq-phone-drawer-tools__lang' +
-      (isEn ? " is-active" : "") +
-      '" href="' +
-      enHref +
-      '">EN</a>' +
-      '<button type="button" class="eq-phone-drawer-tools__theme" id="eq-phone-theme-toggle">◐ Tema</button>' +
-      "</div>";
-    drawer.appendChild(tools);
-    var themeBtn = document.getElementById("eq-phone-theme-toggle");
-    if (themeBtn) {
-      themeBtn.addEventListener("click", function () {
-        if (typeof window.equstoCycleTheme === "function") window.equstoCycleTheme();
-      });
-    }
-    if (typeof window.equstoRefreshMemberHeader === "function") {
-      window.equstoRefreshMemberHeader();
-    }
+    if (existing) existing.remove();
   }
 
   var EQ_FOOTER_ASSET_V = "20260918-seo-footer";

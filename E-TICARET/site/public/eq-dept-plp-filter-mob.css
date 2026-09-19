@@ -4,15 +4,16 @@
  * Filtrele → soldan kayan beyaz panel; Kategoriler açık.
  */
 @media (max-width: 768px) {
-  /* CafeMarkt: ikon + metin satırı — kutu yok, Alt Kategoriler yok */
+  /* CafeMarkt: Filtre + Karışık Sıra yan yana; sayı alt satır */
   .eq-dept-plp-toolbar,
   .eq-dept-plp-toolbar--marka {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
+    display: grid !important;
+    grid-template-columns: max-content max-content !important;
+    grid-template-rows: auto auto !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 4px 22px !important;
+    justify-content: start !important;
+    column-gap: 22px !important;
+    row-gap: 2px !important;
     padding: 6px 0 10px !important;
     border-bottom: 1px solid #eee !important;
     background: #fff !important;
@@ -21,6 +22,18 @@
   .eq-dept-plp-toolbar__row--primary,
   .eq-dept-plp-toolbar__row--sort {
     display: contents !important;
+  }
+
+  .eq-dept-plp-filter-mob,
+  .eq-arama-filter-mob,
+  .eq-marka-plp-filter-mob {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .eq-dept-plp-sort {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .eq-dept-plp-filter-mob,
@@ -99,6 +112,8 @@
     min-width: 0 !important;
     flex: 0 1 auto !important;
     margin: 0 !important;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .eq-dept-plp-sort::before {
@@ -136,8 +151,11 @@
   .eq-dept-plp-count,
   #eq-arama-filter-count,
   .eq-dept-plp-toolbar--marka .eq-dept-plp-count {
-    flex: 1 0 100% !important;
-    width: 100% !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    flex: none !important;
+    width: auto !important;
+    max-width: 100%;
     text-align: left !important;
     font-size: 12px !important;
     line-height: 1.35;
