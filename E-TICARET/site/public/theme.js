@@ -5,7 +5,7 @@
       "header.hdr a.logo,header.hdr .srch,header.hdr .srch-input,header.hdr input.srch-input,header.hdr .srch-cat,header.hdr .cat-picker,header.hdr .cat-picker-btn,nav.topnav,header+nav.topnav,#eq-home-catband";
     function clear() {
       try {
-        if (window.matchMedia("(max-width: 768px)").matches) return;
+        if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone")) return;
         document.querySelectorAll(SEL).forEach(function (el) {
           ["display", "visibility", "pointer-events", "width", "height", "overflow"].forEach(function (p) {
             el.style.removeProperty(p);

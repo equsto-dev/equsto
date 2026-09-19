@@ -32,6 +32,9 @@ export default function LoginPage() {
     <>
       <link rel="preconnect" href="https://accounts.google.com" />
       <link rel="preconnect" href="https://oauth2.googleapis.com" crossOrigin="anonymous" />
+      <Script id="auth-body-class-boot" strategy="beforeInteractive">
+        {`(function(){try{document.body.classList.add("eq-shop","eq-auth");}catch(e){}})();`}
+      </Script>
       {googleClientId ? (
         <Script
           id="auth-google-boot"
@@ -41,11 +44,6 @@ export default function LoginPage() {
           }}
         />
       ) : null}
-      <Script
-        id="gsi-client"
-        src="https://accounts.google.com/gsi/client"
-        strategy="beforeInteractive"
-      />
       <RawLegacyPage
         bodyClass="eq-shop eq-auth"
         bodyHtml={LoginBodyHtml}

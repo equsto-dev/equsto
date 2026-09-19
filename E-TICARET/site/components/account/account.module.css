@@ -9,6 +9,13 @@
   margin-bottom: 28px;
 }
 
+.headRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .phoneRequiredBanner {
   margin-top: 14px;
   padding: 12px 14px;

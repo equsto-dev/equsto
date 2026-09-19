@@ -64,10 +64,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var q=new URLSearchParams(location.search);var f=q.get("mobile")||q.get("eq-device");var k;if(f==="1"||f==="phone")k="phone";else if(f==="0"||f==="desktop")k="desktop";else if(f==="tablet")k="tablet";if(!k){try{var s=sessionStorage.getItem("eq-device-force");if(s==="phone"||s==="tablet"||s==="desktop")k=s;}catch(e){}}if(!k){var ua=navigator.userAgent||"";if(/iPhone|iPod|Windows Phone|webOS|BlackBerry/i.test(ua)||(/Android/i.test(ua)&&/Mobile/i.test(ua))||(navigator.userAgentData&&navigator.userAgentData.mobile))k="phone";else if(/iPad/i.test(ua)||(/Android/i.test(ua)&&!/Mobile/i.test(ua))||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1))k="tablet";else if(window.matchMedia("(pointer: coarse)").matches)k=innerWidth<=900?"phone":"tablet";else k="desktop";}if(f==="1"||f==="phone"||f==="0"||f==="desktop"||f==="tablet"){try{sessionStorage.setItem("eq-device-force",k);}catch(e2){}}var r=document.documentElement;r.classList.add("eq-device-"+k);r.setAttribute("data-eq-device",k);}catch(e3){document.documentElement.classList.add("eq-device-desktop");}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <AnalyticsScripts />
         {/* eslint-disable-next-line @next/next/no-css-tags */}
-        <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260916-phones`} />
+        <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-shell`} />
         <GlobalSiteJsonLd />
         <SiteDiscoveryFaqJsonLd />
         <div id="eq-shop-chrome-root" />

@@ -60,7 +60,7 @@
     var fab = document.querySelector(".equsto-contact-wa-fab");
     var modal = document.querySelector(".equsto-wa-modal");
     if (!modal) return;
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone")) {
       modal.style.right = "";
       modal.style.bottom = "";
       modal.style.maxHeight = "";
@@ -295,7 +295,7 @@
 
   function equstoPreferDirectWhatsAppApp() {
     try {
-      if (window.matchMedia("(max-width: 768px)").matches) return true;
+      if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone")) return true;
       if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) return true;
     } catch (e) {}
     return /Android|iPhone|iPad|iPod|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent || "");
@@ -1216,7 +1216,7 @@
 
   function mountFloatingFab() {
     if (document.getElementById("equsto-contact-fab")) return;
-    if (window.matchMedia("(max-width: 768px)").matches) return;
+    if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone")) return;
     if (document.body && document.body.classList.contains("admin-app")) return;
 
     var wrap = document.createElement("div");
@@ -1264,7 +1264,7 @@
   }
 
   function mountFabInTabbar() {
-    if (!window.matchMedia("(max-width: 768px)").matches) return false;
+    if (!(typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))) return false;
     var slot = document.getElementById("eq-bnav-wa-slot");
     if (!slot) return false;
     removeFloatingFab();
@@ -1275,13 +1275,13 @@
   }
 
   window.equstoMountContactFabInTabbar = function () {
-    if (!window.matchMedia("(max-width: 768px)").matches) return;
+    if (!(typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))) return;
     if (!document.body || !document.body.classList.contains("eq-has-bottom-tabbar")) return;
     mountFabInTabbar();
   };
 
   function syncFabPlacement() {
-    var mobile = window.matchMedia("(max-width: 768px)").matches;
+    var mobile = typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone");
     var inBar = document.body && document.body.classList.contains("eq-has-bottom-tabbar");
     if (mobile && inBar && document.getElementById("eq-bnav-wa-slot")) {
       removeFloatingFab();

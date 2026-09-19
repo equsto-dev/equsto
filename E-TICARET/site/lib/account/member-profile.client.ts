@@ -66,12 +66,14 @@ export async function ensureMemberToken(): Promise<string> {
 
 export async function fetchMemberProfileRemote(): Promise<MemberProfileUser | null> {
   const token = await ensureMemberToken();
-  if (!token) return null;
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+    headers["X-Equsto-Authorization"] = token;
+  }
   const res = await fetch("/api/auth/me", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "X-Equsto-Authorization": token,
-    },
+    headers,
+    credentials: "same-origin",
     cache: "no-store",
   });
   if (!res.ok) return null;
@@ -96,6 +98,7 @@ export async function putMemberProfile(
   }
   const res = await fetch("/api/auth/profile", {
     method: "PUT",
+    credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,

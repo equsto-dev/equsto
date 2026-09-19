@@ -200,41 +200,14 @@ body.eq-auth button.auth-logo .eq-logo-img {
 }
 
 #google-btn-slot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  min-height: 44px;
-  margin: 0 auto 10px;
-  padding: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-  background: transparent;
-}
-
-#google-btn-slot > div {
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-#google-btn-slot iframe {
-  display: block;
-  max-width: 100% !important;
-  margin: 0 auto;
-}
-
-#google-btn-slot:empty + .auth-btn-google {
-  display: flex;
-}
-
-#google-btn-slot:not(:empty) + .auth-btn-google {
   display: none;
+}
+
+.auth-btn-google,
+#auth-google-fallback.auth-btn-google {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
 }
 
 .auth-msg {

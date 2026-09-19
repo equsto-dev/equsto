@@ -13,7 +13,7 @@
     var inner = document.querySelector(".bd-besos-subnav-inner");
     if (!nav || !inner) return;
 
-    var mobile = window.matchMedia("(max-width: 768px)").matches;
+    var mobile = typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone");
     if (!mobile) {
       nav.style.setProperty("width", "100%", "important");
       inner.style.setProperty("display", "flex", "important");

@@ -13,6 +13,7 @@ const PUBLIC = path.join(ROOT, "public");
 
 const BRAND_THEME = "#001e50";
 const MOBILE_BREAKPOINT = 768;
+const DEVICE_PHONE_CLASS = "eq-device-phone";
 
 const VERIFY_SCRIPTS = [
   "verify-whatsapp-cat-fab-kilit.mjs",
@@ -510,6 +511,7 @@ export function auditMobileAssets() {
   const issues = [];
   const required = [
     "public/eq-mobile.css",
+    "public/eq-device.js",
     "public/theme.css",
     "public/nav.js",
     "public/contact.js",
@@ -549,15 +551,29 @@ export function auditMobileAssets() {
         }),
       );
     }
-    if (!css.includes(`${MOBILE_BREAKPOINT}px`)) {
+    if (!css.includes(DEVICE_PHONE_CLASS)) {
       issues.push(
         makeIssue({
-          id: "viewport:no_768_breakpoint",
+          id: "viewport:no_device_phone_class",
           platform: "viewport",
-          severity: "medium",
+          severity: "high",
           type: "css_gap",
-          area: "breakpoint",
-          message: `eq-mobile.css ${MOBILE_BREAKPOINT}px breakpoint bulunamadı`,
+          area: "device_class",
+          message: `eq-mobile.css ${DEVICE_PHONE_CLASS} cihaz sınıfı bulunamadı`,
+          file: "public/eq-mobile.css",
+          fix: "Mobil stilleri html.eq-device-phone altına alın; Windows dar pencere masaüstü kalsın",
+        }),
+      );
+    }
+    if (!css.includes("font-synthesis")) {
+      issues.push(
+        makeIssue({
+          id: "viewport:no_font_synthesis_lock",
+          platform: "ios",
+          severity: "high",
+          type: "css_gap",
+          area: "typography",
+          message: "eq-mobile.css iOS sentetik kalın kilidi (font-synthesis) yok",
           file: "public/eq-mobile.css",
         }),
       );
@@ -577,11 +593,58 @@ export function auditMobileAssets() {
     }
   }
 
+  if (fileExists("public/eq-device.js")) {
+    const js = readText("public/eq-device.js");
+    if (!js.includes("eqIsPhoneShell") || !js.includes('qs("mobile")')) {
+      issues.push(
+        makeIssue({
+          id: "viewport:device_js_incomplete",
+          platform: "viewport",
+          severity: "high",
+          type: "js_gap",
+          area: "device_class",
+          message: "eq-device.js telefon iskelesi veya ?mobile=1 önizlemesi eksik",
+          file: "public/eq-device.js",
+        }),
+      );
+    }
+  }
+  if (fileExists("public/nav.js")) {
+    const nav = readText("public/nav.js");
+    if (!nav.includes("eqIsPhoneShell")) {
+      issues.push(
+        makeIssue({
+          id: "viewport:nav_not_device_class",
+          platform: "viewport",
+          severity: "high",
+          type: "js_gap",
+          area: "device_class",
+          message: "nav.js alt şerit hâlâ viewport 768’e bağlı; eqIsPhoneShell yok",
+          file: "public/nav.js",
+        }),
+      );
+    }
+    if (!nav.includes("/hesabim") && !nav.includes("equstoUrl(\"account\")")) {
+      issues.push(
+        makeIssue({
+          id: "auth:tabbar_account_href",
+          platform: "viewport",
+          severity: "high",
+          type: "js_gap",
+          area: "auth",
+          message: "Alt şerit hesap bağlantısı girişli /hesabim yolunu içermiyor",
+          file: "public/nav.js",
+        }),
+      );
+    }
+  }
+
   return {
     check: {
       status: missing > 0 ? "error" : "ok",
       required_missing: missing,
       breakpoint_px: MOBILE_BREAKPOINT,
+      device_class: DEVICE_PHONE_CLASS,
     },
     issues,
   };
@@ -731,6 +794,7 @@ function extractHeadSignals(html) {
     appleTouchIcon: /<link[^>]+rel=["']apple-touch-icon["']/i.test(head),
     appleWebApp: /apple-mobile-web-app-capable/i.test(head),
     eqMobileCss: /eq-mobile\.css/i.test(html),
+    eqDevice: /eq-device|data-eq-device|eq-device-phone/i.test(html),
   };
 }
 
@@ -816,6 +880,20 @@ export async function auditLiveMobileHead(baseUrl) {
             area: "live_head",
             message: `Canlı ana sayfada apple-touch-icon yok`,
             meta: { url },
+          }),
+        );
+      }
+      if (!signals.eqDevice && p === "/") {
+        issues.push(
+          makeIssue({
+            id: `live:no_eq_device:${p}`,
+            platform: "viewport",
+            severity: "high",
+            type: "missing_asset",
+            area: "device_class",
+            message: `Canlı ${p} eq-device cihaz sınıfı boot’u yok`,
+            meta: { url },
+            fix: "layout.tsx inline eq-device snippet veya /eq-device.js",
           }),
         );
       }

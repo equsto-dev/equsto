@@ -534,7 +534,8 @@
 
   function __eqIsMobileNav() {
     try {
-      return window.matchMedia("(max-width: 768px)").matches;
+      if (typeof window.eqIsPhoneShell === "function") return window.eqIsPhoneShell();
+      return document.documentElement.classList.contains("eq-device-phone");
     } catch (eM) {
       return false;
     }
@@ -1188,7 +1189,7 @@
   /** PC: mobil inline gizlemeleri kaldır (dar pencereden genişletince kategoriler geri gelsin). */
   function eqClearDesktopChrome() {
     try {
-      if (window.matchMedia("(max-width: 768px)").matches) return;
+      if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone")) return;
       var b = document.body;
       if (!b || b.classList.contains("admin-app")) return;
       document.querySelectorAll(__eqMobileChromeSelectors).forEach(function (el) {
@@ -1206,7 +1207,7 @@
   /** Mobil: yüzen kedi FAB kaldırılır; WhatsApp alt şeritte (contact.js → eq-bnav-wa-slot). */
   function eqEnforceMobileChrome() {
     try {
-      if (!window.matchMedia("(max-width: 768px)").matches) return;
+      if (!(typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))) return;
       var b = document.body;
       if (!b || b.classList.contains("admin-app")) return;
       if (document.getElementById("eq-pdp-mobile-buybar")) {
@@ -1215,6 +1216,7 @@
         return;
       }
       if (!b.classList.contains("eq-shop") || b.classList.contains("bd-page") || b.classList.contains("eq-pfos")) return;
+      eqEnsurePhoneDrawerTools();
       if (typeof window.equstoMountContactFabInTabbar === "function") {
         window.equstoMountContactFabInTabbar();
       }
@@ -1224,7 +1226,8 @@
   }
 
   function eqSyncMobileChrome() {
-    if (window.matchMedia("(max-width: 768px)").matches) eqEnforceMobileChrome();
+    if (typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))
+      eqEnforceMobileChrome();
     else eqClearDesktopChrome();
   }
   window.eqEnforceMobileChrome = eqEnforceMobileChrome;
@@ -1321,6 +1324,12 @@
     setTimeout(ensureRenderDrawer, 0);
   }
   ensureRenderDrawer();
+  try {
+    new MutationObserver(function () {
+      installEqBottomTabbar();
+      eqSyncMobileChrome();
+    }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+  } catch (eMo) {}
   window.addEventListener("load", function () {
     var d = document.getElementById("catDrawer");
     if (d && !d.querySelector("#eq-drawer-mega-row")) renderDrawer();
@@ -1392,11 +1401,25 @@
   }
   function eqBottomNavLoginHref() {
     try {
-      if (typeof window.equstoResolveNavHref === "function") return window.equstoResolveNavHref("login.html");
+      if (typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn()) {
+        if (typeof window.equstoUrl === "function") return window.equstoUrl("account");
+        return "/hesabim";
+      }
+    } catch (eAcc) {}
+    try {
+      if (typeof window.equstoUrl === "function") {
+        var loginUrl = String(window.equstoUrl("login") || "/login").replace(/login\.html$/i, "login");
+        return loginUrl.charAt(0) === "/" ? loginUrl : "/login";
+      }
     } catch (e2) {}
-    return "login.html";
+    return "/login";
   }
   function installEqBottomTabbar() {
+    var phone =
+      typeof window.eqIsPhoneShell === "function"
+        ? window.eqIsPhoneShell()
+        : document.documentElement.classList.contains("eq-device-phone");
+    if (!phone) return;
     var b = document.body;
     if (!b || !b.classList.contains("eq-shop") || b.classList.contains("admin-app")) return;
     /* PFOS: pf-m-tabbar (Devam + adımlar) — çift alt şerit olmasın */
@@ -1426,6 +1449,12 @@
     aAcc.setAttribute("aria-label", "Hesap");
     aAcc.innerHTML =
       '<span class="eq-bottom-tabbar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1"/></svg></span>';
+    function syncAccHref() {
+      aAcc.href = eqBottomNavLoginHref();
+    }
+    document.addEventListener("equsto-member-session", syncAccHref);
+    document.addEventListener("equsto-member-changed", syncAccHref);
+    window.addEventListener("equsto-member-changed", syncAccHref);
 
     var btnCart = document.createElement("button");
     btnCart.type = "button";
@@ -1480,7 +1509,55 @@
     } catch (waErr) {}
 
     if (window.EqustoCart && typeof window.EqustoCart.syncBadge === "function") window.EqustoCart.syncBadge();
+    eqEnsurePhoneDrawerTools();
     eqSyncMobileChrome();
+  }
+
+  function eqEnsurePhoneDrawerTools() {
+    var drawer = document.getElementById("catDrawer");
+    if (!drawer) return;
+    var phone =
+      typeof window.eqIsPhoneShell === "function"
+        ? window.eqIsPhoneShell()
+        : document.documentElement.classList.contains("eq-device-phone");
+    var existing = document.getElementById("eq-phone-drawer-tools");
+    if (!phone) {
+      if (existing) existing.remove();
+      return;
+    }
+    if (existing) return;
+    var path = location.pathname || "/";
+    var isEn = path === "/en" || path.indexOf("/en/") === 0;
+    var trHref = isEn ? path.replace(/^\/en(?=\/|$)/, "") || "/" : path;
+    var enHref = isEn ? path : path === "/" ? "/en" : "/en" + path;
+    var tools = document.createElement("div");
+    tools.id = "eq-phone-drawer-tools";
+    tools.className = "eq-phone-drawer-tools";
+    tools.innerHTML =
+      '<div class="eq-phone-drawer-tools__row">' +
+      '<a class="eq-phone-drawer-tools__lang' +
+      (isEn ? "" : " is-active") +
+      '" href="' +
+      trHref +
+      '">TR</a>' +
+      '<a class="eq-phone-drawer-tools__lang' +
+      (isEn ? " is-active" : "") +
+      '" href="' +
+      enHref +
+      '">EN</a>' +
+      '<button type="button" class="eq-phone-drawer-tools__theme" id="eq-phone-theme-toggle">◐ Tema</button>' +
+      '<button type="button" class="eq-phone-drawer-tools__logout eq-hdr-logout" hidden>Çıkış</button>' +
+      "</div>";
+    drawer.appendChild(tools);
+    var themeBtn = document.getElementById("eq-phone-theme-toggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function () {
+        if (typeof window.equstoCycleTheme === "function") window.equstoCycleTheme();
+      });
+    }
+    if (typeof window.equstoRefreshMemberHeader === "function") {
+      window.equstoRefreshMemberHeader();
+    }
   }
 
   var EQ_FOOTER_ASSET_V = "20260918-seo-footer";

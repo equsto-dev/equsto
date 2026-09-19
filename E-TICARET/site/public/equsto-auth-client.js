@@ -100,10 +100,9 @@
     if (opts.json !== undefined && token) {
       opts.json = Object.assign({}, opts.json, { token: token });
     }
-    var cred = apiBase() ? 'omit' : 'same-origin';
     return fetch(url, {
       method: opts.method || 'GET',
-      credentials: cred,
+      credentials: 'same-origin',
       headers: headers,
       body: opts.json !== undefined ? JSON.stringify(opts.json) : opts.body,
     })
@@ -142,6 +141,7 @@
       if (j && j.success) {
         window.EQUSTO_AUTH = window.EQUSTO_AUTH || {};
         if (j.googleClientId) window.EQUSTO_AUTH.googleClientId = j.googleClientId;
+        window.EQUSTO_AUTH.googleRedirect = j.googleRedirect === true;
         if (j.appleClientId) window.EQUSTO_AUTH.appleClientId = j.appleClientId;
         if (j.appleRedirectURI) window.EQUSTO_AUTH.appleRedirectURI = j.appleRedirectURI;
       }
@@ -265,30 +265,28 @@
   };
 
   window.equstoAuthValidateSession = function () {
-    var token =
-      (typeof window.equstoGetMemberToken === 'function' && window.equstoGetMemberToken()) || '';
-    if (!token) {
-      try {
-        var raw = localStorage.getItem('equsto_member_v1');
-        if (raw) {
-          var o = JSON.parse(raw);
-          if (o && o.active === true && typeof window.equstoClearMemberSession === 'function') {
-            window.equstoClearMemberSession();
-          }
-        }
-      } catch (e) {}
-      return Promise.resolve(false);
-    }
     return apiFetch('/me').then(function (j) {
       if (j && j.success && j.user) {
         applySession(j);
         return true;
       }
-      if (typeof window.equstoClearMemberSession === 'function') {
+      if (j && j._httpStatus === 401 && typeof window.equstoClearMemberSession === 'function') {
         window.equstoClearMemberSession();
       }
       return false;
     });
+  };
+
+  window.equstoGoogleStartHref = function (next) {
+    var dest = next || new URLSearchParams(location.search).get('next') || '/hesabim';
+    if (!dest || dest.charAt(0) !== '/') dest = '/hesabim';
+    var sync = '';
+    try {
+      sync = localStorage.getItem('equsto_cart_sync_v1') || '';
+    } catch (e) {}
+    var u = '/api/auth/google/start?next=' + encodeURIComponent(dest);
+    if (sync) u += '&sync=' + encodeURIComponent(sync);
+    return u;
   };
 
   window.equstoAuthBootstrap = function () {

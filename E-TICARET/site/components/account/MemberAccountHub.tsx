@@ -39,6 +39,7 @@ type MemberProfile = {
 type EqustoMemberWindow = Window & {
   equstoGetMemberToken?: () => string;
   equstoAuthLogout?: () => Promise<unknown>;
+  equstoAuthValidateSession?: () => Promise<boolean>;
   equstoClearMemberSession?: () => void;
   equstoShowWhatsAppModal?: () => void;
   equstoSetMemberActive?: (extra: Record<string, unknown>) => void;
@@ -111,6 +112,14 @@ export default function MemberAccountHub() {
 
   const load = useCallback(async () => {
     await waitForMemberApi();
+    const apiWin = window as EqustoMemberWindow;
+    if (typeof apiWin.equstoAuthValidateSession === "function") {
+      try {
+        await apiWin.equstoAuthValidateSession();
+      } catch {
+        /* cookie kurtarırsa /me yazar */
+      }
+    }
     if (!memberLoggedInNow()) {
       window.location.href = pfosLoginHref();
       return;
@@ -270,9 +279,18 @@ export default function MemberAccountHub() {
   return (
     <main className={styles.page}>
       <header className={styles.head}>
-        <div>
-          <h1 className={styles.title}>Hesabım</h1>
-          <p className={styles.greeting}>Merhaba, {displayName}</p>
+        <div className={styles.headRow}>
+          <div>
+            <h1 className={styles.title}>Hesabım</h1>
+            <p className={styles.greeting}>Merhaba, {displayName}</p>
+          </div>
+          <button
+            type="button"
+            className={styles.logoutBtn}
+            onClick={() => void onLogout()}
+          >
+            Çıkış yap
+          </button>
         </div>
         {phoneMissing ? (
           <div className={styles.phoneRequiredBanner} role="alert">

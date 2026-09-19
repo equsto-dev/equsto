@@ -70,7 +70,8 @@ export function readBearerToken(req: NextRequest): string {
   const alt = req.headers.get("x-equsto-authorization");
   if (alt) return alt.trim();
   const q = req.nextUrl.searchParams.get("access_token");
-  return q ? q.trim() : "";
+  if (q) return q.trim();
+  return req.cookies.get("equsto_member")?.value?.trim() || "";
 }
 
 export function readTokenFromBody(body: Record<string, unknown> | null | undefined): string {
@@ -86,6 +87,14 @@ export function googleClientId(): string {
     process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID?.trim() ||
     ""
   );
+}
+
+export function googleOAuthReady(): boolean {
+  const secret =
+    process.env.EQUSTO_GOOGLE_CLIENT_SECRET?.trim() ||
+    process.env.GOOGLE_CLIENT_SECRET?.trim() ||
+    "";
+  return !!(googleClientId() && secret);
 }
 
 type GoogleJwk = {

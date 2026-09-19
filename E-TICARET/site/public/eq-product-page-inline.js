@@ -3968,10 +3968,12 @@ window.searchFilter = window.searchFilter || function () {};
 
     function isEpdpMobileBuybarViewport() {
       try {
+        if (typeof window.eqIsPhoneShell === "function") return window.eqIsPhoneShell();
+        if (document.documentElement.classList.contains("eq-device-phone")) return true;
         if (epdpViewportWidth() <= 768) return true;
         return window.matchMedia("(max-width: 768px)").matches;
       } catch (_) {
-        return epdpViewportWidth() <= 768;
+        return document.documentElement.classList.contains("eq-device-phone") || epdpViewportWidth() <= 768;
       }
     }
 

@@ -80,191 +80,63 @@
     }
   }
 
-  function loadGoogleScript() {
-    return new Promise(function (resolve, reject) {
-      if (window.google && window.google.accounts) {
-        resolve();
-        return;
-      }
-      var existing = document.getElementById("gsi-client");
-      if (existing) {
-        if (window.google && window.google.accounts) {
-          resolve();
-          return;
-        }
-        existing.addEventListener("load", function () {
-          resolve();
-        });
-        existing.addEventListener("error", reject);
-        return;
-      }
-      var s = document.createElement("script");
-      s.id = "gsi-client";
-      s.src = "https://accounts.google.com/gsi/client";
-      s.async = true;
-      s.onload = function () {
-        resolve();
-      };
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
+  function setSocialMsg(html, isInfo) {
+    var el = document.getElementById("auth-social-msg");
+    if (!el) return;
+    el.innerHTML = html || "";
+    el.className = "auth-msg" + (isInfo ? " auth-msg--info" : "");
+    el.style.display = html ? "block" : "none";
   }
 
   function prefetchGoogleAuth() {
-    try {
-      if (!document.querySelector('link[rel="preconnect"][href="https://accounts.google.com"]')) {
-        var pc = document.createElement("link");
-        pc.rel = "preconnect";
-        pc.href = "https://accounts.google.com";
-        document.head.appendChild(pc);
-      }
-    } catch (_) {}
-    loadGoogleScript().catch(function () {});
     if (typeof window.equstoAuthFetchConfig === "function") {
       window.equstoAuthFetchConfig().catch(function () {});
     }
   }
 
-  function googleBtnPixelWidth() {
-    var slot = document.getElementById("google-btn-slot");
-    var safety = 2;
-    var fallback = 320;
-    var w = 0;
-    if (slot) {
-      w = slot.getBoundingClientRect().width || slot.clientWidth;
-    }
-    if (!(w > 0)) {
-      var card = document.querySelector(".auth-card");
-      if (card) {
-        var styles = window.getComputedStyle(card);
-        var padL = parseFloat(styles.paddingLeft) || 22;
-        var padR = parseFloat(styles.paddingRight) || 22;
-        w = card.clientWidth - padL - padR;
-      }
-    }
-    if (w > 0) {
-      return Math.max(200, Math.floor(w - safety));
-    }
-    return fallback;
-  }
-
-  var googleBtnResizeTimer = null;
-  var googleBtnClientId = "";
-
-  function scheduleGoogleButtonResize(clientId) {
-    if (!clientId) return;
-    googleBtnClientId = clientId;
-    if (window.__eqGoogleBtnResizeBound) return;
-    window.__eqGoogleBtnResizeBound = true;
-    window.addEventListener("resize", function () {
-      if (!googleBtnClientId) return;
-      clearTimeout(googleBtnResizeTimer);
-      googleBtnResizeTimer = setTimeout(function () {
-        renderGoogleButton(googleBtnClientId);
-      }, 120);
-    });
-  }
-
-  function renderGoogleButton(clientId) {
-    var slot = document.getElementById("google-btn-slot");
-    if (!slot || !clientId || !window.google || !window.google.accounts) return;
-    scheduleGoogleButtonResize(clientId);
-
-    function paint() {
-      slot.innerHTML = "";
-      try {
-        window.google.accounts.id.initialize({
-          client_id: clientId,
-          callback: function (res) {
-            if (!res || !res.credential) return;
-            if (typeof window.equstoAuthGoogleCredential === "function") {
-              window.equstoAuthGoogleCredential(res.credential);
-            }
-          },
-          auto_select: false,
-        });
-        window.google.accounts.id.renderButton(slot, {
-          type: "standard",
-          theme: "outline",
-          size: "large",
-          width: googleBtnPixelWidth(),
-          text: "continue_with",
-          locale: document.documentElement.lang === "en" ? "en" : "tr",
-          shape: "rectangular",
-        });
-      } catch (e) {
-        console.warn("[auth-social] Google button", e);
-      }
-    }
-
-    requestAnimationFrame(paint);
-  }
-
-  function googleClientIdOrFetch(cb) {
-    var id = (window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "";
-    if (id) {
-      cb(id);
-      return;
-    }
-    if (typeof window.equstoAuthFetchConfig !== "function") {
-      cb("");
-      return;
-    }
-    window.equstoAuthFetchConfig().then(function () {
-      cb((window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "");
-    });
-  }
-
   window.equstoGoogleSignIn = function () {
-    googleClientIdOrFetch(function (clientId) {
-      if (!clientId) {
-        var el = document.getElementById("auth-social-msg");
-        if (el) {
-          el.textContent =
-            "Google girişi yapılandırılmamış (GOOGLE_CLIENT_ID). Sunucu .env.production dosyasını kontrol edin.";
-          el.className = "auth-msg";
-          el.style.display = "block";
-        }
-        return;
-      }
-      equstoGoogleSignInWithClient(clientId);
-    });
+    var href =
+      typeof window.equstoGoogleStartHref === "function"
+        ? window.equstoGoogleStartHref()
+        : "/api/auth/google/start";
+    setSocialMsg("Google ile yönlendiriliyorsunuz…", true);
+    location.href = href;
   };
-
-  function equstoGoogleSignInWithClient(clientId) {
-    loadGoogleScript()
-      .then(function () {
-        if (!window.google || !window.google.accounts) throw new Error("gsi");
-        window.google.accounts.id.initialize({
-          client_id: clientId,
-          callback: function (res) {
-            if (res && res.credential && window.equstoAuthGoogleCredential) {
-              window.equstoAuthGoogleCredential(res.credential);
-            }
-          },
-        });
-        window.google.accounts.id.prompt();
-      })
-      .catch(function () {
-        var el = document.getElementById("auth-social-msg");
-        if (el) {
-          el.textContent = "Google oturum penceresi açılamadı.";
-          el.className = "auth-msg";
-          el.style.display = "block";
-        }
-      });
-  }
 
   window.equstoInitSocialAuth = function () {
-    googleClientIdOrFetch(function (clientId) {
-      if (!clientId) return;
-      loadGoogleScript()
-        .then(function () {
-          renderGoogleButton(clientId);
-        })
-        .catch(function () {});
-    });
+    var slot = document.getElementById("google-btn-slot");
+    if (slot) slot.innerHTML = "";
+    var fallback = document.getElementById("auth-google-fallback");
+    if (fallback) fallback.style.display = "flex";
   };
+
+  function handleGoogleReturn() {
+    var q = new URLSearchParams(location.search);
+    var err = q.get("google_error");
+    if (err) {
+      setSocialMsg(
+        err + " E-posta ile giriş yapmayı deneyebilirsiniz.",
+        false,
+      );
+      return;
+    }
+    if (q.get("google") !== "ok") return;
+    setSocialMsg("Google ile giriş yapılıyor…", true);
+    var p =
+      typeof window.equstoAuthValidateSession === "function"
+        ? window.equstoAuthValidateSession()
+        : Promise.resolve(false);
+    p.then(function (ok) {
+      if (ok) {
+        showLoggedIn();
+        return;
+      }
+      setSocialMsg(
+        "Google girişi tamamlandı ama oturum okunamadı. Sayfayı yenileyin veya e-posta ile devam edin.",
+        false,
+      );
+    });
+  }
 
   function bindForgotPassword() {
     var showBtn = document.getElementById("auth-show-forgot");
@@ -426,6 +298,7 @@
     if (typeof window.equstoInitSocialAuth === "function") {
       window.equstoInitSocialAuth();
     }
+    handleGoogleReturn();
     showLoggedIn();
     try {
       if (typeof window.eqI18nApply === "function") {

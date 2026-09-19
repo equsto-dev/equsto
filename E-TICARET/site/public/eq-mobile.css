@@ -65,7 +65,7 @@ nav.topnav {
 }
 
 /* ── Formlar: iOS odak zoom’u önle ───────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
   select,
   textarea {
@@ -74,7 +74,7 @@ nav.topnav {
 }
 
 /* ── Dokunma hedefleri ───────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   header.hdr .srch-btn,
   header.hdr .srch-cat,
   .topnav-item,
@@ -97,7 +97,7 @@ nav.topnav {
 }
 
 /* ── Üst bar: dar ekran ince ayar ─────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   header.hdr > .pg-inner,
   header.hdr > .pg-inner.hdr-pg-inner {
     padding-right: max(12px, env(safe-area-inset-right, 0px)) !important;
@@ -119,7 +119,7 @@ nav.topnav {
 }
 
 /* ── Ana sayfa: üçlü hero + dekor ───────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-body {
     padding: 12px 14px 14px;
   }
@@ -206,7 +206,7 @@ nav.topnav {
 }
 
 /* ── Kategori / arama PLP (toolbar: eq-dept-plp.css) ─────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   .eq-dept-plp-grid,
   .eq-arama-grid {
     gap: 10px 8px;
@@ -319,7 +319,7 @@ nav.topnav {
 }
 
 /* ── Besos ─────────────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   body.bd-page.besos .besos-hdr-brand {
     padding: 10px max(12px, env(safe-area-inset-left, 0px));
   }
@@ -349,7 +349,7 @@ nav.topnav {
 }
 
 /* ── Footer + alt şerit / FAB ────────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   .footer {
     flex-direction: column;
     align-items: flex-start;
@@ -381,7 +381,7 @@ nav.topnav {
 }
 
 /* ── Tablolar ve geniş içerik ──────────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   table {
     display: block;
     max-width: 100%;
@@ -397,7 +397,7 @@ nav.topnav {
 }
 
 /* ── Yönetim paneli (Ant Design) ──────────────────────────────────────────── */
-@media (max-width: 768px) {
+html.eq-device-phone {
   body.admin-app .ant-pro-layout .ant-pro-page-container-children-content {
     padding: 12px !important;
   }
@@ -409,7 +409,7 @@ nav.topnav {
 
 
 /* Sticky Bottom Buybox / CTA on PDP — #eq-pdp-mobile-buybar (body düzeyi) */
-@media (max-width: 768px) {
+html.eq-device-phone {
   body:has(#eq-pdp-mobile-buybar) #eq-bottom-tabbar {
     display: none !important;
   }
@@ -598,4 +598,123 @@ nav.topnav {
   .eq-dept-plp-toolbar {
     gap: 6px 8px !important;
   }
+}
+
+/* ── Telefon iskelesi: cihaz sınıfı (Windows dar pencere = masaüstü) ──────── */
+html:not(.eq-device-phone) #eq-bottom-tabbar.eq-bottom-tabbar {
+  display: none !important;
+}
+html:not(.eq-device-phone) body.eq-shop:not(.admin-app).eq-has-bottom-tabbar {
+  padding-bottom: 0 !important;
+}
+
+html.eq-device-phone {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-alici,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-orders,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-locale-bar,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+  display: none !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-logout:not([hidden]) {
+  display: inline-flex !important;
+  min-height: 48px;
+  align-items: center;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-hdr-logout:not([hidden]) {
+  min-width: 48px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+html.eq-device-phone body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+}
+
+html.eq-device-phone body.eq-shop.eq-home .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
+html.eq-device-phone body.eq-shop.eq-home .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner .eq-wf-headline,
+html.eq-device-phone body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
+html.eq-device-phone body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero-banner--slim .eq-wf-headline {
+  font-synthesis: none !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.01em !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+html.eq-device-phone body.eq-auth .auth-logo {
+  display: none;
+}
+
+html.eq-device-phone body.eq-auth .auth-page {
+  align-items: flex-start;
+  padding-top: max(16px, calc(var(--eq-shop-chrome-h, 118px) + 12px));
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+html.eq-device-phone .eq-phone-drawer-tools {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin-top: auto;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--eq-surface, #fff);
+  border-top: 1px solid var(--eq-border, #e7e7e7);
+}
+
+html:not(.eq-device-phone) .eq-phone-drawer-tools {
+  display: none !important;
+}
+
+html.eq-device-phone .eq-phone-drawer-tools__row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+}
+
+html.eq-device-phone .eq-phone-drawer-tools__lang,
+html.eq-device-phone .eq-phone-drawer-tools__theme,
+html.eq-device-phone .eq-phone-drawer-tools__logout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--eq-border, #d5dbe6);
+  border-radius: 8px;
+  background: #f6f7fb;
+  color: #001e50;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html.eq-device-phone .eq-phone-drawer-tools__lang.is-active {
+  background: #001e50;
+  color: #fff;
+  border-color: #001e50;
+}
+
+html.eq-device-phone .eq-phone-drawer-tools__logout[hidden] {
+  display: none !important;
 }

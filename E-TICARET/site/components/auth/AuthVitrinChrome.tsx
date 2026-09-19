@@ -17,7 +17,9 @@ export default function AuthVitrinChrome() {
     <>
       <ShopEqustoChrome />
       <ShopDrawerShell />
-      <Script src={`/nav.js?v=${v}&m=20260918-caglayan-out`} strategy="afterInteractive" />
+      <Script src={`/nav.js?v=${v}&m=20260919-shell`} strategy="afterInteractive" />
+      <link rel="stylesheet" href={`/contact.css?v=${v}`} />
+      <Script src={`/contact.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-shop-header.js?v=${v}`} strategy="afterInteractive" />
       <Script

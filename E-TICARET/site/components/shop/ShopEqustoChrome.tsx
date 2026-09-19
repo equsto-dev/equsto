@@ -213,6 +213,15 @@ export default function ShopEqustoChrome({
                 <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1" strokeLinecap="round" />
               </svg>
             </a>
+            <button
+              type="button"
+              className="eq-hdr-logout"
+              id="eq-hdr-logout"
+              hidden
+              title={h.logout_title}
+            >
+              {h.logout}
+            </button>
             <div className="eq-hdr-orders">
               <span data-i18n="common.returns">{h.returns}</span>
               <span data-i18n="common.and_orders">{h.and_orders}</span>

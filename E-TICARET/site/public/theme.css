@@ -3821,6 +3821,28 @@ header.hdr .eq-hdr-locale-bar .theme-toggle {
   border-radius: 8px;
 }
 
+header.hdr .eq-hdr-logout {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 10px;
+  margin: 0;
+  border: 1px solid var(--eq-hdr-bar-border, rgba(255, 255, 255, 0.28));
+  border-radius: 8px;
+  background: transparent;
+  color: var(--eq-hdr-bar-text, #fff);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+}
+header.hdr .eq-hdr-logout:not([hidden]) {
+  display: inline-flex;
+}
+
 /* Kategori sayfaları: ürünler sağdan sola, satırda 5 adet (desktop) */
 .main .products {
   /* 5'li görünüm: kartlar ezilmesin diye minimum genişlik ver */
@@ -4983,7 +5005,7 @@ body.eq-shop:not(.admin-app):not(.bd-page.besos) footer.footer.eq-mfoot .eq-mfoo
 #eq-bottom-tabbar.eq-bottom-tabbar {
   display: none !important;
 }
-@media (max-width: 768px) {
+html.eq-device-phone {
   body.eq-shop:not(.admin-app).eq-has-bottom-tabbar {
     padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
   }
@@ -5083,15 +5105,15 @@ body.eq-shop:not(.admin-app):not(.bd-page.besos) footer.footer.eq-mfoot .eq-mfoo
     pointer-events: none;
     user-select: none;
   }
-  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
+  &[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
     background: #ffffff !important;
     border-top-color: #e7e7e7 !important;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
   }
-  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__btn,
-  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar a.eq-bottom-tabbar__btn,
-  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico,
-  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__cart-qty {
+  &[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__btn,
+  &[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar a.eq-bottom-tabbar__btn,
+  &[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico,
+  &[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__cart-qty {
     color: #0f1111 !important;
   }
 

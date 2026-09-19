@@ -115,7 +115,7 @@
   function run() {
     publishLogoGlobals();
     document.querySelectorAll("a.logo, a.bd-hdr-wordmark, button.auth-logo").forEach(inject);
-    if (!window.matchMedia("(max-width: 768px)").matches) {
+    if (!(typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))) {
       document.querySelectorAll("header.hdr a.logo").forEach(clearInlineHide);
     }
   }
@@ -139,7 +139,7 @@
   window.addEventListener(
     "resize",
     function () {
-      if (!window.matchMedia("(max-width: 768px)").matches) run();
+      if (!(typeof window.eqIsPhoneShell === "function" ? window.eqIsPhoneShell() : document.documentElement.classList.contains("eq-device-phone"))) run();
     },
     { passive: true }
   );
