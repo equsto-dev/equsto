@@ -15,7 +15,7 @@ body.eq-marka-hub #eq-filter-col{display:none!important;}
 
 export default function MarkaHubScripts() {
   const v = SHOP_ASSET_V;
-  const markaV = `${v}&m=20260919-cambro-hub`;
+  const markaV = `${v}&m=20260919-cambro-official`;
   return (
     <>
       <style id="eq-marka-hub-page-css">{MARKA_HUB_CSS}</style>

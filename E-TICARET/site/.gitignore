@@ -115,3 +115,6 @@ next-env.d.ts
 # CM import product photos (witcdn -O mirrors)
 !public/images/catalog/cafemarkt/
 !public/images/catalog/cafemarkt/**
+# Cambro official (cambro.com / Widen CDN)
+!public/images/catalog/cambro/
+!public/images/catalog/cambro/**
