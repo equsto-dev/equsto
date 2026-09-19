@@ -716,12 +716,30 @@ body.eq-dept-plp {
     display: none !important;
   }
 
+  /* CafeMarkt tarzı: aside varsayılan gizli, Filtrele → soldan kayar */
   body.eq-shop.eq-dept-plp .eq-dept-plp-aside,
   body.eq-arama-page .eq-arama-aside {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1200 !important;
+    width: min(300px, 88vw) !important;
+    max-width: none !important;
+    transform: translateX(-105%) !important;
+    transition: transform 0.22s ease !important;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+    background: #fff !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.eq-shop.eq-dept-plp.eq-dept-filter-open .eq-dept-plp-aside,
+  body.eq-arama-page.eq-dept-filter-open .eq-arama-aside {
+    transform: translateX(0) !important;
   }
 
   .eq-dept-filter-backdrop {
@@ -729,7 +747,31 @@ body.eq-dept-plp {
   }
 
   body.eq-dept-filter-open .eq-dept-filter-backdrop {
-    display: none !important;
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 1190 !important;
+    background: rgba(0, 30, 80, 0.35) !important;
+  }
+
+  .eq-dept-plp-aside__hd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .eq-dept-plp-aside__close,
+  .eq-filter-drawer-close {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #111;
+    font-size: 28px;
+    line-height: 1;
+    padding: 4px 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

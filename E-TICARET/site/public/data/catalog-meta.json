@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-17T23-01-01",
-  "rebuiltAt": "2026-09-17T23:01:01.828Z",
+  "version": "2026-09-19T05-26-11",
+  "rebuiltAt": "2026-09-19T05:26:11.012Z",
   "ekipmanlar": 8293,
   "withImage": 8293,
   "brands": 25,
@@ -13,13 +13,13 @@
     "istif": 276,
     "kahve": 124,
     "market-reyon": 767,
-    "pisirme": 2411,
+    "pisirme": 2076,
     "servis": 55,
     "set-ustu-mutfak": 986,
     "sogutma": 892,
     "tasima": 173,
     "tezgah": 565,
-    "yikama": 328
+    "yikama": 663
   },
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,

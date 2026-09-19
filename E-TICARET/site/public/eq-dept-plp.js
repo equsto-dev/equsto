@@ -1596,7 +1596,7 @@
   };
 
   function bindMobileFilter() {
-    /* Mobil filtre: eq-dept-plp-filter-mob.js bottom sheet */
+    /* Mobil filtre: eq-dept-plp-filter-mob.js sol drawer (CafeMarkt tarzı) */
   }
 
   function applyPageMeta() {
@@ -1608,7 +1608,17 @@
     var leadEl = document.querySelector('.eq-dept-plp-lead');
     if (leadEl && lead && !leadEl.getAttribute('data-i18n')) leadEl.textContent = lead;
     var asideHd = document.querySelector('.eq-dept-plp-aside__hd');
-    if (asideHd && title && !asideHd.getAttribute('data-i18n')) asideHd.textContent = title;
+    if (asideHd) {
+      var titleEl = asideHd.querySelector('.eq-dept-plp-aside__title');
+      if (titleEl) {
+        titleEl.textContent = 'Filtreler';
+      } else if (!asideHd.querySelector('.eq-dept-plp-aside__close')) {
+        /* Başlık Filtreler kalsın; departman adı ile ezme */
+        if (!asideHd.getAttribute('data-i18n') || asideHd.getAttribute('data-i18n') === 'plp.filters') {
+          asideHd.setAttribute('data-i18n', 'plp.filters');
+        }
+      }
+    }
     try {
       if (typeof window.eqI18nApply === 'function') window.eqI18nApply(document.querySelector('.eq-dept-plp-layout') || document);
     } catch (_) {}

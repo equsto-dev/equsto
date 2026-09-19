@@ -33,7 +33,6 @@ const CATEGORY_FACET: Record<string, PisirmeFacetKey> = {
   "doner-makineleri": "ocaklar",
   "elektrikli-setustu-ocaklar": "ocaklar",
   "elektrikli-setustu-dinlendirme-ocagi": "ocaklar",
-  "yer-izgaralari": "izgaralar",
   "sanayi-tipi-izgaralar": "izgaralar",
   "komurlu-izgara": "izgaralar",
   izgaralar: "izgaralar",

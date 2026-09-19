@@ -117,6 +117,13 @@
       label: "El Yıkama Evyeleri",
       slug: "el-yikama-evyeleri",
     },
+    {
+      tip: "yer-izgaralari",
+      dept: "yikama",
+      label: "Yer Izgaraları",
+      slug: "yer-izgaralari",
+      search: "yer ızgara|yer izgara|floor drain|floor grate",
+    },
     { tip: "et-hazirlik", dept: "hazirlik", label: "Et Hazırlık Ekipmanları", search: "et hazırlık|et hazirlik|kasap" },
     { tip: "et_kutugu", dept: "hazirlik", label: "Et Kütüğü", search: "kütük|kutuk|butcher block" },
     { tip: "kiyma_makinesi", dept: "hazirlik", label: "Et Kıyma Makinesi", search: "kıyma|kiyma|mincer" },
@@ -690,6 +697,7 @@
     "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi":
       "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi",
     "el-yikama-evyeleri": "el-yikama-evyeleri",
+    "yer-izgaralari": "yer-izgaralari",
   };
 
   /** «Bulaşık Yıkama Makineleri» üst filtresi — tezgah/evye hariç makine tipleri */
@@ -715,6 +723,7 @@
     "calisma-tezgahlari-bulasik-makinesi-tezgahlari": true,
     "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi": true,
     "el-yikama-evyeleri": true,
+    "yer-izgaralari": true,
   };
 
   function isYikamaProduct(u) {
@@ -1198,6 +1207,7 @@
         ? "banket-arabalari"
         : "taban-raflari";
     if (lk.indexOf("ızgara") >= 0 || lk.indexOf("izgara") >= 0) {
+      if (/yer\s*ızgara|yer\s*izgara/.test(lk)) return "yer-izgaralari";
       if (/istif\s*raf|izgara\s*tabl|4\s*izgara\s*tabl/.test(lk)) return "taban-raflari";
       if (lk.indexOf("ocakbaşı") >= 0 || lk.indexOf("ocakbasi") >= 0) return "ocakbasi-izgara";
       if (lk.indexOf("lavta") >= 0) return "lavtasli_izgara";

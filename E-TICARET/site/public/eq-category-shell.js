@@ -274,6 +274,7 @@
       if (plpMode && total) {
         toolbar =
           '<div class="eq-dept-plp-toolbar eq-dept-plp-toolbar--marka">' +
+          '<button type="button" class="eq-dept-plp-filter-mob eq-marka-plp-filter-mob" id="eq-marka-plp-filter-mob" data-i18n="plp.filter_mob">Filtrele</button>' +
           '<div class="eq-dept-plp-count">' +
           esc(String(shown)) +
           " / " +
