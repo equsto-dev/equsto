@@ -29,6 +29,53 @@ const ISTIF_HERO =
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+let plpByCode = null;
+function loadPlpIndex() {
+  if (plpByCode) return plpByCode;
+  plpByCode = new Map();
+  const plpPath = path.join(ROOT, "scripts/data/cm-import/cambro-plp.json");
+  if (!fs.existsSync(plpPath)) return plpByCode;
+  try {
+    const cache = JSON.parse(fs.readFileSync(plpPath, "utf8"));
+    for (const item of cache.items || []) {
+      const code = String(item.code || item.sku || "")
+        .trim()
+        .toUpperCase();
+      const img = String(item.image || item.images?.[0] || "");
+      if (!code || !/witcdn\.cafemarkt/i.test(img)) continue;
+      plpByCode.set(code, img);
+      const stripped = code.replace(/^105\./, "");
+      if (stripped) plpByCode.set(stripped, img);
+    }
+  } catch (_) {}
+  return plpByCode;
+}
+
+function lookupCafemarktPlpImage(row) {
+  const code = String(row.sku || row.marka_urun_kodu || "")
+    .trim()
+    .toUpperCase();
+  if (!code) return "";
+  const idx = loadPlpIndex();
+  let remote = idx.get(code) || "";
+  if (!remote) return "";
+  // Match fill-cm-import-images short hash from witcdn filename
+  const m = remote.match(/witcdn\.cafemarkt\.com\/([^?#]+)/i);
+  if (!m) return "";
+  let fn;
+  try {
+    fn = decodeURIComponent(m[1]);
+  } catch {
+    fn = m[1];
+  }
+  const ext = (path.extname(fn) || ".jpg").toLowerCase();
+  const shortFn = crypto.createHash("sha1").update(fn).digest("hex").slice(0, 16) + ext;
+  const rel = `images/catalog/cafemarkt/${shortFn}`;
+  const abs = path.join(ROOT, "public", rel);
+  if (fs.existsSync(abs) && fs.statSync(abs).size >= MIN_BYTES) return rel;
+  return "";
+}
+
 function isIstifCambroRow(row) {
   const kod = String(row.sku || row.urun_kodu || row.model || "")
     .replace(/\s+/g, "")
@@ -79,23 +126,31 @@ function pickHeroFromHtml(html, sku) {
     .map((img) => {
       let score = 0;
       const u = img.src.toLowerCase();
-      const a = img.alt.toUpperCase().replace(/[^A-Z0-9]/g, "");
+      const a = (img.alt || "").toLowerCase();
+      const aU = a.toUpperCase().replace(/[^A-Z0-9]/g, "");
+      if (/cambro-only-logo|logo-flat|jwhkzvefmz/i.test(u + a)) score -= 200;
       if (/w=48&h=48|\/48x48/i.test(img.src)) score -= 50;
-      if (/logo|icon|nav/i.test(u + img.alt)) score -= 40;
-      if (skuU && (u.toUpperCase().replace(/[^A-Z0-9]/g, "").includes(skuU) || a.includes(skuU))) score += 80;
+      if (/logo|icon|nav|favicon/i.test(u + a)) score -= 40;
+      if (skuU && (u.toUpperCase().replace(/[^A-Z0-9]/g, "").includes(skuU) || aU.includes(skuU))) score += 80;
       if (/w=1200|w=765|w=640|w=800/i.test(img.src)) score += 20;
       if (/_s0\d|_a\d/i.test(u)) score += 10;
+      if (/\.webp|\.jpe?g/i.test(u) && /content\/[a-z0-9]{8,}\//i.test(u)) score += 5;
       return { ...img, score };
     })
     .sort((x, y) => y.score - x.score);
   const best = scored[0];
-  if (!best || best.score < 10) {
+  if (!best || best.score < 30) {
+    // og:image often the Cambro logo on empty search — only accept if SKU appears in URL
     const og = html.match(/property="og:image"\s+content="([^"]+)"/i);
-    if (og && /cambro\.widen\.net/i.test(og[1])) {
-      return og[1].replace(/&amp;/g, "&").replace(/w=\d+&h=\d+/i, "w=1200&h=1200");
+    if (og && /cambro\.widen\.net/i.test(og[1]) && !/logo|jwhkzvefmz/i.test(og[1])) {
+      const ogUrl = og[1].replace(/&amp;/g, "&");
+      if (skuU && ogUrl.toUpperCase().replace(/[^A-Z0-9]/g, "").includes(skuU)) {
+        return ogUrl.replace(/w=\d+&h=\d+/i, "w=1200&h=1200");
+      }
     }
     return "";
   }
+  if (/logo|jwhkzvefmz/i.test(best.src + best.alt)) return "";
   return best.src.replace(/w=\d+&h=\d+/gi, "w=1200&h=1200");
 }
 
@@ -151,15 +206,30 @@ async function main() {
       const real = isRealCambroRow(row);
       if (!istif && !real) continue;
       if (istifOnly && !istif) continue;
-      if (row.cambro_official_image && String(row.image || "").includes("catalog/cambro/")) {
+      const curImg = String(row.image || (row.images && row.images[0]) || "");
+      const isLogoStub = /8bd5189c45\.(jpg|webp)$/i.test(curImg);
+      if (row.cambro_official_image && curImg.includes("catalog/cambro/") && !isLogoStub) {
         skipped++;
         continue;
+      }
+      if (isLogoStub) {
+        delete row.cambro_official_image;
       }
       scanned++;
       if (LIMIT && filled + failed + skipped >= LIMIT) break;
 
       const remote = await resolveOfficialUrl(row);
       if (!remote) {
+        // Logo stub temizliği: resmi yoksa cafemarkt PLP'ye dön
+        if (isLogoStub || /catalog\/cambro\/.*8bd5189c45/i.test(curImg)) {
+          const plpImg = lookupCafemarktPlpImage(row);
+          if (plpImg && !dryRun) {
+            row.image = plpImg;
+            row.images = [plpImg];
+            delete row.cambro_official_image;
+            changed = true;
+          }
+        }
         skipped++;
         console.warn(`[cambro-img] skip ${row.id || row.sku} — no official url`);
         await sleep(200);
