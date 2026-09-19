@@ -111,3 +111,7 @@ next-env.d.ts
 # Üye kaynak listeleri (orijinal PDF/Excel)
 /data/liste-uploads/*
 !/data/liste-uploads/.gitkeep
+
+# CM import product photos (witcdn -O mirrors)
+!public/images/catalog/cafemarkt/
+!public/images/catalog/cafemarkt/**
