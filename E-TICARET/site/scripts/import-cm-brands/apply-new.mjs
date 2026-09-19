@@ -298,6 +298,14 @@ function pickBrandLabel(eqRows, cmBrand) {
 
 function mapGenericDept(cls, cm) {
   const hay = `${cls.group || ""} ${cm.name || ""}`.toLocaleLowerCase("tr-TR");
+  if (cls.group === "icecek" || /[cç]ay|sahlep|[cç]ikolata|su [iı]s[ıi]t|semaver|[sş]erbet|ayran|seb[iı]l|smoothie|slush|granita|s[ıi]kac|dispenser/i.test(hay)) {
+    return {
+      dept: "icecek",
+      category: /[cç]ay/i.test(hay) ? "cay-makinasi" : "icecek",
+      alt: /[cç]ay/i.test(hay) ? "cay" : "icecek",
+      altLabel: /[cç]ay/i.test(hay) ? "Çay Makinesi" : "İçecek",
+    };
+  }
   if (/espresso|kahve|de[gğ]irmen|filtre kahve|brew/i.test(hay)) {
     return { dept: "kahve", category: "kahve-makineleri", alt: "kahve", altLabel: "Kahve" };
   }
@@ -306,9 +314,6 @@ function mapGenericDept(cls, cm) {
   }
   if (/buz|ice maker|so[gğ]ut|dondur|buzdolab/i.test(hay)) {
     return { dept: "sogutma", category: "sogutma", alt: "sogutma", altLabel: "Soğutma" };
-  }
-  if (/s[ıi]kac|smoothie|slush|granita|dispenser/i.test(hay)) {
-    return { dept: "icecek", category: "icecek", alt: "icecek", altLabel: "İçecek" };
   }
   if (/davlumbaz/i.test(hay)) {
     return { dept: "davlumbaz", category: "davlumbaz", alt: "davlumbaz", altLabel: "Davlumbaz" };

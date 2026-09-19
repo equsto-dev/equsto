@@ -61,6 +61,10 @@ export function classifyProduct(p, brandHint = "") {
     return classifyCsaInox(hay, name, code); // soğutma / buz / saladbar / dry aged
   }
 
+  if (/ate[sş]e/i.test(brand) || /ate[sş]e/i.test(hay) || /me[sş]ale/i.test(brand) || /me[sş]ale/i.test(hay)) {
+    return classifyAtese(hay, name, code);
+  }
+
   if (!isCapacityTepsi(hay) && isAccessory(hay)) {
     return { verdict: "drop", reason: accessoryReason(hay), group: accessoryGroup(hay) };
   }
@@ -383,11 +387,13 @@ function classifyRemta(hay, name, code) {
   ) {
     const group = /[sş]erbet|ayran|seb[iı]l|so[gğ]utucu|buz|dispenser/i.test(hay)
       ? "icecek"
-      : /[cç]ay|[cç]ikolata|sahlep|kahve/i.test(hay)
-        ? "kahve"
-        : /waffle|tost|krep|kornet|sos[iı]s|ha[sş]lama|m[ıi]s[ıi]r|hamburger/i.test(hay)
-          ? "pisirme"
-          : "pisirme";
+      : /[cç]ay|[cç]ikolata|sahlep/i.test(hay)
+        ? "icecek"
+        : /kahve|espresso/i.test(hay)
+          ? "kahve"
+          : /waffle|tost|krep|kornet|sos[iı]s|ha[sş]lama|m[ıi]s[ıi]r|hamburger/i.test(hay)
+            ? "pisirme"
+            : "pisirme";
     return { verdict: "keep", reason: "Remta ana ekipman", group, name };
   }
   return { verdict: "review", reason: "Remta — grup belirsiz", group: "diger" };
@@ -449,6 +455,20 @@ function classifyCsaInox(hay, name, code) {
     return { verdict: "keep", reason: "soğutma / dolap", group: "sogutma", name };
   }
   return { verdict: "review", reason: "CSA — grup belirsiz", group: "diger" };
+}
+
+/** Ateşe / Meşale: çay kazanı → içecek; demlik/damlalık → drop */
+function classifyAtese(hay, name, code) {
+  if (/porselen.*demlik|bak[ıi]r.*demlik|demlik(?!li)|damlal[ıi]k|yedek|conta/i.test(hay) && !/kazan|makine|makina|oca[kğ]/i.test(hay)) {
+    return { verdict: "drop", reason: "Ateşe demlik / aksesuar", group: "aksesuar" };
+  }
+  if (/[cç]ay\s*kazan|[cç]ay\s*makine|[cç]ay\s*oca[kğ]|su [iı]s[ıi]t[ıi]c|semaver/i.test(hay)) {
+    return { verdict: "keep", reason: "Ateşe çay / ısıtma — içecek", group: "icecek", name };
+  }
+  if (/makine|makina|kazan|oca[kğ]|frit|waffle|tost|d[oö]ner/i.test(hay)) {
+    return { verdict: "keep", reason: "Ateşe makine", group: /[cç]ay|su [iı]s[ıi]t/i.test(hay) ? "icecek" : "pisirme", name };
+  }
+  return { verdict: "review", reason: "Ateşe — grup belirsiz", group: "diger" };
 }
 
 function looksLikeMachine(hay) {
