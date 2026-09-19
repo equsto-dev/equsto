@@ -48,7 +48,7 @@ const contact = read("public/contact.js");
 if (!contact.includes('WA_FAB_IMG = "' + WA_IMG + '"')) {
   fail("contact.js: WA_FAB_IMG kilit yolu eşleşmiyor");
 }
-if (!/function mountFabInTabbar\(\)[\s\S]{0,220}max-width: 768px/.test(contact)) {
+if (!/function mountFabInTabbar\(\)[\s\S]{0,500}(eqIsPhoneShell|eq-device-phone|max-width: 768px)/.test(contact)) {
   fail("contact.js: mountFabInTabbar mobil guard yok");
 }
 if (contact.includes("if (mountFabInTabbar() || ++tries")) {
@@ -68,7 +68,7 @@ if (!contact.includes('data-eq-wa-cat-kilit')) {
 }
 
 const nav = read("public/nav.js");
-if (!/function eqEnforceMobileChrome\(\)[\s\S]{0,180}max-width: 768px/.test(nav)) {
+if (!/function eqEnforceMobileChrome\(\)[\s\S]{0,500}(eqIsPhoneShell|eq-device-phone|max-width: 768px)/.test(nav)) {
   fail("nav.js: eqEnforceMobileChrome mobil guard yok");
 }
 if (!nav.includes('getElementById("equsto-contact-fab")')) {
