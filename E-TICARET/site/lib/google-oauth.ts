@@ -9,8 +9,27 @@ export function googleClientSecret(): string {
   );
 }
 
-export function googleOAuthRedirectUri(origin: string): string {
-  return `${origin.replace(/\/$/, "")}/api/auth/google/callback`;
+/** Google’a her zaman public HTTPS origin — proxy/docker http://app:3000 geçersiz istek üretir. */
+export function googleOAuthPublicOrigin(): string {
+  const raw = (
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.NEXT_PUBLIC_SITE_ORIGIN ||
+    "https://equsto.com"
+  )
+    .trim()
+    .replace(/\/$/, "");
+  try {
+    const u = new URL(raw.startsWith("http") ? raw : `https://${raw}`);
+    u.protocol = "https:";
+    u.hostname = u.hostname.replace(/^www\./i, "");
+    return u.origin;
+  } catch {
+    return "https://equsto.com";
+  }
+}
+
+export function googleOAuthRedirectUri(_origin?: string): string {
+  return `${googleOAuthPublicOrigin()}/api/auth/google/callback`;
 }
 
 export function newOauthNonce(): string {

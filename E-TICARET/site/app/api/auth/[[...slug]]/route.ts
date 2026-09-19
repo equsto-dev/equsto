@@ -21,6 +21,7 @@ import {
   encodeOauthState,
   exchangeGoogleCode,
   googleAuthorizeUrl,
+  googleOAuthPublicOrigin,
   newOauthNonce,
   safeAuthNext,
 } from "@/lib/google-oauth";
@@ -59,15 +60,14 @@ function err(message: string, status = 400) {
 }
 
 function loginRedirect(req: NextRequest, query: Record<string, string>) {
-  const url = req.nextUrl.clone();
-  url.pathname = url.pathname.startsWith("/en") ? "/en/login" : "/login";
-  url.search = "";
+  const en = req.nextUrl.pathname.startsWith("/en");
+  const url = new URL(en ? "/en/login" : "/login", googleOAuthPublicOrigin());
   for (const [k, v] of Object.entries(query)) url.searchParams.set(k, v);
   return url;
 }
 
 async function startGoogleOAuth(req: NextRequest) {
-  const origin = req.nextUrl.origin;
+  const origin = googleOAuthPublicOrigin();
   const next = safeAuthNext(req.nextUrl.searchParams.get("next"));
   const sync = String(req.nextUrl.searchParams.get("sync") || "").trim();
   const nonce = newOauthNonce();
@@ -84,7 +84,7 @@ async function startGoogleOAuth(req: NextRequest) {
 }
 
 async function finishGoogleOAuth(req: NextRequest) {
-  const origin = req.nextUrl.origin;
+  const origin = googleOAuthPublicOrigin();
   const q = req.nextUrl.searchParams;
   const errCode = q.get("error");
   if (errCode) {
@@ -106,9 +106,8 @@ async function finishGoogleOAuth(req: NextRequest) {
   try {
     const { idToken } = await exchangeGoogleCode(code, origin);
     const session = await loginWithGoogle(idToken, state.sync || null);
-    const dest = req.nextUrl.clone();
-    dest.search = "";
-    dest.pathname = (state.next || "/hesabim").split("#")[0].split("?")[0] || "/hesabim";
+    const destPath = (state.next || "/hesabim").split("#")[0].split("?")[0] || "/hesabim";
+    const dest = new URL(destPath, origin);
     dest.searchParams.set("google", "ok");
     const res = NextResponse.redirect(dest);
     setMemberSessionCookie(res, session.token, session.expiresAt);
