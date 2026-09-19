@@ -150,6 +150,7 @@
     "i18n:geo-blog": "node scripts/fix-bloghub-i18n.mjs",
     "catalog:ozti:move-cay": "node scripts/move-ozti-cay-from-kahve.mjs && npm run catalog:ozti:ekipmanlar",
     "catalog:ozti:move-kahve-acc": "node scripts/move-ozti-kahve-accessories-to-kahve.mjs && npm run catalog:ozti:ekipmanlar",
+    "catalog:ozti:move-yer-izgara": "node scripts/move-yer-izgara-to-yikama.mjs && npm run catalog:ozti:ekipmanlar && npm run legacy-pdp:build",
     "catalog:ozti:images:purge": "python scripts/extract-ozti-pdf-images.py --purge",
     "catalog:ozti:set-ustu": "node scripts/build-ozti-set-ustu-dept.mjs",
     "catalog:ozti:build": "node scripts/build-ozti-all-depts.mjs",

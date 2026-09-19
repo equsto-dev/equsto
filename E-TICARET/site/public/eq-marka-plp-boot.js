@@ -9,7 +9,7 @@
     { re: /pisirme|izgara|kuzine|fritez|ocak|salamander|wok|doner|sanayi-ocak|pisirici/i, label: "pişirme" },
     { re: /firin|konveksiyon|pastane.fir|kombi|pompe/i, label: "fırın" },
     { re: /buzdolab|derin.donduruc|sogutuc|buz.makin|donduruc|sogutma|teshir/i, label: "soğutma" },
-    { re: /yikama|bulasik|giyotin|kurutma|flight|konveyor|cop.siyirma|bardak.yik/i, label: "yıkama" },
+    { re: /yikama|bulasik|giyotin|kurutma|flight|konveyor|cop.siyirma|bardak.yik|yer[\s\-]*izgara/i, label: "yıkama" },
   ];
 
   function esc(s) {
@@ -39,6 +39,10 @@
   function brandPriorityRank(row) {
     var cat = String(row.category || row.cat || "").toLocaleLowerCase("tr");
     var h = normHay(row);
+    // Zemin drenaj ızgarası — pişirme ızgarası değil (yıkama grubu)
+    if (cat === "yer-izgaralari" || /yer[\s\-]*izgara/.test(h)) {
+      return 3; // yıkama sırası
+    }
     var i;
     for (i = 0; i < PAGE_PRIO.length; i++) {
       if (PAGE_PRIO[i].re.test(cat) || PAGE_PRIO[i].re.test(h)) return i;
