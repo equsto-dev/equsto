@@ -23,7 +23,7 @@ export default function ShopSearchMain() {
           <div className="eq-dept-plp-toolbar">
             <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--primary">
               <button type="button" className="eq-dept-plp-filter-mob" id="eq-arama-filter-mob" data-i18n="plp.filter_mob">
-                Filtrele
+                Filtre
               </button>
               <div className="eq-dept-plp-count" id="eq-arama-filter-count" />
             </div>

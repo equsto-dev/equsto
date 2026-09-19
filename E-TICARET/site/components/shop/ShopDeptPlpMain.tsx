@@ -24,7 +24,7 @@ export default function ShopDeptPlpMain({ meta }: { meta: ShopDeptMeta }) {
           <div className="eq-dept-plp-toolbar">
             <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--primary">
               <button type="button" className="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob" data-i18n="plp.filter_mob">
-                Filtrele
+                Filtre
               </button>
               <div className="eq-dept-plp-count" id="eq-dept-plp-count" />
             </div>

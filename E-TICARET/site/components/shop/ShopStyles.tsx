@@ -17,8 +17,8 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
       {variant === "plp" || variant === "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
         <>
-          <link rel="stylesheet" href={`/eq-dept-plp.css?v=${v}&m=20260919-left-drawer`} />
-          <link rel="stylesheet" href={`/eq-dept-plp-filter-mob.css?v=${v}&m=20260919-left-drawer`} />
+          <link rel="stylesheet" href={`/eq-dept-plp.css?v=${v}&m=20260919-cm-tools`} />
+          <link rel="stylesheet" href={`/eq-dept-plp-filter-mob.css?v=${v}&m=20260919-cm-tools`} />
         </>
       ) : null}
       {variant === "product" ? (

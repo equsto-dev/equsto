@@ -559,13 +559,14 @@ body.eq-dept-plp {
   .eq-dept-plp-layout {
     flex-direction: column;
   }
-  /* Mobil: Filtrele + Sıralama aynı satır; ürün sayısı altında */
   .eq-dept-plp-toolbar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-    gap: 8px 10px;
-    align-items: stretch;
-    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px 22px;
+    padding: 6px 0 10px;
   }
   .eq-dept-plp-toolbar__row--primary,
   .eq-dept-plp-toolbar__row--sort {
@@ -575,41 +576,19 @@ body.eq-dept-plp {
   .eq-arama-filter-mob {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
+    width: auto;
     min-width: 0;
-    padding: 10px 12px;
-    box-sizing: border-box;
   }
   .eq-dept-plp-sort {
-    grid-column: 2;
-    grid-row: 1;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-    width: 100%;
+    width: auto;
     min-width: 0;
-  }
-  .eq-dept-plp-sort > span {
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 600;
-    color: #333;
-  }
-  .eq-dept-plp-sort select {
-    width: 100%;
-    min-height: 44px;
   }
   .eq-dept-plp-count,
   #eq-arama-filter-count {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    flex: 1 0 100%;
     width: 100%;
-    flex: none;
-    text-align: center;
-    font-size: 13px;
+    text-align: left;
+    font-size: 12px;
     line-height: 1.35;
     padding-top: 2px;
   }
@@ -641,72 +620,41 @@ body.eq-dept-plp {
   }
 }
 
-/* Mobil (≤768px): bottom sheet filter, sorting visible, toolbar grid */
+/* Mobil (≤768px): CafeMarkt ikon+metin; Alt Kategoriler yok */
 @media (max-width: 768px) {
   .eq-dept-plp-toolbar {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
-    gap: 8px 10px !important;
-    align-items: stretch !important;
-    padding: 12px 0 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px 22px;
+    padding: 6px 0 10px;
   }
 
   .eq-dept-plp-toolbar__row--primary,
   .eq-dept-plp-toolbar__row--sort {
-    display: contents !important;
+    display: contents;
   }
 
   .eq-dept-plp-filter-mob,
   .eq-arama-filter-mob {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
+    display: inline-flex;
+    width: auto;
     min-width: 0;
-    padding: 10px 12px;
-    box-sizing: border-box;
-    min-height: 48px;
   }
 
   .eq-dept-plp-sort {
-    grid-column: 2;
-    grid-row: 1;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-    width: 100%;
+    width: auto;
     min-width: 0;
-  }
-
-  .eq-dept-plp-sort > span {
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 600;
-    color: #333;
-  }
-
-  .eq-dept-plp-sort select {
-    width: 100%;
-    min-height: 44px;
-    padding: 8px 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: #fff;
-    color: #111;
   }
 
   .eq-dept-plp-count,
   #eq-arama-filter-count {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    flex: 1 0 100%;
     width: 100%;
-    flex: none;
-    text-align: center;
-    font-size: 13px;
+    text-align: left;
+    font-size: 12px;
     line-height: 1.35;
     padding-top: 2px;
   }
