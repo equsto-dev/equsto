@@ -742,6 +742,7 @@ export async function runCatalogAgentChecks() {
     L2_source: universal.l2.check,
     L3_market: universal.l3.check,
     L4_anomaly: universal.l4.check,
+    L5_price_trust: universal.l5.check,
     senox: senox.check,
     yuksel_ithal: yukselIthal.check,
     portabianco: portabianco.check,
@@ -756,7 +757,7 @@ export async function runCatalogAgentChecks() {
         ? "info"
         : "ok";
 
-  const byLayer = { L1: 0, L2: 0, L3: 0, L4: 0, brand: 0 };
+  const byLayer = { L1: 0, L2: 0, L3: 0, L4: 0, L5: 0, brand: 0 };
   for (const i of allIssues) {
     const layer = i.meta?.layer;
     if (layer && byLayer[layer] != null) byLayer[layer]++;

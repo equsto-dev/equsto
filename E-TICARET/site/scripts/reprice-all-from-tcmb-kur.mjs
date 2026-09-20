@@ -86,7 +86,7 @@ function patchSpecs(specs, kurVal, kdvDahil, havaleTl) {
 }
 
 function repriceRow(row) {
-  if (!row || isListeTl(row)) return null;
+  if (!row || row.fiyat_kilit || isListeTl(row)) return null;
   const netEur = netEurFromRow(row);
   if (!(netEur > 0)) return null;
 

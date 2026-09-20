@@ -166,7 +166,12 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function buyboxPriceParts(x) {
-      var quoteOnly = !!(x && x.fiyat_bekleniyor) || /teklif\s+iste|teklif\s+için/i.test(String((x && x.price) || ""));
+      var quoteOnly =
+        !!(x && x.fiyat_bekleniyor) ||
+        (window.EqustoPriceDisplay &&
+          typeof window.EqustoPriceDisplay.isQuoteOnly === "function" &&
+          window.EqustoPriceDisplay.isQuoteOnly(x)) ||
+        /teklif\s+iste|teklif\s+için/i.test(String((x && x.price) || ""));
       if (quoteOnly) return { quoteOnly: true };
       var n = parsePriceTlNumber(x && x.price, x);
       if (!(n > 0) && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {

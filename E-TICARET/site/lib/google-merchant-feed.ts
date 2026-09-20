@@ -7,6 +7,7 @@ import { isShopDeptSlug } from "@/lib/shop/depts";
 import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
 import { resolveKdvDahilTry } from "@/lib/shop/consumer-price";
+import { isUntrustedPublishedPrice } from "@/lib/shop/price-trust";
 import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
 import { ProductDetail, extractTechnicalDetails } from "./feed-product-details";
 
@@ -56,6 +57,7 @@ export function isQuoteOnlyProduct(row: CatalogRow): boolean {
     return true;
   }
   if (row.fiyat_bekleniyor === true || row.fiyat_bekleniyor === 1) return true;
+  if (isUntrustedPublishedPrice(row)) return true;
   if (/€|eur\b/.test(p) && !/₺|tl\b|try\b/i.test(p)) return true;
   return false;
 }

@@ -35,8 +35,9 @@ function skipRow(row, fix) {
       row.kaynak ||
       "",
   ).toLowerCase();
+  if (row.fiyat_kilit) return true;
   if (/portabianco/i.test(brand)) return true;
-  if (src.includes("cafemarkt")) return true;
+  if (src.includes("cafemarkt") || src.includes("price-trust")) return true;
   if (String(fix.layer) === "brand" && /portabianco/i.test(String(fix.brand || "")))
     return true;
   return false;

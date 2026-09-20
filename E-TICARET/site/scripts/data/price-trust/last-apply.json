@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-09-20T18:42:47.185Z",
+  "corrected": [
+    {
+      "sku": "0830.03216.01",
+      "dept": "set-ustu-mutfak",
+      "before": 11448,
+      "after": 137691,
+      "marketTl": 148055,
+      "source": "cafemarkt",
+      "feedPatched": true
+    }
+  ],
+  "withheld": [],
+  "expensive": [
+    {
+      "sku": "7890.60400.7T",
+      "dept": "pisirme",
+      "siteTl": 458921,
+      "marketTl": 117552
+    },
+    {
+      "sku": "7890.60400.7TE",
+      "dept": "pisirme",
+      "siteTl": 477781,
+      "marketTl": 122384
+    },
+    {
+      "sku": "9890.D90D2.30",
+      "dept": "pisirme",
+      "siteTl": 23858,
+      "marketTl": 7290
+    },
+    {
+      "sku": "7919.14018.03",
+      "dept": "tasima",
+      "siteTl": 472984,
+      "marketTl": 137678
+    },
+    {
+      "sku": "7819.15G11.11",
+      "dept": "tasima",
+      "siteTl": 536862,
+      "marketTl": 141771
+    }
+  ],
+  "skipped": 24461
+}
