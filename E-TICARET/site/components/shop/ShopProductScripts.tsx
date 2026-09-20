@@ -38,8 +38,8 @@ export default function ShopProductScripts() {
       <Script src={`/eq-competitor-redirects.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-display-terminology.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/equsto-pricing-core.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-price-display.js?v=${cartV}`} strategy="afterInteractive" />
+      <Script src={`/eq-kur-live.js?v=${cartV}`} strategy="afterInteractive" />
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-filter-column.js" strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
