@@ -1,11 +1,11 @@
+import { isUntrustedPublishedPrice, type PriceTrustRow } from "@/lib/shop/price-trust";
+
 /** Tüketici vitrin fiyat etiketi — TRY (gösterim: ₺… TL). */
 
 export const CONSUMER_PRICE_SUFFIX = " TL";
 
-export type ConsumerPriceRow = {
-  fiyat_tl?: number | string | null;
+export type ConsumerPriceRow = PriceTrustRow & {
   price?: string | null;
-  fiyat_bekleniyor?: number | boolean | null;
 };
 
 function parseTrAmount(raw: string): number {
@@ -40,6 +40,7 @@ export function extractKdvDahilFromPriceString(price: string | null | undefined)
 export function resolveKdvDahilTry(row: ConsumerPriceRow | null | undefined): number {
   if (!row) return 0;
   if (row.fiyat_bekleniyor) return 0;
+  if (isUntrustedPublishedPrice(row)) return 0;
   const fiyatTl = Number(row.fiyat_tl);
   if (Number.isFinite(fiyatTl) && fiyatTl > 0) {
     return Math.round(fiyatTl * 100) / 100;
@@ -50,6 +51,7 @@ export function resolveKdvDahilTry(row: ConsumerPriceRow | null | undefined): nu
 export function isQuoteOnlyConsumerPrice(row: ConsumerPriceRow | null | undefined): boolean {
   if (!row) return false;
   if (row.fiyat_bekleniyor) return true;
+  if (isUntrustedPublishedPrice(row)) return true;
   return /teklif\s+iste|teklif\s+için/i.test(String(row.price || ""));
 }
 

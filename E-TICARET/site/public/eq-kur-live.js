@@ -129,7 +129,8 @@
   }
 
   function applyRowPrices(row) {
-    if (!row || !state.rate) return row;
+    if (!row || row.fiyat_kilit) return row;
+    if (!state.rate) return row;
     var px = computeRowPrices(row, state.rate);
     if (!px) return row;
     var copy = Object.assign({}, row, {

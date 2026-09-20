@@ -1,0 +1,14 @@
+{
+  "generated": "2026-09-20",
+  "note": "Yüksek güvenli SKU eşleşmesi — aynı üretici kodu Mutbex/Cafemarkt ile ve iki kaynak 2× içinde. too_cheap eşiği 0.45. Cafemarkt tek başına otomatik düzeltmez (ör. 8317.BO216.00: Cafemarkt ₺37.894 vs Mutbex ₺545).",
+  "skus": {
+    "0830.03216.01": {
+      "name": "OZTIRYAKILER EKMEK DILIMLEME MAKINASI MONOFAZE 32D 16MM",
+      "cafemarkt": 148054.8,
+      "cafemarkt_url": "https://www.cafemarkt.com/oztiryakiler-32d-ekmek-dilimleme-makinesi-16-mm-monofaze",
+      "mutbex": 166119,
+      "mutbex_url": "https://www.mutbex.com/oztiryakiler-ekmek-dilimleme-makinesi-monofaze-16-mm-edml-3216",
+      "confidence": "sku"
+    }
+  }
+}

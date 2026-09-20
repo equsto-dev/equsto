@@ -10,6 +10,7 @@ import {
   findPdfListPrice,
   normVoscoKey,
 } from "./vosco-pdf-prices.mjs";
+import { evaluatePriceTrust, normSku, num as trustNum, skuOf as trustSkuOf } from "./price-trust.mjs";
 
 function makeIssue(p) {
   return {
@@ -173,6 +174,10 @@ export function auditL1Formula(rows, liveEur, liveUsd) {
 
   for (const row of rows) {
     const site = num(row.fiyat_tl);
+    if (row.fiyat_kilit) {
+      skipped++;
+      continue;
+    }
     if (!(site > 0)) {
       skipped++;
       continue;
@@ -598,6 +603,77 @@ export function auditL4Anomaly(rows) {
   };
 }
 
+function loadPriceTrustRefs() {
+  const p = path.join(ROOT, "scripts/data/price-trust/market-refs.json");
+  const raw = loadJsonSafe(p);
+  return raw?.skus && typeof raw.skus === "object" ? raw.skus : {};
+}
+
+/** L5 — yayınlanan fiyatın piyasa referansına göre güvenilirliği */
+export function auditL5PriceTrust(rows) {
+  const refs = loadPriceTrustRefs();
+  const issues = [];
+  let checked = 0;
+  let bad = 0;
+
+  for (const row of rows) {
+    const sku = normSku(trustSkuOf(row));
+    const ref = refs[sku];
+    const cafe = trustNum(row.cafemarkt_fiyat_kdv_dahil || row.cafemarkt_fiyat_tl || ref?.cafemarkt);
+    const mut = trustNum(row.mutbex_ref_tl || row.mutbex_tl || ref?.mutbex);
+    const piyasa = trustNum(row.piyasa_ref_tl);
+    const markets = {
+      cafemarkt: cafe || (row.piyasa_kaynak === "cafemarkt" ? piyasa : 0),
+      mutbex: mut || (row.piyasa_kaynak === "mutbex" ? piyasa : 0),
+    };
+    if (!(markets.cafemarkt > 0 || markets.mutbex > 0 || piyasa > 0)) continue;
+    if (!(markets.cafemarkt > 0 || markets.mutbex > 0) && piyasa > 0) {
+      markets.other = [piyasa];
+    }
+    checked++;
+    const verdict = evaluatePriceTrust({
+      siteTl: trustNum(row.fiyat_tl),
+      markets,
+      quoteOnly: !!row.fiyat_bekleniyor,
+      locked: !!row.fiyat_kilit,
+      fiyatGuven: row.fiyat_guven,
+    });
+    if (verdict.reason !== "too_cheap" && verdict.reason !== "flagged") continue;
+    if (verdict.publishable) continue;
+    bad++;
+    issues.push(
+      makeIssue({
+        id: `l5:${sku}`,
+        brand: row.brand || "?",
+        severity: "critical",
+        type: "competitor_gap",
+        sku,
+        model: String(row.model || ""),
+        name: String(row.name || "").slice(0, 120),
+        message: `L5 piyasa güveni: sitede ₺${trustNum(row.fiyat_tl).toLocaleString("tr-TR")} vs ${verdict.marketSource} ₺${verdict.marketTl.toLocaleString("tr-TR")} (${verdict.reason})`,
+        site_tl: trustNum(row.fiyat_tl),
+        expected_tl: verdict.suggestedTl || verdict.marketTl,
+        diff_tl: trustNum(row.fiyat_tl) - (verdict.suggestedTl || verdict.marketTl),
+        source: String(row.fiyat_kaynagi || row.kaynak || ""),
+        competitor: verdict.marketSource,
+        competitor_tl: verdict.marketTl,
+        meta: { layer: "L5", reason: verdict.reason, ratio: verdict.ratio, dept: row._deptFile },
+      }),
+    );
+  }
+
+  return {
+    check: {
+      status: bad === 0 ? "ok" : "error",
+      total: rows.length,
+      checked,
+      bad,
+      formula: "site / piyasa < 0.45 ise yayınlanamaz",
+    },
+    issues,
+  };
+}
+
 /**
  * @param {number} liveEur
  * @param {number} liveUsd
@@ -608,12 +684,14 @@ export function runUniversalAudits(liveEur, liveUsd) {
   const l2 = auditL2Source(rows);
   const l3 = auditL3Market(rows, liveEur, liveUsd);
   const l4 = auditL4Anomaly(rows);
+  const l5 = auditL5PriceTrust(rows);
   return {
     rowCount: rows.length,
     l1,
     l2,
     l3,
     l4,
-    issues: [...l1.issues, ...l2.issues, ...l3.issues, ...l4.issues],
+    l5,
+    issues: [...l1.issues, ...l2.issues, ...l3.issues, ...l4.issues, ...l5.issues],
   };
 }

@@ -38,6 +38,7 @@
   function resolveKdvDahilTl(row) {
     if (!row) return 0;
     if (row.fiyat_bekleniyor) return 0;
+    if (isUntrustedPublishedPrice(row)) return 0;
     var fiyatTl = Number(row.fiyat_tl);
     if (Number.isFinite(fiyatTl) && fiyatTl > 0) {
       return Math.round(fiyatTl * 100) / 100;
@@ -54,9 +55,20 @@
     return 0;
   }
 
+  function isUntrustedPublishedPrice(row) {
+    if (!row) return false;
+    if (row.fiyat_bekleniyor) return false;
+    if (row.fiyat_guven === false) return true;
+    if (row.fiyat_kilit) return false;
+    var market = Number(row.piyasa_ref_tl);
+    var site = Number(row.fiyat_tl);
+    return market >= 500 && site > 0 && site / market < 0.45;
+  }
+
   function isQuoteOnly(row) {
     if (!row) return false;
     if (row.fiyat_bekleniyor) return true;
+    if (isUntrustedPublishedPrice(row)) return true;
     return /teklif\s+için/i.test(String(row.price || ""));
   }
 
@@ -103,5 +115,6 @@
     resolveKdvDahilTl: resolveKdvDahilTl,
     formatCard: formatCard,
     isQuoteOnly: isQuoteOnly,
+    isUntrustedPublishedPrice: isUntrustedPublishedPrice,
   };
 })(typeof window !== "undefined" ? window : globalThis);

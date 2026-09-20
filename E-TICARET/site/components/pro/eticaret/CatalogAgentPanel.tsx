@@ -171,7 +171,7 @@ export default function CatalogAgentPanel() {
         showIcon
         icon={<RobotOutlined />}
         message="Katalog Ajanı"
-        description="Tüm katalog: L1 formül, L2 kaynak (Electrolux/Vosco/Öztiryakiler…), L3 piyasa/oran sapması, L4 anomali + marka özel denetimler. Full rapor: scripts/data/catalog-agent/full-report.md"
+        description="Tüm katalog: L1 formül, L2 kaynak, L3 piyasa/oran, L4 anomali, L5 fiyat güveni (rakip SKU) + marka özel denetimler. Full rapor: scripts/data/catalog-agent/full-report.md"
       />
 
       <ProCard
