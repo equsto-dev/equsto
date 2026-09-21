@@ -4,6 +4,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
+import { readAnthropicApiKey } from "@/lib/claude/anthropic-key";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { cleanProformaTanim } from "./sanitize-tanim";
 import type { ParsedItem } from "./types";
@@ -90,7 +91,7 @@ export async function parseWithClaude(
   pdfBuffer: ArrayBuffer,
   opts?: { notlar?: string },
 ): Promise<ParsedItem[]> {
-  const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
+  const apiKey = readAnthropicApiKey();
   if (!apiKey) {
     throw new Error(
       "ANTHROPIC_API_KEY tanımlı değil — Vercel Environment Variables'a ekleyin.",

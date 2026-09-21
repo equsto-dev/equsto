@@ -4,6 +4,7 @@
 
 import { adminLoginToken } from "@/lib/admin-auth";
 import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
+import { readAnthropicApiKey } from "@/lib/claude/anthropic-key";
 
 export type ImportAnalizRequest = {
   dosya_base64: string;
@@ -58,7 +59,7 @@ function proxyBase(): string | null {
 
 /** Canlı Anthropic veya yerel proxy hazır mı */
 export function isClaudeImportConfigured(): boolean {
-  return Boolean(process.env.ANTHROPIC_API_KEY?.trim() || proxyBase());
+  return Boolean(readAnthropicApiKey() || proxyBase());
 }
 
 export const CLAUDE_IMPORT_MISSING_USER_MSG =
@@ -121,7 +122,7 @@ async function anthropicJsonFromMessages(
   userText: string,
   document?: { media_type: string; data: string },
 ): Promise<unknown[]> {
-  const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
+  const apiKey = readAnthropicApiKey();
   if (!apiKey) {
     throw new Error(
       "ANTHROPIC_API_KEY tanımlı değil — Vercel Environment Variables'a ekleyin.",
@@ -183,7 +184,7 @@ async function anthropicJsonFromMessages(
 async function fetchDocumentJsonArray(
   req: ImportAnalizRequest,
 ): Promise<unknown[]> {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+  if (readAnthropicApiKey()) {
     return anthropicJsonFromMessages(req.system_prompt, req.user_prompt, {
       media_type: req.dosya_tip,
       data: req.dosya_base64,
@@ -256,7 +257,7 @@ export async function runImportTextAnaliz(req: {
   system_prompt: string;
   user_prompt: string;
 }): Promise<ImportAnalizRow[]> {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+  if (readAnthropicApiKey()) {
     const arr = await anthropicJsonFromMessages(
       req.system_prompt,
       req.user_prompt,
