@@ -151,6 +151,42 @@ function toTelegramHtml(title: string, body: string): string {
   return formatNotifyLinesHtml(`${title}\n\n${body}`.trim(), "\n");
 }
 
+async function sendTelegramMessage(
+  token: string,
+  chatId: string,
+  title: string,
+  body: string,
+): Promise<void> {
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  const payloads: Record<string, unknown>[] = [
+    {
+      chat_id: chatId,
+      text: toTelegramHtml(title, body),
+      parse_mode: "HTML",
+      disable_web_page_preview: true,
+    },
+    {
+      chat_id: chatId,
+      text: `${title}\n\n${body}`.trim().slice(0, 4096),
+      disable_web_page_preview: true,
+    },
+  ];
+  let lastErr = "";
+  for (const payload of payloads) {
+    const r = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (r.ok) return;
+    lastErr = (await r.text()).slice(0, 240);
+    if (!/parse entities|can't parse/i.test(lastErr)) {
+      throw new Error(lastErr);
+    }
+  }
+  throw new Error(lastErr || "Telegram sendMessage failed");
+}
+
 function toNotifyEmailHtml(body: string): string {
   const inner = formatNotifyLinesHtml(body.trim(), "<br>\n");
   return `<div style="font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111">${inner}</div>`;
@@ -171,22 +207,7 @@ export async function sendInstantAlert(
   const tgChat = telegramChatId();
   if (channelEnabled("telegram", opts) && tgToken && tgChat) {
     try {
-      const r = await fetch(
-        `https://api.telegram.org/bot${tgToken}/sendMessage`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            chat_id: tgChat,
-            text: toTelegramHtml(title, body),
-            parse_mode: "HTML",
-            disable_web_page_preview: true,
-          }),
-        }
-      );
-      if (!r.ok) {
-        throw new Error((await r.text()).slice(0, 240));
-      }
+      await sendTelegramMessage(tgToken, tgChat, title, body);
       sent.push("telegram");
     } catch (e) {
       errors.push(
@@ -195,6 +216,7 @@ export async function sendInstantAlert(
     }
   } else if (channelEnabled("telegram", opts)) {
     skipped.push("telegram");
+    console.warn("[notify] telegram skipped: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID missing");
   }
 
   const resendKey = env("RESEND_API_KEY");
