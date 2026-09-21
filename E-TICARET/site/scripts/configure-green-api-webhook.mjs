@@ -9,7 +9,13 @@ const dryRun = process.argv.includes("--dry-run");
 
 const id = process.env.GREEN_API_INSTANCE_ID?.trim();
 const token = process.env.GREEN_API_TOKEN?.trim();
-const mode = process.env.EQUSTO_WHATSAPP_MODE?.trim() || "link";
+const rawMode = process.env.EQUSTO_WHATSAPP_MODE?.trim().toLowerCase() || "";
+const mode =
+  rawMode === "green-api" || rawMode === "greenapi" || rawMode === "green"
+    ? "green-api"
+    : !rawMode && id && token
+      ? "green-api"
+      : rawMode || "link";
 const webhookToken =
   process.env.GREEN_API_WEBHOOK_TOKEN?.trim() ||
   // yoksa deterministik ama gizli olmayan fallback üretme — zorunlu kıl

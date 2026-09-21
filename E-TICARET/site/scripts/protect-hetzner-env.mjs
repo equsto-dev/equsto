@@ -195,6 +195,37 @@ if (anthropicKey.length >= 20) {
   console.log("[protect-hetzner-env] ANTHROPIC_API_KEY merged from deploy env");
 }
 
+const waOverlay = {};
+const ghWaMode = String(process.env.EQUSTO_WHATSAPP_MODE || "").trim();
+const ghGreenId = String(process.env.GREEN_API_INSTANCE_ID || "").trim();
+const ghGreenToken = String(process.env.GREEN_API_TOKEN || "").trim();
+const ghGreenWebhook = String(process.env.GREEN_API_WEBHOOK_TOKEN || "").trim();
+if (ghWaMode) waOverlay.EQUSTO_WHATSAPP_MODE = ghWaMode;
+if (ghGreenId) waOverlay.GREEN_API_INSTANCE_ID = ghGreenId;
+if (ghGreenToken) waOverlay.GREEN_API_TOKEN = ghGreenToken;
+if (ghGreenWebhook) waOverlay.GREEN_API_WEBHOOK_TOKEN = ghGreenWebhook;
+if (Object.keys(waOverlay).length) {
+  writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", waOverlay);
+  fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+  writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", waOverlay);
+  console.log(
+    `[protect-hetzner-env] whatsapp overlay mode=${ghWaMode || "keep"} greenId=${ghGreenId ? "ok" : "skip"} greenToken=${ghGreenToken ? "ok" : "skip"} webhookToken=${ghGreenWebhook ? "ok" : "skip"}`,
+  );
+}
+
+const waFinal = readMap(envPath);
+const hasGreenApi = Boolean(
+  String(waFinal.GREEN_API_INSTANCE_ID || "").trim() && String(waFinal.GREEN_API_TOKEN || "").trim(),
+);
+const waModeNow = String(waFinal.EQUSTO_WHATSAPP_MODE || "").trim();
+if (hasGreenApi && !waModeNow) {
+  const modeOverlay = { EQUSTO_WHATSAPP_MODE: "green-api" };
+  writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", modeOverlay);
+  fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+  writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", modeOverlay);
+  console.log("[protect-hetzner-env] EQUSTO_WHATSAPP_MODE=green-api (GREEN_API_* present, mode was empty)");
+}
+
 const final = readMap(envPath);
 ensureDirectUrl(final);
 const meiliOverlay = {};
@@ -229,8 +260,13 @@ const okMeili = String(final.MEILISEARCH_HOST || "").startsWith("http");
 const okGoogle = String(final.GOOGLE_CLIENT_SECRET || "").length >= 16;
 const okGoogleId = String(final.GOOGLE_CLIENT_ID || final.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "").length >= 16;
 const okAnthropic = String(final.ANTHROPIC_API_KEY || "").trim().length >= 20;
+const okGreenApi = Boolean(
+  String(final.GREEN_API_INSTANCE_ID || "").trim() && String(final.GREEN_API_TOKEN || "").trim(),
+);
+const okGreenWebhook = Boolean(String(final.GREEN_API_WEBHOOK_TOKEN || "").trim());
+const waModeLog = String(final.EQUSTO_WHATSAPP_MODE || "").trim() || (okGreenApi ? "green-api(auto)" : "empty");
 console.log(
-  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"} GOOGLE_CLIENT_ID=${okGoogleId ? "ok" : "MISSING"} ANTHROPIC_API_KEY=${okAnthropic ? "ok" : "MISSING"}`,
+  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"} GOOGLE_CLIENT_ID=${okGoogleId ? "ok" : "MISSING"} ANTHROPIC_API_KEY=${okAnthropic ? "ok" : "MISSING"} GREEN_API=${okGreenApi ? "ok" : "MISSING"} GREEN_API_WEBHOOK_TOKEN=${okGreenWebhook ? "ok" : "MISSING"} EQUSTO_WHATSAPP_MODE=${waModeLog}`,
 );
 
 if (!okDb || !okDirect) {

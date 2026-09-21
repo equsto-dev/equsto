@@ -56,6 +56,11 @@ if (!greenApi.includes("parseGreenApiOutboundMessages")) {
   fail("green-api.ts: parseGreenApiOutboundMessages yok");
 }
 
+const waConfig = read("lib/whatsapp/config.ts");
+if (!/if \(greenApiConfigured\(\)\) return "green-api"/.test(waConfig)) {
+  fail("config.ts: boş MODE + Green API → green-api yok");
+}
+
 const handlers = read("lib/whatsapp/api-handlers.ts");
 if (!handlers.includes("parseGreenApiOutboundMessages")) {
   fail("api-handlers.ts: parseGreenApiOutboundMessages kullanımı yok");

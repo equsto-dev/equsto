@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { db } from "@/lib/db";
 import { notifyNewLead } from "@/lib/notify";
-import { whatsAppAppSecret } from "./config";
+import { greenApiWebhookToken, whatsAppAppSecret } from "./config";
 import { markWhatsAppRead } from "./meta-client";
 import { extractSayfaUrlFromWhatsAppText } from "./sayfa-url";
 
@@ -92,13 +92,14 @@ export function verifyWhatsAppSignature(
  * K5: Green API webhookUrlToken doğrulaması.
  * Green API, Authorization header'ına token koyar (Bearer opsiyonel).
  * Token tanımlı değilse production'da reddet; dev'de uyarıyla geç.
+ * Anahtar `greenApiWebhookToken()` ile runtime okunur (standalone inlining yok).
  */
 export function verifyGreenApiWebhookAuth(
   authorizationHeader: string | null
 ): boolean {
-  const expected = (process.env.GREEN_API_WEBHOOK_TOKEN || "").trim();
+  const expected = greenApiWebhookToken();
   if (!expected) {
-    return process.env.NODE_ENV !== "production";
+    return process.env["NODE_ENV"] !== "production";
   }
   const raw = String(authorizationHeader || "").trim();
   if (!raw) return false;

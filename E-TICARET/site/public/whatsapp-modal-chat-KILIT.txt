@@ -17,6 +17,8 @@ Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akış�
   • Müşteriden gelen WA: incomingMessageReceived → webhook → user satırı
   • İç numaralar (vitrin / notify) isInternalWhatsAppPhone ile filtrelenir
   • Green API GET /api/whatsapp/webhook → 200 JSON (panel URL kontrolü; Forbidden değil)
+  • EQUSTO_WHATSAPP_MODE boş + GREEN_API_INSTANCE_ID/TOKEN → mode=green-api
+    (git reset şablonu MODE="" bırakınca kedi sohbet kapanmasın)
 
 ── Green API webhook (Hetzner / configure script) ───────────────────────────
   URL: https://equsto.com/api/whatsapp/webhook
@@ -48,6 +50,7 @@ YASAK (onay olmadan):
   • Polling’i kaldırmak veya yalnızca localStorage’a dönmek
   • Webhook outbound (telefondan gönderilen) parse/kaydını kaldırmak
   • GET webhook’u Green API modunda Forbidden yapmak
+  • Boş MODE + Green API anahtarları varken link’e düşürmek
   • requireMemberSession’ı /api/whatsapp/chat’ten çıkarmak
   • WaChatMessage modelini / migration’ı silmek
   • isInternalWhatsAppPhone filtresini kaldırmak (iç sohbet karışır)
