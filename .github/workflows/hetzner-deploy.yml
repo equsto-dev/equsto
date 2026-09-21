@@ -21,6 +21,7 @@ jobs:
       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
       GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID != '' && secrets.GOOGLE_CLIENT_ID || '1041839711854-kj81vgdnu9qp8jv5t58hlcamd4q587r3.apps.googleusercontent.com' }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -30,15 +31,63 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
+
+            # git reset .env.production şablonunu ezer; anahtar keep'te kalmalı.
+            # GitHub secret varsa keep'e yaz — protect-hetzner-env keep'ten geri yükler.
+            node <<'NODE'
+            const fs = require("fs");
+            const path = require("path");
+            function hasKey(file) {
+              try {
+                const t = fs.readFileSync(file, "utf8");
+                return t.split(/\n/).some((line) => {
+                  if (!line.startsWith("ANTHROPIC_API_KEY=")) return false;
+                  const v = line.slice("ANTHROPIC_API_KEY=".length).trim().replace(/^['"]|['"]$/g, "");
+                  return v.length >= 20;
+                });
+              } catch {
+                return false;
+              }
+            }
+            function mergeKey(file, key) {
+              fs.mkdirSync(path.dirname(file), { recursive: true });
+              const t = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+              const lines = t.split(/\n/);
+              let found = false;
+              const out = lines.map((line) => {
+                if (!line.startsWith("ANTHROPIC_API_KEY=")) return line;
+                found = true;
+                return "ANTHROPIC_API_KEY=" + key;
+              });
+              if (!found) {
+                if (out.length && out[out.length - 1] !== "") out.push("");
+                out.push("ANTHROPIC_API_KEY=" + key);
+              }
+              fs.writeFileSync(file, out.join("\n").replace(/\n+$/, "\n"));
+            }
+            const keep = "/opt/equsto/.env.production.keep";
+            const site = ".env.production";
+            const secret = String(process.env.ANTHROPIC_API_KEY || "").trim();
+            console.log("KEEP_ANTHROPIC=" + (hasKey(keep) ? "ok" : "MISSING"));
+            console.log("SITE_ANTHROPIC=" + (hasKey(site) ? "ok" : "MISSING"));
+            console.log("GH_SECRET_ANTHROPIC=" + (secret.length >= 20 ? "ok" : "MISSING"));
+            if (secret.length >= 20) {
+              mergeKey(keep, secret);
+              mergeKey(site, secret);
+              console.log("INJECT_ANTHROPIC=wrote keep+site len=" + secret.length);
+            } else {
+              console.log("INJECT_ANTHROPIC=skipped");
+            }
+            NODE
+            docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING"))' || echo CONTAINER_ANTHROPIC=unreachable
+
             git fetch origin
             git reset --hard origin/main
-            # GOOGLE_CLIENT_SECRET appleboy env ile gelir; protect-hetzner-env.mjs
-            # keep'e merge eder. Şablon .env.production keep üzerine kopyalanmaz.
             bash scripts/hetzner-deploy.sh
 
       - name: Özet

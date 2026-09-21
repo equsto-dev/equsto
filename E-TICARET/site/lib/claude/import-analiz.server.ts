@@ -4,6 +4,7 @@
 
 import { adminLoginToken } from "@/lib/admin-auth";
 import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
+import { readAnthropicApiKey } from "@/lib/claude/anthropic-key";
 
 export type ImportAnalizRequest = {
   dosya_base64: string;
@@ -55,6 +56,14 @@ function proxyBase(): string | null {
   }
   return null;
 }
+
+/** Canlı Anthropic veya yerel proxy hazır mı */
+export function isClaudeImportConfigured(): boolean {
+  return Boolean(readAnthropicApiKey() || proxyBase());
+}
+
+export const CLAUDE_IMPORT_MISSING_USER_MSG =
+  "Bu liste otomatik okunamadı. Ürün ve adet sütunları olan bir Excel yükleyin.";
 
 function extractTextFromClaude(resp: {
   content?: Array<{ type?: string; text?: string }>;
@@ -113,7 +122,7 @@ async function anthropicJsonFromMessages(
   userText: string,
   document?: { media_type: string; data: string },
 ): Promise<unknown[]> {
-  const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
+  const apiKey = readAnthropicApiKey();
   if (!apiKey) {
     throw new Error(
       "ANTHROPIC_API_KEY tanımlı değil — Vercel Environment Variables'a ekleyin.",
@@ -175,7 +184,7 @@ async function anthropicJsonFromMessages(
 async function fetchDocumentJsonArray(
   req: ImportAnalizRequest,
 ): Promise<unknown[]> {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+  if (readAnthropicApiKey()) {
     return anthropicJsonFromMessages(req.system_prompt, req.user_prompt, {
       media_type: req.dosya_tip,
       data: req.dosya_base64,
@@ -184,9 +193,10 @@ async function fetchDocumentJsonArray(
 
   const base = proxyBase();
   if (!base) {
-    throw new Error(
-      "PDF analiz için ANTHROPIC_API_KEY (canlı) veya yerelde npm run api gerekli.",
+    console.error(
+      "[import-analiz] Claude yok: ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
     );
+    throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
   }
 
   const token = adminLoginToken();
@@ -247,7 +257,7 @@ export async function runImportTextAnaliz(req: {
   system_prompt: string;
   user_prompt: string;
 }): Promise<ImportAnalizRow[]> {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+  if (readAnthropicApiKey()) {
     const arr = await anthropicJsonFromMessages(
       req.system_prompt,
       req.user_prompt,
@@ -269,9 +279,10 @@ export async function runImportTextAnaliz(req: {
     });
   }
 
-  throw new Error(
-    "Liste analizi için ANTHROPIC_API_KEY veya yerelde npm run api gerekli.",
+  console.error(
+    "[import-analiz] Claude yok (text): ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
   );
+  throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
 }
 
 /** PDF/Excel base64 → ekipman satırları */

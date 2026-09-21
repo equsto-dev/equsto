@@ -94,8 +94,11 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[PFOS parse-upload]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";
+    const userMsg = /ANTHROPIC_API_KEY|npm run api|Vercel Environment/i.test(msg)
+      ? "PDF analizi için Claude anahtarı canlı ortamda tanımlı değil. Liste tekrar denenebilir veya Excel olarak yükleyin."
+      : msg;
     const status =
-      /Anthropic|Meilisearch|502|çıkarılamadı/i.test(msg) ? 502 : 500;
-    return NextResponse.json({ error: msg }, { status });
+      /Anthropic|Meilisearch|502|çıkarılamadı|ANTHROPIC/i.test(msg) ? 502 : 500;
+    return NextResponse.json({ error: userMsg }, { status });
   }
 }
