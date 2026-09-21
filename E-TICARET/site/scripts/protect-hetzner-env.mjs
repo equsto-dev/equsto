@@ -128,6 +128,18 @@ function writeMerged(file, baseText, overlay) {
   fs.writeFileSync(file, text, "utf8");
 }
 
+function dropVercelKeys(file) {
+  if (!fs.existsSync(file)) return;
+  const lines = fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "").split(/\n/);
+  const out = lines.filter((line) => {
+    const t = line.trim();
+    if (!t || t.startsWith("#") || t.startsWith("$") || !t.includes("=")) return true;
+    const key = t.slice(0, t.indexOf("=")).trim();
+    return !key.startsWith("VERCEL");
+  });
+  fs.writeFileSync(file, `${out.join("\n").replace(/\s+$/, "")}\n`, "utf8");
+}
+
 const site = readMap(envPath);
 const keep = readMap(keepPath);
 ensureDirectUrl(site);
@@ -234,6 +246,9 @@ if (Object.keys(meiliOverlay).length) {
     fs.copyFileSync(envPath, keepPath);
   }
 }
+
+dropVercelKeys(envPath);
+if (fs.existsSync(keepPath)) dropVercelKeys(keepPath);
 
 const okDb = String(final.DATABASE_URL || "").startsWith("postgresql://");
 const okDirect = String(final.DIRECT_URL || "").startsWith("postgresql://");

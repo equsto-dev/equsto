@@ -125,7 +125,7 @@ async function anthropicJsonFromMessages(
   const apiKey = readAnthropicApiKey();
   if (!apiKey) {
     throw new Error(
-      "ANTHROPIC_API_KEY tanımlı değil — Vercel Environment Variables'a ekleyin.",
+      "ANTHROPIC_API_KEY tanımlı değil — GitHub Secret / Hetzner keep'e ekleyin.",
     );
   }
 

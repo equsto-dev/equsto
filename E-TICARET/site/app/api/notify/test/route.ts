@@ -47,6 +47,6 @@ export async function GET(req: NextRequest) {
   return adminOk({
     configured: notifyChannelsConfigured(),
     env: notifyEnvHints(),
-    note: "env missing ise Vercel → Settings → Environment Variables → Production → Redeploy",
+    note: "env missing ise GitHub Secrets + Hetzner keep, sonra redeploy",
   });
 }

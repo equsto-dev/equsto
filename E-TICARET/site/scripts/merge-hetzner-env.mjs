@@ -1,5 +1,5 @@
 /**
- * Hetzner .env.production — Vercel pull + .env.local.template birleştirme.
+ * Hetzner .env.production — keep / template / secrets birleştirme.
  * DATABASE_URL boşsa stderr uyarı; dosya yine yazılır (build için).
  */
 import fs from "node:fs";
@@ -28,7 +28,7 @@ function parseEnv(text) {
   return out;
 }
 
-const vercel = parseEnv(
+const productionEnv = parseEnv(
   fs.existsSync(path.join(root, ".env.production"))
     ? fs.readFileSync(path.join(root, ".env.production"), "utf8")
     : "",
@@ -72,11 +72,11 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-/** öncelik: template < example < vercel < dbSecrets < waSecrets < geminiSecrets < tepeSecrets */
+/** öncelik: template < example < production < dbSecrets < waSecrets < geminiSecrets < tepeSecrets */
 const merged = {
   ...template,
   ...example,
-  ...vercel,
+  ...productionEnv,
   ...dbSecrets,
   ...waSecrets,
   ...geminiSecrets,

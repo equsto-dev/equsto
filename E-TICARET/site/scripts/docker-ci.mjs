@@ -1,6 +1,5 @@
 /**
  * Docker / Hetzner build — prebuild + admin-config + next build (standalone).
- * Vercel'e özgü .next → repo kökü kopyası yok.
  */
 import { spawnSync } from "node:child_process";
 import path from "node:path";

@@ -1,5 +1,5 @@
 /**
- * Vercel install/build — tek kaynak: E-TICARET/site
+ * Hetzner / Docker install-build — tek kaynak: E-TICARET/site
  */
 import fs from "node:fs";
 import path from "node:path";
