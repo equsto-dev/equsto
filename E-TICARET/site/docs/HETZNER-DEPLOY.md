@@ -112,7 +112,7 @@ bash scripts/hetzner-deploy.sh
 
 ## Ajan cron'ları (Hetzner)
 
-Sunucuda bir kez (`.env.production` içinde `CRON_SECRET` ve isteğe bağlı `ANTHROPIC_API_KEY` tanımlı olmalı):
+Sunucuda bir kez (`.env.production` / keep içinde `CRON_SECRET` ve `ANTHROPIC_API_KEY` tanımlı olmalı — GitHub Secret `ANTHROPIC_API_KEY`, Vercel değil):
 
 ```bash
 cd /opt/equsto/E-TICARET/site
