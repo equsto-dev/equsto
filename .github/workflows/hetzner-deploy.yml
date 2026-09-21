@@ -11,6 +11,7 @@ on:
 concurrency:
   group: hetzner-deploy
   cancel-in-progress: false
+  # redeploy: GitHub TELEGRAM_CHAT_ID updated
 
 jobs:
   deploy:
