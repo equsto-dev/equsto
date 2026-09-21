@@ -22,6 +22,8 @@ jobs:
       GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID != '' && secrets.GOOGLE_CLIENT_ID || '1041839711854-kj81vgdnu9qp8jv5t58hlcamd4q587r3.apps.googleusercontent.com' }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -31,7 +33,7 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
@@ -42,53 +44,63 @@ jobs:
             node <<'NODE'
             const fs = require("fs");
             const path = require("path");
-            function hasKey(file) {
+            function envVal(name) {
+              return String(process.env[name] || "").trim();
+            }
+            function hasKey(file, name, minLen) {
               try {
                 const t = fs.readFileSync(file, "utf8");
                 return t.split(/\n/).some((line) => {
-                  if (!line.startsWith("ANTHROPIC_API_KEY=")) return false;
-                  const v = line.slice("ANTHROPIC_API_KEY=".length).trim().replace(/^['"]|['"]$/g, "");
-                  return v.length >= 20;
+                  if (!line.startsWith(name + "=")) return false;
+                  const v = line.slice(name.length + 1).trim().replace(/^['"]|['"]$/g, "");
+                  return v.length >= minLen;
                 });
               } catch {
                 return false;
               }
             }
-            function mergeKey(file, key) {
+            function mergeKey(file, name, value) {
               fs.mkdirSync(path.dirname(file), { recursive: true });
               const t = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
               const lines = t.split(/\n/);
               let found = false;
               const out = lines.map((line) => {
-                if (!line.startsWith("ANTHROPIC_API_KEY=")) return line;
+                if (!line.startsWith(name + "=")) return line;
                 found = true;
-                return "ANTHROPIC_API_KEY=" + key;
+                return name + "=" + value;
               });
               if (!found) {
                 if (out.length && out[out.length - 1] !== "") out.push("");
-                out.push("ANTHROPIC_API_KEY=" + key);
+                out.push(name + "=" + value);
               }
               fs.writeFileSync(file, out.join("\n").replace(/\n+$/, "\n"));
             }
-            const keep = "/opt/equsto/.env.production.keep";
-            const site = ".env.production";
-            const secret = String(process.env.ANTHROPIC_API_KEY || "").trim();
-            console.log("KEEP_ANTHROPIC=" + (hasKey(keep) ? "ok" : "MISSING"));
-            console.log("SITE_ANTHROPIC=" + (hasKey(site) ? "ok" : "MISSING"));
-            console.log("GH_SECRET_ANTHROPIC=" + (secret.length >= 20 ? "ok" : "MISSING"));
-            if (secret.length >= 20) {
-              mergeKey(keep, secret);
-              mergeKey(site, secret);
-              console.log("INJECT_ANTHROPIC=wrote keep+site len=" + secret.length);
-            } else {
-              console.log("INJECT_ANTHROPIC=skipped");
+            function inject(name, minLen) {
+              const keep = "/opt/equsto/.env.production.keep";
+              const site = ".env.production";
+              const secret = envVal(name);
+              const ok = secret.length >= minLen;
+              console.log("KEEP_" + name + "=" + (hasKey(keep, name, minLen) ? "ok" : "MISSING"));
+              console.log("SITE_" + name + "=" + (hasKey(site, name, minLen) ? "ok" : "MISSING"));
+              console.log("GH_SECRET_" + name + "=" + (ok ? "ok" : "MISSING"));
+              if (ok) {
+                mergeKey(keep, name, secret);
+                mergeKey(site, name, secret);
+                console.log("INJECT_" + name + "=wrote keep+site len=" + secret.length);
+              } else {
+                console.log("INJECT_" + name + "=skipped");
+              }
             }
+            inject("ANTHROPIC_API_KEY", 20);
+            inject("TELEGRAM_BOT_TOKEN", 20);
+            inject("TELEGRAM_CHAT_ID", 3);
             NODE
-            docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING"))' || echo CONTAINER_ANTHROPIC=unreachable
+            docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING")); console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_SECRETS=unreachable
 
             git fetch origin
             git reset --hard origin/main
             bash scripts/hetzner-deploy.sh
+            docker compose --env-file .env.production exec -T app node -e 'const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_TELEGRAM=unreachable
 
       - name: Özet
         if: success()

@@ -70,10 +70,7 @@ export function whatsAppNotifyTo(): string {
 
 /** Green API QR ile bağlı WhatsApp hattı (kendine mesaj bildirim vermez). */
 export function greenApiInstancePhone(): string {
-  const raw =
-    env("GREEN_API_INSTANCE_WID") ||
-    env("GREEN_API_INSTANCE_PHONE") ||
-    env("EQUSTO_WHATSAPP_E164");
+  const raw = env("GREEN_API_INSTANCE_WID") || env("GREEN_API_INSTANCE_PHONE");
   return normalizeWaRecipient(raw);
 }
 
