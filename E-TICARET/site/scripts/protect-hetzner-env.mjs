@@ -217,13 +217,15 @@ const waFinal = readMap(envPath);
 const hasGreenApi = Boolean(
   String(waFinal.GREEN_API_INSTANCE_ID || "").trim() && String(waFinal.GREEN_API_TOKEN || "").trim(),
 );
-const waModeNow = String(waFinal.EQUSTO_WHATSAPP_MODE || "").trim();
-if (hasGreenApi && !waModeNow) {
+const waModeNow = String(waFinal.EQUSTO_WHATSAPP_MODE || "").trim().toLowerCase();
+if (hasGreenApi && waModeNow !== "green-api" && waModeNow !== "meta") {
   const modeOverlay = { EQUSTO_WHATSAPP_MODE: "green-api" };
   writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", modeOverlay);
   fs.mkdirSync(path.dirname(keepPath), { recursive: true });
   writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", modeOverlay);
-  console.log("[protect-hetzner-env] EQUSTO_WHATSAPP_MODE=green-api (GREEN_API_* present, mode was empty)");
+  console.log(
+    `[protect-hetzner-env] EQUSTO_WHATSAPP_MODE=green-api (GREEN_API_* present, mode was ${waModeNow || "empty"})`,
+  );
 }
 
 const final = readMap(envPath);

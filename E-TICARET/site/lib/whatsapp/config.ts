@@ -10,14 +10,13 @@ export type WhatsAppMode = "link" | "green-api" | "meta";
  * link      — wa.me (sunucu gönderimi kapalı)
  * green-api — QR ile bağlanır; kedi sohbet send/receive (GREEN_API_*)
  * meta      — Meta Cloud API (Facebook Developer)
- * MODE boş + GREEN_API_* dolu → green-api
+ * GREEN_API_* doluysa link/boş MODE kedi sohbeti kapatmaz; yalnızca meta ayrı kalır.
  */
 export function whatsAppMode(): WhatsAppMode {
   const raw = env("EQUSTO_WHATSAPP_MODE").toLowerCase();
-  if (raw === "green-api" || raw === "greenapi" || raw === "green") return "green-api";
   if (raw === "meta" || raw === "cloud" || raw === "facebook") return "meta";
-  if (raw === "link" || raw === "wa.me" || raw === "wame") return "link";
-  // git reset boş EQUSTO_WHATSAPP_MODE="" bırakınca kedi sohbet (send/webhook) kapanıyordu.
+  if (raw === "green-api" || raw === "greenapi" || raw === "green") return "green-api";
+  // Örnek env MODE=link / git reset MODE="" — anahtarlar varken kedi sohbet açık kalsın.
   if (greenApiConfigured()) return "green-api";
   return "link";
 }

@@ -46,14 +46,14 @@ describe("whatsAppMode — empty MODE + Green API credentials", () => {
     assert.equal(whatsAppWebhookConfigured(), true);
   });
 
-  it("stays link when MODE is explicitly link even with Green API keys", () => {
+  it("uses green-api when MODE is link but GREEN_API_* are set", () => {
     setEnv({
       EQUSTO_WHATSAPP_MODE: "link",
       GREEN_API_INSTANCE_ID: "1101234567",
       GREEN_API_TOKEN: "token-abc-12345678",
     });
-    assert.equal(whatsAppMode(), "link");
-    assert.equal(whatsAppWebhookConfigured(), false);
+    assert.equal(whatsAppMode(), "green-api");
+    assert.equal(whatsAppWebhookConfigured(), true);
   });
 
   it("stays meta when MODE is meta", () => {

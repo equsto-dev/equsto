@@ -13,9 +13,11 @@ const rawMode = process.env.EQUSTO_WHATSAPP_MODE?.trim().toLowerCase() || "";
 const mode =
   rawMode === "green-api" || rawMode === "greenapi" || rawMode === "green"
     ? "green-api"
-    : !rawMode && id && token
-      ? "green-api"
-      : rawMode || "link";
+    : rawMode === "meta" || rawMode === "cloud" || rawMode === "facebook"
+      ? "meta"
+      : id && token
+        ? "green-api"
+        : rawMode || "link";
 const webhookToken =
   process.env.GREEN_API_WEBHOOK_TOKEN?.trim() ||
   // yoksa deterministik ama gizli olmayan fallback üretme — zorunlu kıl

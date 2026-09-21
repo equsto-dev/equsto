@@ -98,15 +98,25 @@ jobs:
             inject("GREEN_API_TOKEN", 8);
             inject("GREEN_API_WEBHOOK_TOKEN", 8);
             inject("EQUSTO_WHATSAPP_MODE", 4);
+            function readVal(file, name) {
+              try {
+                const t = fs.readFileSync(file, "utf8");
+                for (const line of t.split(/\n/)) {
+                  if (!line.startsWith(name + "=")) continue;
+                  return line.slice(name.length + 1).trim().replace(/^['"]|['"]$/g, "");
+                }
+              } catch {}
+              return "";
+            }
             const keep = "/opt/equsto/.env.production.keep";
             const site = ".env.production";
             const hasGreen =
               hasKey(keep, "GREEN_API_INSTANCE_ID", 4) && hasKey(keep, "GREEN_API_TOKEN", 8);
-            const modeSet = hasKey(keep, "EQUSTO_WHATSAPP_MODE", 4);
-            if (hasGreen && !modeSet) {
+            const keepMode = readVal(keep, "EQUSTO_WHATSAPP_MODE").toLowerCase();
+            if (hasGreen && keepMode !== "green-api" && keepMode !== "meta") {
               mergeKey(keep, "EQUSTO_WHATSAPP_MODE", "green-api");
               mergeKey(site, "EQUSTO_WHATSAPP_MODE", "green-api");
-              console.log("INJECT_EQUSTO_WHATSAPP_MODE=green-api (GREEN_API present, mode empty)");
+              console.log("INJECT_EQUSTO_WHATSAPP_MODE=green-api (GREEN_API present, mode was " + (keepMode || "empty") + ")");
             }
             NODE
             docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING"))' || echo CONTAINER_ANTHROPIC=unreachable
