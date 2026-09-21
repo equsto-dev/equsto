@@ -56,6 +56,14 @@ function proxyBase(): string | null {
   return null;
 }
 
+/** Canlı Anthropic veya yerel proxy hazır mı */
+export function isClaudeImportConfigured(): boolean {
+  return Boolean(process.env.ANTHROPIC_API_KEY?.trim() || proxyBase());
+}
+
+export const CLAUDE_IMPORT_MISSING_USER_MSG =
+  "Bu liste otomatik okunamadı. Ürün ve adet sütunları olan bir Excel yükleyin.";
+
 function extractTextFromClaude(resp: {
   content?: Array<{ type?: string; text?: string }>;
 }): string {
@@ -184,9 +192,10 @@ async function fetchDocumentJsonArray(
 
   const base = proxyBase();
   if (!base) {
-    throw new Error(
-      "PDF analiz için ANTHROPIC_API_KEY (canlı) veya yerelde npm run api gerekli.",
+    console.error(
+      "[import-analiz] Claude yok: ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
     );
+    throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
   }
 
   const token = adminLoginToken();
@@ -269,9 +278,10 @@ export async function runImportTextAnaliz(req: {
     });
   }
 
-  throw new Error(
-    "Liste analizi için ANTHROPIC_API_KEY veya yerelde npm run api gerekli.",
+  console.error(
+    "[import-analiz] Claude yok (text): ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
   );
+  throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
 }
 
 /** PDF/Excel base64 → ekipman satırları */

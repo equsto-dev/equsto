@@ -419,6 +419,14 @@ function isTanimHeaderLabel(c: string): boolean {
     n.includes("urun adi") ||
     n.includes("urun ad") ||
     (n.includes("urun") && n.includes("adi")) ||
+    n === "urun" ||
+    n.startsWith("urun ") ||
+    n.includes("kalem") ||
+    n === "isim" ||
+    n === "name" ||
+    n.includes("description") ||
+    n === "item" ||
+    n.includes("cihaz") ||
     n === "cinsi"
   );
 }
@@ -514,7 +522,7 @@ function findTabularHeader(ws: Worksheet): TabularHeader | null {
     acc.merged = mergeTabularHeaderRows(acc.merged, hit, cells);
   });
 
-  if (!acc.merged || acc.merged.poz < 0 || acc.merged.malzeme < 0) return null;
+  if (!acc.merged || acc.merged.malzeme < 0) return null;
   return { ...acc.merged, headerRow: acc.headerRow };
 }
 
@@ -538,9 +546,23 @@ function resolveTabularPoz(
   return null;
 }
 
+function syntheticPoz(bolum: string, index: number): string {
+  const harf = bolum.trim().toUpperCase().charAt(0);
+  const prefix = harf && BOLUM_HARF_RE.test(harf) ? harf : "A";
+  return `${prefix}${index}`;
+}
+
+function parseAdetCell(raw: string | undefined): number | null {
+  if (raw == null || raw === "") return null;
+  const n = parseInt(String(raw).replace(/[^\d]/g, ""), 10);
+  if (!Number.isFinite(n) || n <= 0) return null;
+  return Math.min(99, n);
+}
+
 /**
  * Sütun başlıklı proforma tablosu (yaygın mühendislik listeleri):
  * No | Poz | Malzeme/Tanım | Açıklama | Ölçü | Adet — sayısal ve harfli poz birlikte.
+ * Poz sütunu yoksa (müşteri Excel'leri) sıralı A1, A2… üretilir.
  */
 export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
   const rows: PfosEkipmanSatir[] = [];
@@ -550,6 +572,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
   let bolum = "";
   let bolumAd = "";
   let sectionIndex = 0;
+  let itemIndex = 0;
 
   ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
     if (rowNumber <= header.headerRow) return;
@@ -591,10 +614,13 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
     if (/^toplam|proforma|fatura|mutabakat/i.test(malzeme)) return;
 
     const adBase = malzeme || aciklama;
+    const parsedAdet =
+      header.adet >= 0 ? parseAdetCell(cells[header.adet]) : null;
     if (
       BOLUM_HARF_RE.test(pozRaw) &&
       adBase.length > 4 &&
-      !NUM_POZ_RE.test(noRaw.replace(/\D/g, ""))
+      !NUM_POZ_RE.test(noRaw.replace(/\D/g, "")) &&
+      parsedAdet == null
     ) {
       bolum = pozRaw.toUpperCase();
       if (BOLUM_HARF_RE.test(bolum)) {
@@ -605,12 +631,15 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       return;
     }
 
+    const filledCount = cells.filter(Boolean).length;
     if (
       !pozRaw &&
       !noRaw &&
+      parsedAdet == null &&
       adBase.length >= 3 &&
       !OLCU_RE.test(adBase) &&
-      !/^\d+$/.test(adBase)
+      !/^\d+$/.test(adBase) &&
+      filledCount <= 1
     ) {
       sectionIndex++;
       bolumAd = `${adBase}\0${sectionIndex}`;
@@ -619,8 +648,9 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       return;
     }
 
-    const poz = resolveTabularPoz(pozRaw, noRaw, bolum);
-    if (!poz) return;
+    const poz =
+      resolveTabularPoz(pozRaw, noRaw, bolum) ||
+      syntheticPoz(bolum, ++itemIndex);
 
     let ad = malzeme;
     if (aciklama && aciklama !== malzeme) {
@@ -652,15 +682,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       }
     }
 
-    let adet = 1;
-    if (header.adet >= 0) {
-      const raw = cells[header.adet];
-      const n =
-        typeof raw === "number"
-          ? Math.round(raw)
-          : parseInt(String(raw ?? "").replace(/[^\d]/g, ""), 10);
-      if (Number.isFinite(n) && n > 0) adet = Math.min(99, n);
-    }
+    const adet = parsedAdet ?? 1;
 
     let marka: string | undefined;
     if (header.marka >= 0) {
@@ -679,7 +701,6 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       mevcut = true;
     }
 
-    const harf = poz.charAt(0).toUpperCase();
     const bolumFields = resolveSatirBolumFields(poz, bolum, bolumAd);
     const satir: PfosEkipmanSatir = {
       bolum: bolumFields.bolum,
@@ -698,6 +719,77 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
   return rows;
 }
 
+const GENERIC_SKIP_RE =
+  /^(toplam|tutar|ara toplam|proforma|fatura|sayfa|page|tel|fax|email|e-posta|adres|tarih|müşteri|musteri|proje no|sipariş|siparis)/i;
+
+/** Başlıksız müşteri listesi: uzun metin + adet (Claude olmadan). */
+export function parseGenericItemListWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
+  const rows: PfosEkipmanSatir[] = [];
+  let item = 0;
+
+  ws.eachRow({ includeEmpty: false }, (row) => {
+    const cells = rowCells(row);
+    const filled = cells.filter(Boolean);
+    if (filled.length < 1) return;
+    const joined = filled.join(" ");
+    if (GENERIC_SKIP_RE.test(joined.trim())) return;
+    const headerish = filled.every((c) => {
+      const n = normHeaderCell(c);
+      return (
+        isTanimHeaderLabel(c) ||
+        /^(adet|ad|miktar|olcu|poz|no|sira|marka|fiyat|tutar)$/i.test(n)
+      );
+    });
+    if (headerish) return;
+
+    let name = "";
+    let adet = 1;
+    let olcu = "";
+    let sawQty = false;
+    for (const c of filled) {
+      if (OLCU_RE.test(c) && !olcu) {
+        olcu = c.match(OLCU_RE)?.[0] ?? c;
+      }
+      const qty = parseAdetCell(c);
+      if (qty != null && /^\d{1,2}$/.test(c.trim())) {
+        adet = qty;
+        sawQty = true;
+        continue;
+      }
+      if (parsePriceEur(c) != null) continue;
+      const cleaned = cleanProformaAd(c);
+      if (cleaned.length > name.length && !/^\d+$/.test(cleaned)) {
+        name = cleaned;
+      }
+    }
+    if (!name || name.length < 4) return;
+    if (isTanimHeaderLabel(name)) return;
+    item += 1;
+    rows.push({
+      bolum: "A",
+      bolumAd: "",
+      poz: `A${item}`,
+      ad: name,
+      olcu: olcu || "—",
+      adet: sawQty ? adet : 1,
+    });
+  });
+
+  return rows.length >= 2 ? rows : [];
+}
+
+export function scoreProformaRows(rows: PfosEkipmanSatir[]): number {
+  const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
+  const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
+  const fiyatCount = rows.filter((r) => (r.birim_fiyat_eur ?? 0) > 0).length;
+  return (
+    rows.length +
+    validOlcuCount * 5 +
+    validAdetCount * 2 +
+    fiyatCount * 8
+  );
+}
+
 /** Tüm proforma ayrıştırıcıları — en çok satırı veren seçilir */
 export function pickBestProformaRows(
   ws: Worksheet,
@@ -713,14 +805,27 @@ export function pickBestProformaRows(
   let bestScore = -1;
   for (const parse of parsers) {
     const rows = parse(ws);
-    const validOlcuCount = rows.filter((r) => r.olcu && r.olcu !== "—").length;
-    const validAdetCount = rows.filter((r) => r.adet && Number(r.adet) > 1).length;
-    const fiyatCount = rows.filter((r) => (r.birim_fiyat_eur ?? 0) > 0).length;
-    const score =
-      rows.length +
-      validOlcuCount * 5 +
-      validAdetCount * 2 +
-      fiyatCount * 8;
+    const score = scoreProformaRows(rows);
+    if (score > bestScore) {
+      bestScore = score;
+      best = rows;
+    }
+  }
+  if (best.length) return best;
+  return parseGenericItemListWorksheet(ws);
+}
+
+/** Kapak sayfası / 2. sayfa — tüm worksheet'lerden en iyi listeyi seç */
+export function pickBestProformaWorkbook(
+  wb: { worksheets: Worksheet[] },
+  extra: Array<(w: Worksheet) => PfosEkipmanSatir[]> = [],
+): PfosEkipmanSatir[] {
+  let best: PfosEkipmanSatir[] = [];
+  let bestScore = -1;
+  for (const ws of wb.worksheets) {
+    if (!ws) continue;
+    const rows = pickBestProformaRows(ws, extra);
+    const score = scoreProformaRows(rows);
     if (score > bestScore) {
       bestScore = score;
       best = rows;

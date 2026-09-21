@@ -92,7 +92,9 @@ export default function PfosListeWorkspace({
                   ? t("Eşleştiriliyor…")
                   : sonuc
                     ? `${sonuc.kalemler?.length ?? 0} ${t("kalem")}`
-                    : t("Hazır")}
+                    : error
+                      ? t("Yükleme hatası")
+                      : t("Hazır")}
               </span>
             </div>
             {!loadingKind ? (

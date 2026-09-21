@@ -148,7 +148,7 @@ if (!looksReal(site) && looksReal(keep)) {
   fs.mkdirSync(path.dirname(keepPath), { recursive: true });
   writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", keep);
 } else if (looksReal(site)) {
-  const overlay = { ...site };
+  const overlay = { ...keep, ...site };
   if (!overlay.DIRECT_URL && overlay.DATABASE_URL) {
     overlay.DIRECT_URL = ensureDirectUrl(overlay);
   }
@@ -186,6 +186,15 @@ if (Object.keys(googleOverlay).length) {
   );
 }
 
+const anthropicKey = String(process.env.ANTHROPIC_API_KEY || "").trim();
+if (anthropicKey.length >= 20) {
+  const anthropicOverlay = { ANTHROPIC_API_KEY: anthropicKey };
+  writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", anthropicOverlay);
+  fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+  writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", anthropicOverlay);
+  console.log("[protect-hetzner-env] ANTHROPIC_API_KEY merged from deploy env");
+}
+
 const final = readMap(envPath);
 ensureDirectUrl(final);
 const meiliOverlay = {};
@@ -219,8 +228,9 @@ const bearerLen = String(final.EQUSTO_ADMIN_BEARER || "").length;
 const okMeili = String(final.MEILISEARCH_HOST || "").startsWith("http");
 const okGoogle = String(final.GOOGLE_CLIENT_SECRET || "").length >= 16;
 const okGoogleId = String(final.GOOGLE_CLIENT_ID || final.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "").length >= 16;
+const okAnthropic = String(final.ANTHROPIC_API_KEY || "").trim().length >= 20;
 console.log(
-  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"} GOOGLE_CLIENT_ID=${okGoogleId ? "ok" : "MISSING"}`,
+  `[protect-hetzner-env] source=${source} DATABASE_URL=${okDb ? "ok" : "MISSING"} DIRECT_URL=${okDirect ? "ok" : "MISSING"} MEILISEARCH_HOST=${okMeili ? "ok" : "MISSING"} EQUSTO_ADMIN_BEARER_len=${bearerLen} GOOGLE_CLIENT_SECRET=${okGoogle ? "ok" : "MISSING"} GOOGLE_CLIENT_ID=${okGoogleId ? "ok" : "MISSING"} ANTHROPIC_API_KEY=${okAnthropic ? "ok" : "MISSING"}`,
 );
 
 if (!okDb || !okDirect) {

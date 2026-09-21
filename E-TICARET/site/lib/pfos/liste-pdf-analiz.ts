@@ -90,10 +90,13 @@ export async function analyzeExcelForListe(
 ): Promise<ListePdfKalem[]> {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.load(xlsxBuffer);
-  const ws = wb.worksheets[0];
-  if (!ws) throw new Error("Excel sayfası bulunamadı");
+  if (!wb.worksheets.length) throw new Error("Excel sayfası bulunamadı");
 
-  const plain = worksheetToPlainText(ws);
+  const plain = wb.worksheets
+    .map((sheet) => worksheetToPlainText(sheet))
+    .filter(Boolean)
+    .join("\n\n")
+    .slice(0, 120_000);
   const system_prompt = buildSystemPrompt();
   const trimmedNotes = opts?.notlar?.trim();
   const user_prompt = trimmedNotes

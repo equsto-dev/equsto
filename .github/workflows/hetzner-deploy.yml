@@ -21,6 +21,7 @@ jobs:
       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
       GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID != '' && secrets.GOOGLE_CLIENT_ID || '1041839711854-kj81vgdnu9qp8jv5t58hlcamd4q587r3.apps.googleusercontent.com' }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -30,15 +31,15 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
             git fetch origin
             git reset --hard origin/main
-            # GOOGLE_CLIENT_SECRET appleboy env ile gelir; protect-hetzner-env.mjs
-            # keep'e merge eder. Şablon .env.production keep üzerine kopyalanmaz.
+            # GOOGLE_CLIENT_SECRET / ANTHROPIC_API_KEY appleboy env ile gelir;
+            # protect-hetzner-env.mjs keep'e merge eder.
             bash scripts/hetzner-deploy.sh
 
       - name: Özet
