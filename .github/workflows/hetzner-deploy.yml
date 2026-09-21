@@ -93,6 +93,15 @@ jobs:
             }
             inject("ANTHROPIC_API_KEY", 20);
             inject("TELEGRAM_BOT_TOKEN", 20);
+            {
+              const t = envVal("TELEGRAM_BOT_TOKEN");
+              const shape = /^\d{5,}:[A-Za-z0-9_-]{20,}$/.test(t)
+                ? "botId:secret"
+                : t.length
+                  ? "invalid"
+                  : "empty";
+              console.log("GH_SECRET_TELEGRAM_BOT_TOKEN_SHAPE=" + shape);
+            }
             inject("TELEGRAM_CHAT_ID", 3);
             NODE
             docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING")); console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_SECRETS=unreachable
