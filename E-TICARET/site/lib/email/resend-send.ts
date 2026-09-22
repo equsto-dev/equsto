@@ -1,7 +1,3 @@
-function env(name: string): string {
-  return process.env[name]?.trim() || "";
-}
-
 export type ResendAttachment = {
   filename: string;
   content: Buffer;
@@ -21,13 +17,13 @@ export type SendResendResult =
 
 /** Resend 403 — onboarding@resend.dev yalnızca hesap e-postasına gider */
 function friendlyResendError(raw: string): string {
-  const account = env("RESEND_ACCOUNT_EMAIL");
+  const account = process.env.RESEND_ACCOUNT_EMAIL?.trim() || "";
   if (
     /only send testing emails to your own email/i.test(raw) ||
     /verify a domain at resend\.com\/domains/i.test(raw)
   ) {
     const who = account || "Resend hesabınızdaki e-posta (jurnaldang@gmail.com)";
-    return `Test gönderen adresi (${env("RESEND_FROM") || "onboarding@resend.dev"}) yalnızca ${who} adresine mail atabilir. Müşteriye göndermek için equsto.com domain doğrulaması gerekir.`;
+    return `Test gönderen adresi (${process.env.RESEND_FROM?.trim() || "onboarding@resend.dev"}) yalnızca ${who} adresine mail atabilir. Müşteriye göndermek için equsto.com domain doğrulaması gerekir.`;
   }
   return raw.slice(0, 400);
 }
@@ -36,7 +32,7 @@ function friendlyResendError(raw: string): string {
 export async function sendResendEmail(
   opts: SendResendOptions,
 ): Promise<SendResendResult> {
-  const key = env("RESEND_API_KEY");
+  const key = process.env.RESEND_API_KEY?.trim() || "";
   const to = opts.to.trim();
   if (!key) {
     return { ok: false, error: "RESEND_API_KEY yok", skipped: true };
@@ -46,8 +42,8 @@ export async function sendResendEmail(
   }
 
   const from =
-    env("RESEND_FROM") ||
-    env("EQUSTO_TEKLIF_FROM") ||
+    process.env.RESEND_FROM?.trim() ||
+    process.env.EQUSTO_TEKLIF_FROM?.trim() ||
     "Equsto <onboarding@resend.dev>";
 
   const body: Record<string, unknown> = {

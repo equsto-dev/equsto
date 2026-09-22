@@ -1,8 +1,5 @@
 /** WhatsApp entegrasyonu — Facebook hesabı zorunlu değil */
 
-function env(name: string): string {
-  return process.env[name]?.trim() || "";
-}
 
 export type WhatsAppMode = "link" | "green-api" | "meta";
 
@@ -12,37 +9,37 @@ export type WhatsAppMode = "link" | "green-api" | "meta";
  * meta      — Meta Cloud API (Facebook Developer)
  */
 export function whatsAppMode(): WhatsAppMode {
-  const raw = env("EQUSTO_WHATSAPP_MODE").toLowerCase();
+  const raw = (process.env.EQUSTO_WHATSAPP_MODE?.trim() || "").toLowerCase();
   if (raw === "green-api" || raw === "greenapi" || raw === "green") return "green-api";
   if (raw === "meta" || raw === "cloud" || raw === "facebook") return "meta";
   return "link";
 }
 
 export function greenApiConfigured(): boolean {
-  return Boolean(env("GREEN_API_INSTANCE_ID") && env("GREEN_API_TOKEN"));
+  return Boolean((process.env.GREEN_API_INSTANCE_ID?.trim() || "") && (process.env.GREEN_API_TOKEN?.trim() || ""));
 }
 
 /** Green API webhookUrlToken — Authorization header ile doğrulanır */
 export function greenApiWebhookToken(): string {
-  return env("GREEN_API_WEBHOOK_TOKEN");
+  return (process.env.GREEN_API_WEBHOOK_TOKEN?.trim() || "");
 }
 
 // —— Meta Cloud API (yalnızca mode=meta) ——
 
 export function whatsAppAccessToken(): string {
-  return env("WHATSAPP_ACCESS_TOKEN");
+  return (process.env.WHATSAPP_ACCESS_TOKEN?.trim() || "");
 }
 
 export function whatsAppPhoneNumberId(): string {
-  return env("WHATSAPP_PHONE_NUMBER_ID");
+  return (process.env.WHATSAPP_PHONE_NUMBER_ID?.trim() || "");
 }
 
 export function whatsAppVerifyToken(): string {
-  return env("WHATSAPP_VERIFY_TOKEN");
+  return (process.env.WHATSAPP_VERIFY_TOKEN?.trim() || "");
 }
 
 export function whatsAppAppSecret(): string {
-  return env("WHATSAPP_APP_SECRET");
+  return (process.env.WHATSAPP_APP_SECRET?.trim() || "");
 }
 
 export function whatsAppMetaConfigured(): boolean {
@@ -62,15 +59,18 @@ export function whatsAppWebhookConfigured(): boolean {
 
 export function whatsAppNotifyTo(): string {
   const raw =
-    env("WHATSAPP_NOTIFY_TO") ||
-    env("EQUSTO_NOTIFY_SMS_E164") ||
-    env("EQUSTO_WHATSAPP_E164");
+    (process.env.WHATSAPP_NOTIFY_TO?.trim() || "") ||
+    (process.env.EQUSTO_NOTIFY_SMS_E164?.trim() || "") ||
+    (process.env.EQUSTO_WHATSAPP_E164?.trim() || "");
   return raw.replace(/\D/g, "");
 }
 
 /** Green API QR ile bağlı WhatsApp hattı (kendine mesaj bildirim vermez). */
 export function greenApiInstancePhone(): string {
-  const raw = env("GREEN_API_INSTANCE_WID") || env("GREEN_API_INSTANCE_PHONE");
+  const raw =
+    (process.env.GREEN_API_INSTANCE_WID?.trim() || "") ||
+    (process.env.GREEN_API_INSTANCE_PHONE?.trim() || "") ||
+    (process.env.EQUSTO_WHATSAPP_E164?.trim() || "");
   return normalizeWaRecipient(raw);
 }
 
@@ -89,7 +89,7 @@ export function isOwnerSelfWhatsAppNotifyBlocked(): boolean {
  */
 export function ownerWhatsAppNotifyPhones(): string[] {
   const owner = normalizeWaRecipient(whatsAppNotifyTo());
-  const alt = normalizeWaRecipient(env("WHATSAPP_NOTIFY_ALT_TO"));
+  const alt = normalizeWaRecipient((process.env.WHATSAPP_NOTIFY_ALT_TO?.trim() || ""));
   const out: string[] = [];
 
   if (isOwnerSelfWhatsAppNotifyBlocked()) {
@@ -109,7 +109,7 @@ export function ownerWhatsAppNotifyPhone(): string {
 }
 
 export function vitrinWhatsAppE164(): string {
-  const raw = env("EQUSTO_WHATSAPP_E164") || "905326840152";
+  const raw = (process.env.EQUSTO_WHATSAPP_E164?.trim() || "") || "905326840152";
   return raw.replace(/\D/g, "");
 }
 
@@ -127,7 +127,7 @@ export function whatsAppEnvHints() {
     EQUSTO_WHATSAPP_MODE: mode,
     EQUSTO_WHATSAPP_E164: vitrinWhatsAppE164() ? "set" : "missing",
     WHATSAPP_NOTIFY_TO: whatsAppNotifyTo() ? "set" : "missing",
-    WHATSAPP_NOTIFY_ALT_TO: env("WHATSAPP_NOTIFY_ALT_TO") ? "set" : "missing",
+    WHATSAPP_NOTIFY_ALT_TO: (process.env.WHATSAPP_NOTIFY_ALT_TO?.trim() || "") ? "set" : "missing",
     owner_self_notify_blocked: isOwnerSelfWhatsAppNotifyBlocked() ? "yes" : "no",
     owner_notify_target: ownerWhatsAppNotifyPhone() ? "set" : "missing",
     owner_wa_notify_count: String(ownerWhatsAppNotifyPhones().length),
@@ -141,8 +141,8 @@ export function whatsAppEnvHints() {
   }
 
   if (mode === "green-api") {
-    hints.GREEN_API_INSTANCE_ID = env("GREEN_API_INSTANCE_ID") ? "set" : "missing";
-    hints.GREEN_API_TOKEN = env("GREEN_API_TOKEN") ? "set" : "missing";
+    hints.GREEN_API_INSTANCE_ID = (process.env.GREEN_API_INSTANCE_ID?.trim() || "") ? "set" : "missing";
+    hints.GREEN_API_TOKEN = (process.env.GREEN_API_TOKEN?.trim() || "") ? "set" : "missing";
     hints.GREEN_API_WEBHOOK_TOKEN = greenApiWebhookToken() ? "set" : "missing";
   }
 
