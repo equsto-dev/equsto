@@ -39,7 +39,6 @@ jobs:
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
-
             # git reset .env.production şablonunu ezer; anahtar keep'te kalmalı.
             # GitHub secret varsa keep'e yaz — protect-hetzner-env keep'ten geri yükler.
             node <<'NODE'
@@ -103,10 +102,10 @@ jobs:
                   : "empty";
               console.log("GH_SECRET_TELEGRAM_BOT_TOKEN_SHAPE=" + shape);
             }
-                    inject("TELEGRAM_CHAT_ID", 3);
- 		    inject("RESEND_API_KEY", 10);
-           	    inject("GREEN_API_INSTANCE_ID", 3);
-           	    inject("GREEN_API_TOKEN", 10);
+            inject("TELEGRAM_CHAT_ID", 3);
+            inject("RESEND_API_KEY", 10);
+            inject("GREEN_API_INSTANCE_ID", 3);
+            inject("GREEN_API_TOKEN", 10);
             NODE
             docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING")); console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_SECRETS=unreachable
 
