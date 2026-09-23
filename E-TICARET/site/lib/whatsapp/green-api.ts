@@ -20,6 +20,43 @@ function chatIdFromE164(e164: string): string {
   return d ? `${d}@c.us` : "";
 }
 
+type GreenApiResponse = {
+  idMessage?: string;
+  message?: string;
+  error?: string;
+  invokeStatus?: { status?: string; description?: string };
+  correspondentsStatus?: { description?: string };
+};
+
+async function readGreenApiResponse(response: Response): Promise<GreenApiResponse & { raw: string }> {
+  const raw = await response.text();
+  let json: GreenApiResponse = {};
+  try {
+    json = raw ? (JSON.parse(raw) as GreenApiResponse) : {};
+  } catch {
+    // Green API may return plain text for gateway/proxy errors.
+  }
+  return { ...json, raw };
+}
+
+function greenApiError(response: Response, result: GreenApiResponse & { raw: string }): string {
+  const invokeErr =
+    result.invokeStatus?.description ||
+    (result.invokeStatus?.status &&
+    !/^(success|ok)$/i.test(result.invokeStatus.status)
+      ? result.invokeStatus.status
+      : "") ||
+    result.correspondentsStatus?.description;
+
+  return (
+    invokeErr ||
+    result.message ||
+    result.error ||
+    result.raw.slice(0, 500) ||
+    `HTTP ${response.status}`
+  );
+}
+
 /** Green API — QR ile bağlanır, Facebook hesabı gerekmez */
 export async function sendGreenApiText(
   to: string,
@@ -35,44 +72,30 @@ export async function sendGreenApiText(
   const message = String(body || "").trim().slice(0, 4096);
   if (!message) return { ok: false, error: "Mesaj boş" };
 
-  const id = greenApiInstanceId();
-  const token = greenApiToken();
-  const r = await fetch(
-    `https://api.green-api.com/waInstance${id}/sendMessage/${token}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chatId, message }),
+  try {
+    const id = greenApiInstanceId();
+    const token = greenApiToken();
+    const r = await fetch(
+      `https://api.green-api.com/waInstance${id}/sendMessage/${token}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chatId, message }),
+      }
+    );
+    const result = await readGreenApiResponse(r);
+
+    if (!r.ok || !result.idMessage) {
+      return { ok: false, error: greenApiError(r, result), status: r.status };
     }
-  );
 
-  const json = (await r.json().catch(() => ({}))) as {
-    idMessage?: string;
-    message?: string;
-    invokeStatus?: { status?: string; description?: string };
-    correspondentsStatus?: { description?: string };
-  };
-
-  const invokeErr =
-    json.invokeStatus?.description ||
-    (json.invokeStatus?.status &&
-    !/^(success|ok)$/i.test(json.invokeStatus.status)
-      ? json.invokeStatus.status
-      : "") ||
-    json.correspondentsStatus?.description;
-
-  if (!r.ok || invokeErr || !json.idMessage) {
+    return { ok: true, messageId: result.idMessage, status: r.status };
+  } catch (e) {
     return {
       ok: false,
-      error:
-        invokeErr ||
-        json.message ||
-        (!json.idMessage ? "Green API idMessage döndürmedi" : `HTTP ${r.status}`),
-      status: r.status,
+      error: `Green API bağlantı hatası: ${e instanceof Error ? e.message : String(e)}`,
     };
   }
-
-  return { ok: true, messageId: json.idMessage, status: r.status };
 }
 
 /** Green API — dosya (PDF vb.) gönder */
@@ -104,46 +127,26 @@ export async function sendGreenApiFile(
     new Blob([new Uint8Array(file)], { type: "application/pdf" }),
     safeName,
   );
-  if (caption?.trim()) {
-    form.append("caption", caption.trim().slice(0, 1024));
-  }
+  if (caption?.trim()) form.append("caption", caption.trim().slice(0, 1024));
 
-  // Dosya yükleme için Green API media host kullanılır (api host değil)
-  const r = await fetch(
-    `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
-    { method: "POST", body: form },
-  );
-
-  // Response body yalnızca bir kez okunur; böylece JSON olmayan hata cevapları da kaybolmaz.
-  const raw = await r.text();
-  let json: { idMessage?: string; message?: string; error?: string } = {};
   try {
-    json = raw ? (JSON.parse(raw) as typeof json) : {};
-  } catch {
-    // Green API bazı hatalarda JSON yerine düz metin döndürebilir.
-  }
+    const r = await fetch(
+      `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
+      { method: "POST", body: form },
+    );
+    const result = await readGreenApiResponse(r);
 
-  if (!r.ok) {
+    if (!r.ok || !result.idMessage) {
+      return { ok: false, error: greenApiError(r, result), status: r.status };
+    }
+
+    return { ok: true, messageId: result.idMessage, status: r.status };
+  } catch (e) {
     return {
       ok: false,
-      error:
-        json.message ||
-        json.error ||
-        raw.slice(0, 500) ||
-        `HTTP ${r.status}`,
-      status: r.status,
+      error: `Green API PDF bağlantı hatası: ${e instanceof Error ? e.message : String(e)}`,
     };
   }
-
-  if (!json.idMessage) {
-    return {
-      ok: false,
-      error: raw.slice(0, 500) || "Green API idMessage döndürmedi",
-      status: r.status,
-    };
-  }
-
-  return { ok: true, messageId: json.idMessage, status: r.status };
 }
 
 export type GreenApiInboundMessage = {
@@ -190,60 +193,23 @@ function parseGreenApiTextMessage(root: {
   };
 }
 
-/** Green API webhook gövdesinden gelen metin mesajları */
 export function parseGreenApiInboundMessages(body: unknown): GreenApiInboundMessage[] {
-  const root = body as {
-    typeWebhook?: string;
-    idMessage?: string;
-    senderData?: { sender?: string; senderName?: string; chatId?: string };
-    messageData?: {
-      typeMessage?: string;
-      textMessageData?: { textMessage?: string };
-      extendedTextMessageData?: { text?: string };
-    };
-  };
-
+  const root = body as Parameters<typeof parseGreenApiTextMessage>[0];
   if (root.typeWebhook !== "incomingMessageReceived") return [];
-
   const parsed = parseGreenApiTextMessage(root);
   if (!parsed || !parsed.text) return [];
-
   const from = parsed.chatId.replace(/@c\.us$/i, "");
   if (!from) return [];
-
-  return [
-    {
-      from,
-      messageId: parsed.messageId,
-      text: parsed.text,
-      profileName: parsed.senderName,
-    },
-  ];
+  return [{ from, messageId: parsed.messageId, text: parsed.text, profileName: parsed.senderName }];
 }
 
-/** Green API — telefondan/API'den giden müşteri mesajları */
 export function parseGreenApiOutboundMessages(body: unknown): GreenApiOutboundMessage[] {
-  const root = body as {
-    typeWebhook?: string;
-    idMessage?: string;
-    senderData?: { sender?: string; senderName?: string; chatId?: string };
-    messageData?: {
-      typeMessage?: string;
-      textMessageData?: { textMessage?: string };
-      extendedTextMessageData?: { text?: string };
-    };
-  };
-
+  const root = body as Parameters<typeof parseGreenApiTextMessage>[0];
   const hook = root.typeWebhook || "";
-  if (hook !== "outgoingMessageReceived" && hook !== "outgoingAPIMessageReceived") {
-    return [];
-  }
-
+  if (hook !== "outgoingMessageReceived" && hook !== "outgoingAPIMessageReceived") return [];
   const parsed = parseGreenApiTextMessage(root);
   if (!parsed || !parsed.text) return [];
-
   const to = parsed.chatId.replace(/@c\.us$/i, "");
   if (!to) return [];
-
   return [{ to, messageId: parsed.messageId, text: parsed.text }];
 }
