@@ -67,7 +67,7 @@ export async function sendGreenApiText(
       error:
         invokeErr ||
         json.message ||
-        `HTTP ${r.status}`,
+        (!json.idMessage ? "Green API idMessage döndürmedi" : `HTTP ${r.status}`),
       status: r.status,
     };
   }
@@ -88,10 +88,14 @@ export async function sendGreenApiFile(
 
   const chatId = chatIdFromE164(to);
   if (!chatId) return { ok: false, error: "Geçersiz alıcı numarası" };
+  if (!file?.length) return { ok: false, error: "PDF boş oluşturuldu" };
 
   const id = greenApiInstanceId();
   const token = greenApiToken();
-  const safeName = fileName.slice(0, 120) || "teklif.pdf";
+  const rawName = String(fileName || "teklif").trim().slice(0, 116);
+  const safeName = /\.pdf$/i.test(rawName)
+    ? rawName
+    : `${rawName || "teklif"}.pdf`;
   const form = new FormData();
   form.append("chatId", chatId);
   form.append("fileName", safeName);
@@ -110,18 +114,31 @@ export async function sendGreenApiFile(
     { method: "POST", body: form },
   );
 
-  const json = (await r.json().catch(() => ({}))) as {
-    idMessage?: string;
-    message?: string;
-  };
+  // Response body yalnızca bir kez okunur; böylece JSON olmayan hata cevapları da kaybolmaz.
+  const raw = await r.text();
+  let json: { idMessage?: string; message?: string; error?: string } = {};
+  try {
+    json = raw ? (JSON.parse(raw) as typeof json) : {};
+  } catch {
+    // Green API bazı hatalarda JSON yerine düz metin döndürebilir.
+  }
 
   if (!r.ok) {
     return {
       ok: false,
       error:
         json.message ||
-        (await r.text().catch(() => "")).slice(0, 240) ||
+        json.error ||
+        raw.slice(0, 500) ||
         `HTTP ${r.status}`,
+      status: r.status,
+    };
+  }
+
+  if (!json.idMessage) {
+    return {
+      ok: false,
+      error: raw.slice(0, 500) || "Green API idMessage döndürmedi",
       status: r.status,
     };
   }
