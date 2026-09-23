@@ -25,6 +25,9 @@ jobs:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      GREEN_API_INSTANCE_ID: ${{ secrets.GREEN_API_INSTANCE_ID }}
+      GREEN_API_TOKEN: ${{ secrets.GREEN_API_TOKEN }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -34,7 +37,7 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GREEN_API_INSTANCE_ID, GREEN_API_TOKEN, RESEND_API_KEY
           script: |
             set -euo pipefail
             cd /opt/equsto/E-TICARET/site
