@@ -1,11 +1,14 @@
 /**
- * PDF / Excel teklif listesi → Claude analiz (sunucu tarafı, public liste-fiyat için).
+ * PDF / Excel teklif listesi → önce yerel parse, Claude yalnızca yedek.
  */
 
 import {
+  CLAUDE_IMPORT_MISSING_USER_MSG,
+  isClaudeImportConfigured,
   runImportDocumentAnaliz,
   runImportTextAnaliz,
 } from "@/lib/claude/import-analiz.server";
+import { isAnthropicQuotaError } from "@/lib/claude/anthropic-errors";
 import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
 import { worksheetToPlainText } from "@/lib/pfos/liste-proforma-excel";
 import ExcelJS from "exceljs";
@@ -73,14 +76,42 @@ async function analyzeDocumentForListe(
   });
 }
 
-/** PDF buffer → ekipman kalemleri */
+/** PDF buffer → ekipman kalemleri (Claude zorunlu değil; kota/anahtar yoksa yerel) */
 export async function analyzePdfForListe(
   pdfBuffer: ArrayBuffer,
   opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
+  // 1) Yerel SKTÜRK/EQUSTO parse — Claude’sız (eski davranış)
   const structured = await parseProformaPdfBuffer(pdfBuffer);
   if (structured?.length) return structured;
-  return analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
+
+  // 2) Claude yedek (anahtar veya proxy varsa)
+  if (isClaudeImportConfigured()) {
+    try {
+      return await analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      // Kota / geçici Claude hatası → gevşek yerel parse dene
+      const soft = await parseProformaPdfBuffer(pdfBuffer, { minKalem: 1 });
+      if (soft?.length) {
+        console.warn(
+          `[liste-pdf-analiz] Claude yedek başarısız (${msg.slice(0, 120)}); yerel ${soft.length} kalem kullanıldı`,
+        );
+        return soft;
+      }
+      if (isAnthropicQuotaError(msg) || /Claude kotası|Görsel analiz kotası/i.test(msg)) {
+        throw new Error(
+          "Claude kotası dolu ve bu PDF yerel okuyucuyla çıkarılamadı. Excel (.xlsx) yükleyin veya kotanın yenilenmesini bekleyin.",
+        );
+      }
+      throw err;
+    }
+  }
+
+  // 3) Claude yok — gevşek yerel; yine yoksa Excel öner
+  const soft = await parseProformaPdfBuffer(pdfBuffer, { minKalem: 1 });
+  if (soft?.length) return soft;
+  throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
 }
 
 /** Excel (.xlsx) — önce düz metin (ucuz); PDF document API kullanılmaz */
