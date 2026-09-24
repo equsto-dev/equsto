@@ -28,7 +28,7 @@ export const HOME_SCRIPTS = [
   `/eq-category-overrides.js?v=${v}`,
   `/eq-vendor-sanitize.js?v=${v}`,
   `/eq-display-terminology.js?v=${v}`,
-  `/eq-dept-tips.js?v=${v}`,
+  `/eq-dept-tips.js?v=${v}&m=20260924-kahve-filtre`,
   `/equsto-engine.js`,
   `/pfos-rule-engine.js`,
   `/eq-product-compare.js`,

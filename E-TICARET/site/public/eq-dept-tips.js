@@ -59,22 +59,34 @@
       dept: "kahve",
       label: "Espresso Kahve Makineleri",
       search:
-        "espresso|gruplu kahve|gruplu tam otomatik|tam otomatik kahve mak|barista kahve mak|çekirdekten fincan|bean to cup|appia|linea|aurelia|faema kahve mak|sanremo kahve",
+        "espresso|gruplu kahve|gruplu tam otomatik|tam otomatik kahve mak|barista kahve mak|çekirdekten fincan|bean to cup|appia|linea|aurelia|faema|sanremo|simonelli|nuosi|oscar|wmf|saeco|super otomatik|süper otomatik|otomatik kahve mak|cappuccino kahve|1 gruplu|2 gruplu|3 gruplu|4 gruplu|tek grup",
     },
-    { tip: "kahve-degirmeni", dept: "kahve", label: "Kahve Değirmenleri", search: "değirmen|degirmen|grinder|öğüt|ogut" },
+    { tip: "kahve-degirmeni", dept: "kahve", label: "Kahve Değirmenleri", search: "değirmen|degirmen|grinder|öğüt|ogut|ogutucu|öğütücü" },
     {
       tip: "filtre-kahve",
       dept: "kahve",
       label: "Filtre Kahve Makineleri",
-      search: "filtre kahve|filtre kahve mak|fm250|ftl120|ftl|bravilor|batch brew|demleme",
+      search: "filtre kahve|filtre kahve mak|fm250|ftl120|ftl|bravilor|batch brew|demleme|animo m|bunn|coffeedio",
     },
     {
       tip: "kahve-sut-potlari",
       dept: "kahve",
       label: "Kahve Süt Potları",
-      search: "kahve süt pot|kahve sut pot|8534|süt potu|sut potu",
+      search: "kahve süt pot|kahve sut pot|8534|süt potu|sut potu|süt ısıt|sut isit|milk frother|pitcher",
     },
-    { tip: "turk-kahve", dept: "kahve", label: "Türk Kahve Makineleri", search: "türk|turk|cezve" },
+    {
+      tip: "turk-kahve",
+      dept: "kahve",
+      label: "Türk Kahve Makineleri",
+      search: "türk kahve|turk kahve|cezve|kumda kahve|kahve kavurma",
+    },
+    {
+      tip: "barista-aksesuarlari",
+      dept: "kahve",
+      label: "Barista Aksesuarları",
+      search:
+        "barista|tamper|knock box|posa çekmece|posa cekmece|wdt|kahve dağıt|kahve dagit|şebeke bağlantı|sebeke baglanti|filtre kağıdı|filtre kagidi|kahve çekmece|kahve cekmece",
+    },
     {
       tip: "bulasik-makineleri",
       dept: "yikama",
@@ -289,6 +301,21 @@
       lc((u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "") +
       " " +
       lc((u && u.raw && u.raw.specs) || "")
+    );
+  }
+
+  /** Tip anahtar eşlemesi — specs metnindeki marka/boilerplate yanlış eşleşmesin. */
+  function productTipHaystack(u) {
+    var raw = (u && u.raw) || {};
+    return foldTrSeries(
+      [
+        (u && u.n) || (u && u.name) || "",
+        (u && u.b) || (u && u.brand) || "",
+        (u && u.fb) || "",
+        (u && u.c) || (u && u.category) || raw.category || "",
+        raw.sku || raw.model || raw.urun_kodu || "",
+        raw.oem_brand || "",
+      ].join(" ")
     );
   }
 
@@ -599,6 +626,42 @@
     return false;
   }
 
+  /**
+   * Kahve PLP dışı — bar/kokteyl, narenciye, yanlış kategoriye düşmüş sepet/araba vb.
+   * (JSON category çoğu satırda «kahve-makineleri» olduğu için ada bakılır.)
+   */
+  function isNotKahveCatalogProduct(u) {
+    if (!u) return false;
+    var cat = lc(productCategorySlug(u));
+    if (cat === "bar-blenderlar") return true;
+    var nameFold = foldTrSeries(productName(u));
+    var hay = foldTrSeries(productHaystack(u));
+    if (!hay && !nameFold) return false;
+    if (/dito\s*sama/.test(hay) && /kesme|izgara|kup/.test(hay)) return true;
+    if (/kokteyl|boston\s*shaker|shaker\s*seti|shaker\s*750/.test(hay) && !/kahve|espresso|filtre/.test(hay))
+      return true;
+    if (/narenciye|portakal\s*sik|zummo/.test(hay)) return true;
+    if (/bardak\s*basketi/.test(hay)) return true;
+    if (/servis\s*arabasi/.test(hay) && /plastport|kahverengi|tribeca/.test(hay)) return true;
+    if (/kahveci\s*takimi|kahveci\s*deml/.test(hay)) return true;
+    /* «Kahverengi» renk adı — kahve ekipmanı değil */
+    if (
+      /kahverengi/.test(nameFold) &&
+      !/espresso|degirmen|grinder|filtre\s*kahve|cezve|turk\s*kahve|kumda\s*kahve|barista|tamper|ogutucu|kahve\s*makine|kahve\s*makina/.test(
+        nameFold
+      )
+    ) {
+      return true;
+    }
+    if (/pizza\s*firin|tabak\s*tasima|buz\s*konteyner|fishek\s*sosluk|fisek\s*sosluk|servis\s*tepsisi|mobil\s*bar/.test(nameFold))
+      return true;
+    if (/kahveci\s*guzeli/.test(nameFold)) return true;
+    if (/sicak\s*icecek\s*unitesi/.test(nameFold)) return true;
+    if (/blender\s*yedek\s*hazne|yedek\s*hazne/.test(nameFold) && /kahve/.test(nameFold) && !/espresso|filtre\s*kahve|degirmen/.test(nameFold))
+      return true;
+    return false;
+  }
+
   /** Portashelf MB126X çöp arabası — araba dept; istif / Portashelf raf vitrininde gösterme */
   function isPortashelfCopArabasi(u) {
     if (!u) return false;
@@ -642,6 +705,7 @@
 
   function excludeFromDeptView(dept, u) {
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
+    if (dept === "kahve" && isNotKahveCatalogProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "sogutma" && (isOztiServisRafiProduct(u) || isBuzKonteynerProduct(u))) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
@@ -679,6 +743,32 @@
     "buz-makineleri": "buz-makinesi",
     "icecek-berrak-buz-makineleri": "buz-makinesi",
     "soguk-odalar": "soguk-oda",
+  };
+
+  /** Kahve — JSON category slug → kanonik ?tip= */
+  var KAHVE_CAT_ALIASES = {
+    "filtre-kahve-makineleri": "filtre-kahve",
+    "silindirik-filtre-kahve-makineleri": "filtre-kahve",
+    "silindirik-filtre-kahve-makinesi-hazneleri": "filtre-kahve",
+    "wmf-kahve-makinalari": "espresso-makinesi",
+    "espresso-makinesi": "espresso-makinesi",
+    "espresso-kahve-makinalari": "espresso-makinesi",
+    "espresso-kahve-makineleri-classic": "espresso-makinesi",
+    "espresso-kahve-makineleri-aura": "espresso-makinesi",
+    "espresso-kahve-makineleri-aura-dosamat-ozellikli": "espresso-makinesi",
+    "espresso-kahve-makineleri-aura-dosamat-steamair-ozellikli": "espresso-makinesi",
+    "espresso-kahve-makineleri-aura-steamair-ozellikli": "espresso-makinesi",
+    "e98-up-s-serisi": "espresso-makinesi",
+    "e98-up-a-serisi": "espresso-makinesi",
+    "e61-s-serisi": "espresso-makinesi",
+    "e61-a-serisi": "espresso-makinesi",
+    "e71-touch-a-serisi": "espresso-makinesi",
+    "e71-e-a-2": "espresso-makinesi",
+    "e71-e-a-serisi": "espresso-makinesi",
+    "x20-cs10-x20-s10-x15-cs10": "espresso-makinesi",
+    "kahve-de-irmenleri": "kahve-degirmeni",
+    "kahve-degirmenleri": "kahve-degirmeni",
+    "kahve-sut-potlari": "kahve-sut-potlari",
   };
 
   /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
@@ -792,6 +882,7 @@
 
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
+    if (KAHVE_CAT_ALIASES[c]) return KAHVE_CAT_ALIASES[c];
     if (SOGUTMA_CAT_ALIASES[c]) return SOGUTMA_CAT_ALIASES[c];
     if (PISIRME_CAT_ALIASES[c]) return PISIRME_CAT_ALIASES[c];
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
@@ -955,9 +1046,10 @@
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;
     if (tile.keys && tile.keys.length) {
-      var hay = productHaystack(u);
+      var hayFold = productTipHaystack(u);
       for (var ki = 0; ki < tile.keys.length; ki++) {
-        if (hay.indexOf(lc(tile.keys[ki])) !== -1) return true;
+        var keyFold = foldTrSeries(tile.keys[ki]);
+        if (keyFold && hayFold.indexOf(keyFold) !== -1) return true;
       }
     }
     if (tile.id && u.raw && u.raw.tileId === tile.id) return true;
@@ -1227,6 +1319,10 @@
       return "filtre-kahve";
     if (lk.indexOf("kahve süt pot") >= 0 || lk.indexOf("kahve sut pot") >= 0 || lk.indexOf("8534") >= 0)
       return "kahve-sut-potlari";
+    if (lk.indexOf("barista") >= 0 || lk.indexOf("tamper") >= 0 || lk.indexOf("knock box") >= 0 || lk.indexOf("posa") >= 0)
+      return "barista-aksesuarlari";
+    if (lk.indexOf("kumda kahve") >= 0 || lk.indexOf("türk kahve") >= 0 || lk.indexOf("turk kahve") >= 0 || lk.indexOf("cezve") >= 0)
+      return "turk-kahve";
     if (lk.indexOf("kahveci deml") >= 0) return "kahveci-demlik";
     if (lk.indexOf("değirmen") >= 0 || lk.indexOf("degirmen") >= 0) return "kahve-degirmeni";
     if (lk.indexOf("blender") >= 0) return "bar-blender";
@@ -1309,6 +1405,12 @@
 
   /** Eski GEO linkleri (?tip=tezgah_tipi_buzdolabi) → kanonik tip slug */
   var TIP_PARAM_ALIASES = {
+    kahve: {
+      "barista-aksesuarlari": "barista-aksesuarlari",
+      barista: "barista-aksesuarlari",
+      "filtre-kahve-makineleri": "filtre-kahve",
+      "wmf-kahve-makinalari": "espresso-makinesi",
+    },
     "set-ustu-mutfak": {
       "servis-gere-leri": "servis-gerecleri",
     },

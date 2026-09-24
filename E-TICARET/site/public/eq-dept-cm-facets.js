@@ -519,7 +519,7 @@
       esc(__facetT('plp.facet_clear_all', 'HEPSİNİ SİL')) +
       '</button></div>';
 
-    if (tileItems.length && !komurluIzgaraView) {
+    if (tileItems.length && !komurluIzgaraView && dept !== 'kahve') {
       html +=
         '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
         esc(__facetT('plp.facet_categories', 'Kategoriler')) +
@@ -540,6 +540,33 @@
           ')</span></label></li>';
       });
       html += '</ul></div></details>';
+    }
+
+    if (dept === 'kahve' && global.EqKahveFacets) {
+      var kahveMakinePool = getPool('kahveMakineTip');
+      var kahveMakineCounts = global.EqKahveFacets.countMakine(
+        kahveMakinePool.map(function (u) {
+          return { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw };
+        }),
+      );
+      html += global.EqKahveFacets.renderMakineHtml({
+        counts: kahveMakineCounts,
+        selected: state.kahveMakineTip || [],
+        inputName: 'eq-dept-cm-kahve-makine',
+        title: __facetT('plp.facet_kahve_machine', 'Makine tipi'),
+      });
+      var kahveGrupPool = getPool('kahveGrup');
+      var kahveGrupCounts = global.EqKahveFacets.countGrup(
+        kahveGrupPool.map(function (u) {
+          return { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw };
+        }),
+      );
+      html += global.EqKahveFacets.renderGrupHtml({
+        counts: kahveGrupCounts,
+        selected: state.kahveGrup || [],
+        inputName: 'eq-dept-cm-kahve-grup',
+        title: __facetT('plp.facet_kahve_groups', 'Grup sayısı'),
+      });
     }
 
     if (dept === 'kuvetler' && global.EqKuvetGnFacets) {
@@ -799,6 +826,26 @@
       });
     });
 
+    host.querySelectorAll('input[name="eq-dept-cm-kahve-makine"]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        state.kahveMakineTip = [];
+        host.querySelectorAll('input[name="eq-dept-cm-kahve-makine"]:checked').forEach(function (c) {
+          state.kahveMakineTip.push(c.value);
+        });
+        onChange('kahveMakineTip');
+      });
+    });
+
+    host.querySelectorAll('input[name="eq-dept-cm-kahve-grup"]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        state.kahveGrup = [];
+        host.querySelectorAll('input[name="eq-dept-cm-kahve-grup"]:checked').forEach(function (c) {
+          state.kahveGrup.push(c.value);
+        });
+        onChange('kahveGrup');
+      });
+    });
+
     host.querySelectorAll('input[name="eq-dept-cm-komurlu-grup"]').forEach(function (inp) {
       inp.addEventListener('change', function () {
         state.komurluIzgaraGrup = [];
@@ -893,6 +940,20 @@
           ? global.EqPisirmeFacets.labelFromKey(pk)
           : pk;
       chips.push({ type: 'pisirmeTip', value: pk, text: pl });
+    });
+    (state.kahveMakineTip || []).forEach(function (mk) {
+      var ml =
+        global.EqKahveFacets && global.EqKahveFacets.makineLabel
+          ? global.EqKahveFacets.makineLabel(mk)
+          : mk;
+      chips.push({ type: 'kahveMakineTip', value: mk, text: ml });
+    });
+    (state.kahveGrup || []).forEach(function (gk) {
+      var gl =
+        global.EqKahveFacets && global.EqKahveFacets.grupLabel
+          ? global.EqKahveFacets.grupLabel(gk)
+          : gk;
+      chips.push({ type: 'kahveGrup', value: gk, text: gl });
     });
     (state.komurluIzgaraGrup || []).forEach(function (kg) {
       var kl =

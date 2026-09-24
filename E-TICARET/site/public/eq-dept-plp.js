@@ -72,6 +72,8 @@
     kuvetGn: [],
     buzdolapTip: [],
     pisirmeTip: [],
+    kahveMakineTip: [],
+    kahveGrup: [],
     komurluIzgaraGrup: [],
     q: '',
     sort: '',
@@ -890,6 +892,22 @@
         );
       });
     }
+    if (state.kahveMakineTip.length && window.EqKahveFacets) {
+      list = list.filter(function (u) {
+        return window.EqKahveFacets.hitMatchesAnyMakine(
+          { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw },
+          state.kahveMakineTip,
+        );
+      });
+    }
+    if (state.kahveGrup.length && window.EqKahveFacets) {
+      list = list.filter(function (u) {
+        return window.EqKahveFacets.hitMatchesAnyGrup(
+          { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw },
+          state.kahveGrup,
+        );
+      });
+    }
     if (state.komurluIzgaraGrup.length && window.EqKomurluIzgaraFacets) {
       list = list.filter(function (u) {
         return window.EqKomurluIzgaraFacets.hitMatchesAnyFacet(
@@ -996,6 +1014,22 @@
         );
       });
     }
+    if (state.kahveMakineTip.length && exclude !== 'kahveMakineTip' && window.EqKahveFacets) {
+      list = list.filter(function (u) {
+        return window.EqKahveFacets.hitMatchesAnyMakine(
+          { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw },
+          state.kahveMakineTip,
+        );
+      });
+    }
+    if (state.kahveGrup.length && exclude !== 'kahveGrup' && window.EqKahveFacets) {
+      list = list.filter(function (u) {
+        return window.EqKahveFacets.hitMatchesAnyGrup(
+          { name: u.n, n: u.n, category: u.c, brand: u.b, fb: u.fb, raw: u.raw },
+          state.kahveGrup,
+        );
+      });
+    }
     if (state.komurluIzgaraGrup.length && exclude !== 'komurluIzgaraGrup' && window.EqKomurluIzgaraFacets) {
       list = list.filter(function (u) {
         return window.EqKomurluIzgaraFacets.hitMatchesAnyFacet(
@@ -1041,6 +1075,8 @@
     state.kuvetGn = [];
     state.buzdolapTip = [];
     state.pisirmeTip = [];
+    state.kahveMakineTip = [];
+    state.kahveGrup = [];
     state.komurluIzgaraGrup = [];
     state.priceMin = '';
     state.priceMax = '';
@@ -1067,6 +1103,8 @@
       else if (type === 'kuvetGn') state.kuvetGn = state.kuvetGn.filter(function (k) { return k !== value; });
       else if (type === 'buzdolapTip') state.buzdolapTip = state.buzdolapTip.filter(function (k) { return k !== value; });
       else if (type === 'pisirmeTip') state.pisirmeTip = state.pisirmeTip.filter(function (k) { return k !== value; });
+      else if (type === 'kahveMakineTip') state.kahveMakineTip = state.kahveMakineTip.filter(function (k) { return k !== value; });
+      else if (type === 'kahveGrup') state.kahveGrup = state.kahveGrup.filter(function (k) { return k !== value; });
       else if (type === 'komurluIzgaraGrup') state.komurluIzgaraGrup = state.komurluIzgaraGrup.filter(function (k) { return k !== value; });
       else if (type === 'priceMin') state.priceMin = '';
       else if (type === 'priceMax') state.priceMax = '';
@@ -1263,6 +1301,8 @@
         state.kuvetGn.length ||
         state.buzdolapTip.length ||
         state.pisirmeTip.length ||
+        state.kahveMakineTip.length ||
+        state.kahveGrup.length ||
         state.komurluIzgaraGrup.length ||
         state.priceMin !== '' ||
         state.priceMax !== '';
@@ -1363,7 +1403,23 @@
         if (facet) state.brands = [facet];
       }
       var tip = normalizeUrlTip(sp.get('tip'));
-      if (tip && findTile(tip)) state.activeTiles = [tip];
+      if (tip) {
+        if (DEPT === 'kahve' && window.EqKahveFacets && window.EqKahveFacets.normalizeTipToMakine) {
+          var makine = window.EqKahveFacets.normalizeTipToMakine(tip);
+          if (makine) state.kahveMakineTip = [makine];
+        } else if (findTile(tip)) {
+          state.activeTiles = [tip];
+        }
+      }
+      var grup = sp.get('grup');
+      if (grup && DEPT === 'kahve' && window.EqKahveFacets) {
+        var gNorm = String(grup).trim();
+        if (gNorm && window.EqKahveFacets.GRUP_ORDER.indexOf(gNorm) >= 0) {
+          state.kahveGrup = [gNorm];
+        } else if (/^[1-4]$/.test(gNorm)) {
+          state.kahveGrup = [gNorm + '-grup'];
+        }
+      }
       var q = sp.get('q');
       if (q != null && String(q).trim()) {
         if (DEPT === 'market-reyon') {
