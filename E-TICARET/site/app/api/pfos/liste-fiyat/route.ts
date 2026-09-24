@@ -2,17 +2,13 @@ import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
 import { pickBestProformaWorkbook } from "@/lib/pfos/liste-proforma-excel";
-import { analyzeExcelForListe } from "@/lib/pfos/liste-pdf-analiz";
+import { LISTE_LOCAL_PARSE_MISSING_MSG } from "@/lib/pfos/liste-pdf-analiz";
 import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type { FiyatStratejisi } from "@/lib/pfos/schemas/pfos.schema";
 import { getMemberIdByToken, readBearerToken } from "@/lib/member-auth";
 import { persistListeUpload } from "@/lib/pfos/liste-upload-store";
-import {
-  CLAUDE_IMPORT_MISSING_USER_MSG,
-  isClaudeImportConfigured,
-} from "@/lib/claude/import-analiz.server";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -124,43 +120,26 @@ export async function POST(req: NextRequest) {
     }
 
     const satirlar = pickBestProformaWorkbook(wb, [parseEkipmanWorksheet]);
-    if (satirlar.length) {
-      const response = await calculateListeQuote({
-        satirlar,
-        kaynakDosya: name,
-        kaynakTip: "excel",
-        projeAdi: projeAdi || baseName,
-        sehir,
-        fiyatStratejisi,
-      });
-      return withKaynak(req, name, kind, ab, response);
-    }
-
-    if (!isClaudeImportConfigured()) {
+    if (!satirlar.length) {
       return NextResponse.json(
-        { error: CLAUDE_IMPORT_MISSING_USER_MSG },
+        { error: LISTE_LOCAL_PARSE_MISSING_MSG },
         { status: 422 },
       );
     }
 
-    const importKalemler = await analyzeExcelForListe(ab, { notlar });
     const response = await calculateListeQuote({
-      importKalemler,
+      satirlar,
       kaynakDosya: name,
       kaynakTip: "excel",
       projeAdi: projeAdi || baseName,
       sehir,
       fiyatStratejisi,
     });
-
     return withKaynak(req, name, kind, ab, response);
   } catch (err) {
     console.error("[PFOS liste-fiyat]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";
-    const userMsg = /ANTHROPIC_API_KEY|npm run api|proxy ulaşılamad/i.test(msg)
-      ? "Bu liste otomatik okunamadı. Ürün ve adet sütunları olan bir Excel yükleyin."
-      : msg;
-    const status = /ulaşılamad|proxy|502|Anthropic/i.test(msg) ? 502 : 500;
-    return NextResponse.json({ error: userMsg }, { status });
+    const status = /okunamadı|çıkarılamadı/i.test(msg) ? 422 : 500;
+    return NextResponse.json({ error: msg }, { status });
   }
 }

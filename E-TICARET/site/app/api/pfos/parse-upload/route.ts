@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import type { ProcessPdfUploadResult } from "@/lib/pfos/parse-upload/process-pdf-upload";
+import { LISTE_LOCAL_PARSE_MISSING_MSG } from "@/lib/pfos/liste-pdf-analiz";
 import { getMemberIdByToken, requireMemberSession } from "@/lib/member-auth";
 import { persistListeUpload } from "@/lib/pfos/liste-upload-store";
 
@@ -94,11 +95,14 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[PFOS parse-upload]", err);
     const msg = err instanceof Error ? err.message : "Sunucu hatası";
-    const userMsg = /ANTHROPIC_API_KEY|npm run api|Vercel Environment/i.test(msg)
-      ? "PDF analizi için Claude anahtarı canlı ortamda tanımlı değil. Liste tekrar denenebilir veya Excel olarak yükleyin."
+    const userMsg = /ANTHROPIC_API_KEY|npm run api|Vercel Environment|Claude/i.test(msg)
+      ? LISTE_LOCAL_PARSE_MISSING_MSG
       : msg;
-    const status =
-      /Anthropic|Meilisearch|502|çıkarılamadı|ANTHROPIC/i.test(msg) ? 502 : 500;
+    const status = /okunamadı|çıkarılamadı|Meilisearch|502/i.test(msg)
+      ? /Meilisearch|502/.test(msg)
+        ? 502
+        : 422
+      : 500;
     return NextResponse.json({ error: userMsg }, { status });
   }
 }
