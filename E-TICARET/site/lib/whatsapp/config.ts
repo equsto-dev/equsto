@@ -67,10 +67,10 @@ export function whatsAppNotifyTo(): string {
 
 /** Green API QR ile bağlı WhatsApp hattı (kendine mesaj bildirim vermez). */
 export function greenApiInstancePhone(): string {
+  // Vitrin E164 (532) instance sanılmamalı — yoksa sahip WA bildirimi yanlışlıkla self-block olur.
   const raw =
     (process.env.GREEN_API_INSTANCE_WID?.trim() || "") ||
-    (process.env.GREEN_API_INSTANCE_PHONE?.trim() || "") ||
-    (process.env.EQUSTO_WHATSAPP_E164?.trim() || "");
+    (process.env.GREEN_API_INSTANCE_PHONE?.trim() || "");
   return normalizeWaRecipient(raw);
 }
 
