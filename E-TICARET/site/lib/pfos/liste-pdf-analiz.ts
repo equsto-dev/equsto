@@ -1,17 +1,12 @@
 /**
- * PDF / Excel teklif listesi → önce yerel parse, Claude yalnızca yedek.
+ * PDF / Excel teklif listesi → yalnızca yerel parse (Anthropic/Claude yok).
  */
 
-import {
-  CLAUDE_IMPORT_MISSING_USER_MSG,
-  isClaudeImportConfigured,
-  runImportDocumentAnaliz,
-  runImportTextAnaliz,
-} from "@/lib/claude/import-analiz.server";
-import { isAnthropicQuotaError } from "@/lib/claude/anthropic-errors";
-import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
-import { worksheetToPlainText } from "@/lib/pfos/liste-proforma-excel";
 import ExcelJS from "exceljs";
+import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
+import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
+import { pickBestProformaWorkbook } from "@/lib/pfos/liste-proforma-excel";
+import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
 
 export type ListePdfKalem = {
   ham_isim: string;
@@ -25,114 +20,62 @@ export type ListePdfKalem = {
   mevcut?: boolean;
 };
 
-function buildSystemPrompt(): string {
-  return `Sen bir endüstriyel mutfak ekipman listesi çıkarıcısısın.
-PDF veya Excel proforma/teklif dosyasındaki satırları BİREBİR kopyala — yorumlama veya stok kodu ekleme.
+export const LISTE_LOCAL_PARSE_MISSING_MSG =
+  "Bu liste otomatik okunamadı. Ürün/tanım ve adet sütunları olan bir Excel (.xlsx) veya metin içeren proforma PDF yükleyin.";
 
-KURALLAR:
-1. Yalnızca dosyada görünen Poz satırlarını al (A1, D7, K2 vb.). Dosyada olmayan kalem UYDURMA.
-2. ham_isim = ürün tanımı (marka ve fiyat hariç), dosyadaki Türkçe metin aynen.
-3. poz = dosyadaki poz numarası (A25A gibi).
-4. olcu = varsa 140*70*85 formatında; yoksa null.
-5. adet = dosyadaki adet sütunu.
-6. marka = satırdaki marka (sktürk, electrolux vb.); yoksa null.
-7. birim_fiyat_eur = dosyadaki birim fiyat (EUR, sayı); yoksa null.
-8. mevcut = müşteri temini / mevcut satırlarda true.
-9. kategori = dosyadaki bölüm başlığı (sıcak mutfak, bulaşık yıkama vb.) veya poz harfine göre tahmin.
-10. tip_kodu alanını boş string bırak ("").
-
-SADECE JSON dizi döndür:
-[
-  {
-    "ham_isim": "MAKE-UP DOLABI, 3*2 ÇEKMECELİ, YÜKSEK BORULU",
-    "tip_kodu": "",
-    "kategori": "sıcak mutfak",
-    "adet": 1,
-    "poz": "A1",
-    "olcu": "140*70*85/142",
-    "marka": "sktürk",
-    "birim_fiyat_eur": 1900,
-    "mevcut": false
-  }
-]`;
+function satirToListeKalem(row: PfosEkipmanSatir): ListePdfKalem | null {
+  const ham_isim = String(row.ad ?? "").trim();
+  if (!ham_isim) return null;
+  const adetRaw = row.adet;
+  const adet =
+    typeof adetRaw === "number" && adetRaw > 0
+      ? Math.round(adetRaw)
+      : parseInt(String(adetRaw ?? "1"), 10) || 1;
+  const olcu = String(row.olcu ?? "").trim();
+  const marka = String(row.marka ?? "").trim();
+  return {
+    ham_isim,
+    tip_kodu: "",
+    kategori: String(row.bolumAd || row.bolum || "").trim() || "diger",
+    adet,
+    poz: String(row.poz ?? "").trim() || undefined,
+    olcu: olcu && olcu !== "—" ? olcu : undefined,
+    marka: marka || undefined,
+    birim_fiyat_eur:
+      row.birim_fiyat_eur != null && Number(row.birim_fiyat_eur) > 0
+        ? Number(row.birim_fiyat_eur)
+        : null,
+    mevcut: row.mevcut === true,
+  };
 }
 
-async function analyzeDocumentForListe(
-  buffer: ArrayBuffer,
-  dosya_tip: string,
-  opts?: { notlar?: string },
-): Promise<ListePdfKalem[]> {
-  const system_prompt = buildSystemPrompt();
-  const trimmedNotes = opts?.notlar?.trim();
-  const user_prompt = trimmedNotes
-    ? `Dosyayı analiz et.\n\nListe notları:\n---\n${trimmedNotes}\n---`
-    : "Dosyayı analiz et ve tüm ekipman kalemlerini çıkar:";
-
-  return runImportDocumentAnaliz({
-    dosya_base64: Buffer.from(buffer).toString("base64"),
-    dosya_tip,
-    system_prompt,
-    user_prompt,
-  });
-}
-
-/** PDF buffer → ekipman kalemleri (Claude zorunlu değil; kota/anahtar yoksa yerel) */
+/** PDF buffer → ekipman kalemleri (Claude kullanılmaz) */
 export async function analyzePdfForListe(
   pdfBuffer: ArrayBuffer,
-  opts?: { notlar?: string },
+  _opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
-  // 1) Yerel SKTÜRK/EQUSTO parse — Claude’sız (eski davranış)
   const structured = await parseProformaPdfBuffer(pdfBuffer);
   if (structured?.length) return structured;
 
-  // 2) Claude yedek (anahtar veya proxy varsa)
-  if (isClaudeImportConfigured()) {
-    try {
-      return await analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      // Kota / geçici Claude hatası → gevşek yerel parse dene
-      const soft = await parseProformaPdfBuffer(pdfBuffer, { minKalem: 1 });
-      if (soft?.length) {
-        console.warn(
-          `[liste-pdf-analiz] Claude yedek başarısız (${msg.slice(0, 120)}); yerel ${soft.length} kalem kullanıldı`,
-        );
-        return soft;
-      }
-      if (isAnthropicQuotaError(msg) || /Claude kotası|Görsel analiz kotası/i.test(msg)) {
-        throw new Error(
-          "Claude kotası dolu ve bu PDF yerel okuyucuyla çıkarılamadı. Excel (.xlsx) yükleyin veya kotanın yenilenmesini bekleyin.",
-        );
-      }
-      throw err;
-    }
-  }
-
-  // 3) Claude yok — gevşek yerel; yine yoksa Excel öner
   const soft = await parseProformaPdfBuffer(pdfBuffer, { minKalem: 1 });
   if (soft?.length) return soft;
-  throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
+
+  throw new Error(LISTE_LOCAL_PARSE_MISSING_MSG);
 }
 
-/** Excel (.xlsx) — önce düz metin (ucuz); PDF document API kullanılmaz */
+/** Excel (.xlsx) → yerel proforma ayrıştırıcılar (Claude kullanılmaz) */
 export async function analyzeExcelForListe(
   xlsxBuffer: ArrayBuffer,
-  opts?: { notlar?: string },
+  _opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.load(xlsxBuffer);
   if (!wb.worksheets.length) throw new Error("Excel sayfası bulunamadı");
 
-  const plain = wb.worksheets
-    .map((sheet) => worksheetToPlainText(sheet))
-    .filter(Boolean)
-    .join("\n\n")
-    .slice(0, 120_000);
-  const system_prompt = buildSystemPrompt();
-  const trimmedNotes = opts?.notlar?.trim();
-  const user_prompt = trimmedNotes
-    ? `Aşağıdaki teklif listesi metninden kalemleri çıkar.\n\nNotlar:\n---\n${trimmedNotes}\n---\n\n${plain}`
-    : `Aşağıdaki teklif listesi metninden tüm ekipman kalemlerini çıkar:\n\n${plain}`;
-
-  return runImportTextAnaliz({ system_prompt, user_prompt });
+  const satirlar = pickBestProformaWorkbook(wb, [parseEkipmanWorksheet]);
+  const kalemler = satirlar
+    .map(satirToListeKalem)
+    .filter((k): k is ListePdfKalem => Boolean(k));
+  if (!kalemler.length) throw new Error(LISTE_LOCAL_PARSE_MISSING_MSG);
+  return kalemler;
 }
