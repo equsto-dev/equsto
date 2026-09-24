@@ -15,6 +15,10 @@ export function isInternalWhatsAppPhone(raw: string): boolean {
   const notify = whatsAppNotifyTo();
   if (d === vitrin) return true;
   if (notify && d === notify) return true;
+  const alt = normalizeWaRecipient(
+    (process.env.WHATSAPP_NOTIFY_ALT_TO?.trim() || ""),
+  );
+  if (alt && d === alt) return true;
   return false;
 }
 

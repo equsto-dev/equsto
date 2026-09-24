@@ -1,5 +1,5 @@
 import type { Musteri, Siparis } from "@/lib/prisma";
-import { appendWaChatMessage } from "@/lib/wa-chat";
+import { appendWaChatMessage, isInternalWhatsAppPhone } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
 import { encodeWaMeQueryText } from "@/lib/whatsapp/encode-text";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
@@ -413,6 +413,10 @@ export async function notifyCustomerLeadAck(m: Musteri): Promise<void> {
   if (!whatsAppSendConfigured()) return;
   const to = normalizeWaRecipient(m.tel);
   if (!to) return;
+  // Sahip kendi hattıyla test edince ack, bildirimin üzerine biner → yalnız mesaj gibi görünür
+  if (isInternalWhatsAppPhone(to) || ownerWhatsAppNotifyPhones().includes(to)) {
+    return;
+  }
   const preview = String(m.mesaj || "").trim().slice(0, 240);
   const text = [
     "Equsto — mesajınız alındı.",

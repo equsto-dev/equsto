@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { leadBodyForWhatsApp } from "./notify-lead-format";
+import { leadBodyForWhatsApp, ownerWhatsAppAlertText } from "./notify-lead-format";
 
 describe("leadBodyForWhatsApp", () => {
   it("always includes sender phone and email lines", () => {
@@ -12,19 +12,31 @@ describe("leadBodyForWhatsApp", () => {
       kaynak: "whatsapp-modal",
       sayfa: "https://equsto.com/kahve",
     });
-    assert.match(text, /\*Gönderen:\* Ayşe Yılmaz/);
-    assert.match(text, /\*Telefon:\* 05321234567/);
-    assert.match(text, /\*E-posta:\* ayse@example.com/);
-    assert.match(text, /\*Mesaj:\*\nMakine fiyatı\?/);
+    assert.match(text, /^Gönderen: Ayşe Yılmaz$/m);
+    assert.match(text, /^Telefon: 05321234567$/m);
+    assert.match(text, /^E-posta: ayse@example.com$/m);
+    assert.match(text, /^Mesaj:\nMakine fiyatı\?$/m);
     assert.doesNotMatch(text, /Hazır mesaj:/);
     assert.doesNotMatch(text, /wa\.me\//);
   });
 
   it("shows placeholders when sender fields are empty", () => {
     const text = leadBodyForWhatsApp({ mesaj: "Merhaba" });
-    assert.match(text, /\*Gönderen:\* Ziyaretçi/);
-    assert.match(text, /\*Telefon:\* —/);
-    assert.match(text, /\*E-posta:\* —/);
-    assert.match(text, /\*Mesaj:\*\nMerhaba/);
+    assert.match(text, /^Gönderen: Ziyaretçi$/m);
+    assert.match(text, /^Telefon: —$/m);
+    assert.match(text, /^E-posta: —$/m);
+  });
+
+  it("puts name and phone in the alert headline", () => {
+    const text = ownerWhatsAppAlertText("Equsto — WhatsApp modal mesajı", {
+      yetkili: "Ayşe Yılmaz",
+      tel: "05321234567",
+      mesaj: "Merhaba",
+    });
+    assert.match(
+      text,
+      /^Equsto — WhatsApp modal mesajı — Ayşe Yılmaz · 05321234567\n/,
+    );
+    assert.match(text, /^Gönderen: Ayşe Yılmaz$/m);
   });
 });
