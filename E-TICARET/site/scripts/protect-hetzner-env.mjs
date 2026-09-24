@@ -187,12 +187,17 @@ if (Object.keys(googleOverlay).length) {
 }
 
 const anthropicKey = String(process.env.ANTHROPIC_API_KEY || "").trim();
-if (anthropicKey.length >= 20) {
-  const anthropicOverlay = { ANTHROPIC_API_KEY: anthropicKey };
+const anthropicModel = String(process.env.ANTHROPIC_MODEL || "").trim();
+if (anthropicKey.length >= 20 || anthropicModel) {
+  const anthropicOverlay = {};
+  if (anthropicKey.length >= 20) anthropicOverlay.ANTHROPIC_API_KEY = anthropicKey;
+  if (anthropicModel) anthropicOverlay.ANTHROPIC_MODEL = anthropicModel;
   writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", anthropicOverlay);
   fs.mkdirSync(path.dirname(keepPath), { recursive: true });
   writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", anthropicOverlay);
-  console.log("[protect-hetzner-env] ANTHROPIC_API_KEY merged from deploy env");
+  console.log(
+    `[protect-hetzner-env] anthropic merged key=${anthropicKey.length >= 20 ? "ok" : "MISSING"} model=${anthropicModel || "skip"}`,
+  );
 }
 
 const tgOverlay = {};

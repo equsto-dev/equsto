@@ -61,6 +61,11 @@ const tepeSecrets = parseEnv(
     ? fs.readFileSync(path.join(root, ".env.tepeplatform.secrets"), "utf8")
     : "",
 );
+const apiSecrets = parseEnv(
+  fs.existsSync(path.join(root, ".env.api.secrets"))
+    ? fs.readFileSync(path.join(root, ".env.api.secrets"), "utf8")
+    : "",
+);
 
 const skip = new Set([
   "VERCEL",
@@ -72,7 +77,7 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-/** öncelik: template < example < vercel < dbSecrets < waSecrets < geminiSecrets < tepeSecrets */
+/** öncelik: template < example < vercel < db < wa < gemini < tepe < api (api en yüksek) */
 const merged = {
   ...template,
   ...example,
@@ -81,6 +86,7 @@ const merged = {
   ...waSecrets,
   ...geminiSecrets,
   ...tepeSecrets,
+  ...apiSecrets,
 };
 for (const k of Object.keys(merged)) {
   if ([...skip].some((p) => k.startsWith(p.replace(/_$/, "")) || k.startsWith(p))) {
@@ -135,6 +141,7 @@ const order = [
   "CRON_SECRET",
   "GOOGLE_CLIENT_ID",
   "ANTHROPIC_API_KEY",
+  "ANTHROPIC_MODEL",
   "GEMINI_API_KEY",
   "GEMINI_VISION_MODEL",
   "TELEGRAM_BOT_TOKEN",

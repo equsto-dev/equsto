@@ -94,6 +94,18 @@ cd /opt/equsto/E-TICARET/site
 bash scripts/hetzner-deploy.sh
 ```
 
+## API anahtarları (tek dosya)
+
+Tercih edilen kaynak: `.env.api.secrets` (şablon: `.env.api.secrets.example`).
+Parça dosyalar (`.env.whatsapp.secrets` vb.) hâlâ çalışır; merge önceliği: api secrets en yüksek.
+
+```bash
+cp .env.api.secrets.example .env.api.secrets
+# doldur, sonra:
+node scripts/push-api-env-hetzner.mjs .env.api.secrets
+# veya GitHub Secret ANTHROPIC_API_KEY + Hetzner deploy inject
+```
+
 ## Dosyalar
 
 | Dosya | Açıklama |

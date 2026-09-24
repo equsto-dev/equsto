@@ -19,7 +19,7 @@
     "db:generate": "prisma generate",
     "db:migrate": "node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js migrate dev",
     "db:push": "node --import ./scripts/load-env.mjs ./node_modules/prisma/build/index.js db push",
-                "db:seed": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
+    "db:seed": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
     "db:seed:brema": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed-brema.ts",
     "kur:fetch": "node scripts/fetch-tcmb-kur.mjs",
     "catalog:agent:run": "node scripts/catalog-agent-run.mjs",
@@ -330,7 +330,8 @@
     "catalog:master:sync": "node scripts/import-katalog-master-from-xlsx.mjs && npm run catalog:master:publish",
     "catalog:master:sync:full": "node scripts/import-katalog-master-from-xlsx.mjs && npm run catalog:master:publish && npm run catalog:master:prisma",
     "catalog:master:prisma": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/sync-master-to-prisma.ts",
-    "postinstall": "node scripts/prisma-postinstall-skip.mjs"
+    "postinstall": "node scripts/prisma-postinstall-skip.mjs",
+    "hetzner:push-api": "node scripts/push-api-env-hetzner.mjs .env.api.secrets"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
