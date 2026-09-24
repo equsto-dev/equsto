@@ -7,11 +7,14 @@ export type WhatsAppMode = "link" | "green-api" | "meta";
  * link      — wa.me / kedi sohbet (varsayılan, Facebook gerekmez)
  * green-api — QR ile bağlanır (GREEN_API_*), Facebook gerekmez
  * meta      — Meta Cloud API (Facebook Developer)
+ * GREEN_API_* doluysa link/boş MODE kedi sohbeti / WA bildirimi kapatmaz.
  */
 export function whatsAppMode(): WhatsAppMode {
   const raw = (process.env.EQUSTO_WHATSAPP_MODE?.trim() || "").toLowerCase();
-  if (raw === "green-api" || raw === "greenapi" || raw === "green") return "green-api";
   if (raw === "meta" || raw === "cloud" || raw === "facebook") return "meta";
+  if (raw === "green-api" || raw === "greenapi" || raw === "green") return "green-api";
+  // keep/örnek MODE=link veya git reset MODE="" — anahtarlar varken gönderim açık kalsın.
+  if (greenApiConfigured()) return "green-api";
   return "link";
 }
 
@@ -67,10 +70,10 @@ export function whatsAppNotifyTo(): string {
 
 /** Green API QR ile bağlı WhatsApp hattı (kendine mesaj bildirim vermez). */
 export function greenApiInstancePhone(): string {
+  // Vitrin E164 (532) instance sanılmamalı — yoksa sahip WA bildirimi yanlışlıkla self-block olur.
   const raw =
     (process.env.GREEN_API_INSTANCE_WID?.trim() || "") ||
-    (process.env.GREEN_API_INSTANCE_PHONE?.trim() || "") ||
-    (process.env.EQUSTO_WHATSAPP_E164?.trim() || "");
+    (process.env.GREEN_API_INSTANCE_PHONE?.trim() || "");
   return normalizeWaRecipient(raw);
 }
 
@@ -85,7 +88,7 @@ export function isOwnerSelfWhatsAppNotifyBlocked(): boolean {
 
 /**
  * Sahip bildirimi hedef(ler)i.
- * Green API hattı (532) ile notify aynıysa ALT (554) + instance kopyası birlikte gider.
+ * Green API QR hattı (554 iş WA) ile notify (532) aynıysa ALT gerekir; aksi halde kendine push yok.
  */
 export function ownerWhatsAppNotifyPhones(): string[] {
   const owner = normalizeWaRecipient(whatsAppNotifyTo());
