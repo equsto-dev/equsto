@@ -85,11 +85,10 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   const data = normalizeMusteriPayload(body);
   if (memberSession) {
     const u = memberSession.session.user;
-    if (!data.tel && u.telefon) data.tel = u.telefon.trim();
-    if (!data.mail && u.email) data.mail = u.email.trim();
-    if ((!data.yetkili || data.yetkili === "Ziyaretçi") && u.name) {
-      data.yetkili = u.name.trim();
-    }
+    // Üye oturumu — gönderen bilgisi WA/Telegram bildiriminde eksik kalmasın
+    if (u.telefon?.trim()) data.tel = u.telefon.trim();
+    if (u.email?.trim()) data.mail = u.email.trim();
+    if (u.name?.trim()) data.yetkili = u.name.trim();
   }
   const err = validatePublicMusteriPayload(data);
   if (err) return adminErr(err, 400);

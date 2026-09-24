@@ -11,6 +11,9 @@ import {
   whatsAppNotifyTo,
   whatsAppSendConfigured,
 } from "@/lib/whatsapp";
+import { ownerWhatsAppAlertText } from "@/lib/notify-lead-format";
+
+export { leadBodyForWhatsApp, ownerWhatsAppAlertText } from "@/lib/notify-lead-format";
 
 function env(name: string): string {
   return process.env[name]?.trim() || "";
@@ -76,6 +79,8 @@ export type NotifyChannel = "telegram" | "email" | "sms" | "whatsapp";
 export type SendInstantAlertOptions = {
   only?: NotifyChannel[];
   skip?: NotifyChannel[];
+  /** WhatsApp’a özel gövde (Telegram’daki Hazır mesaj / wa.me satırları olmadan). */
+  whatsappBody?: string;
 };
 
 function mergeNotifyResults(...parts: NotifyResult[]): NotifyResult {
@@ -288,11 +293,12 @@ export async function sendInstantAlert(
   }
 
   const ownerWaTargets = ownerWhatsAppNotifyPhones();
+  const waText = String(opts?.whatsappBody?.trim() || text).slice(0, 4096);
   if (channelEnabled("whatsapp", opts) && whatsAppSendConfigured() && ownerWaTargets.length) {
     let anyOk = false;
     for (const to of ownerWaTargets) {
       try {
-        const wa = await sendWhatsAppText(to, text.slice(0, 4096));
+        const wa = await sendWhatsAppText(to, waText);
         if (wa.ok) anyOk = true;
         else errors.push(`whatsapp(…${to.slice(-4)}): ${wa.error || "send failed"}`);
       } catch (e) {
@@ -362,13 +368,17 @@ function leadBody(m: Musteri): string {
 }
 
 export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
-  return sendInstantAlert("Equsto — yeni mesaj (kedi sohbet)", leadBody(m));
+  const title = "Equsto — yeni mesaj (kedi sohbet)";
+  return sendInstantAlert(title, leadBody(m), {
+    whatsappBody: ownerWhatsAppAlertText(title, m),
+  });
 }
 
 /** WhatsApp modal — sahip bildirimi (WA / Telegram / e-posta). */
 export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult> {
   const title = "Equsto — WhatsApp modal mesajı";
   const body = leadBody(m);
+  const waBody = ownerWhatsAppAlertText(title, m);
   const ownerTargets = ownerWhatsAppNotifyPhones();
 
   if (isOwnerSelfWhatsAppNotifyBlocked() && !ownerTargets.length) {
@@ -385,7 +395,10 @@ export async function notifyWhatsAppModalLead(m: Musteri): Promise<NotifyResult>
   }
 
   const ownerWa = ownerTargets.length
-    ? await sendInstantAlert(title, body, { only: ["whatsapp"] })
+    ? await sendInstantAlert(title, body, {
+        only: ["whatsapp"],
+        whatsappBody: waBody,
+      })
     : { sent: [] as string[], skipped: ["whatsapp"], errors: [] as string[] };
   const rest = await sendInstantAlert(title, body, { skip: ["whatsapp", "sms"] });
   const merged = mergeNotifyResults(ownerWa, rest);
