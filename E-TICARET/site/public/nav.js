@@ -106,7 +106,7 @@
         { label: "Değirmenler", tip: "kahve-degirmeni" },
         { label: "Filtre Kahve", tip: "filtre-kahve" },
         { label: "Türk Kahve", tip: "turk-kahve" },
-        { label: "Barista Aksesuarları", labelKey: "nav.sub.barista_aksesuarlari", search: "barista|tamper|pitcher|süt köpürt" },
+        { label: "Barista Aksesuarları", labelKey: "nav.sub.barista_aksesuarlari", tip: "barista-aksesuarlari" },
       ],
     },
     {

@@ -24,7 +24,7 @@ export default function ShopPlpScripts() {
       <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-display-terminology.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
-      <Script src={`/eq-dept-tips.js?v=${v}&m=20260918-caglayan-out`} strategy="afterInteractive" />
+      <Script src={`/eq-dept-tips.js?v=${v}&m=20260924-kahve-filtre`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-olcu-facets.js?v=${v}`} strategy="afterInteractive" />
