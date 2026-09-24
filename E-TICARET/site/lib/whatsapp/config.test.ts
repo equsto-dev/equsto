@@ -4,6 +4,8 @@ import {
   greenApiInstancePhone,
   isOwnerSelfWhatsAppNotifyBlocked,
   ownerWhatsAppNotifyPhones,
+  whatsAppMode,
+  whatsAppWebhookConfigured,
 } from "./config";
 
 const KEYS = [
@@ -34,6 +36,37 @@ afterEach(() => {
     if (v == null) delete process.env[k];
     else process.env[k] = v;
   }
+});
+
+describe("whatsAppMode — empty/link MODE + Green API credentials", () => {
+  it("uses green-api when MODE is empty but GREEN_API_* are set", () => {
+    setEnv({
+      EQUSTO_WHATSAPP_MODE: "",
+      GREEN_API_INSTANCE_ID: "1101234567",
+      GREEN_API_TOKEN: "token-abc-12345678",
+    });
+    assert.equal(whatsAppMode(), "green-api");
+    assert.equal(whatsAppWebhookConfigured(), true);
+  });
+
+  it("uses green-api when MODE is link but GREEN_API_* are set", () => {
+    setEnv({
+      EQUSTO_WHATSAPP_MODE: "link",
+      GREEN_API_INSTANCE_ID: "1101234567",
+      GREEN_API_TOKEN: "token-abc-12345678",
+    });
+    assert.equal(whatsAppMode(), "green-api");
+    assert.equal(whatsAppWebhookConfigured(), true);
+  });
+
+  it("stays meta when MODE is meta", () => {
+    setEnv({
+      EQUSTO_WHATSAPP_MODE: "meta",
+      GREEN_API_INSTANCE_ID: "1101234567",
+      GREEN_API_TOKEN: "token-abc-12345678",
+    });
+    assert.equal(whatsAppMode(), "meta");
+  });
 });
 
 describe("owner WhatsApp notify — missing INSTANCE_WID", () => {
