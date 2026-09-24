@@ -209,6 +209,40 @@ if (Object.keys(tgOverlay).length) {
   );
 }
 
+// WhatsApp notify — boş leave owner WA sessiz (Telegram etkilenmez).
+// Varsayılanlar: .env.notify.secrets.example (532 bildirim, 554 Green API QR).
+{
+  const cur = { ...readMap(keepPath), ...readMap(envPath) };
+  const missing = (k) => !String(cur[k] || "").trim();
+  const notifyFill = {};
+  if (missing("EQUSTO_WHATSAPP_E164")) notifyFill.EQUSTO_WHATSAPP_E164 = "905326840152";
+  if (missing("WHATSAPP_NOTIFY_TO")) notifyFill.WHATSAPP_NOTIFY_TO = "905326840152";
+  if (missing("GREEN_API_INSTANCE_WID")) notifyFill.GREEN_API_INSTANCE_WID = "905542378532";
+  const hasGreen = Boolean(
+    String(cur.GREEN_API_INSTANCE_ID || "").trim() &&
+      String(cur.GREEN_API_TOKEN || "").trim(),
+  );
+  if (missing("EQUSTO_WHATSAPP_MODE") && hasGreen) {
+    notifyFill.EQUSTO_WHATSAPP_MODE = "green-api";
+  }
+  if (Object.keys(notifyFill).length) {
+    writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", notifyFill);
+    fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+    writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", notifyFill);
+    const mask = (v) => {
+      const d = String(v || "").replace(/\D/g, "");
+      return d ? `***${d.slice(-4)}` : v;
+    };
+    console.log(
+      `[protect-hetzner-env] notify fill ${Object.entries(notifyFill)
+        .map(([k, v]) => `${k}=${/MODE|green-api/i.test(k) ? v : mask(v)}`)
+        .join(" ")}`,
+    );
+  } else {
+    console.log("[protect-hetzner-env] notify phones already set");
+  }
+}
+
 const final = readMap(envPath);
 ensureDirectUrl(final);
 const meiliOverlay = {};

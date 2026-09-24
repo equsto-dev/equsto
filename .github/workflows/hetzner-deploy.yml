@@ -163,6 +163,32 @@ jobs:
             inject("RESEND_API_KEY", 10);
             inject("GREEN_API_INSTANCE_ID", 3);
             inject("GREEN_API_TOKEN", 10);
+
+            // Boş notify telefonlarını Equsto varsayılanlarıyla doldur (token değil).
+            // 532 = bildirim / vitrin, 554 = Green API QR iş hattı (.env.notify.secrets.example).
+            {
+              const keep = "/opt/equsto/.env.production.keep";
+              const site = ".env.production";
+              const defaults = {
+                EQUSTO_WHATSAPP_E164: "905326840152",
+                WHATSAPP_NOTIFY_TO: "905326840152",
+                GREEN_API_INSTANCE_WID: "905542378532",
+              };
+              for (const [name, value] of Object.entries(defaults)) {
+                if (!hasKey(keep, name, 10) && !hasKey(site, name, 10)) {
+                  mergeKey(keep, name, value);
+                  mergeKey(site, name, value);
+                  console.log("FILL_" + name + "=***" + value.slice(-4));
+                } else {
+                  console.log("FILL_" + name + "=keep");
+                }
+              }
+              if (!hasKey(keep, "EQUSTO_WHATSAPP_MODE", 4) && hasKey(keep, "GREEN_API_INSTANCE_ID", 3)) {
+                mergeKey(keep, "EQUSTO_WHATSAPP_MODE", "green-api");
+                mergeKey(site, "EQUSTO_WHATSAPP_MODE", "green-api");
+                console.log("FILL_EQUSTO_WHATSAPP_MODE=green-api");
+              }
+            }
             NODE
             docker compose --env-file .env.production exec -T app node -e 'const v=process.env["ANTHROPIC_API_KEY"]; const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_ANTHROPIC="+(v&&String(v).trim()?"ok":"MISSING")); console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_SECRETS=unreachable
 
@@ -170,6 +196,50 @@ jobs:
             git reset --hard origin/main
             bash scripts/hetzner-deploy.sh
             docker compose --env-file .env.production exec -T app node -e 'const t=process.env["TELEGRAM_BOT_TOKEN"]; const c=process.env["TELEGRAM_CHAT_ID"]; console.log("CONTAINER_TELEGRAM="+(t&&c&&String(t).trim()&&String(c).trim()?"ok":"MISSING"));' || echo CONTAINER_TELEGRAM=unreachable
+            # post-deploy diagnose (after protect fill)
+            node <<'DIAG2'
+            const fs = require("fs");
+            function readMap(file) {
+              const out = {};
+              if (!fs.existsSync(file)) return out;
+              for (const line of fs.readFileSync(file, "utf8").split(/\n/)) {
+                if (!line || line.trim().startsWith("#") || !line.includes("=")) continue;
+                const i = line.indexOf("=");
+                const k = line.slice(0, i).trim();
+                let v = line.slice(i + 1).trim();
+                if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+                out[k] = v;
+              }
+              return out;
+            }
+            const digits = (raw) => String(raw || "").replace(/\D/g, "");
+            const maskPhone = (raw) => {
+              const d = digits(raw);
+              return d ? "***" + d.slice(-4) + "(len=" + d.length + ")" : "EMPTY";
+            };
+            const normalize = (raw) => {
+              let d = digits(raw);
+              if (d.startsWith("0") && d.length === 11) d = "90" + d.slice(1);
+              if (d.length === 10 && d.startsWith("5")) d = "90" + d;
+              return d;
+            };
+            const keep = readMap("/opt/equsto/.env.production.keep");
+            const site = readMap("/opt/equsto/E-TICARET/site/.env.production");
+            const src = { ...site, ...keep };
+            const wid = normalize(src.GREEN_API_INSTANCE_WID || "");
+            const notify = normalize(src.WHATSAPP_NOTIFY_TO || src.EQUSTO_WHATSAPP_E164 || "");
+            const alt = normalize(src.WHATSAPP_NOTIFY_ALT_TO || "");
+            const selfBlocked = wid && notify && wid === notify;
+            const targets = [];
+            if (selfBlocked) { if (alt && alt !== notify) targets.push(alt); }
+            else { if (notify) targets.push(notify); if (alt && alt !== notify) targets.push(alt); }
+            console.log("POST_DIAG_WID=" + maskPhone(src.GREEN_API_INSTANCE_WID));
+            console.log("POST_DIAG_NOTIFY=" + maskPhone(src.WHATSAPP_NOTIFY_TO));
+            console.log("POST_DIAG_E164=" + maskPhone(src.EQUSTO_WHATSAPP_E164));
+            console.log("POST_DIAG_MODE=" + (String(src.EQUSTO_WHATSAPP_MODE || "").trim() || "(empty)"));
+            console.log("POST_DIAG_SELF_BLOCK=" + (selfBlocked ? "YES" : "no"));
+            console.log("POST_DIAG_OWNER_WA_TARGETS=" + (targets.length ? targets.map((t) => maskPhone(t)).join(",") : "NONE"));
+            DIAG2
 
       - name: Özet
         if: success()
