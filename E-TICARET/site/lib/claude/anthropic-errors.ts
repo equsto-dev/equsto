@@ -9,9 +9,9 @@ export function anthropicErrorMessage(httpStatus: number, bodyText: string): str
   if (isAnthropicQuotaError(bodyText)) {
     const until = bodyText.match(/regain access on (\d{4}-\d{2}-\d{2})/i);
     if (until) {
-      return `Görsel analiz kotası dolu (yenileme: ${until[1]}). Yedek yöntem deneniyor.`;
+      return `Claude kotası dolu (yenileme: ${until[1]}). Yerel PDF okuma veya Excel deneyin.`;
     }
-    return "Görsel analiz kotası geçici olarak dolu. Yedek yöntem deneniyor.";
+    return "Claude kotası geçici olarak dolu. Yerel PDF okuma veya Excel deneyin.";
   }
   if (/not_found_error/i.test(bodyText) && /model:/i.test(bodyText)) {
     return "Anthropic modeli bulunamadı — ANTHROPIC_MODEL=claude-sonnet-4-6 deneyin.";

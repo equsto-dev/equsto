@@ -275,13 +275,20 @@ function parseProformaBlobFallback(text: string): ListePdfKalem[] {
   return out;
 }
 
-/** SKTÜRK/EQUSTO proforma PDF → kalemler (yeterli poz satırı yoksa null) */
+export type ParseProformaPdfOpts = {
+  /** Varsayılan 5 — Claude yedeğine düşmeden kabul eşiği. Kota/anahtar yokken 1. */
+  minKalem?: number;
+};
+
+/** SKTÜRK/EQUSTO proforma PDF → kalemler (eşik altındaysa null) */
 export async function parseProformaPdfBuffer(
   buffer: Buffer | ArrayBuffer,
+  opts?: ParseProformaPdfOpts,
 ): Promise<ListePdfKalem[] | null> {
+  const minKalem = Math.max(1, opts?.minKalem ?? 5);
   const buf = Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer);
   const parsed = await pdf(buf);
   const text = String(parsed.text ?? "");
   const kalemler = parseProformaText(text);
-  return kalemler.length >= 5 ? kalemler : null;
+  return kalemler.length >= minKalem ? kalemler : null;
 }
