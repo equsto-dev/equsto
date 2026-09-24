@@ -40,6 +40,60 @@ jobs:
           envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GREEN_API_INSTANCE_ID, GREEN_API_TOKEN, RESEND_API_KEY
           script: |
             set -euo pipefail
+            # --- notify diagnose (masked last4 only; no tokens) ---
+            node <<'DIAG'
+            const fs = require("fs");
+            function readMap(file) {
+              const out = {};
+              if (!fs.existsSync(file)) return out;
+              for (const line of fs.readFileSync(file, "utf8").split(/\n/)) {
+                if (!line || line.trim().startsWith("#") || !line.includes("=")) continue;
+                const i = line.indexOf("=");
+                const k = line.slice(0, i).trim();
+                let v = line.slice(i + 1).trim();
+                if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+                out[k] = v;
+              }
+              return out;
+            }
+            const digits = (raw) => String(raw || "").replace(/\D/g, "");
+            const maskPhone = (raw) => {
+              const d = digits(raw);
+              return d ? "***" + d.slice(-4) + "(len=" + d.length + ")" : "EMPTY";
+            };
+            const normalize = (raw) => {
+              let d = digits(raw);
+              if (d.startsWith("0") && d.length === 11) d = "90" + d.slice(1);
+              if (d.length === 10 && d.startsWith("5")) d = "90" + d;
+              return d;
+            };
+            const keep = readMap("/opt/equsto/.env.production.keep");
+            const site = readMap("/opt/equsto/E-TICARET/site/.env.production");
+            const src = { ...site, ...keep };
+            const mode = String(src.EQUSTO_WHATSAPP_MODE || "").trim() || "(empty)";
+            const wid = normalize(src.GREEN_API_INSTANCE_WID || src.GREEN_API_INSTANCE_PHONE || "");
+            const notify = normalize(src.WHATSAPP_NOTIFY_TO || src.EQUSTO_NOTIFY_SMS_E164 || src.EQUSTO_WHATSAPP_E164 || "");
+            const alt = normalize(src.WHATSAPP_NOTIFY_ALT_TO || "");
+            const greenOk = Boolean(String(src.GREEN_API_INSTANCE_ID || "").trim() && String(src.GREEN_API_TOKEN || "").trim());
+            const effectiveMode = /^(meta|cloud|facebook)$/i.test(mode) ? "meta" : /^(green-api|greenapi|green)$/i.test(mode) ? "green-api" : greenOk ? "green-api(auto)" : "link";
+            const selfBlocked = String(effectiveMode).startsWith("green-api") && wid && notify && wid === notify;
+            const ownerTargets = [];
+            if (selfBlocked) { if (alt && alt !== notify) ownerTargets.push(alt); }
+            else { if (notify) ownerTargets.push(notify); if (alt && alt !== notify) ownerTargets.push(alt); }
+            console.log("DIAG_MODE_RAW=" + mode);
+            console.log("DIAG_MODE_EFFECTIVE=" + effectiveMode);
+            console.log("DIAG_GREEN_API_KEYS=" + (greenOk ? "ok" : "MISSING"));
+            console.log("DIAG_INSTANCE_WID=" + maskPhone(src.GREEN_API_INSTANCE_WID));
+            console.log("DIAG_NOTIFY_TO=" + maskPhone(src.WHATSAPP_NOTIFY_TO));
+            console.log("DIAG_NOTIFY_ALT=" + maskPhone(src.WHATSAPP_NOTIFY_ALT_TO));
+            console.log("DIAG_E164=" + maskPhone(src.EQUSTO_WHATSAPP_E164));
+            console.log("DIAG_RESOLVED_INSTANCE=" + (wid ? maskPhone(wid) : "EMPTY"));
+            console.log("DIAG_RESOLVED_NOTIFY=" + (notify ? maskPhone(notify) : "EMPTY"));
+            console.log("DIAG_SELF_BLOCK=" + (selfBlocked ? "YES" : "no"));
+            console.log("DIAG_OWNER_WA_TARGETS=" + (ownerTargets.length ? ownerTargets.map((t) => maskPhone(t)).join(",") : "NONE"));
+            console.log("DIAG_TELEGRAM=" + (String(src.TELEGRAM_BOT_TOKEN || "").trim() && String(src.TELEGRAM_CHAT_ID || "").trim() ? "ok" : "MISSING"));
+            DIAG
+            # --- end notify diagnose ---
             cd /opt/equsto/E-TICARET/site
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/equsto-dev/equsto.git"
             # git reset .env.production şablonunu ezer; anahtar keep'te kalmalı.
