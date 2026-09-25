@@ -79,7 +79,9 @@ Kapsam: yalnızca `next` = `/shop` | `/en/shop`…; `/login?next=/sepet` ve düz
 
 ### B2 — 410 değersiz
 
-**Durum:** Altyapı hazır (`gsc-gone-paths.json` + `resolveGscGonePath`); liste boş — canlı 404 doğrulaması rate-limit sonrası doldurulacak. **Çalışan 200’lere 410 yok.**
+**Durum:** ✓ İlk batch **250** path — çift canlı 404 doğrulaması + alias/legacy yok.  
+Dosya: `public/data/gsc-gone-paths.json` · audit: `scripts/seo/output/gsc_B2_GONE_CONFIRMED.tsv`  
+Kalan ~140 confirmed 404 sonraki batch’e bırakılabilir.
 
 ### C — Redirect hatası
 
