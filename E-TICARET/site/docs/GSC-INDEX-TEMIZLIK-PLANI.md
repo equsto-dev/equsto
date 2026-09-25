@@ -223,4 +223,4 @@ Faz 4  GSC doğrulama + arşiv + kapanış metriği
 
 ---
 
-*Bu belge plan içindir. Uygulama PR’ları batch etiketiyle (`gsc-cleanup-B1` …) açılır; her PR bu planın ilgili fazına referans verir.*
+*Bu belge teknik çerçevedir. **Ürün değeri odaklı tek plan:** [`GSC-ETICARET-DEGER-PLANI.md`](./GSC-ETICARET-DEGER-PLANI.md) (11 drilldown, 2026-09-25).*

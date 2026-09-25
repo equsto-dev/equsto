@@ -62,5 +62,5 @@ Teknik GEO SSR + discovery FAQ canlı (`e7081eb`, `cf85f44`). AI testlerinde hen
 
 ## GSC dizine ekleme temizliği (2026-09)
 
-Kontrollü plan (404 / redirect hatası / 4xx–5xx; noindex·robots·canonical hariç):  
-→ [`GSC-INDEX-TEMIZLIK-PLANI.md`](./GSC-INDEX-TEMIZLIK-PLANI.md)
+- Teknik çerçeve: [`GSC-INDEX-TEMIZLIK-PLANI.md`](./GSC-INDEX-TEMIZLIK-PLANI.md)
+- **Tek e-ticaret değeri planı** (11 drilldown analizi): [`GSC-ETICARET-DEGER-PLANI.md`](./GSC-ETICARET-DEGER-PLANI.md)

@@ -1,0 +1,196 @@
+{
+  "sample_total_urls": 5426,
+  "by_plan_bucket": {
+    "P2_CANONICAL_HYGIENE": 1007,
+    "P3_OK_LEAVE": 991,
+    "P9_HUMAN": 230,
+    "P0_RECOVER_PRODUCT": 2696,
+    "P1_DROP_NO_VALUE": 502
+  },
+  "by_decision": {
+    "FIX_ROBOTS_CONFLICT": 1,
+    "OK_REDIRECT": 801,
+    "FIX_OR_DROP": 199,
+    "OK_EN_NOINDEX_TO_TR": 165,
+    "RECOVER_308": 1293,
+    "COMMERCE_LEAK_NOINDEX": 3,
+    "OK_INTENTIONAL": 7,
+    "OK_CANONICAL_ALT": 999,
+    "IGNORE_ASSET": 18,
+    "COMMERCE_LEAK_ROBOTS_LOGIN": 963,
+    "FIX_REDIRECT": 396,
+    "DROP_410": 502,
+    "FIX_LIVE": 41,
+    "ADD_CANONICAL": 7,
+    "NEEDS_HUMAN": 31
+  },
+  "by_gsc_reason_sample": {
+    "Robots.txt tarafından engelleniyor olsa da dizine eklendi": 1,
+    "Yönlendirmeli sayfa": 1000,
+    "\"noindex\" etiketi tarafından hariç tutuldu": 1000,
+    "Doğru standart etikete sahip alternatif sayfa": 1000,
+    "Robots.txt tarafından engellendi": 963,
+    "Yeniden yönlendirme hatası": 408,
+    "Başka bir 4xx sorunu nedeniyle engellendi": 26,
+    "Sunucu hatası (5xx)": 15,
+    "Kullanıcı tarafından seçilen standart sayfa olmadan kopya": 7,
+    "Erişim izni verilmemesi (403) nedeniyle engellendi": 6,
+    "Bulunamadı (404)": 1000
+  },
+  "extrapolated": {
+    "Bulunamadı (404)": {
+      "sample": 1000,
+      "gsc_total": 8110,
+      "bucket_sample": {
+        "P1_DROP_NO_VALUE": 490,
+        "P0_RECOVER_PRODUCT": 468,
+        "P9_HUMAN": 31,
+        "P3_OK_LEAVE": 11
+      },
+      "bucket_est": {
+        "P1_DROP_NO_VALUE": 3973,
+        "P0_RECOVER_PRODUCT": 3795,
+        "P9_HUMAN": 251,
+        "P3_OK_LEAVE": 89
+      }
+    },
+    "Yönlendirmeli sayfa": {
+      "sample": 1000,
+      "gsc_total": 7115,
+      "bucket_sample": {
+        "P3_OK_LEAVE": 801,
+        "P9_HUMAN": 199
+      },
+      "bucket_est": {
+        "P3_OK_LEAVE": 5699,
+        "P9_HUMAN": 1415
+      }
+    },
+    "\"noindex\" etiketi tarafından hariç tutuldu": {
+      "sample": 1000,
+      "gsc_total": 2367,
+      "bucket_sample": {
+        "P3_OK_LEAVE": 172,
+        "P0_RECOVER_PRODUCT": 828
+      },
+      "bucket_est": {
+        "P3_OK_LEAVE": 407,
+        "P0_RECOVER_PRODUCT": 1959
+      }
+    },
+    "Doğru standart etikete sahip alternatif sayfa": {
+      "sample": 1000,
+      "gsc_total": 1165,
+      "bucket_sample": {
+        "P2_CANONICAL_HYGIENE": 999,
+        "P3_OK_LEAVE": 1
+      },
+      "bucket_est": {
+        "P2_CANONICAL_HYGIENE": 1163,
+        "P3_OK_LEAVE": 1
+      }
+    },
+    "Robots.txt tarafından engellendi": {
+      "sample": 963,
+      "gsc_total": 963,
+      "bucket_sample": {
+        "P0_RECOVER_PRODUCT": 963
+      },
+      "bucket_est": {
+        "P0_RECOVER_PRODUCT": 963
+      }
+    },
+    "Yeniden yönlendirme hatası": {
+      "sample": 408,
+      "gsc_total": 408,
+      "bucket_sample": {
+        "P0_RECOVER_PRODUCT": 396,
+        "P1_DROP_NO_VALUE": 12
+      },
+      "bucket_est": {
+        "P0_RECOVER_PRODUCT": 396,
+        "P1_DROP_NO_VALUE": 12
+      }
+    },
+    "Başka bir 4xx sorunu nedeniyle engellendi": {
+      "sample": 26,
+      "gsc_total": 26,
+      "bucket_sample": {
+        "P0_RECOVER_PRODUCT": 26
+      },
+      "bucket_est": {
+        "P0_RECOVER_PRODUCT": 26
+      }
+    },
+    "Sunucu hatası (5xx)": {
+      "sample": 15,
+      "gsc_total": 15,
+      "bucket_sample": {
+        "P0_RECOVER_PRODUCT": 15
+      },
+      "bucket_est": {
+        "P0_RECOVER_PRODUCT": 15
+      }
+    },
+    "Kullanıcı tarafından seçilen standart sayfa olmadan kopya": {
+      "sample": 7,
+      "gsc_total": 7,
+      "bucket_sample": {
+        "P2_CANONICAL_HYGIENE": 7
+      },
+      "bucket_est": {
+        "P2_CANONICAL_HYGIENE": 7
+      }
+    },
+    "Erişim izni verilmemesi (403) nedeniyle engellendi": {
+      "sample": 6,
+      "gsc_total": 6,
+      "bucket_sample": {
+        "P3_OK_LEAVE": 6
+      },
+      "bucket_est": {
+        "P3_OK_LEAVE": 6
+      }
+    },
+    "Robots.txt tarafından engelleniyor olsa da dizine eklendi": {
+      "sample": 1,
+      "gsc_total": 1,
+      "bucket_sample": {
+        "P2_CANONICAL_HYGIENE": 1
+      },
+      "bucket_est": {
+        "P2_CANONICAL_HYGIENE": 1
+      }
+    },
+    "Keşfedildi - şu anda dizine eklenmiş değil": {
+      "sample": 0,
+      "gsc_total": 5295,
+      "note": "drilldown_yok"
+    },
+    "Kopya, Google kullanıcıdan farklı bir standart sayfa seçti": {
+      "sample": 0,
+      "gsc_total": 3415,
+      "note": "drilldown_yok"
+    },
+    "Tarandı - şu anda dizine eklenmiş değil": {
+      "sample": 0,
+      "gsc_total": 890,
+      "note": "drilldown_yok"
+    }
+  },
+  "missing_drilldowns": [
+    "Keşfedildi - şu anda dizine eklenmiş değil",
+    "Kopya, Google kullanıcıdan farklı bir standart sayfa seçti",
+    "Tarandı - şu anda dizine eklenmiş değil"
+  ],
+  "est_p0_recover_product_urls": 7154,
+  "est_p1_drop_urls": 3985,
+  "workstreams": {
+    "A_login_next_308": 2098,
+    "B_404_remap_or_drop": 1000,
+    "C_redirect_errors": 408,
+    "D_live_4xx_5xx": 41,
+    "E_tr_noindex_leaks": 3,
+    "F_en_noindex_ok": 165
+  }
+}
