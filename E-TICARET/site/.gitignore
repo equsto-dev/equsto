@@ -120,3 +120,6 @@ next-env.d.ts
 # Cambro official (cambro.com / Widen CDN)
 !public/images/catalog/cambro/
 !public/images/catalog/cambro/**
+
+# GSC raw exports (local)
+scripts/seo/input/**/*.csv

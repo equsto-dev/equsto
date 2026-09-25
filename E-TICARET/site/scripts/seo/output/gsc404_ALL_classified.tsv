@@ -1,0 +1,1001 @@
+decision	confidence	reason	lang	dept	slug	target	was_login	url
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28061		False	https://equsto.com/shop/hazirlik/rc-28061
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12060-31	/en/shop/tezgah/7911-12060-31	False	https://equsto.com/en/shop/tezgah/pimak-12060-31
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-12125-11		False	https://equsto.com/shop/davlumbaz/pimak-12125-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7910-14040-01	/en/shop/tezgah/7910-14040-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7910-14040-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-10060-15		False	https://equsto.com/en/shop/tezgah/pimak-10060-15
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq76	/en/shop/market-reyonlari/eq-falcon-eq76	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq76
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14060-56	/en/shop/tezgah/7911-14060-56	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14060-56
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	2864-q3028-99	/en/shop/set-ustu-mutfak/2864-q3028-99	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/2864-q3028-99
+RECOVER_308	high	login_next_to_product	en	dolap	7754-147cb-11	/en/shop/tezgah/7754-147cb-11	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7754-147cb-11
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	equsto__equsto-35125-01		False	https://equsto.com/en/shop/davlumbaz/equsto__equsto-35125-01
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8325-0kfh5-03	/en/shop/set-ustu-mutfak/8325-0kfh5-03	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8325-0kfh5-03
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27072		False	https://equsto.com/shop/hazirlik/rc-27072
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-19070-08		False	https://equsto.com/shop/tezgah/pimak-19070-08
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-50205-00		False	https://equsto.com/en/shop/davlumbaz/pimak-50205-00
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq5		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq5
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-tp-eq16		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-tp-eq16
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	nergis-tp-sky-ml-3m1-1875x1012x2050		False	https://equsto.com/shop/market-reyonlari/nergis-tp-sky-ml-3m1-1875x1012x2050
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	nergis-lb-fg-ml-3m1-3124x912x2050		False	https://equsto.com/shop/market-reyonlari/nergis-lb-fg-ml-3m1-3124x912x2050
+DROP_NO_VALUE	high	no_product_match	en	sogutma	portabianco-tezgah-tip-mix-iki-kapili-buzdolabi		False	https://equsto.com/en/shop/sogutma/portabianco-tezgah-tip-mix-iki-kapili-buzdolabi
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-1909w		False	https://equsto.com/shop/hazirlik/rc-1909w
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-nergis-tp-sky-eq20		False	https://equsto.com/shop/market-reyonlari/eq-nergis-tp-sky-eq20
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-nergis-lm-eq54		False	https://equsto.com/shop/market-reyonlari/eq-nergis-lm-eq54
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28113		False	https://equsto.com/shop/hazirlik/rc-28113
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-nergis-lb-fg-eq39		False	https://equsto.com/shop/market-reyonlari/eq-nergis-lb-fg-eq39
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-krc180	/en/shop/tezgah/ino-krc180	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-krc180
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/buffalo/buffalo.pdf		False	https://equsto.com/prosogutma-market/buffalo/buffalo.pdf
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-89054		False	https://equsto.com/shop/hazirlik/rc-t1-057-89054
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/firefly-corners/firefly-corners-br.pdf		False	https://equsto.com/prosogutma-market/firefly-corners/firefly-corners-br.pdf
+RECOVER_308	high	login_next_to_product	en	yikama	7960-20629-7o3	/en/shop/yikama/7960-20629-7o3	True	https://equsto.com/en/login.html?next=/en/shop/yikama/7960-20629-7o3
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25125-01	/en/shop/davlumbaz/7885-25125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-25125-01
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	bosfor-bosfor-cift-motorlu-spiral-mikser-ush-150t		False	https://equsto.com/shop/hazirlik/bosfor-bosfor-cift-motorlu-spiral-mikser-ush-150t
+RECOVER_308	high	login_next_to_product	en	sogutma	7919-df6030-00	/en/shop/sogutma/7919-df6030-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/7919-df6030-00
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq115	/en/shop/market-reyonlari/eq-falcon-sld-eq115	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq115
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-247d5-23	/en/shop/tezgah/7754-247d5-23	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-247d5-23
+DROP_NO_VALUE	high	no_product_match	en	tezgah	hazirlik.html		False	https://equsto.com/en/shop/tezgah/hazirlik.html
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0311-21020-10	/en/shop/set-ustu-mutfak/0311-21020-10	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0311-21020-10
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-nergis-lb-fg-sky-eq2		False	https://equsto.com/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq2
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	eq-orkide-eq17		False	https://equsto.com/en/shop/market-reyonlari/eq-orkide-eq17
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-39345		False	https://equsto.com/shop/hazirlik/rc-t1-057-39345
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-33208		False	https://equsto.com/en/shop/hazirlik/rc-33208
+RECOVER_308	high	login_next_to_product	en	pisirme	xela-05eu-exrs	/en/shop/pisirme/xela-05eu-exrs	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/xela-05eu-exrs
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-25155-01	/shop/davlumbaz/7885-25155-01	False	https://equsto.com/shop/davlumbaz/pimak-25155-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12060-52	/shop/tezgah/7911-12060-52	False	https://equsto.com/shop/tezgah/pimak-12060-52
+RECOVER_308	high	login_next_to_product	en	pisirme	xb893	/en/shop/pisirme/xb893	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/xb893
+RECOVER_308	high	login_next_to_product	en	yikama	7961-04929-5o2	/en/shop/yikama/7961-04929-5o2	True	https://equsto.com/en/login.html?next=/en/shop/yikama/7961-04929-5o2
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-102690		False	https://equsto.com/shop/hazirlik/rc-102690
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-papatya-nv-eq4		False	https://equsto.com/shop/market-reyonlari/eq-papatya-nv-eq4
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-10070-13		False	https://equsto.com/en/shop/tezgah/pimak-10070-13
+DROP_NO_VALUE	high	no_product_match	tr	icecek	uba1012		False	https://equsto.com/shop/icecek/uba1012
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-1604060-00		False	https://equsto.com/shop/tezgah/mr38-1604060-00
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	fulya-nv-fg-ml-3m1-937x790x2220		False	https://equsto.com/shop/market-reyonlari/fulya-nv-fg-ml-3m1-937x790x2220
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-16060-13	/shop/tezgah/7911-16060-13	False	https://equsto.com/shop/tezgah/pimak-16060-13
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	eq-nergis-lm-eq31		False	https://equsto.com/en/shop/market-reyonlari/eq-nergis-lm-eq31
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-t1-057-39337		False	https://equsto.com/en/shop/hazirlik/rc-t1-057-39337
+RECOVER_308	high	login_next_to_product	en	kahve	9868-11986-6001	/en/shop/kahve/9868-11986-6001	True	https://equsto.com/en/login.html?next=/en/shop/kahve/9868-11986-6001
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zco-9ig20	/en/shop/pisirme/ino-zco-9ig20	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zco-9ig20
+RECOVER_308	high	login_next_to_product	en	pisirme	xb895	/en/shop/pisirme/xb895	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/xb895
+RECOVER_308	high	login_next_to_product	en	hazirlik	8823-0ha40-00	/en/shop/hazirlik/8823-0ha40-00	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/8823-0ha40-00
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-krn210	/en/shop/tezgah/ino-krn210	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-krn210
+RECOVER_308	high	login_next_to_product	en	dolap	7754-186e8-35	/en/shop/tezgah/7754-186e8-35	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7754-186e8-35
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-14060-52	/shop/tezgah/7911-14060-52	False	https://equsto.com/shop/tezgah/equsto-14060-52
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19060-04a	/en/shop/tezgah/7911-19060-04a	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19060-04a
+KEEP_HUB	med	hub	en	icecek		/shop/icecek	True	https://equsto.com/en/login.html?next=/en/shop/icecek?tip%3Dicecek-otomat
+RECOVER_308	high	login_next_to_product	en	tezgah	7876-19070-00	/en/shop/tezgah/7876-19070-00	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7876-19070-00
+DROP_NO_VALUE	high	no_product_match	en	kahve	cafe-kurulumu.html		False	https://equsto.com/en/shop/kahve/cafe-kurulumu.html
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-09429-5y3	/en/shop/yikama/7961-09429-5y3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-09429-5y3
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq96	/en/shop/market-reyonlari/eq-falcon-eq96	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq96
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40205-10	/en/shop/davlumbaz/7885-40205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-40205-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15155-01	/en/shop/davlumbaz/7885-15155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-15155-01
+RECOVER_308	high	login_next_to_product	en	dolap	7754-157b5-21	/en/shop/tezgah/7754-157b5-21	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7754-157b5-21
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12060-51		False	https://equsto.com/shop/tezgah/pimak-12060-51
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	nergis-lb-tp-sky-ml-3m1-3124x812x2050		False	https://equsto.com/shop/market-reyonlari/nergis-lb-tp-sky-ml-3m1-3124x812x2050
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28114		False	https://equsto.com/shop/hazirlik/rc-28114
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	9830-f300e-00	/en/shop/set-ustu-mutfak/9830-f300e-00	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/9830-f300e-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14060-46		False	https://equsto.com/shop/tezgah/pimak-14060-46
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16060-56	/en/shop/tezgah/7911-16060-56	False	https://equsto.com/en/shop/tezgah/pimak-16060-56
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8860-ops03-38	/en/shop/set-ustu-mutfak/8860-ops03-38	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8860-ops03-38
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-45205-00		False	https://equsto.com/shop/davlumbaz/pimak-45205-00
+DROP_NO_VALUE	high	no_product_match	tr	yikama	hazirlik.html		False	https://equsto.com/shop/yikama/hazirlik.html
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-fm480-ake		False	https://equsto.com/shop/sogutma/9805-fm480-ake
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-60205-00		False	https://equsto.com/shop/davlumbaz/pimak-60205-00
+DROP_NO_VALUE	high	not_sellable	en	sogutma	727488		True	https://equsto.com/en/login.html?next=/en/shop/sogutma/727488
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq28	/en/shop/market-reyonlari/eq-falcon-sld-eq28	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq28
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-nergis-lb-lm-eq45		False	https://equsto.com/shop/market-reyonlari/eq-nergis-lb-lm-eq45
+DROP_NO_VALUE	high	non_product_url	en		/en/rehber/marka.html		False	https://equsto.com/en/rehber/marka.html
+DROP_NO_VALUE	high	login_next_no_product	en	sogutma	portabianco-monoblok-tezgah-tip-iki-kapili-buzdo		True	https://equsto.com/en/login.html?next=/en/shop/sogutma/portabianco-monoblok-tezgah-tip-iki-kapili-buzdo
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-lotus-eq52		False	https://equsto.com/shop/market-reyonlari/eq-lotus-eq52
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-22570d		False	https://equsto.com/shop/hazirlik/rc-22570d
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/quokka/QUOKKA.pdf		False	https://equsto.com/prosogutma-market/quokka/QUOKKA.pdf
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-fulya-hf-fg-eq18		False	https://equsto.com/shop/market-reyonlari/eq-fulya-hf-fg-eq18
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19060-46		False	https://equsto.com/en/shop/tezgah/pimak-19060-46
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-1942		False	https://equsto.com/en/shop/hazirlik/rc-1942
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-16060-04		False	https://equsto.com/shop/tezgah/pimak-16060-04
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19060-85	/en/shop/tezgah/7911-19060-85	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19060-85
+DROP_NO_VALUE	high	no_product_match	tr	icecek	ztiryakiler-dok-m-k-ll-k-no-2-alt-n-renk		False	https://equsto.com/shop/icecek/ztiryakiler-dok-m-k-ll-k-no-2-alt-n-renk
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0314-21040-01	/en/shop/set-ustu-mutfak/0314-21040-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0314-21040-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19070-46		False	https://equsto.com/en/shop/tezgah/pimak-19070-46
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14070-52	/en/shop/tezgah/7911-14070-52	False	https://equsto.com/en/shop/tezgah/pimak-14070-52
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35155-01	/en/shop/davlumbaz/7885-35155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-35155-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-06060-00	/shop/tezgah/7911-06060-00	False	https://equsto.com/shop/tezgah/pimak-06060-00
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-kss160	/en/shop/tezgah/ino-kss160	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-kss160
+RECOVER_308	high	login_next_to_product	en	pisirme	7960-11829-5o3	/en/shop/yikama/7960-11829-5o3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7960-11829-5o3
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-33220		False	https://equsto.com/en/shop/hazirlik/rc-33220
+RECOVER_308	high	login_next_to_product	en	yikama	073m-11010-ad	/en/shop/yikama/073m-11010-ad	True	https://equsto.com/en/login.html?next=/en/shop/yikama/073m-11010-ad
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-33208		False	https://equsto.com/shop/hazirlik/rc-33208
+DROP_NO_VALUE	high	not_sellable	en	market-reyonlari	eq-barracuda-frozen-eq1		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-barracuda-frozen-eq1
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	eq-nergis-lb-fg-eq14		False	https://equsto.com/en/shop/market-reyonlari/eq-nergis-lb-fg-eq14
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-im130n-ehc		False	https://equsto.com/shop/sogutma/9805-im130n-ehc
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe-robot-coupe-sebze-dograma-makinesi-cl-20		False	https://equsto.com/shop/hazirlik/robot-coupe-robot-coupe-sebze-dograma-makinesi-cl-20
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28058		False	https://equsto.com/shop/hazirlik/rc-28058
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	eq-fulya-nv-fg-eq20		False	https://equsto.com/shop/market-reyonlari/eq-fulya-nv-fg-eq20
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-krg242	/en/shop/tezgah/ino-krg242	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-krg242
+DROP_NO_VALUE	high	no_product_match	en	tezgah	mr38-1-1804060-10		False	https://equsto.com/en/shop/tezgah/mr38-1-1804060-10
+DROP_NO_VALUE	high	login_next_no_product	en	davlumbaz	pimak-40205-00		True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/pimak-40205-00
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-19060-04		False	https://equsto.com/en/shop/tezgah/pimak-19060-04
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-06070-91	/en/shop/tezgah/7911-06070-91	False	https://equsto.com/en/shop/tezgah/pimak-06070-91
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-60155-10	/shop/davlumbaz/7885-60155-10	False	https://equsto.com/shop/davlumbaz/pimak-60155-10
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-89676		False	https://equsto.com/shop/hazirlik/rc-t1-057-89676
+DROP_NO_VALUE	high	no_product_match	tr	pisirme	benmariler		False	https://equsto.com/shop/pisirme/benmariler
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/butterfly-dp/butterfly-dp-tk.pdf		False	https://equsto.com/prosogutma-market/butterfly-dp/butterfly-dp-tk.pdf
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16070-50		False	https://equsto.com/shop/tezgah/pimak-16070-50
+RECOVER_308	high	login_next_to_product	en	araba	g-gn-75-s-2	/en/shop/araba/g-gn-75-s-2	True	https://equsto.com/en/login.html?next=/en/shop/araba/g-gn-75-s-2
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28056		False	https://equsto.com/shop/hazirlik/rc-28056
+DROP_NO_VALUE	high	no_product_match	tr	yikama	araba.html		False	https://equsto.com/shop/yikama/araba.html
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28111		False	https://equsto.com/shop/hazirlik/rc-28111
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-16070-79	/en/shop/tezgah/7911-16070-79	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-16070-79
+DROP_NO_VALUE	high	no_product_match	tr	icecek	rc-55040d		False	https://equsto.com/shop/icecek/rc-55040d
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-60155-01	/shop/davlumbaz/7885-60155-01	False	https://equsto.com/shop/davlumbaz/pimak-60155-01
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-9ig30	/en/shop/pisirme/ino-9ig30	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-9ig30
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-kangaroo-eq4	/en/shop/market-reyonlari/eq-kangaroo-eq4	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-kangaroo-eq4
+RECOVER_308	high	login_next_to_product	en	pisirme	371282	/en/shop/pisirme/371282	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/371282
+RECOVER_308	high	login_next_to_product	en	pisirme	ago-870y	/en/shop/pisirme/ago-870y	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ago-870y
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14060-96	/en/shop/tezgah/7911-14060-96	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14060-96
+RECOVER_308	high	login_next_to_product	en	tasima	7919-70130-00	/en/shop/tasima/7919-70130-00	True	https://equsto.com/en/login.html?next=/en/shop/tasima/7919-70130-00
+RECOVER_308	high	login_next_to_product	en	sogutma	ttc-2n60	/en/shop/sogutma/ttc-2n60	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/ttc-2n60
+DROP_NO_VALUE	high	non_product_url	en				True	https://equsto.com/en/login.html?next=/en/login?mode%3Dregister%26next%3D%252Fen%252Fshop%252Fset-ustu-mutfak%252F0312-00024-13
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-18070-14		False	https://equsto.com/shop/tezgah/pimak-18070-14
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-30155-10	/shop/davlumbaz/7885-30155-10	False	https://equsto.com/shop/davlumbaz/pimak-30155-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35125-11	/en/shop/davlumbaz/7885-35125-11	False	https://equsto.com/en/shop/davlumbaz/pimak-35125-11
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	eq-nergis-lb-fg-sky-eq16		False	https://equsto.com/en/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq16
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8325-0kfh5-15	/en/shop/set-ustu-mutfak/8325-0kfh5-15	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8325-0kfh5-15
+RECOVER_308	high	login_next_to_product	en	hazirlik	bks-100	/en/shop/hazirlik/bks-100	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/bks-100
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kct07-14070	/en/shop/tezgah/eq-kct07-14070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kct07-14070
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-14060-00		False	https://equsto.com/shop/tezgah/pimak-14060-00
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-24614m		False	https://equsto.com/en/shop/hazirlik/rc-24614m
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	eq-nergis-lb-fg-sky-eq26		False	https://equsto.com/en/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq26
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-20105-11	/en/shop/davlumbaz/7885-20105-11	False	https://equsto.com/en/shop/davlumbaz/pimak-20105-11
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15155-11	/en/shop/davlumbaz/7885-15155-11	False	https://equsto.com/en/shop/davlumbaz/pimak-15155-11
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40155-10	/en/shop/davlumbaz/7885-40155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-40155-10
+RECOVER_308	high	login_next_to_product	en	pisirme	391543	/en/shop/pisirme/391543	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391543
+RECOVER_308	high	login_next_to_product	en	hazirlik	058-no-54	/en/shop/hazirlik/058-no-54	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/058-no-54
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-27072		False	https://equsto.com/en/shop/hazirlik/rc-27072
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-tp-sky-eq12		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-tp-sky-eq12
+RECOVER_308	high	login_next_to_product	en	dolap	7911-12070-95	/en/shop/tezgah/7911-12070-95	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-12070-95
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/penguin/PENGUIN.pdf		False	https://equsto.com/prosogutma-market/penguin/PENGUIN.pdf
+DROP_NO_VALUE	high	no_product_match	en	sogutma	oztiryakiler-endustriyel-mutfak__9805-im130n-ehc		False	https://equsto.com/en/shop/sogutma/oztiryakiler-endustriyel-mutfak__9805-im130n-ehc
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14060-15	/en/shop/tezgah/7911-14060-15	False	https://equsto.com/en/shop/tezgah/pimak-14060-15
+RECOVER_308	med	login_next_to_product	en	tezgah	pimak-16070-56	/en/shop/tezgah/7911-16070-56	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/pimak-16070-56
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	oztiryakiler-endustriyel-mutfak__9805-im130n-ehc		False	https://equsto.com/shop/sogutma/oztiryakiler-endustriyel-mutfak__9805-im130n-ehc
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28062		False	https://equsto.com/shop/hazirlik/rc-28062
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco712-3	/en/shop/pisirme/npicco712-3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco712-3
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-ktk090i	/en/shop/tezgah/ino-ktk090i	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-ktk090i
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28209		False	https://equsto.com/shop/hazirlik/rc-28209
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	dito-sama-tr260-sebze-dograma-makinesi-2-kafali-2500-kg-saat		False	https://equsto.com/shop/hazirlik/dito-sama-tr260-sebze-dograma-makinesi-2-kafali-2500-kg-saat
+RECOVER_308	high	login_next_to_product	en	hazirlik	118-sft-01	/en/shop/hazirlik/118-sft-01	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/118-sft-01
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/butterfly-tk/butterfly-dp-tk.pdf		False	https://equsto.com/prosogutma-market/butterfly-tk/butterfly-dp-tk.pdf
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	6268-00019-32	/en/shop/set-ustu-mutfak/6268-00019-32	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/6268-00019-32
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	nergis-lb-tp-ml-3m1-937x812x2050		False	https://equsto.com/shop/market-reyonlari/nergis-lb-tp-ml-3m1-937x812x2050
+RECOVER_308	high	login_next_to_product	en	icecek	sc10-ai-sspb	/en/shop/icecek/sc10-ai-sspb	True	https://equsto.com/en/login.html?next=/en/shop/icecek/sc10-ai-sspb
+RECOVER_308	high	login_next_to_product	en	hazirlik	9840-cl55d-00	/en/shop/hazirlik/9840-cl55d-00	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/9840-cl55d-00
+RECOVER_308	high	login_next_to_product	en	hazirlik	208-600337	/en/shop/hazirlik/208-600337	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/208-600337
+RECOVER_308	high	login_next_to_product	en	pisirme	7864-n1-80903-14	/en/shop/pisirme/7864-n1-80903-14	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7864-n1-80903-14
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-klg100	/en/shop/tezgah/ino-klg100	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-klg100
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zco-7fg10	/en/shop/pisirme/ino-zco-7fg10	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zco-7fg10
+RECOVER_308	high	login_next_to_product	en	pisirme	aei-673-n	/en/shop/pisirme/aei-673-n	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/aei-673-n
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-nv-tp-sky-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-nv-tp-sky-eq3
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq41	/en/shop/market-reyonlari/eq-falcon-sld-eq41	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq41
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28134		False	https://equsto.com/shop/hazirlik/rc-28134
+DROP_NO_VALUE	high	non_product_url	en				True	https://equsto.com/en/login.html?next=/en/imt300
+DROP_NO_VALUE	high	login_next_no_product	en	tezgah	pimak-10060-70		True	https://equsto.com/en/login.html?next=/en/shop/tezgah/pimak-10060-70
+DROP_NO_VALUE	high	not_sellable	en	pisirme	391576		True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391576
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28207		False	https://equsto.com/shop/hazirlik/rc-28207
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28066		False	https://equsto.com/en/shop/hazirlik/rc-28066
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-14070-14		False	https://equsto.com/shop/tezgah/pimak-14070-14
+DROP_NO_VALUE	high	no_product_match	tr	pisirme	kayalar-kayalar-elektrikli-pleyt-zgara-120x70x30-cm-k-de12070		False	https://equsto.com/shop/pisirme/kayalar-kayalar-elektrikli-pleyt-zgara-120x70x30-cm-k-de12070
+RECOVER_308	high	login_next_to_product	en	sogutma	118-srdny215	/en/shop/sogutma/118-srdny215	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-srdny215
+DROP_NO_VALUE	high	not_sellable	en	set-ustu-mutfak	8893-up103-00		True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8893-up103-00
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	sogutma-ekipmanlari		False	https://equsto.com/shop/sogutma/sogutma-ekipmanlari
+RECOVER_308	high	login_next_to_product	en	sogutma	pza-2n80	/en/shop/sogutma/pza-2n80	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/pza-2n80
+RECOVER_308	high	login_next_to_product	en	pisirme	391334	/en/shop/pisirme/391334	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391334
+RECOVER_308	high	login_next_to_product	en	hazirlik	bhy-10	/en/shop/hazirlik/bhy-10	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/bhy-10
+RECOVER_308	high	login_next_to_product	en	istif	53-x-122-x-183-201	/en/shop/istif/53-x-122-x-183-201	True	https://equsto.com/en/login.html?next=/en/shop/istif/53-x-122-x-183-201
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8916-0mv20-00	/en/shop/set-ustu-mutfak/8916-0mv20-00	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8916-0mv20-00
+RECOVER_308	high	login_next_to_product	en	tezgah	133089	/en/shop/tezgah/133089	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/133089
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/panther-dgd-sld/panther-sgd-dgd-sld.pdf		False	https://equsto.com/prosogutma-market/panther-dgd-sld/panther-sgd-dgd-sld.pdf
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27566		False	https://equsto.com/shop/hazirlik/rc-27566
+RECOVER_308	high	login_next_to_product	en	pisirme	frn-smk-et-tutsuleme-firini	/en/shop/pisirme/frn-smk-et-tutsuleme-firini	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/frn-smk-et-tutsuleme-firini
+RECOVER_308	high	login_next_to_product	en	dolap	7911-16060-84	/en/shop/tezgah/7911-16060-84	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-16060-84
+RECOVER_308	high	login_next_to_product	en	sogutma	118-pd400d	/en/shop/sogutma/118-pd400d	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-pd400d
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-14070-08		False	https://equsto.com/shop/tezgah/pimak-14070-08
+DROP_NO_VALUE	high	non_product_url	en		/en/italyan-restoran-kurulumu		False	https://equsto.com/en/italyan-restoran-kurulumu
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-2244		False	https://equsto.com/en/shop/hazirlik/rc-2244
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq44	/en/shop/market-reyonlari/eq-falcon-sld-eq44	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq44
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-klg220	/en/shop/tezgah/ino-klg220	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-klg220
+DROP_NO_VALUE	high	no_product_match	tr	pisirme	istif.html		False	https://equsto.com/shop/pisirme/istif.html
+DROP_NO_VALUE	high	no_product_match	en	tezgah	0754-087d0-01		False	https://equsto.com/en/shop/tezgah/0754-087d0-01
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19060-20	/en/shop/tezgah/7911-19060-20	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19060-20
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	sogutma		False	https://equsto.com/shop/sogutma/sogutma
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19060-70		False	https://equsto.com/en/shop/tezgah/pimak-19060-70
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-19070-00		False	https://equsto.com/en/shop/tezgah/pimak-19070-00
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pfos.html		False	https://equsto.com/en/shop/davlumbaz/pfos.html
+RECOVER_308	high	login_next_to_product	en	pisirme	7864-n1-60603-19	/en/shop/pisirme/7864-n1-60603-19	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7864-n1-60603-19
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	fulya-hf-fl-fl-3h1-937x840x2200		False	https://equsto.com/shop/market-reyonlari/fulya-hf-fl-fl-3h1-937x840x2200
+RECOVER_308	high	login_next_to_product	en	pisirme	7865-n1-60603-14	/en/shop/pisirme/7865-n1-60603-14	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7865-n1-60603-14
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-39337		False	https://equsto.com/shop/hazirlik/rc-t1-057-39337
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	oztiryakiler-robot-coupe-rende-3-mm		False	https://equsto.com/shop/hazirlik/oztiryakiler-robot-coupe-rende-3-mm
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-19070-00		False	https://equsto.com/shop/tezgah/pimak-19070-00
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28207		False	https://equsto.com/en/shop/hazirlik/rc-28207
+DROP_NO_VALUE	high	non_product_url	en		/en/rehber/mutfak-alani-kisi-basi-metrekare-2026		False	https://equsto.com/en/rehber/mutfak-alani-kisi-basi-metrekare-2026
+DROP_NO_VALUE	high	non_product_url	tr		/marka.html		False	https://equsto.com/marka.html?b=UNOX
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-16229-7y3	/en/shop/yikama/7961-16229-7y3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-16229-7y3
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-166e5-21	/en/shop/tezgah/7754-166e5-21	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-166e5-21
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-fg-sky-eq5		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq5
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-24620		False	https://equsto.com/shop/hazirlik/rc-24620
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__kesme-diski-88-mm		False	https://equsto.com/shop/hazirlik/robot-coupe__kesme-diski-88-mm
+RECOVER_308	high	login_next_to_product	en	pisirme	aei-490s	/en/shop/pisirme/aei-490s	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/aei-490s
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15155-10	/en/shop/davlumbaz/7885-15155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-15155-10
+RECOVER_308	high	login_next_to_product	en	tezgah	7919-37ntv-t1	/en/shop/tezgah/7919-37ntv-t1	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7919-37ntv-t1
+RECOVER_308	high	login_next_to_product	en	sogutma	9805-sde84-00	/en/shop/sogutma/9805-sde84-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/9805-sde84-00
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	7868-00030-00	/en/shop/set-ustu-mutfak/7868-00030-00	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/7868-00030-00
+RECOVER_308	high	login_next_to_product	en	pisirme	391121	/en/shop/pisirme/391121	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391121
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-50155-00		False	https://equsto.com/en/shop/davlumbaz/pimak-50155-00
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-14070-04		False	https://equsto.com/shop/tezgah/pimak-14070-04
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16060-11		False	https://equsto.com/en/shop/tezgah/pimak-16060-11
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__blixer-4-3000-monofaz		False	https://equsto.com/shop/hazirlik/robot-coupe__blixer-4-3000-monofaz
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12060-12	/shop/tezgah/7911-12060-12	False	https://equsto.com/shop/tezgah/pimak-12060-12
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-39881		False	https://equsto.com/en/shop/hazirlik/rc-39881
+DROP_NO_VALUE	high	no_product_match	en	tezgah	tb04-2003030-00		False	https://equsto.com/en/shop/tezgah/tb04-2003030-00
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28056		False	https://equsto.com/en/shop/hazirlik/rc-28056
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28209		False	https://equsto.com/en/shop/hazirlik/rc-28209
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12060-52	/en/shop/tezgah/7911-12060-52	False	https://equsto.com/en/shop/tezgah/pimak-12060-52
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	5rrx-60171-002		False	https://equsto.com/shop/set-ustu-mutfak/5rrx-60171-002
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__cl-30-bistro-icin-8-disklik-takim		False	https://equsto.com/shop/hazirlik/robot-coupe__cl-30-bistro-icin-8-disklik-takim
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-89213		False	https://equsto.com/shop/hazirlik/rc-t1-057-89213
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19070-31	/shop/tezgah/7911-19070-31	False	https://equsto.com/shop/tezgah/pimak-19070-31
+DROP_NO_VALUE	high	non_product_url	en		/en/fine-dining-kurulumu		False	https://equsto.com/en/fine-dining-kurulumu
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27555		False	https://equsto.com/shop/hazirlik/rc-27555
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-16060-52	/shop/tezgah/7911-16060-52	False	https://equsto.com/shop/tezgah/pimak-16060-52
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	tb04-1203030-00		False	https://equsto.com/shop/tezgah/tb04-1203030-00
+DROP_NO_VALUE	high	no_product_match	en	kahve	coffee-toys-coffee-toys-ct01-kahve-tart-s		False	https://equsto.com/en/shop/kahve/coffee-toys-coffee-toys-ct01-kahve-tart-s
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-09060-04		False	https://equsto.com/en/shop/tezgah/pimak-09060-04
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12070-70		False	https://equsto.com/en/shop/tezgah/pimak-12070-70
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16060-31	/en/shop/tezgah/7911-16060-31	False	https://equsto.com/en/shop/tezgah/pimak-16060-31
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-25155-00		False	https://equsto.com/shop/davlumbaz/pimak-25155-00
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-19060-31	/en/shop/tezgah/7911-19060-31	False	https://equsto.com/en/shop/tezgah/pimak-19060-31
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-33220		False	https://equsto.com/shop/hazirlik/rc-33220
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40155-01	/en/shop/davlumbaz/7885-40155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-40155-01
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	7754-216a5-41		False	https://equsto.com/shop/tezgah/7754-216a5-41
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12060-13	/shop/tezgah/7911-12060-13	False	https://equsto.com/shop/tezgah/pimak-12060-13
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-15155-01	/shop/davlumbaz/7885-15155-01	False	https://equsto.com/shop/davlumbaz/pimak-15155-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-35155-01	/shop/davlumbaz/7885-35155-01	False	https://equsto.com/shop/davlumbaz/pimak-35155-01
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-50205-00		False	https://equsto.com/shop/davlumbaz/pimak-50205-00
+DROP_NO_VALUE	high	non_product_url	en		/en/oztiryakiler-ekipmani-tedarik		False	https://equsto.com/en/oztiryakiler-ekipmani-tedarik
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-16070-14		False	https://equsto.com/en/shop/tezgah/pimak-16070-14
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-1404060-00		False	https://equsto.com/shop/tezgah/mr38-1404060-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-19070-50		False	https://equsto.com/shop/tezgah/pimak-19070-50
+DROP_NO_VALUE	high	no_product_match	tr	yikama	index.html		False	https://equsto.com/shop/yikama/index.html
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28130		False	https://equsto.com/shop/hazirlik/rc-28130
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	equsto-30155-01	/shop/davlumbaz/7885-30155-01	False	https://equsto.com/shop/davlumbaz/equsto-30155-01
+DROP_NO_VALUE	high	no_product_match	tr	icecek	ztiryakiler-cappadoc-a-ay-kazan-smart-statik-boyal-4-demlikli-elektrikli-gazl		False	https://equsto.com/shop/icecek/ztiryakiler-cappadoc-a-ay-kazan-smart-statik-boyal-4-demlikli-elektrikli-gazl
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-50155-01	/en/shop/davlumbaz/7885-50155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-50155-01
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16060-70		False	https://equsto.com/shop/tezgah/pimak-16060-70
+DROP_NO_VALUE	high	no_product_match	tr	icecek	ztiryakiler-gastrobutik-kare-kase-beyaz		False	https://equsto.com/shop/icecek/ztiryakiler-gastrobutik-kare-kase-beyaz
+DROP_NO_VALUE	high	no_product_match	en	kahve	anka-anka-buyuk-boy-kumda-kahve-makinesi-kkm3		False	https://equsto.com/en/shop/kahve/anka-anka-buyuk-boy-kumda-kahve-makinesi-kkm3
+DROP_NO_VALUE	high	no_product_match	en	kahve	blendtec-blendtec-bar-blender-classic-575-1560w-c575b4101a-a1ap1a		False	https://equsto.com/en/shop/kahve/blendtec-blendtec-bar-blender-classic-575-1560w-c575b4101a-a1ap1a
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__3-paslanmaz-ayarlanabilir-destek-500-1000-mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__3-paslanmaz-ayarlanabilir-destek-500-1000-mm
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-10060-13		False	https://equsto.com/en/shop/tezgah/pimak-10060-13
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__3-paslanmaz-ayarlanabilir-destek-500-1000-mm		False	https://equsto.com/shop/hazirlik/robot-coupe__3-paslanmaz-ayarlanabilir-destek-500-1000-mm
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__12-bicakli-disk-seti		False	https://equsto.com/en/shop/hazirlik/robot-coupe__12-bicakli-disk-seti
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-22382		False	https://equsto.com/shop/hazirlik/rc-22382
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	equsto-55155-11	/en/shop/davlumbaz/7885-55155-11	False	https://equsto.com/en/shop/davlumbaz/equsto-55155-11
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-22394		False	https://equsto.com/shop/hazirlik/rc-22394
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto__equsto-06060-00		False	https://equsto.com/shop/tezgah/equsto__equsto-06060-00
+DROP_NO_VALUE	high	no_product_match	en	icecek	rc-56200b		False	https://equsto.com/en/shop/icecek/rc-56200b
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19708-23	/shop/tezgah/7868-19708-23	False	https://equsto.com/shop/tezgah/pimak-19708-23
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28060		False	https://equsto.com/shop/hazirlik/rc-28060
+DROP_NO_VALUE	high	no_product_match	tr	kahve	anka-anka-buyuk-boy-kumda-kahve-makinesi-kkm3		False	https://equsto.com/shop/kahve/anka-anka-buyuk-boy-kumda-kahve-makinesi-kkm3
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	equsto-55205-10	/shop/davlumbaz/7885-55205-10	False	https://equsto.com/shop/davlumbaz/equsto-55205-10
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-1-904060-10		False	https://equsto.com/shop/tezgah/mr38-1-904060-10
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-24070-25		False	https://equsto.com/en/shop/tezgah/pimak-24070-25
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	tb04-903030-00		False	https://equsto.com/shop/tezgah/tb04-903030-00
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28112		False	https://equsto.com/shop/hazirlik/rc-28112
+DROP_NO_VALUE	high	no_product_match	tr	icecek	rc-56100b		False	https://equsto.com/shop/icecek/rc-56100b
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28115		False	https://equsto.com/shop/hazirlik/rc-28115
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27364		False	https://equsto.com/shop/hazirlik/rc-27364
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	oztiryakiler-robot-coupe-12-bicakli-disk-seti		False	https://equsto.com/shop/hazirlik/oztiryakiler-robot-coupe-12-bicakli-disk-seti
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-20060-12		False	https://equsto.com/en/shop/tezgah/pimak-20060-12
+DROP_NO_VALUE	high	no_product_match	tr	icecek	ztiryakiler-gastrobutik-l-xor-kase-beyaz		False	https://equsto.com/shop/icecek/ztiryakiler-gastrobutik-l-xor-kase-beyaz
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-1942		False	https://equsto.com/shop/hazirlik/rc-1942
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__12-bicakli-disk-seti		False	https://equsto.com/shop/hazirlik/robot-coupe__12-bicakli-disk-seti
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14070-25		False	https://equsto.com/shop/tezgah/pimak-14070-25
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-55255-10	/en/shop/davlumbaz/7885-55255-10	False	https://equsto.com/en/shop/davlumbaz/pimak-55255-10
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-awne-hc		False	https://equsto.com/shop/sogutma/9805-awne-hc
+DROP_NO_VALUE	high	no_product_match	tr	icecek	rc-47010a		False	https://equsto.com/shop/icecek/rc-47010a
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28111		False	https://equsto.com/en/shop/hazirlik/rc-28111
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-2816070		False	https://equsto.com/en/shop/tezgah/pimak-2816070
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14080-57		False	https://equsto.com/shop/tezgah/pimak-14080-57
+DROP_NO_VALUE	high	non_product_url	tr		/guides/cafe-opening-equipment-list-2026		False	https://equsto.com/guides/cafe-opening-equipment-list-2026
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__serit-kesici-88-mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__serit-kesici-88-mm
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28061		False	https://equsto.com/en/shop/hazirlik/rc-28061
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28135		False	https://equsto.com/shop/hazirlik/rc-28135
+DROP_NO_VALUE	high	no_product_match	en	sogutma	oztiryakiler-endustriyel-mutfak__9805-im100-hc		False	https://equsto.com/en/shop/sogutma/oztiryakiler-endustriyel-mutfak__9805-im100-hc
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30155-11	/en/shop/davlumbaz/7885-30155-11	False	https://equsto.com/en/shop/davlumbaz/pimak-30155-11
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28059		False	https://equsto.com/shop/hazirlik/rc-28059
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-14070-15	/shop/tezgah/7911-14070-15	False	https://equsto.com/shop/tezgah/equsto-14070-15
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19060-50		False	https://equsto.com/en/shop/tezgah/pimak-19060-50
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-14060-46		False	https://equsto.com/shop/tezgah/equsto-14060-46
+DROP_NO_VALUE	high	no_product_match	en	icecek	urban-bar__sb1055		False	https://equsto.com/en/shop/icecek/urban-bar__sb1055
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-im100-hc		False	https://equsto.com/shop/sogutma/9805-im100-hc
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14060-56	/shop/tezgah/7911-14060-56	False	https://equsto.com/shop/tezgah/pimak-14060-56
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	9481-26000-10		False	https://equsto.com/shop/set-ustu-mutfak/9481-26000-10
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14070-31	/shop/tezgah/7911-14070-31	False	https://equsto.com/shop/tezgah/pimak-14070-31
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-19060-52	/shop/tezgah/7911-19060-52	False	https://equsto.com/shop/tezgah/equsto-19060-52
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28054		False	https://equsto.com/shop/hazirlik/rc-28054
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40255-10	/en/shop/davlumbaz/7885-40255-10	False	https://equsto.com/en/shop/davlumbaz/pimak-40255-10
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto__equsto-12070-04		False	https://equsto.com/shop/tezgah/equsto__equsto-12070-04
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-20205-00		False	https://equsto.com/shop/davlumbaz/pimak-20205-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-19060-46		False	https://equsto.com/shop/tezgah/pimak-19060-46
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-55155-10	/en/shop/davlumbaz/7885-55155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-55155-10
+DROP_NO_VALUE	high	no_product_match	tr	icecek	sb1055		False	https://equsto.com/shop/icecek/sb1055
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28068		False	https://equsto.com/shop/hazirlik/rc-28068
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-05050-91	/shop/tezgah/7911-05050-91	False	https://equsto.com/shop/tezgah/equsto-05050-91
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-12070-04		False	https://equsto.com/shop/tezgah/pimak-12070-04
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28197w		False	https://equsto.com/shop/hazirlik/rc-28197w
+DROP_NO_VALUE	high	no_product_match	tr	yikama	oztiryakiler-flight-tip-bulasik-yikama-makinesi-sol-girisli-kurutmali		False	https://equsto.com/shop/yikama/oztiryakiler-flight-tip-bulasik-yikama-makinesi-sol-girisli-kurutmali
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28177w		False	https://equsto.com/shop/hazirlik/rc-28177w
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-45155-00		False	https://equsto.com/shop/davlumbaz/pimak-45155-00
+DROP_NO_VALUE	high	non_product_url	en		/en/iade-politikasi		False	https://equsto.com/en/iade-politikasi
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto__equsto-19070-08		False	https://equsto.com/shop/tezgah/equsto__equsto-19070-08
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-34850l		False	https://equsto.com/shop/hazirlik/rc-34850l
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14060-11		False	https://equsto.com/shop/tezgah/pimak-14060-11
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-14070-14		False	https://equsto.com/en/shop/tezgah/pimak-14070-14
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-14060-11		False	https://equsto.com/en/shop/tezgah/pimak-14060-11
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-53331c		False	https://equsto.com/shop/hazirlik/rc-53331c
+DROP_NO_VALUE	high	no_product_match	en	sogutma	9805-fm480-ake		False	https://equsto.com/en/shop/sogutma/9805-fm480-ake
+KEEP_HUB	med	hub	tr	marka		/shop/marka	False	https://equsto.com/shop/marka?b=UNOX
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16070-52	/en/shop/tezgah/7911-16070-52	False	https://equsto.com/en/shop/tezgah/pimak-16070-52
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-2810070		False	https://equsto.com/en/shop/tezgah/pimak-2810070
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	equsto-19070-08		False	https://equsto.com/shop/tezgah/equsto-19070-08
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__robot-coupe-robot-cook-profesyonel-pisirici-mutfak-robotu		False	https://equsto.com/en/shop/hazirlik/robot-coupe__robot-coupe-robot-cook-profesyonel-pisirici-mutfak-robotu
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	equsto__equsto-12125-11		False	https://equsto.com/en/shop/davlumbaz/equsto__equsto-12125-11
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	equsto-12125-11		False	https://equsto.com/shop/davlumbaz/equsto-12125-11
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-20155-00		False	https://equsto.com/shop/davlumbaz/pimak-20155-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-55155-11	/shop/davlumbaz/7885-55155-11	False	https://equsto.com/shop/davlumbaz/pimak-55155-11
+DROP_NO_VALUE	high	non_product_url	en		/en/kvkk		False	https://equsto.com/en/kvkk
+DROP_NO_VALUE	high	no_product_match	en	pisirme	atalay-endustriyel-mutfak-ekipmanlari-atalay-doner-makineleri-adgc-3-u-550x700x970		False	https://equsto.com/en/shop/pisirme/atalay-endustriyel-mutfak-ekipmanlari-atalay-doner-makineleri-adgc-3-u-550x700x970
+DROP_NO_VALUE	high	non_product_url	en		/en/mutfak-teklif-platformu		False	https://equsto.com/en/mutfak-teklif-platformu
+DROP_NO_VALUE	high	no_product_match	en	pisirme	atalay-endustriyel-mutfak-ekipmanlari-atalay-izgaralar-aei-490-s-cr-400x900x300		False	https://equsto.com/en/shop/pisirme/atalay-endustriyel-mutfak-ekipmanlari-atalay-izgaralar-aei-490-s-cr-400x900x300
+DROP_NO_VALUE	high	no_product_match	en	tezgah	mr38-1204060-00		False	https://equsto.com/en/shop/tezgah/mr38-1204060-00
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28110		False	https://equsto.com/en/shop/hazirlik/rc-28110
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-t1-057-89102		False	https://equsto.com/shop/hazirlik/rc-t1-057-89102
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-t1-057-89054		False	https://equsto.com/en/shop/hazirlik/rc-t1-057-89054
+DROP_NO_VALUE	high	no_product_match	en	icecek	bar-blender		False	https://equsto.com/en/shop/icecek/bar-blender
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	5rrx-60711-57		False	https://equsto.com/shop/set-ustu-mutfak/5rrx-60711-57
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	5rrx-60212-94		False	https://equsto.com/shop/set-ustu-mutfak/5rrx-60212-94
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	8338-00007-03		False	https://equsto.com/shop/set-ustu-mutfak/8338-00007-03
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	ttk-2n60		False	https://equsto.com/shop/sogutma/ttk-2n60
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	144x74x111-127		False	https://equsto.com/shop/sogutma/144x74x111-127
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14060-50		False	https://equsto.com/shop/tezgah/pimak-14060-50
+DROP_NO_VALUE	high	no_product_match	en	pisirme	ocaklar		False	https://equsto.com/en/shop/pisirme/ocaklar
+DROP_NO_VALUE	high	no_product_match	en	market-reyonlari	proso-sarkuteri		False	https://equsto.com/en/shop/market-reyonlari/proso-sarkuteri
+DROP_NO_VALUE	high	no_product_match	en	pisirme	seri-730		False	https://equsto.com/en/shop/pisirme/seri-730
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__parmak-patates-8-mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__parmak-patates-8-mm
+DROP_NO_VALUE	high	non_product_url	en		/en/market-kasap-sarkuteri-kurulumu		False	https://equsto.com/en/market-kasap-sarkuteri-kurulumu
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28113		False	https://equsto.com/en/shop/hazirlik/rc-28113
+DROP_NO_VALUE	high	no_product_match	tr	pisirme	kahve.html		False	https://equsto.com/shop/pisirme/kahve.html
+DROP_NO_VALUE	high	no_product_match	en	sogutma	9805-im100-hc		False	https://equsto.com/en/shop/sogutma/9805-im100-hc
+DROP_NO_VALUE	high	no_product_match	en	araba	hazirlik.html		False	https://equsto.com/en/shop/araba/hazirlik.html
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pfos.html		False	https://equsto.com/shop/tezgah/pfos.html
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	teshir-dolaplari		False	https://equsto.com/shop/sogutma/teshir-dolaplari
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-33197		False	https://equsto.com/shop/hazirlik/rc-33197
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16070-51		False	https://equsto.com/shop/tezgah/pimak-16070-51
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-12060-00		False	https://equsto.com/en/shop/tezgah/pimak-12060-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	sogutma.html		False	https://equsto.com/shop/tezgah/sogutma.html
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27511		False	https://equsto.com/shop/hazirlik/rc-27511
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27067		False	https://equsto.com/shop/hazirlik/rc-27067
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	endustriyel-mutfak-ekipmanlari-teshir-dolaplari		False	https://equsto.com/shop/sogutma/endustriyel-mutfak-ekipmanlari-teshir-dolaplari
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	dito-sama-lv200-sabit-kazanli-sebze-yikama-makinesi-200-l		False	https://equsto.com/en/shop/hazirlik/dito-sama-lv200-sabit-kazanli-sebze-yikama-makinesi-200-l
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	tasima.html		False	https://equsto.com/shop/tezgah/tasima.html
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16070-51		False	https://equsto.com/en/shop/tezgah/pimak-16070-51
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/lion-pgd/lion-pgd.pdf		False	https://equsto.com/prosogutma-market/lion-pgd/lion-pgd.pdf
+DROP_NO_VALUE	high	no_product_match	en	sogutma	paslanmaz-raf-stainless-steel-shelf-glass-door-slim-2-doors-refrigerators		False	https://equsto.com/en/shop/sogutma/paslanmaz-raf-stainless-steel-shelf-glass-door-slim-2-doors-refrigerators
+DROP_NO_VALUE	high	no_product_match	tr	yikama	pfos.html		False	https://equsto.com/shop/yikama/pfos.html
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-43000r		False	https://equsto.com/en/shop/hazirlik/rc-43000r
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-09060-08	/en/shop/tezgah/7911-09060-08	False	https://equsto.com/en/shop/tezgah/pimak-09060-08
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__kesme-diski-1414-mm		False	https://equsto.com/shop/hazirlik/robot-coupe__kesme-diski-1414-mm
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-22570d		False	https://equsto.com/en/shop/hazirlik/rc-22570d
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/tiger-dp/tiger-dp.pdf		False	https://equsto.com/prosogutma-market/tiger-dp/tiger-dp.pdf
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	pisirme.html		False	https://equsto.com/shop/hazirlik/pisirme.html
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	mateka-mateka-42-no-et-kiyma-makinesi-yekpare-paslanmaz-kafali-celik-400-v-eps-42t		False	https://equsto.com/shop/hazirlik/mateka-mateka-42-no-et-kiyma-makinesi-yekpare-paslanmaz-kafali-celik-400-v-eps-42t
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28115		False	https://equsto.com/en/shop/hazirlik/rc-28115
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	equsto-14070-00		False	https://equsto.com/shop/tezgah/equsto-14070-00
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/kangaroo/kangaroo.pdf		False	https://equsto.com/prosogutma-market/kangaroo/kangaroo.pdf
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-16060-52	/shop/tezgah/7911-16060-52	False	https://equsto.com/shop/tezgah/equsto-16060-52
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-39680		False	https://equsto.com/shop/hazirlik/rc-39680
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28064		False	https://equsto.com/shop/hazirlik/rc-28064
+DROP_NO_VALUE	high	no_product_match	tr	icecek	rc-47000a		False	https://equsto.com/shop/icecek/rc-47000a
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-43000r		False	https://equsto.com/shop/hazirlik/rc-43000r
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-12070-50		False	https://equsto.com/shop/tezgah/equsto-12070-50
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28178w		False	https://equsto.com/shop/hazirlik/rc-28178w
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12070-13	/en/shop/tezgah/7911-12070-13	False	https://equsto.com/en/shop/tezgah/pimak-12070-13
+DROP_NO_VALUE	high	no_product_match	en	tezgah	tb04-1203030-00		False	https://equsto.com/en/shop/tezgah/tb04-1203030-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-12070-46		False	https://equsto.com/shop/tezgah/equsto-12070-46
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28016		False	https://equsto.com/shop/hazirlik/rc-28016
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-1907		False	https://equsto.com/en/shop/hazirlik/rc-1907
+RECOVER_308	high	login_next_to_product	en	araba	mt140x	/en/shop/araba/mt140x	True	https://equsto.com/en/login.html?next=/en/shop/araba/mt140x
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kptt03-12070	/en/shop/tezgah/eq-kptt03-12070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kptt03-12070
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-2214		False	https://equsto.com/shop/hazirlik/rc-2214
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	market-reyonlari.html		False	https://equsto.com/en/shop/davlumbaz/market-reyonlari.html
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-45155-00		False	https://equsto.com/en/shop/davlumbaz/pimak-45155-00
+RECOVER_308	high	login_next_to_product	en	sogutma	118-sds-265-dc-1-cf-p	/en/shop/sogutma/118-sds-265-dc-1-cf-p	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-sds-265-dc-1-cf-p
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-9tn10	/en/shop/pisirme/ino-9tn10	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-9tn10
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28058		False	https://equsto.com/en/shop/hazirlik/rc-28058
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__rende-3-mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__rende-3-mm
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-16070-51		False	https://equsto.com/shop/tezgah/equsto-16070-51
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-sky-eq7		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-sky-eq7
+DROP_NO_VALUE	high	non_product_url	tr		/prosogutma-market/tiger-cg/tiger-cg.pdf		False	https://equsto.com/prosogutma-market/tiger-cg/tiger-cg.pdf
+RECOVER_308	high	login_next_to_product	en	tezgah	7919-06lmv-13	/en/shop/tezgah/7919-06lmv-13	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7919-06lmv-13
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco58-1	/en/shop/pisirme/npicco58-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco58-1
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-papatya-nv-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-papatya-nv-eq3
+RECOVER_308	high	login_next_to_product	en	pisirme	7865-n1-40703-33ls	/en/shop/pisirme/7865-n1-40703-33ls	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7865-n1-40703-33ls
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-10070-00	/en/shop/tezgah/7911-10070-00	False	https://equsto.com/en/shop/tezgah/pimak-10070-00
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28130		False	https://equsto.com/en/shop/hazirlik/rc-28130
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-2382		False	https://equsto.com/shop/hazirlik/rc-2382
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-fg-sky-eq4		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-fg-sky-eq4
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-nv-tp-sky-eq21		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-nv-tp-sky-eq21
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28170		False	https://equsto.com/en/shop/hazirlik/rc-28170
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-16060-00	/en/shop/tezgah/7911-16060-00	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-16060-00
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kktyb-12070	/en/shop/tezgah/eq-kktyb-12070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kktyb-12070
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-24709m		False	https://equsto.com/en/shop/hazirlik/rc-24709m
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-60205-00		False	https://equsto.com/en/shop/davlumbaz/pimak-60205-00
+RECOVER_308	high	login_next_to_product	en	dolap	7911-06070-82	/en/shop/tezgah/7911-06070-82	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-06070-82
+DROP_NO_VALUE	high	no_product_match	en	icecek	rc-55040d		False	https://equsto.com/en/shop/icecek/rc-55040d
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-04929-1o1	/en/shop/yikama/7961-04929-1o1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-04929-1o1
+RECOVER_308	high	login_next_to_product	en	tasima	8360-00007-08	/en/shop/tasima/8360-00007-08	True	https://equsto.com/en/login.html?next=/en/shop/tasima/8360-00007-08
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-nv-fg-eq23		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-nv-fg-eq23
+RECOVER_308	high	login_next_to_product	en	pisirme	7865-n1-80903-20	/en/shop/pisirme/7865-n1-80903-20	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7865-n1-80903-20
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-45155-10	/en/shop/davlumbaz/7885-45155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-45155-10
+RECOVER_308	high	login_next_to_product	en	kahve	9580-oscar-10	/en/shop/kahve/9580-oscar-10	True	https://equsto.com/en/login.html?next=/en/shop/kahve/9580-oscar-10
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-16070-04	/en/shop/tezgah/7911-16070-04	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-16070-04
+RECOVER_308	high	login_next_to_product	en	tezgah	7897-16030-07	/en/shop/tezgah/7897-16030-07	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7897-16030-07
+RECOVER_308	high	login_next_to_product	en	dolap	7911-14070-79	/en/shop/tezgah/7911-14070-79	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-14070-79
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0220-03032-10	/en/shop/set-ustu-mutfak/0220-03032-10	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0220-03032-10
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-tp-eq24		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-tp-eq24
+RECOVER_308	high	login_next_to_product	en	tasima	7912-15078-30	/en/shop/tasima/7912-15078-30	True	https://equsto.com/en/login.html?next=/en/shop/tasima/7912-15078-30
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-09070-04		False	https://equsto.com/shop/tezgah/pimak-09070-04
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-tiger-wfg-eq1	/en/shop/market-reyonlari/eq-tiger-wfg-eq1	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-tiger-wfg-eq1
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14060-31	/en/shop/tezgah/7911-14060-31	False	https://equsto.com/en/shop/tezgah/pimak-14060-31
+RECOVER_308	high	login_next_to_product	en	sogutma	7919-df5035-00	/en/shop/sogutma/7919-df5035-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/7919-df5035-00
+DROP_NO_VALUE	high	non_product_url	tr		/industrial-kitchen-equipment-turkey		False	https://equsto.com/industrial-kitchen-equipment-turkey
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-2382		False	https://equsto.com/en/shop/hazirlik/rc-2382
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30205-00	/en/shop/davlumbaz/7885-30205-00	False	https://equsto.com/en/shop/davlumbaz/pimak-30205-00
+RECOVER_308	high	login_next_to_product	en	icecek	8573-cde3s	/en/shop/icecek/8573-cde3s	True	https://equsto.com/en/login.html?next=/en/shop/icecek/8573-cde3s
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	8448-03244-01		False	https://equsto.com/shop/set-ustu-mutfak/8448-03244-01
+RECOVER_308	high	login_next_to_product	en	sogutma	7919-cr4020-00	/en/shop/sogutma/7919-cr4020-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/7919-cr4020-00
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq25		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq25
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-08070-11		False	https://equsto.com/shop/tezgah/pimak-08070-11
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27086		False	https://equsto.com/shop/hazirlik/rc-27086
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__dilimleyici-bicak-1mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__dilimleyici-bicak-1mm
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28114		False	https://equsto.com/en/shop/hazirlik/rc-28114
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-34900		False	https://equsto.com/shop/hazirlik/rc-34900
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-25125-11	/shop/davlumbaz/7885-25125-11	False	https://equsto.com/shop/davlumbaz/pimak-25125-11
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-50155-11	/en/shop/davlumbaz/7885-50155-11	False	https://equsto.com/en/shop/davlumbaz/pimak-50155-11
+RECOVER_308	high	login_next_to_product	en	yikama	ino-bym102t-hr	/en/shop/yikama/ino-bym102t-hr	True	https://equsto.com/en/login.html?next=/en/shop/yikama/ino-bym102t-hr
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco78-1	/en/shop/pisirme/npicco78-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco78-1
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-40125-11	/shop/davlumbaz/7885-40125-11	False	https://equsto.com/shop/davlumbaz/pimak-40125-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-146a5-25	/en/shop/tezgah/7754-146a5-25	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-146a5-25
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-10070-84	/en/shop/tezgah/7911-10070-84	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-10070-84
+DROP_NO_VALUE	high	non_product_url	tr		/dark-kitchen-bulut-mutfak-2026		False	https://equsto.com/dark-kitchen-bulut-mutfak-2026
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30205-10	/en/shop/davlumbaz/7885-30205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-30205-10
+RECOVER_308	high	login_next_to_product	en	davlumbaz	eq-kdavot01-225250	/en/shop/davlumbaz/eq-kdavot01-225250	True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/eq-kdavot01-225250
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-12070-00		False	https://equsto.com/en/shop/tezgah/pimak-12070-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19060-15	/shop/tezgah/7911-19060-15	False	https://equsto.com/shop/tezgah/pimak-19060-15
+DROP_NO_VALUE	high	no_product_match	en	sogutma	index.html		False	https://equsto.com/en/shop/sogutma/index.html
+RECOVER_308	high	login_next_to_product	en	pisirme	7856-n1-40703-03	/en/shop/pisirme/7856-n1-40703-03	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7856-n1-40703-03
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq66	/en/shop/market-reyonlari/eq-falcon-eq66	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq66
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28067		False	https://equsto.com/shop/hazirlik/rc-28067
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	equsto-25155-01	/en/shop/davlumbaz/7885-25155-01	False	https://equsto.com/en/shop/davlumbaz/equsto-25155-01
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__rende-7mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__rende-7mm
+DROP_NO_VALUE	high	no_product_match	en	icecek	robot-coupe__robot-coupe-bl-5-paslanmaz-celik-hazneli-profesyonel-mutfak-blender-5-l-1200-w		False	https://equsto.com/en/shop/icecek/robot-coupe__robot-coupe-bl-5-paslanmaz-celik-hazneli-profesyonel-mutfak-blender-5-l-1200-w
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__rende-7mm		False	https://equsto.com/shop/hazirlik/robot-coupe__rende-7mm
+RECOVER_308	high	login_next_to_product	en	yikama	ino-bym042	/en/shop/yikama/ino-bym042	True	https://equsto.com/en/login.html?next=/en/shop/yikama/ino-bym042
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco223-4	/en/shop/pisirme/npicco223-4	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco223-4
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-10608-23		False	https://equsto.com/en/shop/tezgah/pimak-10608-23
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-2810070		False	https://equsto.com/shop/tezgah/pimak-2810070
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35155-10	/en/shop/davlumbaz/7885-35155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-35155-10
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-18060-12		False	https://equsto.com/en/shop/tezgah/pimak-18060-12
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16070-46		False	https://equsto.com/shop/tezgah/pimak-16070-46
+RECOVER_308	high	login_next_to_product	en	araba	m08221	/en/shop/araba/m08221	True	https://equsto.com/en/login.html?next=/en/shop/araba/m08221
+DROP_NO_VALUE	high	no_product_match	tr	icecek	robot-coupe__robot-coupe-bl-5-paslanmaz-celik-hazneli-profesyonel-mutfak-blender-5-l-1200-w		False	https://equsto.com/shop/icecek/robot-coupe__robot-coupe-bl-5-paslanmaz-celik-hazneli-profesyonel-mutfak-blender-5-l-1200-w
+RECOVER_308	high	login_next_to_product	en	tasima	avatherm-601m	/en/shop/tasima/avatherm-601m	True	https://equsto.com/en/login.html?next=/en/shop/tasima/avatherm-601m
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__robot-coupe-39337-mp-350-mp-450-combi-ultra-mp-350-vv-mp-450-ultra-yedek-bicak		False	https://equsto.com/shop/hazirlik/robot-coupe__robot-coupe-39337-mp-350-mp-450-combi-ultra-mp-350-vv-mp-450-ultra-yedek-bicak
+DROP_NO_VALUE	high	no_product_match	en	istif	istif.html		False	https://equsto.com/en/shop/istif/istif.html
+RECOVER_308	high	login_next_to_product	en	istif	8897-46130-p0	/en/shop/istif/8897-46130-p0	True	https://equsto.com/en/login.html?next=/en/shop/istif/8897-46130-p0
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-34780		False	https://equsto.com/shop/hazirlik/rc-34780
+RECOVER_308	high	login_next_to_product	en	tezgah	7897-19030-03	/en/shop/tezgah/7897-19030-03	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7897-19030-03
+RECOVER_308	high	login_next_to_product	en	pisirme	7867-n1-10908-02	/en/shop/pisirme/7867-n1-10908-02	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7867-n1-10908-02
+RECOVER_308	high	login_next_to_product	en	sogutma	8919-oef25-00	/en/shop/sogutma/8919-oef25-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/8919-oef25-00
+RECOVER_308	high	login_next_to_product	en	yikama	7754-196eb-25	/en/shop/yikama/7754-196eb-25	True	https://equsto.com/en/login.html?next=/en/shop/yikama/7754-196eb-25
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco330-2	/en/shop/pisirme/npicco330-2	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco330-2
+RECOVER_308	high	login_next_to_product	en	icecek	9563-hbb25-00	/en/shop/set-ustu-mutfak/9563-hbb25-00	True	https://equsto.com/en/login.html?next=/en/shop/icecek/9563-hbb25-00
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0449-62435-01	/en/shop/set-ustu-mutfak/0449-62435-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0449-62435-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12060-51		False	https://equsto.com/en/shop/tezgah/pimak-12060-51
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-19070-04		False	https://equsto.com/en/shop/tezgah/pimak-19070-04
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14060-12	/shop/tezgah/7911-14060-12	False	https://equsto.com/shop/tezgah/pimak-14060-12
+RECOVER_308	high	login_next_to_product	en	icecek	8477-slush-36i	/en/shop/icecek/8477-slush-36i	True	https://equsto.com/en/login.html?next=/en/shop/icecek/8477-slush-36i
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12060-12	/en/shop/tezgah/7911-12060-12	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12060-12
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0213-21020-01	/en/shop/set-ustu-mutfak/0213-21020-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0213-21020-01
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14070-12	/en/shop/tezgah/7911-14070-12	False	https://equsto.com/en/shop/tezgah/pimak-14070-12
+RECOVER_308	high	login_next_to_product	en	pisirme	eagi-660-nd	/en/shop/pisirme/eagi-660-nd	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/eagi-660-nd
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-sky-eq8		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-sky-eq8
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq29	/en/shop/market-reyonlari/eq-falcon-eq29	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq29
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-147c8-27	/en/shop/tezgah/7758-147c8-27	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-147c8-27
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__bicak-14mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__bicak-14mm
+RECOVER_308	high	login_next_to_product	en	istif	8897-46800-p0	/en/shop/istif/8897-46800-p0	True	https://equsto.com/en/login.html?next=/en/shop/istif/8897-46800-p0
+RECOVER_308	high	login_next_to_product	en	pisirme	aei-870	/en/shop/pisirme/aei-870	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/aei-870
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	9830-rl220-rd	/en/shop/set-ustu-mutfak/9830-rl220-rd	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/9830-rl220-rd
+DROP_NO_VALUE	high	not_sellable	en	sogutma	710003		True	https://equsto.com/en/login.html?next=/en/shop/sogutma/710003
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__cl50-pure-aksesuari-6-mm		False	https://equsto.com/en/shop/hazirlik/robot-coupe__cl50-pure-aksesuari-6-mm
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-08070-11		False	https://equsto.com/shop/tezgah/equsto-08070-11
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lm-eq9		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lm-eq9
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19070-82	/en/shop/tezgah/7911-19070-82	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19070-82
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-08060-11		False	https://equsto.com/en/shop/tezgah/pimak-08060-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-16060-23p	/en/shop/tezgah/7911-16060-23p	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-16060-23p
+DROP_NO_VALUE	high	no_product_match	en	tezgah	0754-056a0-01		False	https://equsto.com/en/shop/tezgah/0754-056a0-01
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-cb249ahc	/en/shop/sogutma/bre-cb249ahc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-cb249ahc
+RECOVER_308	high	login_next_to_product	en	davlumbaz	922729	/en/shop/davlumbaz/922729	True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/922729
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	2920-17870-38		False	https://equsto.com/shop/set-ustu-mutfak/2920-17870-38
+RECOVER_308	high	login_next_to_product	en	hazirlik	bpkm-12ck	/en/shop/hazirlik/bpkm-12ck	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/bpkm-12ck
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-ktevdt02-09070	/en/shop/tezgah/eq-ktevdt02-09070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-ktevdt02-09070
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-knsrvb02-14070	/en/shop/tezgah/eq-knsrvb02-14070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-knsrvb02-14070
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-sardunya-gl-eq22		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-sardunya-gl-eq22
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-fke010	/en/shop/pisirme/ino-fke010	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-fke010
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28068		False	https://equsto.com/en/shop/hazirlik/rc-28068
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-khct02-16070	/en/shop/tezgah/eq-khct02-16070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-khct02-16070
+RECOVER_308	high	login_next_to_product	en	hazirlik	bhy-100k	/en/shop/hazirlik/bhy-100k	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/bhy-100k
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-lion-eq1	/en/shop/market-reyonlari/eq-lion-eq1	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lion-eq1
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-fgm100	/en/shop/pisirme/ino-fgm100	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-fgm100
+RECOVER_308	high	login_next_to_product	en	pisirme	391273	/en/shop/pisirme/391273	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391273
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-24432		False	https://equsto.com/en/shop/hazirlik/rc-24432
+RECOVER_308	high	login_next_to_product	en	pisirme	spr75-3	/en/shop/pisirme/spr75-3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/spr75-3
+RECOVER_308	high	login_next_to_product	en	sogutma	79k3-12nmv-10	/en/shop/sogutma/79k3-12nmv-10	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/79k3-12nmv-10
+RECOVER_308	high	login_next_to_product	en	pisirme	7960-16229-5o3	/en/shop/yikama/7960-16229-5o3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7960-16229-5o3
+RECOVER_308	high	login_next_to_product	en	sogutma	tm-450-a-hc	/en/shop/sogutma/tm-450-a-hc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/tm-450-a-hc
+DROP_NO_VALUE	high	not_sellable	en	set-ustu-mutfak	8893-up112-l0		True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8893-up112-l0
+RECOVER_308	high	login_next_to_product	en	sogutma	79k3-06nmv-10	/en/shop/sogutma/79k3-06nmv-10	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/79k3-06nmv-10
+DROP_NO_VALUE	high	non_product_url	tr		/mutfak-alani-kisi-basi-metrekare-2026		False	https://equsto.com/mutfak-alani-kisi-basi-metrekare-2026
+DROP_NO_VALUE	high	non_product_url	tr		/guides/dark-kitchen-cloud-kitchen-2026		False	https://equsto.com/guides/dark-kitchen-cloud-kitchen-2026
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-cb955ahcbqube	/en/shop/sogutma/bre-cb955ahcbqube	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-cb955ahcbqube
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-bin550vds	/en/shop/sogutma/bre-bin550vds	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-bin550vds
+RECOVER_308	high	login_next_to_product	en	sogutma	710070	/en/shop/sogutma/710070	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/710070
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15105-01	/en/shop/davlumbaz/7885-15105-01	False	https://equsto.com/en/shop/davlumbaz/pimak-15105-01
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8350-31042-0k	/en/shop/set-ustu-mutfak/8350-31042-0k	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8350-31042-0k
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-06060-04	/en/shop/tezgah/7911-06060-04	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-06060-04
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-lm-eq1		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-lm-eq1
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-rabbit-eq3	/en/shop/market-reyonlari/eq-rabbit-eq3	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-rabbit-eq3
+RECOVER_308	high	login_next_to_product	en	hazirlik	5ksm7591xeer	/en/shop/hazirlik/5ksm7591xeer	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/5ksm7591xeer
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14060-09	/en/shop/tezgah/7911-14060-09	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14060-09
+RECOVER_308	high	login_next_to_product	en	tezgah	7910-10040-01	/en/shop/tezgah/7910-10040-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7910-10040-01
+RECOVER_308	high	login_next_to_product	en	tezgah	7919-10lts-00	/en/shop/tezgah/7919-10lts-00	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7919-10lts-00
+RECOVER_308	high	login_next_to_product	en	dolap	7754-246e5-23	/en/shop/tezgah/7754-246e5-23	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7754-246e5-23
+DROP_NO_VALUE	high	non_product_url	tr		/500-kisilik-catering-ekipman-planlama-2026		False	https://equsto.com/500-kisilik-catering-ekipman-planlama-2026
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	m037-6se	/en/shop/market-reyonlari/m037-6se	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/m037-6se
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-19070-70		False	https://equsto.com/shop/tezgah/equsto-19070-70
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-07429-5y5	/en/shop/yikama/7961-07429-5y5	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-07429-5y5
+RECOVER_308	high	login_next_to_product	en	kahve	197-e61-s1	/en/shop/kahve/197-e61-s1	True	https://equsto.com/en/login.html?next=/en/shop/kahve/197-e61-s1
+RECOVER_308	high	login_next_to_product	en	sogutma	7919-df6045-00	/en/shop/sogutma/7919-df6045-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/7919-df6045-00
+RECOVER_308	high	login_next_to_product	en	pisirme	371237	/en/shop/pisirme/371237	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/371237
+DROP_NO_VALUE	high	login_next_no_product	en	tezgah	pimak-24060-56		True	https://equsto.com/en/login.html?next=/en/shop/tezgah/pimak-24060-56
+DROP_NO_VALUE	high	no_product_match	en	sogutma	kuvetler.html		False	https://equsto.com/en/shop/sogutma/kuvetler.html
+DROP_NO_VALUE	high	non_product_url	en				True	https://equsto.com/en/login.html?next=/en/blog
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-fg-eq1		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-fg-eq1
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-217d5-25	/en/shop/tezgah/7754-217d5-25	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-217d5-25
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12060-28	/en/shop/tezgah/7911-12060-28	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12060-28
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	hazirlik.html		False	https://equsto.com/shop/set-ustu-mutfak/hazirlik.html
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12060-81	/en/shop/tezgah/7911-12060-81	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12060-81
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-55205-10	/shop/davlumbaz/7885-55205-10	False	https://equsto.com/shop/davlumbaz/pimak-55205-10
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14070-30	/en/shop/tezgah/7911-14070-30	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14070-30
+RECOVER_308	high	login_next_to_product	en	pisirme	aaig-670	/en/shop/pisirme/aaig-670	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/aaig-670
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	equsto-19060-00		False	https://equsto.com/shop/tezgah/equsto-19060-00
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-fg-eq1		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-fg-eq1
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-30255-10	/shop/davlumbaz/7885-30255-10	False	https://equsto.com/shop/davlumbaz/pimak-30255-10
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-30155-11	/shop/davlumbaz/7885-30155-11	False	https://equsto.com/shop/davlumbaz/pimak-30155-11
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-fg-eq37		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-fg-eq37
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19060-24	/en/shop/tezgah/7911-19060-24	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19060-24
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-19060-52	/en/shop/tezgah/7911-19060-52	False	https://equsto.com/en/shop/tezgah/pimak-19060-52
+RECOVER_308	high	login_next_to_product	en	tasima	avatherm-400	/en/shop/tasima/avatherm-400	True	https://equsto.com/en/login.html?next=/en/shop/tasima/avatherm-400
+RECOVER_308	high	login_next_to_product	en	sogutma	9805-sde18-00	/en/shop/sogutma/9805-sde18-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/9805-sde18-00
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-07429-1y4	/en/shop/yikama/7961-07429-1y4	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-07429-1y4
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-45205-10	/shop/davlumbaz/7885-45205-10	False	https://equsto.com/shop/davlumbaz/pimak-45205-10
+RECOVER_308	high	login_next_to_product	en	pisirme	729631	/en/shop/pisirme/729631	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/729631
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-60205-10	/en/shop/davlumbaz/7885-60205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-60205-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30105-11	/en/shop/davlumbaz/7885-30105-11	False	https://equsto.com/en/shop/davlumbaz/pimak-30105-11
+RECOVER_308	high	login_next_to_product	en	hazirlik	208-653774-j3x	/en/shop/hazirlik/208-653774-j3x	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/208-653774-j3x
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12060-95	/en/shop/tezgah/7911-12060-95	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12060-95
+RECOVER_308	high	login_next_to_product	en	istif	46-x-137-x-183-304l	/en/shop/istif/46-x-137-x-183-304l	True	https://equsto.com/en/login.html?next=/en/shop/istif/46-x-137-x-183-304l
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-sky-eq22		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-sky-eq22
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kct07-11070	/en/shop/tezgah/eq-kct07-11070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kct07-11070
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco56-1	/en/shop/pisirme/npicco56-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco56-1
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-tp-sky-eq39		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-tp-sky-eq39
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco69-1	/en/shop/pisirme/npicco69-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco69-1
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lm-eq34		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lm-eq34
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__sebze-dograma-makinesi-cl20		False	https://equsto.com/en/shop/hazirlik/robot-coupe__sebze-dograma-makinesi-cl20
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-iris-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-iris-eq3
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0420-42285-01	/en/shop/set-ustu-mutfak/0420-42285-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0420-42285-01
+RECOVER_308	high	login_next_to_product	en	pisirme	206377	/en/shop/pisirme/206377	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/206377
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq31		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq31
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0311-24100-30	/en/shop/set-ustu-mutfak/0311-24100-30	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0311-24100-30
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	equsto-20155-01	/shop/davlumbaz/7885-20155-01	False	https://equsto.com/shop/davlumbaz/equsto-20155-01
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-tp-eq1		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-tp-eq1
+RECOVER_308	high	login_next_to_product	en	dolap	7911-14070-96	/en/shop/tezgah/7911-14070-96	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-14070-96
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15105-11	/en/shop/davlumbaz/7885-15105-11	False	https://equsto.com/en/shop/davlumbaz/pimak-15105-11
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-tp-sky-eq6		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-tp-sky-eq6
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq10		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq10
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-vm900a	/en/shop/sogutma/bre-vm900a	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-vm900a
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-20155-01	/shop/davlumbaz/7885-20155-01	False	https://equsto.com/shop/davlumbaz/pimak-20155-01
+RECOVER_308	high	login_next_to_product	en	pisirme	spr57	/en/shop/pisirme/spr57	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/spr57
+DROP_NO_VALUE	high	non_product_url	tr		/restaurant-kitchen-quote		False	https://equsto.com/restaurant-kitchen-quote
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lm-eq49		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lm-eq49
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0420-03625-11	/en/shop/set-ustu-mutfak/0420-03625-11	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0420-03625-11
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-19070-08		False	https://equsto.com/en/shop/tezgah/pimak-19070-08
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-sky-eq21		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-sky-eq21
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco63-1	/en/shop/pisirme/npicco63-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco63-1
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16608-23	/en/shop/tezgah/7868-16608-23	False	https://equsto.com/en/shop/tezgah/pimak-16608-23
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq83	/en/shop/market-reyonlari/eq-falcon-sld-eq83	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq83
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-45155-01	/en/shop/davlumbaz/7885-45155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-45155-01
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-ic24ahc	/en/shop/sogutma/bre-ic24ahc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-ic24ahc
+DROP_NO_VALUE	high	no_product_match	en	tezgah	mr38-1604060-00		False	https://equsto.com/en/shop/tezgah/mr38-1604060-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-35155-10	/shop/davlumbaz/7885-35155-10	False	https://equsto.com/shop/davlumbaz/pimak-35155-10
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19070-23p	/en/shop/tezgah/7911-19070-23p	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19070-23p
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-24620		False	https://equsto.com/en/shop/hazirlik/rc-24620
+RECOVER_308	high	login_next_to_product	en	kahve	vkd-25k	/en/shop/kahve/vkd-25k	True	https://equsto.com/en/login.html?next=/en/shop/kahve/vkd-25k
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-19060-00		False	https://equsto.com/en/shop/tezgah/pimak-19060-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-10070-04	/shop/tezgah/7911-10070-04	False	https://equsto.com/shop/tezgah/pimak-10070-04
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14060-13	/en/shop/tezgah/7911-14060-13	False	https://equsto.com/en/shop/tezgah/pimak-14060-13
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30125-01	/en/shop/davlumbaz/7885-30125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-30125-01
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-14070-00		False	https://equsto.com/en/shop/tezgah/pimak-14070-00
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12060-08	/en/shop/tezgah/7911-12060-08	False	https://equsto.com/en/shop/tezgah/pimak-12060-08
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco901	/en/shop/pisirme/npicco901	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco901
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-nv-lm-eq18		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-nv-lm-eq18
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-14060-04		False	https://equsto.com/shop/tezgah/pimak-14060-04
+RECOVER_308	high	login_next_to_product	en	davlumbaz	7885-30155-12	/en/shop/davlumbaz/7885-30155-12	True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/7885-30155-12
+RECOVER_308	high	login_next_to_product	en	sogutma	gb-1540-a-hc	/en/shop/sogutma/gb-1540-a-hc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/gb-1540-a-hc
+RECOVER_308	high	login_next_to_product	en	pisirme	7865-n1-80703-35lp	/en/shop/pisirme/7865-n1-80703-35lp	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7865-n1-80703-35lp
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq33		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq33
+DROP_NO_VALUE	high	non_product_url	en		/en/projeler/fine-dining-kurulumu.html		False	https://equsto.com/en/projeler/fine-dining-kurulumu.html
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-20155-11	/en/shop/davlumbaz/7885-20155-11	False	https://equsto.com/en/shop/davlumbaz/pimak-20155-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-167c8-13	/en/shop/tezgah/7754-167c8-13	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-167c8-13
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-186e5-25	/en/shop/tezgah/7754-186e5-25	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-186e5-25
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-06070-11		False	https://equsto.com/en/shop/tezgah/pimak-06070-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-067c8-01	/en/shop/tezgah/7758-067c8-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-067c8-01
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-12060-04		False	https://equsto.com/shop/tezgah/pimak-12060-04
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-166a5-21	/en/shop/tezgah/7758-166a5-21	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-166a5-21
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12060-70		False	https://equsto.com/shop/tezgah/pimak-12060-70
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12070-57		False	https://equsto.com/en/shop/tezgah/pimak-12070-57
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-20060-14		False	https://equsto.com/en/shop/tezgah/pimak-20060-14
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-16608-23	/shop/tezgah/7868-16608-23	False	https://equsto.com/shop/tezgah/pimak-16608-23
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12060-31	/shop/tezgah/7911-12060-31	False	https://equsto.com/shop/tezgah/pimak-12060-31
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-tp-eq17		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-tp-eq17
+RECOVER_308	high	login_next_to_product	en	sogutma	7919-cr5040-00	/en/shop/sogutma/7919-cr5040-00	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/7919-cr5040-00
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-14070-70		False	https://equsto.com/en/shop/tezgah/pimak-14070-70
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	dr04-1803030-00		False	https://equsto.com/shop/tezgah/dr04-1803030-00
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14060-12	/en/shop/tezgah/7911-14060-12	False	https://equsto.com/en/shop/tezgah/pimak-14060-12
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-45205-00		False	https://equsto.com/en/shop/davlumbaz/pimak-45205-00
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-16060-14		False	https://equsto.com/shop/tezgah/pimak-16060-14
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16070-70		False	https://equsto.com/en/shop/tezgah/pimak-16070-70
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12708-23	/en/shop/tezgah/7868-12708-23	False	https://equsto.com/en/shop/tezgah/pimak-12708-23
+RECOVER_308	high	login_next_to_product	en	pisirme	adgc-5s	/en/shop/pisirme/adgc-5s	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/adgc-5s
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28057		False	https://equsto.com/en/shop/hazirlik/rc-28057
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-06060-91	/shop/tezgah/7911-06060-91	False	https://equsto.com/shop/tezgah/pimak-06060-91
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-06060-11		False	https://equsto.com/en/shop/tezgah/pimak-06060-11
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-35155-00		False	https://equsto.com/en/shop/davlumbaz/pimak-35155-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-20060-11		False	https://equsto.com/shop/tezgah/pimak-20060-11
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16060-15	/en/shop/tezgah/7911-16060-15	False	https://equsto.com/en/shop/tezgah/pimak-16060-15
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-50255-10	/en/shop/davlumbaz/7885-50255-10	False	https://equsto.com/en/shop/davlumbaz/pimak-50255-10
+RECOVER_308	high	login_next_to_product	en	yikama	502072	/en/shop/yikama/502072	True	https://equsto.com/en/login.html?next=/en/shop/yikama/502072
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-lb-eq7		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-lb-eq7
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8350-31044-0s	/en/shop/set-ustu-mutfak/8350-31044-0s	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8350-31044-0s
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-35105-11	/shop/davlumbaz/7885-35105-11	False	https://equsto.com/shop/davlumbaz/pimak-35105-11
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-25205-00	/shop/davlumbaz/7885-25205-00	False	https://equsto.com/shop/davlumbaz/pimak-25205-00
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zmd-9he10s	/en/shop/pisirme/ino-zmd-9he10s	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zmd-9he10s
+DROP_NO_VALUE	high	no_product_match	en	tezgah	tb04-903030-00		False	https://equsto.com/en/shop/tezgah/tb04-903030-00
+RECOVER_308	high	login_next_to_product	en	pisirme	7960-16229-5y2	/en/shop/yikama/7960-16229-5y2	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7960-16229-5y2
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12080-57		False	https://equsto.com/en/shop/tezgah/pimak-12080-57
+RECOVER_308	high	login_next_to_product	en	pisirme	371295	/en/shop/pisirme/371295	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/371295
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-sky-eq37		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-sky-eq37
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	equsto-30125-11	/en/shop/davlumbaz/7885-30125-11	False	https://equsto.com/en/shop/davlumbaz/equsto-30125-11
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30105-01	/en/shop/davlumbaz/7885-30105-01	False	https://equsto.com/en/shop/davlumbaz/pimak-30105-01
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-10070-11		False	https://equsto.com/shop/tezgah/pimak-10070-11
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-09070-08	/en/shop/tezgah/7911-09070-08	False	https://equsto.com/en/shop/tezgah/pimak-09070-08
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	dr04-703030-00		False	https://equsto.com/shop/tezgah/dr04-703030-00
+RECOVER_308	high	login_next_to_product	en	tezgah	7712-12090-01	/en/shop/tezgah/7712-12090-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7712-12090-01
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq95	/en/shop/market-reyonlari/eq-falcon-sld-eq95	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq95
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq131	/en/shop/market-reyonlari/eq-falcon-eq131	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq131
+RECOVER_308	high	login_next_to_product	en	pisirme	7960-16229-7o3	/en/shop/yikama/7960-16229-7o3	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7960-16229-7o3
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-pn-eq11		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-pn-eq11
+DROP_NO_VALUE	high	non_product_url	en				True	https://equsto.com/en/login.html?next=/en/cloud-kitchen-setup
+RECOVER_308	high	login_next_to_product	en	sogutma	8919-oef40-aps	/en/shop/sogutma/8919-oef40-aps	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/8919-oef40-aps
+RECOVER_308	high	login_next_to_product	en	pisirme	7960-09429-1o1	/en/shop/yikama/7960-09429-1o1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7960-09429-1o1
+RECOVER_308	high	login_next_to_product	en	istif	53-x-137-x-183-201	/en/shop/istif/53-x-137-x-183-201	True	https://equsto.com/en/login.html?next=/en/shop/istif/53-x-137-x-183-201
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-tp-eq12		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-tp-eq12
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0211-45605-13	/en/shop/set-ustu-mutfak/0211-45605-13	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0211-45605-13
+RECOVER_308	high	login_next_to_product	en	istif	8897-36900-p0	/en/shop/istif/8897-36900-p0	True	https://equsto.com/en/login.html?next=/en/shop/istif/8897-36900-p0
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-077d8-01	/en/shop/tezgah/7758-077d8-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-077d8-01
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-056a8-01	/en/shop/tezgah/7758-056a8-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-056a8-01
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-187cb-21	/en/shop/tezgah/7758-187cb-21	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-187cb-21
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-09070-82	/en/shop/tezgah/7911-09070-82	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-09070-82
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-14070-56	/en/shop/tezgah/7911-14070-56	False	https://equsto.com/en/shop/tezgah/pimak-14070-56
+KEEP_HUB	med	hub	tr	pfos.html		/shop/pfos.html	False	https://equsto.com/shop/pfos.html
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-gardenya-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-gardenya-eq3
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14070-11		False	https://equsto.com/shop/tezgah/pimak-14070-11
+RECOVER_308	high	login_next_to_product	en	pisirme	371214	/en/shop/pisirme/371214	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/371214
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-sardunya-lm-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-sardunya-lm-eq3
+RECOVER_308	high	login_next_to_product	en	davlumbaz	7885-25205-10	/en/shop/davlumbaz/7885-25205-10	True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/7885-25205-10
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-06070-00	/en/shop/tezgah/7911-06070-00	False	https://equsto.com/en/shop/tezgah/pimak-06070-00
+RECOVER_308	high	login_next_to_product	en	dolap	7911-06060-79	/en/shop/tezgah/7911-06060-79	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7911-06060-79
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-21070-25		False	https://equsto.com/en/shop/tezgah/pimak-21070-25
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25205-00	/en/shop/davlumbaz/7885-25205-00	False	https://equsto.com/en/shop/davlumbaz/pimak-25205-00
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-20155-10	/en/shop/davlumbaz/7885-20155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-20155-10
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-40155-00		False	https://equsto.com/shop/davlumbaz/pimak-40155-00
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-2433		False	https://equsto.com/shop/hazirlik/rc-2433
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco25-2	/en/shop/pisirme/npicco25-2	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco25-2
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-55155-10	/shop/davlumbaz/7885-55155-10	False	https://equsto.com/shop/davlumbaz/pimak-55155-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-60155-10	/en/shop/davlumbaz/7885-60155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-60155-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-45255-10	/en/shop/davlumbaz/7885-45255-10	False	https://equsto.com/en/shop/davlumbaz/pimak-45255-10
+DROP_NO_VALUE	high	no_product_match	en	tezgah	tb04-503030-00		False	https://equsto.com/en/shop/tezgah/tb04-503030-00
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-40155-00		False	https://equsto.com/en/shop/davlumbaz/pimak-40155-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	dr04-1403030-00		False	https://equsto.com/shop/tezgah/dr04-1403030-00
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-28063		False	https://equsto.com/shop/hazirlik/rc-28063
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-14070-46		False	https://equsto.com/en/shop/tezgah/pimak-14070-46
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-12125-01	/en/shop/davlumbaz/7885-12125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-12125-01
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-45205-10	/en/shop/davlumbaz/7885-45205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-45205-10
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	m070	/en/shop/set-ustu-mutfak/m070	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/m070
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35125-01	/en/shop/davlumbaz/7885-35125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-35125-01
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-19070-15	/en/shop/tezgah/7911-19070-15	False	https://equsto.com/en/shop/tezgah/pimak-19070-15
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-30155-01	/en/shop/davlumbaz/7885-30155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-30155-01
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-10060-00		False	https://equsto.com/en/shop/tezgah/pimak-10060-00
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12060-46		False	https://equsto.com/en/shop/tezgah/pimak-12060-46
+DROP_NO_VALUE	high	no_product_match	en	sogutma	9805-im240n-ehc		False	https://equsto.com/en/shop/sogutma/9805-im240n-ehc
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-fg-sky-eq6		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-fg-sky-eq6
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-08060-11		False	https://equsto.com/shop/tezgah/pimak-08060-11
+RECOVER_308	high	login_next_to_product	en	dolap	7758-197c5-25	/en/shop/tezgah/7758-197c5-25	True	https://equsto.com/en/login.html?next=/en/shop/dolap/7758-197c5-25
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14060-51		False	https://equsto.com/shop/tezgah/pimak-14060-51
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-30205-10	/shop/davlumbaz/7885-30205-10	False	https://equsto.com/shop/davlumbaz/pimak-30205-10
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-40155-01	/shop/davlumbaz/7885-40155-01	False	https://equsto.com/shop/davlumbaz/pimak-40155-01
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16070-31	/en/shop/tezgah/7911-16070-31	False	https://equsto.com/en/shop/tezgah/pimak-16070-31
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-20125-11	/en/shop/davlumbaz/7885-20125-11	False	https://equsto.com/en/shop/davlumbaz/pimak-20125-11
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq50	/en/shop/market-reyonlari/eq-falcon-eq50	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq50
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zmd-9og20	/en/shop/pisirme/ino-zmd-9og20	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zmd-9og20
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27138		False	https://equsto.com/shop/hazirlik/rc-27138
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	oztiryakiler-robot-coupe-rg-9-rende-9-mm		False	https://equsto.com/shop/hazirlik/oztiryakiler-robot-coupe-rg-9-rende-9-mm
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-55205-00		False	https://equsto.com/en/shop/davlumbaz/pimak-55205-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-45255-10	/shop/davlumbaz/7885-45255-10	False	https://equsto.com/shop/davlumbaz/pimak-45255-10
+DROP_NO_VALUE	high	no_product_match	en	tezgah	dr04-903030-00		False	https://equsto.com/en/shop/tezgah/dr04-903030-00
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12070-15	/en/shop/tezgah/7911-12070-15	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12070-15
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-2809070		False	https://equsto.com/shop/tezgah/pimak-2809070
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-14070-51		False	https://equsto.com/en/shop/tezgah/pimak-14070-51
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-14060-51		False	https://equsto.com/en/shop/tezgah/pimak-14060-51
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25155-10	/en/shop/davlumbaz/7885-25155-10	False	https://equsto.com/en/shop/davlumbaz/pimak-25155-10
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-16060-15	/shop/tezgah/7911-16060-15	False	https://equsto.com/shop/tezgah/pimak-16060-15
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40125-01	/en/shop/davlumbaz/7885-40125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-40125-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19070-50		False	https://equsto.com/en/shop/tezgah/pimak-19070-50
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-18070-12		False	https://equsto.com/shop/tezgah/pimak-18070-12
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	7912-10070-51	/en/shop/set-ustu-mutfak/7912-10070-51	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/7912-10070-51
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	robot-coupe__rg-9-rende-9-mm		False	https://equsto.com/shop/hazirlik/robot-coupe__rg-9-rende-9-mm
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14070-15	/en/shop/tezgah/7911-14070-15	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14070-15
+RECOVER_308	high	login_next_to_product	en	sogutma	bre-cb184ahc	/en/shop/sogutma/bre-cb184ahc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/bre-cb184ahc
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-35155-00		False	https://equsto.com/shop/davlumbaz/pimak-35155-00
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-40205-00		False	https://equsto.com/shop/davlumbaz/pimak-40205-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19070-15	/shop/tezgah/7911-19070-15	False	https://equsto.com/shop/tezgah/pimak-19070-15
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-16070-12	/shop/tezgah/7911-16070-12	False	https://equsto.com/shop/tezgah/pimak-16070-12
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-18060-14		False	https://equsto.com/en/shop/tezgah/pimak-18060-14
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12070-13	/shop/tezgah/7911-12070-13	False	https://equsto.com/shop/tezgah/pimak-12070-13
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16080-57		False	https://equsto.com/en/shop/tezgah/pimak-16080-57
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14070-15	/shop/tezgah/7911-14070-15	False	https://equsto.com/shop/tezgah/pimak-14070-15
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12608-23	/shop/tezgah/7868-12608-23	False	https://equsto.com/shop/tezgah/pimak-12608-23
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-19070-13	/en/shop/tezgah/7911-19070-13	False	https://equsto.com/en/shop/tezgah/pimak-19070-13
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-40105-11	/shop/davlumbaz/7885-40105-11	False	https://equsto.com/shop/davlumbaz/pimak-40105-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-20060-14		False	https://equsto.com/shop/tezgah/pimak-20060-14
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-07060-11		False	https://equsto.com/en/shop/tezgah/pimak-07060-11
+RECOVER_308	high	login_next_to_product	en	pisirme	easfe-860f	/en/shop/pisirme/easfe-860f	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/easfe-860f
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-076e8-01	/en/shop/tezgah/7758-076e8-01	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-076e8-01
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-2390		False	https://equsto.com/shop/hazirlik/rc-2390
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq21	/en/shop/market-reyonlari/eq-falcon-sld-eq21	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq21
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-60155-11	/shop/davlumbaz/7885-60155-11	False	https://equsto.com/shop/davlumbaz/pimak-60155-11
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-xnehc-32		False	https://equsto.com/shop/sogutma/9805-xnehc-32
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12070-51		False	https://equsto.com/shop/tezgah/pimak-12070-51
+DROP_NO_VALUE	high	not_sellable	en	set-ustu-mutfak	8893-up235w-00		True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8893-up235w-00
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-16070-12	/en/shop/tezgah/7911-16070-12	False	https://equsto.com/en/shop/tezgah/pimak-16070-12
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-eq42		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-eq42
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-nv-pn-eq33		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-nv-pn-eq33
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14060-13	/shop/tezgah/7911-14060-13	False	https://equsto.com/shop/tezgah/pimak-14060-13
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-12070-14		False	https://equsto.com/shop/tezgah/pimak-12070-14
+DROP_NO_VALUE	high	no_product_match	en	tezgah	dr04-503030-00		False	https://equsto.com/en/shop/tezgah/dr04-503030-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-35155-11	/shop/davlumbaz/7885-35155-11	False	https://equsto.com/shop/davlumbaz/pimak-35155-11
+RECOVER_308	high	login_next_to_product	en	sogutma	118-bbc-150	/en/shop/sogutma/118-bbc-150	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-bbc-150
+RECOVER_308	high	login_next_to_product	en	hazirlik	208-650090-c3wx	/en/shop/hazirlik/208-650090-c3wx	True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/208-650090-c3wx
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-2814070		False	https://equsto.com/shop/tezgah/pimak-2814070
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-orkide-eq12		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-orkide-eq12
+RECOVER_308	high	login_next_to_product	en	pisirme	eagi-1060-nd	/en/shop/pisirme/eagi-1060-nd	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/eagi-1060-nd
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-2812070		False	https://equsto.com/shop/tezgah/pimak-2812070
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16070-70		False	https://equsto.com/shop/tezgah/pimak-16070-70
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	dr04-1603030-00		False	https://equsto.com/shop/tezgah/dr04-1603030-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-25155-11	/shop/davlumbaz/7885-25155-11	False	https://equsto.com/shop/davlumbaz/pimak-25155-11
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12070-15	/shop/tezgah/7911-12070-15	False	https://equsto.com/shop/tezgah/pimak-12070-15
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-40125-01	/shop/davlumbaz/7885-40125-01	False	https://equsto.com/shop/davlumbaz/pimak-40125-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-14070-12	/shop/tezgah/7911-14070-12	False	https://equsto.com/shop/tezgah/pimak-14070-12
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lm-eq45		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lm-eq45
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	tb04-503030-00		False	https://equsto.com/shop/tezgah/tb04-503030-00
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	vwjg-8p	/en/shop/set-ustu-mutfak/vwjg-8p	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/vwjg-8p
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kmertt01-09070	/en/shop/tezgah/eq-kmertt01-09070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kmertt01-09070
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	pimak-60155-00		False	https://equsto.com/en/shop/davlumbaz/pimak-60155-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-30105-11	/shop/davlumbaz/7885-30105-11	False	https://equsto.com/shop/davlumbaz/pimak-30105-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-1-1404060-10		False	https://equsto.com/shop/tezgah/mr38-1-1404060-10
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-18060-14		False	https://equsto.com/shop/tezgah/pimak-18060-14
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-27066		False	https://equsto.com/en/shop/hazirlik/rc-27066
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-20155-11	/shop/davlumbaz/7885-20155-11	False	https://equsto.com/shop/davlumbaz/pimak-20155-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-10708-23		False	https://equsto.com/shop/tezgah/pimak-10708-23
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-30155-00		False	https://equsto.com/shop/davlumbaz/pimak-30155-00
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19070-52	/shop/tezgah/7911-19070-52	False	https://equsto.com/shop/tezgah/pimak-19070-52
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0449-00032-01	/en/shop/set-ustu-mutfak/0449-00032-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0449-00032-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-12070-51		False	https://equsto.com/en/shop/tezgah/pimak-12070-51
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-55205-00		False	https://equsto.com/shop/davlumbaz/pimak-55205-00
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12070-31	/en/shop/tezgah/7911-12070-31	False	https://equsto.com/en/shop/tezgah/pimak-12070-31
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-40155-10	/shop/davlumbaz/7885-40155-10	False	https://equsto.com/shop/davlumbaz/pimak-40155-10
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-19608-23	/en/shop/tezgah/7868-19608-23	False	https://equsto.com/en/shop/tezgah/pimak-19608-23
+DROP_NO_VALUE	high	no_product_match	tr	davlumbaz	pimak-60155-00		False	https://equsto.com/shop/davlumbaz/pimak-60155-00
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-18070-25		False	https://equsto.com/en/shop/tezgah/pimak-18070-25
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-40105-11	/en/shop/davlumbaz/7885-40105-11	False	https://equsto.com/en/shop/davlumbaz/pimak-40105-11
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19070-25		False	https://equsto.com/en/shop/tezgah/pimak-19070-25
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-10070-08	/en/shop/tezgah/7911-10070-08	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-10070-08
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25205-10	/en/shop/davlumbaz/7885-25205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-25205-10
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-1-1204060-10		False	https://equsto.com/shop/tezgah/mr38-1-1204060-10
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-50205-10	/en/shop/davlumbaz/7885-50205-10	False	https://equsto.com/en/shop/davlumbaz/pimak-50205-10
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27066		False	https://equsto.com/shop/hazirlik/rc-27066
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-28158w		False	https://equsto.com/en/shop/hazirlik/rc-28158w
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-34800		False	https://equsto.com/shop/hazirlik/rc-34800
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35105-01	/en/shop/davlumbaz/7885-35105-01	False	https://equsto.com/en/shop/davlumbaz/pimak-35105-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-50255-10	/shop/davlumbaz/7885-50255-10	False	https://equsto.com/shop/davlumbaz/pimak-50255-10
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16070-11		False	https://equsto.com/en/shop/tezgah/pimak-16070-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-166e5-25	/en/shop/tezgah/7758-166e5-25	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-166e5-25
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-fg-sky-eq34		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq34
+DROP_NO_VALUE	high	no_product_match	en	tezgah	dr04-1603030-00		False	https://equsto.com/en/shop/tezgah/dr04-1603030-00
+DROP_NO_VALUE	high	login_next_no_product	en	marka	npicco		True	https://equsto.com/en/login.html?next=/en/shop/marka/npicco
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-20070-11		False	https://equsto.com/en/shop/tezgah/pimak-20070-11
+RECOVER_308	high	login_next_to_product	en	sogutma	dt-2ngn-eko	/en/shop/sogutma/dt-2ngn-eko	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/dt-2ngn-eko
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14070-50		False	https://equsto.com/shop/tezgah/pimak-14070-50
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-27051		False	https://equsto.com/en/shop/hazirlik/rc-27051
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25155-01	/en/shop/davlumbaz/7885-25155-01	False	https://equsto.com/en/shop/davlumbaz/pimak-25155-01
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-sld-eq56	/en/shop/market-reyonlari/eq-falcon-sld-eq56	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-sld-eq56
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0336-24137-01	/en/shop/set-ustu-mutfak/0336-24137-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0336-24137-01
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-217d8-25	/en/shop/tezgah/7758-217d8-25	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-217d8-25
+NEEDS_HUMAN	low	ambiguous_sku_match	en	tezgah	pimak-16060-14		False	https://equsto.com/en/shop/tezgah/pimak-16060-14
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco913	/en/shop/pisirme/npicco913	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco913
+RECOVER_308	high	login_next_to_product	en	sogutma	asbhdg-2n70e	/en/shop/sogutma/asbhdg-2n70e	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/asbhdg-2n70e
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	pimak-12060-14		False	https://equsto.com/shop/tezgah/pimak-12060-14
+RECOVER_308	high	login_next_to_product	en	tezgah	7758-247c5-31	/en/shop/tezgah/7758-247c5-31	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7758-247c5-31
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-lion-sld-eq1	/en/shop/market-reyonlari/eq-lion-sld-eq1	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lion-sld-eq1
+RECOVER_308	high	login_next_to_product	en	yikama	7711-19075-13	/en/shop/yikama/7711-19075-13	True	https://equsto.com/en/login.html?next=/en/shop/yikama/7711-19075-13
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-2115		False	https://equsto.com/en/shop/hazirlik/rc-2115
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12070-31	/shop/tezgah/7911-12070-31	False	https://equsto.com/shop/tezgah/pimak-12070-31
+DROP_NO_VALUE	high	no_product_match	en	tezgah	mr38-1-2004060-10		False	https://equsto.com/en/shop/tezgah/mr38-1-2004060-10
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-06060-91	/en/shop/tezgah/7911-06060-91	False	https://equsto.com/en/shop/tezgah/pimak-06060-91
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19070-13	/shop/tezgah/7911-19070-13	False	https://equsto.com/shop/tezgah/pimak-19070-13
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8325-acsh7-w30	/en/shop/set-ustu-mutfak/8325-acsh7-w30	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8325-acsh7-w30
+RECOVER_308	high	login_next_to_product	en	istif	8897-30dp4-07	/en/shop/istif/8897-30dp4-07	True	https://equsto.com/en/login.html?next=/en/shop/istif/8897-30dp4-07
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__french-fries-kesme-diski		False	https://equsto.com/en/shop/hazirlik/robot-coupe__french-fries-kesme-diski
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-fg-sky-eq21		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-fg-sky-eq21
+RECOVER_308	med	remap:wrong_brand_unique	tr	hazirlik	rc-2547-le	/shop/hazirlik/tm2547-le	False	https://equsto.com/shop/hazirlik/rc-2547-le
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-60155-11	/en/shop/davlumbaz/7885-60155-11	False	https://equsto.com/en/shop/davlumbaz/pimak-60155-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12070-11		False	https://equsto.com/shop/tezgah/pimak-12070-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16070-11		False	https://equsto.com/shop/tezgah/pimak-16070-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-19070-46		False	https://equsto.com/shop/tezgah/pimak-19070-46
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-11829-1y5	/en/shop/yikama/7961-11829-1y5	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-11829-1y5
+RECOVER_308	high	login_next_to_product	en	pisirme	eaef-660	/en/shop/pisirme/eaef-660	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/eaef-660
+RECOVER_308	high	login_next_to_product	en	tezgah	eq-kcevt01-14070	/en/shop/tezgah/eq-kcevt01-14070	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/eq-kcevt01-14070
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-10070-11		False	https://equsto.com/en/shop/tezgah/pimak-10070-11
+RECOVER_308	high	login_next_to_product	en	tezgah	7919-46ntv-c2	/en/shop/tezgah/7919-46ntv-c2	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7919-46ntv-c2
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19070-96	/en/shop/tezgah/7911-19070-96	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19070-96
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__kesme-diski-2-mm-cl-20-uyumlu		False	https://equsto.com/en/shop/hazirlik/robot-coupe__kesme-diski-2-mm-cl-20-uyumlu
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-35105-11	/en/shop/davlumbaz/7885-35105-11	False	https://equsto.com/en/shop/davlumbaz/pimak-35105-11
+DROP_NO_VALUE	high	not_sellable	en	istif	alt-sase-iki-adet		True	https://equsto.com/en/login.html?next=/en/shop/istif/alt-sase-iki-adet
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco88-7	/en/shop/pisirme/npicco88-7	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco88-7
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-22382		False	https://equsto.com/en/shop/hazirlik/rc-22382
+DROP_NO_VALUE	high	no_product_match	en	kahve	artemis-artemis-mix-2010-a-bar-mikser		False	https://equsto.com/en/shop/kahve/artemis-artemis-mix-2010-a-bar-mikser
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-15125-01	/en/shop/davlumbaz/7885-15125-01	False	https://equsto.com/en/shop/davlumbaz/pimak-15125-01
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12070-12	/shop/tezgah/7911-12070-12	False	https://equsto.com/shop/tezgah/pimak-12070-12
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-2812070		False	https://equsto.com/en/shop/tezgah/pimak-2812070
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0311-11040-21	/en/shop/set-ustu-mutfak/0311-11040-21	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0311-11040-21
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12060-11		False	https://equsto.com/shop/tezgah/pimak-12060-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-12060-46		False	https://equsto.com/shop/tezgah/pimak-12060-46
+DROP_NO_VALUE	high	no_product_match	tr	kahve	9574-m200-00		False	https://equsto.com/shop/kahve/9574-m200-00
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-18060-12		False	https://equsto.com/shop/tezgah/pimak-18060-12
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	rc-27068		False	https://equsto.com/en/shop/hazirlik/rc-27068
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-tp-eq34		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-tp-eq34
+DROP_NO_VALUE	high	no_product_match	en	davlumbaz	equsto-50155-00		False	https://equsto.com/en/shop/davlumbaz/equsto-50155-00
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-07070-11		False	https://equsto.com/en/shop/tezgah/pimak-07070-11
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-14070-46		False	https://equsto.com/shop/tezgah/pimak-14070-46
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-196a5-33	/en/shop/tezgah/7754-196a5-33	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-196a5-33
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	dr04-903030-00		False	https://equsto.com/shop/tezgah/dr04-903030-00
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-yasemin-nt-eq3		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-yasemin-nt-eq3
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-12060-13	/shop/tezgah/7911-12060-13	False	https://equsto.com/shop/tezgah/equsto-12060-13
+RECOVER_308	high	login_next_to_product	en	pisirme	391405	/en/shop/pisirme/391405	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/391405
+DROP_NO_VALUE	high	no_product_match	en	tezgah	dr04-1803030-00		False	https://equsto.com/en/shop/tezgah/dr04-1803030-00
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	9805-im45cne-hc		False	https://equsto.com/shop/sogutma/9805-im45cne-hc
+RECOVER_308	high	login_next_to_product	en	pisirme	371014	/en/shop/pisirme/371014	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/371014
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-19060-51		False	https://equsto.com/en/shop/tezgah/pimak-19060-51
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0311-19100-10	/en/shop/set-ustu-mutfak/0311-19100-10	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0311-19100-10
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-45155-01	/shop/davlumbaz/7885-45155-01	False	https://equsto.com/shop/davlumbaz/pimak-45155-01
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-20060-11		False	https://equsto.com/en/shop/tezgah/pimak-20060-11
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-09060-08	/shop/tezgah/7911-09060-08	False	https://equsto.com/shop/tezgah/pimak-09060-08
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-20070-14		False	https://equsto.com/en/shop/tezgah/pimak-20070-14
+DROP_NO_VALUE	high	non_product_url	en				True	https://equsto.com/en/login.html?next=/en/besos/modul/pl-sm-s-n-3-09
+DROP_NO_VALUE	high	no_product_match	en	tezgah	pimak-16060-46		False	https://equsto.com/en/shop/tezgah/pimak-16060-46
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-12708-23	/shop/tezgah/7868-12708-23	False	https://equsto.com/shop/tezgah/pimak-12708-23
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14060-21a	/en/shop/tezgah/7911-14060-21a	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14060-21a
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	oztiryakiler-endustriyel-mutfak__9805-awne-hc		False	https://equsto.com/shop/sogutma/oztiryakiler-endustriyel-mutfak__9805-awne-hc
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-16060-50		False	https://equsto.com/shop/tezgah/pimak-16060-50
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zmd-9ke10s	/en/shop/pisirme/ino-zmd-9ke10s	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zmd-9ke10s
+RECOVER_308	med	remap:wrong_brand_unique	en	tezgah	pimak-12060-56	/en/shop/tezgah/7911-12060-56	False	https://equsto.com/en/shop/tezgah/pimak-12060-56
+DROP_NO_VALUE	high	no_product_match	en	hazirlik	robot-coupe__robot-coupe-89213-micromix-yedek-bicak		False	https://equsto.com/en/shop/hazirlik/robot-coupe__robot-coupe-89213-micromix-yedek-bicak
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-19070-50		False	https://equsto.com/shop/tezgah/equsto-19070-50
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-10070-85	/en/shop/tezgah/7911-10070-85	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-10070-85
+DROP_NO_VALUE	high	not_sellable	en	hazirlik	tmfa250		True	https://equsto.com/en/login.html?next=/en/shop/hazirlik/tmfa250
+DROP_NO_VALUE	high	no_product_match	en	icecek	urban-bar__uba4020		False	https://equsto.com/en/shop/icecek/urban-bar__uba4020
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	mr38-904060-00		False	https://equsto.com/shop/tezgah/mr38-904060-00
+RECOVER_308	high	login_next_to_product	en	yikama	504293	/en/shop/yikama/504293	True	https://equsto.com/en/login.html?next=/en/shop/yikama/504293
+DROP_NO_VALUE	high	no_product_match	tr	tasima	tezgah.html		False	https://equsto.com/shop/tasima/tezgah.html
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0420-03625-01	/en/shop/set-ustu-mutfak/0420-03625-01	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0420-03625-01
+RECOVER_308	high	login_next_to_product	en	pisirme	9890-xbc01-eu	/en/shop/pisirme/9890-xbc01-eu	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/9890-xbc01-eu
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-25105-01	/en/shop/davlumbaz/7885-25105-01	False	https://equsto.com/en/shop/davlumbaz/pimak-25105-01
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	pimak-18070-11		False	https://equsto.com/shop/tezgah/pimak-18070-11
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-kangaroo-eq1	/en/shop/market-reyonlari/eq-kangaroo-eq1	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-kangaroo-eq1
+RECOVER_308	high	login_next_to_product	en	sogutma	118-wf377	/en/shop/sogutma/118-wf377	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-wf377
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-19080-22	/en/shop/tezgah/7911-19080-22	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-19080-22
+RECOVER_308	high	login_next_to_product	en	davlumbaz	7885-15125-01	/en/shop/davlumbaz/7885-15125-01	True	https://equsto.com/en/login.html?next=/en/shop/davlumbaz/7885-15125-01
+RECOVER_308	high	login_next_to_product	en	icecek	251-1280k	/en/shop/icecek/251-1280k	True	https://equsto.com/en/login.html?next=/en/shop/icecek/251-1280k
+RECOVER_308	high	login_next_to_product	en	sogutma	725109	/en/shop/sogutma/725109	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/725109
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-02929-7o1	/en/shop/yikama/7961-02929-7o1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-02929-7o1
+RECOVER_308	high	login_next_to_product	en	kahve	vkd-p25s	/en/shop/kahve/vkd-p25s	True	https://equsto.com/en/login.html?next=/en/shop/kahve/vkd-p25s
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco26-2	/en/shop/pisirme/npicco26-2	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco26-2
+RECOVER_308	high	login_next_to_product	en	pisirme	aba-62-1	/en/shop/pisirme/aba-62-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/aba-62-1
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-fulya-hf-pn-eq16		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-fulya-hf-pn-eq16
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-eq44		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-eq44
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-lotus-lb-eq9		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-lotus-lb-eq9
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-14060-20	/en/shop/tezgah/7911-14060-20	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-14060-20
+RECOVER_308	high	login_next_to_product	en	pisirme	9890-xbc06-e1	/en/shop/pisirme/9890-xbc06-e1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/9890-xbc06-e1
+DROP_NO_VALUE	high	no_product_match	en	sogutma	yikama.html		False	https://equsto.com/en/shop/sogutma/yikama.html
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	0211-40508-12	/en/shop/set-ustu-mutfak/0211-40508-12	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/0211-40508-12
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	8310-0pp13-100	/en/shop/set-ustu-mutfak/8310-0pp13-100	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8310-0pp13-100
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	pimak-20105-01	/en/shop/davlumbaz/7885-20105-01	False	https://equsto.com/en/shop/davlumbaz/pimak-20105-01
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	9531-0pw-a-00		False	https://equsto.com/shop/set-ustu-mutfak/9531-0pw-a-00
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-34310b		False	https://equsto.com/shop/hazirlik/rc-34310b
+RECOVER_308	high	login_next_to_product	en	pisirme	npicco72-1	/en/shop/pisirme/npicco72-1	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/npicco72-1
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq9	/en/shop/market-reyonlari/eq-falcon-eq9	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq9
+DROP_NO_VALUE	high	no_product_match	en	icecek	urban-bar__uba7922		False	https://equsto.com/en/shop/icecek/urban-bar__uba7922
+DROP_NO_VALUE	high	no_product_match	tr	icecek	uba7922		False	https://equsto.com/shop/icecek/uba7922
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	pimak-19060-52	/shop/tezgah/7911-19060-52	False	https://equsto.com/shop/tezgah/pimak-19060-52
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-04929-7y2	/en/shop/yikama/7961-04929-7y2	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-04929-7y2
+DROP_NO_VALUE	high	no_product_match	tr	set-ustu-mutfak	0143-01808-21		False	https://equsto.com/shop/set-ustu-mutfak/0143-01808-21
+DROP_NO_VALUE	high	no_product_match	tr	pisirme	oztiryakiler-endustriyel-mutfak-sicak-servis-unitesi-ve-ayakli-sicak-tututcu-lamba-seti-2-1		False	https://equsto.com/shop/pisirme/oztiryakiler-endustriyel-mutfak-sicak-servis-unitesi-ve-ayakli-sicak-tututcu-lamba-seti-2-1
+RECOVER_308	high	login_next_to_product	en	tezgah	7911-12060-31p	/en/shop/tezgah/7911-12060-31p	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7911-12060-31p
+RECOVER_308	med	remap:wrong_brand_unique	tr	tezgah	equsto-12070-08	/shop/tezgah/7911-12070-08	False	https://equsto.com/shop/tezgah/equsto-12070-08
+RECOVER_308	high	login_next_to_product	en	tezgah	ino-krn240c	/en/shop/tezgah/ino-krn240c	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/ino-krn240c
+NEEDS_HUMAN	low	ambiguous_sku_match	tr	tezgah	equsto-19070-04		False	https://equsto.com/shop/tezgah/equsto-19070-04
+DROP_NO_VALUE	high	no_product_match	tr	sogutma	oztiryakiler-tek-i-noks-kapi-dik-tip-derin-dondurucu-k-tip		False	https://equsto.com/shop/sogutma/oztiryakiler-tek-i-noks-kapi-dik-tip-derin-dondurucu-k-tip
+DROP_NO_VALUE	high	no_product_match	tr	tezgah	equsto-2814070		False	https://equsto.com/shop/tezgah/equsto-2814070
+RECOVER_308	med	remap:wrong_brand_unique	en	davlumbaz	equsto-35255-10	/en/shop/davlumbaz/7885-35255-10	False	https://equsto.com/en/shop/davlumbaz/equsto-35255-10
+RECOVER_308	high	login_next_to_product	en	sogutma	asbhk-2n70	/en/shop/sogutma/asbhk-2n70	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/asbhk-2n70
+DROP_NO_VALUE	high	no_product_match	tr	market-reyonlari	davlumbaz.html		False	https://equsto.com/shop/market-reyonlari/davlumbaz.html
+RECOVER_308	high	login_next_to_product	en	sogutma	118-wn385	/en/shop/sogutma/118-wn385	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/118-wn385
+DROP_NO_VALUE	high	not_sellable	en	set-ustu-mutfak	8893-up101-l0		True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/8893-up101-l0
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	oztiryakiler-robot-coupe-rende-5-mm		False	https://equsto.com/shop/hazirlik/oztiryakiler-robot-coupe-rende-5-mm
+RECOVER_308	high	login_next_to_product	en	sogutma	9805-ofb10-0a	/en/shop/sogutma/9805-ofb10-0a	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/9805-ofb10-0a
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-zmd-9fe10s-s	/en/shop/pisirme/ino-zmd-9fe10s-s	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-zmd-9fe10s-s
+RECOVER_308	high	login_next_to_product	en	set-ustu-mutfak	vwg-6t	/en/shop/set-ustu-mutfak/vwg-6t	True	https://equsto.com/en/login.html?next=/en/shop/set-ustu-mutfak/vwg-6t
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-27447		False	https://equsto.com/shop/hazirlik/rc-27447
+RECOVER_308	high	login_next_to_product	en	sogutma	9805-im240x-nhc	/en/shop/sogutma/9805-im240x-nhc	True	https://equsto.com/en/login.html?next=/en/shop/sogutma/9805-im240x-nhc
+RECOVER_308	high	login_next_to_product	en	pisirme	7961-07429-5y4	/en/shop/yikama/7961-07429-5y4	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/7961-07429-5y4
+RECOVER_308	high	login_next_to_product	en	market-reyonlari	eq-falcon-eq14	/en/shop/market-reyonlari/eq-falcon-eq14	True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-falcon-eq14
+DROP_NO_VALUE	high	not_sellable	en	istif	derin-sepet		True	https://equsto.com/en/login.html?next=/en/shop/istif/derin-sepet
+DROP_NO_VALUE	high	login_next_no_product	en	market-reyonlari	eq-nergis-lb-fg-eq7		True	https://equsto.com/en/login.html?next=/en/shop/market-reyonlari/eq-nergis-lb-fg-eq7
+DROP_NO_VALUE	high	non_product_url	en		/en/restaurant-kitchen-checklist-2026		False	https://equsto.com/en/restaurant-kitchen-checklist-2026
+DROP_NO_VALUE	high	no_product_match	tr	icecek	oztiryakiler-endustriyel-mutfak__0466-00809-01		False	https://equsto.com/shop/icecek/oztiryakiler-endustriyel-mutfak__0466-00809-01
+RECOVER_308	high	login_next_to_product	en	pisirme	ino-7tn20	/en/shop/pisirme/ino-7tn20	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/ino-7tn20
+RECOVER_308	high	login_next_to_product	en	pisirme	8890-md800-02	/en/shop/pisirme/8890-md800-02	True	https://equsto.com/en/login.html?next=/en/shop/pisirme/8890-md800-02
+RECOVER_308	med	remap:wrong_brand_unique	tr	davlumbaz	pimak-10105-01	/shop/davlumbaz/7885-10105-01	False	https://equsto.com/shop/davlumbaz/pimak-10105-01
+DROP_NO_VALUE	high	no_product_match	tr	hazirlik	rc-1946		False	https://equsto.com/shop/hazirlik/rc-1946
+RECOVER_308	high	login_next_to_product	en	tezgah	7754-196e5-35	/en/shop/tezgah/7754-196e5-35	True	https://equsto.com/en/login.html?next=/en/shop/tezgah/7754-196e5-35
+DROP_NO_VALUE	high	no_product_match	en	icecek	robot-coupe__j100-ultra-otomatik-kati-meyve-sikacagi		False	https://equsto.com/en/shop/icecek/robot-coupe__j100-ultra-otomatik-kati-meyve-sikacagi

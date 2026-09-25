@@ -1,0 +1,27 @@
+{
+  "sample_size": 1000,
+  "gsc_total_404_approx": 8110,
+  "by_decision": {
+    "DROP_NO_VALUE": 498,
+    "RECOVER_308": 468,
+    "NEEDS_HUMAN": 31,
+    "KEEP_HUB": 3
+  },
+  "by_reason": {
+    "no_product_match": 396,
+    "login_next_to_product": 307,
+    "remap:wrong_brand_unique": 161,
+    "login_next_no_product": 56,
+    "non_product_url": 35,
+    "ambiguous_sku_match": 31,
+    "not_sellable": 11,
+    "hub": 3
+  },
+  "pct_recover": 46.8,
+  "pct_drop": 49.8,
+  "login_wrapped": 380,
+  "extrapolate_8110": {
+    "recover": 3795,
+    "drop": 4038
+  }
+}
