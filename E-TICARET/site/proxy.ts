@@ -2,8 +2,10 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { PUBLIC_BLOCKED_DATA_PATHS } from "@/lib/catalog-paths";
 import {
+  resolveGscGonePath,
   resolveLegacyPdpRedirect,
   resolveLegacySiteRedirect,
+  resolveLoginNextShopRedirect,
 } from "@/lib/shop/legacy-pdp-redirect";
 import { resolveBrandRedirectPath } from "./lib/brand-shop-redirect";
 
@@ -143,6 +145,23 @@ function wwwToApexRedirect(request: NextRequest): NextResponse | null {
   return NextResponse.redirect(url, 308);
 }
 
+/**
+ * GSC login sızıntısı — yalnızca next=/shop| /en/shop …
+ * /login?next=/sepet ve düz /login akışına dokunulmaz.
+ */
+function loginNextShopRedirect(request: NextRequest): NextResponse | null {
+  const destPath = resolveLoginNextShopRedirect(
+    request.nextUrl.pathname,
+    request.nextUrl.searchParams.get("next"),
+  );
+  if (!destPath) return null;
+  const dest = request.nextUrl.clone();
+  const parsed = new URL(destPath, request.url);
+  dest.pathname = parsed.pathname;
+  dest.search = parsed.search;
+  return NextResponse.redirect(dest, 308);
+}
+
 /** Tam katalog JSON — yalnızca sunucu (var/catalog); /data/ekipmanlar*.json engelli */
 function blockPublicEkipmanlarJson(request: NextRequest): NextResponse | null {
   const path = request.nextUrl.pathname;
@@ -161,6 +180,14 @@ export function proxy(request: NextRequest) {
 
   const wwwRedir = wwwToApexRedirect(request);
   if (wwwRedir) return wwwRedir;
+
+  const loginShopRedir = loginNextShopRedirect(request);
+  if (loginShopRedir) return loginShopRedir;
+
+  // Doğrulanmış ölü PDP listesi (boş olabilir) — çalışan sayfalara uygulanmaz
+  if (resolveGscGonePath(request.nextUrl.pathname)) {
+    return new NextResponse(null, { status: 410 });
+  }
 
   const siteRedir = legacySiteRedirect(request);
   if (siteRedir) return siteRedir;
