@@ -69,12 +69,16 @@ Bunlar gelince planın “indeks kazanımı” kısmı tamamlanır; şimdiki pla
 
 ### A — Login kapısı → ürün (en hızlı kazanım)
 
+**Durum (2026-09-25):** Kod landed — `resolveLoginNextShopRedirect` + `proxy.ts`.  
+Kapsam: yalnızca `next` = `/shop` | `/en/shop`…; `/login?next=/sepet` ve düz `/login` **değişmedi**.  
+Deploy sonrası GSC robots/login satırında doğrulama.
+
 **Kanıt:** Robots drilldown’un 963/963’ü login wrap. noindex örnekleminde de yüzlerce `login?next=/shop/...`.
 
 **İş:**
-1. `proxy.ts`: `/login`, `/en/login`, `login.html` + `next=` (ve `mode=register`) → **308** `next` path (yalnızca aynı-origin `/shop/...`).
-2. İç link / e-posta / eski sitemap’te login URL üretmeyi kes.
-3. Smoke: 50 rastgele GSC login URL → tek hop → **200** PDP.
+1. ~~`proxy.ts`: `/login`, `/en/login`, `login.html` + `next=` → **308** shop~~ ✓
+2. İç link / e-posta / eski sitemap’te login URL üretmeyi kes (ayrı tur).
+3. Smoke (deploy sonrası): 50 rastgele GSC login URL → tek hop → **200** PDP.
 
 **Başarı:** Robots + noindex login satırlarında GSC doğrulama; ürün kanonikleri taranır.
 

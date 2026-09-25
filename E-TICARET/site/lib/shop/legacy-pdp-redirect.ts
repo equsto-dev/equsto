@@ -63,3 +63,38 @@ export function resolveLegacySiteRedirect(pathname: string): string | null {
 
   return null;
 }
+
+/**
+ * GSC: /login?next=/shop/... ve /en/login.html?next=... — ürün sayfaları giriş gerektirmez.
+ * Yalnızca aynı-origin public shop path; /sepet, hesap, yonetim vb. next değerlerine dokunulmaz.
+ */
+export function resolveLoginNextShopRedirect(
+  pathname: string,
+  nextParam: string | null | undefined,
+): string | null {
+  const path = pathname.replace(/\/$/, "") || "/";
+  if (!/^(\/en)?\/login(\.html)?$/i.test(path)) return null;
+
+  let next = String(nextParam || "").trim();
+  if (!next) return null;
+  try {
+    next = decodeURIComponent(next);
+  } catch {
+    /* ham değer */
+  }
+  next = next.trim();
+  if (!next.startsWith("/") || next.startsWith("//") || next.includes("://")) return null;
+
+  const hashIdx = next.indexOf("#");
+  if (hashIdx >= 0) next = next.slice(0, hashIdx);
+  const qIdx = next.indexOf("?");
+  const pathPart = qIdx >= 0 ? next.slice(0, qIdx) : next;
+  const queryPart = qIdx >= 0 ? next.slice(qIdx) : "";
+
+  const shopPath = pathPart.replace(/\/$/, "") || "/";
+  // Public vitrin: /shop, /shop/{dept}, /shop/{dept}/{slug} (+ /en)
+  if (!/^(\/en)?\/shop(\/|$)/i.test(shopPath + "/")) return null;
+  if (!/^(\/en)?\/shop(\/[^/]+){0,2}$/i.test(shopPath)) return null;
+
+  return shopPath + queryPart;
+}
