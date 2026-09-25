@@ -59,3 +59,8 @@ Teknik GEO SSR + discovery FAQ canlı (`e7081eb`, `cf85f44`). AI testlerinde hen
 5. **1–2 hafta sonra** aynı 5 AI sorgusunu tekrar test (Perplexity web açık)
 
 **GSC eşik:** indekslenen sayfa ~50+ olunca anlamlı GEO sinyali beklenir.
+
+## GSC dizine ekleme temizliği (2026-09)
+
+Kontrollü plan (404 / redirect hatası / 4xx–5xx; noindex·robots·canonical hariç):  
+→ [`GSC-INDEX-TEMIZLIK-PLANI.md`](./GSC-INDEX-TEMIZLIK-PLANI.md)
