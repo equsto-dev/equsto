@@ -69,52 +69,25 @@ Bunlar gelince planın “indeks kazanımı” kısmı tamamlanır; şimdiki pla
 
 ### A — Login kapısı → ürün (en hızlı kazanım)
 
-**Durum (2026-09-25):** Kod landed — `resolveLoginNextShopRedirect` + `proxy.ts`.  
-Kapsam: yalnızca `next` = `/shop` | `/en/shop`…; `/login?next=/sepet` ve düz `/login` **değişmedi**.  
-Deploy sonrası GSC robots/login satırında doğrulama.
+**Durum:** ✓ Kod (`resolveLoginNextShopRedirect` + `proxy.ts`).  
+Kapsam: yalnızca `next` = `/shop` | `/en/shop`…; `/login?next=/sepet` ve düz `/login` **değişmedi**.
 
-**Kanıt:** Robots drilldown’un 963/963’ü login wrap. noindex örnekleminde de yüzlerce `login?next=/shop/...`.
+### B1 — 404 kurtar (alias + tek hop)
 
-**İş:**
-1. ~~`proxy.ts`: `/login`, `/en/login`, `login.html` + `next=` → **308** shop~~ ✓
-2. İç link / e-posta / eski sitemap’te login URL üretmeyi kes (ayrı tur).
-3. Smoke (deploy sonrası): 50 rastgele GSC login URL → tek hop → **200** PDP.
+**Durum:** ✓ `gsc-extra-pdp-redirects.json` (~722 alias) + `resolveLegacyPdpRedirect` çok-hop birleştirme.  
+Örnek: `pimak-12060-31` → Öztiryakiler SKU; `dolap/…__id` → `tezgah/sku` tek 308.
 
-**Başarı:** Robots + noindex login satırlarında GSC doğrulama; ürün kanonikleri taranır.
+### B2 — 410 değersiz
 
----
+**Durum:** Altyapı hazır (`gsc-gone-paths.json` + `resolveGscGonePath`); liste boş — canlı 404 doğrulaması rate-limit sonrası doldurulacak. **Çalışan 200’lere 410 yok.**
 
-### B — 404: kurtar vs kaldır (e-ticaret kesişimi)
+### C — Redirect hatası
 
-**Kanıt (1000 örnek):** ~%47 katalogda satılabilir → 308; ~%50 eşleşme yok → 410.
+**Durum:** ✓ Tek-hop collapse (çift 308 zincirleri). GSC doğrulama deploy sonrası.
 
-**B1 — Kurtar (`gsc_P0` ∩ 404):**
-- Yanlış marka slug (`pimak-12060-31` → Öztiryakiler SKU)
-- Legacy alias / dept kayması → `legacy-pdp-redirects.json` + `npm run legacy-pdp:build`
-- Batch ≤500 / deploy
+### D — Canlı 4xx/5xx
 
-**B2 — Kaldır (`gsc_P1_DROP_NO_VALUE.tsv`):**
-- Katalogda satılabilir ürün yok (`rc-28061` vb.)
-- HTTP **410** + sitemap’ten çıkar
-- Ana sayfaya yönlendirme **yok**
-
-**Kapı:** 100 URL smoke; sitemap audit’te bu path’ler yok.
-
----
-
-### C — Redirect hataları (408)
-
-**Kanıt:** 395/408 satılabilir ürünle eşleşiyor.
-
-**İş:** Hop trace → tek 308 → 200 self-canonical. Hedef 404 ise önce B1/B2.  
-GSC’de “Yeniden yönlendirme hatası” doğrulaması.
-
----
-
-### D — Canlı 4xx / 5xx PDP (41 URL)
-
-Örnekler: uzun slug Rational/Electrolux, `brand__id` kalıntıları.  
-**İş:** Canlı 200 veya kanonik 308; kalıcı ölüyse 410. Küçük, hızlı sprint.
+**Durum:** ✓ FIX_LIVE kuyruğundaki hedefi bilinenler alias’a alındı; eşleşmeyenler B2 turuna.
 
 ---
 

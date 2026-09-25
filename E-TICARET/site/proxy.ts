@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { PUBLIC_BLOCKED_DATA_PATHS } from "@/lib/catalog-paths";
 import {
+  resolveGscGonePath,
   resolveLegacyPdpRedirect,
   resolveLegacySiteRedirect,
   resolveLoginNextShopRedirect,
@@ -182,6 +183,11 @@ export function proxy(request: NextRequest) {
 
   const loginShopRedir = loginNextShopRedirect(request);
   if (loginShopRedir) return loginShopRedir;
+
+  // Doğrulanmış ölü PDP listesi (boş olabilir) — çalışan sayfalara uygulanmaz
+  if (resolveGscGonePath(request.nextUrl.pathname)) {
+    return new NextResponse(null, { status: 410 });
+  }
 
   const siteRedir = legacySiteRedirect(request);
   if (siteRedir) return siteRedir;
