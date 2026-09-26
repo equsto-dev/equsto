@@ -63,6 +63,11 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   // Salad bar (önceki doğrulama; 2026-2-1’de aynı blok)
   ["SLD03", 1800],
   ["SLD04", 2000],
+  // s.15 — Slush (page-order / blok sızıntısı: 2000↔2500↔3300 karışmıştı)
+  // SLS-02 desc’te “2500 EUR” başlık altında; 3300 SLS-03’ten sızmış
+  ["SLS01", 2000],
+  ["SLS02", 2500],
+  ["SLS03", 3300],
   // s.10 — SDS 1510 DC 3 YF
   ["SDS1510", 3300],
   ["SDS1510DC3YF", 3300],

@@ -830,8 +830,8 @@
         "yukseklik_mm": 820,
         "voltaj": "220V~50Hz",
         "agirlik_kg": "31",
-        "fiyat_eur": "2500",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "2000",
+        "fiyat_eur_source": "override-sls-ladder"
       },
       "image": "/data/senox/images/senox-sls-01_1.jpg",
       "imageMethod": "bbox-render-v4"
@@ -847,9 +847,10 @@
         "genislik_mm": 400,
         "derinlik_mm": 480,
         "yukseklik_mm": 820,
-        "fiyat_eur": "3300",
+        "fiyat_eur": "2500",
         "voltaj": "220V~50Hz",
-        "agirlik_kg": "46"
+        "agirlik_kg": "46",
+        "fiyat_eur_source": "override-sls-ladder"
       },
       "image": "/data/senox/images/senox-sls-02_1.jpg",
       "imageMethod": "bbox-render-v4"
@@ -867,8 +868,8 @@
         "yukseklik_mm": 820,
         "voltaj": "220V~50Hz",
         "agirlik_kg": "65",
-        "fiyat_eur": "2000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3300",
+        "fiyat_eur_source": "override-sls-ladder"
       },
       "image": "/data/senox/images/senox-sls-03_1.jpg",
       "imageMethod": "bbox-render-v4"

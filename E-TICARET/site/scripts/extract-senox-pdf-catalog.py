@@ -276,9 +276,11 @@ def parse_specs(text: str, rows: list[dict] | None = None, row_idx: int | None =
             if len(eur_hits) == 1:
                 price_val = eur_hits[0]
             else:
-                # Komşu ürün fiyatı karışmasın: en küçük makul aday (18.000 + 1800 → 1800)
+                # Komşu ürün fiyatı karışmasın:
+                # - 18.000 + 1800 → en küçük (OCR binlik)
+                # - SLS-02: "2500 EUR … 3300 EUR" → başlığa en yakın (= ilk) fiyat
                 lo, hi = min(eur_hits), max(eur_hits)
-                price_val = lo if hi >= lo * 5 else sorted(eur_hits)[len(eur_hits) // 2]
+                price_val = lo if hi >= lo * 5 else eur_hits[0]
     if price_val > 0:
         specs["fiyat_eur"] = str(int(price_val) if price_val == int(price_val) else price_val)
     gz = GAZ_RE.search(t)
