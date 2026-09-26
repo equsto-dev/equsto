@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * SENOX 2026-1 PDF × %50 iskonto — tam katalog denetimi ve düzeltme raporu.
+ * SENOX 2026-2-1 — tam katalog denetimi ve düzeltme raporu.
+ *
+ * Formül: alış = liste × %45; satış = alış × 1.20 (= liste × %54).
  *
  *   node scripts/fix-senox-catalog-prices.mjs              # denetle + uygula + rapor
  *   node scripts/fix-senox-catalog-prices.mjs --dry-run    # sadece rapor
@@ -26,7 +28,12 @@ import {
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT = path.join(ROOT, "public/data/dept");
 const OUT_DIR = path.join(ROOT, "scripts/data/senox");
-const SATIS_ORAN = 0.5;
+const ALIS_ORAN = Number(process.env.EQUSTO_SENOX_ALIS_ORAN || "0.45");
+const KAR_ORAN = Number(process.env.EQUSTO_SENOX_KAR_ORAN || "0.20");
+const SATIS_ORAN = Number(
+  process.env.EQUSTO_SENOX_SATIS_ORAN || String(Math.round(ALIS_ORAN * (1 + KAR_ORAN) * 1e6) / 1e6),
+);
+const ISKONTO_ORAN = Math.round((1 - SATIS_ORAN) * 10000) / 100;
 const KDV = 20;
 const dryRun = process.argv.includes("--dry-run");
 const reextract = process.argv.includes("--reextract");
@@ -118,8 +125,8 @@ function writeReports(report) {
     "# Şenox Katalog Fiyat Düzeltme Raporu",
     "",
     `**Tarih:** ${report.generatedAt}`,
-    `**Kaynak:** SENOX 2026-1 PDF (${report.pdfProducts} ürün, ${report.pdfIndexKeys} fiyat kodu)`,
-    `**Formül:** Equsto = PDF liste EUR × 50% × kur × 1.20 (KDV dahil)`,
+    `**Kaynak:** SENOX 2026-2-1 PDF (${report.pdfProducts} ürün, ${report.pdfIndexKeys} fiyat kodu)`,
+    `**Formül:** alış = liste × %45; satış = alış × 1.20 (= liste × %${Math.round(SATIS_ORAN * 100)}) × kur × 1.20 KDV`,
     `**Kur:** 1 EUR = ${report.kur_eur_try} TRY`,
     dryRun ? "\n> **DRY-RUN** — dosyalara yazılmadı\n" : "",
     "## Özet",
@@ -170,9 +177,9 @@ function writeReports(report) {
 
   if (report.mutbex_only.length) {
     lines.push(
-      "## PDF'de yok — Mutbex liste × %50",
+      "## PDF'de yok — Mutbex liste × satış oranı",
       "",
-      `_${report.mutbex_only.length} ürün; SENOX PDF'de kod yok, Mutbex satış × 2 = liste._`,
+      `_${report.mutbex_only.length} ürün; SENOX PDF'de kod yok, Mutbex satış × 2 = liste, satış = liste × %${Math.round(SATIS_ORAN * 100)}._`,
       "",
       "| Model | SKU | Liste € | TL KDV dahil |",
       "| --- | --- | --- | --- |",
@@ -306,13 +313,16 @@ async function main() {
 
   const report = {
     generatedAt: new Date().toISOString(),
-    pdfPath: "SENOX 2026-1 4 (1).pdf",
+    pdfPath: "SENOX 2026-2-1.pdf",
     pdfProducts: pdfCatalog.products.length,
     pdfIndexKeys: pdfCatalog.index.size,
     kur_eur_try: kur,
+    alis_oran: ALIS_ORAN,
+    kar_oran: KAR_ORAN,
     satis_oran: SATIS_ORAN,
+    iskonto_oran: ISKONTO_ORAN,
     kdv: KDV,
-    formula: "Equsto = PDF liste EUR × 50% × kur × 1.20 (KDV dahil)",
+    formula: `alış = liste × ${ALIS_ORAN}; satış = alış × ${1 + KAR_ORAN} (= liste × ${SATIS_ORAN}) × kur × 1.20 KDV`,
     dryRun,
     summary,
     fixed: fixed.sort((a, b) => Math.abs(b.after_tl - b.before_tl) - Math.abs(a.after_tl - a.before_tl)),
