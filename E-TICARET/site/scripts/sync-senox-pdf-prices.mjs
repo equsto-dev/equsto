@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 /**
- * Mevcut Şenox (mutbex) satırlarına SENOX PDF liste fiyatı × %50 satış uygular.
- * Görseller ve slug'lar korunur.
+ * Mevcut Şenox satırlarına SENOX 2026-2-1 liste fiyatından satış uygular.
+ *
+ * Formül (varsayılan):
+ *   alış  = liste × %45  (katalogdan %55 iskonto)
+ *   satış = alış × 1.20  (= liste × %54)
+ *
+ *   EQUSTO_SENOX_SATIS_ORAN=0.54  (satış / liste)
+ *   EQUSTO_SENOX_ALIS_ORAN=0.45
+ *   EQUSTO_SENOX_KAR_ORAN=0.20
  *
  *   node scripts/sync-senox-pdf-prices.mjs
  *   node scripts/sync-senox-pdf-prices.mjs --dry-run
@@ -27,9 +34,15 @@ import { MASTER_JSON_PATH } from "./catalog-master-paths.mjs";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const KAYNAK = "senox-mutbex";
-const SATIS_ORAN = Number(process.env.EQUSTO_SENOX_SATIS_ORAN || "0.5");
+const ALIS_ORAN = Number(process.env.EQUSTO_SENOX_ALIS_ORAN || "0.45");
+const KAR_ORAN = Number(process.env.EQUSTO_SENOX_KAR_ORAN || "0.20");
+const SATIS_ORAN = Number(
+  process.env.EQUSTO_SENOX_SATIS_ORAN || String(Math.round(ALIS_ORAN * (1 + KAR_ORAN) * 1e6) / 1e6),
+);
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
+/** Liste üzerinden indirim % — fallback hesap: liste × (1 − iskonto/100) = satış */
+const ISKONTO_ORAN = Math.round((1 - SATIS_ORAN) * 10000) / 100;
 
 function isSenoxRow(r) {
   const k = String(r?.kaynak_fiyat_listesi || r?.kaynak || "").toLowerCase();
@@ -47,13 +60,16 @@ function patchSpecsPriceBlock(specs, px, match, priceSource) {
       : priceSource === "senox-mutbex-liste"
       ? "Liste fiyatı (EUR, Mutbex liste)"
       : "Liste fiyatı (EUR, SENOX PDF)";
+  const satisPct = Math.round(SATIS_ORAN * 10000) / 100;
+  const alisPct = Math.round(ALIS_ORAN * 10000) / 100;
+  const karPct = Math.round(KAR_ORAN * 10000) / 100;
   const block = [
     priceSource === "senox-manual-tl"
       ? `Equsto satış (TL, KDV dahil): ₺${px.fiyat_tl.toLocaleString("tr-TR")}`
       : `${listeLabel}: ${px.liste_fiyati_eur}`,
     priceSource === "senox-manual-tl"
-      ? `Gösterim eşdeğeri: liste × ${Math.round(SATIS_ORAN * 100)}% ≈ ${px.satis_fiyati_eur} EUR`
-      : `Equsto satış: liste × ${Math.round(SATIS_ORAN * 100)}% = ${px.satis_fiyati_eur} EUR`,
+      ? `Gösterim eşdeğeri: liste × %${satisPct} (alış %${alisPct} + kâr %${karPct}) ≈ ${px.satis_fiyati_eur} EUR`
+      : `Equsto satış: liste × %${satisPct} (alış %${alisPct} + kâr %${karPct}) = ${px.satis_fiyati_eur} EUR`,
     `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
     match?.source === "mutbex" && match?.mutbexCode
       ? `Mutbex kod: ${match.mutbexCode} (satis ${match.satisEur} EUR × 2)`
@@ -90,13 +106,15 @@ function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
     const next = {
       ...row,
       ...px,
-      iskonto_oran: Math.round(SATIS_ORAN * 100),
+      iskonto_oran: ISKONTO_ORAN,
+      satis_oran: SATIS_ORAN,
+      alis_oran: ALIS_ORAN,
       kaynak_fiyat_listesi: kaynakListe,
       senox_pdf_match: manualMatch.matchKey,
       senox_pdf_fuzzy: false,
       senox_mutbex_match: "",
       equsto_site_markup: 0,
-      equsto_kar_oran: 0,
+      equsto_kar_oran: KAR_ORAN,
       specs: patchSpecsPriceBlock(row.specs, px, priceMatch, kaynakListe),
     };
     const teknik = [...(row.teknik_ozellikler || [])].filter(
@@ -124,13 +142,15 @@ function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
   const next = {
     ...row,
     ...px,
-    iskonto_oran: Math.round(SATIS_ORAN * 100),
+    iskonto_oran: ISKONTO_ORAN,
+    satis_oran: SATIS_ORAN,
+    alis_oran: ALIS_ORAN,
     kaynak_fiyat_listesi: kaynakListe,
     senox_pdf_match: pdfMatch?.matchKey || "",
     senox_pdf_fuzzy: pdfMatch?.fuzzy || false,
     senox_mutbex_match: mutbexMatch?.mutbexCode || "",
     equsto_site_markup: 0,
-    equsto_kar_oran: 0,
+    equsto_kar_oran: KAR_ORAN,
     specs: patchSpecsPriceBlock(row.specs, px, priceMatch, kaynakListe),
   };
   const teknik = [...(row.teknik_ozellikler || [])].filter(

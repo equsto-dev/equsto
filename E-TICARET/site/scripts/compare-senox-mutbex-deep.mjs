@@ -18,7 +18,7 @@ import {
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT = path.join(ROOT, "public/data/dept");
 const OUT = path.join(ROOT, "scripts/data/senox/mutbex-karsilastirma-deep.json");
-const SATIS_ORAN = 0.5;
+const SATIS_ORAN = Number(process.env.EQUSTO_SENOX_SATIS_ORAN || "0.54");
 
 function pctDiff(a, b) {
   if (!(a > 0) || !(b > 0)) return null;
