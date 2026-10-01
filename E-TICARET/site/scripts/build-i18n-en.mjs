@@ -700,6 +700,69 @@ const EN = {
     cta_brands: "Brands",
   },
 
+  kariyer: {
+    title: "Careers",
+    meta_description:
+      "Careers at Equsto: sales engineering, project consultancy, catalogue, software and operations. Send your CV to info@equsto.com.",
+    lead:
+      "Equsto is an industrial kitchen platform delivering equipment and technology to restaurant, hotel, café and catering projects. We are looking for talent in sales engineering, projects, catalogue, software and operations.",
+    depts_h2: "Where we hire",
+    dept_sales: "Sales engineering — quotes, MEP and brand alternatives",
+    dept_project: "Project consultancy — concept, capacity and floor-area planning (PFOS)",
+    dept_catalog: "Catalogue and data — product cards, dimensions, pricing",
+    dept_software: "Software and digital — storefront, Project Factory, automation",
+    dept_ops: "Logistics and operations — shipping, installation coordination",
+    apply_h2: "Apply",
+    apply_p:
+      "Send your CV and a short cover note to info@equsto.com; your application is reviewed by the relevant team.",
+    cta_mail: "Send your CV — info@equsto.com",
+    cta_contact: "Contact",
+  },
+
+  export: {
+    title: "Export",
+    meta_description:
+      "Equsto export: industrial kitchen equipment from Turkey to AE, QA, SA, AZ, KZ, UZ, AL, RO and BG markets, with USD payments and international shipping.",
+    lead:
+      "From our production and supply network in Turkey we export industrial kitchen equipment to Gulf, Central Asia and Balkan markets. One team owns the process from quote to shipment.",
+    markets_h2: "Our markets",
+    market_ae: "AE — United Arab Emirates",
+    market_qa: "QA — Qatar",
+    market_sa: "SA — Saudi Arabia",
+    market_az: "AZ — Azerbaijan",
+    market_kz: "KZ — Kazakhstan",
+    market_uz: "UZ — Uzbekistan",
+    market_al: "AL — Albania",
+    market_ro: "RO — Romania",
+    market_bg: "BG — Bulgaria",
+    process_h2: "How it works",
+    step_1: "Quote — share your equipment list and delivery terms; our sales engineer prepares a priced quote.",
+    step_2: "Order — production and quality control start after quote approval and payment.",
+    step_3: "Shipping — sea, road or air delivery to your address or port.",
+    step_4: "Documents — invoice, certificate of origin and export papers accompany the order.",
+    pay_h2: "International payment",
+    pay_p: "Export payments are made to our USD account:",
+    pay_bank_l: "Bank",
+    pay_iban_l: "IBAN (USD)",
+    pay_swift_l: "SWIFT",
+    cta_contact: "Quote and export request",
+  },
+
+  banka: {
+    title: "Our Bank Details",
+    meta_description:
+      "Equsto payment account details: QNB Finans Bank TL and USD IBANs and SWIFT code. Add your order number to your transfer description.",
+    lead: "Account details for order and invoice payments:",
+    bank_l: "Bank",
+    holder_l: "Account holder",
+    tr_iban_l: "IBAN (TL)",
+    usd_iban_l: "IBAN (USD)",
+    swift_l: "SWIFT",
+    note_html:
+      "<strong>Note:</strong> Add your order or quote number to the transfer description. After payment, send your receipt via our <a href=\"/iletisim\">contact</a> channels.",
+    cta_contact: "Contact",
+  },
+
   contact: {
     title: "Contact & quote",
     meta_description:
