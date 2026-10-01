@@ -346,6 +346,17 @@ ABS_CROPS: dict[str, tuple[float, float, float, float]] = {
 }
 
 
+
+def load_abs_crops() -> dict[str, tuple[float, float, float, float]]:
+    crops_path = ROOT / "scripts/data/protek/photo-crops.json"
+    out = dict(ABS_CROPS)
+    if crops_path.is_file():
+        raw = json.loads(crops_path.read_text(encoding="utf-8"))
+        for k, v in raw.items():
+            if isinstance(v, (list, tuple)) and len(v) == 4:
+                out[str(k).upper()] = (float(v[0]), float(v[1]), float(v[2]), float(v[3]))
+    return out
+
 def render_pages(doc: fitz.Document) -> None:
     PAGE_CACHE.mkdir(parents=True, exist_ok=True)
     for i in range(doc.page_count):
@@ -411,7 +422,7 @@ def main() -> None:
         img_abs = ROOT / "public" / img_rel
         if page_path.exists():
             page_img = Image.open(page_path).convert("RGB")
-            crop = crop_slot(page_img, p.get("slot"), ABS_CROPS.get(code))
+            crop = crop_slot(page_img, p.get("slot"), load_abs_crops().get(code))
             # min size pad
             if crop.size[0] < 80 or crop.size[1] < 80:
                 crop = page_img
