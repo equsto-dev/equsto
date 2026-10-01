@@ -1,5 +1,6 @@
 import BesosCatalog from "@/components/besos/BesosCatalog";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import BesosImt300Hero from "@/components/besos/BesosImt300Hero";
 import BesosMethod from "@/components/besos/BesosMethod";
 import BesosModular from "@/components/besos/BesosModular";
@@ -53,6 +54,12 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
         <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} locale={locale} />
         <BesosSignatureBars items={landing.signatureTrio} products={products} locale={locale} />
       </main>
+      <ProductDwellTracker
+        slug="besos"
+        dept="besos"
+        title={locale === "en" ? "Besos · Bar Design Studio" : "Besos · Bar Design Studio"}
+        brand="Besos"
+      />
       <ShopFooterHost />
     </>
   );
@@ -71,6 +78,12 @@ export async function BesosBarIstasyonlariContent({ locale = "tr" }: Props) {
         <BesosCatalog products={products} locale={locale} />
         <BesosProjects projectsData={projects} products={products} locale={locale} />
       </main>
+      <ProductDwellTracker
+        slug="bar-istasyonlari"
+        dept="besos"
+        title={locale === "en" ? "Bar Stations" : "Bar İstasyonları"}
+        brand="Besos"
+      />
       <ShopFooterHost />
     </>
   );

@@ -1993,6 +1993,7 @@ export type KullaniciRaporUrun = {
   title: string;
   brand: string;
   dept: string;
+  path?: string;
   views: number;
   uniqueSessions: number;
   totalMs: number;

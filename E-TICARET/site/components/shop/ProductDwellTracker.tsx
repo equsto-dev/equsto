@@ -2,9 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import {
+  localeFromPath,
+  parseTrackablePath,
+} from "@/lib/analytics/dwell-paths";
 
 const SESSION_KEY = "eq_dwell_sid";
 const ENDPOINT = "/api/analytics/product-dwell";
+const MIN_MS = 2_000;
 
 type ProductMeta = {
   slug: string;
@@ -27,16 +32,6 @@ function getOrCreateSessionId(): string {
   } catch {
     return `s_${Date.now().toString(36)}`;
   }
-}
-
-function parseShopPath(pathname: string): { locale: string; dept: string; slug: string } | null {
-  const m = pathname.match(/^\/(en\/)?shop\/([^/]+)\/([^/?#]+)/i);
-  if (!m) return null;
-  return {
-    locale: m[1] ? "en" : "tr",
-    dept: decodeURIComponent(m[2]),
-    slug: decodeURIComponent(m[3]),
-  };
 }
 
 function sendDwell(payload: Record<string, unknown>) {
@@ -66,8 +61,9 @@ type Props = {
 };
 
 /**
- * Ürün PDP süre takibi — görünür süre (sekme gizliyken durur).
- * Minimum 2 sn; sayfa terk / sekme kapanışında gönderilir.
+ * Sayfa süre takibi — shop PDP, Besos ve PFOS.
+ * Görünür süre (sekme gizliyken durur). Minimum 2 sn; terk / kapanışta gönderilir.
+ * Mobil: kısa süreli visibilitychange biriken süreyi silmez.
  */
 export default function ProductDwellTracker({
   slug,
@@ -87,12 +83,18 @@ export default function ProductDwellTracker({
   }, [slug, dept, productId, title, brand]);
 
   useEffect(() => {
-    const pathInfo = parseShopPath(pathname || "");
-    if (!pathInfo) return;
+    const path = pathname || "";
+    const pathInfo = parseTrackablePath(path);
+    const metaSlug = String(slug || "").trim();
+    const metaDept = String(dept || "").trim();
+    if (!metaSlug || !metaDept) {
+      if (!pathInfo) return;
+    }
 
     sent.current = false;
     accumulated.current = 0;
-    visibleStarted.current = document.visibilityState === "visible" ? Date.now() : null;
+    visibleStarted.current =
+      document.visibilityState === "visible" ? Date.now() : null;
 
     function pause() {
       if (visibleStarted.current != null) {
@@ -107,12 +109,16 @@ export default function ProductDwellTracker({
       }
     }
 
-    function flush() {
+    /** finalLeave=false: kısa süreyi koru (mobil app switch). finalLeave=true: sayfa terk. */
+    function flush(finalLeave: boolean) {
       if (sent.current) return;
       pause();
       const durationMs = accumulated.current;
+      if (durationMs < MIN_MS) {
+        if (finalLeave) accumulated.current = 0;
+        return;
+      }
       accumulated.current = 0;
-      if (durationMs < 2000) return;
       sent.current = true;
 
       const meta = metaRef.current;
@@ -128,14 +134,14 @@ export default function ProductDwellTracker({
 
       sendDwell({
         sessionId: getOrCreateSessionId(),
-        path: pathname || "",
-        slug: meta.slug || pathInfo!.slug,
-        dept: meta.dept || pathInfo!.dept,
+        path,
+        slug: meta.slug || pathInfo?.slug || metaSlug,
+        dept: meta.dept || pathInfo?.dept || metaDept,
         productId: meta.productId || null,
         title: meta.title || "",
         brand: meta.brand || "",
         durationMs,
-        locale: pathInfo!.locale,
+        locale: pathInfo?.locale || localeFromPath(path),
         memberId: memberId || null,
         referrer: typeof document !== "undefined" ? document.referrer || "" : "",
       });
@@ -143,22 +149,26 @@ export default function ProductDwellTracker({
 
     function onVisibility() {
       if (document.visibilityState === "hidden") {
-        flush();
+        flush(false);
       } else {
         sent.current = false;
         resume();
       }
     }
 
+    function onPageHide() {
+      flush(true);
+    }
+
     document.addEventListener("visibilitychange", onVisibility);
-    window.addEventListener("pagehide", flush);
+    window.addEventListener("pagehide", onPageHide);
 
     return () => {
-      flush();
+      flush(true);
       document.removeEventListener("visibilitychange", onVisibility);
-      window.removeEventListener("pagehide", flush);
+      window.removeEventListener("pagehide", onPageHide);
     };
-  }, [pathname, slug]);
+  }, [pathname, slug, dept]);
 
   return null;
 }

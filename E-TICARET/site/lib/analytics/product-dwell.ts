@@ -64,6 +64,8 @@ export type KullaniciRaporUrun = {
   title: string;
   brand: string;
   dept: string;
+  /** Örnek path — shop dışı (besos/pfos) linkleri için */
+  path: string;
   views: number;
   uniqueSessions: number;
   totalMs: number;
@@ -135,6 +137,7 @@ export async function computeKullaniciRaporu(
       title: string;
       brand: string;
       dept: string;
+      path: string;
       views: number;
       sessions: Set<string>;
       totalMs: number;
@@ -155,6 +158,7 @@ export async function computeKullaniciRaporu(
       if (!prev.title && r.title) prev.title = r.title;
       if (!prev.brand && r.brand) prev.brand = r.brand;
       if (!prev.productId && r.productId) prev.productId = r.productId;
+      if (!prev.path && r.path) prev.path = r.path;
     } else {
       bySlug.set(r.slug, {
         slug: r.slug,
@@ -162,6 +166,7 @@ export async function computeKullaniciRaporu(
         title: r.title || r.slug,
         brand: r.brand || "",
         dept: r.dept || "",
+        path: r.path || "",
         views: 1,
         sessions: new Set([r.sessionId]),
         totalMs: r.durationMs,
@@ -177,6 +182,7 @@ export async function computeKullaniciRaporu(
       title: p.title,
       brand: p.brand,
       dept: p.dept,
+      path: p.path,
       views: p.views,
       uniqueSessions: p.sessions.size,
       totalMs: p.totalMs,

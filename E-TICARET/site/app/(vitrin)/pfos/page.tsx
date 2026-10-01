@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import PfosPublicPage from "@/components/pfos/public/PfosPublicPage";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 export const metadata: Metadata = {
@@ -42,6 +43,12 @@ export default function PfosPage() {
       <Suspense fallback={null}>
         <PfosPublicPage />
       </Suspense>
+      <ProductDwellTracker
+        slug="pfos"
+        dept="pfos"
+        title="Proje Fabrikası"
+        brand="Equsto"
+      />
     </>
   );
 }

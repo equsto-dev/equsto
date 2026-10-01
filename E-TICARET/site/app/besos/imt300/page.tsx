@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import Imt300BodyClass from "@/components/besos/Imt300BodyClass";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
+import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import { Imt300BodyHtml } from "@/lib/vitrin/bodies/imt300";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
@@ -56,6 +57,13 @@ export default function Imt300Page() {
       <link rel="stylesheet" href={`/eq-youtube-embed.css?v=${v}`} />
       <Imt300BodyClass />
       <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: Imt300BodyHtml }} />
+      <ProductDwellTracker
+        slug="imt300"
+        dept="besos"
+        productId="imt300"
+        title="IMT300 Berrak Buz Makinesi"
+        brand="Besos"
+      />
       <ShopFooterHost />
       <Script src={`/eq-youtube-embed.js?v=${v}`} strategy="afterInteractive" />
       <Script id="imt300-interactions" strategy="afterInteractive">

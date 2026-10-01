@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import BesosUrbanBarPdp, { buildUrbanBarPdpView } from "@/components/besos/urbanbar/BesosUrbanBarPdp";
 import JsonLdScript from "@/components/seo/JsonLdScript";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import type { BesosLocale } from "@/lib/besos/locale";
 import {
@@ -50,11 +51,20 @@ export async function renderBesosUrbanBarPdpPage(
   );
   const ssr = urbanBarToPdpSsr(bundle.product, sectionKey, canonicalSlug, locale);
   const jsonLd = buildBesosUrbanBarJsonLd(ssr);
+  const dept =
+    sectionKey === "bardaklar" ? "besos-bardaklar" : "besos-bar-ekipman";
 
   return (
     <>
       <JsonLdScript data={jsonLd} />
       <BesosUrbanBarPdp view={view} />
+      <ProductDwellTracker
+        slug={canonicalSlug}
+        dept={dept}
+        productId={String(bundle.product.equstoId || bundle.product.id || canonicalSlug)}
+        title={ssr.name}
+        brand={ssr.brand || "Urban Bar"}
+      />
       <ShopFooterHost />
     </>
   );
