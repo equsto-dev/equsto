@@ -298,24 +298,39 @@ def capture_loop(
 
 
 # ------------------------------------------------------- STT + çeviri
-def stt_translate_loop(model_size: str, want_tts: bool) -> None:
+def stt_translate_loop(model_size: str, want_tts: bool, force_device: str = "cpu") -> None:
     from faster_whisper import WhisperModel as WM
     import argostranslate.translate as atr
 
+    # Varsayılan CPU: Windows'ta CUDA DLL eksikse (cublas64_12.dll) GPU çöküyor.
+    device = (force_device or "cpu").lower()
+    if device == "auto":
+        try:
+            import ctranslate2
+
+            device = "cuda" if ctranslate2.get_cuda_device_count() > 0 else "cpu"
+        except Exception:
+            device = "cpu"
+
+    def load(dev: str):
+        return WM(
+            model_size,
+            device=dev,
+            compute_type="float16" if dev == "cuda" else "int8",
+        )
+
     try:
-        import ctranslate2
+        model = load(device)
+    except Exception as e:
+        if device != "cpu":
+            print(f"GPU açılamadı ({e}); CPU'ya geçiliyor…")
+            device = "cpu"
+            model = load("cpu")
+        else:
+            raise
 
-        gpu = ctranslate2.get_cuda_device_count() > 0
-    except Exception:
-        gpu = False
-
-    model = WM(
-        model_size,
-        device="cuda" if gpu else "cpu",
-        compute_type="float16" if gpu else "int8",
-    )
-    print(f"Whisper hazır ({'GPU' if gpu else 'CPU'} / {model_size}). Dinleniyor…")
-    ui_put(status=f"Hazır · {model_size} · {'GPU' if gpu else 'CPU'}")
+    print(f"Whisper hazır ({device.upper()} / {model_size}). Dinleniyor…")
+    ui_put(status=f"Hazır · {model_size} · {device.upper()}")
 
     while True:
         audio, t0 = seg_q.get()
@@ -324,16 +339,27 @@ def stt_translate_loop(model_size: str, want_tts: bool) -> None:
         if time.time() - t0 > 8.0:
             continue
         t1 = time.time()
-        segs, _ = model.transcribe(
-            audio,
-            language="en",
-            beam_size=1,
-            best_of=1,
-            temperature=0.0,
-            without_timestamps=True,
-            condition_on_previous_text=False,
-            vad_filter=False,
-        )
+        try:
+            segs, _ = model.transcribe(
+                audio,
+                language="en",
+                beam_size=1,
+                best_of=1,
+                temperature=0.0,
+                without_timestamps=True,
+                condition_on_previous_text=False,
+                vad_filter=False,
+            )
+        except Exception as e:
+            # Ortada CUDA DLL hatası gelirse modeli CPU ile yeniden yükle
+            if "cublas" in str(e).lower() or "cuda" in str(e).lower():
+                print(f"CUDA hatası, CPU'ya düşülüyor: {e}")
+                device = "cpu"
+                model = load("cpu")
+                ui_put(status=f"Hazır · {model_size} · CPU")
+                continue
+            print("STT hatası:", e)
+            continue
         parts = [
             s.text.strip()
             for s in segs
@@ -480,6 +506,12 @@ def main() -> None:
         default=0.9,
         help="Türkçe ses seviyesi 0–1 (yayın motor sesinin üstüne)",
     )
+    ap.add_argument(
+        "--device",
+        default="cpu",
+        choices=["cpu", "cuda", "auto"],
+        help="Whisper cihazı (varsayılan cpu — Windows'ta CUDA DLL sorunu olmasın)",
+    )
     ap.add_argument("--voice", default="tr-TR-AhmetNeural")
     a = ap.parse_args()
 
@@ -494,7 +526,9 @@ def main() -> None:
     out_dev = find_out_device(out_name) if want_tts else None
 
     threading.Thread(
-        target=stt_translate_loop, args=(a.model, want_tts), daemon=True
+        target=stt_translate_loop,
+        args=(a.model, want_tts, a.device),
+        daemon=True,
     ).start()
     if want_tts:
         vol = max(0.05, min(1.0, a.volume))
