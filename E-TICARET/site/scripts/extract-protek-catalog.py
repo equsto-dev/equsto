@@ -20,7 +20,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 PDF = ROOT / "scripts/data/protek/PROTEK-KATALOG.pdf"
 OUT_JSON = ROOT / "scripts/data/protek/protek-catalog.json"
-OUT_IMG = ROOT / "public/images/catalog/protek"
+OUT_IMG = ROOT / "public/data/protek/images"
 PAGE_CACHE = Path("/tmp/protek-pages-hires")
 
 BRAND = "PRO-TEK Hijyen"
@@ -407,7 +407,7 @@ def main() -> None:
             # fallback /tmp cache from earlier OCR run
             alt = Path(f"/tmp/protek-pages/page-{p['page']:02d}.png")
             page_path = alt if alt.exists() else page_path
-        img_rel = f"images/catalog/protek/{slug_code(code)}.jpg"
+        img_rel = f"data/protek/images/{slug_code(code)}.jpg"
         img_abs = ROOT / "public" / img_rel
         if page_path.exists():
             page_img = Image.open(page_path).convert("RGB")
