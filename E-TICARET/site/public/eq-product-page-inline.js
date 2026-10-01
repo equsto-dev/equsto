@@ -397,12 +397,50 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     /**
-     * Eski GMC köprüsü: aynı fotonun detail/upper/closeup zoom’ları.
-     * PDP’de kapalı (kandırmaca). Feed `/api/gmc/img` ayrı kalır.
-     * Gerçek ek foto: CafeMarkt / üretici enrich.
+     * GMC mağaza kalitesi — tek foto ürünlerde detail/upper/closeup zoom.
+     * Merchant için şimdilik açık. Gerçek 2./3. foto varsa enrich ile gelir;
+     * photos.length ≥4 olunca sentetik eklenmez.
      */
-    function appendGmcSyntheticGallery(_out) {
-      /* no-op on PDP */
+    function appendGmcSyntheticGallery(out) {
+      if (!out || !out.length) return;
+      var photos = out.filter(function (item) {
+        return item && item.src && !item.lineart;
+      });
+      if (photos.length >= 4) return;
+      var hero = photos[0] || out[0];
+      if (!hero || !hero.rel) return;
+      var rel = String(hero.rel || "")
+        .replace(/\\/g, "/")
+        .replace(/^\.\//, "")
+        .replace(/^\/+/, "");
+      if (!rel || /^https?:\/\//i.test(rel)) {
+        // CDN absolute → images/… göreli yol çıkar
+        var m = String(hero.rel || hero.src || "").match(
+          /\/((?:images|data)\/[^?#]+)/i,
+        );
+        if (!m) return;
+        rel = m[1].replace(/^\/+/, "");
+      }
+      if (!/^(images|data)\//i.test(rel)) {
+        if (/^catalog\//i.test(rel)) rel = "images/" + rel;
+        else return;
+      }
+      if (!/\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(rel)) return;
+      var variants = ["detail", "upper", "closeup"];
+      var i;
+      for (i = 0; i < variants.length && out.length < 4; i++) {
+        var apiSrc =
+          "/api/gmc/img/" +
+          variants[i] +
+          "?src=" +
+          encodeURIComponent(rel);
+        out.push({
+          src: apiSrc,
+          rel: rel,
+          lineart: false,
+          synthetic: true,
+        });
+      }
     }
 
     function pdpImgFailAttr() {
