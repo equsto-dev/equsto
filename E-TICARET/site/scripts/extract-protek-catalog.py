@@ -59,17 +59,41 @@ PRODUCTS: list[dict] = [
     P("PH5101", "Duvara Monte Çift Çanak Hazneli Turnikeli El Dezenfeksiyon Sistemi",
       "Wall Mount Two Hand Disinfection System with Turnstile", 4,
       "turnikeli-el-dezenfeksiyon", "850x500x740",
-      ["Fotocell algılamalı çift çanak", "Dezenfeksiyon sonrası turnike açılır", "Yalnızca sıvı alkol bazlı dezenfektan", "CE"],
+      [
+        "Üretim alanına girişte zorunlu el dezenfeksiyonu",
+        "Fotosel algılamalı çift çanak — dezenfektan püskürtme",
+        "Dezenfeksiyon tamamlanmadan turnike açılmaz",
+        "Kolların dönüş yönü ayarlanabilir",
+        "Yalnızca sıvı alkol bazlı dezenfektan (jel değil)",
+        "Duvara monte gövde",
+        "CE",
+      ],
       (0, 0, 3, 1)),
     P("PH5102", "Ayaklı Hijyenik Paspaslı Tutunma Barlı Turnikeli El Dezenfeksiyon Sistemi",
       "Two Hand Disinfection System with Turnstile (Handrail and Hygienic Mat)", 4,
       "turnikeli-el-dezenfeksiyon", "1100x700x1500",
-      ["Ayaklı kombine set", "Hijyenik paspas", "Tutunma barı", "CE"],
+      [
+        "Üretim alanına girişte zorunlu el dezenfeksiyonu",
+        "Fotosel algılamalı çift çanak — dezenfektan püskürtme",
+        "Dezenfeksiyon tamamlanmadan turnike açılmaz",
+        "Kolların dönüş yönü ayarlanabilir",
+        "Ayaklı kombine set + hijyenik paspas + tutunma barı",
+        "Yalnızca sıvı alkol bazlı dezenfektan (jel değil)",
+        "CE",
+      ],
       (1, 0, 3, 1)),
     P("PH5103", "Ayaklı Hijyenik Paspaslı Turnikeli El Dezenfeksiyon Sistemi",
       "Two Hand Disinfection System with Turnstile and Hygienic Mat", 4,
       "turnikeli-el-dezenfeksiyon", "900x420x1400",
-      ["Kompakt ayaklı gövde", "Hijyenik paspas", "CE"],
+      [
+        "Üretim alanına girişte zorunlu el dezenfeksiyonu",
+        "Fotosel algılamalı çift çanak — dezenfektan püskürtme",
+        "Dezenfeksiyon tamamlanmadan turnike açılmaz",
+        "Kolların dönüş yönü ayarlanabilir",
+        "Kompakt ayaklı gövde + hijyenik paspas",
+        "Yalnızca sıvı alkol bazlı dezenfektan (jel değil)",
+        "CE",
+      ],
       (2, 0, 3, 1)),
     # --- s.5 Turnikeler ---
     P("PH5151", "Yarım Boy 4 Kollu Tekli Turnike",
@@ -317,10 +341,10 @@ CATEGORY_LABELS = {
 
 # Sayfa başına mutlak kırpım (x0,y0,x1,y1) — 0..1 normalize, asimetrik layoutlar için
 ABS_CROPS: dict[str, tuple[float, float, float, float]] = {
-    # s.4 — solda metin / sağda büyük foto (PH5101), altta PH5102/5103
-    "PH5101": (0.42, 0.06, 0.97, 0.42),
-    "PH5102": (0.04, 0.48, 0.48, 0.78),
-    "PH5103": (0.52, 0.48, 0.96, 0.78),
+    # s.4 — foto-only (katalog metni / başlık şeridi hariç)
+    "PH5101": (0.60, 0.125, 0.90, 0.40),
+    "PH5102": (0.03, 0.50, 0.30, 0.79),
+    "PH5103": (0.76, 0.55, 0.99, 0.755),
     # s.16 — 2 sütun × 3 satır
     "PH5317": (0.04, 0.08, 0.49, 0.34),
     "PH5315": (0.51, 0.08, 0.96, 0.34),
@@ -345,6 +369,17 @@ ABS_CROPS: dict[str, tuple[float, float, float, float]] = {
     "PH5418": (0.35, 0.48, 0.96, 0.82),
 }
 
+
+
+def load_abs_crops() -> dict[str, tuple[float, float, float, float]]:
+    crops_path = ROOT / "scripts/data/protek/photo-crops.json"
+    out = dict(ABS_CROPS)
+    if crops_path.is_file():
+        raw = json.loads(crops_path.read_text(encoding="utf-8"))
+        for k, v in raw.items():
+            if isinstance(v, (list, tuple)) and len(v) == 4:
+                out[str(k).upper()] = (float(v[0]), float(v[1]), float(v[2]), float(v[3]))
+    return out
 
 def render_pages(doc: fitz.Document) -> None:
     PAGE_CACHE.mkdir(parents=True, exist_ok=True)
@@ -382,6 +417,63 @@ def crop_slot(page_img: Image.Image, slot: list[int] | None, abs_crop: tuple[flo
     return band.crop((x0, y0, x1, y1))
 
 
+def _is_textish_strip(gray_strip) -> bool:
+    """Near-white strip with sparse dark ink — catalog text bleed, not product metal."""
+    import numpy as np
+
+    g = np.asarray(gray_strip, dtype=np.float32)
+    if g.size < 20:
+        return False
+    dark = float((g < 90).mean())
+    mid = float(((g >= 90) & (g < 230)).mean())
+    white = float((g >= 230).mean())
+    return white > 0.72 and 0.004 < dark < 0.18 and mid < 0.22
+
+
+def trim_product_photo(im: Image.Image, pad: int = 4) -> Image.Image:
+    """Trim near-white margins and leftover catalog text strips on edges."""
+    import numpy as np
+
+    arr = np.asarray(im.convert("RGB"))
+    gray = arr.mean(axis=2)
+    h, w = gray.shape
+    content = gray < 248
+    rows = np.where(content.any(axis=1))[0]
+    cols = np.where(content.any(axis=0))[0]
+    if len(rows) == 0 or len(cols) == 0:
+        return im
+    y0, y1 = int(max(0, rows[0] - pad)), int(min(h, rows[-1] + 1 + pad))
+    x0, x1 = int(max(0, cols[0] - pad)), int(min(w, cols[-1] + 1 + pad))
+
+    strip_w = max(10, (x1 - x0) // 9)
+    strip_h = max(8, (y1 - y0) // 14)
+    # shrink left/right/top text chrome
+    for _ in range(24):
+        if x1 - x0 <= 90:
+            break
+        if _is_textish_strip(gray[y0:y1, x0 : x0 + strip_w]):
+            x0 += max(2, strip_w // 2)
+            continue
+        if _is_textish_strip(gray[y0:y1, x1 - strip_w : x1]):
+            x1 -= max(2, strip_w // 2)
+            continue
+        if _is_textish_strip(gray[y0 : y0 + strip_h, x0:x1]):
+            y0 += max(2, strip_h // 2)
+            continue
+        break
+
+    out_w, out_h = x1 - x0, y1 - y0
+    # Güvenlik: aşırı kırpımı reddet (ince şerit / neredeyse boş)
+    if out_w < 120 or out_h < 120:
+        return im
+    if out_w * out_h < (w * h) * 0.35:
+        return im
+    if out_w < w * 0.35 and out_h > h * 0.7:
+        # dikey ince şerit — genelde trim hatası
+        return im
+    return im.crop((x0, y0, x1, y1))
+
+
 def slug_code(code: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", code.lower()).strip("-")
 
@@ -411,11 +503,19 @@ def main() -> None:
         img_abs = ROOT / "public" / img_rel
         if page_path.exists():
             page_img = Image.open(page_path).convert("RGB")
-            crop = crop_slot(page_img, p.get("slot"), ABS_CROPS.get(code))
+            crop = crop_slot(page_img, p.get("slot"), load_abs_crops().get(code))
+            crop = trim_product_photo(crop)
             # min size pad
             if crop.size[0] < 80 or crop.size[1] < 80:
                 crop = page_img
             crop.save(img_abs, "JPEG", quality=88, optimize=True)
+            # mirror legacy catalog path (bazı CDN/eski linkler)
+            legacy = ROOT / "public/images/catalog/protek" / f"{slug_code(code)}.jpg"
+            try:
+                legacy.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(img_abs, legacy)
+            except OSError:
+                pass
         else:
             img_rel = ""
 
