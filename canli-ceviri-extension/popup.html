@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a222d;
+      --fg: #eef2f6;
+      --muted: #8b9aab;
+      --ok: #3ddc97;
+      --warn: #f0b429;
+      --bad: #ff6b6b;
+      --line: #2a3544;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 340px;
+      color: var(--fg);
+      background: radial-gradient(120% 80% at 0% 0%, #1b2a22 0%, var(--bg) 55%);
+      font: 13px/1.45 "Segoe UI", system-ui, sans-serif;
+    }
+    header { padding: 14px 16px 10px; }
+    h1 { margin: 0; font-size: 17px; letter-spacing: -0.02em; }
+    .sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+    main { padding: 0 16px 16px; display: grid; gap: 10px; }
+    label { display: grid; gap: 5px; color: var(--muted); font-size: 11px; }
+    input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--fg);
+      border-radius: 9px;
+      padding: 9px 10px;
+      font: inherit;
+    }
+    .row { display: flex; gap: 8px; }
+    button {
+      flex: 1;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: 650 13px/1 "Segoe UI", system-ui, sans-serif;
+      cursor: pointer;
+    }
+    #start { background: var(--ok); color: #052816; }
+    #stop { background: #2a3544; color: var(--fg); }
+    button:disabled { opacity: 0.4; cursor: default; }
+    .box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+      min-height: 78px;
+      color: var(--muted);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .box b { color: var(--fg); font-weight: 650; }
+    .hint { font-size: 11px; color: var(--muted); }
+    a { color: var(--ok); }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #243041;
+      color: var(--fg);
+      font-size: 11px;
+    }
+    .err { color: var(--bad); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Canlı Çeviri</h1>
+    <div class="sub">Yayın susmaz · Türkçe kadın ses · GB model yok</div>
+  </header>
+  <main>
+    <label>
+      Groq API anahtarı (ücretsiz, zorunlu)
+      <input id="apiKey" type="password" placeholder="gsk_..." autocomplete="off" />
+    </label>
+    <div class="hint">
+      <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer">console.groq.com/keys</a>
+      → Create API Key → yapıştır
+    </div>
+
+    <label>
+      Mod
+      <select id="mode">
+        <option value="auto" selected>Otomatik (önce altyazı, gerekirse ses)</option>
+        <option value="captions">Sadece altyazı (YouTube / altyazılı yayın)</option>
+        <option value="audio">Sadece sekme sesi (Groq Whisper)</option>
+      </select>
+    </label>
+
+    <label>
+      Ses
+      <select id="voiceHint">
+        <option value="female" selected>Kadın · doğal</option>
+        <option value="male">Erkek</option>
+      </select>
+    </label>
+
+    <div class="row">
+      <button id="start">Başlat</button>
+      <button id="stop" disabled>Durdur</button>
+    </div>
+
+    <div id="status" class="box">
+      1) API anahtarını kaydet
+      2) Yayının olduğu Chrome sekmesine geç
+      3) Başlat
+    </div>
+    <div class="hint">Python / 1 GB kurulum gerekmez. Eski <span class="pill">Desktop\canli-ceviri</span> klasörünü silebilirsin.</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
