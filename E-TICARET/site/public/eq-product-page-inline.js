@@ -117,7 +117,9 @@ window.searchFilter = window.searchFilter || function () {};
           if (m) s = m[1];
           else return;
         }
-        s = s.replace(/^\/+/, "").replace(/^data\//i, "");
+        s = s.replace(/^\/+/, "");
+        // data/images/… → images/… (CDN katalog). data/protek/… gibi kökleri KORU.
+        if (/^data\/images\//i.test(s)) s = s.replace(/^data\//i, "");
         if (!s) return;
         var key = s.toLowerCase().split("?")[0];
         if (seen[key]) return;
@@ -456,7 +458,9 @@ window.searchFilter = window.searchFilter || function () {};
         var rm = raw.match(/^https?:\/\/[^/]+\/(images\/catalog\/[^?#]+)/i);
         raw = rm ? rm[1] : "";
       }
-      raw = raw.replace(/^\/+/, "").replace(/^data\//i, "");
+      raw = raw.replace(/^\/+/, "");
+      // data/images → images; data/protek vb. kalsın (CDN’e düşmesin)
+      if (/^data\/images\//i.test(raw)) raw = raw.replace(/^data\//i, "");
       var sku = (x && (x.sku || x.urun_kodu || x.model)) || "";
       var s = raw ? ' data-eq-img-raw="' + esc(raw) + '"' : "";
       if (sku) s += ' data-eq-ozti-kod="' + esc(String(sku).trim()) + '"';

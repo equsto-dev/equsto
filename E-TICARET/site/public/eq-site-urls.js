@@ -1142,8 +1142,23 @@
       if (/^images\/catalog\/cafemarkt\//i.test(absPath)) {
         return catalogImageCandidates(absPath);
       }
+      // Yanlışlıkla CDN’e giden data/protek vb. → origin /data/
+      if (/^(?:images\/)?protek\//i.test(absPath) || /^data\/protek\//i.test(absPath)) {
+        var pr = absPath.replace(/^images\//i, "").replace(/^data\//i, "");
+        return ["/data/" + encodeDataRelPath(pr)];
+      }
       var abs = withCatalogImgV(raw);
       return abs ? [abs] : [];
+    }
+    raw = raw.replace(/^\/+/, "");
+    // public/data/protek|… — images/ öneki YOK; origin /data/…
+    if (
+      /^data\/protek\//i.test(raw) ||
+      /^protek\//i.test(raw) ||
+      (/^data\//i.test(raw) && !/^data\/images\//i.test(raw) && !/^data\/(?:caglayan-market|prosogutma-market|vitrum-drawings|electrolux-professional|advanced-cuisine-clear-ice)\//i.test(raw))
+    ) {
+      var dataFile = raw.replace(/^data\//i, "");
+      return ["/data/" + encodeDataRelPath(dataFile)];
     }
     if (!/^images\//i.test(raw)) raw = "images/" + raw.replace(/^\/+/, "");
     var rels = [];
@@ -1173,6 +1188,15 @@
         if (absFile && !seen[absFile]) {
           seen[absFile] = 1;
           list.push(absFile);
+        }
+        continue;
+      }
+      // protek vb. yanlışlıkla images/ altına düşmesin
+      if (/^protek\//i.test(file)) {
+        var pUrl = "/data/" + encodeDataRelPath(file);
+        if (!seen[pUrl]) {
+          seen[pUrl] = 1;
+          list.push(pUrl);
         }
         continue;
       }
@@ -1710,6 +1734,10 @@
     if (mapped) return mapped;
     if (isStaticPublicImage(s) && typeof window.eqAttrPath === "function") {
       return window.eqAttrPath(s);
+    }
+    // data/protek (ve data/ öneki soyulmuş protek/) → origin /data/… (CDN images/ YOK)
+    if (/^(?:data\/)?protek\//i.test(s)) {
+      return window.equstoDataAssetHref(/^data\//i.test(s) ? s : "data/" + s);
     }
     if (typeof window.equstoDataAssetHref === "function") {
       if (/^\/images\//i.test(s)) {
