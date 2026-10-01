@@ -1,61 +1,57 @@
-# Canlı Çeviri (EN → TR)
+# Canlı Çeviri (EN → TR seslendirme)
 
-Bilgisayarda canlı yayın izlerken anlık İngilizce→Türkçe çeviri.
+Bilgisayarda canlı yayın izlerken anlık İngilizce→Türkçe **sesli** çeviri.
 
-- **Yayın sesini kapatmaz** — F1 motor / ortam sesi olduğu gibi kalır
-- **Varsayılan: altyazı** — ekstra ses yok, gecikme düşük
-- **İsteğe bağlı TTS** — Türkçe sesi ayrı cihaza (kulaklık) verir
+- **Yayın susmaz** — F1 motor / ortam sesi hoparlörde kalır
+- **Türkçe ses de hoparlöre** gider (yayınla karışık)
+- TTS sırasında loopback geçici kilitlenir → kendi sesini tekrar çevirmez
+- İsteğe bağlı altyazı penceresi (`--no-ui` ile kapat)
 
 ## Kurulum
 
-```bash
-cd tools/canli-ceviri
+```powershell
+cd tools\canli-ceviri
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/macOS:
-source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-İlk çalıştırmada Argos EN→TR modeli bir kez indirilir.
-
 ## Kullanım
 
-```bash
-# Ses cihazlarını listele
+```powershell
 python canli_ceviri.py --list
 
-# F1 / canlı yayın (önerilen): sadece altyazı
+# Önerilen: yayın + Türkçe aynı hoparlörde
 python canli_ceviri.py --in "Hoparlör"
 
-# Altyazı + kulaklıktan Türkçe ses (yayın hoparlörü açık kalır)
-python canli_ceviri.py --in "Hoparlör" --out "Kulaklık" --tts
+# Çıkışı açıkça seç
+python canli_ceviri.py --in "Hoparlör" --out "Hoparlör"
+
+# Altyazı penceresi istemiyorsan
+python canli_ceviri.py --in "Hoparlör" --no-ui
 ```
 
-`--in` = yayının çıktığı hoparlör (loopback yakalama).  
-`--out` = TTS için **farklı** cihaz; aynı cihazı verirsen geri besleme olur.
+`--list` çıktısındaki hoparlör adını `--in` için kullan.  
+`--out` vermezsen Türkçe ses de aynı hoparlöre / sistem varsayılanına gider.
 
-## Gecikme / gürültü ayarları
+## Ayarlar
 
 | Bayrak | Varsayılan | Ne işe yarar |
 |--------|------------|--------------|
-| `--model` | `tiny.en` | Hız. Kalite için `base.en` / `small.en` |
-| `--chunk` | `1.8` | Max parça (sn). Düşük = daha az gecikme |
-| `--silence` | `0.22` | Cümle sonu sessizliği (sn) |
-| `--threshold` | `0.012` | Motor gürültüsünde yükselt: `0.02`–`0.04` |
-| `--no-ui` | — | Sadece konsol çıktısı |
+| `--volume` | `0.9` | Türkçe ses seviyesi (0–1) |
+| `--model` | `tiny.en` | Hız. Kalite: `base.en` |
+| `--threshold` | `0.012` | Motor gürültüsünde: `0.02`–`0.04` |
+| `--chunk` | `1.8` | Max parça (sn) |
+| `--max-lag` | `4.0` | Gerideyse TTS atlanır |
 
-Örnek (gürültülü F1, daha agresif eşik):
-
-```bash
-python canli_ceviri.py --in "Hoparlör" --threshold 0.025 --chunk 1.5
+```powershell
+python canli_ceviri.py --in "Hoparlör" --threshold 0.025 --volume 0.85
 ```
 
 ## Nasıl çalışır?
 
-1. Hoparlör loopback ile sistem sesini yakalar (yayını susturmaz).
-2. Konuşma bandı skoru (300–3400 Hz) motor gürültüsünü ayırır.
-3. Kısa parçalar → Whisper (`tiny.en`) → Argos EN→TR.
-4. Sonuç altyazı penceresinde gösterilir; `--tts` ile kulaklığa da gider.
-
-Eski TTS-odaklı sürüm: `canli_ceviri_eski.py`.
+1. Hoparlör loopback ile yayın sesini yakalar (susturmaz).
+2. Konuşma bandı skoru motor gürültüsünü ayırır.
+3. Whisper → Argos EN→TR → Edge TTS.
+4. Türkçe ses **hoparlöre** basılır; bu sırada yakalama durur (geri besleme yok).
+5. TTS bitince tekrar dinlemeye devam eder.
