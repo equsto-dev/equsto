@@ -130,3 +130,7 @@ next-env.d.ts
 
 # GSC raw exports (local)
 scripts/seo/input/**/*.csv
+
+# image enrich ephemeral
+/scripts/data/image-enrich/audit-gaps.csv
+/scripts/data/image-enrich/cafemarkt-gallery-20*.json

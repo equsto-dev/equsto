@@ -197,14 +197,33 @@ Zaten indirilmiş PDF sayfa görselleri varsa ürün koduyla yeniden eşleştir 
 
 ---
 
-## 8. Uygulama sırası (ilk sprint önerisi)
+## 8. Uygulama sırası (ilk sprint)
 
-1. **Audit script + rapor** (Faz A) — tek PR, risk yok  
-2. **CafeMarkt discover+apply** premium markalar (Faz B alt küme)  
-3. **Electrolux multi hero** tamamla (Faz C.1)  
-4. **Ozti / Atalay** mevcut script’leri `min-photos=3` hedefiyle yeniden koştur  
-5. Empero + diğer CM yoğun markalar  
-6. Haftalık audit cron / catalog-agent görevi (opsiyonel)
+### Komutlar (hazır)
+
+```bash
+# Audit
+npm run catalog:images:audit
+# → scripts/data/image-enrich/audit.json + audit-gaps.csv
+
+# CafeMarkt premium (dry-run)
+npm run catalog:images:enrich:cm -- --premium --dry-run --limit=30
+
+# CafeMarkt premium uygula + dept yaz + ekipmanlar rebuild
+npm run catalog:images:enrich:cm:premium
+
+# Görselleri CDN’e
+npm run assets:s3:sync
+```
+
+Script’ler: `audit-product-images.mjs`, `enrich-cafemarkt-galleries.mjs`, `lib/image-enrich/*`
+
+### Sonraki
+
+1. Electrolux multi hero tamamla (Faz C.1)  
+2. Ozti / Atalay mevcut script’leri `min-photos=3`  
+3. Empero + diğer CM yoğun markalar  
+4. Haftalık audit cron / catalog-agent (opsiyonel)
 
 ---
 
