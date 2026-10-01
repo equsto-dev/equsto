@@ -5,6 +5,12 @@ import {
   PUBLIC_PHONE_DISPLAY,
   PUBLIC_PHONE_TEL,
 } from "@/lib/site/public-phone";
+import { buildWebWhatsAppUrl } from "@/lib/whatsapp/link";
+
+const CONTACT_PHONE_WA_WEB = buildWebWhatsAppUrl(
+  PUBLIC_PHONE_TEL,
+  "Merhaba, equsto.com iletişim sayfasından yazıyorum.",
+);
 
 export default function IletisimPageContent() {
   return (
@@ -38,7 +44,15 @@ export default function IletisimPageContent() {
                       Telefon
                     </th>
                     <td>
-                      <a href={`tel:${PUBLIC_PHONE_TEL}`}>{PUBLIC_PHONE_DISPLAY}</a>
+                      <a
+                        href={CONTACT_PHONE_WA_WEB || `tel:${PUBLIC_PHONE_TEL}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-eq-wa-web="1"
+                        title="WhatsApp Web"
+                      >
+                        {PUBLIC_PHONE_DISPLAY}
+                      </a>
                     </td>
                   </tr>
                 ) : null}
