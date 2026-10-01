@@ -114,6 +114,7 @@
     "catalog:images:audit": "node scripts/audit-product-images.mjs",
     "catalog:images:enrich:cm": "node scripts/enrich-cafemarkt-galleries.mjs",
     "catalog:images:enrich:cm:premium": "node scripts/enrich-cafemarkt-galleries.mjs --premium --apply",
+    "catalog:images:enrich:cm:all": "node scripts/enrich-cafemarkt-galleries.mjs --all --apply --concurrency=5 --delay=80",
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
     "catalog:atalay:web-desc": "node scripts/fetch-atalay-web-descriptions.mjs",
     "catalog:atalay:web-desc:full": "node scripts/fetch-atalay-web-descriptions.mjs --refresh-index --force",

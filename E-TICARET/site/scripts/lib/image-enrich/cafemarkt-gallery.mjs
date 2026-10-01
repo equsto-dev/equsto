@@ -24,13 +24,46 @@ export function productSlugFromUrl(url) {
  * @returns {{ id: string, size: string, url: string, file: string }[]}
  * her image id için en iyi boyut (B>O>K)
  */
+function collectWitFilesFromHtml(html) {
+  const files = [
+    ...String(html || "").matchAll(/https?:\/\/witcdn\.cafemarkt\.com\/([^"'\\\s<>]+)/gi),
+  ].map((m) => m[1]);
+
+  // JSON-LD Product.image (kaçırılmış escaped URL’ler)
+  for (const m of String(html || "").matchAll(
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+  )) {
+    try {
+      const data = JSON.parse(m[1]);
+      const nodes = Array.isArray(data)
+        ? data
+        : Array.isArray(data?.["@graph"])
+          ? data["@graph"]
+          : [data];
+      for (const node of nodes) {
+        if (!node || node["@type"] !== "Product") continue;
+        const imgs = Array.isArray(node.image)
+          ? node.image
+          : node.image
+            ? [node.image]
+            : [];
+        for (const u of imgs) {
+          const fm = String(u || "").match(/witcdn\.cafemarkt\.com\/([^?#]+)/i);
+          if (fm) files.push(fm[1]);
+        }
+      }
+    } catch {
+      /* ignore bad json-ld */
+    }
+  }
+  return files;
+}
+
 export function extractCafemarktGallery(html, pageUrl) {
   const slug = productSlugFromUrl(pageUrl);
   if (!slug) return [];
 
-  const files = [
-    ...html.matchAll(/https?:\/\/witcdn\.cafemarkt\.com\/([^"'\\\s<>]+)/gi),
-  ].map((m) => m[1]);
+  const files = collectWitFilesFromHtml(html);
 
   /** @type {Map<string, { id: string, size: string, file: string, rank: number }>} */
   const best = new Map();
@@ -46,7 +79,8 @@ export function extractCafemarktGallery(html, pageUrl) {
     const rank = SIZE_RANK[size] || 0;
     const prev = best.get(id);
     if (!prev || rank > prev.rank) {
-      best.set(id, { id, size, file, rank });
+      // canonical file casing from first match
+      best.set(id, { id, size, file: decodeURIComponent(file), rank });
     }
   }
 

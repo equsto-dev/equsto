@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-10-01T10:37:22.813Z",
+  "generatedAt": "2026-10-01T12:24:19.408Z",
   "total": 15611,
   "buckets": {
     "none": 2,
-    "single": 15436,
-    "multi": 173
+    "single": 13543,
+    "multi": 2066
   },
   "withCafemarktUrl": {
     "none": 2,
-    "single": 7658,
-    "multi": 99
+    "single": 5765,
+    "multi": 1992
   },
-  "multiPhotoPct": 1.11,
+  "multiPhotoPct": 13.23,
   "brands": [
     {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "total": 3567,
       "none": 0,
-      "single": 3567,
-      "multi": 0,
+      "single": 3553,
+      "multi": 14,
       "cafemarkt_url": 238,
       "kaynak_url": 0
     },
@@ -26,8 +26,8 @@
       "brand": "İnoksan",
       "total": 962,
       "none": 0,
-      "single": 962,
-      "multi": 0,
+      "single": 959,
+      "multi": 3,
       "cafemarkt_url": 15,
       "kaynak_url": 0
     },
@@ -53,8 +53,8 @@
       "brand": "Electrolux Professional",
       "total": 732,
       "none": 0,
-      "single": 685,
-      "multi": 47,
+      "single": 673,
+      "multi": 59,
       "cafemarkt_url": 59,
       "kaynak_url": 673
     },
@@ -62,8 +62,8 @@
       "brand": "Empero",
       "total": 685,
       "none": 0,
-      "single": 685,
-      "multi": 0,
+      "single": 596,
+      "multi": 89,
       "cafemarkt_url": 685,
       "kaynak_url": 0
     },
@@ -71,26 +71,17 @@
       "brand": "GastroPlast",
       "total": 558,
       "none": 1,
-      "single": 557,
-      "multi": 0,
+      "single": 415,
+      "multi": 142,
       "cafemarkt_url": 558,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Remta",
-      "total": 436,
-      "none": 1,
-      "single": 435,
-      "multi": 0,
-      "cafemarkt_url": 436,
       "kaynak_url": 0
     },
     {
       "brand": "Pimak",
       "total": 393,
       "none": 0,
-      "single": 393,
-      "multi": 0,
+      "single": 384,
+      "multi": 9,
       "cafemarkt_url": 137,
       "kaynak_url": 256
     },
@@ -98,27 +89,9 @@
       "brand": "Karacasan",
       "total": 284,
       "none": 0,
-      "single": 284,
-      "multi": 0,
+      "single": 276,
+      "multi": 8,
       "cafemarkt_url": 284,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "SilverInox",
-      "total": 283,
-      "none": 0,
-      "single": 283,
-      "multi": 0,
-      "cafemarkt_url": 283,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "PORTABIANCO",
-      "total": 275,
-      "none": 0,
-      "single": 275,
-      "multi": 0,
-      "cafemarkt_url": 257,
       "kaynak_url": 0
     },
     {
@@ -131,21 +104,21 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Vosco",
-      "total": 248,
-      "none": 0,
-      "single": 248,
-      "multi": 0,
-      "cafemarkt_url": 84,
-      "kaynak_url": 164
+      "brand": "Remta",
+      "total": 436,
+      "none": 1,
+      "single": 249,
+      "multi": 186,
+      "cafemarkt_url": 436,
+      "kaynak_url": 0
     },
     {
-      "brand": "Iceinox",
-      "total": 245,
+      "brand": "SilverInox",
+      "total": 283,
       "none": 0,
-      "single": 245,
-      "multi": 0,
-      "cafemarkt_url": 245,
+      "single": 234,
+      "multi": 49,
+      "cafemarkt_url": 283,
       "kaynak_url": 0
     },
     {
@@ -158,30 +131,21 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Kapp",
-      "total": 204,
+      "brand": "Vosco",
+      "total": 248,
       "none": 0,
-      "single": 204,
-      "multi": 0,
-      "cafemarkt_url": 204,
-      "kaynak_url": 0
+      "single": 232,
+      "multi": 16,
+      "cafemarkt_url": 84,
+      "kaynak_url": 164
     },
     {
-      "brand": "By Kitchen",
-      "total": 180,
+      "brand": "Iceinox",
+      "total": 245,
       "none": 0,
-      "single": 180,
-      "multi": 0,
-      "cafemarkt_url": 180,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Omake",
-      "total": 169,
-      "none": 0,
-      "single": 169,
-      "multi": 0,
-      "cafemarkt_url": 169,
+      "single": 195,
+      "multi": 50,
+      "cafemarkt_url": 245,
       "kaynak_url": 0
     },
     {
@@ -194,21 +158,21 @@
       "kaynak_url": 168
     },
     {
-      "brand": "Kalitegaz",
-      "total": 155,
+      "brand": "PORTABIANCO",
+      "total": 275,
       "none": 0,
-      "single": 155,
-      "multi": 0,
-      "cafemarkt_url": 155,
+      "single": 159,
+      "multi": 116,
+      "cafemarkt_url": 257,
       "kaynak_url": 0
     },
     {
-      "brand": "Mateka",
-      "total": 143,
+      "brand": "Kalitegaz",
+      "total": 155,
       "none": 0,
-      "single": 143,
-      "multi": 0,
-      "cafemarkt_url": 143,
+      "single": 154,
+      "multi": 1,
+      "cafemarkt_url": 155,
       "kaynak_url": 0
     },
     {
@@ -221,12 +185,12 @@
       "kaynak_url": 112
     },
     {
-      "brand": "Ateşe",
-      "total": 136,
+      "brand": "Mateka",
+      "total": 143,
       "none": 0,
-      "single": 136,
-      "multi": 0,
-      "cafemarkt_url": 136,
+      "single": 140,
+      "multi": 3,
+      "cafemarkt_url": 143,
       "kaynak_url": 0
     },
     {
@@ -239,12 +203,12 @@
       "kaynak_url": 141
     },
     {
-      "brand": "Bilge Inox",
-      "total": 131,
+      "brand": "By Kitchen",
+      "total": 180,
       "none": 0,
       "single": 131,
-      "multi": 0,
-      "cafemarkt_url": 131,
+      "multi": 49,
+      "cafemarkt_url": 180,
       "kaynak_url": 0
     },
     {
@@ -257,66 +221,66 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Yüksel Endüstriyel",
-      "total": 122,
+      "brand": "Omake",
+      "total": 169,
       "none": 0,
-      "single": 122,
-      "multi": 0,
-      "cafemarkt_url": 40,
+      "single": 120,
+      "multi": 49,
+      "cafemarkt_url": 169,
       "kaynak_url": 0
     },
     {
-      "brand": "Cambro",
-      "total": 114,
+      "brand": "Kapp",
+      "total": 204,
       "none": 0,
-      "single": 114,
-      "multi": 0,
-      "cafemarkt_url": 114,
+      "single": 118,
+      "multi": 86,
+      "cafemarkt_url": 204,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Ateşe",
+      "total": 136,
+      "none": 0,
+      "single": 116,
+      "multi": 20,
+      "cafemarkt_url": 136,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Bilge Inox",
+      "total": 131,
+      "none": 0,
+      "single": 108,
+      "multi": 23,
+      "cafemarkt_url": 131,
       "kaynak_url": 0
     },
     {
       "brand": "Bosfor",
       "total": 113,
       "none": 0,
-      "single": 113,
-      "multi": 0,
+      "single": 102,
+      "multi": 11,
       "cafemarkt_url": 113,
       "kaynak_url": 0
     },
     {
-      "brand": "KitchenAid",
-      "total": 110,
+      "brand": "Cambro",
+      "total": 114,
       "none": 0,
-      "single": 110,
-      "multi": 0,
-      "cafemarkt_url": 85,
+      "single": 100,
+      "multi": 14,
+      "cafemarkt_url": 114,
       "kaynak_url": 0
     },
     {
       "brand": "Mazzer",
       "total": 108,
       "none": 0,
-      "single": 108,
-      "multi": 0,
+      "single": 95,
+      "multi": 13,
       "cafemarkt_url": 108,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Venarro",
-      "total": 105,
-      "none": 0,
-      "single": 105,
-      "multi": 0,
-      "cafemarkt_url": 105,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Dirmak",
-      "total": 99,
-      "none": 0,
-      "single": 99,
-      "multi": 0,
-      "cafemarkt_url": 99,
       "kaynak_url": 0
     },
     {
@@ -329,29 +293,20 @@
       "kaynak_url": 95
     },
     {
-      "brand": "Gtech",
-      "total": 94,
+      "brand": "Yüksel Endüstriyel",
+      "total": 122,
       "none": 0,
-      "single": 94,
-      "multi": 0,
-      "cafemarkt_url": 94,
+      "single": 90,
+      "multi": 32,
+      "cafemarkt_url": 40,
       "kaynak_url": 0
-    },
-    {
-      "brand": "Samixir",
-      "total": 92,
-      "none": 0,
-      "single": 92,
-      "multi": 0,
-      "cafemarkt_url": 67,
-      "kaynak_url": 25
     },
     {
       "brand": "Boğaziçi",
       "total": 89,
       "none": 0,
-      "single": 89,
-      "multi": 0,
+      "single": 87,
+      "multi": 2,
       "cafemarkt_url": 89,
       "kaynak_url": 0
     },
@@ -365,6 +320,15 @@
       "kaynak_url": 108
     },
     {
+      "brand": "Dirmak",
+      "total": 99,
+      "none": 0,
+      "single": 79,
+      "multi": 20,
+      "cafemarkt_url": 99,
+      "kaynak_url": 0
+    },
+    {
       "brand": "Portashelf",
       "total": 78,
       "none": 0,
@@ -374,21 +338,21 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Unox",
-      "total": 73,
+      "brand": "Venarro",
+      "total": 105,
       "none": 0,
-      "single": 73,
-      "multi": 0,
-      "cafemarkt_url": 73,
+      "single": 71,
+      "multi": 34,
+      "cafemarkt_url": 105,
       "kaynak_url": 0
     },
     {
-      "brand": "Macap",
-      "total": 67,
+      "brand": "Gtech",
+      "total": 94,
       "none": 0,
-      "single": 67,
-      "multi": 0,
-      "cafemarkt_url": 67,
+      "single": 70,
+      "multi": 24,
+      "cafemarkt_url": 94,
       "kaynak_url": 0
     },
     {
@@ -401,57 +365,39 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Brema",
-      "total": 66,
+      "brand": "Macap",
+      "total": 67,
       "none": 0,
-      "single": 66,
-      "multi": 0,
-      "cafemarkt_url": 19,
+      "single": 62,
+      "multi": 5,
+      "cafemarkt_url": 67,
       "kaynak_url": 0
     },
     {
-      "brand": "Scotsman",
-      "total": 64,
-      "none": 0,
-      "single": 64,
-      "multi": 0,
-      "cafemarkt_url": 64,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Cancan",
-      "total": 60,
+      "brand": "Unox",
+      "total": 73,
       "none": 0,
       "single": 60,
-      "multi": 0,
-      "cafemarkt_url": 60,
+      "multi": 13,
+      "cafemarkt_url": 73,
       "kaynak_url": 0
     },
     {
       "brand": "Kroom",
       "total": 56,
       "none": 0,
-      "single": 56,
-      "multi": 0,
+      "single": 53,
+      "multi": 3,
       "cafemarkt_url": 9,
       "kaynak_url": 0
     },
     {
-      "brand": "Frenox",
-      "total": 53,
+      "brand": "Brema",
+      "total": 66,
       "none": 0,
-      "single": 53,
-      "multi": 0,
-      "cafemarkt_url": 53,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Liebherr",
-      "total": 48,
-      "none": 0,
-      "single": 48,
-      "multi": 0,
-      "cafemarkt_url": 48,
+      "single": 51,
+      "multi": 15,
+      "cafemarkt_url": 19,
       "kaynak_url": 0
     },
     {
@@ -464,24 +410,6 @@
       "kaynak_url": 30
     },
     {
-      "brand": "Bezzera",
-      "total": 47,
-      "none": 0,
-      "single": 47,
-      "multi": 0,
-      "cafemarkt_url": 47,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Bravilor Bonamat",
-      "total": 46,
-      "none": 0,
-      "single": 46,
-      "multi": 0,
-      "cafemarkt_url": 46,
-      "kaynak_url": 0
-    },
-    {
       "brand": "Rational",
       "total": 46,
       "none": 0,
@@ -491,21 +419,12 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Victoria Arduino",
-      "total": 43,
+      "brand": "Frenox",
+      "total": 53,
       "none": 0,
-      "single": 43,
-      "multi": 0,
-      "cafemarkt_url": 43,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Sayl",
-      "total": 42,
-      "none": 0,
-      "single": 42,
-      "multi": 0,
-      "cafemarkt_url": 42,
+      "single": 44,
+      "multi": 9,
+      "cafemarkt_url": 53,
       "kaynak_url": 0
     },
     {
@@ -518,20 +437,11 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Salva",
-      "total": 40,
-      "none": 0,
-      "single": 40,
-      "multi": 0,
-      "cafemarkt_url": 40,
-      "kaynak_url": 0
-    },
-    {
       "brand": "Zanussi",
       "total": 39,
       "none": 0,
-      "single": 39,
-      "multi": 0,
+      "single": 38,
+      "multi": 1,
       "cafemarkt_url": 39,
       "kaynak_url": 0
     },
@@ -539,36 +449,36 @@
       "brand": "Dampak",
       "total": 38,
       "none": 0,
-      "single": 38,
-      "multi": 0,
+      "single": 37,
+      "multi": 1,
       "cafemarkt_url": 38,
       "kaynak_url": 0
     },
     {
-      "brand": "KEF",
-      "total": 37,
+      "brand": "Salva",
+      "total": 40,
       "none": 0,
       "single": 37,
-      "multi": 0,
-      "cafemarkt_url": 37,
+      "multi": 3,
+      "cafemarkt_url": 40,
       "kaynak_url": 0
     },
     {
-      "brand": "Süper Mikser",
-      "total": 33,
+      "brand": "KitchenAid",
+      "total": 110,
       "none": 0,
       "single": 33,
-      "multi": 0,
-      "cafemarkt_url": 33,
+      "multi": 77,
+      "cafemarkt_url": 85,
       "kaynak_url": 0
     },
     {
-      "brand": "Saeco",
-      "total": 32,
+      "brand": "Sayl",
+      "total": 42,
       "none": 0,
-      "single": 32,
-      "multi": 0,
-      "cafemarkt_url": 32,
+      "single": 31,
+      "multi": 11,
+      "cafemarkt_url": 42,
       "kaynak_url": 0
     },
     {
@@ -581,147 +491,39 @@
       "kaynak_url": 19
     },
     {
-      "brand": "Hamilton Beach",
-      "total": 30,
+      "brand": "Samixir",
+      "total": 92,
       "none": 0,
-      "single": 30,
-      "multi": 0,
-      "cafemarkt_url": 30,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Frozy",
-      "total": 30,
-      "none": 0,
-      "single": 30,
-      "multi": 0,
-      "cafemarkt_url": 30,
-      "kaynak_url": 0
+      "single": 27,
+      "multi": 65,
+      "cafemarkt_url": 67,
+      "kaynak_url": 25
     },
     {
       "brand": "Ugolini",
       "total": 29,
       "none": 0,
-      "single": 29,
-      "multi": 0,
+      "single": 23,
+      "multi": 6,
       "cafemarkt_url": 29,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "La Cimbali",
-      "total": 27,
-      "none": 0,
-      "single": 27,
-      "multi": 0,
-      "cafemarkt_url": 27,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Sanremo",
-      "total": 26,
-      "none": 0,
-      "single": 26,
-      "multi": 0,
-      "cafemarkt_url": 26,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Kastel",
-      "total": 26,
-      "none": 0,
-      "single": 26,
-      "multi": 0,
-      "cafemarkt_url": 26,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "VBM",
-      "total": 24,
-      "none": 0,
-      "single": 24,
-      "multi": 0,
-      "cafemarkt_url": 24,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "SGS",
-      "total": 21,
-      "none": 0,
-      "single": 21,
-      "multi": 0,
-      "cafemarkt_url": 21,
       "kaynak_url": 0
     },
     {
       "brand": "Myco",
       "total": 20,
       "none": 0,
-      "single": 20,
-      "multi": 0,
+      "single": 18,
+      "multi": 2,
       "cafemarkt_url": 20,
       "kaynak_url": 0
     },
     {
-      "brand": "Senoven",
-      "total": 18,
-      "none": 0,
-      "single": 18,
-      "multi": 0,
-      "cafemarkt_url": 18,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Bunn",
-      "total": 17,
-      "none": 0,
-      "single": 17,
-      "multi": 0,
-      "cafemarkt_url": 17,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Ceado",
-      "total": 17,
-      "none": 0,
-      "single": 17,
-      "multi": 0,
-      "cafemarkt_url": 17,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Fiamma",
-      "total": 17,
-      "none": 0,
-      "single": 17,
-      "multi": 0,
-      "cafemarkt_url": 17,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Hoshizaki",
-      "total": 17,
-      "none": 0,
-      "single": 17,
-      "multi": 0,
-      "cafemarkt_url": 17,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Simag",
-      "total": 17,
-      "none": 0,
-      "single": 17,
-      "multi": 0,
-      "cafemarkt_url": 17,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Sirman",
-      "total": 16,
+      "brand": "KEF",
+      "total": 37,
       "none": 0,
       "single": 16,
-      "multi": 0,
-      "cafemarkt_url": 16,
+      "multi": 21,
+      "cafemarkt_url": 37,
       "kaynak_url": 0
     },
     {
@@ -734,6 +536,24 @@
       "kaynak_url": 15
     },
     {
+      "brand": "Bezzera",
+      "total": 47,
+      "none": 0,
+      "single": 15,
+      "multi": 32,
+      "cafemarkt_url": 47,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Frozy",
+      "total": 30,
+      "none": 0,
+      "single": 15,
+      "multi": 15,
+      "cafemarkt_url": 30,
+      "kaynak_url": 0
+    },
+    {
       "brand": "Şenocak",
       "total": 15,
       "none": 0,
@@ -743,12 +563,39 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Zummo",
-      "total": 14,
+      "brand": "Bunn",
+      "total": 17,
       "none": 0,
       "single": 14,
-      "multi": 0,
-      "cafemarkt_url": 14,
+      "multi": 3,
+      "cafemarkt_url": 17,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Senoven",
+      "total": 18,
+      "none": 0,
+      "single": 14,
+      "multi": 4,
+      "cafemarkt_url": 18,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Bravilor Bonamat",
+      "total": 46,
+      "none": 0,
+      "single": 14,
+      "multi": 32,
+      "cafemarkt_url": 46,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Sirman",
+      "total": 16,
+      "none": 0,
+      "single": 14,
+      "multi": 2,
+      "cafemarkt_url": 16,
       "kaynak_url": 0
     },
     {
@@ -761,93 +608,93 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Şengün",
-      "total": 13,
+      "brand": "Saeco",
+      "total": 32,
       "none": 0,
       "single": 13,
-      "multi": 0,
-      "cafemarkt_url": 13,
+      "multi": 19,
+      "cafemarkt_url": 32,
       "kaynak_url": 0
     },
     {
-      "brand": "Imperia",
-      "total": 13,
-      "none": 0,
-      "single": 13,
-      "multi": 0,
-      "cafemarkt_url": 13,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "WMF",
-      "total": 12,
+      "brand": "Hamilton Beach",
+      "total": 30,
       "none": 0,
       "single": 12,
-      "multi": 0,
-      "cafemarkt_url": 12,
+      "multi": 18,
+      "cafemarkt_url": 30,
       "kaynak_url": 0
     },
     {
-      "brand": "Himaksan",
-      "total": 12,
+      "brand": "Scotsman",
+      "total": 64,
       "none": 0,
       "single": 12,
-      "multi": 0,
-      "cafemarkt_url": 12,
+      "multi": 52,
+      "cafemarkt_url": 64,
       "kaynak_url": 0
     },
     {
-      "brand": "Mypresso",
-      "total": 12,
-      "none": 0,
-      "single": 12,
-      "multi": 0,
-      "cafemarkt_url": 12,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Senox",
-      "total": 11,
+      "brand": "SGS",
+      "total": 21,
       "none": 0,
       "single": 11,
-      "multi": 0,
-      "cafemarkt_url": 11,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Menumaster",
-      "total": 11,
-      "none": 0,
-      "single": 11,
-      "multi": 0,
-      "cafemarkt_url": 11,
+      "multi": 10,
+      "cafemarkt_url": 21,
       "kaynak_url": 0
     },
     {
       "brand": "Seles",
       "total": 10,
       "none": 0,
-      "single": 10,
-      "multi": 0,
+      "single": 9,
+      "multi": 1,
       "cafemarkt_url": 10,
       "kaynak_url": 0
     },
     {
-      "brand": "Moretti Forni",
-      "total": 10,
-      "none": 0,
-      "single": 10,
-      "multi": 0,
-      "cafemarkt_url": 10,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Celme",
-      "total": 9,
+      "brand": "Süper Mikser",
+      "total": 33,
       "none": 0,
       "single": 9,
-      "multi": 0,
-      "cafemarkt_url": 9,
+      "multi": 24,
+      "cafemarkt_url": 33,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Senox",
+      "total": 11,
+      "none": 0,
+      "single": 9,
+      "multi": 2,
+      "cafemarkt_url": 11,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Liebherr",
+      "total": 48,
+      "none": 0,
+      "single": 9,
+      "multi": 39,
+      "cafemarkt_url": 48,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Imperia",
+      "total": 13,
+      "none": 0,
+      "single": 9,
+      "multi": 4,
+      "cafemarkt_url": 13,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Menumaster",
+      "total": 11,
+      "none": 0,
+      "single": 9,
+      "multi": 2,
+      "cafemarkt_url": 11,
       "kaynak_url": 0
     },
     {
@@ -860,57 +707,48 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Zumex",
-      "total": 8,
+      "brand": "Himaksan",
+      "total": 12,
       "none": 0,
       "single": 8,
-      "multi": 0,
-      "cafemarkt_url": 8,
+      "multi": 4,
+      "cafemarkt_url": 12,
       "kaynak_url": 0
     },
     {
-      "brand": "Mychef",
-      "total": 8,
+      "brand": "Victoria Arduino",
+      "total": 43,
       "none": 0,
       "single": 8,
-      "multi": 0,
-      "cafemarkt_url": 8,
+      "multi": 35,
+      "cafemarkt_url": 43,
       "kaynak_url": 0
     },
     {
-      "brand": "Hobart",
-      "total": 8,
+      "brand": "Kastel",
+      "total": 26,
       "none": 0,
       "single": 8,
-      "multi": 0,
-      "cafemarkt_url": 8,
+      "multi": 18,
+      "cafemarkt_url": 26,
       "kaynak_url": 0
     },
     {
-      "brand": "Tribeca",
-      "total": 7,
+      "brand": "Şengün",
+      "total": 13,
       "none": 0,
       "single": 7,
-      "multi": 0,
-      "cafemarkt_url": 7,
+      "multi": 6,
+      "cafemarkt_url": 13,
       "kaynak_url": 0
     },
     {
-      "brand": "Elektrola",
-      "total": 8,
+      "brand": "WMF",
+      "total": 12,
       "none": 0,
-      "single": 6,
-      "multi": 2,
-      "cafemarkt_url": 6,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Plastport",
-      "total": 6,
-      "none": 0,
-      "single": 6,
-      "multi": 0,
-      "cafemarkt_url": 6,
+      "single": 7,
+      "multi": 5,
+      "cafemarkt_url": 12,
       "kaynak_url": 0
     },
     {
@@ -923,57 +761,84 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Ice O Matic",
-      "total": 6,
+      "brand": "Zumex",
+      "total": 8,
       "none": 0,
       "single": 6,
-      "multi": 0,
-      "cafemarkt_url": 6,
+      "multi": 2,
+      "cafemarkt_url": 8,
       "kaynak_url": 0
     },
     {
-      "brand": "Kumkaya",
-      "total": 5,
+      "brand": "Cancan",
+      "total": 60,
+      "none": 0,
+      "single": 6,
+      "multi": 54,
+      "cafemarkt_url": 60,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Tribeca",
+      "total": 7,
+      "none": 0,
+      "single": 6,
+      "multi": 1,
+      "cafemarkt_url": 7,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Hobart",
+      "total": 8,
+      "none": 0,
+      "single": 6,
+      "multi": 2,
+      "cafemarkt_url": 8,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Ceado",
+      "total": 17,
       "none": 0,
       "single": 5,
-      "multi": 0,
-      "cafemarkt_url": 5,
+      "multi": 12,
+      "cafemarkt_url": 17,
       "kaynak_url": 0
     },
     {
-      "brand": "Astoria",
-      "total": 5,
+      "brand": "Sanremo",
+      "total": 26,
       "none": 0,
       "single": 5,
-      "multi": 0,
-      "cafemarkt_url": 5,
+      "multi": 21,
+      "cafemarkt_url": 26,
       "kaynak_url": 0
     },
     {
-      "brand": "Merrychef",
-      "total": 5,
+      "brand": "Mychef",
+      "total": 8,
       "none": 0,
       "single": 5,
-      "multi": 0,
-      "cafemarkt_url": 5,
+      "multi": 3,
+      "cafemarkt_url": 8,
       "kaynak_url": 0
     },
     {
-      "brand": "Manitowoc",
-      "total": 5,
-      "none": 0,
-      "single": 5,
-      "multi": 0,
-      "cafemarkt_url": 5,
-      "kaynak_url": 0
-    },
-    {
-      "brand": "Neumarker",
-      "total": 4,
+      "brand": "Celme",
+      "total": 9,
       "none": 0,
       "single": 4,
-      "multi": 0,
-      "cafemarkt_url": 4,
+      "multi": 5,
+      "cafemarkt_url": 9,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Plastport",
+      "total": 6,
+      "none": 0,
+      "single": 4,
+      "multi": 2,
+      "cafemarkt_url": 6,
       "kaynak_url": 0
     },
     {
@@ -986,21 +851,39 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Waring",
-      "total": 4,
+      "brand": "Astoria",
+      "total": 5,
       "none": 0,
       "single": 4,
-      "multi": 0,
-      "cafemarkt_url": 4,
+      "multi": 1,
+      "cafemarkt_url": 5,
       "kaynak_url": 0
     },
     {
-      "brand": "Josper",
-      "total": 4,
+      "brand": "VBM",
+      "total": 24,
       "none": 0,
       "single": 4,
-      "multi": 0,
-      "cafemarkt_url": 4,
+      "multi": 20,
+      "cafemarkt_url": 24,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "La Cimbali",
+      "total": 27,
+      "none": 0,
+      "single": 4,
+      "multi": 23,
+      "cafemarkt_url": 27,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Fiamma",
+      "total": 17,
+      "none": 0,
+      "single": 3,
+      "multi": 14,
+      "cafemarkt_url": 17,
       "kaynak_url": 0
     },
     {
@@ -1013,21 +896,39 @@
       "kaynak_url": 0
     },
     {
-      "brand": "Pacojet",
-      "total": 2,
+      "brand": "Mypresso",
+      "total": 12,
       "none": 0,
-      "single": 2,
-      "multi": 0,
-      "cafemarkt_url": 2,
+      "single": 3,
+      "multi": 9,
+      "cafemarkt_url": 12,
       "kaynak_url": 0
     },
     {
-      "brand": "Zanolli",
-      "total": 2,
+      "brand": "Hoshizaki",
+      "total": 17,
+      "none": 0,
+      "single": 3,
+      "multi": 14,
+      "cafemarkt_url": 17,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Simag",
+      "total": 17,
+      "none": 0,
+      "single": 3,
+      "multi": 14,
+      "cafemarkt_url": 17,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Kumkaya",
+      "total": 5,
       "none": 0,
       "single": 2,
-      "multi": 0,
-      "cafemarkt_url": 2,
+      "multi": 3,
+      "cafemarkt_url": 5,
       "kaynak_url": 0
     },
     {
@@ -1067,6 +968,33 @@
       "kaynak_url": 0
     },
     {
+      "brand": "Elektrola",
+      "total": 8,
+      "none": 0,
+      "single": 1,
+      "multi": 7,
+      "cafemarkt_url": 6,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Waring",
+      "total": 4,
+      "none": 0,
+      "single": 1,
+      "multi": 3,
+      "cafemarkt_url": 4,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Merrychef",
+      "total": 5,
+      "none": 0,
+      "single": 1,
+      "multi": 4,
+      "cafemarkt_url": 5,
+      "kaynak_url": 0
+    },
+    {
       "brand": "Inoxclass",
       "total": 1,
       "none": 0,
@@ -1074,9 +1002,81 @@
       "multi": 0,
       "cafemarkt_url": 1,
       "kaynak_url": 0
+    },
+    {
+      "brand": "Neumarker",
+      "total": 4,
+      "none": 0,
+      "single": 0,
+      "multi": 4,
+      "cafemarkt_url": 4,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Pacojet",
+      "total": 2,
+      "none": 0,
+      "single": 0,
+      "multi": 2,
+      "cafemarkt_url": 2,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Zanolli",
+      "total": 2,
+      "none": 0,
+      "single": 0,
+      "multi": 2,
+      "cafemarkt_url": 2,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Zummo",
+      "total": 14,
+      "none": 0,
+      "single": 0,
+      "multi": 14,
+      "cafemarkt_url": 14,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Moretti Forni",
+      "total": 10,
+      "none": 0,
+      "single": 0,
+      "multi": 10,
+      "cafemarkt_url": 10,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Josper",
+      "total": 4,
+      "none": 0,
+      "single": 0,
+      "multi": 4,
+      "cafemarkt_url": 4,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Ice O Matic",
+      "total": 6,
+      "none": 0,
+      "single": 0,
+      "multi": 6,
+      "cafemarkt_url": 6,
+      "kaynak_url": 0
+    },
+    {
+      "brand": "Manitowoc",
+      "total": 5,
+      "none": 0,
+      "single": 0,
+      "multi": 5,
+      "cafemarkt_url": 5,
+      "kaynak_url": 0
     }
   ],
-  "gapCount": 15438,
+  "gapCount": 13545,
   "gapsSample": [
     {
       "id": "atalay-endustriyel-mutfak-ekipmanlari__adk-10/2",
@@ -4412,39 +4412,6 @@
       "hero": "images/catalog/cafemarkt/5541a6fd92bcbc76.jpg"
     },
     {
-      "id": "atese__kz-120",
-      "sku": "KZ.120",
-      "brand": "Ateşe",
-      "dept": "davlumbaz",
-      "name": "Ateşe Kömürlü Davlumbazlı Kapalı Izgara, 120x55x125 cm, Bakır Kaplama",
-      "photoCount": 1,
-      "cafemarkt_url": "https://www.cafemarkt.com/atese-komurlu-kapali-izgara-davlumbazli-120x55x125-cm-bakir-kaplama",
-      "kaynak_url": null,
-      "hero": "images/catalog/cafemarkt/03d6aa8113b9975a.jpg"
-    },
-    {
-      "id": "atese__kz-150",
-      "sku": "KZ.150",
-      "brand": "Ateşe",
-      "dept": "davlumbaz",
-      "name": "Ateşe Kömürlü Davlumbazlı Kapalı Izgara, 150x55x125 cm, Bakır Kaplama",
-      "photoCount": 1,
-      "cafemarkt_url": "https://www.cafemarkt.com/atese-komurlu-kapali-izgara-davlumbazli-150x55x125-cm-bakir-kaplama",
-      "kaynak_url": null,
-      "hero": "images/catalog/cafemarkt/2374c35bc011c871.jpg"
-    },
-    {
-      "id": "atese__kz-200",
-      "sku": "KZ.200",
-      "brand": "Ateşe",
-      "dept": "davlumbaz",
-      "name": "Ateşe Kömürlü Davlumbazlı Kapalı Izgara, 200x55x125 cm, Bakır Kaplama",
-      "photoCount": 1,
-      "cafemarkt_url": "https://www.cafemarkt.com/atese-komurlu-kapali-izgara-davlumbazli-200x55x125-cm-bakir-kaplama",
-      "kaynak_url": null,
-      "hero": "images/catalog/cafemarkt/a01160651dd6ed69.jpg"
-    },
-    {
       "id": "atese__dda-130",
       "sku": "DDA.130",
       "brand": "Ateşe",
@@ -4454,28 +4421,6 @@
       "cafemarkt_url": "https://www.cafemarkt.com/atese-duvar-tipi-davlumbaz-130x45x45-cm-bakir",
       "kaynak_url": null,
       "hero": "images/catalog/cafemarkt/a12e74c0408b0bf9.jpg"
-    },
-    {
-      "id": "atese__kz-100",
-      "sku": "KZ.100",
-      "brand": "Ateşe",
-      "dept": "davlumbaz",
-      "name": "Ateşe Kömürlü Davlumbazlı Kapalı Izgara, 100x55x125 cm, Bakır Kaplama",
-      "photoCount": 1,
-      "cafemarkt_url": "https://www.cafemarkt.com/atese-komurlu-kapali-izgara-davlumbazli-100x55x125-cm-bakir-kaplama",
-      "kaynak_url": null,
-      "hero": "images/catalog/cafemarkt/69ee30ba30bf2d81.jpg"
-    },
-    {
-      "id": "atese__kz-170",
-      "sku": "KZ.170",
-      "brand": "Ateşe",
-      "dept": "davlumbaz",
-      "name": "Ateşe Kömürlü Davlumbazlı Kapalı Izgara, 170x55x125 cm, Bakır Kaplama",
-      "photoCount": 1,
-      "cafemarkt_url": "https://www.cafemarkt.com/atese-komurlu-kapali-izgara-davlumbazli-170x55x125-cm-bakir-kaplama",
-      "kaynak_url": null,
-      "hero": "images/catalog/cafemarkt/8724e1e4ce4dee65.jpg"
     },
     {
       "id": "atese__dda-100",
@@ -6577,6 +6522,61 @@
       "cafemarkt_url": null,
       "kaynak_url": null,
       "hero": "images/catalog/ozti/web/ozti-7758-217d5-25.jpg"
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7754-146a5-21",
+      "sku": "7754.146A5.21",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "dept": "dolap",
+      "name": "EVYELİ TEZG.2G/1D SOL 3 PERDELİ  DEM. 140*60",
+      "photoCount": 1,
+      "cafemarkt_url": null,
+      "kaynak_url": null,
+      "hero": "images/catalog/ozti/web/ozti-7754-146a5-21.jpg"
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7754-156a5-21",
+      "sku": "7754.156A5.21",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "dept": "dolap",
+      "name": "EVYELİ TEZG.2G/1D SOL 3 PERDELİ  DEM. 150*60",
+      "photoCount": 1,
+      "cafemarkt_url": null,
+      "kaynak_url": null,
+      "hero": "images/catalog/ozti/web/ozti-7754-156a5-21.jpg"
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7754-166a5-21",
+      "sku": "7754.166A5.21",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "dept": "dolap",
+      "name": "EVYELİ TEZG.2G/1D SOL 3 PERDELİ  DEM. 160*60",
+      "photoCount": 1,
+      "cafemarkt_url": null,
+      "kaynak_url": null,
+      "hero": "images/catalog/ozti/web/ozti-7754-166a5-21.jpg"
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7754-166e5-21",
+      "sku": "7754.166E5.21",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "dept": "dolap",
+      "name": "EVYELİ TEZG.2G/1D SOL 3 PERDELİ  DEM. 160*60",
+      "photoCount": 1,
+      "cafemarkt_url": null,
+      "kaynak_url": null,
+      "hero": "images/catalog/ozti/web/ozti-7754-166e5-21.jpg"
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7754-186e5-21",
+      "sku": "7754.186E5.21",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "dept": "dolap",
+      "name": "EVYELİ TEZG.2G/1D SOL 3 PERDELİ  DEM. 180*60",
+      "photoCount": 1,
+      "cafemarkt_url": null,
+      "kaynak_url": null,
+      "hero": "images/catalog/ozti/web/ozti-7754-186e5-21.jpg"
     }
   ]
 }
