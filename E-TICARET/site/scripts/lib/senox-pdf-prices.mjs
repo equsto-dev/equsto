@@ -49,9 +49,14 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["DT100", 1800],
   ["DT200", 2000],
   ["DT600", 12000],
-  // s.12 — Şarap dolabı WN 250/350
+  // s.12 — Şarap dolabı (page-order / ebat sızıntısı)
+  // WN-1010: OCR 1900 + yanlış ebat 900×505×850 (WN350); doğru 3000 — Mutbex
+  // WN-770 ile aynı satış (1741.5), 2026-1’de ikisi de 2700’dü, 2026-2-1’de 3000.
+  // WN-400: page-order 3000 (WN-770 fiyatı); katalogda 3800 EUR (Mutbex 2193 ≈ %58).
   ["WN250", 1600],
   ["WN350", 1750],
+  ["WN400", 3800],
+  ["WN1010", 3000],
   // s.37 — Vakum (Robotcoupe blender EUR ile karışmış)
   ["VM01", 500],
   ["WM2", 2000],

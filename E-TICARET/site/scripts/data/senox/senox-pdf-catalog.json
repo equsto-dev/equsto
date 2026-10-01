@@ -759,14 +759,15 @@
       "anchorX": 715.1,
       "description": "Senox WN-1010 Kanopili Çarpma Kapı Siyah\nPVC kaplı sac iç ve dış gövde.\nNet Hacim 903/816\nCFC içermeyen, 40 mm kalınlığında poliüretan izolasyon.\nRaf sayısı 4\nÖzel tasarım rolbond evaporatör.\n500ml şişe yükleme kapasitesi\nKilitli cam kapılar.\n200 adet İzolasyon Kalınlığı 50\nLed aydınlatmalı iç kabin, Ayarlanabilir iç raflar\nİklim Sınıfı B/C\nİç ısı dağılımını sağlayan fanlı sistem.\nLed aydınlatma\nÜç ahşap raflıdır\nIp24 su geçirmezlik\nSoğutucu Gaz: R600A\nSoğutucu Gaz: R290A\nIsı aralığı: +10 - +14°C\nFiyat\nFiyat\nAğırlık\nEbatlar (mm)\nAğırlık\nVoltaj\nEbatlar (mm)\nVoltaj\nIsı Aralığı\n1600 EUR\n3000 EUR\n158 kg\n220 V ~ 50Hz\n61 kg\n220 V ~ 50Hz\n900 x 505x 850\n0 - +10°C\n980x740x2145\n220 V ~ 50Hz\n75 kg\n1900 EUR\n1350 x 505x 850",
       "specs": {
-        "ebat_mm": "900 x 505 x 850",
-        "genislik_mm": 900,
-        "derinlik_mm": 505,
-        "yukseklik_mm": 850,
-        "fiyat_eur": "1900",
+        "ebat_mm": "980 x 740 x 2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145,
+        "fiyat_eur": "3000",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
-        "agirlik_kg": "158"
+        "agirlik_kg": "158",
+        "fiyat_eur_source": "override-verified"
       },
       "parseSource": "senox-title",
       "localImage": "images/senox-wn-1010_1.jpg",
@@ -822,10 +823,10 @@
       "anchorX": 258.0,
       "description": "WN 250\n0 - +10°C\n980x740x2145\n220 V ~ 50Hz\n75 kg\n1900 EUR\n1350 x 505x 850",
       "specs": {
-        "ebat_mm": "980 x 740 x 2145",
-        "genislik_mm": 980,
-        "derinlik_mm": 740,
-        "yukseklik_mm": 2145,
+        "ebat_mm": "1350 x 505 x 850",
+        "genislik_mm": 1350,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850,
         "fiyat_eur": "1600",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "75"
@@ -861,8 +862,8 @@
       "anchorX": 255.1,
       "description": "Senox WN 400",
       "specs": {
-        "fiyat_eur": "3000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3800",
+        "fiyat_eur_source": "override-verified"
       },
       "parseSource": "senox-title",
       "localImage": "images/senox-wn400_1.jpg",

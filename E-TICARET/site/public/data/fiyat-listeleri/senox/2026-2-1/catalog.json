@@ -614,14 +614,15 @@
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "specs": {
-        "ebat_mm": "900 x 505 x 850",
-        "genislik_mm": 900,
-        "derinlik_mm": 505,
-        "yukseklik_mm": 850,
-        "fiyat_eur": "1900",
+        "ebat_mm": "980 x 740 x 2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145,
+        "fiyat_eur": "3000",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
-        "agirlik_kg": "158"
+        "agirlik_kg": "158",
+        "fiyat_eur_source": "override-verified"
       },
       "image": "/data/senox/images/senox-wn-1010_1.jpg",
       "imageMethod": "bbox-render-v4"
@@ -665,10 +666,10 @@
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "specs": {
-        "ebat_mm": "980 x 740 x 2145",
-        "genislik_mm": 980,
-        "derinlik_mm": 740,
-        "yukseklik_mm": 2145,
+        "ebat_mm": "1350 x 505 x 850",
+        "genislik_mm": 1350,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850,
         "fiyat_eur": "1600",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "75"
@@ -696,8 +697,8 @@
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "specs": {
-        "fiyat_eur": "3000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3800",
+        "fiyat_eur_source": "override-verified"
       },
       "image": "/data/senox/images/senox-wn400_1.jpg",
       "imageMethod": "bbox-render-v4"
