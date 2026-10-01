@@ -36,7 +36,7 @@ export default function ShopCoreScripts() {
         onReady={() => (window as Window & { EqustoCart?: { syncBadge?: () => void } }).EqustoCart?.syncBadge?.()}
       />
       <Script
-        src={`/contact.js?v=${v}&m=20261001-wa-toast`}
+        src={`/contact.js?v=${v}&m=20261001-gonderildi-v2`}
         strategy="afterInteractive"
         onReady={() => {
           try {

@@ -1387,6 +1387,7 @@
           return;
         }
         if (st) { st.textContent = "Mesajınız alındı. En kısa sürede ulaşırız."; st.style.color = "#1e7a45"; }
+        toastIletisimGonderildi();
         var form = document.getElementById("equsto-msg-form");
         if (form) form.reset();
         setTimeout(closeMsgModal, 1600);
@@ -1445,79 +1446,242 @@
   }
 
   /** Sepete eklendi toast'ı ile aynı görünüm — iletişim formu başarı. */
-  function ensureIletisimToastCss() {
-    if (document.getElementById("eq-iletisim-toast-css")) return;
-    var s = document.createElement("style");
-    s.id = "eq-iletisim-toast-css";
-    s.textContent =
-      ".eq-cart-added-toast{position:fixed;top:72px;right:12px;z-index:510;display:flex;align-items:flex-start;gap:10px;max-width:min(300px,calc(100vw - 24px));padding:10px 14px;border-radius:10px;background:var(--eq-surface,#fff);color:var(--eq-text,#1a1a1a);border:1px solid var(--eq-border,#e5e5e5);box-shadow:0 8px 28px rgba(0,0,0,.14);opacity:0;transform:translateY(-8px);transition:opacity .22s ease,transform .22s ease;pointer-events:none}" +
-      ".eq-cart-added-toast.is-visible{opacity:1;transform:translateY(0)}" +
-      ".eq-cart-added-toast__icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#25d366;color:#fff;font-size:12px;font-weight:700;line-height:22px;text-align:center}" +
-      ".eq-cart-added-toast__body{display:flex;flex-direction:column;gap:2px;min-width:0;font-size:13px;line-height:1.35}" +
-      ".eq-cart-added-toast__body span{font-size:11px;font-weight:500;color:var(--eq-text-secondary,#5a6278);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}";
-    document.head.appendChild(s);
+  var iletisimToastHideTimer = null;
+  var iletisimToastRemoveTimer = null;
+  var iletisimCaptcha = "";
+  var iletisimFormDocBound = false;
+
+  function escToast(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function positionIletisimToast(bar) {
+    var top = 8;
+    try {
+      var hdr = document.querySelector("header.hdr");
+      if (hdr) {
+        var hr = hdr.getBoundingClientRect();
+        top = Math.max(top, hr.bottom + 8);
+      }
+      var nav = document.querySelector("nav.topnav, .topnav");
+      if (nav) {
+        var cs = window.getComputedStyle(nav);
+        if (cs.display !== "none" && cs.visibility !== "hidden") {
+          var nr = nav.getBoundingClientRect();
+          if (nr.height > 0) top = Math.max(top, nr.bottom + 8);
+        }
+      }
+    } catch (_) {}
+    bar.style.top = top + "px";
   }
 
   function toastIletisimGonderildi() {
-    ensureIletisimToastCss();
-    var old = document.getElementById("equsto-iletisim-sent-toast");
-    if (old) old.remove();
-    var bar = document.createElement("div");
-    bar.id = "equsto-iletisim-sent-toast";
-    bar.className = "eq-cart-added-toast";
-    bar.setAttribute("role", "status");
-    var strong =
-      typeof window.eqT === "function"
-        ? window.eqT("contact.form_sent_strong", "Gönderildi")
-        : "Gönderildi";
-    var sub =
-      typeof window.eqT === "function"
-        ? window.eqT("contact.form_sent_sub", "Mesajınız alındı")
-        : "Mesajınız alındı";
-    bar.innerHTML =
-      '<span class="eq-cart-added-toast__icon" aria-hidden="true">✓</span>' +
-      '<span class="eq-cart-added-toast__body">' +
-      "<strong>" +
-      strong +
-      "</strong>" +
-      "<span>" +
-      sub +
-      "</span>" +
-      "</span>";
-    document.body.appendChild(bar);
-    requestAnimationFrame(function () {
+    try {
+      var old = document.getElementById("equsto-iletisim-sent-toast");
+      if (old && old.parentNode) old.parentNode.removeChild(old);
+      if (iletisimToastHideTimer) clearTimeout(iletisimToastHideTimer);
+      if (iletisimToastRemoveTimer) clearTimeout(iletisimToastRemoveTimer);
+
+      var strongFb = "Gönderildi";
+      var subFb = "Mesajınız alındı";
+      var strong = strongFb;
+      var sub = subFb;
+      try {
+        if (typeof window.eqT === "function") {
+          var s1 = window.eqT("contact.form_sent_strong", strongFb);
+          var s2 = window.eqT("contact.form_sent_sub", subFb);
+          if (s1) strong = String(s1);
+          if (s2) sub = String(s2);
+        }
+      } catch (_) {}
+
+      var bar = document.createElement("div");
+      bar.id = "equsto-iletisim-sent-toast";
+      bar.className = "eq-cart-added-toast is-visible";
+      bar.setAttribute("role", "status");
+      bar.setAttribute("aria-live", "polite");
+      bar.innerHTML =
+        '<span class="eq-cart-added-toast__icon" aria-hidden="true">✓</span>' +
+        '<span class="eq-cart-added-toast__body">' +
+        "<strong>" +
+        escToast(strong) +
+        "</strong>" +
+        "<span>" +
+        escToast(sub) +
+        "</span>" +
+        "</span>";
+      document.body.appendChild(bar);
+      positionIletisimToast(bar);
+      // class already is-visible; force reflow then keep
+      void bar.offsetWidth;
       bar.classList.add("is-visible");
-    });
-    clearTimeout(bar._hide);
-    bar._hide = setTimeout(function () {
-      bar.classList.remove("is-visible");
-      setTimeout(function () {
-        if (bar.parentNode) bar.parentNode.removeChild(bar);
-      }, 240);
-    }, 2800);
+
+      iletisimToastHideTimer = setTimeout(function () {
+        bar.classList.remove("is-visible");
+        iletisimToastRemoveTimer = setTimeout(function () {
+          if (bar.parentNode) bar.parentNode.removeChild(bar);
+        }, 240);
+      }, 5000);
+    } catch (err) {
+      try {
+        console.warn("[iletisim toast]", err);
+      } catch (_) {}
+    }
+  }
+
+  window.equstoToastIletisimGonderildi = toastIletisimGonderildi;
+
+  function refreshIletisimCaptcha() {
+    var captchaEl = document.getElementById("eq-iletisim-captcha-code");
+    var captchaInput = document.getElementById("eq-iletisim-captcha-input");
+    var chars = "abcdefghjkmnpqrstuvwxyz23456789";
+    var out = "";
+    for (var i = 0; i < 5; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
+    iletisimCaptcha = out;
+    if (captchaEl) captchaEl.textContent = out;
+    if (captchaInput) captchaInput.value = "";
+  }
+
+  function onIletisimFormSubmit(e) {
+    var form = e.target;
+    if (!form || form.id !== "equsto-iletisim-form") return;
+    e.preventDefault();
+    e.stopPropagation();
+
+    var st = document.getElementById("eq-iletisim-status");
+    var sb = document.getElementById("eq-iletisim-submit");
+    var deptEl = document.getElementById("eq-iletisim-dept");
+    var adEl = document.getElementById("eq-iletisim-ad");
+    var soyadEl = document.getElementById("eq-iletisim-soyad");
+    var mailEl = document.getElementById("eq-iletisim-mail");
+    var telEl = document.getElementById("eq-iletisim-tel");
+    var mesajEl = document.getElementById("eq-iletisim-mesaj");
+    var privacyEl = document.getElementById("eq-iletisim-privacy");
+    var captchaInput = document.getElementById("eq-iletisim-captcha-input");
+
+    var dept = deptEl && deptEl.options ? deptEl.options[deptEl.selectedIndex].text : "";
+    var ad = adEl ? String(adEl.value || "").trim() : "";
+    var soyad = soyadEl ? String(soyadEl.value || "").trim() : "";
+    var mail = mailEl ? String(mailEl.value || "").trim() : "";
+    var tel = telEl ? String(telEl.value || "").trim() : "";
+    var mesaj = mesajEl ? String(mesajEl.value || "").trim() : "";
+    var captchaTry = captchaInput ? String(captchaInput.value || "").trim().toLowerCase() : "";
+
+    function fail(msg) {
+      if (st) {
+        st.textContent = msg;
+        st.style.color = "#c0392b";
+      }
+    }
+
+    if (!deptEl || !deptEl.value) return fail("Lütfen departman seçin.");
+    if (!ad || !soyad) return fail("Ad ve soyad zorunlu.");
+    if (!mail || !tel || !mesaj) return fail("E-posta, telefon ve mesaj zorunlu.");
+    if (!privacyEl || !privacyEl.checked) return fail("Gizlilik politikasını kabul etmelisiniz.");
+    if (captchaTry !== String(iletisimCaptcha).toLowerCase()) {
+      refreshIletisimCaptcha();
+      return fail("Güvenlik kodu hatalı.");
+    }
+
+    var fullMesaj = ["Departman: " + dept, "", mesaj].join("\n");
+    if (sb) {
+      sb.disabled = true;
+      sb.textContent = "Gönderiliyor…";
+    }
+    if (st) {
+      st.textContent = "";
+      st.style.color = "var(--eq-text-muted,#888)";
+    }
+
+    fetch(eqMsgApiBase() + "/musteriler", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ad: ad + " " + soyad,
+        telefon: tel,
+        eposta: mail,
+        mesaj: fullMesaj,
+        kaynak: "iletisim-sayfa",
+        sayfa: window.location.href || "",
+      }),
+    })
+      .then(function (r) {
+        return r.json().then(function (j) {
+          return { ok: r.ok, j: j };
+        });
+      })
+      .then(function (res) {
+        var sendLabel =
+          typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
+        if (sb) {
+          sb.disabled = false;
+          sb.textContent = sendLabel;
+        }
+        if (!res.ok || !(res.j && res.j.success)) {
+          var msg = (res.j && (res.j.error || res.j.message)) || "HTTP hata";
+          return fail("Gönderilemedi: " + msg);
+        }
+        toastIletisimGonderildi();
+        if (st) {
+          st.textContent = "Mesajınız alındı. En kısa sürede size dönüş yapılacaktır.";
+          st.style.color = "#1e7a45";
+        }
+        form.reset();
+        refreshIletisimCaptcha();
+      })
+      .catch(function (err) {
+        var sendLabel =
+          typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
+        if (sb) {
+          sb.disabled = false;
+          sb.textContent = sendLabel;
+        }
+        fail("Sunucuya ulaşılamadı: " + (err && err.message ? err.message : String(err)));
+      });
   }
 
   function initIletisimForm() {
-    var form = document.getElementById("equsto-iletisim-form");
-    if (!form || form.getAttribute("data-eq-bound") === "1") return;
-    form.setAttribute("data-eq-bound", "1");
-
-    var captchaEl = document.getElementById("eq-iletisim-captcha-code");
-    var captchaInput = document.getElementById("eq-iletisim-captcha-input");
-    var refreshBtn = document.getElementById("eq-iletisim-captcha-refresh");
-    var currentCaptcha = "";
-
-    function randomCaptcha() {
-      var chars = "abcdefghjkmnpqrstuvwxyz23456789";
-      var out = "";
-      for (var i = 0; i < 5; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
-      currentCaptcha = out;
-      if (captchaEl) captchaEl.textContent = out;
-      if (captchaInput) captchaInput.value = "";
+    // Document-level bind — React remount form'u değiştirse bile submit yakalanır
+    if (!iletisimFormDocBound) {
+      iletisimFormDocBound = true;
+      document.addEventListener("submit", onIletisimFormSubmit, true);
+      document.addEventListener(
+        "click",
+        function (e) {
+          var t = e.target;
+          if (!t) return;
+          var id = t.id || (t.closest && t.closest("#eq-iletisim-captcha-refresh") && "eq-iletisim-captcha-refresh");
+          if (id === "eq-iletisim-captcha-refresh" || (t.id === "eq-iletisim-captcha-refresh")) {
+            e.preventDefault();
+            refreshIletisimCaptcha();
+          }
+        },
+        true
+      );
+      document.addEventListener(
+        "reset",
+        function (e) {
+          if (e.target && e.target.id === "equsto-iletisim-form") {
+            setTimeout(refreshIletisimCaptcha, 0);
+            var st = document.getElementById("eq-iletisim-status");
+            if (st) st.textContent = "";
+          }
+        },
+        true
+      );
     }
 
-    randomCaptcha();
-    if (refreshBtn) refreshBtn.addEventListener("click", randomCaptcha);
+    var form = document.getElementById("equsto-iletisim-form");
+    if (!form) return;
+    if (!iletisimCaptcha) refreshIletisimCaptcha();
+    else {
+      var captchaEl = document.getElementById("eq-iletisim-captcha-code");
+      if (captchaEl && !String(captchaEl.textContent || "").trim()) refreshIletisimCaptcha();
+    }
 
     try {
       var q = new URLSearchParams(String(window.location.search || "").replace(/^\?/, ""));
@@ -1527,90 +1691,21 @@
         mesajEl.value = String(konu).trim();
       }
     } catch (_) {}
-
-    form.addEventListener("reset", function () {
-      setTimeout(randomCaptcha, 0);
-      var st = document.getElementById("eq-iletisim-status");
-      if (st) st.textContent = "";
-    });
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var st = document.getElementById("eq-iletisim-status");
-      var sb = document.getElementById("eq-iletisim-submit");
-      var deptEl = document.getElementById("eq-iletisim-dept");
-      var adEl = document.getElementById("eq-iletisim-ad");
-      var soyadEl = document.getElementById("eq-iletisim-soyad");
-      var mailEl = document.getElementById("eq-iletisim-mail");
-      var telEl = document.getElementById("eq-iletisim-tel");
-      var mesajEl = document.getElementById("eq-iletisim-mesaj");
-      var privacyEl = document.getElementById("eq-iletisim-privacy");
-
-      var dept = deptEl && deptEl.options ? deptEl.options[deptEl.selectedIndex].text : "";
-      var ad = adEl ? String(adEl.value || "").trim() : "";
-      var soyad = soyadEl ? String(soyadEl.value || "").trim() : "";
-      var mail = mailEl ? String(mailEl.value || "").trim() : "";
-      var tel = telEl ? String(telEl.value || "").trim() : "";
-      var mesaj = mesajEl ? String(mesajEl.value || "").trim() : "";
-      var captchaTry = captchaInput ? String(captchaInput.value || "").trim().toLowerCase() : "";
-
-      function fail(msg) {
-        if (st) { st.textContent = msg; st.style.color = "#c0392b"; }
-      }
-
-      if (!deptEl || !deptEl.value) return fail("Lütfen departman seçin.");
-      if (!ad || !soyad) return fail("Ad ve soyad zorunlu.");
-      if (!mail || !tel || !mesaj) return fail("E-posta, telefon ve mesaj zorunlu.");
-      if (!privacyEl || !privacyEl.checked) return fail("Gizlilik politikasını kabul etmelisiniz.");
-      if (captchaTry !== String(currentCaptcha).toLowerCase()) {
-        randomCaptcha();
-        return fail("Güvenlik kodu hatalı.");
-      }
-
-      var fullMesaj = ["Departman: " + dept, "", mesaj].join("\n");
-      if (sb) { sb.disabled = true; sb.textContent = "Gönderiliyor…"; }
-      if (st) { st.textContent = ""; st.style.color = "var(--eq-text-muted,#888)"; }
-
-      fetch(eqMsgApiBase() + "/musteriler", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ad: ad + " " + soyad,
-          telefon: tel,
-          eposta: mail,
-          mesaj: fullMesaj,
-          kaynak: "iletisim-sayfa",
-          sayfa: window.location.href || "",
-        }),
-      })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
-        .then(function (res) {
-          var sendLabel = typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
-          if (sb) { sb.disabled = false; sb.textContent = sendLabel; }
-          if (!res.ok || !(res.j && res.j.success)) {
-            var msg = (res.j && (res.j.error || res.j.message)) || "HTTP hata";
-            return fail("Gönderilemedi: " + msg);
-          }
-          if (st) {
-            st.textContent = "Mesajınız alındı. En kısa sürede size dönüş yapılacaktır.";
-            st.style.color = "#1e7a45";
-          }
-          toastIletisimGonderildi();
-          form.reset();
-          randomCaptcha();
-        })
-        .catch(function (err) {
-          var sendLabel = typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
-          if (sb) { sb.disabled = false; sb.textContent = sendLabel; }
-          fail("Sunucuya ulaşılamadı: " + (err && err.message ? err.message : String(err)));
-        });
-    });
   }
 
   function init() {
     if (document.body && document.body.classList.contains("admin-app")) return;
     initContactPhoneWaLink();
     initIletisimForm();
+    // Form geç hydrate olursa captcha/bind yenile
+    var formTries = 0;
+    var formWait = setInterval(function () {
+      initIletisimForm();
+      initContactPhoneWaLink();
+      if (document.getElementById("equsto-iletisim-form") || ++formTries > 40) {
+        clearInterval(formWait);
+      }
+    }, 250);
     mountWaModal();
     syncFabPlacement();
     try {
