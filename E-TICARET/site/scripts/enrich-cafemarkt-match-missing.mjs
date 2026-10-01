@@ -65,8 +65,14 @@ function brandMatch(rowBrand, wanted) {
 
 function normHay(s) {
   return String(s || "")
-    .toUpperCase()
+    .toLocaleUpperCase("tr-TR")
     .replace(/İ/g, "I")
+    .replace(/İ/g, "I")
+    .replace(/Ş/g, "S")
+    .replace(/Ğ/g, "G")
+    .replace(/Ü/g, "U")
+    .replace(/Ö/g, "O")
+    .replace(/Ç/g, "C")
     .replace(/[^A-Z0-9]/g, "");
 }
 
@@ -148,11 +154,13 @@ function scoreMatch(row, hit) {
     const t = normHay(tok);
     if (t.length >= 3 && (hName.includes(t) || hUrl.includes(t))) s += Math.min(t.length, 8);
   }
-  if (hit.brand && brandMatch(row.brand, hit.brand)) s += 25;
-  else if (hit.brand && !brandMatch(row.brand, hit.brand)) s -= 40;
-  // brand word in url
+  // Yanlış marka eşleşmesini engelle (örn. Şenox → Brema/Wartmann)
   const brandTok = normHay(String(row.brand || "").split(/\s+/)[0] || "");
-  if (brandTok.length >= 4 && hUrl.includes(brandTok)) s += 15;
+  const brandInUrl = brandTok.length >= 3 && hUrl.includes(brandTok);
+  const brandOk = hit.brand ? brandMatch(row.brand, hit.brand) : brandInUrl;
+  if (!brandOk && !brandInUrl) return -999;
+  if (brandOk) s += 25;
+  if (brandInUrl) s += 15;
   if (name && hName && name.slice(0, 12) === hName.slice(0, 12)) s += 10;
   return s;
 }
