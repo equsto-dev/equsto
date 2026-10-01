@@ -32,6 +32,7 @@ export default function ShopProductScripts() {
         }}
       />
       <Script src="/ecom-data.js" strategy="beforeInteractive" />
+      <Script src={`/eq-site-urls.js?v=${cartV}`} strategy="beforeInteractive" />
       <Script src={`/ecom-cart.js?v=${cartV}`} strategy="beforeInteractive" />
       <Script src={`/eq-shop-catalog-bootstrap.js?v=${cartV}`} strategy="beforeInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />

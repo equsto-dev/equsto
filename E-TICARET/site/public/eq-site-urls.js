@@ -1735,9 +1735,10 @@
     if (isStaticPublicImage(s) && typeof window.eqAttrPath === "function") {
       return window.eqAttrPath(s);
     }
-    // data/protek (ve data/ öneki soyulmuş protek/) → origin /data/… (CDN images/ YOK)
-    if (/^(?:data\/)?protek\//i.test(s)) {
-      return window.equstoDataAssetHref(/^data\//i.test(s) ? s : "data/" + s);
+    // data/protek | protek/ | images/protek/ → origin /data/… (CDN images/ YOK)
+    if (/^(?:(?:images|data)\/)?protek\//i.test(s)) {
+      var protekRel = s.replace(/^images\//i, "").replace(/^data\//i, "");
+      return window.equstoDataAssetHref("data/" + protekRel);
     }
     if (typeof window.equstoDataAssetHref === "function") {
       if (/^\/images\//i.test(s)) {

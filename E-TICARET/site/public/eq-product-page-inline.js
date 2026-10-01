@@ -62,9 +62,19 @@ window.searchFilter = window.searchFilter || function () {};
       var s = String(p || "")
         .replace(/\\/g, "/")
         .replace(/^\.\//, "")
-        .replace(/^\/+/, "")
-        .replace(/^data\//i, "");
+        .replace(/^\/+/, "");
+      // data/images → images (CDN katalog). data/protek vb. kalsın.
+      if (/^data\/images\//i.test(s)) s = s.replace(/^data\//i, "");
+      else if (/^data\//i.test(s)) {
+        return typeof window.eqAttrPath === "function"
+          ? window.eqAttrPath("/" + s)
+          : "/" + s;
+      }
       if (/^https?:\/\//i.test(s)) return s;
+      if (/^(?:images\/)?protek\//i.test(s)) {
+        var pr = s.replace(/^images\//i, "");
+        return "/data/" + pr;
+      }
       if (/^images\//i.test(s)) {
         return typeof window.eqAttrPath === "function" ? window.eqAttrPath(s) : "/" + s;
       }
