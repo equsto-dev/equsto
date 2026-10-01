@@ -1,7 +1,0 @@
-numpy>=1.24
-soundcard>=0.4.3
-sounddevice>=0.4.6
-faster-whisper>=1.0.0
-argostranslate>=1.9.0
-edge-tts>=6.1.0
-miniaudio>=1.59
