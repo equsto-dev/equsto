@@ -5,7 +5,7 @@
 **GA4:** `G-MVRNFQC4PQ`  
 **Aktif bütçe:** **2.000 TL / ay** (Senaryo A — kilitli)  
 **İş modeli:** B2B endüstriyel mutfak — satış = teklif / lead, sepet değil  
-**İlgili:** [`GOOGLE-ADS-BASLANGIC.md`](./GOOGLE-ADS-BASLANGIC.md) · [`GOOGLE-MERCHANT-CENTER.md`](./GOOGLE-MERCHANT-CENTER.md)
+**İlgili:** [`GOOGLE-ADS-PANEL-ADIMLAR.md`](./GOOGLE-ADS-PANEL-ADIMLAR.md) · [`GOOGLE-ADS-BASLANGIC.md`](./GOOGLE-ADS-BASLANGIC.md) · [`GOOGLE-MERCHANT-CENTER.md`](./GOOGLE-MERCHANT-CENTER.md)
 
 ---
 
