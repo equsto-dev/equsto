@@ -52,6 +52,15 @@ Tüm katalog (teklif ürünleri dahil) denemek için:
 | Yanlış görsel (varyant) | Düz / nervürlü / krom karışması — `scripts/fetch-atalay-gmc-images.mjs` model eşlemesi |
 | Eksik açıklama | `specs` / `name` boş ürünleri katalogdan düzeltin |
 | Kimlik (GTIN) | Feed `identifier_exists=false` — normaldir, MPN/SKU kullanılır |
+| Fırsat başına resimler (Tamamlanmadı) | Feed `additional_image_link` + PDP/JSON-LD galeri. Tek fotoğraflı ürünlere `/api/gmc/img/{detail\|upper\|closeup}?src=…` detay kırpımları eklenir (hedef ≈4 görsel/ürün). Gerçek ek foto varsa onlar önceliklidir. |
+
+## Fırsat başına resimler (Images per offer)
+
+Mağaza kalitesi **göz atma deneyimi** metriği, sitedeki ürün başına ortalama görsel sayısını ölçer.
+
+- Feed: `g:image_link` + en fazla 10× `g:additional_image_link`
+- Site: PDP galeri + Product JSON-LD `image[]`
+- Tek fotoğraflı ürünler: `lib/gmc-additional-images.ts` → kırpım API (`app/api/gmc/img/[variant]/route.ts`)
 
 ## WooCommerce?
 
@@ -60,5 +69,7 @@ Tüm katalog (teklif ürünleri dahil) denemek için:
 ## İlgili dosyalar
 
 - `lib/google-merchant-feed.ts` — feed mantığı
+- `lib/gmc-additional-images.ts` — ek görsel / kırpım URL’leri
+- `app/api/gmc/img/[variant]/route.ts` — detay kırpım API
 - `app/feeds/google-products.xml/route.ts` — canlı endpoint
 - `scripts/build-google-merchant-feed.mjs` — yerel XML üretimi

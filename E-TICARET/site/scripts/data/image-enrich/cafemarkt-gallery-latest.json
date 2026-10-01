@@ -1,0 +1,3206 @@
+{
+  "generatedAt": "2026-10-01T10:36:57.375Z",
+  "brands": [
+    "Faema",
+    "Santos",
+    "Dito Sama",
+    "Animo",
+    "Blendtec",
+    "Nuova Simonelli",
+    "Berkel"
+  ],
+  "dryRun": false,
+  "stats": {
+    "updated": 76,
+    "wouldUpdate": 0,
+    "downloaded": 236,
+    "downloadFail": 0,
+    "skippedEnough": 11,
+    "skippedNoGallery": 277,
+    "skippedNoNew": 12,
+    "errors": []
+  },
+  "results": [
+    {
+      "sku": "058.NO.11",
+      "url": "https://www.cafemarkt.com/portakal-sikma-makinesi-no-11",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.11.C",
+      "url": "https://www.cafemarkt.com/santos-no11-c-portakal-sikma-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.10",
+      "url": "https://www.cafemarkt.com/santos-no10-portakal-sikma-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.70",
+      "url": "https://www.cafemarkt.com/santos-no70-portakal-sikma-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.68",
+      "url": "https://www.cafemarkt.com/santos-no68-kombine-kati-meyve-sikacagi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.65",
+      "url": "https://www.cafemarkt.com/santos-no65-kati-meyve-sikacagi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.37",
+      "url": "https://www.cafemarkt.com/santos-no37-mini-bar-blender-1550-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.53",
+      "url": "https://www.cafemarkt.com/buz-kirici-5370",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.NO.54",
+      "url": "https://www.cafemarkt.com/santos-no54-bar-mikseri-shaker",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.08208",
+      "url": "https://www.cafemarkt.com/animo-cam-pot-1-8-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600970",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-1-hizli-200-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600972",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-degisken-hizli-200-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650196",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-3-adet",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650197",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-6-adet",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600419",
+      "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-1-hizli-500-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600423",
+      "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-2-hizli-500-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600424",
+      "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-hiz-varyatorlu-500-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600411",
+      "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-1-hizli-2100-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600412",
+      "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-2-hizli-2100-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600415",
+      "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-hiz-varyatorlu-2100-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600413",
+      "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-2-hizli-2100-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600414",
+      "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-hiz-varyatorlu-2100-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650109",
+      "url": "https://www.cafemarkt.com/dito-sama-uzun-sebze-yukleme-silosu-28611",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650094",
+      "url": "https://www.cafemarkt.com/dito-sama-sebze-doldurma-silosu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600960",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-plastik-hazne-2-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600959",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-paslanmaz-hazne-2-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600965",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-3-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600967",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-9-kademeli-hiz-3-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600443",
+      "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-1-hizli-4-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600445",
+      "url": "https://www.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-2-hizli-5-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600446",
+      "url": "https://www.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-2-hizli-7-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600444",
+      "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-2-hizli-4-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600448",
+      "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-hiz-varyatorlu-4-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600450",
+      "url": "https://www.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-hiz-varyatorlu-5-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600453",
+      "url": "https://www.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-hiz-varyatorlu-7-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600091",
+      "url": "https://www.cafemarkt.com/dito-sama-k120s-cutter-mikser-mutfak-robotu-2-hizli-11-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600092",
+      "url": "https://www.cafemarkt.com/dito-sama-k180s-cutter-mikser-mutfak-robotu-2-hizli-17-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600093",
+      "url": "https://www.cafemarkt.com/dito-sama-ke120s-cutter-mikser-mutfak-robotu-hiz-varyatorlu-11-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600976",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-plastik-hazne-2-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600974",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-paslanmaz-hazne-2-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600981",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-3-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600984",
+      "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-9-kademeli-hiz-3-6-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600434",
+      "url": "https://www.cafemarkt.com/dito-sama-trk55-kombine-cutter-ve-sebze-dograma-makinesi-5-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600437",
+      "url": "https://www.cafemarkt.com/dito-sama-trk70-kombine-cutter-ve-sebze-dograma-makinesi-7-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600431",
+      "url": "https://www.cafemarkt.com/dito-sama-trk45-kombine-cutter-ve-sebze-dograma-makinesi-4-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603464",
+      "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-200-mm-250-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600314",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-353-mm-350-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650057",
+      "url": "https://www.cafemarkt.com/dito-sama-603677-el-blender-icin-cirpici",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650108",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-icin-cirpici",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603465",
+      "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-250-mm-250-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603676",
+      "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-hiz-varyatorlu-200-mm-250-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650057",
+      "url": "https://www.cafemarkt.com/dito-sama-603677-el-blender-icin-cirpici",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600320",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-453-mm-350-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600392",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-350-mm-tup-450-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600321",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-450-mm-tup-450-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600329",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-553-mm-450-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600322",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-550-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600336",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-650-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600330",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-550-mm-tup-550-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600324",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-650-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600331",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-650-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600332",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-750-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600337",
+      "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-750-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600137",
+      "url": "https://www.cafemarkt.com/dito-sama-be5-planet-mikser-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603797",
+      "url": "https://www.cafemarkt.com/dito-sama-dmix-set-ustu-mikser-5-l-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600139",
+      "url": "https://www.cafemarkt.com/dito-sama-be8-planet-mikser-8-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600142",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe10-planet-mikser-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600155",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe20-planet-mikser-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600141",
+      "url": "https://www.cafemarkt.com/dito-sama-xbm10-planet-mikser-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600157",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe20-standli-planet-mikser-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600145",
+      "url": "https://www.cafemarkt.com/dito-sama-xbm20-planet-mikser-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600150",
+      "url": "https://www.cafemarkt.com/dito-sama-xbm20-standli-planet-mikser-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600167",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe30-planet-mikser-30-l-220v",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600175",
+      "url": "https://www.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-220v",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600163",
+      "url": "https://www.cafemarkt.com/dito-sama-xbm30-planet-mikser-30-l-380v",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600176",
+      "url": "https://www.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-380v",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600187",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe80-planet-mikser-80-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600177",
+      "url": "https://www.cafemarkt.com/dito-sama-bmx60-planet-mikser-60-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600186",
+      "url": "https://www.cafemarkt.com/dito-sama-bmxe80-planet-mikser-80-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600181",
+      "url": "https://www.cafemarkt.com/dito-sama-bmxe60-planet-mikser-60-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600182",
+      "url": "https://www.cafemarkt.com/dito-sama-xbe60-planet-mikser-60-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.602184",
+      "url": "https://www.cafemarkt.com/dito-sama-vakumlu-paketleme-makinesi-8-m3-h",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600524",
+      "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-250-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603354",
+      "url": "https://www.cafemarkt.com/dito-sama-el40-sebze-kurutma-makinesi-32-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600521",
+      "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-300-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600522",
+      "url": "https://www.cafemarkt.com/dito-sama-dik-tip-gida-dilimleme-makinesi-300-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600523",
+      "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-350-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603651",
+      "url": "https://www.cafemarkt.com/dito-sama-elx65-sebze-kurutma-makinesi-65-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601524",
+      "url": "https://www.cafemarkt.com/dito-sama-lva100-sebze-yikama-ve-kurutma-makinesi-32-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601525",
+      "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-12-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601526",
+      "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-25-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653037.AH260",
+      "url": "https://www.cafemarkt.com/dito-sama-otomatik-sebze-yukleme-silosu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "208.653774.J3X",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm-12953",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650077.AS4XX",
+      "url": "https://www.cafemarkt.com/dito-sama-gastronomi-disk-seti-5-bicakli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653779.PX",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-permasan-vb-sert-peynirler-ve-kuru-ekmek-icin",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650078.AS6XX",
+      "url": "https://www.cafemarkt.com/dito-sama-julyen-kesme-diski-6-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653777.J9X",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-9-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653776.J7X",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-7-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650165.C13SX",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm-tr260tr300",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653778.KX",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-kuru-ekmek-icin",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653773.J2X",
+      "brand": "Dito Sama",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 2,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/dito-sama-rende-diski-paslanmaz-celik-2-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22595-12-O.jpg",
+        "images/catalog/cafemarkt/dito-sama-rende-diski-paslanmaz-celik-2-mm-tr260tr300-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22626-12-b.jpg"
+      ]
+    },
+    {
+      "sku": "208.653568.MT10T",
+      "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-10x10-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653569.MT12T",
+      "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-12x12-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650164.C10WX",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-knodel",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653573.FT10",
+      "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-10x10-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650166.AS2XX",
+      "brand": "Dito Sama",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 2,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/dito-sama-rende-diski-paslanmaz-celik-3-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22602-12-O.jpg",
+        "images/catalog/cafemarkt/dito-sama-rende-diski-paslanmaz-celik-3-mm-12953-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22596-12-b.jpg"
+      ]
+    },
+    {
+      "sku": "208.653571.FT06",
+      "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-6x6-mm",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "208.653572.FT08",
+      "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-8x8-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650081.C06SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650083.C2SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-8-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650092.SCEQXX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-5-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650162.C8WX",
+      "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x8-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650167.AS3XX",
+      "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-4-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650088.C8SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-1-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650087.C6SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-13-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650079.AS8XX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650085.C4SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650160.C10SX",
+      "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-4x4-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650089.C2WX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650090.C3WX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650082.C1SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-6-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650159.AS2X10X",
+      "url": "https://www.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-3x3-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650158.AS2X8X",
+      "url": "https://www.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x10-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650161.C12SX",
+      "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x2-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650178",
+      "url": "https://www.cafemarkt.com/dito-sama-4li-disk-seti",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.DS7DSET",
+      "url": "https://www.cafemarkt.com/dito-sama-7li-disk-seti",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.CC0G12",
+      "url": "https://www.cafemarkt.com/dito-sama-8li-disk-seti",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "208.CC0G13",
+      "url": "https://www.cafemarkt.com/dito-sama-12li-disk-seti",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "208.650080.AS10XX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650084.C3SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-0",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650091.C6WX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-4-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.650086.C5SX",
+      "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-12-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603692",
+      "url": "https://www.cafemarkt.com/dito-sama-ti25-patates-soyma-makinesi-25-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601549",
+      "url": "https://www.cafemarkt.com/dito-sama-lmp400-manuel-hamur-acma-makinesi-400-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601546",
+      "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-32-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601567",
+      "url": "https://www.cafemarkt.com/dito-sama-lmp500-set-ustu-hamur-acma-makinesi-500-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.660030",
+      "url": "https://www.cafemarkt.com/dito-sama-lv301-otomatik-sebze-yikama-makinesi-300-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601547",
+      "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-38-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601548",
+      "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-48-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603499",
+      "url": "https://www.cafemarkt.com/dito-sama-t5m-kabuklu-deniz-urunleri-ayiklama-makinesi-5-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603512",
+      "url": "https://www.cafemarkt.com/dito-sama-t15e-standli-patates-soyma-makinesi-15-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603510",
+      "url": "https://www.cafemarkt.com/dito-sama-t10e-standli-patates-soyma-makinesi-10-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603649",
+      "url": "https://www.cafemarkt.com/dito-sama-t25e-standli-patates-soyma-makinesi-25-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.660033",
+      "url": "https://www.cafemarkt.com/dito-sama-lv300-sabit-kazanli-sebze-yikama-makinesi-300-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.601588",
+      "url": "https://www.cafemarkt.com/dito-sama-lmp600bf-standli-hamur-acma-makinesi-600-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603498",
+      "url": "https://www.cafemarkt.com/dito-sama-t5e-patates-soyma-makinesi-5-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653585",
+      "url": "https://www.cafemarkt.com/dito-sama-kazan-arabasi-35x65x105-cm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.603506",
+      "url": "https://www.cafemarkt.com/dito-sama-t8e-patates-soyma-makinesi-8-kg",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.600125",
+      "url": "https://www.cafemarkt.com/dito-sama-tr260-sebze-dograma-makinesi-2-kafali-2500-kg-saat",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.660031",
+      "url": "https://www.cafemarkt.com/dito-sama-lv200-sabit-kazanli-sebze-yikama-makinesi-200-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10419",
+      "url": "https://www.cafemarkt.com/animo-pompali-termos-2-1-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.50241",
+      "url": "https://www.cafemarkt.com/animo-konteyner-2-4-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10597",
+      "url": "https://www.cafemarkt.com/animo-m22-cam-pot-sicak-tutucu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.08420",
+      "url": "https://www.cafemarkt.com/animo-paslanmaz-celik-termos-2-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "VOLANO.B2",
+      "url": "https://www.cafemarkt.com/berkel-volano-b2-pedestal-b2-geleneksel-dilimleme-makinesi-265-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "VOLANO.TRIBUTE",
+      "brand": "Berkel",
+      "url": "https://www.cafemarkt.com/berkel-volano-tribute-pedestal-tribute-geleneksel-dilimleme-makinesi-300-mm",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/4c8c17d5fc998c07.jpg",
+        "images/catalog/cafemarkt/berkel-volano-tribute-pedestal-tribute-geleneksel-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-berkel-30957-17-b.jpg",
+        "images/catalog/cafemarkt/berkel-volano-tribute-pedestal-tribute-geleneksel-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-berkel-40500-17-b.jpg",
+        "images/catalog/cafemarkt/berkel-volano-tribute-pedestal-tribute-geleneksel-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-berkel-40501-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9830.0VS30.00",
+      "brand": "Berkel",
+      "url": "https://www.cafemarkt.com/berkel-pro-line-vs30-gida-dilimleme-makinesi-300-mm-gumus",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/c63ab07df37fef84.jpg",
+        "images/catalog/cafemarkt/berkel-pro-line-vs30-gida-dilimleme-makinesi-300-mm-gumus-gida-dilimleme-makineleri-berkel-41396-23-b.jpg",
+        "images/catalog/cafemarkt/berkel-pro-line-vs30-gida-dilimleme-makinesi-300-mm-gumus-gida-dilimleme-makineleri-berkel-41397-23-b.jpg",
+        "images/catalog/cafemarkt/berkel-pro-line-vs30-gida-dilimleme-makinesi-300-mm-gumus-gida-dilimleme-makineleri-berkel-41398-23-b.jpg",
+        "images/catalog/cafemarkt/berkel-pro-line-vs30-gida-dilimleme-makinesi-300-mm-gumus-gida-dilimleme-makineleri-berkel-41399-23-b.jpg"
+      ]
+    },
+    {
+      "sku": "C575B4101A",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-classic-575-blender-3-beygir-22-programli-1560-w",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5dcb38a333b8f751.jpg",
+        "images/catalog/cafemarkt/blendtec-classic-575-blender-3-beygir-22-programli-1560-w-bar-blenderlar-blendtec-29676-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-classic-575-blender-3-beygir-22-programli-1560-w-bar-blenderlar-blendtec-29678-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-classic-575-blender-3-beygir-22-programli-1560-w-bar-blenderlar-blendtec-29680-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "193.40.620.54",
+      "url": "https://www.cafemarkt.com/twister-jar",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "D650D0501A1A",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-designer-650-blender-8-hizli-6-programli-1560-w",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/c725012b78a2eb6a.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650-blender-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-33546-18-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650-blender-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-33547-18-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650-blender-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-33548-18-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650-blender-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-33549-18-b.jpg"
+      ]
+    },
+    {
+      "sku": "D650D0507A1A",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-designer-650s-blender-paslanmaz-celik-8-hizli-6-programli-1560-w",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/9d8031b6b4640b37.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650s-blender-paslanmaz-celik-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-41107-23-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650s-blender-paslanmaz-celik-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-41108-23-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650s-blender-paslanmaz-celik-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-41109-23-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-650s-blender-paslanmaz-celik-8-hizli-6-programli-1560-w-bar-blenderlar-blendtec-41110-23-b.jpg"
+      ]
+    },
+    {
+      "sku": "CONNOISSEURR825.SS",
+      "url": "https://www.cafemarkt.com/blendtec-connoisseur-spacesaver-blender-26-l-1825-w-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "JRE.614",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-jre-614-hizli-durulama-aparati",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/038561f813878d0c.jpg",
+        "images/catalog/cafemarkt/blendtec-jre-614-hizli-durulama-aparati-bar-blender-hazne-durulama-aparatlari-blendtec-75899-39-b.jpg",
+        "images/catalog/cafemarkt/blendtec-jre-614-hizli-durulama-aparati-bar-blender-hazne-durulama-aparatlari-blendtec-75900-39-b.jpg"
+      ]
+    },
+    {
+      "sku": "STEALTH.885",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-stealth-885-blender-1800-w",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/af3238b7383ab42b.jpg",
+        "images/catalog/cafemarkt/blendtec-stealth-885-blender-1800-w-bar-blenderlar-blendtec-34106-19-b.jpg",
+        "images/catalog/cafemarkt/blendtec-stealth-885-blender-1800-w-bar-blenderlar-blendtec-34107-19-b.jpg"
+      ]
+    },
+    {
+      "sku": "FOURSIDEJAR",
+      "url": "https://www.cafemarkt.com/fourside-jar-kapaksiz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "RAPIDRINSESTATION",
+      "url": "https://www.cafemarkt.com/rapid-rinse-station",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "193.40.630.50",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-wildside-hazne-2",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/6c288ba7f3d97f79.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-2-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-29683-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-2-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-29684-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-2-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-29685-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-2-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-29686-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "FOURSIDEYELLOWJAR",
+      "url": "https://www.cafemarkt.com/fourside-yellow-jar",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "FOAMINGJAR",
+      "url": "https://www.cafemarkt.com/foaming-jar-kapaksiz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "WILDSIDEJAR",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-wildside-hazne-kapaksiz-1-l",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/e7582c419003a335.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-kapaksiz-1-l-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-28294-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-wildside-hazne-kapaksiz-1-l-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-28295-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "FOURSIDEPINKJAR",
+      "url": "https://www.cafemarkt.com/fourside-pink-jar",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "193.40.609.50",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-fourside-hazne-1-l",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/1b130913279af577.jpg",
+        "images/catalog/cafemarkt/blendtec-fourside-hazne-1-l-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-31201-17-b.jpg",
+        "images/catalog/cafemarkt/blendtec-fourside-hazne-1-l-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-31202-17-b.jpg",
+        "images/catalog/cafemarkt/blendtec-fourside-hazne-1-l-blendtec-yedek-parcalari-ve-aksesuarlari-blendtec-31203-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "CH600",
+      "url": "https://www.cafemarkt.com/blendtec-chef-600-blender-1560-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "P800D4601.EU",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-pro-800-blender-38-beygir-6-programli-1800-w",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/e9b74401f620167a.jpg",
+        "images/catalog/cafemarkt/blendtec-pro-800-blender-38-beygir-6-programli-1800-w-bar-blenderlar-blendtec-29687-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-pro-800-blender-38-beygir-6-programli-1800-w-bar-blenderlar-blendtec-29688-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-pro-800-blender-38-beygir-6-programli-1800-w-bar-blenderlar-blendtec-29689-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "D625B4101A1A",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/blendtec-designer-625-blender-3-beygir-4-programli-1560-w",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/8bb779dac8370d06.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-625-blender-3-beygir-4-programli-1560-w-bar-blenderlar-blendtec-29677-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-625-blender-3-beygir-4-programli-1560-w-bar-blenderlar-blendtec-29679-16-b.jpg",
+        "images/catalog/cafemarkt/blendtec-designer-625-blender-3-beygir-4-programli-1560-w-bar-blenderlar-blendtec-29681-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "STEALTH.895",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/stealth-895-nitro-bs-blender",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/0349c9e57dd48642.jpg",
+        "images/catalog/cafemarkt/stealth-895-nitro-bs-blender-bar-blenderlar-blendtec-18954-11-b.jpg",
+        "images/catalog/cafemarkt/stealth-895-nitro-bs-blender-bar-blenderlar-blendtec-18955-11-b.jpg",
+        "images/catalog/cafemarkt/stealth-895-nitro-bs-blender-bar-blenderlar-blendtec-18956-11-b.jpg",
+        "images/catalog/cafemarkt/stealth-895-nitro-bs-blender-bar-blenderlar-blendtec-18957-11-b.jpg"
+      ]
+    },
+    {
+      "sku": "CONNOISSEUR825",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/connoisseur-825-blender",
+      "galleryFound": 7,
+      "before": 1,
+      "after": 8,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/db3c7df300f2eb42.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-18951-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-18953-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-75476-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-75477-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-75478-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-75479-11-b.jpg",
+        "images/catalog/cafemarkt/connoisseur-825-blender-bar-blenderlar-blendtec-75480-11-b.jpg"
+      ]
+    },
+    {
+      "sku": "EZ600",
+      "brand": "Blendtec",
+      "url": "https://www.cafemarkt.com/ez-600-blender",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/59bffd70fea1458d.jpg",
+        "images/catalog/cafemarkt/ez-600-blender-bar-blenderlar-blendtec-18949-11-b.jpg",
+        "images/catalog/cafemarkt/ez-600-blender-bar-blenderlar-blendtec-18950-11-b.jpg"
+      ]
+    },
+    {
+      "sku": "058.NO.33.GE",
+      "url": "https://www.cafemarkt.com/santos-no33-ge-mini-bar-blender-600-w",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E98.UP.S2.TC",
+      "url": "https://www.cafemarkt.com/faema-e98-up-s-2-tall-cup-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E98.UP.S2.TC",
+      "url": "https://www.cafemarkt.com/faema-e98-up-s-2-tall-cup-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E98.UP.A3",
+      "url": "https://www.cafemarkt.com/faema-e98-up-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.S1",
+      "url": "https://www.cafemarkt.com/faema-e61-legend-s-1-jubile-yari-otomatik-espresso-kahve-makinesi-1-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.S2",
+      "url": "https://www.cafemarkt.com/faema-e61-legend-s-2-jubile-yari-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.S3",
+      "url": "https://www.cafemarkt.com/faema-e61-legend-s-3-jubile-yari-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.A2.WW",
+      "url": "https://www.cafemarkt.com/faema-e61-a-2-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.A1.WW",
+      "url": "https://www.cafemarkt.com/faema-e61-a-1-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-1-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.A2.WW",
+      "url": "https://www.cafemarkt.com/faema-e61-a-2-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E61.A1.WW",
+      "url": "https://www.cafemarkt.com/faema-e61-a-1-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-1-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.E71.TOU.A3.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A2.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-2-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A3.BL",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-black-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A2.BL",
+      "url": "https://www.cafemarkt.com/faema-e71-a-2-touch-black-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A3.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A3.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A3.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.E71.TOU.A3.BP",
+      "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 2,
+      "applied": false,
+      "reason": "no_new_files",
+      "photos": 2
+    },
+    {
+      "sku": "197.PRESIDENT.A3",
+      "url": "https://www.cafemarkt.com/faema-president-gti-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.X30.S10",
+      "url": "https://www.cafemarkt.com/faema-x30-s10-autosteam-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.X30.CS10",
+      "url": "https://www.cafemarkt.com/faema-x30-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.X20.S10",
+      "url": "https://www.cafemarkt.com/faema-x20-s10-autosteam-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.X20.CS10",
+      "url": "https://www.cafemarkt.com/faema-x20-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.X15.CS10",
+      "url": "https://www.cafemarkt.com/faema-x15-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.BR9C",
+      "url": "https://www.cafemarkt.com/faema-br9c-sut-sogutucu-unite",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.MD.3000.OD",
+      "url": "https://www.cafemarkt.com/faema-md-3000-on-demand-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "197.MD.3000",
+      "url": "https://www.cafemarkt.com/faema-md-3000-kahve-degirmeni-saatte-33-kg-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10380",
+      "url": "https://www.cafemarkt.com/excelso-filtre-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10385",
+      "url": "https://www.cafemarkt.com/animo-excelso-t-termoslu-filtre-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10592",
+      "url": "https://www.cafemarkt.com/animo-m21-cam-pot-sicak-tutucu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.10522",
+      "url": "https://www.cafemarkt.com/animo-mt100-filtre-kahve-makinesi-manuel-dolum",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005390",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x5-silindirik-filtre-kahve-makinesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005391",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x5-r-silindirik-filtre-kahve-makinesi-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005392",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x5-l-silindirik-filtre-kahve-makinesi-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005390",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x5-silindirik-filtre-kahve-makinesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1007174",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x40-r-silindirik-filtre-kahve-makinesi-40-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005394",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x5-w-silindirik-filtre-kahve-makinesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005364",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cn5e-silindirik-filtre-kahve-makinesi-haznesi-5-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.50087",
+      "url": "https://www.cafemarkt.com/animo-mpw-6-tetra-pak-kutu-sut-isitici",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005365",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cn10e-silindirik-filtre-kahve-makinesi-haznesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005366",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cn20e-silindirik-filtre-kahve-makinesi-haznesi-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1007177",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cn40e-silindirik-filtre-kahve-makinesi-haznesi-40-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "208.653570.MT20T",
+      "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-20x20-mm",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "MT100.V",
+      "brand": "Animo",
+      "url": "https://www.cafemarkt.com/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/848739cb28e42d47.jpg",
+        "images/catalog/cafemarkt/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65108-35-b.jpg",
+        "images/catalog/cafemarkt/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65109-35-b.jpg",
+        "images/catalog/cafemarkt/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65110-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "MT200.V",
+      "brand": "Animo",
+      "url": "https://www.cafemarkt.com/animo-mt100-v-otomatik-dolum-filtre-kahve-makinesi-144-fincan-saat",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/2b487d96f97d4722.jpg",
+        "images/catalog/cafemarkt/animo-mt100-v-otomatik-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65111-35-b.jpg",
+        "images/catalog/cafemarkt/animo-mt100-v-otomatik-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65112-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "199.1005402",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x10-w-silindirik-filtre-kahve-makinesi-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005398",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x10-silindirik-filtre-kahve-makinesi-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005406",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x20-silindirik-filtre-kahve-makinesi-40-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005410",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x20-w-silindirik-filtre-kahve-makinesi-40-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1007173",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x40-silindirik-filtre-kahve-makinesi-80-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1007175",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x40-l-silindirik-filtre-kahve-makinesi-40-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005408",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x20-l-silindirik-filtre-kahve-makinesi-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005407",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x20-r-silindirik-filtre-kahve-makinesi-20-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005400",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x10-l-silindirik-filtre-kahve-makinesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "199.1005399",
+      "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x10-r-silindirik-filtre-kahve-makinesi-10-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "NO.04",
+      "brand": "Santos",
+      "url": "https://www.cafemarkt.com/santos-no-04-filtre-kahve-degirmeni-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/2e85e1785e2d70e2.jpg",
+        "images/catalog/cafemarkt/santos-no-04-filtre-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-santos-35179-19-b.jpg",
+        "images/catalog/cafemarkt/santos-no-04-filtre-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-santos-35196-19-b.jpg"
+      ]
+    },
+    {
+      "sku": "NO.43.N",
+      "brand": "Santos",
+      "url": "https://www.cafemarkt.com/santos-filtre-kahve-degirmeni",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/b3e56a44e30e1210.jpg",
+        "images/catalog/cafemarkt/santos-filtre-kahve-degirmeni-kahve-ogutucu-degirmenleri-santos-46085-65-b.jpg",
+        "images/catalog/cafemarkt/santos-filtre-kahve-degirmeni-kahve-ogutucu-degirmenleri-santos-46086-65-b.jpg",
+        "images/catalog/cafemarkt/santos-filtre-kahve-degirmeni-kahve-ogutucu-degirmenleri-santos-46087-65-b.jpg"
+      ]
+    },
+    {
+      "sku": "NO.40.AN",
+      "url": "https://www.cafemarkt.com/santos-no40-kahve-degirmeni-manuel-elektrikli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "058.01.BAR",
+      "url": "https://www.cafemarkt.com/santos-01bar-cok-amacli-kahve-degirmeni-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "NO.63",
+      "brand": "Santos",
+      "url": "https://www.cafemarkt.com/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/46f6ac8f63c75ab8.jpg",
+        "images/catalog/cafemarkt/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu-kahve-ogutucu-degirmenleri-santos-46095-26-b.jpg",
+        "images/catalog/cafemarkt/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu-kahve-ogutucu-degirmenleri-santos-46096-26-b.jpg",
+        "images/catalog/cafemarkt/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu-kahve-ogutucu-degirmenleri-santos-46097-26-b.jpg"
+      ]
+    },
+    {
+      "sku": "NO.75",
+      "url": "https://www.cafemarkt.com/santos-no75-kahve-makinesi-tek-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "NO.55.BF",
+      "url": "https://www.cafemarkt.com/santos-no55-kahve-degirmeni-otomatik-elektrikli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "NO.06.A",
+      "url": "https://www.cafemarkt.com/santos-no06-kahve-degirmeni-nostaljik-elektrikli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.2VT",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/4200f96a66b2bb35.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-kahve-makinesi-alana-su-filtrasyon-indirimi-34592-19-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-kahve-makinesi-alana-su-filtrasyon-indirimi-52844-19-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-kahve-makinesi-alana-su-filtrasyon-indirimi-52845-19-b.jpg"
+      ]
+    },
+    {
+      "sku": "T43420",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah",
+      "galleryFound": 14,
+      "before": 1,
+      "after": 10,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5b7da295b9130a4a.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84989-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84990-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84993-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84994-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84995-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84996-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84997-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84998-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-13-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-84999-43-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.2VT.01",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "SET.25004045",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah",
+      "galleryFound": 15,
+      "before": 1,
+      "after": 10,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/323996192451e815.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83907-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83908-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83911-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83912-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83913-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83914-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83915-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83916-43-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-14-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-83917-43-b.jpg"
+      ]
+    },
+    {
+      "sku": "AUUX.2.02",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-nuova-aurelia-ux-tall-cup-otomatik-dozaj-ayarli-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AUXT.2.01",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-nuova-aurelia-xt-otomatik-dozaj-ayarli-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "MCD4.00",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mcd4-filtre-turk-kahve-ogutme-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GX85",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-gx-85-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.2VT.F64E",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni",
+      "galleryFound": 5,
+      "before": 1,
+      "after": 6,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5433c79606473fa1.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni-kahve-makinesi-setleri-nuova-simonelli-67896-36-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni-kahve-makinesi-setleri-nuova-simonelli-67897-36-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni-kahve-makinesi-setleri-nuova-simonelli-67898-36-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni-kahve-makinesi-setleri-nuova-simonelli-67899-36-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-2-gruplu-fiorenzato-f64e-kahve-degirmeni-kahve-makinesi-setleri-nuova-simonelli-67900-36-b.jpg"
+      ]
+    },
+    {
+      "sku": "AUVOL.2.00",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-nuova-aurelia-volumetric-tall-cup-otomatik-dozaj-ayarli-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AUMP.2.01",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-nuova-aurelia-mp-otomatik-dozaj-ayarli-multi-boiler-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "PRONTOBAR.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-prontobar-silent-easycream-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/91ad59a6e2f45df5.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-prontobar-silent-easycream-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-nuova-simonelli-50956-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-prontobar-silent-easycream-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-nuova-simonelli-50957-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "AURELIA.WV.2GR.00.EC",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-easy-cream-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/b5fd96f669810786.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-easy-cream-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-74132-39-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-easy-cream-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-74133-39-b.jpg"
+      ]
+    },
+    {
+      "sku": "OSCAR.MOOD.RED",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-mood-espresso-kahve-makinesi-1-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AURELIA.MP.2GR.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-mp-otomatik-dozaj-ayarli-multi-boiler-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2XT.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-xt-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "OSCAR.MOOD.KH",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-mood-espresso-kahve-makinesi-1-gruplu-kahverengi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2GR.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-compact-tall-cup-tam-otomatik-espresso-makinesi-2-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.1GR.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-tam-otomatik-espresso-kahve-makinesi-1-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "VIVA.75.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-viva-on-demand-kahve-degirmeni-75-mm-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "OSCAR.MOOD.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-mood-espresso-kahve-makinesi-1-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AURELIA.XT.2GR.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-xt-otomatik-dozaj-ayarli-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2XT.WH",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-xt-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2VT.WH",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2VT.RED",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "VIVA.65.RED",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-viva-on-demand-kahve-degirmeni-65-mm-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2XT.RED",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-xt-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.VIVA.2VT.BL",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-viva-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "T44415",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah",
+      "galleryFound": 13,
+      "before": 1,
+      "after": 10,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/2887e2186f1406ef.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88926-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88929-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88930-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88931-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88932-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88933-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88934-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88935-44-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-2-gruplu-espresso-kahve-makinesi-fiorenzato-f64e-kahve-degirmeni-12-parca-kafe-seti-siyah-kahve-makinesi-setleri-nuova-simonelli-88936-44-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDJ.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/d147e7071cb802cd.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-72675-38-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-72676-38-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDJ.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-kirmizi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/23274ddeb74b0a27.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-72677-38-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-72678-38-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDJ.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-beyaz",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/a87f1858846429ca.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-72679-38-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdj-sessiz-on-demand-kahve-degirmeni-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-72680-38-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDXS.CORE.00",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-core-kahve-degirmeni-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GX.85V",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-gx-85v-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GX.85W",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-gx-85w-tartili-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.1GR.00",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-1-gruplu-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.CVG",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5a0761cac5767767.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-53310-24-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-80429-24-b.jpg"
+      ]
+    },
+    {
+      "sku": "AURELIA.WAVE.2GB",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/8fa8d5be647420c8.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-38922-22-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-38923-22-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-38924-22-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-38925-22-b.jpg"
+      ]
+    },
+    {
+      "sku": "PRONTOBAR.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/prontobar-tam-otomatik-kahve-makinasi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/048698868f6684df.jpg",
+        "images/catalog/cafemarkt/prontobar-tam-otomatik-kahve-makinasi-espresso-makineleri-nuova-simonelli-50952-60-b.jpg",
+        "images/catalog/cafemarkt/prontobar-tam-otomatik-kahve-makinasi-espresso-makineleri-nuova-simonelli-50953-60-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDXS.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-kahve-degirmeni-on-demand-siyah",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/f3de5de1d3cdf9d4.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-kahve-degirmeni-on-demand-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-70277-22-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-kahve-degirmeni-on-demand-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-70278-22-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-kahve-degirmeni-on-demand-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-70279-22-b.jpg"
+      ]
+    },
+    {
+      "sku": "TCMDX.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/mdx-kahve-degirmeni-on-demand",
+      "galleryFound": 5,
+      "before": 1,
+      "after": 6,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/a9b7c19b7e917c39.jpg",
+        "images/catalog/cafemarkt/mdx-kahve-degirmeni-on-demand-kahve-ogutucu-degirmenleri-nuova-simonelli-15867-60-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-24068-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-24069-13-b.jpg",
+        "images/catalog/cafemarkt/mdx-kahve-degirmeni-on-demand-kahve-ogutucu-degirmenleri-nuova-simonelli-72682-60-b.jpg",
+        "images/catalog/cafemarkt/mdx-kahve-degirmeni-on-demand-kahve-ogutucu-degirmenleri-nuova-simonelli-72683-60-b.jpg"
+      ]
+    },
+    {
+      "sku": "MYTHOS.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/mythos-one-kahve-degirmeni",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/cb24372c107aeea1.jpg",
+        "images/catalog/cafemarkt/mythos-one-kahve-degirmeni-kahve-ogutucu-degirmenleri-nuova-simonelli-73232-98-b.jpg",
+        "images/catalog/cafemarkt/mythos-one-kahve-degirmeni-kahve-ogutucu-degirmenleri-nuova-simonelli-73233-98-b.jpg"
+      ]
+    },
+    {
+      "sku": "TCGRINTA.00",
+      "url": "https://www.cafemarkt.com/grinta-kahve-degirmeni-on-demand",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "TCMDX.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdx-kahve-degirmeni-on-demand-beyaz",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/3133c5ee02a295ea.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-24068-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-72685-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-72686-13-b.jpg"
+      ]
+    },
+    {
+      "sku": "TCMDH.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdh-kahve-degirmeni-on-demand-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/f59d8df0eeb8ccf3.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdh-kahve-degirmeni-on-demand-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-24066-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdh-kahve-degirmeni-on-demand-siyah-kahve-ogutucu-degirmenleri-nuova-simonelli-24067-13-b.jpg"
+      ]
+    },
+    {
+      "sku": "TCMDJ.01",
+      "url": "https://www.cafemarkt.com/mdj-kahve-degirmeni-on-demand",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "TCMDX.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdx-kahve-degirmeni-on-demand-kirmizi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/075c173ac85e2fbf.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-24069-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-72688-13-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdx-kahve-degirmeni-on-demand-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-72689-13-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDXS.CORE.01",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-core-kahve-degirmeni-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "MDXS.CORE.02",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-core-kahve-degirmeni-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "DUO.03",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-duo-on-demand-kahve-degirmeni-gri",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "DUO.02",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-duo-on-demand-kahve-degirmeni-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "DUO.00",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-duo-on-demand-kahve-degirmeni-siyah",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "MDXS.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-beyaz",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/efc6bf8ba7743002.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-70273-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-beyaz-kahve-ogutucu-degirmenleri-nuova-simonelli-70274-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "DUO.04",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-duo-on-demand-kahve-degirmeni-yesil",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AURELIA.WAVE.T3.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-t3-espresso-kahve-makinesi-tam-otomatik-volumetric-2-gruplu-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/2dd4d10142f57091.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-t3-espresso-kahve-makinesi-tam-otomatik-volumetric-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-30354-17-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-t3-espresso-kahve-makinesi-tam-otomatik-volumetric-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-30355-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "OSCAR.10",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/oscar-tam-otomatik-espresso-kahve-makinesi-9920",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/55afb8db817ed4c3.jpg",
+        "images/catalog/cafemarkt/oscar-tam-otomatik-espresso-kahve-makinesi-9920-espresso-makineleri-nuova-simonelli-17056-99-b.jpg",
+        "images/catalog/cafemarkt/oscar-tam-otomatik-espresso-kahve-makinesi-9920-espresso-makineleri-nuova-simonelli-17057-99-b.jpg",
+        "images/catalog/cafemarkt/oscar-tam-otomatik-espresso-kahve-makinesi-9920-espresso-makineleri-nuova-simonelli-60574-99-b.jpg",
+        "images/catalog/cafemarkt/oscar-tam-otomatik-espresso-kahve-makinesi-9920-espresso-makineleri-nuova-simonelli-60575-99-b.jpg"
+      ]
+    },
+    {
+      "sku": "MUSICA.STDV1.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/musica-1-gruplu-volumetrik-kahve-makinasi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/223f38ebfc7b6d0c.jpg",
+        "images/catalog/cafemarkt/musica-1-gruplu-volumetrik-kahve-makinasi-espresso-makineleri-nuova-simonelli-6861-60-b.jpg",
+        "images/catalog/cafemarkt/musica-1-gruplu-volumetrik-kahve-makinasi-espresso-makineleri-nuova-simonelli-15859-60-b.jpg",
+        "images/catalog/cafemarkt/musica-1-gruplu-volumetrik-kahve-makinasi-espresso-makineleri-nuova-simonelli-15860-60-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.C2V.00",
+      "url": "https://www.cafemarkt.com/appia-compact-2-gruplu-volumetrik-kahve-makinasi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.1GR.01",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-1-gruplu-beyaz",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.COM.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/ed694e97540949ff.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-49496-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-compact-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-49497-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.XT.00",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/56a48b3b27d228dc.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-49498-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-49499-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "AURELIA.UX",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-ux-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/c0316a1295ad3c23.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-ux-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-espresso-makineleri-nuova-simonelli-49514-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-ux-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-espresso-makineleri-nuova-simonelli-49515-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.XT.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/ba21f1a2d1dbf7a9.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-49500-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-xt-tall-cup-espresso-kahve-makinesi-tam-otomatik-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-49501-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "OSCAR.2.MAVI",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-mavi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/dab808a48e3532fd.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-mavi-espresso-makineleri-nuova-simonelli-49507-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-mavi-espresso-makineleri-nuova-simonelli-49508-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-mavi-espresso-makineleri-nuova-simonelli-49509-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "OSCAR.2.KIR",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-kirmizi",
+      "galleryFound": 4,
+      "before": 1,
+      "after": 5,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/32ad7441896fb6f4.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-49504-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-49505-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-49506-29-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-oscar-ii-tall-cup-espresso-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-49516-29-b.jpg"
+      ]
+    },
+    {
+      "sku": "OSCAR.MOOD",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-oscar-mood-espresso-makinesi-1-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "AURELIA.WAVE.2GB.01",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/e4903c1fa43a26c6.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-63855-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-63856-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz-espresso-makineleri-nuova-simonelli-70719-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.1GR.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-1-gruplu-kirmizi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5dde2460507d4394.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63857-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-espresso-kahve-makinesi-1-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63858-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "MDXS.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-kirmizi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/5d7490dbf2acbe38.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-70275-31-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-mdxs-on-demand-kahve-degirmeni-kirmizi-kahve-ogutucu-degirmenleri-nuova-simonelli-70276-31-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.COM.02",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-compact-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "PRONTOBAR.T",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-prontobar-touch-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/a938b97f53b0eeb3.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-prontobar-touch-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-nuova-simonelli-63852-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-prontobar-touch-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-nuova-simonelli-63853-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.2VT.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/91fa95884f129c5d.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63834-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63835-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63836-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "AURELIA.WAVE.2GB.02",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-aurelia-wave-t3-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/24a1b20017bbdf27.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-t3-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63837-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-t3-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63838-35-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-aurelia-wave-t3-volumetric-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi-espresso-makineleri-nuova-simonelli-63839-35-b.jpg"
+      ]
+    },
+    {
+      "sku": "APPIA.LIFE.XT.02",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-xt-tall-cup-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.2VT.02.EC",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-easy-cream-tam-otomatik-espresso-kahve-makinesi-2-gruplu-kirmizi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "APPIA.LIFE.2VT.00.EC",
+      "brand": "Nuova Simonelli",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-appia-life-tall-cup-easy-cream-tam-otomatik-espresso-kahve-makinesi-2-gruplu-siyah",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/cf2e50f89bc7ea3f.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-easy-cream-tam-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-69763-37-b.jpg",
+        "images/catalog/cafemarkt/nuova-simonelli-appia-life-tall-cup-easy-cream-tam-otomatik-espresso-kahve-makinesi-2-gruplu-siyah-espresso-makineleri-nuova-simonelli-69764-37-b.jpg"
+      ]
+    },
+    {
+      "sku": "XCOMPACT.8",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 7,
+      "before": 1,
+      "after": 8,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/d1e6041cedd3ba99.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75829-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75830-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75831-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75832-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75841-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75842-39-b.jpg",
+        "images/catalog/cafemarkt/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75843-39-b.jpg"
+      ]
+    },
+    {
+      "sku": "PRESIDENT.A2",
+      "url": "https://www.cafemarkt.com/faema-president-gti-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E71.A2.WG",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-white-gold",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/21618f42e6f1c4a9.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-white-gold-espresso-makineleri-faema-46059-26-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-white-gold-espresso-makineleri-faema-46065-26-b.jpg"
+      ]
+    },
+    {
+      "sku": "E71.A3.WG",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-white-gold",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/d93c26eaf72bad03.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-white-gold-espresso-makineleri-faema-46060-26-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-white-gold-espresso-makineleri-faema-46066-26-b.jpg"
+      ]
+    },
+    {
+      "sku": "ME.A.64",
+      "url": "https://www.cafemarkt.com/faema-me-a64-kahve-degirmeni-saatte-23-kg-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GROUNDB",
+      "url": "https://www.cafemarkt.com/faema-groundbreaker-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GROUNDB.A",
+      "url": "https://www.cafemarkt.com/faema-groundbreaker-autotamper-kahve-degirmeni",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "FAEMINA.A1.GTI.1",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu",
+      "galleryFound": 10,
+      "before": 1,
+      "after": 10,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/e20aa84d2408b782.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74479-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74480-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74481-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74482-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74483-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74484-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74485-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74486-39-b.jpg",
+        "images/catalog/cafemarkt/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74487-39-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71BG.A3",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-3-gruplu-beyaz-gold-ahsap",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/9b2cbd9736bea815.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-3-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31382-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-3-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31383-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "E71.A3",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/e71-3-gruplu-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/de40c15167af9281.jpg",
+        "images/catalog/cafemarkt/e71-3-gruplu-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-19042-11-b.jpg",
+        "images/catalog/cafemarkt/e71-3-gruplu-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-19043-11-b.jpg",
+        "images/catalog/cafemarkt/e71-3-gruplu-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-19044-11-b.jpg"
+      ]
+    },
+    {
+      "sku": "E71.A2",
+      "url": "https://www.cafemarkt.com/e71-2-gruplu-otomatik-espresso-kahve-makinesi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "9999.MDOND.00",
+      "url": "https://www.cafemarkt.com/faema-kahve-degirmeni-on-demand-cekirdek-hazne-kapasitesi-1",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "9580.PRTGA.2W",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/0d85c5b48917c264.jpg",
+        "images/catalog/cafemarkt/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-espresso-makineleri-faema-31377-17-b.jpg",
+        "images/catalog/cafemarkt/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-espresso-makineleri-faema-31378-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.PRTGA.2B",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/792cca4f559c9f42.jpg",
+        "images/catalog/cafemarkt/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-31379-17-b.jpg",
+        "images/catalog/cafemarkt/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-31380-17-b.jpg",
+        "images/catalog/cafemarkt/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-31381-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71B.GA",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gold-ahsap",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/71bac44f8af801c7.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31384-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31385-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71S3.00",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-gti-espresso-kahve-makinesi-full-otomatik-3-gruplu",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/a0c74b0196616bb3.jpg",
+        "images/catalog/cafemarkt/faema-e71-gti-espresso-kahve-makinesi-full-otomatik-3-gruplu-espresso-makineleri-faema-30390-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-gti-espresso-kahve-makinesi-full-otomatik-3-gruplu-espresso-makineleri-faema-30396-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71ES.G3",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-gumus",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/061bec5e01548e2b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-gumus-espresso-makineleri-faema-30389-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-gumus-espresso-makineleri-faema-30395-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71ES.G2",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-gumus",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/fb1717974f5eec06.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-gumus-espresso-makineleri-faema-30388-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-gumus-espresso-makineleri-faema-30394-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71ES.B3",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-siyah-bakir",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/ffda944a457f569a.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-siyah-bakir-espresso-makineleri-faema-30387-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-siyah-bakir-espresso-makineleri-faema-30393-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71ES.B2",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-bakir",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/15c839ced892be89.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-bakir-espresso-makineleri-faema-30392-17-b.jpg",
+        "images/catalog/cafemarkt/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-bakir-espresso-makineleri-faema-30397-17-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E71WG.00",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gumus-ahsap",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/73a0bff16c1088c0.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gumus-ahsap-espresso-makineleri-faema-29890-16-b.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gumus-ahsap-espresso-makineleri-faema-29893-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E7100.00",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-gumus-ahsap",
+      "galleryFound": 2,
+      "before": 1,
+      "after": 3,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/4d25810438b4cc1d.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-gumus-ahsap-espresso-makineleri-faema-29891-16-b.jpg",
+        "images/catalog/cafemarkt/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-gumus-ahsap-espresso-makineleri-faema-29892-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "9580.E98A2.VA",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah",
+      "galleryFound": 3,
+      "before": 1,
+      "after": 4,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/12b0f3790f90a98e.jpg",
+        "images/catalog/cafemarkt/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-29883-16-b.jpg",
+        "images/catalog/cafemarkt/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-29884-16-b.jpg",
+        "images/catalog/cafemarkt/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-29885-16-b.jpg"
+      ]
+    },
+    {
+      "sku": "GRANDITALIA.X54",
+      "url": "https://www.cafemarkt.com/faema-granditalia-milkps-x54-super-otomatik-espresso-kahve-makinesi-saatte-260-fincan-kahve-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "GRANDITALIA.X1",
+      "url": "https://www.cafemarkt.com/faema-granditalia-milkps-x1-super-otomatik-espresso-kahve-makinesi-saatte-200-fincan-kahve-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.S3",
+      "url": "https://www.cafemarkt.com/faema-enova-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.S2",
+      "url": "https://www.cafemarkt.com/faema-enova-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.S1",
+      "url": "https://www.cafemarkt.com/faema-enova-s1-yari-otomatik-espresso-kahve-makinesi-1-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.A3",
+      "url": "https://www.cafemarkt.com/faema-enova-a3-otomatik-espresso-kahve-makinesi-3-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.A2",
+      "url": "https://www.cafemarkt.com/faema-enova-a2-otomatik-espresso-kahve-makinesi-2-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "ENOVA.A1",
+      "url": "https://www.cafemarkt.com/faema-enova-a1-otomatik-espresso-kahve-makinesi-1-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "EMBLEMA.A4",
+      "url": "https://www.cafemarkt.com/faema-emblema-a4-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-4-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "EMBLEMA.A3",
+      "brand": "Faema",
+      "url": "https://www.cafemarkt.com/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu",
+      "galleryFound": 6,
+      "before": 1,
+      "after": 7,
+      "applied": true,
+      "images": [
+        "images/catalog/cafemarkt/727ade4ea6c81d75.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38962-12-b.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38963-12-b.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38964-12-b.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38965-12-b.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38966-12-b.jpg",
+        "images/catalog/cafemarkt/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38968-12-b.jpg"
+      ]
+    },
+    {
+      "sku": "EMBLEMA.A2",
+      "url": "https://www.cafemarkt.com/faema-emblema-a2-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-2-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E98.S3",
+      "url": "https://www.cafemarkt.com/faema-e98-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E98.S2",
+      "url": "https://www.cafemarkt.com/faema-e98-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E98.A3",
+      "url": "https://www.cafemarkt.com/faema-e98-a3-otomatik-espresso-kahve-makinesi-3-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E98.A2",
+      "url": "https://www.cafemarkt.com/faema-e98-a2-otomatik-espresso-kahve-makinesi-2-kollu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "BARCODE.PS.11",
+      "url": "https://www.cafemarkt.com/faema-barcode-milkps-ps-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "BARCODE.C.S.11",
+      "url": "https://www.cafemarkt.com/faema-barcode-milkps-cs-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli-sicak-cikolata-ozelligi",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E91.A2",
+      "url": "https://www.cafemarkt.com/faema-e91-a-2-ambassador-otomatik-espresso-kahve-makinesi-2-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E91.A3",
+      "url": "https://www.cafemarkt.com/faema-e91-a-3-ambassador-otomatik-espresso-kahve-makinesi-3-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "E91.A4",
+      "url": "https://www.cafemarkt.com/faema-e91-a-4-ambassador-otomatik-espresso-kahve-makinesi-4-gruplu",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "PRONTOFRIGO",
+      "url": "https://www.cafemarkt.com/nuova-simonelli-prontofrigo-sut-sogutucu-7-l",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "RUDM.01",
+      "url": "https://www.cafemarkt.com/faema-sut-sogutucu-unite",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "FM.CW.01",
+      "url": "https://www.cafemarkt.com/faema-fincan-sogutucu-ve-isitici-unite",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    },
+    {
+      "sku": "FRIGOMILK",
+      "url": "https://www.cafemarkt.com/faema-frigomilk-sogutmali-unite-3-l-kapasiteli",
+      "galleryFound": 1,
+      "applied": false,
+      "reason": "gallery_lt_min"
+    }
+  ]
+}

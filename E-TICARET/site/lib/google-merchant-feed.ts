@@ -9,6 +9,10 @@ import { absoluteAssetUrl } from "@/lib/asset-cdn";
 import { resolveKdvDahilTry } from "@/lib/shop/consumer-price";
 import { isUntrustedPublishedPrice } from "@/lib/shop/price-trust";
 import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
+import {
+  collectGmcPhotoRels,
+  expandOfferImageUrls,
+} from "@/lib/gmc-additional-images";
 import { ProductDetail, extractTechnicalDetails } from "./feed-product-details";
 
 export { absoluteAssetUrl };
@@ -23,6 +27,8 @@ export type MerchantFeedItem = {
   description: string;
   link: string;
   imageLink: string;
+  /** GMC additional_image_link — en fazla 10 */
+  additionalImageLinks: string[];
   priceTry: number;
   brand: string;
   mpn: string;
@@ -63,6 +69,9 @@ export function isQuoteOnlyProduct(row: CatalogRow): boolean {
 }
 
 function productImagePath(row: CatalogRow): string {
+  const photos = collectGmcPhotoRels(Array.isArray(row.images) ? row.images : []);
+  if (photos.length) return photos[0].startsWith("/") ? photos[0] : `/${photos[0]}`;
+
   const imgs = row.images;
   if (!Array.isArray(imgs) || !imgs.length) return "";
   const pick = pickMerchantHeroImage(imgs);
@@ -73,7 +82,7 @@ function productImagePath(row: CatalogRow): string {
 /** GMC: teknik çizim / kesit değil; kapak veya ilk foto. */
 function isMerchantTechnicalImg(rel: string): boolean {
   const fn = String(rel || "").split("?")[0].split("/").pop()?.toLowerCase() || "";
-  if (/kesit|wireframe|placeholder|model-\d+\./i.test(fn)) return true;
+  if (/kesit|wireframe|placeholder|model-\d+\.|\.svg$|\.pdf$/i.test(fn)) return true;
   return false;
 }
 
@@ -86,6 +95,20 @@ function pickMerchantHeroImage(images: unknown[]): string {
     if (!isMerchantTechnicalImg(String(raw))) return String(raw);
   }
   return String(images[0] || "");
+}
+
+function productOfferImages(row: CatalogRow, origin: string): {
+  imageLink: string;
+  additionalImageLinks: string[];
+} {
+  const photos = collectGmcPhotoRels(Array.isArray(row.images) ? row.images : []);
+  if (photos.length) {
+    return expandOfferImageUrls(photos, origin);
+  }
+  const fallback = productImagePath(row);
+  if (!fallback) return { imageLink: "", additionalImageLinks: [] };
+  const rel = fallback.replace(/^\//, "");
+  return expandOfferImageUrls([rel], origin);
 }
 
 /** XML 1.0: yalnızca tab, LF, CR kontrol karakterleri geçerlidir. */
@@ -164,8 +187,8 @@ export function rowToMerchantItem(
   const priceTry = resolveMerchantPriceTry(row);
   if (!(priceTry > 0)) return null;
 
-  const imagePath = productImagePath(row);
-  if (!imagePath) return null;
+  const { imageLink, additionalImageLinks } = productOfferImages(row, origin);
+  if (!imageLink) return null;
 
   const link = `${origin}/shop/${dept}/${encodeURIComponent(slug)}`;
   const brand = String(row.brand || "Equsto").trim().slice(0, 70);
@@ -178,7 +201,8 @@ export function rowToMerchantItem(
     title,
     description: cleanDescription(row, productDetails),
     link,
-    imageLink: absoluteAssetUrl(imagePath, origin),
+    imageLink,
+    additionalImageLinks,
     priceTry,
     brand,
     mpn,
@@ -283,6 +307,10 @@ export function buildGoogleMerchantXml(items: MerchantFeedItem[], origin: string
     lines.push(`      <g:description>${escapeXml(item.description)}</g:description>`);
     lines.push(`      <g:link>${escapeXml(item.link)}</g:link>`);
     lines.push(`      <g:image_link>${escapeXml(item.imageLink)}</g:image_link>`);
+    for (const extra of item.additionalImageLinks || []) {
+      if (!extra) continue;
+      lines.push(`      <g:additional_image_link>${escapeXml(extra)}</g:additional_image_link>`);
+    }
     lines.push("      <g:condition>new</g:condition>");
     lines.push(`      <g:availability>${item.availability}</g:availability>`);
     lines.push(`      <g:price>${escapeXml(formatGooglePriceTry(item.priceTry))}</g:price>`);
