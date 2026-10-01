@@ -37,6 +37,8 @@ services:
     volumes:
       # Admin panel JSON yazımı (eticaret-icerik, tip-sozlugu, pfos-referans…) — host'ta kalıcı
       - ./public/data:/app/public/data
+      # CafeMarkt galeri — git’teki dosyalar (S3 sync yokken origin’den servis)
+      - ./public/images/catalog/cafemarkt:/app/public/images/catalog/cafemarkt:ro
       # Üye kaynak listeleri — mevcut yazılabilir volume
       - ./scripts:/app/scripts
       # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir
