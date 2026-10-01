@@ -1,7 +1,7 @@
 # Google Ads panel — nasıl yapılır (2.000 TL / Equsto)
 
 **Hesap:** `416-696-9695` · **Giriş:** [ads.google.com](https://ads.google.com) (`jurnaldang@gmail.com`)  
-**Bütçe:** 2.000 TL/ay ≈ 65 TL/gün · Landing: `https://equsto.com/pfos`  
+**Bütçe:** 2.000 TL/ay ≈ 65 TL/gün · **Landing (birincil): `https://equsto.com/shop/pisirme`** · PFOS sonra  
 **Plan:** [`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)  
 **Ölçüm önkoşul:** [`GOOGLE-ADS-BASLANGIC.md`](./GOOGLE-ADS-BASLANGIC.md)
 
@@ -33,7 +33,7 @@ Menü isimleri Türkçe arayüze göre; İngilizce görürsen köşeli parantezd
 
 ## C) Dönüşümü tanımla (para harcamadan)
 
-Hedef: PFOS’ta **teklif gönderildi** = dönüşüm.
+Hedef (shop-first): mağaza trafiği → **iletişim / sepet-sipariş**. Birincil event: `equsto_lead` (+ `equsto_order` aktif olunca). `equsto_quote` (PFOS) **ikincil**.
 
 ### Tercih 1 — GA4 event’i içe aktar (kolay)
 
@@ -109,19 +109,20 @@ Sol menü: **Kampanyalar** → **+ Yeni kampanya**.
 - **Reklam programı (ad schedule):** örn. Pzt–Cmt 08:00–20:00 (isteğe bağlı ama 2k’da önerilir).  
 - **Cihaz:** şimdilik dokunma.
 
-### E3 — Ad grubu 1 (tek grup)
+### E3 — Ad grubu 1 (tek grup) — shop-first
 
-- **Ad grubu adı:** `PFOS | Teklif`  
-- **Son URL:** `https://equsto.com/pfos`
+- **Ad grubu adı:** `Shop | Pişirme`  
+- **Son URL:** `https://equsto.com/shop/pisirme`
 
 **Anahtar kelimeler** — hepsini **ifade eşlemesi** (`"..."` ) veya panede “İfade” seç; **Geniş kullanma**:
 
 ```
-"restoran mutfak teklifi"
-"endüstriyel mutfak teklifi"
-"mutfak projesi fiyat"
-"sanayi tipi mutfak kurulumu"
-"restoran mutfak ekipman listesi"
+"sanayi tipi ocak"
+"endüstriyel fırın"
+"konveksiyonlu fırın"
+"kombi fırın"
+"sanayi tipi ızgara"
+"endüstriyel fritöz"
 ```
 
 İstersen 2–3 tane **tam eşleme** `[...]` ekle; geniş (broad) ekleme.
@@ -132,20 +133,20 @@ En az 5 başlık, 2 açıklama:
 
 **Başlık örnekleri (30 karakter sınırı — kısalt):**
 
-- Equsto Proje Fabrikası  
-- Endüstriyel Mutfak Teklifi  
-- Mutfak Listeni Yükle  
-- Restoran Mutfak Ekipmanı  
-- Anlık Teklif Al  
-- PFOS ile Teklif Netleştir  
+- Equsto Endüstriyel Mutfak  
+- Sanayi Tipi Ocak & Fırın  
+- Pişirme Ekipmanları  
+- Restoran Mutfak Mağazası  
+- Fiyatlı Katalog  
+- Hemen İncele  
 
 **Açıklama örnekleri:**
 
-- Proje Fabrikası’nda listenizi oluşturun veya yükleyin; fiyatları birlikte netleştirelim.  
-- Restoran, otel ve kafe için endüstriyel mutfak ekipmanı teklifi. Equsto.
+- Endüstriyel pişirme ekipmanları: ocak, fırın, ızgara. Equsto mağazadan incele.  
+- Restoran ve kafe için sanayi tipi mutfak ürünleri — stok ve fiyat için mağaza.
 
-**Son URL:** `https://equsto.com/pfos`  
-**Görünen yol:** `equsto.com` / `pfos` (veya `teklif`)
+**Son URL:** `https://equsto.com/shop/pisirme`  
+**Görünen yol:** `equsto.com` / `shop`
 
 ### E5 — Uzantılar (varsa şimdi)
 
@@ -220,7 +221,7 @@ youtube
 - [ ] B — GA4 bağla  
 - [ ] C — `quote` / PFOS dönüşümü  
 - [ ] D — Test teklifi → 1 dönüşüm görünür  
-- [ ] E — `EQ \| Search \| Lead \| TR` kur (50 TL/gün, Display kapalı)  
+- [ ] E — `EQ | Search | Shop | TR` kur → `/shop/pisirme` (50 TL/gün, Display kapalı)  
 - [ ] Etkinleştir (yalnız D yeşilse)  
 
 Takıldığın adımın harfini yaz (A/B/C/D/E); oradan devam ederiz.

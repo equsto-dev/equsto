@@ -3,7 +3,8 @@
 **Tarih:** 2026-10-01  
 **Hesap:** `416-696-9695` (Equsto Google)  
 **GA4:** `G-MVRNFQC4PQ`  
-**Aktif bütçe:** **2.000 TL / ay** (Senaryo A — kilitli)  
+**Aktif bütçe:** **2.000 TL / ay** (Senaryo A — kilitli)
+**Birincil hedef:** **Shop** (`/shop/pisirme`) — PFOS sonra  
 **İş modeli:** B2B endüstriyel mutfak — satış = teklif / lead, sepet değil  
 **İlgili:** [`GOOGLE-ADS-PANEL-ADIMLAR.md`](./GOOGLE-ADS-PANEL-ADIMLAR.md) · [`GOOGLE-ADS-BASLANGIC.md`](./GOOGLE-ADS-BASLANGIC.md) · [`GOOGLE-MERCHANT-CENTER.md`](./GOOGLE-MERCHANT-CENTER.md)
 
@@ -11,7 +12,7 @@
 
 ## 1. Tek cümle strateji
 
-Kısıtlı parayı **yüksek niyetli arama** + **tek dönüşüm (PFOS teklifi)** + **dar anahtar kelime** ile yak; Display / PMax / marka dışı geniş eşleme **açma**.
+Kısıtlı parayı **yüksek niyetli arama** + **shop landing** + **dar ürün kelimesi** ile yak; birincil dönüşüm `equsto_lead` / (aktifse) `equsto_order`. PFOS sonra. Display / PMax / geniş eşleme **açma**.
 
 ---
 
@@ -113,8 +114,8 @@ Detay: `GOOGLE-ADS-BASLANGIC.md`.
 **Program:** İş saatleri ağırlıklı (ör. 08:00–20:00) — gece tıklama yakmayı azaltır  
 **Teklif:** Manuel CPC (başlangıç) → 15–20 dönüşüm sonrası Maximize conversions + isteğe bağlı hedef CPL  
 
-**Final URL önceliği:** `https://equsto.com/pfos`  
-(İkinci ad grubunda marka sayfası — aşağıda.)
+**Final URL önceliği:** `https://equsto.com/shop/pisirme`  
+(PFOS / marka ad grupları — bütçe artınca.)
 
 ---
 
@@ -122,22 +123,22 @@ Detay: `GOOGLE-ADS-BASLANGIC.md`.
 
 İki ad grubu yeter. Üçüncüyü yalnızca Senaryo B+ ve Faz 1 CPL iyi gittikten sonra ekle.
 
-### Ad grubu 1 — Teklif / proje (birincil)
+### Ad grubu 1 — Shop / pişirme (birincil)
 
 | | |
 |--|--|
-| Landing | `/pfos` |
+| Landing | `/shop/pisirme` |
 | Eşleme | **Tam + ifade** (phrase); geniş yok |
-| Amaç | Proje / teklif niyeti |
+| Amaç | Ürün / fiyat niyeti → mağaza |
 
 **Pozitif örnekler (ifade / tam):**
 
-- `"restoran mutfak teklifi"`
-- `"endüstriyel mutfak teklifi"`
-- `"mutfak projesi fiyat"`
-- `"sanayi tipi mutfak kurulumu"`
-- `"restoran mutfak ekipman listesi"`
-- `[pfos mutfak]` (marka / ürün bilinirliği düşükse düşük hacim — opsiyonel)
+- `"sanayi tipi ocak"`
+- `"endüstriyel fırın"`
+- `"konveksiyonlu fırın"`
+- `"kombi fırın"`
+- `"sanayi tipi ızgara"`
+- `"endüstriyel fritöz"`
 
 **Reklam (RSA) — yön:**
 

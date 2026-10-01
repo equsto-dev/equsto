@@ -65,8 +65,9 @@ Başka terim öğrenmene gerek yok; sıradaki adımda sadece bunlara odaklanaca�
 - Görünmüyorsa → reklam açmayız, önce düzeltiriz
 
 ### Adım 5 — İlk küçük reklam (çok düşük bütçe)
-- Tek hedef: **PFOS teklifi**
-- Tek landing: `https://equsto.com/pfos`
+- Tek hedef: **Shop** (pişirme mağaza)
+- Tek landing: `https://equsto.com/shop/pisirme`
+- Dönüşüm: `equsto_lead` birincil; `equsto_quote` (PFOS) sonra
 - **Kilitli bütçe: 2.000 TL/ay ≈ 65 TL/gün** (ilk 7 gün 50 TL)
 - Kısıtlı bütçe mimarisi → **[`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)**
 
