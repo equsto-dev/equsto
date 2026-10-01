@@ -323,7 +323,10 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
 
   const images = originalRow?.images as string[] | undefined;
   const photoRels = collectGmcPhotoRels(images);
-  const expanded = expandOfferImageUrlList(photoRels, origin);
+  /** PDP JSON-LD: yalnızca gerçek foto; sentetik GMC zoom feed’de kalsın. */
+  const expanded = expandOfferImageUrlList(photoRels, origin, {
+    includeSynthetic: false,
+  });
   const imageUrls: string[] | undefined = expanded.length
     ? expanded
     : ssr.image
