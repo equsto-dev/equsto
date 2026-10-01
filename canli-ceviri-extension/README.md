@@ -1,15 +1,11 @@
-# Canlı Çeviri (Chrome uzantısı)
+# Canlı Çeviri v6 — simultane mantık
 
-`canli_ceviri.py` akışının uzantı hali:
-
-1. Sekme sesini dinler (her site)
-2. Chrome susturmasın diye yayın sesini **tam seviyede** geri çalar
-3. Groq Whisper → Türkçe çeviri → **kadın** Google TTS
+- Kaynak yayın sesi **hiç kısılmaz**
+- Dinleme TTS sırasında da sürer (ear–voice span)
+- Kısa birimler (~1–2 sn) → Whisper → çeviri → kadın TTS kuyruğu
+- Gecikince eski kuyruk atılır, canlıya yetişilir
 
 ## Kurulum
-1. Eski uzantıyı **Kaldır**, Chrome’u kapat-aç
-2. `chrome://extensions` → Geliştirici modu → Paketlenmemiş yükle → bu klasör
-3. https://console.groq.com/keys → key al
-4. Yayın sekmesinde Başlat
-
-Yayın sesi kapanmaz / kısılmaz. Türkçe ses üstüne biner.
+1. Eski uzantıyı kaldır, Chrome kapat-aç
+2. Paketlenmemiş yükle → bu klasör
+3. Groq key + yayın sekmesinde Başlat

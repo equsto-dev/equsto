@@ -1,10 +1,13 @@
 /**
- * canli_ceviri.py mantığının Chrome karşılığı
- * ------------------------------------------------
- * 1) Sekme sesini yakala (loopback benzeri)
- * 2) Chrome sekmeyi susturduğu için sesi TAM SEVİYEDE geri çal (asla kısma)
- * 3) Konuşma parçala → Groq Whisper → TR çeviri
- * 4) Kadın ses (Google TTS) — yayın sesinden bağımsız
+ * Simultane çeviri motoru (Chrome offscreen)
+ * ==========================================
+ * Profesyonel simultane mantık:
+ *  - Kaynak SESİ HİÇ DURMAZ / KISILMAZ (monitor.volume = 1)
+ *  - Dinleme TTS sırasında da DEVAM EDER (ear–voice span)
+ *  - Kısa anlam birimleri (~1.2–2.0 sn) → STT → çeviri → TTS kuyruğu
+ *  - STT / çeviri / TTS boru hattı PARALEL
+ *  - Gecikince eski kuyruk atılır, canlıya yetişilir
+ *  - Kadın ses (Google TTS)
  */
 
 let stream = null;
@@ -14,30 +17,43 @@ let source = null;
 let proc = null;
 let apiKey = "";
 let running = false;
-let speaking = false;
-let transcribing = false;
-let buf = [];
-let bufN = 0;
-let speakingSeg = false;
-let silentN = 0;
-let t0 = 0;
-let ttsAudio = null;
+
+// --- simultane durum ---
+let ring = []; // Float32Array parçaları
+let ringN = 0;
+let voiced = false;
+let silenceFrames = 0;
+let segStart = 0;
+let lastCommit = 0;
 let rmsThresh = 0.01;
-let speechPad = 0;
+
+let sttInFlight = 0;
+const STT_MAX = 2;
+const ttsQueue = [];
+let ttsPlaying = false;
+let ttsAudio = null;
+
+let lastEn = "";
+let lastEnAt = 0;
+let spokenRecent = []; // son söylenen TR/EN (dedup)
 
 const SR = 16000;
-const FRAME = 4096;
-const MAX_SEC = 3.0;
-const MIN_SEC = 0.45;
-const SILENCE_SEC = 0.32;
+const FRAME = 2048;
+// simultane: kısa birimler, düşük kulak-ses mesafesi
+const COMMIT_SILENCE_S = 0.22;
+const COMMIT_MAX_S = 1.8;
+const COMMIT_MIN_S = 0.55;
+const OVERLAP_S = 0.25; // birim başı örtüşme (kelime kesilmesin)
+const MAX_LAG_S = 4.5;
 
 const BAD = [
   /formula\s*(1|one)/i,
   /live\s*(race\s*)?(commentary|radio)/i,
   /team\s*radio/i,
   /thanks?\s*for\s*watching/i,
-  /subscribe/i,
+  /subscribe\s*(to|now)?/i,
   /canlı anlatım/i,
+  /^[\s.·•…♪♫]+$/,
 ];
 
 chrome.runtime.onMessage.addListener((msg, _s, sendResponse) => {
@@ -57,16 +73,7 @@ chrome.runtime.onMessage.addListener((msg, _s, sendResponse) => {
 });
 
 function setSensitivity(level) {
-  if (level === "low") {
-    rmsThresh = 0.018;
-    speechPad = 0;
-  } else if (level === "high") {
-    rmsThresh = 0.006;
-    speechPad = 2;
-  } else {
-    rmsThresh = 0.01;
-    speechPad = 1;
-  }
+  rmsThresh = level === "low" ? 0.016 : level === "high" ? 0.006 : 0.01;
 }
 
 async function start(streamId, key, sensitivity) {
@@ -85,130 +92,145 @@ async function start(streamId, key, sensitivity) {
       },
       video: false,
     });
-  } catch (e) {
+  } catch {
     running = false;
     return { ok: false, error: "Sekme sesi alınamadı" };
   }
 
-  // Yayın sesi — HTMLAudio, volume hep 1 (TTS yayın sesini ASLA kısmaz)
+  // KAYNAK: her zaman tam ses — simultane çevirmenin kuralı
   monitor = new Audio();
   monitor.srcObject = stream;
-  monitor.volume = 1.0;
-  try {
-    await monitor.play();
-  } catch (_) {}
+  monitor.volume = 1;
+  await monitor.play().catch(() => {});
 
   ctx = new AudioContext();
-  // Analiz için 16k'ya yakın çalış; asıl sampleRate cihazınki olabilir
   source = ctx.createMediaStreamSource(stream);
-  const mute = ctx.createGain();
-  mute.gain.value = 0;
+  const sink = ctx.createGain();
+  sink.gain.value = 0; // analiz yolu hoparlöre gitmez
   proc = ctx.createScriptProcessor(FRAME, 1, 1);
   source.connect(proc);
-  proc.connect(mute);
-  mute.connect(ctx.destination);
+  proc.connect(sink);
+  sink.connect(ctx.destination);
 
-  const preroll = [];
-  const prerollMax = 3 + speechPad;
-
-  proc.onaudioprocess = (ev) => {
-    if (!running || transcribing) return;
-    // TTS sırasında da yayın çalmaya devam eder; sadece STT için örnek toplama
-    // (TTS extension sesidir, sekme yakalamasına girmez)
-    if (speaking) return;
-
-    const input = ev.inputBuffer.getChannelData(0);
-    const ratio = ctx.sampleRate / SR;
-    let frame;
-    if (ratio > 1.05) {
-      const step = Math.max(1, Math.round(ratio));
-      frame = new Float32Array(Math.floor(input.length / step));
-      for (let i = 0, j = 0; j < frame.length; i += step, j++) frame[j] = input[i];
-    } else {
-      frame = new Float32Array(input);
-    }
-
-    let sum = 0;
-    for (let i = 0; i < frame.length; i++) sum += frame[i] * frame[i];
-    const rms = Math.sqrt(sum / frame.length);
-    const loud = rms > rmsThresh;
-    const frameSec = frame.length / SR;
-    const silenceNeed = Math.max(2, Math.round(SILENCE_SEC / frameSec));
-    const maxFrames = Math.max(4, Math.round(MAX_SEC / frameSec));
-    const minFrames = Math.max(2, Math.round(MIN_SEC / frameSec));
-
-    if (!speakingSeg) {
-      preroll.push(frame);
-      if (preroll.length > prerollMax) preroll.shift();
-      if (loud) {
-        speakingSeg = true;
-        silentN = 0;
-        buf = preroll.slice();
-        bufN = buf.reduce((a, f) => a + f.length, 0);
-        t0 = performance.now() / 1000 - bufN / SR;
-        preroll.length = 0;
-      }
-      return;
-    }
-
-    buf.push(frame);
-    bufN += frame.length;
-    silentN = loud ? 0 : silentN + 1;
-
-    if (silentN >= silenceNeed) {
-      if (buf.length >= minFrames) emit(buf, t0);
-      buf = [];
-      bufN = 0;
-      speakingSeg = false;
-      silentN = 0;
-    } else if (buf.length >= maxFrames) {
-      // en sessiz yarıdan kes (python ile aynı fikir)
-      const mid = Math.floor(buf.length / 2);
-      let best = mid;
-      let bestR = Infinity;
-      for (let i = mid; i < buf.length; i++) {
-        const f = buf[i];
-        let s = 0;
-        for (let k = 0; k < f.length; k++) s += f[k] * f[k];
-        const r = s / f.length;
-        if (r < bestR) {
-          bestR = r;
-          best = i;
-        }
-      }
-      const cut = best + 1;
-      emit(buf.slice(0, cut), t0);
-      const rest = buf.slice(cut);
-      buf = rest;
-      bufN = rest.reduce((a, f) => a + f.length, 0);
-      t0 += (cut * frame.length) / SR;
-    }
-  };
-
+  proc.onaudioprocess = onProcess;
   return { ok: true };
 }
 
-function emit(frames, startT) {
+function downsample(input, fromSr, toSr) {
+  if (fromSr <= toSr * 1.05) return new Float32Array(input);
+  const step = fromSr / toSr;
+  const out = new Float32Array(Math.floor(input.length / step));
+  for (let i = 0; i < out.length; i++) out[i] = input[Math.floor(i * step)] || 0;
+  return out;
+}
+
+function rmsOf(frame) {
+  let s = 0;
+  for (let i = 0; i < frame.length; i++) s += frame[i] * frame[i];
+  return Math.sqrt(s / (frame.length || 1));
+}
+
+function onProcess(ev) {
+  if (!running) return;
+  // ÖNEMLİ: TTS çalarken dinlemeye DEVAM (simultane)
+  const input = ev.inputBuffer.getChannelData(0);
+  const frame = downsample(input, ctx.sampleRate, SR);
+  const now = performance.now() / 1000;
+  const rms = rmsOf(frame);
+  const loud = rms > rmsThresh;
+  const frameS = frame.length / SR;
+  const silenceNeed = Math.max(2, Math.round(COMMIT_SILENCE_S / frameS));
+  const maxFrames = Math.max(4, Math.round(COMMIT_MAX_S / frameS));
+  const minSamples = Math.round(COMMIT_MIN_S * SR);
+
+  if (!voiced) {
+    // preroll: konuşma başı kaçmasın
+    ring.push(frame);
+    ringN += frame.length;
+    const maxPre = Math.round(0.35 * SR);
+    while (ringN > maxPre && ring.length > 1) {
+      ringN -= ring[0].length;
+      ring.shift();
+    }
+    if (loud) {
+      voiced = true;
+      silenceFrames = 0;
+      segStart = now - ringN / SR;
+    }
+    return;
+  }
+
+  ring.push(frame);
+  ringN += frame.length;
+  silenceFrames = loud ? 0 : silenceFrames + 1;
+
+  const longEnough = ringN >= minSamples;
+  const naturalEnd = silenceFrames >= silenceNeed && longEnough;
+  const forced = ring.length >= maxFrames;
+
+  if (naturalEnd || forced) {
+    commitSegment(forced);
+  }
+}
+
+function commitSegment(forced) {
+  if (sttInFlight >= STT_MAX) {
+    // boru dolu: en eski halkayı budayıp canlıya yetiş
+    const drop = Math.floor(ring.length / 3);
+    for (let i = 0; i < drop; i++) {
+      ringN -= ring[0].length;
+      ring.shift();
+    }
+    return;
+  }
+
+  const overlap = Math.round(OVERLAP_S * SR);
+  let keep = [];
+  let keepN = 0;
+  if (forced && overlap > 0) {
+    // zorunlu kesimde son overlap'i bir sonraki segmente bırak
+    let need = overlap;
+    for (let i = ring.length - 1; i >= 0 && need > 0; i--) {
+      keep.unshift(ring[i]);
+      keepN += ring[i].length;
+      need -= ring[i].length;
+    }
+  }
+
+  const pcm = flatten(ring);
+  const startT = segStart;
+  ring = keep;
+  ringN = keepN;
+  voiced = keepN > 0;
+  silenceFrames = 0;
+  segStart = performance.now() / 1000 - keepN / SR;
+  lastCommit = performance.now() / 1000;
+
+  if (pcm.length < SR * 0.4) return;
+  if (rmsOf(pcm) < rmsThresh * 0.5) return;
+
+  pipelineSTT(pcm, startT);
+}
+
+function flatten(frames) {
   const n = frames.reduce((a, f) => a + f.length, 0);
-  const pcm = new Float32Array(n);
+  const out = new Float32Array(n);
   let o = 0;
   for (const f of frames) {
-    pcm.set(f, o);
+    out.set(f, o);
     o += f.length;
   }
-  let peak = 0;
-  for (let i = 0; i < pcm.length; i++) peak = Math.max(peak, Math.abs(pcm[i]));
-  if (peak < 0.02) return;
-  transcribe(pcm, startT);
+  return out;
 }
 
 function stopAll() {
   running = false;
-  speaking = false;
-  transcribing = false;
-  speakingSeg = false;
-  buf = [];
-  bufN = 0;
+  voiced = false;
+  ring = [];
+  ringN = 0;
+  sttInFlight = 0;
+  ttsQueue.length = 0;
+  ttsPlaying = false;
   try {
     ttsAudio?.pause();
   } catch (_) {}
@@ -228,6 +250,7 @@ function stopAll() {
     stream?.getTracks().forEach((t) => t.stop());
   } catch (_) {}
   proc = source = ctx = stream = null;
+  if (monitor) monitor = null;
 }
 
 function toWav(float32, sr) {
@@ -252,7 +275,7 @@ function toWav(float32, sr) {
   v.setUint32(40, n * 2, true);
   let peak = 1e-6;
   for (let i = 0; i < n; i++) peak = Math.max(peak, Math.abs(float32[i]));
-  const g = Math.min(10, 0.7 / peak);
+  const g = Math.min(12, 0.72 / peak);
   let o = 44;
   for (let i = 0; i < n; i++) {
     let s = Math.max(-1, Math.min(1, float32[i] * g));
@@ -264,18 +287,42 @@ function toWav(float32, sr) {
 
 function isBad(t) {
   const s = (t || "").trim();
-  if (s.length < 3) return true;
+  if (s.length < 2) return true;
   return BAD.some((re) => re.test(s));
 }
 
-async function transcribe(pcm, startT) {
-  if (transcribing || !apiKey) return;
-  // çok gerideyse atla (python max-lag)
-  if (performance.now() / 1000 - startT > 6) return;
-  transcribing = true;
+/** Örtüşen / tekrarlayan metni ayıkla */
+function novelText(en) {
+  const t = en.replace(/\s+/g, " ").trim();
+  if (!t) return "";
+  const now = Date.now();
+  if (t === lastEn && now - lastEnAt < 5000) return "";
+  // önceki cümlenin uzaması
+  if (lastEn && t.startsWith(lastEn) && t.length - lastEn.length < 10) {
+    lastEn = t;
+    return "";
+  }
+  // yeni metin eskisini kapsıyorsa sadece farkı al
+  let out = t;
+  if (lastEn && t.startsWith(lastEn)) out = t.slice(lastEn.length).trim();
+  else if (lastEn && lastEn.includes(t)) return "";
+  // yakın tekrar
+  for (const prev of spokenRecent) {
+    if (prev === out || (out.length > 12 && prev.includes(out))) return "";
+  }
+  lastEn = t;
+  lastEnAt = now;
+  return out;
+}
+
+async function pipelineSTT(pcm, startT) {
+  const lag0 = performance.now() / 1000 - startT;
+  if (lag0 > MAX_LAG_S) return;
+
+  sttInFlight++;
   try {
     const fd = new FormData();
-    fd.append("file", toWav(pcm, SR), "chunk.wav");
+    fd.append("file", toWav(pcm, SR), "seg.wav");
     fd.append("model", "whisper-large-v3-turbo");
     fd.append("language", "en");
     fd.append("response_format", "verbose_json");
@@ -291,27 +338,42 @@ async function transcribe(pcm, startT) {
     );
     if (!res.ok) return;
     const data = await res.json();
+
     let text = (data.text || "").trim();
     if (data.segments?.length) {
       const avg =
         data.segments.reduce((a, s) => a + (s.avg_logprob || 0), 0) /
         data.segments.length;
-      if (avg < -1.0) return;
-      // no_speech yüksek segmentleri ele
+      if (avg < -1.05) return;
       text = data.segments
-        .filter((s) => (s.no_speech_prob ?? 0) < 0.7)
+        .filter((s) => (s.no_speech_prob ?? 0) < 0.72)
         .map((s) => s.text || "")
         .join(" ")
         .replace(/\s+/g, " ")
         .trim();
     }
     if (isBad(text)) return;
-    const tr = await translate(text);
+    const novel = novelText(text);
+    if (!novel || isBad(novel)) return;
+
+    const tr = await translate(novel);
     if (!tr || isBad(tr)) return;
-    await speakFemale(tr);
+
+    spokenRecent.push(novel);
+    if (spokenRecent.length > 8) spokenRecent.shift();
+
+    // gecikme kontrolü: kuyruk şişmesin
+    const lag = performance.now() / 1000 - startT;
+    if (lag > MAX_LAG_S) {
+      ttsQueue.length = 0; // eskiyi at, canlıya yetiş
+    }
+    ttsQueue.push({ text: tr, t0: startT });
+    // en fazla 2 bekleyen cümle
+    while (ttsQueue.length > 2) ttsQueue.shift();
+    pumpTTS();
   } catch (_) {
   } finally {
-    transcribing = false;
+    sttInFlight--;
   }
 }
 
@@ -325,13 +387,14 @@ async function translate(en) {
       },
       body: JSON.stringify({
         model: "llama-3.1-8b-instant",
-        temperature: 0.15,
-        max_tokens: 160,
+        temperature: 0.1,
+        max_tokens: 120,
         messages: [
           {
             role: "system",
             content:
-              "İngilizceyi doğal kısa Türkçeye çevir. Sadece çeviriyi yaz. İsimleri koru.",
+              "Simultane tercümansın. İngilizce parçayı doğal, kısa, akıcı Türkçeye çevir. " +
+              "Sadece çeviriyi yaz. İsim/teknik terimleri (DRS, pit, Verstappen) koru. Açıklama ekleme.",
           },
           { role: "user", content: en },
         ],
@@ -339,7 +402,7 @@ async function translate(en) {
     });
     if (res.ok) {
       const t = (await res.json()).choices?.[0]?.message?.content?.trim();
-      if (t) return t;
+      if (t) return t.replace(/^["«]|["»]$/g, "").trim();
     }
   } catch (_) {}
   const url =
@@ -349,7 +412,7 @@ async function translate(en) {
   return (data?.[0] || []).map((x) => x[0]).join("").trim();
 }
 
-function chunks(text, max = 160) {
+function chunkSpeak(text, max = 140) {
   const out = [];
   let s = text.trim();
   while (s.length) {
@@ -358,33 +421,48 @@ function chunks(text, max = 160) {
       break;
     }
     let cut = s.lastIndexOf(" ", max);
-    if (cut < 40) cut = max;
+    if (cut < 30) cut = max;
     out.push(s.slice(0, cut).trim());
     s = s.slice(cut).trim();
   }
   return out.filter(Boolean);
 }
 
-async function speakFemale(text) {
-  speaking = true;
-  // YAYIN SESİNE DOKUNMA — monitor.volume hep 1
-  if (monitor) monitor.volume = 1;
+async function pumpTTS() {
+  if (ttsPlaying) return;
+  ttsPlaying = true;
   try {
-    for (const part of chunks(text)) {
-      if (!running) break;
-      await new Promise((resolve) => {
-        const url =
-          "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=tr&q=" +
-          encodeURIComponent(part);
-        ttsAudio = new Audio(url);
-        ttsAudio.volume = 1;
-        ttsAudio.onended = () => resolve();
-        ttsAudio.onerror = () => resolve();
-        ttsAudio.play().catch(() => resolve());
-      });
+    while (ttsQueue.length && running) {
+      const job = ttsQueue.shift();
+      const lag = performance.now() / 1000 - job.t0;
+      if (lag > MAX_LAG_S + 1) continue; // yetişilemez, atla
+
+      // kaynak sesine DOKUNMA
+      if (monitor) monitor.volume = 1;
+
+      for (const part of chunkSpeak(job.text)) {
+        if (!running) break;
+        await playGoogleFemale(part);
+      }
     }
   } finally {
     if (monitor) monitor.volume = 1;
-    speaking = false;
+    ttsPlaying = false;
+    if (ttsQueue.length && running) pumpTTS();
   }
+}
+
+function playGoogleFemale(text) {
+  return new Promise((resolve) => {
+    const url =
+      "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=tr&q=" +
+      encodeURIComponent(text);
+    ttsAudio = new Audio(url);
+    ttsAudio.volume = 1;
+    // kuyruk doluysa biraz hızlı yetiş
+    ttsAudio.playbackRate = ttsQueue.length >= 1 ? 1.12 : 1.05;
+    ttsAudio.onended = () => resolve();
+    ttsAudio.onerror = () => resolve();
+    ttsAudio.play().catch(() => resolve());
+  });
 }

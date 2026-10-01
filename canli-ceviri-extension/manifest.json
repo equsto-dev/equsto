@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Canlı Çeviri",
-  "version": "5.0.0",
-  "description": "canli_ceviri.py → Chrome: her sitede EN→TR kadın ses. Yayın sesi kapanmaz.",
+  "version": "6.0.0",
+  "description": "Simultane EN→TR: kaynak ses açık kalır, kadın ses, her site.",
   "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
   "host_permissions": [
     "<all_urls>",
