@@ -844,3 +844,68 @@ html[data-theme="dark"] .equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text {
   background: #008069;
   color: #ffffff;
 }
+
+/* İletişim formu — sepete eklendi ile aynı toast (üstte görünsün) */
+#equsto-iletisim-sent-toast.eq-cart-added-toast {
+  position: fixed;
+  top: 72px;
+  right: 12px;
+  z-index: 10060;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: min(300px, calc(100vw - 24px));
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #1a1a1a);
+  border: 1px solid var(--eq-border, #e5e5e5);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+#equsto-iletisim-sent-toast.eq-cart-added-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#equsto-iletisim-sent-toast .eq-cart-added-toast__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+#equsto-iletisim-sent-toast .eq-cart-added-toast__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+#equsto-iletisim-sent-toast .eq-cart-added-toast__body strong {
+  font-weight: 700;
+  color: var(--eq-text, #1a1a1a);
+}
+
+#equsto-iletisim-sent-toast .eq-cart-added-toast__body span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--eq-text-secondary, #5a6278);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
