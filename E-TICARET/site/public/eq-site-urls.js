@@ -1083,7 +1083,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613-tezgah-buz-3k-v1";
+  var EQ_CATALOG_IMG_V = "20261001-cafemarkt-gallery-origin";
   var EQ_EQUSTO_FIYAT_IMG_V = "20260621-pfos-ice-blue";
 
   /** Pimak katalog yolu → CDN'deki legacy equsto yolu (Faz B taşınmadan önce). */
@@ -1204,12 +1204,19 @@
         file = istifRel.replace(/^images\//i, "");
       }
       var isFiyatListesi = /equsto\/fiyat-listesi\//i.test(file);
-      if (isFiyatListesi) {
+      /** Yeni CafeMarkt galeri dosyaları S3’te olmayabilir — origin /images önce, CDN yedek. */
+      var isCafeMarktGallery = /^catalog\/cafemarkt\//i.test(file);
+      if (isFiyatListesi || isCafeMarktGallery) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
       }
-      var cdnFirst = isFiyatListesi ? "" : equstoCdnAssetHref("images/" + file);
+      var cdnFirst =
+        isFiyatListesi || isCafeMarktGallery ? "" : equstoCdnAssetHref("images/" + file);
       if (cdnFirst) chunk.push(cdnFirst);
+      if (isCafeMarktGallery) {
+        var cmCdn = equstoCdnAssetHref("images/" + file);
+        if (cmCdn) chunk.push(cmCdn);
+      }
       if (isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
         var axLive = oztiAxFromCatalogRel("images/" + file);
         if (axLive) chunk.push(axLive);
@@ -1639,8 +1646,8 @@
       if (axCafe) return axCafe;
     }
     if (/^images\/catalog\/cafemarkt\//i.test(s)) {
-      var cmLocal = localCatalogImageHref(s);
-      if (cmLocal) return cmLocal;
+      /* Origin önce — Hetzner volume / Docker public; CDN’de yoksa 403 boş bırakmasın. */
+      return withCatalogImgV("/" + s.replace(/^\/+/, ""));
     }
     if (
       isStaticPublicImage(s) &&
@@ -1806,6 +1813,8 @@
             window.__eqImgFail(img);
           };
           img.src = next;
+          var thumbBtn = img.closest("button[data-src]");
+          if (thumbBtn) thumbBtn.setAttribute("data-src", next);
           return;
         }
       }
