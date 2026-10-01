@@ -329,6 +329,13 @@ const nextConfig: NextConfig = {
         ...(cdnBase
           ? []
           : [{ source: "/data/images/:path*", destination: "/images/:path*" }]),
+        /*
+         * PRO-TEK: dosyalar public/data/protek/… (origin 200).
+         * Eski PDP JS data/ önekini silince /protek/… veya CDN /images/protek/… 404/403 olur —
+         * origin /data/protek/…’e yönlendir (CDN’de yok).
+         */
+        { source: "/protek/:path*", destination: "/data/protek/:path*" },
+        { source: "/images/protek/:path*", destination: "/data/protek/:path*" },
         /* Eski dosya adı — cache / bookmark */
         { source: "/eq-home-mutbex.css", destination: "/eq-home-equsto.css" },
         /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */

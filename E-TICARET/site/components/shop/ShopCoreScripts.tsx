@@ -15,7 +15,7 @@ export default function ShopCoreScripts() {
       <Script src={`/eq-price-display.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/theme.js?v=${v}`} strategy="afterInteractive" />
       <AssetCdnConfigScript />
-      <Script src={`/eq-site-urls.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-site-urls.js?v=${cartV}`} strategy="afterInteractive" />
       <Script
         src={`/eq-i18n.js?v=${v}`}
         strategy="afterInteractive"
