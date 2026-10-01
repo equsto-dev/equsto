@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Canlı Çeviri EN→TR",
-  "version": "4.0.1",
-  "description": "Her sitede canlı yayın EN→TR kadın ses. Yayın sesi açık kalır.",
+  "name": "Canlı Çeviri",
+  "version": "5.0.0",
+  "description": "canli_ceviri.py → Chrome: her sitede EN→TR kadın ses. Yayın sesi kapanmaz.",
   "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
   "host_permissions": [
     "<all_urls>",
@@ -17,9 +17,7 @@
       "128": "icons/icon128.png"
     }
   },
-  "background": {
-    "service_worker": "background.js"
-  },
+  "background": { "service_worker": "background.js" },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

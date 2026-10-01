@@ -5,18 +5,18 @@
   <style>
     body {
       margin: 0;
-      width: 280px;
+      width: 300px;
       font: 13px/1.4 "Segoe UI", system-ui, sans-serif;
-      background: #101820;
-      color: #f3f6f9;
+      background: #0e1520;
+      color: #eef3f8;
     }
     main { padding: 14px; display: grid; gap: 10px; }
-    h1 { margin: 0; font-size: 15px; }
-    .hint { color: #9db0c2; font-size: 12px; }
-    label { display: grid; gap: 4px; color: #9db0c2; font-size: 11px; }
-    input {
-      border: 1px solid #2c3b4c;
-      background: #182230;
+    h1 { margin: 0; font-size: 16px; }
+    p { margin: 0; color: #8fa0b3; font-size: 12px; }
+    label { display: grid; gap: 4px; color: #8fa0b3; font-size: 11px; }
+    input, select {
+      border: 1px solid #2a3648;
+      background: #172233;
       color: #fff;
       border-radius: 8px;
       padding: 8px 10px;
@@ -27,23 +27,31 @@
       flex: 1;
       border: 0;
       border-radius: 10px;
-      padding: 10px;
+      padding: 11px;
       font-weight: 650;
       cursor: pointer;
     }
-    #start { background: #3ddc97; color: #062216; }
-    #stop { background: #2c3b4c; color: #fff; }
-    button:disabled { opacity: 0.4; }
-    #err { color: #ff8a8a; font-size: 12px; }
+    #start { background: #3ddc97; color: #042216; }
+    #stop { background: #2a3648; color: #fff; }
+    button:disabled { opacity: 0.4; cursor: default; }
+    #err { color: #ff8b8b; font-size: 12px; min-height: 1em; }
   </style>
 </head>
 <body>
   <main>
     <h1>Canlı Çeviri</h1>
-    <div class="hint">Yayın sekmesine geç → Başlat. Ses açık kalır · kadın ses.</div>
+    <p>Yayın sekmesinde Başlat. Video sesi açık kalır · kadın Türkçe ses.</p>
     <label>
-      Groq API anahtarı
-      <input id="apiKey" type="password" placeholder="gsk_..." />
+      Groq API
+      <input id="apiKey" type="password" placeholder="gsk_..." autocomplete="off" />
+    </label>
+    <label>
+      Hassasiyet
+      <select id="sensitivity">
+        <option value="low">Düşük (az gürültü yakalar)</option>
+        <option value="mid" selected>Normal</option>
+        <option value="high">Yüksek (daha çok konuşma)</option>
+      </select>
     </label>
     <div class="row">
       <button id="start">Başlat</button>
