@@ -100,14 +100,26 @@ window.searchFilter = window.searchFilter || function () {};
       return origin + path;
     }
 
-    /** Aynı görselin tekrarını ele: önce normalize, sonra Set ile benzersiz. */
+    /**
+     * Aynı görselin tekrarını ele — katalog göreli yolu koru (CDN absolute’a çevirme).
+     * Absolute CDN URL gelirse images/… göreliye indir (galeri failover için).
+     */
     function uniqueImgs(arr) {
       var seen = Object.create(null);
       var out = [];
       (arr || []).forEach(function (raw) {
-        var s = normImgPath(raw);
+        var s = String(raw || "")
+          .replace(/\\/g, "/")
+          .trim();
         if (!s) return;
-        var key = s.toLowerCase();
+        if (/^https?:\/\//i.test(s)) {
+          var m = s.match(/^https?:\/\/[^/]+\/(images\/catalog\/[^?#]+)/i);
+          if (m) s = m[1];
+          else return;
+        }
+        s = s.replace(/^\/+/, "").replace(/^data\//i, "");
+        if (!s) return;
+        var key = s.toLowerCase().split("?")[0];
         if (seen[key]) return;
         seen[key] = 1;
         out.push(s);
@@ -432,7 +444,15 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function pdpImgDataAttrs(x, rel) {
-      var raw = normImgPath(rel) || "";
+      /** Failover için göreli images/… tut; CDN absolute normImgPath kullanma. */
+      var raw = String(rel || "")
+        .replace(/\\/g, "/")
+        .trim();
+      if (/^https?:\/\//i.test(raw)) {
+        var rm = raw.match(/^https?:\/\/[^/]+\/(images\/catalog\/[^?#]+)/i);
+        raw = rm ? rm[1] : "";
+      }
+      raw = raw.replace(/^\/+/, "").replace(/^data\//i, "");
       var sku = (x && (x.sku || x.urun_kodu || x.model)) || "";
       var s = raw ? ' data-eq-img-raw="' + esc(raw) + '"' : "";
       if (sku) s += ' data-eq-ozti-kod="' + esc(String(sku).trim()) + '"';

@@ -1131,6 +1131,17 @@
       .replace(/^\.\//, "")
       .trim();
     if (/^https?:\/\//i.test(raw)) {
+      /** CloudFront / equsto absolute → origin /images adayları (CafeMarkt galeri S3’te yokken). */
+      var absPath = "";
+      try {
+        absPath = String(new URL(raw).pathname || "").replace(/^\/+/, "");
+      } catch (_) {
+        var am = raw.match(/^https?:\/\/[^/]+\/(.+?)(?:\?|#|$)/i);
+        absPath = am ? am[1] : "";
+      }
+      if (/^images\/catalog\/cafemarkt\//i.test(absPath)) {
+        return catalogImageCandidates(absPath);
+      }
       var abs = withCatalogImgV(raw);
       return abs ? [abs] : [];
     }
@@ -1614,6 +1625,20 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
+    /** Absolute CDN/equsto → göreli images/… (CafeMarkt origin-first için). */
+    if (/^https?:\/\//i.test(s)) {
+      var hostPath = "";
+      try {
+        var uAbs = new URL(s);
+        hostPath = String(uAbs.pathname || "").replace(/^\/+/, "");
+        if (
+          /^images\/catalog\/cafemarkt\//i.test(hostPath) &&
+          /(cloudfront\.net|equsto\.com)$/i.test(uAbs.hostname)
+        ) {
+          s = hostPath;
+        }
+      } catch (_) {}
+    }
     if (/^images\/yuksel-/i.test(s)) {
       s = "images/catalog/yuksel/" + s.replace(/^images\//i, "");
     }
@@ -1625,6 +1650,7 @@
       if (/witcdn\.cafemarkt\.com/i.test(s) && (isEqustoLiveHost() || !allowRemoteImages())) return "";
       return s;
     }
+    s = s.replace(/^\/+/, "");
     var fiyatImg = equstoFiyatListesiImgHref(s);
     if (fiyatImg) return fiyatImg;
     var pbLocalFirst = portabiancoLocalCatalogHref(s);
