@@ -67,7 +67,8 @@ Başka terim öğrenmene gerek yok; sıradaki adımda sadece bunlara odaklanaca�
 ### Adım 5 — İlk küçük reklam (çok düşük bütçe)
 - Tek hedef: **PFOS teklifi**
 - Tek landing: `https://equsto.com/pfos`
-- Günlük 50–100 TL test; sonuçları birlikte okuruz
+- Günlük 50–80 TL mikro test (Senaryo A); sonuçları birlikte okuruz
+- Kısıtlı bütçe mimarisi, negatif kelimeler, 30 gün takvim → **[`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)**
 
 **Adım 5’e Adım 1–4 bitmeden geçilmez.**
 
@@ -110,4 +111,5 @@ Mağaza, Performance Max, Merchant Center → **çok sonra**; şimdilik düşün
 ## İlgili dosyalar
 
 - `.env.example` — GA4 / Ads değişkenleri
+- `docs/GOOGLE-ADS-KISITLI-BUTCE-PLANI.md` — kısıtlı bütçe kampanya planı (Adım 5+)
 - `docs/GOOGLE-MERCHANT-CENTER.md` — ürün feed (ileride, şimdilik okuma)
