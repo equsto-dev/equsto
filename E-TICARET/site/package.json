@@ -110,6 +110,7 @@
     "catalog:ozti:audit": "node scripts/audit-ozti-catalog.mjs",
     "feed:google": "node scripts/build-google-merchant-feed.mjs",
     "feed:google:stats": "tsx scripts/run-google-merchant-feed.ts --stats",
+    "feed:google:verify-images": "tsx scripts/verify-gmc-additional-images.ts",
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
     "catalog:atalay:web-desc": "node scripts/fetch-atalay-web-descriptions.mjs",
     "catalog:atalay:web-desc:full": "node scripts/fetch-atalay-web-descriptions.mjs --refresh-index --force",
@@ -352,6 +353,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "server-only": "^0.0.1",
+    "sharp": "^0.34.5",
     "zod": "^4.4.3"
   },
   "devDependencies": {

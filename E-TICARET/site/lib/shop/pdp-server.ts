@@ -16,6 +16,10 @@ import {
   isQuoteOnlyProduct,
   resolveMerchantPriceTry,
 } from "@/lib/google-merchant-feed";
+import {
+  collectGmcPhotoRels,
+  expandOfferImageUrlList,
+} from "@/lib/gmc-additional-images";
 import { extractTechnicalDetails } from "@/lib/feed-product-details";
 import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
 import { resolveShopDept } from "./category-dept";
@@ -318,7 +322,13 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
   }
 
   const images = originalRow?.images as string[] | undefined;
-  const imageUrls = images?.map((img) => absoluteAssetUrl(img, origin)).filter(Boolean) ?? (ssr.image ? [ssr.image] : undefined);
+  const photoRels = collectGmcPhotoRels(images);
+  const expanded = expandOfferImageUrlList(photoRels, origin);
+  const imageUrls: string[] | undefined = expanded.length
+    ? expanded
+    : ssr.image
+      ? [ssr.image]
+      : undefined;
 
   const breadcrumbs = buildBreadcrumbsFromKategoriYolu(originalRow, ssr, origin);
 

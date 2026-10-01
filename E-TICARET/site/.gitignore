@@ -41,6 +41,7 @@ yarn-error.log*
 /public/data/ekipmanlar*.json
 /public/data/ekipmanlar.json.backup-*
 /var/catalog/ekipmanlar-full-archive.json
+/var/gmc-img-cache/
 
 # Electrolux PDF/DWG/RFA (~4 GB) — kaynak: PFOS/veri/electrolux-professional/media/documents
 # Canlı: S3/CloudFront (data/electrolux-professional/docs/). Import: catalog:electrolux:import
