@@ -40,10 +40,10 @@ import sounddevice as sd
 SR_IN = 16000
 FRAME = 512  # ~32 ms
 FRAME_S = FRAME / SR_IN
-PREROLL = 5
+PREROLL = 10  # konuşma başı kesilmesin
 TTS_SR = 24000
 # TTS bittikten sonra loopback'te kalan yankı için kısa bekleme
-TTS_COOLDOWN_S = 0.35
+TTS_COOLDOWN_S = 0.2
 
 seg_q: queue.Queue = queue.Queue(maxsize=8)
 tts_q: queue.Queue = queue.Queue(maxsize=8)
@@ -122,23 +122,52 @@ def ensure_translation_model() -> None:
 
 
 def speech_score(frame: np.ndarray, sr: int = SR_IN) -> float:
-    """Motor gürültüsü vs konuşma (300–3400 Hz)."""
+    """
+    Konuşmayı yakala; saf motor gürültüsünü ele.
+    Önceki sürüm çok seçiciydi — spektrum oranı + RMS birleşik skor.
+    """
     x = frame.astype(np.float32)
     if x.size < 64:
         return 0.0
     x = x - np.mean(x)
-    rms = float(np.sqrt(np.mean(x * x)) + 1e-9)
+    rms = float(np.sqrt(np.mean(x * x)) + 1e-12)
+    if rms < 0.0008:
+        return 0.0
+
     n = 1 << int(np.ceil(np.log2(x.size)))
     spec = np.fft.rfft(x * np.hanning(x.size), n=n)
     mag = np.abs(spec) ** 2
     freqs = np.fft.rfftfreq(n, d=1.0 / sr)
-    speech = float(mag[(freqs >= 300) & (freqs <= 3400)].sum() + 1e-12)
-    low = float(mag[(freqs >= 40) & (freqs < 250)].sum() + 1e-12)
-    high = float(mag[(freqs > 4000) & (freqs < 7500)].sum() + 1e-12)
-    ratio = speech / (low + high + speech)
-    zc = float(np.mean(np.abs(np.diff(np.sign(x)))) * 0.5)
-    zc_w = 1.0 if 0.02 < zc < 0.35 else 0.35
-    return rms * ratio * zc_w * 8.0
+    speech = float(mag[(freqs >= 250) & (freqs <= 3800)].sum() + 1e-12)
+    low = float(mag[(freqs >= 40) & (freqs < 200)].sum() + 1e-12)
+    total = float(mag.sum() + 1e-12)
+    speech_ratio = speech / total
+    # Motor: düşük bant baskın. Konuşma: mid bant + yeterli RMS.
+    # Düşük frekans cezası yumuşak — F1'de motor her zaman var.
+    motor_pen = 1.0 / (1.0 + 0.35 * (low / speech))
+    zc = float(np.mean(np.abs(np.diff(np.signbit(x).astype(np.float32)))))
+    zc_w = 0.55 + 0.45 * (1.0 if 0.01 < zc < 0.45 else 0.0)
+    return rms * (0.35 + 0.65 * speech_ratio) * motor_pen * zc_w * 14.0
+
+
+def prep_audio_for_stt(audio: np.ndarray) -> np.ndarray:
+    """Motor uğultusunu azalt + konuşmayı güçlendir (AGC)."""
+    x = np.asarray(audio, dtype=np.float32)
+    if x.size < 16:
+        return x
+    # 1. derece yüksek geçiren ~150 Hz @ 16 kHz — motor ugultusunu kes
+    a = 0.98
+    y = np.empty_like(x)
+    prev_x = float(x[0])
+    prev_y = 0.0
+    for i in range(x.size):
+        xi = float(x[i])
+        prev_y = a * (prev_y + xi - prev_x)
+        prev_x = xi
+        y[i] = prev_y
+    peak = float(np.max(np.abs(y)) + 1e-9)
+    gain = min(12.0, 0.7 / peak)
+    return np.clip(y * gain, -1.0, 1.0).astype(np.float32)
 
 
 # ---------------------------------------------------------------- UI
@@ -340,15 +369,22 @@ def stt_translate_loop(model_size: str, want_tts: bool, force_device: str = "cpu
             continue
         t1 = time.time()
         try:
+            audio_stt = prep_audio_for_stt(audio)
             segs, _ = model.transcribe(
-                audio,
+                audio_stt,
                 language="en",
                 beam_size=1,
                 best_of=1,
                 temperature=0.0,
                 without_timestamps=True,
-                condition_on_previous_text=False,
-                vad_filter=False,
+                condition_on_previous_text=True,
+                vad_filter=True,
+                vad_parameters=dict(
+                    min_silence_duration_ms=200,
+                    speech_pad_ms=200,
+                    threshold=0.35,
+                ),
+                initial_prompt="Formula 1 live commentary race radio.",
             )
         except Exception as e:
             # Ortada CUDA DLL hatası gelirse modeli CPU ile yeniden yükle
@@ -363,12 +399,13 @@ def stt_translate_loop(model_size: str, want_tts: bool, force_device: str = "cpu
         parts = [
             s.text.strip()
             for s in segs
-            if getattr(s, "no_speech_prob", 0) < 0.65
+            if getattr(s, "no_speech_prob", 0) < 0.88
         ]
         text = " ".join(parts).strip()
         if len(text) < 2:
             continue
-        if text.lower() in {"thank you", "thanks", "you", ".", "..."}:
+        low = text.lower().strip(" .")
+        if low in {"thank you", "thanks", "you", "the", "a", "um", "uh"}:
             continue
         t2 = time.time()
         tr = atr.translate(text, "en", "tr")
@@ -480,25 +517,25 @@ def main() -> None:
     )
     ap.add_argument(
         "--model",
-        default="tiny.en",
-        help="Whisper: tiny.en (hız) / base.en / small.en (kalite)",
+        default="base.en",
+        help="Whisper: tiny.en (hız) / base.en (önerilen) / small.en (kalite)",
     )
     ap.add_argument(
         "--threshold",
         type=float,
-        default=0.012,
-        help="Konuşma skoru eşiği (motor gürültüsünde: 0.02–0.04)",
+        default=0.004,
+        help="Konuşma eşiği (düşük=daha çok yakalar; gürültüde yükselt)",
     )
     ap.add_argument(
         "--silence",
         type=float,
-        default=0.22,
+        default=0.35,
         help="Cümle sonu sessizliği (sn)",
     )
     ap.add_argument(
         "--chunk",
         type=float,
-        default=1.8,
+        default=2.8,
         help="En uzun parça (sn)",
     )
     ap.add_argument(
@@ -519,7 +556,7 @@ def main() -> None:
         choices=["cpu", "cuda", "auto"],
         help="Whisper cihazı (varsayılan cpu — Windows'ta CUDA DLL sorunu olmasın)",
     )
-    ap.add_argument("--voice", default="tr-TR-AhmetNeural")
+    ap.add_argument("--voice", default="tr-TR-EmelNeural")
     a = ap.parse_args()
 
     if a.list:
