@@ -982,6 +982,8 @@
     "form_privacy_html": "<a href=\"/kvkk\">KVKK ve çerez politikası</a>'nı okudum ve kabul ediyorum.",
     "form_send": "Gönder",
     "form_clear": "Temizle",
+    "form_sent_strong": "Gönderildi",
+    "form_sent_sub": "Mesajınız alındı",
     "quick_faq": "Sık Sorulan Sorular",
     "quick_support": "Müşteri Hizmetleri",
     "quick_orders": "Sipariş Takip",

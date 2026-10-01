@@ -982,6 +982,8 @@
     "form_privacy_html": "I have read and accept the <a href=\"/en/privacy\">Privacy &amp; cookie policy</a>.",
     "form_send": "Gönder",
     "form_clear": "Temizle",
+    "form_sent_strong": "Sent",
+    "form_sent_sub": "Your message was received",
     "quick_faq": "Sık Sorulan Sorular",
     "quick_support": "Müşteri Hizmetleri",
     "quick_orders": "Sipariş Takip",
