@@ -5,6 +5,7 @@
  *   node scripts/enrich-cafemarkt-galleries.mjs --dry-run --brands=Faema,Santos --limit=20
  *   node scripts/enrich-cafemarkt-galleries.mjs --brands=Faema,Santos,Animo,"Dito Sama" --min-gallery=2
  *   node scripts/enrich-cafemarkt-galleries.mjs --premium --apply
+ *   node scripts/enrich-cafemarkt-galleries.mjs --all --apply --concurrency=4
  *
  * Kaynak: var/catalog değil — public/data/dept/*.json güncellenir, sonra rebuild.
  */
@@ -47,11 +48,14 @@ const argv = process.argv.slice(2);
 const dryRun = argv.includes("--dry-run");
 const apply = argv.includes("--apply") || !dryRun;
 const premium = argv.includes("--premium");
+const allBrands = argv.includes("--all");
 const skipDownload = argv.includes("--discover-only");
 const brandsArg = argv.find((a) => a.startsWith("--brands="));
 const limitArg = argv.find((a) => a.startsWith("--limit="));
 const minGalleryArg = argv.find((a) => a.startsWith("--min-gallery="));
 const delayArg = argv.find((a) => a.startsWith("--delay="));
+const concurrencyArg = argv.find((a) => a.startsWith("--concurrency="));
+const onlySingle = !argv.includes("--include-multi");
 
 const brands = brandsArg
   ? brandsArg
@@ -59,12 +63,15 @@ const brands = brandsArg
       .split(",")
       .map((s) => s.trim())
       .filter(Boolean)
-  : premium
-    ? PREMIUM_BRANDS
+  : allBrands
+    ? []
     : PREMIUM_BRANDS;
 const limit = limitArg ? Math.max(1, Number(limitArg.split("=")[1]) || 0) : 0;
 const minGallery = minGalleryArg ? Math.max(2, Number(minGalleryArg.split("=")[1]) || 2) : 2;
 const delayMs = delayArg ? Math.max(50, Number(delayArg.split("=")[1]) || 250) : 250;
+const concurrency = concurrencyArg
+  ? Math.max(1, Math.min(8, Number(concurrencyArg.split("=")[1]) || 1))
+  : 1;
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -245,33 +252,59 @@ async function processRow(row, stats) {
   };
 }
 
+async function mapPool(items, size, worker) {
+  let idx = 0;
+  const out = new Array(items.length);
+  async function run() {
+    while (idx < items.length) {
+      const i = idx++;
+      out[i] = await worker(items[i], i);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(size, items.length) }, () => run()));
+  return out;
+}
+
 async function main() {
   const packs = loadDeptRows();
   const brandSet = new Set(brands.map((b) => b.toLowerCase()));
+  const filterByBrand = !allBrands && brandSet.size > 0;
 
   /** @type {any[]} */
   const targets = [];
   for (const pack of packs) {
     for (const row of pack.rows) {
       if (!row?.cafemarkt_url) continue;
-      if (![...brandSet].some((b) => brandMatch(row.brand, b))) continue;
+      if (filterByBrand && ![...brandSet].some((b) => brandMatch(row.brand, b))) continue;
       const photos = collectValidPhotos(row.images);
       if (photos.length >= 4) continue;
+      if (onlySingle && photos.length >= 2) continue;
       targets.push({ pack, row });
     }
   }
+
+  // Marka başına dağılım — büyükleri önce işle (ROI)
+  targets.sort((a, b) => {
+    const ba = String(a.row.brand || "");
+    const bb = String(b.row.brand || "");
+    if (ba !== bb) return ba.localeCompare(bb, "tr");
+    return String(a.row.sku || "").localeCompare(String(b.row.sku || ""));
+  });
 
   const slice = limit ? targets.slice(0, limit) : targets;
   console.log(
     JSON.stringify(
       {
-        brands,
+        mode: allBrands ? "all-cafemarkt-url" : premium ? "premium" : "brands",
+        brands: allBrands ? ["*"] : brands,
         targets: targets.length,
         processing: slice.length,
         dryRun,
         apply: apply && !dryRun,
         minGallery,
         skipDownload,
+        concurrency,
+        onlySingle,
       },
       null,
       2,
@@ -290,17 +323,21 @@ async function main() {
   };
   const results = [];
   const dirtyFiles = new Set();
+  let done = 0;
 
-  for (let i = 0; i < slice.length; i++) {
-    const { pack, row } = slice[i];
+  await mapPool(slice, concurrency, async ({ pack, row }) => {
     const r = await processRow(row, stats);
     if (r) results.push(r);
     if (r?.applied) dirtyFiles.add(pack.file);
-    if ((i + 1) % 10 === 0 || i === slice.length - 1) {
-      console.log(`[enrich-cm] ${i + 1}/${slice.length} updated=${stats.updated} would=${stats.wouldUpdate} dl=${stats.downloaded}`);
+    done += 1;
+    if (done % 25 === 0 || done === slice.length) {
+      console.log(
+        `[enrich-cm] ${done}/${slice.length} updated=${stats.updated} would=${stats.wouldUpdate} dl=${stats.downloaded} noGal=${stats.skippedNoGallery} err=${stats.errors.length}`,
+      );
     }
-    await sleep(delayMs);
-  }
+    if (delayMs > 0) await sleep(delayMs);
+    return r;
+  });
 
   if (dirtyFiles.size && apply && !dryRun) {
     for (const file of dirtyFiles) {
@@ -326,14 +363,18 @@ async function main() {
     REPORT_DIR,
     `cafemarkt-gallery-${new Date().toISOString().replace(/[:.]/g, "-")}.json`,
   );
+  const latestPath = path.join(REPORT_DIR, "cafemarkt-gallery-latest.json");
   const report = {
     generatedAt: new Date().toISOString(),
-    brands,
+    mode: allBrands ? "all" : premium ? "premium" : "brands",
+    brands: allBrands ? ["*"] : brands,
     dryRun,
-    stats,
+    concurrency,
+    stats: { ...stats, errors: stats.errors.slice(0, 100) },
     results,
   };
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8");
+  fs.writeFileSync(latestPath, JSON.stringify(report, null, 2), "utf8");
   console.log(
     JSON.stringify(
       {

@@ -48,7 +48,10 @@ yarn-error.log*
 /public/data/electrolux-professional/docs/
 
 # Faz B — medya S3/CloudFront; git yalnızca katalog JSON + JS
-/public/images/
+# Not: dizin ignore edilirse alt ! istisnalar çalışmaz → içerikleri ignore et
+/public/images/*
+!/public/images/catalog/
+/public/images/catalog/*
 /public/data/caglayan-market/
 /public/data/prosogutma-market/
 /public/data/vitrum-drawings/

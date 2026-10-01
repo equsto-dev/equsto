@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-10-01T12:24:19.767235Z",
+  "note": "Tek gerçek foto kalan ürünler — PDP appendGmcSyntheticGallery ile aynı görselin kırpımlarını gösterir (geçici). Sonraki görev: gerçek ek foto bul.",
+  "buckets": {
+    "none": 8,
+    "single": 13743,
+    "multi": 2055,
+    "total": 15806
+  },
+  "topBrandsStillSingle": [
+    [
+      "Öztiryakiler Endüstriyel Mutfak",
+      3619
+    ],
+    [
+      "İnoksan",
+      959
+    ],
+    [
+      "Atalay Endüstriyel Mutfak Ekipmanları",
+      834
+    ],
+    [
+      "Proso Profesyonel Soğutma",
+      743
+    ],
+    [
+      "Electrolux Professional",
+      673
+    ],
+    [
+      "Empero",
+      596
+    ],
+    [
+      "GastroPlast",
+      415
+    ],
+    [
+      "Pimak",
+      378
+    ],
+    [
+      "SilverInox",
+      344
+    ],
+    [
+      "Karacasan",
+      276
+    ],
+    [
+      "CSA Inox",
+      267
+    ],
+    [
+      "Remta",
+      266
+    ],
+    [
+      "Equsto",
+      233
+    ],
+    [
+      "Vosco",
+      232
+    ],
+    [
+      "Iceinox",
+      195
+    ],
+    [
+      "Npicco",
+      167
+    ],
+    [
+      "PORTABIANCO",
+      159
+    ],
+    [
+      "Kalitegaz",
+      154
+    ],
+    [
+      "Şenox",
+      142
+    ],
+    [
+      "Mateka",
+      140
+    ],
+    [
+      "Dito Sama",
+      135
+    ],
+    [
+      "By Kitchen",
+      131
+    ],
+    [
+      "Omake",
+      128
+    ],
+    [
+      "Meşale",
+      125
+    ],
+    [
+      "Kapp",
+      118
+    ],
+    [
+      "Ateşe",
+      116
+    ],
+    [
+      "Bilge Inox",
+      108
+    ],
+    [
+      "Bosfor",
+      102
+    ],
+    [
+      "Cambro",
+      100
+    ],
+    [
+      "Mazzer",
+      95
+    ]
+  ],
+  "count": 13743
+}
