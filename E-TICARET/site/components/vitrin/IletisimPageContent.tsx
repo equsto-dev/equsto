@@ -5,12 +5,11 @@ import {
   PUBLIC_PHONE_DISPLAY,
   PUBLIC_PHONE_TEL,
 } from "@/lib/site/public-phone";
-import { buildWebWhatsAppUrl } from "@/lib/whatsapp/link";
+import { buildWaMeUrl, buildWebWhatsAppUrl } from "@/lib/whatsapp/link";
 
-const CONTACT_PHONE_WA_WEB = buildWebWhatsAppUrl(
-  PUBLIC_PHONE_TEL,
-  "Merhaba, equsto.com iletişim sayfasından yazıyorum.",
-);
+const CONTACT_WA_PREFILL = "Merhaba, equsto.com iletişim sayfasından yazıyorum.";
+const CONTACT_PHONE_WA_WEB = buildWebWhatsAppUrl(PUBLIC_PHONE_TEL, CONTACT_WA_PREFILL);
+const CONTACT_PHONE_WA_APP = buildWaMeUrl(PUBLIC_PHONE_TEL, CONTACT_WA_PREFILL);
 
 export default function IletisimPageContent() {
   return (
@@ -45,11 +44,13 @@ export default function IletisimPageContent() {
                     </th>
                     <td>
                       <a
-                        href={CONTACT_PHONE_WA_WEB || `tel:${PUBLIC_PHONE_TEL}`}
+                        id="eq-contact-phone-wa"
+                        href={CONTACT_PHONE_WA_APP || CONTACT_PHONE_WA_WEB || `tel:${PUBLIC_PHONE_TEL}`}
+                        data-eq-wa-app={CONTACT_PHONE_WA_APP || undefined}
+                        data-eq-wa-web={CONTACT_PHONE_WA_WEB || undefined}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-eq-wa-web="1"
-                        title="WhatsApp Web"
+                        title="WhatsApp"
                       >
                         {PUBLIC_PHONE_DISPLAY}
                       </a>

@@ -1398,6 +1398,105 @@
       });
   }
 
+  function eqIsMobileWaTarget() {
+    try {
+      if (typeof window.eqIsPhoneShell === "function" && window.eqIsPhoneShell()) return true;
+    } catch (_) {}
+    var root = document.documentElement;
+    if (root.classList.contains("eq-device-phone") || root.classList.contains("eq-device-tablet")) {
+      return true;
+    }
+    var kind = root.getAttribute("data-eq-device");
+    if (kind === "phone" || kind === "tablet") return true;
+    return /Android|iPhone|iPad|iPod|Mobile|webOS|BlackBerry/i.test(
+      String(navigator.userAgent || "")
+    );
+  }
+
+  /** Masaüstü → WhatsApp Web; mobil/tablet → WhatsApp uygulaması (wa.me). */
+  function initContactPhoneWaLink() {
+    var a = document.getElementById("eq-contact-phone-wa");
+    if (!a || a.getAttribute("data-eq-wa-bound") === "1") return;
+    a.setAttribute("data-eq-wa-bound", "1");
+    var app = String(a.getAttribute("data-eq-wa-app") || a.href || "").trim();
+    var web = String(a.getAttribute("data-eq-wa-web") || "").trim();
+    if (!app && !web) return;
+
+    function syncHref() {
+      var mobile = eqIsMobileWaTarget();
+      var url = mobile ? app || web : web || app;
+      if (url) a.setAttribute("href", url);
+      a.setAttribute("title", mobile ? "WhatsApp" : "WhatsApp Web");
+    }
+
+    syncHref();
+    window.addEventListener("resize", syncHref, { passive: true });
+    a.addEventListener("click", function (ev) {
+      syncHref();
+      var mobile = eqIsMobileWaTarget();
+      var url = mobile ? app || web : web || app;
+      if (!url) return;
+      // Masaüstünde web.whatsapp.com; mobilde wa.me (uygulama)
+      if (!mobile && web) {
+        ev.preventDefault();
+        window.open(web, "_blank", "noopener,noreferrer");
+      }
+    });
+  }
+
+  /** Sepete eklendi toast'ı ile aynı görünüm — iletişim formu başarı. */
+  function ensureIletisimToastCss() {
+    if (document.getElementById("eq-iletisim-toast-css")) return;
+    var s = document.createElement("style");
+    s.id = "eq-iletisim-toast-css";
+    s.textContent =
+      ".eq-cart-added-toast{position:fixed;top:72px;right:12px;z-index:510;display:flex;align-items:flex-start;gap:10px;max-width:min(300px,calc(100vw - 24px));padding:10px 14px;border-radius:10px;background:var(--eq-surface,#fff);color:var(--eq-text,#1a1a1a);border:1px solid var(--eq-border,#e5e5e5);box-shadow:0 8px 28px rgba(0,0,0,.14);opacity:0;transform:translateY(-8px);transition:opacity .22s ease,transform .22s ease;pointer-events:none}" +
+      ".eq-cart-added-toast.is-visible{opacity:1;transform:translateY(0)}" +
+      ".eq-cart-added-toast__icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#25d366;color:#fff;font-size:12px;font-weight:700;line-height:22px;text-align:center}" +
+      ".eq-cart-added-toast__body{display:flex;flex-direction:column;gap:2px;min-width:0;font-size:13px;line-height:1.35}" +
+      ".eq-cart-added-toast__body span{font-size:11px;font-weight:500;color:var(--eq-text-secondary,#5a6278);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}";
+    document.head.appendChild(s);
+  }
+
+  function toastIletisimGonderildi() {
+    ensureIletisimToastCss();
+    var old = document.getElementById("equsto-iletisim-sent-toast");
+    if (old) old.remove();
+    var bar = document.createElement("div");
+    bar.id = "equsto-iletisim-sent-toast";
+    bar.className = "eq-cart-added-toast";
+    bar.setAttribute("role", "status");
+    var strong =
+      typeof window.eqT === "function"
+        ? window.eqT("contact.form_sent_strong", "Gönderildi")
+        : "Gönderildi";
+    var sub =
+      typeof window.eqT === "function"
+        ? window.eqT("contact.form_sent_sub", "Mesajınız alındı")
+        : "Mesajınız alındı";
+    bar.innerHTML =
+      '<span class="eq-cart-added-toast__icon" aria-hidden="true">✓</span>' +
+      '<span class="eq-cart-added-toast__body">' +
+      "<strong>" +
+      strong +
+      "</strong>" +
+      "<span>" +
+      sub +
+      "</span>" +
+      "</span>";
+    document.body.appendChild(bar);
+    requestAnimationFrame(function () {
+      bar.classList.add("is-visible");
+    });
+    clearTimeout(bar._hide);
+    bar._hide = setTimeout(function () {
+      bar.classList.remove("is-visible");
+      setTimeout(function () {
+        if (bar.parentNode) bar.parentNode.removeChild(bar);
+      }, 240);
+    }, 2800);
+  }
+
   function initIletisimForm() {
     var form = document.getElementById("equsto-iletisim-form");
     if (!form || form.getAttribute("data-eq-bound") === "1") return;
@@ -1496,6 +1595,7 @@
             st.textContent = "Mesajınız alındı. En kısa sürede size dönüş yapılacaktır.";
             st.style.color = "#1e7a45";
           }
+          toastIletisimGonderildi();
           form.reset();
           randomCaptcha();
         })
@@ -1509,6 +1609,7 @@
 
   function init() {
     if (document.body && document.body.classList.contains("admin-app")) return;
+    initContactPhoneWaLink();
     initIletisimForm();
     mountWaModal();
     syncFabPlacement();
