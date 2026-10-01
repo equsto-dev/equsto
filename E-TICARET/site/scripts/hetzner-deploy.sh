@@ -34,24 +34,33 @@ if [[ -f .env.production ]]; then
   export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
   # CLOUDFRONT_DISTRIBUTION_ID should be set as environment variable (from GitHub secret)
   # Not stored in .env.production for security
-  if [[ -n "${AWS_S3_BUCKET:-}" ]] && command -v aws >/dev/null 2>&1; then
-    echo "[hetzner-deploy] Syncing images to S3..."
-    aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
+  if [[ -n "${AWS_S3_BUCKET:-}" && -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
+    if ! command -v aws >/dev/null 2>&1; then
+      echo "[hetzner-deploy] aws cli yok — kuruluyor…"
+      if command -v apt-get >/dev/null 2>&1; then
+        apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq awscli || true
+      fi
+    fi
+    if command -v aws >/dev/null 2>&1; then
+      echo "[hetzner-deploy] Syncing images to S3 ($AWS_S3_BUCKET)…"
+      aws s3 sync public/images "s3://$AWS_S3_BUCKET/images" --region "${AWS_REGION:-eu-central-1}" --only-show-errors \
+        || echo "[hetzner-deploy] S3 sync failed (non-fatal)"
 
-    # CloudFront invalidation for new/updated images
-    if [[ -n "${CLOUDFRONT_DISTRIBUTION_ID:-}" ]] && command -v aws >/dev/null 2>&1; then
-      echo "[hetzner-deploy] Creating CloudFront invalidation..."
-      aws cloudfront create-invalidation \
-        --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
-        --paths \
-          "/images/pfos/pfos_gorsel.jpeg" \
-          "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png" \
-          "/images/pfos/proje-fabrikasi-ana-gorsel.png" \
-          "/images/catalog/cafemarkt/*" \
-        --region "${AWS_REGION:-eu-central-1}" || echo "[hetzner-deploy] CloudFront invalidation failed (non-fatal)"
+      if [[ -n "${CLOUDFRONT_DISTRIBUTION_ID:-}" ]]; then
+        echo "[hetzner-deploy] Creating CloudFront invalidation…"
+        aws cloudfront create-invalidation \
+          --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
+          --paths \
+            "/images/pfos/*" \
+            "/images/catalog/cafemarkt/*" \
+          --region "${AWS_REGION:-eu-central-1}" \
+          || echo "[hetzner-deploy] CloudFront invalidation failed (non-fatal)"
+      fi
+    else
+      echo "[hetzner-deploy] S3 sync skipped (aws cli kurulamadı)"
     fi
   else
-    echo "[hetzner-deploy] S3 sync skipped (no AWS_S3_BUCKET or aws cli)"
+    echo "[hetzner-deploy] S3 sync skipped (AWS_S3_BUCKET / credentials yok)"
   fi
 fi
 

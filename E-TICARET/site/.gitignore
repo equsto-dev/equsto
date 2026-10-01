@@ -134,3 +134,6 @@ scripts/seo/input/**/*.csv
 # image enrich ephemeral
 /scripts/data/image-enrich/audit-gaps.csv
 /scripts/data/image-enrich/cafemarkt-gallery-20*.json
+
+# Stale static GMC feed — canlıda Next route kullanılır
+/public/feeds/google-products.xml
