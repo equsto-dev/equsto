@@ -9,6 +9,7 @@ import {
   fetchKullaniciRaporu,
   type KullaniciRaporOzet,
 } from "@/lib/pro-admin-client";
+import { kullaniciRaporHref } from "@/lib/analytics/dwell-paths";
 
 export default function IsletmeKullaniciRaporPanel() {
   const { message } = App.useApp();
@@ -35,7 +36,7 @@ export default function IsletmeKullaniciRaporPanel() {
     <Space direction="vertical" size="middle" style={{ width: "100%" }}>
       <ProCard
         title="Kullanıcı raporu"
-        subTitle="Hangi ürün sayfasında ne kadar süre kaldılar"
+        subTitle="Hangi ürün / alan sayfasında ne kadar süre kaldılar"
         extra={
           <Space wrap>
             <Select
@@ -55,8 +56,9 @@ export default function IsletmeKullaniciRaporPanel() {
         }
       >
         <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
-          Vitrin ürün sayfalarında geçen görünür süre kaydedilir (sekme arka plandayken sayılmaz).
-          2 saniyeden kısa ziyaretler rapora dahil edilmez.
+          Shop ürün sayfaları, Besos (landing, istasyonlar, IMT300, modül/Urban Bar PDP) ve PFOS
+          görünür süreleri kaydedilir (sekme arka plandayken sayılmaz). 2 saniyeden kısa ziyaretler
+          rapora dahil edilmez.
         </Typography.Paragraph>
       </ProCard>
 
@@ -118,7 +120,7 @@ export default function IsletmeKullaniciRaporPanel() {
                   ellipsis: true,
                   render: (_, r) => (
                     <Space direction="vertical" size={0}>
-                      <Link href={`/shop/${r.dept || "pisirme"}/${r.slug}`} target="_blank">
+                      <Link href={kullaniciRaporHref(r)} target="_blank">
                         {r.title}
                       </Link>
                       {r.brand ? (
@@ -151,7 +153,7 @@ export default function IsletmeKullaniciRaporPanel() {
                   dataIndex: "title",
                   ellipsis: true,
                   render: (_, r) => (
-                    <Link href={`/shop/${r.dept || "pisirme"}/${r.slug}`} target="_blank">
+                    <Link href={kullaniciRaporHref(r)} target="_blank">
                       {r.title}
                     </Link>
                   ),
@@ -184,7 +186,7 @@ export default function IsletmeKullaniciRaporPanel() {
                   dataIndex: "title",
                   ellipsis: true,
                   render: (_, r) => (
-                    <Link href={r.path || `/shop/${r.dept}/${r.slug}`} target="_blank">
+                    <Link href={kullaniciRaporHref(r)} target="_blank">
                       {r.title}
                     </Link>
                   ),

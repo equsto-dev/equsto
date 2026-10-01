@@ -3,6 +3,7 @@ import Script from "next/script";
 import BesosModulPdpBoot from "@/components/besos/BesosModulPdpBoot";
 import BesosModulProductScripts from "@/components/besos/BesosModulProductScripts";
 import JsonLdScript from "@/components/seo/JsonLdScript";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import ShopProductMain from "@/components/shop/ShopProductMain";
 import ShopStyles from "@/components/shop/ShopStyles";
@@ -33,6 +34,13 @@ export async function renderBesosModulPage(
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
       <ShopProductMain ssr={ssr} />
+      <ProductDwellTracker
+        slug={ssr.slug}
+        dept="besos-modul"
+        productId={ssr.code || ssr.slug}
+        title={ssr.name}
+        brand={ssr.brand}
+      />
       <BesosModulPdpBoot />
       <BesosModulProductScripts />
       <ShopFooterHost />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
+import ProductDwellTracker from "@/components/shop/ProductDwellTracker";
 import BesosUrbanBarCatalog from "@/components/besos/urbanbar/BesosUrbanBarCatalog";
 import { getBesosUrbanBarSection } from "@/lib/besos/urbanbar/catalog";
 import type { BesosUrbanBarSectionKey } from "@/lib/besos/urbanbar/catalog";
@@ -64,6 +65,12 @@ export default async function BesosUrbanBarSectionPage({ section, locale = "tr" 
       <main className="besos-page ub-besos-page ub-shop">
         <BesosUrbanBarCatalog section={sectionData} locale={locale} />
       </main>
+      <ProductDwellTracker
+        slug={section === "bardaklar" ? "bardaklar" : "bar-ekipman"}
+        dept="besos"
+        title={locale === "en" ? META[section].titleEn : META[section].titleTr}
+        brand="Besos"
+      />
       <ShopFooterHost />
     </>
   );
