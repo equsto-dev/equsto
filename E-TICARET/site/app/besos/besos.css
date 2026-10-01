@@ -30,6 +30,26 @@ body.bd-page.besos .bd-vitrum-jump {
   min-height: 100vh;
 }
 
+.besos-seo-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+.besos-seo-intro h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.besos-seo-intro p {
+  margin: 0.45rem 0 0;
+  max-width: 46rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--bes-text-2);
+}
+
 /* Header */
 .besos-hdr {
   position: sticky;

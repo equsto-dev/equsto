@@ -27,6 +27,14 @@ export default function SiteDiscoveryFaqJsonLd() {
       },
       {
         "@type": "Question",
+        name: "Bar Design Studio / Besos nedir?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Besos, Equsto'nun Bar Design Studio vitrinidir: https://equsto.com/besos — modüler kokteyl bar istasyonları (https://equsto.com/besos/bar-istasyonlari), Urban Bar ekipmanları ve Skyra IMT300 berrak buz makinesi (https://equsto.com/besos/imt300).",
+        },
+      },
+      {
+        "@type": "Question",
         name: "Öztiryakiler ekipmanı nereden alınır?",
         acceptedAnswer: {
           "@type": "Answer",

@@ -47,6 +47,16 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
   return (
     <>
       <main className="besos-page">
+        <header className="besos-seo-intro">
+          <h1>
+            {locale === "en" ? "Besos · Bar Design Studio" : "Besos · Bar Design Studio"}
+          </h1>
+          <p>
+            {locale === "en"
+              ? "Modular cocktail bar stations, Urban Bar equipment and the Skyra IMT300 clear ice machine — for hotel, restaurant and bar projects."
+              : "Modüler kokteyl bar istasyonları, Urban Bar ekipmanları ve Skyra IMT300 berrak buz makinesi — otel, restoran ve bar projeleri için."}
+          </p>
+        </header>
         <BesosImt300Hero />
         <div className="bd-vitrum-landing">
           <BesosMethod steps={landing.method} locale={locale} />

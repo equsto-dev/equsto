@@ -25,7 +25,11 @@ export function HomeHeroAdsMount() {
         wrap.appendChild(mountEl);
       }
     }
-    setMount(mountEl);
+    if (mountEl) {
+      /* SSR SEO fallback linklerini temizle; React <a href> kartları alır */
+      mountEl.replaceChildren();
+      setMount(mountEl);
+    }
   }, []);
 
   useEffect(() => {

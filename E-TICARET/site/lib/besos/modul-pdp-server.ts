@@ -29,9 +29,55 @@ export function besosToSsr(p: BesosProduct, locale: "tr" | "en" = "tr"): BesosMo
   const canonical = `${origin}${prefix}/besos/modul/${encodeURIComponent(slug)}`;
   const descTr = String(p.description || "").trim();
   const descEn = String(p.descriptionEn || "").trim();
-  const description =
+  const baseDesc =
     (locale === "en" && descEn ? descEn : descTr) ||
     `${p.name || p.code} — Besos Bar Design Studio modülü.`;
+
+  const features =
+    locale === "en" && p.featuresEn?.length
+      ? p.featuresEn
+      : p.features?.length
+        ? p.features
+        : [];
+  const featureLine = features
+    .map((f) => String(f || "").trim())
+    .filter(Boolean)
+    .slice(0, 8)
+    .join("; ");
+  const dims = String(p.totalDimensionsMm || "").trim();
+  const category = String(p.category || "").trim();
+  const code = String(p.code || "").trim();
+
+  const parts = [baseDesc];
+  if (category) {
+    parts.push(
+      locale === "en"
+        ? `Category: ${category}.`
+        : `Kategori: ${category}.`,
+    );
+  }
+  if (code) {
+    parts.push(locale === "en" ? `Model code: ${code}.` : `Model kodu: ${code}.`);
+  }
+  if (dims) {
+    parts.push(
+      locale === "en"
+        ? `Overall dimensions: ${dims} mm.`
+        : `Genel ölçüler: ${dims} mm.`,
+    );
+  }
+  if (featureLine) {
+    parts.push(
+      locale === "en" ? `Key features: ${featureLine}.` : `Öne çıkan özellikler: ${featureLine}.`,
+    );
+  }
+  parts.push(
+    locale === "en"
+      ? "Equsto Besos Bar Design Studio — modular cocktail bar stations for hotels and restaurants."
+      : "Equsto Besos Bar Design Studio — otel ve restoranlar için modüler kokteyl bar istasyonları.",
+  );
+
+  const description = parts.join(" ").replace(/\s+/g, " ").trim().slice(0, 1200);
 
   let image: string | undefined;
   const img = String(p.imageLocal || p.image || "").replace(/\\/g, "/");
@@ -42,13 +88,13 @@ export function besosToSsr(p: BesosProduct, locale: "tr" | "en" = "tr"): BesosMo
   return {
     name: String(p.name || p.code || "Bar modülü").trim(),
     brand: "Besos",
-    description: description.slice(0, 320),
+    description,
     deptTitle: locale === "en" ? "Bar Design" : "Bar Design",
     deptHref: `${prefix}/besos`,
     slug,
     canonical,
     image,
-    code: String(p.code || "").trim() || undefined,
+    code: code || undefined,
   };
 }
 

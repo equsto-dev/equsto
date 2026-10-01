@@ -4,16 +4,6 @@
 import { heroPillars } from "@/lib/home-content";
 import { publicAssetUrl } from "@/lib/public-asset-url";
 
-function goLegacy(href: string | null, legacyKey?: string) {
-  if (typeof window === "undefined") return;
-  const w = window as Window & { eqGo?: (key: string) => void };
-  if (legacyKey && typeof w.eqGo === "function") {
-    w.eqGo(legacyKey);
-    return;
-  }
-  if (href) window.location.href = href;
-}
-
 function imgClass(visual: (typeof heroPillars)[number]["visual"]): string {
   if (visual === "pfos") return "hero-card-img hero-card-img--pfos-cover";
   if (visual === "besos") return "hero-card-img hero-card-img--bar-combo";
@@ -34,8 +24,6 @@ export function HomeHeroAds() {
     >
       {heroPillars.map((pillar) => {
         const cardClass = `hero-card hero-card--${pillar.visual}${pillar.soon ? " hero-card--soon" : ""}`;
-        const legacyKey =
-          pillar.id === "pfos" ? "pfos" : pillar.id === "besos" ? "besos" : undefined;
 
         const body = (
           <>
@@ -110,19 +98,11 @@ export function HomeHeroAds() {
           );
         }
 
+        /* Gerçek <a href> — SSR/crawler ve paylaşım için zorunlu (onclick-only değil) */
         return (
-          <div
-            key={pillar.id}
-            className={cardClass}
-            role="link"
-            tabIndex={0}
-            onClick={() => goLegacy(pillar.href, legacyKey)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") goLegacy(pillar.href, legacyKey);
-            }}
-          >
+          <a key={pillar.id} href={pillar.href} className={cardClass}>
             {body}
-          </div>
+          </a>
         );
       })}
     </section>

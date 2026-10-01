@@ -1449,6 +1449,8 @@ body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card {
   justify-content: flex-start;
   padding: 0;
   border-right: 1px solid var(--eq-border);
+  text-decoration: none;
+  color: inherit;
 }
 body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card:last-child {
   border-right: none;
