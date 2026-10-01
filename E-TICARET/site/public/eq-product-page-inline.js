@@ -396,7 +396,11 @@ window.searchFilter = window.searchFilter || function () {};
       return out;
     }
 
-    /** GMC mağaza kalitesi — fırsat başına ≥4 görsel (detay kırpımları). */
+    /**
+     * GMC mağaza kalitesi — tek foto ürünlerde detail/upper/closeup zoom.
+     * Merchant için şimdilik açık. Gerçek 2./3. foto varsa enrich ile gelir;
+     * photos.length ≥4 olunca sentetik eklenmez.
+     */
     function appendGmcSyntheticGallery(out) {
       if (!out || !out.length) return;
       var photos = out.filter(function (item) {

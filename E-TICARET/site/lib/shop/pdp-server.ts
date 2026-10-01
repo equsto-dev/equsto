@@ -323,6 +323,7 @@ export function buildProductJsonLd(ssr: PdpSsrPayload, originalRow?: Record<stri
 
   const images = originalRow?.images as string[] | undefined;
   const photoRels = collectGmcPhotoRels(images);
+  /** Merchant/PDP: tek foto ürünlerde sentetik zoom şimdilik açık. */
   const expanded = expandOfferImageUrlList(photoRels, origin);
   const imageUrls: string[] | undefined = expanded.length
     ? expanded
