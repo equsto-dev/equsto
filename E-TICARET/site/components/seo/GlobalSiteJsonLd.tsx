@@ -21,6 +21,7 @@ export default function GlobalSiteJsonLd() {
           "Restoran mutfak teklifi",
           "Öztiryakiler bayii",
           "Proje Fabrikası PFOS",
+          "Besos Bar Design Studio",
           "Bulut mutfak kurulumu",
           "Steakhouse mutfak",
         ],
@@ -34,6 +35,7 @@ export default function GlobalSiteJsonLd() {
           "https://equsto.com/llms.txt",
           "https://equsto.com/hakkimizda",
           "https://equsto.com/pfos",
+          "https://equsto.com/besos",
           ...(process.env.NEXT_PUBLIC_EQUSTO_LINKEDIN_URL?.trim()
             ? [process.env.NEXT_PUBLIC_EQUSTO_LINKEDIN_URL.trim()]
             : []),
@@ -67,6 +69,17 @@ export default function GlobalSiteJsonLd() {
           "Restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanları ve proje planlama. Mr. Equsto ile 5 dakikada teklif.",
         serviceType: "Endüstriyel mutfak ekipmanı ve proje danışmanlığı",
         url: `${origin}/pfos`,
+      },
+      {
+        "@type": "Service",
+        "@id": `${origin}/#service-besos`,
+        name: "Besos · Bar Design Studio",
+        provider: { "@id": `${origin}/#organization` },
+        areaServed: "TR",
+        description:
+          "Modüler kokteyl bar istasyonları, Urban Bar ekipmanları ve IMT300 berrak buz makinesi — Equsto Bar Design Studio.",
+        serviceType: "Bar tasarımı ve modüler bar ekipmanı",
+        url: `${origin}/besos`,
       },
     ],
   };

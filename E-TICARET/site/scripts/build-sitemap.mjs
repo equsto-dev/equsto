@@ -88,6 +88,27 @@ ${entries}
   fs.writeFileSync(path.join(PUBLIC, "sitemap.xml"), xml, "utf8");
 }
 
+/** PFOS + Besos öncelik URL’leri — GSC / IndexNow için kısa sitemap */
+function writePrioritySitemap() {
+  const urls = [
+    urlEntry(`${ORIGIN}/`, { priority: "1", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/pfos`, { priority: "0.99", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/pfos`, { priority: "0.95", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos`, { priority: "0.97", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos`, { priority: "0.94", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/bar-istasyonlari`, { priority: "0.96", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos/bar-istasyonlari`, { priority: "0.93", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/imt300`, { priority: "0.94", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/en/besos/imt300`, { priority: "0.91", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/bardaklar`, { priority: "0.9", changefreq: "weekly" }),
+    urlEntry(`${ORIGIN}/besos/bar-ekipman`, { priority: "0.9", changefreq: "weekly" }),
+  ];
+  const modulXml = buildBesos()
+    .filter((x) => String(x).includes("/besos/modul/"))
+    .slice(0, 24);
+  writeUrlset(path.join(PUBLIC, "sitemap-priority.xml"), [...urls, ...modulXml]);
+}
+
 function writeVideoSitemap(file) {
   const videos = [
     {
@@ -513,6 +534,7 @@ function main() {
 
   writeSitemapIndex(indexFiles);
   patchSitemapPages();
+  writePrioritySitemap();
 
   const brands = uniqueBrandSlugs(rows).length;
   console.log(

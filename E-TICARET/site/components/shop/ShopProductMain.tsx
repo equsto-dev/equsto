@@ -61,7 +61,7 @@ export default function ShopProductMain({ ssr }: Props) {
           </div>
           <main className="eq-product-main eq-pdp-booting" id="eq-product-root">
             {ssr ? (
-              <article className="eq-product-seo-only" aria-hidden="true">
+              <article className="eq-product-seo-only">
                 <h1>{ssr.brand && !ssr.name.toLowerCase().includes(ssr.brand.toLowerCase()) ? `${ssr.brand} ${ssr.name}` : ssr.name}</h1>
                 {ssr.brand ? <p>{ssr.brand}</p> : null}
                 <p>{ssr.description}</p>
