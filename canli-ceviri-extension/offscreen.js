@@ -1,11 +1,15 @@
 /**
  * Offscreen: tab audio capture + Groq Whisper + speechSynthesis TTS.
+ *
+ * ÖNEMLİ: Chrome tabCapture sekme sesini keser.
+ * Bu yüzden yakalanan akışı hoparlöre TAM sesle geri çalmak zorunlu.
  */
 
 let mediaStream = null;
 let audioCtx = null;
 let processor = null;
 let source = null;
+let playbackGain = null;
 let apiKey = "";
 let aggressive = false;
 let running = false;
@@ -17,8 +21,19 @@ let lastSpeechAt = 0;
 let transcribing = false;
 
 const SR = 16000;
-const CHUNK_SEC = 2.4;
-const MAX_BUFFER_SEC = 6;
+const CHUNK_SEC = 2.6;
+const MAX_BUFFER_SEC = 5;
+
+const HALLUCINATIONS = [
+  /formula\s*1/i,
+  /formula\s*one/i,
+  /live\s*(race\s*)?(commentary|radio)/i,
+  /team\s*radio/i,
+  /thanks?\s*for\s*watching/i,
+  /subscribe/i,
+  /\[.*music.*\]/i,
+  /^[\s.·•…♪]+$/,
+];
 
 chrome.runtime.onMessage.addListener((msg, _s, sendResponse) => {
   (async () => {
@@ -37,7 +52,10 @@ chrome.runtime.onMessage.addListener((msg, _s, sendResponse) => {
       return;
     }
     if (msg?.type === "CAPTIONS_ALIVE") {
-      captionsBackoffUntil = Date.now() + 12000;
+      captionsBackoffUntil = Date.now() + 15000;
+      // Altyazı varken ses STT'yi durdur — uydurma + çift konuşma olmasın
+      pendingPcm = [];
+      pendingSamples = 0;
       sendResponse({ ok: true });
       return;
     }
@@ -65,45 +83,60 @@ async function startCapture(streamId, key, agg) {
     return { ok: false, error: "Sekme sesi alınamadı: " + (e.message || e) };
   }
 
-  audioCtx = new AudioContext({ sampleRate: SR });
+  // Varsayılan sample rate — playback kalitesi için
+  audioCtx = new AudioContext();
   source = audioCtx.createMediaStreamSource(mediaStream);
-  // ScriptProcessor is deprecated but widely available in extension offscreen
+
+  // 1) Kullanıcının duyması için TAM sesle geri çal (yoksa Chrome sekmeyi susturur)
+  playbackGain = audioCtx.createGain();
+  playbackGain.gain.value = 1.0;
+  source.connect(playbackGain);
+  playbackGain.connect(audioCtx.destination);
+
+  // 2) STT için ayrı dal — hoparlöre gitmez
+  const silent = audioCtx.createGain();
+  silent.gain.value = 0;
   processor = audioCtx.createScriptProcessor(4096, 1, 1);
   source.connect(processor);
-  processor.connect(audioCtx.destination); // required for processing; tab already plays in page
-  // Mute our tap into destination to avoid double audio — use gain 0
-  const mute = audioCtx.createGain();
-  mute.gain.value = 0;
-  processor.disconnect();
-  source.connect(processor);
-  processor.connect(mute);
-  mute.connect(audioCtx.destination);
+  processor.connect(silent);
+  silent.connect(audioCtx.destination);
 
   processor.onaudioprocess = (ev) => {
     if (!running || speaking || transcribing) return;
     if (!aggressive && Date.now() < captionsBackoffUntil) return;
 
     const input = ev.inputBuffer.getChannelData(0);
-    // speech-ish energy in mid band proxy: RMS
     let sum = 0;
     for (let i = 0; i < input.length; i++) sum += input[i] * input[i];
     const rms = Math.sqrt(sum / input.length);
-    if (rms > 0.01) lastSpeechAt = Date.now();
+    if (rms > 0.012) lastSpeechAt = Date.now();
 
-    // Always collect while recently speechy or aggressive
-    if (rms > 0.008 || Date.now() - lastSpeechAt < 600) {
-      pendingPcm.push(new Float32Array(input));
-      pendingSamples += input.length;
+    if (rms > 0.01 || Date.now() - lastSpeechAt < 500) {
+      // Resample roughly if context != 16k: simple decimate/hold
+      const ratio = audioCtx.sampleRate / SR;
+      if (ratio > 1.2) {
+        const step = Math.floor(ratio);
+        const down = new Float32Array(Math.floor(input.length / step));
+        for (let i = 0, j = 0; j < down.length; i += step, j++) down[j] = input[i];
+        pendingPcm.push(down);
+        pendingSamples += down.length;
+      } else {
+        pendingPcm.push(new Float32Array(input));
+        pendingSamples += input.length;
+      }
     }
 
     const sec = pendingSamples / SR;
     const silenceFor = Date.now() - lastSpeechAt;
     const shouldFlush =
-      (sec >= CHUNK_SEC && silenceFor > 350) ||
-      sec >= MAX_BUFFER_SEC;
+      (sec >= CHUNK_SEC && silenceFor > 400) || sec >= MAX_BUFFER_SEC;
 
-    if (shouldFlush && pendingSamples > SR * 0.5) {
+    if (shouldFlush && pendingSamples > SR * 0.7) {
       const merged = mergePending();
+      // Çok sessiz parçaları yollama (halüsinasyon kaynağı)
+      let peak = 0;
+      for (let i = 0; i < merged.length; i++) peak = Math.max(peak, Math.abs(merged[i]));
+      if (peak < 0.02) return;
       flushToWhisper(merged);
     }
   };
@@ -129,11 +162,13 @@ function stopCapture() {
     processor && (processor.onaudioprocess = null);
     processor?.disconnect();
     source?.disconnect();
+    playbackGain?.disconnect();
     audioCtx?.close();
     mediaStream?.getTracks().forEach((t) => t.stop());
   } catch (_) {}
   processor = null;
   source = null;
+  playbackGain = null;
   audioCtx = null;
   mediaStream = null;
   pendingPcm = [];
@@ -160,10 +195,9 @@ function floatTo16BitWav(float32, sampleRate) {
   view.setUint16(34, 16, true);
   writeStr(36, "data");
   view.setUint32(40, num * 2, true);
-  // AGC
   let peak = 1e-6;
   for (let i = 0; i < num; i++) peak = Math.max(peak, Math.abs(float32[i]));
-  const gain = Math.min(10, 0.8 / peak);
+  const gain = Math.min(8, 0.75 / peak);
   let offset = 44;
   for (let i = 0; i < num; i++) {
     let s = Math.max(-1, Math.min(1, float32[i] * gain));
@@ -173,8 +207,16 @@ function floatTo16BitWav(float32, sampleRate) {
   return new Blob([buffer], { type: "audio/wav" });
 }
 
+function isHallucination(text) {
+  const t = text.trim();
+  if (t.length < 3) return true;
+  if (t.split(/\s+/).length <= 2 && /radio|commentary|watching/i.test(t)) return true;
+  return HALLUCINATIONS.some((re) => re.test(t));
+}
+
 async function flushToWhisper(float32) {
   if (transcribing || speaking || !apiKey) return;
+  if (!aggressive && Date.now() < captionsBackoffUntil) return;
   transcribing = true;
   try {
     const blob = floatTo16BitWav(float32, SR);
@@ -182,11 +224,9 @@ async function flushToWhisper(float32) {
     fd.append("file", blob, "chunk.wav");
     fd.append("model", "whisper-large-v3-turbo");
     fd.append("language", "en");
-    fd.append("response_format", "json");
-    fd.append(
-      "prompt",
-      "Formula One live race commentary and team radio in English."
-    );
+    fd.append("response_format", "verbose_json");
+    fd.append("temperature", "0");
+    // Prompt YOK — Whisper prompt'u çıktıya sızdırıp "F1 radio" uyduruyordu
 
     const res = await fetch(
       "https://api.groq.com/openai/v1/audio/transcriptions",
@@ -206,9 +246,15 @@ async function flushToWhisper(float32) {
     }
     const data = await res.json();
     const text = (data.text || "").trim();
-    if (text.length >= 2) {
-      chrome.runtime.sendMessage({ type: "AUDIO_TEXT", text });
+    // no_speech benzeri: çok düşük ortalama logprob varsa at
+    if (data.segments?.length) {
+      const avg =
+        data.segments.reduce((a, s) => a + (s.avg_logprob || 0), 0) /
+        data.segments.length;
+      if (avg < -1.0) return;
     }
+    if (!text || isHallucination(text)) return;
+    chrome.runtime.sendMessage({ type: "AUDIO_TEXT", text });
   } catch (e) {
     chrome.runtime.sendMessage({
       type: "OFFSCREEN_ERROR",
@@ -221,17 +267,19 @@ async function flushToWhisper(float32) {
 
 function pickVoice(hint) {
   const voices = speechSynthesis.getVoices();
-  const tr = voices.filter((v) => /^tr(-|_)/i.test(v.lang) || /turkish/i.test(v.name));
+  const tr = voices.filter(
+    (v) => /^tr(-|_)/i.test(v.lang) || /turkish/i.test(v.name)
+  );
   const pool = tr.length ? tr : voices;
   if (hint === "male") {
     return (
-      pool.find((v) => /ahmet|male|erkek/i.test(v.name)) ||
-      pool[0] ||
-      null
+      pool.find((v) => /ahmet|male|erkek/i.test(v.name)) || pool[0] || null
     );
   }
   return (
-    pool.find((v) => /emel|female|woman|kadın|gul|yaprak|aysegul|zeynep/i.test(v.name)) ||
+    pool.find((v) =>
+      /emel|female|woman|kadın|gul|yaprak|aysegul|zeynep/i.test(v.name)
+    ) ||
     pool.find((v) => /female/i.test(v.name)) ||
     tr[0] ||
     pool[0] ||
@@ -240,7 +288,6 @@ function pickVoice(hint) {
 }
 
 async function speakTr(text, voiceHint) {
-  // Wait for voices
   if (!speechSynthesis.getVoices().length) {
     await new Promise((r) => {
       speechSynthesis.onvoiceschanged = () => r();
@@ -248,9 +295,11 @@ async function speakTr(text, voiceHint) {
     });
   }
   speaking = true;
-  // Don't capture our own TTS if mixed — pause collection
   pendingPcm = [];
   pendingSamples = 0;
+
+  // TTS sırasında yayın sesini biraz kıs (duyulsun diye tamamen kesme)
+  if (playbackGain) playbackGain.gain.value = 0.55;
 
   await new Promise((resolve) => {
     const u = new SpeechSynthesisUtterance(text);
@@ -266,7 +315,7 @@ async function speakTr(text, voiceHint) {
     speechSynthesis.speak(u);
   });
 
-  // short cooldown against echo into tab capture
-  await new Promise((r) => setTimeout(r, 250));
+  if (playbackGain) playbackGain.gain.value = 1.0;
+  await new Promise((r) => setTimeout(r, 200));
   speaking = false;
 }

@@ -18,7 +18,7 @@ async function load() {
     "running",
   ]);
   $("apiKey").value = cfg.apiKey || "";
-  $("mode").value = cfg.mode || "auto";
+  $("mode").value = cfg.mode || "captions";
   $("voiceHint").value = cfg.voiceHint || "female";
   setRunning(!!cfg.running);
   if (cfg.running) setStatus("<b>Çalışıyor.</b> Yayın açık; Türkçe ses hoparlöre gidiyor.");

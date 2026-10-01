@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Canlı Çeviri EN→TR",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Canlı yayında İngilizce konuşmayı Türkçe seslendirir. Önce altyazı, yoksa bulut STT. Yayın sesi kapanmaz.",
   "permissions": [
     "tabCapture",

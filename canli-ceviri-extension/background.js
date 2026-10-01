@@ -45,54 +45,83 @@ async function start() {
   if (!cfg.apiKey) return { ok: false, error: "Groq API anahtarı yok" };
 
   const tab = await getActiveTab();
-  const mode = cfg.mode || "auto";
+  const mode = cfg.mode || "captions";
 
   await chrome.storage.local.set({
     running: true,
     activeTabId: tab.id,
     speakQueueBusy: false,
+    captionsAliveUntil: 0,
   });
 
-  // Always enable caption watcher — free & ignores engines
+  // Altyazı izleyici
+  const wantCaptions = mode !== "audio";
   try {
     await chrome.tabs.sendMessage(tab.id, {
       type: "CAPTIONS_START",
-      enabled: mode !== "audio",
+      enabled: wantCaptions,
     });
   } catch {
-    // content script may need injection
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       files: ["content.js"],
     });
     await chrome.tabs.sendMessage(tab.id, {
       type: "CAPTIONS_START",
-      enabled: mode !== "audio",
+      enabled: wantCaptions,
     });
   }
 
-  let used = "captions";
-  if (mode === "audio" || mode === "auto") {
-    // Start tab audio path (auto uses it when captions are quiet)
-    await ensureOffscreen();
-    const streamId = await chrome.tabCapture.getMediaStreamId({
-      targetTabId: tab.id,
-    });
-    const off = await chrome.runtime.sendMessage({
-      type: "OFFSCREEN_START",
-      streamId,
-      apiKey: cfg.apiKey,
-      aggressive: mode === "audio",
-    });
-    if (!off?.ok && mode === "audio") {
+  // Ses yakalama: sadece audio modunda hemen.
+  // auto: önce altyazı dene; 10 sn altyazı gelmezse sesi aç.
+  // captions: hiç yakalama yok → Chrome sekmeyi susturmaz.
+  if (mode === "audio") {
+    const ok = await startTabAudio(tab.id, cfg.apiKey, true);
+    if (!ok.ok) {
       await chrome.storage.local.set({ running: false });
-      return { ok: false, error: off?.error || "Sekme sesi alınamadı" };
+      return ok;
     }
-    used = mode === "audio" ? "audio" : "auto";
+    uiStatus("<b>Çalışıyor</b> · sekme sesi<br>Yayın geri çalınıyor; Türkçe üstüne biner.");
+    return { ok: true, mode: "audio" };
   }
 
-  uiStatus(`<b>Çalışıyor</b> · ${used}<br>Yayın susmaz; Türkçe hoparlöre eklenir.`);
-  return { ok: true, mode: used };
+  if (mode === "auto") {
+    uiStatus("<b>Çalışıyor</b> · altyazı bekleniyor…<br>10 sn gelmezse ses moduna geçer.");
+    setTimeout(async () => {
+      const st = await chrome.storage.local.get([
+        "running",
+        "captionsAliveUntil",
+        "mode",
+      ]);
+      if (!st.running || (st.mode || "captions") === "captions") return;
+      if (Date.now() < (st.captionsAliveUntil || 0)) return;
+      await startTabAudio(tab.id, cfg.apiKey, false);
+      uiStatus("<b>Çalışıyor</b> · ses modu (altyazı yok)<br>Yayın geri çalınıyor.");
+    }, 10000);
+    return { ok: true, mode: "auto" };
+  }
+
+  uiStatus(
+    "<b>Çalışıyor</b> · sadece altyazı<br>Yayın sesi değişmez. YouTube’da CC açık olsun."
+  );
+  return { ok: true, mode: "captions" };
+}
+
+async function startTabAudio(tabId, apiKey, aggressive) {
+  await ensureOffscreen();
+  const streamId = await chrome.tabCapture.getMediaStreamId({
+    targetTabId: tabId,
+  });
+  const off = await chrome.runtime.sendMessage({
+    type: "OFFSCREEN_START",
+    streamId,
+    apiKey,
+    aggressive,
+  });
+  if (!off?.ok) {
+    return { ok: false, error: off?.error || "Sekme sesi alınamadı" };
+  }
+  return { ok: true };
 }
 
 async function stop() {
@@ -117,6 +146,16 @@ async function stop() {
 async function pipelineSpeak(enText, source) {
   const text = (enText || "").replace(/\s+/g, " ").trim();
   if (text.length < 2) return;
+
+  // Whisper / altyazı çöp filtreleri
+  if (
+    /formula\s*(1|one)|live\s*(race\s*)?(commentary|radio)|team\s*radio|thanks for watching/i.test(
+      text
+    )
+  ) {
+    return;
+  }
+
   const cfg = await chrome.storage.local.get([
     "apiKey",
     "voiceHint",
@@ -135,7 +174,6 @@ async function pipelineSpeak(enText, source) {
   ) {
     return;
   }
-  // Soft dedup: if new text is contained in last or vice versa
   if (
     cfg.lastSpoken &&
     now - (cfg.lastSpokenAt || 0) < 5000 &&
@@ -154,12 +192,12 @@ async function pipelineSpeak(enText, source) {
     tr = await translateFallback(text);
   }
   if (!tr) return;
+  if (/formula\s*1|canlı anlatım radyosu|takım radyosu/i.test(tr)) return;
 
   uiStatus(
     `<b>TR</b> ${escapeHtml(tr)}<br><span style="opacity:.7">kaynak: ${source}</span>`
   );
 
-  // Speak in offscreen (has stable audio context) or via content script
   await ensureOffscreen();
   await chrome.runtime.sendMessage({
     type: "SPEAK",
