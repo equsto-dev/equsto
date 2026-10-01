@@ -9,11 +9,11 @@ Equsto **WooCommerce kullanmaz**. Ürün feed’i Next.js üzerinden sunulur.
 | Canlı | `https://equsto.com/feeds/google-products.xml` |
 | İstatistik (JSON) | `https://equsto.com/feeds/google-products.xml?stats=1` |
 
-Yerel statik kopya (opsiyonel):
+Yerel statik kopya (opsiyonel; **canlıda kullanmayın** — `public/feeds/google-products.xml` dinamik route’u ezer):
 
 ```bash
 npm run feed:google
-# → public/feeds/google-products.xml
+# → public/feeds/google-products.xml (yalnızca lokal test; gitignore’da)
 ```
 
 ## GMC bağlama checklist
