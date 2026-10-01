@@ -149,6 +149,63 @@ export const GEO_PAGE_CSS = `
 @media (max-width:560px){.eq-geo-blog-index{grid-template-columns:1fr;}}
 `;
 
+export const KARIYER_PAGE_CSS = `
+body.eq-kariyer > nav.breadcrumb{display:none!important;}
+.kr-main{max-width:52rem;margin:0 auto;padding:28px 20px 56px;line-height:1.65;color:var(--eq-text);}
+.kr-main h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 12px;}
+.kr-lead{font-size:15px;color:var(--eq-text-secondary);margin:0 0 20px;}
+.kr-main h2{font-size:18px;font-weight:700;margin:24px 0 10px;}
+.kr-main p,.kr-main li{font-size:14px;line-height:1.7;color:var(--eq-text-secondary);}
+.kr-main strong{color:var(--eq-text);}
+.kr-depts{margin:0 0 16px;padding-left:1.2em;}
+.kr-depts li{margin-bottom:8px;}
+.kr-actions{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0;}
+.kr-a-primary,.kr-a-secondary{display:inline-flex;padding:10px 16px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;}
+.kr-a-primary{background:#001e50;color:#fff;border:1px solid #001e50;}
+.kr-a-secondary{background:var(--eq-surface);color:var(--eq-text);border:1px solid var(--eq-border);}
+`;
+
+export const EXPORT_PAGE_CSS = `
+body.eq-export > nav.breadcrumb{display:none!important;}
+.ex-main{max-width:52rem;margin:0 auto;padding:28px 20px 56px;line-height:1.65;color:var(--eq-text);}
+.ex-main h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 12px;}
+.ex-lead{font-size:15px;color:var(--eq-text-secondary);margin:0 0 20px;}
+.ex-main h2{font-size:18px;font-weight:700;margin:24px 0 10px;}
+.ex-main p,.ex-main li{font-size:14px;line-height:1.7;color:var(--eq-text-secondary);}
+.ex-markets{margin:0 0 16px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.ex-markets li{margin:0;padding:10px 12px;border:1px solid var(--eq-border);border-radius:6px;background:var(--eq-surface);font-size:13px;font-weight:600;color:var(--eq-text);}
+.ex-steps{margin:0 0 16px;padding-left:1.4em;}
+.ex-steps li{margin-bottom:8px;}
+.ex-pay{margin:20px 0;padding:14px 16px;border:1px solid var(--eq-border);border-radius:8px;background:var(--eq-surface-2);}
+.ex-pay h2{margin:0 0 6px;font-size:15px;}
+.ex-pay p{margin:0 0 10px;}
+.ex-pay-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.5;}
+.ex-pay-table th,.ex-pay-table td{border:1px solid var(--eq-border);padding:8px 10px;text-align:left;vertical-align:top;}
+.ex-pay-table th{width:34%;font-weight:600;background:var(--eq-surface);color:var(--eq-text);}
+.ex-pay-table td{color:var(--eq-text-secondary);}
+.ex-actions{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0;}
+.ex-a-primary,.ex-a-secondary{display:inline-flex;padding:10px 16px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;}
+.ex-a-primary{background:#001e50;color:#fff;border:1px solid #001e50;}
+.ex-a-secondary{background:var(--eq-surface);color:var(--eq-text);border:1px solid var(--eq-border);}
+@media (max-width:640px){.ex-markets{grid-template-columns:1fr 1fr;}}
+`;
+
+export const BANKA_PAGE_CSS = `
+body.eq-banka > nav.breadcrumb{display:none!important;}
+.bk-main{max-width:52rem;margin:0 auto;padding:28px 20px 56px;line-height:1.65;color:var(--eq-text);}
+.bk-main h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 12px;}
+.bk-lead{font-size:15px;color:var(--eq-text-secondary);margin:0 0 20px;}
+.bk-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.5;}
+.bk-table th,.bk-table td{border:1px solid var(--eq-border);padding:9px 11px;text-align:left;vertical-align:top;}
+.bk-table th{width:34%;font-weight:600;background:var(--eq-surface-2);color:var(--eq-text);}
+.bk-table td{color:var(--eq-text-secondary);}
+.bk-note{margin:16px 0;padding:14px 16px;border:1px solid var(--eq-border);border-radius:8px;background:var(--eq-surface-2);font-size:13px;line-height:1.6;color:var(--eq-text-secondary);}
+.bk-note strong{color:var(--eq-text);}
+.bk-note a{color:#001e50;font-weight:600;}
+.bk-actions{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0;}
+.bk-a-secondary{display:inline-flex;padding:10px 16px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;background:var(--eq-surface);color:var(--eq-text);border:1px solid var(--eq-border);}
+`;
+
 export const VIDEO_HUB_CSS = `
 .eq-vid-main{max-width:52rem;margin:0 auto;padding:28px 20px 56px;line-height:1.65;color:var(--eq-text);}
 .eq-vid-main h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 12px;}

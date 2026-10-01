@@ -130,6 +130,34 @@
       slug: "el-yikama-evyeleri",
     },
     {
+      tip: "sanitasyon-uniteleri",
+      dept: "yikama",
+      label: "Sanitasyon Üniteleri",
+      slug: "sanitasyon-uniteleri",
+      search: "sanitasyon|hijyen hattı|turnikeli el dezenfeksiyon|pro-tek|protek|ph54",
+    },
+    {
+      tip: "turnikeli-el-dezenfeksiyon",
+      dept: "yikama",
+      label: "Turnikeli El Dezenfeksiyon",
+      slug: "turnikeli-el-dezenfeksiyon",
+      search: "turnikeli el|el dezenfeksiyon|ph51",
+    },
+    {
+      tip: "cizme-fircalama",
+      dept: "yikama",
+      label: "Çizme Fırçalama Üniteleri",
+      slug: "cizme-fircalama",
+      search: "çizme fırça|cizme firca|boot brush|taban fırça|ph52",
+    },
+    {
+      tip: "hijyenik-paspaslar",
+      dept: "yikama",
+      label: "Hijyenik Paspaslar",
+      slug: "hijyenik-paspaslar",
+      search: "hijyenik paspas|yapışkanlı paspas|ph32|ph34",
+    },
+    {
       tip: "yer-izgaralari",
       dept: "yikama",
       label: "Yer Izgaraları",
@@ -788,6 +816,16 @@
       "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi",
     "el-yikama-evyeleri": "el-yikama-evyeleri",
     "yer-izgaralari": "yer-izgaralari",
+    "sanitasyon-uniteleri": "sanitasyon-uniteleri",
+    "turnikeli-el-dezenfeksiyon": "turnikeli-el-dezenfeksiyon",
+    "cizme-fircalama": "cizme-fircalama",
+    "cizme-kurutma": "cizme-fircalama",
+    "hijyenik-paspaslar": "hijyenik-paspaslar",
+    "hijyen-turnikeleri": "turnikeli-el-dezenfeksiyon",
+    "sivi-sabunluklar": "el-yikama-evyeleri",
+    "musluk-aparatlari": "el-yikama-evyeleri",
+    "el-kurutma": "el-yikama-evyeleri",
+    "kagit-havlu": "el-yikama-evyeleri",
   };
 
   /** «Bulaşık Yıkama Makineleri» üst filtresi — tezgah/evye hariç makine tipleri */

@@ -120,6 +120,12 @@ next-env.d.ts
 # Cambro official (cambro.com / Widen CDN)
 !public/images/catalog/cambro/
 !public/images/catalog/cambro/**
+# PRO-TEK Hijyen katalog kırpımları
+!public/images/catalog/
+!public/images/catalog/protek/
+!public/images/catalog/protek/**
+!public/images/brands/
+!public/images/brands/protek-hijyen.png
 
 # GSC raw exports (local)
 scripts/seo/input/**/*.csv

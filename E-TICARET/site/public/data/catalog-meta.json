@@ -1,9 +1,9 @@
 {
-  "version": "2026-10-01T01-55-35",
-  "rebuiltAt": "2026-10-01T01:55:35.922Z",
-  "ekipmanlar": 15516,
-  "withImage": 15514,
-  "brands": 117,
+  "version": "2026-10-01T02-19-10",
+  "rebuiltAt": "2026-10-01T02:19:10.237Z",
+  "ekipmanlar": 15611,
+  "withImage": 15609,
+  "brands": 118,
   "deptCounts": {
     "araba": 92,
     "davlumbaz": 228,
@@ -19,7 +19,7 @@
     "sogutma": 2126,
     "tasima": 173,
     "tezgah": 565,
-    "yikama": 727
+    "yikama": 822
   },
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,
