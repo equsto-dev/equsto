@@ -39,7 +39,7 @@ Kısıtlı parayı **yüksek niyetli arama** + **shop landing** + **dar ürün k
 | İlk 7 gün (temkinli) | **50 TL/gün** → ~350 TL öğrenme |
 | Gün 8–30 | **65–70 TL/gün** (ay 2.000’i aşmadan) |
 | Teklif | Manuel CPC; max CPC tavanı **~12 TL** (ilk hafta) |
-| Ad grupları | **Yalnız 1** (`/pfos`) ilk **14 gün**; 2. grup en erken gün 15 |
+| Ad grupları | **Yalnız 1** (`/shop/pisirme`) ilk **14 gün**; 2. grup en erken gün 15 |
 
 ### 2.000 TL ile gerçekçi beklenti
 
@@ -83,7 +83,7 @@ Mevcut başlangıç notuyla uyumlu; kısaca:
 |---|-----|------------|
 | 1 | GA4 canlı (`G-MVRNFQC4PQ`) | Başlangıç doc: Adım 2 tamam |
 | 2 | Ads ↔ GA4 bağlantısı | Adım 3 |
-| 3 | Dönüşüm: PFOS teklif = birincil; iletişim = ikincil | `quote` / `lead` |
+| 3 | Dönüşüm: shop → `equsto_lead` birincil; `equsto_quote` ikincil | lead / quote |
 | 4 | Test teklifi → panelde 1 dönüşüm | Adım 4 — **görünmeden reklam yok** |
 | 5 | Env: `NEXT_PUBLIC_GOOGLE_ADS_ID` + conversion label’lar (canlı) | Hetzner / prod |
 | 6 | KVKK / çerez: analitik+reklam onayı sonrası etiket | Consent |
@@ -145,7 +145,7 @@ Detay: `GOOGLE-ADS-BASLANGIC.md`.
 - Başlık: Equsto · Proje Fabrikası · Anlık teklif · Endüstriyel mutfak  
 - Açıklama: Liste yükle veya oluştur → fiyatları birlikte netleştir. Restoran / otel / kafe.  
 - CTA: Teklif al / Projeni başlat  
-- Siteline: `/pfos`, `/iletisim`, `/shop/pisirme` (yalnız sitelink; ana final URL PFOS kalsın)
+- Siteline: `/shop/pisirme`, `/iletisim`, `/pfos` (yalnız sitelink; ana final URL shop)
 
 ### Ad grupu 2 — Marka / bayilik niyeti (yüksek intent, düşük hacim)
 
@@ -162,7 +162,7 @@ Detay: `GOOGLE-ADS-BASLANGIC.md`.
 - `"öztiryakiler yetkili satıcı"`
 - `"rational icombi fiyat"` (stok/yetki netse; değilse ekleme)
 
-**Not (2.000 TL/ay):** Bu ad grubunu **en erken gün 15** aç. Açınca bile günlük payı düşük tut (~%25–30); asıl bütçe PFOS’ta kalsın. CPC şişerse hemen duraklat.
+**Not (2.000 TL/ay):** Marka/PFOS ad grubunu **en erken gün 15** aç. Pay ~%25; asıl bütçe shop’ta kalsın. CPC şişerse duraklat.
 
 ### Ad grupu 3 — (sonra) Kategori intent
 
@@ -213,7 +213,7 @@ Haftalık: Arama terimleri raporu → alakasız sorguyu negatife taşı.
 
 ### Gün 1–3 — Soft launch (2.000 TL/ay)
 
-- Günlük **50 TL**; yalnız Ad grubu 1 → `/pfos`  
+- Günlük **50 TL**; yalnız Ad grubu 1 → `/shop/pisirme`  
 - Manuel CPC, max ~12 TL  
 - Günde 1 kez: arama terimleri + harcama (panik yok)
 
@@ -255,7 +255,7 @@ Hedef CPL ≤ (ortalama proje brüt kâr × kapanış oranı)
 - **Marka görünür:** Equsto başlıkta (brand test)  
 - Abartılı “en ucuz / #1” yok — politika + güven  
 - Fiyat vaadi yoksa “fiyat listesi anında” gibi iddialardan kaçın; “birlikte netleştir” daha dürüst  
-- Uzantılar: sitelink (PFOS, iletişim, pişirme), callout (B2B, katalog, teklif), çağrı uzantısı (satış hattı varsa)
+- Uzantılar: sitelink (pişirme, iletişim, PFOS), callout (B2B, katalog, fiyat), çağrı uzantısı (varsa)
 
 ---
 
@@ -269,7 +269,7 @@ Hedef CPL ≤ (ortalama proje brüt kâr × kapanış oranı)
 | CPL | Hedef bant |
 | Arama terimleri | Negatif / pozitif |
 | Cihaz | Mobil CPL kötüyse teklif ayarı |
-| Landing (GA4) | PFOS oturum → teklif oranı |
+| Landing (GA4) | Shop oturum → lead / sepet oranı |
 
 Pro panel: **Google Ads Ajan** (`GoogleAdsAgentPanel`) — etiket, feed, landing denetimi; kampanya açmadan önce bir kez çalıştır.
 
@@ -293,14 +293,14 @@ Sıra sabit; erken açma bütçeyi yakar:
 1. Dönüşüm + GA4 bağlantısını kilitle  
 2. Aylık limit **2.000 TL** + günlük **65 TL**  
 3. `EQ | Search | Lead | TR` + negatif liste  
-4. Ad grubu 1 → `/pfos` (14 gün yalnız bu)  
+4. Ad grubu 1 → `/shop/pisirme` (14 gün yalnız bu)  
 5. Gün 15+ (isteğe bağlı) Ad grubu 2 → Öztiryakiler  
 6. Haftalık arama terimi temizliği  
 
 **Biz (repo / site)** — ihtiyaç olursa
 
 - Conversion label env’lerin prod’da dolu olması  
-- PFOS / landing hızı ve CTA netliği  
+- Shop / PDP hızı ve sepet-iletişim CTA netliği  
 - Ads ajan raporunun yeşile yakın olması  
 
 ---
@@ -310,7 +310,7 @@ Sıra sabit; erken açma bütçeyi yakar:
 | Yap | Yapma |
 |-----|--------|
 | Tek Search, dar kelime | PMax / Display ilk ay |
-| PFOS = birincil dönüşüm | Sipariş sayısına göre optimize |
+| Shop + `equsto_lead` birincil | Sayfa görüntülemeye göre optimize |
 | Negatif liste + arama terimi | Geniş eşleme |
 | Günlük + aylık tavan | “Önerilen bütçeyi uygula” |
 | 14 gün sabır + budama | Her gün teklif / yapı değiştir |
