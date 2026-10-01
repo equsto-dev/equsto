@@ -1,24 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Canlı Çeviri EN→TR",
-  "version": "2.1.0",
-  "description": "Canlı yayında İngilizce konuşmayı Türkçe seslendirir. Önce altyazı, yoksa bulut STT. Yayın sesi kapanmaz.",
-  "permissions": [
-    "tabCapture",
-    "offscreen",
-    "storage",
-    "activeTab",
-    "scripting",
-    "tabs"
-  ],
+  "version": "4.0.0",
+  "description": "Her sitede canlı yayın EN→TR kadın ses. Yayın sesi açık kalır.",
+  "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
   "host_permissions": [
+    "<all_urls>",
     "https://api.groq.com/*",
-    "https://translate.googleapis.com/*",
-    "<all_urls>"
+    "https://translate.googleapis.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Canlı Çeviri",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -32,13 +24,5 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_idle",
-      "all_frames": false
-    }
-  ]
+  }
 }
