@@ -393,9 +393,10 @@ def synth_loop(voice: str, max_lag: float, volume: float) -> None:
 
     loop = asyncio.new_event_loop()
 
-    async def synth(text: str, rate: str) -> bytes:
+    async def synth(text: str, rate: str, pitch: str) -> bytes:
         data = b""
-        async for ch in etts.Communicate(text, voice, rate=rate).stream():
+        communicate = etts.Communicate(text, voice, rate=rate, pitch=pitch)
+        async for ch in communicate.stream():
             if ch["type"] == "audio":
                 data += ch["data"]
         return data
@@ -406,9 +407,15 @@ def synth_loop(voice: str, max_lag: float, volume: float) -> None:
         if lag > max_lag:
             print(f"   [TTS atlandı: {lag:.1f}s geride]")
             continue
-        rate = "+45%" if lag > 3.5 else "+30%" if lag > 2.5 else "+20%"
+        # Doğal tempo: gerideysek hafif hızlan, yoksa normal
+        if lag > 3.5:
+            rate, pitch = "+12%", "+0Hz"
+        elif lag > 2.2:
+            rate, pitch = "+6%", "+0Hz"
+        else:
+            rate, pitch = "+2%", "+1Hz"
         try:
-            mp3 = loop.run_until_complete(synth(text, rate))
+            mp3 = loop.run_until_complete(synth(text, rate, pitch))
             dec = ma.decode(
                 mp3,
                 output_format=ma.SampleFormat.SIGNED16,
