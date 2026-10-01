@@ -4,9 +4,9 @@
  */
 
 let stream = null;
+let monitor = null; // HTMLAudioElement — yayın sesi (asla kısma)
 let ctx = null;
 let source = null;
-let playGain = null;
 let proc = null;
 let apiKey = "";
 let running = false;
@@ -64,14 +64,15 @@ async function start(streamId, key) {
   }
 
   ctx = new AudioContext();
+
+  // Yayın sesi: Audio elementi ile tam ses (WebAudio gain ile kısma YOK)
+  monitor = new Audio();
+  monitor.srcObject = stream;
+  monitor.volume = 1;
+  await monitor.play().catch(() => {});
+
+  // STT için ayrı analiz yolu — hoparlöre bağlanmaz
   source = ctx.createMediaStreamSource(stream);
-
-  // KRİTİK: Chrome yakalayınca sekmeyi susturur → sesi biz geri çalmalıyız
-  playGain = ctx.createGain();
-  playGain.gain.value = 1;
-  source.connect(playGain);
-  playGain.connect(ctx.destination);
-
   const silent = ctx.createGain();
   silent.gain.value = 0;
   proc = ctx.createScriptProcessor(4096, 1, 1);
@@ -142,14 +143,20 @@ function stop() {
   } catch (_) {}
   ttsAudio = null;
   try {
+    if (monitor) {
+      monitor.pause();
+      monitor.srcObject = null;
+    }
+  } catch (_) {}
+  monitor = null;
+  try {
     if (proc) proc.onaudioprocess = null;
     proc?.disconnect();
     source?.disconnect();
-    playGain?.disconnect();
     ctx?.close();
     stream?.getTracks().forEach((t) => t.stop());
   } catch (_) {}
-  proc = source = playGain = ctx = stream = null;
+  proc = source = ctx = stream = null;
 }
 
 function toWav(float32, sr) {
@@ -285,8 +292,8 @@ async function speakFemale(text) {
   speaking = true;
   parts = [];
   samples = 0;
-  // Yayın biraz kısalsın ama kapanmasın
-  if (playGain) playGain.gain.value = 0.45;
+  // Yayın sesine DOKUNMA — monitor.volume hep 1
+  if (monitor) monitor.volume = 1;
   try {
     for (const part of chunks(text)) {
       if (!running) break;
@@ -295,13 +302,14 @@ async function speakFemale(text) {
           "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=tr&q=" +
           encodeURIComponent(part);
         ttsAudio = new Audio(url);
+        ttsAudio.volume = 1;
         ttsAudio.onended = () => resolve();
         ttsAudio.onerror = () => resolve();
         ttsAudio.play().catch(() => resolve());
       });
     }
   } finally {
-    if (playGain) playGain.gain.value = 1;
+    if (monitor) monitor.volume = 1;
     speaking = false;
   }
 }

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Canlı Çeviri EN→TR",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Her sitede canlı yayın EN→TR kadın ses. Yayın sesi açık kalır.",
   "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
   "host_permissions": [
