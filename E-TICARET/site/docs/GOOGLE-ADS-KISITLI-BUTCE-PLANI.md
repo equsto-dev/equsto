@@ -3,6 +3,7 @@
 **Tarih:** 2026-10-01  
 **Hesap:** `416-696-9695` (Equsto Google)  
 **GA4:** `G-MVRNFQC4PQ`  
+**Aktif bütçe:** **2.000 TL / ay** (Senaryo A — kilitli)  
 **İş modeli:** B2B endüstriyel mutfak — satış = teklif / lead, sepet değil  
 **İlgili:** [`GOOGLE-ADS-BASLANGIC.md`](./GOOGLE-ADS-BASLANGIC.md) · [`GOOGLE-MERCHANT-CENTER.md`](./GOOGLE-MERCHANT-CENTER.md)
 
@@ -28,22 +29,47 @@ Kısıtlı parayı **yüksek niyetli arama** + **tek dönüşüm (PFOS teklifi)*
 
 ---
 
-## 3. Bütçe senaryoları (TRY)
+## 3. Kilitli bütçe — 2.000 TL / ay
 
-Aylık brüt bütçeni seç; günlük = aylık ÷ 30,5 (Google günlük aşımı olabilir → hesap tavanı koy).
+| Ayar | Değer |
+|------|--------|
+| Aylık tavan (hesap) | **2.000 TL** |
+| Günlük kampanya bütçesi | **65 TL** (2000 ÷ 30,5 ≈ 65,6) |
+| İlk 7 gün (temkinli) | **50 TL/gün** → ~350 TL öğrenme |
+| Gün 8–30 | **65–70 TL/gün** (ay 2.000’i aşmadan) |
+| Teklif | Manuel CPC; max CPC tavanı **~12 TL** (ilk hafta) |
+| Ad grupları | **Yalnız 1** (`/pfos`) ilk **14 gün**; 2. grup en erken gün 15 |
 
-| Senaryo | Aylık | Günlük tavan | Ne yapar |
-|---------|-------|--------------|----------|
-| **A — Mikro test** | 1.500–2.500 TL | 50–80 TL | Ölçüm + 1 kampanya; öğrenme |
-| **B — Dar büyüme** (önerilen) | 4.000–7.000 TL | 130–230 TL | 2 ad grubu; kelime budama |
-| **C — Kontrollü ölçek** | 10.000–15.000 TL | 330–500 TL | 3. ad grubu + remarketing (yalnız site ziyaretçisi) |
+### 2.000 TL ile gerçekçi beklenti
 
-**Kural:** Senaryo A bitmeden B’ye geçme. B’de CPL kabul edilebilir değilse C’ye geçme — önce teklif metni / landing / negatif kelime düzelt.
+| Varsayım | Aralık |
+|----------|--------|
+| Ortalama CPC (dar B2B) | 8–20 TL |
+| Aylık tıklama | ~100–250 |
+| Teklif (dönüşüm) | **0–4** (1–2 kaliteli lead = başarı) |
+| Ham CPL (1–2 teklifte) | ~1.000–2.000 TL |
+
+Bu ayın işi “her gün lead” değil: **ölçümü kanıtla + 1–2 gerçek teklif + hangi kelime işe yarıyor öğren**.
+
+### Bu bütçede özellikle yapma
+
+- 2. ad grubunu ilk 14 günde açma (bütçe parçalanır)  
+- PMax / Display / Shopping / remarketing  
+- Günlüğü 100+ TL’ye çekme  
+- Geniş eşleme  
+
+### Sonraki adım (bütçe artarsa)
+
+| Senaryo | Aylık | Günlük | Ne zaman |
+|---------|-------|--------|----------|
+| **A — şimdi** | **2.000 TL** | **~65 TL** | Aktif |
+| B | 4.000–7.000 TL | 130–230 TL | ≥2 teklif + CPL kabul |
+| C | 10.000–15.000 TL | 330–500 TL | B oturunca |
 
 **Hesap güvenliği**
 
-1. Google Ads → Faturalandırma → **hesap bütçesi / aylık harcama limiti** (mümkünse).  
-2. Kampanya günlük bütçe + **manuel CPC** veya **maksimize dönüşüm** ama **hedef CPL tavanı** (veri yokken ilk 7–14 gün manuel CPC daha güvenli).  
+1. Faturalandırma → **aylık harcama limiti = 2.000 TL**.  
+2. Kampanya günlük **65 TL** + manuel CPC.  
 3. Otomatik “önerileri uygula” / Smart goals **kapalı**.
 
 ---
@@ -135,7 +161,7 @@ Detay: `GOOGLE-ADS-BASLANGIC.md`.
 - `"öztiryakiler yetkili satıcı"`
 - `"rational icombi fiyat"` (stok/yetki netse; değilse ekleme)
 
-**Not:** Marka kelimeleri pahalı olabilir ama niyet yüksek. Günlük bütçenin **%30–40’ı** bu ad grubuna kalsın; kalan **%60–70** teklif ad grubuna.
+**Not (2.000 TL/ay):** Bu ad grubunu **en erken gün 15** aç. Açınca bile günlük payı düşük tut (~%25–30); asıl bütçe PFOS’ta kalsın. CPC şişerse hemen duraklat.
 
 ### Ad grupu 3 — (sonra) Kategori intent
 
@@ -184,27 +210,28 @@ Haftalık: Arama terimleri raporu → alakasız sorguyu negatife taşı.
 - Negatif liste hazır  
 - **Tek** kampanya taslak; henüz etkin değil
 
-### Gün 1–3 — Soft launch
+### Gün 1–3 — Soft launch (2.000 TL/ay)
 
-- Günlük tavan: Senaryo A (50–80 TL) veya B’nin altı  
-- Yalnız Ad grubu 1 (teklif)  
+- Günlük **50 TL**; yalnız Ad grubu 1 → `/pfos`  
+- Manuel CPC, max ~12 TL  
 - Günde 1 kez: arama terimleri + harcama (panik yok)
 
-### Gün 4–14 — Öğrenme
+### Gün 4–14 — Öğrenme (hâlâ tek ad grubu)
 
-- Ad grubu 2’yi aç (bütçe payı %30–40)  
-- CTR &lt; %2 veya bounce yüksekse: reklam metni + landing hızı / CTA  
-- CPL &gt; hedef (ör. 400–800 TL / teklif — senin marjına göre ayarla) → kelime budama, teklif düşürme  
-- Dönüşüm 0 ve harcama &gt; 1.000 TL → landing / form / etiket denetimi (reklamı büyütme)
+- Günlüğü **65 TL**’ye çıkar  
+- Ad grubu 2 **açma** — bütçe yetmez, parçalanır  
+- CTR &lt; %2 veya bounce yüksekse: reklam metni + landing / CTA  
+- Dönüşüm 0 ve harcama &gt; **1.000 TL** → etiket / form / landing denetimi (büyütme)
 
 ### Gün 15–30 — Karar
 
 | Sonuç | Karar |
 |-------|--------|
-| ≥ 3–5 kaliteli teklif, CPL kabul | Senaryo B’ye sabitle; kelime genişletme dikkatli |
-| Tıklama var, teklif yok | Landing + form + telefon CTA; reklam kelimesini daralt |
-| Ne tıklama ne öğrenme (çok düşük gösterim) | Teklifi / eşlemeyi biraz aç (hâlâ ifade); konum genişlet |
-| CPL felaket | Durdur; SEO/GEO + Merchant ücretsiz listeleme’ye ağırlık ver |
+| ≥ 1–2 kaliteli teklif | 2.000 TL’de devam; isteğe bağlı Ad grubu 2 (~%25 pay) |
+| ≥ 3 teklif + CPL kabul | Bütçeyi 4.000+ (Senaryo B) düşün |
+| Tıklama var, teklif yok | Landing + form; kelime daralt — bütçe artırma |
+| Gösterim çok düşük | Max CPC’yi 15 TL’ye çek; konum TR kalsın |
+| CPL / alakasız trafik | Durdur; SEO/GEO + Merchant ücretsiz listeleme |
 
 ---
 
@@ -217,7 +244,7 @@ Hedef CPL ≤ (ortalama proje brüt kâr × kapanış oranı)
 ```
 
 Örnek: Ortalama kapanan projede net katkı 15.000 TL, kapanış %10 → lead değeri ~1.500 TL → **hedef CPL 400–700 TL** makul bant.  
-Sayıların yoksa ilk ay **öğrenme bütçesi** kabul et; hedef CPL uydurma.
+2.000 TL’lik ilk ayda **öğrenme bütçesi** kabul et: 1 teklif bile CPL’yi ~2.000 TL gösterir; bu “başarısızlık” değil, örneklem küçük. Hedef CPL’yi 2. aya bırak.
 
 ---
 
@@ -263,10 +290,10 @@ Sıra sabit; erken açma bütçeyi yakar:
 **Sen (Ads paneli)**
 
 1. Dönüşüm + GA4 bağlantısını kilitle  
-2. Aylık limit + Senaryo A/B seç  
+2. Aylık limit **2.000 TL** + günlük **65 TL**  
 3. `EQ | Search | Lead | TR` + negatif liste  
-4. Ad grubu 1 → `/pfos`  
-5. 3–4 gün sonra Ad grubu 2 → Öztiryakiler landing  
+4. Ad grubu 1 → `/pfos` (14 gün yalnız bu)  
+5. Gün 15+ (isteğe bağlı) Ad grubu 2 → Öztiryakiler  
 6. Haftalık arama terimi temizliği  
 
 **Biz (repo / site)** — ihtiyaç olursa
@@ -287,4 +314,4 @@ Sıra sabit; erken açma bütçeyi yakar:
 | Günlük + aylık tavan | “Önerilen bütçeyi uygula” |
 | 14 gün sabır + budama | Her gün teklif / yapı değiştir |
 
-**Önerilen başlangıç:** Senaryo **A** (≈50–80 TL/gün) → ölçüm kanıtı → Senaryo **B**.
+**Kilitli:** **2.000 TL/ay ≈ 65 TL/gün** → ölçüm + 1–2 lead → gerekirse Senaryo **B**.

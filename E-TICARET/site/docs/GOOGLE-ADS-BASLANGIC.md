@@ -67,8 +67,8 @@ Başka terim öğrenmene gerek yok; sıradaki adımda sadece bunlara odaklanaca�
 ### Adım 5 — İlk küçük reklam (çok düşük bütçe)
 - Tek hedef: **PFOS teklifi**
 - Tek landing: `https://equsto.com/pfos`
-- Günlük 50–80 TL mikro test (Senaryo A); sonuçları birlikte okuruz
-- Kısıtlı bütçe mimarisi, negatif kelimeler, 30 gün takvim → **[`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)**
+- **Kilitli bütçe: 2.000 TL/ay ≈ 65 TL/gün** (ilk 7 gün 50 TL)
+- Kısıtlı bütçe mimarisi → **[`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)**
 
 **Adım 5’e Adım 1–4 bitmeden geçilmez.**
 
