@@ -125,7 +125,14 @@ window.searchFilter = window.searchFilter || function () {};
         if (/^https?:\/\//i.test(s)) {
           var m = s.match(/^https?:\/\/[^/]+\/(images\/catalog\/[^?#]+)/i);
           if (m) s = m[1];
-          else return;
+          else if (/\.(jpe?g|png|webp|gif|avif)(\?|#|$)/i.test(s)) {
+            /** Harici üretici foto (npicco.com vb.) — absolute tut */
+            var absKey = s.toLowerCase().split("?")[0];
+            if (seen[absKey]) return;
+            seen[absKey] = 1;
+            out.push(s);
+            return;
+          } else return;
         }
         s = s.replace(/^\/+/, "");
         // data/images/… → images/… (CDN katalog). data/protek/… gibi kökleri KORU.
