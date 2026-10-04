@@ -39,6 +39,8 @@ services:
       - ./public/data:/app/public/data
       # CafeMarkt galeri — git’teki dosyalar (S3 sync yokken origin’den servis)
       - ./public/images/catalog/cafemarkt:/app/public/images/catalog/cafemarkt:ro
+      # Sparo — ölü üretici CDN; git + origin volume
+      - ./public/images/catalog/sparo:/app/public/images/catalog/sparo:ro
       # Üye kaynak listeleri — mevcut yazılabilir volume
       - ./scripts:/app/scripts
       # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir

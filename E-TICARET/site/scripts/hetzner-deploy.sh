@@ -53,6 +53,7 @@ if [[ -f .env.production ]]; then
           --paths \
             "/images/pfos/*" \
             "/images/catalog/cafemarkt/*" \
+            "/images/catalog/sparo/*" \
           --region "${AWS_REGION:-eu-central-1}" \
           || echo "[hetzner-deploy] CloudFront invalidation failed (non-fatal)"
       fi

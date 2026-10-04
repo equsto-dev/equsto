@@ -128,6 +128,9 @@ next-env.d.ts
 !public/images/catalog/
 !public/images/catalog/protek/
 !public/images/catalog/protek/**
+# Sparo — sparo.com.tr ölü; PDF/Wayback yerel kopya (origin volume)
+!public/images/catalog/sparo/
+!public/images/catalog/sparo/**
 !public/images/brands/
 !public/images/brands/protek-hijyen.png
 

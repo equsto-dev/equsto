@@ -1139,7 +1139,10 @@
         var am = raw.match(/^https?:\/\/[^/]+\/(.+?)(?:\?|#|$)/i);
         absPath = am ? am[1] : "";
       }
-      if (/^images\/catalog\/cafemarkt\//i.test(absPath)) {
+      if (
+        /^images\/catalog\/cafemarkt\//i.test(absPath) ||
+        /^images\/catalog\/sparo\//i.test(absPath)
+      ) {
         return catalogImageCandidates(absPath);
       }
       // Yanlışlıkla CDN’e giden data/protek vb. → origin /data/
@@ -1239,16 +1242,18 @@
         file = istifRel.replace(/^images\//i, "");
       }
       var isFiyatListesi = /equsto\/fiyat-listesi\//i.test(file);
-      /** Yeni CafeMarkt galeri dosyaları S3’te olmayabilir — origin /images önce, CDN yedek. */
+      /** CafeMarkt / Sparo — S3’te olmayabilir; origin /images önce, CDN yedek. */
       var isCafeMarktGallery = /^catalog\/cafemarkt\//i.test(file);
-      if (isFiyatListesi || isCafeMarktGallery) {
+      var isSparoGallery = /^catalog\/sparo\//i.test(file);
+      var originFirstGallery = isCafeMarktGallery || isSparoGallery;
+      if (isFiyatListesi || originFirstGallery) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
       }
       var cdnFirst =
-        isFiyatListesi || isCafeMarktGallery ? "" : equstoCdnAssetHref("images/" + file);
+        isFiyatListesi || originFirstGallery ? "" : equstoCdnAssetHref("images/" + file);
       if (cdnFirst) chunk.push(cdnFirst);
-      if (isCafeMarktGallery) {
+      if (originFirstGallery) {
         var cmCdn = equstoCdnAssetHref("images/" + file);
         if (cmCdn) chunk.push(cmCdn);
       }
@@ -1649,14 +1654,15 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
-    /** Absolute CDN/equsto → göreli images/… (CafeMarkt origin-first için). */
+    /** Absolute CDN/equsto → göreli images/… (CafeMarkt/Sparo origin-first için). */
     if (/^https?:\/\//i.test(s)) {
       var hostPath = "";
       try {
         var uAbs = new URL(s);
         hostPath = String(uAbs.pathname || "").replace(/^\/+/, "");
         if (
-          /^images\/catalog\/cafemarkt\//i.test(hostPath) &&
+          (/^images\/catalog\/cafemarkt\//i.test(hostPath) ||
+            /^images\/catalog\/sparo\//i.test(hostPath)) &&
           /(cloudfront\.net|equsto\.com)$/i.test(uAbs.hostname)
         ) {
           s = hostPath;
@@ -1695,7 +1701,10 @@
       var axCafe = oztiAxFallbackFromRel(s);
       if (axCafe) return axCafe;
     }
-    if (/^images\/catalog\/cafemarkt\//i.test(s)) {
+    if (
+      /^images\/catalog\/cafemarkt\//i.test(s) ||
+      /^images\/catalog\/sparo\//i.test(s)
+    ) {
       /* Origin önce — Hetzner volume / Docker public; CDN’de yoksa 403 boş bırakmasın. */
       return withCatalogImgV("/" + s.replace(/^\/+/, ""));
     }
