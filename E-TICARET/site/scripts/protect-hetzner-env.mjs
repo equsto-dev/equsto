@@ -200,6 +200,27 @@ if (anthropicKey.length >= 20 || anthropicModel) {
   );
 }
 
+// TepePlatform — kart ödeme entegrasyonu
+const tepeApiKey = String(process.env.TEPEPLATFORM_API_KEY || "").trim();
+const tepeApiSecret = String(process.env.TEPEPLATFORM_API_SECRET || "").trim();
+const tepeEnabled = String(process.env.TEPEPLATFORM_ENABLED || "").trim();
+const tepeBaseUrl = String(process.env.TEPEPLATFORM_BASE_URL || "").trim();
+const tepePartnerSlug = String(process.env.TEPEPLATFORM_PARTNER_SLUG || "").trim();
+if (tepeApiKey.length >= 8 || tepeApiSecret.length >= 8) {
+  const tepeOverlay = {};
+  if (tepeEnabled) tepeOverlay.TEPEPLATFORM_ENABLED = tepeEnabled;
+  if (tepeBaseUrl) tepeOverlay.TEPEPLATFORM_BASE_URL = tepeBaseUrl;
+  if (tepeApiKey.length >= 8) tepeOverlay.TEPEPLATFORM_API_KEY = tepeApiKey;
+  if (tepeApiSecret.length >= 8) tepeOverlay.TEPEPLATFORM_API_SECRET = tepeApiSecret;
+  if (tepePartnerSlug) tepeOverlay.TEPEPLATFORM_PARTNER_SLUG = tepePartnerSlug;
+  writeMerged(envPath, fs.existsSync(envPath) ? fs.readFileSync(envPath, "utf8") : "", tepeOverlay);
+  fs.mkdirSync(path.dirname(keepPath), { recursive: true });
+  writeMerged(keepPath, fs.existsSync(keepPath) ? fs.readFileSync(keepPath, "utf8") : "", tepeOverlay);
+  console.log(
+    `[protect-hetzner-env] tepeplatform merged key=${tepeApiKey.length >= 8 ? "ok" : "MISSING"} secret=${tepeApiSecret.length >= 8 ? "ok" : "MISSING"}`,
+  );
+}
+
 const tgOverlay = {};
 const ghTgToken = String(process.env.TELEGRAM_BOT_TOKEN || "").trim();
 const ghTgChat = String(process.env.TELEGRAM_CHAT_ID || "").trim();
