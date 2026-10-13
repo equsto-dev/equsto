@@ -58,7 +58,7 @@ const VAKUM = {
     markaUrunKodu: "VM-3",
     equstoKod: "EQ-ŞENOX.VM-3",
     name: "Senox VM 3 Çift Çene Vakum Makinesi",
-    image: "data/senox/images/senox-vm-3-ft-ene-vakum-mak-nes_1.jpg",
+    image: "data/senox/images/senox-vm-3-cift-cene_1.jpg",
     pdfMatch: "VM3",
     aciklama:
       "Senox VM 3 Çift Çene Vakum Makinesi. Marka: Seles, model DZ-400 2F. Vakumlama ölçüleri: 440×420×125 mm. Vakum pompa kapasitesi: 20 m³/h. Vakumlama süresi: 1–2 dk. Yapıştırma: çift çene. Besleme: 220 V / 50 Hz. Ebatlar: 555×475×450 mm. Güç: 900 W. Ağırlık: 76 kg.",
