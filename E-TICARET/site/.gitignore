@@ -131,6 +131,9 @@ next-env.d.ts
 # Sparo — sparo.com.tr ölü; PDF/Wayback yerel kopya (origin volume)
 !public/images/catalog/sparo/
 !public/images/catalog/sparo/**
+# Remta — PDF katalog görselleri
+!public/images/catalog/remta/
+!public/images/catalog/remta/**
 !public/images/brands/
 !public/images/brands/protek-hijyen.png
 

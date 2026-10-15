@@ -82,6 +82,7 @@
     "catalog:npicco:full": "npm run catalog:npicco:scrape && npm run catalog:npicco:import && npm run catalog:npicco:prices",
     "catalog:rational:prices": "node scripts/apply-rational-liste-prices.mjs",
     "catalog:rational:compare": "node scripts/compare-rational-multi-market.mjs",
+    "catalog:remta:prices": "python scripts/apply-remta-2026-catalog.py && node scripts/rebuild-ekipmanlar-from-dept.mjs && npm run search:index",
     "catalog:samixir:pdf": "python scripts/extract-samixir-pdf-catalog.py",
     "catalog:samixir:scrape": "node scripts/scrape-samixir-catalog.mjs",
     "catalog:samixir:import": "node scripts/import-samixir-to-equsto.mjs",
