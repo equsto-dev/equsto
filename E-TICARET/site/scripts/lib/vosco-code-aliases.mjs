@@ -95,8 +95,12 @@ export const VOSCO_CODE_ALIASES = {
   VSC100T: "VSC100TC",
 };
 
-/** PDF'te kodu olmayan; doğrudan USD liste (katalog sayfası) */
+/** PDF'te kodu olmayan veya ayrıştırma kayması olan; doğrudan USD liste (katalog sayfası) */
 export const VOSCO_DIRECT_LISTE_USD = {
+  // Pizza fırınları (Vosco Katalog 2026 s.80)
+  VZMH2: 2000,
+  VCP03: 950,
+  VCP04: 1650,
   VST16EB: 750,
   VST16EM: 750,
   VST16ES: 750,

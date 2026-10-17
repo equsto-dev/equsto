@@ -119,15 +119,15 @@ export function findPdfListPrice(p, index, products = []) {
   const keys = candidateKeys(p);
 
   for (const k of keys) {
-    const hit = pricesForKey(k, index, products);
-    if (hit) return { ...hit, fuzzy: false };
-  }
-
-  for (const k of keys) {
     const direct = VOSCO_DIRECT_LISTE_USD[k];
     if (direct > 0) {
       return { listeUsd: direct, listeEur: 0, matchKey: k, direct: true };
     }
+  }
+
+  for (const k of keys) {
+    const hit = pricesForKey(k, index, products);
+    if (hit) return { ...hit, fuzzy: false };
   }
 
   return null;

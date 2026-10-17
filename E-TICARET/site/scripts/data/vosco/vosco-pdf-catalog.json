@@ -879,11 +879,11 @@
     {
       "model": "VCP-03",
       "modelNorm": "VCP03",
-      "title": "Vosco Çift Katlı Elektrikli Pizza Fırını",
+      "title": "Vosco Tek Katlı Taş Pizza Fırını",
       "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
-        "liste_usd": 1400.0,
+        "liste_usd": 950.0,
         "liste_eur": null,
         "guc": "2500 W / 220",
         "kapasite_kg": null,
@@ -899,7 +899,7 @@
     {
       "model": "VCP-04",
       "modelNorm": "VCP04",
-      "title": "Vosco Elektrikli 10 Tepsili Rotary Fırın",
+      "title": "Vosco Çift Katlı Taş Pizza Fırını",
       "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
@@ -2964,11 +2964,11 @@
     {
       "model": "VZM-H2",
       "modelNorm": "VZMH2",
-      "title": "Vosco Çift Katlı Taş Pizza Fırını",
+      "title": "Vosco Çift Katlı Elektrikli Pizza Fırını",
       "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
-        "liste_usd": 950.0,
+        "liste_usd": 2000.0,
         "liste_eur": null,
         "guc": "4000 W / 220",
         "kapasite_kg": null,
