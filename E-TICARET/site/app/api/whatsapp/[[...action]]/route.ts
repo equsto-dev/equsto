@@ -7,22 +7,20 @@ import {
   waWebhookGet,
   waWebhookPost,
 } from "@/lib/whatsapp/api-handlers";
-import { getTempWhatsAppFile } from "@/lib/whatsapp/temp-file-store";
 
 export const dynamic = "force-dynamic";
 
 type Ctx = { params: Promise<{ action?: string[] }> };
 
-async function actionParts(ctx: Ctx): Promise<string[]> {
+async function actionName(ctx: Ctx): Promise<string> {
   const { action } = await ctx.params;
-  return (action || []).map((s) => s.toLowerCase());
+  return action?.[0]?.toLowerCase() || "";
 }
 
 /**
- * Tek Vercel function — link / send / status / webhook / temp-file
+ * Tek Vercel function — link / send / status / webhook
  * GET  /api/whatsapp/link
  * GET  /api/whatsapp/status  (Bearer)
- * GET  /api/whatsapp/temp-file/:id  (Green API sendFileByUrl)
  * POST /api/whatsapp/send    (Bearer)
  * POST /api/whatsapp/status  (Bearer test)
  * *    /api/whatsapp/webhook
@@ -30,35 +28,20 @@ async function actionParts(ctx: Ctx): Promise<string[]> {
  * GET /api/whatsapp → next.config rewrite → /api/musteriler?whatsapp=1
  */
 export async function GET(req: NextRequest, ctx: Ctx) {
-  const parts = await actionParts(ctx);
-  const name = parts[0] || "";
-  switch (name) {
+  switch (await actionName(ctx)) {
     case "link":
       return waLinkGet(req);
     case "status":
       return waStatusGet(req);
     case "webhook":
       return waWebhookGet(req);
-    case "temp-file": {
-      const entry = getTempWhatsAppFile(parts[1] || "");
-      if (!entry) return new Response("Not Found", { status: 404 });
-      return new Response(new Uint8Array(entry.buf), {
-        status: 200,
-        headers: {
-          "Content-Type": entry.contentType,
-          "Content-Disposition": `inline; filename="${entry.fileName.replace(/"/g, "")}"`,
-          "Cache-Control": "no-store",
-          "Content-Length": String(entry.buf.length),
-        },
-      });
-    }
     default:
       return new Response("Not Found", { status: 404 });
   }
 }
 
 export async function POST(req: NextRequest, ctx: Ctx) {
-  switch ((await actionParts(ctx))[0] || "") {
+  switch (await actionName(ctx)) {
     case "send":
       return waSendPost(req);
     case "status":
