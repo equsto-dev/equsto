@@ -137,23 +137,15 @@ export async function sendGreenApiFile(
   const safeName = /\.pdf$/i.test(rawName)
     ? rawName
     : `${rawName || "teklif"}.pdf`;
-  const form = new FormData();
-  form.append("chatId", chatId);
-  form.append("fileName", safeName);
-  form.append(
-    "file",
-    new Blob([new Uint8Array(file)], { type: "application/pdf" }),
-    safeName,
-  );
-  if (caption?.trim()) form.append("caption", caption.trim().slice(0, 1024));
 
   const url = `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`;
-  const maxAttempts = 3;
+  // UI beklemesin: 1 deneme, kısa timeout (eski 3×120s kullanıcıyı dakikalarca kilitliyordu)
+  const maxAttempts = 1;
+  const perAttemptMs = 25_000;
   let lastError = "Green API PDF gönderilemedi";
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      // FormData body yeniden kullanılmaz; her denemede yeni form
       const attemptForm = new FormData();
       attemptForm.append("chatId", chatId);
       attemptForm.append("fileName", safeName);
@@ -169,7 +161,7 @@ export async function sendGreenApiFile(
       const r = await fetch(url, {
         method: "POST",
         body: attemptForm,
-        signal: AbortSignal.timeout(120_000),
+        signal: AbortSignal.timeout(perAttemptMs),
       });
       const result = await readGreenApiResponse(r);
 
@@ -181,16 +173,16 @@ export async function sendGreenApiFile(
       if (!isRetryableGreenStatus(r.status, result.raw) || attempt === maxAttempts) {
         return { ok: false, error: lastError, status: r.status };
       }
-      await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+      await new Promise((resolve) => setTimeout(resolve, 800 * attempt));
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       lastError = /timeout|aborted/i.test(msg)
-        ? "WhatsApp medya sunucusu zaman aşımına uğradı. Teklif kayıttadır — PDF’i tekrar göndermeyi deneyin."
+        ? "WhatsApp PDF yüklemesi zaman aşımına uğradı. Teklif kayıttadır."
         : `Green API PDF bağlantı hatası: ${msg}`;
       if (attempt === maxAttempts) {
         return { ok: false, error: lastError };
       }
-      await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+      await new Promise((resolve) => setTimeout(resolve, 800 * attempt));
     }
   }
 

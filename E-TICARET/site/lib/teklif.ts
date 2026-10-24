@@ -319,7 +319,24 @@ export async function createTeklif(
   let customerWhatsApp: TeklifDeliveryResult = { attempted: false, sent: false };
 
   if (kanal === "whatsapp") {
-    customerWhatsApp = await sendTeklifCustomerWhatsApp(admin, body);
+    // UI 40 sn’den fazla kilitlenmesin; yavaş PDF arka planda sürer
+    const waJob = sendTeklifCustomerWhatsApp(admin, body);
+    customerWhatsApp = await Promise.race([
+      waJob,
+      new Promise<TeklifDeliveryResult>((resolve) =>
+        setTimeout(
+          () =>
+            resolve({
+              attempted: true,
+              sent: false,
+              error:
+                "WhatsApp gönderimi sürüyor; teklif kayda alındı. PDF birazdan düşebilir.",
+            }),
+          40_000,
+        ),
+      ),
+    ]);
+    void waJob.catch((e) => console.error("[teklif] whatsapp background", e));
   } else {
     customerEmail = await sendTeklifCustomerEmail(admin, body);
   }
@@ -463,7 +480,23 @@ export async function resendTeklif(
   let customerEmail: TeklifDeliveryResult = { attempted: false, sent: false };
   let customerWhatsApp: TeklifDeliveryResult = { attempted: false, sent: false };
   if (kanal === "whatsapp") {
-    customerWhatsApp = await sendTeklifCustomerWhatsApp(admin, sendBody);
+    const waJob = sendTeklifCustomerWhatsApp(admin, sendBody);
+    customerWhatsApp = await Promise.race([
+      waJob,
+      new Promise<TeklifDeliveryResult>((resolve) =>
+        setTimeout(
+          () =>
+            resolve({
+              attempted: true,
+              sent: false,
+              error:
+                "WhatsApp gönderimi sürüyor; teklif kayda alındı. PDF birazdan düşebilir.",
+            }),
+          40_000,
+        ),
+      ),
+    ]);
+    void waJob.catch((e) => console.error("[teklif] whatsapp resend background", e));
   } else {
     customerEmail = await sendTeklifCustomerEmail(admin, sendBody);
   }
