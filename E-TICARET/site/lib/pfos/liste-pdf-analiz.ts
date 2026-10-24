@@ -1,5 +1,5 @@
 /**
- * PDF / Excel teklif listesi → yalnızca yerel parse (Anthropic/Claude yok).
+ * PDF / Excel teklif listesi → yerel parse; başarısızsa Gemini (Claude kredisi yokken).
  */
 
 import ExcelJS from "exceljs";
@@ -7,6 +7,11 @@ import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx
 import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
 import { pickBestProformaWorkbook } from "@/lib/pfos/liste-proforma-excel";
 import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
+import {
+  isGeminiProformaConfigured,
+  parseWithGemini,
+} from "@/lib/pfos/parse-upload/gemini-proforma";
+import type { ParsedItem } from "@/lib/pfos/parse-upload/types";
 
 export type ListePdfKalem = {
   ham_isim: string;
@@ -49,10 +54,24 @@ function satirToListeKalem(row: PfosEkipmanSatir): ListePdfKalem | null {
   };
 }
 
-/** PDF buffer → ekipman kalemleri (Claude kullanılmaz) */
+function parsedItemsToListeKalemler(items: ParsedItem[]): ListePdfKalem[] {
+  return items.map((it) => ({
+    ham_isim: it.tanim,
+    tip_kodu: "",
+    kategori: it.bolum?.trim() || "diger",
+    adet: it.adet,
+    poz: it.poz || undefined,
+    olcu: it.olcu?.trim() || undefined,
+    marka: it.marka_orijinal?.trim() || undefined,
+    birim_fiyat_eur: null,
+    mevcut: it.mevcut === true,
+  }));
+}
+
+/** PDF buffer → ekipman kalemleri (yerel → Gemini) */
 export async function analyzePdfForListe(
   pdfBuffer: ArrayBuffer,
-  _opts?: { notlar?: string },
+  opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
   const structured = await parseProformaPdfBuffer(pdfBuffer);
   if (structured?.length) return structured;
@@ -60,10 +79,23 @@ export async function analyzePdfForListe(
   const soft = await parseProformaPdfBuffer(pdfBuffer, { minKalem: 1 });
   if (soft?.length) return soft;
 
+  if (isGeminiProformaConfigured()) {
+    try {
+      const items = await parseWithGemini(pdfBuffer, { notlar: opts?.notlar });
+      const kalemler = parsedItemsToListeKalemler(items);
+      if (kalemler.length) return kalemler;
+    } catch (e) {
+      console.warn(
+        "[liste-pdf-analiz] Gemini yedek başarısız:",
+        e instanceof Error ? e.message : e,
+      );
+    }
+  }
+
   throw new Error(LISTE_LOCAL_PARSE_MISSING_MSG);
 }
 
-/** Excel (.xlsx) → yerel proforma ayrıştırıcılar (Claude kullanılmaz) */
+/** Excel (.xlsx) → yerel proforma ayrıştırıcılar (Claude/Gemini yok) */
 export async function analyzeExcelForListe(
   xlsxBuffer: ArrayBuffer,
   _opts?: { notlar?: string },

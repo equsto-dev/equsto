@@ -33,52 +33,67 @@ function visionMediaType(mime: string): "image/jpeg" | "image/png" | "image/gif"
   return "image/jpeg";
 }
 
-/** Görsel → Türkçe katalog arama ifadesi (Claude vision). */
+/** Görsel → Türkçe katalog arama ifadesi (Claude → Gemini yedek). */
 export async function extractImageSearchQuery(
   imageBuffer: ArrayBuffer,
   mimeType: string,
 ): Promise<ImageVisionQuery> {
   const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
-  if (!apiKey) {
+  if (apiKey) {
+    try {
+      const anthropic = new Anthropic({ apiKey });
+      const base64 = Buffer.from(imageBuffer).toString("base64");
+      const media_type = visionMediaType(mimeType);
+      const response = await anthropic.messages.create({
+        model: resolveModel(),
+        max_tokens: 256,
+        temperature: 0.1,
+        messages: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "image",
+                source: {
+                  type: "base64",
+                  media_type,
+                  data: base64,
+                },
+              },
+              { type: "text", text: VISION_PROMPT },
+            ],
+          },
+        ],
+      });
+      const raw =
+        response.content.find((b) => b.type === "text")?.type === "text"
+          ? (response.content.find((b) => b.type === "text") as { text: string })
+              .text
+          : "{}";
+      return parseVisionModelOutput(raw);
+    } catch (e) {
+      const err = e as { status?: number; message?: string };
+      const msg = anthropicErrorMessage(
+        err.status ?? 502,
+        String(err.message ?? e),
+      );
+      if (/credit|too low|invalid|401|403|authentication/i.test(msg)) {
+        console.warn("[image-vision] Claude → Gemini:", msg.slice(0, 120));
+        const { extractImageSearchQueryGemini } = await import(
+          "@/lib/search/image-gemini-query"
+        );
+        return extractImageSearchQueryGemini(imageBuffer, mimeType);
+      }
+      throw new Error(msg);
+    }
+  }
+
+  const { extractImageSearchQueryGemini } = await import(
+    "@/lib/search/image-gemini-query"
+  );
+  try {
+    return await extractImageSearchQueryGemini(imageBuffer, mimeType);
+  } catch {
     throw new Error("Görsel arama şu an yapılandırılmamış.");
   }
-
-  const anthropic = new Anthropic({ apiKey });
-  const base64 = Buffer.from(imageBuffer).toString("base64");
-  const media_type = visionMediaType(mimeType);
-
-  let response;
-  try {
-    response = await anthropic.messages.create({
-      model: resolveModel(),
-      max_tokens: 256,
-      temperature: 0.1,
-      messages: [
-        {
-          role: "user",
-          content: [
-            {
-              type: "image",
-              source: {
-                type: "base64",
-                media_type,
-                data: base64,
-              },
-            },
-            { type: "text", text: VISION_PROMPT },
-          ],
-        },
-      ],
-    });
-  } catch (e) {
-    const err = e as { status?: number; message?: string };
-    throw new Error(anthropicErrorMessage(err.status ?? 502, String(err.message ?? e)));
-  }
-
-  const raw =
-    response.content.find((b) => b.type === "text")?.type === "text"
-      ? (response.content.find((b) => b.type === "text") as { text: string }).text
-      : "{}";
-
-  return parseVisionModelOutput(raw);
 }

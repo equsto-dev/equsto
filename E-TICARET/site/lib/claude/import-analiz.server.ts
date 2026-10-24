@@ -1,10 +1,16 @@
 /**
- * PDF/Excel ekipman listesi — Claude analiz (Vercel: doğrudan Anthropic; yerel: proxy).
+ * PDF/Excel ekipman listesi — Claude analiz; kredi yoksa Gemini yedek.
  */
 
 import { adminLoginToken } from "@/lib/admin-auth";
 import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
 import { readAnthropicApiKey } from "@/lib/claude/anthropic-key";
+import {
+  isGeminiConfigured,
+  readGeminiApiKey,
+  readGeminiVisionModel,
+} from "@/lib/gemini/gemini-key";
+import { tryParseJsonArray } from "@/lib/pfos/parse-upload/proforma-llm-shared";
 
 export type ImportAnalizRequest = {
   dosya_base64: string;
@@ -57,9 +63,9 @@ function proxyBase(): string | null {
   return null;
 }
 
-/** Canlı Anthropic veya yerel proxy hazır mı */
+/** Claude, Gemini veya yerel proxy hazır mı */
 export function isClaudeImportConfigured(): boolean {
-  return Boolean(readAnthropicApiKey() || proxyBase());
+  return Boolean(readAnthropicApiKey() || isGeminiConfigured() || proxyBase());
 }
 
 export const CLAUDE_IMPORT_MISSING_USER_MSG =
@@ -76,17 +82,10 @@ function extractTextFromClaude(resp: {
     .trim();
 }
 
-function tryParseJsonArray(text: string): unknown[] | null {
-  if (!text) return null;
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]");
-  if (start < 0 || end <= start) return null;
-  try {
-    const j = JSON.parse(text.slice(start, end + 1)) as unknown;
-    return Array.isArray(j) ? j : null;
-  } catch {
-    return null;
-  }
+function isClaudeUnavailableError(msg: string): boolean {
+  return /credit balance|too low|invalid.*api.?key|authentication|401|403|ANTHROPIC_API_KEY tanımlı değil/i.test(
+    msg,
+  );
 }
 
 function mapAnalizRows(raw: unknown): ImportAnalizRow[] {
@@ -181,11 +180,100 @@ async function anthropicJsonFromMessages(
   return arr;
 }
 
+async function geminiJsonFromMessages(
+  system: string,
+  userText: string,
+  document?: { media_type: string; data: string },
+): Promise<unknown[]> {
+  if (!isGeminiConfigured()) {
+    throw new Error("GEMINI_API_KEY tanımlı değil");
+  }
+  const apiKey = readGeminiApiKey();
+  const model = readGeminiVisionModel();
+  const parts: Array<Record<string, unknown>> = [];
+  if (document?.data) {
+    parts.push({
+      inline_data: {
+        mime_type: document.media_type || "application/pdf",
+        data: document.data,
+      },
+    });
+  }
+  parts.push({
+    text: `${system}\n\n${userText}\n\nYanıt yalnızca JSON dizi olsun.`,
+  });
+
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-goog-api-key": apiKey,
+    },
+    body: JSON.stringify({
+      contents: [{ parts }],
+      generationConfig: {
+        temperature: 0.2,
+        maxOutputTokens: Math.min(16384, IMPORT_MAX_TOKENS),
+        thinkingConfig: { thinkingBudget: 0 },
+        responseMimeType: "application/json",
+      },
+    }),
+    signal: AbortSignal.timeout(180_000),
+  });
+
+  const text = await res.text();
+  if (!res.ok) {
+    throw new Error(`Gemini HTTP ${res.status}: ${text.slice(0, 280)}`);
+  }
+
+  let data: {
+    candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
+  };
+  try {
+    data = JSON.parse(text) as typeof data;
+  } catch {
+    throw new Error(`Gemini yanıtı JSON değil: ${text.slice(0, 300)}`);
+  }
+
+  const raw =
+    data.candidates?.[0]?.content?.parts
+      ?.map((p) => p.text || "")
+      .join("")
+      .trim() || "";
+  const arr = tryParseJsonArray(raw);
+  if (!arr) {
+    throw new Error(
+      "Gemini geçerli JSON dizi döndürmedi — dosya okunabilir mi kontrol edin.",
+    );
+  }
+  return arr;
+}
+
 async function fetchDocumentJsonArray(
   req: ImportAnalizRequest,
 ): Promise<unknown[]> {
   if (readAnthropicApiKey()) {
-    return anthropicJsonFromMessages(req.system_prompt, req.user_prompt, {
+    try {
+      return await anthropicJsonFromMessages(req.system_prompt, req.user_prompt, {
+        media_type: req.dosya_tip,
+        data: req.dosya_base64,
+      });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (isGeminiConfigured() && isClaudeUnavailableError(msg)) {
+        console.warn("[import-analiz] Claude başarısız → Gemini:", msg.slice(0, 160));
+        return geminiJsonFromMessages(req.system_prompt, req.user_prompt, {
+          media_type: req.dosya_tip,
+          data: req.dosya_base64,
+        });
+      }
+      throw e;
+    }
+  }
+
+  if (isGeminiConfigured()) {
+    return geminiJsonFromMessages(req.system_prompt, req.user_prompt, {
       media_type: req.dosya_tip,
       data: req.dosya_base64,
     });
@@ -194,7 +282,7 @@ async function fetchDocumentJsonArray(
   const base = proxyBase();
   if (!base) {
     console.error(
-      "[import-analiz] Claude yok: ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
+      "[import-analiz] Claude/Gemini yok: ANTHROPIC_API_KEY ve GEMINI_API_KEY tanımlı değil",
     );
     throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
   }
@@ -257,16 +345,35 @@ export async function runImportTextAnaliz(req: {
   system_prompt: string;
   user_prompt: string;
 }): Promise<ImportAnalizRow[]> {
-  if (readAnthropicApiKey()) {
-    const arr = await anthropicJsonFromMessages(
-      req.system_prompt,
-      req.user_prompt,
-    );
+  const runMap = async (arr: unknown[]) => {
     const rows = mapAnalizRows(arr);
     if (!rows.length) {
       throw new Error("Dosyadan ekipman kalemi çıkarılamadı.");
     }
     return rows;
+  };
+
+  if (readAnthropicApiKey()) {
+    try {
+      return await runMap(
+        await anthropicJsonFromMessages(req.system_prompt, req.user_prompt),
+      );
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (isGeminiConfigured() && isClaudeUnavailableError(msg)) {
+        console.warn("[import-analiz] Claude text → Gemini:", msg.slice(0, 160));
+        return runMap(
+          await geminiJsonFromMessages(req.system_prompt, req.user_prompt),
+        );
+      }
+      throw e;
+    }
+  }
+
+  if (isGeminiConfigured()) {
+    return runMap(
+      await geminiJsonFromMessages(req.system_prompt, req.user_prompt),
+    );
   }
 
   const base = proxyBase();
@@ -280,7 +387,7 @@ export async function runImportTextAnaliz(req: {
   }
 
   console.error(
-    "[import-analiz] Claude yok (text): ANTHROPIC_API_KEY tanımlı değil ve proxy yok",
+    "[import-analiz] Claude/Gemini yok (text): API key tanımlı değil ve proxy yok",
   );
   throw new Error(CLAUDE_IMPORT_MISSING_USER_MSG);
 }
