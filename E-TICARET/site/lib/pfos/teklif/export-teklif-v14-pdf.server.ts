@@ -82,19 +82,26 @@ export async function generateTeklifV14PdfBuffer(
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
-    await page.setContent(html, { waitUntil: "load", timeout: 90_000 });
-    await page.evaluate(() =>
-      Promise.all(
-        Array.from(document.images).map((img) =>
-          img.complete
-            ? Promise.resolve()
-            : new Promise<void>((resolve) => {
-                img.onload = () => resolve();
-                img.onerror = () => resolve();
-              }),
+    // load/networkidle uzak CDN görsellerinde dakikalar sürebilir
+    await page.setContent(html, {
+      waitUntil: "domcontentloaded",
+      timeout: 25_000,
+    });
+    await Promise.race([
+      page.evaluate(() =>
+        Promise.all(
+          Array.from(document.images).map((img) =>
+            img.complete
+              ? Promise.resolve()
+              : new Promise<void>((resolve) => {
+                  img.onload = () => resolve();
+                  img.onerror = () => resolve();
+                }),
+          ),
         ),
       ),
-    );
+      new Promise<void>((resolve) => setTimeout(resolve, 6_000)),
+    ]);
     const pdf = await page.pdf({
       format: "A4",
       landscape: true,

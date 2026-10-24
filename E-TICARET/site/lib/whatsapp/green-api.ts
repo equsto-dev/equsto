@@ -1,5 +1,9 @@
 import { greenApiConfigured, normalizeWaRecipient } from "./config";
 import type { WaSendResult } from "./meta-client";
+import {
+  deleteTempWhatsAppFile,
+  putTempWhatsAppFile,
+} from "./temp-file-store";
 
 function env(name: string): string {
   return process.env[name]?.trim() || "";
@@ -20,15 +24,33 @@ function chatIdFromE164(e164: string): string {
   return d ? `${d}@c.us` : "";
 }
 
+function greenApiApiHost(): string {
+  return (env("GREEN_API_API_URL") || "https://api.green-api.com").replace(
+    /\/$/,
+    "",
+  );
+}
+
+function siteOrigin(): string {
+  return (
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    process.env.SITE_URL?.trim() ||
+    "https://equsto.com"
+  ).replace(/\/$/, "");
+}
+
 type GreenApiResponse = {
   idMessage?: string;
   message?: string;
   error?: string;
+  urlFile?: string;
   invokeStatus?: { status?: string; description?: string };
   correspondentsStatus?: { description?: string };
 };
 
-async function readGreenApiResponse(response: Response): Promise<GreenApiResponse & { raw: string }> {
+async function readGreenApiResponse(
+  response: Response,
+): Promise<GreenApiResponse & { raw: string }> {
   const raw = await response.text();
   let json: GreenApiResponse = {};
   try {
@@ -39,7 +61,10 @@ async function readGreenApiResponse(response: Response): Promise<GreenApiRespons
   return { ...json, raw };
 }
 
-function greenApiError(response: Response, result: GreenApiResponse & { raw: string }): string {
+function greenApiError(
+  response: Response,
+  result: GreenApiResponse & { raw: string },
+): string {
   const invokeErr =
     result.invokeStatus?.description ||
     (result.invokeStatus?.status &&
@@ -48,19 +73,31 @@ function greenApiError(response: Response, result: GreenApiResponse & { raw: str
       : "") ||
     result.correspondentsStatus?.description;
 
+  const raw = invokeErr || result.message || result.error || result.raw || "";
+
+  if (/quota|correspondents|tariff|QUOTE_/i.test(raw)) {
+    return (
+      "Green API aylık muhatap kotası dolmuş. " +
+      "console.green-api.com üzerinden tarife yükseltin veya " +
+      "yalnızca kota içindeki numaralara gönderin."
+    );
+  }
+
+  if (/<\s*html[\s>]|gateway time-?out|504|502 bad gateway/i.test(raw)) {
+    return `WhatsApp medya sunucusu hata verdi (HTTP ${response.status}).`;
+  }
+
   return (
-    invokeErr ||
-    result.message ||
-    result.error ||
-    result.raw.slice(0, 500) ||
-    `HTTP ${response.status}`
+    (typeof raw === "string" && raw.trim()
+      ? raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 400)
+      : "") || `HTTP ${response.status}`
   );
 }
 
 /** Green API — QR ile bağlanır, Facebook hesabı gerekmez */
 export async function sendGreenApiText(
   to: string,
-  body: string
+  body: string,
 ): Promise<WaSendResult> {
   if (!greenApiConfigured()) {
     return { ok: false, error: "Green API yapılandırılmamış" };
@@ -76,12 +113,13 @@ export async function sendGreenApiText(
     const id = greenApiInstanceId();
     const token = greenApiToken();
     const r = await fetch(
-      `https://api.green-api.com/waInstance${id}/sendMessage/${token}`,
+      `${greenApiApiHost()}/waInstance${id}/sendMessage/${token}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ chatId, message }),
-      }
+        signal: AbortSignal.timeout(30_000),
+      },
     );
     const result = await readGreenApiResponse(r);
 
@@ -98,7 +136,10 @@ export async function sendGreenApiText(
   }
 }
 
-/** Green API — dosya (PDF vb.) gönder */
+/**
+ * PDF gönder — media.green-api.com upload kırık/yavaş;
+ * dosyayı equsto temp URL ile api.green-api.com sendFileByUrl kullan.
+ */
 export async function sendGreenApiFile(
   to: string,
   file: Buffer,
@@ -119,20 +160,26 @@ export async function sendGreenApiFile(
   const safeName = /\.pdf$/i.test(rawName)
     ? rawName
     : `${rawName || "teklif"}.pdf`;
-  const form = new FormData();
-  form.append("chatId", chatId);
-  form.append("fileName", safeName);
-  form.append(
-    "file",
-    new Blob([new Uint8Array(file)], { type: "application/pdf" }),
-    safeName,
-  );
-  if (caption?.trim()) form.append("caption", caption.trim().slice(0, 1024));
+
+  const tempId = putTempWhatsAppFile(file, safeName, "application/pdf");
+  const urlFile = `${siteOrigin()}/api/whatsapp/temp-file/${tempId}`;
 
   try {
     const r = await fetch(
-      `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
-      { method: "POST", body: form },
+      `${greenApiApiHost()}/waInstance${id}/sendFileByUrl/${token}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chatId,
+          urlFile,
+          fileName: safeName,
+          ...(caption?.trim()
+            ? { caption: caption.trim().slice(0, 1024) }
+            : {}),
+        }),
+        signal: AbortSignal.timeout(60_000),
+      },
     );
     const result = await readGreenApiResponse(r);
 
@@ -146,6 +193,9 @@ export async function sendGreenApiFile(
       ok: false,
       error: `Green API PDF bağlantı hatası: ${e instanceof Error ? e.message : String(e)}`,
     };
+  } finally {
+    // Green API URL'yi birkaç sn içinde çeker; kısa gecikmeyle sil
+    setTimeout(() => deleteTempWhatsAppFile(tempId), 120_000);
   }
 }
 
@@ -171,7 +221,13 @@ function parseGreenApiTextMessage(root: {
     textMessageData?: { textMessage?: string };
     extendedTextMessageData?: { text?: string };
   };
-}): { type: string; messageId: string; chatId: string; text: string; senderName: string } | null {
+}): {
+  type: string;
+  messageId: string;
+  chatId: string;
+  text: string;
+  senderName: string;
+} | null {
   const type = root.messageData?.typeMessage || "";
   if (type !== "textMessage" && type !== "extendedTextMessage") return null;
 
@@ -180,7 +236,9 @@ function parseGreenApiTextMessage(root: {
       root.messageData?.extendedTextMessageData?.text ||
       "",
   ).trim();
-  const chatId = String(root.senderData?.chatId || root.senderData?.sender || "");
+  const chatId = String(
+    root.senderData?.chatId || root.senderData?.sender || "",
+  );
   const messageId = String(root.idMessage || "");
   if (!chatId || !messageId) return null;
 
@@ -193,20 +251,35 @@ function parseGreenApiTextMessage(root: {
   };
 }
 
-export function parseGreenApiInboundMessages(body: unknown): GreenApiInboundMessage[] {
+export function parseGreenApiInboundMessages(
+  body: unknown,
+): GreenApiInboundMessage[] {
   const root = body as Parameters<typeof parseGreenApiTextMessage>[0];
   if (root.typeWebhook !== "incomingMessageReceived") return [];
   const parsed = parseGreenApiTextMessage(root);
   if (!parsed || !parsed.text) return [];
   const from = parsed.chatId.replace(/@c\.us$/i, "");
   if (!from) return [];
-  return [{ from, messageId: parsed.messageId, text: parsed.text, profileName: parsed.senderName }];
+  return [
+    {
+      from,
+      messageId: parsed.messageId,
+      text: parsed.text,
+      profileName: parsed.senderName,
+    },
+  ];
 }
 
-export function parseGreenApiOutboundMessages(body: unknown): GreenApiOutboundMessage[] {
+export function parseGreenApiOutboundMessages(
+  body: unknown,
+): GreenApiOutboundMessage[] {
   const root = body as Parameters<typeof parseGreenApiTextMessage>[0];
   const hook = root.typeWebhook || "";
-  if (hook !== "outgoingMessageReceived" && hook !== "outgoingAPIMessageReceived") return [];
+  if (
+    hook !== "outgoingMessageReceived" &&
+    hook !== "outgoingAPIMessageReceived"
+  )
+    return [];
   const parsed = parseGreenApiTextMessage(root);
   if (!parsed || !parsed.text) return [];
   const to = parsed.chatId.replace(/@c\.us$/i, "");
