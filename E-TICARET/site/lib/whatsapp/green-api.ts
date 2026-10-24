@@ -39,6 +39,10 @@ async function readGreenApiResponse(response: Response): Promise<GreenApiRespons
   return { ...json, raw };
 }
 
+function looksLikeHtmlGatewayError(raw: string): boolean {
+  return /<\s*html[\s>]|gateway time-?out|504 gateway|502 bad gateway/i.test(raw);
+}
+
 function greenApiError(response: Response, result: GreenApiResponse & { raw: string }): string {
   const invokeErr =
     result.invokeStatus?.description ||
@@ -48,13 +52,27 @@ function greenApiError(response: Response, result: GreenApiResponse & { raw: str
       : "") ||
     result.correspondentsStatus?.description;
 
+  if (
+    response.status === 504 ||
+    response.status === 502 ||
+    looksLikeHtmlGatewayError(result.raw)
+  ) {
+    return "WhatsApp medya sunucusu zaman aşımına uğradı (PDF büyük veya yavaş). Teklif kayıttadır — PDF’i tekrar göndermeyi deneyin.";
+  }
+
   return (
     invokeErr ||
     result.message ||
     result.error ||
-    result.raw.slice(0, 500) ||
+    (looksLikeHtmlGatewayError(result.raw)
+      ? "WhatsApp medya sunucusu yanıt vermedi"
+      : result.raw.slice(0, 280)) ||
     `HTTP ${response.status}`
   );
+}
+
+function isRetryableGreenStatus(status: number, raw: string): boolean {
+  return status === 502 || status === 503 || status === 504 || looksLikeHtmlGatewayError(raw);
 }
 
 /** Green API — QR ile bağlanır, Facebook hesabı gerekmez */
@@ -129,24 +147,54 @@ export async function sendGreenApiFile(
   );
   if (caption?.trim()) form.append("caption", caption.trim().slice(0, 1024));
 
-  try {
-    const r = await fetch(
-      `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
-      { method: "POST", body: form },
-    );
-    const result = await readGreenApiResponse(r);
+  const url = `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`;
+  const maxAttempts = 3;
+  let lastError = "Green API PDF gönderilemedi";
 
-    if (!r.ok || !result.idMessage) {
-      return { ok: false, error: greenApiError(r, result), status: r.status };
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      // FormData body yeniden kullanılmaz; her denemede yeni form
+      const attemptForm = new FormData();
+      attemptForm.append("chatId", chatId);
+      attemptForm.append("fileName", safeName);
+      attemptForm.append(
+        "file",
+        new Blob([new Uint8Array(file)], { type: "application/pdf" }),
+        safeName,
+      );
+      if (caption?.trim()) {
+        attemptForm.append("caption", caption.trim().slice(0, 1024));
+      }
+
+      const r = await fetch(url, {
+        method: "POST",
+        body: attemptForm,
+        signal: AbortSignal.timeout(120_000),
+      });
+      const result = await readGreenApiResponse(r);
+
+      if (r.ok && result.idMessage) {
+        return { ok: true, messageId: result.idMessage, status: r.status };
+      }
+
+      lastError = greenApiError(r, result);
+      if (!isRetryableGreenStatus(r.status, result.raw) || attempt === maxAttempts) {
+        return { ok: false, error: lastError, status: r.status };
+      }
+      await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      lastError = /timeout|aborted/i.test(msg)
+        ? "WhatsApp medya sunucusu zaman aşımına uğradı. Teklif kayıttadır — PDF’i tekrar göndermeyi deneyin."
+        : `Green API PDF bağlantı hatası: ${msg}`;
+      if (attempt === maxAttempts) {
+        return { ok: false, error: lastError };
+      }
+      await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
     }
-
-    return { ok: true, messageId: result.idMessage, status: r.status };
-  } catch (e) {
-    return {
-      ok: false,
-      error: `Green API PDF bağlantı hatası: ${e instanceof Error ? e.message : String(e)}`,
-    };
   }
+
+  return { ok: false, error: lastError };
 }
 
 export type GreenApiInboundMessage = {

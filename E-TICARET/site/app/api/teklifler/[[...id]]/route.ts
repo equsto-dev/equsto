@@ -15,7 +15,8 @@ import {
 import { kaynakUploadsByTeklifSayi } from "@/lib/pfos/liste-upload-store";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 120;
+/** PDF (Puppeteer) + WhatsApp eki — Caddy/nginx 5m ile uyumlu */
+export const maxDuration = 300;
 
 type Ctx = { params: Promise<{ id?: string[] }> };
 

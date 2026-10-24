@@ -26,6 +26,15 @@ http://equsto.com, http://www.equsto.com {
 			}
 		}
 	}
+	# Teklif PDF (Puppeteer) + WhatsApp eki — uzun sürebilir
+	handle /api/teklifler* {
+		reverse_proxy app:3000 {
+			transport http {
+				read_timeout 5m
+				write_timeout 5m
+			}
+		}
+	}
 	handle {
 		reverse_proxy app:3000
 	}
@@ -38,6 +47,14 @@ equsto.com {
 		reverse_proxy app:3000
 	}
 	handle /api/pfos/* {
+		reverse_proxy app:3000 {
+			transport http {
+				read_timeout 5m
+				write_timeout 5m
+			}
+		}
+	}
+	handle /api/teklifler* {
 		reverse_proxy app:3000 {
 			transport http {
 				read_timeout 5m

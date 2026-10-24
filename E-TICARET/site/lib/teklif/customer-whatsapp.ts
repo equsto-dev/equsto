@@ -62,5 +62,22 @@ export async function sendTeklifCustomerWhatsApp(
   const caption = teklifWaCaption(teklif, model);
   const res = await sendWhatsAppDocument(tel, pdf, filename, caption);
   if (res.ok) return { attempted: true, sent: true };
+
+  // PDF yüklemesi 504 olursa en azından kısa metin gitsin
+  const { sendWhatsAppText } = await import("@/lib/whatsapp/send");
+  const textFallback = await sendWhatsAppText(
+    tel,
+    `${caption}\n\n(PDF eki şu an iletilemedi; ekibimiz teklifi kayıttan iletecek.)`,
+  );
+  if (textFallback.ok) {
+    return {
+      attempted: true,
+      sent: false,
+      error:
+        res.error ||
+        "PDF eki gönderilemedi; WhatsApp metin bildirimi iletildi.",
+    };
+  }
+
   return { attempted: true, sent: false, error: res.error };
 }

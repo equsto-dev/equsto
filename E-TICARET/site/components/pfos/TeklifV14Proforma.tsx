@@ -925,9 +925,11 @@ export default function TeklifV14Proforma({
       <Modal
         title={
           sendResult?.kind === "ok"
-            ? sendResult.kanal === "whatsapp"
-              ? "WhatsApp gönderildi"
-              : "E-posta gönderildi"
+            ? sendResult.sent
+              ? sendResult.kanal === "whatsapp"
+                ? "WhatsApp gönderildi"
+                : "E-posta gönderildi"
+              : "Teklif kayda alındı"
             : "Gönderilemedi"
         }
         open={sendResult != null}
