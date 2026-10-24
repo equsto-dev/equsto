@@ -6,11 +6,7 @@ import {
   teklifPdfFilename,
 } from "@/lib/teklif/parse-v14";
 import type { TeklifDeliveryResult } from "@/lib/teklif/customer-email";
-import {
-  sendWhatsAppDocument,
-  sendWhatsAppText,
-  whatsAppSendConfigured,
-} from "@/lib/whatsapp/send";
+import { sendWhatsAppDocument, whatsAppSendConfigured } from "@/lib/whatsapp/send";
 
 function teklifWaCaption(
   teklif: TeklifAdminRow,
@@ -28,7 +24,7 @@ function teklifWaCaption(
     .slice(0, 1024);
 }
 
-/** Önce hızlı metin, sonra PDF — UI dakikalarca kilitlenmesin */
+/** PFOS teklifi — müşteriye WhatsApp PDF */
 export async function sendTeklifCustomerWhatsApp(
   teklif: TeklifAdminRow,
   body: Record<string, unknown>,
@@ -51,16 +47,6 @@ export async function sendTeklifCustomerWhatsApp(
     return { attempted: true, sent: false, error: "Teklif modeli eksik" };
   }
 
-  const caption = teklifWaCaption(teklif, model);
-  const textRes = await sendWhatsAppText(tel, caption);
-  if (!textRes.ok) {
-    return {
-      attempted: true,
-      sent: false,
-      error: textRes.error || "WhatsApp metin gönderilemedi",
-    };
-  }
-
   const filename = teklifPdfFilename(model, teklif.ref_no);
   let pdf: Buffer;
   try {
@@ -68,21 +54,13 @@ export async function sendTeklifCustomerWhatsApp(
   } catch (e) {
     return {
       attempted: true,
-      sent: true,
-      error:
-        (e instanceof Error ? e.message : "PDF oluşturulamadı") +
-        " — metin bildirimi iletildi.",
+      sent: false,
+      error: e instanceof Error ? e.message : "PDF oluşturulamadı",
     };
   }
 
+  const caption = teklifWaCaption(teklif, model);
   const res = await sendWhatsAppDocument(tel, pdf, filename, caption);
   if (res.ok) return { attempted: true, sent: true };
-
-  return {
-    attempted: true,
-    sent: true,
-    error:
-      (res.error || "PDF eki gönderilemedi") +
-      " — metin bildirimi iletildi; PDF ekibimizden iletilebilir.",
-  };
+  return { attempted: true, sent: false, error: res.error };
 }
