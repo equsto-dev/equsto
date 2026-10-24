@@ -135,6 +135,18 @@ function categoryMismatchPenalty(item: ParsedItem, hit: CatalogSearchHit): numbe
   ) {
     penalty += 350;
   }
+  // İstif / ızgara tabla ≠ döküm-gaz ızgara (7864…)
+  const istifQuery =
+    /istif\s*raf|izgara\s*tabl|katli\s*raf/.test(q) ||
+    /portashelf/.test(foldTr(item.marka_orijinal ?? ""));
+  if (
+    istifQuery &&
+    (/dokum\s*izgar|set\s*ustu.*izgar|char\s*broil|7864\.|plate\s*izgar/.test(hay) ||
+      /^78[0-9]{2}\./.test(String(hit.sku ?? ""))) &&
+    !/istif|portashelf|katli\s*raf|tel\s*raf/.test(hay)
+  ) {
+    penalty += 400;
+  }
   return penalty;
 }
 

@@ -36,6 +36,13 @@ export function isIstifRafiReferansIsim(isim: string | null | undefined): boolea
   if (/istif\s*raf|istif\s*rafi|tel\s*raf|katli\s*raf|kati\s*raf|demonte\s*raf/.test(n)) {
     return true;
   }
+  // "Izgara tabla" = tel ızgara raflı istif; pişirme ızgarası değil
+  if (
+    /izgara\s*tabl|izgar\s*tabl/.test(n) &&
+    /(?:katli|kati|paslanmaz|portashelf|\d+\s*kat|istif)/.test(n)
+  ) {
+    return true;
+  }
   if (/kuru\s*depo\s*raf|depo\s*raf/.test(n)) return true;
   if (/portashelf/.test(n)) return true;
   return false;

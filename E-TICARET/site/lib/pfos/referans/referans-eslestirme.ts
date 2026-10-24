@@ -1637,6 +1637,17 @@ async function matchReferansKalemBody(
     }
   }
 
+  // İstif / ızgara tabla Portashelf — pişirme ızgarasından önce (IZGARA TABLA ≠ gazlı ızgara)
+  if (isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const istif = await matchIstifRafiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (istif) return istif;
+  }
+
   if (
     isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
     !isTostMakinasiReferans(input.isim, input.urunTipi)
@@ -1649,16 +1660,6 @@ async function matchReferansKalemBody(
       input.fiyatStratejisi,
     );
     if (pisirme) return pisirme;
-  }
-
-  if (isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
-    const istif = await matchIstifRafiByReferans(
-      input.isim,
-      olcu,
-      input.notlar,
-      input.fiyatStratejisi,
-    );
-    if (istif) return istif;
   }
 
   if (isCopArabasiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
@@ -1816,6 +1817,15 @@ async function matchReferansKalemBody(
       ) {
         return tost;
       }
+    }
+    if (isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+      const istif = await matchIstifRafiByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.fiyatStratejisi,
+      );
+      if (istif) return istif;
     }
     if (
       isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&

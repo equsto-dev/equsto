@@ -1,4 +1,8 @@
 import { resolveTipKodu } from "./tip-kodu";
+import {
+  isIstifRafiReferansIsim,
+  isIstifRafiTipKodu,
+} from "./portashelf-marka";
 
 /** PFOS pişirme hattı — teklif markası Atalay */
 export const ATALAY_MARKA = "Atalay";
@@ -30,7 +34,21 @@ function norm(s: string | null | undefined): string {
     .trim();
 }
 
-/** Referans adı — pişirme ekipmanı (soğutma / hazırlık / bulaşık hariç) */
+/**
+ * İstif rafı “ızgara tabla” (tel ızgara raf) — pişirme ızgarası değil.
+ * Aksi halde /izgar/ eşlemesi döküm/gaz ızgaraya düşer.
+ */
+export function isIzgaraTablaIstifIsim(isim: string | null | undefined): boolean {
+  const n = norm(String(isim ?? ""));
+  if (!n) return false;
+  if (isIstifRafiReferansIsim(n)) return true;
+  if (/izgara\s*tabl|izgar\s*tabl/.test(n) && /(?:katli|kati|paslanmaz|portashelf|\d+\s*kat)/.test(n)) {
+    return true;
+  }
+  return false;
+}
+
+/** Referans adı — pişirme ekipmanı (soğutma / hazırlık / bulaşık / istif hariç) */
 export function isPisirmeReferansIsim(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
   if (!n) return false;
@@ -38,6 +56,7 @@ export function isPisirmeReferansIsim(isim: string | null | undefined): boolean 
     return false;
   }
   if (/yer\s*izgar|yer\s*ızgar/.test(n)) return false;
+  if (isIzgaraTablaIstifIsim(n)) return false;
   if (/kahve|espresso|filtre\s*kahve|degirmen|değirmen/.test(n)) return false;
   if (/kiyma|kıyma|kemik\s*testere|dilimleme|hamur\s*yogur|hamur\s*acma|patates\s*soy|meyve\s*sik/.test(n)) {
     return false;
@@ -69,6 +88,9 @@ export function isAtalayPisirmePfosKalem(opts: {
   isim?: string | null;
   urunTipi?: string | null;
 }): boolean {
+  if (isIstifRafiTipKodu(opts.urunTipi) || isIzgaraTablaIstifIsim(opts.isim)) {
+    return false;
+  }
   if (isPisirmeTipKodu(opts.urunTipi)) return true;
   return isPisirmeReferansIsim(opts.isim);
 }

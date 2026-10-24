@@ -17,6 +17,10 @@ import {
 } from "../core/ozti-pisirme-spec";
 import { resolveTipKodu } from "../core/tip-kodu";
 import { isSenoxMikrodalgaReferansIsim } from "../core/senox-marka";
+import {
+  isIzgaraTablaIstifIsim,
+  isPisirmeReferansIsim,
+} from "../core/atalay-marka";
 import { isKombiKonveksiyonReferans } from "./firin-match";
 import { referansKatalogCeliski } from "./referans-nitelikleri";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -97,10 +101,7 @@ export function oztiPisirmeKatalogUyumsuz(
 }
 
 export function isPisirmeReferans(isim: string): boolean {
-  const n = norm(isim);
-  return /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|patates\s*dinlendir|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|makarna\s*pisir|tost|waffle|pizza\s*firin|mikrodalga|microwave|menumaster/.test(
-    n,
-  );
+  return isPisirmeReferansIsim(isim);
 }
 
 type PisirmeFamily =
@@ -121,6 +122,7 @@ type PisirmeFamily =
   | null;
 
 function parsePisirmeFamily(isim: string, urunTipi?: string | null): PisirmeFamily {
+  if (isIzgaraTablaIstifIsim(isim)) return null;
   const n = norm(`${isim} ${urunTipi ?? ""}`);
   if (/patates\s*dinlendir|scuttle|sicak\s*tutucu.*patates/.test(n)) {
     return "patates_dinlendirme";
@@ -365,6 +367,7 @@ export async function matchPisirmeByReferans(
   urunTipi?: string | null,
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
+  if (isIzgaraTablaIstifIsim(isim)) return null;
   if (isSenoxMikrodalgaReferansIsim(isim, urunTipi)) {
     return null;
   }
