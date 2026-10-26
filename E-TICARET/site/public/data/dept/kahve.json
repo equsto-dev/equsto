@@ -21462,8 +21462,8 @@
     "category": "kahve-makineleri",
     "brand": "Gtech",
     "name": "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu",
-    "price": "₺27.375,18 KDV dahil",
-    "specs": "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu\nKaynak: Cafemarkt (fiyat)\nStok: ST.530ED\nCafemarkt: https://www.cafemarkt.com/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu\nKaynak fiyat (Cafemarkt KDV dahil): ₺27.933,86\nEqusto Cafemarkt −%2 (KDV dahil): ₺27.375,18\nHavale / EFT: %2 indirim → ₺26.827,68",
+    "price": "₺30.960,00 KDV dahil",
+    "specs": "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu\nKaynak: Cafemarkt (fiyat)\nStok: ST.530ED\nCafemarkt: https://www.cafemarkt.com/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu\nKaynak fiyat (Cafemarkt KDV dahil): ₺27.933,86\nEqusto satış (KDV dahil): ₺30.960,00 (manuel)\nHavale / EFT: %2 indirim → ₺30.340,80",
     "images": [
       "images/catalog/cafemarkt/50ef41a215b0a37c.jpg",
       "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72718-38-b.jpg",
@@ -21477,11 +21477,11 @@
     ],
     "sku": "ST.530ED",
     "model": "ST.530ED",
-    "fiyat_tl": 27375.18,
+    "fiyat_tl": 30960,
     "kaynak_fiyat_listesi": "cafemarkt-plp",
     "fiyat_kaynak": "cafemarkt",
     "cafemarkt_fiyat_kdv_dahil": 27933.86,
-    "cafemarkt_fiyat_equsto_kdv_dahil": 27375.18,
+    "cafemarkt_fiyat_equsto_kdv_dahil": 30960,
     "cafemarkt_indirim_oran": 0.02,
     "cafemarkt_id": "38645",
     "cafemarkt_url": "https://www.cafemarkt.com/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu",
@@ -21511,7 +21511,8 @@
     ],
     "description": "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu",
     "image": "images/catalog/cafemarkt/50ef41a215b0a37c.jpg",
-    "fiyat_bekleniyor": false
+    "fiyat_bekleniyor": false,
+    "fiyat_tl_override": 30960
   },
   {
     "category": "kahve-makineleri",
