@@ -1242,10 +1242,11 @@
         file = istifRel.replace(/^images\//i, "");
       }
       var isFiyatListesi = /equsto\/fiyat-listesi\//i.test(file);
-      /** CafeMarkt / Sparo — S3’te olmayabilir; origin /images önce, CDN yedek. */
+      /** CafeMarkt / Sparo / Şelale — S3’te olmayabilir; origin /images önce, CDN yedek. */
       var isCafeMarktGallery = /^catalog\/cafemarkt\//i.test(file);
       var isSparoGallery = /^catalog\/sparo\//i.test(file);
-      var originFirstGallery = isCafeMarktGallery || isSparoGallery;
+      var isSelaleGallery = /^catalog\/selale\//i.test(file);
+      var originFirstGallery = isCafeMarktGallery || isSparoGallery || isSelaleGallery;
       if (isFiyatListesi || originFirstGallery) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
