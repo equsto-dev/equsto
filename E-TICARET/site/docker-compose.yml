@@ -41,6 +41,8 @@ services:
       - ./public/images/catalog/cafemarkt:/app/public/images/catalog/cafemarkt:ro
       # Sparo — ölü üretici CDN; git + origin volume
       - ./public/images/catalog/sparo:/app/public/images/catalog/sparo:ro
+      # Şelale — çay ocağı PDF seri görselleri; git + origin volume
+      - ./public/images/catalog/selale:/app/public/images/catalog/selale:ro
       # Üye kaynak listeleri — mevcut yazılabilir volume
       - ./scripts:/app/scripts
       # Ajan rapor / blog taslakları — host'ta kalıcı ve yazılabilir
