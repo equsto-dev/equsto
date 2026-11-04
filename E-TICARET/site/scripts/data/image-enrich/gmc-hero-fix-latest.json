@@ -1,0 +1,178 @@
+{
+  "at": "2026-11-04T22:12:56.299Z",
+  "dryRun": false,
+  "upscaleOnly": false,
+  "stats": {
+    "replacedFromB": 5950,
+    "upscaledLocal": 210,
+    "failed": 5,
+    "skippedNoUrl": 196,
+    "errors": []
+  },
+  "processing": 6165,
+  "ok": 6160,
+  "sample": [
+    {
+      "rel": "images/catalog/cafemarkt/429dec3249a0a5ed.jpg",
+      "before": {
+        "w": 400,
+        "h": 400
+      },
+      "skus": [
+        "CRD"
+      ],
+      "method": "cafemarkt_b",
+      "after": {
+        "w": 800,
+        "h": 800
+      },
+      "ok": true,
+      "src": "https://witcdn.cafemarkt.com/kalitegaz-pilic-cevirme-makinesi-davlumbazi-kalitegaz-yedek-parcalari-ve-aksesuarlari-kalitegaz-25699-14-B.jpg",
+      "gallery": 1
+    },
+    {
+      "rel": "images/catalog/cafemarkt/82bf4e982130ad8d.jpg",
+      "before": {
+        "w": 400,
+        "h": 400
+      },
+      "skus": [
+        "PHE4301A"
+      ],
+      "method": "cafemarkt_b",
+      "after": {
+        "w": 800,
+        "h": 800
+      },
+      "ok": true,
+      "src": "https://witcdn.cafemarkt.com/kalitegaz-phe4301a-pizza-firini-davlumbazi-motorsuz-kalitegaz-yedek-parcalari-ve-aksesuarlari-kalitegaz-25659-14-B.jpg",
+      "gallery": 1
+    },
+    {
+      "rel": "images/catalog/cafemarkt/c1db06f9bd59ee4d.jpg",
+      "before": {
+        "w": 400,
+        "h": 400
+      },
+      "skus": [
+        "7885.25205.00"
+      ],
+      "method": "cafemarkt_b",
+      "after": {
+        "w": 800,
+        "h": 800
+      },
+      "ok": true,
+      "src": "https://witcdn.cafemarkt.com/davlumbaz-orta-tip-filtresiz-250x200-davlumbazlar-oztiryakiler-12785-14-B.jpg",
+      "gallery": 1
+    },
+    {
+      "rel": "images/catalog/cafemarkt/e0eec6a897491516.jpg",
+      "before": {
+        "w": 400,
+        "h": 400
+      },
+      "skus": [
+        "EMP.3545.6D"
+      ],
+      "method": "cafemarkt_b",
+      "after": {
+        "w": 800,
+        "h": 800
+      },
+      "ok": true,
+      "src": "https://witcdn.cafemarkt.com/empero-moduler-firin-davlumbazi-171x146x37-cm-firin-aksesuarlari-empero-47460-28-B.jpg",
+      "gallery": 1
+    },
+    {
+      "rel": "images/catalog/cafemarkt/d5f93a2fd4edcabe.jpg",
+      "before": {
+        "w": 400,
+        "h": 400
+      },
+      "skus": [
+        "7885.30205.00"
+      ],
+      "method": "cafemarkt_b",
+      "after": {
+        "w": 700,
+        "h": 700
+      },
+      "ok": true,
+      "src": "https://witcdn.cafemarkt.com/davlumbaz-orta-tip-filtresiz-300x200-davlumbazlar-oztiryakiler-1553-14-B.jpg",
+      "gallery": 1
+    }
+  ],
+  "failSample": [
+    {
+      "rel": "images/catalog/cafemarkt/a9e6007135d40a12.jpg",
+      "before": {
+        "w": 400,
+        "h": 309
+      },
+      "skus": [
+        "CR5002N"
+      ],
+      "method": "failed",
+      "after": null,
+      "ok": false,
+      "galleryFail": "no_gallery"
+    },
+    {
+      "rel": "images/catalog/cafemarkt/e2bb34ee8f384be0.jpg",
+      "before": {
+        "w": 400,
+        "h": 342
+      },
+      "skus": [
+        "CR9002L"
+      ],
+      "method": "failed",
+      "after": null,
+      "ok": false,
+      "galleryFail": "no_gallery"
+    },
+    {
+      "rel": "images/catalog/cafemarkt/73c4c2843cf02887.jpg",
+      "before": {
+        "w": 400,
+        "h": 346
+      },
+      "skus": [
+        "CR9001L"
+      ],
+      "method": "failed",
+      "after": null,
+      "ok": false,
+      "galleryFail": "no_gallery"
+    },
+    {
+      "rel": "images/catalog/cafemarkt/568c7a4b476699a7.jpg",
+      "before": {
+        "w": 400,
+        "h": 329
+      },
+      "skus": [
+        "RTR160L"
+      ],
+      "method": "failed",
+      "after": null,
+      "ok": false,
+      "galleryFail": "no_gallery"
+    },
+    {
+      "rel": "images/catalog/cafemarkt/0281947d2fc26df0.jpg",
+      "before": {
+        "w": 400,
+        "h": 361
+      },
+      "skus": [
+        "RTR120L"
+      ],
+      "method": "failed",
+      "after": null,
+      "ok": false,
+      "galleryFail": "no_gallery"
+    }
+  ]
+}

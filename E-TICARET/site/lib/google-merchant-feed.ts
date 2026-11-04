@@ -103,12 +103,12 @@ function productOfferImages(row: CatalogRow, origin: string): {
 } {
   const photos = collectGmcPhotoRels(Array.isArray(row.images) ? row.images : []);
   if (photos.length) {
-    return expandOfferImageUrls(photos, origin);
+    return expandOfferImageUrls(photos, origin, { ensureHeroMin: true });
   }
   const fallback = productImagePath(row);
   if (!fallback) return { imageLink: "", additionalImageLinks: [] };
   const rel = fallback.replace(/^\//, "");
-  return expandOfferImageUrls([rel], origin);
+  return expandOfferImageUrls([rel], origin, { ensureHeroMin: true });
 }
 
 /** XML 1.0: yalnızca tab, LF, CR kontrol karakterleri geçerlidir. */

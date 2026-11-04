@@ -1,6 +1,7 @@
 /**
- * GMC ek görsel kırpımı — tek fotoğraflı ürünler için detay / üst / yakın plan.
+ * GMC görsel API — ek kırpımlar + ana görsel min-px güvence.
  * GET /api/gmc/img/:variant?src=images/catalog/...
+ * variant: detail | upper | closeup | hero
  */
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
@@ -9,7 +10,10 @@ import { NextRequest } from "next/server";
 import sharp from "sharp";
 import {
   GMC_CROP_VARIANTS,
+  GMC_HERO_VARIANT,
+  GMC_MIN_IMAGE_PX,
   isGmcCropVariant,
+  isGmcImgVariant,
   sanitizeGmcSourceRel,
   type GmcCropVariant,
 } from "@/lib/gmc-additional-images";
@@ -18,7 +22,7 @@ import { getAssetCdnBase } from "@/lib/asset-cdn";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const MIN_PX = 500;
+const MIN_PX = GMC_MIN_IMAGE_PX;
 const OUT_PX = 1000;
 const CACHE_DIR = path.join(process.cwd(), "var", "gmc-img-cache");
 
@@ -88,6 +92,37 @@ async function loadSourceBuffer(rel: string): Promise<Buffer | null> {
   }
 }
 
+/** Ana görsel: ürünü kırpma; min 500×500 (içeride sığdır, gerekirse büyüt). */
+async function renderHeroEnsure(rel: string): Promise<Buffer | null> {
+  const src = await loadSourceBuffer(rel);
+  if (!src?.length) return null;
+
+  const rotated = sharp(src, { failOn: "none" }).rotate();
+  const meta = await rotated.metadata();
+  const width = meta.width || 0;
+  const height = meta.height || 0;
+  if (width < 32 || height < 32) return null;
+
+  if (width >= MIN_PX && height >= MIN_PX) {
+    return rotated.jpeg({ quality: 88, mozjpeg: true }).toBuffer();
+  }
+
+  // Her iki kenar ≥ MIN_PX (fit:inside kısa kenarı kaçırır).
+  const scale = Math.max(MIN_PX / width, MIN_PX / height, OUT_PX / Math.max(width, height));
+  const tw = Math.max(MIN_PX, Math.round(width * scale));
+  const th = Math.max(MIN_PX, Math.round(height * scale));
+  return sharp(src, { failOn: "none" })
+    .rotate()
+    .resize({
+      width: tw,
+      height: th,
+      fit: "fill",
+      withoutEnlargement: false,
+    })
+    .jpeg({ quality: 88, mozjpeg: true })
+    .toBuffer();
+}
+
 async function renderCrop(variant: GmcCropVariant, rel: string): Promise<Buffer | null> {
   const src = await loadSourceBuffer(rel);
   if (!src?.length) return null;
@@ -124,10 +159,11 @@ export async function GET(
 ) {
   const { variant: rawVariant } = await ctx.params;
   const variant = String(rawVariant || "").toLowerCase();
-  if (!isGmcCropVariant(variant)) {
-    return new Response(`variant must be one of: ${GMC_CROP_VARIANTS.join(", ")}`, {
-      status: 400,
-    });
+  if (!isGmcImgVariant(variant)) {
+    return new Response(
+      `variant must be one of: ${[...GMC_CROP_VARIANTS, GMC_HERO_VARIANT].join(", ")}`,
+      { status: 400 },
+    );
   }
 
   const src = sanitizeGmcSourceRel(req.nextUrl.searchParams.get("src") || "");
@@ -154,7 +190,12 @@ export async function GET(
     /* miss */
   }
 
-  const buf = await renderCrop(variant, src);
+  const buf =
+    variant === GMC_HERO_VARIANT
+      ? await renderHeroEnsure(src)
+      : isGmcCropVariant(variant)
+        ? await renderCrop(variant, src)
+        : null;
   if (!buf?.length) {
     return new Response("image unavailable", { status: 404 });
   }
