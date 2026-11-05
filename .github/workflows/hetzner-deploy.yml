@@ -34,6 +34,11 @@ jobs:
       TEPEPLATFORM_API_KEY: ${{ secrets.TEPEPLATFORM_API_KEY }}
       TEPEPLATFORM_API_SECRET: ${{ secrets.TEPEPLATFORM_API_SECRET }}
       TEPEPLATFORM_PARTNER_SLUG: ${{ secrets.TEPEPLATFORM_PARTNER_SLUG != '' && secrets.TEPEPLATFORM_PARTNER_SLUG || 'equsto-endustriyel-mutfak' }}
+      # S3 / CloudFront — public/images sync (CafeMarkt GMC görselleri vb.)
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET != '' && secrets.AWS_S3_BUCKET || 'equsto-assets' }}
+      AWS_REGION: ${{ secrets.AWS_REGION != '' && secrets.AWS_REGION || 'eu-central-1' }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
@@ -43,7 +48,7 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           passphrase: ${{ secrets.HETZNER_SSH_PASSPHRASE }}
           command_timeout: 30m
-          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, ANTHROPIC_MODEL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GREEN_API_INSTANCE_ID, GREEN_API_TOKEN, RESEND_API_KEY, TEPEPLATFORM_ENABLED, TEPEPLATFORM_BASE_URL, TEPEPLATFORM_API_KEY, TEPEPLATFORM_API_SECRET, TEPEPLATFORM_PARTNER_SLUG
+          envs: GITHUB_TOKEN, CLOUDFRONT_DISTRIBUTION_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, ANTHROPIC_API_KEY, ANTHROPIC_MODEL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GREEN_API_INSTANCE_ID, GREEN_API_TOKEN, RESEND_API_KEY, TEPEPLATFORM_ENABLED, TEPEPLATFORM_BASE_URL, TEPEPLATFORM_API_KEY, TEPEPLATFORM_API_SECRET, TEPEPLATFORM_PARTNER_SLUG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_S3_BUCKET, AWS_REGION
           script: |
             set -euo pipefail
             # --- notify diagnose (masked last4 only; no tokens) ---
@@ -175,6 +180,10 @@ jobs:
             inject("TEPEPLATFORM_ENABLED", 1);
             inject("TEPEPLATFORM_BASE_URL", 8);
             inject("TEPEPLATFORM_PARTNER_SLUG", 3);
+            inject("AWS_ACCESS_KEY_ID", 16);
+            inject("AWS_SECRET_ACCESS_KEY", 16);
+            inject("AWS_S3_BUCKET", 3);
+            inject("AWS_REGION", 5);
 
             // Boş notify telefonlarını Equsto varsayılanlarıyla doldur (token değil).
             // 532 = bildirim / vitrin, 554 = Green API QR iş hattı (.env.notify.secrets.example).
