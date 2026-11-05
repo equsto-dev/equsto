@@ -3,9 +3,9 @@
 - Kur: **1 EUR = 56.3432 TRY** (TCMB 04.11.2026)
 - Dry-run: false
 - Katalog ürün: 852
-- Güncellenen: **815**
-- Eklenen: **37**
-- Rational/Electrolux atlanan: **36**
+- Güncellenen: **823**
+- Eklenen: **29**
+- Rational/Electrolux atlanan: **0**
 
 ## Kurallar
 - s.41–78: liste × %55 + KDV
@@ -41,31 +41,31 @@
 - `gastrotech__cc6020` s.13 default: ₺28.668,00 KDV dahil → **₺28.668,00 KDV dahil** (liste 800 EUR)
 
 ## Örnek eklemeler
-- `gastrotech__371000` s.79 default: **₺61.098,00 KDV dahil** — Gastrotech Gazlı Ocak, 2 Brülörlü
-- `gastrotech__371001` s.79 default: **₺98.939,00 KDV dahil** — Gastrotech Gazlı Ocak, 4 Brülörlü
-- `gastrotech__371002` s.79 default: **₺182.182,00 KDV dahil** — Gastrotech Gazlı Kuzine, 4 Brülörlü + 1 Fırın
-- `gastrotech__371004` s.79 default: **₺134.020,00 KDV dahil** — Gastrotech Gazlı Ocak, 6 Brülörlü
-- `gastrotech__371014` s.79 default: **₺51.960,00 KDV dahil** — Gastrotech Elektrikli Ocak, 2 Brülörlü
-- `gastrotech__371015` s.79 default: **₺77.689,00 KDV dahil** — Gastrotech Elektrikli Ocak, 4 Brülörlü
-- `gastrotech__371016` s.79 default: **₺184.511,00 KDV dahil** — Gastrotech Elektrikli Kuzine, 4 Pleytli + 1 Fırın
-- `gastrotech__371019` s.79 default: **₺126.065,00 KDV dahil** — Gastrotech Elektrikli Ocak, 6 Brülörlü
-- `gastrotech__371038` s.80 default: **₺176.950,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelik Düz Yüzeyli
-- `gastrotech__371041` s.80 default: **₺180.605,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelik 1/3 Nervürlü
-- `gastrotech__371042` s.80 default: **₺173.438,00 KDV dahil** — Gastrotech Gazlı Set üstü Power Grill
-- `gastrotech__371043` s.80 default: **₺216.582,00 KDV dahil** — Gastrotech Gazlı Set üstü Power Grill
-- `gastrotech__371193` s.80 default: **₺110.513,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelikli Düz Yüzeyli
-- `gastrotech__371320` s.80 default: **₺111.086,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelik Düz Yüzeyli
-- `gastrotech__371323` s.80 default: **₺115.422,00 KDV dahil** — Gastrotech Izgara, Karbon Çelik Nervürlü Yüzeyli
-- `gastrotech__371332` s.80 default: **₺108.649,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelik Nervürlü Yüzeyli
-- `gastrotech__371340` s.80 default: **₺153.335,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelikli Düz Yüzeyli
-- `gastrotech__371347` s.80 default: **₺156.882,00 KDV dahil** — Gastrotech Pleyt Izgara, Karbon Çelik 1/3 Nervürlü
-- `gastrotech__371070` s.81 default: **₺153.120,00 KDV dahil** — Gastrotech Gazlı Fritöz, Dolaplı 15 lt.
-- `gastrotech__371071` s.81 default: **₺262.343,00 KDV dahil** — Gastrotech Gazlı Fritöz, Dolaplı 15 + 15 lt.
-- `gastrotech__371079` s.81 default: **₺96.788,00 KDV dahil** — Gastrotech Elektrikli Fritöz 15 lt.
-- `gastrotech__371080` s.81 default: **₺160.968,00 KDV dahil** — Gastrotech Elektrikli Fritöz 15 + 15 lt
-- `gastrotech__371083` s.81 default: **₺316.560,00 KDV dahil** — Gastrotech 371083
-- `gastrotech__371086` s.81 default: **₺88.475,00 KDV dahil** — Gastrotech Elektrikli Patates Dinlendirme
-- `gastrotech__371090` s.82 default: **₺130.544,00 KDV dahil** — Gastrotech Gazlı Makarna Pişirici 24,5 lt.
+- `gastrotech__sym2500` s.177 default: **₺977.917,00 KDV dahil** — Gastrotech SYM2500
+- `gastrotech__sym3000` s.177 default: **₺1.063.920,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__sym300` s.178 default: **₺557.581,00 KDV dahil** — Gastrotech Genel Özellikler
+- `gastrotech__mod250af` s.179 default: **₺28.309,00 KDV dahil** — Gastrotech MOD275AF
+- `gastrotech__mod275af` s.179 default: **₺40.134,00 KDV dahil** — Gastrotech Genel Özellikler
+- `gastrotech__mod300c` s.179 default: **₺45.510,00 KDV dahil** — Gastrotech MOD300C
+- `gastrotech__mod300v` s.179 default: **₺77.044,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__c-254` s.180 default: **₺107.144,00 KDV dahil** — Gastrotech C-254
+- `gastrotech__c-308` s.180 default: **₺130.795,00 KDV dahil** — Gastrotech C-308
+- `gastrotech__c-312` s.180 default: **₺146.562,00 KDV dahil** — Gastrotech C-312
+- `gastrotech__c-62` s.180 default: **₺430.012,00 KDV dahil** — Gastrotech C-62
+- `gastrotech__c420` s.180 default: **₺179.171,00 KDV dahil** — Gastrotech C420
+- `gastrotech__ss-08c` s.181 default: **₺16.842,00 KDV dahil** — Gastrotech SS-08C
+- `gastrotech__ss-10h` s.181 default: **₺23.292,00 KDV dahil** — Gastrotech SS-10H
+- `gastrotech__ss-12h` s.181 default: **₺43.001,00 KDV dahil** — Gastrotech SS-12H
+- `gastrotech__ss-24h` s.181 default: **₺71.669,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__dfd-20a` s.183 default: **₺491.108,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__gp-b` s.184 default: **₺297.425,00 KDV dahil** — Gastrotech İki Hızlı Cihaz Farkı
+- `gastrotech__spa-a22` s.185 default: **₺931.691,00 KDV dahil** — Gastrotech SPA-A22
+- `gastrotech__spa-m22` s.185 default: **₺573.348,00 KDV dahil** — Gastrotech SPA-M22
+- `gastrotech__ip30f` s.197 default: **₺66.294,00 KDV dahil** — Gastrotech IP30F
+- `gastrotech__mxb7` s.197 default: **₺35.834,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__wik185` s.197 default: **₺6.450,00 KDV dahil** — Gastrotech Ürün Adı
+- `gastrotech__ef708` s.198 default: **₺25.442,00 KDV dahil** — Gastrotech Genel Özellikler
+- `gastrotech__ef708-s` s.198 default: **₺27.055,00 KDV dahil** — Gastrotech EF708-S
 
 ## Puqpress
 - PUQ PRESS PRO: ₺87.895,00 KDV dahil (liste 1300 EUR, iskontosuz)

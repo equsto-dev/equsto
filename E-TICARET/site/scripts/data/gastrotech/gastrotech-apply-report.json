@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T07:32:28.370Z",
+  "generated_at": "2026-11-05T07:59:32.402Z",
   "kur_eur_try": 56.3432,
   "tcmb_date": "04.11.2026",
   "dry_run": false,
@@ -4603,6 +4603,474 @@
       "dept": "pisirme"
     },
     {
+      "id": "gastrotech__371000",
+      "brand": "Gastrotech",
+      "model": "371000",
+      "page": 79,
+      "rule": "default",
+      "liste": 1705,
+      "currency": "EUR",
+      "before": "₺61.098,00 KDV dahil",
+      "after": "₺61.098,00 KDV dahil",
+      "fiyat_tl": 61098,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371001",
+      "brand": "Gastrotech",
+      "model": "371001",
+      "page": 79,
+      "rule": "default",
+      "liste": 2761,
+      "currency": "EUR",
+      "before": "₺98.939,00 KDV dahil",
+      "after": "₺98.939,00 KDV dahil",
+      "fiyat_tl": 98939,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371002",
+      "brand": "Gastrotech",
+      "model": "371002",
+      "page": 79,
+      "rule": "default",
+      "liste": 5084,
+      "currency": "EUR",
+      "before": "₺182.182,00 KDV dahil",
+      "after": "₺182.182,00 KDV dahil",
+      "fiyat_tl": 182182,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371004",
+      "brand": "Gastrotech",
+      "model": "371004",
+      "page": 79,
+      "rule": "default",
+      "liste": 3740,
+      "currency": "EUR",
+      "before": "₺134.020,00 KDV dahil",
+      "after": "₺134.020,00 KDV dahil",
+      "fiyat_tl": 134020,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371014",
+      "brand": "Gastrotech",
+      "model": "371014",
+      "page": 79,
+      "rule": "default",
+      "liste": 1450,
+      "currency": "EUR",
+      "before": "₺51.960,00 KDV dahil",
+      "after": "₺51.960,00 KDV dahil",
+      "fiyat_tl": 51960,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371015",
+      "brand": "Gastrotech",
+      "model": "371015",
+      "page": 79,
+      "rule": "default",
+      "liste": 2168,
+      "currency": "EUR",
+      "before": "₺77.689,00 KDV dahil",
+      "after": "₺77.689,00 KDV dahil",
+      "fiyat_tl": 77689,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371016",
+      "brand": "Gastrotech",
+      "model": "371016",
+      "page": 79,
+      "rule": "default",
+      "liste": 5149,
+      "currency": "EUR",
+      "before": "₺184.511,00 KDV dahil",
+      "after": "₺184.511,00 KDV dahil",
+      "fiyat_tl": 184511,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371019",
+      "brand": "Gastrotech",
+      "model": "371019",
+      "page": 79,
+      "rule": "default",
+      "liste": 3518,
+      "currency": "EUR",
+      "before": "₺126.065,00 KDV dahil",
+      "after": "₺126.065,00 KDV dahil",
+      "fiyat_tl": 126065,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371038",
+      "brand": "Gastrotech",
+      "model": "371038",
+      "page": 80,
+      "rule": "default",
+      "liste": 4938,
+      "currency": "EUR",
+      "before": "₺176.950,00 KDV dahil",
+      "after": "₺176.950,00 KDV dahil",
+      "fiyat_tl": 176950,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371041",
+      "brand": "Gastrotech",
+      "model": "371041",
+      "page": 80,
+      "rule": "default",
+      "liste": 5040,
+      "currency": "EUR",
+      "before": "₺180.605,00 KDV dahil",
+      "after": "₺180.605,00 KDV dahil",
+      "fiyat_tl": 180605,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371042",
+      "brand": "Gastrotech",
+      "model": "371042",
+      "page": 80,
+      "rule": "default",
+      "liste": 4840,
+      "currency": "EUR",
+      "before": "₺173.438,00 KDV dahil",
+      "after": "₺173.438,00 KDV dahil",
+      "fiyat_tl": 173438,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371043",
+      "brand": "Gastrotech",
+      "model": "371043",
+      "page": 80,
+      "rule": "default",
+      "liste": 6044,
+      "currency": "EUR",
+      "before": "₺216.582,00 KDV dahil",
+      "after": "₺216.582,00 KDV dahil",
+      "fiyat_tl": 216582,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371193",
+      "brand": "Gastrotech",
+      "model": "371193",
+      "page": 80,
+      "rule": "default",
+      "liste": 3084,
+      "currency": "EUR",
+      "before": "₺110.513,00 KDV dahil",
+      "after": "₺110.513,00 KDV dahil",
+      "fiyat_tl": 110513,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371320",
+      "brand": "Gastrotech",
+      "model": "371320",
+      "page": 80,
+      "rule": "default",
+      "liste": 3100,
+      "currency": "EUR",
+      "before": "₺111.086,00 KDV dahil",
+      "after": "₺111.086,00 KDV dahil",
+      "fiyat_tl": 111086,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371323",
+      "brand": "Gastrotech",
+      "model": "371323",
+      "page": 80,
+      "rule": "default",
+      "liste": 3221,
+      "currency": "EUR",
+      "before": "₺115.422,00 KDV dahil",
+      "after": "₺115.422,00 KDV dahil",
+      "fiyat_tl": 115422,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371332",
+      "brand": "Gastrotech",
+      "model": "371332",
+      "page": 80,
+      "rule": "default",
+      "liste": 3032,
+      "currency": "EUR",
+      "before": "₺108.649,00 KDV dahil",
+      "after": "₺108.649,00 KDV dahil",
+      "fiyat_tl": 108649,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371340",
+      "brand": "Gastrotech",
+      "model": "371340",
+      "page": 80,
+      "rule": "default",
+      "liste": 4279,
+      "currency": "EUR",
+      "before": "₺153.335,00 KDV dahil",
+      "after": "₺153.335,00 KDV dahil",
+      "fiyat_tl": 153335,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371347",
+      "brand": "Gastrotech",
+      "model": "371347",
+      "page": 80,
+      "rule": "default",
+      "liste": 4378,
+      "currency": "EUR",
+      "before": "₺156.882,00 KDV dahil",
+      "after": "₺156.882,00 KDV dahil",
+      "fiyat_tl": 156882,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371070",
+      "brand": "Gastrotech",
+      "model": "371070",
+      "page": 81,
+      "rule": "default",
+      "liste": 4273,
+      "currency": "EUR",
+      "before": "₺153.120,00 KDV dahil",
+      "after": "₺153.120,00 KDV dahil",
+      "fiyat_tl": 153120,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371071",
+      "brand": "Gastrotech",
+      "model": "371071",
+      "page": 81,
+      "rule": "default",
+      "liste": 7321,
+      "currency": "EUR",
+      "before": "₺262.343,00 KDV dahil",
+      "after": "₺262.343,00 KDV dahil",
+      "fiyat_tl": 262343,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371079",
+      "brand": "Gastrotech",
+      "model": "371079",
+      "page": 81,
+      "rule": "default",
+      "liste": 2701,
+      "currency": "EUR",
+      "before": "₺96.788,00 KDV dahil",
+      "after": "₺96.788,00 KDV dahil",
+      "fiyat_tl": 96788,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371080",
+      "brand": "Gastrotech",
+      "model": "371080",
+      "page": 81,
+      "rule": "default",
+      "liste": 4492,
+      "currency": "EUR",
+      "before": "₺160.968,00 KDV dahil",
+      "after": "₺160.968,00 KDV dahil",
+      "fiyat_tl": 160968,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371083",
+      "brand": "Gastrotech",
+      "model": "371083",
+      "page": 81,
+      "rule": "default",
+      "liste": 8834,
+      "currency": "EUR",
+      "before": "₺316.560,00 KDV dahil",
+      "after": "₺316.560,00 KDV dahil",
+      "fiyat_tl": 316560,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371086",
+      "brand": "Gastrotech",
+      "model": "371086",
+      "page": 81,
+      "rule": "default",
+      "liste": 2469,
+      "currency": "EUR",
+      "before": "₺88.475,00 KDV dahil",
+      "after": "₺88.475,00 KDV dahil",
+      "fiyat_tl": 88475,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371090",
+      "brand": "Gastrotech",
+      "model": "371090",
+      "page": 82,
+      "rule": "default",
+      "liste": 3643,
+      "currency": "EUR",
+      "before": "₺130.544,00 KDV dahil",
+      "after": "₺130.544,00 KDV dahil",
+      "fiyat_tl": 130544,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371096",
+      "brand": "Gastrotech",
+      "model": "371096",
+      "page": 82,
+      "rule": "default",
+      "liste": 2002,
+      "currency": "EUR",
+      "before": "₺71.741,00 KDV dahil",
+      "after": "₺71.741,00 KDV dahil",
+      "fiyat_tl": 71741,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371098",
+      "brand": "Gastrotech",
+      "model": "371098",
+      "page": 82,
+      "rule": "default",
+      "liste": 4013,
+      "currency": "EUR",
+      "before": "₺143.803,00 KDV dahil",
+      "after": "₺143.803,00 KDV dahil",
+      "fiyat_tl": 143803,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371100",
+      "brand": "Gastrotech",
+      "model": "371100",
+      "page": 82,
+      "rule": "default",
+      "liste": 9027,
+      "currency": "EUR",
+      "before": "₺323.476,00 KDV dahil",
+      "after": "₺323.476,00 KDV dahil",
+      "fiyat_tl": 323476,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371181",
+      "brand": "Gastrotech",
+      "model": "371181",
+      "page": 82,
+      "rule": "default",
+      "liste": 8475,
+      "currency": "EUR",
+      "before": "₺303.696,00 KDV dahil",
+      "after": "₺303.696,00 KDV dahil",
+      "fiyat_tl": 303696,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371183",
+      "brand": "Gastrotech",
+      "model": "371183",
+      "page": 82,
+      "rule": "default",
+      "liste": 8556,
+      "currency": "EUR",
+      "before": "₺306.598,00 KDV dahil",
+      "after": "₺306.598,00 KDV dahil",
+      "fiyat_tl": 306598,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371112",
+      "brand": "Gastrotech",
+      "model": "371112",
+      "page": 83,
+      "rule": "default",
+      "liste": 609,
+      "currency": "EUR",
+      "before": "₺21.823,00 KDV dahil",
+      "after": "₺21.823,00 KDV dahil",
+      "fiyat_tl": 21823,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371113",
+      "brand": "Gastrotech",
+      "model": "371113",
+      "page": 83,
+      "rule": "default",
+      "liste": 711,
+      "currency": "EUR",
+      "before": "₺25.478,00 KDV dahil",
+      "after": "₺25.478,00 KDV dahil",
+      "fiyat_tl": 25478,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371114",
+      "brand": "Gastrotech",
+      "model": "371114",
+      "page": 83,
+      "rule": "default",
+      "liste": 860,
+      "currency": "EUR",
+      "before": "₺30.817,00 KDV dahil",
+      "after": "₺30.817,00 KDV dahil",
+      "fiyat_tl": 30817,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371116",
+      "brand": "Gastrotech",
+      "model": "371116",
+      "page": 83,
+      "rule": "default",
+      "liste": 835,
+      "currency": "EUR",
+      "before": "₺29.922,00 KDV dahil",
+      "after": "₺29.922,00 KDV dahil",
+      "fiyat_tl": 29922,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371269",
+      "brand": "Gastrotech",
+      "model": "371269",
+      "page": 83,
+      "rule": "default",
+      "liste": 9624,
+      "currency": "EUR",
+      "before": "₺344.869,00 KDV dahil",
+      "after": "₺344.869,00 KDV dahil",
+      "fiyat_tl": 344869,
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371272",
+      "brand": "Gastrotech",
+      "model": "371272",
+      "page": 83,
+      "rule": "default",
+      "liste": 9130,
+      "currency": "EUR",
+      "before": "₺327.167,00 KDV dahil",
+      "after": "₺327.167,00 KDV dahil",
+      "fiyat_tl": 327167,
+      "dept": "pisirme"
+    },
+    {
       "id": "gastrotech__217720",
       "brand": "Gastrotech",
       "model": "217720",
@@ -5429,7 +5897,7 @@
       "rule": "default",
       "liste": 1333,
       "currency": "EUR",
-      "before": "₺47.767,00 KDV dahil",
+      "before": "₺46.247,63 KDV dahil",
       "after": "₺47.767,00 KDV dahil",
       "fiyat_tl": 47767,
       "dept": "hazirlik"
@@ -8321,97 +8789,6 @@
       "dept": "sogutma"
     },
     {
-      "id": "gastrotech__sym2500",
-      "brand": "Gastrotech",
-      "model": "SYM2500",
-      "page": 177,
-      "rule": "default",
-      "liste": 27290,
-      "currency": "EUR",
-      "before": "₺977.917,00 KDV dahil",
-      "after": "₺977.917,00 KDV dahil",
-      "fiyat_tl": 977917,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__sym3000",
-      "brand": "Gastrotech",
-      "model": "SYM3000",
-      "page": 177,
-      "rule": "default",
-      "liste": 29690,
-      "currency": "EUR",
-      "before": "₺1.063.920,00 KDV dahil",
-      "after": "₺1.063.920,00 KDV dahil",
-      "fiyat_tl": 1063920,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__sym300",
-      "brand": "Gastrotech",
-      "model": "SYM300",
-      "page": 178,
-      "rule": "default",
-      "liste": 15560,
-      "currency": "EUR",
-      "before": "₺557.581,00 KDV dahil",
-      "after": "₺557.581,00 KDV dahil",
-      "fiyat_tl": 557581,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__mod250af",
-      "brand": "Gastrotech",
-      "model": "MOD250AF",
-      "page": 179,
-      "rule": "default",
-      "liste": 790,
-      "currency": "EUR",
-      "before": "₺28.309,00 KDV dahil",
-      "after": "₺28.309,00 KDV dahil",
-      "fiyat_tl": 28309,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__mod275af",
-      "brand": "Gastrotech",
-      "model": "MOD275AF",
-      "page": 179,
-      "rule": "default",
-      "liste": 1120,
-      "currency": "EUR",
-      "before": "₺40.134,00 KDV dahil",
-      "after": "₺40.134,00 KDV dahil",
-      "fiyat_tl": 40134,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__mod300c",
-      "brand": "Gastrotech",
-      "model": "MOD300C",
-      "page": 179,
-      "rule": "default",
-      "liste": 1270,
-      "currency": "EUR",
-      "before": "₺45.510,00 KDV dahil",
-      "after": "₺45.510,00 KDV dahil",
-      "fiyat_tl": 45510,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__mod300v",
-      "brand": "Gastrotech",
-      "model": "MOD300V",
-      "page": 179,
-      "rule": "default",
-      "liste": 2150,
-      "currency": "EUR",
-      "before": "₺77.044,00 KDV dahil",
-      "after": "₺77.044,00 KDV dahil",
-      "fiyat_tl": 77044,
-      "dept": "hazirlik"
-    },
-    {
       "id": "gtech__ms220st-u",
       "brand": "Gtech",
       "model": "MS220ST-U",
@@ -8419,7 +8796,7 @@
       "rule": "default",
       "liste": 690,
       "currency": "EUR",
-      "before": "₺24.726,00 KDV dahil",
+      "before": "₺22.679,18 KDV dahil",
       "after": "₺24.726,00 KDV dahil",
       "fiyat_tl": 24726,
       "dept": "hazirlik"
@@ -8432,7 +8809,7 @@
       "rule": "default",
       "liste": 740,
       "currency": "EUR",
-      "before": "₺26.518,00 KDV dahil",
+      "before": "₺24.322,60 KDV dahil",
       "after": "₺26.518,00 KDV dahil",
       "fiyat_tl": 26518,
       "dept": "hazirlik"
@@ -8445,7 +8822,7 @@
       "rule": "default",
       "liste": 2900,
       "currency": "EUR",
-      "before": "₺103.919,00 KDV dahil",
+      "before": "₺87.655,32 KDV dahil",
       "after": "₺103.919,00 KDV dahil",
       "fiyat_tl": 103919,
       "dept": "hazirlik"
@@ -8458,126 +8835,9 @@
       "rule": "default",
       "liste": 1150,
       "currency": "EUR",
-      "before": "₺41.209,00 KDV dahil",
+      "before": "₺34.759,87 KDV dahil",
       "after": "₺41.209,00 KDV dahil",
       "fiyat_tl": 41209,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__c-254",
-      "brand": "Gastrotech",
-      "model": "C-254",
-      "page": 180,
-      "rule": "default",
-      "liste": 2990,
-      "currency": "EUR",
-      "before": "₺107.144,00 KDV dahil",
-      "after": "₺107.144,00 KDV dahil",
-      "fiyat_tl": 107144,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__c-308",
-      "brand": "Gastrotech",
-      "model": "C-308",
-      "page": 180,
-      "rule": "default",
-      "liste": 3650,
-      "currency": "EUR",
-      "before": "₺130.795,00 KDV dahil",
-      "after": "₺130.795,00 KDV dahil",
-      "fiyat_tl": 130795,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__c-312",
-      "brand": "Gastrotech",
-      "model": "C-312",
-      "page": 180,
-      "rule": "default",
-      "liste": 4090,
-      "currency": "EUR",
-      "before": "₺146.562,00 KDV dahil",
-      "after": "₺146.562,00 KDV dahil",
-      "fiyat_tl": 146562,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__c-62",
-      "brand": "Gastrotech",
-      "model": "C-62",
-      "page": 180,
-      "rule": "default",
-      "liste": 12000,
-      "currency": "EUR",
-      "before": "₺430.012,00 KDV dahil",
-      "after": "₺430.012,00 KDV dahil",
-      "fiyat_tl": 430012,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__c420",
-      "brand": "Gastrotech",
-      "model": "C420",
-      "page": 180,
-      "rule": "default",
-      "liste": 5000,
-      "currency": "EUR",
-      "before": "₺179.171,00 KDV dahil",
-      "after": "₺179.171,00 KDV dahil",
-      "fiyat_tl": 179171,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ss-08c",
-      "brand": "Gastrotech",
-      "model": "SS-08C",
-      "page": 181,
-      "rule": "default",
-      "liste": 470,
-      "currency": "EUR",
-      "before": "₺16.842,00 KDV dahil",
-      "after": "₺16.842,00 KDV dahil",
-      "fiyat_tl": 16842,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ss-10h",
-      "brand": "Gastrotech",
-      "model": "SS-10H",
-      "page": 181,
-      "rule": "default",
-      "liste": 650,
-      "currency": "EUR",
-      "before": "₺23.292,00 KDV dahil",
-      "after": "₺23.292,00 KDV dahil",
-      "fiyat_tl": 23292,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ss-12h",
-      "brand": "Gastrotech",
-      "model": "SS-12H",
-      "page": 181,
-      "rule": "default",
-      "liste": 1200,
-      "currency": "EUR",
-      "before": "₺43.001,00 KDV dahil",
-      "after": "₺43.001,00 KDV dahil",
-      "fiyat_tl": 43001,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ss-24h",
-      "brand": "Gastrotech",
-      "model": "SS-24H",
-      "page": 181,
-      "rule": "default",
-      "liste": 2000,
-      "currency": "EUR",
-      "before": "₺71.669,00 KDV dahil",
-      "after": "₺71.669,00 KDV dahil",
-      "fiyat_tl": 71669,
       "dept": "hazirlik"
     },
     {
@@ -8607,58 +8867,6 @@
       "dept": "sogutma"
     },
     {
-      "id": "gastrotech__dfd-20a",
-      "brand": "Gastrotech",
-      "model": "DFD-20A",
-      "page": 183,
-      "rule": "default",
-      "liste": 13705,
-      "currency": "EUR",
-      "before": "₺491.108,00 KDV dahil",
-      "after": "₺491.108,00 KDV dahil",
-      "fiyat_tl": 491108,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__gp-b",
-      "brand": "Gastrotech",
-      "model": "GP-B",
-      "page": 184,
-      "rule": "default",
-      "liste": 8300,
-      "currency": "EUR",
-      "before": "₺297.425,00 KDV dahil",
-      "after": "₺297.425,00 KDV dahil",
-      "fiyat_tl": 297425,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__spa-a22",
-      "brand": "Gastrotech",
-      "model": "SPA-A22",
-      "page": 185,
-      "rule": "default",
-      "liste": 26000,
-      "currency": "EUR",
-      "before": "₺931.691,00 KDV dahil",
-      "after": "₺931.691,00 KDV dahil",
-      "fiyat_tl": 931691,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__spa-m22",
-      "brand": "Gastrotech",
-      "model": "SPA-M22",
-      "page": 185,
-      "rule": "default",
-      "liste": 16000,
-      "currency": "EUR",
-      "before": "₺573.348,00 KDV dahil",
-      "after": "₺573.348,00 KDV dahil",
-      "fiyat_tl": 573348,
-      "dept": "hazirlik"
-    },
-    {
       "id": "by-kitchen__vc-65ms",
       "brand": "By Kitchen",
       "model": "VC-65MS",
@@ -8666,7 +8874,7 @@
       "rule": "default",
       "liste": 1420,
       "currency": "EUR",
-      "before": "₺50.885,00 KDV dahil",
+      "before": "₺36.292,73 KDV dahil",
       "after": "₺50.885,00 KDV dahil",
       "fiyat_tl": 50885,
       "dept": "hazirlik"
@@ -8679,7 +8887,7 @@
       "rule": "default",
       "liste": 1000,
       "currency": "EUR",
-      "before": "₺35.834,00 KDV dahil",
+      "before": "₺28.635,13 KDV dahil",
       "after": "₺35.834,00 KDV dahil",
       "fiyat_tl": 35834,
       "dept": "hazirlik"
@@ -8692,7 +8900,7 @@
       "rule": "default",
       "liste": 900,
       "currency": "EUR",
-      "before": "₺32.251,00 KDV dahil",
+      "before": "₺25.771,62 KDV dahil",
       "after": "₺32.251,00 KDV dahil",
       "fiyat_tl": 32251,
       "dept": "hazirlik"
@@ -8705,7 +8913,7 @@
       "rule": "default",
       "liste": 1040,
       "currency": "EUR",
-      "before": "₺37.267,00 KDV dahil",
+      "before": "₺29.780,53 KDV dahil",
       "after": "₺37.267,00 KDV dahil",
       "fiyat_tl": 37267,
       "dept": "hazirlik"
@@ -8718,7 +8926,7 @@
       "rule": "default",
       "liste": 940,
       "currency": "EUR",
-      "before": "₺33.684,00 KDV dahil",
+      "before": "₺26.917,02 KDV dahil",
       "after": "₺33.684,00 KDV dahil",
       "fiyat_tl": 33684,
       "dept": "hazirlik"
@@ -8731,7 +8939,7 @@
       "rule": "default",
       "liste": 1100,
       "currency": "EUR",
-      "before": "₺39.418,00 KDV dahil",
+      "before": "₺31.498,64 KDV dahil",
       "after": "₺39.418,00 KDV dahil",
       "fiyat_tl": 39418,
       "dept": "hazirlik"
@@ -8744,7 +8952,7 @@
       "rule": "default",
       "liste": 1340,
       "currency": "EUR",
-      "before": "₺48.018,00 KDV dahil",
+      "before": "₺38.371,08 KDV dahil",
       "after": "₺48.018,00 KDV dahil",
       "fiyat_tl": 48018,
       "dept": "hazirlik"
@@ -8757,74 +8965,9 @@
       "rule": "default",
       "liste": 1600,
       "currency": "EUR",
-      "before": "₺57.335,00 KDV dahil",
+      "before": "₺45.816,21 KDV dahil",
       "after": "₺57.335,00 KDV dahil",
       "fiyat_tl": 57335,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ip30f",
-      "brand": "Gastrotech",
-      "model": "IP30F",
-      "page": 197,
-      "rule": "default",
-      "liste": 1850,
-      "currency": "EUR",
-      "before": "₺66.294,00 KDV dahil",
-      "after": "₺66.294,00 KDV dahil",
-      "fiyat_tl": 66294,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__mxb7",
-      "brand": "Gastrotech",
-      "model": "MXB7",
-      "page": 197,
-      "rule": "default",
-      "liste": 1000,
-      "currency": "EUR",
-      "before": "₺35.834,00 KDV dahil",
-      "after": "₺35.834,00 KDV dahil",
-      "fiyat_tl": 35834,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__wik185",
-      "brand": "Gastrotech",
-      "model": "WIK185",
-      "page": 197,
-      "rule": "default",
-      "liste": 180,
-      "currency": "EUR",
-      "before": "₺6.450,00 KDV dahil",
-      "after": "₺6.450,00 KDV dahil",
-      "fiyat_tl": 6450,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ef708",
-      "brand": "Gastrotech",
-      "model": "EF708",
-      "page": 198,
-      "rule": "default",
-      "liste": 710,
-      "currency": "EUR",
-      "before": "₺25.442,00 KDV dahil",
-      "after": "₺25.442,00 KDV dahil",
-      "fiyat_tl": 25442,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "gastrotech__ef708-s",
-      "brand": "Gastrotech",
-      "model": "EF708-S",
-      "page": 198,
-      "rule": "default",
-      "liste": 755,
-      "currency": "EUR",
-      "before": "₺27.055,00 KDV dahil",
-      "after": "₺27.055,00 KDV dahil",
-      "fiyat_tl": 27055,
       "dept": "hazirlik"
     },
     {
@@ -8835,7 +8978,7 @@
       "rule": "default",
       "liste": 1087,
       "currency": "EUR",
-      "before": "₺38.952,00 KDV dahil",
+      "before": "₺40.981,00 KDV dahil",
       "after": "₺38.952,00 KDV dahil",
       "fiyat_tl": 38952,
       "dept": "hazirlik"
@@ -8848,7 +8991,7 @@
       "rule": "default",
       "liste": 1087,
       "currency": "EUR",
-      "before": "₺38.952,00 KDV dahil",
+      "before": "₺40.981,00 KDV dahil",
       "after": "₺38.952,00 KDV dahil",
       "fiyat_tl": 38952,
       "dept": "hazirlik"
@@ -8861,33 +9004,7 @@
       "rule": "default",
       "liste": 1400,
       "currency": "EUR",
-      "before": "₺50.168,00 KDV dahil",
-      "after": "₺50.168,00 KDV dahil",
-      "fiyat_tl": 50168,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "kitchenaid__5kpmseob",
-      "brand": "KitchenAid",
-      "model": "5KPMSEOB",
-      "page": 202,
-      "rule": "default",
-      "liste": 1400,
-      "currency": "EUR",
-      "before": "₺50.168,00 KDV dahil",
-      "after": "₺50.168,00 KDV dahil",
-      "fiyat_tl": 50168,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "kitchenaid__5kpmsewh",
-      "brand": "KitchenAid",
-      "model": "5KPMSEWH",
-      "page": 202,
-      "rule": "default",
-      "liste": 1400,
-      "currency": "EUR",
-      "before": "₺50.168,00 KDV dahil",
+      "before": "₺53.353,00 KDV dahil",
       "after": "₺50.168,00 KDV dahil",
       "fiyat_tl": 50168,
       "dept": "hazirlik"
@@ -8900,7 +9017,7 @@
       "rule": "default",
       "liste": 1650,
       "currency": "EUR",
-      "before": "₺59.126,00 KDV dahil",
+      "before": "₺63.404,00 KDV dahil",
       "after": "₺59.126,00 KDV dahil",
       "fiyat_tl": 59126,
       "dept": "hazirlik"
@@ -8913,7 +9030,7 @@
       "rule": "default",
       "liste": 1650,
       "currency": "EUR",
-      "before": "₺59.126,00 KDV dahil",
+      "before": "₺63.404,00 KDV dahil",
       "after": "₺59.126,00 KDV dahil",
       "fiyat_tl": 59126,
       "dept": "hazirlik"
@@ -8926,7 +9043,7 @@
       "rule": "default",
       "liste": 1650,
       "currency": "EUR",
-      "before": "₺59.126,00 KDV dahil",
+      "before": "₺63.404,00 KDV dahil",
       "after": "₺59.126,00 KDV dahil",
       "fiyat_tl": 59126,
       "dept": "hazirlik"
@@ -8939,7 +9056,7 @@
       "rule": "default",
       "liste": 1650,
       "currency": "EUR",
-      "before": "₺59.126,00 KDV dahil",
+      "before": "₺63.404,00 KDV dahil",
       "after": "₺59.126,00 KDV dahil",
       "fiyat_tl": 59126,
       "dept": "hazirlik"
@@ -8952,7 +9069,7 @@
       "rule": "default",
       "liste": 2150,
       "currency": "EUR",
-      "before": "₺77.044,00 KDV dahil",
+      "before": "₺81.188,00 KDV dahil",
       "after": "₺77.044,00 KDV dahil",
       "fiyat_tl": 77044,
       "dept": "hazirlik"
@@ -8965,7 +9082,7 @@
       "rule": "default",
       "liste": 2150,
       "currency": "EUR",
-      "before": "₺77.044,00 KDV dahil",
+      "before": "₺81.188,00 KDV dahil",
       "after": "₺77.044,00 KDV dahil",
       "fiyat_tl": 77044,
       "dept": "hazirlik"
@@ -8978,7 +9095,7 @@
       "rule": "default",
       "liste": 2150,
       "currency": "EUR",
-      "before": "₺77.044,00 KDV dahil",
+      "before": "₺81.188,00 KDV dahil",
       "after": "₺77.044,00 KDV dahil",
       "fiyat_tl": 77044,
       "dept": "hazirlik"
@@ -8991,7 +9108,7 @@
       "rule": "default",
       "liste": 2150,
       "currency": "EUR",
-      "before": "₺77.044,00 KDV dahil",
+      "before": "₺81.188,00 KDV dahil",
       "after": "₺77.044,00 KDV dahil",
       "fiyat_tl": 77044,
       "dept": "hazirlik"
@@ -9004,7 +9121,7 @@
       "rule": "default",
       "liste": 2350,
       "currency": "EUR",
-      "before": "₺84.210,00 KDV dahil",
+      "before": "₺88.921,00 KDV dahil",
       "after": "₺84.210,00 KDV dahil",
       "fiyat_tl": 84210,
       "dept": "hazirlik"
@@ -9017,7 +9134,7 @@
       "rule": "default",
       "liste": 2350,
       "currency": "EUR",
-      "before": "₺84.210,00 KDV dahil",
+      "before": "₺88.921,00 KDV dahil",
       "after": "₺84.210,00 KDV dahil",
       "fiyat_tl": 84210,
       "dept": "hazirlik"
@@ -9030,22 +9147,9 @@
       "rule": "default",
       "liste": 430,
       "currency": "EUR",
-      "before": "₺15.409,00 KDV dahil",
+      "before": "Teklif için iletişim",
       "after": "₺15.409,00 KDV dahil",
       "fiyat_tl": 15409,
-      "dept": "hazirlik"
-    },
-    {
-      "id": "kitchenaid__5ksmfga",
-      "brand": "KitchenAid",
-      "model": "5KSMFGA",
-      "page": 203,
-      "rule": "default",
-      "liste": 155,
-      "currency": "EUR",
-      "before": "₺5.555,00 KDV dahil",
-      "after": "₺5.555,00 KDV dahil",
-      "fiyat_tl": 5555,
       "dept": "hazirlik"
     },
     {
@@ -9056,7 +9160,7 @@
       "rule": "default",
       "liste": 325,
       "currency": "EUR",
-      "before": "₺11.646,00 KDV dahil",
+      "before": "Teklif için iletişim",
       "after": "₺11.646,00 KDV dahil",
       "fiyat_tl": 11646,
       "dept": "hazirlik"
@@ -9095,7 +9199,7 @@
       "rule": "default",
       "liste": 1700,
       "currency": "EUR",
-      "before": "₺60.918,00 KDV dahil",
+      "before": "₺49.872,85 KDV dahil",
       "after": "₺60.918,00 KDV dahil",
       "fiyat_tl": 60918,
       "dept": "hazirlik"
@@ -9108,7 +9212,7 @@
       "rule": "default",
       "liste": 1900,
       "currency": "EUR",
-      "before": "₺68.086,00 KDV dahil",
+      "before": "₺55.918,05 KDV dahil",
       "after": "₺68.086,00 KDV dahil",
       "fiyat_tl": 68086,
       "dept": "hazirlik"
@@ -9225,7 +9329,7 @@
       "rule": "default",
       "liste": 7270,
       "currency": "EUR",
-      "before": "₺260.515,00 KDV dahil",
+      "before": "₺8.207,89 KDV dahil",
       "after": "₺260.515,00 KDV dahil",
       "fiyat_tl": 260515,
       "dept": "hazirlik"
@@ -9238,7 +9342,7 @@
       "rule": "default",
       "liste": 9200,
       "currency": "EUR",
-      "before": "₺329.675,00 KDV dahil",
+      "before": "₺8.207,89 KDV dahil",
       "after": "₺329.675,00 KDV dahil",
       "fiyat_tl": 329675,
       "dept": "hazirlik"
@@ -9745,7 +9849,7 @@
       "rule": "default",
       "liste": 900,
       "currency": "EUR",
-      "before": "₺32.251,00 KDV dahil",
+      "before": "₺25.542,53 KDV dahil",
       "after": "₺32.251,00 KDV dahil",
       "fiyat_tl": 32251,
       "dept": "hazirlik"
@@ -9758,7 +9862,7 @@
       "rule": "default",
       "liste": 1080,
       "currency": "EUR",
-      "before": "₺38.701,00 KDV dahil",
+      "before": "₺30.925,94 KDV dahil",
       "after": "₺38.701,00 KDV dahil",
       "fiyat_tl": 38701,
       "dept": "hazirlik"
@@ -9771,7 +9875,7 @@
       "rule": "default",
       "liste": 1450,
       "currency": "EUR",
-      "before": "₺51.960,00 KDV dahil",
+      "before": "₺41.228,85 KDV dahil",
       "after": "₺51.960,00 KDV dahil",
       "fiyat_tl": 51960,
       "dept": "hazirlik"
@@ -10611,472 +10715,368 @@
   ],
   "added": [
     {
-      "id": "gastrotech__371000",
+      "id": "gastrotech__sym2500",
       "brand": "Gastrotech",
-      "model": "371000",
-      "page": 79,
+      "model": "SYM2500",
+      "page": 177,
       "rule": "default",
-      "liste": 1705,
+      "liste": 27290,
       "currency": "EUR",
-      "price": "₺61.098,00 KDV dahil",
-      "fiyat_tl": 61098,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Ocak, 2 Brülörlü"
+      "price": "₺977.917,00 KDV dahil",
+      "fiyat_tl": 977917,
+      "dept": "hazirlik",
+      "name": "Gastrotech SYM2500"
     },
     {
-      "id": "gastrotech__371001",
+      "id": "gastrotech__sym3000",
       "brand": "Gastrotech",
-      "model": "371001",
-      "page": 79,
+      "model": "SYM3000",
+      "page": 177,
       "rule": "default",
-      "liste": 2761,
+      "liste": 29690,
       "currency": "EUR",
-      "price": "₺98.939,00 KDV dahil",
-      "fiyat_tl": 98939,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Ocak, 4 Brülörlü"
+      "price": "₺1.063.920,00 KDV dahil",
+      "fiyat_tl": 1063920,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371002",
+      "id": "gastrotech__sym300",
       "brand": "Gastrotech",
-      "model": "371002",
-      "page": 79,
+      "model": "SYM300",
+      "page": 178,
       "rule": "default",
-      "liste": 5084,
+      "liste": 15560,
       "currency": "EUR",
-      "price": "₺182.182,00 KDV dahil",
-      "fiyat_tl": 182182,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Kuzine, 4 Brülörlü + 1 Fırın"
+      "price": "₺557.581,00 KDV dahil",
+      "fiyat_tl": 557581,
+      "dept": "hazirlik",
+      "name": "Gastrotech Genel Özellikler"
     },
     {
-      "id": "gastrotech__371004",
+      "id": "gastrotech__mod250af",
       "brand": "Gastrotech",
-      "model": "371004",
-      "page": 79,
+      "model": "MOD250AF",
+      "page": 179,
       "rule": "default",
-      "liste": 3740,
+      "liste": 790,
       "currency": "EUR",
-      "price": "₺134.020,00 KDV dahil",
-      "fiyat_tl": 134020,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Ocak, 6 Brülörlü"
+      "price": "₺28.309,00 KDV dahil",
+      "fiyat_tl": 28309,
+      "dept": "hazirlik",
+      "name": "Gastrotech MOD275AF"
     },
     {
-      "id": "gastrotech__371014",
+      "id": "gastrotech__mod275af",
       "brand": "Gastrotech",
-      "model": "371014",
-      "page": 79,
+      "model": "MOD275AF",
+      "page": 179,
       "rule": "default",
-      "liste": 1450,
+      "liste": 1120,
       "currency": "EUR",
-      "price": "₺51.960,00 KDV dahil",
-      "fiyat_tl": 51960,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Ocak, 2 Brülörlü"
+      "price": "₺40.134,00 KDV dahil",
+      "fiyat_tl": 40134,
+      "dept": "hazirlik",
+      "name": "Gastrotech Genel Özellikler"
     },
     {
-      "id": "gastrotech__371015",
+      "id": "gastrotech__mod300c",
       "brand": "Gastrotech",
-      "model": "371015",
-      "page": 79,
+      "model": "MOD300C",
+      "page": 179,
       "rule": "default",
-      "liste": 2168,
+      "liste": 1270,
       "currency": "EUR",
-      "price": "₺77.689,00 KDV dahil",
-      "fiyat_tl": 77689,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Ocak, 4 Brülörlü"
+      "price": "₺45.510,00 KDV dahil",
+      "fiyat_tl": 45510,
+      "dept": "hazirlik",
+      "name": "Gastrotech MOD300C"
     },
     {
-      "id": "gastrotech__371016",
+      "id": "gastrotech__mod300v",
       "brand": "Gastrotech",
-      "model": "371016",
-      "page": 79,
+      "model": "MOD300V",
+      "page": 179,
       "rule": "default",
-      "liste": 5149,
+      "liste": 2150,
       "currency": "EUR",
-      "price": "₺184.511,00 KDV dahil",
-      "fiyat_tl": 184511,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Kuzine, 4 Pleytli + 1 Fırın"
+      "price": "₺77.044,00 KDV dahil",
+      "fiyat_tl": 77044,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371019",
+      "id": "gastrotech__c-254",
       "brand": "Gastrotech",
-      "model": "371019",
-      "page": 79,
+      "model": "C-254",
+      "page": 180,
       "rule": "default",
-      "liste": 3518,
+      "liste": 2990,
       "currency": "EUR",
-      "price": "₺126.065,00 KDV dahil",
-      "fiyat_tl": 126065,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Ocak, 6 Brülörlü"
+      "price": "₺107.144,00 KDV dahil",
+      "fiyat_tl": 107144,
+      "dept": "hazirlik",
+      "name": "Gastrotech C-254"
     },
     {
-      "id": "gastrotech__371038",
+      "id": "gastrotech__c-308",
       "brand": "Gastrotech",
-      "model": "371038",
-      "page": 80,
+      "model": "C-308",
+      "page": 180,
       "rule": "default",
-      "liste": 4938,
+      "liste": 3650,
       "currency": "EUR",
-      "price": "₺176.950,00 KDV dahil",
-      "fiyat_tl": 176950,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelik Düz Yüzeyli"
+      "price": "₺130.795,00 KDV dahil",
+      "fiyat_tl": 130795,
+      "dept": "hazirlik",
+      "name": "Gastrotech C-308"
     },
     {
-      "id": "gastrotech__371041",
+      "id": "gastrotech__c-312",
       "brand": "Gastrotech",
-      "model": "371041",
-      "page": 80,
+      "model": "C-312",
+      "page": 180,
       "rule": "default",
-      "liste": 5040,
+      "liste": 4090,
       "currency": "EUR",
-      "price": "₺180.605,00 KDV dahil",
-      "fiyat_tl": 180605,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelik 1/3 Nervürlü"
+      "price": "₺146.562,00 KDV dahil",
+      "fiyat_tl": 146562,
+      "dept": "hazirlik",
+      "name": "Gastrotech C-312"
     },
     {
-      "id": "gastrotech__371042",
+      "id": "gastrotech__c-62",
       "brand": "Gastrotech",
-      "model": "371042",
-      "page": 80,
+      "model": "C-62",
+      "page": 180,
       "rule": "default",
-      "liste": 4840,
+      "liste": 12000,
       "currency": "EUR",
-      "price": "₺173.438,00 KDV dahil",
-      "fiyat_tl": 173438,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Set üstü Power Grill"
+      "price": "₺430.012,00 KDV dahil",
+      "fiyat_tl": 430012,
+      "dept": "hazirlik",
+      "name": "Gastrotech C-62"
     },
     {
-      "id": "gastrotech__371043",
+      "id": "gastrotech__c420",
       "brand": "Gastrotech",
-      "model": "371043",
-      "page": 80,
+      "model": "C420",
+      "page": 180,
       "rule": "default",
-      "liste": 6044,
+      "liste": 5000,
       "currency": "EUR",
-      "price": "₺216.582,00 KDV dahil",
-      "fiyat_tl": 216582,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Set üstü Power Grill"
+      "price": "₺179.171,00 KDV dahil",
+      "fiyat_tl": 179171,
+      "dept": "hazirlik",
+      "name": "Gastrotech C420"
     },
     {
-      "id": "gastrotech__371193",
+      "id": "gastrotech__ss-08c",
       "brand": "Gastrotech",
-      "model": "371193",
-      "page": 80,
+      "model": "SS-08C",
+      "page": 181,
       "rule": "default",
-      "liste": 3084,
+      "liste": 470,
       "currency": "EUR",
-      "price": "₺110.513,00 KDV dahil",
-      "fiyat_tl": 110513,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelikli Düz Yüzeyli"
+      "price": "₺16.842,00 KDV dahil",
+      "fiyat_tl": 16842,
+      "dept": "hazirlik",
+      "name": "Gastrotech SS-08C"
     },
     {
-      "id": "gastrotech__371320",
+      "id": "gastrotech__ss-10h",
       "brand": "Gastrotech",
-      "model": "371320",
-      "page": 80,
+      "model": "SS-10H",
+      "page": 181,
       "rule": "default",
-      "liste": 3100,
+      "liste": 650,
       "currency": "EUR",
-      "price": "₺111.086,00 KDV dahil",
-      "fiyat_tl": 111086,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelik Düz Yüzeyli"
+      "price": "₺23.292,00 KDV dahil",
+      "fiyat_tl": 23292,
+      "dept": "hazirlik",
+      "name": "Gastrotech SS-10H"
     },
     {
-      "id": "gastrotech__371323",
+      "id": "gastrotech__ss-12h",
       "brand": "Gastrotech",
-      "model": "371323",
-      "page": 80,
+      "model": "SS-12H",
+      "page": 181,
       "rule": "default",
-      "liste": 3221,
+      "liste": 1200,
       "currency": "EUR",
-      "price": "₺115.422,00 KDV dahil",
-      "fiyat_tl": 115422,
-      "dept": "pisirme",
-      "name": "Gastrotech Izgara, Karbon Çelik Nervürlü Yüzeyli"
+      "price": "₺43.001,00 KDV dahil",
+      "fiyat_tl": 43001,
+      "dept": "hazirlik",
+      "name": "Gastrotech SS-12H"
     },
     {
-      "id": "gastrotech__371332",
+      "id": "gastrotech__ss-24h",
       "brand": "Gastrotech",
-      "model": "371332",
-      "page": 80,
+      "model": "SS-24H",
+      "page": 181,
       "rule": "default",
-      "liste": 3032,
+      "liste": 2000,
       "currency": "EUR",
-      "price": "₺108.649,00 KDV dahil",
-      "fiyat_tl": 108649,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelik Nervürlü Yüzeyli"
+      "price": "₺71.669,00 KDV dahil",
+      "fiyat_tl": 71669,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371340",
+      "id": "gastrotech__dfd-20a",
       "brand": "Gastrotech",
-      "model": "371340",
-      "page": 80,
+      "model": "DFD-20A",
+      "page": 183,
       "rule": "default",
-      "liste": 4279,
+      "liste": 13705,
       "currency": "EUR",
-      "price": "₺153.335,00 KDV dahil",
-      "fiyat_tl": 153335,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelikli Düz Yüzeyli"
+      "price": "₺491.108,00 KDV dahil",
+      "fiyat_tl": 491108,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371347",
+      "id": "gastrotech__gp-b",
       "brand": "Gastrotech",
-      "model": "371347",
-      "page": 80,
+      "model": "GP-B",
+      "page": 184,
       "rule": "default",
-      "liste": 4378,
+      "liste": 8300,
       "currency": "EUR",
-      "price": "₺156.882,00 KDV dahil",
-      "fiyat_tl": 156882,
-      "dept": "pisirme",
-      "name": "Gastrotech Pleyt Izgara, Karbon Çelik 1/3 Nervürlü"
+      "price": "₺297.425,00 KDV dahil",
+      "fiyat_tl": 297425,
+      "dept": "hazirlik",
+      "name": "Gastrotech İki Hızlı Cihaz Farkı"
     },
     {
-      "id": "gastrotech__371070",
+      "id": "gastrotech__spa-a22",
       "brand": "Gastrotech",
-      "model": "371070",
-      "page": 81,
+      "model": "SPA-A22",
+      "page": 185,
       "rule": "default",
-      "liste": 4273,
+      "liste": 26000,
       "currency": "EUR",
-      "price": "₺153.120,00 KDV dahil",
-      "fiyat_tl": 153120,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Fritöz, Dolaplı 15 lt."
+      "price": "₺931.691,00 KDV dahil",
+      "fiyat_tl": 931691,
+      "dept": "hazirlik",
+      "name": "Gastrotech SPA-A22"
     },
     {
-      "id": "gastrotech__371071",
+      "id": "gastrotech__spa-m22",
       "brand": "Gastrotech",
-      "model": "371071",
-      "page": 81,
+      "model": "SPA-M22",
+      "page": 185,
       "rule": "default",
-      "liste": 7321,
+      "liste": 16000,
       "currency": "EUR",
-      "price": "₺262.343,00 KDV dahil",
-      "fiyat_tl": 262343,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Fritöz, Dolaplı 15 + 15 lt."
+      "price": "₺573.348,00 KDV dahil",
+      "fiyat_tl": 573348,
+      "dept": "hazirlik",
+      "name": "Gastrotech SPA-M22"
     },
     {
-      "id": "gastrotech__371079",
+      "id": "gastrotech__ip30f",
       "brand": "Gastrotech",
-      "model": "371079",
-      "page": 81,
+      "model": "IP30F",
+      "page": 197,
       "rule": "default",
-      "liste": 2701,
+      "liste": 1850,
       "currency": "EUR",
-      "price": "₺96.788,00 KDV dahil",
-      "fiyat_tl": 96788,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Fritöz 15 lt."
+      "price": "₺66.294,00 KDV dahil",
+      "fiyat_tl": 66294,
+      "dept": "hazirlik",
+      "name": "Gastrotech IP30F"
     },
     {
-      "id": "gastrotech__371080",
+      "id": "gastrotech__mxb7",
       "brand": "Gastrotech",
-      "model": "371080",
-      "page": 81,
+      "model": "MXB7",
+      "page": 197,
       "rule": "default",
-      "liste": 4492,
+      "liste": 1000,
       "currency": "EUR",
-      "price": "₺160.968,00 KDV dahil",
-      "fiyat_tl": 160968,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Fritöz 15 + 15 lt"
+      "price": "₺35.834,00 KDV dahil",
+      "fiyat_tl": 35834,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371083",
+      "id": "gastrotech__wik185",
       "brand": "Gastrotech",
-      "model": "371083",
-      "page": 81,
+      "model": "WIK185",
+      "page": 197,
       "rule": "default",
-      "liste": 8834,
+      "liste": 180,
       "currency": "EUR",
-      "price": "₺316.560,00 KDV dahil",
-      "fiyat_tl": 316560,
-      "dept": "pisirme",
-      "name": "Gastrotech 371083"
+      "price": "₺6.450,00 KDV dahil",
+      "fiyat_tl": 6450,
+      "dept": "hazirlik",
+      "name": "Gastrotech Ürün Adı"
     },
     {
-      "id": "gastrotech__371086",
+      "id": "gastrotech__ef708",
       "brand": "Gastrotech",
-      "model": "371086",
-      "page": 81,
+      "model": "EF708",
+      "page": 198,
       "rule": "default",
-      "liste": 2469,
+      "liste": 710,
       "currency": "EUR",
-      "price": "₺88.475,00 KDV dahil",
-      "fiyat_tl": 88475,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Patates Dinlendirme"
+      "price": "₺25.442,00 KDV dahil",
+      "fiyat_tl": 25442,
+      "dept": "hazirlik",
+      "name": "Gastrotech Genel Özellikler"
     },
     {
-      "id": "gastrotech__371090",
+      "id": "gastrotech__ef708-s",
       "brand": "Gastrotech",
-      "model": "371090",
-      "page": 82,
+      "model": "EF708-S",
+      "page": 198,
       "rule": "default",
-      "liste": 3643,
+      "liste": 755,
       "currency": "EUR",
-      "price": "₺130.544,00 KDV dahil",
-      "fiyat_tl": 130544,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Makarna Pişirici 24,5 lt."
+      "price": "₺27.055,00 KDV dahil",
+      "fiyat_tl": 27055,
+      "dept": "hazirlik",
+      "name": "Gastrotech EF708-S"
     },
     {
-      "id": "gastrotech__371096",
-      "brand": "Gastrotech",
-      "model": "371096",
-      "page": 82,
+      "id": "kitchenaid__5kpmseob",
+      "brand": "KitchenAid",
+      "model": "5KPMSEOB",
+      "page": 202,
       "rule": "default",
-      "liste": 2002,
+      "liste": 1400,
       "currency": "EUR",
-      "price": "₺71.741,00 KDV dahil",
-      "fiyat_tl": 71741,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Benmari"
+      "price": "₺50.168,00 KDV dahil",
+      "fiyat_tl": 50168,
+      "dept": "hazirlik",
+      "name": "KitchenAid 5KSM7990XEWH"
     },
     {
-      "id": "gastrotech__371098",
-      "brand": "Gastrotech",
-      "model": "371098",
-      "page": 82,
+      "id": "kitchenaid__5kpmsewh",
+      "brand": "KitchenAid",
+      "model": "5KPMSEWH",
+      "page": 202,
       "rule": "default",
-      "liste": 4013,
+      "liste": 1400,
       "currency": "EUR",
-      "price": "₺143.803,00 KDV dahil",
-      "fiyat_tl": 143803,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Makarna Pişirici 24,5 lt."
+      "price": "₺50.168,00 KDV dahil",
+      "fiyat_tl": 50168,
+      "dept": "hazirlik",
+      "name": "KitchenAid 5KSM7990XEER"
     },
     {
-      "id": "gastrotech__371100",
-      "brand": "Gastrotech",
-      "model": "371100",
-      "page": 82,
+      "id": "kitchenaid__5ksmfga",
+      "brand": "KitchenAid",
+      "model": "5KSMFGA",
+      "page": 203,
       "rule": "default",
-      "liste": 9027,
+      "liste": 155,
       "currency": "EUR",
-      "price": "₺323.476,00 KDV dahil",
-      "fiyat_tl": 323476,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Makarna Pişirici 20 lt."
-    },
-    {
-      "id": "gastrotech__371181",
-      "brand": "Gastrotech",
-      "model": "371181",
-      "page": 82,
-      "rule": "default",
-      "liste": 8475,
-      "currency": "EUR",
-      "price": "₺303.696,00 KDV dahil",
-      "fiyat_tl": 303696,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Devrilir Tava 60 lt."
-    },
-    {
-      "id": "gastrotech__371183",
-      "brand": "Gastrotech",
-      "model": "371183",
-      "page": 82,
-      "rule": "default",
-      "liste": 8556,
-      "currency": "EUR",
-      "price": "₺306.598,00 KDV dahil",
-      "fiyat_tl": 306598,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Devrilir Tava 60 lt."
-    },
-    {
-      "id": "gastrotech__371112",
-      "brand": "Gastrotech",
-      "model": "371112",
-      "page": 83,
-      "rule": "default",
-      "liste": 609,
-      "currency": "EUR",
-      "price": "₺21.823,00 KDV dahil",
-      "fiyat_tl": 21823,
-      "dept": "pisirme",
-      "name": "Gastrotech 371112"
-    },
-    {
-      "id": "gastrotech__371113",
-      "brand": "Gastrotech",
-      "model": "371113",
-      "page": 83,
-      "rule": "default",
-      "liste": 711,
-      "currency": "EUR",
-      "price": "₺25.478,00 KDV dahil",
-      "fiyat_tl": 25478,
-      "dept": "pisirme",
-      "name": "Gastrotech 371113"
-    },
-    {
-      "id": "gastrotech__371114",
-      "brand": "Gastrotech",
-      "model": "371114",
-      "page": 83,
-      "rule": "default",
-      "liste": 860,
-      "currency": "EUR",
-      "price": "₺30.817,00 KDV dahil",
-      "fiyat_tl": 30817,
-      "dept": "pisirme",
-      "name": "Gastrotech 371114"
-    },
-    {
-      "id": "gastrotech__371116",
-      "brand": "Gastrotech",
-      "model": "371116",
-      "page": 83,
-      "rule": "default",
-      "liste": 835,
-      "currency": "EUR",
-      "price": "₺29.922,00 KDV dahil",
-      "fiyat_tl": 29922,
-      "dept": "pisirme",
-      "name": "Gastrotech 400x730x250"
-    },
-    {
-      "id": "gastrotech__371269",
-      "brand": "Gastrotech",
-      "model": "371269",
-      "page": 83,
-      "rule": "default",
-      "liste": 9624,
-      "currency": "EUR",
-      "price": "₺344.869,00 KDV dahil",
-      "fiyat_tl": 344869,
-      "dept": "pisirme",
-      "name": "Gastrotech Gazlı Kaynatma Tenceresi (İndirekt) 60 lt."
-    },
-    {
-      "id": "gastrotech__371272",
-      "brand": "Gastrotech",
-      "model": "371272",
-      "page": 83,
-      "rule": "default",
-      "liste": 9130,
-      "currency": "EUR",
-      "price": "₺327.167,00 KDV dahil",
-      "fiyat_tl": 327167,
-      "dept": "pisirme",
-      "name": "Gastrotech Elektrikli Kaynatma Tenceresi (İndirekt) 60 lt."
+      "price": "₺5.555,00 KDV dahil",
+      "fiyat_tl": 5555,
+      "dept": "hazirlik",
+      "name": "KitchenAid Kıyma Makinesi - 4 Aparatlı"
     },
     {
       "id": "puqpress__m4",
@@ -11092,447 +11092,14 @@
       "name": "Puqpress Tamper Makinesi (Fiorenzato F64 & F83)"
     }
   ],
-  "skipped_protected": [
-    {
-      "model": "371000",
-      "page": 79,
-      "liste": 1705,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371000",
-        "electrolux-professional__371000",
-        "electrolux-professional__371000"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371001",
-      "page": 79,
-      "liste": 2761,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371001",
-        "electrolux-professional__371001",
-        "electrolux-professional__371001"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371002",
-      "page": 79,
-      "liste": 5084,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371002",
-        "electrolux-professional__371002",
-        "electrolux-professional__371002"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371004",
-      "page": 79,
-      "liste": 3740,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371004",
-        "electrolux-professional__371004",
-        "electrolux-professional__371004"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371014",
-      "page": 79,
-      "liste": 1450,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371014",
-        "electrolux-professional__371014",
-        "electrolux-professional__371014"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371015",
-      "page": 79,
-      "liste": 2168,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371015",
-        "electrolux-professional__371015",
-        "electrolux-professional__371015"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371016",
-      "page": 79,
-      "liste": 5149,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371016",
-        "electrolux-professional__371016",
-        "electrolux-professional__371016"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371019",
-      "page": 79,
-      "liste": 3518,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371019",
-        "electrolux-professional__371019",
-        "electrolux-professional__371019"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371038",
-      "page": 80,
-      "liste": 4938,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371038",
-        "electrolux-professional__371038",
-        "electrolux-professional__371038"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371041",
-      "page": 80,
-      "liste": 5040,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371041",
-        "electrolux-professional__371041",
-        "electrolux-professional__371041"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371042",
-      "page": 80,
-      "liste": 4840,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371042",
-        "electrolux-professional__371042",
-        "electrolux-professional__371042"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371043",
-      "page": 80,
-      "liste": 6044,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371043",
-        "electrolux-professional__371043",
-        "electrolux-professional__371043"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371193",
-      "page": 80,
-      "liste": 3084,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371193",
-        "electrolux-professional__371193",
-        "electrolux-professional__371193"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371320",
-      "page": 80,
-      "liste": 3100,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371320",
-        "electrolux-professional__371320",
-        "electrolux-professional__371320"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371323",
-      "page": 80,
-      "liste": 3221,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371323",
-        "electrolux-professional__371323",
-        "electrolux-professional__371323"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371332",
-      "page": 80,
-      "liste": 3032,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371332",
-        "electrolux-professional__371332",
-        "electrolux-professional__371332"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371340",
-      "page": 80,
-      "liste": 4279,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371340",
-        "electrolux-professional__371340",
-        "electrolux-professional__371340"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371347",
-      "page": 80,
-      "liste": 4378,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371347",
-        "electrolux-professional__371347",
-        "electrolux-professional__371347"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371070",
-      "page": 81,
-      "liste": 4273,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371070",
-        "electrolux-professional__371070",
-        "electrolux-professional__371070"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371071",
-      "page": 81,
-      "liste": 7321,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371071",
-        "electrolux-professional__371071",
-        "electrolux-professional__371071"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371079",
-      "page": 81,
-      "liste": 2701,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371079",
-        "electrolux-professional__371079",
-        "electrolux-professional__371079"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371080",
-      "page": 81,
-      "liste": 4492,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371080",
-        "electrolux-professional__371080",
-        "electrolux-professional__371080"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371083",
-      "page": 81,
-      "liste": 8834,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371083",
-        "electrolux-professional__371083",
-        "electrolux-professional__371083"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371086",
-      "page": 81,
-      "liste": 2469,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371086",
-        "electrolux-professional__371086",
-        "electrolux-professional__371086"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371090",
-      "page": 82,
-      "liste": 3643,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371090",
-        "electrolux-professional__371090",
-        "electrolux-professional__371090"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371096",
-      "page": 82,
-      "liste": 2002,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371096",
-        "electrolux-professional__371096",
-        "electrolux-professional__371096"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371098",
-      "page": 82,
-      "liste": 4013,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371098",
-        "electrolux-professional__371098",
-        "electrolux-professional__371098"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371100",
-      "page": 82,
-      "liste": 9027,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371100",
-        "electrolux-professional__371100",
-        "electrolux-professional__371100"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371181",
-      "page": 82,
-      "liste": 8475,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371181",
-        "electrolux-professional__371181",
-        "electrolux-professional__371181"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371183",
-      "page": 82,
-      "liste": 8556,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371183",
-        "electrolux-professional__371183",
-        "electrolux-professional__371183"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371112",
-      "page": 83,
-      "liste": 609,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371112",
-        "electrolux-professional__371112",
-        "electrolux-professional__371112"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371113",
-      "page": 83,
-      "liste": 711,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371113",
-        "electrolux-professional__371113",
-        "electrolux-professional__371113"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371114",
-      "page": 83,
-      "liste": 860,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371114",
-        "electrolux-professional__371114",
-        "electrolux-professional__371114"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371116",
-      "page": 83,
-      "liste": 835,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371116",
-        "electrolux-professional__371116",
-        "electrolux-professional__371116"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371269",
-      "page": 83,
-      "liste": 9624,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371269",
-        "electrolux-professional__371269",
-        "electrolux-professional__371269"
-      ],
-      "action": "add_as_gastrotech_new"
-    },
-    {
-      "model": "371272",
-      "page": 83,
-      "liste": 9130,
-      "reason": "site_hit_only_rational_or_electrolux",
-      "site_ids": [
-        "electrolux-professional__371272",
-        "electrolux-professional__371272",
-        "electrolux-professional__371272"
-      ],
-      "action": "add_as_gastrotech_new"
-    }
-  ],
+  "skipped_protected": [],
   "skipped_no_price": [],
   "unmatched_existing_note": "sitede eşleşmeyen katalog ürünleri eklendi (added)",
   "stats": {
     "catalog": 852,
-    "updated": 815,
-    "added": 37,
-    "skipped_protected": 36,
+    "updated": 823,
+    "added": 29,
+    "skipped_protected": 0,
     "by_rule": {
       "p41_78": 189,
       "puqpress_list": 3,

@@ -46705,5 +46705,46 @@
     "fiyat_bekleniyor": false,
     "specs": "Tamper Makinesi (Fiorenzato F64 & F83)\nÜrün kodu: M4\nListe fiyatı (EUR): 900\nPuqpress liste=satış\nEqusto satış (EUR): 900\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺60.851,00\nKaynak: Gastrotech 2025-2027 katalog s.238",
     "gastrotech_image": "images/catalog/gastrotech/p238_5.jpg"
+  },
+  {
+    "id": "puqpress__m4",
+    "dept": "kahve",
+    "category": "kahve",
+    "brand": "Puqpress",
+    "name": "Puqpress Tamper Makinesi (Fiorenzato F64 & F83)",
+    "sku": "M4",
+    "model": "M4",
+    "marka_urun_kodu": "M4",
+    "equsto_kod": "EQ-PUQPRESS.M4",
+    "images": [
+      "images/catalog/gastrotech/p238_5.jpg"
+    ],
+    "image": "images/catalog/gastrotech/p238_5.jpg",
+    "keywords": [
+      "Puqpress",
+      "M4",
+      "Puqpress Tamper Makinesi (Fiorenzato F64 & F83)"
+    ],
+    "description": "Puqpress Tamper Makinesi (Fiorenzato F64 & F83)",
+    "aciklama": "Puqpress Tamper Makinesi (Fiorenzato F64 & F83)",
+    "urun_kategori": "kahve",
+    "price": "₺60.851,00 KDV dahil",
+    "fiyat_tl": 60851,
+    "fiyat_tl_net": 50709,
+    "liste_fiyati": 900,
+    "liste_fiyati_eur": 900,
+    "satis_fiyati_eur": 900,
+    "para_birimi": "EUR",
+    "kur_eur_try": 56.3432,
+    "iskonto_oran": 0,
+    "bayi_iskonto": 0,
+    "kdv_oran": 20,
+    "fiyat_kaynagi": "gastrotech-2025-2027",
+    "kaynak_fiyat_listesi": "gastrotech-2025-2027",
+    "gastrotech_page": 238,
+    "gastrotech_model": "M4",
+    "fiyat_bekleniyor": false,
+    "specs": "Tamper Makinesi (Fiorenzato F64 & F83)\nÜrün kodu: M4\nListe fiyatı (EUR): 900\nPuqpress liste=satış\nEqusto satış (EUR): 900\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺60.851,00\nKaynak: Gastrotech 2025-2027 katalog s.238",
+    "gastrotech_image": "images/catalog/gastrotech/p238_5.jpg"
   }
 ]
