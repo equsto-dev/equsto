@@ -529,9 +529,9 @@
     "category": "buz-makineleri",
     "brand": "Şenox",
     "name": "Senox Buz Kırıcı, Paslanmaz Çelik Hazne, 3 Litre, IC80A",
-    "price": "₺27.090,00 + KDV\nKDV Dahil ₺32.508,00",
+    "price": "₺26.875,00 KDV dahil",
     "fiyat_bekleniyor": false,
-    "specs": "Senox Buz Kırıcı, Paslanmaz Çelik Hazne, 3 Litre, IC80A\n\nSenox Buz Kırıcı, Paslanmaz Çelik Hazne, 3 Litre, IC80A Alüminyum alaşımdan yapılmış gövde Paslanmaz Çelik Hazne Güçlü çelik bıçak takımı Güvenlik mikro anahtarı dahildir Profesyonel kullanım için yüksek kalite Havalandırmalı motor uzun süre kullanım Ebatlar :38.5x25.5x58 cm Kapasite : 3 litre\n\nÜrün kodu: 118. IC80A\nModel:  IC-80A\nKategori: İçecek Ekipmanları > İçecek Hazırlama Ekipmanları\nMutbex stok: 10\n\nListe fiyatı (EUR, SENOX PDF): 900\nEqusto satış: liste × %54 (alış %45 + kâr %20) = 486 EUR\nKur: 1 EUR = 55.7403 TRY (KDV %20)\nPDF eşleşme: IC80A\nKaynak fiyat: SENOX 2026-1 PDF\nKaynak ürün: Mutbex — https://www.mutbex.com/senox-buz-kirici-paslanmaz-celik-hazne-3-litre-ic80a\nMarka: Şenox\nBuz makinesi site indirimi: −%3",
+    "specs": "Buz Kırıcı 385x255x580\nÜrün kodu: IC80A\nÖlçü: 385x255x580 mm\nListe fiyatı (EUR): 750\nkatalog %47 iskonto\nEqusto satış (EUR): 397.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺26.875,00\nKaynak: Gastrotech 2025-2027 katalog s.246",
     "aciklama": "Senox Buz Kırıcı, Paslanmaz Çelik Hazne, 3 Litre, IC80A Alüminyum alaşımdan yapılmış gövde Paslanmaz Çelik Hazne Güçlü çelik bıçak takımı Güvenlik mikro anahtarı dahildir Profesyonel kullanım için yüksek kalite Havalandırmalı motor uzun süre kullanım Ebatlar :38.5x25.5x58 cm Kapasite : 3 litre",
     "teknik_ozellikler": [
       "Mutbex kodu: 118. IC80A",
@@ -547,7 +547,7 @@
       "Buz Kıracakları"
     ],
     "images": [
-      "images/catalog/senox/mutbex/16986.jpg"
+      "images/catalog/gastrotech/p246_2.jpg"
     ],
     "sku": "118. IC80A",
     "model": " IC-80A",
@@ -559,15 +559,15 @@
     "mutbex_stok": 10,
     "senox_pdf_match": "IC80A",
     "senox_pdf_fuzzy": false,
-    "liste_fiyati_eur": 900,
-    "satis_fiyati_eur": 486,
+    "liste_fiyati_eur": 750,
+    "satis_fiyati_eur": 397.5,
     "satis_eur_indirimli": 486,
     "satis_oran": 0.54,
     "equsto_kar_oran": 0.2,
-    "kur_eur_try": 55.7403,
-    "fiyat_tl": 32508,
-    "fiyat_tl_net": 27090,
-    "kaynak_fiyat_listesi": "senox-pdf-2026-2-1",
+    "kur_eur_try": 56.3432,
+    "fiyat_tl": 26875,
+    "fiyat_tl_net": 22396,
+    "kaynak_fiyat_listesi": "gastrotech-2025-2027",
     "equsto_kod": "EQ-ŞENOX.118.IC80A",
     "marka_kodu": "ŞENOX",
     "marka_urun_kodu": "118. IC80A",
@@ -580,7 +580,7 @@
       "Buz Makineleri",
       "İçecek Ekipmanları > İçecek Hazırlama Ekipmanları"
     ],
-    "iskonto_oran": 46,
+    "iskonto_oran": 47,
     "senox_mutbex_match": "",
     "senox_pdf_rejected": false,
     "fiyat_havale_tl": 29937,
@@ -590,7 +590,15 @@
     "buz_makinesi_indirim_oran": 0.03,
     "buz_makinesi_indirim_not": "2026-08-10 site −%3",
     "alis_oran": 0.45,
-    "cafemarkt_url": "https://www.cafemarkt.com/senox-ic80a-buz-kirici-3-l"
+    "cafemarkt_url": "https://www.cafemarkt.com/senox-ic80a-buz-kirici-3-l",
+    "liste_fiyati": 750,
+    "para_birimi": "EUR",
+    "bayi_iskonto": 0.47,
+    "fiyat_kaynagi": "gastrotech-2025-2027",
+    "gastrotech_page": 246,
+    "gastrotech_model": "IC80A",
+    "image": "images/catalog/gastrotech/p246_2.jpg",
+    "gastrotech_image": "images/catalog/gastrotech/p246_2.jpg"
   },
   {
     "id": "senox__senox-bz-12",
@@ -11688,15 +11696,15 @@
     "category": "icecek",
     "brand": "Gtech",
     "name": "Gtech CJ8 Katı Meyve Sıkacağı",
-    "price": "₺37.512,02 KDV dahil",
-    "specs": "Gtech CJ8 Katı Meyve Sıkacağı\nKaynak: Cafemarkt (fiyat)\nStok: CJ8\nCafemarkt: https://www.cafemarkt.com/gtech-cj8-kati-meyve-sikacagi\nKaynak fiyat (Cafemarkt KDV dahil): ₺38.277,57\nEqusto Cafemarkt −%2 (KDV dahil): ₺37.512,02\nHavale / EFT: %2 indirim → ₺36.761,78",
+    "price": "₺46.943,00 KDV dahil",
+    "specs": "Katı Meyve Presi\nÜrün kodu: CJ8\nÖlçü: 240x400x530 mm\nListe fiyatı (EUR): 1310\nkatalog %47 iskonto\nEqusto satış (EUR): 694.3\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺46.943,00\nKaynak: Gastrotech 2025-2027 katalog s.245",
     "images": [
-      "images/catalog/cafemarkt/9899db08f0b571ae.jpg"
+      "images/catalog/gastrotech/p245_4.jpg"
     ],
     "sku": "CJ8",
     "model": "CJ8",
-    "fiyat_tl": 37512.02,
-    "kaynak_fiyat_listesi": "cafemarkt-plp",
+    "fiyat_tl": 46943,
+    "kaynak_fiyat_listesi": "gastrotech-2025-2027",
     "fiyat_kaynak": "cafemarkt",
     "cafemarkt_fiyat_kdv_dahil": 38277.57,
     "cafemarkt_fiyat_equsto_kdv_dahil": 37512.02,
@@ -11728,22 +11736,35 @@
       "Gtech CJ8 Katı Meyve Sıkacağı"
     ],
     "description": "Gtech CJ8 Katı Meyve Sıkacağı",
-    "image": "images/catalog/cafemarkt/9899db08f0b571ae.jpg",
-    "fiyat_bekleniyor": false
+    "image": "images/catalog/gastrotech/p245_4.jpg",
+    "fiyat_bekleniyor": false,
+    "fiyat_tl_net": 39119,
+    "liste_fiyati": 1310,
+    "liste_fiyati_eur": 1310,
+    "satis_fiyati_eur": 694.3,
+    "para_birimi": "EUR",
+    "kur_eur_try": 56.3432,
+    "iskonto_oran": 47,
+    "bayi_iskonto": 0.47,
+    "kdv_oran": 20,
+    "fiyat_kaynagi": "gastrotech-2025-2027",
+    "gastrotech_page": 245,
+    "gastrotech_model": "CJ8",
+    "gastrotech_image": "images/catalog/gastrotech/p245_4.jpg"
   },
   {
     "category": "icecek",
     "brand": "Gtech",
     "name": "Gtech CJ5 Narenciye Sıkacağı",
-    "price": "₺9.449,59 KDV dahil",
-    "specs": "Gtech CJ5 Narenciye Sıkacağı\nKaynak: Cafemarkt (fiyat)\nStok: CJ5\nCafemarkt: https://www.cafemarkt.com/gtech-cj50-narenciye-sikacagi\nKaynak fiyat (Cafemarkt KDV dahil): ₺9.642,44\nEqusto Cafemarkt −%2 (KDV dahil): ₺9.449,59\nHavale / EFT: %2 indirim → ₺9.260,60",
+    "price": "₺11.825,00 KDV dahil",
+    "specs": "Gtech CJ5\nÜrün kodu: CJ5\nÖlçü: 300x245x405 mm\nListe fiyatı (EUR): 330\nkatalog %47 iskonto\nEqusto satış (EUR): 174.9\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺11.825,00\nKaynak: Gastrotech 2025-2027 katalog s.245",
     "images": [
-      "images/catalog/cafemarkt/209547477d7bb154.jpg"
+      "images/catalog/gastrotech/p245_1.jpg"
     ],
     "sku": "CJ5",
     "model": "CJ5",
-    "fiyat_tl": 9449.59,
-    "kaynak_fiyat_listesi": "cafemarkt-plp",
+    "fiyat_tl": 11825,
+    "kaynak_fiyat_listesi": "gastrotech-2025-2027",
     "fiyat_kaynak": "cafemarkt",
     "cafemarkt_fiyat_kdv_dahil": 9642.44,
     "cafemarkt_fiyat_equsto_kdv_dahil": 9449.59,
@@ -11775,8 +11796,21 @@
       "Gtech CJ5 Narenciye Sıkacağı"
     ],
     "description": "Gtech CJ5 Narenciye Sıkacağı",
-    "image": "images/catalog/cafemarkt/209547477d7bb154.jpg",
-    "fiyat_bekleniyor": false
+    "image": "images/catalog/gastrotech/p245_1.jpg",
+    "fiyat_bekleniyor": false,
+    "fiyat_tl_net": 9854,
+    "liste_fiyati": 330,
+    "liste_fiyati_eur": 330,
+    "satis_fiyati_eur": 174.9,
+    "para_birimi": "EUR",
+    "kur_eur_try": 56.3432,
+    "iskonto_oran": 47,
+    "bayi_iskonto": 0.47,
+    "kdv_oran": 20,
+    "fiyat_kaynagi": "gastrotech-2025-2027",
+    "gastrotech_page": 245,
+    "gastrotech_model": "CJ5",
+    "gastrotech_image": "images/catalog/gastrotech/p245_1.jpg"
   },
   {
     "category": "icecek",

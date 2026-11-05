@@ -137,6 +137,9 @@ next-env.d.ts
 # Şelale — çay ocağı fiyat listesi seri görselleri
 !public/images/catalog/selale/
 !public/images/catalog/selale/**
+# Gastrotech 2025-2027 katalog görselleri
+!public/images/catalog/gastrotech/
+!public/images/catalog/gastrotech/**
 !public/images/brands/
 !public/images/brands/protek-hijyen.png
 
