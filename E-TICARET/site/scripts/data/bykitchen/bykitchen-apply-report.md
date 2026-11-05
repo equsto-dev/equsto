@@ -1,0 +1,120 @@
+# BYKITCHEN 2027 apply 
+
+- Kur USD: **50.101** | EUR: **56.3432**
+- Formül: liste × **0.55** (%45 iskonto) + KDV %20
+- Katalog: **136** | Güncellenen: **70** | Yeni: **67** | Aynı: **0**
+- Kilitli atlanan: **1** | Sitede olup katalogda yok: **109** | Şüpheli atlanan: **0**
+
+## Fiyatı değişen (ilk 40)
+- `by-kitchen__silencer-00` SILENCER s.4: ₺15.969,98 → **₺16.500** (Δ +530.0200000000004, liste 499 USD)
+- `by-kitchen__silencer-pro-gr` SILENCER.PRO s.4: ₺23.810,11 → **₺25.726** (Δ +1915.8899999999994, liste 778 USD)
+- `by-kitchen__silencer-pro-khz` SILENCER.PRO s.4: ₺10.405,25 → **₺25.726** (Δ +15320.75, liste 778 USD)
+- `by-kitchen__silencer-pro-wh` SILENCER.PRO s.4: ₺23.809,76 → **₺25.726** (Δ +1916.2400000000016, liste 778 USD)
+- `by-kitchen__vortex-00` VORTEX-S s.4: ₺7.028,07 → **₺8.069** (Δ +1040.9300000000003, liste 244 USD)
+- `by-kitchen__dbk` DBK s.5: ₺6.720,83 → **₺6.944** (Δ +223.17000000000007, liste 210 USD)
+- `by-kitchen__dbm-01` DBM-01 s.5: ₺8.321,03 → **₺8.597** (Δ +275.96999999999935, liste 260 USD)
+- `by-kitchen__dph-01` DPH-01 s.6: ₺28.774,77 → **₺33.034** (Δ +4259.23, liste 999 USD)
+- `by-kitchen__dph-f` DPH-F s.6: ₺5.760,71 → **₺5.952** (Δ +191.28999999999996, liste 180 USD)
+- `by-kitchen__dph-s` DPH-S s.6: ₺16.642,07 → **₺17.195** (Δ +552.9300000000003, liste 520 USD)
+- `by-kitchen__dps-m01` DPS-M01 s.6: ₺7.680,96 → **₺7.936** (Δ +255.03999999999996, liste 240 USD)
+- `by-kitchen__dmps-01` DMPS-01 s.8: ₺3.859,68 → **₺4.430** (Δ +570.3200000000002, liste 134 USD)
+- `by-kitchen__dns-01` DNS-01 s.8: ₺11.521,43 → **₺11.904** (Δ +382.5699999999997, liste 360 USD)
+- `by-kitchen__dop-20` DOP-20 s.9: ₺57.270,26 → **₺62.827** (Δ +5556.739999999998, liste 1900 USD)
+- `by-kitchen__dop-20m` DOP-20M s.9: ₺76.409,31 → **₺68.779** (Δ -7630.309999999998, liste 2080 USD)
+- `by-kitchen__dol-80` DOL-80 s.10: ₺74.205,2 → **₺66.794** (Δ -7411.199999999997, liste 2020 USD)
+- `by-kitchen__dop-20mp` DOP-20MP s.10: ₺107.266,92 → **₺96.554** (Δ -10712.919999999998, liste 2920 USD)
+- `by-kitchen__dhc-6` DHC-6 s.12: ₺11.454,05 → **₺12.896** (Δ +1441.9500000000007, liste 390 USD)
+- `by-kitchen__bot-b` BOT-B s.15: ₺24.963,1 → **₺25.792** (Δ +828.9000000000015, liste 780 USD)
+- `by-kitchen__bot-s` BOT-S s.15: ₺22.908,11 → **₺25.792** (Δ +2883.8899999999994, liste 780 USD)
+- `by-kitchen__dsd-01` DSD-01 s.19: ₺31.683,93 → **₺7.936** (Δ -23747.93, liste 240 USD)
+- `by-kitchen__fcm-01` FCM-01 s.20: ₺10.136,84 → **₺12.565** (Δ +2428.16, liste 380 USD)
+- `by-kitchen__fcm-02` FCM-02 s.20: ₺11.167,7 → **₺13.558** (Δ +2390.2999999999993, liste 410 USD)
+- `by-kitchen__fcm-02d` FCM-02D s.20: ₺18.612,84 → **₺22.486** (Δ +3873.16, liste 680 USD)
+- `by-kitchen__fcm-02k` FCM-02K s.21: ₺31.683,93 → **₺32.736** (Δ +1052.0699999999997, liste 990 USD)
+- `by-kitchen__fcm-cp` FCM-CP s.21: ₺979,32 → **₺992** (Δ +12.67999999999995, liste 30 USD)
+- `by-kitchen__dtm-02` DTM-02 s.22: ₺17.265,56 → **₺19.523** (Δ +2257.4399999999987, liste 525 EUR)
+- `by-kitchen__dtm-03` DTM-03 s.22: ₺21.306,44 → **₺23.242** (Δ +1935.5600000000013, liste 625 EUR)
+- `by-kitchen__dic-36` DIC-36 s.24: ₺11.167,7 → **₺11.904** (Δ +736.2999999999993, liste 360 USD)
+- `by-kitchen__dic-36a` DIC-36A s.24: ₺11.841,47 → **₺12.235** (Δ +393.53000000000065, liste 370 USD)
+- `by-kitchen__dic-50` DIC-50 s.24: ₺25.603,18 → **₺26.453** (Δ +849.8199999999997, liste 800 USD)
+- `by-kitchen__dmo-30` DMO-30 s.25: ₺8.237,82 → **₺9.457** (Δ +1219.1800000000003, liste 286 USD)
+- `by-kitchen__dpf-120` DPF-120 s.26: ₺62.087,69 → **₺64.150** (Δ +2062.3099999999977, liste 1940 USD)
+- `by-kitchen__dpoj` DPOJ s.27: ₺40.397,01 → **₺43.648** (Δ +3250.989999999998, liste 1320 USD)
+- `by-kitchen__dpo-502` DPO-502 s.28: ₺35.793,91 → **₺41.003** (Δ +5209.0899999999965, liste 1240 USD)
+- `by-kitchen__dpo-503` DPO-503 s.28: ₺53.690,87 → **₺59.520** (Δ +5829.129999999997, liste 1800 USD)
+- `by-kitchen__dhr` DHR s.31: ₺11.841,47 → **₺12.235** (Δ +393.53000000000065, liste 370 USD)
+- `by-kitchen__dsm-7` DSM-7 s.42: ₺34.531,13 → **₺37.187** (Δ +2655.8700000000026, liste 1000 EUR)
+- `by-kitchen__vc-65ms` VC-65MS s.44: ₺50.885 → **₺41.664** (Δ -9221, liste 1260 USD)
+- `by-kitchen__dgd-220` DGD-220 s.46: ₺22.402,78 → **₺23.147** (Δ +744.2200000000012, liste 700 USD)
+
+## Yeni ürünler
+- `by-kitchen__blm-22d` BLM-22D s.5: **₺33.468** (900 EUR) — CAFE BAR EKİPMANLARI → hazirlik.json
+- `by-kitchen__dpm-b` DPM-B s.7: **₺20.501** (620 USD) — Set Üstü Popcorn Makinesi → hazirlik.json
+- `by-kitchen__dkm-01` DKM-01 s.8: **₺9.920** (300 USD) — Saf bakır motor yapısı → hazirlik.json
+- `by-kitchen__ddm-16` DDM-16 s.11: **₺95.893** (2900 USD) — DONDURMA MAKİNELERİ → hazirlik.json
+- `by-kitchen__ddm-28` DDM-28 s.11: **₺175.253** (5300 USD) — 28 Kg/Gün → hazirlik.json
+- `by-kitchen__fcm-k` FCM-K s.21: **₺12.235** (370 USD) — 1 adet 2.5 litrelik vakum yalıtımlı kahve konteyneri ile birlikte → kahve.json
+- `by-kitchen__skm-01` SKM-01 s.23: **₺95.893** (2900 USD) — Soğuk içecek sunumları için özel olarak tasarlanan bu silindirik plastik şişe, → sogutma.json
+- `by-kitchen__dmo-25` DMO-25 s.25: **₺26.123** (790 USD) — PİŞİRİCİLER → hazirlik.json
+- `by-kitchen__dhp-f` DHP-F s.26: **₺320.747** (9700 USD) — profesyonel mutfaklar için ideal bir çözümdür. → hazirlik.json
+- `by-kitchen__dttf-464` DTTF-464 s.29: **₺163.680** (4950 USD) — İki Katlı Taş Tabanlı Elektrikli Fırın → pisirme.json
+- `by-kitchen__dttf-466` DTTF-466 s.29: **₺196.747** (5950 USD) — İki Katlı Taş Tabanlı Elektrikli Fırın → pisirme.json
+- `by-kitchen__ddp-10` DDP-10 s.30: **₺294.293** (8900 USD) — poğaça, hatta sebze ve et gibi birçok ürünü pişirebilirsiniz. → pisirme.json
+- `by-kitchen__dasc-01` DASC-01 s.34: **₺9.920** (300 USD) — YENİ ÜRÜN → hazirlik.json
+- `by-kitchen__dasc-02` DASC-02 s.34: **₺11.243** (340 USD) — Ankastre Isıtıcı → hazirlik.json
+- `by-kitchen__deb-25` DEB-25 s.35: **₺2.976** (90 USD) — El Blender → hazirlik.json
+- `by-kitchen__ib250ev` IB250EV s.35: **₺12.235** (370 USD) — Profesyonel El Blender → hazirlik.json
+- `by-kitchen__ib350tve` IB350TVE s.36: **₺16.202** (490 USD) — Önerilen Öğütme Derinliği: 240 mm → hazirlik.json
+- `by-kitchen__ib500av` IB500AV s.36: **₺19.510** (590 USD) — HAZIRLIK EKİPMANLARI → hazirlik.json
+- `by-kitchen__dsh-10` DSH-10 s.37: **₺40.010** (1210 USD) — Çift hızlı çalışma sistemi → hazirlik.json
+- `by-kitchen__dsh-20` DSH-20 s.37: **₺59.520** (1800 USD) — Spiral Hamur Yoğurma Makinesi → hazirlik.json
+- `by-kitchen__dsh-30` DSH-30 s.38: **₺79.030** (2390 USD) — Spiral Hamur Yoğurma Makinesi → hazirlik.json
+- `by-kitchen__dsh-40` DSH-40 s.38: **₺87.296** (2640 USD) — YENİ ÜRÜN → hazirlik.json
+- `by-kitchen__dsh-60` DSH-60 s.39: **₺115.403** (3490 USD) — YENİ ÜRÜN → hazirlik.json
+- `by-kitchen__dsh-10l` DSH-10L s.40: **₺75.061** (2270 USD) — Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı → hazirlik.json
+- `by-kitchen__dsh-20l` DSH-20L s.40: **₺84.982** (2570 USD) — Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı → hazirlik.json
+- `by-kitchen__dsh-30l` DSH-30L s.41: **₺107.797** (3260 USD) — Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı → hazirlik.json
+- `by-kitchen__dsh-40l` DSH-40L s.41: **₺129.622** (3920 USD) — Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı → hazirlik.json
+- `by-kitchen__dm-10` DM-10 s.42: **₺36.043** (1090 USD) — Üç kademe hız ayarı vardır. → hazirlik.json
+- `by-kitchen__dm-20` DM-20 s.43: **₺44.309** (1340 USD) — Planet Mikser → hazirlik.json
+- `by-kitchen__dm-30` DM-30 s.43: **₺54.229** (1640 USD) — Planet Mikser → hazirlik.json
+- `by-kitchen__ds1000` DS1000 s.44: **₺5.291** (160 USD) — HAZIRLIK EKİPMANLARI → hazirlik.json
+- `by-kitchen__ds2000` DS2000 s.44: **₺4.960** (150 USD) — Küp Kesme Diski → hazirlik.json
+- `by-kitchen__fs100` FS100 s.44: **₺4.298** (130 USD) — Küp Kesme Diski → hazirlik.json
+- `by-kitchen__sa010` SA010 s.44: **₺3.968** (120 USD) — HAZIRLIK EKİPMANLARI → hazirlik.json
+- `by-kitchen__sa014` SA014 s.44: **₺3.968** (120 USD) — Ürüne Dahil 5 Kesici Disk → hazirlik.json
+- `by-kitchen__cvs101s` CVS101S s.45: **₺27.115** (820 USD) — Çift Pompa Sistemi: Güçlü ve etkili vakumlama performansı. → hazirlik.json
+- `by-kitchen__dgd-250d` DGD-250D s.47: **₺66.133** (2000 USD) — Otomatik Gıda Dilimleme Makinesi → hazirlik.json
+- `by-kitchen__dgd-300d` DGD-300D s.47: **₺84.320** (2550 USD) — GIDA DİLİMLEME MAKİNELERİ → hazirlik.json
+- `by-kitchen__hcs-300b` HCS-300B s.48: **₺228.160** (6900 USD) — GIDA DİLİMLEME MAKİNELERİ → hazirlik.json
+- `by-kitchen__dem-300` DEM-300 s.50: **₺165.002** (4990 USD) — Et Açma Makinesi → hazirlik.json
+- `by-kitchen__dem-435` DEM-435 s.50: **₺284.374** (8600 USD) — Et Açma Makinesi → hazirlik.json
+- `by-kitchen__dem-500` DEM-500 s.50: **₺294.293** (8900 USD) — İstenilen kalınlıkta et açma imkânı sunan → hazirlik.json
+- `by-kitchen__dsa-03` DSA-03 s.52: **₺9.391** (284 USD) — Demonte Servis Arabası → hazirlik.json
+- `by-kitchen__dbt-125` DBT-125 s.53: **₺35.712** (1080 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dbt-70` DBT-70 s.53: **₺21.493** (650 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dbt-95` DBT-95 s.53: **₺29.429** (890 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dbt-120` DBT-120 s.54: **₺36.373** (1100 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dbt-160` DBT-160 s.54: **₺42.656** (1290 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dbt-202` DBT-202 s.54: **₺65.472** (1980 USD) — Sıcak Teşhir Ünitesi → sogutma.json
+- `by-kitchen__dst-09` DST-09 s.58: **₺55.552** (1680 USD) — Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dts-104l` DTS-104L s.59: **₺57.866** (1750 USD) — Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dts-64l` DTS-64L s.59: **₺51.584** (1560 USD) — Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dts-84l` DTS-84L s.59: **₺55.883** (1690 USD) — Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dst-58` DST-58 s.61: **₺41.664** (1260 USD) — Dik Tip Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dst-78` DST-78 s.61: **₺42.325** (1280 USD) — Dik Tip Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dst-98` DST-98 s.61: **₺45.896** (1388 USD) — Dik Tip Set Üstü Soğuk Teşhir → sogutma.json
+- `by-kitchen__dpddi-120` DPDDI-120 s.63: **₺124.661** (3770 USD) — TEŞHİR ÜNİTELERİ → hazirlik.json
+- `by-kitchen__dpddi-90` DPDDI-90 s.63: **₺109.781** (3320 USD) — TEŞHİR ÜNİTELERİ → hazirlik.json
+- `by-kitchen__sfj-90` SFJ-90 s.65: **₺108.790** (3290 USD) — TEŞHİR ÜNİTELERİ → hazirlik.json
+- `by-kitchen__dbb-150p` DBB-150P s.69: **₺39.019** (1180 USD) — 201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller. → hazirlik.json
+- `by-kitchen__dbb-250p` DBB-250P s.69: **₺51.253** (1550 USD) — BAR ALTI ŞİŞE SOĞUTUCULAR → hazirlik.json
+- `by-kitchen__dbb-350p` DBB-350P s.69: **₺66.001** (1996 USD) — 201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller. → hazirlik.json
+- `by-kitchen__wc-22b` WC-22B s.71: **₺49.270** (1490 USD) — CE&ERP standardı → hazirlik.json
+- `by-kitchen__pd-115` PD-115 s.72: **₺46.624** (1410 USD) — ŞARAP DOLAPLARI → sogutma.json
+- `by-kitchen__ddb-02` DDB-02 s.85: **₺7.810** (210 EUR) — Ön Yıkama Duş Bataryası → yikama.json
+- `by-kitchen__dbm-1000d` DBM-1000D s.87: **₺103.751** (2790 EUR) — BULAŞIK MAKİNELERİ → hazirlik.json
+- `by-kitchen__dby-500d` DBY-500D s.87: **₺65.076** (1750 EUR) — Tezgah Altı Bulaşık Makinesi → yikama.json
+
+## Kilitli (dokunulmadı)
+- `by-kitchen__djr` mevcut ₺5760 / katalog ₺5291

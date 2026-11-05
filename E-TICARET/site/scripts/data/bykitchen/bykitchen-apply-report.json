@@ -1,0 +1,2053 @@
+{
+  "at": "2026-11-05T11:06:40.753Z",
+  "dry": false,
+  "rates": {
+    "eurTry": 56.3432,
+    "usdTry": 50.101,
+    "usdEur": 0.8892111204191454,
+    "tcmbDate": "04.11.2026",
+    "fallback": false
+  },
+  "pricing": "liste × 0.55 + KDV %20",
+  "catalog_count": 136,
+  "updated": [
+    {
+      "id": "by-kitchen__silencer-00",
+      "model": "SILENCER",
+      "page": 4,
+      "liste": 499,
+      "currency": "USD",
+      "old_tl": 15969.98,
+      "new_tl": 16500,
+      "delta": 530.0200000000004
+    },
+    {
+      "id": "by-kitchen__silencer-pro-gr",
+      "model": "SILENCER.PRO",
+      "page": 4,
+      "liste": 778,
+      "currency": "USD",
+      "old_tl": 23810.11,
+      "new_tl": 25726,
+      "delta": 1915.8899999999994
+    },
+    {
+      "id": "by-kitchen__silencer-pro-khz",
+      "model": "SILENCER.PRO",
+      "page": 4,
+      "liste": 778,
+      "currency": "USD",
+      "old_tl": 10405.25,
+      "new_tl": 25726,
+      "delta": 15320.75
+    },
+    {
+      "id": "by-kitchen__silencer-pro-wh",
+      "model": "SILENCER.PRO",
+      "page": 4,
+      "liste": 778,
+      "currency": "USD",
+      "old_tl": 23809.76,
+      "new_tl": 25726,
+      "delta": 1916.2400000000016
+    },
+    {
+      "id": "by-kitchen__vortex-00",
+      "model": "VORTEX-S",
+      "page": 4,
+      "liste": 244,
+      "currency": "USD",
+      "old_tl": 7028.07,
+      "new_tl": 8069,
+      "delta": 1040.9300000000003
+    },
+    {
+      "id": "by-kitchen__dbk",
+      "model": "DBK",
+      "page": 5,
+      "liste": 210,
+      "currency": "USD",
+      "old_tl": 6720.83,
+      "new_tl": 6944,
+      "delta": 223.17000000000007
+    },
+    {
+      "id": "by-kitchen__dbm-01",
+      "model": "DBM-01",
+      "page": 5,
+      "liste": 260,
+      "currency": "USD",
+      "old_tl": 8321.03,
+      "new_tl": 8597,
+      "delta": 275.96999999999935
+    },
+    {
+      "id": "by-kitchen__dph-01",
+      "model": "DPH-01",
+      "page": 6,
+      "liste": 999,
+      "currency": "USD",
+      "old_tl": 28774.77,
+      "new_tl": 33034,
+      "delta": 4259.23
+    },
+    {
+      "id": "by-kitchen__dph-f",
+      "model": "DPH-F",
+      "page": 6,
+      "liste": 180,
+      "currency": "USD",
+      "old_tl": 5760.71,
+      "new_tl": 5952,
+      "delta": 191.28999999999996
+    },
+    {
+      "id": "by-kitchen__dph-s",
+      "model": "DPH-S",
+      "page": 6,
+      "liste": 520,
+      "currency": "USD",
+      "old_tl": 16642.07,
+      "new_tl": 17195,
+      "delta": 552.9300000000003
+    },
+    {
+      "id": "by-kitchen__dps-m01",
+      "model": "DPS-M01",
+      "page": 6,
+      "liste": 240,
+      "currency": "USD",
+      "old_tl": 7680.96,
+      "new_tl": 7936,
+      "delta": 255.03999999999996
+    },
+    {
+      "id": "by-kitchen__dmps-01",
+      "model": "DMPS-01",
+      "page": 8,
+      "liste": 134,
+      "currency": "USD",
+      "old_tl": 3859.68,
+      "new_tl": 4430,
+      "delta": 570.3200000000002
+    },
+    {
+      "id": "by-kitchen__dns-01",
+      "model": "DNS-01",
+      "page": 8,
+      "liste": 360,
+      "currency": "USD",
+      "old_tl": 11521.43,
+      "new_tl": 11904,
+      "delta": 382.5699999999997
+    },
+    {
+      "id": "by-kitchen__dop-20",
+      "model": "DOP-20",
+      "page": 9,
+      "liste": 1900,
+      "currency": "USD",
+      "old_tl": 57270.26,
+      "new_tl": 62827,
+      "delta": 5556.739999999998
+    },
+    {
+      "id": "by-kitchen__dop-20m",
+      "model": "DOP-20M",
+      "page": 9,
+      "liste": 2080,
+      "currency": "USD",
+      "old_tl": 76409.31,
+      "new_tl": 68779,
+      "delta": -7630.309999999998
+    },
+    {
+      "id": "by-kitchen__dol-80",
+      "model": "DOL-80",
+      "page": 10,
+      "liste": 2020,
+      "currency": "USD",
+      "old_tl": 74205.2,
+      "new_tl": 66794,
+      "delta": -7411.199999999997
+    },
+    {
+      "id": "by-kitchen__dop-20mp",
+      "model": "DOP-20MP",
+      "page": 10,
+      "liste": 2920,
+      "currency": "USD",
+      "old_tl": 107266.92,
+      "new_tl": 96554,
+      "delta": -10712.919999999998
+    },
+    {
+      "id": "by-kitchen__dhc-6",
+      "model": "DHC-6",
+      "page": 12,
+      "liste": 390,
+      "currency": "USD",
+      "old_tl": 11454.05,
+      "new_tl": 12896,
+      "delta": 1441.9500000000007
+    },
+    {
+      "id": "by-kitchen__bot-b",
+      "model": "BOT-B",
+      "page": 15,
+      "liste": 780,
+      "currency": "USD",
+      "old_tl": 24963.1,
+      "new_tl": 25792,
+      "delta": 828.9000000000015
+    },
+    {
+      "id": "by-kitchen__bot-s",
+      "model": "BOT-S",
+      "page": 15,
+      "liste": 780,
+      "currency": "USD",
+      "old_tl": 22908.11,
+      "new_tl": 25792,
+      "delta": 2883.8899999999994
+    },
+    {
+      "id": "by-kitchen__dsd-01",
+      "model": "DSD-01",
+      "page": 19,
+      "liste": 240,
+      "currency": "USD",
+      "old_tl": 31683.93,
+      "new_tl": 7936,
+      "delta": -23747.93
+    },
+    {
+      "id": "by-kitchen__fcm-01",
+      "model": "FCM-01",
+      "page": 20,
+      "liste": 380,
+      "currency": "USD",
+      "old_tl": 10136.84,
+      "new_tl": 12565,
+      "delta": 2428.16
+    },
+    {
+      "id": "by-kitchen__fcm-02",
+      "model": "FCM-02",
+      "page": 20,
+      "liste": 410,
+      "currency": "USD",
+      "old_tl": 11167.7,
+      "new_tl": 13558,
+      "delta": 2390.2999999999993
+    },
+    {
+      "id": "by-kitchen__fcm-02d",
+      "model": "FCM-02D",
+      "page": 20,
+      "liste": 680,
+      "currency": "USD",
+      "old_tl": 18612.84,
+      "new_tl": 22486,
+      "delta": 3873.16
+    },
+    {
+      "id": "by-kitchen__fcm-02k",
+      "model": "FCM-02K",
+      "page": 21,
+      "liste": 990,
+      "currency": "USD",
+      "old_tl": 31683.93,
+      "new_tl": 32736,
+      "delta": 1052.0699999999997
+    },
+    {
+      "id": "by-kitchen__fcm-cp",
+      "model": "FCM-CP",
+      "page": 21,
+      "liste": 30,
+      "currency": "USD",
+      "old_tl": 979.32,
+      "new_tl": 992,
+      "delta": 12.67999999999995
+    },
+    {
+      "id": "by-kitchen__dtm-02",
+      "model": "DTM-02",
+      "page": 22,
+      "liste": 525,
+      "currency": "EUR",
+      "old_tl": 17265.56,
+      "new_tl": 19523,
+      "delta": 2257.4399999999987
+    },
+    {
+      "id": "by-kitchen__dtm-03",
+      "model": "DTM-03",
+      "page": 22,
+      "liste": 625,
+      "currency": "EUR",
+      "old_tl": 21306.44,
+      "new_tl": 23242,
+      "delta": 1935.5600000000013
+    },
+    {
+      "id": "by-kitchen__dic-36",
+      "model": "DIC-36",
+      "page": 24,
+      "liste": 360,
+      "currency": "USD",
+      "old_tl": 11167.7,
+      "new_tl": 11904,
+      "delta": 736.2999999999993
+    },
+    {
+      "id": "by-kitchen__dic-36a",
+      "model": "DIC-36A",
+      "page": 24,
+      "liste": 370,
+      "currency": "USD",
+      "old_tl": 11841.47,
+      "new_tl": 12235,
+      "delta": 393.53000000000065
+    },
+    {
+      "id": "by-kitchen__dic-50",
+      "model": "DIC-50",
+      "page": 24,
+      "liste": 800,
+      "currency": "USD",
+      "old_tl": 25603.18,
+      "new_tl": 26453,
+      "delta": 849.8199999999997
+    },
+    {
+      "id": "by-kitchen__dmo-30",
+      "model": "DMO-30",
+      "page": 25,
+      "liste": 286,
+      "currency": "USD",
+      "old_tl": 8237.82,
+      "new_tl": 9457,
+      "delta": 1219.1800000000003
+    },
+    {
+      "id": "by-kitchen__dpf-120",
+      "model": "DPF-120",
+      "page": 26,
+      "liste": 1940,
+      "currency": "USD",
+      "old_tl": 62087.69,
+      "new_tl": 64150,
+      "delta": 2062.3099999999977
+    },
+    {
+      "id": "by-kitchen__dpoj",
+      "model": "DPOJ",
+      "page": 27,
+      "liste": 1320,
+      "currency": "USD",
+      "old_tl": 40397.01,
+      "new_tl": 43648,
+      "delta": 3250.989999999998
+    },
+    {
+      "id": "by-kitchen__dpo-502",
+      "model": "DPO-502",
+      "page": 28,
+      "liste": 1240,
+      "currency": "USD",
+      "old_tl": 35793.91,
+      "new_tl": 41003,
+      "delta": 5209.0899999999965
+    },
+    {
+      "id": "by-kitchen__dpo-503",
+      "model": "DPO-503",
+      "page": 28,
+      "liste": 1800,
+      "currency": "USD",
+      "old_tl": 53690.87,
+      "new_tl": 59520,
+      "delta": 5829.129999999997
+    },
+    {
+      "id": "by-kitchen__dhr",
+      "model": "DHR",
+      "page": 31,
+      "liste": 370,
+      "currency": "USD",
+      "old_tl": 11841.47,
+      "new_tl": 12235,
+      "delta": 393.53000000000065
+    },
+    {
+      "id": "by-kitchen__dsm-7",
+      "model": "DSM-7",
+      "page": 42,
+      "liste": 1000,
+      "currency": "EUR",
+      "old_tl": 34531.13,
+      "new_tl": 37187,
+      "delta": 2655.8700000000026
+    },
+    {
+      "id": "by-kitchen__vc-65ms",
+      "model": "VC-65MS",
+      "page": 44,
+      "liste": 1260,
+      "currency": "USD",
+      "old_tl": 50885,
+      "new_tl": 41664,
+      "delta": -9221
+    },
+    {
+      "id": "by-kitchen__dgd-220",
+      "model": "DGD-220",
+      "page": 46,
+      "liste": 700,
+      "currency": "USD",
+      "old_tl": 22402.78,
+      "new_tl": 23147,
+      "delta": 744.2200000000012
+    },
+    {
+      "id": "by-kitchen__dgd-250",
+      "model": "DGD-250",
+      "page": 46,
+      "liste": 780,
+      "currency": "USD",
+      "old_tl": 24963.1,
+      "new_tl": 25792,
+      "delta": 828.9000000000015
+    },
+    {
+      "id": "by-kitchen__dgd-300",
+      "model": "DGD-300",
+      "page": 46,
+      "liste": 1100,
+      "currency": "USD",
+      "old_tl": 35204.36,
+      "new_tl": 36373,
+      "delta": 1168.6399999999994
+    },
+    {
+      "id": "by-kitchen__dgd-320",
+      "model": "DGD-320",
+      "page": 49,
+      "liste": 3660,
+      "currency": "USD",
+      "old_tl": 117134.52,
+      "new_tl": 121024,
+      "delta": 3889.479999999996
+    },
+    {
+      "id": "by-kitchen__dgd-350",
+      "model": "DGD-350",
+      "page": 49,
+      "liste": 6270,
+      "currency": "USD",
+      "old_tl": 200664.88,
+      "new_tl": 207328,
+      "delta": 6663.119999999995
+    },
+    {
+      "id": "by-kitchen__ddkb",
+      "model": "DDKB",
+      "page": 51,
+      "liste": 240,
+      "currency": "USD",
+      "old_tl": 7680.96,
+      "new_tl": 7936,
+      "delta": 255.03999999999996
+    },
+    {
+      "id": "by-kitchen__ddkb-s",
+      "model": "DDKB-S",
+      "page": 51,
+      "liste": 550,
+      "currency": "USD",
+      "old_tl": 17602.18,
+      "new_tl": 18187,
+      "delta": 584.8199999999997
+    },
+    {
+      "id": "by-kitchen__dst-04",
+      "model": "DST-04",
+      "page": 56,
+      "liste": 1520,
+      "currency": "USD",
+      "old_tl": 46517.77,
+      "new_tl": 50261,
+      "delta": 3743.230000000003
+    },
+    {
+      "id": "by-kitchen__dst-05",
+      "model": "DST-05",
+      "page": 56,
+      "liste": 1810,
+      "currency": "USD",
+      "old_tl": 55392.87,
+      "new_tl": 59851,
+      "delta": 4458.129999999997
+    },
+    {
+      "id": "by-kitchen__dst-06",
+      "model": "DST-06",
+      "page": 56,
+      "liste": 1920,
+      "currency": "USD",
+      "old_tl": 58759.29,
+      "new_tl": 63488,
+      "delta": 4728.709999999999
+    },
+    {
+      "id": "by-kitchen__dst-07",
+      "model": "DST-07",
+      "page": 56,
+      "liste": 3400,
+      "currency": "USD",
+      "old_tl": 94871.76,
+      "new_tl": 112427,
+      "delta": 17555.240000000005
+    },
+    {
+      "id": "by-kitchen__dst-10",
+      "model": "DST-10",
+      "page": 57,
+      "liste": 1320,
+      "currency": "USD",
+      "old_tl": 40397.01,
+      "new_tl": 43648,
+      "delta": 3250.989999999998
+    },
+    {
+      "id": "by-kitchen__dst-08",
+      "model": "DST-08",
+      "page": 58,
+      "liste": 1620,
+      "currency": "USD",
+      "old_tl": 49578.15,
+      "new_tl": 53568,
+      "delta": 3989.8499999999985
+    },
+    {
+      "id": "by-kitchen__dbd-01",
+      "model": "DBD-01",
+      "page": 60,
+      "liste": 3500,
+      "currency": "USD",
+      "old_tl": 107113.28,
+      "new_tl": 115733,
+      "delta": 8619.720000000001
+    },
+    {
+      "id": "by-kitchen__dst-02",
+      "model": "DST-02",
+      "page": 62,
+      "liste": 2220,
+      "currency": "USD",
+      "old_tl": 56617.02,
+      "new_tl": 73408,
+      "delta": 16790.980000000003
+    },
+    {
+      "id": "by-kitchen__dst-235",
+      "model": "DST-235",
+      "page": 62,
+      "liste": 2740,
+      "currency": "USD",
+      "old_tl": 83854.4,
+      "new_tl": 90602,
+      "delta": 6747.600000000006
+    },
+    {
+      "id": "by-kitchen__dpd-120",
+      "model": "DPD-120",
+      "page": 64,
+      "liste": 4300,
+      "currency": "USD",
+      "old_tl": 125994.57,
+      "new_tl": 142187,
+      "delta": 16192.429999999993
+    },
+    {
+      "id": "by-kitchen__dpd-150",
+      "model": "DPD-150",
+      "page": 64,
+      "liste": 4900,
+      "currency": "USD",
+      "old_tl": 149958.59,
+      "new_tl": 162026,
+      "delta": 12067.410000000003
+    },
+    {
+      "id": "by-kitchen__dpd-90",
+      "model": "DPD-90",
+      "page": 64,
+      "liste": 3800,
+      "currency": "USD",
+      "old_tl": 110531.6,
+      "new_tl": 125653,
+      "delta": 15121.399999999994
+    },
+    {
+      "id": "by-kitchen__dpdk",
+      "model": "DPDK",
+      "page": 65,
+      "liste": 5590,
+      "currency": "USD",
+      "old_tl": 164652,
+      "new_tl": 184843,
+      "delta": 20191
+    },
+    {
+      "id": "by-kitchen__dbb-150",
+      "model": "DBB-150",
+      "page": 68,
+      "liste": 1090,
+      "currency": "USD",
+      "old_tl": 34884.32,
+      "new_tl": 36043,
+      "delta": 1158.6800000000003
+    },
+    {
+      "id": "by-kitchen__dbb-250",
+      "model": "DBB-250",
+      "page": 68,
+      "liste": 1320,
+      "currency": "USD",
+      "old_tl": 37569.29,
+      "new_tl": 43648,
+      "delta": 6078.709999999999
+    },
+    {
+      "id": "by-kitchen__dbb-350",
+      "model": "DBB-350",
+      "page": 68,
+      "liste": 1680,
+      "currency": "USD",
+      "old_tl": 53766.67,
+      "new_tl": 55552,
+      "delta": 1785.3300000000017
+    },
+    {
+      "id": "by-kitchen__dsc-800",
+      "model": "DSC-800",
+      "page": 70,
+      "liste": 2680,
+      "currency": "USD",
+      "old_tl": 82018.17,
+      "new_tl": 88619,
+      "delta": 6600.830000000002
+    },
+    {
+      "id": "by-kitchen__wc34b",
+      "model": "WC-34B",
+      "page": 71,
+      "liste": 1760,
+      "currency": "USD",
+      "old_tl": 56326.98,
+      "new_tl": 58198,
+      "delta": 1871.0199999999968
+    },
+    {
+      "id": "by-kitchen__wc-73b",
+      "model": "WC-73B",
+      "page": 72,
+      "liste": 1930,
+      "currency": "USD",
+      "old_tl": 61767.66,
+      "new_tl": 63818,
+      "delta": 2050.3399999999965
+    },
+    {
+      "id": "by-kitchen__by-yd300",
+      "model": "BY.YD300",
+      "page": 78,
+      "liste": 713,
+      "currency": "EUR",
+      "old_tl": 20423.82,
+      "new_tl": 26514,
+      "delta": 6090.18
+    },
+    {
+      "id": "by-kitchen__by-yd400",
+      "model": "BY.YD400",
+      "page": 78,
+      "liste": 835,
+      "currency": "EUR",
+      "old_tl": 23880.15,
+      "new_tl": 31051,
+      "delta": 7170.8499999999985
+    },
+    {
+      "id": "by-kitchen__by-yd500",
+      "model": "BY.YD500",
+      "page": 79,
+      "liste": 972,
+      "currency": "EUR",
+      "old_tl": 28593.34,
+      "new_tl": 36145,
+      "delta": 7551.66
+    },
+    {
+      "id": "by-kitchen__by-yd600",
+      "model": "BY.YD600",
+      "page": 80,
+      "liste": 1154,
+      "currency": "EUR",
+      "old_tl": 34249.17,
+      "new_tl": 42913,
+      "delta": 8663.830000000002
+    },
+    {
+      "id": "by-kitchen__sphere-140",
+      "model": "SPHERE-140",
+      "page": 82,
+      "liste": 1520,
+      "currency": "USD",
+      "old_tl": 40426.07,
+      "new_tl": 50261,
+      "delta": 9834.93
+    }
+  ],
+  "added": [
+    {
+      "id": "by-kitchen__blm-22d",
+      "model": "BLM-22D",
+      "page": 5,
+      "liste": 900,
+      "currency": "EUR",
+      "fiyat_tl": 33468,
+      "dept": "hazirlik.json",
+      "name": "CAFE BAR EKİPMANLARI"
+    },
+    {
+      "id": "by-kitchen__dpm-b",
+      "model": "DPM-B",
+      "page": 7,
+      "liste": 620,
+      "currency": "USD",
+      "fiyat_tl": 20501,
+      "dept": "hazirlik.json",
+      "name": "Set Üstü Popcorn Makinesi"
+    },
+    {
+      "id": "by-kitchen__dkm-01",
+      "model": "DKM-01",
+      "page": 8,
+      "liste": 300,
+      "currency": "USD",
+      "fiyat_tl": 9920,
+      "dept": "hazirlik.json",
+      "name": "Saf bakır motor yapısı"
+    },
+    {
+      "id": "by-kitchen__ddm-16",
+      "model": "DDM-16",
+      "page": 11,
+      "liste": 2900,
+      "currency": "USD",
+      "fiyat_tl": 95893,
+      "dept": "hazirlik.json",
+      "name": "DONDURMA MAKİNELERİ"
+    },
+    {
+      "id": "by-kitchen__ddm-28",
+      "model": "DDM-28",
+      "page": 11,
+      "liste": 5300,
+      "currency": "USD",
+      "fiyat_tl": 175253,
+      "dept": "hazirlik.json",
+      "name": "28 Kg/Gün"
+    },
+    {
+      "id": "by-kitchen__fcm-k",
+      "model": "FCM-K",
+      "page": 21,
+      "liste": 370,
+      "currency": "USD",
+      "fiyat_tl": 12235,
+      "dept": "kahve.json",
+      "name": "1 adet 2.5 litrelik vakum yalıtımlı kahve konteyneri ile birlikte"
+    },
+    {
+      "id": "by-kitchen__skm-01",
+      "model": "SKM-01",
+      "page": 23,
+      "liste": 2900,
+      "currency": "USD",
+      "fiyat_tl": 95893,
+      "dept": "sogutma.json",
+      "name": "Soğuk içecek sunumları için özel olarak tasarlanan bu silindirik plastik şişe,"
+    },
+    {
+      "id": "by-kitchen__dmo-25",
+      "model": "DMO-25",
+      "page": 25,
+      "liste": 790,
+      "currency": "USD",
+      "fiyat_tl": 26123,
+      "dept": "hazirlik.json",
+      "name": "PİŞİRİCİLER"
+    },
+    {
+      "id": "by-kitchen__dhp-f",
+      "model": "DHP-F",
+      "page": 26,
+      "liste": 9700,
+      "currency": "USD",
+      "fiyat_tl": 320747,
+      "dept": "hazirlik.json",
+      "name": "profesyonel mutfaklar için ideal bir çözümdür."
+    },
+    {
+      "id": "by-kitchen__dttf-464",
+      "model": "DTTF-464",
+      "page": 29,
+      "liste": 4950,
+      "currency": "USD",
+      "fiyat_tl": 163680,
+      "dept": "pisirme.json",
+      "name": "İki Katlı Taş Tabanlı Elektrikli Fırın"
+    },
+    {
+      "id": "by-kitchen__dttf-466",
+      "model": "DTTF-466",
+      "page": 29,
+      "liste": 5950,
+      "currency": "USD",
+      "fiyat_tl": 196747,
+      "dept": "pisirme.json",
+      "name": "İki Katlı Taş Tabanlı Elektrikli Fırın"
+    },
+    {
+      "id": "by-kitchen__ddp-10",
+      "model": "DDP-10",
+      "page": 30,
+      "liste": 8900,
+      "currency": "USD",
+      "fiyat_tl": 294293,
+      "dept": "pisirme.json",
+      "name": "poğaça, hatta sebze ve et gibi birçok ürünü pişirebilirsiniz."
+    },
+    {
+      "id": "by-kitchen__dasc-01",
+      "model": "DASC-01",
+      "page": 34,
+      "liste": 300,
+      "currency": "USD",
+      "fiyat_tl": 9920,
+      "dept": "hazirlik.json",
+      "name": "YENİ ÜRÜN"
+    },
+    {
+      "id": "by-kitchen__dasc-02",
+      "model": "DASC-02",
+      "page": 34,
+      "liste": 340,
+      "currency": "USD",
+      "fiyat_tl": 11243,
+      "dept": "hazirlik.json",
+      "name": "Ankastre Isıtıcı"
+    },
+    {
+      "id": "by-kitchen__deb-25",
+      "model": "DEB-25",
+      "page": 35,
+      "liste": 90,
+      "currency": "USD",
+      "fiyat_tl": 2976,
+      "dept": "hazirlik.json",
+      "name": "El Blender"
+    },
+    {
+      "id": "by-kitchen__ib250ev",
+      "model": "IB250EV",
+      "page": 35,
+      "liste": 370,
+      "currency": "USD",
+      "fiyat_tl": 12235,
+      "dept": "hazirlik.json",
+      "name": "Profesyonel El Blender"
+    },
+    {
+      "id": "by-kitchen__ib350tve",
+      "model": "IB350TVE",
+      "page": 36,
+      "liste": 490,
+      "currency": "USD",
+      "fiyat_tl": 16202,
+      "dept": "hazirlik.json",
+      "name": "Önerilen Öğütme Derinliği: 240 mm"
+    },
+    {
+      "id": "by-kitchen__ib500av",
+      "model": "IB500AV",
+      "page": 36,
+      "liste": 590,
+      "currency": "USD",
+      "fiyat_tl": 19510,
+      "dept": "hazirlik.json",
+      "name": "HAZIRLIK EKİPMANLARI"
+    },
+    {
+      "id": "by-kitchen__dsh-10",
+      "model": "DSH-10",
+      "page": 37,
+      "liste": 1210,
+      "currency": "USD",
+      "fiyat_tl": 40010,
+      "dept": "hazirlik.json",
+      "name": "Çift hızlı çalışma sistemi"
+    },
+    {
+      "id": "by-kitchen__dsh-20",
+      "model": "DSH-20",
+      "page": 37,
+      "liste": 1800,
+      "currency": "USD",
+      "fiyat_tl": 59520,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinesi"
+    },
+    {
+      "id": "by-kitchen__dsh-30",
+      "model": "DSH-30",
+      "page": 38,
+      "liste": 2390,
+      "currency": "USD",
+      "fiyat_tl": 79030,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinesi"
+    },
+    {
+      "id": "by-kitchen__dsh-40",
+      "model": "DSH-40",
+      "page": 38,
+      "liste": 2640,
+      "currency": "USD",
+      "fiyat_tl": 87296,
+      "dept": "hazirlik.json",
+      "name": "YENİ ÜRÜN"
+    },
+    {
+      "id": "by-kitchen__dsh-60",
+      "model": "DSH-60",
+      "page": 39,
+      "liste": 3490,
+      "currency": "USD",
+      "fiyat_tl": 115403,
+      "dept": "hazirlik.json",
+      "name": "YENİ ÜRÜN"
+    },
+    {
+      "id": "by-kitchen__dsh-10l",
+      "model": "DSH-10L",
+      "page": 40,
+      "liste": 2270,
+      "currency": "USD",
+      "fiyat_tl": 75061,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı"
+    },
+    {
+      "id": "by-kitchen__dsh-20l",
+      "model": "DSH-20L",
+      "page": 40,
+      "liste": 2570,
+      "currency": "USD",
+      "fiyat_tl": 84982,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı"
+    },
+    {
+      "id": "by-kitchen__dsh-30l",
+      "model": "DSH-30L",
+      "page": 41,
+      "liste": 3260,
+      "currency": "USD",
+      "fiyat_tl": 107797,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı"
+    },
+    {
+      "id": "by-kitchen__dsh-40l",
+      "model": "DSH-40L",
+      "page": 41,
+      "liste": 3920,
+      "currency": "USD",
+      "fiyat_tl": 129622,
+      "dept": "hazirlik.json",
+      "name": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı"
+    },
+    {
+      "id": "by-kitchen__dm-10",
+      "model": "DM-10",
+      "page": 42,
+      "liste": 1090,
+      "currency": "USD",
+      "fiyat_tl": 36043,
+      "dept": "hazirlik.json",
+      "name": "Üç kademe hız ayarı vardır."
+    },
+    {
+      "id": "by-kitchen__dm-20",
+      "model": "DM-20",
+      "page": 43,
+      "liste": 1340,
+      "currency": "USD",
+      "fiyat_tl": 44309,
+      "dept": "hazirlik.json",
+      "name": "Planet Mikser"
+    },
+    {
+      "id": "by-kitchen__dm-30",
+      "model": "DM-30",
+      "page": 43,
+      "liste": 1640,
+      "currency": "USD",
+      "fiyat_tl": 54229,
+      "dept": "hazirlik.json",
+      "name": "Planet Mikser"
+    },
+    {
+      "id": "by-kitchen__ds1000",
+      "model": "DS1000",
+      "page": 44,
+      "liste": 160,
+      "currency": "USD",
+      "fiyat_tl": 5291,
+      "dept": "hazirlik.json",
+      "name": "HAZIRLIK EKİPMANLARI"
+    },
+    {
+      "id": "by-kitchen__ds2000",
+      "model": "DS2000",
+      "page": 44,
+      "liste": 150,
+      "currency": "USD",
+      "fiyat_tl": 4960,
+      "dept": "hazirlik.json",
+      "name": "Küp Kesme Diski"
+    },
+    {
+      "id": "by-kitchen__fs100",
+      "model": "FS100",
+      "page": 44,
+      "liste": 130,
+      "currency": "USD",
+      "fiyat_tl": 4298,
+      "dept": "hazirlik.json",
+      "name": "Küp Kesme Diski"
+    },
+    {
+      "id": "by-kitchen__sa010",
+      "model": "SA010",
+      "page": 44,
+      "liste": 120,
+      "currency": "USD",
+      "fiyat_tl": 3968,
+      "dept": "hazirlik.json",
+      "name": "HAZIRLIK EKİPMANLARI"
+    },
+    {
+      "id": "by-kitchen__sa014",
+      "model": "SA014",
+      "page": 44,
+      "liste": 120,
+      "currency": "USD",
+      "fiyat_tl": 3968,
+      "dept": "hazirlik.json",
+      "name": "Ürüne Dahil 5 Kesici Disk"
+    },
+    {
+      "id": "by-kitchen__cvs101s",
+      "model": "CVS101S",
+      "page": 45,
+      "liste": 820,
+      "currency": "USD",
+      "fiyat_tl": 27115,
+      "dept": "hazirlik.json",
+      "name": "Çift Pompa Sistemi: Güçlü ve etkili vakumlama performansı."
+    },
+    {
+      "id": "by-kitchen__dgd-250d",
+      "model": "DGD-250D",
+      "page": 47,
+      "liste": 2000,
+      "currency": "USD",
+      "fiyat_tl": 66133,
+      "dept": "hazirlik.json",
+      "name": "Otomatik Gıda Dilimleme Makinesi"
+    },
+    {
+      "id": "by-kitchen__dgd-300d",
+      "model": "DGD-300D",
+      "page": 47,
+      "liste": 2550,
+      "currency": "USD",
+      "fiyat_tl": 84320,
+      "dept": "hazirlik.json",
+      "name": "GIDA DİLİMLEME MAKİNELERİ"
+    },
+    {
+      "id": "by-kitchen__hcs-300b",
+      "model": "HCS-300B",
+      "page": 48,
+      "liste": 6900,
+      "currency": "USD",
+      "fiyat_tl": 228160,
+      "dept": "hazirlik.json",
+      "name": "GIDA DİLİMLEME MAKİNELERİ"
+    },
+    {
+      "id": "by-kitchen__dem-300",
+      "model": "DEM-300",
+      "page": 50,
+      "liste": 4990,
+      "currency": "USD",
+      "fiyat_tl": 165002,
+      "dept": "hazirlik.json",
+      "name": "Et Açma Makinesi"
+    },
+    {
+      "id": "by-kitchen__dem-435",
+      "model": "DEM-435",
+      "page": 50,
+      "liste": 8600,
+      "currency": "USD",
+      "fiyat_tl": 284374,
+      "dept": "hazirlik.json",
+      "name": "Et Açma Makinesi"
+    },
+    {
+      "id": "by-kitchen__dem-500",
+      "model": "DEM-500",
+      "page": 50,
+      "liste": 8900,
+      "currency": "USD",
+      "fiyat_tl": 294293,
+      "dept": "hazirlik.json",
+      "name": "İstenilen kalınlıkta et açma imkânı sunan"
+    },
+    {
+      "id": "by-kitchen__dsa-03",
+      "model": "DSA-03",
+      "page": 52,
+      "liste": 284,
+      "currency": "USD",
+      "fiyat_tl": 9391,
+      "dept": "hazirlik.json",
+      "name": "Demonte Servis Arabası"
+    },
+    {
+      "id": "by-kitchen__dbt-125",
+      "model": "DBT-125",
+      "page": 53,
+      "liste": 1080,
+      "currency": "USD",
+      "fiyat_tl": 35712,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dbt-70",
+      "model": "DBT-70",
+      "page": 53,
+      "liste": 650,
+      "currency": "USD",
+      "fiyat_tl": 21493,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dbt-95",
+      "model": "DBT-95",
+      "page": 53,
+      "liste": 890,
+      "currency": "USD",
+      "fiyat_tl": 29429,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dbt-120",
+      "model": "DBT-120",
+      "page": 54,
+      "liste": 1100,
+      "currency": "USD",
+      "fiyat_tl": 36373,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dbt-160",
+      "model": "DBT-160",
+      "page": 54,
+      "liste": 1290,
+      "currency": "USD",
+      "fiyat_tl": 42656,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dbt-202",
+      "model": "DBT-202",
+      "page": 54,
+      "liste": 1980,
+      "currency": "USD",
+      "fiyat_tl": 65472,
+      "dept": "sogutma.json",
+      "name": "Sıcak Teşhir Ünitesi"
+    },
+    {
+      "id": "by-kitchen__dst-09",
+      "model": "DST-09",
+      "page": 58,
+      "liste": 1680,
+      "currency": "USD",
+      "fiyat_tl": 55552,
+      "dept": "sogutma.json",
+      "name": "Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dts-104l",
+      "model": "DTS-104L",
+      "page": 59,
+      "liste": 1750,
+      "currency": "USD",
+      "fiyat_tl": 57866,
+      "dept": "sogutma.json",
+      "name": "Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dts-64l",
+      "model": "DTS-64L",
+      "page": 59,
+      "liste": 1560,
+      "currency": "USD",
+      "fiyat_tl": 51584,
+      "dept": "sogutma.json",
+      "name": "Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dts-84l",
+      "model": "DTS-84L",
+      "page": 59,
+      "liste": 1690,
+      "currency": "USD",
+      "fiyat_tl": 55883,
+      "dept": "sogutma.json",
+      "name": "Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dst-58",
+      "model": "DST-58",
+      "page": 61,
+      "liste": 1260,
+      "currency": "USD",
+      "fiyat_tl": 41664,
+      "dept": "sogutma.json",
+      "name": "Dik Tip Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dst-78",
+      "model": "DST-78",
+      "page": 61,
+      "liste": 1280,
+      "currency": "USD",
+      "fiyat_tl": 42325,
+      "dept": "sogutma.json",
+      "name": "Dik Tip Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dst-98",
+      "model": "DST-98",
+      "page": 61,
+      "liste": 1388,
+      "currency": "USD",
+      "fiyat_tl": 45896,
+      "dept": "sogutma.json",
+      "name": "Dik Tip Set Üstü Soğuk Teşhir"
+    },
+    {
+      "id": "by-kitchen__dpddi-120",
+      "model": "DPDDI-120",
+      "page": 63,
+      "liste": 3770,
+      "currency": "USD",
+      "fiyat_tl": 124661,
+      "dept": "hazirlik.json",
+      "name": "TEŞHİR ÜNİTELERİ"
+    },
+    {
+      "id": "by-kitchen__dpddi-90",
+      "model": "DPDDI-90",
+      "page": 63,
+      "liste": 3320,
+      "currency": "USD",
+      "fiyat_tl": 109781,
+      "dept": "hazirlik.json",
+      "name": "TEŞHİR ÜNİTELERİ"
+    },
+    {
+      "id": "by-kitchen__sfj-90",
+      "model": "SFJ-90",
+      "page": 65,
+      "liste": 3290,
+      "currency": "USD",
+      "fiyat_tl": 108790,
+      "dept": "hazirlik.json",
+      "name": "TEŞHİR ÜNİTELERİ"
+    },
+    {
+      "id": "by-kitchen__dbb-150p",
+      "model": "DBB-150P",
+      "page": 69,
+      "liste": 1180,
+      "currency": "USD",
+      "fiyat_tl": 39019,
+      "dept": "hazirlik.json",
+      "name": "201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller."
+    },
+    {
+      "id": "by-kitchen__dbb-250p",
+      "model": "DBB-250P",
+      "page": 69,
+      "liste": 1550,
+      "currency": "USD",
+      "fiyat_tl": 51253,
+      "dept": "hazirlik.json",
+      "name": "BAR ALTI ŞİŞE SOĞUTUCULAR"
+    },
+    {
+      "id": "by-kitchen__dbb-350p",
+      "model": "DBB-350P",
+      "page": 69,
+      "liste": 1996,
+      "currency": "USD",
+      "fiyat_tl": 66001,
+      "dept": "hazirlik.json",
+      "name": "201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller."
+    },
+    {
+      "id": "by-kitchen__wc-22b",
+      "model": "WC-22B",
+      "page": 71,
+      "liste": 1490,
+      "currency": "USD",
+      "fiyat_tl": 49270,
+      "dept": "hazirlik.json",
+      "name": "CE&ERP standardı"
+    },
+    {
+      "id": "by-kitchen__pd-115",
+      "model": "PD-115",
+      "page": 72,
+      "liste": 1410,
+      "currency": "USD",
+      "fiyat_tl": 46624,
+      "dept": "sogutma.json",
+      "name": "ŞARAP DOLAPLARI"
+    },
+    {
+      "id": "by-kitchen__ddb-02",
+      "model": "DDB-02",
+      "page": 85,
+      "liste": 210,
+      "currency": "EUR",
+      "fiyat_tl": 7810,
+      "dept": "yikama.json",
+      "name": "Ön Yıkama Duş Bataryası"
+    },
+    {
+      "id": "by-kitchen__dbm-1000d",
+      "model": "DBM-1000D",
+      "page": 87,
+      "liste": 2790,
+      "currency": "EUR",
+      "fiyat_tl": 103751,
+      "dept": "hazirlik.json",
+      "name": "BULAŞIK MAKİNELERİ"
+    },
+    {
+      "id": "by-kitchen__dby-500d",
+      "model": "DBY-500D",
+      "page": 87,
+      "liste": 1750,
+      "currency": "EUR",
+      "fiyat_tl": 65076,
+      "dept": "yikama.json",
+      "name": "Tezgah Altı Bulaşık Makinesi"
+    }
+  ],
+  "unchanged": [],
+  "locked_skip": [
+    {
+      "id": "by-kitchen__djr",
+      "model": "DJR",
+      "mevcut": 5760,
+      "katalog": 5291
+    }
+  ],
+  "unmatched_site": [
+    {
+      "id": "by-kitchen__ib250-bld190-ewik",
+      "sku": "IB250.BLD190.EWIK",
+      "fiyat_tl": 9769.63,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__deb-25-eco",
+      "sku": "DEB.25.ECO",
+      "fiyat_tl": 2505.58,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpm-k",
+      "sku": "DPM.K",
+      "fiyat_tl": 19842.46,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-khz",
+      "sku": "VORTEX.PRO.KHZ",
+      "fiyat_tl": 3722.57,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-khz",
+      "sku": "VORTEX.KHZ",
+      "fiyat_tl": 3722.57,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-btk",
+      "sku": "VORTEX.BTK",
+      "fiyat_tl": 3083.78,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-bhz",
+      "sku": "VORTEX.PRO.BHZ",
+      "fiyat_tl": 2090.66,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-mud",
+      "sku": "VORTEX.MUD",
+      "fiyat_tl": 1321.57,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-mud",
+      "sku": "VORTEX.PRO.MUD",
+      "fiyat_tl": 889.94,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__by-sw-01",
+      "sku": "BY.SW.01",
+      "fiyat_tl": 36605.76,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ib350-bld250-wik",
+      "sku": "IB350.BLD250.WIK",
+      "fiyat_tl": 12771.27,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ib500-bld5-w250",
+      "sku": "IB500.BLD5.W250",
+      "fiyat_tl": 16994.11,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__wc-34b1",
+      "sku": "WC.34B1",
+      "fiyat_tl": 52259.11,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddkb-t",
+      "sku": "DDKB.T",
+      "fiyat_tl": 1824.23,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__wc-22b1",
+      "sku": "WC.22B1",
+      "fiyat_tl": 43639.94,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dop-22",
+      "sku": "DOP.22",
+      "fiyat_tl": 60807.54,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dph-sf",
+      "sku": "DPH.SF",
+      "fiyat_tl": 22402.78,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-05-02",
+      "sku": "DST.05.02",
+      "fiyat_tl": 55698.91,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpm-ss",
+      "sku": "DPM.SS",
+      "fiyat_tl": 18722.32,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-bhz",
+      "sku": "VORTEX.BHZ",
+      "fiyat_tl": 2555.11,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-kpk",
+      "sku": "VORTEX.KPK",
+      "fiyat_tl": 660.78,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-kpk",
+      "sku": "VORTEX.PRO.KPK",
+      "fiyat_tl": 629.97,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-180l",
+      "sku": "DST.180L",
+      "fiyat_tl": 73449.11,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-260l",
+      "sku": "DST.260L",
+      "fiyat_tl": 88751.01,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-06-02",
+      "sku": "DST.06.02",
+      "fiyat_tl": 59065.33,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpm-s",
+      "sku": "DPM.S",
+      "fiyat_tl": 19842.46,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dop-s",
+      "sku": "DOP.S",
+      "fiyat_tl": 40408.77,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-630-edge",
+      "sku": "KIVI.630.EDGE",
+      "fiyat_tl": 95144.28,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-p-630",
+      "sku": "KIVI.P.630",
+      "fiyat_tl": 73433.75,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-1270",
+      "sku": "KIVI.1270",
+      "fiyat_tl": 142348.34,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-360",
+      "sku": "DST.360",
+      "fiyat_tl": 183592.16,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ded-02",
+      "sku": "DED.02",
+      "fiyat_tl": 51429.34,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-1910",
+      "sku": "KIVI.1910",
+      "fiyat_tl": 257109.98,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-1620-edge",
+      "sku": "KIVI.1620.EDGE",
+      "fiyat_tl": 223717.64,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-1270-edge",
+      "sku": "KIVI.1270.EDGE",
+      "fiyat_tl": 176329.18,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpd-915",
+      "sku": "DPD.915",
+      "fiyat_tl": 100812.5,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ded-01",
+      "sku": "DED.01",
+      "fiyat_tl": 47755.82,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dbd-02",
+      "sku": "DBD.02",
+      "fiyat_tl": 113540.09,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsd-300",
+      "sku": "DSD.300",
+      "fiyat_tl": 47941.94,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dss-67-1",
+      "sku": "DSS.67.1",
+      "fiyat_tl": 57841.18,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__wc-22w1",
+      "sku": "WC.22W1",
+      "fiyat_tl": 48646.03,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__wc-34bk",
+      "sku": "WC.34BK",
+      "fiyat_tl": 60807.54,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-disk",
+      "sku": "VORTEX.DISK",
+      "fiyat_tl": 687.24,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpm-a",
+      "sku": "DPM.A",
+      "fiyat_tl": 25571.17,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpm-ka",
+      "sku": "DPM.KA",
+      "fiyat_tl": 31363.89,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dhc-3",
+      "sku": "DHC.3",
+      "fiyat_tl": 9921.23,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-wh",
+      "sku": "VORTEX.WH",
+      "fiyat_tl": 7028.07,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-red",
+      "sku": "VORTEX.RED",
+      "fiyat_tl": 7028.07,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-wh",
+      "sku": "VORTEX.PRO.WH",
+      "fiyat_tl": 12161.51,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro-red",
+      "sku": "VORTEX.PRO.RED",
+      "fiyat_tl": 12161.51,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-215",
+      "sku": "DST.215",
+      "fiyat_tl": 76203.45,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__vortex-pro",
+      "sku": "VORTEX.PRO",
+      "fiyat_tl": 12161.51,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-1620",
+      "sku": "KIVI.1620",
+      "fiyat_tl": 168577.31,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dss-67",
+      "sku": "DSS.67",
+      "fiyat_tl": 57229.1,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-p-1270",
+      "sku": "KIVI.P.1270",
+      "fiyat_tl": 139557.19,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-630",
+      "sku": "KIVI.630",
+      "fiyat_tl": 74902.43,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-170",
+      "sku": "DST.170",
+      "fiyat_tl": 91199.31,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dst-03",
+      "sku": "DST.03",
+      "fiyat_tl": 177502.01,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-p-1620",
+      "sku": "KIVI.P.1620",
+      "fiyat_tl": 165271.86,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__kivi-p-1910",
+      "sku": "KIVI.P.1910",
+      "fiyat_tl": 223166.61,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtm-15",
+      "sku": "DTM.15",
+      "fiyat_tl": 10881.35,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtm-10",
+      "sku": "DTM.10",
+      "fiyat_tl": 8321.03,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtm-20",
+      "sku": "DTM.20",
+      "fiyat_tl": 11393.41,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bar-duo",
+      "sku": "BAR.DUO",
+      "fiyat_tl": 30297.76,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__barista-one",
+      "sku": "BARISTA.ONE",
+      "fiyat_tl": 47813.94,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dei",
+      "sku": "DEI",
+      "fiyat_tl": 1152.15,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bpc-syh",
+      "sku": "BPC.SYH",
+      "fiyat_tl": 3200.4,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bcm",
+      "sku": "BCM",
+      "fiyat_tl": 70088.69,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bcm-pro",
+      "sku": "BCM.PRO",
+      "fiyat_tl": 102412.7,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bcm-prolux",
+      "sku": "BCM.PROLUX",
+      "fiyat_tl": 108813.5,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpog-45",
+      "sku": "DPOG.45",
+      "fiyat_tl": 53690.87,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpc-16",
+      "sku": "DPC.16",
+      "fiyat_tl": 35078.03,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dic-50w",
+      "sku": "DIC.50W",
+      "fiyat_tl": 27331.39,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bhp16a",
+      "sku": "BHP16A",
+      "fiyat_tl": 358444.45,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dic-36c",
+      "sku": "DIC.36C",
+      "fiyat_tl": 12481.54,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bhp30a",
+      "sku": "BHP30A",
+      "fiyat_tl": 422452.38,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bcc50a",
+      "sku": "BCC50A",
+      "fiyat_tl": 633678.57,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__bcc30a",
+      "sku": "BCC30A",
+      "fiyat_tl": 510463.29,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dpf-120-ha",
+      "sku": "DPF.120.HA",
+      "fiyat_tl": 67208.33,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dic-35",
+      "sku": "DIC.35",
+      "fiyat_tl": 11218.24,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsd-1-3",
+      "sku": "DSD.1.3",
+      "fiyat_tl": 8641.51,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsd-1-2",
+      "sku": "DSD.1.2",
+      "fiyat_tl": 8353.44,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsd-1-1",
+      "sku": "DSD.1.1",
+      "fiyat_tl": 7777.3,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__private-ice",
+      "sku": "PRIVATE.ICE",
+      "fiyat_tl": 15842.1,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__by-yd400p",
+      "sku": "BY.YD400P",
+      "fiyat_tl": 26708.07,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__by-yd600p",
+      "sku": "BY.YD600P",
+      "fiyat_tl": 36762.87,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__by-yd500p",
+      "sku": "BY.YD500P",
+      "fiyat_tl": 30792.83,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__by-370k-s",
+      "sku": "BY.370K.S",
+      "fiyat_tl": 33664.18,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-2n",
+      "sku": "DTS.2N",
+      "fiyat_tl": 98634.13,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-2",
+      "sku": "DTS.2",
+      "fiyat_tl": 72919.46,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-3",
+      "sku": "DTG.3",
+      "fiyat_tl": 89817.68,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-3",
+      "sku": "DTS.3",
+      "fiyat_tl": 84491.06,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-2",
+      "sku": "DTG.2",
+      "fiyat_tl": 76592.99,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddt-67",
+      "sku": "DDT.67",
+      "fiyat_tl": 88751.01,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-4",
+      "sku": "DTS.4",
+      "fiyat_tl": 108001.62,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-3n",
+      "sku": "DTG.3N",
+      "fiyat_tl": 114613.96,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-2n",
+      "sku": "DTG.2N",
+      "fiyat_tl": 103593.39,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddg-1n",
+      "sku": "DDG.1N",
+      "fiyat_tl": 115348.67,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-4n",
+      "sku": "DTS.4N",
+      "fiyat_tl": 125286.52,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-4n",
+      "sku": "DTG.4N",
+      "fiyat_tl": 146573.62,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dtg-4",
+      "sku": "DTG.4",
+      "fiyat_tl": 113328.23,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddg-2n",
+      "sku": "DDG.2N",
+      "fiyat_tl": 157961.55,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dts-3n",
+      "sku": "DTS.3N",
+      "fiyat_tl": 108581.65,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddg-1",
+      "sku": "DDG.1",
+      "fiyat_tl": 90368.7,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__ddg-2",
+      "sku": "DDG.2",
+      "fiyat_tl": 120491.6,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsg-2",
+      "sku": "DSG.2",
+      "fiyat_tl": 110573.09,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dsg-3",
+      "sku": "DSG.3",
+      "fiyat_tl": 135920.4,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dbm-1000",
+      "sku": "DBM.1000",
+      "fiyat_tl": 104541.16,
+      "kaynak": "cafemarkt"
+    },
+    {
+      "id": "by-kitchen__dby-500",
+      "sku": "DBY.500",
+      "fiyat_tl": 64286.68,
+      "kaynak": "cafemarkt"
+    }
+  ],
+  "suspicious": []
+}

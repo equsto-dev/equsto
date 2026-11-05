@@ -10974,16 +10974,16 @@
     "category": "icecek",
     "brand": "By Kitchen",
     "name": "By Kitchen DMPS-01 Kollu Narenciye Sıkacağı",
-    "price": "₺3.859,68 KDV dahil",
-    "specs": "By Kitchen DMPS-01 Kollu Narenciye Sıkacağı\nKaynak: Cafemarkt (fiyat)\nStok: DMPS.01\nCafemarkt: https://www.cafemarkt.com/by-kitchen-dmps-01-kollu-narenciye-sikacagi\nKaynak fiyat (Cafemarkt KDV dahil): ₺3.938,45\nEqusto Cafemarkt −%2 (KDV dahil): ₺3.859,68\nHavale / EFT: %2 indirim → ₺3.782,49",
+    "price": "₺4.430,00 KDV dahil",
+    "specs": "By Kitchen DMPS-01 Kollu Narenciye Sıkacağı\n\nÜrün kodu: DMPS-01\nListe fiyatı (USD): 134\n%45 iskonto → satış USD: 73.7\nKur (USD/TRY): 50.101\nEqusto satış (KDV hariç): ₺3.692,00\nEqusto satış (KDV dahil): ₺4.430,00\nHavale / EFT: %2 indirim → ₺4.341,00\nKaynak: BYKITCHEN 2027 katalog s.8",
     "images": [
       "images/catalog/cafemarkt/e3169deb1f4bb156.jpg"
     ],
     "sku": "DMPS.01",
     "model": "DMPS.01",
-    "fiyat_tl": 3859.68,
-    "kaynak_fiyat_listesi": "cafemarkt-plp",
-    "fiyat_kaynak": "cafemarkt",
+    "fiyat_tl": 4430,
+    "kaynak_fiyat_listesi": "BYKITCHEN 2027",
+    "fiyat_kaynak": "bykitchen-2027-catalog",
     "cafemarkt_fiyat_kdv_dahil": 3938.45,
     "cafemarkt_fiyat_equsto_kdv_dahil": 3859.68,
     "cafemarkt_indirim_oran": 0.02,
@@ -11015,7 +11015,12 @@
     ],
     "description": "By Kitchen DMPS-01 Kollu Narenciye Sıkacağı",
     "image": "images/catalog/cafemarkt/e3169deb1f4bb156.jpg",
-    "fiyat_bekleniyor": false
+    "fiyat_bekleniyor": false,
+    "fiyat_havale_tl": 4341,
+    "bykitchen_liste": 134,
+    "bykitchen_currency": "USD",
+    "bykitchen_page": 8,
+    "bykitchen_satis_oran": 0.55
   },
   {
     "category": "icecek",
