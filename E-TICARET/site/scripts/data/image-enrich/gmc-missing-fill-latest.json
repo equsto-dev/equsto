@@ -1,0 +1,71 @@
+{
+  "at": "2026-11-04T23:59:12.109Z",
+  "dryRun": false,
+  "stats": {
+    "filledCm": 194,
+    "filledBrand": 0,
+    "failed": 0,
+    "watermarkSkip": 0,
+    "catalogUpdates": 1
+  },
+  "processing": 194,
+  "ok": 194,
+  "failSample": [],
+  "okSample": [
+    {
+      "hero": "images/catalog/cafemarkt/portakal-sikma-makinesi-no-11-otomatik-portakal-sikma-makineleri-santos-22436-54-O.jpg",
+      "brand": "Santos",
+      "skus": [
+        "058.NO.11"
+      ],
+      "ok": true,
+      "method": "cafemarkt_b",
+      "dest": "images/catalog/cafemarkt/portakal-sikma-makinesi-no-11-otomatik-portakal-sikma-makineleri-santos-22436-54-O.jpg",
+      "src": "https://witcdn.cafemarkt.com/portakal-sikma-makinesi-no-11-otomatik-portakal-sikma-makineleri-santos-22436-54-B.jpg"
+    },
+    {
+      "hero": "images/catalog/cafemarkt/santos-no11-c-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-santos-22440-12-O.jpg",
+      "brand": "Santos",
+      "skus": [
+        "058.NO.11.C"
+      ],
+      "ok": true,
+      "method": "cafemarkt_b",
+      "dest": "images/catalog/cafemarkt/santos-no11-c-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-santos-22440-12-O.jpg",
+      "src": "https://witcdn.cafemarkt.com/santos-no11-c-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-santos-22440-12-B.jpg"
+    },
+    {
+      "hero": "images/catalog/cafemarkt/santos-no50-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46077-12-O.jpg",
+      "brand": "Santos",
+      "skus": [
+        "058.NO.50"
+      ],
+      "ok": true,
+      "method": "cafemarkt_b",
+      "dest": "images/catalog/cafemarkt/santos-no50-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46077-12-O.jpg",
+      "src": "https://witcdn.cafemarkt.com/santos-no50-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46077-12-B.jpg"
+    },
+    {
+      "hero": "images/catalog/cafemarkt/santos-no70-portakal-sikma-makinesi-kati-meyve-ve-narenciye-sikacaklari-santos-22442-12-O.jpg",
+      "brand": "Santos",
+      "skus": [
+        "058.NO.70"
+      ],
+      "ok": true,
+      "method": "cafemarkt_b",
+      "dest": "images/catalog/cafemarkt/santos-no70-portakal-sikma-makinesi-kati-meyve-ve-narenciye-sikacaklari-santos-22442-12-O.jpg",
+      "src": "https://witcdn.cafemarkt.com/santos-no70-portakal-sikma-makinesi-kati-meyve-ve-narenciye-sikacaklari-santos-22442-12-B.jpg"
+    },
+    {
+      "hero": "images/catalog/cafemarkt/santos-no28-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46082-12-O.jpg",
+      "brand": "Santos",
+      "skus": [
+        "058.NO.28"
+      ],
+      "ok": true,
+      "method": "cafemarkt_b",
+      "dest": "images/catalog/cafemarkt/santos-no28-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46082-12-O.jpg",
+      "src": "https://witcdn.cafemarkt.com/santos-no28-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46082-12-B.jpg"
+    }
+  ]
+}

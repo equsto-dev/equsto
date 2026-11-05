@@ -117,6 +117,7 @@
     "catalog:images:enrich:cm:premium": "node scripts/enrich-cafemarkt-galleries.mjs --premium --apply",
     "catalog:images:enrich:cm:all": "node scripts/enrich-cafemarkt-galleries.mjs --all --apply --concurrency=5 --delay=80",
     "catalog:images:fix-gmc-hero:cm": "node scripts/fix-cafemarkt-gmc-hero-images.mjs --concurrency=6 --delay=40",
+    "catalog:images:fill-missing-cm": "node scripts/fill-missing-cafemarkt-heroes.mjs --concurrency=6 --delay=35",
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
     "catalog:atalay:web-desc": "node scripts/fetch-atalay-web-descriptions.mjs",
     "catalog:atalay:web-desc:full": "node scripts/fetch-atalay-web-descriptions.mjs --refresh-index --force",
