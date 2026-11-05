@@ -3,15 +3,28 @@
  * Tek fotoğraflı ürünlere detay kırpımları ekler (additional_image_link + PDP/JSON-LD).
  */
 
+import fs from "node:fs";
+import path from "node:path";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
 import { resolveCatalogImagePath } from "@/lib/catalog-image-resolve";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 export const GMC_MIN_IMAGES_PER_OFFER = 4;
 export const GMC_MAX_ADDITIONAL_IMAGES = 10;
+/** GMC image_link minimum (Google: 500×500, Ocak 2027 zorunlu). */
+export const GMC_MIN_IMAGE_PX = 500;
 
 export const GMC_CROP_VARIANTS = ["detail", "upper", "closeup"] as const;
 export type GmcCropVariant = (typeof GMC_CROP_VARIANTS)[number];
+
+/** Ana görsel: kırpma yok, yalnızca min kenar güvence. */
+export const GMC_HERO_VARIANT = "hero" as const;
+export type GmcHeroVariant = typeof GMC_HERO_VARIANT;
+export type GmcImgVariant = GmcCropVariant | GmcHeroVariant;
+
+export function isGmcImgVariant(v: string): v is GmcImgVariant {
+  return v === GMC_HERO_VARIANT || isGmcCropVariant(v);
+}
 
 const PHOTO_EXT = /\.(jpe?g|png|webp|gif|bmp|tiff?)(\?|#|$)/i;
 const TECH_IMG =
@@ -68,7 +81,7 @@ export function sanitizeGmcSourceRel(raw: string): string {
   return s;
 }
 
-export function buildGmcCropApiPath(variant: GmcCropVariant, sourceRel: string): string {
+export function buildGmcCropApiPath(variant: GmcImgVariant, sourceRel: string): string {
   const rel = sanitizeGmcSourceRel(sourceRel);
   if (!rel) return "";
   return `/api/gmc/img/${variant}?src=${encodeURIComponent(rel)}`;
@@ -76,13 +89,35 @@ export function buildGmcCropApiPath(variant: GmcCropVariant, sourceRel: string):
 
 export function buildGmcCropApiUrl(
   origin: string,
-  variant: GmcCropVariant,
+  variant: GmcImgVariant,
   sourceRel: string,
 ): string {
   const path = buildGmcCropApiPath(variant, sourceRel);
   if (!path) return "";
   const base = String(origin || getSiteOrigin() || "").replace(/\/$/, "");
   return `${base}${path}`;
+}
+
+/** image_link için min-px güvence URL’si (kaynak küçükse sunucu büyütür). */
+export function buildGmcEnsureHeroUrl(origin: string, sourceRel: string): string {
+  return buildGmcCropApiUrl(origin, GMC_HERO_VARIANT, sourceRel);
+}
+
+/**
+ * Yerel dosya çok küçükse (tipik 400×400 CafeMarkt ~9–12KB) GMC hero API’ye yönlendir.
+ * Büyük / CDN-only dosyalara dokunmaz.
+ */
+export function shouldEnsureGmcHeroRel(rel: string): boolean {
+  const clean = sanitizeGmcSourceRel(rel);
+  if (!clean) return false;
+  try {
+    const abs = path.join(process.cwd(), "public", clean);
+    const st = fs.statSync(abs);
+    // 800×800 -B ~20–40KB; 400×400 hash ~8–12KB
+    return st.size > 0 && st.size < 18_000;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -92,18 +127,29 @@ export function buildGmcCropApiUrl(
 export function expandOfferImageUrls(
   photoRels: string[],
   origin: string,
-  opts?: { minTotal?: number; maxAdditional?: number; includeSynthetic?: boolean },
+  opts?: {
+    minTotal?: number;
+    maxAdditional?: number;
+    includeSynthetic?: boolean;
+    /** true: küçük yerel hero → /api/gmc/img/hero (GMC 500×500) */
+    ensureHeroMin?: boolean;
+  },
 ): { imageLink: string; additionalImageLinks: string[] } {
   const minTotal = opts?.minTotal ?? GMC_MIN_IMAGES_PER_OFFER;
   const maxAdditional = opts?.maxAdditional ?? GMC_MAX_ADDITIONAL_IMAGES;
   const includeSynthetic = opts?.includeSynthetic !== false;
+  const ensureHeroMin = opts?.ensureHeroMin === true;
 
   const abs = photoRels
     .map((rel) => absoluteAssetUrl(rel.startsWith("/") ? rel : `/${rel}`, origin))
     .filter(Boolean);
   if (!abs.length) return { imageLink: "", additionalImageLinks: [] };
 
-  const imageLink = abs[0];
+  let imageLink = abs[0];
+  if (ensureHeroMin && shouldEnsureGmcHeroRel(photoRels[0])) {
+    const ensured = buildGmcEnsureHeroUrl(origin, photoRels[0]);
+    if (ensured) imageLink = ensured;
+  }
   const additional: string[] = [];
   const seen = new Set<string>([imageLink.toLowerCase()]);
 

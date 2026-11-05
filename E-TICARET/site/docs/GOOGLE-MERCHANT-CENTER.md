@@ -48,7 +48,7 @@ Tüm katalog (teklif ürünleri dahil) denemek için:
 |------|--------|
 | Geçersiz fiyat | `price` metninde TRY; `fiyat_tl` güncel mi kontrol edin |
 | Görsel 404 | `/images/catalog/...` veya `/data/images/...` canlıda açılıyor mu |
-| Görsel çok küçük | GMC min **500×500** (önerilen **800×800**). Cafemarkt `-K` = 250px — `-B` kullanın: `npm run catalog:atalay:gmc-images -- --model="E AEI - 360"` |
+| Görsel çok küçük | GMC min **500×500** (önerilen **800×800**, zorunluluk: 31 Oca 2027). CafeMarkt hash/400px hero’lar: `npm run catalog:images:fix-gmc-hero:cm` (witcdn `-B` → yerinde yaz). Kalan küçükler: feed `image_link` → `/api/gmc/img/hero?src=…`. Atalay: `npm run catalog:atalay:gmc-images -- --model="E AEI - 360"` |
 | Yanlış görsel (varyant) | Düz / nervürlü / krom karışması — `scripts/fetch-atalay-gmc-images.mjs` model eşlemesi |
 | Eksik açıklama | `specs` / `name` boş ürünleri katalogdan düzeltin |
 | Kimlik (GTIN) | Feed `identifier_exists=false` — normaldir, MPN/SKU kullanılır |

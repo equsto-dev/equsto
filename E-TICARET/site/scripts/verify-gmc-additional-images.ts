@@ -30,6 +30,12 @@ assert(
   "synthetic urls should hit crop API",
 );
 
+const ensured = expandOfferImageUrls(["images/catalog/ozti/web/ozti-demo.jpg"], origin, {
+  ensureHeroMin: true,
+  includeSynthetic: false,
+});
+assert(ensured.imageLink.includes("ozti-demo") || ensured.imageLink.includes("/api/gmc/img/hero"), "ensure hero link");
+
 assert(sanitizeGmcSourceRel("../etc/passwd") === "", "path traversal");
 assert(sanitizeGmcSourceRel("https://evil.test/x.jpg") === "", "ssrf absolute");
 assert(

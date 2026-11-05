@@ -115,13 +115,16 @@ async function downloadProcessed(url, destAbs) {
   const h = meta.height || 0;
   if (w < 64 || h < 64) return null;
   if (w < MIN_PX || h < MIN_PX || w < TARGET_PX || h < TARGET_PX) {
-    const side = Math.max(MIN_PX, Math.min(TARGET_PX, Math.max(w, h, MIN_PX)));
+    // GMC: her iki kenar ≥500 — fit:inside kısa kenarı kaçırır.
+    const scale = Math.max(MIN_PX / w, MIN_PX / h, TARGET_PX / Math.max(w, h));
+    const tw = Math.max(MIN_PX, Math.round(w * scale));
+    const th = Math.max(MIN_PX, Math.round(h * scale));
     pipeline = sharp(buf, { failOn: "none" })
       .rotate()
       .resize({
-        width: side,
-        height: side,
-        fit: "inside",
+        width: tw,
+        height: th,
+        fit: "fill",
         withoutEnlargement: false,
       });
   } else {
