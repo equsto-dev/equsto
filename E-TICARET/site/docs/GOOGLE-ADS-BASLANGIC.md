@@ -65,9 +65,11 @@ Başka terim öğrenmene gerek yok; sıradaki adımda sadece bunlara odaklanaca�
 - Görünmüyorsa → reklam açmayız, önce düzeltiriz
 
 ### Adım 5 — İlk küçük reklam (çok düşük bütçe)
-- Tek hedef: **PFOS teklifi**
-- Tek landing: `https://equsto.com/pfos`
-- Günlük 50–100 TL test; sonuçları birlikte okuruz
+- Tek hedef: **Shop** (pişirme mağaza)
+- Tek landing: `https://equsto.com/shop/pisirme`
+- Dönüşüm: `equsto_lead` birincil; `equsto_quote` (PFOS) sonra
+- **Kilitli bütçe: 2.000 TL/ay ≈ 65 TL/gün** (ilk 7 gün 50 TL)
+- Kısıtlı bütçe mimarisi → **[`GOOGLE-ADS-KISITLI-BUTCE-PLANI.md`](./GOOGLE-ADS-KISITLI-BUTCE-PLANI.md)**
 
 **Adım 5’e Adım 1–4 bitmeden geçilmez.**
 
@@ -105,9 +107,13 @@ Mağaza, Performance Max, Merchant Center → **çok sonra**; şimdilik düşün
 
 **Sıradaki adım:** Adım 3 — Google Ads hesabını Analytics'e bağla, «teklif gönderildi» dönüşümünü tanımla (henüz para ekleme).
 
+**Panelde tıklama tıklama rehber:** [`GOOGLE-ADS-PANEL-ADIMLAR.md`](./GOOGLE-ADS-PANEL-ADIMLAR.md) (A→E: fatura, GA4, dönüşüm, test, kampanya).
+
 ---
 
 ## İlgili dosyalar
 
 - `.env.example` — GA4 / Ads değişkenleri
+- `docs/GOOGLE-ADS-PANEL-ADIMLAR.md` — ads.google.com kurulum adımları
+- `docs/GOOGLE-ADS-KISITLI-BUTCE-PLANI.md` — kısıtlı bütçe kampanya planı (Adım 5+)
 - `docs/GOOGLE-MERCHANT-CENTER.md` — ürün feed (ileride, şimdilik okuma)
