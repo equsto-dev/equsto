@@ -35,6 +35,10 @@ const ensured = expandOfferImageUrls(["images/catalog/ozti/web/ozti-demo.jpg"], 
   includeSynthetic: false,
 });
 assert(ensured.imageLink.includes("ozti-demo") || ensured.imageLink.includes("/api/gmc/img/hero"), "ensure hero link");
+assert(
+  ensured.imageLink.startsWith(origin) && !ensured.imageLink.includes("cloudfront.net"),
+  "feed ensureHeroMin should prefer origin over CDN",
+);
 
 assert(sanitizeGmcSourceRel("../etc/passwd") === "", "path traversal");
 assert(sanitizeGmcSourceRel("https://evil.test/x.jpg") === "", "ssrf absolute");

@@ -133,15 +133,29 @@ export function expandOfferImageUrls(
     includeSynthetic?: boolean;
     /** true: küçük yerel hero → /api/gmc/img/hero (GMC 500×500) */
     ensureHeroMin?: boolean;
+    /**
+     * true: CDN yerine site origin kullan.
+     * Hetzner public/ güncel, S3/CloudFront gecikmeli olduğunda GMC eski 400px görmesin.
+     */
+    preferOrigin?: boolean;
   },
 ): { imageLink: string; additionalImageLinks: string[] } {
   const minTotal = opts?.minTotal ?? GMC_MIN_IMAGES_PER_OFFER;
   const maxAdditional = opts?.maxAdditional ?? GMC_MAX_ADDITIONAL_IMAGES;
   const includeSynthetic = opts?.includeSynthetic !== false;
   const ensureHeroMin = opts?.ensureHeroMin === true;
+  // Feed yolu: ensureHeroMin ile birlikte origin tercih et (CDN lag güvenliği).
+  const preferOrigin = opts?.preferOrigin === true || ensureHeroMin;
 
   const abs = photoRels
-    .map((rel) => absoluteAssetUrl(rel.startsWith("/") ? rel : `/${rel}`, origin))
+    .map((rel) => {
+      const path = rel.startsWith("/") ? rel : `/${rel}`;
+      if (preferOrigin) {
+        const base = String(origin || getSiteOrigin() || "").replace(/\/$/, "");
+        return base ? `${base}${path}` : absoluteAssetUrl(path, origin);
+      }
+      return absoluteAssetUrl(path, origin);
+    })
     .filter(Boolean);
   if (!abs.length) return { imageLink: "", additionalImageLinks: [] };
 
