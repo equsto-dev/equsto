@@ -28065,7 +28065,7 @@
     "aciklama": "KitchenAid Classic 4,3 Litre Stand Mikser - Beyaz 5K45SSEWH",
     "keywords": "kitchenaid, kitchen aid, stand mikser, planet mikser, set üstü mikser, KitchenAid Classic 4,3 Litre Stand Mikser - Beyaz 5K45SSEWH",
     "images": [
-      "images/catalog/gastrotech/p201_2.jpg"
+      "images/catalog/kitchenaid/5k45ss.jpg"
     ],
     "sku": "5K45SSEWH",
     "model": "5K45SSEWH",
@@ -28093,8 +28093,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 201,
     "gastrotech_model": "5K45SSEWH",
-    "image": "images/catalog/gastrotech/p201_2.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p201_2.jpg"
+    "image": "images/catalog/kitchenaid/5k45ss.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-classic-4-3-litre-stand-mikser-parlak-siyah-5k45sseob",
@@ -28108,7 +28107,15 @@
     "aciklama": "KitchenAid Classic 4,3 Litre Stand Mikser - Parlak Siyah 5K45SSEOB",
     "keywords": "kitchenaid, kitchen aid, stand mikser, planet mikser, set üstü mikser, KitchenAid Classic 4,3 Litre Stand Mikser - Parlak Siyah 5K45SSEOB",
     "images": [
-      "images/catalog/gastrotech/p201_1.jpg"
+      "images/catalog/kitchenaid/5k45ss.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-24320-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-27491-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85443-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85444-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85445-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85446-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85447-13-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-classic-stand-mikser-43-l-siyah-kitchenaid-mikserler-kitchenaid-85448-13-b.jpg"
     ],
     "sku": "5K45SSEOB",
     "model": "5K45SSEOB",
@@ -28137,8 +28144,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 201,
     "gastrotech_model": "5K45SSEOB",
-    "image": "images/catalog/gastrotech/p201_1.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p201_1.jpg"
+    "image": "images/catalog/kitchenaid/5k45ss.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-classic-4-3-litre-stand-mikser-mat-beyaz-5k45ssefw",
@@ -28296,7 +28302,7 @@
     "aciklama": "KitchenAid Ağır Hizmet 4,8 Litre Stand Mikser - Kırmızı 5KPM5EER",
     "keywords": "kitchenaid, kitchen aid, stand mikser, planet mikser, set üstü mikser, KitchenAid Ağır Hizmet 4,8 Litre Stand Mikser - Kırmızı 5KPM5EER",
     "images": [
-      "images/catalog/gastrotech/p202_2.jpg"
+      "images/catalog/kitchenaid/5kpm5.jpg"
     ],
     "sku": "5KPM5EER",
     "model": "5KPM5EER",
@@ -28324,8 +28330,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
     "gastrotech_model": "5KPM5EER",
-    "image": "images/catalog/gastrotech/p202_2.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p202_2.jpg"
+    "image": "images/catalog/kitchenaid/5kpm5.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-agir-hizmet-6-9-litre-stand-mikser-kirmizi-5ksm7591xeer",
@@ -28479,7 +28484,7 @@
     "aciklama": "KitchenAid Profesyonel 6,9 Litre Stand Mikser - Beyaz 5KSM7990XEWH",
     "keywords": "kitchenaid, kitchen aid, stand mikser, planet mikser, set üstü mikser, KitchenAid Profesyonel 6,9 Litre Stand Mikser - Beyaz 5KSM7990XEWH",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/kitchenaid/5ksm7990x.jpg"
     ],
     "sku": "5KSM7990XEWH",
     "model": "5KSM7990XEWH",
@@ -28508,8 +28513,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
     "gastrotech_model": "5KSM7990XEWH",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "image": "images/catalog/kitchenaid/5ksm7990x.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-profesyonel-6-9-litre-stand-mikser-kirmizi-5ksm7990xeer",
@@ -28523,7 +28527,7 @@
     "aciklama": "KitchenAid Profesyonel 6,9 Litre Stand Mikser - Kırmızı 5KSM7990XEER",
     "keywords": "kitchenaid, kitchen aid, stand mikser, planet mikser, set üstü mikser, KitchenAid Profesyonel 6,9 Litre Stand Mikser - Kırmızı 5KSM7990XEER",
     "images": [
-      "images/catalog/gastrotech/p202_4.jpg"
+      "images/catalog/kitchenaid/5ksm7990x.jpg"
     ],
     "sku": "5KSM7990XEER",
     "model": "5KSM7990XEER",
@@ -28551,8 +28555,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
     "gastrotech_model": "5KSM7990XEER",
-    "image": "images/catalog/gastrotech/p202_4.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p202_4.jpg"
+    "image": "images/catalog/kitchenaid/5ksm7990x.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-profesyonel-6-9-litre-stand-mikser-gumus-5ksm7990xesl",
@@ -28707,7 +28710,7 @@
     "aciklama": "KitchenAid İnce Sebze Kesici",
     "keywords": "kitchenaid, kitchen aid, mikser aksesuarı, stand mikser aksesuarı, KitchenAid İnce Sebze Kesici",
     "images": [
-      "images/catalog/gastrotech/p203_13.jpg"
+      "images/catalog/kitchenaid/5ksmsca.jpg"
     ],
     "sku": "5KSMSCA",
     "model": "5KSMSCA",
@@ -28734,8 +28737,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 203,
     "gastrotech_model": "5KSMSCA",
-    "image": "images/catalog/gastrotech/p203_13.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p203_13.jpg"
+    "image": "images/catalog/kitchenaid/5ksmsca.jpg"
   },
   {
     "id": "kitchenaid__kitchenaid-makarna-yapma-aparati",
@@ -28959,7 +28961,7 @@
     "aciklama": "KitchenAid Tane Değirmeni",
     "keywords": "kitchenaid, kitchen aid, mikser aksesuarı, stand mikser aksesuarı, KitchenAid Tane Değirmeni",
     "images": [
-      "images/catalog/gastrotech/p203_17.jpg"
+      "images/catalog/kitchenaid/5kgm.jpg"
     ],
     "sku": "5KGM",
     "model": "5KGM",
@@ -28986,8 +28988,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 203,
     "gastrotech_model": "5KGM",
-    "image": "images/catalog/gastrotech/p203_17.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p203_17.jpg"
+    "image": "images/catalog/kitchenaid/5kgm.jpg"
   },
   {
     "category": "sebze-dograma-makineleri",
@@ -41749,7 +41750,7 @@
     "price": "₺47.767,00 KDV dahil",
     "specs": "Mayalama Kabini\nÜrün kodu: VMD06\nÖlçü: 945x725x845 mm\nListe fiyatı (EUR): 1333\nkatalog %47 iskonto\nEqusto satış (EUR): 706.49\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺47.767,00\nKaynak: Gastrotech 2025-2027 katalog s.122",
     "images": [
-      "images/catalog/gastrotech/p122_2.jpg"
+      "images/catalog/cafemarkt/014182688f7261be.jpg"
     ],
     "sku": "VMD.06",
     "model": "VMD.06",
@@ -41786,7 +41787,7 @@
       "Vital VMD-06 8 Tepsi Kapasiteli Mayalandırma Kabini, Elektrikli"
     ],
     "description": "Vital VMD-06 8 Tepsi Kapasiteli Mayalandırma Kabini, Elektrikli",
-    "image": "images/catalog/gastrotech/p122_2.jpg",
+    "image": "images/catalog/cafemarkt/014182688f7261be.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 39806,
     "liste_fiyati": 1333,
@@ -41799,8 +41800,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 122,
-    "gastrotech_model": "VMD06",
-    "gastrotech_image": "images/catalog/gastrotech/p122_2.jpg"
+    "gastrotech_model": "VMD06"
   },
   {
     "category": "hazirlik",
@@ -50702,7 +50702,9 @@
     "price": "₺329.675,00 KDV dahil",
     "specs": "SilverInox B20\nÜrün kodu: B20\nÖlçü: 1173x600x947 mm\nListe fiyatı (EUR): 9200\nkatalog %47 iskonto\nEqusto satış (EUR): 4876\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺329.675,00\nKaynak: Gastrotech 2025-2027 katalog s.209",
     "images": [
-      "images/catalog/gastrotech/p209_1.jpg"
+      "images/catalog/cafemarkt/a97fd1b46ab206d5.jpg",
+      "images/catalog/cafemarkt/silver-kalpli-bubble-waffle-makinesi-tekli-kapakli-elektrikli-waffle-makineleri-silverinox-72444-18-b.jpg",
+      "images/catalog/cafemarkt/silver-kalpli-bubble-waffle-makinesi-tekli-kapakli-elektrikli-waffle-makineleri-silverinox-72546-18-b.jpg"
     ],
     "sku": "B20",
     "model": "B20",
@@ -50739,7 +50741,7 @@
       "SilverInox B20 Kalpli Bubble Waffle Makinesi, Tekli, Kapaklı, Elektrikli"
     ],
     "description": "SilverInox B20 Kalpli Bubble Waffle Makinesi, Tekli, Kapaklı, Elektrikli",
-    "image": "images/catalog/gastrotech/p209_1.jpg",
+    "image": "images/catalog/cafemarkt/a97fd1b46ab206d5.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 274729,
     "liste_fiyati": 9200,
@@ -50752,8 +50754,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 209,
-    "gastrotech_model": "B20",
-    "gastrotech_image": "images/catalog/gastrotech/p209_1.jpg"
+    "gastrotech_model": "B20"
   },
   {
     "category": "hazirlik",
@@ -52558,7 +52559,9 @@
     "price": "₺260.515,00 KDV dahil",
     "specs": "SilverInox B10\nÜrün kodu: B10\nÖlçü: 955x512x840 mm\nListe fiyatı (EUR): 7270\nkatalog %47 iskonto\nEqusto satış (EUR): 3853.1\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺260.515,00\nKaynak: Gastrotech 2025-2027 katalog s.209",
     "images": [
-      "images/catalog/gastrotech/p209_1.jpg"
+      "images/catalog/cafemarkt/7529929151cd9027.jpg",
+      "images/catalog/cafemarkt/silver-yuvarlak-bubble-waffle-makinesi-tekli-kapakli-elektrikli-waffle-makineleri-silverinox-72440-18-b.jpg",
+      "images/catalog/cafemarkt/silver-yuvarlak-bubble-waffle-makinesi-tekli-kapakli-elektrikli-waffle-makineleri-silverinox-72544-18-b.jpg"
     ],
     "sku": "B10",
     "model": "B10",
@@ -52595,7 +52598,7 @@
       "SilverInox B10 Yuvarlak Bubble Waffle Makinesi, Tekli, Kapaklı, Elektrikli"
     ],
     "description": "SilverInox B10 Yuvarlak Bubble Waffle Makinesi, Tekli, Kapaklı, Elektrikli",
-    "image": "images/catalog/gastrotech/p209_1.jpg",
+    "image": "images/catalog/cafemarkt/7529929151cd9027.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 217096,
     "liste_fiyati": 7270,
@@ -52608,8 +52611,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 209,
-    "gastrotech_model": "B10",
-    "gastrotech_image": "images/catalog/gastrotech/p209_1.jpg"
+    "gastrotech_model": "B10"
   },
   {
     "category": "hazirlik",
@@ -54667,7 +54669,9 @@
     "price": "₺50.885,00 KDV dahil",
     "specs": "Ürün Adı\nÜrün kodu: VC-65MS\nÖlçü: 325x620x535 mm\nListe fiyatı (EUR): 1420\nkatalog %47 iskonto\nEqusto satış (EUR): 752.6\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺50.885,00\nKaynak: Gastrotech 2025-2027 katalog s.186",
     "images": [
-      "images/catalog/gastrotech/p186_1.jpg"
+      "images/catalog/cafemarkt/768d0ada33338307.jpg",
+      "images/catalog/cafemarkt/by-kitchen-vc-65ms-sebze-dograma-makinesi-5-diskli-sebze-dograma-makineleri-by-kitchen-86063-43-b.jpg",
+      "images/catalog/cafemarkt/by-kitchen-vc-65ms-sebze-dograma-makinesi-5-diskli-sebze-dograma-makineleri-by-kitchen-86064-43-b.jpg"
     ],
     "sku": "VC.65MS",
     "model": "VC.65MS",
@@ -54704,7 +54708,7 @@
       "By Kitchen VC-65MS Sebze Doğrama Makinesi, 5 Diskli"
     ],
     "description": "By Kitchen VC-65MS Sebze Doğrama Makinesi, 5 Diskli",
-    "image": "images/catalog/gastrotech/p186_1.jpg",
+    "image": "images/catalog/cafemarkt/768d0ada33338307.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 42404,
     "liste_fiyati": 1420,
@@ -54717,8 +54721,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 186,
-    "gastrotech_model": "VC-65MS",
-    "gastrotech_image": "images/catalog/gastrotech/p186_1.jpg"
+    "gastrotech_model": "VC-65MS"
   },
   {
     "category": "hazirlik",
@@ -78845,7 +78848,15 @@
     "price": "₺59.126,00 KDV dahil",
     "specs": "5KSM55SXXEER\nÜrün kodu: 5KSM55SXXEOB\nListe fiyatı (EUR): 1650\nkatalog %47 iskonto\nEqusto satış (EUR): 874.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺59.126,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/01f2159f2017473b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85743-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85744-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85745-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85746-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85747-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85748-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85749-43-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-siyah-kitchenaid-mikserler-kitchenaid-85750-43-b.jpg"
     ],
     "sku": "5KSM55SXXEOB",
     "model": "5KSM55SXXEOB",
@@ -78882,7 +78893,7 @@
       "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Siyah"
     ],
     "description": "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Siyah",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/01f2159f2017473b.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 1650,
     "satis_eur_net": 943,
@@ -78899,8 +78910,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM55SXXEOB",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM55SXXEOB"
   },
   {
     "category": "hazirlik",
@@ -78963,7 +78973,12 @@
     "price": "₺77.044,00 KDV dahil",
     "specs": "KitchenAid 5KSM70JPXEER\nÜrün kodu: 5KSM70JPXEER\nListe fiyatı (EUR): 2150\nkatalog %47 iskonto\nEqusto satış (EUR): 1139.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺77.044,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/cb9b866795f3bdca.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-kirmizi-kitchenaid-mikserler-kitchenaid-82397-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-kirmizi-kitchenaid-mikserler-kitchenaid-82398-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-kirmizi-kitchenaid-mikserler-kitchenaid-82399-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-kirmizi-kitchenaid-mikserler-kitchenaid-82400-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-kirmizi-kitchenaid-mikserler-kitchenaid-82401-42-b.jpg"
     ],
     "sku": "5KSM70JPXEER",
     "model": "5KSM70JPXEER",
@@ -79000,7 +79015,7 @@
       "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Kırmızı"
     ],
     "description": "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Kırmızı",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/cb9b866795f3bdca.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 2150,
     "satis_eur_net": 1207.5,
@@ -79017,8 +79032,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM70JPXEER",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM70JPXEER"
   },
   {
     "category": "hazirlik",
@@ -79027,7 +79041,13 @@
     "price": "₺77.044,00 KDV dahil",
     "specs": "5KSM70JPXEWH\nÜrün kodu: 5KSM70JPXEOB\nListe fiyatı (EUR): 2150\nkatalog %47 iskonto\nEqusto satış (EUR): 1139.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺77.044,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/8e150d283d94bcd7.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82391-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82392-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82393-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82394-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82395-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-siyah-kitchenaid-mikserler-kitchenaid-82396-42-b.jpg"
     ],
     "sku": "5KSM70JPXEOB",
     "model": "5KSM70JPXEOB",
@@ -79064,7 +79084,7 @@
       "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Siyah"
     ],
     "description": "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Siyah",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/8e150d283d94bcd7.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 2150,
     "satis_eur_net": 1207.5,
@@ -79081,8 +79101,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM70JPXEOB",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM70JPXEOB"
   },
   {
     "category": "hazirlik",
@@ -79091,7 +79110,12 @@
     "price": "₺59.126,00 KDV dahil",
     "specs": "Ürün Adı\nÜrün kodu: 5KSM55SXXECU\nListe fiyatı (EUR): 1650\nkatalog %47 iskonto\nEqusto satış (EUR): 874.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺59.126,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/cee94feab3e7f0bb.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-gumus-kitchenaid-mikserler-kitchenaid-82384-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-gumus-kitchenaid-mikserler-kitchenaid-82386-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-gumus-kitchenaid-mikserler-kitchenaid-82387-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-gumus-kitchenaid-mikserler-kitchenaid-82389-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-gumus-kitchenaid-mikserler-kitchenaid-82390-42-b.jpg"
     ],
     "sku": "5KSM55SXXECU",
     "model": "5KSM55SXXECU",
@@ -79128,7 +79152,7 @@
       "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Gümüş"
     ],
     "description": "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Gümüş",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/cee94feab3e7f0bb.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 1650,
     "satis_eur_net": 943,
@@ -79145,8 +79169,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM55SXXECU",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM55SXXECU"
   },
   {
     "category": "hazirlik",
@@ -79155,7 +79178,13 @@
     "price": "₺59.126,00 KDV dahil",
     "specs": "5KSM70JPXECU\nÜrün kodu: 5KSM55SXXEER\nListe fiyatı (EUR): 1650\nkatalog %47 iskonto\nEqusto satış (EUR): 874.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺59.126,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/86f0375118ed9f9e.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82377-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82378-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82379-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82380-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82381-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-kirmizi-kitchenaid-mikserler-kitchenaid-82382-42-b.jpg"
     ],
     "sku": "5KSM55SXXEER",
     "model": "5KSM55SXXEER",
@@ -79192,7 +79221,7 @@
       "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Kırmızı"
     ],
     "description": "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Kırmızı",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/86f0375118ed9f9e.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 1650,
     "satis_eur_net": 943,
@@ -79209,8 +79238,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM55SXXEER",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM55SXXEER"
   },
   {
     "category": "hazirlik",
@@ -79219,7 +79247,12 @@
     "price": "₺77.044,00 KDV dahil",
     "specs": "5KSM70JPXEER\nÜrün kodu: 5KSM70JPXECU\nListe fiyatı (EUR): 2150\nkatalog %47 iskonto\nEqusto satış (EUR): 1139.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺77.044,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/779128fe64244a7b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-gumus-kitchenaid-mikserler-kitchenaid-82371-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-gumus-kitchenaid-mikserler-kitchenaid-82372-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-gumus-kitchenaid-mikserler-kitchenaid-82373-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-gumus-kitchenaid-mikserler-kitchenaid-82374-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpx-heavy-duty-kaldirilabilir-kaseli-stand-mikser-66-l-gumus-kitchenaid-mikserler-kitchenaid-82375-42-b.jpg"
     ],
     "sku": "5KSM70JPXECU",
     "model": "5KSM70JPXECU",
@@ -79256,7 +79289,7 @@
       "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Gümüş"
     ],
     "description": "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Gümüş",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/779128fe64244a7b.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 2150,
     "satis_eur_net": 1207.5,
@@ -79273,8 +79306,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM70JPXECU",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM70JPXECU"
   },
   {
     "category": "hazirlik",
@@ -79346,7 +79378,11 @@
     "price": "₺59.126,00 KDV dahil",
     "specs": "5KSM55SXXECU\nÜrün kodu: 5KSM55SXXEBM\nListe fiyatı (EUR): 1650\nkatalog %47 iskonto\nEqusto satış (EUR): 874.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺59.126,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/0099f3f9eb7033a5.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-mat-siyah-kitchenaid-mikserler-kitchenaid-82360-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-mat-siyah-kitchenaid-mikserler-kitchenaid-82362-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-mat-siyah-kitchenaid-mikserler-kitchenaid-82363-42-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm55sxx-agir-hizmet-tipi-kaldirilabilir-kaseli-stand-mikser-52-l-mat-siyah-kitchenaid-mikserler-kitchenaid-82364-42-b.jpg"
     ],
     "sku": "5KSM55SXXEBM",
     "model": "5KSM55SXXEBM",
@@ -79383,7 +79419,7 @@
       "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Mat Siyah"
     ],
     "description": "KitchenAid 5KSM55SXX Ağır Hizmet Tipi Kaldırılabilir Kaseli Stand Mikser, 5.2 L, Mat Siyah",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/0099f3f9eb7033a5.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 1650,
     "satis_eur_net": 943,
@@ -79400,8 +79436,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM55SXXEBM",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM55SXXEBM"
   },
   {
     "category": "hazirlik",
@@ -79410,7 +79445,13 @@
     "price": "₺77.044,00 KDV dahil",
     "specs": "KitchenAid 5KSM70JPXEWH\nÜrün kodu: 5KSM70JPXEWH\nListe fiyatı (EUR): 2150\nkatalog %47 iskonto\nEqusto satış (EUR): 1139.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺77.044,00\nKaynak: Gastrotech 2025-2027 katalog s.202",
     "images": [
-      "images/catalog/gastrotech/p202_1.jpg"
+      "images/catalog/cafemarkt/4b8bf54eea3abbe3.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71008-38-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71095-38-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71178-38-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71255-38-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71320-38-b.jpg",
+      "images/catalog/cafemarkt/kitchenaid-5ksm70jpxewh-heavy-duty-kaldirilabilir-kaseli-stand-mikser-6-6-l-beyaz-kitchenaid-mikserler-kitchenaid-71374-38-b.jpg"
     ],
     "sku": "5KSM70JPXEWH",
     "model": "5KSM70JPXEWH",
@@ -79447,7 +79488,7 @@
       "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Beyaz"
     ],
     "description": "KitchenAid 5KSM70JPX Heavy Duty Kaldırılabilir Kaseli Stand Mikser, 6.6 L, Beyaz",
-    "image": "images/catalog/gastrotech/p202_1.jpg",
+    "image": "images/catalog/cafemarkt/4b8bf54eea3abbe3.jpg",
     "fiyat_bekleniyor": false,
     "liste_fiyati_eur": 2150,
     "satis_eur_net": 1207.5,
@@ -79464,8 +79505,7 @@
     "bayi_iskonto": 0.47,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 202,
-    "gastrotech_model": "5KSM70JPXEWH",
-    "gastrotech_image": "images/catalog/gastrotech/p202_1.jpg"
+    "gastrotech_model": "5KSM70JPXEWH"
   },
   {
     "category": "hazirlik",
@@ -89607,7 +89647,9 @@
     "price": "₺51.960,00 KDV dahil",
     "specs": "Karıştırmadan\nÜrün kodu: GT-E8\nÖlçü: 220x250x420 mm\nListe fiyatı (EUR): 1450\nkatalog %47 iskonto\nEqusto satış (EUR): 768.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺51.960,00\nKaynak: Gastrotech 2025-2027 katalog s.249",
     "images": [
-      "images/catalog/gastrotech/p249_1.jpg"
+      "images/catalog/cafemarkt/3b09ed2b10ca8bec.jpg",
+      "images/catalog/cafemarkt/gtech-gt-e8-bar-blender-gurultu-onleyici-kapakli-12-l-1500-w-bar-blenderlar-gtech-50968-30-b.jpg",
+      "images/catalog/cafemarkt/gtech-gt-e8-bar-blender-gurultu-onleyici-kapakli-12-l-1500-w-beyaz-bar-blenderlar-gtech-68397-37-b.jpg"
     ],
     "sku": "GT.E8",
     "model": "GT.E8",
@@ -89644,7 +89686,7 @@
       "Gtech GT-E8 Bar Blender, Gürültü Önleyici Kapaklı, 1.2 L, 1500 W, Siyah"
     ],
     "description": "Gtech GT-E8 Bar Blender, Gürültü Önleyici Kapaklı, 1.2 L, 1500 W, Siyah",
-    "image": "images/catalog/gastrotech/p249_1.jpg",
+    "image": "images/catalog/cafemarkt/3b09ed2b10ca8bec.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 43300,
     "liste_fiyati": 1450,
@@ -89657,8 +89699,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 249,
-    "gastrotech_model": "GT-E8",
-    "gastrotech_image": "images/catalog/gastrotech/p249_1.jpg"
+    "gastrotech_model": "GT-E8"
   },
   {
     "category": "hazirlik",
@@ -89821,7 +89862,7 @@
     "price": "₺32.251,00 KDV dahil",
     "specs": "D Series\nÜrün kodu: SP1180\nÖlçü: 250x250x570 mm\nListe fiyatı (EUR): 900\nkatalog %47 iskonto\nEqusto satış (EUR): 477\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺32.251,00\nKaynak: Gastrotech 2025-2027 katalog s.248",
     "images": [
-      "images/catalog/gastrotech/p248_1.jpg"
+      "images/catalog/cafemarkt/915edc7ed53980f3.jpg"
     ],
     "sku": "SP1180",
     "model": "SP1180",
@@ -89858,7 +89899,7 @@
       "Gtech SP1180 Bar Blender, Gürültü Önleyici Kapaklı, 2.5 L, 1680 W, Siyah"
     ],
     "description": "Gtech SP1180 Bar Blender, Gürültü Önleyici Kapaklı, 2.5 L, 1680 W, Siyah",
-    "image": "images/catalog/gastrotech/p248_1.jpg",
+    "image": "images/catalog/cafemarkt/915edc7ed53980f3.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 26876,
     "liste_fiyati": 900,
@@ -89871,8 +89912,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 248,
-    "gastrotech_model": "SP1180",
-    "gastrotech_image": "images/catalog/gastrotech/p248_1.jpg"
+    "gastrotech_model": "SP1180"
   },
   {
     "category": "hazirlik",
@@ -90030,7 +90070,7 @@
     "price": "₺24.726,00 KDV dahil",
     "specs": "Gtech MS220ST-U\nÜrün kodu: MS220ST-U\nÖlçü: 520x460x380 mm\nListe fiyatı (EUR): 690\nkatalog %47 iskonto\nEqusto satış (EUR): 365.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺24.726,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
     "images": [
-      "images/catalog/gastrotech/p179_4.jpg"
+      "images/catalog/cafemarkt/0de8d4d744cd4016.jpg"
     ],
     "sku": "MS220ST.U",
     "model": "MS220ST.U",
@@ -90067,7 +90107,7 @@
       "Gtech Gıda Dilimleme Makinesi, 220 mm"
     ],
     "description": "Gtech Gıda Dilimleme Makinesi, 220 mm",
-    "image": "images/catalog/gastrotech/p179_4.jpg",
+    "image": "images/catalog/cafemarkt/0de8d4d744cd4016.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 20605,
     "liste_fiyati": 690,
@@ -90080,8 +90120,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 179,
-    "gastrotech_model": "MS220ST-U",
-    "gastrotech_image": "images/catalog/gastrotech/p179_4.jpg"
+    "gastrotech_model": "MS220ST-U"
   },
   {
     "category": "hazirlik",
@@ -90090,7 +90129,7 @@
     "price": "₺26.518,00 KDV dahil",
     "specs": "Gtech MS250ST-U\nÜrün kodu: MS250ST-U\nÖlçü: 520x460x380 mm\nListe fiyatı (EUR): 740\nkatalog %47 iskonto\nEqusto satış (EUR): 392.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺26.518,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
     "images": [
-      "images/catalog/gastrotech/p179_4.jpg"
+      "images/catalog/cafemarkt/57c9bc6a65b5f395.jpg"
     ],
     "sku": "MS250ST.U",
     "model": "MS250ST.U",
@@ -90127,7 +90166,7 @@
       "Gtech Gıda Dilimleme Makinesi, 250 mm"
     ],
     "description": "Gtech Gıda Dilimleme Makinesi, 250 mm",
-    "image": "images/catalog/gastrotech/p179_4.jpg",
+    "image": "images/catalog/cafemarkt/57c9bc6a65b5f395.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 22098,
     "liste_fiyati": 740,
@@ -90337,7 +90376,7 @@
     "price": "₺41.209,00 KDV dahil",
     "specs": "Gtech MS300ST-U\nÜrün kodu: MS300ST-U\nÖlçü: 650x530x460 mm\nListe fiyatı (EUR): 1150\nkatalog %47 iskonto\nEqusto satış (EUR): 609.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺41.209,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
     "images": [
-      "images/catalog/gastrotech/p179_4.jpg"
+      "images/catalog/cafemarkt/ddddcfbe7792d286.jpg"
     ],
     "sku": "MS300ST.U",
     "model": "MS300ST.U",
@@ -90374,7 +90413,7 @@
       "Gtech Gıda Dilimleme Makinesi, 300 mm"
     ],
     "description": "Gtech Gıda Dilimleme Makinesi, 300 mm",
-    "image": "images/catalog/gastrotech/p179_4.jpg",
+    "image": "images/catalog/cafemarkt/ddddcfbe7792d286.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 34341,
     "liste_fiyati": 1150,
@@ -90678,7 +90717,7 @@
     "price": "₺37.267,00 KDV dahil",
     "specs": "Makinesi\nÜrün kodu: FC-3MC\nÖlçü: 240x260x460 mm\nListe fiyatı (EUR): 1040\nkatalog %47 iskonto\nEqusto satış (EUR): 551.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺37.267,00\nKaynak: Gastrotech 2025-2027 katalog s.187",
     "images": [
-      "images/catalog/gastrotech/p187_1.jpg"
+      "images/catalog/cafemarkt/99973e2d459a2141.jpg"
     ],
     "sku": "FC.3MC",
     "model": "FC.3MC",
@@ -90715,7 +90754,7 @@
       "Gtech FC-3MC Sebze Doğrama ve Parçalama Makinesi, 3.3 L + 2 Bıçak"
     ],
     "description": "Gtech FC-3MC Sebze Doğrama ve Parçalama Makinesi, 3.3 L + 2 Bıçak",
-    "image": "images/catalog/gastrotech/p187_1.jpg",
+    "image": "images/catalog/cafemarkt/99973e2d459a2141.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 31056,
     "liste_fiyati": 1040,
@@ -90728,8 +90767,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 187,
-    "gastrotech_model": "FC-3MC",
-    "gastrotech_image": "images/catalog/gastrotech/p187_1.jpg"
+    "gastrotech_model": "FC-3MC"
   },
   {
     "category": "hazirlik",
@@ -90738,7 +90776,7 @@
     "price": "₺33.684,00 KDV dahil",
     "specs": "Gtech FC-3MP\nÜrün kodu: FC-3MP\nÖlçü: 240x260x370 mm\nListe fiyatı (EUR): 940\nkatalog %47 iskonto\nEqusto satış (EUR): 498.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺33.684,00\nKaynak: Gastrotech 2025-2027 katalog s.187",
     "images": [
-      "images/catalog/gastrotech/p187_2.jpg"
+      "images/catalog/cafemarkt/7f5bcebd75f7b601.jpg"
     ],
     "sku": "FC.3MP",
     "model": "FC.3MP",
@@ -90775,7 +90813,7 @@
       "Gtech FC-3MP Sebze Parçalama Makinesi, 3.3 L"
     ],
     "description": "Gtech FC-3MP Sebze Parçalama Makinesi, 3.3 L",
-    "image": "images/catalog/gastrotech/p187_2.jpg",
+    "image": "images/catalog/cafemarkt/7f5bcebd75f7b601.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 28070,
     "liste_fiyati": 940,
@@ -90788,8 +90826,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 187,
-    "gastrotech_model": "FC-3MP",
-    "gastrotech_image": "images/catalog/gastrotech/p187_2.jpg"
+    "gastrotech_model": "FC-3MP"
   },
   {
     "category": "hazirlik",
@@ -90798,7 +90835,7 @@
     "price": "₺39.418,00 KDV dahil",
     "specs": "Makinesi\nÜrün kodu: VC-10MF\nÖlçü: 240x260x370 mm\nListe fiyatı (EUR): 1100\nkatalog %47 iskonto\nEqusto satış (EUR): 583\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺39.418,00\nKaynak: Gastrotech 2025-2027 katalog s.187",
     "images": [
-      "images/catalog/gastrotech/p187_3.jpg"
+      "images/catalog/cafemarkt/ddd3dd96e5a43973.jpg"
     ],
     "sku": "VC.10MF",
     "model": "VC.10MF",
@@ -90835,7 +90872,7 @@
       "Gtech VC-10MF Sebze Doğrama Makinesi, 2 Bıçaklı"
     ],
     "description": "Gtech VC-10MF Sebze Doğrama Makinesi, 2 Bıçaklı",
-    "image": "images/catalog/gastrotech/p187_3.jpg",
+    "image": "images/catalog/cafemarkt/ddd3dd96e5a43973.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 32848,
     "liste_fiyati": 1100,
@@ -90848,8 +90885,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 187,
-    "gastrotech_model": "VC-10MF",
-    "gastrotech_image": "images/catalog/gastrotech/p187_3.jpg"
+    "gastrotech_model": "VC-10MF"
   },
   {
     "category": "hazirlik",
@@ -90858,7 +90894,7 @@
     "price": "₺32.251,00 KDV dahil",
     "specs": "Gtech FC-2MP\nÜrün kodu: FC-2MP\nÖlçü: 240x260x320 mm\nListe fiyatı (EUR): 900\nkatalog %47 iskonto\nEqusto satış (EUR): 477\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺32.251,00\nKaynak: Gastrotech 2025-2027 katalog s.187",
     "images": [
-      "images/catalog/gastrotech/p187_4.jpg"
+      "images/catalog/cafemarkt/65bfb8c5add0e982.jpg"
     ],
     "sku": "FC.2MP",
     "model": "FC.2MP",
@@ -90895,7 +90931,7 @@
       "Gtech FC-2MP Sebze Parçalama Makinesi, 2.4 L"
     ],
     "description": "Gtech FC-2MP Sebze Parçalama Makinesi, 2.4 L",
-    "image": "images/catalog/gastrotech/p187_4.jpg",
+    "image": "images/catalog/cafemarkt/65bfb8c5add0e982.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 26876,
     "liste_fiyati": 900,
@@ -90908,8 +90944,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 187,
-    "gastrotech_model": "FC-2MP",
-    "gastrotech_image": "images/catalog/gastrotech/p187_4.jpg"
+    "gastrotech_model": "FC-2MP"
   },
   {
     "category": "hazirlik",
@@ -90918,7 +90953,7 @@
     "price": "₺35.834,00 KDV dahil",
     "specs": "Gtech FC-2MC\nÜrün kodu: FC-2MC\nÖlçü: 240x260x440 mm\nListe fiyatı (EUR): 1000\nkatalog %47 iskonto\nEqusto satış (EUR): 530\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺35.834,00\nKaynak: Gastrotech 2025-2027 katalog s.187",
     "images": [
-      "images/catalog/gastrotech/p187_4.jpg"
+      "images/catalog/cafemarkt/385d4cb401503612.jpg"
     ],
     "sku": "FC.2MC",
     "model": "FC.2MC",
@@ -90955,7 +90990,7 @@
       "Gtech FC-2MC Sebze Doğrama ve Parçalama Makinesi, 2.4 L + 2 Bıçak"
     ],
     "description": "Gtech FC-2MC Sebze Doğrama ve Parçalama Makinesi, 2.4 L + 2 Bıçak",
-    "image": "images/catalog/gastrotech/p187_4.jpg",
+    "image": "images/catalog/cafemarkt/385d4cb401503612.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 29862,
     "liste_fiyati": 1000,
@@ -90968,8 +91003,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 187,
-    "gastrotech_model": "FC-2MC",
-    "gastrotech_image": "images/catalog/gastrotech/p187_4.jpg"
+    "gastrotech_model": "FC-2MC"
   },
   {
     "category": "hazirlik",
@@ -91025,7 +91059,7 @@
     "price": "₺48.018,00 KDV dahil",
     "specs": "Ürün Adı\nÜrün kodu: IP10F\nÖlçü: 430x500x700 mm\nListe fiyatı (EUR): 1340\nkatalog %47 iskonto\nEqusto satış (EUR): 710.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺48.018,00\nKaynak: Gastrotech 2025-2027 katalog s.197",
     "images": [
-      "images/catalog/gastrotech/p197_2.jpg"
+      "images/catalog/cafemarkt/88ea9823408f7d77.jpg"
     ],
     "sku": "IP10F",
     "model": "IP10F",
@@ -91062,7 +91096,7 @@
       "Gtech IP10F 3 Hızlı Planet Mikser, 10 L"
     ],
     "description": "Gtech IP10F 3 Hızlı Planet Mikser, 10 L",
-    "image": "images/catalog/gastrotech/p197_2.jpg",
+    "image": "images/catalog/cafemarkt/88ea9823408f7d77.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 40015,
     "liste_fiyati": 1340,
@@ -91075,8 +91109,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 197,
-    "gastrotech_model": "IP10F",
-    "gastrotech_image": "images/catalog/gastrotech/p197_2.jpg"
+    "gastrotech_model": "IP10F"
   },
   {
     "category": "hazirlik",
@@ -91085,7 +91118,7 @@
     "price": "₺57.335,00 KDV dahil",
     "specs": "Genel Özellikler\nÜrün kodu: IP20F\nÖlçü: 460x530x800 mm\nListe fiyatı (EUR): 1600\nkatalog %47 iskonto\nEqusto satış (EUR): 848\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺57.335,00\nKaynak: Gastrotech 2025-2027 katalog s.197",
     "images": [
-      "images/catalog/gastrotech/p197_3.jpg"
+      "images/catalog/cafemarkt/8600501ea1ae5da0.jpg"
     ],
     "sku": "IP20F",
     "model": "IP20F",
@@ -91122,7 +91155,7 @@
       "Gtech IP20F 3 Hızlı Planet Mikser, 20 L"
     ],
     "description": "Gtech IP20F 3 Hızlı Planet Mikser, 20 L",
-    "image": "images/catalog/gastrotech/p197_3.jpg",
+    "image": "images/catalog/cafemarkt/8600501ea1ae5da0.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 47779,
     "liste_fiyati": 1600,
@@ -91135,8 +91168,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 197,
-    "gastrotech_model": "IP20F",
-    "gastrotech_image": "images/catalog/gastrotech/p197_3.jpg"
+    "gastrotech_model": "IP20F"
   },
   {
     "category": "hazirlik",
@@ -91497,7 +91529,7 @@
     "price": "₺38.701,00 KDV dahil",
     "specs": "SP1180D Series\nÜrün kodu: SP1180D\nÖlçü: 250x250x570 mm\nListe fiyatı (EUR): 1080\nkatalog %47 iskonto\nEqusto satış (EUR): 572.4\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺38.701,00\nKaynak: Gastrotech 2025-2027 katalog s.248",
     "images": [
-      "images/catalog/gastrotech/p248_1.jpg"
+      "images/catalog/cafemarkt/def46dead5520b50.jpg"
     ],
     "sku": "SP1180D",
     "model": "SP1180D",
@@ -91534,7 +91566,7 @@
       "Gtech SP1180D Dijital Bar Blender, Gürültü Önleyici Kapaklı, 5 Programlı, 2.5 L, 1680 W, Siyah"
     ],
     "description": "Gtech SP1180D Dijital Bar Blender, Gürültü Önleyici Kapaklı, 5 Programlı, 2.5 L, 1680 W, Siyah",
-    "image": "images/catalog/gastrotech/p248_1.jpg",
+    "image": "images/catalog/cafemarkt/def46dead5520b50.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 32251,
     "liste_fiyati": 1080,
@@ -91547,8 +91579,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 248,
-    "gastrotech_model": "SP1180D",
-    "gastrotech_image": "images/catalog/gastrotech/p248_1.jpg"
+    "gastrotech_model": "SP1180D"
   },
   {
     "category": "hazirlik",
@@ -91651,7 +91682,7 @@
     "price": "₺103.919,00 KDV dahil",
     "specs": "Otomatik Gıda Dilimleme Makinesi\nÜrün kodu: MS300AS\nÖlçü: 660x600x700 mm\nListe fiyatı (EUR): 2900\nkatalog %47 iskonto\nEqusto satış (EUR): 1537\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺103.919,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
     "images": [
-      "images/catalog/gastrotech/p179_4.jpg"
+      "images/catalog/cafemarkt/d6c7bf30dfb16283.jpg"
     ],
     "sku": "MS300AS",
     "model": "MS300AS",
@@ -91688,7 +91719,7 @@
       "Gtech MS300AS Otomatik Gıda Dilimleme Makinesi, 300 mm"
     ],
     "description": "Gtech MS300AS Otomatik Gıda Dilimleme Makinesi, 300 mm",
-    "image": "images/catalog/gastrotech/p179_4.jpg",
+    "image": "images/catalog/cafemarkt/d6c7bf30dfb16283.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 86599,
     "liste_fiyati": 2900,
@@ -91945,7 +91976,7 @@
     "price": "₺68.086,00 KDV dahil",
     "specs": "Gtech RTW160\nÜrün kodu: RTW160\nÖlçü: 870x570x660 mm\nListe fiyatı (EUR): 1900\nkatalog %47 iskonto\nEqusto satış (EUR): 1007\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺68.086,00\nKaynak: Gastrotech 2025-2027 katalog s.206",
     "images": [
-      "images/catalog/gastrotech/p206_5.jpg"
+      "images/catalog/cafemarkt/730c7f963b62cac5.jpg"
     ],
     "sku": "RTW160",
     "model": "RTW160",
@@ -91982,7 +92013,7 @@
       "Gtech Pasta Teşhir Dolabı, 160 L"
     ],
     "description": "Gtech Pasta Teşhir Dolabı, 160 L",
-    "image": "images/catalog/gastrotech/p206_5.jpg",
+    "image": "images/catalog/cafemarkt/730c7f963b62cac5.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 56738,
     "liste_fiyati": 1900,
@@ -91995,8 +92026,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 206,
-    "gastrotech_model": "RTW160",
-    "gastrotech_image": "images/catalog/gastrotech/p206_5.jpg"
+    "gastrotech_model": "RTW160"
   },
   {
     "category": "hazirlik",
@@ -92005,7 +92035,7 @@
     "price": "₺60.918,00 KDV dahil",
     "specs": "Gtech RTW120\nÜrün kodu: RTW120\nÖlçü: 690x570x690 mm\nListe fiyatı (EUR): 1700\nkatalog %47 iskonto\nEqusto satış (EUR): 901\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺60.918,00\nKaynak: Gastrotech 2025-2027 katalog s.206",
     "images": [
-      "images/catalog/gastrotech/p206_3.jpg"
+      "images/catalog/cafemarkt/8c83ea09c25321fd.jpg"
     ],
     "sku": "RTW120",
     "model": "RTW120",
@@ -92042,7 +92072,7 @@
       "Gtech Pasta Teşhir Dolabı, 120 L"
     ],
     "description": "Gtech Pasta Teşhir Dolabı, 120 L",
-    "image": "images/catalog/gastrotech/p206_3.jpg",
+    "image": "images/catalog/cafemarkt/8c83ea09c25321fd.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 50765,
     "liste_fiyati": 1700,
@@ -92055,8 +92085,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 206,
-    "gastrotech_model": "RTW120",
-    "gastrotech_image": "images/catalog/gastrotech/p206_3.jpg"
+    "gastrotech_model": "RTW120"
   },
   {
     "category": "hazirlik",

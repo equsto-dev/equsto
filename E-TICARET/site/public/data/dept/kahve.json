@@ -12204,7 +12204,7 @@
     "price": "₺150.504,00 KDV dahil",
     "specs": "Otomatik Kahve Makinesi\nÜrün kodu: GT-2V-TC\nÖlçü: 795x535x500 mm\nListe fiyatı (EUR): 4200\nkatalog %47 iskonto\nEqusto satış (EUR): 2226\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺150.504,00\nKaynak: Gastrotech 2025-2027 katalog s.210",
     "images": [
-      "images/catalog/gastrotech/p210_2.jpg"
+      "images/catalog/cafemarkt/226b40bf8e2862cc.jpg"
     ],
     "sku": "GT.2V.TC",
     "model": "GT.2V.TC",
@@ -12241,7 +12241,7 @@
       "Magister Tall Cup Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu"
     ],
     "description": "Magister Tall Cup Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
-    "image": "images/catalog/gastrotech/p210_2.jpg",
+    "image": "images/catalog/cafemarkt/226b40bf8e2862cc.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 125420,
     "liste_fiyati": 4200,
@@ -12254,8 +12254,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 210,
-    "gastrotech_model": "GT-2V-TC",
-    "gastrotech_image": "images/catalog/gastrotech/p210_2.jpg"
+    "gastrotech_model": "GT-2V-TC"
   },
   {
     "category": "kahve-makineleri",
@@ -12311,7 +12310,7 @@
     "price": "₺143.338,00 KDV dahil",
     "specs": "Otomatik Kahve Makinesi\nÜrün kodu: GT-2M-TC\nÖlçü: 795x535x500 mm\nListe fiyatı (EUR): 4000\nkatalog %47 iskonto\nEqusto satış (EUR): 2120\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺143.338,00\nKaynak: Gastrotech 2025-2027 katalog s.210",
     "images": [
-      "images/catalog/gastrotech/p210_1.jpg"
+      "images/catalog/cafemarkt/826c9e15018cf050.jpg"
     ],
     "sku": "GT.2M.TC",
     "model": "GT.2M.TC",
@@ -12348,7 +12347,7 @@
       "Magister Tall Cup Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu"
     ],
     "description": "Magister Tall Cup Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
-    "image": "images/catalog/gastrotech/p210_1.jpg",
+    "image": "images/catalog/cafemarkt/826c9e15018cf050.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 119448,
     "liste_fiyati": 4000,
@@ -12361,8 +12360,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 210,
-    "gastrotech_model": "GT-2M-TC",
-    "gastrotech_image": "images/catalog/gastrotech/p210_1.jpg"
+    "gastrotech_model": "GT-2M-TC"
   },
   {
     "category": "kahve-makineleri",
@@ -21568,7 +21566,15 @@
     "price": "₺39.776,00 KDV dahil",
     "specs": "Yarı Profesyonel Kahve Makinesi 2 Lt. 390x370x410\nÜrün kodu: ST-530ED\nÖlçü: 390x370x410 mm\nListe fiyatı (EUR): 1110\nkatalog %47 iskonto\nEqusto satış (EUR): 588.3\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺39.776,00\nKaynak: Gastrotech 2025-2027 katalog s.226",
     "images": [
-      "images/catalog/gastrotech/p226_1.jpg"
+      "images/catalog/cafemarkt/50ef41a215b0a37c.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72718-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72719-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72720-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72721-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72722-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72723-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72733-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-st-530ed-pid-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72787-38-b.jpg"
     ],
     "sku": "ST.530ED",
     "model": "ST.530ED",
@@ -21605,7 +21611,7 @@
       "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu"
     ],
     "description": "Gtech ST-530ED PID Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu",
-    "image": "images/catalog/gastrotech/p226_1.jpg",
+    "image": "images/catalog/cafemarkt/50ef41a215b0a37c.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_override": 30960,
     "fiyat_tl_net": 33147,
@@ -21619,8 +21625,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 226,
-    "gastrotech_model": "ST-530ED",
-    "gastrotech_image": "images/catalog/gastrotech/p226_1.jpg"
+    "gastrotech_model": "ST-530ED"
   },
   {
     "category": "kahve-makineleri",
@@ -21629,7 +21634,14 @@
     "price": "₺26.518,00 KDV dahil",
     "specs": "Yarı Profesyonel Kahve Makinesi 2 Lt. 390x370x410\nÜrün kodu: AC-517EC\nÖlçü: 390x370x410 mm\nListe fiyatı (EUR): 740\nkatalog %47 iskonto\nEqusto satış (EUR): 392.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺26.518,00\nKaynak: Gastrotech 2025-2027 katalog s.226",
     "images": [
-      "images/catalog/gastrotech/p226_2.jpg"
+      "images/catalog/cafemarkt/29f6040f090438c9.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72724-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72725-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72726-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72727-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72728-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72729-38-b.jpg",
+      "images/catalog/cafemarkt/gtech-ac-517ec-ev-tipi-ogutuculu-barista-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-gtech-72730-38-b.jpg"
     ],
     "sku": "AC.517EC",
     "model": "AC.517EC",
@@ -21666,7 +21678,7 @@
       "Gtech AC-517EC Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu"
     ],
     "description": "Gtech AC-517EC Ev Tipi Öğütücülü Barista Espresso Kahve Makinesi, 1 Gruplu",
-    "image": "images/catalog/gastrotech/p226_2.jpg",
+    "image": "images/catalog/cafemarkt/29f6040f090438c9.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 22098,
     "liste_fiyati": 740,
@@ -21679,8 +21691,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 226,
-    "gastrotech_model": "AC-517EC",
-    "gastrotech_image": "images/catalog/gastrotech/p226_2.jpg"
+    "gastrotech_model": "AC-517EC"
   },
   {
     "category": "kahve-makineleri",
@@ -40274,7 +40285,7 @@
     "price": "₺255.498,00 KDV dahil",
     "specs": "Bezzera B2013AL-3GR\nÜrün kodu: B2013AL-3GR\nÖlçü: 850x495x520 mm\nListe fiyatı (EUR): 7130\nkatalog %47 iskonto\nEqusto satış (EUR): 3778.9\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺255.498,00\nKaynak: Gastrotech 2025-2027 katalog s.211",
     "images": [
-      "images/catalog/gastrotech/p211_3.jpg"
+      "images/catalog/cafemarkt/b60aaae81820acff.png"
     ],
     "sku": "B2013.AL.3GR",
     "model": "B2013.AL.3GR",
@@ -40311,7 +40322,7 @@
       "Bezzera B2013 AL Pistonlu Espresso Kahve Makinesi, 3 Gruplu"
     ],
     "description": "Bezzera B2013 AL Pistonlu Espresso Kahve Makinesi, 3 Gruplu",
-    "image": "images/catalog/gastrotech/p211_3.jpg",
+    "image": "images/catalog/cafemarkt/b60aaae81820acff.png",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 212915,
     "liste_fiyati": 7130,
@@ -40324,8 +40335,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 211,
-    "gastrotech_model": "B2013AL-3GR",
-    "gastrotech_image": "images/catalog/gastrotech/p211_3.jpg"
+    "gastrotech_model": "B2013AL-3GR"
   },
   {
     "category": "kahve-makineleri",
@@ -40334,7 +40344,9 @@
     "price": "₺207.839,00 KDV dahil",
     "specs": "Bezzera B2013AL-2GR\nÜrün kodu: B2013AL-2GR\nÖlçü: 670x495x520 mm\nListe fiyatı (EUR): 5800\nkatalog %47 iskonto\nEqusto satış (EUR): 3074\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺207.839,00\nKaynak: Gastrotech 2025-2027 katalog s.211",
     "images": [
-      "images/catalog/gastrotech/p211_4.jpg"
+      "images/catalog/cafemarkt/b1bf45da1465e136.png",
+      "images/catalog/cafemarkt/bezzera-b2013-al-pistonlu-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-bezzera-77190-40-b.png",
+      "images/catalog/cafemarkt/bezzera-b2013-al-pistonlu-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-bezzera-77191-40-b.png"
     ],
     "sku": "B2013.AL.2GR",
     "model": "B2013.AL.2GR",
@@ -40371,7 +40383,7 @@
       "Bezzera B2013 AL Pistonlu Espresso Kahve Makinesi, 2 Gruplu"
     ],
     "description": "Bezzera B2013 AL Pistonlu Espresso Kahve Makinesi, 2 Gruplu",
-    "image": "images/catalog/gastrotech/p211_4.jpg",
+    "image": "images/catalog/cafemarkt/b1bf45da1465e136.png",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 173199,
     "liste_fiyati": 5800,
@@ -40384,8 +40396,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 211,
-    "gastrotech_model": "B2013AL-2GR",
-    "gastrotech_image": "images/catalog/gastrotech/p211_4.jpg"
+    "gastrotech_model": "B2013AL-2GR"
   },
   {
     "category": "kahve-makineleri",
@@ -41173,7 +41184,7 @@
     "price": "₺99.619,00 KDV dahil",
     "specs": "Yarı Profesyonel Kahve Makinesi\nÜrün kodu: BZ10PM\nÖlçü: 250x450x375 mm\nListe fiyatı (EUR): 2780\nkatalog %47 iskonto\nEqusto satış (EUR): 1473.4\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺99.619,00\nKaynak: Gastrotech 2025-2027 katalog s.224",
     "images": [
-      "images/catalog/gastrotech/p224_2.jpg"
+      "images/catalog/cafemarkt/33a900791cd7c796.jpg"
     ],
     "sku": "BZ10PM",
     "model": "BZ10PM",
@@ -41210,7 +41221,7 @@
       "Bezzera BZ10PM Yarı Otomatik Espresso Kahve Makinesi, 1 Gruplu"
     ],
     "description": "Bezzera BZ10PM Yarı Otomatik Espresso Kahve Makinesi, 1 Gruplu",
-    "image": "images/catalog/gastrotech/p224_2.jpg",
+    "image": "images/catalog/cafemarkt/33a900791cd7c796.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 83016,
     "liste_fiyati": 2780,
@@ -41223,8 +41234,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 224,
-    "gastrotech_model": "BZ10PM",
-    "gastrotech_image": "images/catalog/gastrotech/p224_2.jpg"
+    "gastrotech_model": "BZ10PM"
   },
   {
     "category": "kahve-makineleri",

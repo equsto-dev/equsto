@@ -7596,7 +7596,7 @@
     "price": "₺770.831,00 KDV dahil",
     "specs": "Elektrikli Kombi Fırın 20 GN 2/1\nÜrün kodu: MAESTRO202E\nÖlçü: 1230x1135x1870 mm\nListe fiyatı (EUR): 21511\nkatalog %47 iskonto\nEqusto satış (EUR): 11400.83\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺770.831,00\nKaynak: Gastrotech 2025-2027 katalog s.107",
     "images": [
-      "images/catalog/gastrotech/p107_4.jpg"
+      "images/catalog/cafemarkt/4df449c1b4e13064.jpg"
     ],
     "sku": "MAESTRO202E",
     "model": "MAESTRO202E",
@@ -7633,7 +7633,7 @@
       "Vital MAESTRO 202E Dijital Kontrollü Kombi Fırın, GN 2/1 20 Tepsi Kapasiteli, Elektrikli"
     ],
     "description": "Vital MAESTRO 202E Dijital Kontrollü Kombi Fırın, GN 2/1 20 Tepsi Kapasiteli, Elektrikli",
-    "image": "images/catalog/gastrotech/p107_4.jpg",
+    "image": "images/catalog/cafemarkt/4df449c1b4e13064.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 642359,
     "liste_fiyati": 21511,
@@ -7646,8 +7646,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 107,
-    "gastrotech_model": "MAESTRO202E",
-    "gastrotech_image": "images/catalog/gastrotech/p107_4.jpg"
+    "gastrotech_model": "MAESTRO202E"
   },
   {
     "category": "servis",

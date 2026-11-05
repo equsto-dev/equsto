@@ -420,18 +420,22 @@ def apply_to_catalog(image_map: dict[str, dict]) -> None:
                 if row.get("kaynak_fiyat_listesi") == "gastrotech-2025-2027":
                     missing += 1
                 continue
-            # Mevcut cafemarkt görseli varsa ve gastrotech değilse — yalnızca boşsa veya gastrotech ürünüyse yaz
+            # PDF thumbnail düşük çözünürlüklü — yalnızca yeni Gastrotech ürünleri
+            # veya görseli boş ürünler. Scotsman/Gtech/Cafemarkt görsellerini ezme.
             existing = (row.get("images") or [None])[0] or row.get("image") or ""
-            if existing and "gastrotech" not in existing and existing.startswith("images/catalog/") and not str(row.get("id", "")).startswith("gastrotech__"):
-                # Güncellenen Scotsman/Gtech: katalog görseliyle değiştir (kaynak gastrotech)
-                pass
+            is_new_gt = str(row.get("id", "")).startswith("gastrotech__") or str(
+                row.get("brand", "")
+            ).lower() == "gastrotech"
+            has_good = bool(existing) and "gastrotech" not in existing and existing.startswith(
+                "images/catalog/"
+            )
+            if has_good and not is_new_gt:
+                continue
             path = hit["path"]
-            if not (ROOT / "public" / path).exists() and not (ROOT / path).exists():
-                # path relative to public
-                pub = ROOT / "public" / path
-                if not pub.exists():
-                    missing += 1
-                    continue
+            pub = ROOT / "public" / path
+            if not pub.exists():
+                missing += 1
+                continue
             row["images"] = [path]
             row["image"] = path
             row["gastrotech_image"] = path

@@ -547,7 +547,7 @@
       "Buz Kıracakları"
     ],
     "images": [
-      "images/catalog/gastrotech/p246_2.jpg"
+      "images/catalog/senox/mutbex/16986.jpg"
     ],
     "sku": "118. IC80A",
     "model": " IC-80A",
@@ -597,8 +597,7 @@
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 246,
     "gastrotech_model": "IC80A",
-    "image": "images/catalog/gastrotech/p246_2.jpg",
-    "gastrotech_image": "images/catalog/gastrotech/p246_2.jpg"
+    "image": "images/catalog/senox/mutbex/16986.jpg"
   },
   {
     "id": "senox__senox-bz-12",
@@ -11699,7 +11698,7 @@
     "price": "₺46.943,00 KDV dahil",
     "specs": "Katı Meyve Presi\nÜrün kodu: CJ8\nÖlçü: 240x400x530 mm\nListe fiyatı (EUR): 1310\nkatalog %47 iskonto\nEqusto satış (EUR): 694.3\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺46.943,00\nKaynak: Gastrotech 2025-2027 katalog s.245",
     "images": [
-      "images/catalog/gastrotech/p245_4.jpg"
+      "images/catalog/cafemarkt/9899db08f0b571ae.jpg"
     ],
     "sku": "CJ8",
     "model": "CJ8",
@@ -11736,7 +11735,7 @@
       "Gtech CJ8 Katı Meyve Sıkacağı"
     ],
     "description": "Gtech CJ8 Katı Meyve Sıkacağı",
-    "image": "images/catalog/gastrotech/p245_4.jpg",
+    "image": "images/catalog/cafemarkt/9899db08f0b571ae.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 39119,
     "liste_fiyati": 1310,
@@ -11749,8 +11748,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 245,
-    "gastrotech_model": "CJ8",
-    "gastrotech_image": "images/catalog/gastrotech/p245_4.jpg"
+    "gastrotech_model": "CJ8"
   },
   {
     "category": "icecek",
@@ -11759,7 +11757,7 @@
     "price": "₺11.825,00 KDV dahil",
     "specs": "Gtech CJ5\nÜrün kodu: CJ5\nÖlçü: 300x245x405 mm\nListe fiyatı (EUR): 330\nkatalog %47 iskonto\nEqusto satış (EUR): 174.9\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺11.825,00\nKaynak: Gastrotech 2025-2027 katalog s.245",
     "images": [
-      "images/catalog/gastrotech/p245_1.jpg"
+      "images/catalog/cafemarkt/209547477d7bb154.jpg"
     ],
     "sku": "CJ5",
     "model": "CJ5",
@@ -11796,7 +11794,7 @@
       "Gtech CJ5 Narenciye Sıkacağı"
     ],
     "description": "Gtech CJ5 Narenciye Sıkacağı",
-    "image": "images/catalog/gastrotech/p245_1.jpg",
+    "image": "images/catalog/cafemarkt/209547477d7bb154.jpg",
     "fiyat_bekleniyor": false,
     "fiyat_tl_net": 9854,
     "liste_fiyati": 330,
@@ -11809,8 +11807,7 @@
     "kdv_oran": 20,
     "fiyat_kaynagi": "gastrotech-2025-2027",
     "gastrotech_page": 245,
-    "gastrotech_model": "CJ5",
-    "gastrotech_image": "images/catalog/gastrotech/p245_1.jpg"
+    "gastrotech_model": "CJ5"
   },
   {
     "category": "icecek",
