@@ -59476,9 +59476,9 @@
     "marka_urun_kodu": "VBY1000D",
     "equsto_kod": "EQ-GASTROTE.VBY1000D",
     "images": [
-      "images/catalog/gastrotech/p252_2.jpg"
+      "images/catalog/gastrotech/web/vby1000d.jpg"
     ],
-    "image": "images/catalog/gastrotech/p252_2.jpg",
+    "image": "images/catalog/gastrotech/web/vby1000d.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1000D",
@@ -59504,7 +59504,9 @@
     "gastrotech_model": "VBY1000D",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: VBY1000D\nÖlçü: 695X810X1456 mm\nListe fiyatı (EUR): 2320\nkatalog %47 iskonto\nEqusto satış (EUR): 1229.6\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺83.136,00\nKaynak: Gastrotech 2025-2027 katalog s.252",
-    "gastrotech_image": "images/catalog/gastrotech/p252_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1000d.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
   },
   {
     "id": "gastrotech__vby1000d-p",
@@ -59517,9 +59519,9 @@
     "marka_urun_kodu": "VBY1000D-P",
     "equsto_kod": "EQ-GASTROTE.VBY1000DP",
     "images": [
-      "images/catalog/gastrotech/p252_2.jpg"
+      "images/catalog/gastrotech/web/vby1000d-p.jpg"
     ],
-    "image": "images/catalog/gastrotech/p252_2.jpg",
+    "image": "images/catalog/gastrotech/web/vby1000d-p.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1000D-P",
@@ -59545,7 +59547,9 @@
     "gastrotech_model": "VBY1000D-P",
     "fiyat_bekleniyor": false,
     "specs": "VBY1000D\nÜrün kodu: VBY1000D-P\nÖlçü: 695X810X1456 mm\nListe fiyatı (EUR): 2516\nkatalog %47 iskonto\nEqusto satış (EUR): 1333.48\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺90.160,00\nKaynak: Gastrotech 2025-2027 katalog s.252",
-    "gastrotech_image": "images/catalog/gastrotech/p252_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1000d-p.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
   },
   {
     "id": "gastrotech__wz-50",
@@ -59558,9 +59562,9 @@
     "marka_urun_kodu": "WZ-50",
     "equsto_kod": "EQ-GASTROTE.WZ50",
     "images": [
-      "images/catalog/gastrotech/p252_1.jpg"
+      "images/catalog/gastrotech/web/wz-50.jpg"
     ],
-    "image": "images/catalog/gastrotech/p252_1.jpg",
+    "image": "images/catalog/gastrotech/web/wz-50.jpg",
     "keywords": [
       "Gastrotech",
       "WZ-50",
@@ -59586,7 +59590,9 @@
     "gastrotech_model": "WZ-50",
     "fiyat_bekleniyor": false,
     "specs": "Tezgahaltı Bulaşık Makinesi\nÜrün kodu: WZ-50\nÖlçü: 600x630x820 mm\nListe fiyatı (EUR): 1500\nkatalog %47 iskonto\nEqusto satış (EUR): 795\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺53.752,00\nKaynak: Gastrotech 2025-2027 katalog s.252",
-    "gastrotech_image": "images/catalog/gastrotech/p252_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/wz-50.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/gtech-wz-50-tezgahalti-bulasik-makinesi-500-tabak-kapasiteli-drenaj-pompali-set-alti-bulasik-makineleri-gtech-5048-28-B.jpg"
   },
   {
     "id": "gastrotech__vby1000",
@@ -59599,9 +59605,9 @@
     "marka_urun_kodu": "VBY1000",
     "equsto_kod": "EQ-GASTROTE.VBY1000",
     "images": [
-      "images/catalog/gastrotech/p253_3.jpg"
+      "images/catalog/gastrotech/web/vby1000.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby1000.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1000",
@@ -59627,7 +59633,9 @@
     "gastrotech_model": "VBY1000",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: VBY1000\nÖlçü: 695X810X1456 mm\nListe fiyatı (EUR): 2240\nkatalog %47 iskonto\nEqusto satış (EUR): 1187.2\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺80.269,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1000.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
   },
   {
     "id": "gastrotech__vby1000-p",
@@ -59640,9 +59648,9 @@
     "marka_urun_kodu": "VBY1000-P",
     "equsto_kod": "EQ-GASTROTE.VBY1000P",
     "images": [
-      "images/catalog/gastrotech/p253_2.jpg"
+      "images/catalog/gastrotech/web/vby1000-p.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_2.jpg",
+    "image": "images/catalog/gastrotech/web/vby1000-p.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1000-P",
@@ -59668,7 +59676,8 @@
     "gastrotech_model": "VBY1000-P",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY1000-P\nÜrün kodu: VBY1000-P\nÖlçü: 695X810X1456 mm\nListe fiyatı (EUR): 2436\nkatalog %47 iskonto\nEqusto satış (EUR): 1291.08\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺87.293,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1000-p.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby500c",
@@ -59681,9 +59690,9 @@
     "marka_urun_kodu": "VBY500C",
     "equsto_kod": "EQ-GASTROTE.VBY500C",
     "images": [
-      "images/catalog/gastrotech/p253_1.jpg"
+      "images/catalog/gastrotech/web/vby500c.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby500c.jpg",
     "keywords": [
       "Gastrotech",
       "VBY500C",
@@ -59709,7 +59718,9 @@
     "gastrotech_model": "VBY500C",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bulaşık Makinesi Manuel Kontrollü,\nÜrün kodu: VBY500C\nÖlçü: 595x670x820 mm\nListe fiyatı (EUR): 1627\nkatalog %47 iskonto\nEqusto satış (EUR): 862.31\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺58.302,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby500c.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3870-22-B.jpg"
   },
   {
     "id": "gastrotech__vby500c-p",
@@ -59722,9 +59733,9 @@
     "marka_urun_kodu": "VBY500C-P",
     "equsto_kod": "EQ-GASTROTE.VBY500CP",
     "images": [
-      "images/catalog/gastrotech/p253_3.jpg"
+      "images/catalog/gastrotech/web/vby500c-p.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby500c-p.jpg",
     "keywords": [
       "Gastrotech",
       "VBY500C-P",
@@ -59750,7 +59761,8 @@
     "gastrotech_model": "VBY500C-P",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bulaşık Makinesi Manuel Kontrollü,\nÜrün kodu: VBY500C-P\nÖlçü: 595x670x820 mm\nListe fiyatı (EUR): 1822\nkatalog %47 iskonto\nEqusto satış (EUR): 965.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺65.290,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby500c-p.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby500cd",
@@ -59763,9 +59775,9 @@
     "marka_urun_kodu": "VBY500CD",
     "equsto_kod": "EQ-GASTROTE.VBY500CD",
     "images": [
-      "images/catalog/gastrotech/p253_3.jpg"
+      "images/catalog/gastrotech/web/vby500cd.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby500cd.jpg",
     "keywords": [
       "Gastrotech",
       "VBY500CD",
@@ -59791,7 +59803,9 @@
     "gastrotech_model": "VBY500CD",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bulaşık Makinesi Dijital Kontrollü,\nÜrün kodu: VBY500CD\nÖlçü: 600x645x830 mm\nListe fiyatı (EUR): 1716\nkatalog %47 iskonto\nEqusto satış (EUR): 909.48\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺61.492,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby500cd.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3870-22-B.jpg"
   },
   {
     "id": "gastrotech__vby500cd-p",
@@ -59804,9 +59818,9 @@
     "marka_urun_kodu": "VBY500CD-P",
     "equsto_kod": "EQ-GASTROTE.VBY500CDP",
     "images": [
-      "images/catalog/gastrotech/p253_3.jpg"
+      "images/catalog/gastrotech/web/vby500cd-p.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby500cd-p.jpg",
     "keywords": [
       "Gastrotech",
       "VBY500CD-P",
@@ -59832,7 +59846,9 @@
     "gastrotech_model": "VBY500CD-P",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bulaşık Makinesi Dijital Kontrollü,\nÜrün kodu: VBY500CD-P\nÖlçü: 600x645x830 mm\nListe fiyatı (EUR): 1911\nkatalog %47 iskonto\nEqusto satış (EUR): 1012.83\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺68.479,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby500cd-p.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-p-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-deterjan-parlatici-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3871-22-B.jpg"
   },
   {
     "id": "gastrotech__vgy400",
@@ -59845,9 +59861,9 @@
     "marka_urun_kodu": "VGY400",
     "equsto_kod": "EQ-GASTROTE.VGY400",
     "images": [
-      "images/catalog/gastrotech/p253_2.jpg"
+      "images/catalog/gastrotech/web/vgy400.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_2.jpg",
+    "image": "images/catalog/gastrotech/web/vgy400.jpg",
     "keywords": [
       "Gastrotech",
       "VGY400",
@@ -59873,7 +59889,9 @@
     "gastrotech_model": "VGY400",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bardak Yıkama Makinesi,Drenaj\nÜrün kodu: VGY400\nÖlçü: 470x560x710 mm\nListe fiyatı (EUR): 1547\nkatalog %47 iskonto\nEqusto satış (EUR): 819.91\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺55.435,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vgy400.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vgy400d-p-bardak-yikama-makinesi-30-sepetsa-dijital-deterjan-parlatici-pompali-bardak-yikama-makineleri-vital-4622-26-B.webp"
   },
   {
     "id": "gastrotech__vgy400-dp",
@@ -59886,9 +59904,9 @@
     "marka_urun_kodu": "VGY400-DP",
     "equsto_kod": "EQ-GASTROTE.VGY400DP",
     "images": [
-      "images/catalog/gastrotech/p253_3.jpg"
+      "images/catalog/gastrotech/web/vgy400-dp.jpg"
     ],
-    "image": "images/catalog/gastrotech/p253_3.jpg",
+    "image": "images/catalog/gastrotech/web/vgy400-dp.jpg",
     "keywords": [
       "Gastrotech",
       "VGY400-DP",
@@ -59914,7 +59932,8 @@
     "gastrotech_model": "VGY400-DP",
     "fiyat_bekleniyor": false,
     "specs": "Tezgah Altı Bardak Yıkama Makinesi, Drenaj,\nÜrün kodu: VGY400-DP\nÖlçü: 470x560x710 mm\nListe fiyatı (EUR): 1618\nkatalog %47 iskonto\nEqusto satış (EUR): 857.54\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺57.980,00\nKaynak: Gastrotech 2025-2027 katalog s.253",
-    "gastrotech_image": "images/catalog/gastrotech/p253_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vgy400-dp.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby1500l",
@@ -59927,9 +59946,9 @@
     "marka_urun_kodu": "VBY1500L",
     "equsto_kod": "EQ-GASTROTE.VBY1500L",
     "images": [
-      "images/catalog/gastrotech/p254_3.jpg"
+      "images/catalog/gastrotech/web/vby1500l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p254_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby1500l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1500L",
@@ -59955,7 +59974,8 @@
     "gastrotech_model": "VBY1500L",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 1.500 2010x800x1900\nÜrün kodu: VBY1500L\nÖlçü: 2010x800x1900 mm\nListe fiyatı (EUR): 10222\nkatalog %47 iskonto\nEqusto satış (EUR): 5417.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺366.298,00\nKaynak: Gastrotech 2025-2027 katalog s.254",
-    "gastrotech_image": "images/catalog/gastrotech/p254_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1500l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby1500r",
@@ -59968,9 +59988,9 @@
     "marka_urun_kodu": "VBY1500R",
     "equsto_kod": "EQ-GASTROTE.VBY1500R",
     "images": [
-      "images/catalog/gastrotech/p254_3.jpg"
+      "images/catalog/gastrotech/web/vby1500r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p254_3.jpg",
+    "image": "images/catalog/gastrotech/web/vby1500r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY1500R",
@@ -59996,7 +60016,8 @@
     "gastrotech_model": "VBY1500R",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 1.500 2010x800x1900\nÜrün kodu: VBY1500R\nÖlçü: 2010x800x1900 mm\nListe fiyatı (EUR): 10222\nkatalog %47 iskonto\nEqusto satış (EUR): 5417.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺366.298,00\nKaynak: Gastrotech 2025-2027 katalog s.254",
-    "gastrotech_image": "images/catalog/gastrotech/p254_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby1500r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby2000l",
@@ -60009,9 +60030,9 @@
     "marka_urun_kodu": "VBY2000L",
     "equsto_kod": "EQ-GASTROTE.VBY2000L",
     "images": [
-      "images/catalog/gastrotech/p254_6.jpg"
+      "images/catalog/gastrotech/web/vby2000l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p254_6.jpg",
+    "image": "images/catalog/gastrotech/web/vby2000l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY2000L",
@@ -60037,7 +60058,8 @@
     "gastrotech_model": "VBY2000L",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 2.000\nÜrün kodu: VBY2000L\nÖlçü: 2620x800x1900 mm\nListe fiyatı (EUR): 11404\nkatalog %47 iskonto\nEqusto satış (EUR): 6044.12\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺408.654,00\nKaynak: Gastrotech 2025-2027 katalog s.254",
-    "gastrotech_image": "images/catalog/gastrotech/p254_6.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby2000l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby2000r",
@@ -60050,9 +60072,9 @@
     "marka_urun_kodu": "VBY2000R",
     "equsto_kod": "EQ-GASTROTE.VBY2000R",
     "images": [
-      "images/catalog/gastrotech/p254_6.jpg"
+      "images/catalog/gastrotech/web/vby2000r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p254_6.jpg",
+    "image": "images/catalog/gastrotech/web/vby2000r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY2000R",
@@ -60078,7 +60100,8 @@
     "gastrotech_model": "VBY2000R",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 2.000\nÜrün kodu: VBY2000R\nÖlçü: 2620x800x1900 mm\nListe fiyatı (EUR): 11404\nkatalog %47 iskonto\nEqusto satış (EUR): 6044.12\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺408.654,00\nKaynak: Gastrotech 2025-2027 katalog s.254",
-    "gastrotech_image": "images/catalog/gastrotech/p254_6.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby2000r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby3600l",
@@ -60091,9 +60114,9 @@
     "marka_urun_kodu": "VBY3600L",
     "equsto_kod": "EQ-GASTROTE.VBY3600L",
     "images": [
-      "images/catalog/gastrotech/p255_1.jpg"
+      "images/catalog/gastrotech/web/vby3600l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p255_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby3600l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY3600L",
@@ -60119,7 +60142,8 @@
     "gastrotech_model": "VBY3600L",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 3.600 2850x800x1900\nÜrün kodu: VBY3600L\nÖlçü: 2850x800x1900 mm\nListe fiyatı (EUR): 15378\nkatalog %47 iskonto\nEqusto satış (EUR): 8150.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺551.059,00\nKaynak: Gastrotech 2025-2027 katalog s.255",
-    "gastrotech_image": "images/catalog/gastrotech/p255_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby3600l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby3600r",
@@ -60132,9 +60156,9 @@
     "marka_urun_kodu": "VBY3600R",
     "equsto_kod": "EQ-GASTROTE.VBY3600R",
     "images": [
-      "images/catalog/gastrotech/p255_2.jpg"
+      "images/catalog/gastrotech/web/vby3600r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p255_2.jpg",
+    "image": "images/catalog/gastrotech/web/vby3600r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY3600R",
@@ -60160,7 +60184,8 @@
     "gastrotech_model": "VBY3600R",
     "fiyat_bekleniyor": false,
     "specs": "Bulaşık Makinesi, Kurutma Tünelli 3.600 2850x800x1900\nÜrün kodu: VBY3600R\nÖlçü: 2850x800x1900 mm\nListe fiyatı (EUR): 15378\nkatalog %47 iskonto\nEqusto satış (EUR): 8150.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺551.059,00\nKaynak: Gastrotech 2025-2027 katalog s.255",
-    "gastrotech_image": "images/catalog/gastrotech/p255_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby3600r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft3000l",
@@ -60173,9 +60198,9 @@
     "marka_urun_kodu": "VBY-FT3000L",
     "equsto_kod": "EQ-GASTROTE.VBYFT3000L",
     "images": [
-      "images/catalog/gastrotech/p256_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft3000l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p256_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft3000l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT3000L",
@@ -60201,7 +60226,8 @@
     "gastrotech_model": "VBY-FT3000L",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT3000L\nÜrün kodu: VBY-FT3000L\nÖlçü: 2800x860x1956 mm\nListe fiyatı (EUR): 18667\nkatalog %47 iskonto\nEqusto satış (EUR): 9893.51\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺668.918,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p256_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft3000l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft3000r",
@@ -60214,9 +60240,9 @@
     "marka_urun_kodu": "VBY-FT3000R",
     "equsto_kod": "EQ-GASTROTE.VBYFT3000R",
     "images": [
-      "images/catalog/gastrotech/p256_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft3000r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p256_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft3000r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT3000R",
@@ -60242,7 +60268,8 @@
     "gastrotech_model": "VBY-FT3000R",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT3000R\nÜrün kodu: VBY-FT3000R\nÖlçü: 2800x860x1956 mm\nListe fiyatı (EUR): 18667\nkatalog %47 iskonto\nEqusto satış (EUR): 9893.51\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺668.918,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p256_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft3000r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft3600l",
@@ -60255,9 +60282,9 @@
     "marka_urun_kodu": "VBY-FT3600L",
     "equsto_kod": "EQ-GASTROTE.VBYFT3600L",
     "images": [
-      "images/catalog/gastrotech/p257_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft3600l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft3600l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT3600L",
@@ -60283,7 +60310,8 @@
     "gastrotech_model": "VBY-FT3600L",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: VBY-FT3600L\nÖlçü: 3400x860x1956 mm\nListe fiyatı (EUR): 21422\nkatalog %47 iskonto\nEqusto satış (EUR): 11353.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺767.642,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p257_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft3600l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft3600r",
@@ -60296,9 +60324,9 @@
     "marka_urun_kodu": "VBY-FT3600R",
     "equsto_kod": "EQ-GASTROTE.VBYFT3600R",
     "images": [
-      "images/catalog/gastrotech/p257_2.jpg"
+      "images/catalog/gastrotech/web/vby-ft3600r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_2.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft3600r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT3600R",
@@ -60324,7 +60352,8 @@
     "gastrotech_model": "VBY-FT3600R",
     "fiyat_bekleniyor": false,
     "specs": "Flight Tip Bulaşık Yıkama Makinesi\nÜrün kodu: VBY-FT3600R\nÖlçü: 3400x860x1956 mm\nListe fiyatı (EUR): 21422\nkatalog %47 iskonto\nEqusto satış (EUR): 11353.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺767.642,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p257_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft3600r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft4500l",
@@ -60337,9 +60366,9 @@
     "marka_urun_kodu": "VBY-FT4500L",
     "equsto_kod": "EQ-GASTROTE.VBYFT4500L",
     "images": [
-      "images/catalog/gastrotech/p256_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft4500l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p256_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft4500l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT4500L",
@@ -60365,7 +60394,8 @@
     "gastrotech_model": "VBY-FT4500L",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT4500L\nÜrün kodu: VBY-FT4500L\nÖlçü: 3700x860x1956 mm\nListe fiyatı (EUR): 28444\nkatalog %47 iskonto\nEqusto satış (EUR): 15075.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.019.270,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p256_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft4500l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft4500r",
@@ -60378,9 +60408,9 @@
     "marka_urun_kodu": "VBY-FT4500R",
     "equsto_kod": "EQ-GASTROTE.VBYFT4500R",
     "images": [
-      "images/catalog/gastrotech/p256_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft4500r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p256_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft4500r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT4500R",
@@ -60406,7 +60436,8 @@
     "gastrotech_model": "VBY-FT4500R",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT4500R\nÜrün kodu: VBY-FT4500R\nÖlçü: 3700x860x1956 mm\nListe fiyatı (EUR): 28444\nkatalog %47 iskonto\nEqusto satış (EUR): 15075.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.019.270,00\nKaynak: Gastrotech 2025-2027 katalog s.256",
-    "gastrotech_image": "images/catalog/gastrotech/p256_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft4500r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft5200l",
@@ -60419,9 +60450,9 @@
     "marka_urun_kodu": "VBY-FT5200L",
     "equsto_kod": "EQ-GASTROTE.VBYFT5200L",
     "images": [
-      "images/catalog/gastrotech/p257_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft5200l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft5200l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT5200L",
@@ -60447,7 +60478,8 @@
     "gastrotech_model": "VBY-FT5200L",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT5200L\nÜrün kodu: VBY-FT5200L\nÖlçü: 4000x860x1956 mm\nListe fiyatı (EUR): 33778\nkatalog %47 iskonto\nEqusto satış (EUR): 17902.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.210.410,00\nKaynak: Gastrotech 2025-2027 katalog s.257",
-    "gastrotech_image": "images/catalog/gastrotech/p257_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft5200l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft5200r",
@@ -60460,9 +60492,9 @@
     "marka_urun_kodu": "VBY-FT5200R",
     "equsto_kod": "EQ-GASTROTE.VBYFT5200R",
     "images": [
-      "images/catalog/gastrotech/p257_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft5200r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft5200r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT5200R",
@@ -60488,7 +60520,8 @@
     "gastrotech_model": "VBY-FT5200R",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT5200R\nÜrün kodu: VBY-FT5200R\nÖlçü: 4000x860x1956 mm\nListe fiyatı (EUR): 33778\nkatalog %47 iskonto\nEqusto satış (EUR): 17902.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.210.410,00\nKaynak: Gastrotech 2025-2027 katalog s.257",
-    "gastrotech_image": "images/catalog/gastrotech/p257_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft5200r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft6000l",
@@ -60501,9 +60534,9 @@
     "marka_urun_kodu": "VBY-FT6000L",
     "equsto_kod": "EQ-GASTROTE.VBYFT6000L",
     "images": [
-      "images/catalog/gastrotech/p257_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft6000l.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft6000l.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT6000L",
@@ -60529,7 +60562,8 @@
     "gastrotech_model": "VBY-FT6000L",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT6000L\nÜrün kodu: VBY-FT6000L\nÖlçü: 4300x860x1956 mm\nListe fiyatı (EUR): 36444\nkatalog %47 iskonto\nEqusto satış (EUR): 19315.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.305.944,00\nKaynak: Gastrotech 2025-2027 katalog s.257",
-    "gastrotech_image": "images/catalog/gastrotech/p257_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft6000l.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vby-ft6000r",
@@ -60542,9 +60576,9 @@
     "marka_urun_kodu": "VBY-FT6000R",
     "equsto_kod": "EQ-GASTROTE.VBYFT6000R",
     "images": [
-      "images/catalog/gastrotech/p257_1.jpg"
+      "images/catalog/gastrotech/web/vby-ft6000r.jpg"
     ],
-    "image": "images/catalog/gastrotech/p257_1.jpg",
+    "image": "images/catalog/gastrotech/web/vby-ft6000r.jpg",
     "keywords": [
       "Gastrotech",
       "VBY-FT6000R",
@@ -60570,7 +60604,8 @@
     "gastrotech_model": "VBY-FT6000R",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VBY-FT6000R\nÜrün kodu: VBY-FT6000R\nÖlçü: 4300x860x1956 mm\nListe fiyatı (EUR): 36444\nkatalog %47 iskonto\nEqusto satış (EUR): 19315.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.305.944,00\nKaynak: Gastrotech 2025-2027 katalog s.257",
-    "gastrotech_image": "images/catalog/gastrotech/p257_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vby-ft6000r.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vpy130",
@@ -60583,9 +60618,9 @@
     "marka_urun_kodu": "VPY130",
     "equsto_kod": "EQ-GASTROTE.VPY130",
     "images": [
-      "images/catalog/gastrotech/p258_1.jpg"
+      "images/catalog/gastrotech/web/vpy130.jpg"
     ],
-    "image": "images/catalog/gastrotech/p258_1.jpg",
+    "image": "images/catalog/gastrotech/web/vpy130.jpg",
     "keywords": [
       "Gastrotech",
       "VPY130",
@@ -60611,7 +60646,9 @@
     "gastrotech_model": "VPY130",
     "fiyat_bekleniyor": false,
     "specs": "Yıkama Makinesi 480 adet 60x80 cm tepsi/ 2020x950x1380\nÜrün kodu: VPY130\nÖlçü: 2020x950x1380 mm\nListe fiyatı (EUR): 15111\nkatalog %47 iskonto\nEqusto satış (EUR): 8008.83\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺541.492,00\nKaynak: Gastrotech 2025-2027 katalog s.258",
-    "gastrotech_image": "images/catalog/gastrotech/p258_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vpy130.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vpy130-kazan-yikama-makinesi-drenaj-pompali-kazan-yikama-makineleri-vital-3877-23-B.webp"
   },
   {
     "id": "gastrotech__vpy80",
@@ -60624,9 +60661,9 @@
     "marka_urun_kodu": "VPY80",
     "equsto_kod": "EQ-GASTROTE.VPY80",
     "images": [
-      "images/catalog/gastrotech/p258_2.jpg"
+      "images/catalog/gastrotech/web/vpy80.jpg"
     ],
-    "image": "images/catalog/gastrotech/p258_2.jpg",
+    "image": "images/catalog/gastrotech/web/vpy80.jpg",
     "keywords": [
       "Gastrotech",
       "VPY80",
@@ -60652,7 +60689,9 @@
     "gastrotech_model": "VPY80",
     "fiyat_bekleniyor": false,
     "specs": "Yıkama Makinesi 240 adet 60x80 cm tepsi/ 2020x785x985\nÜrün kodu: VPY80\nÖlçü: 2020x785x985 mm\nListe fiyatı (EUR): 9778\nkatalog %47 iskonto\nEqusto satış (EUR): 5182.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺350.388,00\nKaynak: Gastrotech 2025-2027 katalog s.258",
-    "gastrotech_image": "images/catalog/gastrotech/p258_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vpy80.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vpy80-kazan-yikama-makinesi-drenaj-pompali-kazan-yikama-makineleri-vital-3876-22-B.webp"
   },
   {
     "id": "gastrotech__vlwe13e",
@@ -60665,9 +60704,9 @@
     "marka_urun_kodu": "VLWE13E",
     "equsto_kod": "EQ-GASTROTE.VLWE13E",
     "images": [
-      "images/catalog/gastrotech/p260_1.jpg"
+      "images/catalog/gastrotech/web/vlwe13e.jpg"
     ],
-    "image": "images/catalog/gastrotech/p260_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlwe13e.jpg",
     "keywords": [
       "Gastrotech",
       "VLWE13E",
@@ -60693,7 +60732,9 @@
     "gastrotech_model": "VLWE13E",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Yıkama Sıkma Makinası\nÜrün kodu: VLWE13E\nÖlçü: 880x880x1570 mm\nListe fiyatı (EUR): 9956\nkatalog %47 iskonto\nEqusto satış (EUR): 5276.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺356.766,00\nKaynak: Gastrotech 2025-2027 katalog s.260",
-    "gastrotech_image": "images/catalog/gastrotech/p260_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlwe13e.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vlwe13e-camasir-yikama-ve-sikma-makinesi-13-kgseferi-camasirhane-ekipmanlari-vital-3926-23-B.jpg"
   },
   {
     "id": "gastrotech__vlwe20e",
@@ -60706,9 +60747,9 @@
     "marka_urun_kodu": "VLWE20E",
     "equsto_kod": "EQ-GASTROTE.VLWE20E",
     "images": [
-      "images/catalog/gastrotech/p260_1.jpg"
+      "images/catalog/gastrotech/web/vlwe20e.jpg"
     ],
-    "image": "images/catalog/gastrotech/p260_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlwe20e.jpg",
     "keywords": [
       "Gastrotech",
       "VLWE20E",
@@ -60734,7 +60775,9 @@
     "gastrotech_model": "VLWE20E",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Yıkama Sıkma Makinası\nÜrün kodu: VLWE20E\nÖlçü: 995x1075x1720 mm\nListe fiyatı (EUR): 13333\nkatalog %47 iskonto\nEqusto satış (EUR): 7066.49\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺477.779,00\nKaynak: Gastrotech 2025-2027 katalog s.260",
-    "gastrotech_image": "images/catalog/gastrotech/p260_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlwe20e.jpg",
+    "gastrotech_image_source": "official",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/d9c4c78e-0876-401b-b2b0-e5d759fc8c42/file/"
   },
   {
     "id": "gastrotech__vlwe30e",
@@ -60747,9 +60790,9 @@
     "marka_urun_kodu": "VLWE30E",
     "equsto_kod": "EQ-GASTROTE.VLWE30E",
     "images": [
-      "images/catalog/gastrotech/p260_1.jpg"
+      "images/catalog/gastrotech/web/vlwe30e.jpg"
     ],
-    "image": "images/catalog/gastrotech/p260_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlwe30e.jpg",
     "keywords": [
       "Gastrotech",
       "VLWE30E",
@@ -60775,7 +60818,8 @@
     "gastrotech_model": "VLWE30E",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Yıkama Sıkma Makinası\nÜrün kodu: VLWE30E\nÖlçü: 1135x1335x1870 mm\nListe fiyatı (EUR): 16000\nkatalog %47 iskonto\nEqusto satış (EUR): 8480\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺573.348,00\nKaynak: Gastrotech 2025-2027 katalog s.260",
-    "gastrotech_image": "images/catalog/gastrotech/p260_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlwe30e.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlwe40e",
@@ -60788,9 +60832,9 @@
     "marka_urun_kodu": "VLWE40E",
     "equsto_kod": "EQ-GASTROTE.VLWE40E",
     "images": [
-      "images/catalog/gastrotech/p260_2.jpg"
+      "images/catalog/gastrotech/web/vlwe40e.jpg"
     ],
-    "image": "images/catalog/gastrotech/p260_2.jpg",
+    "image": "images/catalog/gastrotech/web/vlwe40e.jpg",
     "keywords": [
       "Gastrotech",
       "VLWE40E",
@@ -60816,7 +60860,8 @@
     "gastrotech_model": "VLWE40E",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Yıkama Sıkma Makinası\nÜrün kodu: VLWE40E\nÖlçü: 1210x1380x1870 mm\nListe fiyatı (EUR): 19111\nkatalog %47 iskonto\nEqusto satış (EUR): 10128.83\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺684.829,00\nKaynak: Gastrotech 2025-2027 katalog s.260",
-    "gastrotech_image": "images/catalog/gastrotech/p260_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlwe40e.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlwe60e",
@@ -60829,9 +60874,9 @@
     "marka_urun_kodu": "VLWE60E",
     "equsto_kod": "EQ-GASTROTE.VLWE60E",
     "images": [
-      "images/catalog/gastrotech/p260_2.jpg"
+      "images/catalog/gastrotech/web/vlwe60e.jpg"
     ],
-    "image": "images/catalog/gastrotech/p260_2.jpg",
+    "image": "images/catalog/gastrotech/web/vlwe60e.jpg",
     "keywords": [
       "Gastrotech",
       "VLWE60E",
@@ -60857,7 +60902,9 @@
     "gastrotech_model": "VLWE60E",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Yıkama Sıkma Makinası\nÜrün kodu: VLWE60E\nÖlçü: 1585x1760x2070 mm\nListe fiyatı (EUR): 30222\nkatalog %47 iskonto\nEqusto satış (EUR): 16017.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.082.983,00\nKaynak: Gastrotech 2025-2027 katalog s.260",
-    "gastrotech_image": "images/catalog/gastrotech/p260_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlwe60e.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vlwe60e-camasir-yikama-ve-sikma-makinesi-60-kgsefer-camasirhane-ekipmanlari-vital-3925-23-B.jpg"
   },
   {
     "id": "gastrotech__vltd15",
@@ -60870,9 +60917,9 @@
     "marka_urun_kodu": "VLTD15",
     "equsto_kod": "EQ-GASTROTE.VLTD15",
     "images": [
-      "images/catalog/gastrotech/p261_1.jpg"
+      "images/catalog/gastrotech/web/vltd15.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_1.jpg",
+    "image": "images/catalog/gastrotech/web/vltd15.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD15",
@@ -60898,7 +60945,9 @@
     "gastrotech_model": "VLTD15",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD15\nÖlçü: 1085x1025x1720 mm\nListe fiyatı (EUR): 7244\nkatalog %47 iskonto\nEqusto satış (EUR): 3839.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺259.584,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd15.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/vital-vltd15-camasir-kurutma-makinesi-15-kgsefer-camasirhane-ekipmanlari-vital-3888-23-B.webp"
   },
   {
     "id": "gastrotech__vltd15g",
@@ -60911,9 +60960,9 @@
     "marka_urun_kodu": "VLTD15G",
     "equsto_kod": "EQ-GASTROTE.VLTD15G",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd15g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd15g.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD15G",
@@ -60939,7 +60988,8 @@
     "gastrotech_model": "VLTD15G",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD15G\nÖlçü: 1085x1025x1970 mm\nListe fiyatı (EUR): 10667\nkatalog %47 iskonto\nEqusto satış (EUR): 5653.51\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺382.244,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd15g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd20",
@@ -60952,9 +61002,9 @@
     "marka_urun_kodu": "VLTD20",
     "equsto_kod": "EQ-GASTROTE.VLTD20",
     "images": [
-      "images/catalog/gastrotech/p261_1.jpg"
+      "images/catalog/gastrotech/web/vltd20.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_1.jpg",
+    "image": "images/catalog/gastrotech/web/vltd20.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD20",
@@ -60980,7 +61030,9 @@
     "gastrotech_model": "VLTD20",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD20\nÖlçü: 1085x1230x1720 mm\nListe fiyatı (EUR): 8178\nkatalog %47 iskonto\nEqusto satış (EUR): 4334.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺293.053,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd20.jpg",
+    "gastrotech_image_source": "official",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/904f61e8-2f5f-40d1-a1de-0088ded169b3/file/"
   },
   {
     "id": "gastrotech__vltd20g",
@@ -60993,9 +61045,9 @@
     "marka_urun_kodu": "VLTD20G",
     "equsto_kod": "EQ-GASTROTE.VLTD20G",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd20g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd20g.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD20G",
@@ -61021,7 +61073,8 @@
     "gastrotech_model": "VLTD20G",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD20G\nÖlçü: 1085x1230x1970 mm\nListe fiyatı (EUR): 11556\nkatalog %47 iskonto\nEqusto satış (EUR): 6124.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺414.101,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd20g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd30",
@@ -61034,9 +61087,9 @@
     "marka_urun_kodu": "VLTD30",
     "equsto_kod": "EQ-GASTROTE.VLTD30",
     "images": [
-      "images/catalog/gastrotech/p261_1.jpg"
+      "images/catalog/gastrotech/web/vltd30.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_1.jpg",
+    "image": "images/catalog/gastrotech/web/vltd30.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD30",
@@ -61062,7 +61115,8 @@
     "gastrotech_model": "VLTD30",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD30\nÖlçü: 1305x1280x1920 mm\nListe fiyatı (EUR): 11289\nkatalog %47 iskonto\nEqusto satış (EUR): 5983.17\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺404.533,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd30.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd30g",
@@ -61075,9 +61129,9 @@
     "marka_urun_kodu": "VLTD30G",
     "equsto_kod": "EQ-GASTROTE.VLTD30G",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd30g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd30g.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD30G",
@@ -61103,7 +61157,8 @@
     "gastrotech_model": "VLTD30G",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD30G\nÖlçü: 1305x1280x2170 mm\nListe fiyatı (EUR): 14844\nkatalog %47 iskonto\nEqusto satış (EUR): 7867.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺531.924,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd30g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd40",
@@ -61116,9 +61171,9 @@
     "marka_urun_kodu": "VLTD40",
     "equsto_kod": "EQ-GASTROTE.VLTD40",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd40.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd40.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD40",
@@ -61144,7 +61199,8 @@
     "gastrotech_model": "VLTD40",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD40\nÖlçü: 1305x1520x1920 mm\nListe fiyatı (EUR): 12444\nkatalog %47 iskonto\nEqusto satış (EUR): 6595.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺445.921,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd40.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd40g",
@@ -61157,9 +61213,9 @@
     "marka_urun_kodu": "VLTD40G",
     "equsto_kod": "EQ-GASTROTE.VLTD40G",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd40g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd40g.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD40G",
@@ -61185,7 +61241,8 @@
     "gastrotech_model": "VLTD40G",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD40G\nÖlçü: 1305x1520x2170 mm\nListe fiyatı (EUR): 16444\nkatalog %47 iskonto\nEqusto satış (EUR): 8715.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺589.259,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd40g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd60",
@@ -61198,9 +61255,9 @@
     "marka_urun_kodu": "VLTD60",
     "equsto_kod": "EQ-GASTROTE.VLTD60",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd60.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd60.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD60",
@@ -61226,7 +61283,8 @@
     "gastrotech_model": "VLTD60",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD60\nÖlçü: 1455x1785x1920 mm\nListe fiyatı (EUR): 16000\nkatalog %47 iskonto\nEqusto satış (EUR): 8480\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺573.348,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd60.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vltd60g",
@@ -61239,9 +61297,9 @@
     "marka_urun_kodu": "VLTD60G",
     "equsto_kod": "EQ-GASTROTE.VLTD60G",
     "images": [
-      "images/catalog/gastrotech/p261_2.jpg"
+      "images/catalog/gastrotech/web/vltd60g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p261_2.jpg",
+    "image": "images/catalog/gastrotech/web/vltd60g.jpg",
     "keywords": [
       "Gastrotech",
       "VLTD60G",
@@ -61267,7 +61325,8 @@
     "gastrotech_model": "VLTD60G",
     "fiyat_bekleniyor": false,
     "specs": "Çamaşır Kurutma Makinası\nÜrün kodu: VLTD60G\nÖlçü: 1455x1785x2230 mm\nListe fiyatı (EUR): 20444\nkatalog %47 iskonto\nEqusto satış (EUR): 10835.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺732.596,00\nKaynak: Gastrotech 2025-2027 katalog s.261",
-    "gastrotech_image": "images/catalog/gastrotech/p261_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vltd60g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri32150",
@@ -61280,9 +61339,9 @@
     "marka_urun_kodu": "VLRI32150",
     "equsto_kod": "EQ-GASTROTE.VLRI32150",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri32150.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri32150.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI32150",
@@ -61308,7 +61367,8 @@
     "gastrotech_model": "VLRI32150",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI32150\nÖlçü: 2250x1020x1170 mm\nListe fiyatı (EUR): 9511\nkatalog %47 iskonto\nEqusto satış (EUR): 5040.83\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺340.819,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri32150.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri32180",
@@ -61321,9 +61381,9 @@
     "marka_urun_kodu": "VLRI32180",
     "equsto_kod": "EQ-GASTROTE.VLRI32180",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri32180.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri32180.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI32180",
@@ -61349,7 +61409,8 @@
     "gastrotech_model": "VLRI32180",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI32180\nÖlçü: 2550x1020x1170 mm\nListe fiyatı (EUR): 10489\nkatalog %47 iskonto\nEqusto satış (EUR): 5559.17\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺375.865,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri32180.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri55150",
@@ -61362,9 +61423,9 @@
     "marka_urun_kodu": "VLRI55150",
     "equsto_kod": "EQ-GASTROTE.VLRI55150",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri55150.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55150.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55150",
@@ -61390,7 +61451,8 @@
     "gastrotech_model": "VLRI55150",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55150\nÖlçü: 2250x1200x1500 mm\nListe fiyatı (EUR): 12844\nkatalog %47 iskonto\nEqusto satış (EUR): 6807.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺460.255,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55150.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri55180",
@@ -61403,9 +61465,9 @@
     "marka_urun_kodu": "VLRI55180",
     "equsto_kod": "EQ-GASTROTE.VLRI55180",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri55180.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55180.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55180",
@@ -61431,7 +61493,8 @@
     "gastrotech_model": "VLRI55180",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55180\nÖlçü: 2550x1200x1500 mm\nListe fiyatı (EUR): 12844\nkatalog %47 iskonto\nEqusto satış (EUR): 6807.32\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺460.255,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55180.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri55200",
@@ -61444,9 +61507,9 @@
     "marka_urun_kodu": "VLRI55200",
     "equsto_kod": "EQ-GASTROTE.VLRI55200",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri55200.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55200.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55200",
@@ -61472,7 +61535,8 @@
     "gastrotech_model": "VLRI55200",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55200\nÖlçü: 2750x1300x1500 mm\nListe fiyatı (EUR): 13956\nkatalog %47 iskonto\nEqusto satış (EUR): 7396.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺500.104,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55200.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri60180",
@@ -61485,9 +61549,9 @@
     "marka_urun_kodu": "VLRI60180",
     "equsto_kod": "EQ-GASTROTE.VLRI60180",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri60180.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri60180.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI60180",
@@ -61513,7 +61577,8 @@
     "gastrotech_model": "VLRI60180",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI60180\nÖlçü: 2550x1300x1700 mm\nListe fiyatı (EUR): 15467\nkatalog %47 iskonto\nEqusto satış (EUR): 8197.51\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺554.249,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri60180.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri60200",
@@ -61526,9 +61591,9 @@
     "marka_urun_kodu": "VLRI60200",
     "equsto_kod": "EQ-GASTROTE.VLRI60200",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri60200.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri60200.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI60200",
@@ -61554,7 +61619,8 @@
     "gastrotech_model": "VLRI60200",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI60200\nÖlçü: 2750x1300x1700 mm\nListe fiyatı (EUR): 16089\nkatalog %47 iskonto\nEqusto satış (EUR): 8527.17\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺576.538,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri60200.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri75200",
@@ -61567,9 +61633,9 @@
     "marka_urun_kodu": "VLRI75200",
     "equsto_kod": "EQ-GASTROTE.VLRI75200",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri75200.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri75200.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI75200",
@@ -61595,7 +61661,8 @@
     "gastrotech_model": "VLRI75200",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI75200\nÖlçü: 3000x1580x1900 mm\nListe fiyatı (EUR): 20889\nkatalog %47 iskonto\nEqusto satış (EUR): 11071.17\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺748.542,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri75200.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri75250",
@@ -61608,9 +61675,9 @@
     "marka_urun_kodu": "VLRI75250",
     "equsto_kod": "EQ-GASTROTE.VLRI75250",
     "images": [
-      "images/catalog/gastrotech/p262_1.jpg"
+      "images/catalog/gastrotech/web/vlri75250.jpg"
     ],
-    "image": "images/catalog/gastrotech/p262_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri75250.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI75250",
@@ -61636,7 +61703,8 @@
     "gastrotech_model": "VLRI75250",
     "fiyat_bekleniyor": false,
     "specs": "Elektrikli, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI75250\nÖlçü: 3500x1580x1900 mm\nListe fiyatı (EUR): 23556\nkatalog %47 iskonto\nEqusto satış (EUR): 12484.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺844.112,00\nKaynak: Gastrotech 2025-2027 katalog s.262",
-    "gastrotech_image": "images/catalog/gastrotech/p262_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri75250.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri32150g",
@@ -61649,9 +61717,9 @@
     "marka_urun_kodu": "VLRI32150G",
     "equsto_kod": "EQ-GASTROTE.VLRI32150G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri32150g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri32150g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI32150G",
@@ -61677,7 +61745,8 @@
     "gastrotech_model": "VLRI32150G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI32150G\nÖlçü: 2250x1020x1170 mm\nListe fiyatı (EUR): 13956\nkatalog %47 iskonto\nEqusto satış (EUR): 7396.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺500.104,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri32150g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri32180g",
@@ -61690,9 +61759,9 @@
     "marka_urun_kodu": "VLRI32180G",
     "equsto_kod": "EQ-GASTROTE.VLRI32180G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri32180g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri32180g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI32180G",
@@ -61718,7 +61787,9 @@
     "gastrotech_model": "VLRI32180G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI32180G\nÖlçü: 2550x1020x1170 mm\nListe fiyatı (EUR): 15378\nkatalog %47 iskonto\nEqusto satış (EUR): 8150.34\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺551.059,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri32180g.jpg",
+    "gastrotech_image_source": "official",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/bba6b2ed-d98c-43d7-b7f6-cdc6d29f48f6/file/"
   },
   {
     "id": "gastrotech__vlri55150g",
@@ -61731,9 +61802,9 @@
     "marka_urun_kodu": "VLRI55150G",
     "equsto_kod": "EQ-GASTROTE.VLRI55150G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri55150g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55150g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55150G",
@@ -61759,7 +61830,8 @@
     "gastrotech_model": "VLRI55150G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55150G\nÖlçü: 2250x1200x1500 mm\nListe fiyatı (EUR): 17733\nkatalog %47 iskonto\nEqusto satış (EUR): 9398.49\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺635.449,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55150g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri55180g",
@@ -61772,9 +61844,9 @@
     "marka_urun_kodu": "VLRI55180G",
     "equsto_kod": "EQ-GASTROTE.VLRI55180G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri55180g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55180g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55180G",
@@ -61800,7 +61872,8 @@
     "gastrotech_model": "VLRI55180G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55180G\nÖlçü: 2550x1200x1500 mm\nListe fiyatı (EUR): 18622\nkatalog %47 iskonto\nEqusto satış (EUR): 9869.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺667.306,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55180g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri55200g",
@@ -61813,9 +61886,9 @@
     "marka_urun_kodu": "VLRI55200G",
     "equsto_kod": "EQ-GASTROTE.VLRI55200G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri55200g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri55200g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI55200G",
@@ -61841,7 +61914,8 @@
     "gastrotech_model": "VLRI55200G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI55200G\nÖlçü: 2750x1200x1500 mm\nListe fiyatı (EUR): 19289\nkatalog %47 iskonto\nEqusto satış (EUR): 10223.17\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺691.207,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri55200g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri60180g",
@@ -61854,9 +61928,9 @@
     "marka_urun_kodu": "VLRI60180G",
     "equsto_kod": "EQ-GASTROTE.VLRI60180G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri60180g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri60180g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI60180G",
@@ -61882,7 +61956,8 @@
     "gastrotech_model": "VLRI60180G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI60180G\nÖlçü: 2550x1300x1700 mm\nListe fiyatı (EUR): 20356\nkatalog %47 iskonto\nEqusto satış (EUR): 10788.68\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺729.443,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri60180g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri60200g",
@@ -61895,9 +61970,9 @@
     "marka_urun_kodu": "VLRI60200G",
     "equsto_kod": "EQ-GASTROTE.VLRI60200G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri60200g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri60200g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI60200G",
@@ -61923,7 +61998,8 @@
     "gastrotech_model": "VLRI60200G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI60200G\nÖlçü: 2750x1300x1700 mm\nListe fiyatı (EUR): 21422\nkatalog %47 iskonto\nEqusto satış (EUR): 11353.66\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺767.642,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri60200g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri75200g",
@@ -61936,9 +62012,9 @@
     "marka_urun_kodu": "VLRI75200G",
     "equsto_kod": "EQ-GASTROTE.VLRI75200G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri75200g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri75200g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI75200G",
@@ -61964,7 +62040,8 @@
     "gastrotech_model": "VLRI75200G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI75200G\nÖlçü: 3000x1580x1900 mm\nListe fiyatı (EUR): 26667\nkatalog %47 iskonto\nEqusto satış (EUR): 14133.51\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺955.592,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri75200g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vlri75250g",
@@ -61977,9 +62054,9 @@
     "marka_urun_kodu": "VLRI75250G",
     "equsto_kod": "EQ-GASTROTE.VLRI75250G",
     "images": [
-      "images/catalog/gastrotech/p263_1.jpg"
+      "images/catalog/gastrotech/web/vlri75250g.jpg"
     ],
-    "image": "images/catalog/gastrotech/p263_1.jpg",
+    "image": "images/catalog/gastrotech/web/vlri75250g.jpg",
     "keywords": [
       "Gastrotech",
       "VLRI75250G",
@@ -62005,7 +62082,8 @@
     "gastrotech_model": "VLRI75250G",
     "fiyat_bekleniyor": false,
     "specs": "Gazlı, Kurutma Bantlı Silindir Ütü\nÜrün kodu: VLRI75250G\nÖlçü: 3500x1580x1900 mm\nListe fiyatı (EUR): 29333\nkatalog %47 iskonto\nEqusto satış (EUR): 15546.49\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.051.127,00\nKaynak: Gastrotech 2025-2027 katalog s.263",
-    "gastrotech_image": "images/catalog/gastrotech/p263_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vlri75250g.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vpau-01",
@@ -62018,9 +62096,9 @@
     "marka_urun_kodu": "VPAU-01",
     "equsto_kod": "EQ-GASTROTE.VPAU01",
     "images": [
-      "images/catalog/gastrotech/p265_2.jpg"
+      "images/catalog/gastrotech/web/vpau-01.jpg"
     ],
-    "image": "images/catalog/gastrotech/p265_2.jpg",
+    "image": "images/catalog/gastrotech/web/vpau-01.jpg",
     "keywords": [
       "Gastrotech",
       "VPAU-01",
@@ -62046,7 +62124,8 @@
     "gastrotech_model": "VPAU-01",
     "fiyat_bekleniyor": false,
     "specs": "1580x1200x1350\nÜrün kodu: VPAU-01\nÖlçü: 1490x420x910 mm\nListe fiyatı (EUR): 2560\nkatalog %47 iskonto\nEqusto satış (EUR): 1356.8\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺91.735,00\nKaynak: Gastrotech 2025-2027 katalog s.265",
-    "gastrotech_image": "images/catalog/gastrotech/p265_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vpau-01.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__vpru-01",
@@ -62059,9 +62138,9 @@
     "marka_urun_kodu": "VPRU-01",
     "equsto_kod": "EQ-GASTROTE.VPRU01",
     "images": [
-      "images/catalog/gastrotech/p265_1.jpg"
+      "images/catalog/gastrotech/web/vpru-01.jpg"
     ],
-    "image": "images/catalog/gastrotech/p265_1.jpg",
+    "image": "images/catalog/gastrotech/web/vpru-01.jpg",
     "keywords": [
       "Gastrotech",
       "VPRU-01",
@@ -62087,6 +62166,7 @@
     "gastrotech_model": "VPRU-01",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech VPRU-01\nÜrün kodu: VPRU-01\nÖlçü: 1580x1200x1350 mm\nListe fiyatı (EUR): 8212\nkatalog %47 iskonto\nEqusto satış (EUR): 4352.36\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺294.271,00\nKaynak: Gastrotech 2025-2027 katalog s.265",
-    "gastrotech_image": "images/catalog/gastrotech/p265_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/vpru-01.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   }
 ]

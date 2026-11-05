@@ -1,0 +1,5167 @@
+{
+  "ok": [
+    {
+      "model": "SYM2500",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/sym2500.jpg",
+      "url": null
+    },
+    {
+      "model": "SYM3000",
+      "source": "pdf-normalize",
+      "short": 937,
+      "rel": "images/catalog/gastrotech/web/sym3000.jpg",
+      "url": null
+    },
+    {
+      "model": "SYM300",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/sym300.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c4914330-4dee-4324-8ef4-88dce1fb17dd/file/"
+    },
+    {
+      "model": "MOD275AF",
+      "source": "pdf-normalize",
+      "short": 821,
+      "rel": "images/catalog/gastrotech/web/mod275af.jpg",
+      "url": null
+    },
+    {
+      "model": "MOD300V",
+      "source": "pdf-normalize",
+      "short": 906,
+      "rel": "images/catalog/gastrotech/web/mod300v.jpg",
+      "url": null
+    },
+    {
+      "model": "C-254",
+      "source": "pdf-normalize",
+      "short": 491,
+      "rel": "images/catalog/gastrotech/web/c-254.jpg",
+      "url": null
+    },
+    {
+      "model": "C-308",
+      "source": "pdf-normalize",
+      "short": 619,
+      "rel": "images/catalog/gastrotech/web/c-308.jpg",
+      "url": null
+    },
+    {
+      "model": "C-312",
+      "source": "pdf-normalize",
+      "short": 619,
+      "rel": "images/catalog/gastrotech/web/c-312.jpg",
+      "url": null
+    },
+    {
+      "model": "C-62",
+      "source": "pdf-normalize",
+      "short": 619,
+      "rel": "images/catalog/gastrotech/web/c-62.jpg",
+      "url": null
+    },
+    {
+      "model": "C420",
+      "source": "pdf-normalize",
+      "short": 619,
+      "rel": "images/catalog/gastrotech/web/c420.jpg",
+      "url": null
+    },
+    {
+      "model": "SS-08C",
+      "source": "www.gustomarkt.com",
+      "short": 1178,
+      "rel": "images/catalog/gastrotech/web/ss-08c.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ss-08c-sebze-ve-meyve-kurutucu-8-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss08c-16293-19-B.png"
+    },
+    {
+      "model": "SS-10H",
+      "source": "www.gustomarkt.com",
+      "short": 1254,
+      "rel": "images/catalog/gastrotech/web/ss-10h.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ss-10h-sebze-ve-meyve-kurutucu-10-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-ss-10h-16294-19-B.png"
+    },
+    {
+      "model": "SS-12H",
+      "source": "www.gustomarkt.com",
+      "short": 1204,
+      "rel": "images/catalog/gastrotech/web/ss-12h.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ss-12h-sebze-ve-meyve-kurutucu-12-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss12h-16295-19-B.png"
+    },
+    {
+      "model": "SS-24H",
+      "source": "www.gustomarkt.com",
+      "short": 1146,
+      "rel": "images/catalog/gastrotech/web/ss-24h.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ss-24h-sebze-ve-meyve-kurutucu-24-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss24h-16296-19-B.png"
+    },
+    {
+      "model": "DFD-20A",
+      "source": "pdf-normalize",
+      "short": 737,
+      "rel": "images/catalog/gastrotech/web/dfd-20a.jpg",
+      "url": null
+    },
+    {
+      "model": "GP-B",
+      "source": "pdf-normalize",
+      "short": 388,
+      "rel": "images/catalog/gastrotech/web/gp-b.jpg",
+      "url": null
+    },
+    {
+      "model": "MXB7",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/mxb7.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-mxb7-set-ustu-stand-mikser-7-l-stand-mikserler-gtech-2146-12-B.jpg"
+    },
+    {
+      "model": "EF708",
+      "source": "www.gustomarkt.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/ef708.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ef708-s-professional-krom-set-ustu-mikser-48-l-siyah-set-ustu-mikserler-gtech-ef708s-8511-18-B.jpg"
+    },
+    {
+      "model": "EF708-S",
+      "source": "www.gustomarkt.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/ef708-s.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ef708-s-professional-krom-set-ustu-mikser-48-l-siyah-set-ustu-mikserler-gtech-ef708s-8511-18-B.jpg"
+    },
+    {
+      "model": "RTR120",
+      "source": "www.gustomarkt.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/rtr120.jpg",
+      "url": "https://www.gustomarkt.com/gtech-sicak-teshir-unitesi-120-l-sicak-teshir-urunleri-gtech-rtr120-8506-18-B.jpg"
+    },
+    {
+      "model": "RTR160",
+      "source": "www.gustomarkt.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/rtr160.jpg",
+      "url": "https://www.gustomarkt.com/gtech-sicak-teshir-unitesi-160-l-sicak-teshir-urunleri-gtech-rtr160-8505-18-B.jpg"
+    },
+    {
+      "model": "RTW202",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/rtw202.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-rtw202l-4-hava-perdeli-sistem-pasta-teshir-dolabi-202-l-pasta-teshir-uniteleri-gtech-2025-12-B.jpg"
+    },
+    {
+      "model": "RTW252",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/rtw252.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-rtw252l-4-hava-perdeli-sistem-pasta-teshir-dolabi-252-l-pasta-teshir-uniteleri-gtech-2024-12-B.jpg"
+    },
+    {
+      "model": "ARC100B",
+      "source": "www.antmutfak.com",
+      "short": 412,
+      "rel": "images/catalog/gastrotech/web/arc100b.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-arc100b-dik-tip-soguk-pasta-teshir-unitesi-100-l-pasta-teshir-uniteleri-gtech-4378-25-B.webp"
+    },
+    {
+      "model": "RT215C",
+      "source": "pdf-normalize",
+      "short": 413,
+      "rel": "images/catalog/gastrotech/web/rt215c.jpg",
+      "url": null
+    },
+    {
+      "model": "RT68B",
+      "source": "pdf-normalize",
+      "short": 522,
+      "rel": "images/catalog/gastrotech/web/rt68b.jpg",
+      "url": null
+    },
+    {
+      "model": "RT98B",
+      "source": "pdf-normalize",
+      "short": 523,
+      "rel": "images/catalog/gastrotech/web/rt98b.jpg",
+      "url": null
+    },
+    {
+      "model": "RTW118B",
+      "source": "pdf-normalize",
+      "short": 480,
+      "rel": "images/catalog/gastrotech/web/rtw118b.jpg",
+      "url": null
+    },
+    {
+      "model": "RTW128B",
+      "source": "pdf-normalize",
+      "short": 605,
+      "rel": "images/catalog/gastrotech/web/rtw128b.jpg",
+      "url": null
+    },
+    {
+      "model": "B40",
+      "source": "pdf-normalize",
+      "short": 957,
+      "rel": "images/catalog/gastrotech/web/b40.jpg",
+      "url": null
+    },
+    {
+      "model": "M23 UP DT/2 Otomatik",
+      "source": "pdf-normalize",
+      "short": 784,
+      "rel": "images/catalog/gastrotech/web/m23-up-dt-2-otomatik.jpg",
+      "url": null
+    },
+    {
+      "model": "M23 UP DT/3",
+      "source": "pdf-normalize",
+      "short": 784,
+      "rel": "images/catalog/gastrotech/web/m23-up-dt-3.jpg",
+      "url": null
+    },
+    {
+      "model": "B2016-DE",
+      "source": "pdf-normalize",
+      "short": 877,
+      "rel": "images/catalog/gastrotech/web/b2016-de.jpg",
+      "url": null
+    },
+    {
+      "model": "B2016-PM",
+      "source": "pdf-normalize",
+      "short": 884,
+      "rel": "images/catalog/gastrotech/web/b2016-pm.jpg",
+      "url": null
+    },
+    {
+      "model": "1GR",
+      "source": "pdf-normalize",
+      "short": 704,
+      "rel": "images/catalog/gastrotech/web/1gr.jpg",
+      "url": null
+    },
+    {
+      "model": "2GR",
+      "source": "pdf-normalize",
+      "short": 1021,
+      "rel": "images/catalog/gastrotech/web/2gr.jpg",
+      "url": null
+    },
+    {
+      "model": "3GR",
+      "source": "pdf-normalize",
+      "short": 1021,
+      "rel": "images/catalog/gastrotech/web/3gr.jpg",
+      "url": null
+    },
+    {
+      "model": "F10",
+      "source": "pdf-normalize",
+      "short": 890,
+      "rel": "images/catalog/gastrotech/web/f10.jpg",
+      "url": null
+    },
+    {
+      "model": "BR9CI",
+      "source": "pdf-normalize",
+      "short": 569,
+      "rel": "images/catalog/gastrotech/web/br9ci.jpg",
+      "url": null
+    },
+    {
+      "model": "BR9CN",
+      "source": "pdf-normalize",
+      "short": 569,
+      "rel": "images/catalog/gastrotech/web/br9cn.jpg",
+      "url": null
+    },
+    {
+      "model": "RTRW-15L",
+      "source": "pdf-normalize",
+      "short": 569,
+      "rel": "images/catalog/gastrotech/web/rtrw-15l.jpg",
+      "url": null
+    },
+    {
+      "model": "TOP-MN",
+      "source": "pdf-normalize",
+      "short": 690,
+      "rel": "images/catalog/gastrotech/web/top-mn.jpg",
+      "url": null
+    },
+    {
+      "model": "F71",
+      "source": "pdf-normalize",
+      "short": 446,
+      "rel": "images/catalog/gastrotech/web/f71.jpg",
+      "url": null
+    },
+    {
+      "model": "F83",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/f83.jpg",
+      "url": null
+    },
+    {
+      "model": "F64",
+      "source": "pdf-normalize",
+      "short": 881,
+      "rel": "images/catalog/gastrotech/web/f64.jpg",
+      "url": null
+    },
+    {
+      "model": "KDM450G",
+      "source": "pdf-normalize",
+      "short": 990,
+      "rel": "images/catalog/gastrotech/web/kdm450g.jpg",
+      "url": null
+    },
+    {
+      "model": "KDM450K",
+      "source": "pdf-normalize",
+      "short": 326,
+      "rel": "images/catalog/gastrotech/web/kdm450k.jpg",
+      "url": null
+    },
+    {
+      "model": "KDM450S",
+      "source": "pdf-normalize",
+      "short": 326,
+      "rel": "images/catalog/gastrotech/web/kdm450s.jpg",
+      "url": null
+    },
+    {
+      "model": "KDM450Y",
+      "source": "pdf-normalize",
+      "short": 326,
+      "rel": "images/catalog/gastrotech/web/kdm450y.jpg",
+      "url": null
+    },
+    {
+      "model": "EJ02CS",
+      "source": "www.gustomarkt.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/ej02cs.jpg",
+      "url": "https://www.gustomarkt.com/gtech-ej02cs-kati-meyve-presi-kati-meyve-sikacagi-gtech-ej02cs-18691-21-B.jpg"
+    },
+    {
+      "model": "GKO6010",
+      "source": "www.antmutfak.com",
+      "short": 452,
+      "rel": "images/catalog/gastrotech/web/gko6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-600-seri-gko6010-2-brulorlu-gazli-ocak-elektrikli-ocaklar-vital-3828-22-B.jpg"
+    },
+    {
+      "model": "GKO6020",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gko6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-600-seri-gko6020-4-brulorlu-gazli-ocak-elektrikli-ocaklar-vital-3829-22-B.webp"
+    },
+    {
+      "model": "GKO6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gko6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-600-seri-gko6030-6-brulorlu-gazli-ocak-elektrikli-ocaklar-vital-3831-22-B.webp"
+    },
+    {
+      "model": "GKW6010",
+      "source": "www.gustomarkt.com",
+      "short": 1000,
+      "rel": "images/catalog/gastrotech/web/gkw6010.jpg",
+      "url": "https://www.gustomarkt.com/gastrotech-gkw6010-1-brulorlu-gazli-wok-ocak-wok-ocaklar-gtech-gkw6010-18542-21-B.png"
+    },
+    {
+      "model": "GKW6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gkw6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-600-seri-gkw6030-2-brulorlu-gazli-wok-ocak-900x630x280-600-seri-vital-3832-22-B.webp"
+    },
+    {
+      "model": "EKO6010",
+      "source": "www.antmutfak.com",
+      "short": 543,
+      "rel": "images/catalog/gastrotech/web/eko6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-eko6010-elektrikli-ocak-2-yuvarlak-pleyt-400x630x280-elektrikli-ocaklar-vital-3839-22-B.jpg"
+    },
+    {
+      "model": "EKO6020",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/eko6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-eko6020-elektrikli-ocak-4-yuvarlak-pleyt-600x630x280-elektrikli-ocaklar-vital-3841-22-B.webp"
+    },
+    {
+      "model": "EKO6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/eko6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-eko6030-elektrikli-ocak-6-yuvarlak-pleyt-900x630x280-elektrikli-ocaklar-vital-3838-22-B.webp"
+    },
+    {
+      "model": "IKO6010",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/iko6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-iko6010-induksiyon-ocak-1-bolmeli-400x630x280-600-seri-vital-3844-22-B.webp"
+    },
+    {
+      "model": "IKO6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/iko6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-iko6030-2-bolmeli-induksiyon-ocak-900x630x280-induksiyonlu-ocaklar-vital-3843-22-B.webp"
+    },
+    {
+      "model": "EKF6020",
+      "source": "www.antmutfak.com",
+      "short": 812,
+      "rel": "images/catalog/gastrotech/web/ekf6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-ekf6020-elektrikli-kuzine-4-yuvarlak-pleyt-1-firin-600x630x850-kuzineler-vital-3848-22-B.jpg"
+    },
+    {
+      "model": "EKF6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/ekf6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-ekf6030-elektrikli-kuzine-6-yuvarlak-pleyt-1-firin-900x630x850-600-seri-vital-3850-22-B.webp"
+    },
+    {
+      "model": "GKF6020",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gkf6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gkf6020-gazli-kuzine-4-brulorlu-600x630x850-600-seri-vital-3853-22-B.webp"
+    },
+    {
+      "model": "GKF6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gkf6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gkf6030-6-brulorlu-gazli-kuzine-firinli-900x630x850-kuzineler-vital-3851-22-B.webp"
+    },
+    {
+      "model": "CC6030",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/cc6030.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6010R",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6010r.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6010S",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6010s.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6020R",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6020r.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6020S",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6020s.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6020SR",
+      "source": "pdf-normalize",
+      "short": 904,
+      "rel": "images/catalog/gastrotech/web/gpi6020sr.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6030R",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6030r.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6030S",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6030s.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI6030SR",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/gpi6030sr.jpg",
+      "url": null
+    },
+    {
+      "model": "CC6010",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/cc6010.jpg",
+      "url": null
+    },
+    {
+      "model": "CC6020",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/cc6020.jpg",
+      "url": null
+    },
+    {
+      "model": "EPI6010R",
+      "source": "pdf-normalize",
+      "short": 935,
+      "rel": "images/catalog/gastrotech/web/epi6010r.jpg",
+      "url": null
+    },
+    {
+      "model": "EPI6010S",
+      "source": "www.antmutfak.com",
+      "short": 441,
+      "rel": "images/catalog/gastrotech/web/epi6010s.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6010s-600-seri-duz-yuzeyli-elektrikli-izgara-400x630x280-elektrikli-izgaralar-vital-3908-23-B.jpg"
+    },
+    {
+      "model": "EPI6020R",
+      "source": "www.antmutfak.com",
+      "short": 467,
+      "rel": "images/catalog/gastrotech/web/epi6020r.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6020r-600-seri-nervurlu-yuzeyli-elektrikli-izgara-600x630x280-elektrikli-izgaralar-vital-3913-23-B.jpg"
+    },
+    {
+      "model": "EPI6020S",
+      "source": "www.antmutfak.com",
+      "short": 479,
+      "rel": "images/catalog/gastrotech/web/epi6020s.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6020sr-600-seri-elektrikli-pleyt-izgara-duz-nervurlu-yuzeyli-600x630x280-elektrikli-izgaralar-vital-3915-23-B.jpg"
+    },
+    {
+      "model": "EPI6020SR",
+      "source": "pdf-normalize",
+      "short": 904,
+      "rel": "images/catalog/gastrotech/web/epi6020sr.jpg",
+      "url": null
+    },
+    {
+      "model": "EPI6030R",
+      "source": "www.antmutfak.com",
+      "short": 519,
+      "rel": "images/catalog/gastrotech/web/epi6030r.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6030r-600-seri-nervurlu-yuzeyli-elektrikli-izgara-900x630x280-elektrikli-izgaralar-vital-3911-23-B.jpg"
+    },
+    {
+      "model": "EPI6030S",
+      "source": "www.antmutfak.com",
+      "short": 496,
+      "rel": "images/catalog/gastrotech/web/epi6030s.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6030s-600-seri-duz-yuzeyli-elektrikli-izgara-900x630x280-elektrikli-izgaralar-vital-3910-23-B.jpg"
+    },
+    {
+      "model": "EPI6030SR",
+      "source": "www.antmutfak.com",
+      "short": 522,
+      "rel": "images/catalog/gastrotech/web/epi6030sr.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-epi6030sr-600-seri-nervurlu-duz-yuzeyli-elektrikli-izgara-900x630x280-elektrikli-izgaralar-vital-3909-23-B.jpg"
+    },
+    {
+      "model": "ESB6010",
+      "source": "pdf-normalize",
+      "short": 756,
+      "rel": "images/catalog/gastrotech/web/esb6010.jpg",
+      "url": null
+    },
+    {
+      "model": "ESB6020",
+      "source": "pdf-normalize",
+      "short": 952,
+      "rel": "images/catalog/gastrotech/web/esb6020.jpg",
+      "url": null
+    },
+    {
+      "model": "GLI6010",
+      "source": "www.antmutfak.com",
+      "short": 448,
+      "rel": "images/catalog/gastrotech/web/gli6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gli6010-600-seri-gazli-lavatas-izgara-400x630x280-lavatasli-izgaralar-vital-3920-23-B.jpg"
+    },
+    {
+      "model": "GLI6020",
+      "source": "www.antmutfak.com",
+      "short": 478,
+      "rel": "images/catalog/gastrotech/web/gli6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gli6020-600-seri-gazli-lavatas-izgara-600x630x280-lavatasli-izgaralar-vital-3921-23-B.jpg"
+    },
+    {
+      "model": "GLI6030",
+      "source": "www.antmutfak.com",
+      "short": 523,
+      "rel": "images/catalog/gastrotech/web/gli6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gli6030-600-seri-gazli-lavatas-izgara-900x630x280-lavatasli-izgaralar-vital-3922-23-B.jpg"
+    },
+    {
+      "model": "ESI6010",
+      "source": "pdf-normalize",
+      "short": 838,
+      "rel": "images/catalog/gastrotech/web/esi6010.jpg",
+      "url": null
+    },
+    {
+      "model": "ESI6020",
+      "source": "www.antmutfak.com",
+      "short": 496,
+      "rel": "images/catalog/gastrotech/web/esi6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-esi6020-600-seri-elektrikli-sulu-izgara-600x630x280-dokum-izgaralar-vital-3893-23-B.jpg"
+    },
+    {
+      "model": "ESI6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/esi6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-esi6030-600-seri-elektrikli-amerikan-izgara-900x630x280-dokum-izgaralar-vital-3892-23-B.webp"
+    },
+    {
+      "model": "GSI6010",
+      "source": "pdf-normalize",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gsi6010.jpg",
+      "url": null
+    },
+    {
+      "model": "GSI6020",
+      "source": "pdf-normalize",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/gsi6020.jpg",
+      "url": null
+    },
+    {
+      "model": "GSI6030",
+      "source": "pdf-normalize",
+      "short": 754,
+      "rel": "images/catalog/gastrotech/web/gsi6030.jpg",
+      "url": null
+    },
+    {
+      "model": "EFP6010",
+      "source": "www.antmutfak.com",
+      "short": 449,
+      "rel": "images/catalog/gastrotech/web/efp6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-efp6010-600-seri-elektrikli-fritoz-400x630x280-10-litre-kapasiteli-600-seri-vital-3900-23-B.jpg"
+    },
+    {
+      "model": "EFP6020",
+      "source": "pdf-normalize",
+      "short": 1039,
+      "rel": "images/catalog/gastrotech/web/efp6020.jpg",
+      "url": null
+    },
+    {
+      "model": "GFP6010",
+      "source": "www.antmutfak.com",
+      "short": 468,
+      "rel": "images/catalog/gastrotech/web/gfp6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-gfp6010-600-seri-gazli-fritoz-dolapli-400x630x850-10-litre-kapasiteli-600-seri-vital-3916-23-B.jpg"
+    },
+    {
+      "model": "GFP6030",
+      "source": "pdf-normalize",
+      "short": 1068,
+      "rel": "images/catalog/gastrotech/web/gfp6030.jpg",
+      "url": null
+    },
+    {
+      "model": "EMF6010",
+      "source": "www.antmutfak.com",
+      "short": 447,
+      "rel": "images/catalog/gastrotech/web/emf6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-emf6010-600-seri-elektrikli-makarna-pisirici-400x630x280-600-seri-vital-3899-23-B.jpg"
+    },
+    {
+      "model": "EMF6020",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/emf6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-emf6020-600-seri-elektrikli-makarna-pisiriciler-600x630x280-600-seri-vital-3896-23-B.webp"
+    },
+    {
+      "model": "EPD6010",
+      "source": "pdf-normalize",
+      "short": 1023,
+      "rel": "images/catalog/gastrotech/web/epd6010.jpg",
+      "url": null
+    },
+    {
+      "model": "NTR6010",
+      "source": "pdf-normalize",
+      "short": 941,
+      "rel": "images/catalog/gastrotech/web/ntr6010.jpg",
+      "url": null
+    },
+    {
+      "model": "NTR6010C",
+      "source": "pdf-normalize",
+      "short": 969,
+      "rel": "images/catalog/gastrotech/web/ntr6010c.jpg",
+      "url": null
+    },
+    {
+      "model": "NTR6010E",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/ntr6010e.jpg",
+      "url": null
+    },
+    {
+      "model": "NTR6020",
+      "source": "pdf-normalize",
+      "short": 906,
+      "rel": "images/catalog/gastrotech/web/ntr6020.jpg",
+      "url": null
+    },
+    {
+      "model": "NTR6020C",
+      "source": "pdf-normalize",
+      "short": 905,
+      "rel": "images/catalog/gastrotech/web/ntr6020c.jpg",
+      "url": null
+    },
+    {
+      "model": "STD6010",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6010.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6010c-cekmeceli-alt-stand-400x550x570-set-alti-dolaplar-vital-3857-22-B.webp"
+    },
+    {
+      "model": "STD6010C",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6010c.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6010c-cekmeceli-alt-stand-400x550x570-set-alti-dolaplar-vital-3857-22-B.webp"
+    },
+    {
+      "model": "STD6010D",
+      "source": "pdf-normalize",
+      "short": 746,
+      "rel": "images/catalog/gastrotech/web/std6010d.jpg",
+      "url": null
+    },
+    {
+      "model": "STD6020",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6020c-alt-stand-cekmeceli-900x630x280-set-alti-dolaplar-vital-3856-22-B.webp"
+    },
+    {
+      "model": "STD6020C",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6020c.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6020c-alt-stand-cekmeceli-900x630x280-set-alti-dolaplar-vital-3856-22-B.webp"
+    },
+    {
+      "model": "STD6020D",
+      "source": "pdf-normalize",
+      "short": 689,
+      "rel": "images/catalog/gastrotech/web/std6020d.jpg",
+      "url": null
+    },
+    {
+      "model": "STD6030",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6030.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6030d-kapakli-alt-stand-900x550x570-set-alti-dolaplar-vital-3855-22-B.webp"
+    },
+    {
+      "model": "STD6030C",
+      "source": "pdf-normalize",
+      "short": 543,
+      "rel": "images/catalog/gastrotech/web/std6030c.jpg",
+      "url": null
+    },
+    {
+      "model": "STD6030D",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/std6030d.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-std6030d-kapakli-alt-stand-900x550x570-set-alti-dolaplar-vital-3855-22-B.webp"
+    },
+    {
+      "model": "GKO7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4ae65fee-1da1-40e6-b592-6ab2390d5660/file/"
+    },
+    {
+      "model": "GKO7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3aec3983-1e8c-4319-9aef-2f4d38dbe351/file/"
+    },
+    {
+      "model": "GKO7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/046a014c-71d4-451f-a63f-3a283a2ca1b7/file/"
+    },
+    {
+      "model": "GKW7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/051690ff-d187-4ccc-9242-ec0fcbdcfe09/file/"
+    },
+    {
+      "model": "GKW7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d2258373-549c-4a51-9e25-b18262c0b61b/file/"
+    },
+    {
+      "model": "GKW7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/092deaef-63bf-4e25-8fbb-e4a8ff017e6b/file/"
+    },
+    {
+      "model": "GKS7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5879db88-a3eb-43fe-9511-6484b20d5bb8/file/"
+    },
+    {
+      "model": "GKS7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4b1b2fb7-0742-4a84-a512-b1c8bb60ba3d/file/"
+    },
+    {
+      "model": "GKS7020B",
+      "source": "pdf-normalize",
+      "short": 610,
+      "rel": "images/catalog/gastrotech/web/gks7020b.jpg",
+      "url": null
+    },
+    {
+      "model": "GKS7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f7de4aa5-05a4-4ac7-9e4b-41931672ecce/file/"
+    },
+    {
+      "model": "EKO7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5e558694-d9bf-41c3-bc0e-c5d6789617b3/file/"
+    },
+    {
+      "model": "EKO7010K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7010k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5f86c279-2b5d-4fe5-95a9-45232347685b/file/"
+    },
+    {
+      "model": "EKO7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4aaaabf8-3526-4157-ae59-413582073ed6/file/"
+    },
+    {
+      "model": "EKO7020K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7020k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/00efd560-69ae-47f2-a33b-5d378f9f033d/file/"
+    },
+    {
+      "model": "EKO7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2cc77684-340f-42c4-b7cc-4e382084579a/file/"
+    },
+    {
+      "model": "EKO7030K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko7030k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/56683942-34b9-4d4e-8f0b-d9fd86cf6338/file/"
+    },
+    {
+      "model": "EST7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/est7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/34de254c-53c8-4092-bd96-eac002c0861d/file/"
+    },
+    {
+      "model": "EST7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/est7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/fd23efae-830f-4d27-8107-65e8f952586e/file/"
+    },
+    {
+      "model": "IKO7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d2374305-814f-42d2-b1b4-48f7c2d7dc19/file/"
+    },
+    {
+      "model": "IKO7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/aac9bacb-84ef-4214-9245-c14c040c02d8/file/"
+    },
+    {
+      "model": "IKO7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/dfcff207-a0d1-418b-9ad1-0e3ced113ba3/file/"
+    },
+    {
+      "model": "GSF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/facd2fc6-2c64-43b3-bccb-f8bae954d339/file/"
+    },
+    {
+      "model": "GST7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gst7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ca2ed9d0-7290-4dcf-88ca-80ff119cf29c/file/"
+    },
+    {
+      "model": "GST7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gst7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9400647a-8ac2-4558-b20d-c23b8c1e93b8/file/"
+    },
+    {
+      "model": "GKF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c94055c5-3194-4081-b04a-5ef6b31e0b20/file/"
+    },
+    {
+      "model": "GKF7021",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf7021.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/57266b90-fc0c-4656-a263-bed8ad35f536/file/"
+    },
+    {
+      "model": "GKF7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1640d6ea-b5b1-49f1-aace-d95e31940e77/file/"
+    },
+    {
+      "model": "GKF7030M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf7030m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f2276ab3-2bf8-40a7-a0fa-0c9ebcc24f26/file/"
+    },
+    {
+      "model": "GKF7031",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf7031.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ff47339c-41e4-4475-8fa7-06a44c3e14be/file/"
+    },
+    {
+      "model": "GKFE7020",
+      "source": "pdf-normalize",
+      "short": 886,
+      "rel": "images/catalog/gastrotech/web/gkfe7020.jpg",
+      "url": null
+    },
+    {
+      "model": "GKFE7030",
+      "source": "pdf-normalize",
+      "short": 896,
+      "rel": "images/catalog/gastrotech/web/gkfe7030.jpg",
+      "url": null
+    },
+    {
+      "model": "EKF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/eadbbdc5-06f4-482b-bc8c-41ab604bd35d/file/"
+    },
+    {
+      "model": "EKF7020K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf7020k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/0704be39-d153-4c8c-a431-c691ee4fa741/file/"
+    },
+    {
+      "model": "EKF7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/22535522-41a8-4445-a46f-e1bdbf0123f8/file/"
+    },
+    {
+      "model": "EKF7030K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf7030k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/0b897c03-9fc9-418a-b11d-0a7d4c5b3e1e/file/"
+    },
+    {
+      "model": "IKF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ikf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6d0d6bea-b836-49db-a38c-e590f0de1679/file/"
+    },
+    {
+      "model": "IKF7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ikf7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4f982814-2e00-409f-aa89-4181b95383ba/file/"
+    },
+    {
+      "model": "CC7030",
+      "source": "pdf-normalize",
+      "short": 776,
+      "rel": "images/catalog/gastrotech/web/cc7030.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI7010R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7010r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/81ef9cd1-5d1a-45be-895d-7dc068307a68/file/"
+    },
+    {
+      "model": "GPI7010S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7010s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e30652f3-a62b-43f1-888e-a02067bc8844/file/"
+    },
+    {
+      "model": "GPI7020R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7020r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/31439846-cb4c-46a7-ae06-65d162caa8d4/file/"
+    },
+    {
+      "model": "GPI7020S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7020s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/fb4d46cb-6d66-41e2-8756-a4999af5fc71/file/"
+    },
+    {
+      "model": "GPI7020SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7020sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c2815edc-e1a0-4535-86fc-2a13417cf63c/file/"
+    },
+    {
+      "model": "GPI7030R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7030r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/0e5fcc7f-18a0-4c7a-8995-338b131549c0/file/"
+    },
+    {
+      "model": "GPI7030S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7030s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f0356025-19e1-49bb-a854-aca3e1d2b095/file/"
+    },
+    {
+      "model": "GPI7030SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi7030sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ae3542a2-4697-4fa6-9716-5162995f393e/file/"
+    },
+    {
+      "model": "CC7010",
+      "source": "pdf-normalize",
+      "short": 776,
+      "rel": "images/catalog/gastrotech/web/cc7010.jpg",
+      "url": null
+    },
+    {
+      "model": "CC7020",
+      "source": "pdf-normalize",
+      "short": 776,
+      "rel": "images/catalog/gastrotech/web/cc7020.jpg",
+      "url": null
+    },
+    {
+      "model": "EPI7010R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7010r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/11197d19-29f3-41e2-84a2-94df41b4efce/file/"
+    },
+    {
+      "model": "EPI7010S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7010s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/bc5c43c2-d10c-4251-bcf5-75279977bb54/file/"
+    },
+    {
+      "model": "EPI7020R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7020r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a3814987-c881-4ee4-97eb-695189286727/file/"
+    },
+    {
+      "model": "EPI7020S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7020s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/789047ea-f6f4-4b01-9f70-665a92d5361a/file/"
+    },
+    {
+      "model": "EPI7020SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7020sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/300ea607-fad7-4c0d-93d3-f11cf4567ee6/file/"
+    },
+    {
+      "model": "EPI7030R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7030r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/107d9fb6-2926-45b0-81a4-ac1df8923e77/file/"
+    },
+    {
+      "model": "EPI7030S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7030s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e4202021-a7c1-4260-aa33-9510f43cbfc7/file/"
+    },
+    {
+      "model": "EPI7030SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi7030sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/cc41438e-9c15-4618-87d7-186a2cdd0e81/file/"
+    },
+    {
+      "model": "GLI7010",
+      "source": "pdf-normalize",
+      "short": 702,
+      "rel": "images/catalog/gastrotech/web/gli7010.jpg",
+      "url": null
+    },
+    {
+      "model": "GLI7020",
+      "source": "www.antmutfak.com",
+      "short": 600,
+      "rel": "images/catalog/gastrotech/web/gli7020.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-700-seri-gli7020-gazli-lavatas-izgara-800x730x280-mm-dokum-izgaralar-vital-4904-28-B.webp"
+    },
+    {
+      "model": "GLI7030",
+      "source": "pdf-normalize",
+      "short": 702,
+      "rel": "images/catalog/gastrotech/web/gli7030.jpg",
+      "url": null
+    },
+    {
+      "model": "GSI7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3e20ad7a-4545-4158-85e8-2d03fb8049c4/file/"
+    },
+    {
+      "model": "GSI7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/acab6280-a9a5-4a93-94c5-d1c6cf4499e0/file/"
+    },
+    {
+      "model": "GSI7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/431ebda7-0c6c-4fd9-9b34-118fca972b79/file/"
+    },
+    {
+      "model": "ESI7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/27ead312-30e4-4ea5-9467-f6e10a437787/file/"
+    },
+    {
+      "model": "ESI7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8abab537-6d16-4b9e-b53a-879d9d3fefde/file/"
+    },
+    {
+      "model": "ESI7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/992d99b5-9539-4670-92c5-55fd97bc80c9/file/"
+    },
+    {
+      "model": "EPD7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epd7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/84cc620e-85fe-48ed-bf06-796d8bcb5b6a/file/"
+    },
+    {
+      "model": "EFP7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/efp7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f3542d15-fb1c-4994-80d7-32e9e4258913/file/"
+    },
+    {
+      "model": "EFP7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/efp7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/93f6a4a0-1d6c-4378-9312-83a4e1645358/file/"
+    },
+    {
+      "model": "GFP7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gfp7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5680021a-d949-44e9-97d7-5954c2d3e168/file/"
+    },
+    {
+      "model": "GFP7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gfp7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/58d3d6f6-9a5c-4002-a6a7-8ba90e2803b5/file/"
+    },
+    {
+      "model": "EMF7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/emf7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/78af5053-8166-4072-b22c-9c37c06fdb79/file/"
+    },
+    {
+      "model": "EMF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/emf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b6bb30f4-a867-42a1-bfbb-306060e75e84/file/"
+    },
+    {
+      "model": "GMF7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gmf7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/404e2c2e-c245-4b79-bf20-68b131cf5026/file/"
+    },
+    {
+      "model": "GMF7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gmf7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/117341fe-fb23-4202-acdd-f0d509a46e6c/file/"
+    },
+    {
+      "model": "ESB7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esb7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c6bf2b21-b091-4500-8218-a184970b03e0/file/"
+    },
+    {
+      "model": "ESB7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esb7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6ddd3fcb-8e1d-4a33-9d3e-55bd9828e4fd/file/"
+    },
+    {
+      "model": "GSB7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsb7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/76ee25ef-4057-4270-b8ae-712ace57e494/file/"
+    },
+    {
+      "model": "GSB7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsb7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5ada55b3-b9d5-41f5-a530-e52437132e25/file/"
+    },
+    {
+      "model": "NTR7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d54580ae-279b-466f-b17c-08cf7358bcdf/file/"
+    },
+    {
+      "model": "NTR7010C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7010c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4dd0d0f8-259f-4641-9d95-4550f59b4866/file/"
+    },
+    {
+      "model": "NTR7010E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7010e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9825d7d4-2d9a-44b0-9a46-542386837620/file/"
+    },
+    {
+      "model": "NTR7015",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7015.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/01225b16-1034-4fea-883a-a857dc172260/file/"
+    },
+    {
+      "model": "NTR7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4d66f250-3178-407a-889e-0f3779e78085/file/"
+    },
+    {
+      "model": "NTR7020C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr7020c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/28a2af3f-274d-4f1a-a4de-6dbd025623af/file/"
+    },
+    {
+      "model": "STD7010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/eb1fef30-f585-4e06-8993-680039be18fd/file/"
+    },
+    {
+      "model": "STD7010C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7010c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2e35a3ee-4c71-4540-82b3-7680708afd85/file/"
+    },
+    {
+      "model": "STD7010D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7010d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b1579953-5577-4893-a7d5-fdc9360760e7/file/"
+    },
+    {
+      "model": "STD7015",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7015.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/fc15d686-307d-44b7-abcc-e732f136db26/file/"
+    },
+    {
+      "model": "STD7015D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7015d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/202a715f-5740-474a-a3df-009b59e551ca/file/"
+    },
+    {
+      "model": "STD7020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6c8bc071-a0ec-479b-b4a8-cf35e537430e/file/"
+    },
+    {
+      "model": "STD7020C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7020c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/806e1e01-e1d7-4c94-b391-5c449f93811a/file/"
+    },
+    {
+      "model": "STD7020D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7020d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1645676f-ac6d-42c8-8a95-7fae95553fcc/file/"
+    },
+    {
+      "model": "STD7030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/00d51d4e-9ad5-43a0-a4d9-fc81e832ead0/file/"
+    },
+    {
+      "model": "STD7030C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7030c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/599c44c3-3098-44d8-9378-bd365364c8e2/file/"
+    },
+    {
+      "model": "STD7030D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std7030d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d852ae88-8f34-4d90-956c-c0de8443e5ef/file/"
+    },
+    {
+      "model": "EDT7050",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt7050.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ad57b440-329d-4a25-85a5-352be077e04d/file/"
+    },
+    {
+      "model": "EKT7080",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekt7080.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/fdf1c172-1adf-4dbf-844a-0290813922d8/file/"
+    },
+    {
+      "model": "GDT7050",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gdt7050.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5f13545a-b12e-4e49-bb31-f6b74722ae3d/file/"
+    },
+    {
+      "model": "GKT7080",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkt7080.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f6200f03-f8ad-43cb-aeae-890229fa76af/file/"
+    },
+    {
+      "model": "GKO9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/63ca0186-8a0f-40e8-a4ee-15718b3f6d09/file/"
+    },
+    {
+      "model": "GKO9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e4dee7d4-bc19-4ba6-80e6-16d4b9a74c3a/file/"
+    },
+    {
+      "model": "GKO9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/cf96a486-ad53-4e73-9ee0-7cd38003ede5/file/"
+    },
+    {
+      "model": "GKW9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1c779b31-4833-4c8e-810d-2b31dd1a24c4/file/"
+    },
+    {
+      "model": "GKW9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/edcf242c-5015-4b65-8578-a230d6738a8f/file/"
+    },
+    {
+      "model": "GKW9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkw9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/753e6ebe-69fd-430e-b029-e7a696dc6544/file/"
+    },
+    {
+      "model": "GKS9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3962c860-81c7-455f-b1ab-a09ebdcb93d3/file/"
+    },
+    {
+      "model": "GKS9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e265abfe-ee7c-46f5-b517-071d870407a5/file/"
+    },
+    {
+      "model": "GKS9020B",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gks9020b.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gks9020b-gazli-dort-yanisli-819066.png"
+    },
+    {
+      "model": "GKS9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gks9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/33ab6f6f-bee7-4054-991f-ef9b60bc1e12/file/"
+    },
+    {
+      "model": "EKO9010K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko9010k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/289985c1-00e5-4146-af54-0a8323817773/file/"
+    },
+    {
+      "model": "EKO9020K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko9020k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/bf0724c9-5502-4427-9117-27a827f94e58/file/"
+    },
+    {
+      "model": "EKO9030K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eko9030k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2cc9c415-eefd-40e3-bfab-1a496f25457d/file/"
+    },
+    {
+      "model": "IKO9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f11698b8-892e-434d-b2c6-770091ef7c23/file/"
+    },
+    {
+      "model": "IKO9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/db6f9b89-25df-49e4-8d4f-ed76dc4365a6/file/"
+    },
+    {
+      "model": "IKO9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/iko9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/48b52880-c953-4a28-a97d-d3e078e26e34/file/"
+    },
+    {
+      "model": "EST9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/est9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/68b233a1-99e1-4f74-9b6d-5c3f10e5dbfd/file/"
+    },
+    {
+      "model": "EST9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/est9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/16fde8ec-802f-4463-ae7b-f9586f537099/file/"
+    },
+    {
+      "model": "GST9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gst9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/7d2fda75-59ae-43e8-ac0c-6d37af87f5d2/file/"
+    },
+    {
+      "model": "GST9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gst9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1d6982f8-158e-40c1-94b2-d5876d2dced0/file/"
+    },
+    {
+      "model": "GKF9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4b276941-41bb-424d-a308-15aebe6a270e/file/"
+    },
+    {
+      "model": "GKF9021",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf9021.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/73642c86-f38c-4a77-b125-12e32236f3e1/file/"
+    },
+    {
+      "model": "GKF9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b8b24c23-0ac0-4d24-8ac1-5e90bcdcfe15/file/"
+    },
+    {
+      "model": "GKF9030M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf9030m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6a86efdf-e33d-4991-9e1e-919dbcfcb2ee/file/"
+    },
+    {
+      "model": "GKF9031",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf9031.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/aca7628f-51dd-4f4c-b283-43035bc46c13/file/"
+    },
+    {
+      "model": "GKFE9020",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gkfe9020.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkfe9020-gazli-kuzine-elekt-dd750f.png"
+    },
+    {
+      "model": "GKFE9030",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gkfe9030.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkfe9030-gazli-kuzine-elekt-4c7a-b.png"
+    },
+    {
+      "model": "GSF9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsf9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/73b78030-c9b5-4a08-9498-b5aab864c611/file/"
+    },
+    {
+      "model": "EKF9020K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf9020k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c3b2f2f0-e68b-453f-911e-902fcb3a025f/file/"
+    },
+    {
+      "model": "EKF9030K",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekf9030k.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/470b8ed9-f6cd-4db8-9294-440bf0d77425/file/"
+    },
+    {
+      "model": "IKF9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ikf9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e259bf0c-1e9c-4126-a495-c4559efea66f/file/"
+    },
+    {
+      "model": "IKF9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ikf9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/44ebf27a-1ef2-47fd-831b-2cc887b8cf0f/file/"
+    },
+    {
+      "model": "CC9030",
+      "source": "pdf-normalize",
+      "short": 768,
+      "rel": "images/catalog/gastrotech/web/cc9030.jpg",
+      "url": null
+    },
+    {
+      "model": "GPI9010R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9010r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a8e6db90-46c4-4a22-a012-653288449bf2/file/"
+    },
+    {
+      "model": "GPI9010S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9010s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/19d9a7cf-68b1-41b9-981e-368d89ac4cc8/file/"
+    },
+    {
+      "model": "GPI9020R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9020r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b600f7fb-2914-4efd-9b2d-396965ba6bd5/file/"
+    },
+    {
+      "model": "GPI9020S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9020s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/08612550-1464-437f-ac5e-8a9a8e6198bc/file/"
+    },
+    {
+      "model": "GPI9020SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9020sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/acce9dd7-edf1-48fc-b195-aee837dc3ffa/file/"
+    },
+    {
+      "model": "GPI9030R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9030r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/12c9c235-5456-419c-9433-e71c7a3f3801/file/"
+    },
+    {
+      "model": "GPI9030S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9030s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b573c070-7f9c-4889-9b6a-0f20ead39200/file/"
+    },
+    {
+      "model": "GPI9030SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gpi9030sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9e07ed0e-bed4-468d-8d9a-37938f7bd693/file/"
+    },
+    {
+      "model": "CC9010",
+      "source": "pdf-normalize",
+      "short": 766,
+      "rel": "images/catalog/gastrotech/web/cc9010.jpg",
+      "url": null
+    },
+    {
+      "model": "CC9020",
+      "source": "pdf-normalize",
+      "short": 766,
+      "rel": "images/catalog/gastrotech/web/cc9020.jpg",
+      "url": null
+    },
+    {
+      "model": "EPI9010R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9010r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/295e3606-0bb6-4fa2-94a1-6837157f48cd/file/"
+    },
+    {
+      "model": "EPI9010S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9010s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/622bd18c-a4b5-4eaf-9009-4dd5c259f054/file/"
+    },
+    {
+      "model": "EPI9020R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9020r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c97380a2-b8a2-4b0c-8dd1-c49868063a9b/file/"
+    },
+    {
+      "model": "EPI9020S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9020s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/51e4d198-f789-4eb3-92ce-f6f5f9cf8db0/file/"
+    },
+    {
+      "model": "EPI9020SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9020sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/57005da1-17fb-434b-8a39-ba182832b17a/file/"
+    },
+    {
+      "model": "EPI9030R",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9030r.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f1fc8f08-f7b8-485b-b896-b7d572f6d3ac/file/"
+    },
+    {
+      "model": "EPI9030S",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9030s.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c321d099-e6db-41c9-a04f-be00b4ce24b8/file/"
+    },
+    {
+      "model": "EPI9030SR",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epi9030sr.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/84544746-210d-4788-b9b6-93d7b8684822/file/"
+    },
+    {
+      "model": "GLI9010",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gli9010.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9010-gazli-lavatas-izgar-65ab73.png"
+    },
+    {
+      "model": "GLI9020",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gli9020.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9020-gazli-lavatas-izgar-9b3c-b.png"
+    },
+    {
+      "model": "GLI9030",
+      "source": "demasan",
+      "short": 1024,
+      "rel": "images/catalog/gastrotech/web/gli9030.jpg",
+      "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9030-gazli-lavatas-izgar-f65-42.png"
+    },
+    {
+      "model": "GSI9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1d772e02-bea4-4c0b-a88f-63fe02b4c425/file/"
+    },
+    {
+      "model": "GSI9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5e1bbc19-4572-49ea-8dfb-e014f880f97a/file/"
+    },
+    {
+      "model": "GSI9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsi9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5083a434-79de-4bf5-9fe0-8f1fdb327348/file/"
+    },
+    {
+      "model": "ESI9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ba6564e5-8e67-4a63-802f-738b94680b03/file/"
+    },
+    {
+      "model": "ESI9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/28c658d1-9331-4d09-b24a-185201325ab5/file/"
+    },
+    {
+      "model": "ESI9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esi9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/34e658e3-ec7f-4470-a588-ffe5e802cf5c/file/"
+    },
+    {
+      "model": "EPD9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/epd9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/452d5147-d6d9-484d-8d27-4edec5487021/file/"
+    },
+    {
+      "model": "EFP9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/efp9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8aa067fe-5f22-4b50-9513-4f178846ddfe/file/"
+    },
+    {
+      "model": "EFP9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/efp9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d66a989d-0441-49e7-a398-fb2725650655/file/"
+    },
+    {
+      "model": "GFP9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gfp9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/15e279d9-5317-4dd7-a4fa-9cef00052c4e/file/"
+    },
+    {
+      "model": "GFP9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gfp9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/88fa5f7b-aaa6-4e6c-b412-e2fd5ab2552d/file/"
+    },
+    {
+      "model": "EMF9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/emf9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/92d3147b-31b4-43e0-9816-2f32d234d339/file/"
+    },
+    {
+      "model": "EMF9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/emf9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8d7252b0-40df-4130-8a46-eb5894bbf914/file/"
+    },
+    {
+      "model": "GMF9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gmf9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ca42139c-505b-4eb9-acc2-22291d3669ea/file/"
+    },
+    {
+      "model": "GMF9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gmf9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/796d8240-411e-482a-a6e5-b97973e15cda/file/"
+    },
+    {
+      "model": "ESB9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esb9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6e0f082f-ce02-47ea-ba37-699b51ecfd30/file/"
+    },
+    {
+      "model": "ESB9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/esb9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2d3ad04e-c09c-4e19-9f84-274117683f6c/file/"
+    },
+    {
+      "model": "GSB9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsb9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2b30fb54-80b6-4797-86b5-f48bcb1cdee9/file/"
+    },
+    {
+      "model": "GSB9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gsb9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ecb06842-1ef5-433f-9c8c-eeca6122abfd/file/"
+    },
+    {
+      "model": "NTR9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2ee8dd76-507b-4010-9c1d-6979507193e7/file/"
+    },
+    {
+      "model": "NTR9010C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9010c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d2ebc4aa-9391-485b-8be0-20d505da6aed/file/"
+    },
+    {
+      "model": "NTR9010E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9010e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9e1a0e56-a783-4288-8fbf-3b19d16bebe1/file/"
+    },
+    {
+      "model": "NTR9015",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9015.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b8bcb38b-96c5-4874-b614-1c7ec6483fe0/file/"
+    },
+    {
+      "model": "NTR9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2d84efb6-cc01-4a9e-8f2b-f487d71e588c/file/"
+    },
+    {
+      "model": "NTR9020C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ntr9020c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1e13f063-6aef-4158-8730-61974d0591fe/file/"
+    },
+    {
+      "model": "STD9010",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9010.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/60b86197-50c3-4b42-bd0f-fedceb8165bf/file/"
+    },
+    {
+      "model": "STD9010C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9010c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6743d8c3-c488-45eb-9826-a8541d261b34/file/"
+    },
+    {
+      "model": "STD9010D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9010d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1d456b61-7040-4271-ad06-113b3351ece4/file/"
+    },
+    {
+      "model": "STD9015",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9015.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/28df9540-40c7-450d-b672-1b4f2001478a/file/"
+    },
+    {
+      "model": "STD9015D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9015d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1aaa2fbb-accf-43ff-9835-916211d471d9/file/"
+    },
+    {
+      "model": "STD9020",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9020.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ac226028-d69a-4056-bcd3-12b82ec4a32d/file/"
+    },
+    {
+      "model": "STD9020C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9020c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/aa8396cb-1895-4284-92d2-a71031215da9/file/"
+    },
+    {
+      "model": "STD9020D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9020d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8938e23b-4d04-461c-8c8b-c9c044d30f8d/file/"
+    },
+    {
+      "model": "STD9030",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9030.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1903b86d-9780-4764-8a4e-0fe693cb8e7e/file/"
+    },
+    {
+      "model": "STD9030C",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9030c.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/73bd3edb-4eb4-489b-ab0b-49c487613086/file/"
+    },
+    {
+      "model": "STD9030D",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/std9030d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a75a2f47-a376-4e63-95de-9b827965e3e0/file/"
+    },
+    {
+      "model": "GKT90100",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkt90100.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/34416892-a820-4ef3-b0ab-1deb6339ba55/file/"
+    },
+    {
+      "model": "GKT90150",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkt90150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/e58264f5-825e-4975-b630-230d17faa36e/file/"
+    },
+    {
+      "model": "GKTD90150",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gktd90150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b6fe4c19-6c03-432c-80c6-d287b92a6e42/file/"
+    },
+    {
+      "model": "EKT90100",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekt90100.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f53be838-09d8-48f3-bc49-ac90035a430e/file/"
+    },
+    {
+      "model": "EKT90150",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekt90150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/bf9c5e07-885c-41d2-b722-2eef0760dd70/file/"
+    },
+    {
+      "model": "GDT90120",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gdt90120.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3dfbd96d-80c0-4f06-9727-cbf3059a3caa/file/"
+    },
+    {
+      "model": "GDT90120M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gdt90120m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/49788987-6ed4-4f7f-be97-832290e9c835/file/"
+    },
+    {
+      "model": "GDT9080",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gdt9080.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/cd4cbc7a-d296-4926-ae9b-1b40e660a38c/file/"
+    },
+    {
+      "model": "GDT9080M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gdt9080m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/081c166e-67ab-4e61-89a5-ac215439b888/file/"
+    },
+    {
+      "model": "EDT90120",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt90120.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d80aeeb2-679b-4a4f-be72-a81d94fad4ef/file/"
+    },
+    {
+      "model": "EDT90120M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt90120m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/455f806b-74aa-4269-9b9d-55e3d9e6450e/file/"
+    },
+    {
+      "model": "EDT90150",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt90150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/172ce26d-6345-4dcb-9939-1bc27d43a96a/file/"
+    },
+    {
+      "model": "EDT90150M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt90150m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d6368995-c198-470e-a443-65fa5e4e9804/file/"
+    },
+    {
+      "model": "EDT9080",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt9080.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/092942d2-e1a9-4272-8bec-3f73f4e707be/file/"
+    },
+    {
+      "model": "EDT9080M",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/edt9080m.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4daeb8b4-0228-4ba4-bafd-d7c38188f973/file/"
+    },
+    {
+      "model": "VDRP-EKO10",
+      "source": "pdf-normalize",
+      "short": 633,
+      "rel": "images/catalog/gastrotech/web/vdrp-eko10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EKO20",
+      "source": "pdf-normalize",
+      "short": 591,
+      "rel": "images/catalog/gastrotech/web/vdrp-eko20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-GKO10",
+      "source": "pdf-normalize",
+      "short": 611,
+      "rel": "images/catalog/gastrotech/web/vdrp-gko10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-GKO20",
+      "source": "pdf-normalize",
+      "short": 601,
+      "rel": "images/catalog/gastrotech/web/vdrp-gko20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-ESI20",
+      "source": "pdf-normalize",
+      "short": 653,
+      "rel": "images/catalog/gastrotech/web/vdrp-esi20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-IKO10",
+      "source": "pdf-normalize",
+      "short": 614,
+      "rel": "images/catalog/gastrotech/web/vdrp-iko10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-IKO10T",
+      "source": "pdf-normalize",
+      "short": 614,
+      "rel": "images/catalog/gastrotech/web/vdrp-iko10t.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-IKO20",
+      "source": "pdf-normalize",
+      "short": 585,
+      "rel": "images/catalog/gastrotech/web/vdrp-iko20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPI10R",
+      "source": "pdf-normalize",
+      "short": 738,
+      "rel": "images/catalog/gastrotech/web/vdrp-epi10r.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPI10S",
+      "source": "pdf-normalize",
+      "short": 847,
+      "rel": "images/catalog/gastrotech/web/vdrp-epi10s.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPI20R",
+      "source": "pdf-normalize",
+      "short": 847,
+      "rel": "images/catalog/gastrotech/web/vdrp-epi20r.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPI20S",
+      "source": "pdf-normalize",
+      "short": 847,
+      "rel": "images/catalog/gastrotech/web/vdrp-epi20s.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPI20SR",
+      "source": "pdf-normalize",
+      "short": 738,
+      "rel": "images/catalog/gastrotech/web/vdrp-epi20sr.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-ESB10",
+      "source": "pdf-normalize",
+      "short": 633,
+      "rel": "images/catalog/gastrotech/web/vdrp-esb10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-ESB20",
+      "source": "pdf-normalize",
+      "short": 591,
+      "rel": "images/catalog/gastrotech/web/vdrp-esb20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EFP10",
+      "source": "pdf-normalize",
+      "short": 637,
+      "rel": "images/catalog/gastrotech/web/vdrp-efp10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EFP20",
+      "source": "pdf-normalize",
+      "short": 594,
+      "rel": "images/catalog/gastrotech/web/vdrp-efp20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EMF10",
+      "source": "pdf-normalize",
+      "short": 828,
+      "rel": "images/catalog/gastrotech/web/vdrp-emf10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EMF20",
+      "source": "pdf-normalize",
+      "short": 749,
+      "rel": "images/catalog/gastrotech/web/vdrp-emf20.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-EPD10",
+      "source": "pdf-normalize",
+      "short": 1078,
+      "rel": "images/catalog/gastrotech/web/vdrp-epd10.jpg",
+      "url": null
+    },
+    {
+      "model": "VDRP-NTR10E",
+      "source": "pdf-normalize",
+      "short": 1018,
+      "rel": "images/catalog/gastrotech/web/vdrp-ntr10e.jpg",
+      "url": null
+    },
+    {
+      "model": "GKF100",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf100.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5cd9b035-682e-41d0-8376-b340be9bc09f/file/"
+    },
+    {
+      "model": "GKF150",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/cdb2f05d-8f78-4e18-a2c3-4b4f9e8cb1cc/file/"
+    },
+    {
+      "model": "GKF200",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf200.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/66b92738-8c78-4888-9fb2-04ff04ceea7d/file/"
+    },
+    {
+      "model": "GKF201",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf201.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/f4a2fb44-3b1d-4c24-9ddb-64018f9b6099/file/"
+    },
+    {
+      "model": "GKF202",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf202.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2982be85-cf67-4682-8fe5-e805459b8ca5/file/"
+    },
+    {
+      "model": "GKF203",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf203.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6228df39-ac9f-4b83-917e-433ef0db9016/file/"
+    },
+    {
+      "model": "GKF204",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf204.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/576aedfa-fc80-4f30-a6c7-1513cd7e1e51/file/"
+    },
+    {
+      "model": "GKF205",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf205.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/63325e39-e38a-4f61-bebc-a094ca090ebc/file/"
+    },
+    {
+      "model": "EKT400",
+      "source": "pdf-normalize",
+      "short": 1007,
+      "rel": "images/catalog/gastrotech/web/ekt400.jpg",
+      "url": null
+    },
+    {
+      "model": "EKT500",
+      "source": "pdf-normalize",
+      "short": 1008,
+      "rel": "images/catalog/gastrotech/web/ekt500.jpg",
+      "url": null
+    },
+    {
+      "model": "GKT500",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkt500.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b04aa526-7032-4d2e-90eb-f3aa8f62ab0b/file/"
+    },
+    {
+      "model": "GKT90250",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkt90250.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/2ca11dd3-c9dd-4f9f-82b9-ac546679868a/file/"
+    },
+    {
+      "model": "EKT90250",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/ekt90250.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8180c538-8cc9-45d1-a010-4b489d52df24/file/"
+    },
+    {
+      "model": "GKTD90250",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gktd90250.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3573630b-5185-4c65-bf58-b5c409f2c1d7/file/"
+    },
+    {
+      "model": "EFP81",
+      "source": "pdf-normalize",
+      "short": 549,
+      "rel": "images/catalog/gastrotech/web/efp81.jpg",
+      "url": null
+    },
+    {
+      "model": "EFP82",
+      "source": "pdf-normalize",
+      "short": 549,
+      "rel": "images/catalog/gastrotech/web/efp82.jpg",
+      "url": null
+    },
+    {
+      "model": "EYO400",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/eyo400.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4774ce01-c155-4f7e-9f72-465e06049291/file/"
+    },
+    {
+      "model": "VYO68B",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/vyo68b.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/fdc83d19-a0aa-4aef-ae32-fb8ab8266c5e/file/"
+    },
+    {
+      "model": "VYO78",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/vyo78.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a00e7f1f-48ad-498c-be17-5c489523d8f5/file/"
+    },
+    {
+      "model": "GKF8020",
+      "source": "pdf-normalize",
+      "short": 593,
+      "rel": "images/catalog/gastrotech/web/gkf8020.jpg",
+      "url": null
+    },
+    {
+      "model": "GKF8030",
+      "source": "pdf-normalize",
+      "short": 593,
+      "rel": "images/catalog/gastrotech/web/gkf8030.jpg",
+      "url": null
+    },
+    {
+      "model": "GKFPS-152",
+      "source": "pdf-normalize",
+      "short": 593,
+      "rel": "images/catalog/gastrotech/web/gkfps-152.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8010",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8010.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8010K",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8010k.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8020",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8020.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8020K",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8020k.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8030",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8030.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO8030K",
+      "source": "pdf-normalize",
+      "short": 481,
+      "rel": "images/catalog/gastrotech/web/gko8030k.jpg",
+      "url": null
+    },
+    {
+      "model": "GKF100-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf100-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a7a6d8f9-47aa-4083-952d-3589b978cf47/file/"
+    },
+    {
+      "model": "GKF150-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf150-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/36e07235-a9d7-4156-b671-a89ce8606d58/file/"
+    },
+    {
+      "model": "GKF200-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf200-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9dced7a7-c608-4db5-beb7-5b2e34cf32aa/file/"
+    },
+    {
+      "model": "GKF201-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf201-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3e1109b6-c8e0-4ca2-9333-ff01820e6250/file/"
+    },
+    {
+      "model": "GKF202-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf202-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/aa6edbff-f62d-4d1e-8816-7a82cef89850/file/"
+    },
+    {
+      "model": "GKF203-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf203-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a611b056-bcc8-48a6-aba9-cee4fc7cd819/file/"
+    },
+    {
+      "model": "GKF204-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf204-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/744d59de-bdd0-4a92-82ea-b2d72477e90d/file/"
+    },
+    {
+      "model": "GKF205-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gkf205-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/c4656eb1-10a8-4695-a1eb-a121908f77bf/file/"
+    },
+    {
+      "model": "GKO302-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko302-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/275dc216-90b9-4f3c-bebd-71aad7f73ae6/file/"
+    },
+    {
+      "model": "GKO303-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko303-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a3fde20f-378f-40eb-8d70-cc021a400e61/file/"
+    },
+    {
+      "model": "GKO402-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko402-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/5dfce580-fa10-4204-b294-0f5cb5dac1fc/file/"
+    },
+    {
+      "model": "GKO403-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko403-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/0b2c347e-8947-4cf7-9ba1-c261f5c711da/file/"
+    },
+    {
+      "model": "GKO404-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko404-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/cfd562a6-60d9-4213-bd39-43d1fb4584fb/file/"
+    },
+    {
+      "model": "GKO406-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko406-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/490f4814-fb8a-4d89-8b8b-0918a38797a6/file/"
+    },
+    {
+      "model": "GKO408-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gko408-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ad64bb5d-e1c0-4ab4-ac8d-d0cd85d94cae/file/"
+    },
+    {
+      "model": "GKO601-ECO",
+      "source": "pdf-normalize",
+      "short": 930,
+      "rel": "images/catalog/gastrotech/web/gko601-eco.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO602-ECO",
+      "source": "pdf-normalize",
+      "short": 930,
+      "rel": "images/catalog/gastrotech/web/gko602-eco.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO642-ECO",
+      "source": "pdf-normalize",
+      "short": 930,
+      "rel": "images/catalog/gastrotech/web/gko642-eco.jpg",
+      "url": null
+    },
+    {
+      "model": "GKO643-ECO",
+      "source": "pdf-normalize",
+      "short": 930,
+      "rel": "images/catalog/gastrotech/web/gko643-eco.jpg",
+      "url": null
+    },
+    {
+      "model": "GKSO204-ECO",
+      "source": "pdf-normalize",
+      "short": 641,
+      "rel": "images/catalog/gastrotech/web/gkso204-eco.jpg",
+      "url": null
+    },
+    {
+      "model": "GSO201-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso201-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d24c908f-85da-46b8-856f-974dacc1d416/file/"
+    },
+    {
+      "model": "GSO202-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso202-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a4e6ec26-83ab-4196-97c4-d5fd850d715e/file/"
+    },
+    {
+      "model": "GSO203-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso203-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/60530a00-9d3e-4d9d-83ad-1b11012151fc/file/"
+    },
+    {
+      "model": "GSO301-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso301-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/dc4066f8-9643-4681-9ff8-e91710a77a84/file/"
+    },
+    {
+      "model": "GSO302-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso302-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/59509a8e-1913-44e3-9c9a-ab67ae057b3c/file/"
+    },
+    {
+      "model": "GSO303-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso303-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/7c15e14f-2c72-4a13-9844-68f5d3904bac/file/"
+    },
+    {
+      "model": "GSO401-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso401-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/61094cdc-a3c0-46bb-8721-3f1f31708977/file/"
+    },
+    {
+      "model": "GSO402-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso402-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/6a0a3fd3-5eaf-4aee-ae7d-25c195738fb9/file/"
+    },
+    {
+      "model": "GSO403-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/gso403-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/b762156c-e46a-4d49-b519-c746ee93bce4/file/"
+    },
+    {
+      "model": "VBA-06",
+      "source": "pdf-normalize",
+      "short": 580,
+      "rel": "images/catalog/gastrotech/web/vba-06.jpg",
+      "url": null
+    },
+    {
+      "model": "VBA-11",
+      "source": "pdf-normalize",
+      "short": 541,
+      "rel": "images/catalog/gastrotech/web/vba-11.jpg",
+      "url": null
+    },
+    {
+      "model": "VBA-22",
+      "source": "pdf-normalize",
+      "short": 826,
+      "rel": "images/catalog/gastrotech/web/vba-22.jpg",
+      "url": null
+    },
+    {
+      "model": "VBB-11",
+      "source": "pdf-normalize",
+      "short": 495,
+      "rel": "images/catalog/gastrotech/web/vbb-11.jpg",
+      "url": null
+    },
+    {
+      "model": "VYO68B-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/vyo68b-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/ec0523af-e968-4ca1-a3e2-992b963ca78c/file/"
+    },
+    {
+      "model": "VYO78-ECO",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/vyo78-eco.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1ccd3a1e-7782-41c9-9470-012beaa17f49/file/"
+    },
+    {
+      "model": "217720",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217720.jpg",
+      "url": null
+    },
+    {
+      "model": "217721",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217721.jpg",
+      "url": null
+    },
+    {
+      "model": "217722",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217722.jpg",
+      "url": null
+    },
+    {
+      "model": "217723",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217723.jpg",
+      "url": null
+    },
+    {
+      "model": "217724",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217724.jpg",
+      "url": null
+    },
+    {
+      "model": "217725",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217725.jpg",
+      "url": null
+    },
+    {
+      "model": "217780",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217780.jpg",
+      "url": null
+    },
+    {
+      "model": "217781",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217781.jpg",
+      "url": null
+    },
+    {
+      "model": "217782",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217782.jpg",
+      "url": null
+    },
+    {
+      "model": "217783",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217783.jpg",
+      "url": null
+    },
+    {
+      "model": "217784",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217784.jpg",
+      "url": null
+    },
+    {
+      "model": "217785",
+      "source": "pdf-normalize",
+      "short": 1091,
+      "rel": "images/catalog/gastrotech/web/217785.jpg",
+      "url": null
+    },
+    {
+      "model": "MAESTRO061G",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro061g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/787af976-3777-4e1d-a842-f23227e114d8/file/"
+    },
+    {
+      "model": "MAESTRO101G",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro101g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/afdf11dd-5c87-4216-95e3-00a1b09589f4/file/"
+    },
+    {
+      "model": "MAESTRO102G",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro102g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4378a4b0-4d4d-49f0-b8aa-ed7d73683cd9/file/"
+    },
+    {
+      "model": "MAESTRO201G",
+      "source": "pdf-normalize",
+      "short": 621,
+      "rel": "images/catalog/gastrotech/web/maestro201g.jpg",
+      "url": null
+    },
+    {
+      "model": "MAESTRO202G",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro202g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8290cff1-29d5-4698-906e-8017047aba57/file/"
+    },
+    {
+      "model": "MAESTRO061E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro061e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/0cab50e8-1902-4122-99d6-f5891c6ea7fb/file/"
+    },
+    {
+      "model": "MAESTRO101E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro101e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/afdf11dd-5c87-4216-95e3-00a1b09589f4/file/"
+    },
+    {
+      "model": "MAESTRO102E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/maestro102e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/4378a4b0-4d4d-49f0-b8aa-ed7d73683cd9/file/"
+    },
+    {
+      "model": "MAESTRO201E",
+      "source": "pdf-normalize",
+      "short": 621,
+      "rel": "images/catalog/gastrotech/web/maestro201e.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME061GP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime061gp.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME101GP",
+      "source": "pdf-normalize",
+      "short": 1064,
+      "rel": "images/catalog/gastrotech/web/prime101gp.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME102GP",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/prime102gp.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-prime102gp-gazli-buharli-konveksiyonlu-dijital-firin-20-x-gn-11-tepsi-kapasiteli-gazli-konveksiyonel-firinlar-vital-4964-28-B.webp"
+    },
+    {
+      "model": "PRIME201GP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime201gp.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME202GP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime202gp.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME061EP",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/prime061ep.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-prime061ep-elektrikli-buharli-konveksiyonlu-dijital-firin-6-x-gn-11-tepsi-kapasiteli-konveksiyonel-firinlar-vital-4965-28-B.webp"
+    },
+    {
+      "model": "PRIME101EP",
+      "source": "pdf-normalize",
+      "short": 1064,
+      "rel": "images/catalog/gastrotech/web/prime101ep.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME102EP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime102ep.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME201EP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime201ep.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME202EP",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime202ep.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME061GPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime061gpm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME101GPM",
+      "source": "pdf-normalize",
+      "short": 1066,
+      "rel": "images/catalog/gastrotech/web/prime101gpm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME102GPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime102gpm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME201GPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime201gpm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME202GPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime202gpm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME061EPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime061epm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME101EPM",
+      "source": "pdf-normalize",
+      "short": 1066,
+      "rel": "images/catalog/gastrotech/web/prime101epm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME102EPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime102epm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME201EPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime201epm.jpg",
+      "url": null
+    },
+    {
+      "model": "PRIME202EPM",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/prime202epm.jpg",
+      "url": null
+    },
+    {
+      "model": "NEVO-02E",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/nevo-02e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1f948d11-1a37-4aa7-b2cd-9f86bb167b54/file/"
+    },
+    {
+      "model": "NEVO-02EM",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/nevo-02em.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/49323434-c4a1-468f-a07a-72f8034e56ea/file/"
+    },
+    {
+      "model": "NEVO-04EM",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/nevo-04em.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/8745e1da-5506-4cb7-b29a-4cf7bfa48ef9/file/"
+    },
+    {
+      "model": "NEVO-06EM",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/nevo-06em.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d250adb9-86b8-4cbb-b781-7bdc614a924a/file/"
+    },
+    {
+      "model": "NEVO-10EM",
+      "source": "official",
+      "short": 2160,
+      "rel": "images/catalog/gastrotech/web/nevo-10em.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/abd953e2-2e31-4697-b0c0-fa4177f7fced/file/"
+    },
+    {
+      "model": "GO-130",
+      "source": "pdf-normalize",
+      "short": 599,
+      "rel": "images/catalog/gastrotech/web/go-130.jpg",
+      "url": null
+    },
+    {
+      "model": "GO-85",
+      "source": "pdf-normalize",
+      "short": 517,
+      "rel": "images/catalog/gastrotech/web/go-85.jpg",
+      "url": null
+    },
+    {
+      "model": "GO-95",
+      "source": "pdf-normalize",
+      "short": 599,
+      "rel": "images/catalog/gastrotech/web/go-95.jpg",
+      "url": null
+    },
+    {
+      "model": "PO-6292DE",
+      "source": "pdf-normalize",
+      "short": 937,
+      "rel": "images/catalog/gastrotech/web/po-6292de.jpg",
+      "url": null
+    },
+    {
+      "model": "PO-6292E",
+      "source": "pdf-normalize",
+      "short": 937,
+      "rel": "images/catalog/gastrotech/web/po-6292e.jpg",
+      "url": null
+    },
+    {
+      "model": "PO-9292-DE",
+      "source": "pdf-normalize",
+      "short": 770,
+      "rel": "images/catalog/gastrotech/web/po-9292-de.jpg",
+      "url": null
+    },
+    {
+      "model": "PO-9292E",
+      "source": "pdf-normalize",
+      "short": 549,
+      "rel": "images/catalog/gastrotech/web/po-9292e.jpg",
+      "url": null
+    },
+    {
+      "model": "EMZ729EMK",
+      "source": "pdf-normalize",
+      "short": 611,
+      "rel": "images/catalog/gastrotech/web/emz729emk.jpg",
+      "url": null
+    },
+    {
+      "model": "VMD04",
+      "source": "pdf-normalize",
+      "short": 889,
+      "rel": "images/catalog/gastrotech/web/vmd04.jpg",
+      "url": null
+    },
+    {
+      "model": "E-20/13",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/e-20-13.jpg",
+      "url": null
+    },
+    {
+      "model": "E-20/21",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/e-20-21.jpg",
+      "url": null
+    },
+    {
+      "model": "E-30/13",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/e-30-13.jpg",
+      "url": null
+    },
+    {
+      "model": "E-30/21",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/e-30-21.jpg",
+      "url": null
+    },
+    {
+      "model": "EM-20/13",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/em-20-13.jpg",
+      "url": null
+    },
+    {
+      "model": "EM-20/21",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/em-20-21.jpg",
+      "url": null
+    },
+    {
+      "model": "EM/13",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/em-13.jpg",
+      "url": null
+    },
+    {
+      "model": "ED-20/13",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/ed-20-13.jpg",
+      "url": null
+    },
+    {
+      "model": "ED-20/21",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/ed-20-21.jpg",
+      "url": null
+    },
+    {
+      "model": "ED-30/13",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/ed-30-13.jpg",
+      "url": null
+    },
+    {
+      "model": "ED-30/21",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/ed-30-21.jpg",
+      "url": null
+    },
+    {
+      "model": "EDP-20/21",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/edp-20-21.jpg",
+      "url": null
+    },
+    {
+      "model": "EMD-20/13",
+      "source": "pdf-normalize",
+      "short": 939,
+      "rel": "images/catalog/gastrotech/web/emd-20-13.jpg",
+      "url": null
+    },
+    {
+      "model": "EMD-435/13",
+      "source": "pdf-normalize",
+      "short": 938,
+      "rel": "images/catalog/gastrotech/web/emd-435-13.jpg",
+      "url": null
+    },
+    {
+      "model": "GR110K",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr110k.jpg",
+      "url": null
+    },
+    {
+      "model": "GR120C",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr120c.jpg",
+      "url": null
+    },
+    {
+      "model": "GR120S",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr120s.jpg",
+      "url": null
+    },
+    {
+      "model": "GR130K",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr130k.jpg",
+      "url": null
+    },
+    {
+      "model": "GR140C",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr140c.jpg",
+      "url": null
+    },
+    {
+      "model": "GR140S",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr140s.jpg",
+      "url": null
+    },
+    {
+      "model": "GR160C",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr160c.jpg",
+      "url": null
+    },
+    {
+      "model": "GR160S",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr160s.jpg",
+      "url": null
+    },
+    {
+      "model": "GR85K",
+      "source": "pdf-normalize",
+      "short": 294,
+      "rel": "images/catalog/gastrotech/web/gr85k.jpg",
+      "url": null
+    },
+    {
+      "model": "MIX120R",
+      "source": "pdf-normalize",
+      "short": 413,
+      "rel": "images/catalog/gastrotech/web/mix120r.jpg",
+      "url": null
+    },
+    {
+      "model": "MIX120RK",
+      "source": "pdf-normalize",
+      "short": 413,
+      "rel": "images/catalog/gastrotech/web/mix120rk.jpg",
+      "url": null
+    },
+    {
+      "model": "MIX85RK",
+      "source": "pdf-normalize",
+      "short": 413,
+      "rel": "images/catalog/gastrotech/web/mix85rk.jpg",
+      "url": null
+    },
+    {
+      "model": "QUICK1T",
+      "source": "pdf-normalize",
+      "short": 345,
+      "rel": "images/catalog/gastrotech/web/quick1t.jpg",
+      "url": null
+    },
+    {
+      "model": "371000",
+      "source": "pdf-normalize",
+      "short": 580,
+      "rel": "images/catalog/gastrotech/web/371000.jpg",
+      "url": null
+    },
+    {
+      "model": "371001",
+      "source": "pdf-normalize",
+      "short": 766,
+      "rel": "images/catalog/gastrotech/web/371001.jpg",
+      "url": null
+    },
+    {
+      "model": "371002",
+      "source": "pdf-normalize",
+      "short": 525,
+      "rel": "images/catalog/gastrotech/web/371002.jpg",
+      "url": null
+    },
+    {
+      "model": "371004",
+      "source": "pdf-normalize",
+      "short": 525,
+      "rel": "images/catalog/gastrotech/web/371004.jpg",
+      "url": null
+    },
+    {
+      "model": "371014",
+      "source": "pdf-normalize",
+      "short": 571,
+      "rel": "images/catalog/gastrotech/web/371014.jpg",
+      "url": null
+    },
+    {
+      "model": "371015",
+      "source": "pdf-normalize",
+      "short": 740,
+      "rel": "images/catalog/gastrotech/web/371015.jpg",
+      "url": null
+    },
+    {
+      "model": "371016",
+      "source": "pdf-normalize",
+      "short": 463,
+      "rel": "images/catalog/gastrotech/web/371016.jpg",
+      "url": null
+    },
+    {
+      "model": "371019",
+      "source": "pdf-normalize",
+      "short": 463,
+      "rel": "images/catalog/gastrotech/web/371019.jpg",
+      "url": null
+    },
+    {
+      "model": "371038",
+      "source": "pdf-normalize",
+      "short": 580,
+      "rel": "images/catalog/gastrotech/web/371038.jpg",
+      "url": null
+    },
+    {
+      "model": "371041",
+      "source": "pdf-normalize",
+      "short": 462,
+      "rel": "images/catalog/gastrotech/web/371041.jpg",
+      "url": null
+    },
+    {
+      "model": "371042",
+      "source": "pdf-normalize",
+      "short": 462,
+      "rel": "images/catalog/gastrotech/web/371042.jpg",
+      "url": null
+    },
+    {
+      "model": "371043",
+      "source": "pdf-normalize",
+      "short": 584,
+      "rel": "images/catalog/gastrotech/web/371043.jpg",
+      "url": null
+    },
+    {
+      "model": "371193",
+      "source": "pdf-normalize",
+      "short": 483,
+      "rel": "images/catalog/gastrotech/web/371193.jpg",
+      "url": null
+    },
+    {
+      "model": "371320",
+      "source": "pdf-normalize",
+      "short": 462,
+      "rel": "images/catalog/gastrotech/web/371320.jpg",
+      "url": null
+    },
+    {
+      "model": "371323",
+      "source": "pdf-normalize",
+      "short": 462,
+      "rel": "images/catalog/gastrotech/web/371323.jpg",
+      "url": null
+    },
+    {
+      "model": "371332",
+      "source": "pdf-normalize",
+      "short": 483,
+      "rel": "images/catalog/gastrotech/web/371332.jpg",
+      "url": null
+    },
+    {
+      "model": "371340",
+      "source": "pdf-normalize",
+      "short": 580,
+      "rel": "images/catalog/gastrotech/web/371340.jpg",
+      "url": null
+    },
+    {
+      "model": "371347",
+      "source": "pdf-normalize",
+      "short": 567,
+      "rel": "images/catalog/gastrotech/web/371347.jpg",
+      "url": null
+    },
+    {
+      "model": "371070",
+      "source": "pdf-normalize",
+      "short": 724,
+      "rel": "images/catalog/gastrotech/web/371070.jpg",
+      "url": null
+    },
+    {
+      "model": "371071",
+      "source": "pdf-normalize",
+      "short": 724,
+      "rel": "images/catalog/gastrotech/web/371071.jpg",
+      "url": null
+    },
+    {
+      "model": "371079",
+      "source": "pdf-normalize",
+      "short": 598,
+      "rel": "images/catalog/gastrotech/web/371079.jpg",
+      "url": null
+    },
+    {
+      "model": "371080",
+      "source": "pdf-normalize",
+      "short": 463,
+      "rel": "images/catalog/gastrotech/web/371080.jpg",
+      "url": null
+    },
+    {
+      "model": "371083",
+      "source": "pdf-normalize",
+      "short": 463,
+      "rel": "images/catalog/gastrotech/web/371083.jpg",
+      "url": null
+    },
+    {
+      "model": "371086",
+      "source": "pdf-normalize",
+      "short": 463,
+      "rel": "images/catalog/gastrotech/web/371086.jpg",
+      "url": null
+    },
+    {
+      "model": "371090",
+      "source": "pdf-normalize",
+      "short": 446,
+      "rel": "images/catalog/gastrotech/web/371090.jpg",
+      "url": null
+    },
+    {
+      "model": "371096",
+      "source": "pdf-normalize",
+      "short": 500,
+      "rel": "images/catalog/gastrotech/web/371096.jpg",
+      "url": null
+    },
+    {
+      "model": "371098",
+      "source": "pdf-normalize",
+      "short": 443,
+      "rel": "images/catalog/gastrotech/web/371098.jpg",
+      "url": null
+    },
+    {
+      "model": "371100",
+      "source": "pdf-normalize",
+      "short": 443,
+      "rel": "images/catalog/gastrotech/web/371100.jpg",
+      "url": null
+    },
+    {
+      "model": "371181",
+      "source": "pdf-normalize",
+      "short": 913,
+      "rel": "images/catalog/gastrotech/web/371181.jpg",
+      "url": null
+    },
+    {
+      "model": "371183",
+      "source": "pdf-normalize",
+      "short": 913,
+      "rel": "images/catalog/gastrotech/web/371183.jpg",
+      "url": null
+    },
+    {
+      "model": "371112",
+      "source": "pdf-normalize",
+      "short": 500,
+      "rel": "images/catalog/gastrotech/web/371112.jpg",
+      "url": null
+    },
+    {
+      "model": "371113",
+      "source": "pdf-normalize",
+      "short": 500,
+      "rel": "images/catalog/gastrotech/web/371113.jpg",
+      "url": null
+    },
+    {
+      "model": "371114",
+      "source": "pdf-normalize",
+      "short": 500,
+      "rel": "images/catalog/gastrotech/web/371114.jpg",
+      "url": null
+    },
+    {
+      "model": "371116",
+      "source": "pdf-normalize",
+      "short": 573,
+      "rel": "images/catalog/gastrotech/web/371116.jpg",
+      "url": null
+    },
+    {
+      "model": "371269",
+      "source": "pdf-normalize",
+      "short": 876,
+      "rel": "images/catalog/gastrotech/web/371269.jpg",
+      "url": null
+    },
+    {
+      "model": "371272",
+      "source": "pdf-normalize",
+      "short": 876,
+      "rel": "images/catalog/gastrotech/web/371272.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-72",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-72.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-73",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-73.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-74",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-74.jpg",
+      "url": null
+    },
+    {
+      "model": "TPP-82",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpp-82.jpg",
+      "url": null
+    },
+    {
+      "model": "TPP-83",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpp-83.jpg",
+      "url": null
+    },
+    {
+      "model": "TPP-84",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpp-84.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-62",
+      "source": "official",
+      "short": 827,
+      "rel": "images/catalog/gastrotech/web/tps-62.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/3d17e515-a3a0-42fe-80d3-8f7c1bb8e0b1/file/"
+    },
+    {
+      "model": "TPS-63",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tps-63.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-64",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tps-64.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-72GD",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-72gd.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-73GD",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-73gd.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-74GD",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tpg-74gd.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-62GD",
+      "source": "official",
+      "short": 827,
+      "rel": "images/catalog/gastrotech/web/tps-62gd.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/9c514fee-11c9-4a3a-b958-d5527418e5eb/file/"
+    },
+    {
+      "model": "TPS-63GD",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tps-63gd.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-64GD",
+      "source": "pdf-normalize",
+      "short": 493,
+      "rel": "images/catalog/gastrotech/web/tps-64gd.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-724D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-724d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-736D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-736d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-748D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-748d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-624D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tps-624d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-636D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tps-636d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-648D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tps-648d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-722D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-722d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-734D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-734d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-744D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tpg-744d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-622D",
+      "source": "official",
+      "short": 912,
+      "rel": "images/catalog/gastrotech/web/tps-622d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/91ebc389-3ae7-4c51-9ed8-d7c516615b6d/file/"
+    },
+    {
+      "model": "TPS-634D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tps-634d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPS-644D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tps-644d.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-72",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-72.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-73",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-73.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-74",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-74.jpg",
+      "url": null
+    },
+    {
+      "model": "TNP-82",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tnp-82.jpg",
+      "url": null
+    },
+    {
+      "model": "TNP-83",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tnp-83.jpg",
+      "url": null
+    },
+    {
+      "model": "TNP-84",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tnp-84.jpg",
+      "url": null
+    },
+    {
+      "model": "TNS-62",
+      "source": "official",
+      "short": 912,
+      "rel": "images/catalog/gastrotech/web/tns-62.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/bbd37f2d-d459-4c82-974c-6025e1780c3f/file/"
+    },
+    {
+      "model": "TNS-63",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tns-63.jpg",
+      "url": null
+    },
+    {
+      "model": "TNS-64",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tns-64.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-722D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-722d.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-734D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-734d.jpg",
+      "url": null
+    },
+    {
+      "model": "TNG-744D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tng-744d.jpg",
+      "url": null
+    },
+    {
+      "model": "TNS-622D",
+      "source": "official",
+      "short": 912,
+      "rel": "images/catalog/gastrotech/web/tns-622d.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/91ebc389-3ae7-4c51-9ed8-d7c516615b6d/file/"
+    },
+    {
+      "model": "TNS-634D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tns-634d.jpg",
+      "url": null
+    },
+    {
+      "model": "TNS-644D",
+      "source": "pdf-normalize",
+      "short": 544,
+      "rel": "images/catalog/gastrotech/web/tns-644d.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-73L",
+      "source": "pdf-normalize",
+      "short": 331,
+      "rel": "images/catalog/gastrotech/web/tpg-73l.jpg",
+      "url": null
+    },
+    {
+      "model": "TPG-74L",
+      "source": "official",
+      "short": 415,
+      "rel": "images/catalog/gastrotech/web/tpg-74l.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/077a34d1-b4e3-4d02-b9f9-1736b802f9fb/file/"
+    },
+    {
+      "model": "MUR-72",
+      "source": "pdf-normalize",
+      "short": 640,
+      "rel": "images/catalog/gastrotech/web/mur-72.jpg",
+      "url": null
+    },
+    {
+      "model": "MUR-724D",
+      "source": "pdf-normalize",
+      "short": 640,
+      "rel": "images/catalog/gastrotech/web/mur-724d.jpg",
+      "url": null
+    },
+    {
+      "model": "MUR-73",
+      "source": "official",
+      "short": 888,
+      "rel": "images/catalog/gastrotech/web/mur-73.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/1bbf3d51-0a78-4f38-9650-1fb235ff4fb4/file/"
+    },
+    {
+      "model": "MUR-736D",
+      "source": "pdf-normalize",
+      "short": 640,
+      "rel": "images/catalog/gastrotech/web/mur-736d.jpg",
+      "url": null
+    },
+    {
+      "model": "TTR-150",
+      "source": "official",
+      "short": 494,
+      "rel": "images/catalog/gastrotech/web/ttr-150.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/32593518-f4e1-4eda-a91f-17c02b4382c3/file/"
+    },
+    {
+      "model": "TTR-200",
+      "source": "pdf-normalize",
+      "short": 356,
+      "rel": "images/catalog/gastrotech/web/ttr-200.jpg",
+      "url": null
+    },
+    {
+      "model": "CPG-101",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-101.jpg",
+      "url": null
+    },
+    {
+      "model": "CPG-202",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-202.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-101",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-101.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-202",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-202.jpg",
+      "url": null
+    },
+    {
+      "model": "CPS-101",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cps-101.jpg",
+      "url": null
+    },
+    {
+      "model": "CPS-202",
+      "source": "official",
+      "short": 1124,
+      "rel": "images/catalog/gastrotech/web/cps-202.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/06ef4a3a-8d71-4b51-8121-705ac7f56457/file/"
+    },
+    {
+      "model": "CPG-102",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-102.jpg",
+      "url": null
+    },
+    {
+      "model": "CPG-203",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-102",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-102.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-203",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CPS-102",
+      "source": "official",
+      "short": 1124,
+      "rel": "images/catalog/gastrotech/web/cps-102.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/a42de5af-7483-4fa6-b365-2ddabb5b3c70/file/"
+    },
+    {
+      "model": "CPS-203",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cps-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CPG-101G",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-101g.jpg",
+      "url": null
+    },
+    {
+      "model": "CPG-202G",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpg-202g.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-101G",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-101g.jpg",
+      "url": null
+    },
+    {
+      "model": "CPP-202G",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cpp-202g.jpg",
+      "url": null
+    },
+    {
+      "model": "CPS-101G",
+      "source": "official",
+      "short": 1124,
+      "rel": "images/catalog/gastrotech/web/cps-101g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/52894352-f909-4ef5-bf0d-3107dd81d3bb/file/"
+    },
+    {
+      "model": "CPS-202G",
+      "source": "pdf-normalize",
+      "short": 778,
+      "rel": "images/catalog/gastrotech/web/cps-202g.jpg",
+      "url": null
+    },
+    {
+      "model": "CNG-101",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cng-101.jpg",
+      "url": null
+    },
+    {
+      "model": "CNG-202",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cng-202.jpg",
+      "url": null
+    },
+    {
+      "model": "CNP-101",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cnp-101.jpg",
+      "url": null
+    },
+    {
+      "model": "CNP-202",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cnp-202.jpg",
+      "url": null
+    },
+    {
+      "model": "CNS-101",
+      "source": "official",
+      "short": 1124,
+      "rel": "images/catalog/gastrotech/web/cns-101.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/30b61e46-e29b-410c-a0e1-d2d6ddb0365d/file/"
+    },
+    {
+      "model": "CNS-202",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cns-202.jpg",
+      "url": null
+    },
+    {
+      "model": "CNG-203",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cng-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CNP-102",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cnp-102.jpg",
+      "url": null
+    },
+    {
+      "model": "CNP-203",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cnp-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CNS-203",
+      "source": "pdf-normalize",
+      "short": 759,
+      "rel": "images/catalog/gastrotech/web/cns-203.jpg",
+      "url": null
+    },
+    {
+      "model": "CGL2",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/cgl2.jpg",
+      "url": null
+    },
+    {
+      "model": "CGL4",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/cgl4.jpg",
+      "url": null
+    },
+    {
+      "model": "CGN4",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/cgn4.jpg",
+      "url": null
+    },
+    {
+      "model": "CSL3",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/csl3.jpg",
+      "url": null
+    },
+    {
+      "model": "CSL4",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/csl4.jpg",
+      "url": null
+    },
+    {
+      "model": "CSN2",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/csn2.jpg",
+      "url": null
+    },
+    {
+      "model": "CSN3",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/csn3.jpg",
+      "url": null
+    },
+    {
+      "model": "CSN4",
+      "source": "pdf-normalize",
+      "short": 871,
+      "rel": "images/catalog/gastrotech/web/csn4.jpg",
+      "url": null
+    },
+    {
+      "model": "UGL2",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/ugl2.jpg",
+      "url": null
+    },
+    {
+      "model": "UGL4",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/ugl4.jpg",
+      "url": null
+    },
+    {
+      "model": "UGN2",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/ugn2.jpg",
+      "url": null
+    },
+    {
+      "model": "UGN4",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/ugn4.jpg",
+      "url": null
+    },
+    {
+      "model": "USL2",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usl2.jpg",
+      "url": null
+    },
+    {
+      "model": "USL3",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usl3.jpg",
+      "url": null
+    },
+    {
+      "model": "USL4",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usl4.jpg",
+      "url": null
+    },
+    {
+      "model": "USN2",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usn2.jpg",
+      "url": null
+    },
+    {
+      "model": "USN3",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usn3.jpg",
+      "url": null
+    },
+    {
+      "model": "USN4",
+      "source": "pdf-normalize",
+      "short": 558,
+      "rel": "images/catalog/gastrotech/web/usn4.jpg",
+      "url": null
+    },
+    {
+      "model": "CGN4-YM-MR",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/cgn4-ym-mr.jpg",
+      "url": null
+    },
+    {
+      "model": "MGN2",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mgn2.jpg",
+      "url": null
+    },
+    {
+      "model": "MGN3",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mgn3.jpg",
+      "url": null
+    },
+    {
+      "model": "MGN4",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mgn4.jpg",
+      "url": null
+    },
+    {
+      "model": "MPN2",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mpn2.jpg",
+      "url": null
+    },
+    {
+      "model": "MPN3",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mpn3.jpg",
+      "url": null
+    },
+    {
+      "model": "MPN4",
+      "source": "pdf-normalize",
+      "short": 862,
+      "rel": "images/catalog/gastrotech/web/mpn4.jpg",
+      "url": null
+    },
+    {
+      "model": "155-D",
+      "source": "pdf-normalize",
+      "short": 875,
+      "rel": "images/catalog/gastrotech/web/155-d.jpg",
+      "url": null
+    },
+    {
+      "model": "210-D",
+      "source": "pdf-normalize",
+      "short": 875,
+      "rel": "images/catalog/gastrotech/web/210-d.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-100",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-100.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-140",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-140.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-155",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-155.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-160",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-160.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-186",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-186.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-210",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-210.jpg",
+      "url": null
+    },
+    {
+      "model": "DSP-215",
+      "source": "pdf-normalize",
+      "short": 303,
+      "rel": "images/catalog/gastrotech/web/dsp-215.jpg",
+      "url": null
+    },
+    {
+      "model": "VL14-M",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vl14-m.jpg",
+      "url": null
+    },
+    {
+      "model": "VL14-M-G",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vl14-m-g.jpg",
+      "url": null
+    },
+    {
+      "model": "VL7-M",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vl7-m.jpg",
+      "url": null
+    },
+    {
+      "model": "VL7-M-G",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vl7-m-g.jpg",
+      "url": null
+    },
+    {
+      "model": "VN14-M",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vn14-m.jpg",
+      "url": null
+    },
+    {
+      "model": "VN14-M-G",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vn14-m-g.jpg",
+      "url": null
+    },
+    {
+      "model": "VN7-M",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vn7-m.jpg",
+      "url": null
+    },
+    {
+      "model": "VN7-M-G",
+      "source": "pdf-normalize",
+      "short": 696,
+      "rel": "images/catalog/gastrotech/web/vn7-m-g.jpg",
+      "url": null
+    },
+    {
+      "model": "VL14-P",
+      "source": "pdf-normalize",
+      "short": 624,
+      "rel": "images/catalog/gastrotech/web/vl14-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VL7-P",
+      "source": "pdf-normalize",
+      "short": 624,
+      "rel": "images/catalog/gastrotech/web/vl7-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VL8-P",
+      "source": "pdf-normalize",
+      "short": 624,
+      "rel": "images/catalog/gastrotech/web/vl8-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VN14-P",
+      "source": "pdf-normalize",
+      "short": 886,
+      "rel": "images/catalog/gastrotech/web/vn14-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VN7-P",
+      "source": "pdf-normalize",
+      "short": 624,
+      "rel": "images/catalog/gastrotech/web/vn7-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VN8-P",
+      "source": "pdf-normalize",
+      "short": 624,
+      "rel": "images/catalog/gastrotech/web/vn8-p.jpg",
+      "url": null
+    },
+    {
+      "model": "14-3T",
+      "source": "pdf-normalize",
+      "short": 1059,
+      "rel": "images/catalog/gastrotech/web/14-3t.jpg",
+      "url": null
+    },
+    {
+      "model": "14-4T",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/14-4t.jpg",
+      "url": null
+    },
+    {
+      "model": "CGNL4",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/cgnl4.jpg",
+      "url": null
+    },
+    {
+      "model": "CSNL4",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/csnl4.jpg",
+      "url": null
+    },
+    {
+      "model": "VNL14",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/vnl14.jpg",
+      "url": null
+    },
+    {
+      "model": "VNL7",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/vnl7.jpg",
+      "url": null
+    },
+    {
+      "model": "VNN14",
+      "source": "pdf-normalize",
+      "short": 616,
+      "rel": "images/catalog/gastrotech/web/vnn14.jpg",
+      "url": null
+    },
+    {
+      "model": "VNN7",
+      "source": "pdf-normalize",
+      "short": 1059,
+      "rel": "images/catalog/gastrotech/web/vnn7.jpg",
+      "url": null
+    },
+    {
+      "model": "VBL10",
+      "source": "pdf-normalize",
+      "short": 484,
+      "rel": "images/catalog/gastrotech/web/vbl10.jpg",
+      "url": null
+    },
+    {
+      "model": "VBL7",
+      "source": "pdf-normalize",
+      "short": 806,
+      "rel": "images/catalog/gastrotech/web/vbl7.jpg",
+      "url": null
+    },
+    {
+      "model": "DR13-G",
+      "source": "pdf-normalize",
+      "short": 722,
+      "rel": "images/catalog/gastrotech/web/dr13-g.jpg",
+      "url": null
+    },
+    {
+      "model": "DR250-G",
+      "source": "pdf-normalize",
+      "short": 746,
+      "rel": "images/catalog/gastrotech/web/dr250-g.jpg",
+      "url": null
+    },
+    {
+      "model": "DR6-G",
+      "source": "pdf-normalize",
+      "short": 746,
+      "rel": "images/catalog/gastrotech/web/dr6-g.jpg",
+      "url": null
+    },
+    {
+      "model": "SY13-G-HM",
+      "source": "pdf-normalize",
+      "short": 746,
+      "rel": "images/catalog/gastrotech/web/sy13-g-hm.jpg",
+      "url": null
+    },
+    {
+      "model": "SY6-G-HM",
+      "source": "pdf-normalize",
+      "short": 746,
+      "rel": "images/catalog/gastrotech/web/sy6-g-hm.jpg",
+      "url": null
+    },
+    {
+      "model": "CKT2-WK-WP",
+      "source": "pdf-normalize",
+      "short": 827,
+      "rel": "images/catalog/gastrotech/web/ckt2-wk-wp.jpg",
+      "url": null
+    },
+    {
+      "model": "CKT3-WK-WP",
+      "source": "pdf-normalize",
+      "short": 656,
+      "rel": "images/catalog/gastrotech/web/ckt3-wk-wp.jpg",
+      "url": null
+    },
+    {
+      "model": "SC-118F",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/sc-118f.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-sc-118f-s-bar-arkasi-sise-sogutucu-dolap-tek-kapili-paslanmaz-celik-kasa-118-l-bar-arkasi-sise-sogutucu-dolaplar-gtech-3154-19-B.jpg"
+    },
+    {
+      "model": "SC-228F-S",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/sc-228f-s.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-sc-228f-s-bar-arkasi-sise-sogutucu-dolap-2-kapili-paslanmaz-celik-kasa-228-l-bar-arkasi-sise-sogutucu-dolaplar-gtech-1823-10-B.jpg"
+    },
+    {
+      "model": "SC-228YF-S",
+      "source": "pdf-normalize",
+      "short": 1031,
+      "rel": "images/catalog/gastrotech/web/sc-228yf-s.jpg",
+      "url": null
+    },
+    {
+      "model": "SC-338F",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/sc-338f.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-sc-338f-s-bar-arkasi-sise-sogutucu-dolap-3-kapili-paslanmaz-celik-kasa-338-l-bar-arkasi-sise-sogutucu-dolaplar-gtech-1758-10-B.jpg"
+    },
+    {
+      "model": "SC-338F-S",
+      "source": "www.antmutfak.com",
+      "short": 800,
+      "rel": "images/catalog/gastrotech/web/sc-338f-s.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-sc-338f-s-bar-arkasi-sise-sogutucu-dolap-3-kapili-paslanmaz-celik-kasa-338-l-bar-arkasi-sise-sogutucu-dolaplar-gtech-1758-10-B.jpg"
+    },
+    {
+      "model": "SC-338YF",
+      "source": "pdf-normalize",
+      "short": 950,
+      "rel": "images/catalog/gastrotech/web/sc-338yf.jpg",
+      "url": null
+    },
+    {
+      "model": "SC-338YF-S",
+      "source": "pdf-normalize",
+      "short": 1031,
+      "rel": "images/catalog/gastrotech/web/sc-338yf-s.jpg",
+      "url": null
+    },
+    {
+      "model": "RTD-109C",
+      "source": "pdf-normalize",
+      "short": 806,
+      "rel": "images/catalog/gastrotech/web/rtd-109c.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY1000D",
+      "source": "www.antmutfak.com",
+      "short": 435,
+      "rel": "images/catalog/gastrotech/web/vby1000d.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
+    },
+    {
+      "model": "VBY1000D-P",
+      "source": "www.antmutfak.com",
+      "short": 435,
+      "rel": "images/catalog/gastrotech/web/vby1000d-p.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
+    },
+    {
+      "model": "WZ-50",
+      "source": "www.antmutfak.com",
+      "short": 804,
+      "rel": "images/catalog/gastrotech/web/wz-50.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/gtech-wz-50-tezgahalti-bulasik-makinesi-500-tabak-kapasiteli-drenaj-pompali-set-alti-bulasik-makineleri-gtech-5048-28-B.jpg"
+    },
+    {
+      "model": "VBY1000",
+      "source": "www.antmutfak.com",
+      "short": 435,
+      "rel": "images/catalog/gastrotech/web/vby1000.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby1000d-p-giyotin-tip-bulasik-makinesi-dijital-kontrollu-deterjan-parlatici-pompali-1080-tabak-saatte-giyotin-tip-bulasik-makineleri-vital-3875-22-B.jpg"
+    },
+    {
+      "model": "VBY1000-P",
+      "source": "pdf-normalize",
+      "short": 852,
+      "rel": "images/catalog/gastrotech/web/vby1000-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY500C",
+      "source": "www.antmutfak.com",
+      "short": 519,
+      "rel": "images/catalog/gastrotech/web/vby500c.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3870-22-B.jpg"
+    },
+    {
+      "model": "VBY500C-P",
+      "source": "pdf-normalize",
+      "short": 591,
+      "rel": "images/catalog/gastrotech/web/vby500c-p.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY500CD",
+      "source": "www.antmutfak.com",
+      "short": 519,
+      "rel": "images/catalog/gastrotech/web/vby500cd.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3870-22-B.jpg"
+    },
+    {
+      "model": "VBY500CD-P",
+      "source": "www.antmutfak.com",
+      "short": 519,
+      "rel": "images/catalog/gastrotech/web/vby500cd-p.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vby500cd-p-tezgah-alti-bulasik-makinesi-dijital-kontrollu-drenaj-deterjan-parlatici-pompali-saatte-540-tabak-set-alti-bulasik-makineleri-vital-3871-22-B.jpg"
+    },
+    {
+      "model": "VGY400",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/vgy400.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vgy400d-p-bardak-yikama-makinesi-30-sepetsa-dijital-deterjan-parlatici-pompali-bardak-yikama-makineleri-vital-4622-26-B.webp"
+    },
+    {
+      "model": "VGY400-DP",
+      "source": "pdf-normalize",
+      "short": 591,
+      "rel": "images/catalog/gastrotech/web/vgy400-dp.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY1500L",
+      "source": "pdf-normalize",
+      "short": 852,
+      "rel": "images/catalog/gastrotech/web/vby1500l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY1500R",
+      "source": "pdf-normalize",
+      "short": 852,
+      "rel": "images/catalog/gastrotech/web/vby1500r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY2000L",
+      "source": "pdf-normalize",
+      "short": 851,
+      "rel": "images/catalog/gastrotech/web/vby2000l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY2000R",
+      "source": "pdf-normalize",
+      "short": 851,
+      "rel": "images/catalog/gastrotech/web/vby2000r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY3600L",
+      "source": "pdf-normalize",
+      "short": 637,
+      "rel": "images/catalog/gastrotech/web/vby3600l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY3600R",
+      "source": "pdf-normalize",
+      "short": 637,
+      "rel": "images/catalog/gastrotech/web/vby3600r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT3000L",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft3000l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT3000R",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft3000r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT3600L",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft3600l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT3600R",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft3600r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT4500L",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft4500l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT4500R",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft4500r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT5200L",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft5200l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT5200R",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft5200r.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT6000L",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft6000l.jpg",
+      "url": null
+    },
+    {
+      "model": "VBY-FT6000R",
+      "source": "pdf-normalize",
+      "short": 428,
+      "rel": "images/catalog/gastrotech/web/vby-ft6000r.jpg",
+      "url": null
+    },
+    {
+      "model": "VPY130",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/vpy130.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vpy130-kazan-yikama-makinesi-drenaj-pompali-kazan-yikama-makineleri-vital-3877-23-B.webp"
+    },
+    {
+      "model": "VPY80",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/vpy80.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vpy80-kazan-yikama-makinesi-drenaj-pompali-kazan-yikama-makineleri-vital-3876-22-B.webp"
+    },
+    {
+      "model": "VLWE13E",
+      "source": "www.antmutfak.com",
+      "short": 435,
+      "rel": "images/catalog/gastrotech/web/vlwe13e.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vlwe13e-camasir-yikama-ve-sikma-makinesi-13-kgseferi-camasirhane-ekipmanlari-vital-3926-23-B.jpg"
+    },
+    {
+      "model": "VLWE20E",
+      "source": "official",
+      "short": 707,
+      "rel": "images/catalog/gastrotech/web/vlwe20e.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/d9c4c78e-0876-401b-b2b0-e5d759fc8c42/file/"
+    },
+    {
+      "model": "VLWE30E",
+      "source": "pdf-normalize",
+      "short": 653,
+      "rel": "images/catalog/gastrotech/web/vlwe30e.jpg",
+      "url": null
+    },
+    {
+      "model": "VLWE40E",
+      "source": "pdf-normalize",
+      "short": 653,
+      "rel": "images/catalog/gastrotech/web/vlwe40e.jpg",
+      "url": null
+    },
+    {
+      "model": "VLWE60E",
+      "source": "www.antmutfak.com",
+      "short": 602,
+      "rel": "images/catalog/gastrotech/web/vlwe60e.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vlwe60e-camasir-yikama-ve-sikma-makinesi-60-kgsefer-camasirhane-ekipmanlari-vital-3925-23-B.jpg"
+    },
+    {
+      "model": "VLTD15",
+      "source": "www.antmutfak.com",
+      "short": 750,
+      "rel": "images/catalog/gastrotech/web/vltd15.jpg",
+      "url": "https://antendustriyel.tsoftstatic.com/vital-vltd15-camasir-kurutma-makinesi-15-kgsefer-camasirhane-ekipmanlari-vital-3888-23-B.webp"
+    },
+    {
+      "model": "VLTD15G",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd15g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD20",
+      "source": "official",
+      "short": 684,
+      "rel": "images/catalog/gastrotech/web/vltd20.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/904f61e8-2f5f-40d1-a1de-0088ded169b3/file/"
+    },
+    {
+      "model": "VLTD20G",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd20g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD30",
+      "source": "pdf-normalize",
+      "short": 617,
+      "rel": "images/catalog/gastrotech/web/vltd30.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD30G",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd30g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD40",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd40.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD40G",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd40g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD60",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd60.jpg",
+      "url": null
+    },
+    {
+      "model": "VLTD60G",
+      "source": "pdf-normalize",
+      "short": 961,
+      "rel": "images/catalog/gastrotech/web/vltd60g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI32150",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri32150.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI32180",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri32180.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI55150",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri55150.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI55180",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri55180.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI55200",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri55200.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI60180",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri60180.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI60200",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri60200.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI75200",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri75200.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI75250",
+      "source": "pdf-normalize",
+      "short": 675,
+      "rel": "images/catalog/gastrotech/web/vlri75250.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI32150G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri32150g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI32180G",
+      "source": "official",
+      "short": 517,
+      "rel": "images/catalog/gastrotech/web/vlri32180g.jpg",
+      "url": "https://gastrotech.com.tr/api/v1/media/bba6b2ed-d98c-43d7-b7f6-cdc6d29f48f6/file/"
+    },
+    {
+      "model": "VLRI55150G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri55150g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI55180G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri55180g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI55200G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri55200g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI60180G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri60180g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI60200G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri60200g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI75200G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri75200g.jpg",
+      "url": null
+    },
+    {
+      "model": "VLRI75250G",
+      "source": "pdf-normalize",
+      "short": 313,
+      "rel": "images/catalog/gastrotech/web/vlri75250g.jpg",
+      "url": null
+    },
+    {
+      "model": "VPAU-01",
+      "source": "pdf-normalize",
+      "short": 823,
+      "rel": "images/catalog/gastrotech/web/vpau-01.jpg",
+      "url": null
+    },
+    {
+      "model": "VPRU-01",
+      "source": "pdf-normalize",
+      "short": 826,
+      "rel": "images/catalog/gastrotech/web/vpru-01.jpg",
+      "url": null
+    }
+  ],
+  "keep_pdf": [],
+  "miss": [
+    "MOD250AF",
+    "MOD300C",
+    "SPA-A22",
+    "SPA-M22",
+    "IP30F",
+    "WIK185"
+  ],
+  "at": "2026-11-05T12:37:32",
+  "pdf_norm": []
+}

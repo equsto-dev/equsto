@@ -1,0 +1,566 @@
+{
+  "bar": {
+    "model": "BAR",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gtech-bar-blender-gurultu-onleyici-kap-ad65-4.jpg",
+    "page": "https://www.demasan.com/gtech-bar-blender-gurultu-onleyici-kapakli25-lt",
+    "source": "demasan"
+  },
+  "gmf7020": {
+    "model": "GMF7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gmf7020-gazli-makarna-pisir-57-4e7.png",
+    "page": "https://www.demasan.com/gastrotech-gmf7020-gazli-makarna-pisirici-700-seri-2330",
+    "source": "demasan"
+  },
+  "emf7010": {
+    "model": "EMF7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-emf7010-elektrikli-makarna---a40d-.png",
+    "page": "https://www.demasan.com/gastrotech-emf7010-elektrikli-makarna-pisirici-700-seri-2331",
+    "source": "demasan"
+  },
+  "emf7020": {
+    "model": "EMF7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-emf7020-elektrikli-makarna---ae00-.png",
+    "page": "https://www.demasan.com/gastrotech-emf7020-elektrikli-makarna-pisirici-700-seri-2332",
+    "source": "demasan"
+  },
+  "gfp7010": {
+    "model": "GFP7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gfp7010-gazli-fritoz-dolapl-a39c7d.png",
+    "page": "https://www.demasan.com/gastrotech-gfp7010-gazli-fritoz-dolapli-700-seri-2333",
+    "source": "demasan"
+  },
+  "gfp7020": {
+    "model": "GFP7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gfp7020-gazli-fritoz-dolapl-e39809.png",
+    "page": "https://www.demasan.com/gastrotech-gfp7020-gazli-fritoz-dolapli-700-seri-2334",
+    "source": "demasan"
+  },
+  "efp7020": {
+    "model": "EFP7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-efp7020-elektrikli-fritoz-7--4bfa-.png",
+    "page": "https://www.demasan.com/gastrotech-efp7020-elektrikli-fritoz-700-seri-2336",
+    "source": "demasan"
+  },
+  "gkt7080": {
+    "model": "GKT7080",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkt7080-indirekt-gazli-kayn-57-a3c.png",
+    "page": "https://www.demasan.com/gastrotech-gkt7080-indirekt-gazli-kaynatma-tenceresi-80-lt-700-seri-2358",
+    "source": "demasan"
+  },
+  "ekt7080": {
+    "model": "EKT7080",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ekt7080-indirekt-elektrikli-67969a.png",
+    "page": "https://www.demasan.com/gastrotech-ekt7080-indirekt-elektrikli-kaynatma-tenceresi-80-lt-700-seri-2359",
+    "source": "demasan"
+  },
+  "gdt7050": {
+    "model": "GDT7050",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gdt7050-gazli-devrilir-tava--d1fb7.png",
+    "page": "https://www.demasan.com/gastrotech-gdt7050-gazli-devrilir-tava-50-lt-700-seri-2360",
+    "source": "demasan"
+  },
+  "edt7050": {
+    "model": "EDT7050",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-edt7050-elektrikli-devrilir-7-b75a.png",
+    "page": "https://www.demasan.com/gastrotech-edt7050-elektrikli-devrilir-tava-50-lt-700-seri-2361",
+    "source": "demasan"
+  },
+  "gko9010": {
+    "model": "GKO9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gko9010-gazli-ocak-2-brulor-bb-3b1.png",
+    "page": "https://www.demasan.com/gastrotech-gko9010-gazli-ocak-2-brulorlu-900-seri-2362",
+    "source": "demasan"
+  },
+  "gko9020": {
+    "model": "GKO9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gko9020-gazli-ocak-4-brulor-f4971f.png",
+    "page": "https://www.demasan.com/gastrotech-gko9020-gazli-ocak-4-brulorlu-900-seri-2363",
+    "source": "demasan"
+  },
+  "gko9030": {
+    "model": "GKO9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gko9030-gazli-ocak-6-brulor-66a6-4.png",
+    "page": "https://www.demasan.com/gastrotech-gko9030-gazli-ocak-6-brulorlu-900-seri-2364",
+    "source": "demasan"
+  },
+  "gkw9010": {
+    "model": "GKW9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkw9010-gazli-wok-ocak-1-br--a83d-.png",
+    "page": "https://www.demasan.com/gastrotech-gkw9010-gazli-wok-ocak-1-brulorlu-900-seri-2365",
+    "source": "demasan"
+  },
+  "gkw9020": {
+    "model": "GKW9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkw9020-gazli-wok-ocak-2-br-b-e70a.png",
+    "page": "https://www.demasan.com/gastrotech-gkw9020-gazli-wok-ocak-2-brulorlu-900-seri-2366",
+    "source": "demasan"
+  },
+  "gkw9030": {
+    "model": "GKW9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkw9030-gazli-wok-ocak-3-br-3b-ab9.png",
+    "page": "https://www.demasan.com/gastrotech-gkw9030-gazli-wok-ocak-3-brulorlu-900-seri-2367",
+    "source": "demasan"
+  },
+  "gks9010": {
+    "model": "GKS9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gks9010-gazli-show-ocak-900--e2149.png",
+    "page": "https://www.demasan.com/gastrotech-gks9010-gazli-show-ocak-900-seri-2368",
+    "source": "demasan"
+  },
+  "gks9020": {
+    "model": "GKS9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gks9020-gazli-show-ocak-900-b-dfb9.png",
+    "page": "https://www.demasan.com/gastrotech-gks9020-gazli-show-ocak-900-seri-2369",
+    "source": "demasan"
+  },
+  "gks9030": {
+    "model": "GKS9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gks9030-gazli-show-ocak-900-905cdb.png",
+    "page": "https://www.demasan.com/gastrotech-gks9030-gazli-show-ocak-900-seri-2370",
+    "source": "demasan"
+  },
+  "gks9020b": {
+    "model": "GKS9020B",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gks9020b-gazli-dort-yanisli-819066.png",
+    "page": "https://www.demasan.com/gastrotech-gks9020b-gazli-dort-yanisli-ocak-900-seri-2371",
+    "source": "demasan"
+  },
+  "est9010": {
+    "model": "EST9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-est9010-elektrikli-kapali-o-f940bd.png",
+    "page": "https://www.demasan.com/gastrotech-est9010-elektrikli-kapali-ocak-900-seri-2372",
+    "source": "demasan"
+  },
+  "est9020": {
+    "model": "EST9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-est9020-elektrikli-kapali-o-fcf8b3.png",
+    "page": "https://www.demasan.com/gastrotech-est9020-elektrikli-kapali-ocak-900-seri-2373",
+    "source": "demasan"
+  },
+  "gst9010": {
+    "model": "GST9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gst9010-gazli-kapali-ocak-9-4c59-a.png",
+    "page": "https://www.demasan.com/gastrotech-gst9010-gazli-kapali-ocak-900-seri-2374",
+    "source": "demasan"
+  },
+  "gst9020": {
+    "model": "GST9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gst9020-gazli-kapali-ocak-9-0248e2.png",
+    "page": "https://www.demasan.com/gastrotech-gst9020-gazli-kapali-ocak-900-seri-2375",
+    "source": "demasan"
+  },
+  "iko9010": {
+    "model": "IKO9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-iko9010-2-bolmeli-induksiyo-4c45-a.png",
+    "page": "https://www.demasan.com/gastrotech-iko9010-2-bolmeli-induksiyon-ocak-900-seri-2379",
+    "source": "demasan"
+  },
+  "iko9020": {
+    "model": "IKO9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-iko9020-4-bolmeli-induksiyo-4deb-b.png",
+    "page": "https://www.demasan.com/gastrotech-iko9020-4-bolmeli-induksiyon-ocak-900-seri-2380",
+    "source": "demasan"
+  },
+  "iko9030": {
+    "model": "IKO9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-iko9030-6-bolmeli-induksiyo--ba53-.png",
+    "page": "https://www.demasan.com/gastrotech-iko9030-6-bolmeli-induksiyon-ocak-900-seri-2381",
+    "source": "demasan"
+  },
+  "gsf9020": {
+    "model": "GSF9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsf9020-gazli-kapali-ocakli-e-4be9.png",
+    "page": "https://www.demasan.com/gastrotech-gsf9020-gazli-kapali-ocakli-kuzine-900-seri-2382",
+    "source": "demasan"
+  },
+  "gkf9020": {
+    "model": "GKF9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkf9020-4-brulorlu-gazli-ku-54d990.png",
+    "page": "https://www.demasan.com/gastrotech-gkf9020-4-brulorlu-gazli-kuzine-firinli-900-seri-2383",
+    "source": "demasan"
+  },
+  "gkf9021": {
+    "model": "GKF9021",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkf9021-4-brulorlu-gazli-ku-744214.png",
+    "page": "https://www.demasan.com/gastrotech-gkf9021-4-brulorlu-gazli-kuzine-firinli-900-seri-2384",
+    "source": "demasan"
+  },
+  "gkf9030": {
+    "model": "GKF9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkf9030-6-brulorlu-gazli-ku-0b2190.png",
+    "page": "https://www.demasan.com/gastrotech-gkf9030-6-brulorlu-gazli-kuzine-firinli-900-seri-2385",
+    "source": "demasan"
+  },
+  "gkf9031": {
+    "model": "GKF9031",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkf9031-6-brulorlu-gazli-ku-f2-047.png",
+    "page": "https://www.demasan.com/gastrotech-gkf9031-6-brulorlu-gazli-kuzine-firinli-900-seri-2386",
+    "source": "demasan"
+  },
+  "gkf9030m": {
+    "model": "GKF9030M",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkf9030m-6-brulorlu-gazli-k-2c58bb.png",
+    "page": "https://www.demasan.com/gastrotech-gkf9030m-6-brulorlu-gazli-kuzine-maxi-firinli-900-seri-2387",
+    "source": "demasan"
+  },
+  "gkfe9020": {
+    "model": "GKFE9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkfe9020-gazli-kuzine-elekt-dd750f.png",
+    "page": "https://www.demasan.com/gastrotech-gkfe9020-gazli-kuzine-elektrikli-firinli-900-seri-2388",
+    "source": "demasan"
+  },
+  "gkfe9030": {
+    "model": "GKFE9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkfe9030-gazli-kuzine-elekt-4c7a-b.png",
+    "page": "https://www.demasan.com/gastrotech-gkfe9030-gazli-kuzine-elektrikli-firinli-900-seri-2389",
+    "source": "demasan"
+  },
+  "ekf9020k": {
+    "model": "EKF9020K",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ekf9020k-4-kare-pleytli-ele-39-41b.png",
+    "page": "https://www.demasan.com/gastrotech-ekf9020k-4-kare-pleytli-elektrikli-kuzine-firinli-900-seri-2390",
+    "source": "demasan"
+  },
+  "ekf9030k": {
+    "model": "EKF9030K",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ekf9030k-6-kare-pleytli-ele-79c7b6.png",
+    "page": "https://www.demasan.com/gastrotech-ekf9030k-6-kare-pleytli-elektrikli-kuzine-firinli-900-seri-2391",
+    "source": "demasan"
+  },
+  "ikf9020": {
+    "model": "IKF9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ikf9020-4-bolmeli-induksiyo-910d-3.png",
+    "page": "https://www.demasan.com/gastrotech-ikf9020-4-bolmeli-induksiyon-ocak-elektrikli-firinli-900-seri-2392",
+    "source": "demasan"
+  },
+  "ikf9030": {
+    "model": "IKF9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ikf9030-6-bolmeli-induksiyo-fe113-.png",
+    "page": "https://www.demasan.com/gastrotech-ikf9030-6-bolmeli-induksiyon-ocak-elektrikli-firinli-900-seri-2393",
+    "source": "demasan"
+  },
+  "gpi9010s": {
+    "model": "GPI9010S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9010s-duz-yuzeyli-gazli---880e-.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9010s-duz-yuzeyli-gazli-izgara-900-seri-2394",
+    "source": "demasan"
+  },
+  "gpi9020s": {
+    "model": "GPI9020S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9020s-duz-yuzeyli-gazli--44d1-b.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9020s-duz-yuzeyli-gazli-izgara-900-seri-2395",
+    "source": "demasan"
+  },
+  "gpi9010r": {
+    "model": "GPI9010R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9010r-nervurlu-yuzeyli-g-4fbe-a.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9010r-nervurlu-yuzeyli-gazli-izgara-900-seri-2396",
+    "source": "demasan"
+  },
+  "gpi9020r": {
+    "model": "GPI9020R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9020r-nervurlu-yuzeyli-g-a466-1.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9020r-nervurlu-yuzeyli-gazli-izgara-900-seri-2397",
+    "source": "demasan"
+  },
+  "gpi9020sr": {
+    "model": "GPI9020SR",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9020sr-duznervurlu-yuzey-2ac563.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9020sr-duznervurlu-yuzeyli-gazli-izgara-900-seri-2398",
+    "source": "demasan"
+  },
+  "gpi9030s": {
+    "model": "GPI9030S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9030s-duz-yuzeyli-gazli--740569.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9030s-duz-yuzeyli-gazli-izgara-900-seri-2399",
+    "source": "demasan"
+  },
+  "gpi9030r": {
+    "model": "GPI9030R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9030r-nervurlu-yuzeyli-g-3b-255.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9030r-nervurlu-yuzeyli-gazli-izgara-900-seri-2400",
+    "source": "demasan"
+  },
+  "gpi9030sr": {
+    "model": "GPI9030SR",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gpi9030sr-duznervurlu-yuzey-5473-4.png",
+    "page": "https://www.demasan.com/gastrotech-gpi9030sr-duznervurlu-yuzeyli-gazli-izgara-900-seri-2401",
+    "source": "demasan"
+  },
+  "epi9010s": {
+    "model": "EPI9010S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9010s-duz-yuzeyli-elektr-621af7.png",
+    "page": "https://www.demasan.com/gastrotech-epi9010s-duz-yuzeyli-elektrikli-izgara-900-seri-2402",
+    "source": "demasan"
+  },
+  "epi9020s": {
+    "model": "EPI9020S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9020s-duz-yuzeyli-elektr-8-4d67.png",
+    "page": "https://www.demasan.com/gastrotech-epi9020s-duz-yuzeyli-elektrikli-izgara-900-seri-2403",
+    "source": "demasan"
+  },
+  "epi9010r": {
+    "model": "EPI9010R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9010r-nervurlu-yuzeyli-e--a9e46.png",
+    "page": "https://www.demasan.com/gastrotech-epi9010r-nervurlu-yuzeyli-elektrikli-izgara-900-seri-2404",
+    "source": "demasan"
+  },
+  "epi9020r": {
+    "model": "EPI9020R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9020r-nervurlu-yuzeyli-e-fc323f.png",
+    "page": "https://www.demasan.com/gastrotech-epi9020r-nervurlu-yuzeyli-elektrikli-izgara-900-seri-2405",
+    "source": "demasan"
+  },
+  "epi9020sr": {
+    "model": "EPI9020SR",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9020sr-duznervurlu-yuzey-1b86a-.png",
+    "page": "https://www.demasan.com/gastrotech-epi9020sr-duznervurlu-yuzeyli-elektrikli-izgara-900-seri-2406",
+    "source": "demasan"
+  },
+  "epi9030s": {
+    "model": "EPI9030S",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9030s-duz-yuzeyli-elektr-3384f7.png",
+    "page": "https://www.demasan.com/gastrotech-epi9030s-duz-yuzeyli-elektrikli-izgara-900-seri-2407",
+    "source": "demasan"
+  },
+  "epi9030r": {
+    "model": "EPI9030R",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9030r-nervurlu-yuzeyli-e-f01c04.png",
+    "page": "https://www.demasan.com/gastrotech-epi9030r-nervurlu-yuzeyli-elektrikli-izgara-900-seri-2408",
+    "source": "demasan"
+  },
+  "epi9030sr": {
+    "model": "EPI9030SR",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epi9030sr-duznervurlu-yuzey-c-46d2.png",
+    "page": "https://www.demasan.com/gastrotech-epi9030sr-duznervurlu-yuzeyli-elektrikli-izgara-900-seri-2409",
+    "source": "demasan"
+  },
+  "esi9010": {
+    "model": "ESI9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-esi9010-elektrikli-amerikan-e51242.png",
+    "page": "https://www.demasan.com/gastrotech-esi9010-elektrikli-amerikan-izgara-900-seri-2410",
+    "source": "demasan"
+  },
+  "esi9020": {
+    "model": "ESI9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-esi9020-elektrikli-amerikan--afa4-.png",
+    "page": "https://www.demasan.com/gastrotech-esi9020-elektrikli-amerikan-izgara-900-seri-2411",
+    "source": "demasan"
+  },
+  "esi9030": {
+    "model": "ESI9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-esi9030-elektrikli-amerikan-4bbb-b.png",
+    "page": "https://www.demasan.com/gastrotech-esi9030-elektrikli-amerikan-izgara-900-seri-2412",
+    "source": "demasan"
+  },
+  "epd9010": {
+    "model": "EPD9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-epd9010-elektrikli-patates--1d2943.png",
+    "page": "https://www.demasan.com/gastrotech-epd9010-elektrikli-patates-dinlendirme-900-seri-2413",
+    "source": "demasan"
+  },
+  "gli9010": {
+    "model": "GLI9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9010-gazli-lavatas-izgar-65ab73.png",
+    "page": "https://www.demasan.com/gastrotech-gli9010-gazli-lavatas-izgara-900-seri-2414",
+    "source": "demasan"
+  },
+  "gli9020": {
+    "model": "GLI9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9020-gazli-lavatas-izgar-9b3c-b.png",
+    "page": "https://www.demasan.com/gastrotech-gli9020-gazli-lavatas-izgara-900-seri-2415",
+    "source": "demasan"
+  },
+  "gli9030": {
+    "model": "GLI9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gli9030-gazli-lavatas-izgar-f65-42.png",
+    "page": "https://www.demasan.com/gastrotech-gli9030-gazli-lavatas-izgara-900-seri-2416",
+    "source": "demasan"
+  },
+  "gsi9010": {
+    "model": "GSI9010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsi9010-gazli-amerikan-izga-0-4be8.png",
+    "page": "https://www.demasan.com/gastrotech-gsi9010-gazli-amerikan-izgara-900-seri-2417",
+    "source": "demasan"
+  },
+  "gsi9020": {
+    "model": "GSI9020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsi9020-gazli-amerikan-izga-4e50-8.png",
+    "page": "https://www.demasan.com/gastrotech-gsi9020-gazli-amerikan-izgara-900-seri-2418",
+    "source": "demasan"
+  },
+  "gsi9030": {
+    "model": "GSI9030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsi9030-gazli-amerikan-izga-f4-441.png",
+    "page": "https://www.demasan.com/gastrotech-gsi9030-gazli-amerikan-izgara-900-seri-2419",
+    "source": "demasan"
+  },
+  "ntr7010": {
+    "model": "NTR7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7010-ara-tezgah-700-seri--7471-.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7010-ara-tezgah-700-seri-2433",
+    "source": "demasan"
+  },
+  "ntr7015": {
+    "model": "NTR7015",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7015-ara-tezgah-700-seri-5d99d1.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7015-ara-tezgah-700-seri-2434",
+    "source": "demasan"
+  },
+  "ntr7020": {
+    "model": "NTR7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7020-ara-tezgah-700-seri-319274.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7020-ara-tezgah-700-seri-2435",
+    "source": "demasan"
+  },
+  "ntr7010c": {
+    "model": "NTR7010C",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7010c-cekmeceli-ara-tezg-de-e5e.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7010c-cekmeceli-ara-tezgah-700-seri-2436",
+    "source": "demasan"
+  },
+  "ntr7020c": {
+    "model": "NTR7020C",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7020c-cekmeceli-ara-tezg-c-778c.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7020c-cekmeceli-ara-tezgah-700-seri-2437",
+    "source": "demasan"
+  },
+  "ntr7010e": {
+    "model": "NTR7010E",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ntr7010e-evyeli-ara-tezgah--c06c79.png",
+    "page": "https://www.demasan.com/gastrotech-ntr7010e-evyeli-ara-tezgah-700-seri-2438",
+    "source": "demasan"
+  },
+  "std7010d": {
+    "model": "STD7010D",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7010d-alt-stand-kapakli--9de150.png",
+    "page": "https://www.demasan.com/gastrotech-std7010d-alt-stand-kapakli-700-seri-2439",
+    "source": "demasan"
+  },
+  "std7015d": {
+    "model": "STD7015D",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7015d-alt-stand-kapakli--4d8b-4.png",
+    "page": "https://www.demasan.com/gastrotech-std7015d-alt-stand-kapakli-700-seri-2440",
+    "source": "demasan"
+  },
+  "std7020d": {
+    "model": "STD7020D",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7020d-alt-stand-kapakli--3cb4d-.png",
+    "page": "https://www.demasan.com/gastrotech-std7020d-alt-stand-kapakli-700-seri-2441",
+    "source": "demasan"
+  },
+  "std7030d": {
+    "model": "STD7030D",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7030d-alt-stand-kapakli--40d0-9.png",
+    "page": "https://www.demasan.com/gastrotech-std7030d-alt-stand-kapakli-700-seri-2442",
+    "source": "demasan"
+  },
+  "std7010c": {
+    "model": "STD7010C",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7010c-alt-stand-cekmecel-3b01e9.png",
+    "page": "https://www.demasan.com/gastrotech-std7010c-alt-stand-cekmeceli-700-seri-2443",
+    "source": "demasan"
+  },
+  "std7020c": {
+    "model": "STD7020C",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7020c-alt-stand-cekmecel-4-a9c3.png",
+    "page": "https://www.demasan.com/gastrotech-std7020c-alt-stand-cekmeceli-700-seri-2444",
+    "source": "demasan"
+  },
+  "std7030c": {
+    "model": "STD7030C",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7030c-alt-stand-cekmecel--7ede-.png",
+    "page": "https://www.demasan.com/gastrotech-std7030c-alt-stand-cekmeceli-700-seri-2445",
+    "source": "demasan"
+  },
+  "std7010": {
+    "model": "STD7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7010-alt-stand-kapaksiz---f462f.png",
+    "page": "https://www.demasan.com/gastrotech-std7010-alt-stand-kapaksiz-700-seri-2446",
+    "source": "demasan"
+  },
+  "std7015": {
+    "model": "STD7015",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7015-alt-stand-kapaksiz--25b537.png",
+    "page": "https://www.demasan.com/gastrotech-std7015-alt-stand-kapaksiz-700-seri-2447",
+    "source": "demasan"
+  },
+  "std7020": {
+    "model": "STD7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7020-alt-stand-kapaksiz--86a3f7.png",
+    "page": "https://www.demasan.com/gastrotech-std7020-alt-stand-kapaksiz-700-seri-2448",
+    "source": "demasan"
+  },
+  "std7030": {
+    "model": "STD7030",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-std7030-alt-stand-kapaksiz--a93-02.png",
+    "page": "https://www.demasan.com/gastrotech-std7030-alt-stand-kapaksiz-700-seri-2449",
+    "source": "demasan"
+  },
+  "gsb7010": {
+    "model": "GSB7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsb7010-gazli-benmari-700-s-b2-4db.png",
+    "page": "https://www.demasan.com/gastrotech-gsb7010-gazli-benmari-700-seri-2450",
+    "source": "demasan"
+  },
+  "gsb7020": {
+    "model": "GSB7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gsb7020-gazli-benmari-700-s-a9a-8e.png",
+    "page": "https://www.demasan.com/gastrotech-gsb7020-gazli-benmari-700-seri-2451",
+    "source": "demasan"
+  },
+  "esb7010": {
+    "model": "ESB7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-esb7010-elektrikli-benmari--454a-a.png",
+    "page": "https://www.demasan.com/gastrotech-esb7010-elektrikli-benmari-700-seri-2452",
+    "source": "demasan"
+  },
+  "esb7020": {
+    "model": "ESB7020",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-esb7020-elektrikli-benmari--f9-429.png",
+    "page": "https://www.demasan.com/gastrotech-esb7020-elektrikli-benmari-700-seri-2453",
+    "source": "demasan"
+  },
+  "gmf7010": {
+    "model": "GMF7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gmf7010-gazli-makarna-pisir--a64a-.png",
+    "page": "https://www.demasan.com/gastrotech-gmf7010-gazli-makarna-pisirici-700-seri-2454",
+    "source": "demasan"
+  },
+  "efp7010": {
+    "model": "EFP7010",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-efp7010-elektrikli-fritoz-7-2-d2ea.png",
+    "page": "https://www.demasan.com/gastrotech-efp7010-elektrikli-fritoz-700-seri-2460",
+    "source": "demasan"
+  },
+  "ekt90100": {
+    "model": "EKT90100",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ekt90100-100-lt-indirekt-el-ead0f-.png",
+    "page": "https://www.demasan.com/gastrotech-ekt90100-100-lt-indirekt-elektrikli-kaynatma-tenceresi-900-seri-2466",
+    "source": "demasan"
+  },
+  "ekt90150": {
+    "model": "EKT90150",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-ekt90150-150-lt-indirekt-el-6bcb-4.png",
+    "page": "https://www.demasan.com/gastrotech-ekt90150-150-lt-indirekt-elektrikli-kaynatma-tenceresi-900-seri-2467",
+    "source": "demasan"
+  },
+  "gkt90100": {
+    "model": "GKT90100",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkt90100-indirekt-gazli-kay-612-4f.png",
+    "page": "https://www.demasan.com/gastrotech-gkt90100-indirekt-gazli-kaynatma-tenceresi-100-lt-900-seri-2468",
+    "source": "demasan"
+  },
+  "gkt90150": {
+    "model": "GKT90150",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gkt90150-indirekt-gazli-kay-7-c733.png",
+    "page": "https://www.demasan.com/gastrotech-gkt90150-indirekt-gazli-kaynatma-tenceresi-150-lt-900-seri-2469",
+    "source": "demasan"
+  },
+  "gktd90150": {
+    "model": "GKTD90150",
+    "url": "https://static.ticimax.cloud/32902/uploads/urunresimleri/buyuk/gastrotech-gktd90150-direkt-gazli-kayn--8c99-.png",
+    "page": "https://www.demasan.com/gastrotech-gktd90150-direkt-gazli-kaynatma-tenceresi-150-lt-900-seri-2470",
+    "source": "demasan"
+  }
+}

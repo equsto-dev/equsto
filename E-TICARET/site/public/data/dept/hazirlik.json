@@ -109814,9 +109814,9 @@
     "marka_urun_kodu": "SYM2500",
     "equsto_kod": "EQ-GASTROTE.SYM2500",
     "images": [
-      "images/catalog/gastrotech/p177_2.jpg"
+      "images/catalog/gastrotech/web/sym2500.jpg"
     ],
-    "image": "images/catalog/gastrotech/p177_2.jpg",
+    "image": "images/catalog/gastrotech/web/sym2500.jpg",
     "keywords": [
       "Gastrotech",
       "SYM2500",
@@ -109842,7 +109842,9 @@
     "gastrotech_model": "SYM2500",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech SYM2500\nÜrün kodu: SYM2500\nÖlçü: 2500x1070x1510 mm\nListe fiyatı (EUR): 27290\nkatalog %47 iskonto\nEqusto satış (EUR): 14463.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺977.917,00\nKaynak: Gastrotech 2025-2027 katalog s.177",
-    "gastrotech_image": "images/catalog/gastrotech/p177_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/sym2500.jpg",
+    "gastrotech_image_source": "pdf-normalize",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/803958bd-6afa-4154-8d6c-5888c9c9ad11/file/"
   },
   {
     "id": "gastrotech__sym3000",
@@ -109855,9 +109857,9 @@
     "marka_urun_kodu": "SYM3000",
     "equsto_kod": "EQ-GASTROTE.SYM3000",
     "images": [
-      "images/catalog/gastrotech/p177_1.jpg"
+      "images/catalog/gastrotech/web/sym3000.jpg"
     ],
-    "image": "images/catalog/gastrotech/p177_1.jpg",
+    "image": "images/catalog/gastrotech/web/sym3000.jpg",
     "keywords": [
       "Gastrotech",
       "SYM3000",
@@ -109883,7 +109885,9 @@
     "gastrotech_model": "SYM3000",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: SYM3000\nÖlçü: 3000x1300x1600 mm\nListe fiyatı (EUR): 29690\nkatalog %47 iskonto\nEqusto satış (EUR): 15735.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺1.063.920,00\nKaynak: Gastrotech 2025-2027 katalog s.177",
-    "gastrotech_image": "images/catalog/gastrotech/p177_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/sym3000.jpg",
+    "gastrotech_image_source": "pdf-normalize",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/3a15c4a4-6148-489f-b2d5-2d10d81322ec/file/"
   },
   {
     "id": "gastrotech__sym300",
@@ -109896,9 +109900,9 @@
     "marka_urun_kodu": "SYM300",
     "equsto_kod": "EQ-GASTROTE.SYM300",
     "images": [
-      "images/catalog/gastrotech/p178_1.jpg"
+      "images/catalog/gastrotech/web/sym300.jpg"
     ],
-    "image": "images/catalog/gastrotech/p178_1.jpg",
+    "image": "images/catalog/gastrotech/web/sym300.jpg",
     "keywords": [
       "Gastrotech",
       "SYM300",
@@ -109924,7 +109928,9 @@
     "gastrotech_model": "SYM300",
     "fiyat_bekleniyor": false,
     "specs": "Genel Özellikler\nÜrün kodu: SYM300\nÖlçü: 1600x950x900 mm\nListe fiyatı (EUR): 15560\nkatalog %47 iskonto\nEqusto satış (EUR): 8246.8\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺557.581,00\nKaynak: Gastrotech 2025-2027 katalog s.178",
-    "gastrotech_image": "images/catalog/gastrotech/p178_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/sym300.jpg",
+    "gastrotech_image_source": "official",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/c4914330-4dee-4324-8ef4-88dce1fb17dd/file/"
   },
   {
     "id": "gastrotech__mod250af",
@@ -109937,9 +109943,9 @@
     "marka_urun_kodu": "MOD250AF",
     "equsto_kod": "EQ-GASTROTE.MOD250AF",
     "images": [
-      "images/catalog/gastrotech/p179_1.jpg"
+      "images/catalog/gastrotech/web/mod250af.jpg"
     ],
-    "image": "images/catalog/gastrotech/p179_1.jpg",
+    "image": "images/catalog/gastrotech/web/mod250af.jpg",
     "keywords": [
       "Gastrotech",
       "MOD250AF",
@@ -109964,7 +109970,9 @@
     "gastrotech_page": 179,
     "gastrotech_model": "MOD250AF",
     "fiyat_bekleniyor": false,
-    "specs": "MOD275AF\nÜrün kodu: MOD250AF\nÖlçü: 510x380x370 mm\nListe fiyatı (EUR): 790\nkatalog %47 iskonto\nEqusto satış (EUR): 418.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺28.309,00\nKaynak: Gastrotech 2025-2027 katalog s.179"
+    "specs": "MOD275AF\nÜrün kodu: MOD250AF\nÖlçü: 510x380x370 mm\nListe fiyatı (EUR): 790\nkatalog %47 iskonto\nEqusto satış (EUR): 418.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺28.309,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
+    "gastrotech_image": "images/catalog/gastrotech/web/mod250af.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__mod275af",
@@ -109977,9 +109985,9 @@
     "marka_urun_kodu": "MOD275AF",
     "equsto_kod": "EQ-GASTROTE.MOD275AF",
     "images": [
-      "images/catalog/gastrotech/p179_2.jpg"
+      "images/catalog/gastrotech/web/mod275af.jpg"
     ],
-    "image": "images/catalog/gastrotech/p179_2.jpg",
+    "image": "images/catalog/gastrotech/web/mod275af.jpg",
     "keywords": [
       "Gastrotech",
       "MOD275AF",
@@ -110005,7 +110013,9 @@
     "gastrotech_model": "MOD275AF",
     "fiyat_bekleniyor": false,
     "specs": "Genel Özellikler\nÜrün kodu: MOD275AF\nÖlçü: 580X470x390 mm\nListe fiyatı (EUR): 1120\nkatalog %47 iskonto\nEqusto satış (EUR): 593.6\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺40.134,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
-    "gastrotech_image": "images/catalog/gastrotech/p179_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/mod275af.jpg",
+    "gastrotech_image_source": "pdf-normalize",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/d7f79e9d-e9bb-44bc-b2ca-14def3632be2/file/"
   },
   {
     "id": "gastrotech__mod300c",
@@ -110018,9 +110028,9 @@
     "marka_urun_kodu": "MOD300C",
     "equsto_kod": "EQ-GASTROTE.MOD300C",
     "images": [
-      "images/catalog/gastrotech/p179_3.jpg"
+      "images/catalog/gastrotech/web/mod300c.jpg"
     ],
-    "image": "images/catalog/gastrotech/p179_3.jpg",
+    "image": "images/catalog/gastrotech/web/mod300c.jpg",
     "keywords": [
       "Gastrotech",
       "MOD300C",
@@ -110045,7 +110055,9 @@
     "gastrotech_page": 179,
     "gastrotech_model": "MOD300C",
     "fiyat_bekleniyor": false,
-    "specs": "Gastrotech MOD300C\nÜrün kodu: MOD300C\nÖlçü: 690x560x440 mm\nListe fiyatı (EUR): 1270\nkatalog %47 iskonto\nEqusto satış (EUR): 673.1\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺45.510,00\nKaynak: Gastrotech 2025-2027 katalog s.179"
+    "specs": "Gastrotech MOD300C\nÜrün kodu: MOD300C\nÖlçü: 690x560x440 mm\nListe fiyatı (EUR): 1270\nkatalog %47 iskonto\nEqusto satış (EUR): 673.1\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺45.510,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
+    "gastrotech_image": "images/catalog/gastrotech/web/mod300c.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__mod300v",
@@ -110058,9 +110070,9 @@
     "marka_urun_kodu": "MOD300V",
     "equsto_kod": "EQ-GASTROTE.MOD300V",
     "images": [
-      "images/catalog/gastrotech/p179_1.jpg"
+      "images/catalog/gastrotech/web/mod300v.jpg"
     ],
-    "image": "images/catalog/gastrotech/p179_1.jpg",
+    "image": "images/catalog/gastrotech/web/mod300v.jpg",
     "keywords": [
       "Gastrotech",
       "MOD300V",
@@ -110086,7 +110098,9 @@
     "gastrotech_model": "MOD300V",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: MOD300V\nListe fiyatı (EUR): 2150\nkatalog %47 iskonto\nEqusto satış (EUR): 1139.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺77.044,00\nKaynak: Gastrotech 2025-2027 katalog s.179",
-    "gastrotech_image": "images/catalog/gastrotech/p179_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/mod300v.jpg",
+    "gastrotech_image_source": "pdf-normalize",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/8f309bc4-6326-4359-b055-303f1276470e/file/"
   },
   {
     "id": "gastrotech__c-254",
@@ -110099,9 +110113,9 @@
     "marka_urun_kodu": "C-254",
     "equsto_kod": "EQ-GASTROTE.C254",
     "images": [
-      "images/catalog/gastrotech/p180_6.jpg"
+      "images/catalog/gastrotech/web/c-254.jpg"
     ],
-    "image": "images/catalog/gastrotech/p180_6.jpg",
+    "image": "images/catalog/gastrotech/web/c-254.jpg",
     "keywords": [
       "Gastrotech",
       "C-254",
@@ -110127,7 +110141,8 @@
     "gastrotech_model": "C-254",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech C-254\nÜrün kodu: C-254\nÖlçü: 357x475x335 mm\nListe fiyatı (EUR): 2990\nkatalog %47 iskonto\nEqusto satış (EUR): 1584.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺107.144,00\nKaynak: Gastrotech 2025-2027 katalog s.180",
-    "gastrotech_image": "images/catalog/gastrotech/p180_6.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/c-254.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__c-308",
@@ -110140,9 +110155,9 @@
     "marka_urun_kodu": "C-308",
     "equsto_kod": "EQ-GASTROTE.C308",
     "images": [
-      "images/catalog/gastrotech/p180_8.jpg"
+      "images/catalog/gastrotech/web/c-308.jpg"
     ],
-    "image": "images/catalog/gastrotech/p180_8.jpg",
+    "image": "images/catalog/gastrotech/web/c-308.jpg",
     "keywords": [
       "Gastrotech",
       "C-308",
@@ -110168,7 +110183,8 @@
     "gastrotech_model": "C-308",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech C-308\nÜrün kodu: C-308\nÖlçü: 385x470x370 mm\nListe fiyatı (EUR): 3650\nkatalog %47 iskonto\nEqusto satış (EUR): 1934.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺130.795,00\nKaynak: Gastrotech 2025-2027 katalog s.180",
-    "gastrotech_image": "images/catalog/gastrotech/p180_8.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/c-308.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__c-312",
@@ -110181,9 +110197,9 @@
     "marka_urun_kodu": "C-312",
     "equsto_kod": "EQ-GASTROTE.C312",
     "images": [
-      "images/catalog/gastrotech/p180_7.jpg"
+      "images/catalog/gastrotech/web/c-312.jpg"
     ],
-    "image": "images/catalog/gastrotech/p180_7.jpg",
+    "image": "images/catalog/gastrotech/web/c-312.jpg",
     "keywords": [
       "Gastrotech",
       "C-312",
@@ -110209,7 +110225,8 @@
     "gastrotech_model": "C-312",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech C-312\nÜrün kodu: C-312\nÖlçü: 415x585x400 mm\nListe fiyatı (EUR): 4090\nkatalog %47 iskonto\nEqusto satış (EUR): 2167.7\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺146.562,00\nKaynak: Gastrotech 2025-2027 katalog s.180",
-    "gastrotech_image": "images/catalog/gastrotech/p180_7.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/c-312.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__c-62",
@@ -110222,9 +110239,9 @@
     "marka_urun_kodu": "C-62",
     "equsto_kod": "EQ-GASTROTE.C62",
     "images": [
-      "images/catalog/gastrotech/p180_4.jpg"
+      "images/catalog/gastrotech/web/c-62.jpg"
     ],
-    "image": "images/catalog/gastrotech/p180_4.jpg",
+    "image": "images/catalog/gastrotech/web/c-62.jpg",
     "keywords": [
       "Gastrotech",
       "C-62",
@@ -110250,7 +110267,8 @@
     "gastrotech_model": "C-62",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech C-62\nÜrün kodu: C-62\nÖlçü: 772x682x1034 mm\nListe fiyatı (EUR): 12000\nkatalog %47 iskonto\nEqusto satış (EUR): 6360\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺430.012,00\nKaynak: Gastrotech 2025-2027 katalog s.180",
-    "gastrotech_image": "images/catalog/gastrotech/p180_4.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/c-62.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__c420",
@@ -110263,9 +110281,9 @@
     "marka_urun_kodu": "C420",
     "equsto_kod": "EQ-GASTROTE.C420",
     "images": [
-      "images/catalog/gastrotech/p180_5.jpg"
+      "images/catalog/gastrotech/web/c420.jpg"
     ],
-    "image": "images/catalog/gastrotech/p180_5.jpg",
+    "image": "images/catalog/gastrotech/web/c420.jpg",
     "keywords": [
       "Gastrotech",
       "C420",
@@ -110291,7 +110309,8 @@
     "gastrotech_model": "C420",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech C420\nÜrün kodu: C420\nÖlçü: 510x585x435 mm\nListe fiyatı (EUR): 5000\nkatalog %47 iskonto\nEqusto satış (EUR): 2650\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺179.171,00\nKaynak: Gastrotech 2025-2027 katalog s.180",
-    "gastrotech_image": "images/catalog/gastrotech/p180_5.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/c420.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__ss-08c",
@@ -110304,9 +110323,9 @@
     "marka_urun_kodu": "SS-08C",
     "equsto_kod": "EQ-GASTROTE.SS08C",
     "images": [
-      "images/catalog/gastrotech/p181_4.jpg"
+      "images/catalog/gastrotech/web/ss-08c.jpg"
     ],
-    "image": "images/catalog/gastrotech/p181_4.jpg",
+    "image": "images/catalog/gastrotech/web/ss-08c.jpg",
     "keywords": [
       "Gastrotech",
       "SS-08C",
@@ -110332,7 +110351,9 @@
     "gastrotech_model": "SS-08C",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech SS-08C\nÜrün kodu: SS-08C\nÖlçü: 350x450x320 mm\nListe fiyatı (EUR): 470\nkatalog %47 iskonto\nEqusto satış (EUR): 249.1\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺16.842,00\nKaynak: Gastrotech 2025-2027 katalog s.181",
-    "gastrotech_image": "images/catalog/gastrotech/p181_4.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ss-08c.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ss-08c-sebze-ve-meyve-kurutucu-8-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss08c-16293-19-B.png"
   },
   {
     "id": "gastrotech__ss-10h",
@@ -110345,9 +110366,9 @@
     "marka_urun_kodu": "SS-10H",
     "equsto_kod": "EQ-GASTROTE.SS10H",
     "images": [
-      "images/catalog/gastrotech/p181_3.jpg"
+      "images/catalog/gastrotech/web/ss-10h.jpg"
     ],
-    "image": "images/catalog/gastrotech/p181_3.jpg",
+    "image": "images/catalog/gastrotech/web/ss-10h.jpg",
     "keywords": [
       "Gastrotech",
       "SS-10H",
@@ -110373,7 +110394,9 @@
     "gastrotech_model": "SS-10H",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech SS-10H\nÜrün kodu: SS-10H\nÖlçü: 350x400x430 mm\nListe fiyatı (EUR): 650\nkatalog %47 iskonto\nEqusto satış (EUR): 344.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺23.292,00\nKaynak: Gastrotech 2025-2027 katalog s.181",
-    "gastrotech_image": "images/catalog/gastrotech/p181_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ss-10h.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ss-10h-sebze-ve-meyve-kurutucu-10-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-ss-10h-16294-19-B.png"
   },
   {
     "id": "gastrotech__ss-12h",
@@ -110386,9 +110409,9 @@
     "marka_urun_kodu": "SS-12H",
     "equsto_kod": "EQ-GASTROTE.SS12H",
     "images": [
-      "images/catalog/gastrotech/p181_2.jpg"
+      "images/catalog/gastrotech/web/ss-12h.jpg"
     ],
-    "image": "images/catalog/gastrotech/p181_2.jpg",
+    "image": "images/catalog/gastrotech/web/ss-12h.jpg",
     "keywords": [
       "Gastrotech",
       "SS-12H",
@@ -110414,7 +110437,9 @@
     "gastrotech_model": "SS-12H",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech SS-12H\nÜrün kodu: SS-12H\nÖlçü: 470x570x550 mm\nListe fiyatı (EUR): 1200\nkatalog %47 iskonto\nEqusto satış (EUR): 636\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺43.001,00\nKaynak: Gastrotech 2025-2027 katalog s.181",
-    "gastrotech_image": "images/catalog/gastrotech/p181_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ss-12h.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ss-12h-sebze-ve-meyve-kurutucu-12-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss12h-16295-19-B.png"
   },
   {
     "id": "gastrotech__ss-24h",
@@ -110427,9 +110452,9 @@
     "marka_urun_kodu": "SS-24H",
     "equsto_kod": "EQ-GASTROTE.SS24H",
     "images": [
-      "images/catalog/gastrotech/p181_1.jpg"
+      "images/catalog/gastrotech/web/ss-24h.jpg"
     ],
-    "image": "images/catalog/gastrotech/p181_1.jpg",
+    "image": "images/catalog/gastrotech/web/ss-24h.jpg",
     "keywords": [
       "Gastrotech",
       "SS-24H",
@@ -110455,7 +110480,9 @@
     "gastrotech_model": "SS-24H",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: SS-24H\nÖlçü: 470x570x880 mm\nListe fiyatı (EUR): 2000\nkatalog %47 iskonto\nEqusto satış (EUR): 1060\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺71.669,00\nKaynak: Gastrotech 2025-2027 katalog s.181",
-    "gastrotech_image": "images/catalog/gastrotech/p181_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ss-24h.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ss-24h-sebze-ve-meyve-kurutucu-24-tepsi-kapasiteli-sebze-kurutma-makineleri-gtech-144ss24h-16296-19-B.png"
   },
   {
     "id": "gastrotech__dfd-20a",
@@ -110468,9 +110495,9 @@
     "marka_urun_kodu": "DFD-20A",
     "equsto_kod": "EQ-GASTROTE.DFD20A",
     "images": [
-      "images/catalog/gastrotech/p183_3.jpg"
+      "images/catalog/gastrotech/web/dfd-20a.jpg"
     ],
-    "image": "images/catalog/gastrotech/p183_3.jpg",
+    "image": "images/catalog/gastrotech/web/dfd-20a.jpg",
     "keywords": [
       "Gastrotech",
       "DFD-20A",
@@ -110496,7 +110523,9 @@
     "gastrotech_model": "DFD-20A",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: DFD-20A\nÖlçü: 275x750x20 mm\nListe fiyatı (EUR): 13705\nkatalog %47 iskonto\nEqusto satış (EUR): 7263.65\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺491.108,00\nKaynak: Gastrotech 2025-2027 katalog s.183",
-    "gastrotech_image": "images/catalog/gastrotech/p183_3.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/dfd-20a.jpg",
+    "gastrotech_image_source": "pdf-normalize",
+    "gastrotech_image_url": "https://gastrotech.com.tr/api/v1/media/fc6e68f0-72d0-4d49-9979-90ff4db24db1/file/"
   },
   {
     "id": "gastrotech__gp-b",
@@ -110509,9 +110538,9 @@
     "marka_urun_kodu": "GP-B",
     "equsto_kod": "EQ-GASTROTE.GPB",
     "images": [
-      "images/catalog/gastrotech/p184_4.jpg"
+      "images/catalog/gastrotech/web/gp-b.jpg"
     ],
-    "image": "images/catalog/gastrotech/p184_4.jpg",
+    "image": "images/catalog/gastrotech/web/gp-b.jpg",
     "keywords": [
       "Gastrotech",
       "GP-B",
@@ -110537,7 +110566,8 @@
     "gastrotech_model": "GP-B",
     "fiyat_bekleniyor": false,
     "specs": "İki Hızlı Cihaz Farkı\nÜrün kodu: GP-B\nListe fiyatı (EUR): 8300\nkatalog %47 iskonto\nEqusto satış (EUR): 4399\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺297.425,00\nKaynak: Gastrotech 2025-2027 katalog s.184",
-    "gastrotech_image": "images/catalog/gastrotech/p184_4.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/gp-b.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__spa-a22",
@@ -110550,9 +110580,9 @@
     "marka_urun_kodu": "SPA-A22",
     "equsto_kod": "EQ-GASTROTE.SPAA22",
     "images": [
-      "images/catalog/gastrotech/p185_1.jpg"
+      "images/catalog/gastrotech/web/spa-a22.jpg"
     ],
-    "image": "images/catalog/gastrotech/p185_1.jpg",
+    "image": "images/catalog/gastrotech/web/spa-a22.jpg",
     "keywords": [
       "Gastrotech",
       "SPA-A22",
@@ -110577,7 +110607,9 @@
     "gastrotech_page": 185,
     "gastrotech_model": "SPA-A22",
     "fiyat_bekleniyor": false,
-    "specs": "Gastrotech SPA-A22\nÜrün kodu: SPA-A22\nListe fiyatı (EUR): 26000\nkatalog %47 iskonto\nEqusto satış (EUR): 13780\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺931.691,00\nKaynak: Gastrotech 2025-2027 katalog s.185"
+    "specs": "Gastrotech SPA-A22\nÜrün kodu: SPA-A22\nListe fiyatı (EUR): 26000\nkatalog %47 iskonto\nEqusto satış (EUR): 13780\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺931.691,00\nKaynak: Gastrotech 2025-2027 katalog s.185",
+    "gastrotech_image": "images/catalog/gastrotech/web/spa-a22.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__spa-m22",
@@ -110590,9 +110622,9 @@
     "marka_urun_kodu": "SPA-M22",
     "equsto_kod": "EQ-GASTROTE.SPAM22",
     "images": [
-      "images/catalog/gastrotech/p185_2.jpg"
+      "images/catalog/gastrotech/web/spa-m22.jpg"
     ],
-    "image": "images/catalog/gastrotech/p185_2.jpg",
+    "image": "images/catalog/gastrotech/web/spa-m22.jpg",
     "keywords": [
       "Gastrotech",
       "SPA-M22",
@@ -110617,7 +110649,9 @@
     "gastrotech_page": 185,
     "gastrotech_model": "SPA-M22",
     "fiyat_bekleniyor": false,
-    "specs": "Gastrotech SPA-M22\nÜrün kodu: SPA-M22\nListe fiyatı (EUR): 16000\nkatalog %47 iskonto\nEqusto satış (EUR): 8480\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺573.348,00\nKaynak: Gastrotech 2025-2027 katalog s.185"
+    "specs": "Gastrotech SPA-M22\nÜrün kodu: SPA-M22\nListe fiyatı (EUR): 16000\nkatalog %47 iskonto\nEqusto satış (EUR): 8480\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺573.348,00\nKaynak: Gastrotech 2025-2027 katalog s.185",
+    "gastrotech_image": "images/catalog/gastrotech/web/spa-m22.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__ip30f",
@@ -110630,9 +110664,9 @@
     "marka_urun_kodu": "IP30F",
     "equsto_kod": "EQ-GASTROTE.IP30F",
     "images": [
-      "images/catalog/gastrotech/p197_3.jpg"
+      "images/catalog/gastrotech/web/ip30f.jpg"
     ],
-    "image": "images/catalog/gastrotech/p197_3.jpg",
+    "image": "images/catalog/gastrotech/web/ip30f.jpg",
     "keywords": [
       "Gastrotech",
       "IP30F",
@@ -110657,7 +110691,9 @@
     "gastrotech_page": 197,
     "gastrotech_model": "IP30F",
     "fiyat_bekleniyor": false,
-    "specs": "Gastrotech IP30F\nÜrün kodu: IP30F\nÖlçü: 430x430x910 mm\nListe fiyatı (EUR): 1850\nkatalog %47 iskonto\nEqusto satış (EUR): 980.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺66.294,00\nKaynak: Gastrotech 2025-2027 katalog s.197"
+    "specs": "Gastrotech IP30F\nÜrün kodu: IP30F\nÖlçü: 430x430x910 mm\nListe fiyatı (EUR): 1850\nkatalog %47 iskonto\nEqusto satış (EUR): 980.5\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺66.294,00\nKaynak: Gastrotech 2025-2027 katalog s.197",
+    "gastrotech_image": "images/catalog/gastrotech/web/ip30f.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__mxb7",
@@ -110670,9 +110706,9 @@
     "marka_urun_kodu": "MXB7",
     "equsto_kod": "EQ-GASTROTE.MXB7",
     "images": [
-      "images/catalog/gastrotech/p197_2.jpg"
+      "images/catalog/gastrotech/web/mxb7.jpg"
     ],
-    "image": "images/catalog/gastrotech/p197_2.jpg",
+    "image": "images/catalog/gastrotech/web/mxb7.jpg",
     "keywords": [
       "Gastrotech",
       "MXB7",
@@ -110698,7 +110734,9 @@
     "gastrotech_model": "MXB7",
     "fiyat_bekleniyor": false,
     "specs": "Ürün Adı\nÜrün kodu: MXB7\nÖlçü: 400x250x410 mm\nListe fiyatı (EUR): 1000\nkatalog %47 iskonto\nEqusto satış (EUR): 530\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺35.834,00\nKaynak: Gastrotech 2025-2027 katalog s.197",
-    "gastrotech_image": "images/catalog/gastrotech/p197_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/mxb7.jpg",
+    "gastrotech_image_source": "www.antmutfak.com",
+    "gastrotech_image_url": "https://antendustriyel.tsoftstatic.com/gtech-mxb7-set-ustu-stand-mikser-7-l-stand-mikserler-gtech-2146-12-B.jpg"
   },
   {
     "id": "gastrotech__wik185",
@@ -110711,9 +110749,9 @@
     "marka_urun_kodu": "WIK185",
     "equsto_kod": "EQ-GASTROTE.WIK185",
     "images": [
-      "images/catalog/gastrotech/p197_3.jpg"
+      "images/catalog/gastrotech/web/wik185.jpg"
     ],
-    "image": "images/catalog/gastrotech/p197_3.jpg",
+    "image": "images/catalog/gastrotech/web/wik185.jpg",
     "keywords": [
       "Gastrotech",
       "WIK185",
@@ -110738,7 +110776,9 @@
     "gastrotech_page": 197,
     "gastrotech_model": "WIK185",
     "fiyat_bekleniyor": false,
-    "specs": "Ürün Adı\nÜrün kodu: WIK185\nListe fiyatı (EUR): 180\nkatalog %47 iskonto\nEqusto satış (EUR): 95.4\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺6.450,00\nKaynak: Gastrotech 2025-2027 katalog s.197"
+    "specs": "Ürün Adı\nÜrün kodu: WIK185\nListe fiyatı (EUR): 180\nkatalog %47 iskonto\nEqusto satış (EUR): 95.4\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺6.450,00\nKaynak: Gastrotech 2025-2027 katalog s.197",
+    "gastrotech_image": "images/catalog/gastrotech/web/wik185.jpg",
+    "gastrotech_image_source": "pdf-normalize"
   },
   {
     "id": "gastrotech__ef708",
@@ -110751,9 +110791,9 @@
     "marka_urun_kodu": "EF708",
     "equsto_kod": "EQ-GASTROTE.EF708",
     "images": [
-      "images/catalog/gastrotech/p198_1.jpg"
+      "images/catalog/gastrotech/web/ef708.jpg"
     ],
-    "image": "images/catalog/gastrotech/p198_1.jpg",
+    "image": "images/catalog/gastrotech/web/ef708.jpg",
     "keywords": [
       "Gastrotech",
       "EF708",
@@ -110779,7 +110819,9 @@
     "gastrotech_model": "EF708",
     "fiyat_bekleniyor": false,
     "specs": "Genel Özellikler\nÜrün kodu: EF708\nÖlçü: 347x184x364 mm\nListe fiyatı (EUR): 710\nkatalog %47 iskonto\nEqusto satış (EUR): 376.3\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺25.442,00\nKaynak: Gastrotech 2025-2027 katalog s.198",
-    "gastrotech_image": "images/catalog/gastrotech/p198_1.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ef708.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ef708-s-professional-krom-set-ustu-mikser-48-l-siyah-set-ustu-mikserler-gtech-ef708s-8511-18-B.jpg"
   },
   {
     "id": "gastrotech__ef708-s",
@@ -110792,9 +110834,9 @@
     "marka_urun_kodu": "EF708-S",
     "equsto_kod": "EQ-GASTROTE.EF708S",
     "images": [
-      "images/catalog/gastrotech/p198_2.jpg"
+      "images/catalog/gastrotech/web/ef708-s.jpg"
     ],
-    "image": "images/catalog/gastrotech/p198_2.jpg",
+    "image": "images/catalog/gastrotech/web/ef708-s.jpg",
     "keywords": [
       "Gastrotech",
       "EF708-S",
@@ -110820,7 +110862,9 @@
     "gastrotech_model": "EF708-S",
     "fiyat_bekleniyor": false,
     "specs": "Gastrotech EF708-S\nÜrün kodu: EF708-S\nÖlçü: 347x184x364 mm\nListe fiyatı (EUR): 755\nkatalog %47 iskonto\nEqusto satış (EUR): 400.15\nKur: 1 EUR = 56.3432 TRY (KDV %20)\nEqusto satış (TL, KDV dahil): ₺27.055,00\nKaynak: Gastrotech 2025-2027 katalog s.198",
-    "gastrotech_image": "images/catalog/gastrotech/p198_2.jpg"
+    "gastrotech_image": "images/catalog/gastrotech/web/ef708-s.jpg",
+    "gastrotech_image_source": "www.gustomarkt.com",
+    "gastrotech_image_url": "https://www.gustomarkt.com/gtech-ef708-s-professional-krom-set-ustu-mikser-48-l-siyah-set-ustu-mikserler-gtech-ef708s-8511-18-B.jpg"
   },
   {
     "id": "kitchenaid__5kpmseob",
