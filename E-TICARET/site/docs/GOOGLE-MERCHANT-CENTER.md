@@ -48,7 +48,8 @@ Tüm katalog (teklif ürünleri dahil) denemek için:
 |------|--------|
 | Geçersiz fiyat | `price` metninde TRY; `fiyat_tl` güncel mi kontrol edin |
 | Görsel 404 | `/images/catalog/...` veya `/data/images/...` canlıda açılıyor mu |
-| Görsel çok küçük | GMC min **500×500** (önerilen **800×800**, zorunluluk: 31 Oca 2027). CafeMarkt hash/400px hero’lar: `npm run catalog:images:fix-gmc-hero:cm` (witcdn `-B` → yerinde yaz). Kalan küçükler: feed `image_link` → `/api/gmc/img/hero?src=…`. Atalay: `npm run catalog:atalay:gmc-images -- --model="E AEI - 360"` |
+| Görsel çok küçük | GMC min **500×500** (önerilen **800×800**, zorunluluk: 31 Oca 2027). CafeMarkt hash/400px hero’lar: `npm run catalog:images:fix-gmc-hero:cm` (witcdn `-B` → yerinde yaz). Kalan küçükler: feed `image_link` → `/api/gmc/img/hero?src=…`. Feed `image_link` **origin** (`equsto.com`) kullanır — S3/CDN gecikmesinde eski 400px riskini önlemek için. Atalay: `npm run catalog:atalay:gmc-images -- --model="E AEI - 360"` |
+| CDN eski / S3 sync yok | Deploy log: `S3 sync skipped (AWS… yok)`. Görseller Hetzner `public/`’de güncel olsa da CloudFront eski kalır. GMC feed origin’e bakar; site CDN için sunucuda `AWS_ACCESS_KEY_ID` + `AWS_SECRET_ACCESS_KEY` + `AWS_S3_BUCKET` gerekir, sonra `aws s3 sync public/images s3://equsto-assets/images` |
 | Yanlış görsel (varyant) | Düz / nervürlü / krom karışması — `scripts/fetch-atalay-gmc-images.mjs` model eşlemesi |
 | Eksik açıklama | `specs` / `name` boş ürünleri katalogdan düzeltin |
 | Kimlik (GTIN) | Feed `identifier_exists=false` — normaldir, MPN/SKU kullanılır |
