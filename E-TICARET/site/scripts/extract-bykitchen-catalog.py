@@ -24,6 +24,18 @@ PDF = Path(r"C:\D Disk\FİYAT LİSTELERİ\BYKITCHEN 2027.pdf")
 OUT = ROOT / "scripts/data/bykitchen/bykitchen-catalog-extracted.json"
 DEPT = ROOT / "public/data/dept"
 
+
+def resolve_paths() -> tuple[Path, Path]:
+    """CLI: python extract-bykitchen-catalog.py [pdf] [out.json]"""
+    pdf = PDF
+    out = OUT
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
+    if len(args) >= 1:
+        pdf = Path(args[0])
+    if len(args) >= 2:
+        out = Path(args[1])
+    return pdf, out
+
 # Üçüncü parti / yetkili satıcı markaları (Brema, Magister, Cunill…)
 SKIP_MODEL = re.compile(
     r"^("
@@ -274,7 +286,10 @@ def named_vortex(page_no: int, words, text: str) -> list[dict]:
 
 
 def main() -> None:
+    global PDF, OUT
+    PDF, OUT = resolve_paths()
     existing = load_existing_norms()
+    print(f"[bykitchen-extract] pdf={PDF.name}")
     print(f"[bykitchen-extract] existing SKU norms={len(existing)}")
     doc = fitz.open(str(PDF))
     by_norm: dict[str, dict] = {}

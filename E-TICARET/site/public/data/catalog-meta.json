@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-05T20-30-49",
-  "rebuiltAt": "2026-11-05T20:30:49.233Z",
-  "ekipmanlar": 16237,
+  "version": "2026-11-06T06-49-11",
+  "rebuiltAt": "2026-11-06T06:49:11.904Z",
+  "ekipmanlar": 16238,
   "withImage": 16136,
   "brands": 121,
   "deptCounts": {
@@ -9,7 +9,7 @@
     "davlumbaz": 228,
     "dolap": 793,
     "hazirlik": 2156,
-    "unknown": 67,
+    "unknown": 68,
     "icecek": 552,
     "istif": 276,
     "kahve": 919,
@@ -26,5 +26,5 @@
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 15660,
-  "productsEnStale": 577
+  "productsEnStale": 578
 }

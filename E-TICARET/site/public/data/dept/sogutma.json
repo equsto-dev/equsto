@@ -102374,14 +102374,14 @@
     "category": "sogutma",
     "brand": "By Kitchen",
     "name": "By Kitchen DSD-01 Süt Soğutma Dolabı",
-    "price": "₺7.936,00 KDV dahil",
-    "specs": "By Kitchen DSD-01 Süt Soğutma Dolabı\n\nÜrün kodu: DSD-01\nListe fiyatı (USD): 240\n%45 iskonto → satış USD: 132\nKur (USD/TRY): 50.101\nEqusto satış (KDV hariç): ₺6.613,00\nEqusto satış (KDV dahil): ₺7.936,00\nHavale / EFT: %2 indirim → ₺7.777,00\nKaynak: BYKITCHEN 2027 katalog s.19",
+    "price": "₺12.902,00 KDV dahil",
+    "specs": "By Kitchen DSD-01 Süt Soğutma Dolabı\n\nÜrün kodu: DSD-01\nListe fiyatı (USD): 390\n%45 iskonto → satış USD: 214.5\nKur (USD/TRY): 50.1239\nEqusto satış (KDV hariç): ₺10.752,00\nEqusto satış (KDV dahil): ₺12.902,00\nHavale / EFT: %2 indirim → ₺12.644,00\nKaynak: BYKITCHEN 2027 katalog s.19",
     "images": [
       "images/catalog/cafemarkt/d839eceff9e2be8c.jpg"
     ],
     "sku": "DSD.01",
     "model": "DSD.01",
-    "fiyat_tl": 7936,
+    "fiyat_tl": 12902,
     "kaynak_fiyat_listesi": "BYKITCHEN 2027",
     "fiyat_kaynak": "bykitchen-2027-catalog",
     "cafemarkt_fiyat_kdv_dahil": 32330.54,
@@ -102416,8 +102416,8 @@
     "description": "By Kitchen DSD-01 Süt Soğutma Dolabı",
     "image": "images/catalog/cafemarkt/d839eceff9e2be8c.jpg",
     "fiyat_bekleniyor": false,
-    "fiyat_havale_tl": 7777,
-    "bykitchen_liste": 240,
+    "fiyat_havale_tl": 12644,
+    "bykitchen_liste": 390,
     "bykitchen_currency": "USD",
     "bykitchen_page": 19,
     "bykitchen_satis_oran": 0.55

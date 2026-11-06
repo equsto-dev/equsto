@@ -1,0 +1,970 @@
+{
+  "source": "C:\\D Disk\\FİYAT LİSTELERİ\\-BY KİTCHEN KATALOG 2027- (1).pdf",
+  "pages": 88,
+  "count": 137,
+  "pricing_note": "liste × 0.55 (%45 iskonto) + KDV %20",
+  "products": [
+    {
+      "model": "SILENCER",
+      "name_tr": "Vortex Silencer Bar Blender",
+      "liste_fiyat": 499.0,
+      "currency": "USD",
+      "page": 4,
+      "source": "named-vortex"
+    },
+    {
+      "model": "SILENCER.PRO",
+      "name_tr": "Vortex Silencer Pro Bar Blender",
+      "liste_fiyat": 778.0,
+      "currency": "USD",
+      "page": 4,
+      "source": "named-vortex"
+    },
+    {
+      "model": "VORTEX-S",
+      "name_tr": "Vortex Bar Blender",
+      "liste_fiyat": 244.0,
+      "currency": "USD",
+      "page": 4,
+      "source": "named-vortex"
+    },
+    {
+      "model": "BLM-22D",
+      "name_tr": "CAFE BAR EKİPMANLARI",
+      "liste_fiyat": 900.0,
+      "currency": "EUR",
+      "page": 5
+    },
+    {
+      "model": "DBK",
+      "name_tr": "İçecek sunumlarınızda fark yaratmak artık çok kolay! By Kitchen Buz Kırma",
+      "liste_fiyat": 210.0,
+      "currency": "USD",
+      "page": 5
+    },
+    {
+      "model": "DBM-01",
+      "name_tr": "Bar Mikseri",
+      "liste_fiyat": 260.0,
+      "currency": "USD",
+      "page": 5
+    },
+    {
+      "model": "DPH-01",
+      "name_tr": "PAMUK ŞEKER MAKİNALARI",
+      "liste_fiyat": 999.0,
+      "currency": "USD",
+      "page": 6
+    },
+    {
+      "model": "DPH-F",
+      "name_tr": "Arabalı Pamuk Şeker Makinesi",
+      "liste_fiyat": 180.0,
+      "currency": "USD",
+      "page": 6
+    },
+    {
+      "model": "DPH-S",
+      "name_tr": "PAMUK ŞEKER MAKİNALARI",
+      "liste_fiyat": 520.0,
+      "currency": "USD",
+      "page": 6
+    },
+    {
+      "model": "DPS-M01",
+      "name_tr": "Pamuk Şeker Fanusu",
+      "liste_fiyat": 240.0,
+      "currency": "USD",
+      "page": 6
+    },
+    {
+      "model": "DPM-B",
+      "name_tr": "Set Üstü Popcorn Makinesi",
+      "liste_fiyat": 620.0,
+      "currency": "USD",
+      "page": 7
+    },
+    {
+      "model": "DKM-01",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 300.0,
+      "currency": "USD",
+      "page": 8
+    },
+    {
+      "model": "DMPS-01",
+      "name_tr": "Kollu Narenciye Sıkacağı",
+      "liste_fiyat": 134.0,
+      "currency": "USD",
+      "page": 8
+    },
+    {
+      "model": "DNS-01",
+      "name_tr": "Narenciye Sıkacağı",
+      "liste_fiyat": 360.0,
+      "currency": "USD",
+      "page": 8
+    },
+    {
+      "model": "DOP-20",
+      "name_tr": "Otomatik Portakal Sıkma Makinesi",
+      "liste_fiyat": 1900.0,
+      "currency": "USD",
+      "page": 9
+    },
+    {
+      "model": "DOP-20M",
+      "name_tr": "Otomatik Portakal Sıkma Makinesi",
+      "liste_fiyat": 2080.0,
+      "currency": "USD",
+      "page": 9
+    },
+    {
+      "model": "DOL-80",
+      "name_tr": "Otomatik Musluklu Pro Portakal Sıkma Makinesi",
+      "liste_fiyat": 2020.0,
+      "currency": "USD",
+      "page": 10
+    },
+    {
+      "model": "DOP-20MP",
+      "name_tr": "PORTAKAL SIKMA MAKİNELERİ",
+      "liste_fiyat": 2920.0,
+      "currency": "USD",
+      "page": 10
+    },
+    {
+      "model": "DDM-16",
+      "name_tr": "DONDURMA MAKİNELERİ",
+      "liste_fiyat": 2900.0,
+      "currency": "USD",
+      "page": 11
+    },
+    {
+      "model": "DDM-28",
+      "name_tr": "28 Kg/Gün",
+      "liste_fiyat": 5300.0,
+      "currency": "USD",
+      "page": 11
+    },
+    {
+      "model": "DHC-6",
+      "name_tr": "Çikolata Çeşmesi ve Şelalesi",
+      "liste_fiyat": 390.0,
+      "currency": "USD",
+      "page": 12
+    },
+    {
+      "model": "BOT-B",
+      "name_tr": "By Kitchen Otomatik Tamper Makinesi ile her seferinde mükemmel",
+      "liste_fiyat": 780.0,
+      "currency": "USD",
+      "page": 15
+    },
+    {
+      "model": "BOT-S",
+      "name_tr": "Otomatik Tamper Makinesi",
+      "liste_fiyat": 780.0,
+      "currency": "USD",
+      "page": 15
+    },
+    {
+      "model": "DSD-01",
+      "name_tr": "OTOMATİK KAHVE MAKİNESİ",
+      "liste_fiyat": 390.0,
+      "currency": "USD",
+      "page": 19
+    },
+    {
+      "model": "FCM-01",
+      "name_tr": "Profesyonel kullanım için tasarlanmış bu filtre kahve makinesi, otomatik su",
+      "liste_fiyat": 380.0,
+      "currency": "USD",
+      "page": 20
+    },
+    {
+      "model": "FCM-02",
+      "name_tr": "Filtre Kahve Makinesi Dijital",
+      "liste_fiyat": 410.0,
+      "currency": "USD",
+      "page": 20
+    },
+    {
+      "model": "FCM-02D",
+      "name_tr": "Filtre Kahve Makinesi Dijital",
+      "liste_fiyat": 680.0,
+      "currency": "USD",
+      "page": 20
+    },
+    {
+      "model": "FCM-02K",
+      "name_tr": "Yalnızca tesisat bağlantılı kullanım için uygundur",
+      "liste_fiyat": 990.0,
+      "currency": "USD",
+      "page": 21
+    },
+    {
+      "model": "FCM-CP",
+      "name_tr": "1 adet 2.5 litrelik vakum yalıtımlı kahve konteyneri ile birlikte",
+      "liste_fiyat": 30.0,
+      "currency": "USD",
+      "page": 21
+    },
+    {
+      "model": "FCM-K",
+      "name_tr": "1 adet 2.5 litrelik vakum yalıtımlı kahve konteyneri ile birlikte",
+      "liste_fiyat": 370.0,
+      "currency": "USD",
+      "page": 21
+    },
+    {
+      "model": "DTM-02",
+      "name_tr": "Kolay kullanım ve temizlik.",
+      "liste_fiyat": 525.0,
+      "currency": "EUR",
+      "page": 22
+    },
+    {
+      "model": "DTM-03",
+      "name_tr": "Şamandıra sistemi",
+      "liste_fiyat": 625.0,
+      "currency": "EUR",
+      "page": 22
+    },
+    {
+      "model": "SKM-01",
+      "name_tr": "Soğuk içecek sunumları için özel olarak tasarlanan bu silindirik plastik şişe,",
+      "liste_fiyat": 2900.0,
+      "currency": "USD",
+      "page": 23
+    },
+    {
+      "model": "DIC-36",
+      "name_tr": "İndüksiyon Pişirici",
+      "liste_fiyat": 360.0,
+      "currency": "USD",
+      "page": 24
+    },
+    {
+      "model": "DIC-36A",
+      "name_tr": "Siyah kristal cam yüzey",
+      "liste_fiyat": 370.0,
+      "currency": "USD",
+      "page": 24
+    },
+    {
+      "model": "DIC-50",
+      "name_tr": "PİŞİRİCİLER",
+      "liste_fiyat": 800.0,
+      "currency": "USD",
+      "page": 24
+    },
+    {
+      "model": "DMO-25",
+      "name_tr": "PİŞİRİCİLER",
+      "liste_fiyat": 790.0,
+      "currency": "USD",
+      "page": 25
+    },
+    {
+      "model": "DMO-30",
+      "name_tr": "Kontrol Paneli: Dokunmatik, LED ışıklı ekran",
+      "liste_fiyat": 286.0,
+      "currency": "USD",
+      "page": 25
+    },
+    {
+      "model": "DHP-F",
+      "name_tr": "profesyonel mutfaklar için ideal bir çözümdür.",
+      "liste_fiyat": 9700.0,
+      "currency": "USD",
+      "page": 26
+    },
+    {
+      "model": "DPF-120",
+      "name_tr": "Hızlı Pişirme Fırını",
+      "liste_fiyat": 1940.0,
+      "currency": "USD",
+      "page": 26
+    },
+    {
+      "model": "DPOJ",
+      "name_tr": "Elektrikli Patisserie Fırın",
+      "liste_fiyat": 1320.0,
+      "currency": "USD",
+      "page": 27
+    },
+    {
+      "model": "DPO-502",
+      "name_tr": "Standart taş taban ile sunulmaktadır.",
+      "liste_fiyat": 1240.0,
+      "currency": "USD",
+      "page": 28
+    },
+    {
+      "model": "DPO-503",
+      "name_tr": "Standart taş taban ile sunulmaktadır.",
+      "liste_fiyat": 1800.0,
+      "currency": "USD",
+      "page": 28
+    },
+    {
+      "model": "DTTF-464",
+      "name_tr": "İki Katlı Taş Tabanlı Elektrikli Fırın",
+      "liste_fiyat": 4950.0,
+      "currency": "USD",
+      "page": 29
+    },
+    {
+      "model": "DTTF-466",
+      "name_tr": "İki Katlı Taş Tabanlı Elektrikli Fırın",
+      "liste_fiyat": 5950.0,
+      "currency": "USD",
+      "page": 29
+    },
+    {
+      "model": "DDP-10",
+      "name_tr": "pişirebilirsiniz.",
+      "liste_fiyat": 8900.0,
+      "currency": "USD",
+      "page": 30
+    },
+    {
+      "model": "DHR",
+      "name_tr": "PİŞİRİCİLER",
+      "liste_fiyat": 370.0,
+      "currency": "USD",
+      "page": 31
+    },
+    {
+      "model": "DASC-01",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 300.0,
+      "currency": "USD",
+      "page": 34
+    },
+    {
+      "model": "DASC-02",
+      "name_tr": "Ankastre Isıtıcı",
+      "liste_fiyat": 340.0,
+      "currency": "USD",
+      "page": 34
+    },
+    {
+      "model": "DEB-25",
+      "name_tr": "El Blender",
+      "liste_fiyat": 90.0,
+      "currency": "USD",
+      "page": 35
+    },
+    {
+      "model": "IB250EV",
+      "name_tr": "Profesyonel El Blender",
+      "liste_fiyat": 370.0,
+      "currency": "USD",
+      "page": 35
+    },
+    {
+      "model": "IB350TVE",
+      "name_tr": "Önerilen Öğütme Derinliği: 240 mm",
+      "liste_fiyat": 490.0,
+      "currency": "USD",
+      "page": 36
+    },
+    {
+      "model": "IB500AV",
+      "name_tr": "HAZIRLIK EKİPMANLARI",
+      "liste_fiyat": 590.0,
+      "currency": "USD",
+      "page": 36
+    },
+    {
+      "model": "DSH-10",
+      "name_tr": "Çift hızlı çalışma sistemi",
+      "liste_fiyat": 1210.0,
+      "currency": "USD",
+      "page": 37
+    },
+    {
+      "model": "DSH-20",
+      "name_tr": "Spiral Hamur Yoğurma Makinesi",
+      "liste_fiyat": 1800.0,
+      "currency": "USD",
+      "page": 37
+    },
+    {
+      "model": "DSH-30",
+      "name_tr": "Spiral Hamur Yoğurma Makinesi",
+      "liste_fiyat": 2390.0,
+      "currency": "USD",
+      "page": 38
+    },
+    {
+      "model": "DSH-40",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 2640.0,
+      "currency": "USD",
+      "page": 38
+    },
+    {
+      "model": "DSH-60",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 3490.0,
+      "currency": "USD",
+      "page": 39
+    },
+    {
+      "model": "DSH-10L",
+      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir",
+      "liste_fiyat": 2270.0,
+      "currency": "USD",
+      "page": 40
+    },
+    {
+      "model": "DSH-20L",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 2570.0,
+      "currency": "USD",
+      "page": 40
+    },
+    {
+      "model": "DSH-30L",
+      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir",
+      "liste_fiyat": 3260.0,
+      "currency": "USD",
+      "page": 41
+    },
+    {
+      "model": "DSH-40L",
+      "name_tr": "YENİ ÜRÜN",
+      "liste_fiyat": 3920.0,
+      "currency": "USD",
+      "page": 41
+    },
+    {
+      "model": "DM-10",
+      "name_tr": "Üç kademe hız ayarı vardır.",
+      "liste_fiyat": 1090.0,
+      "currency": "USD",
+      "page": 42
+    },
+    {
+      "model": "DSM-7",
+      "name_tr": "3 adet fonksiyonel aparat hamur yoğurma kolu",
+      "liste_fiyat": 1000.0,
+      "currency": "EUR",
+      "page": 42
+    },
+    {
+      "model": "DM-20",
+      "name_tr": "Planet Mikser",
+      "liste_fiyat": 1340.0,
+      "currency": "USD",
+      "page": 43
+    },
+    {
+      "model": "DM-30",
+      "name_tr": "Planet Mikser",
+      "liste_fiyat": 1640.0,
+      "currency": "USD",
+      "page": 43
+    },
+    {
+      "model": "DS1000",
+      "name_tr": "HAZIRLIK EKİPMANLARI",
+      "liste_fiyat": 160.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "DS2000",
+      "name_tr": "Küp Kesme Diski",
+      "liste_fiyat": 150.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "FS100",
+      "name_tr": "Küp Kesme Diski",
+      "liste_fiyat": 130.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "SA010",
+      "name_tr": "HAZIRLIK EKİPMANLARI",
+      "liste_fiyat": 120.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "SA014",
+      "name_tr": "Ürüne Dahil 5 Kesici Disk",
+      "liste_fiyat": 120.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "VC-65MS",
+      "name_tr": "Sebze Doğrama Makinesi",
+      "liste_fiyat": 1260.0,
+      "currency": "USD",
+      "page": 44
+    },
+    {
+      "model": "CVS101S",
+      "name_tr": "Çift Pompa Sistemi: Güçlü ve etkili vakumlama performansı.",
+      "liste_fiyat": 820.0,
+      "currency": "USD",
+      "page": 45
+    },
+    {
+      "model": "DGD-220",
+      "name_tr": "Gıda Dilimleme Makinesi",
+      "liste_fiyat": 700.0,
+      "currency": "USD",
+      "page": 46
+    },
+    {
+      "model": "DGD-250",
+      "name_tr": "Gıda Dilimleme Makinesi",
+      "liste_fiyat": 780.0,
+      "currency": "USD",
+      "page": 46
+    },
+    {
+      "model": "DGD-300",
+      "name_tr": "Gıda Dilimleme Makinesi",
+      "liste_fiyat": 1100.0,
+      "currency": "USD",
+      "page": 46
+    },
+    {
+      "model": "DGD-250D",
+      "name_tr": "Otomatik Gıda Dilimleme Makinesi",
+      "liste_fiyat": 2000.0,
+      "currency": "USD",
+      "page": 47
+    },
+    {
+      "model": "DGD-300D",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 2550.0,
+      "currency": "USD",
+      "page": 47
+    },
+    {
+      "model": "DGD-320",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 3660.0,
+      "currency": "USD",
+      "page": 47
+    },
+    {
+      "model": "HCS-300B",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 6900.0,
+      "currency": "USD",
+      "page": 48
+    },
+    {
+      "model": "DED-38",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 1320.0,
+      "currency": "USD",
+      "page": 49
+    },
+    {
+      "model": "DGD-350",
+      "name_tr": "HAZIRLIK EKİPMANLARI",
+      "liste_fiyat": 6270.0,
+      "currency": "USD",
+      "page": 49
+    },
+    {
+      "model": "DEM-300",
+      "name_tr": "Et Açma Makinesi",
+      "liste_fiyat": 4990.0,
+      "currency": "USD",
+      "page": 50
+    },
+    {
+      "model": "DEM-435",
+      "name_tr": "Et Açma Makinesi",
+      "liste_fiyat": 8600.0,
+      "currency": "USD",
+      "page": 50
+    },
+    {
+      "model": "DEM-500",
+      "name_tr": "İstenilen kalınlıkta et açma imkânı sunan",
+      "liste_fiyat": 8900.0,
+      "currency": "USD",
+      "page": 50
+    },
+    {
+      "model": "DDKB",
+      "name_tr": "DÖNER KESME MAKİNELERİ",
+      "liste_fiyat": 240.0,
+      "currency": "USD",
+      "page": 51
+    },
+    {
+      "model": "DDKB-S",
+      "name_tr": "Paslanmaz çelik bıçak",
+      "liste_fiyat": 550.0,
+      "currency": "USD",
+      "page": 51
+    },
+    {
+      "model": "DSA-03",
+      "name_tr": "Demonte Servis Arabası",
+      "liste_fiyat": 284.0,
+      "currency": "USD",
+      "page": 52
+    },
+    {
+      "model": "DBT-125",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 1080.0,
+      "currency": "USD",
+      "page": 53
+    },
+    {
+      "model": "DBT-70",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 650.0,
+      "currency": "USD",
+      "page": 53
+    },
+    {
+      "model": "DBT-95",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 890.0,
+      "currency": "USD",
+      "page": 53
+    },
+    {
+      "model": "DBT-120",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 1100.0,
+      "currency": "USD",
+      "page": 54
+    },
+    {
+      "model": "DBT-160",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 1290.0,
+      "currency": "USD",
+      "page": 54
+    },
+    {
+      "model": "DBT-202",
+      "name_tr": "Sıcak Teşhir Ünitesi",
+      "liste_fiyat": 1980.0,
+      "currency": "USD",
+      "page": 54
+    },
+    {
+      "model": "DST-04",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 1520.0,
+      "currency": "USD",
+      "page": 56
+    },
+    {
+      "model": "DST-05",
+      "name_tr": "Dijital sıcaklık kontrolü",
+      "liste_fiyat": 1810.0,
+      "currency": "USD",
+      "page": 56
+    },
+    {
+      "model": "DST-06",
+      "name_tr": "Dijital sıcaklık kontrolü",
+      "liste_fiyat": 1920.0,
+      "currency": "USD",
+      "page": 56
+    },
+    {
+      "model": "DST-07",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 3400.0,
+      "currency": "USD",
+      "page": 56
+    },
+    {
+      "model": "DST-10",
+      "name_tr": "Teşhir Dolabı",
+      "liste_fiyat": 1320.0,
+      "currency": "USD",
+      "page": 57
+    },
+    {
+      "model": "DST-08",
+      "name_tr": "Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1620.0,
+      "currency": "USD",
+      "page": 58
+    },
+    {
+      "model": "DST-09",
+      "name_tr": "Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1680.0,
+      "currency": "USD",
+      "page": 58
+    },
+    {
+      "model": "DTS-104L",
+      "name_tr": "Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1750.0,
+      "currency": "USD",
+      "page": 59
+    },
+    {
+      "model": "DTS-64L",
+      "name_tr": "Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1560.0,
+      "currency": "USD",
+      "page": 59
+    },
+    {
+      "model": "DTS-84L",
+      "name_tr": "Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1690.0,
+      "currency": "USD",
+      "page": 59
+    },
+    {
+      "model": "DBD-01",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 3500.0,
+      "currency": "USD",
+      "page": 60
+    },
+    {
+      "model": "DST-58",
+      "name_tr": "Dik Tip Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1260.0,
+      "currency": "USD",
+      "page": 61
+    },
+    {
+      "model": "DST-78",
+      "name_tr": "Dik Tip Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1280.0,
+      "currency": "USD",
+      "page": 61
+    },
+    {
+      "model": "DST-98",
+      "name_tr": "Dik Tip Set Üstü Soğuk Teşhir",
+      "liste_fiyat": 1388.0,
+      "currency": "USD",
+      "page": 61
+    },
+    {
+      "model": "DST-02",
+      "name_tr": "Dik Tip Soğuk Teşhir",
+      "liste_fiyat": 2220.0,
+      "currency": "USD",
+      "page": 62
+    },
+    {
+      "model": "DST-235",
+      "name_tr": "Dik Tip Soğuk Teşhir",
+      "liste_fiyat": 2740.0,
+      "currency": "USD",
+      "page": 62
+    },
+    {
+      "model": "DPDDI-120",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 3770.0,
+      "currency": "USD",
+      "page": 63
+    },
+    {
+      "model": "DPDDI-90",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 3320.0,
+      "currency": "USD",
+      "page": 63
+    },
+    {
+      "model": "DPD-120",
+      "name_tr": "Led aydınlatma",
+      "liste_fiyat": 4300.0,
+      "currency": "USD",
+      "page": 64
+    },
+    {
+      "model": "DPD-150",
+      "name_tr": "Pasta Dolabı",
+      "liste_fiyat": 4900.0,
+      "currency": "USD",
+      "page": 64
+    },
+    {
+      "model": "DPD-90",
+      "name_tr": "Pasta Dolabı",
+      "liste_fiyat": 3800.0,
+      "currency": "USD",
+      "page": 64
+    },
+    {
+      "model": "DPDK",
+      "name_tr": "Önü Açık Perdeli İçecek Dolabı",
+      "liste_fiyat": 5590.0,
+      "currency": "USD",
+      "page": 65
+    },
+    {
+      "model": "SFJ-90",
+      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "liste_fiyat": 3290.0,
+      "currency": "USD",
+      "page": 65
+    },
+    {
+      "model": "DBB-150",
+      "name_tr": "İç LED Aydınlatma",
+      "liste_fiyat": 1090.0,
+      "currency": "USD",
+      "page": 68
+    },
+    {
+      "model": "DBB-250",
+      "name_tr": "İç LED Aydınlatma",
+      "liste_fiyat": 1320.0,
+      "currency": "USD",
+      "page": 68
+    },
+    {
+      "model": "DBB-350",
+      "name_tr": "İç LED Aydınlatma",
+      "liste_fiyat": 1680.0,
+      "currency": "USD",
+      "page": 68
+    },
+    {
+      "model": "DBB-150P",
+      "name_tr": "201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller.",
+      "liste_fiyat": 1180.0,
+      "currency": "USD",
+      "page": 69
+    },
+    {
+      "model": "DBB-250P",
+      "name_tr": "BAR ALTI ŞİŞE SOĞUTUCULAR",
+      "liste_fiyat": 1550.0,
+      "currency": "USD",
+      "page": 69
+    },
+    {
+      "model": "DBB-350P",
+      "name_tr": "201 kalite fırçalanmış paslanmaz çelik üst ve yan paneller.",
+      "liste_fiyat": 1996.0,
+      "currency": "USD",
+      "page": 69
+    },
+    {
+      "model": "DSC-800",
+      "name_tr": "Menteşeli kapı sistemi",
+      "liste_fiyat": 2680.0,
+      "currency": "USD",
+      "page": 70
+    },
+    {
+      "model": "WC-22B",
+      "name_tr": "CE&ERP standardı",
+      "liste_fiyat": 1490.0,
+      "currency": "USD",
+      "page": 71
+    },
+    {
+      "model": "WC-34B",
+      "name_tr": "CE&ERP standardı",
+      "liste_fiyat": 1760.0,
+      "currency": "USD",
+      "page": 71
+    },
+    {
+      "model": "PD-115",
+      "name_tr": "ŞARAP DOLAPLARI",
+      "liste_fiyat": 1410.0,
+      "currency": "USD",
+      "page": 72
+    },
+    {
+      "model": "WC-73B",
+      "name_tr": "ŞARAP DOLAPLARI",
+      "liste_fiyat": 1930.0,
+      "currency": "USD",
+      "page": 72
+    },
+    {
+      "model": "BY.YD300",
+      "name_tr": "E Enerji Sınıfı",
+      "liste_fiyat": 713.0,
+      "currency": "EUR",
+      "page": 78
+    },
+    {
+      "model": "BY.YD400",
+      "name_tr": "E Enerji Sınıfı",
+      "liste_fiyat": 835.0,
+      "currency": "EUR",
+      "page": 78
+    },
+    {
+      "model": "BY.YD500",
+      "name_tr": "C Enerji Sınıfı",
+      "liste_fiyat": 972.0,
+      "currency": "EUR",
+      "page": 79
+    },
+    {
+      "model": "BY.YD600",
+      "name_tr": "Beyaz Desenli Galvaniz Sac İç Gövde",
+      "liste_fiyat": 1154.0,
+      "currency": "EUR",
+      "page": 80
+    },
+    {
+      "model": "SPHERE-140",
+      "name_tr": "Ekolojik Buz Makinesi",
+      "liste_fiyat": 1520.0,
+      "currency": "USD",
+      "page": 82
+    },
+    {
+      "model": "DDB-02",
+      "name_tr": "Ön Yıkama Duş Bataryası",
+      "liste_fiyat": 210.0,
+      "currency": "EUR",
+      "page": 85
+    },
+    {
+      "model": "DJR",
+      "name_tr": "El tabancası kendi etrafında dönen 360C dönebilir",
+      "liste_fiyat": 160.0,
+      "currency": "USD",
+      "page": 86
+    },
+    {
+      "model": "DBM-1000D",
+      "name_tr": "BULAŞIK MAKİNELERİ",
+      "liste_fiyat": 2790.0,
+      "currency": "EUR",
+      "page": 87
+    },
+    {
+      "model": "DBY-500D",
+      "name_tr": "Tezgah Altı Bulaşık Makinesi",
+      "liste_fiyat": 1750.0,
+      "currency": "EUR",
+      "page": 87
+    }
+  ]
+}

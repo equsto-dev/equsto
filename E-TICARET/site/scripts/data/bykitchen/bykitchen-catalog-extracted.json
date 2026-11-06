@@ -1,7 +1,7 @@
 {
-  "source": "C:\\D Disk\\FİYAT LİSTELERİ\\BYKITCHEN 2027.pdf",
+  "source": "C:\\D Disk\\FİYAT LİSTELERİ\\-BY KİTCHEN KATALOG 2027- (1).pdf",
   "pages": 88,
-  "count": 136,
+  "count": 137,
   "pricing_note": "liste × 0.55 (%45 iskonto) + KDV %20",
   "products": [
     {
@@ -86,7 +86,7 @@
     },
     {
       "model": "DKM-01",
-      "name_tr": "Saf bakır motor yapısı",
+      "name_tr": "YENİ ÜRÜN",
       "liste_fiyat": 300.0,
       "currency": "USD",
       "page": 8
@@ -114,7 +114,7 @@
     },
     {
       "model": "DOP-20M",
-      "name_tr": "Otomatik Musluklu Portakal Sıkma Makinesi",
+      "name_tr": "Otomatik Portakal Sıkma Makinesi",
       "liste_fiyat": 2080.0,
       "currency": "USD",
       "page": 9
@@ -156,7 +156,7 @@
     },
     {
       "model": "BOT-B",
-      "name_tr": "By Kitchen Otomatik Tamper Makinesi ile her seferinde mükemmel espresso!",
+      "name_tr": "By Kitchen Otomatik Tamper Makinesi ile her seferinde mükemmel",
       "liste_fiyat": 780.0,
       "currency": "USD",
       "page": 15
@@ -171,7 +171,7 @@
     {
       "model": "DSD-01",
       "name_tr": "OTOMATİK KAHVE MAKİNESİ",
-      "liste_fiyat": 240.0,
+      "liste_fiyat": 390.0,
       "currency": "USD",
       "page": 19
     },
@@ -324,7 +324,7 @@
     },
     {
       "model": "DDP-10",
-      "name_tr": "poğaça, hatta sebze ve et gibi birçok ürünü pişirebilirsiniz.",
+      "name_tr": "pişirebilirsiniz.",
       "liste_fiyat": 8900.0,
       "currency": "USD",
       "page": 30
@@ -415,28 +415,28 @@
     },
     {
       "model": "DSH-10L",
-      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı",
+      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir",
       "liste_fiyat": 2270.0,
       "currency": "USD",
       "page": 40
     },
     {
       "model": "DSH-20L",
-      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı",
+      "name_tr": "YENİ ÜRÜN",
       "liste_fiyat": 2570.0,
       "currency": "USD",
       "page": 40
     },
     {
       "model": "DSH-30L",
-      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı",
+      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir",
       "liste_fiyat": 3260.0,
       "currency": "USD",
       "page": 41
     },
     {
       "model": "DSH-40L",
-      "name_tr": "Spiral Hamur Yoğurma Makinası Kaldırılabilir Başlıklı",
+      "name_tr": "YENİ ÜRÜN",
       "liste_fiyat": 3920.0,
       "currency": "USD",
       "page": 41
@@ -554,6 +554,13 @@
       "page": 47
     },
     {
+      "model": "DGD-320",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 3660.0,
+      "currency": "USD",
+      "page": 47
+    },
+    {
       "model": "HCS-300B",
       "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
       "liste_fiyat": 6900.0,
@@ -561,9 +568,9 @@
       "page": 48
     },
     {
-      "model": "DGD-320",
-      "name_tr": "Gıda Dilimleme Makinesi",
-      "liste_fiyat": 3660.0,
+      "model": "DED-38",
+      "name_tr": "GIDA DİLİMLEME MAKİNELERİ",
+      "liste_fiyat": 1320.0,
       "currency": "USD",
       "page": 49
     },
@@ -688,7 +695,7 @@
     },
     {
       "model": "DST-10",
-      "name_tr": "TEŞHİR ÜNİTELERİ",
+      "name_tr": "Teşhir Dolabı",
       "liste_fiyat": 1320.0,
       "currency": "USD",
       "page": 57
@@ -807,7 +814,7 @@
     },
     {
       "model": "DPDK",
-      "name_tr": "YENİ ÜRÜN",
+      "name_tr": "Önü Açık Perdeli İçecek Dolabı",
       "liste_fiyat": 5590.0,
       "currency": "USD",
       "page": 65
@@ -919,14 +926,14 @@
     },
     {
       "model": "BY.YD600",
-      "name_tr": "C Enerji Sınıfı",
+      "name_tr": "Beyaz Desenli Galvaniz Sac İç Gövde",
       "liste_fiyat": 1154.0,
       "currency": "EUR",
       "page": 80
     },
     {
       "model": "SPHERE-140",
-      "name_tr": "BUZ MAKİNELERİ",
+      "name_tr": "Ekolojik Buz Makinesi",
       "liste_fiyat": 1520.0,
       "currency": "USD",
       "page": 82

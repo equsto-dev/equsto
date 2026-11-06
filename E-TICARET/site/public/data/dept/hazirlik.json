@@ -112088,5 +112088,27 @@
     "bykitchen_currency": "EUR",
     "bykitchen_page": 87,
     "bykitchen_satis_oran": 0.55
+  },
+  {
+    "id": "by-kitchen__ded-38",
+    "equsto_kod": "EQ-BYKITCHEN.DED.38",
+    "marka_kodu": "BYKITCHEN",
+    "brand": "By Kitchen",
+    "name": "By Kitchen DED-38 Ekmek Dilimleme Makinesi",
+    "sku": "DED.38",
+    "model": "DED.38",
+    "marka_urun_kodu": "DED.38",
+    "price": "₺43.668,00 KDV dahil",
+    "fiyat_tl": 43668,
+    "fiyat_havale_tl": 42795,
+    "images": [],
+    "image": "",
+    "specs": "By Kitchen DED-38 Ekmek Dilimleme Makinesi\n\nÜrün kodu: DED-38\nListe fiyatı (USD): 1320\n%45 iskonto → satış USD: 726\nKur (USD/TRY): 50.1239\nEqusto satış (KDV hariç): ₺36.390,00\nEqusto satış (KDV dahil): ₺43.668,00\nHavale / EFT: %2 indirim → ₺42.795,00\nKaynak: BYKITCHEN 2027 katalog s.49",
+    "fiyat_kaynak": "bykitchen-2027-catalog",
+    "kaynak_fiyat_listesi": "BYKITCHEN 2027",
+    "bykitchen_liste": 1320,
+    "bykitchen_currency": "USD",
+    "bykitchen_page": 49,
+    "bykitchen_satis_oran": 0.55
   }
 ]
