@@ -49,8 +49,14 @@ if (!/eq-cmf-qty__val/.test(inline)) {
 if (!/eq-cmf-btn--cart/.test(inline)) {
   fail("eq-product-page-inline.js: .eq-cmf-btn--cart yok");
 }
-if (!/eq-cmf-btn--pfos/.test(inline)) {
-  fail("eq-product-page-inline.js: Proje Fabrikası düğmesi yok");
+if (/eq-cmf-btn--pfos/.test(inline)) {
+  fail("eq-product-page-inline.js: PDP buybox’ta Proje Fabrikası düğmesi olmamalı");
+}
+if (!/eq-cmf-btn--tel/.test(inline)) {
+  fail("eq-product-page-inline.js: Hemen Ara (tel) düğmesi yok");
+}
+if (!/eq-cmf-btn--wa/.test(inline)) {
+  fail("eq-product-page-inline.js: WhatsApp düğmesi yok");
 }
 if (!/eq-cmf-actions--primary/.test(inline)) {
   fail("eq-product-page-inline.js: üst düğme satırı (--primary) yok");
