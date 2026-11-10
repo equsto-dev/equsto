@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { getSubcategoryLanding, filterProductsBySubcategory } from "@/lib/shop/subcategory";
-import { isShopDeptSlug } from "@/lib/shop/depts";
-import { buildDeptBreadcrumbJsonLd } from "@/lib/seo/schemas";
-import { getSiteOrigin } from "@/lib/site-origin";
-import { loadEkipmanlarJson } from "@/lib/catalog-json";
+import { isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
 import SubcategoryLandingPage from "@/components/shop/SubcategoryLandingPage";
+import ShopBodyClass from "@/components/shop/ShopBodyClass";
+import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
+import ShopStyles from "@/components/shop/ShopStyles";
 
 export const dynamic = "force-static";
 
@@ -103,11 +103,16 @@ export default async function SubcategoryLandingPageRoute({
   };
 
   return (
-    <SubcategoryLandingPage
-      landing={landingForClient}
-      dept={dept}
-      locale={locale}
-      products={products}
-    />
+    <>
+      <ShopStyles variant="plp" />
+      <ShopBodyClass className="eq-shop eq-dept eq-dept-plp eq-landing-subcat" dataDept={dept} />
+      <ShopEqustoChrome activeDept={dept as ShopDeptSlug} />
+      <SubcategoryLandingPage
+        landing={landingForClient}
+        dept={dept}
+        locale={locale}
+        products={products}
+      />
+    </>
   );
 }

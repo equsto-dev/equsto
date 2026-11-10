@@ -80,8 +80,9 @@ Kampanya iniş URL’leri **yalnızca** şu kalıplarda olmalı:
 | Kullan | Kullanma |
 |--------|----------|
 | `/pfos` (teklif kampanyası) | Ana sayfaya genel trafik dökme |
-| `/shop/{dept}` (kategori Search) | `/shop/.../kategori/...` (filtre/grid zayıf) |
-| `/shop/{dept}/{slug}` (ürün Search) | `/kategori/[slug]` Prisma storefront |
+| `/shop/{dept}` (kategori Search) | `/kategori/[slug]` Prisma storefront |
+| `/shop/{dept}/kategori/{slug}` (alt kategori — görsel kart + sıralama; tam facet için dept PLP) | |
+| `/shop/{dept}/{slug}` (ürün Search) | |
 | `/iletisim` (yedek lead) | |
 
 Mesaj eşleşmesi: reklam vaadi = sayfa H1 / birincil CTA.

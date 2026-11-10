@@ -805,3 +805,90 @@ body.eq-arama-page .eq-arama-more__btn:disabled {
     max-height: none;
   }
 }
+
+/* Alt kategori landing — Ads-ready ürün grid */
+body.eq-landing-subcat .eq-landing-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin: 8px 0 4px;
+}
+body.eq-landing-subcat .eq-landing-count {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+body.eq-landing-subcat .eq-landing-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+body.eq-landing-subcat .eq-landing-sort select {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+}
+body.eq-landing-subcat .eq-landing-products-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+body.eq-landing-subcat .eq-landing-products {
+  margin: 12px 0 28px;
+}
+body.eq-landing-subcat .eq-landing-aside-help {
+  padding: 12px 14px 16px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #4b5563;
+}
+body.eq-landing-subcat .eq-landing-aside-cta {
+  display: inline-flex;
+  margin-top: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: #001e50;
+  border-radius: 6px;
+  text-decoration: none;
+}
+body.eq-landing-subcat .eq-landing-aside-cta:hover {
+  filter: brightness(1.08);
+}
+body.eq-landing-subcat .eq-landing-aside-related {
+  margin-top: 14px;
+}
+body.eq-landing-subcat .eq-landing-aside-related ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.eq-landing-subcat .eq-landing-aside-related a {
+  display: block;
+  padding: 6px 0;
+  font-size: 13px;
+  color: #001e50;
+  text-decoration: none;
+}
+body.eq-landing-subcat .eq-landing-aside-related a:hover {
+  text-decoration: underline;
+}
+body.eq-landing-subcat .eq-dept-plp-card__price--quote {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+}
+body.eq-landing-subcat .eq-landing-content {
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
