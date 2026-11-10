@@ -1015,8 +1015,30 @@ const EN = {
     add_to_cart_cmf: "Add to cart",
     vat_included_tag: "TL",
     badge_free_ship: "Free shipping",
+    badge_warranty: "Warranty",
+    badge_service: "Installation / service required",
+    badge_sales_eng: "Sales engineering",
+    badge_voltage_1ph: "{v} V Single-phase",
+    badge_voltage_3ph: "{v} V Three-phase",
+    trust_aria: "Product assurances",
+    consult_title: "Ask us about this product",
+    consult_desc:
+      "Our specialists listen to your needs and offer tailored solutions.",
+    usage_areas: "Usage areas",
+    warranty_heading: "Warranty and service",
+    warranty_ozti:
+      "Authorized Öztiryakiler channel — brand warranty and spare parts routed via Equsto.",
+    warranty_brand:
+      "Warranty and service for {brand} products are handled via the manufacturer / authorized network.",
+    warranty_generic:
+      "Warranty term and coverage vary by product/brand; confirmed in writing at quote or order.",
+    warranty_service:
+      "Installation, commissioning and service planning are done with Sales Engineering.",
+    quote_process:
+      "For a quote: model/size, quantity and delivery city are enough. Message via WhatsApp or phone; Sales Engineering replies.",
     ship_banner: "Free delivery in selected regions",
     contact_cta: "Contact us",
+    call_us: "Call now",
     whatsapp_ask: "Ask on WhatsApp",
     payment_options: "Payment options",
     pay_card: "Credit card — secure 3D Secure payment",

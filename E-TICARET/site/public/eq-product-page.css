@@ -914,6 +914,69 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   flex-shrink: 0;
 }
 
+/* Cafemarkt product-info-wrap tarzı güven rozetleri (2×2) */
+.eq-cmf-trust {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 12px 0 4px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.eq-cmf-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1f2937;
+}
+
+.eq-cmf-trust__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--eq-cmf-brand, #001e50);
+}
+
+.eq-cmf-trust__label {
+  min-width: 0;
+}
+
+/* Cafemarkt «Ürün Hakkında Danışabilirsiniz» şeridi */
+.eq-cmf-consult {
+  margin: 12px 0 4px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: #fafbfc;
+}
+
+.eq-cmf-consult__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--eq-cmf-brand, #001e50);
+  margin: 0 0 4px;
+}
+
+.eq-cmf-consult__desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #4b5563;
+  margin: 0 0 10px;
+}
+
+.eq-cmf-consult .eq-cmf-actions--secondary {
+  margin-bottom: 0;
+}
+
+.eq-cmf-quote-note--process {
+  color: #374151;
+}
+
 .eq-cmf-purchase {
   display: flex;
   align-items: stretch;

@@ -1191,7 +1191,10 @@ window.searchFilter = window.searchFilter || function () {};
           esc(__pdpT("pdp.specs_request_quote", "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.")) +
           "</p>";
       }
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function inoksanLeadLine(x) {
@@ -2889,6 +2892,258 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
+    /** Departman kullanım alanları — lib/shop/depts.ts ile hizalı (katalogda alan yok) */
+    var EPDP_DEPT_USAGE = {
+      pisirme: [
+        "Restoran mutfakları",
+        "Otel mutfakları",
+        "Catering firmaları",
+        "Bulut mutfaklar",
+        "Kahvehaneler ve bistrolar",
+        "Hastane ve topluluk yemekhaneleri",
+      ],
+      sogutma: [
+        "Restoran ve otel mutfakları",
+        "Market ve süpermarket reyonları",
+        "Kasap ve şarküteri işletmeleri",
+        "Pastane ve fırınlar",
+        "Hastane ve topluluk yemekhaneleri",
+        "Lojistik ve depolama tesisleri",
+      ],
+      kahve: [
+        "Kahvehaneler ve özel kahve mağazaları",
+        "Restoran ve otel kahve servisleri",
+        "Büro ve coworking kahve istasyonları",
+        "Catering ve etkinlik kahve servisleri",
+        "Bulut mutfak ve fast-food zincirleri",
+      ],
+      yikama: [
+        "Restoran ve otel yıkama alanları",
+        "Hastane ve topluluk yemekhaneleri",
+        "Catering ve merkezi yıkama tesisleri",
+        "Kasap ve gıda işleme tesisleri",
+        "Pastane ve fırın yıkama alanları",
+      ],
+      hazirlik: [
+        "Restoran hazırlık tezgâhları",
+        "Otel ve catering prep alanları",
+        "Bulut mutfak üretim hatları",
+        "Pastane ve fırın prep",
+      ],
+      icecek: [
+        "Cafe ve bar istasyonları",
+        "Restoran içecek servisi",
+        "Otel lobby / restoran bar",
+        "Catering ve etkinlik",
+      ],
+      tezgah: [
+        "Restoran hazırlık ve servis alanları",
+        "Otel ve catering prep hatları",
+        "Kasap ve gıda işleme tezgâhları",
+        "Pastane ve fırın çalışma alanları",
+      ],
+      dolap: [
+        "Restoran ve otel depolama alanları",
+        "Merkezi mutfak malzeme odaları",
+        "Pastane ve fırın stok alanları",
+        "Hastane ve topluluk yemekhaneleri",
+      ],
+      davlumbaz: [
+        "Restoran ve otel pişirme alanları",
+        "Hastane ve topluluk yemekhane ocak başları",
+        "Pastane ve fırın fırın başları",
+        "Merkezi mutfak ve catering ocak başları",
+      ],
+      tasima: [
+        "Restoran ve otel servis alanları",
+        "Catering ve etkinlik servis arabaları",
+        "Merkezi mutfak lojistik alanları",
+        "Hastane yemekhane servis hatları",
+      ],
+      araba: [
+        "Restoran ve otel servis alanları",
+        "Catering ve etkinlik servisi",
+        "Hastane ve topluluk yemekhaneleri",
+      ],
+      istif: [
+        "Mutfak depo ve soğuk oda rafları",
+        "Market ve reyon arka depoları",
+        "Merkezi mutfak stok alanları",
+      ],
+      "set-ustu-mutfak": [
+        "Cafe ve küçük restoran set üstü hatlar",
+        "Büfe ve otel kat mutfakları",
+        "Fast-food ve bulut mutfak istasyonları",
+      ],
+      kuvetler: [
+        "Restoran yıkama ve prep alanları",
+        "Kasap ve gıda işleme ıslak alanlar",
+        "Hastane ve topluluk yemekhaneleri",
+      ],
+      "market-reyonlari": [
+        "Market ve süpermarket reyonları",
+        "Kasap ve şarküteri teşhir",
+        "Pastane ve fırın vitrin alanları",
+      ],
+    };
+
+    function epdpDeptKey(x) {
+      var d = String((x && (x.dept || x.category)) || "")
+        .toLowerCase()
+        .replace(/ı/g, "i")
+        .replace(/ğ/g, "g")
+        .replace(/ü/g, "u")
+        .replace(/ş/g, "s")
+        .replace(/ö/g, "o")
+        .replace(/ç/g, "c");
+      if (/pisirme|ocak|firin|izgara|fritoz|kuzine|doner/.test(d)) return "pisirme";
+      if (/sogut|buzdolap|soguk|sok/.test(d)) return "sogutma";
+      if (/kahve|espresso|barista/.test(d)) return "kahve";
+      if (/yika|bulasik/.test(d)) return "yikama";
+      if (/hazirlik|sebze|mikser|dogra/.test(d)) return "hazirlik";
+      if (/icecek|bar|smoothie|slush/.test(d)) return "icecek";
+      if (EPDP_DEPT_USAGE[d]) return d;
+      return "";
+    }
+
+    function renderEpdpUsageAccSection(x) {
+      var key = epdpDeptKey(x);
+      var areas = key ? EPDP_DEPT_USAGE[key] : null;
+      if (!areas || !areas.length) return "";
+      return renderEpdpFlatAccSection(
+        __pdpT("pdp.usage_areas", "Kullanım alanları"),
+        "<ul>" +
+          areas
+            .map(function (a) {
+              return "<li>" + esc(a) + "</li>";
+            })
+            .join("") +
+          "</ul>",
+        false
+      );
+    }
+
+    function renderEpdpWarrantyAccSection(x) {
+      var brand = pdpVisibleBrand((x && x.brand) || "") || "";
+      var lines = [];
+      if (/öztiryakiler|oztiryakiler/i.test(brand)) {
+        lines.push(
+          __pdpT(
+            "pdp.warranty_ozti",
+            "Öztiryakiler yetkili bayi kanalı — marka garanti ve yedek parça hattı Equsto üzerinden yönlendirilir."
+          )
+        );
+      } else if (brand) {
+        lines.push(
+          __pdpT(
+            "pdp.warranty_brand",
+            "{brand} ürünlerinde garanti ve servis, üretici / yetkili servis ağı üzerinden yürütülür."
+          ).replace("{brand}", brand)
+        );
+      } else {
+        lines.push(
+          __pdpT(
+            "pdp.warranty_generic",
+            "Garanti süresi ve kapsamı ürün / markaya göre değişir; teklif veya sipariş aşamasında yazılı netleştirilir."
+          )
+        );
+      }
+      lines.push(
+        __pdpT(
+          "pdp.warranty_service",
+          "Montaj, devreye alma ve servis planlaması Satış Mühendisliği ile birlikte yapılır."
+        )
+      );
+      return renderEpdpFlatAccSection(
+        __pdpT("pdp.warranty_heading", "Garanti ve servis"),
+        "<ul>" +
+          lines
+            .map(function (l) {
+              return "<li>" + esc(l) + "</li>";
+            })
+            .join("") +
+          "</ul>",
+        false
+      );
+    }
+
+    /** Özellikler akordeonuna Cafemarkt/tsoft tarzı güven blokları ekler */
+    function appendEpdpTrustAccSections(x, accHtml) {
+      var acc = accHtml || "";
+      acc += renderEpdpUsageAccSection(x);
+      acc += renderEpdpWarrantyAccSection(x);
+      return acc;
+    }
+
+    /** Cafemarkt product-info-wrap tarzı güven rozetleri (ücretsiz kargo YOK — kilit) */
+    function epdpVoltageBadgeLabel(x) {
+      var lines = [];
+      if (Array.isArray(x && x.teknik_ozellikler)) lines = lines.concat(x.teknik_ozellikler);
+      if (x && x.voltaj) lines.push(String(x.voltaj));
+      if (x && x.elektrik) lines.push(String(x.elektrik));
+      var blob = lines.join(" | ");
+      var m =
+        blob.match(/\b(380|400)\s*V(?:\s*[~/]?\s*(?:3N?|trifaze|üç\s*faz|uc\s*faz))?\b/i) ||
+        blob.match(/\b(220|230)\s*V(?:\s*[~/]?\s*(?:NPE|monofaze|tek\s*faz))?\b/i) ||
+        blob.match(/\b(220|230|380|400)\s*V\b/i);
+      if (!m) return "";
+      var v = m[1];
+      if (/380|400/.test(v)) {
+        return __pdpT("pdp.badge_voltage_3ph", "{v} V Trifaze").replace("{v}", v);
+      }
+      return __pdpT("pdp.badge_voltage_1ph", "{v} V Monofaze").replace("{v}", v);
+    }
+
+    function epdpTrustIconSvg(kind) {
+      if (kind === "service") {
+        return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>';
+      }
+      if (kind === "power") {
+        return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>';
+      }
+      if (kind === "warranty") {
+        return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>';
+      }
+      return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
+    }
+
+    function renderEpdpTrustBadgesHtml(x) {
+      var items = [
+        {
+          kind: "service",
+          text: __pdpT("pdp.badge_service", "Servis kurulumu gerekir"),
+        },
+      ];
+      var volt = epdpVoltageBadgeLabel(x);
+      if (volt) items.push({ kind: "power", text: volt });
+      items.push({
+        kind: "warranty",
+        text: __pdpT("pdp.badge_warranty", "Garantili"),
+      });
+      items.push({
+        kind: "sales",
+        text: __pdpT("pdp.badge_sales_eng", "Satış mühendisliği"),
+      });
+      return (
+        '<ul class="eq-cmf-trust" aria-label="' +
+        esc(__pdpT("pdp.trust_aria", "Ürün güvenceleri")) +
+        '">' +
+        items
+          .map(function (it) {
+            return (
+              '<li class="eq-cmf-trust__item">' +
+              '<span class="eq-cmf-trust__icon" aria-hidden="true">' +
+              epdpTrustIconSvg(it.kind) +
+              "</span><span class=\"eq-cmf-trust__label\">" +
+              esc(it.text) +
+              "</span></li>"
+            );
+          })
+          .join("") +
+        "</ul>"
+      );
+    }
+
     function renderEpdpFeaturesPanel(title, sectionsHtml) {
       return (
         '<div class="eq-epdp-panel eq-caglayan-panel eq-elx-panel"><h2>' +
@@ -3019,7 +3274,10 @@ window.searchFilter = window.searchFilter || function () {};
         body += sec.items.map(renderElectroluxSpecRow).join("");
         acc += renderEpdpFlatAccSection(electroluxSpecSectionLabel(sec.title), body, idx === 0);
       });
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function isOztiEqustoBrand(brand) {
@@ -3357,7 +3615,10 @@ window.searchFilter = window.searchFilter || function () {};
           ) +
           "</p>";
       }
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function isPimakCatalogRow(x) {
@@ -3632,7 +3893,10 @@ window.searchFilter = window.searchFilter || function () {};
           ) +
           "</p>";
       }
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function isAtalayCatalogRow(x) {
@@ -3910,7 +4174,10 @@ window.searchFilter = window.searchFilter || function () {};
           ) +
           "</p>";
       }
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function pdpVisibleBrand(brand) {
@@ -4306,9 +4573,31 @@ window.searchFilter = window.searchFilter || function () {};
         ? '<p class="eq-cmf-quote-note">' +
           esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
           "</p>"
-        : "";
+        : '<p class="eq-cmf-quote-note eq-cmf-quote-note--process">' +
+          esc(
+            __pdpT(
+              "pdp.quote_process",
+              "Teklif için: model/ölçü, adet ve teslim şehri yeterli. WhatsApp veya telefon ile yazın; Satış Mühendisliği dönüş yapar."
+            )
+          ) +
+          "</p>";
       var cartBtnSolid = epdpCartAddButtonHtml(cartU);
+      /* Cafemarkt sırası: fiyat → rozetler → adet/sepet → danış şeridi */
       var actionsHtml =
+        renderEpdpTrustBadgesHtml(x) +
+        '<div class="eq-cmf-purchase">' +
+        '<div class="eq-cmf-qty" role="group" aria-label="' +
+        esc(__pdpT("pdp.qty_aria", "Adet")) +
+        '">' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
+        esc(__pdpT("pdp.qty_minus", "Azalt")) +
+        '">−</button>' +
+        '<span class="eq-cmf-qty__val">1</span>' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
+        esc(__pdpT("pdp.qty_plus", "Artır")) +
+        '">+</button>' +
+        "</div>" +
+        "</div>" +
         '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
         cartBtnSolid +
         '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
@@ -4317,6 +4606,18 @@ window.searchFilter = window.searchFilter || function () {};
         "</span>" +
         esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
         "</button></div>" +
+        '<div class="eq-cmf-consult">' +
+        '<div class="eq-cmf-consult__title">' +
+        esc(__pdpT("pdp.consult_title", "Ürün Hakkında Danışabilirsiniz")) +
+        "</div>" +
+        '<p class="eq-cmf-consult__desc">' +
+        esc(
+          __pdpT(
+            "pdp.consult_desc",
+            "Uzman ekibimiz, taleplerinizi dinliyor, size özel çözümler sunuyoruz."
+          )
+        ) +
+        "</p>" +
         '<div class="eq-cmf-actions eq-cmf-actions--secondary">' +
         (window.EQUSTO_HIDE_PUBLIC_PHONE
           ? ""
@@ -4337,7 +4638,7 @@ window.searchFilter = window.searchFilter || function () {};
         '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
         "</span>" +
         esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
-        "</button></div>";
+        "</button></div></div>";
       return (
         '<div class="eq-epdp-buybox eq-cmf-buybox"' +
         ' aria-label="' +
@@ -4346,19 +4647,6 @@ window.searchFilter = window.searchFilter || function () {};
         priceBlock +
         havaleNote +
         quoteNote +
-        '<div class="eq-cmf-purchase">' +
-        '<div class="eq-cmf-qty" role="group" aria-label="' +
-        esc(__pdpT("pdp.qty_aria", "Adet")) +
-        '">' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
-        esc(__pdpT("pdp.qty_minus", "Azalt")) +
-        '">−</button>' +
-        '<span class="eq-cmf-qty__val">1</span>' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
-        esc(__pdpT("pdp.qty_plus", "Artır")) +
-        '">+</button>' +
-        "</div>" +
-        "</div>" +
         actionsHtml +
         '<div class="eq-cmf-pay-panel" hidden>' +
         "<ul>" +
@@ -4456,7 +4744,10 @@ window.searchFilter = window.searchFilter || function () {};
           esc(__pdpT("pdp.specs_request_quote", "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.")) +
           "</p>";
       }
-      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+      return renderEpdpFeaturesPanel(
+        __pdpT("pdp.features_heading", "Özellikler"),
+        appendEpdpTrustAccSections(x, acc)
+      );
     }
 
     function buildEpdpDocsExtra(x) {
@@ -4707,6 +4998,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (!oz.length && !blocks.length) {
         html += '<p class="eq-caglayan-acc__body">' + esc(__pdpT("pdp.specs_use_catalog", "Teknik özellikler için katalog PDF veya teklif sürecini kullanın.")) + '</p>';
       }
+      html += appendEpdpTrustAccSections(x, "");
       html += "</div></div>";
       return html;
     }

@@ -70,6 +70,16 @@ if (!/eq-cmf-btn--pay/.test(inline)) {
 if (!/eq-cmf-price__amount/.test(inline)) {
   fail("eq-product-page-inline.js: tek KDV dahil fiyat satırı yok");
 }
+if (!/eq-cmf-trust/.test(inline) || !/function renderEpdpTrustBadgesHtml/.test(inline)) {
+  fail("eq-product-page-inline.js: Cafemarkt güven rozetleri (.eq-cmf-trust) yok");
+}
+if (!/eq-cmf-consult/.test(inline)) {
+  fail("eq-product-page-inline.js: danış şeridi (.eq-cmf-consult) yok");
+}
+if (/Bu üründe Kargo Ücretsiz|Ücretsiz Kargo|badge_free_ship/.test(inline) &&
+    /function renderEpdpTrustBadgesHtml[\s\S]*?badge_free_ship/.test(inline)) {
+  fail("eq-product-page-inline.js: güven rozetlerinde ücretsiz kargo — KİLİT ihlali");
+}
 if (/renderEpdpBuybox[\s\S]*eq-amz-btn-buynow/.test(inline)) {
   fail("eq-product-page-inline.js: buybox içinde eq-amz-btn-buynow — KİLİT ihlali");
 }
@@ -88,6 +98,8 @@ if (cartBlock && /f7dfa5|f0c14b/.test(cartBlock[0])) {
   fail("eq-product-page.css: buybox .eq-cmf-btn--cart Amazon sarı — KİLİT ihlali");
 }
 if (!css.includes(".eq-cmf-pay-panel")) fail("eq-product-page.css: .eq-cmf-pay-panel yok");
+if (!css.includes(".eq-cmf-trust")) fail("eq-product-page.css: .eq-cmf-trust yok");
+if (!css.includes(".eq-cmf-consult")) fail("eq-product-page.css: .eq-cmf-consult yok");
 
 const cart = read("public/ecom-cart.js");
 if (!cart.includes("eq-cmf-qty__val")) {
