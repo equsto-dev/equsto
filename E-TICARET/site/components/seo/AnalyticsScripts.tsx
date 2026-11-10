@@ -6,10 +6,8 @@ const labelLead = process.env.NEXT_PUBLIC_GOOGLE_ADS_LABEL_LEAD?.trim() || "";
 const labelQuote = process.env.NEXT_PUBLIC_GOOGLE_ADS_LABEL_QUOTE?.trim() || "";
 const labelOrder = process.env.NEXT_PUBLIC_GOOGLE_ADS_LABEL_ORDER?.trim() || "";
 
-/** GA4 + Google Ads (gtag) — env doluysa tüm sitede yüklenir */
+/** GA4 + Google Ads (gtag) — ID yokken de lead click API + delegasyon yüklenir */
 export default function AnalyticsScripts() {
-  if (!ga4 && !adsId) return null;
-
   const config = `
     window.EQUSTO_GA4_ID=${JSON.stringify(ga4)};
     window.EQUSTO_GOOGLE_ADS_ID=${JSON.stringify(adsId)};

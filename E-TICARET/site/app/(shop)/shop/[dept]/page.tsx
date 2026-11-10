@@ -8,6 +8,7 @@ import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopPlpScripts from "@/components/shop/ShopPlpScripts";
 import ShopStyles from "@/components/shop/ShopStyles";
 import { SHOP_DEPTS, SHOP_DEPT_SLUGS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
+import { ECOM_ASSET_V } from "@/lib/shop/assets";
 import { buildDeptBreadcrumbJsonLd } from "@/lib/seo/schemas";
 
 export const dynamic = "force-static";
@@ -51,8 +52,16 @@ export default async function ShopDeptPage({ params }: { params: Promise<{ dept:
   const locale = await getLocale();
   const breadcrumbJsonLd = buildDeptBreadcrumbJsonLd(dept, locale);
 
+  const catalogDept = dept === "market-reyonlari" ? "market-reyon" : dept;
+
   return (
     <>
+      <link
+        rel="preload"
+        href={`/data/dept/${catalogDept}.json?v=${ECOM_ASSET_V}`}
+        as="fetch"
+        crossOrigin="anonymous"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

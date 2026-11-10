@@ -73,26 +73,50 @@ Başka terim öğrenmene gerek yok; sıradaki adımda sadece bunlara odaklanaca�
 
 ---
 
-## İlk reklamda kullanılacak sayfalar (not — şimdilik açma)
+## Landing URL politikası (Ads Faz 0 — 2026-11-10)
+
+Kampanya iniş URL’leri **yalnızca** şu kalıplarda olmalı:
+
+| Kullan | Kullanma |
+|--------|----------|
+| `/pfos` (teklif kampanyası) | Ana sayfaya genel trafik dökme |
+| `/shop/{dept}` (kategori Search) | `/shop/.../kategori/...` (filtre/grid zayıf) |
+| `/shop/{dept}/{slug}` (ürün Search) | `/kategori/[slug]` Prisma storefront |
+| `/iletisim` (yedek lead) | |
+
+Mesaj eşleşmesi: reklam vaadi = sayfa H1 / birincil CTA.
+
+## Dönüşüm event’leri (kod hazır)
+
+| Event / conversion type | Ne zaman |
+|-------------------------|----------|
+| `whatsapp_click` → `lead` | FAB, PDP «WhatsApp», footer, iletişim |
+| `phone_click` → `lead` | `tel:` linkleri, PDP «Hemen Ara», footer |
+| `pfos_cta_click` → `lead` | PDP Proje Fabrikası, `/pfos` linkleri |
+| `quote` | PFOS teklif tablosu oluşunca |
+| `order` | Sipariş (env label doluysa) |
+
+Env (Hetzner / `.env`): `NEXT_PUBLIC_GA4_ID`, `NEXT_PUBLIC_GOOGLE_ADS_ID`, `NEXT_PUBLIC_GOOGLE_ADS_LABEL_LEAD|QUOTE|ORDER`.
+
+## İlk reklamda kullanılacak sayfalar
 
 | Sayfa | Ne zaman |
 |-------|----------|
 | `/pfos` | İlk reklam — ana hedef |
-| `/oztiryakiler-ekipmani-tedarik` | Ölçüm çalıştıktan sonra |
-| `/restoran-mutfak-teklif` | Ölçüm çalıştıktan sonra |
-| `/contact` | Yedek |
+| `/shop/pisirme` (ör. dept) | Ölçüm + mobil hız doğrulandıktan sonra |
+| `/oztiryakiler-ekipmani-tedarik` | Marka kampanyası |
+| `/iletisim` | Yedek |
 
-Mağaza, Performance Max, Merchant Center → **çok sonra**; şimdilik düşünme.
+Performance Max / Merchant Center → ölçüm oturduktan sonra.
 
 ---
 
-## Kod tarafında hazır olan (senin yapman gerekmiyor)
+## Kod tarafında hazır olan
 
-- `components/seo/AnalyticsScripts.tsx` — GA4 + Ads tag’leri env dolunca yüklenir
-- `public/eq-analytics.js` — dönüşüm event’leri: `lead`, `quote`, `order`
-- PFOS, iletişim, sepet gönderiminde otomatik tetiklenir
-
-**Eksik:** Vercel’de `NEXT_PUBLIC_GA4_ID` ve `NEXT_PUBLIC_GOOGLE_ADS_ID` henüz yok.
+- `components/seo/AnalyticsScripts.tsx` — GA4 + Ads + lead delegasyon
+- `public/eq-analytics.js` — `equstoTrackLead` / conversion labels
+- PDP: Hemen Ara + WhatsApp (Proje Fabrikası butonu PDP’de yok; nav/ana sayfa)
+- Kamu telefon: `lib/site/public-phone.ts` ile JS senkron (`EQUSTO_HIDE_PUBLIC_PHONE = false`)
 
 ---
 

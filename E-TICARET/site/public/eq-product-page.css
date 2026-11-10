@@ -1026,6 +1026,15 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   color: var(--eq-cmf-brand, #001e50);
 }
 
+.eq-cmf-btn--tel {
+  text-decoration: none;
+  color: inherit;
+}
+
+.eq-cmf-actions--secondary {
+  flex-wrap: wrap;
+}
+
 /* Sepete Ekle — Electrolux mavisi (theme.css .eq-cart-add override) */
 body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--cart,
 body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart,

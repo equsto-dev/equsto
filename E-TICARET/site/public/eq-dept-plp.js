@@ -56,7 +56,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260919-kroom-brema';
+  var CATALOG_V = '20261110-ads-faz0';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -1152,7 +1152,7 @@
     return b;
   }
 
-  function renderProductCard(u) {
+  function renderProductCard(u, cardIndex) {
     var href = productUrl(u);
     var catalogRel =
       u.raw && u.raw.images && u.raw.images[0]
@@ -1168,6 +1168,7 @@
       u.raw && u.raw.pimak_gorsel ? String(u.raw.pimak_gorsel).trim() : '';
     var shopifyImg =
       u.raw && u.raw.shopify_image ? String(u.raw.shopify_image).trim() : '';
+    var eager = typeof cardIndex === 'number' && cardIndex < 2;
     var img = u.img
       ? '<img src="' +
         esc(u.img) +
@@ -1176,7 +1177,10 @@
         (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
         (pimakGorsel ? ' data-eq-pimak-gorsel="' + esc(pimakGorsel) + '"' : '') +
         (shopifyImg ? ' data-eq-shopify-img="' + esc(shopifyImg) + '"' : '') +
-        ' alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+        (eager
+          ? ' alt="" loading="eager" fetchpriority="high" decoding="async"'
+          : ' alt="" loading="lazy" decoding="async"') +
+        ' referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
     var cartBtn =
       window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
@@ -1313,7 +1317,11 @@
       grid.innerHTML =
         '<p class="eq-dept-plp-empty">' + esc(__plpT('plp.empty_filter', 'Bu filtrelere uygun ürün bulunamadı.')) + '</p>';
     } else {
-      grid.innerHTML = slice.map(renderProductCard).join('');
+      grid.innerHTML = slice
+        .map(function (u, i) {
+          return renderProductCard(u, i);
+        })
+        .join('');
       if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
       try {
         if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === 'function') {

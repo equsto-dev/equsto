@@ -12,8 +12,8 @@
 
   "use strict";
 
-  /** Geçici: kamu telefon satırı gizle — lib/site/public-phone.ts ile senkron */
-  window.EQUSTO_HIDE_PUBLIC_PHONE = true;
+  /** Kamu telefon — lib/site/public-phone.ts HIDE_PUBLIC_PHONE ile senkron tutun */
+  window.EQUSTO_HIDE_PUBLIC_PHONE = false;
 
   var FOOTER_JSON = "/data/footer-vitrin.json?v=20260918-seo-footer";
 
@@ -222,22 +222,32 @@
           "</a>"
       );
     }
-    if (contact.phoneTel && contact.phoneDisplay && !window.EQUSTO_HIDE_PUBLIC_PHONE) {
-      parts.push(
-        '<a class="eq-mfoot-contact-item" href="tel:' +
-          esc(String(contact.phoneTel).replace(/\s/g, "")) +
-          '">' +
-          esc(contact.phoneDisplay) +
-          "</a>"
-      );
+    if (!window.EQUSTO_HIDE_PUBLIC_PHONE) {
+      var phoneTel =
+        (contact && contact.phoneTel) ||
+        window.EQUSTO_PUBLIC_PHONE_TEL ||
+        "+905326840152";
+      var phoneDisplay =
+        (contact && contact.phoneDisplay) ||
+        window.EQUSTO_PUBLIC_PHONE_DISPLAY ||
+        "0532 684 01 52";
+      if (phoneTel && phoneDisplay) {
+        parts.push(
+          '<a class="eq-mfoot-contact-item" href="tel:' +
+            esc(String(phoneTel).replace(/\s/g, "")) +
+            '" data-eq-track="phone_click" data-eq-track-source="footer">' +
+            esc(phoneDisplay) +
+            "</a>"
+        );
+      }
     }
-    var wa = contact.whatsapp || (window.EQUSTO_WHATSAPP_E164 || "");
+    var wa = (contact && contact.whatsapp) || (window.EQUSTO_WHATSAPP_E164 || "");
     wa = String(wa).replace(/\D/g, "");
     if (wa.length >= 10) {
       parts.push(
         '<a class="eq-mfoot-contact-item eq-mfoot-contact-wa" href="https://wa.me/' +
           esc(wa) +
-          '" target="_blank" rel="noopener noreferrer">' +
+          '" target="_blank" rel="noopener noreferrer" data-eq-track="whatsapp_click" data-eq-track-source="footer">' +
           esc(t("footer.contact_whatsapp", "WhatsApp")) +
           "</a>"
       );

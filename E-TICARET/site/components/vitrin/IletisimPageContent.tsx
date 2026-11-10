@@ -44,16 +44,31 @@ export default function IletisimPageContent() {
                     </th>
                     <td>
                       <a
-                        id="eq-contact-phone-wa"
-                        href={CONTACT_PHONE_WA_APP || CONTACT_PHONE_WA_WEB || `tel:${PUBLIC_PHONE_TEL}`}
-                        data-eq-wa-app={CONTACT_PHONE_WA_APP || undefined}
-                        data-eq-wa-web={CONTACT_PHONE_WA_WEB || undefined}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="WhatsApp"
+                        id="eq-contact-phone-tel"
+                        href={`tel:${PUBLIC_PHONE_TEL}`}
+                        data-eq-track="phone_click"
+                        data-eq-track-source="iletisim"
                       >
                         {PUBLIC_PHONE_DISPLAY}
                       </a>
+                      {(CONTACT_PHONE_WA_APP || CONTACT_PHONE_WA_WEB) && (
+                        <>
+                          {" · "}
+                          <a
+                            id="eq-contact-phone-wa"
+                            href={CONTACT_PHONE_WA_APP || CONTACT_PHONE_WA_WEB}
+                            data-eq-wa-app={CONTACT_PHONE_WA_APP || undefined}
+                            data-eq-wa-web={CONTACT_PHONE_WA_WEB || undefined}
+                            data-eq-track="whatsapp_click"
+                            data-eq-track-source="iletisim"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="WhatsApp"
+                          >
+                            WhatsApp
+                          </a>
+                        </>
+                      )}
                     </td>
                   </tr>
                 ) : null}

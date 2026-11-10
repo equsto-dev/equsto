@@ -1,12 +1,13 @@
 /**
  * GA4 + Google Ads (gtag) — NEXT_PUBLIC_GA4_ID / NEXT_PUBLIC_GOOGLE_ADS_ID
  * Consent Mode v2 + dönüşüm: window.equstoTrackConversion("lead"|"quote"|"order", { ... })
+ * Lead kaynakları: whatsapp_click, phone_click, pfos_cta_click (data-eq-track veya delegasyon)
  */
 (function () {
   if (typeof document === "undefined") return;
 
-  /** Geçici: kamu telefon satırı (footer) — true = gizle. Geri: false */
-  window.EQUSTO_HIDE_PUBLIC_PHONE = true;
+  /** Kamu telefon — lib/site/public-phone.ts HIDE_PUBLIC_PHONE ile senkron tutun */
+  window.EQUSTO_HIDE_PUBLIC_PHONE = false;
 
   var CONSENT_KEY = "equsto_cookie_consent";
 
@@ -19,7 +20,14 @@
       ? String(window.EQUSTO_GOOGLE_ADS_ID).trim()
       : "";
   var primary = ga4 || ads;
-  if (!primary) return;
+  if (!primary) {
+    /** Env yokken de tıklama event API'si dursun (no-op); ajans kurulumu sonrası çalışır */
+    window.equstoTrackEvent = window.equstoTrackEvent || function () {};
+    window.equstoTrackConversion = window.equstoTrackConversion || function () {};
+    window.equstoTrackLead = window.equstoTrackLead || function () {};
+    bindLeadDelegates();
+    return;
+  }
 
   window.dataLayer = window.dataLayer || [];
   if (!window.gtag) {
@@ -93,4 +101,95 @@
       });
     }
   };
+
+  /**
+   * İletişim lead'i (WA / telefon / PFOS CTA).
+   * Ads'te lead conversion label'ı doluysa conversion da gönderilir.
+   */
+  window.equstoTrackLead = function (source, params) {
+    var p = Object.assign({ source: source || "unknown" }, params || {});
+    window.equstoTrackEvent(String(source || "lead_click"), p);
+    window.equstoTrackConversion("lead", p);
+  };
+
+  bindLeadDelegates();
+
+  function bindLeadDelegates() {
+    if (window.__eqLeadTrackBound) return;
+    window.__eqLeadTrackBound = true;
+
+    document.addEventListener(
+      "click",
+      function (ev) {
+        var el = ev.target;
+        if (!el || !el.closest) return;
+        var tracked = el.closest("[data-eq-track]");
+        if (tracked) {
+          var kind = tracked.getAttribute("data-eq-track") || "";
+          var src = tracked.getAttribute("data-eq-track-source") || "dom";
+          if (kind === "whatsapp_click" || kind === "phone_click" || kind === "pfos_cta_click") {
+            try {
+              (window.equstoTrackLead || function () {})(kind, {
+                source: src,
+                href: tracked.getAttribute("href") || "",
+                path: location.pathname,
+              });
+            } catch (_) {}
+          }
+          return;
+        }
+
+        var tel = el.closest('a[href^="tel:"]');
+        if (tel) {
+          try {
+            (window.equstoTrackLead || function () {})("phone_click", {
+              source: "tel_link",
+              href: tel.getAttribute("href") || "",
+              path: location.pathname,
+            });
+          } catch (_) {}
+          return;
+        }
+
+        var waFab = el.closest(".equsto-contact-wa-fab");
+        if (waFab) {
+          try {
+            (window.equstoTrackLead || function () {})("whatsapp_click", {
+              source: waFab.classList.contains("equsto-contact-wa-fab--tabbar")
+                ? "tabbar_fab"
+                : "floating_fab",
+              path: location.pathname,
+            });
+          } catch (_) {}
+          return;
+        }
+
+        var waBtn = el.closest(".eq-cmf-btn--wa");
+        if (waBtn) {
+          try {
+            (window.equstoTrackLead || function () {})("whatsapp_click", {
+              source: "pdp_buybox",
+              path: location.pathname,
+            });
+          } catch (_) {}
+          return;
+        }
+
+        var pfos = el.closest("a.eq-cmf-btn--pfos, a[href*='/pfos']");
+        if (pfos && pfos.tagName === "A") {
+          var href = pfos.getAttribute("href") || "";
+          if (/\/pfos(\/|$|\?|#)/i.test(href) || pfos.classList.contains("eq-cmf-btn--pfos")) {
+            try {
+              (window.equstoTrackLead || function () {})("pfos_cta_click", {
+                source: pfos.classList.contains("eq-cmf-btn--pfos") ? "pdp_buybox" : "link",
+                href: href,
+                path: location.pathname,
+              });
+            } catch (_) {}
+          }
+        }
+      },
+      true
+    );
+  }
 })();
