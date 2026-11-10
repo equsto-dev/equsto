@@ -73,6 +73,9 @@ if (!/eq-cmf-price__amount/.test(inline)) {
 if (!/eq-cmf-trust/.test(inline) || !/function renderEpdpTrustBadgesHtml/.test(inline)) {
   fail("eq-product-page-inline.js: Cafemarkt güven rozetleri (.eq-cmf-trust) yok");
 }
+if (!/function epdpNeedsServiceInstall/.test(inline)) {
+  fail("eq-product-page-inline.js: servis kurulumu formülü (epdpNeedsServiceInstall) yok");
+}
 if (!/eq-cmf-consult/.test(inline)) {
   fail("eq-product-page-inline.js: danış şeridi (.eq-cmf-consult) yok");
 }

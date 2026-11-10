@@ -1034,6 +1034,8 @@ const EN = {
       "Warranty term and coverage vary by product/brand; confirmed in writing at quote or order.",
     warranty_service:
       "Installation, commissioning and service planning are done with Sales Engineering.",
+    warranty_service_plugplay:
+      "Most models are plug-in / countertop; no special install. Sales Engineering helps if service is needed.",
     quote_process:
       "For a quote: model/size, quantity and delivery city are enough. Message via WhatsApp or phone; Sales Engineering replies.",
     ship_banner: "Free delivery in selected regions",

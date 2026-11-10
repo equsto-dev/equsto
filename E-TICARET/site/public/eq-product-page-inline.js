@@ -3048,12 +3048,21 @@ window.searchFilter = window.searchFilter || function () {};
           )
         );
       }
-      lines.push(
-        __pdpT(
-          "pdp.warranty_service",
-          "Montaj, devreye alma ve servis planlaması Satış Mühendisliği ile birlikte yapılır."
-        )
-      );
+      if (epdpNeedsServiceInstall(x)) {
+        lines.push(
+          __pdpT(
+            "pdp.warranty_service",
+            "Montaj, devreye alma ve servis planlaması Satış Mühendisliği ile birlikte yapılır."
+          )
+        );
+      } else {
+        lines.push(
+          __pdpT(
+            "pdp.warranty_service_plugplay",
+            "Çoğu model fişli / tezgâh üstü kullanıma uygundur; özel montaj gerekmez. Servis ihtiyacında Satış Mühendisliği yönlendirir."
+          )
+        );
+      }
       return renderEpdpFlatAccSection(
         __pdpT("pdp.warranty_heading", "Garanti ve servis"),
         "<ul>" +
@@ -3073,6 +3082,90 @@ window.searchFilter = window.searchFilter || function () {};
       acc += renderEpdpUsageAccSection(x);
       acc += renderEpdpWarrantyAccSection(x);
       return acc;
+    }
+
+    /**
+     * Servis kurulumu rozeti — katalog formülü (SKU tek tek işaretlenmez).
+     * Hayır: fişli küçük cihaz / mobilya (mikser, blender, araba, tezgâh…).
+     * Evet: gaz / trifaze / yıkama-soğutma-davlumbaz / ağır pişirme-kahve.
+     * Override: x.servis_kurulum veya x.installation_required (boolean).
+     */
+    function epdpProductBlob(x) {
+      if (!x) return "";
+      var parts = [
+        x.name,
+        x.brand,
+        x.dept,
+        x.category,
+        x.urun_kategori,
+        x.urun_alt_kategori,
+        x.model,
+        x.sku,
+        Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler.join(" ") : "",
+        x.specs,
+        x.aciklama,
+      ];
+      return parts
+        .map(function (p) {
+          return String(p || "");
+        })
+        .join(" ")
+        .toLocaleLowerCase("tr-TR")
+        .replace(/ı/g, "i")
+        .replace(/ğ/g, "g")
+        .replace(/ü/g, "u")
+        .replace(/ş/g, "s")
+        .replace(/ö/g, "o")
+        .replace(/ç/g, "c");
+    }
+
+    function epdpNeedsServiceInstall(x) {
+      if (!x) return false;
+      if (x.servis_kurulum === false || x.installation_required === false) return false;
+      if (x.servis_kurulum === true || x.installation_required === true) return true;
+
+      var blob = epdpProductBlob(x);
+      var dept = String((x && (x.dept || x.category)) || "")
+        .toLowerCase()
+        .replace(/ı/g, "i")
+        .replace(/ğ/g, "g")
+        .replace(/ü/g, "u")
+        .replace(/ş/g, "s")
+        .replace(/ö/g, "o")
+        .replace(/ç/g, "c");
+
+      /* Fişli / taşınabilir / mobilya → kurulum rozeti yok */
+      if (
+        /stand\s*mikser|kitchenaid|artisan|blender|el\s*mikser|hand\s*mixer|immersion|toaster|waffle|kettle|cay\s*makine|filtre\s*kahve|moka\s*pot|dograyici|dilimleme|robot\s*coupe|cutter\s*mikser|mutfak\s*robot|hamur\s*acar|bicak|knife|spatula|galos|maske|onluk|tepisi|servis\s*tongs/.test(
+          blob
+        )
+      ) {
+        return false;
+      }
+      if (/^(tezgah|dolap|araba|istif|kuvetler|tasima)$/.test(dept)) return false;
+
+      /* Ağır / bağlantılı ekipman */
+      if (/^(davlumbaz|yikama|sogutma|market-reyonlari)$/.test(dept)) return true;
+      if (/\b(380|400)\s*v\b|trifaze|uc\s*faz|3n\s*pe|dogalgaz|\blpg\b|gazli|gaz\s*baglant|su\s*baglant|tahliye|drenaj|boyler|soguk\s*oda/.test(blob)) {
+        return true;
+      }
+      if (
+        /kombi\s*firin|konveksiyon|kuzine|fritoz|devrilir\s*tava|salamand|doner\s*ocak|buz\s*makine|espresso|ogutucu|bulasik|davlumbaz|buzdolap|sok\s*sogut|tezgah\s*alti\s*bulasik|set\s*alti\s*bulasik/.test(
+          blob
+        )
+      ) {
+        return true;
+      }
+      if (dept === "pisirme" || dept === "kahve") return true;
+      if (dept === "icecek") {
+        return /buz|slush|smoothie\s*makine|soda|gazli\s*icecek|soft\s*dondurma|dondurma\s*makine/.test(blob);
+      }
+      if (dept === "hazirlik") {
+        return /yer\s*tipi|floor|patates\s*soy|kemik\s*tester|et\s*kiyma|kiyma\s*makine|40\s*l|60\s*l|80\s*l|planeter|spiral\s*mikser/.test(
+          blob
+        );
+      }
+      return false;
     }
 
     /** Cafemarkt product-info-wrap tarzı güven rozetleri (ücretsiz kargo YOK — kilit) */
@@ -3108,12 +3201,13 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpTrustBadgesHtml(x) {
-      var items = [
-        {
+      var items = [];
+      if (epdpNeedsServiceInstall(x)) {
+        items.push({
           kind: "service",
           text: __pdpT("pdp.badge_service", "Servis kurulumu gerekir"),
-        },
-      ];
+        });
+      }
       var volt = epdpVoltageBadgeLabel(x);
       if (volt) items.push({ kind: "power", text: volt });
       items.push({
