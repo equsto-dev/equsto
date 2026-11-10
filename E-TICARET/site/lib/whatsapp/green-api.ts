@@ -130,8 +130,9 @@ export async function sendGreenApiFile(
   if (caption?.trim()) form.append("caption", caption.trim().slice(0, 1024));
 
   try {
+    // sendFileByUpload: api.green-api.com (media.green-api.com bu instance’ta 504/nginx HTML dönüyor)
     const r = await fetch(
-      `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
+      `https://api.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
       { method: "POST", body: form },
     );
     const result = await readGreenApiResponse(r);
