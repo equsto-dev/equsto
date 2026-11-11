@@ -16,11 +16,14 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
    · Ücretsiz kargo rozeti YOK
 3. Satın alma satırı (.eq-cmf-purchase): yalnızca adet stepper
 4. Üst satır (.eq-cmf-actions--primary):
-   • Sol: Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50)
-   • Sağ: Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
+   • Fiyatlı ürün: Sol Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50);
+     Sağ Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
+   • Quote-only («Teklif iste» / fiyat_bekleniyor): Sepete Ekle ve adet/ödeme YOK;
+     birincil CTA WhatsApp «Teklif iste» (.eq-cmf-btn--quote-wa → equstoOpenWhatsAppWebWindow)
 5. Danış şeridi (.eq-cmf-consult) — Cafemarkt «Ürün Hakkında Danışabilirsiniz»:
    • Hemen Ara (.eq-cmf-btn--tel, tel:) — kamu telefon açıksa
-   • Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
+   • Fiyatlı: Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı
+   • Quote-only: danış şeridinde WA tekrarlanmaz (primary zaten Teklif iste)
    · Proje Fabrikası PDP buybox’ta YOK (nav / ana sayfa /pfos)
 
 YASAK (onay olmadan):

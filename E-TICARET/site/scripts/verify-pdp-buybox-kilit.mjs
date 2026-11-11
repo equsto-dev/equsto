@@ -49,6 +49,12 @@ if (!/eq-cmf-qty__val/.test(inline)) {
 if (!/eq-cmf-btn--cart/.test(inline)) {
   fail("eq-product-page-inline.js: .eq-cmf-btn--cart yok");
 }
+if (!/eq-cmf-btn--quote-wa/.test(inline) || !/epdpQuoteWaButtonHtml/.test(inline)) {
+  fail("eq-product-page-inline.js: quote-only WhatsApp CTA (epdpQuoteWaButtonHtml) yok");
+}
+if (!kilit.includes("Quote-only") && !kilit.includes("quote-only")) {
+  fail("pdp-buybox-cafemarkt-KILIT.txt: quote-only WhatsApp istisnası yok");
+}
 if (/eq-cmf-btn--pfos/.test(inline)) {
   fail("eq-product-page-inline.js: PDP buybox’ta Proje Fabrikası düğmesi olmamalı");
 }

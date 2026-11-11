@@ -141,6 +141,29 @@
     });
   }
 
+  /** Fiyatı kapalı / teklif kalemi — kartta lead CTA göster */
+  function isPlpQuoteUnit(u) {
+    var raw = u && u.raw;
+    var p = String((u && u.p) || '');
+    if (raw) {
+      if (raw.fiyat_bekleniyor) return true;
+      if (Number(raw.fiyat_tl) > 0) return false;
+      if (/teklif\s+iste|teklif\s+i[çc]in/i.test(String(raw.price || ''))) return true;
+    }
+    return /teklif/i.test(p);
+  }
+
+  function plpQuoteWaMsg(u) {
+    var name = displayProductName(u);
+    var sku = '';
+    if (u && u.raw) sku = String(u.raw.sku || u.raw.model || u.raw.urun_kodu || '').trim();
+    return (
+      'Merhaba, Equsto’dan teklif istiyorum:\n' +
+      name +
+      (sku ? '\nKod: ' + sku : '')
+    );
+  }
+
   function isPlpTechnicalImg(rel) {
     var s = String(rel || '').split('?')[0].replace(/\\/g, '/');
     var fn = s.split('/').pop().toLowerCase();
@@ -1182,14 +1205,36 @@
           : ' alt="" loading="lazy" decoding="async"') +
         ' referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
-    var cartBtn =
-      window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
-        ? '<button class="eq-dept-plp-card__btn" ' +
-          window.EqustoCart.cartAddButtonAttrs(u) +
-          '>' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>'
-        : '<button type="button" class="eq-dept-plp-card__btn">' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>';
+    var quote = isPlpQuoteUnit(u);
+    var cartLabel = __plpT('plp.add_to_cart', 'SEPETE EKLE');
+    var quoteLabel = __plpT('plp.request_quote', 'Teklif iste');
+    var cartBtn = '';
+    if (quote) {
+      cartBtn =
+        '<button type="button" class="eq-dept-plp-card__btn eq-dept-plp-card__btn--quote eq-dept-plp-card__btn--wa" data-eq-wa-msg="' +
+        esc(plpQuoteWaMsg(u)) +
+        '" data-eq-track="whatsapp_click" data-eq-track-source="plp_card" aria-label="' +
+        esc(quoteLabel) +
+        '">' +
+        esc(quoteLabel) +
+        '</button>';
+    } else if (window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function') {
+      cartBtn =
+        '<button class="eq-dept-plp-card__btn" ' +
+        window.EqustoCart.cartAddButtonAttrs(u) +
+        ' aria-label="' +
+        esc(cartLabel) +
+        '">' +
+        cartLabel +
+        '</button>';
+    } else {
+      cartBtn =
+        '<button type="button" class="eq-dept-plp-card__btn">' + cartLabel + '</button>';
+    }
     return (
-      '<article class="eq-dept-plp-card">' +
+      '<article class="eq-dept-plp-card' +
+      (quote ? ' eq-dept-plp-card--quote' : '') +
+      '">' +
       '<a class="eq-dept-plp-card__img" href="' +
       esc(href) +
       '">' +
@@ -1218,13 +1263,19 @@
         return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + '</div>' : '';
       })() +
       (u.p
-        ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(null, u.raw)) + '</div>'
+        ? '<div class="eq-dept-plp-card__price' +
+          (quote ? ' eq-dept-plp-card__price--quote' : '') +
+          '">' +
+          esc(formatPrice(null, u.raw)) +
+          '</div>'
         : '') +
       (function () {
         var note = formatPriceNote(u.raw);
         return note ? '<div class="eq-dept-plp-card__price-note">' + esc(note) + '</div>' : '';
       })() +
+      '<div class="eq-dept-plp-card__actions">' +
       cartBtn +
+      '</div>' +
       '</article>'
     );
   }
@@ -1747,8 +1798,28 @@
     });
   }
 
+  function bindQuoteWaClicks() {
+    if (window.__eqPlpQuoteWaBound) return;
+    window.__eqPlpQuoteWaBound = true;
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var btn = t.closest('.eq-dept-plp-card__btn--wa');
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var text = btn.getAttribute('data-eq-wa-msg') || '';
+      if (typeof window.equstoOpenWhatsAppWebWindow === 'function') {
+        window.equstoOpenWhatsAppWebWindow(null, text);
+      } else if (typeof window.equstoOpenWhatsApp === 'function') {
+        window.equstoOpenWhatsApp(e);
+      }
+    });
+  }
+
   function boot() {
     bindSearch();
+    bindQuoteWaClicks();
     loadDeptCover(loadCatalog);
   }
 

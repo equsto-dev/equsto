@@ -632,12 +632,29 @@
         );
       }
 
-      var cartAttrs =
-        global.EqustoCart && typeof global.EqustoCart.cartAddButtonAttrs === 'function'
-          ? global.EqustoCart.cartAddButtonAttrs(uCart)
-          : 'type="button" class="eq-cart-add eq-mx-act eq-mx-add" data-equsto-cart="1"';
-      var cartRow =
-        '<div class="eq-mx-prod-actions"><button ' + cartAttrs + '>Sepete ekle</button></div>';
+      var quoteRow = u.raw || u;
+      var quote =
+        (global.EqustoPriceDisplay &&
+          typeof global.EqustoPriceDisplay.isQuoteOnly === 'function' &&
+          global.EqustoPriceDisplay.isQuoteOnly(quoteRow)) ||
+        /teklif\s+iste|teklif\s+i[çc]in/i.test(String((u && u.p) || (quoteRow && quoteRow.price) || ''));
+      var cartRow;
+      if (quote) {
+        var waMsg =
+          'Merhaba, Equsto’dan teklif istiyorum:\n' +
+          String((u && u.n) || (quoteRow && quoteRow.name) || 'ürün');
+        cartRow =
+          '<div class="eq-mx-prod-actions"><button type="button" class="eq-mx-act eq-dept-plp-card__btn--wa" data-eq-wa-msg="' +
+          esc(waMsg) +
+          '" data-eq-track="whatsapp_click" data-eq-track-source="home_card">Teklif iste</button></div>';
+      } else {
+        var cartAttrs =
+          global.EqustoCart && typeof global.EqustoCart.cartAddButtonAttrs === 'function'
+            ? global.EqustoCart.cartAddButtonAttrs(uCart)
+            : 'type="button" class="eq-cart-add eq-mx-act eq-mx-add" data-equsto-cart="1"';
+        cartRow =
+          '<div class="eq-mx-prod-actions"><button ' + cartAttrs + '>Sepete ekle</button></div>';
+      }
 
       out = out.replace(/<button[^>]*\beq-cart-add\b[^>]*>[\s\S]*?<\/button>/i, '');
       if (out.indexOf('eq-mx-prod-actions') < 0) {

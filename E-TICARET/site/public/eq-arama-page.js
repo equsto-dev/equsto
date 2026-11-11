@@ -723,13 +723,37 @@
     return out;
   }
 
+  function isSearchQuoteHit(h) {
+    if (!h) return false;
+    if (h.fiyat_bekleniyor) return true;
+    if (
+      window.EqustoPriceDisplay &&
+      typeof window.EqustoPriceDisplay.isQuoteOnly === "function" &&
+      window.EqustoPriceDisplay.isQuoteOnly(h)
+    ) {
+      return true;
+    }
+    var price = String(h.price || h.price_display || "");
+    return /teklif\s+iste|teklif\s+i[çc]in/i.test(price);
+  }
+
+  function searchQuoteWaMsg(h) {
+    var name = decodeHtmlEntitiesArama((h && h.name) || "ürün");
+    var sku = String((h && (h.sku || h.model || h.urun_kodu)) || "").trim();
+    return (
+      "Merhaba, Equsto’dan teklif istiyorum:\n" +
+      name +
+      (sku ? "\nKod: " + sku : "")
+    );
+  }
+
   function formatPrice(hit) {
     if (!hit) return "";
     if (hit.price_display) return normalizePriceLabel(hit.price_display);
     if (window.EqustoPriceDisplay && typeof window.EqustoPriceDisplay.formatCard === "function") {
       return window.EqustoPriceDisplay.formatCard(hit);
     }
-    if (hit.fiyat_bekleniyor || /teklif\s+için/i.test(String(hit.price || ""))) {
+    if (hit.fiyat_bekleniyor || /teklif\s+için|teklif\s+iste/i.test(String(hit.price || ""))) {
       return __searchT("plp.quote_contact", "Teklif için iletişim");
     }
     var n = parseKdvDahilTlFromHit(hit);
@@ -1206,6 +1230,7 @@
     }
 
     var addLbl = __searchT("plp.add_to_cart", "SEPETE EKLE");
+    var quoteLbl = __searchT("plp.request_quote", "Teklif iste");
     var imgPh = __searchT("search.image_ph", "Görsel");
 
     grid.innerHTML = hits
@@ -1213,23 +1238,36 @@
         var href = productHref(h);
         var rawImg = h.image ? String(h.image).replace(/\\/g, "/") : "";
         var src = imgSrc(h);
-        var cartBtn =
-          window.EqustoCart && window.EqustoCart.cartAddButtonAttrs
-            ? '<button class="eq-dept-plp-card__btn" ' +
-              window.EqustoCart.cartAddButtonAttrs({
-                b: h.brand,
-                n: h.name,
-                p: h.price,
-                c: h.dept || "",
-                img: src,
-              }) +
-              ' data-eq-cart-toast="1"' +
-              ">" +
-              esc(addLbl) +
-              "</button>"
-            : "";
+        var quote = isSearchQuoteHit(h);
+        var cartBtn = "";
+        if (quote) {
+          cartBtn =
+            '<button type="button" class="eq-dept-plp-card__btn eq-dept-plp-card__btn--quote eq-dept-plp-card__btn--wa" data-eq-wa-msg="' +
+            esc(searchQuoteWaMsg(h)) +
+            '" data-eq-track="whatsapp_click" data-eq-track-source="search_card" aria-label="' +
+            esc(quoteLbl) +
+            '">' +
+            esc(quoteLbl) +
+            "</button>";
+        } else if (window.EqustoCart && window.EqustoCart.cartAddButtonAttrs) {
+          cartBtn =
+            '<button class="eq-dept-plp-card__btn" ' +
+            window.EqustoCart.cartAddButtonAttrs({
+              b: h.brand,
+              n: h.name,
+              p: h.price,
+              c: h.dept || "",
+              img: src,
+            }) +
+            ' data-eq-cart-toast="1"' +
+            ">" +
+            esc(addLbl) +
+            "</button>";
+        }
         return (
-          '<article class="eq-dept-plp-card">' +
+          '<article class="eq-dept-plp-card' +
+          (quote ? " eq-dept-plp-card--quote" : "") +
+          '">' +
           '<a class="eq-dept-plp-card__img" href="' +
           esc(href) +
           '">' +
@@ -1258,8 +1296,12 @@
             var dim = formatOlculerLine(h);
             return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + "</div>" : "";
           })() +
-          (h.price || h.satis_eur_indirimli
-            ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(h)) + "</div>"
+          (h.price || h.satis_eur_indirimli || quote
+            ? '<div class="eq-dept-plp-card__price' +
+              (quote ? " eq-dept-plp-card__price--quote" : "") +
+              '">' +
+              esc(formatPrice(h)) +
+              "</div>"
             : "") +
           cartBtn +
           "</article>"
@@ -1456,6 +1498,24 @@
     if (uiBound) return;
     uiBound = true;
     bindFacetEvents();
+
+    if (!window.__eqAramaQuoteWaBound) {
+      window.__eqAramaQuoteWaBound = true;
+      document.addEventListener("click", function (e) {
+        var t = e.target;
+        if (!t || !t.closest) return;
+        var btn = t.closest(".eq-dept-plp-card__btn--wa");
+        if (!btn || !btn.closest("#eq-arama-grid")) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var text = btn.getAttribute("data-eq-wa-msg") || "";
+        if (typeof window.equstoOpenWhatsAppWebWindow === "function") {
+          window.equstoOpenWhatsAppWebWindow(null, text);
+        } else if (typeof window.equstoOpenWhatsApp === "function") {
+          window.equstoOpenWhatsApp(e);
+        }
+      });
+    }
 
     var sortEl = document.getElementById("eq-arama-sort");
     if (sortEl) {

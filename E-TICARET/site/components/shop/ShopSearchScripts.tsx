@@ -1,9 +1,10 @@
 "use client";
 
 import Script from "next/script";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
+const aramaV = ECOM_ASSET_V;
 
 declare global {
   interface Window {
@@ -14,7 +15,7 @@ declare global {
 export default function ShopSearchScripts() {
   return (
     <>
-      <Script src={`/eq-price-display.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-price-display.js?v=${aramaV}`} strategy="beforeInteractive" />
       <Script src={`/eq-header-search.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
       <Script src={`/eq-dept-tips.js?v=${v}&m=20260924-kahve-filtre`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
@@ -22,7 +23,7 @@ export default function ShopSearchScripts() {
       <Script src={`/eq-pisirme-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dim-mm.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-arama-page.js?v=${v}&m=20260917-html-entities`} strategy="afterInteractive" />
+      <Script src={`/eq-arama-page.js?v=${aramaV}&m=20261111-quote-wa-cta`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp-filter-mob.js?v=${v}&m=20260919-left-drawer`} strategy="afterInteractive" />
     </>
   );

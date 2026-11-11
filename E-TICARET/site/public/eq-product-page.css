@@ -1120,6 +1120,25 @@ body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
   filter: none !important;
 }
 
+/* Quote-only: Teklif iste (WhatsApp) — cart stili + yeşil vurgu */
+body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--quote-wa,
+body.eq-shop .eq-pdp-mobile-buybar .eq-cmf-btn.eq-cmf-btn--quote-wa {
+  background: #128c7e !important;
+  border-color: #128c7e !important;
+  color: #fff !important;
+}
+
+body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--quote-wa:hover,
+body.eq-shop .eq-pdp-mobile-buybar .eq-cmf-btn.eq-cmf-btn--quote-wa:hover {
+  background: #0d6e63 !important;
+  border-color: #0d6e63 !important;
+  color: #fff !important;
+}
+
+.eq-cmf-buybox--quote .eq-cmf-actions--primary {
+  grid-template-columns: 1fr;
+}
+
 .eq-cmf-btn-outline {
   display: inline-flex;
   align-items: center;

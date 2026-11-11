@@ -7,7 +7,7 @@ import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 const v = SHOP_ASSET_V;
 const catalogV = ECOM_ASSET_V;
 /** Cache bust — Ads Faz 0 PLP LCP / script sırası */
-const m = "20261110-ads-faz0";
+const m = "20261111-quote-wa-cta";
 
 function loadScriptOnce(src: string): Promise<void> {
   return new Promise((resolve, reject) => {

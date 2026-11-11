@@ -13,12 +13,34 @@
       .replace(/"/g, "&quot;");
   }
 
+  function isQuoteRow(x) {
+    if (!x) return false;
+    if (x.fiyat_bekleniyor) return true;
+    if (
+      global.EqustoPriceDisplay &&
+      typeof global.EqustoPriceDisplay.isQuoteOnly === "function"
+    ) {
+      return !!global.EqustoPriceDisplay.isQuoteOnly(x);
+    }
+    return /teklif\s+iste|teklif\s+i[çc]in/i.test(String(x.price || ""));
+  }
+
+  function quoteWaMsg(x) {
+    var name = String((x && x.name) || "ürün").trim();
+    var sku = String((x && (x.sku || x.model || x.urun_kodu)) || "").trim();
+    return (
+      "Merhaba, Equsto’dan teklif istiyorum:\n" +
+      name +
+      (sku ? "\nKod: " + sku : "")
+    );
+  }
+
   function formatPriceRow(x) {
     if (global.EqustoPriceDisplay && typeof global.EqustoPriceDisplay.formatCard === "function") {
       return global.EqustoPriceDisplay.formatCard(x);
     }
     if (!x) return "";
-    if (x.fiyat_bekleniyor || /teklif\s+iste|teklif\s+için/i.test(String(x.price || ""))) {
+    if (isQuoteRow(x)) {
       return "Teklif için iletişim";
     }
     var n = 0;
@@ -174,14 +196,26 @@
           (im ? ' data-eq-img-raw="' + esc(String(im).replace(/\\/g, "/")) + '" data-eq-img-step="0"' : "") +
           ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
         : '<span class="eq-img-ph" aria-hidden="true">—</span>';
-      var cartBtn =
-        global.EqustoCart && typeof global.EqustoCart.cartAddButtonAttrs === "function"
-          ? '<button class="eq-dept-plp-card__btn" ' +
-            global.EqustoCart.cartAddButtonAttrs(x) +
-            ">SEPETE EKLE</button>"
-          : '<button type="button" class="eq-dept-plp-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>';
+      var quote = isQuoteRow(x);
+      var cartBtn = "";
+      if (quote) {
+        cartBtn =
+          '<button type="button" class="eq-dept-plp-card__btn eq-dept-plp-card__btn--quote eq-dept-plp-card__btn--wa" data-eq-wa-msg="' +
+          esc(quoteWaMsg(x)) +
+          '" data-eq-track="whatsapp_click" data-eq-track-source="marka_plp">Teklif iste</button>';
+      } else if (global.EqustoCart && typeof global.EqustoCart.cartAddButtonAttrs === "function") {
+        cartBtn =
+          '<button class="eq-dept-plp-card__btn" ' +
+          global.EqustoCart.cartAddButtonAttrs(x) +
+          ">SEPETE EKLE</button>";
+      } else {
+        cartBtn =
+          '<button type="button" class="eq-dept-plp-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>';
+      }
       return (
-        '<article class="eq-dept-plp-card">' +
+        '<article class="eq-dept-plp-card' +
+        (quote ? " eq-dept-plp-card--quote" : "") +
+        '">' +
         '<a class="eq-dept-plp-card__img" href="' +
         esc(href) +
         '">' +
@@ -192,7 +226,9 @@
         '">' +
         esc(x.name || "") +
         "</a>" +
-        '<div class="eq-dept-plp-card__price">' +
+        '<div class="eq-dept-plp-card__price' +
+        (quote ? " eq-dept-plp-card__price--quote" : "") +
+        '">' +
         esc(formatPriceRow(x)) +
         "</div>" +
         cartBtn +
@@ -210,6 +246,12 @@
           (im ? ' data-eq-img-raw="' + esc(String(im).replace(/\\/g, "/")) + '" data-eq-img-step="0"' : "") +
           ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
         : '<span class="eq-cat-card__ph" aria-hidden="true"></span>';
+      var quote = isQuoteRow(x);
+      var cta = quote
+        ? '<button type="button" class="eq-cat-card__btn eq-dept-plp-card__btn--wa" data-eq-wa-msg="' +
+          esc(quoteWaMsg(x)) +
+          '" data-eq-track="whatsapp_click" data-eq-track-source="marka_card">Teklif iste</button>'
+        : '<button type="button" class="eq-cat-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>';
       return (
         '<article class="eq-cat-card">' +
         '<a class="eq-cat-card__img" href="' + esc(href) + '">' + img + "</a>" +
@@ -217,7 +259,7 @@
         '<a class="eq-cat-card__name" href="' + esc(href) + '">' + esc(x.name || "") + "</a>" +
         '<div class="eq-cat-card__brand">' + esc(x.oem_brand && x.oem_brand !== x.brand ? x.oem_brand : x.brand || "") + "</div>" +
         '<div class="eq-cat-card__price">' + esc(formatPriceRow(x)) + "</div>" +
-        '<button type="button" class="eq-cat-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>' +
+        cta +
         "</div></article>"
       );
     }
@@ -369,6 +411,24 @@
         render(catalogAll);
       },
     };
+  }
+
+  if (!global.__eqQuoteWaCardBound) {
+    global.__eqQuoteWaCardBound = true;
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var btn = t.closest(".eq-dept-plp-card__btn--wa");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var text = btn.getAttribute("data-eq-wa-msg") || "";
+      if (typeof global.equstoOpenWhatsAppWebWindow === "function") {
+        global.equstoOpenWhatsAppWebWindow(null, text);
+      } else if (typeof global.equstoOpenWhatsApp === "function") {
+        global.equstoOpenWhatsApp(e);
+      }
+    });
   }
 
   global.EqCategoryShell = { mount: mount };

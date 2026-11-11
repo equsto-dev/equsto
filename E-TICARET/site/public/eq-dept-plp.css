@@ -439,6 +439,12 @@ body.eq-dept-plp {
   color: #6b7280;
   margin: 0 0 10px;
 }
+.eq-dept-plp-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
 .eq-dept-plp-card__btn {
   width: 100%;
   padding: 10px;
@@ -452,6 +458,44 @@ body.eq-dept-plp {
 .eq-dept-plp-card__btn:hover {
   background: #111;
   color: #fff;
+}
+.eq-dept-plp-card__btn--quote {
+  border-color: #001e50;
+  background: #001e50;
+  color: #fff;
+}
+.eq-dept-plp-card__btn--quote:hover {
+  filter: brightness(1.08);
+  background: #001e50;
+  color: #fff;
+}
+.eq-dept-plp-card__btn--wa {
+  border-color: #25d366;
+  color: #128c7e;
+  background: #fff;
+  letter-spacing: 0.02em;
+}
+.eq-dept-plp-card__btn--wa:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+/* Quote-only birincil CTA: Teklif iste → WhatsApp */
+.eq-dept-plp-card__btn--quote.eq-dept-plp-card__btn--wa {
+  border-color: #128c7e;
+  background: #128c7e;
+  color: #fff;
+}
+.eq-dept-plp-card__btn--quote.eq-dept-plp-card__btn--wa:hover {
+  background: #0d6e63;
+  border-color: #0d6e63;
+  color: #fff;
+  filter: none;
+}
+.eq-dept-plp-card__price--quote {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
 }
 .eq-dept-plp-empty {
   grid-column: 1 / -1;

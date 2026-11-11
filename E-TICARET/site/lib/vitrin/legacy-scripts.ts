@@ -1,6 +1,7 @@
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { ECOM_ASSET_V, SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
+const ecomV = ECOM_ASSET_V;
 
 /** İlk boya öncesi hero ızgarası — body sınıfları / theme.css gelmeden PFOS görseli tam genişlikte görünmesin */
 export const HOME_CRITICAL_CSS = `
@@ -24,7 +25,7 @@ export const HOME_EXTRA_STYLES = [
 ];
 
 export const HOME_SCRIPTS = [
-  `/eq-price-display.js?v=${v}`,
+  `/eq-price-display.js?v=${ecomV}`,
   `/eq-home-vitrin.js?v=${v}`,
   `/eq-category-overrides.js?v=${v}`,
   `/eq-vendor-sanitize.js?v=${v}`,
@@ -34,7 +35,7 @@ export const HOME_SCRIPTS = [
   `/pfos-rule-engine.js`,
   `/eq-product-compare.js`,
   `/eq-vitrin-config.js?v=${v}`,
-  `/eq-home-mutbex.js?v=${v}&m=20260918-seo-href`,
+  `/eq-home-mutbex.js?v=${ecomV}&m=20261111-quote-wa-cta`,
   `/eq-product-card-tint.js?v=${v}`,
   `/eq-analytics.js`,
 ];
@@ -73,9 +74,9 @@ export const BAR_DESIGN_SCRIPTS = [`/eq-bar-design.js?v=${v}`, `/eq-analytics.js
 export const ADMIN_SCRIPTS = [`/admin-app.js?v=${v}`];
 
 export const PRODUCT_SCRIPTS = [
-  `/eq-price-display.js?v=${v}`,
+  `/eq-price-display.js?v=${ecomV}`,
   `/eq-display-terminology.js?v=${v}`,
   `/eq-shop-catalog-bootstrap.js?v=${v}`,
   `/eq-filter-column.js?v=${v}`,
-  `/eq-category-shell.js?v=${v}`,
+  `/eq-category-shell.js?v=${ecomV}&m=20261111-quote-wa-cta`,
 ];

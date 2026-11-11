@@ -575,6 +575,9 @@ const EN = {
 
   plp: {
     add_to_cart: "Add to cart",
+    add_to_quote: "Add to quote list",
+    request_quote: "Request quote",
+    whatsapp_ask: "Ask on WhatsApp",
     quote_contact: "Contact for quote",
     price_hint: "VAT incl. · Öztiryakiler list EUR, {pct}% discount",
     load_more: "Load more products",
@@ -945,7 +948,7 @@ const EN = {
     specs_heading: "Technical specifications & description",
     specs_heading_short: "Technical specifications",
     add_to_cart: "Add to cart",
-    price_preparing: "Price list loading — add to cart and request a quote.",
+    price_preparing: "Price list loading — request a quote via WhatsApp.",
     vat_included: "TL price",
     brand_prefix: "Brand:",
     technical_drawings: "Technical drawings",
@@ -1012,6 +1015,7 @@ const EN = {
     quote_and_sales: "Quote and sales",
     quote_contact: "Quote and contact",
     quote_for_contact: "Contact for quote",
+    request_quote: "Request quote",
     add_to_cart_cmf: "Add to cart",
     vat_included_tag: "TL",
     badge_free_ship: "Free shipping",

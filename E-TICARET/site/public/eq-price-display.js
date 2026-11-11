@@ -69,7 +69,7 @@
     if (!row) return false;
     if (row.fiyat_bekleniyor) return true;
     if (isUntrustedPublishedPrice(row)) return true;
-    return /teklif\s+için/i.test(String(row.price || ""));
+    return /teklif\s+iste|teklif\s+i[çc]in/i.test(String(row.price || ""));
   }
 
   function normalizePriceLabel(line) {
@@ -117,4 +117,23 @@
     isQuoteOnly: isQuoteOnly,
     isUntrustedPublishedPrice: isUntrustedPublishedPrice,
   };
+
+  /** Quote-only kart CTA: Teklif iste → Mr. Equsto WhatsApp */
+  if (typeof document !== "undefined" && !global.__eqQuoteWaCardBound) {
+    global.__eqQuoteWaCardBound = true;
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var btn = t.closest(".eq-dept-plp-card__btn--wa");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var text = btn.getAttribute("data-eq-wa-msg") || "";
+      if (typeof global.equstoOpenWhatsAppWebWindow === "function") {
+        global.equstoOpenWhatsAppWebWindow(null, text);
+      } else if (typeof global.equstoOpenWhatsApp === "function") {
+        global.equstoOpenWhatsApp(e);
+      }
+    });
+  }
 })(typeof window !== "undefined" ? window : globalThis);

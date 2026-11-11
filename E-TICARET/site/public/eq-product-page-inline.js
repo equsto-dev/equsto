@@ -2270,6 +2270,7 @@ window.searchFilter = window.searchFilter || function () {};
       var items = pickComplementaryProducts(x, all, keyFn, excludeKeys, 24);
       if (!items.length) return "";
       var addLbl = __pdpT("plp.add_to_cart", "SEPETE EKLE");
+      var quoteLbl = __pdpT("pdp.request_quote", "Teklif iste");
       var cells = items
         .map(function (p) {
           var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
@@ -2280,16 +2281,27 @@ window.searchFilter = window.searchFilter || function () {};
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
             : "product.html?p=" + esc(encodeURIComponent(k));
           var cartRow = pdpCartRowFromProduct(p);
-          var cartBtn =
-            window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === "function"
-              ? '<button class="eq-mbg-plp-card__btn" ' +
-                window.EqustoCart.cartAddButtonAttrs(cartRow) +
-                ">" +
-                esc(addLbl) +
-                "</button>"
-              : "";
+          var quote = buyboxPriceParts(p).quoteOnly;
+          var cartBtn = "";
+          if (quote) {
+            cartBtn =
+              '<button type="button" class="eq-mbg-plp-card__btn eq-mbg-plp-card__btn--wa" data-eq-wa-msg="' +
+              esc(pdpWhatsAppPrefill(p)) +
+              '" data-eq-track="whatsapp_click" data-eq-track-source="pdp_related">' +
+              esc(quoteLbl) +
+              "</button>";
+          } else if (window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === "function") {
+            cartBtn =
+              '<button class="eq-mbg-plp-card__btn" ' +
+              window.EqustoCart.cartAddButtonAttrs(cartRow) +
+              ">" +
+              esc(addLbl) +
+              "</button>";
+          }
           return (
-            '<article class="eq-mbg-plp-card">' +
+            '<article class="eq-mbg-plp-card' +
+            (quote ? " eq-mbg-plp-card--quote" : "") +
+            '">' +
             '<a class="eq-mbg-plp-card__img" href="' +
             esc(eqHtmlUrl(pHref)) +
             '">' +
@@ -2393,6 +2405,7 @@ window.searchFilter = window.searchFilter || function () {};
       });
       window.addEventListener("resize", eqMbgUpdatePage);
       eqMbgUpdatePage();
+      bindEpdpWaClick(tr.parentElement || tr);
       try {
         if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === "function") {
           window.EqustoProductTint.refreshPlp(tr.parentElement || tr);
@@ -4393,12 +4406,53 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
+    function epdpQuoteWaButtonHtml(waMsg, solid) {
+      var label = esc(__pdpT("pdp.request_quote", "Teklif iste"));
+      var cls = solid
+        ? "eq-cmf-btn eq-cmf-btn--cart eq-cmf-btn--wa eq-cmf-btn--quote-wa"
+        : "eq-cmf-btn-outline eq-cmf-btn--wa";
+      return (
+        '<button type="button" class="' +
+        cls +
+        '" data-eq-wa-msg="' +
+        esc(waMsg || "") +
+        '" data-eq-track="whatsapp_click" data-eq-track-source="pdp_buybox" aria-label="' +
+        label +
+        '">' +
+        label +
+        "</button>"
+      );
+    }
+
+    function bindEpdpWaClick(root) {
+      if (!root) return;
+      var nodes = root.querySelectorAll(".eq-cmf-btn--wa");
+      for (var i = 0; i < nodes.length; i++) {
+        var waBtn = nodes[i];
+        if (waBtn.getAttribute("data-eq-wa-bound") === "1") continue;
+        waBtn.setAttribute("data-eq-wa-bound", "1");
+        waBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          var text = this.getAttribute("data-eq-wa-msg") || "";
+          if (typeof window.equstoOpenWhatsAppWebWindow === "function") {
+            window.equstoOpenWhatsAppWebWindow(null, text);
+          } else if (typeof window.equstoOpenWhatsApp === "function") {
+            window.EQUSTO_WHATSAPP_TEXT = text;
+            window.equstoOpenWhatsApp(e);
+          }
+        });
+      }
+    }
+
     function hydrateEpdpBuyboxCartBtn(cartU) {
       if (!cartU) return;
       var primaries = document.querySelectorAll(".eq-cmf-buybox .eq-cmf-actions--primary");
       for (var i = 0; i < primaries.length; i++) {
         var primary = primaries[i];
-        if (!primary || primary.querySelector(".eq-cmf-btn--cart, .eq-cart-add")) continue;
+        if (!primary) continue;
+        if (primary.querySelector(".eq-cmf-btn--quote-wa, .eq-cmf-btn--cart, .eq-cart-add")) continue;
+        var box = primary.closest(".eq-cmf-buybox");
+        if (box && box.querySelector(".eq-cmf-price--quote")) continue;
         primary.insertAdjacentHTML("afterbegin", epdpCartAddButtonHtml(cartU));
       }
     }
@@ -4537,40 +4591,56 @@ window.searchFilter = window.searchFilter || function () {};
       if (existing) existing.remove();
       var priceEl = box.querySelector(".eq-cmf-price");
       var priceHtml = priceEl ? priceEl.outerHTML : "";
+      var quoteOnly =
+        !!(box.querySelector(".eq-cmf-price--quote") || window.__eqEpdpLastQuoteOnly);
+      var waBtn = box.querySelector(".eq-cmf-btn--wa");
+      var waMsg = waBtn ? waBtn.getAttribute("data-eq-wa-msg") || "" : "";
+      if (!waMsg && window.__eqEpdpLastWaMsg) waMsg = window.__eqEpdpLastWaMsg;
       var bar = document.createElement("div");
       bar.id = "eq-pdp-mobile-buybar";
-      bar.className = "eq-pdp-mobile-buybar eq-cmf-buybox eq-epdp-buybox";
+      bar.className =
+        "eq-pdp-mobile-buybar eq-cmf-buybox eq-epdp-buybox" +
+        (quoteOnly ? " eq-pdp-mobile-buybar--quote" : "");
       bar.setAttribute(
         "aria-label",
         box.getAttribute("aria-label") || __pdpT("pdp.buybox_aria", "Satın al")
       );
+      var purchaseHtml = quoteOnly
+        ? ""
+        : '<div class="eq-cmf-purchase">' +
+          '<div class="eq-cmf-qty" role="group" aria-label="' +
+          esc(__pdpT("pdp.qty_aria", "Adet")) +
+          '">' +
+          '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
+          esc(__pdpT("pdp.qty_minus", "Azalt")) +
+          '">−</button>' +
+          '<span class="eq-cmf-qty__val">1</span>' +
+          '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
+          esc(__pdpT("pdp.qty_plus", "Artır")) +
+          '">+</button>' +
+          "</div></div>";
+      var primaryHtml = quoteOnly
+        ? epdpQuoteWaButtonHtml(waMsg, true)
+        : epdpCartAddButtonHtml(cartU);
       bar.innerHTML =
         '<div class="eq-pdp-mobile-buybar__inner">' +
         priceHtml +
         '<div class="eq-pdp-mobile-buybar__actions">' +
-        '<div class="eq-cmf-purchase">' +
-        '<div class="eq-cmf-qty" role="group" aria-label="' +
-        esc(__pdpT("pdp.qty_aria", "Adet")) +
-        '">' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
-        esc(__pdpT("pdp.qty_minus", "Azalt")) +
-        '">−</button>' +
-        '<span class="eq-cmf-qty__val">1</span>' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
-        esc(__pdpT("pdp.qty_plus", "Artır")) +
-        '">+</button>' +
-        "</div></div>" +
+        purchaseHtml +
         '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
-        epdpCartAddButtonHtml(cartU) +
+        primaryHtml +
         "</div></div></div>";
       applyEpdpMobileBuybarInlineStyles(bar);
       document.body.appendChild(bar);
       document.body.classList.add("eq-pdp-mobile-buybar-on");
       hideEpdpTabbarForBuybar();
-      var inlineVal = box.querySelector(".eq-cmf-qty__val");
-      var barVal = bar.querySelector(".eq-cmf-qty__val");
-      if (inlineVal && barVal) barVal.textContent = inlineVal.textContent;
-      bindEpdpQtyControls(bar);
+      if (!quoteOnly) {
+        var inlineVal = box.querySelector(".eq-cmf-qty__val");
+        var barVal = bar.querySelector(".eq-cmf-qty__val");
+        if (inlineVal && barVal) barVal.textContent = inlineVal.textContent;
+        bindEpdpQtyControls(bar);
+      }
+      bindEpdpWaClick(bar);
       if (!window.__eqEpdpMobileBuybarResize) {
         window.__eqEpdpMobileBuybarResize = true;
         window.addEventListener("resize", function () {
@@ -4625,6 +4695,8 @@ window.searchFilter = window.searchFilter || function () {};
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
       var waMsg = pdpWhatsAppPrefill(x);
+      window.__eqEpdpLastQuoteOnly = !!parts.quoteOnly;
+      window.__eqEpdpLastWaMsg = waMsg;
       var priceBlock = parts.quoteOnly
         ? '<div class="eq-cmf-price eq-cmf-price--quote">' +
           esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) +
@@ -4665,7 +4737,12 @@ window.searchFilter = window.searchFilter || function () {};
       }
       var quoteNote = parts.quoteOnly
         ? '<p class="eq-cmf-quote-note">' +
-          esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
+          esc(
+            __pdpT(
+              "pdp.price_preparing",
+              "Fiyat listesi hazırlanıyor — WhatsApp üzerinden teklif isteyin."
+            )
+          ) +
           "</p>"
         : '<p class="eq-cmf-quote-note eq-cmf-quote-note--process">' +
           esc(
@@ -4675,31 +4752,48 @@ window.searchFilter = window.searchFilter || function () {};
             )
           ) +
           "</p>";
-      var cartBtnSolid = epdpCartAddButtonHtml(cartU);
+      var primaryHtml = parts.quoteOnly
+        ? epdpQuoteWaButtonHtml(waMsg, true)
+        : epdpCartAddButtonHtml(cartU) +
+          '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
+          '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
+          "</span>" +
+          esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
+          "</button>";
+      var purchaseHtml = parts.quoteOnly
+        ? ""
+        : '<div class="eq-cmf-purchase">' +
+          '<div class="eq-cmf-qty" role="group" aria-label="' +
+          esc(__pdpT("pdp.qty_aria", "Adet")) +
+          '">' +
+          '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
+          esc(__pdpT("pdp.qty_minus", "Azalt")) +
+          '">−</button>' +
+          '<span class="eq-cmf-qty__val">1</span>' +
+          '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
+          esc(__pdpT("pdp.qty_plus", "Artır")) +
+          '">+</button>' +
+          "</div>" +
+          "</div>";
+      var consultWa = parts.quoteOnly
+        ? ""
+        : '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
+          esc(waMsg) +
+          '" data-eq-track="whatsapp_click" data-eq-track-source="pdp_buybox">' +
+          '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
+          "</span>" +
+          esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
+          "</button>";
       /* Cafemarkt sırası: fiyat → rozetler → adet/sepet → danış şeridi */
+      /* Quote-only: Sepete Ekle yok; birincil CTA WhatsApp (Teklif iste) */
       var actionsHtml =
         renderEpdpTrustBadgesHtml(x) +
-        '<div class="eq-cmf-purchase">' +
-        '<div class="eq-cmf-qty" role="group" aria-label="' +
-        esc(__pdpT("pdp.qty_aria", "Adet")) +
-        '">' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
-        esc(__pdpT("pdp.qty_minus", "Azalt")) +
-        '">−</button>' +
-        '<span class="eq-cmf-qty__val">1</span>' +
-        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
-        esc(__pdpT("pdp.qty_plus", "Artır")) +
-        '">+</button>' +
-        "</div>" +
-        "</div>" +
+        purchaseHtml +
         '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
-        cartBtnSolid +
-        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
-        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
-        "</button></div>" +
+        primaryHtml +
+        "</div>" +
         '<div class="eq-cmf-consult">' +
         '<div class="eq-cmf-consult__title">' +
         esc(__pdpT("pdp.consult_title", "Ürün Hakkında Danışabilirsiniz")) +
@@ -4725,16 +4819,12 @@ window.searchFilter = window.searchFilter || function () {};
             '" data-eq-track="phone_click" data-eq-track-source="pdp_buybox">' +
             esc(__pdpT("pdp.call_us", "Hemen Ara")) +
             "</a>") +
-        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
-        esc(waMsg) +
-        '" data-eq-track="whatsapp_click" data-eq-track-source="pdp_buybox">' +
-        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
-        "</button></div></div>";
+        consultWa +
+        "</div></div>";
       return (
-        '<div class="eq-epdp-buybox eq-cmf-buybox"' +
+        '<div class="eq-epdp-buybox eq-cmf-buybox' +
+        (parts.quoteOnly ? " eq-cmf-buybox--quote" : "") +
+        '"' +
         ' aria-label="' +
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
@@ -4742,18 +4832,26 @@ window.searchFilter = window.searchFilter || function () {};
         havaleNote +
         quoteNote +
         actionsHtml +
-        '<div class="eq-cmf-pay-panel" hidden>' +
-        "<ul>" +
-        "<li>" +
-        esc(__pdpT("pdp.pay_card", "Kredi kartı — 3D Secure ile güvenli ödeme")) +
-        "</li>" +
-        "<li>" +
-        esc(__pdpT("pdp.pay_wire", "Havale / EFT — ekstra %2 indirim")) +
-        "</li>" +
-        "<li>" +
-        esc(__pdpT("pdp.pay_corporate", "Kurumsal fatura ve vadeli ödeme — Proje Fabrikası teklifi sonrası")) +
-        "</li>" +
-        "</ul></div></div>"
+        (parts.quoteOnly
+          ? ""
+          : '<div class="eq-cmf-pay-panel" hidden>' +
+            "<ul>" +
+            "<li>" +
+            esc(__pdpT("pdp.pay_card", "Kredi kartı — 3D Secure ile güvenli ödeme")) +
+            "</li>" +
+            "<li>" +
+            esc(__pdpT("pdp.pay_wire", "Havale / EFT — ekstra %2 indirim")) +
+            "</li>" +
+            "<li>" +
+            esc(
+              __pdpT(
+                "pdp.pay_corporate",
+                "Kurumsal fatura ve vadeli ödeme — Proje Fabrikası teklifi sonrası"
+              )
+            ) +
+            "</li>" +
+            "</ul></div>") +
+        "</div>"
       );
     }
 
@@ -4763,8 +4861,13 @@ window.searchFilter = window.searchFilter || function () {};
         document.querySelector(".eq-cmf-buybox");
       if (!box) return;
       window.__eqEpdpLastCartU = cartU;
-      hydrateEpdpBuyboxCartBtn(cartU);
-      bindEpdpQtyControls(box);
+      var quoteOnly = !!box.querySelector(".eq-cmf-price--quote");
+      window.__eqEpdpLastQuoteOnly = quoteOnly;
+      if (!quoteOnly) {
+        hydrateEpdpBuyboxCartBtn(cartU);
+        bindEpdpQtyControls(box);
+      }
+      bindEpdpWaClick(box);
       mountEpdpMobileBuybar(box, cartU);
       scheduleEpdpMobileBuybarRetry(cartU);
       var payBtn = box.querySelector(".eq-cmf-btn--pay");
@@ -4776,19 +4879,6 @@ window.searchFilter = window.searchFilter || function () {};
           if (open) payPanel.removeAttribute("hidden");
           else payPanel.setAttribute("hidden", "");
           payBtn.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-      }
-      var waBtn = box.querySelector(".eq-cmf-btn--wa");
-      if (waBtn) {
-        waBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          var text = waBtn.getAttribute("data-eq-wa-msg") || "";
-          if (typeof window.equstoOpenWhatsAppWebWindow === "function") {
-            window.equstoOpenWhatsAppWebWindow(null, text);
-          } else if (typeof window.equstoOpenWhatsApp === "function") {
-            window.EQUSTO_WHATSAPP_TEXT = text;
-            window.equstoOpenWhatsApp(e);
-          }
         });
       }
     }
