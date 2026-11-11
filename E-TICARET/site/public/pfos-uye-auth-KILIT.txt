@@ -22,11 +22,12 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
   • İndirme butonu halk PFOS'ta kapalı (deliveryOnly)
 
 ── 3. WhatsApp modal (Mr. Equsto) ──────────────────────────────────────────
-  • Sohbet öncesi üye kapısı — PFOS ile aynı «Üye Girişi» + «Kayıt ol»
-  • WA_MODAL_BUILD = 25 (DOM yenileme kilidi)
-  • equstoLoginHref / equstoRegisterHref ile ?next= geri dönüş
-  • Telefon kapısı: equsto-wa-phone-gate → /hesabim#guvenlik (mesaj öncesi zorunlu)
-  • Stil: .equsto-wa-login-gate__btn (lacivert), __register linki
+  • Misafir sohbet açık — üye girişi zorunlu değil (cep + mesaj ile gönderim)
+  • Opsiyonel üye: equstoLoginHref / equstoRegisterHref (?next=) — geçmiş sohbet
+  • WA_MODAL_BUILD = 26 (DOM yenileme kilidi)
+  • Üye + telefonsuz: equsto-wa-phone-gate → /hesabim#guvenlik
+  • Misafir: #equsto-wa-guest-phone + POST /api/musteriler (kaynak whatsapp-modal)
+  • Stil: .equsto-wa-login-gate__btn (lacivert), __register, guest phone / login-cta
 
 ── 4. Giriş / kayıt sayfası ──────────────────────────────────────────────
   • AuthVitrinChrome: vitrin üst bant + kategori çekmecesi (header/topnav)
@@ -74,7 +75,8 @@ YASAK (onay olmadan):
   • Kayıtta telefon veya şifre tekrar zorunluluğunu kaldırmak
   • Auth layout'tan AuthVitrinChrome / vitrin üst bandını çıkarmak
   • /hesabim hub'unu kaldırmak veya header hesap linkini login'e sabitlemek
-  • WA modal üye kapısını kaldırmak veya WA_MODAL_BUILD'i düşürmek
+  • Misafir WhatsApp modal gönderimini kapatıp yalnızca üye zorunluluğuna dönmek (onaysız)
+  • WA_MODAL_BUILD'i düşürmek
   • PFOS panel clip-path sıçrama animasyonlarına geri dönmek
 
 ── İlgili kilit ────────────────────────────────────────────────────────────

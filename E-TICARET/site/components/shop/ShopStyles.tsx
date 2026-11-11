@@ -13,7 +13,7 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
         <link rel="stylesheet" href={`/eq-home-equsto.css?v=${v}&m=20260918-seo-paths`} />
       ) : null}
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/contact.css?v=${v}&m=20261001-gonderildi-v2`} />
+      <link rel="stylesheet" href={`/contact.css?v=${pdpCssV}&m=20261111-wa-guest`} />
       {variant === "plp" || variant === "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
         <>

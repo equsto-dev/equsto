@@ -13,7 +13,14 @@ import {
   notifyNewLead,
   notifyWhatsAppModalLead,
 } from "@/lib/notify";
-import { requireMemberSession, getMemberIdByToken, readBearerToken, readTokenFromBody, type MemberSessionPayload } from "@/lib/member-auth";
+import {
+  requireMemberSession,
+  requireValidTrMemberPhone,
+  getMemberIdByToken,
+  readBearerToken,
+  readTokenFromBody,
+  type MemberSessionPayload,
+} from "@/lib/member-auth";
 import { appendWaChatMessage, normalizeChatPhone } from "@/lib/wa-chat";
 import { checkRateLimit, clientIpFromRequest } from "@/lib/rate-limit";
 import { sameSiteBrowserError } from "@/lib/same-site";
@@ -78,9 +85,9 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   const kaynak = String(body.kaynak ?? "").trim();
   let memberSession: { session: MemberSessionPayload } | null = null;
   if (kaynak === "whatsapp-modal") {
+    // Üye oturumu tercihli; yoksa misafir — geçerli cep ile lead
     const check = await requireMemberSession(req, body);
-    if (check instanceof Response) return check;
-    memberSession = check;
+    if (!(check instanceof Response)) memberSession = check;
   }
   const data = normalizeMusteriPayload(body);
   if (memberSession) {
@@ -89,6 +96,18 @@ export async function POST(req: NextRequest, ctx: Ctx) {
     if (u.telefon?.trim()) data.tel = u.telefon.trim();
     if (u.email?.trim()) data.mail = u.email.trim();
     if (u.name?.trim()) data.yetkili = u.name.trim();
+  }
+  if (kaynak === "whatsapp-modal" && !memberSession) {
+    try {
+      data.tel = requireValidTrMemberPhone(data.tel || "");
+    } catch (e) {
+      const msg =
+        e instanceof Error ? e.message : "Geçerli bir cep telefonu girin";
+      return adminErr(msg, 400);
+    }
+    if (!String(data.mesaj || "").trim()) {
+      return adminErr("Mesaj gerekli", 400);
+    }
   }
   const err = validatePublicMusteriPayload(data);
   if (err) return adminErr(err, 400);

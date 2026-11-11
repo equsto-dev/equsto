@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SHOP_ASSET_V = "20260621-pfos-ice-blue";
-const WA_MODAL_BUILD = 25;
+const WA_MODAL_BUILD = 26;
 let err = 0;
 
 function fail(msg) {
@@ -90,13 +90,19 @@ const memberSession = read("lib/pfos/member-session.client.ts");
 if (!memberSession.includes("pfosLoginHref")) fail("member-session.client: pfosLoginHref yok");
 if (!memberSession.includes("?next=")) fail("member-session.client: ?next= geri dönüş yok");
 
-/* API — üye oturumu zorunlu */
-for (const rel of [
-  "app/api/teklifler/[[...id]]/route.ts",
-  "app/api/musteriler/[[...id]]/route.ts",
-]) {
-  const api = read(rel);
-  if (!api.includes("requireMemberSession")) fail(`${rel}: requireMemberSession yok`);
+/* API — teklif üye zorunlu; musteriler whatsapp-modal üye tercihli / misafir cep */
+{
+  const teklif = read("app/api/teklifler/[[...id]]/route.ts");
+  if (!teklif.includes("requireMemberSession")) {
+    fail("teklifler route: requireMemberSession yok");
+  }
+  const musteriApi = read("app/api/musteriler/[[...id]]/route.ts");
+  if (!musteriApi.includes("requireMemberSession")) {
+    fail("musteriler route: requireMemberSession yok");
+  }
+  if (!musteriApi.includes("requireValidTrMemberPhone")) {
+    fail("musteriler route: misafir whatsapp-modal cep doğrulama yok");
+  }
 }
 
 const memberAuth = read("lib/member-auth.ts");
@@ -115,10 +121,15 @@ if (!contact.includes(`WA_MODAL_BUILD = ${WA_MODAL_BUILD}`)) {
 }
 if (!contact.includes("equsto-wa-login-gate")) fail("contact.js: WA üye kapısı yok");
 if (!contact.includes("equsto-wa-phone-gate")) fail("contact.js: WA telefon kapısı yok");
+if (!contact.includes("equsto-wa-guest-phone")) fail("contact.js: misafir telefon alanı yok");
+if (!contact.includes("guestPhoneOk")) fail("contact.js: guestPhoneOk yok");
 if (!contact.includes("equstoMemberPhoneOk")) fail("contact.js: equstoMemberPhoneOk yok");
 if (!contact.includes("equstoLoginHref")) fail("contact.js: equstoLoginHref yok");
 if (!contact.includes("equstoRegisterHref")) fail("contact.js: equstoRegisterHref yok");
 if (!contact.includes("applyWaModalView")) fail("contact.js: applyWaModalView yok");
+if (!kilit.includes("Misafir sohbet açık")) {
+  fail("pfos-uye-auth-KILIT.txt: misafir sohbet kuralı yok");
+}
 
 const contactCss = read("public/contact.css");
 if (!contactCss.includes(".equsto-wa-login-gate__btn")) {
@@ -188,5 +199,5 @@ if (err) {
   process.exit(1);
 }
 console.log(
-  "[verify-pfos-uye-auth-kilit] OK — PFOS girişsiz sihirbaz · PDF teslim üye kapısı · WA modal · giriş/kayıt · /hesabim",
+  "[verify-pfos-uye-auth-kilit] OK — PFOS girişsiz sihirbaz · PDF teslim üye kapısı · WA modal misafir · giriş/kayıt · /hesabim",
 );

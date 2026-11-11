@@ -50,7 +50,8 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 25;
+  var WA_MODAL_BUILD = 26;
+  var GUEST_PHONE_KEY = "equsto_wa_guest_phone_v1";
 
   var waModalDigits = "";
   var waModalLastSentText = "";
@@ -231,15 +232,73 @@
     if (btn) btn.setAttribute("href", equstoHesabimPhoneHref());
   }
 
-  /** PFOS teklif ve Mr. Equsto WhatsApp — üye oturumu */
+  function loadGuestPhone() {
+    try {
+      return String(localStorage.getItem(GUEST_PHONE_KEY) || "").trim();
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function saveGuestPhone(raw) {
+    var d = digitsOnly(raw);
+    try {
+      if (d) localStorage.setItem(GUEST_PHONE_KEY, d);
+      else localStorage.removeItem(GUEST_PHONE_KEY);
+    } catch (e) {}
+    return d;
+  }
+
+  function syncGuestPhoneField() {
+    var el = document.getElementById("equsto-wa-guest-phone");
+    if (!el) return;
+    if (!String(el.value || "").trim()) el.value = loadGuestPhone();
+  }
+
+  function guestPhoneOk() {
+    var el = document.getElementById("equsto-wa-guest-phone");
+    var raw = el ? String(el.value || "").trim() : loadGuestPhone();
+    var d = digitsOnly(raw);
+    if (d.length === 11 && d.charAt(0) === "0") d = d.slice(1);
+    if (d.length === 12 && d.indexOf("90") === 0) d = d.slice(2);
+    return d.length === 10 && d.charAt(0) === "5";
+  }
+
+  function resolveGuestPhoneDigits() {
+    var el = document.getElementById("equsto-wa-guest-phone");
+    var raw = el ? String(el.value || "").trim() : loadGuestPhone();
+    var d = digitsOnly(raw);
+    if (d.length === 11 && d.charAt(0) === "0") d = d.slice(1);
+    if (d.length === 12 && d.indexOf("90") === 0) d = d.slice(2);
+    if (d.length === 10 && d.charAt(0) === "5") {
+      saveGuestPhone(d);
+      return d;
+    }
+    return "";
+  }
+
+  function setGuestComposeVisible(on) {
+    var wrap = document.getElementById("equsto-wa-guest-phone-wrap");
+    var loginCta = document.getElementById("equsto-wa-guest-login-cta");
+    if (wrap) wrap.hidden = !on;
+    if (loginCta) loginCta.hidden = !on;
+    var member = document.getElementById("equsto-wa-member");
+    if (member) {
+      if (on) member.classList.add("equsto-wa-member--guest");
+      else member.classList.remove("equsto-wa-member--guest");
+    }
+  }
+
+  /** PFOS teklif ve Mr. Equsto WhatsApp — üye veya üyeliksiz (misafir) */
   function applyWaModalView() {
     var memberEl = document.getElementById("equsto-wa-member");
     var loginGate = document.getElementById("equsto-wa-login-gate");
     var phoneGate = document.getElementById("equsto-wa-phone-gate");
     var pane = document.getElementById("equsto-wa-pane");
     var logged = equstoIsMember();
+    if (loginGate) loginGate.hidden = true;
     if (logged) {
-      if (loginGate) loginGate.hidden = true;
+      setGuestComposeVisible(false);
       if (!equstoMemberPhoneOk()) {
         if (phoneGate) phoneGate.hidden = false;
         if (pane) pane.style.display = "none";
@@ -253,11 +312,13 @@
       renderWaHistoryList();
       renderWaChat();
     } else {
-      if (memberEl) memberEl.style.display = "none";
-      if (loginGate) loginGate.hidden = false;
       if (phoneGate) phoneGate.hidden = true;
-      if (pane) pane.style.display = "none";
+      if (pane) pane.style.display = "flex";
+      if (memberEl) memberEl.style.display = "flex";
+      setGuestComposeVisible(true);
+      syncGuestPhoneField();
       syncWaLoginGateLinks();
+      renderWaChat();
     }
   }
 
@@ -835,27 +896,38 @@
     if (!text) return;
 
     ensureWaMemberSession(function (ok) {
-      if (!ok) {
-        applyWaModalView();
-        var stGate = document.getElementById("equsto-wa-status");
-        if (stGate) {
-          stGate.textContent = __waT(
-            "wa.login_required",
-            "Mesaj göndermek için üye girişi gerekli."
-          );
-          stGate.className = "equsto-wa-status equsto-wa-status--err";
+      if (ok) {
+        if (!equstoMemberPhoneOk()) {
+          applyWaModalView();
+          var stPhone = document.getElementById("equsto-wa-status");
+          if (stPhone) {
+            stPhone.textContent = __waT(
+              "wa.phone_required",
+              "Mesaj göndermek için Hesabım sayfasından cep telefonu ekleyin."
+            );
+            stPhone.className = "equsto-wa-status equsto-wa-status--err";
+          }
+          return;
         }
+        equstoWaSubmitFromModalCore(text);
         return;
       }
-      if (!equstoMemberPhoneOk()) {
-        applyWaModalView();
-        var stPhone = document.getElementById("equsto-wa-status");
-        if (stPhone) {
-          stPhone.textContent = __waT(
-            "wa.phone_required",
-            "Mesaj göndermek için Hesabım sayfasından cep telefonu ekleyin."
+      // Misafir: üye girişi zorunlu değil — cep + mesaj yeterli
+      applyWaModalView();
+      if (!guestPhoneOk()) {
+        var stGuest = document.getElementById("equsto-wa-status");
+        if (stGuest) {
+          stGuest.textContent = __waT(
+            "wa.guest_phone_required",
+            "Mesaj göndermek için geçerli bir cep telefonu girin."
           );
-          stPhone.className = "equsto-wa-status equsto-wa-status--err";
+          stGuest.className = "equsto-wa-status equsto-wa-status--err";
+        }
+        var phoneEl = document.getElementById("equsto-wa-guest-phone");
+        if (phoneEl) {
+          try {
+            phoneEl.focus();
+          } catch (e) {}
         }
         return;
       }
@@ -901,6 +973,10 @@
           if (!payload.eposta && prof.email) payload.eposta = prof.email;
         }
       } catch (e2) {}
+    }
+    if (!payload.telefon) {
+      var guestTel = resolveGuestPhoneDigits();
+      if (guestTel) payload.telefon = guestTel;
     }
 
     fetch(eqMsgApiBase() + "/musteriler", {
@@ -1116,6 +1192,15 @@
       '<div class="equsto-wa-chat-log" id="equsto-wa-chat-log" role="log" aria-live="polite"></div>' +
       "</div>" +
       '<div class="equsto-wa-compose equsto-wa-compose--chat">' +
+      '<div class="equsto-wa-guest-phone-wrap" id="equsto-wa-guest-phone-wrap" hidden>' +
+      '<label class="equsto-wa-guest-phone-label" for="equsto-wa-guest-phone">' +
+      escWa(__waT("wa.guest_phone_label", "Cep telefonunuz")) +
+      "</label>" +
+      '<input type="tel" id="equsto-wa-guest-phone" class="equsto-wa-guest-phone" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="' +
+      escWa(__waT("wa.guest_phone_ph", "05xx xxx xx xx")) +
+      '" />' +
+      '<p class="equsto-wa-guest-hint" data-i18n="wa.guest_hint">Üyelik olmadan yazabilirsiniz; dönüş için telefon gerekli.</p>' +
+      "</div>" +
       '<div class="equsto-wa-input-bar">' +
       '<div class="equsto-wa-input-field">' +
       '<textarea id="equsto-wa-msg" class="equsto-wa-msg equsto-wa-msg--chat" rows="1" maxlength="8000" placeholder="' +
@@ -1128,6 +1213,9 @@
       waSvgIco(waIcoSend) +
       "</button>" +
       "</div>" +
+      '<button type="button" class="equsto-wa-login-cta" id="equsto-wa-guest-login-cta" hidden>' +
+      escWa(__waT("wa.guest_login_cta", "Üye girişi (geçmiş sohbet)")) +
+      "</button>" +
       '<p class="equsto-wa-status" id="equsto-wa-status" role="status" aria-live="polite"></p>' +
       "</div>" +
       "</div>" +
@@ -1148,6 +1236,7 @@
     overlay.querySelector("#equsto-wa-go").addEventListener("click", equstoWaSubmitFromModal);
     var loginGateBtn = overlay.querySelector("#equsto-wa-login-gate-btn");
     var registerGateBtn = overlay.querySelector("#equsto-wa-register-gate-btn");
+    var guestLoginCta = overlay.querySelector("#equsto-wa-guest-login-cta");
     syncWaLoginGateLinks();
     if (loginGateBtn) {
       loginGateBtn.addEventListener("click", function (ev) {
@@ -1161,6 +1250,12 @@
         window.location.href = equstoRegisterHref();
       });
     }
+    if (guestLoginCta) {
+      guestLoginCta.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        window.location.href = equstoLoginHref();
+      });
+    }
     document.addEventListener("equsto-member-session", syncWaModalAuthBtn);
     document.addEventListener("equsto-member-changed", syncWaModalAuthBtn);
     var waMsgInput = overlay.querySelector("#equsto-wa-msg");
@@ -1172,6 +1267,15 @@
         }
       });
       waMsgInput.addEventListener("input", syncWaComposeSendMode);
+    }
+    var guestPhoneInput = overlay.querySelector("#equsto-wa-guest-phone");
+    if (guestPhoneInput) {
+      guestPhoneInput.addEventListener("change", function () {
+        saveGuestPhone(guestPhoneInput.value);
+      });
+      guestPhoneInput.addEventListener("blur", function () {
+        saveGuestPhone(guestPhoneInput.value);
+      });
     }
     syncWaComposeSendMode();
 

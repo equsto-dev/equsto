@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEBHOOK_URL = "https://equsto.com/api/whatsapp/webhook";
-const WA_MODAL_BUILD = 25;
+const WA_MODAL_BUILD = 26;
 const POLL_MS = 4000;
 let err = 0;
 

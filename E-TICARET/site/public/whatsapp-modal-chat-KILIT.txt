@@ -1,14 +1,15 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — WhatsApp modal sohbet senkronu (Mr. Equsto ↔ telefon)
 Onay: 2026-06-12 · Commit referans: f5cac61c · e7dade99 · 63e2cf11
-İlgili: pfos-uye-auth-KILIT.txt (üye kapısı · WA_MODAL_BUILD=25)
+İlgili: pfos-uye-auth-KILIT.txt (misafir sohbet + üye geçmiş · WA_MODAL_BUILD=26)
 ═══════════════════════════════════════════════════════════════════════════
 
 Modal yalnızca localStorage kullanınca telefondan gelen cevaplar görünmez.
 Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akışını korur.
 
 ── Beklenen davranış ───────────────────────────────────────────────────────
-  • Üye oturumu + Hesabım’da kayıtlı cep telefonu zorunlu (equsto-wa-phone-gate)
+  • Üye: Hesabım cep zorunlu (equsto-wa-phone-gate) · Misafir: #equsto-wa-guest-phone
+  • Sunucu sohbet polling (GET /api/whatsapp/chat) yalnızca üye oturumu
   • Modal açıkken GET /api/whatsapp/chat ile 4 sn polling (since= artımlı)
   • Müşteri modalden yazınca: POST /api/musteriler (kaynak: whatsapp-modal) → DB user satırı
   • Sahip bildirimi: notifyWhatsAppModalLead → WHATSAPP_NOTIFY_TO (532, Green API ile aynı hat)
@@ -42,13 +43,14 @@ Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akış�
   contact.js: startWaChatPoll → setInterval(..., 4000)
   api-handlers waWebhookPost: parseGreenApiOutboundMessages + appendWaChatMessage team
   wa-chat.ts: waMessageId unique dedupe
-  WA_MODAL_BUILD = 25 (pfos-uye-auth kilidi ile birlikte)
+  WA_MODAL_BUILD = 26 (pfos-uye-auth kilidi ile birlikte)
 
 YASAK (onay olmadan):
   • Polling’i kaldırmak veya yalnızca localStorage’a dönmek
   • Webhook outbound (telefondan gönderilen) parse/kaydını kaldırmak
   • GET webhook’u Green API modunda Forbidden yapmak
-  • requireMemberSession’ı /api/whatsapp/chat’ten çıkarmak
+  • requireMemberSession’ı /api/whatsapp/chat’ten çıkarmak (misafir polling açmak ayrı onay)
+  • Misafir whatsapp-modal lead’inde cep doğrulamayı kaldırmak
   • WaChatMessage modelini / migration’ı silmek
   • isInternalWhatsAppPhone filtresini kaldırmak (iç sohbet karışır)
 

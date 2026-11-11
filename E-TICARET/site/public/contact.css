@@ -410,37 +410,42 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   box-sizing: border-box;
 }
 
-.equsto-wa-guest {
-  flex: 1;
-  display: none;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  text-align: left;
-  min-height: 340px;
-  padding: 20px 18px 24px;
-  gap: 12px;
-  box-sizing: border-box;
-}
-
-.equsto-wa-guest-lead {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.45;
-  color: var(--eq-text-muted, #667781);
-  text-align: center;
-}
-
-.equsto-wa-guest-login-wrap {
+.equsto-wa-guest-phone-wrap {
   display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 0 8px;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 2px 6px;
 }
 
-.equsto-wa-compose--guest {
+.equsto-wa-guest-phone-wrap[hidden] {
+  display: none !important;
+}
+
+.equsto-wa-guest-phone-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #54656f;
+}
+
+.equsto-wa-guest-phone {
   width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #111b21;
+}
+
+.equsto-wa-guest-phone:focus {
+  outline: 2px solid rgba(0, 128, 105, 0.35);
+  outline-offset: 0;
+}
+
+.equsto-wa-member--guest .equsto-wa-history-wrap {
+  display: none !important;
 }
 
 .equsto-wa-login-secondary {
@@ -711,7 +716,7 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 
 .equsto-wa-guest-hint {
   margin: 0;
-  padding: 0 2px 6px;
+  padding: 2px 2px 0;
   font-size: 11px;
   line-height: 1.4;
   color: var(--eq-text-muted, #667781);
