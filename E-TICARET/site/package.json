@@ -14,6 +14,8 @@
     "docker:up": "docker compose up -d",
     "docker:deploy": "bash scripts/hetzner-deploy.sh",
     "deploy:canli": "node scripts/deploy-canli.mjs",
+    "admin:guest:issue": "node scripts/issue-admin-guest-bearer.mjs --issue --hours=24",
+    "admin:guest:revoke": "node scripts/issue-admin-guest-bearer.mjs --revoke",
     "hetzner:push-secrets": "node scripts/push-hetzner-runtime-secrets.mjs",
     "lint": "eslint",
     "db:generate": "prisma generate",

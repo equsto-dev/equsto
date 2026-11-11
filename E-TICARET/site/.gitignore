@@ -75,6 +75,9 @@ yarn-error.log*
 .env.google.secrets
 .env.api.secrets
 .env.anthropic.secrets
+.env.admin-guest.local
+.env.admin-guest-patch
+
 
 # vercel
 .vercel

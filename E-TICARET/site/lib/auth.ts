@@ -26,11 +26,33 @@ export function readBearer(req: NextRequest): string {
   return normalizeAdminBearer(raw);
 }
 
+function guestBearerStillValid(): boolean {
+  const guest = normalizeAdminBearer(
+    process.env.EQUSTO_ADMIN_BEARER_GUEST || "",
+  );
+  if (!guest) return false;
+  const expRaw = String(process.env.EQUSTO_ADMIN_BEARER_GUEST_EXPIRES || "").trim();
+  if (!expRaw) return true;
+  const expMs = Date.parse(expRaw);
+  if (!Number.isFinite(expMs)) return false;
+  return Date.now() <= expMs;
+}
+
 export function assertAdminBearer(req: NextRequest): Response | null {
   const token = readBearer(req);
   const expected = normalizeAdminBearer(process.env.EQUSTO_ADMIN_BEARER || "");
 
   if (expected && safeEqualString(token, expected)) return null;
+
+  const guest = normalizeAdminBearer(
+    process.env.EQUSTO_ADMIN_BEARER_GUEST || "",
+  );
+  if (guest && safeEqualString(token, guest)) {
+    if (!guestBearerStillValid()) {
+      return adminErr("Misafir Bearer süresi dolmuş", 401);
+    }
+    return null;
+  }
 
   // M8: Boş token ile geçiş yok. Dev bypass yalnızca açıkça açılır.
   const allowDev =
