@@ -89883,8 +89883,8 @@
     "category": "hazirlik",
     "brand": "Gtech",
     "name": "Gtech IB350CV Parçalayıcı El Blender, 250 mm Tüp, 350 W",
-    "price": "₺8.977,11 KDV dahil",
-    "specs": "Gtech IB350CV Parçalayıcı El Blender, 250 mm Tüp, 350 W\nKaynak: Cafemarkt (fiyat)\nStok: IB350CV.BLD25\nCafemarkt: https://www.cafemarkt.com/gtech-ib350cv-parcalayici-el-blender-250-mm-tup-350-w\nKaynak fiyat (Cafemarkt KDV dahil): ₺9.160,32\nEqusto Cafemarkt −%2 (KDV dahil): ₺8.977,11\nHavale / EFT: %2 indirim → ₺8.797,57",
+    "price": "₺9.980,00 KDV dahil",
+    "specs": "Gtech IB350CV Parçalayıcı El Blender, 250 mm Tüp, 350 W\n\nÜrün kodu: IB350CV.BLD25\nEqusto satış (KDV dahil): ₺9.980,00\nHavale / EFT: %2 indirim → ₺9.780,00\nKaynak: manuel fiyat",
     "images": [
       "images/catalog/cafemarkt/2e0ef77c5accc38c.jpg",
       "images/catalog/cafemarkt/gtech-ib350cv-parcalayici-el-blender-250-mm-tup-350-w-el-blenderlari-gtech-93072-34-b.jpg",
@@ -89895,9 +89895,9 @@
     ],
     "sku": "IB350CV.BLD25",
     "model": "IB350CV.BLD25",
-    "fiyat_tl": 8977.11,
-    "kaynak_fiyat_listesi": "cafemarkt-plp",
-    "fiyat_kaynak": "cafemarkt",
+    "fiyat_tl": 9980,
+    "kaynak_fiyat_listesi": "manual",
+    "fiyat_kaynak": "manual",
     "cafemarkt_fiyat_kdv_dahil": 9160.32,
     "cafemarkt_fiyat_equsto_kdv_dahil": 8977.11,
     "cafemarkt_indirim_oran": 0.02,
@@ -89929,7 +89929,9 @@
     ],
     "description": "Gtech IB350CV Parçalayıcı El Blender, 250 mm Tüp, 350 W",
     "image": "images/catalog/cafemarkt/2e0ef77c5accc38c.jpg",
-    "fiyat_bekleniyor": false
+    "fiyat_bekleniyor": false,
+    "fiyat_havale_tl": 9780,
+    "fiyat_kilit": true
   },
   {
     "category": "hazirlik",
