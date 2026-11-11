@@ -144,6 +144,7 @@ function applyPriceFields(row, item, px, brand) {
   row.bayi_iskonto = px.rule.iskonto / 100;
   row.kdv_oran = KDV;
   row.fiyat_kaynagi = "gastrotech-2025-2027";
+  row.fiyat_kaynak = "gastrotech-2025-2027";
   row.kaynak_fiyat_listesi = "gastrotech-2025-2027";
   row.gastrotech_page = item.page;
   row.gastrotech_model = item.model;
@@ -217,6 +218,31 @@ function indexSiteProducts() {
   return { byNorm, deptFiles };
 }
 
+/** Katalog markasının sitede yazılabileceği brand / id önekleri */
+const ALLOWED_SITE_BRANDS = {
+  gastrotech: ["gastrotech", "gtech"],
+  gtech: ["gtech", "gastrotech"],
+  scotsman: ["scotsman"],
+  vital: ["vital"],
+  puqpress: ["puqpress", "puq"],
+  kitchenaid: ["kitchenaid", "kitchen aid"],
+  mahlkönig: ["mahlkönig", "mahlkonig"],
+  mahlkonig: ["mahlkönig", "mahlkonig"],
+};
+
+function siteBrandAllowed(row, wantBrand) {
+  const want = String(wantBrand || "")
+    .toLowerCase()
+    .split(" ")[0];
+  const allowed = ALLOWED_SITE_BRANDS[want] || [want];
+  const b = String(row.brand || "").toLowerCase();
+  const id = String(row.id || "").toLowerCase();
+  const mk = String(row.marka_kodu || "").toLowerCase();
+  return allowed.some(
+    (a) => b === a || b.includes(a) || id.startsWith(`${a}__`) || mk === a.replace(/\s+/g, ""),
+  );
+}
+
 function pickMatch(candidates, item) {
   if (!candidates?.length) return null;
   // Rational / Electrolux asla güncellenmez; yalnızca onlar varsa eşleşme yok → yeni Gastrotech eklenir
@@ -229,26 +255,14 @@ function pickMatch(candidates, item) {
       site_ids: candidates.map((c) => c.row.id),
     };
   }
-  const want = brandFor(item).toLowerCase();
-  // Marka uyumu zorunlu (Gtech AC-517EC ≠ Scotsman AC 47; s.226 ≠ Scotsman)
-  const brandPool = open.filter((c) => {
-    const b = String(c.row.brand || "").toLowerCase();
-    const head = want.split(" ")[0];
-    return b === want || b.includes(head) || head.includes(b.split(" ")[0]);
-  });
-  const pool0 = brandPool.length
-    ? brandPool
-    : open.filter((c) => {
-        const b = String(c.row.brand || "").toLowerCase();
-        if (want === "gtech" && b.includes("scotsman")) return false;
-        if (want === "scotsman" && b.includes("gtech")) return false;
-        if (want === "gastrotech" && (b.includes("electrolux") || b.includes("rational"))) return false;
-        return true;
-      });
-  const sameDept = pool0.filter((c) => c.dept === (item.dept || c.dept));
-  const pool = sameDept.length ? sameDept : pool0;
-  if (!pool.length) return null;
-  const brandHit = pool.find((c) => String(c.row.brand || "").toLowerCase().includes(want.split(" ")[0]));
+  const want = brandFor(item);
+  // Marka uyumu zorunlu — By Kitchen / Silverinox / Bezzera vb. asla ezilmez
+  const brandPool = open.filter((c) => siteBrandAllowed(c.row, want));
+  if (!brandPool.length) return null;
+  const sameDept = brandPool.filter((c) => c.dept === (item.dept || c.dept));
+  const pool = sameDept.length ? sameDept : brandPool;
+  const wantHead = want.toLowerCase().split(" ")[0];
+  const brandHit = pool.find((c) => String(c.row.brand || "").toLowerCase().includes(wantHead));
   return brandHit || pool[0];
 }
 

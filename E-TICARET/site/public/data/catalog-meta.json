@@ -1,23 +1,23 @@
 {
-  "version": "2026-11-06T06-49-11",
-  "rebuiltAt": "2026-11-06T06:49:11.904Z",
-  "ekipmanlar": 16238,
+  "version": "2026-11-11T18-36-39",
+  "rebuiltAt": "2026-11-11T18:36:39.788Z",
+  "ekipmanlar": 16274,
   "withImage": 16136,
   "brands": 121,
   "deptCounts": {
     "araba": 92,
     "davlumbaz": 228,
     "dolap": 793,
-    "hazirlik": 2156,
+    "hazirlik": 2158,
     "unknown": 68,
     "icecek": 552,
     "istif": 276,
-    "kahve": 919,
+    "kahve": 925,
     "market-reyon": 767,
-    "pisirme": 4461,
+    "pisirme": 4476,
     "servis": 520,
     "set-ustu-mutfak": 1510,
-    "sogutma": 2272,
+    "sogutma": 2285,
     "tasima": 173,
     "tezgah": 565,
     "yikama": 886
@@ -26,5 +26,5 @@
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 15660,
-  "productsEnStale": 578
+  "productsEnStale": 614
 }
