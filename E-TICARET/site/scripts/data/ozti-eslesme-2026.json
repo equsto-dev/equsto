@@ -24847,29 +24847,6 @@
     "pdf_eslesme": false
   },
   {
-    "urun_kodu": "2919.0B390.AD01.00",
-    "urun_kodu_norm": "2919.0B390.AD01.00",
-    "urun_tanimi": "B 390 AGIZ ADAPTORU",
-    "liste_fiyati_eur": 289.0,
-    "liste_fiyati": 289.0,
-    "para_birimi": "EUR",
-    "bayi_iskonto": 0.58,
-    "barkod": "",
-    "kategori_yolu": [
-      "BUZ MAKİNELERİ"
-    ],
-    "kategori": "BUZ MAKİNELERİ",
-    "kaynak": "ozti-fiyat-listesi-2025-sayfa1",
-    "marka": "Öztiryakiler Endüstriyel Mutfak",
-    "satis_fiyati_eur": 121.38,
-    "iskonto_yuzde": 58.0,
-    "iskonto_tutar_eur": 167.62,
-    "odeme_carpani": 0.42,
-    "kalan_oran": 0.42,
-    "fiyatlandirma": "liste_x_1_minus_iskonto_excel",
-    "pdf_eslesme": false
-  },
-  {
     "urun_kodu": "9805.SV325.00",
     "urun_kodu_norm": "9805.SV325.00",
     "urun_tanimi": "SIMAG BUZ MAKINASI 315 LTR",
@@ -24900,29 +24877,6 @@
         "9805.SV325.00"
       ]
     }
-  },
-  {
-    "urun_kodu": "2919.0B390.AD01.00",
-    "urun_kodu_norm": "2919.0B390.AD01.00",
-    "urun_tanimi": "B 390 AGIZ ADAPTORU",
-    "liste_fiyati_eur": 289.0,
-    "liste_fiyati": 289.0,
-    "para_birimi": "EUR",
-    "bayi_iskonto": 0.58,
-    "barkod": "",
-    "kategori_yolu": [
-      "BUZ MAKİNELERİ"
-    ],
-    "kategori": "BUZ MAKİNELERİ",
-    "kaynak": "ozti-fiyat-listesi-2025-sayfa1",
-    "marka": "Öztiryakiler Endüstriyel Mutfak",
-    "satis_fiyati_eur": 121.38,
-    "iskonto_yuzde": 58.0,
-    "iskonto_tutar_eur": 167.62,
-    "odeme_carpani": 0.42,
-    "kalan_oran": 0.42,
-    "fiyatlandirma": "liste_x_1_minus_iskonto_excel",
-    "pdf_eslesme": false
   },
   {
     "urun_kodu": "7506.0B390.00",

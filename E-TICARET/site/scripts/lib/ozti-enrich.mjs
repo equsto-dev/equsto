@@ -49,9 +49,13 @@ export function kodSoftKey(k) {
     .join(".");
 }
 
+/** Manuel olarak katalogdan düşürülen Ozti kodları (yeniden build’de geri gelmesin). */
+const OZTI_SKU_DENYLIST = new Set(["2919.0B390.AD01.00"]);
+
 /** TEMİZLİK / 8899 — fiyatsız kimyasallar sitede yok. */
 export function isOztiKimyasalExcluded(row) {
   const kod = normKod(row.urun_kodu || row.sku);
+  if (OZTI_SKU_DENYLIST.has(kod)) return true;
   if (/^8899\./i.test(kod)) return true;
   const hay = foldTr(
     [...(row.kategori_yolu || []), row.kategori, row.urun_tanimi, row.name].join(" "),
@@ -1446,7 +1450,6 @@ export function oztiWebImageRel(kod) {
 
 /** ax-images 404 / cafemarkt UNOX stub — NTV cihazaltı dolap aile fotoğrafı. */
 export const OZTI_AX_PROXY = {
-  "2919.0B390.AD01.00": "7506.0B390.00",
   "7919.47NTV.C2": "7919.37NTV.C2",
   "7919.46NTV.C2": "7919.37NTV.C2",
   "7919.47NTV.C1": "7919.37NTV.C1",

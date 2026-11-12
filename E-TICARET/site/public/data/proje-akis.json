@@ -221,7 +221,7 @@
         "gosterIf": "q_dukkan_turu=Balık Restaurant",
         "mapsTo": "balikci.altTip",
         "motorEtkisi": "mahalle → balikci-mahalle.json; diğer → m² bant",
-        "note": "Mahalle → balikci-mahalle; diğer → m² bantlı listeler."
+        "note": "Mahalle → balikci-mahalle; diğer ��� m² bantlı listeler."
       },
       {
         "id": "q_fast_alt",
@@ -5014,7 +5014,7 @@
       {
         "id": "ecom_bulaşik-toplama-komple-sac_24",
         "cat": "araba",
-        "name": "BULAŞIK TOPLAMA KOMPLE SAC",
+        "name": "BULA��IK TOPLAMA KOMPLE SAC",
         "brand": "Yüksel Endüstriyel",
         "model": "MB100X2",
         "tip_kodu": "MB100X2"
@@ -17798,7 +17798,7 @@
       {
         "id": "ecom_robot-coupe-cl-20-sebze-doğrama-maki-nesi_1622",
         "cat": "hazirlik",
-        "name": "ROBOT COUPE CL 20 SEBZE DOĞRAMA MAKİNESİ",
+        "name": "ROBOT COUPE CL 20 SEBZE DOĞRAMA MAKİNES��",
         "brand": "Yüksel Endüstriyel",
         "model": "TM22394",
         "tip_kodu": "TM22394"
@@ -19164,7 +19164,7 @@
         "tip_kodu": "SM142"
       },
       {
-        "id": "ecom_süper-mikser-hamur-yoğurma-makinesi-kapaklı-35-k_1793",
+        "id": "ecom_s��per-mikser-hamur-yoğurma-makinesi-kapaklı-35-k_1793",
         "cat": "hazirlik",
         "name": "Süper Mikser Hamur Yoğurma Makinesi, Kapaklı, 35 kg",
         "brand": "Süper Mikser",
@@ -22502,7 +22502,7 @@
       {
         "id": "ecom_pimak-sandviç-isıtma-makinesi-4-şiş-elektrikli_2210",
         "cat": "hazirlik",
-        "name": "Pimak Sandviç Isıtma Makinesi, 4 Şiş, Elektrikli",
+        "name": "Pimak Sandviç Is��tma Makinesi, 4 Şiş, Elektrikli",
         "brand": "Pimak",
         "model": "M084",
         "tip_kodu": "M084"
@@ -60908,7 +60908,7 @@
         "tip_kodu": "INO-9IE22S"
       },
       {
-        "id": "ecom_i-noksan-izgara-1-5-modül-elektrikli-düz_7011",
+        "id": "ecom_i-noksan-izgara-1-5-modül-elektrikli-d��z_7011",
         "cat": "pisirme",
         "name": "İNOKSAN IZGARA, 1,5 MODÜL, ELEKTRIKLI, DÜZ",
         "brand": "İnoksan",
@@ -75004,7 +75004,7 @@
         "tip_kodu": "AAIG.873.LPG"
       },
       {
-        "id": "ecom_atalay-agi-1273-n-cr-730-seri-set-üstü-nervürlü-_8773",
+        "id": "ecom_atalay-agi-1273-n-cr-730-seri-set-��stü-nervürlü-_8773",
         "cat": "pisirme",
         "name": "Atalay AGI-1273-N-CR 730 Seri Set Üstü Nervürlü Izgara, 120x73x30 cm, Krom, LPG'li",
         "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
@@ -80324,7 +80324,7 @@
         "tip_kodu": "M013.6G"
       },
       {
-        "id": "ecom_pimak-2-çekmeceli-kumpir-fırını-lpg-li_9438",
+        "id": "ecom_pimak-2-çekmeceli-kumpir-f��rını-lpg-li_9438",
         "cat": "pisirme",
         "name": "Pimak 2 Çekmeceli Kumpir Fırını, LPG'li",
         "brand": "Pimak",
@@ -85934,7 +85934,7 @@
       {
         "id": "ecom_gastroplast-gsppl-12-saklama-kabı-kapağı-yeşil_10139",
         "cat": "diger",
-        "name": "GastroPlast GSPPL-12 Saklama Kabı Kapağı, Yeşil",
+        "name": "GastroPlast GSPPL-12 Saklama Kabı Kapağı, Ye��il",
         "brand": "GastroPlast",
         "model": "01.GSPPL.12.YES",
         "tip_kodu": "01.GSPPL.12.YES"
@@ -105791,7 +105791,7 @@
         "id": "ecom_hoshizaki-buz-makinesi-im-65ne-hc-62-kg_12621",
         "cat": "sogutma",
         "name": "HOSHIZAKI BUZ MAKINESI IM-65NE-HC 62 KG",
-        "brand": "Öztiryakiler Endüstriyel Mutfak",
+        "brand": "Öztiryakiler End��striyel Mutfak",
         "model": "9805.IM65N.EHC",
         "tip_kodu": "9805.IM65N.EHC"
       },
@@ -105922,14 +105922,6 @@
         "brand": "Öztiryakiler Endüstriyel Mutfak",
         "model": "9805.SV545.00",
         "tip_kodu": "9805.SV545.00"
-      },
-      {
-        "id": "ecom_b-390-agiz-adaptoru_12638",
-        "cat": "sogutma",
-        "name": "B 390 AGIZ ADAPTORU",
-        "brand": "Öztiryakiler Endüstriyel Mutfak",
-        "model": "2919.0B390.AD01.00",
-        "tip_kodu": "2919.0B390.AD01.00"
       },
       {
         "id": "ecom_simag-buz-makinasi-315-ltr_12639",
@@ -130006,7 +129998,7 @@
       {
         "id": "ecom_zanussi-professional-400344-tezgah-altı-bulaşık-_15648",
         "cat": "yikama",
-        "name": "Zanussi Professional 400344 Tezgah Altı Bulaşık Yıkama Makinesi, Tahliye ve Parlatıcı Pompalı",
+        "name": "Zanussi Professional 400344 Tezgah Altı Bulaşık Yıkama Makinesi, Tahliye ve Parlat��cı Pompalı",
         "brand": "Zanussi",
         "model": "400344",
         "tip_kodu": "400344"

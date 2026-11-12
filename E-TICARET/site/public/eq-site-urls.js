@@ -933,7 +933,6 @@
 
   /** ax-images yok — aynı ürün ailesi fotoğrafı (parça / adaptör). */
   var OZTI_AX_PROXY = {
-    "2919.0B390.AD01.00": "7506.0B390.00",
     /** 46/47 NTV cihazaltı — ax-images 404; 37NTV çekmeceli/kapılı aile fotoğrafı (.24 havuzlu değil). */
     "7919.47NTV.C2": "7919.37NTV.C2",
     "7919.46NTV.C2": "7919.37NTV.C2",

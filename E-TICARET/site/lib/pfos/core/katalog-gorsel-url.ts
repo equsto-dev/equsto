@@ -21,7 +21,6 @@ export function normalizePfosGorselUrl(
 
 /** ax-images 404 — aynı ürün ailesi (eq-site-urls.js OZTI_AX_PROXY ile hizalı) */
 const OZTI_AX_PROXY: Record<string, string> = {
-  "2919.0B390.AD01.00": "7506.0B390.00",
   "7919.47NTV.C2": "7919.37NTV.C2",
   "7919.46NTV.C2": "7919.37NTV.C2",
   "7919.47NTV.C1": "7919.37NTV.C1",
