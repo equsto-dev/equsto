@@ -44288,16 +44288,16 @@
     "category": "kahve-makineleri",
     "brand": "GastroPlast",
     "name": "GastroPlast GT-2736 ABS Servis Tepsisi, 27x36 cm, Kahverengi",
-    "price": "₺119,75 KDV dahil",
-    "specs": "GastroPlast GT-2736 ABS Servis Tepsisi, 27x36 cm, Kahverengi\nKaynak: Cafemarkt (fiyat)\nStok: 01.GT.2736.ABS.BR\nCafemarkt: https://www.cafemarkt.com/gastroplast-gt-2736-abs-servis-tepsisi-27x36-cm-kahverengi\nKaynak fiyat (Cafemarkt KDV dahil): ₺122,19\nEqusto Cafemarkt −%2 (KDV dahil): ₺119,75\nHavale / EFT: %2 indirim → ₺117,36",
+    "price": "₺1.200,00 KDV dahil",
+    "specs": "GastroPlast GT-2736 ABS Servis Tepsisi, 27x36 cm, Kahverengi\n\nÜrün kodu: 01.GT.2736.ABS.BR\nEqusto satış (KDV dahil): ₺1.200,00\nHavale / EFT: %2 indirim → ₺1.176,00\nKaynak: manuel fiyat",
     "images": [
       "images/catalog/cafemarkt/13b280ce51103fe3.jpg"
     ],
     "sku": "01.GT.2736.ABS.BR",
     "model": "01.GT.2736.ABS.BR",
-    "fiyat_tl": 119.75,
-    "kaynak_fiyat_listesi": "cafemarkt-plp",
-    "fiyat_kaynak": "cafemarkt",
+    "fiyat_tl": 1200,
+    "kaynak_fiyat_listesi": "manual",
+    "fiyat_kaynak": "manual",
     "cafemarkt_fiyat_kdv_dahil": 122.19,
     "cafemarkt_fiyat_equsto_kdv_dahil": 119.75,
     "cafemarkt_indirim_oran": 0.02,
@@ -44329,7 +44329,9 @@
     ],
     "description": "GastroPlast GT-2736 ABS Servis Tepsisi, 27x36 cm, Kahverengi",
     "image": "images/catalog/cafemarkt/13b280ce51103fe3.jpg",
-    "fiyat_bekleniyor": false
+    "fiyat_bekleniyor": false,
+    "fiyat_havale_tl": 1176,
+    "fiyat_kilit": true
   },
   {
     "category": "kahve-makineleri",
