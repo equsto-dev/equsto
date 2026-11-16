@@ -18,6 +18,7 @@ import { fetchTcmbEurUsdRates } from "./fetch-tcmb-kur.mjs";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOG = path.join(ROOT, "scripts/data/gastrotech/gastrotech-catalog-extracted.json");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
+const ELECTROLUX_FIYAT = path.join(ROOT, "scripts/data/electrolux-fiyat-2026.json");
 const REPORT = path.join(ROOT, "scripts/data/gastrotech/gastrotech-apply-report.json");
 const REPORT_MD = path.join(ROOT, "scripts/data/gastrotech/gastrotech-apply-report.md");
 
@@ -25,6 +26,25 @@ const KDV = 20;
 const DRY = process.argv.includes("--dry-run");
 
 const PROTECTED_BRAND = /^(rational|electrolux(\s+professional)?)$/i;
+
+/** Electrolux COD — Gastrotech bayilik PDF’inden asla yeni Gastrotech ürün eklenmez. */
+function loadElectroluxCods() {
+  const set = new Set();
+  if (fs.existsSync(ELECTROLUX_FIYAT)) {
+    const j = JSON.parse(fs.readFileSync(ELECTROLUX_FIYAT, "utf8"));
+    for (const cod of Object.keys(j.by_cod || {})) set.add(String(cod));
+  }
+  return set;
+}
+
+function isElectroluxCatalogModel(model, elCods) {
+  const m = String(model || "").trim();
+  if (!m) return false;
+  if (elCods.has(m)) return true;
+  // SkyLine / 700XP / Thermospeed COD aileleri (liste dışı eski kodlar dahil)
+  if (/^(217|260|371)\d{3}$/.test(m)) return true;
+  return false;
+}
 
 function norm(s) {
   return String(s || "")
@@ -245,8 +265,8 @@ function siteBrandAllowed(row, wantBrand) {
 
 function pickMatch(candidates, item) {
   if (!candidates?.length) return null;
-  // Rational / Electrolux asla güncellenmez; yalnızca onlar varsa eşleşme yok → yeni Gastrotech eklenir
-  // (örn. Electrolux SKU 371000 ≠ Gastrotech 700 seri 371000)
+  // Rational / Electrolux asla güncellenmez; yalnızca onlar varsa eşleşme yok → ekleme yok
+  // (Gastrotech PDF’teki 371xxx / 217xxx = Electrolux COD, ayrı Gastrotech ürün değil)
   const open = candidates.filter((c) => !isProtected(c.row));
   if (!open.length) {
     return {
@@ -278,6 +298,7 @@ async function main() {
   console.log(`[gastrotech] katalog ürün: ${catalog.product_count}`);
 
   const { byNorm, deptFiles } = indexSiteProducts();
+  const elCods = loadElectroluxCods();
 
   const report = {
     generated_at: new Date().toISOString(),
@@ -288,11 +309,12 @@ async function main() {
       pages_41_78: "liste × 0.55 + KDV",
       puqpress: "liste = satış + KDV",
       rest: "liste × 0.53 + KDV",
-      skip: ["Rational", "Electrolux"],
+      skip: ["Rational", "Electrolux", "Electrolux COD (217/260/371 + fiyat listesi)"],
     },
     updated: [],
     added: [],
     skipped_protected: [],
+    skipped_electrolux_cod: [],
     skipped_no_price: [],
     unmatched_existing_note: "sitede eşleşmeyen katalog ürünleri eklendi (added)",
     stats: {},
@@ -306,6 +328,16 @@ async function main() {
       continue;
     }
     if (item.skip_import) continue;
+
+    if (isElectroluxCatalogModel(item.model, elCods)) {
+      report.skipped_electrolux_cod.push({
+        model: item.model,
+        page: item.page,
+        liste: item.liste_fiyat,
+        reason: "electrolux_cod_use_electrolux_list",
+      });
+      continue;
+    }
 
     const px = computePrice(item, eurTry);
     const brand = brandFor(item);
@@ -330,7 +362,7 @@ async function main() {
       }
     }
 
-    // Sitede yalnızca Rational/Electrolux aynı kodla var → onları elleme, Gastrotech olarak ekle
+    // Sitede yalnızca Rational/Electrolux aynı kodla var → dokunma, Gastrotech kopyası ekleme
     if (resolved?.blocked_site_only) {
       report.skipped_protected.push({
         model: item.model,
@@ -338,9 +370,9 @@ async function main() {
         liste: item.liste_fiyat,
         reason: resolved.reason,
         site_ids: resolved.site_ids,
-        action: "add_as_gastrotech_new",
+        action: "skip_no_gastrotech_duplicate",
       });
-      resolved = null;
+      continue;
     }
 
     if (resolved) {

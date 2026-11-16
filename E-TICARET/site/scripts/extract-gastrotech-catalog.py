@@ -40,7 +40,13 @@ SECTION = {
 
 # Rational: iCombi sayfaları + aksesuar sayfaları (dokunulmaz)
 RATIONAL_PAGES = set(range(91, 95))  # 91–94
-SKIP_PAGE_MARKERS = re.compile(r"RATIONAL\s+FIRIN|RATIONAL\b", re.I)
+# Electrolux bayilik sayfaları (Gastrotech PDF içinde EP ürünleri)
+# 78–83: 700XP | 97: Thermospeed (260xxx) | 98: SkyLine PremiumS (217xxx)
+ELECTROLUX_PAGES = set(range(78, 84)) | {97, 98}
+SKIP_PAGE_MARKERS = re.compile(
+    r"RATIONAL\s+FIRIN|RATIONAL\b|SKYLINE\s+PREMIUM|ELECTROLUX|700\s*XP\b",
+    re.I,
+)
 
 # Model kodu: sol sütundaki ürün kimliği
 MODEL_TOKEN = re.compile(
@@ -161,23 +167,32 @@ def group_lines(words, y_bucket: int = 3):
     return lines
 
 
+def is_electrolux_cod(model: str) -> bool:
+    """Gastrotech PDF’teki Electrolux Professional COD’ları (bayilik listesi)."""
+    m = model.strip()
+    if not re.fullmatch(r"\d{6}", m):
+        return False
+    # 217xxx SkyLine | 260xxx Thermospeed/convection | 371xxx 700XP
+    return m.startswith(("217", "260", "371"))
+
+
 def is_valid_model(model: str) -> bool:
     m = model.strip()
     if not m or len(m) < 3:
         return False
     if is_rational_model(m):
         return False
-    # Saf kısa sayı (Scotsman parçası vb.) — 371xxx / 217xxx hariç
+    if is_electrolux_cod(m):
+        return False
+    # Saf kısa sayı (Scotsman parçası vb.)
     if re.fullmatch(r"\d{1,4}", m):
         return False
-    if re.fullmatch(r"\d{5,6}", m) and not m.startswith(("371", "217", "60")):
-        # büyük pizza/fırın kodları 217xxx OK; diğer 5-6 hane şüpheli
-        if not m.startswith("217"):
-            return False
+    if re.fullmatch(r"\d{5,6}", m):
+        return False
     if m.upper() in {"PRO", "Q", "MODEL", "NAME", "W", "KG", "LT"}:
         return False
-    # En az bir harf veya bilinen sayısal seri
-    if not re.search(r"[A-Za-z]", m) and not m.startswith(("371", "217")):
+    # En az bir harf
+    if not re.search(r"[A-Za-z]", m):
         return False
     return True
 
@@ -633,6 +648,9 @@ def main():
         if page_no in RATIONAL_PAGES:
             print(f"  skip Rational page {page_no}")
             continue
+        if page_no in ELECTROLUX_PAGES:
+            print(f"  skip Electrolux page {page_no}")
+            continue
 
         page_items = extract_row_products(page_no, page, text)
         page_items += extract_scotsman_pages(page_no, page)
@@ -643,12 +661,14 @@ def main():
             page_items = extract_puqpress(page_no, text)
         page_items += extract_tl_shelves(page_no, page, text)
 
-        # Electrolux yok ama güvenlik
+        # Electrolux COD / marka güvenlik filtresi
         page_items = [
             it
             for it in page_items
             if "electrolux" not in (it.get("name_tr") or "").lower()
             and "electrolux" not in it["model"].lower()
+            and "skyline" not in (it.get("name_tr") or "").lower()
+            and not is_electrolux_cod(it["model"])
         ]
 
         if page_items:

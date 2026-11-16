@@ -1,0 +1,345 @@
+{
+  "generated": "2026-11-16T00:29:24.527Z",
+  "dry_run": false,
+  "removed": [
+    {
+      "id": "gastrotech__371000",
+      "cod": "371000",
+      "keep": "electrolux-professional__371000",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371001",
+      "cod": "371001",
+      "keep": "electrolux-professional__371001",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371002",
+      "cod": "371002",
+      "keep": "electrolux-professional__371002",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371004",
+      "cod": "371004",
+      "keep": "electrolux-professional__371004",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371014",
+      "cod": "371014",
+      "keep": "electrolux-professional__371014",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371015",
+      "cod": "371015",
+      "keep": "electrolux-professional__371015",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371016",
+      "cod": "371016",
+      "keep": "electrolux-professional__371016",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371019",
+      "cod": "371019",
+      "keep": "electrolux-professional__371019",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371038",
+      "cod": "371038",
+      "keep": "electrolux-professional__371038",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371041",
+      "cod": "371041",
+      "keep": "electrolux-professional__371041",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371042",
+      "cod": "371042",
+      "keep": "electrolux-professional__371042",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371043",
+      "cod": "371043",
+      "keep": "electrolux-professional__371043",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371193",
+      "cod": "371193",
+      "keep": "electrolux-professional__371193",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371320",
+      "cod": "371320",
+      "keep": "electrolux-professional__371320",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371323",
+      "cod": "371323",
+      "keep": "electrolux-professional__371323",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371332",
+      "cod": "371332",
+      "keep": "electrolux-professional__371332",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371340",
+      "cod": "371340",
+      "keep": "electrolux-professional__371340",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371347",
+      "cod": "371347",
+      "keep": "electrolux-professional__371347",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371070",
+      "cod": "371070",
+      "keep": "electrolux-professional__371070",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371071",
+      "cod": "371071",
+      "keep": "electrolux-professional__371071",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371079",
+      "cod": "371079",
+      "keep": "electrolux-professional__371079",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371080",
+      "cod": "371080",
+      "keep": "electrolux-professional__371080",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371083",
+      "cod": "371083",
+      "keep": "electrolux-professional__371083",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371086",
+      "cod": "371086",
+      "keep": "electrolux-professional__371086",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371090",
+      "cod": "371090",
+      "keep": "electrolux-professional__371090",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371096",
+      "cod": "371096",
+      "keep": "electrolux-professional__371096",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371098",
+      "cod": "371098",
+      "keep": "electrolux-professional__371098",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371100",
+      "cod": "371100",
+      "keep": "electrolux-professional__371100",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371181",
+      "cod": "371181",
+      "keep": "electrolux-professional__371181",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371183",
+      "cod": "371183",
+      "keep": "electrolux-professional__371183",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371112",
+      "cod": "371112",
+      "keep": "electrolux-professional__371112",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371113",
+      "cod": "371113",
+      "keep": "electrolux-professional__371113",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371114",
+      "cod": "371114",
+      "keep": "electrolux-professional__371114",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371116",
+      "cod": "371116",
+      "keep": "electrolux-professional__371116",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371269",
+      "cod": "371269",
+      "keep": "electrolux-professional__371269",
+      "dept": "pisirme"
+    },
+    {
+      "id": "gastrotech__371272",
+      "cod": "371272",
+      "keep": "electrolux-professional__371272",
+      "dept": "pisirme"
+    }
+  ],
+  "converted": [
+    {
+      "action": "converted",
+      "cod": "217720",
+      "id": "electrolux-professional__217720",
+      "priceCod": "217635",
+      "model": "ECOE61T2A0",
+      "liste": 10041,
+      "from": "gastrotech__217720",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217721",
+      "id": "electrolux-professional__217721",
+      "priceCod": "217636",
+      "model": "ECOE62T2A0",
+      "liste": 12756,
+      "from": "gastrotech__217721",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217722",
+      "id": "electrolux-professional__217722",
+      "priceCod": "217637",
+      "model": "ECOE101T2A0",
+      "liste": 11817,
+      "from": "gastrotech__217722",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217723",
+      "id": "electrolux-professional__217723",
+      "priceCod": "217638",
+      "model": "ECOE102T2A0",
+      "liste": 17728,
+      "from": "gastrotech__217723",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217724",
+      "id": "electrolux-professional__217724",
+      "priceCod": "217639",
+      "model": "ECOE201T2A0",
+      "liste": 24624,
+      "from": "gastrotech__217724",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217725",
+      "id": "electrolux-professional__217725",
+      "priceCod": "217642",
+      "model": "ECOE202T2A0",
+      "liste": 31832,
+      "from": "gastrotech__217725",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217780",
+      "id": "electrolux-professional__217780",
+      "priceCod": "217719",
+      "model": "ECOG61T2G0",
+      "liste": 16683,
+      "from": "gastrotech__217780",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217781",
+      "id": "electrolux-professional__217781",
+      "priceCod": "217735",
+      "model": "ECOG62T2G0",
+      "liste": 21592,
+      "from": "gastrotech__217781",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217782",
+      "id": "electrolux-professional__217782",
+      "priceCod": "217737",
+      "model": "ECOG101T2G0",
+      "liste": 19039,
+      "from": "gastrotech__217782",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217783",
+      "id": "electrolux-professional__217783",
+      "priceCod": "217739",
+      "model": "ECOG102T2G0",
+      "liste": 25491,
+      "from": "gastrotech__217783",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217784",
+      "id": "electrolux-professional__217784",
+      "priceCod": "217744",
+      "model": "ECOG201T2G0",
+      "liste": 33689,
+      "from": "gastrotech__217784",
+      "dept": "pisirme"
+    },
+    {
+      "action": "converted",
+      "cod": "217785",
+      "id": "electrolux-professional__217785",
+      "priceCod": "217746",
+      "model": "ECOG202T2G0",
+      "liste": 44202,
+      "from": "gastrotech__217785",
+      "dept": "pisirme"
+    }
+  ],
+  "skipped": []
+}
