@@ -1,8 +1,8 @@
 {
-  "version": "2026-11-16T00-29-25",
-  "rebuiltAt": "2026-11-16T00:29:25.485Z",
-  "ekipmanlar": 16237,
-  "withImage": 16087,
+  "version": "2026-11-17T11-22-15",
+  "rebuiltAt": "2026-11-17T11:22:15.289Z",
+  "ekipmanlar": 16223,
+  "withImage": 16073,
   "brands": 121,
   "deptCounts": {
     "araba": 92,
@@ -14,7 +14,7 @@
     "istif": 276,
     "kahve": 925,
     "market-reyon": 767,
-    "pisirme": 4440,
+    "pisirme": 4426,
     "servis": 520,
     "set-ustu-mutfak": 1510,
     "sogutma": 2284,
@@ -26,5 +26,5 @@
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
   "productsEnCount": 15659,
-  "productsEnStale": 578
+  "productsEnStale": 564
 }

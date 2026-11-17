@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Rational Combi Classic / iCombi Pro — liste × 59% × 110% kar
+ * Rational Combi Classic / iCombi Pro — liste × (1−iskonto) × (1+kar)
+ * Varsayılan: %44 iskonto + %9 kar (+ KDV %20)
  *
  *   node scripts/apply-rational-liste-prices.mjs
  *   node scripts/apply-rational-liste-prices.mjs --dry-run
