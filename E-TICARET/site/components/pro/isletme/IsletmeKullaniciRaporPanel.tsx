@@ -105,6 +105,53 @@ export default function IsletmeKullaniciRaporPanel() {
       </Row>
 
       <Row gutter={[16, 16]}>
+        <Col span={24}>
+          <ProCard title="Son ziyaretler" loading={loading}>
+            <Table
+              size="small"
+              pagination={{ pageSize: 15 }}
+              rowKey="id"
+              dataSource={data?.recent || []}
+              locale={{ emptyText: "Henüz kayıt yok." }}
+              columns={[
+                {
+                  title: "Zaman",
+                  dataIndex: "createdAt",
+                  width: 160,
+                  render: (v: string) =>
+                    v ? new Date(v).toLocaleString("tr-TR") : "—",
+                },
+                {
+                  title: "Ürün",
+                  dataIndex: "title",
+                  ellipsis: true,
+                  render: (_, r) => (
+                    <Link href={kullaniciRaporHref(r)} target="_blank">
+                      {r.title}
+                    </Link>
+                  ),
+                },
+                {
+                  title: "Süre",
+                  dataIndex: "durationLabel",
+                  width: 100,
+                  render: (v: string) => <Tag color="blue">{v}</Tag>,
+                },
+                {
+                  title: "Oturum",
+                  dataIndex: "sessionId",
+                  width: 100,
+                },
+                {
+                  title: "Üye",
+                  dataIndex: "memberId",
+                  width: 70,
+                  render: (v: string | null) => (v ? <Tag color="green">üye</Tag> : "—"),
+                },
+              ]}
+            />
+          </ProCard>
+        </Col>
         <Col xs={24} lg={12}>
           <ProCard title="En uzun kalan ürünler" loading={loading}>
             <Table
@@ -161,53 +208,6 @@ export default function IsletmeKullaniciRaporPanel() {
                 { title: "Görüntüleme", dataIndex: "views", width: 90 },
                 { title: "Oturum", dataIndex: "uniqueSessions", width: 80 },
                 { title: "Ort. süre", dataIndex: "avgLabel", width: 90 },
-              ]}
-            />
-          </ProCard>
-        </Col>
-        <Col span={24}>
-          <ProCard title="Son ziyaretler" loading={loading}>
-            <Table
-              size="small"
-              pagination={{ pageSize: 15 }}
-              rowKey="id"
-              dataSource={data?.recent || []}
-              locale={{ emptyText: "Henüz kayıt yok." }}
-              columns={[
-                {
-                  title: "Zaman",
-                  dataIndex: "createdAt",
-                  width: 160,
-                  render: (v: string) =>
-                    v ? new Date(v).toLocaleString("tr-TR") : "—",
-                },
-                {
-                  title: "Ürün",
-                  dataIndex: "title",
-                  ellipsis: true,
-                  render: (_, r) => (
-                    <Link href={kullaniciRaporHref(r)} target="_blank">
-                      {r.title}
-                    </Link>
-                  ),
-                },
-                {
-                  title: "Süre",
-                  dataIndex: "durationLabel",
-                  width: 100,
-                  render: (v: string) => <Tag color="blue">{v}</Tag>,
-                },
-                {
-                  title: "Oturum",
-                  dataIndex: "sessionId",
-                  width: 100,
-                },
-                {
-                  title: "Üye",
-                  dataIndex: "memberId",
-                  width: 70,
-                  render: (v: string | null) => (v ? <Tag color="green">üye</Tag> : "—"),
-                },
               ]}
             />
           </ProCard>
