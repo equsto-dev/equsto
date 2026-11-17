@@ -143,6 +143,9 @@ next-env.d.ts
 # Gastrotech 2025-2027 katalog görselleri
 !public/images/catalog/gastrotech/
 !public/images/catalog/gastrotech/**
+# Rational — iCombi / iVario ürün görselleri (S3 + origin)
+!public/images/catalog/rational/
+!public/images/catalog/rational/**
 !public/images/brands/
 !public/images/brands/protek-hijyen.png
 
