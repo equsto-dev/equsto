@@ -283,6 +283,8 @@ export const SUBCATEGORY_SLUGS = [
   { dept: "pisirme", slug: "elektrikli-kombi-firinlar" },
   { dept: "pisirme", slug: "10-gn-1-1-kombi-firinlar" },
   { dept: "pisirme", slug: "20-gn-2-1-kombi-firinlar" },
+  // Sogutma subcategories
+  { dept: "sogutma", slug: "bar-arkasi-sise-sogutucu" },
 ];
 
 export function buildSubcategoryUrls() {

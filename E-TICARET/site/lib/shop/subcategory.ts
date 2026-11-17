@@ -21,6 +21,99 @@ export interface SubcategoryLanding {
   relatedDepartments?: { slug: string; title: string; titleEn: string }[];
 }
 
+function foldTr(s: unknown): string {
+  return String(s || "")
+    .toLocaleLowerCase("tr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\u0131/g, "i");
+}
+
+/** Bar / back-bar şişe soğutucu (tezgah altı + dik tip) — sogutma PLP predicate. */
+export function isBarSiseSogutucuProduct(row: Record<string, unknown>): boolean {
+  const cat = String(row.category || "");
+  if (cat === "bar-tipi-sise-sogutucu" || cat === "proso-sise-sogutucu") return true;
+  const hay = foldTr(
+    [
+      row.name,
+      row.sku,
+      row.urun_alt_kategori,
+      Array.isArray(row.kategori_yolu) ? row.kategori_yolu.join(" ") : "",
+      row.search_hints,
+    ].join(" "),
+  );
+  return /sise sogut|bar alti|bar arkasi|bar sogutucu|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]/.test(
+    hay,
+  );
+}
+
+export const SOGUTMA_SUBCATEGORIES: SubcategoryLanding[] = [
+  {
+    slug: "bar-arkasi-sise-sogutucu",
+    dept: "sogutma",
+    title: "Bar Arkası Şişe Soğutucu",
+    titleEn: "Back Bar Bottle Coolers",
+    description:
+      "Equsto'da bar altı ve bar arkası şişe soğutucular: Senox, Vosco, Gtech, Şenocak, By Kitchen, Frenox ve Öztiryakiler markalarında 1–3 kapılı, çarpma ve sürgülü modeller. Canlı fiyat, teknik özellik ve PFOS proje teklifi.",
+    descriptionEn:
+      "Under-bar and back-bar bottle coolers at Equsto: Senox, Vosco, Gtech, Şenocak, By Kitchen, Frenox and Öztiryakiler — 1–3 door, hinged and sliding models. Live pricing, specs and PFOS project quotes.",
+    usageAreas: [
+      "Bar ve lounge bankoları",
+      "Kafe ve bistro servis alanları",
+      "Restoran içecek istasyonları",
+      "Otel ve restoran barları",
+      "Gece kulübü ve eğlence mekânları",
+    ],
+    usageAreasEn: [
+      "Bar and lounge counters",
+      "Cafe and bistro service areas",
+      "Restaurant beverage stations",
+      "Hotel and restaurant bars",
+      "Clubs and entertainment venues",
+    ],
+    selectionCriteria: [
+      "Kapı sayısı (1 / 2 / 3) ve çarpma vs sürgülü",
+      "Genişlik ve tezgah altı yükseklik (yaklaşık 85 cm)",
+      "Hacim (lt) ve şişe kapasitesi",
+      "Ortam sıcaklığı dayanımı (+43 °C modeller)",
+      "Marka servis ve yedek parça",
+    ],
+    selectionCriteriaEn: [
+      "Door count (1 / 2 / 3) and hinged vs sliding",
+      "Width and under-counter height (~85 cm)",
+      "Volume (L) and bottle capacity",
+      "Ambient temperature rating (+43 °C models)",
+      "Brand service and spare parts",
+    ],
+    predicate: (row) => isBarSiseSogutucuProduct(row),
+    relatedDepartments: [
+      { slug: "sogutma", title: "Soğutma", titleEn: "Refrigeration" },
+      { slug: "icecek", title: "İçecek", titleEn: "Beverage" },
+      { slug: "market-reyon", title: "Market Reyon", titleEn: "Retail Display" },
+    ],
+    faq: [
+      {
+        q: "Bar altı şişe soğutucu ile dik tip şişe soğutucu farkı nedir?",
+        a: "Bar altı / bar arkası modeller tezgah altına sığacak yükseklikte (~85 cm) tasarlanır; dik tip modeller vitrin gibi dikey teşhir için kullanılır. Dar bankolarda bar tipi, lobi/market teşhirinde dik tip tercih edilir.",
+        qEn: "What is the difference between under-bar and upright bottle coolers?",
+        aEn: "Under-bar / back-bar units fit under counters (~85 cm height); upright models are vertical display cabinets. Prefer under-bar for tight bars; upright for lobby/retail display.",
+      },
+      {
+        q: "1, 2 veya 3 kapılı model nasıl seçilir?",
+        a: "Tek kapılı dar köşe ve düşük stok için; iki kapılı standart bar bankoları için; üç kapılı yoğun servis ve yüksek şişe stoğu için uygundur. Banko genişliğinize göre ölçüyü doğrulayın.",
+        qEn: "How do I choose 1, 2 or 3 doors?",
+        aEn: "One door for narrow corners and low stock; two doors for standard bar counters; three doors for high-volume service. Match width to your counter.",
+      },
+      {
+        q: "Çarpma kapı mı, sürgülü kapı mı?",
+        a: "Çarpma kapı daha iyi sızdırmazlık ve soğuk tutma sağlar; sürgülü kapı dar geçişlerde kapı salınımı istemeyen barlarda yer kazandırır.",
+        qEn: "Hinged or sliding doors?",
+        aEn: "Hinged doors seal better and hold cold longer; sliding doors save swing space in narrow service aisles.",
+      },
+    ],
+  },
+];
+
 export const PISIRME_SUBCATEGORIES: SubcategoryLanding[] = [
   {
     slug: "kombi-firinlar",
@@ -235,7 +328,7 @@ export const PISIRME_SUBCATEGORIES: SubcategoryLanding[] = [
 
 // Mapping: slug -> landing definition
 export const SUBCATEGORY_MAP: Record<string, SubcategoryLanding> = {};
-for (const cat of PISIRME_SUBCATEGORIES) {
+for (const cat of [...PISIRME_SUBCATEGORIES, ...SOGUTMA_SUBCATEGORIES]) {
   SUBCATEGORY_MAP[cat.slug] = cat;
 }
 
@@ -244,7 +337,7 @@ export function getSubcategoryLanding(slug: string): SubcategoryLanding | null {
 }
 
 export function getAllSubcategories(): SubcategoryLanding[] {
-  return PISIRME_SUBCATEGORIES;
+  return [...PISIRME_SUBCATEGORIES, ...SOGUTMA_SUBCATEGORIES];
 }
 
 export function filterProductsBySubcategory(
