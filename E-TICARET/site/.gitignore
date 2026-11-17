@@ -146,6 +146,9 @@ next-env.d.ts
 # Rational — iCombi / iVario ürün görselleri (S3 + origin)
 !public/images/catalog/rational/
 !public/images/catalog/rational/**
+# Yüksel / Portabianco bar & teşhir görselleri
+!public/images/catalog/yuksel/
+!public/images/catalog/yuksel/**
 !public/images/brands/
 !public/images/brands/protek-hijyen.png
 

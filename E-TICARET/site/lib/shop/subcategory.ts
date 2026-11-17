@@ -38,10 +38,15 @@ export function isBarSiseSogutucuProduct(row: Record<string, unknown>): boolean 
       row.name,
       row.sku,
       row.urun_alt_kategori,
+      row.specs,
       Array.isArray(row.kategori_yolu) ? row.kategori_yolu.join(" ") : "",
       row.search_hints,
     ].join(" "),
   );
+  // Pizza teşhir / granite prep (Portabianco ST-*) şişe soğutucu değil
+  if (/granite pizza|teshir buzdolabi|salata|saladette|\bst[- ]?\d{2,}/.test(hay) && !/sise sogut|bar alti|bar arkasi|bbc|vbbc/.test(hay)) {
+    return false;
+  }
   return /sise sogut|bar alti|bar arkasi|bar sogutucu|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]/.test(
     hay,
   );
