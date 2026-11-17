@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Rational Combi Classic / iCombi Pro — liste × (1−iskonto) × (1+kar)
- * Varsayılan: %44 iskonto + %9 kar (+ KDV %20)
+ * Rational iCombi + iVario — liste × (1−iskonto) × (1+kar) × KDV
+ * iCombi: %44 iskonto + %9 kar
+ * iVario: %30 iskonto + %9 kar
  *
  *   node scripts/apply-rational-liste-prices.mjs
  *   node scripts/apply-rational-liste-prices.mjs --dry-run
@@ -13,9 +14,12 @@ import { execFileSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
 import {
   applyRationalPricing,
-  isRationalCombiSku,
+  isRationalPricedSku,
+  isRationalIvarioSku,
   rationalListEur,
+  rationalIskontoForSku,
   RATIONAL_ISKONTO,
+  RATIONAL_IVARIO_ISKONTO,
   RATIONAL_KAR_ORAN,
 } from "./lib/rational-liste-prices.mjs";
 
@@ -32,10 +36,12 @@ const kur =
 const rows = JSON.parse(fs.readFileSync(PISIRME, "utf8"));
 let updated = 0;
 let missing = 0;
+let ivarioN = 0;
+let combiN = 0;
 
 for (const row of rows) {
   const sku = row.sku || row.urun_kodu;
-  if (!isRationalCombiSku(sku)) continue;
+  if (!isRationalPricedSku(sku)) continue;
   if (!rationalListEur(sku)) {
     missing++;
     console.warn(`[rational] liste yok: ${sku}`);
@@ -44,8 +50,11 @@ for (const row of rows) {
   const before = row.fiyat_tl;
   applyRationalPricing(row, kur);
   updated++;
+  if (isRationalIvarioSku(sku)) ivarioN++;
+  else combiN++;
+  const isk = Math.round(rationalIskontoForSku(sku) * 100);
   console.log(
-    `${sku}: ₺${before?.toLocaleString("tr-TR")} → ₺${row.fiyat_tl?.toLocaleString("tr-TR")} (liste €${row.rational_liste_eur})`,
+    `${sku}: ₺${before?.toLocaleString("tr-TR")} → ₺${row.fiyat_tl?.toLocaleString("tr-TR")} (liste €${row.rational_liste_eur}, %${isk})`,
   );
 }
 
@@ -58,6 +67,6 @@ if (!dryRun && updated > 0) {
 }
 
 console.log(
-  `\n[rational] ${dryRun ? "DRY-RUN" : "OK"} ${updated} ürün | iskonto %${Math.round(RATIONAL_ISKONTO * 100)} | kar %${Math.round(RATIONAL_KAR_ORAN * 100)} | kur ${kur}${tcmb.fallback ? " (fallback)" : ""}`,
+  `\n[rational] ${dryRun ? "DRY-RUN" : "OK"} ${updated} ürün (iCombi ${combiN} @%${Math.round(RATIONAL_ISKONTO * 100)}, iVario ${ivarioN} @%${Math.round(RATIONAL_IVARIO_ISKONTO * 100)}) | kar %${Math.round(RATIONAL_KAR_ORAN * 100)} | kur ${kur}${tcmb.fallback ? " (fallback)" : ""}`,
 );
 if (missing) console.warn(`[rational] liste eşleşmeyen: ${missing}`);

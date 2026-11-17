@@ -1,6 +1,7 @@
 {
-  "source": "Rational iCombi Classic + iCombi Pro liste kartı (EUR)",
+  "source": "Rational iCombi Classic + iCombi Pro + iVario liste kartları (EUR)",
   "iskonto_oran": 0.44,
+  "ivario_iskonto_oran": 0.3,
   "equsto_kar_oran": 0.09,
   "pro": {
     "6/2/3|E": 8830,
@@ -31,6 +32,15 @@
     "20/2/1|E": 32360,
     "20/2/1|G": 36560
   },
+  "ivario": {
+    "2XS": 12477,
+    "2S": 18367,
+    "2SP": 21277,
+    "L": 20900,
+    "LP": 24400,
+    "XL": 27480,
+    "XLP": 31460
+  },
   "updated": "2026-11-17",
-  "note": "Liste EUR: kullanıcı fiyat kartı. Hesap: liste × (1−0.44) × (1+0.09) × KDV%20"
+  "note": "iCombi: liste × (1−0.44) × (1+0.09) × KDV%20. iVario: liste × (1−0.30) × (1+0.09) × KDV%20. L/XL fiyat plastik ayak dahil; basınçlı = fiyat + basınç seçeneği."
 }
