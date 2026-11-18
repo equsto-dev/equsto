@@ -89217,7 +89217,10 @@
     "fiyat_tl": 12266,
     "fiyat_tl_net": 10221,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vss-08c.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vss-10h",
@@ -89262,7 +89265,10 @@
     "fiyat_kaynak": "vosco-site-tl",
     "site_fiyat_kdv_dahil": 14106,
     "site_fiyat_str": "14105,77",
-    "kaynak_fiyat_listesi": "vosco-site-tl"
+    "kaynak_fiyat_listesi": "vosco-site-tl",
+    "images": [
+      "images/catalog/vosco/vosco-vss-10h.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vsc-frt1c08bb",
@@ -89315,7 +89321,10 @@
     "fiyat_tl": 25894,
     "fiyat_tl_net": 21578,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vsc-frt1c08bb.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vsl-frt1c12bb",
@@ -89368,7 +89377,10 @@
     "fiyat_tl": 31345,
     "fiyat_tl_net": 26121,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vsl-frt1c12bb.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vsc-frt2c08bb",
@@ -89421,7 +89433,10 @@
     "fiyat_tl": 47699,
     "fiyat_tl_net": 39749,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vsc-frt2c08bb.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vbl-811e",
@@ -89473,7 +89488,10 @@
     "fiyat_tl": 8177,
     "fiyat_tl_net": 6814,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vbl-811e.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vbl-813",
@@ -89525,7 +89543,10 @@
     "fiyat_tl": 14991,
     "fiyat_tl_net": 12493,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vbl-813.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vbl-813e",
@@ -89577,7 +89598,10 @@
     "fiyat_tl": 17717,
     "fiyat_tl_net": 14764,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vbl-813e.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vkb-300",
@@ -89629,7 +89653,10 @@
     "fiyat_tl": 23168,
     "fiyat_tl_net": 19307,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vkb-300.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vkb-450",
@@ -89681,7 +89708,10 @@
     "fiyat_tl": 25894,
     "fiyat_tl_net": 21578,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vkb-450.jpg"
+    ]
   },
   {
     "id": "vosco__vosco-vsl-frt2c12b",
@@ -89727,7 +89757,10 @@
     "fiyat_tl": 55876,
     "fiyat_tl_net": 46563,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vsl-frt2c12b.png"
+    ]
   },
   {
     "id": "vosco__vosco-valp-a83",
@@ -89767,7 +89800,10 @@
     "fiyat_tl": 10903,
     "fiyat_tl_net": 9086,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-valp-a83.png"
+    ]
   },
   {
     "id": "vosco__vosco-valp-c05d",
@@ -89807,7 +89843,10 @@
     "fiyat_tl": 9540,
     "fiyat_tl_net": 7950,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-valp-c05d.png"
+    ]
   },
   {
     "id": "vosco__vosco-valp-c09d",
@@ -89847,7 +89886,10 @@
     "fiyat_tl": 10221,
     "fiyat_tl_net": 8518,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-valp-c09d.png"
+    ]
   },
   {
     "id": "vosco__vosco-valp-dc50",
@@ -89887,7 +89929,10 @@
     "fiyat_tl": 4906,
     "fiyat_tl_net": 4089,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-valp-dc50.png"
+    ]
   },
   {
     "id": "vosco__vosco-valp-dic126",
@@ -89927,7 +89972,10 @@
     "fiyat_tl": 9540,
     "fiyat_tl_net": 7950,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-valp-dic126.png"
+    ]
   },
   {
     "id": "vosco__vosco-vs-er268",
@@ -89967,7 +90015,10 @@
     "fiyat_tl": 34071,
     "fiyat_tl_net": 28392,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vs-er268.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-8t",
@@ -89999,7 +90050,10 @@
     "fiyat_kaynak": "vosco-site-tl",
     "site_fiyat_kdv_dahil": 63614,
     "site_fiyat_str": "63614,27",
-    "kaynak_fiyat_listesi": "vosco-site-tl"
+    "kaynak_fiyat_listesi": "vosco-site-tl",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-8t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-10t",
@@ -90039,7 +90093,10 @@
     "fiyat_tl": 77681,
     "fiyat_tl_net": 64735,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-10t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vzm-h2",
@@ -90081,7 +90138,10 @@
     "fiyat_tl": 54513,
     "fiyat_tl_net": 45428,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vzm-h2.png"
+    ]
   },
   {
     "id": "vosco__vosco-vf-2s",
@@ -90121,7 +90181,10 @@
     "fiyat_tl": 8177,
     "fiyat_tl_net": 6814,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vf-2s.png"
+    ]
   },
   {
     "id": "vosco__vosco-vas-cme01",
@@ -90161,7 +90224,10 @@
     "fiyat_tl": 20715,
     "fiyat_tl_net": 17263,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vas-cme01.png"
+    ]
   },
   {
     "id": "vosco__vosco-vas-cme02",
@@ -90193,7 +90259,10 @@
     "fiyat_kaynak": "vosco-site-tl",
     "site_fiyat_kdv_dahil": 21020,
     "site_fiyat_str": "21020,37",
-    "kaynak_fiyat_listesi": "vosco-site-tl"
+    "kaynak_fiyat_listesi": "vosco-site-tl",
+    "images": [
+      "images/catalog/vosco/vosco-vas-cme02.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwjg-5p",
@@ -90225,7 +90294,10 @@
     "fiyat_kaynak": "vosco-site-tl",
     "site_fiyat_kdv_dahil": 96804,
     "site_fiyat_str": "96804,33",
-    "kaynak_fiyat_listesi": "vosco-site-tl"
+    "kaynak_fiyat_listesi": "vosco-site-tl",
+    "images": [
+      "images/catalog/vosco/vosco-vwjg-5p.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwjg-6p",
@@ -90265,7 +90337,10 @@
     "fiyat_tl": 104938,
     "fiyat_tl_net": 87448,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwjg-6p.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwjg-7p",
@@ -90305,7 +90380,10 @@
     "fiyat_tl": 114478,
     "fiyat_tl_net": 95398,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwjg-7p.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwjg-8p",
@@ -90345,7 +90423,10 @@
     "fiyat_tl": 124018,
     "fiyat_tl_net": 103348,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwjg-8p.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-3t",
@@ -90385,7 +90466,10 @@
     "fiyat_tl": 32708,
     "fiyat_tl_net": 27257,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-3t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-4t",
@@ -90417,7 +90501,10 @@
     "fiyat_kaynak": "vosco-site-tl",
     "site_fiyat_kdv_dahil": 38722,
     "site_fiyat_str": "38721,73",
-    "kaynak_fiyat_listesi": "vosco-site-tl"
+    "kaynak_fiyat_listesi": "vosco-site-tl",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-4t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-5t",
@@ -90457,7 +90544,10 @@
     "fiyat_tl": 43611,
     "fiyat_tl_net": 36342,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-5t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwk-120c",
@@ -90497,7 +90587,10 @@
     "fiyat_tl": 57239,
     "fiyat_tl_net": 47699,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwk-120c.png"
+    ]
   },
   {
     "id": "vosco__vosco-vwg-6t",
@@ -90537,7 +90630,10 @@
     "fiyat_tl": 55876,
     "fiyat_tl_net": 46563,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vwg-6t.png"
+    ]
   },
   {
     "id": "vosco__vosco-vhf-f4",
@@ -90577,6 +90673,9 @@
     "fiyat_tl": 10358,
     "fiyat_tl_net": 8631,
     "fiyat_kaynak": "vosco-pdf-2026",
-    "kaynak_fiyat_listesi": "vosco-pdf-2026"
+    "kaynak_fiyat_listesi": "vosco-pdf-2026",
+    "images": [
+      "images/catalog/vosco/vosco-vhf-f4.png"
+    ]
   }
 ]
