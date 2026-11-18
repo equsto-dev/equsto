@@ -44,10 +44,13 @@ export function isBarSiseSogutucuProduct(row: Record<string, unknown>): boolean 
     ].join(" "),
   );
   // Pizza teşhir / granite prep (Portabianco ST-*) şişe soğutucu değil
-  if (/granite pizza|teshir buzdolabi|salata|saladette|\bst[- ]?\d{2,}/.test(hay) && !/sise sogut|bar alti|bar arkasi|bbc|vbbc/.test(hay)) {
+  if (
+    /granite pizza|teshir buzdolabi|salata|saladette|\bst[- ]?\d{2,}/.test(hay) &&
+    !/sise sogut|bar alti|bar arkasi|bbc|vbbc|bar buzdolab/.test(hay)
+  ) {
     return false;
   }
-  return /sise sogut|bar alti|bar arkasi|bar sogutucu|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]/.test(
+  return /sise sogut|bar alti|bar arkasi|bar sogutucu|bar buzdolab|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]|\bdbb[-.]/.test(
     hay,
   );
 }
