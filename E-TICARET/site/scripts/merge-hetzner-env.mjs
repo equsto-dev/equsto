@@ -104,6 +104,8 @@ merged.NEXT_PUBLIC_ASSET_CDN_URL =
   "https://dqb0g8etbedva.cloudfront.net";
 merged.NEXT_PUBLIC_GA4_ID =
   merged.NEXT_PUBLIC_GA4_ID || "G-MVRNFQC4PQ";
+merged.NEXT_PUBLIC_GTM_ID =
+  merged.NEXT_PUBLIC_GTM_ID || "GTM-N8JZVNTW";
 
 /** Sunucuda yerel Meili — MEILISEARCH_HOST=http://meilisearch:7700 */
 merged.MEILISEARCH_HOST = "http://meilisearch:7700";
@@ -129,6 +131,7 @@ const order = [
   "NEXT_PUBLIC_SUPABASE_URL",
   "NEXT_PUBLIC_SUPABASE_ANON_KEY",
   "NEXT_PUBLIC_GA4_ID",
+  "NEXT_PUBLIC_GTM_ID",
   "NEXT_PUBLIC_GOOGLE_CLIENT_ID",
   "DATABASE_URL",
   "DIRECT_URL",

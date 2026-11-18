@@ -4,6 +4,10 @@ import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
 import SiteDiscoveryFaqJsonLd from "@/components/seo/SiteDiscoveryFaqJsonLd";
 import AnalyticsScripts from "@/components/seo/AnalyticsScripts";
 import CookieConsentBanner from "@/components/seo/CookieConsentBanner";
+import {
+  GoogleTagManagerHead,
+  GoogleTagManagerNoscript,
+} from "@/components/seo/GoogleTagManager";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import "./globals.css";
 
@@ -66,6 +70,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* GTM: Google resmi — mümkün olduğunca yüksek &lt;head&gt; (Consent Mode önce) */}
+        <GoogleTagManagerHead />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var q=new URLSearchParams(location.search);var f=q.get("mobile")||q.get("eq-device");var k;if(f==="1"||f==="phone")k="phone";else if(f==="0"||f==="desktop")k="desktop";else if(f==="tablet")k="tablet";if(!k){try{var s=sessionStorage.getItem("eq-device-force");if(s==="phone"||s==="tablet"||s==="desktop")k=s;}catch(e){}}if(!k){var ua=navigator.userAgent||"";if(/iPhone|iPod|Windows Phone|webOS|BlackBerry/i.test(ua)||(/Android/i.test(ua)&&/Mobile/i.test(ua))||(navigator.userAgentData&&navigator.userAgentData.mobile))k="phone";else if(/iPad/i.test(ua)||(/Android/i.test(ua)&&!/Mobile/i.test(ua))||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1))k="tablet";else if(window.matchMedia("(pointer: coarse)").matches)k=innerWidth<=900?"phone":"tablet";else k="desktop";}if(f==="1"||f==="phone"||f==="0"||f==="desktop"||f==="tablet"){try{sessionStorage.setItem("eq-device-force",k);}catch(e2){}}var r=document.documentElement;r.classList.add("eq-device-"+k);r.setAttribute("data-eq-device",k);}catch(e3){document.documentElement.classList.add("eq-device-desktop");}})();`,
@@ -73,6 +79,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {/* GTM noscript: hemen body açılışı — AdresGezgini / Google şartı */}
+        <GoogleTagManagerNoscript />
         <AnalyticsScripts />
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}&m=20260919-hdr-tools`} />
