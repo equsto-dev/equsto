@@ -12,7 +12,8 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DEPT_DIR = path.join(ROOT, "public/data/dept");
+const SOGUTMA = path.join(ROOT, "public/data/dept/sogutma.json");
+const MARKET = path.join(ROOT, "public/data/dept/market-reyon.json");
 const OUT_SECRET = path.join(ROOT, "var/catalog/gizli-fiyatlar-bar-sise.json");
 const dryRun = process.argv.includes("--dry-run");
 const LABEL = "Teklif için iletişim";
@@ -40,11 +41,11 @@ function isBarSiseSogutucu(row) {
   );
   if (
     /granite pizza|teshir buzdolabi|salata|saladette|\bst[- ]?\d{2,}/.test(hay) &&
-    !/sise sogut|bar alti|bar arkasi|bbc|vbbc|bar buzdolab/.test(hay)
+    !/sise sogut|bar alti|bar arkasi|bbc|vbbc/.test(hay)
   ) {
     return false;
   }
-  return /sise sogut|bar alti|bar arkasi|bar sogutucu|bar buzdolab|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]|\bdbb[-.]/.test(
+  return /sise sogut|bar alti|bar arkasi|bar sogutucu|bottle cooler|back ?bar|\bbbc[-.]|\bvbbc|\bbbcs|\bvgb|\bgbc[-.]/.test(
     hay,
   );
 }
@@ -134,15 +135,9 @@ function patchFile(filePath, secrets) {
 }
 
 const secrets = [];
-let total = 0;
-for (const f of fs.readdirSync(DEPT_DIR).filter((x) => x.endsWith(".json") && !x.includes("_items"))) {
-  const n = patchFile(path.join(DEPT_DIR, f), secrets);
-  if (n) {
-    total += n;
-    console.log(`[hide-bar-sise] ${f}: ${n}`);
-  }
-}
-console.log(`[hide-bar-sise] total=${secrets.length}${dryRun ? " (dry-run)" : ""}`);
+const n1 = patchFile(SOGUTMA, secrets);
+const n2 = patchFile(MARKET, secrets);
+console.log(`[hide-bar-sise] sogutma=${n1} market-reyon=${n2} total=${secrets.length}${dryRun ? " (dry-run)" : ""}`);
 
 if (!dryRun && secrets.length) {
   fs.mkdirSync(path.dirname(OUT_SECRET), { recursive: true });
