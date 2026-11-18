@@ -19,7 +19,7 @@ export const HOME_BODY_CLASS = "eq-shop eq-home eq-home-mutbex eq-home-decor";
 
 export const HOME_EXTRA_STYLES = [
   `/eq-home-equsto.css?v=${v}&m=20260918-seo-paths`,
-  `/eq-home-decor.css?v=${v}&m=20261118-slider-text-wrap`,
+  `/eq-home-decor.css?v=${v}&m=20261118-slider-aspect-fix`,
   `/eq-home-cafemarkt.css?v=${v}`,
   `/contact.css?v=${v}`,
 ];

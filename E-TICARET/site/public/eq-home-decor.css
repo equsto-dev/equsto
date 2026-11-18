@@ -157,11 +157,17 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide.is-acti
   z-index: 1;
 }
 
-/* Split slaytlar (IMT300 · XP) daha yüksek kutu ister; PFOS panoramik oranı bozulmasın */
+/* Split slaytlar (IMT300 · XP) daha yüksek kutu ister; PFOS panoramik oranı bozulmasın.
+   Dikkat: aspect-ratio + min-height birlikte genişliği stage dışına şişirir (metin kesilir). */
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slides:has(.eq-mx-hero__slide--split.is-active) {
+  aspect-ratio: auto;
+  width: 100%;
+  max-width: 100%;
   min-height: min(50vh, 500px);
+  height: auto;
+  box-sizing: border-box;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
@@ -524,7 +530,8 @@ body.eq-home-decor
   .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split
   .eq-mx-hero__slide-media
   .eq-mx-hero__slide-bg {
-  mix-blend-mode: lighten;
+  /* lighten açık gövdeyi maviye yedirip makineyi "kesik" gösteriyordu */
+  mix-blend-mode: normal;
 }
 
 body.eq-home-decor
@@ -532,7 +539,7 @@ body.eq-home-decor
   .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split
   .eq-mx-hero__slide-media
   .eq-mx-hero__slide-bg {
-  mix-blend-mode: lighten;
+  mix-blend-mode: normal;
 }
 
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
@@ -612,7 +619,7 @@ body.eq-home-decor
   object-fit: contain;
   object-position: center center;
   z-index: 2;
-  mix-blend-mode: lighten;
+  mix-blend-mode: normal;
 }
 
 .eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
