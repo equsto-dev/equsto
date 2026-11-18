@@ -19,13 +19,7 @@ interface Props {
 
 type SortKey = "featured" | "price-asc" | "price-desc" | "name";
 
-function isQuoteOnlyProduct(product: Record<string, unknown>): boolean {
-  if (product.fiyat_bekleniyor) return true;
-  return /teklif\s+iste|teklif\s+için/i.test(String(product.price || ""));
-}
-
 function productPriceTl(product: Record<string, unknown>): number {
-  if (isQuoteOnlyProduct(product)) return 0;
   const n = Number(product.fiyat_tl ?? product.priceTry ?? 0);
   return Number.isFinite(n) && n > 0 ? n : 0;
 }

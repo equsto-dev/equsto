@@ -212,17 +212,13 @@ function rowToDoc(row, deptFallback) {
     marka_kodu: String(row.marka_kodu || "").trim(),
     marka_urun_kodu: String(row.marka_urun_kodu || "").trim(),
     kategori_yolu: kategoriYolu,
-    price: row.fiyat_bekleniyor
-      ? "Teklif için iletişim"
-      : String(row.price || "").split("\n")[0].slice(0, 120),
-    // Teklif modunda fiyatı indeksleme — scrape/rakip sızıntısı olmasın
-    fiyat_tl:
-      row.fiyat_bekleniyor || !(Number(row.fiyat_tl) > 0) ? null : Number(row.fiyat_tl),
+    price: String(row.price || "").split("\n")[0].slice(0, 120),
+    fiyat_tl: Number(row.fiyat_tl) > 0 ? Number(row.fiyat_tl) : null,
     fiyat_bekleniyor: row.fiyat_bekleniyor ? 1 : 0,
     price_display: formatPriceDisplayForIndex(row),
-    liste_fiyati_eur: row.fiyat_bekleniyor ? null : Number(row.liste_fiyati_eur) || null,
-    satis_eur_indirimli: row.fiyat_bekleniyor ? null : Number(row.satis_eur_indirimli) || null,
-    iskonto_oran: row.fiyat_bekleniyor ? null : Number(row.iskonto_oran) || null,
+    liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
+    satis_eur_indirimli: Number(row.satis_eur_indirimli) || null,
+    iskonto_oran: Number(row.iskonto_oran) || null,
     image: firstImage(row),
     url: `/shop/${dept}/${slug}`,
     search_hints: searchHints(dept, category, name),
