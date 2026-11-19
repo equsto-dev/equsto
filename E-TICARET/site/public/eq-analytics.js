@@ -36,14 +36,27 @@
     };
   }
 
-  /** Google Consent Mode v2 — varsayılan denied (AB/EEA uyumu) */
-  window.gtag("consent", "default", {
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-    analytics_storage: "denied",
-    wait_for_update: 500,
-  });
+  /**
+   * Consent Mode v2. GTM snippet'i bölgesel varsayılanı zaten kurduysa tekrar default gönderme
+   * (ikinci default, ajans etiketini reddedilmişe çekebiliyor).
+   */
+  if (!window.__eqConsentReady) {
+    window.gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      wait_for_update: 500,
+      region: ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"],
+    });
+    window.gtag("consent", "default", {
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      analytics_storage: "granted",
+    });
+    window.__eqConsentReady = true;
+  }
 
   function applyConsent(granted) {
     var state = granted ? "granted" : "denied";
