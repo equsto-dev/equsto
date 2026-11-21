@@ -37,7 +37,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 810,
+      "derinlik_mm": 764,
+      "yukseklik_mm": 1170
+    },
+    "olcu_etiket": "810×764×1170 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -77,7 +83,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 810,
+      "derinlik_mm": 764,
+      "yukseklik_mm": 1615
+    },
+    "olcu_etiket": "810×764×1615 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -117,7 +129,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 675,
+      "derinlik_mm": 645,
+      "yukseklik_mm": 1110
+    },
+    "olcu_etiket": "675×645×1110 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -157,7 +175,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 665,
+      "derinlik_mm": 955,
+      "yukseklik_mm": 1925
+    },
+    "olcu_etiket": "665×955×1925 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -197,7 +221,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 986,
+      "yukseklik_mm": 1605
+    },
+    "olcu_etiket": "570×986×1605 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -237,7 +267,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 850,
+      "derinlik_mm": 1161,
+      "yukseklik_mm": 1605
+    },
+    "olcu_etiket": "850×1161×1605 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -277,7 +313,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 566,
+      "derinlik_mm": 890,
+      "yukseklik_mm": 1605
+    },
+    "olcu_etiket": "566×890×1605 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -317,7 +359,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 568,
+      "derinlik_mm": 986,
+      "yukseklik_mm": 1605
+    },
+    "olcu_etiket": "568×986×1605 mm"
   },
   {
     "category": "yardimci-ekipmanlar",
@@ -357,7 +405,13 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 850,
+      "derinlik_mm": 1160,
+      "yukseklik_mm": 1605
+    },
+    "olcu_etiket": "850×1160×1605 mm"
   },
   {
     "id": "yukselsatis__tepsi-otomati-kuverli",
@@ -2387,7 +2441,8 @@
       "Net ağırlık: 130 kg",
       "Voltaj: 230 V/1N ph/50/60 Hz",
       "Toplam Kurulu Güç: 2.7 kW",
-      "Fiş tipi: CE-SCHUKO"
+      "Fiş tipi: CE-SCHUKO",
+      "Elektrik frekans: 60 Hz"
     ],
     "images": [
       "images/catalog/electrolux/351156/hero-1.jpg"
@@ -2441,7 +2496,14 @@
         "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_351156_BT1021H.rfa"
       }
     ],
-    "linkKaynak": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/banket-arabalar%C4%B1/yemek-da%C4%9F%C4%B1t%C4%B1m-sistemi-s%C4%B1cak-banket-arabas%C4%B1-10xgn2-1-351156/"
+    "linkKaynak": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/banket-arabalar%C4%B1/yemek-da%C4%9F%C4%B1t%C4%B1m-sistemi-s%C4%B1cak-banket-arabas%C4%B1-10xgn2-1-351156/",
+    "olculer": {
+      "genislik_mm": 770,
+      "derinlik_mm": 885,
+      "yukseklik_mm": 1570
+    },
+    "olcu_etiket": "770×885×1570 mm",
+    "description": "Isıtmalı banket arabası - 10xGN2/1\nSıcak yemeklerin ihtiyaçlarına uygun +30°C ile +90°C arasında sıcaklık ayarı dijital gösterge ile yapılır.\nAraba, set edilen 90°C sıcaklığa yaklaşık 35 dakikada ulaşır.\nIzgara raflar üzerinde GN2/1 ve GN1/1 küvet veya tabaklar yerleştirilebilir (304 AISI paslanmaz çelik ızgara raflar dahildir).\nKuru ısıtma veya yemeklerin kurumasını önleyen nemli havayla ısıtma.\nErgonomik kulplar.\nTüm uluslararası sertifikasyonlarla uyumludur ve CE işaretlidir.\nÇift cidarlı 304 AISI paslanmaz çelik konstruksiyon; izolasyonlu paneller.\nÇevresinde, kapısında ve kulplardaki kalın tamponlar darbeleri abzorbe eder.\n125 mm çapında 2 sabit ve frenli 2 döner tekerlek.\nSpiral kablolu."
   },
   {
     "id": "electrolux-professional__351157",
@@ -2467,7 +2529,8 @@
       "Tekerlek çapı: Tekerlek çapı:",
       "Voltaj: 220-230 V/1N ph/50/60 Hz",
       "Toplam Kurulu Güç: 3.2 kW",
-      "Fiş tipi: CE-SCHUKO"
+      "Fiş tipi: CE-SCHUKO",
+      "Elektrik frekans: 60 Hz"
     ],
     "images": [
       "images/catalog/electrolux/351157/hero-1.jpg"
@@ -2521,7 +2584,14 @@
         "url": "https://tools.electroluxprofessional.com/Mirror/Doc/REVIT/QF_ELECTROLUXPROFESSIONAL_351157_BT2021H.rfa"
       }
     ],
-    "linkKaynak": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/banket-arabalar%C4%B1/yemek-da%C4%9F%C4%B1t%C4%B1m-sistemi-s%C4%B1cak-banket-arabas%C4%B1-20xgn2-1-351157/"
+    "linkKaynak": "https://www.electroluxprofessional.com/tr/pd/self-servis-ekipmanlar%C4%B1/servis-arabalar%C4%B1/banket-arabalar%C4%B1/yemek-da%C4%9F%C4%B1t%C4%B1m-sistemi-s%C4%B1cak-banket-arabas%C4%B1-20xgn2-1-351157/",
+    "olculer": {
+      "genislik_mm": 1520,
+      "derinlik_mm": 885,
+      "yukseklik_mm": 1570
+    },
+    "olcu_etiket": "1520×885×1570 mm",
+    "description": "Isıtmalı banket arabası - 20xGN2/1\nSıcak yemeklerin ihtiyaçlarına uygun +30°C ile +90°C arasında sıcaklık ayarı dijital gösterge ile yapılır.\nAraba, set edilen 90°C sıcaklığa yaklaşık 35 dakikada ulaşır.\nIzgara raflar üzerinde GN2/1 ve GN1/1 küvet veya tabaklar yerleştirilebilir (304 AISI paslanmaz çelik ızgara raflar dahildir).\nKuru ısıtma veya yemeklerin kurumasını önleyen nemli havayla ısıtma.\nErgonomik kulplar.\nTüm uluslararası sertifikasyonlarla uyumludur ve CE işaretlidir.\nÇift cidarlı 304 AISI paslanmaz çelik konstruksiyon; izolasyonlu paneller.\nSpiral kablolu.\nÇevresinde, kapısında ve kulplardaki kalın tamponlar darbeleri abzorbe eder.\n125 mm çapında 2 sabit ve frenli 2 döner tekerlek."
   },
   {
     "category": "banket-arabalari",
@@ -2593,7 +2663,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 118553,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "745×820×1770 mm"
   },
   {
     "category": "banket-arabalari",
@@ -2665,7 +2736,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 80798,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "690×890×1575 mm"
   },
   {
     "category": "banket-arabalari",
@@ -2737,7 +2809,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 89112,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "707×890×1565 mm"
   },
   {
     "category": "banket-arabalari",
@@ -2809,7 +2882,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 83812,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "690×888×1150 mm"
   },
   {
     "category": "banket-arabalari",
@@ -2881,7 +2955,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 84232,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "502×768×1470 mm"
   },
   {
     "category": "banket-arabalari",
@@ -2953,7 +3028,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 135079,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1354×890×1565 mm"
   },
   {
     "category": "banket-arabalari",
@@ -3025,7 +3101,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 143727,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1354×890×1565 mm"
   },
   {
     "category": "tabak-isitma-arabalari",
@@ -3097,7 +3174,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 37630,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "450×450×850 mm"
   },
   {
     "category": "tabak-isitma-arabalari",
@@ -3169,7 +3247,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 60663,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "454×1008×871 mm"
   },
   {
     "id": "pimak__g-gn-150-d-1-ikili-gn-kuvet-tasima-arabasi-150-etrafi-acik",
@@ -3216,7 +3295,8 @@
     "fiyat_havale_tl": 27481,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-150-d-2-ikili-gn-kuvet-tasima-arabasi-150-2-yani-kapali",
@@ -3263,7 +3343,8 @@
     "fiyat_havale_tl": 30916,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-150-s-1-tekli-gn-kuvet-tasima-arabasi-150-etrafi-acik",
@@ -3310,7 +3391,14 @@
     "fiyat_havale_tl": 17175,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "530×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-150-s-2-tekli-gn-kuvet-tasima-arabasi-150-2-yani-kapali",
@@ -3357,7 +3445,14 @@
     "fiyat_havale_tl": 19085,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "530×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-75-d-1-ikili-gn-kuvet-tasima-arabasi-75-etrafi-acik",
@@ -3404,7 +3499,14 @@
     "fiyat_havale_tl": 20610,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 930,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "930×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-75-d-2-ikili-gn-kuvet-tasima-arabasi-75-2-yani-kapali",
@@ -3451,7 +3553,14 @@
     "fiyat_havale_tl": 22137,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 930,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "930×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-75-s-1-tekli-gn-kuvet-tasima-arabasi-75-etrafi-acik",
@@ -3498,7 +3607,14 @@
     "fiyat_havale_tl": 13359,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "530×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-gn-75-s-2-tekli-gn-kuvet-tasima-arabasi-75-2-yani-kapali",
@@ -3545,7 +3661,14 @@
     "fiyat_havale_tl": 14504,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "530×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + PP Kapamalar"
   },
   {
     "id": "pimak__g-md-100-25-d-ikili-hastane-tepsi-arabasi-100-25-isitmali-notr",
@@ -3592,7 +3715,14 @@
     "fiyat_havale_tl": 122137,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 1010,
+      "derinlik_mm": 790,
+      "yukseklik_mm": 1580
+    },
+    "olcu_etiket": "1010×790×1580 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-md-100-25-s-tekli-hastane-tepsi-arabasi-100-25-isitmali-notr",
@@ -3639,7 +3769,14 @@
     "fiyat_havale_tl": 83968,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 790,
+      "yukseklik_mm": 1580
+    },
+    "olcu_etiket": "570×790×1580 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-ss-150-d-1-ikili-self-servis-arabasi-150-etrafi-acik",
@@ -3686,7 +3823,8 @@
     "fiyat_havale_tl": 28626,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-ss-150-d-2-ikili-self-servis-arabasi-150-2-yani-kapali",
@@ -3733,7 +3871,8 @@
     "fiyat_havale_tl": 30534,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-ss-150-s-1-tekli-self-servis-arabasi-150-etrafi-acik",
@@ -3780,7 +3919,8 @@
     "fiyat_havale_tl": 17557,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-ss-150-s-2-tekli-self-servis-arabasi-150-2-yani-kapali",
@@ -3827,7 +3967,8 @@
     "fiyat_havale_tl": 19085,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-150-d-1-ikili-servis-tepsi-arabasi-150-etrafi-acik",
@@ -3874,7 +4015,8 @@
     "fiyat_havale_tl": 30534,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-150-d-2-ikili-servis-tepsi-arabasi-150-2-yani-kapali",
@@ -3921,7 +4063,8 @@
     "fiyat_havale_tl": 34351,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-150-d-3-ikili-servis-tepsi-arabasi-150-2-yani-kapali-arka-kapali",
@@ -3968,7 +4111,8 @@
     "fiyat_havale_tl": 37404,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-150-d-4-ikili-servis-tepsi-arabasi-150-2-yani-kapali-arka-kapali-kapili",
@@ -4015,7 +4159,8 @@
     "fiyat_havale_tl": 47710,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-150-s-1-tekli-servis-tepsi-arabasi-150-etrafi-acik",
@@ -4062,7 +4207,8 @@
     "fiyat_havale_tl": 17557,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS"
   },
   {
     "id": "pimak__g-st-150-s-2-tekli-servis-tepsi-arabasi-150-2-yani-kapali",
@@ -4109,7 +4255,8 @@
     "fiyat_havale_tl": 20228,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS"
   },
   {
     "id": "pimak__g-st-150-s-3-tekli-servis-tepsi-arabasi-150-2-yani-arka-kapali",
@@ -4156,7 +4303,8 @@
     "fiyat_havale_tl": 23665,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS"
   },
   {
     "id": "pimak__g-st-150-s-4-tekli-servis-tepsi-arabasi-150-2-yani-arka-kapali-kapili",
@@ -4203,7 +4351,8 @@
     "fiyat_havale_tl": 27100,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS"
   },
   {
     "id": "pimak__g-st-75-d-1-tepsi-tasima-arabalari-ikili-75",
@@ -4250,7 +4399,14 @@
     "fiyat_havale_tl": 21374,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 1010,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "1010×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-75-d-2-ikili-servis-tepsi-arabasi-75-2-yani-kapali",
@@ -4297,7 +4453,14 @@
     "fiyat_havale_tl": 22902,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 1010,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "1010×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-75-d-3-ikili-servis-tepsi-arabasi-75-2-yani-kapali-arka-kapali",
@@ -4344,7 +4507,14 @@
     "fiyat_havale_tl": 24427,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 1010,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "1010×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-75-d-4-ikili-servis-tepsi-arabasi-75-2-yani-kapali-arka-kapali-kapili",
@@ -4391,7 +4561,14 @@
     "fiyat_havale_tl": 28244,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 1010,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "1010×710×990 mm",
+    "description": "Gövde: Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar"
   },
   {
     "id": "pimak__g-st-75-s-1-tekli-servis-tepsi-arabasi-75-etrafi-acik",
@@ -4444,7 +4621,14 @@
     "fiyat_havale_tl": 12977,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "570×710×990 mm",
+    "description": "Gövde:Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar\nRaf:7 Adet\nRaf Aralığı:9,8 cm\nRaf Materyali:ABS\nTekerlekler:2 Frenli / 2 Frensiz\nTekerlek Tipi:Medikal\nTepsi Ölçüleri:27x36 , 32x44 , 32x57 , 36x46 , 37x53 cm"
   },
   {
     "id": "pimak__g-st-75-s-2-tekli-servis-tepsi-arabasi-75-2-yani-kapali",
@@ -4497,7 +4681,14 @@
     "fiyat_havale_tl": 14123,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "570×710×990 mm",
+    "description": "Gövde:Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar\nRaf:7 Adet\nRaf Aralığı:9,8 cm\nRaf Materyali:ABS\nTekerlekler:2 Frenli / 2 Frensiz\nTekerlek Tipi:Medikal\nTepsi Ölçüleri:27x36 , 32x44 , 32x57 , 36x46 , 37x53 cm"
   },
   {
     "id": "pimak__g-st-75-s-3-tekli-servis-tepsi-arabasi-75-2-yani-arka-kapali",
@@ -4550,7 +4741,14 @@
     "fiyat_havale_tl": 14886,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "570×710×990 mm",
+    "description": "Gövde:Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar\nRaf:7 Adet\nRaf Aralığı:9,8 cm\nRaf Materyali:ABS\nTekerlekler:2 Frenli / 2 Frensiz\nTekerlek Tipi:Medikal\nTepsi Ölçüleri:27x36 , 32x44 , 32x57 , 36x46 , 37x53 cm"
   },
   {
     "id": "pimak__g-st-75-s-4-tekli-servis-tepsi-arabasi-75-2-yani-arka-kapali-kapili",
@@ -4603,7 +4801,14 @@
     "fiyat_havale_tl": 17557,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 570,
+      "derinlik_mm": 710,
+      "yukseklik_mm": 990
+    },
+    "olcu_etiket": "570×710×990 mm",
+    "description": "Gövde:Alüminyum (Elektrostatik Boyalı) + ABS Kapamalar\nRaf:7 Adet\nRaf Aralığı:9,8 cm\nRaf Materyali:ABS\nTekerlekler:2 Frenli / 2 Frensiz\nTekerlek Tipi:Medikal\nTepsi Ölçüleri:27x36 , 32x44 , 32x57 , 36x46 , 37x53 cm"
   },
   {
     "id": "pimak__fc-100-un-seker-arabasi",
@@ -4660,7 +4865,8 @@
     "fiyat_havale_tl": 2671,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "description": "Gıda temasına uygun PP malzeme\nDayanıklı PC kayar kapak\n2 sabit + 2 döner tekerlek\n40°C / +115°C kullanım aralığı\nBulaşık makinesinde yıkanabilir\nPürüzsüz ve hijyenik iç yüzey\nHafif ve dayanıklı gövde"
   },
   {
     "id": "pimak__pdb-75-tepsi",
@@ -4756,7 +4962,13 @@
     "fiyat_havale_tl": 267,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 75
+    },
+    "olcu_etiket": "400×600×75 mm"
   },
   {
     "id": "pimak__pdb-l-tepsi-kapagi",

@@ -3732,7 +3732,8 @@
     ],
     "fiyat_havale_tl": 45343,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nNÖTR SERVİS BANKOSU Servis Üniteleri"
   },
   {
     "category": "servis-uniteleri",
@@ -3800,7 +3801,8 @@
     ],
     "fiyat_havale_tl": 75257,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
   },
   {
     "category": "servis-uniteleri",
@@ -3868,7 +3870,8 @@
     ],
     "fiyat_havale_tl": 82402,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
   },
   {
     "category": "servis-uniteleri",
@@ -3936,7 +3939,8 @@
     ],
     "fiyat_havale_tl": 108602,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "3.9 kW Trifaze 30-90°C\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4204,7 +4208,8 @@
     ],
     "fiyat_havale_tl": 72335,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nAHŞAP KAPLAMALI GN SICAK SERVİS BANKOSU"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4464,7 +4469,8 @@
     ],
     "fiyat_havale_tl": 56488,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "!GN küvetler ayrıca sipariş edilmelidir. !GN küvetler ayrıca sipariş edilmelidir."
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4736,7 +4742,8 @@
     ],
     "fiyat_havale_tl": 48552,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nAHŞAP KAPLAMALI NÖTR SERVİS BANKOSU"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4806,7 +4813,8 @@
     "pdf_sayfalar": [
       303
     ],
-    "fiyat_bekleniyor": true
+    "fiyat_bekleniyor": true,
+    "olcu_etiket": "885×885×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4876,7 +4884,8 @@
     "pdf_sayfalar": [
       303
     ],
-    "fiyat_bekleniyor": true
+    "fiyat_bekleniyor": true,
+    "olcu_etiket": "985×985×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4946,7 +4955,8 @@
     "pdf_sayfalar": [
       303
     ],
-    "fiyat_bekleniyor": true
+    "fiyat_bekleniyor": true,
+    "olcu_etiket": "885×885×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -5016,7 +5026,8 @@
     "pdf_sayfalar": [
       303
     ],
-    "fiyat_bekleniyor": true
+    "fiyat_bekleniyor": true,
+    "olcu_etiket": "985×985×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -5085,7 +5096,8 @@
     ],
     "fiyat_havale_tl": 97809,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -5154,7 +5166,8 @@
     ],
     "fiyat_havale_tl": 125261,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65"
   },
   {
     "category": "servis-uniteleri-bazalari",
@@ -5666,7 +5679,8 @@
     ],
     "fiyat_havale_tl": 2792,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "SERVİS ÜNİTESİ BAZALARI ÇİFT KATLI SERVİS RAFI"
   },
   {
     "category": "banket-arabalari",
@@ -5734,7 +5748,8 @@
     ],
     "fiyat_havale_tl": 158385,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nTel ray ve tepsiler opsiyoneldir."
   },
   {
     "category": "banket-arabalari",
@@ -8211,7 +8226,8 @@
     ],
     "fiyat_havale_tl": 15229,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "600×600×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8538,7 +8554,8 @@
     ],
     "fiyat_havale_tl": 34118,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×600×1750 mm"
   },
   {
     "category": "et-aski-arabasi",
@@ -8602,7 +8619,8 @@
     ],
     "fiyat_havale_tl": 35601,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Et askıları ﬁyata dahil değildir. Et askıları ﬁyata dahil değildir."
   },
   {
     "category": "servis-arabalar",
@@ -8795,7 +8813,8 @@
     ],
     "fiyat_havale_tl": 27295,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nTABAK TAŞIMA ARABASI YÜK TAŞIMA ARABASI"
   },
   {
     "category": "servis-arabalar",
@@ -8859,7 +8878,8 @@
     ],
     "fiyat_havale_tl": 21756,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
   },
   {
     "category": "servis-arabalar",
@@ -8923,7 +8943,8 @@
     ],
     "fiyat_havale_tl": 12355,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
   },
   {
     "category": "servis-arabalar",
@@ -8987,7 +9008,8 @@
     ],
     "fiyat_havale_tl": 15818,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
   },
   {
     "category": "servis-arabalar",
@@ -9051,7 +9073,8 @@
     ],
     "fiyat_havale_tl": 43808,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir. Arabalar\nÜniteler paslanmaz çelikten imal edilmiştir."
   },
   {
     "category": "servis-arabalar",
@@ -9124,7 +9147,9 @@
     ],
     "fiyat_havale_tl": 28679,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "750×1000×900 mm",
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
   },
   {
     "category": "servis-arabalar",
@@ -9444,7 +9469,8 @@
     ],
     "fiyat_havale_tl": 2169,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "POLİETİLEN DEMONTE 37 X 53 TEPSİ TAŞIMA ARABASI"
   },
   {
     "category": "servis-arabalar",
@@ -9574,7 +9600,8 @@
     ],
     "fiyat_havale_tl": 15655,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "İki ürün arasında sadece montaj farkı vardır"
   },
   {
     "category": "servis-arabalar",

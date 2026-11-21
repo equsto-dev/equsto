@@ -1117,7 +1117,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1167,7 +1173,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1217,7 +1229,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1267,7 +1285,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1317,7 +1341,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1367,7 +1397,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1417,7 +1453,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1467,7 +1509,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1517,7 +1565,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1567,7 +1621,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1617,7 +1677,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1667,7 +1733,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1717,7 +1789,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1767,7 +1845,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1817,7 +1901,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1867,7 +1957,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1917,7 +2013,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -1967,7 +2069,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2004,7 +2112,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2041,7 +2155,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2078,7 +2198,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2115,7 +2241,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2152,7 +2284,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2189,7 +2327,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2226,7 +2370,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2263,7 +2413,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2300,7 +2456,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2337,7 +2499,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2374,7 +2542,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2411,7 +2585,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2448,7 +2628,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2485,7 +2671,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2522,7 +2714,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2559,7 +2757,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2596,7 +2800,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2633,7 +2843,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2670,7 +2886,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2707,7 +2929,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2744,7 +2972,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2781,7 +3015,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2818,7 +3058,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2855,7 +3101,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2892,7 +3144,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2929,7 +3187,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -2966,7 +3230,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3003,7 +3273,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3040,7 +3316,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3077,7 +3359,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3114,7 +3402,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3151,7 +3445,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3188,7 +3488,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3225,7 +3531,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3262,7 +3574,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3299,7 +3617,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3336,7 +3660,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3373,7 +3703,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3410,7 +3746,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3447,7 +3789,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3484,7 +3832,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3521,7 +3875,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3558,7 +3918,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3595,7 +3961,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3632,7 +4004,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3669,7 +4047,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3706,7 +4090,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3743,7 +4133,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3780,7 +4176,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 910,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3817,7 +4219,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1070,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3854,7 +4262,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1220,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3891,7 +4305,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1370,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3928,7 +4348,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1520,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -3965,7 +4391,13 @@
     "equsto_site_markup": 0.0388,
     "equsto_kar_oran": 0.0388,
     "kur_eur_try": 56.1423,
-    "kdv_oran": 20
+    "kdv_oran": 20,
+    "olculer": {
+      "genislik_mm": 610,
+      "derinlik_mm": 1830,
+      "yukseklik_mm": 1830
+    },
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4039,7 +4471,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 17079,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×350×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4113,7 +4546,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 19973,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×550×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4187,7 +4621,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 20743,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×350×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4261,7 +4696,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 23921,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×550×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4335,7 +4771,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 21920,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×350×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4409,7 +4846,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 25915,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×550×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4483,7 +4921,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 23803,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×350×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4557,7 +4996,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 27936,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×550×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4631,7 +5071,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 25506,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×350×1600 mm"
   },
   {
     "category": "demonte-duz-tablali",
@@ -4705,7 +5146,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 29951,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -4779,7 +5221,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 21866,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -4853,7 +5296,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 26314,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×750×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -4927,7 +5371,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 23880,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5001,7 +5446,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 29363,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×750×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5075,7 +5521,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 26301,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5149,7 +5596,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 31958,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×750×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5223,7 +5671,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 27961,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5297,7 +5746,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 34514,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×750×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5371,7 +5821,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 30147,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×550×1600 mm"
   },
   {
     "category": "demonte-kazan-tencere",
@@ -5445,7 +5896,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 37387,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×750×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5519,7 +5971,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 17244,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×350×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5593,7 +6046,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 19980,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "800×550×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5667,7 +6121,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 20614,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×350×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5741,7 +6196,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 24198,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×550×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5815,7 +6271,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 22281,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×350×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5889,7 +6346,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 26293,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×550×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -5963,7 +6421,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 23936,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×350×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -6037,7 +6496,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 28559,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1390×550×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -6111,7 +6571,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 25671,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×350×1600 mm"
   },
   {
     "category": "demonte-perforetablali",
@@ -6185,7 +6646,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 30634,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×550×1600 mm"
   },
   {
     "category": "bicak-sterilizatorleri",
@@ -6259,7 +6721,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 16440,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "575×100×480 mm"
   },
   {
     "category": "bicak-sterilizatorleri",
@@ -6333,7 +6796,8 @@
     "inoksan_description_at": "2026-06-14",
     "fiyat_havale_tl": 26180,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1030×100×480 mm"
   },
   {
     "category": "istif-raflari",
@@ -10287,7 +10751,8 @@
     ],
     "fiyat_havale_tl": 18057,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10361,7 +10826,8 @@
     ],
     "fiyat_havale_tl": 19186,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10435,7 +10901,8 @@
     ],
     "fiyat_havale_tl": 20050,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10509,7 +10976,8 @@
     ],
     "fiyat_havale_tl": 22572,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10583,7 +11051,8 @@
     ],
     "fiyat_havale_tl": 24000,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10657,7 +11126,8 @@
     ],
     "fiyat_havale_tl": 26523,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10731,7 +11201,8 @@
     ],
     "fiyat_havale_tl": 19186,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10805,7 +11276,8 @@
     ],
     "fiyat_havale_tl": 20314,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10879,7 +11351,8 @@
     ],
     "fiyat_havale_tl": 23436,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -10953,7 +11426,8 @@
     ],
     "fiyat_havale_tl": 24830,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11027,7 +11501,8 @@
     ],
     "fiyat_havale_tl": 26523,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11101,7 +11576,8 @@
     ],
     "fiyat_havale_tl": 30771,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11175,7 +11651,8 @@
     ],
     "fiyat_havale_tl": 20614,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11249,7 +11726,8 @@
     ],
     "fiyat_havale_tl": 22572,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11323,7 +11801,8 @@
     ],
     "fiyat_havale_tl": 24830,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11397,7 +11876,8 @@
     ],
     "fiyat_havale_tl": 26523,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11471,7 +11951,8 @@
     ],
     "fiyat_havale_tl": 28514,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11545,7 +12026,8 @@
     ],
     "fiyat_havale_tl": 28314,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11619,7 +12101,8 @@
     ],
     "fiyat_havale_tl": 23137,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11693,7 +12176,8 @@
     ],
     "fiyat_havale_tl": 25129,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11767,7 +12251,8 @@
     ],
     "fiyat_havale_tl": 26256,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11841,7 +12326,8 @@
     ],
     "fiyat_havale_tl": 29079,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11915,7 +12401,8 @@
     ],
     "fiyat_havale_tl": 31336,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -11989,7 +12476,8 @@
     ],
     "fiyat_havale_tl": 34423,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12063,7 +12551,8 @@
     ],
     "fiyat_havale_tl": 24565,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12137,7 +12626,8 @@
     ],
     "fiyat_havale_tl": 26256,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12211,7 +12701,8 @@
     ],
     "fiyat_havale_tl": 30771,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12285,7 +12776,8 @@
     ],
     "fiyat_havale_tl": 32464,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12359,7 +12851,8 @@
     ],
     "fiyat_havale_tl": 34721,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12433,7 +12926,8 @@
     ],
     "fiyat_havale_tl": 40364,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12507,7 +13001,8 @@
     ],
     "fiyat_havale_tl": 27650,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×910×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12581,7 +13076,8 @@
     ],
     "fiyat_havale_tl": 29343,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12655,7 +13151,8 @@
     ],
     "fiyat_havale_tl": 32464,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12729,7 +13226,8 @@
     ],
     "fiyat_havale_tl": 34721,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12803,7 +13301,8 @@
     ],
     "fiyat_havale_tl": 37543,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12877,7 +13376,8 @@
     ],
     "fiyat_havale_tl": 37675,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -12951,7 +13451,8 @@
     ],
     "fiyat_havale_tl": 27385,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13025,7 +13526,8 @@
     ],
     "fiyat_havale_tl": 29642,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13099,7 +13601,8 @@
     ],
     "fiyat_havale_tl": 36679,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13173,7 +13676,8 @@
     ],
     "fiyat_havale_tl": 44580,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13247,7 +13751,8 @@
     ],
     "fiyat_havale_tl": 29642,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13321,7 +13826,8 @@
     ],
     "fiyat_havale_tl": 35550,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13395,7 +13901,8 @@
     ],
     "fiyat_havale_tl": 39236,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13469,7 +13976,8 @@
     ],
     "fiyat_havale_tl": 42058,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13543,7 +14051,8 @@
     ],
     "fiyat_havale_tl": 47701,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "530×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13617,7 +14126,8 @@
     ],
     "fiyat_havale_tl": 29343,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×610×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13691,7 +14201,8 @@
     ],
     "fiyat_havale_tl": 35550,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1070×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13765,7 +14276,8 @@
     ],
     "fiyat_havale_tl": 38672,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1220×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13839,7 +14351,8 @@
     ],
     "fiyat_havale_tl": 42323,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1370×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13913,7 +14426,8 @@
     ],
     "fiyat_havale_tl": 45443,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -13987,7 +14501,8 @@
     ],
     "fiyat_havale_tl": 46539,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -14061,7 +14576,8 @@
     ],
     "fiyat_havale_tl": 37543,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1520×1830 mm"
   },
   {
     "category": "istif-raflari",
@@ -14135,7 +14651,8 @@
     ],
     "fiyat_havale_tl": 37675,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "610×1830×1830 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14212,7 +14729,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36700.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "700×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14289,7 +14807,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36800.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "800×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14366,7 +14885,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36900.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "900×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14443,7 +14963,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36100.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1000×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14520,7 +15041,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36110.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1100×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14597,7 +15119,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36120.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1200×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14674,7 +15197,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36130.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1300×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14751,7 +15275,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36141.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1410×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14828,7 +15353,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36151.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1510×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14905,7 +15431,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36161.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1610×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -14982,7 +15509,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.36171.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1710×360×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15059,7 +15587,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46700.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "700×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15136,7 +15665,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46800.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "800×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15213,7 +15743,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.4690P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "900×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15290,7 +15821,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46100.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1000×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15435,7 +15967,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46120.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1200×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15512,7 +16045,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46130.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1300×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15589,7 +16123,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46141.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1410×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15666,7 +16201,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46151.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1510×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15743,7 +16279,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46161.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1610×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15820,7 +16357,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.46171.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1710×460×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15897,7 +16435,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.5670P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "700×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -15974,7 +16513,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.5679P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "800×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16051,7 +16591,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.5689P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "900×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16128,7 +16669,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56100.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1000×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16205,7 +16747,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56110.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1100×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16282,7 +16825,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.5611P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1200×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16359,7 +16903,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.5612P.00-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1300×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16436,7 +16981,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56141.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1410×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16513,7 +17059,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56151.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1510×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16590,7 +17137,8 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56161.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1610×560×1680 mm"
   },
   {
     "category": "polipropilen-tablali-istif-raflari",
@@ -16667,6 +17215,7 @@
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
     "image": "images/catalog/cambro/8897.56171.P0-bc1899573e.webp",
-    "cambro_official_image": true
+    "cambro_official_image": true,
+    "olcu_etiket": "1710×560×1680 mm"
   }
 ]

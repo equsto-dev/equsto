@@ -1101,8 +1101,6 @@ window.searchFilter = window.searchFilter || function () {};
         temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       }
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
 
       var skipDims = Object.create(null);
       if (x.olculer) {
@@ -1146,6 +1144,7 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
+      acc += renderPdpOlcuSection(x, true);
       if (conn.profile.gas && conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_gas", "Gaz"),
@@ -3373,13 +3372,19 @@ window.searchFilter = window.searchFilter || function () {};
     function renderElectroluxFeaturesCol(x) {
       var sections = parseElectroluxSpecSections(x);
       var lead = electroluxLeadDescription(x);
-      if (!sections.length && !lead) return renderEpdpFeaturesCol(x);
-      var acc = "";
+      if (!sections.length && !lead && !pdpOlcuRows(x).length) return renderEpdpFeaturesCol(x);
+      var acc = renderPdpOlcuSection(x, true);
       sections.forEach(function (sec, idx) {
+        var items = sec.items.filter(function (ln) {
+          if (!pdpOlcuRows(x).length) return true;
+          var key = String(ln || "").split(":")[0].trim().toLocaleLowerCase("tr-TR");
+          return !/^(dış boyutlar|dis boyutlar|genişlik|derinlik|yükseklik|uzunluk|ölçü|ebat)/.test(key);
+        });
+        if (!items.length && !(idx === 0 && lead)) return;
         var body = "";
         if (idx === 0 && lead) body += '<p class="eq-elx-desc">' + esc(lead) + "</p>";
-        body += sec.items.map(renderElectroluxSpecRow).join("");
-        acc += renderEpdpFlatAccSection(electroluxSpecSectionLabel(sec.title), body, idx === 0);
+        body += items.map(renderElectroluxSpecRow).join("");
+        acc += renderEpdpFlatAccSection(electroluxSpecSectionLabel(sec.title), body, idx === 0 && !acc);
       });
       return renderEpdpFeaturesPanel(
         __pdpT("pdp.features_heading", "Özellikler"),
@@ -3619,8 +3624,6 @@ window.searchFilter = window.searchFilter || function () {};
         temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       }
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
 
       var skipDims = Object.create(null);
       if (x.olculer) {
@@ -3659,6 +3662,7 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
+      acc += renderPdpOlcuSection(x, true);
       if (conn.profile.gas && conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_gas", "Gaz"),
@@ -3909,8 +3913,6 @@ window.searchFilter = window.searchFilter || function () {};
         temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       }
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
 
       var skipDims = Object.create(null);
       if (x.olculer) {
@@ -3950,6 +3952,7 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
+      acc += renderPdpOlcuSection(x, true);
       if (conn.profile.gas && conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_gas", "Gaz"),
@@ -4191,8 +4194,6 @@ window.searchFilter = window.searchFilter || function () {};
         temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       }
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
 
       var skipDims = Object.create(null);
       if (x.olculer) {
@@ -4231,6 +4232,7 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
+      acc += renderPdpOlcuSection(x, true);
       if (conn.profile.gas && conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_gas", "Gaz"),
@@ -4319,6 +4321,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (isOztiCatalogRow(x) && oztiDescriptionBullets(x).length) return "";
       if (isPimakCatalogRow(x) && pimakDescriptionBullets(x).length) return "";
       if (isAtalayCatalogRow(x) && atalayDescriptionBullets(x).length) return "";
+      if (genericCatalogDescriptionBullets(x).length) return "";
       var desc =
         window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
           ? String(x.descriptionEn).trim()
@@ -4366,13 +4369,60 @@ window.searchFilter = window.searchFilter || function () {};
       return buildAboutBullets(src, 40);
     }
 
+    function pdpMmText(n) {
+      var v = Math.round(Number(n) || 0);
+      if (v < 40) return "";
+      return v + " mm";
+    }
+
+    function pdpOlcuRows(x) {
+      var rows = [];
+      var o = x && x.olculer;
+      if (o && typeof o === "object") {
+        if (isInoksanCatalogRow(x) && Number(o.uzunluk_mm) >= 40) {
+          rows.push(["Uzunluk", pdpMmText(o.uzunluk_mm)]);
+          if (Number(o.genislik_mm) >= 40) rows.push(["Genişlik", pdpMmText(o.genislik_mm)]);
+        } else {
+          if (Number(o.genislik_mm) >= 40) rows.push(["Genişlik", pdpMmText(o.genislik_mm)]);
+          if (Number(o.derinlik_mm) >= 40) rows.push(["Derinlik", pdpMmText(o.derinlik_mm)]);
+          if (!Number(o.genislik_mm) && Number(o.uzunluk_mm) >= 40) {
+            rows.push(["Uzunluk", pdpMmText(o.uzunluk_mm)]);
+          }
+        }
+        if (Number(o.yukseklik_mm) >= 40) rows.push(["Yükseklik", pdpMmText(o.yukseklik_mm)]);
+      }
+      rows = rows.filter(function (r) {
+        return r[1];
+      });
+      if (!rows.length && x && x.olcu_etiket) rows.push(["Ölçü", String(x.olcu_etiket)]);
+      return rows;
+    }
+
+    function renderPdpOlcuSection(x, open) {
+      var rows = pdpOlcuRows(x);
+      if (!rows.length) return "";
+      return renderEpdpFlatAccSection(
+        __pdpT("pdp.spec_group_dims", "Ölçü"),
+        "<ul>" +
+          rows
+            .map(function (r) {
+              return "<li>" + esc(r[0] + ": " + r[1]) + "</li>";
+            })
+            .join("") +
+          "</ul>",
+        !!open
+      );
+    }
+
     function groupPdpSpecLines(lines) {
-      var g = { temel: [], elektrik: [], sogutma: [], diger: [] };
+      var g = { temel: [], olcu: [], elektrik: [], gaz: [], sogutma: [], diger: [] };
       (lines || []).forEach(function (ln) {
         var low = String(ln).toLowerCase();
-        if (/güç|voltaj|elektrik|kw|w\b|hz|amper|fiş/i.test(low)) g.elektrik.push(ln);
-        else if (/soğutma|sıcaklık|kapasite|lt\b|°c|kompresör|gaz|buz|dondur/i.test(low)) g.sogutma.push(ln);
-        else if (/boyut|genişlik|derinlik|yükseklik|mm\b|kg|ağırlık|uzunluk|en×|×/i.test(low)) g.temel.push(ln);
+        var key = low.split(":")[0].trim();
+        if (/^(genişlik|derinlik|yükseklik|uzunluk|ölçü|olcu|ebat|dış boyut|dis boyut)/.test(key)) g.olcu.push(ln);
+        else if (/^gaz\b|gaz g|gaz bas|kcal|doğalgaz|dogalgaz|\blpg\b|mbar/.test(low)) g.gaz.push(ln);
+        else if (/güç|guc|voltaj|elektrik|gerilim|frekans|\bkw\b|\bhz\b|amper|fiş/.test(low)) g.elektrik.push(ln);
+        else if (/soğutma|sıcaklık|kapasite|°c|kompresör/.test(low)) g.sogutma.push(ln);
         else g.diger.push(ln);
       });
       return g;
@@ -4896,10 +4946,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (visBrand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + visBrand);
       if (x.sku || x.model) temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
       var groups = groupPdpSpecLines(pdpTeknikLines(x));
-      if (groups.temel.length) temel = temel.concat(groups.temel);
       var acc = "";
       if (temel.length) {
         acc += renderEpdpFlatAccSection(
@@ -4908,7 +4955,17 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
+      var olcuHtml = renderPdpOlcuSection(x, true);
+      if (!olcuHtml && groups.olcu.length) {
+        olcuHtml = renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_dims", "Ölçü"),
+          "<ul>" + groups.olcu.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
+          true
+        );
+      }
+      acc += olcuHtml;
       [
+        ["gaz", __pdpT("pdp.spec_group_gas", "Gaz")],
         ["elektrik", __pdpT("pdp.spec_group_electric", "Elektrik")],
         ["sogutma", __pdpT("pdp.spec_group_cooling", "Çalışma koşulları")],
         ["diger", __pdpT("pdp.spec_group_other", "Diğer")],
@@ -4950,6 +5007,46 @@ window.searchFilter = window.searchFilter || function () {};
       return extra;
     }
 
+    function genericCatalogDescriptionBullets(x) {
+      var raw = decodeHtmlEntitiesPdp(String((x && (x.description || x.aciklama)) || "")).trim();
+      if (!raw) return [];
+      var name = decodeHtmlEntitiesPdp(String((x && x.name) || "")).trim().toLocaleLowerCase("tr-TR");
+      var parts;
+      if (/\n\s*[•·\-–—*]/.test(raw) || /(?:^|\s)\*\s+/.test(raw)) {
+        parts = raw.split(/\n\s*[•·\-–—*]\s*|\s*\*\s+/);
+      } else {
+        parts = raw.split(/\n+/);
+      }
+      return parts
+        .map(function (l) {
+          return String(l || "")
+            .replace(/^[•\-–—*·]+\s*/, "")
+            .trim();
+        })
+        .filter(function (l) {
+          if (l.length < 12) return false;
+          if (l.toLocaleLowerCase("tr-TR") === name) return false;
+          if (/liste fiyat|equsto satış|bayi net|havale|cafemarkt fiyat|₺\s?\d/i.test(l)) return false;
+          return true;
+        });
+    }
+
+    function renderGenericDescriptionCol(x) {
+      var bullets = genericCatalogDescriptionBullets(x);
+      if (!bullets.length) return "";
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.product_description", "Ürün açıklaması"),
+        '<div class="eq-ozti-desc-panel">' +
+          '<ul class="eq-ozti-desc-list">' +
+          bullets
+            .map(function (l) {
+              return "<li>" + esc(l) + "</li>";
+            })
+            .join("") +
+          "</ul></div>"
+      );
+    }
+
     function renderEpdpDocsCol(x) {
       if (isInoksanCatalogRow(x)) {
         var inoDesc = renderInoksanDescriptionCol(x);
@@ -4971,7 +5068,8 @@ window.searchFilter = window.searchFilter || function () {};
         return renderCaglayanDocsCol(x).replace(/eq-caglayan-drawings/g, "eq-epdp-drawings");
       }
       if (isElectroluxProfessional(x)) {
-        return renderEpdpDocsPanel(
+        var elxDesc = renderGenericDescriptionCol(x);
+        var elxDocs = renderEpdpDocsPanel(
           __pdpT("pdp.documents_heading", "Dökümanlar"),
           renderEpdpDocsAccordion(getElectroluxDocsGrouped(x), null, {
             showEmpty: true,
@@ -4980,13 +5078,18 @@ window.searchFilter = window.searchFilter || function () {};
             },
           })
         );
+        return elxDesc + elxDocs;
       }
+      var genericDesc = renderGenericDescriptionCol(x);
       var extra = buildEpdpDocsExtra(x);
-      if (!Object.keys(extra).length) return "";
-      return renderEpdpDocsPanel(
-        __pdpT("pdp.documents_heading", "Dökümanlar"),
-        renderEpdpDocsAccordion(null, extra, { showEmpty: false })
-      );
+      var docsHtml = "";
+      if (Object.keys(extra).length) {
+        docsHtml = renderEpdpDocsPanel(
+          __pdpT("pdp.documents_heading", "Dökümanlar"),
+          renderEpdpDocsAccordion(null, extra, { showEmpty: false })
+        );
+      }
+      return genericDesc + docsHtml;
     }
 
     function getEpdpDrawingImgs(x) {

@@ -102,7 +102,14 @@
     "fiyat_havale_tl": 49981,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "equsto_kar_oran": 0.0388
+    "equsto_kar_oran": 0.0388,
+    "olculer": {
+      "genislik_mm": 865,
+      "derinlik_mm": 705,
+      "yukseklik_mm": 770
+    },
+    "olcu_etiket": "865×705×770 mm",
+    "description": "6 & 10 GN 1/1 fırın için tepsi destekli açık alt dolap\nFırının kolaylıkla kurulabilmesi için önceden düzenlenmiş yapı (ayakları çıkarmaya gerek kalmaz).\nKaidenin alt kısmında montaj delikleri bulunmaktadır.\nÜrüne 1 adet tepsi destek ünitesi dahildir; ikinci ünite opsiyonel olarak eklenebilmektedir.\nTümüyle paslanmaz çelik konstruksiyon."
   },
   {
     "id": "electrolux-professional__922613",
@@ -207,7 +214,14 @@
     "fiyat_havale_tl": 65184,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "equsto_kar_oran": 0.0388
+    "equsto_kar_oran": 0.0388,
+    "olculer": {
+      "genislik_mm": 1088,
+      "derinlik_mm": 901,
+      "yukseklik_mm": 770
+    },
+    "olcu_etiket": "1088×901×770 mm",
+    "description": "6 & 10 GN 2/1 fırın için tepsi destekli açık alt dolap\nFırının kolaylıkla kurulabilmesi için önceden düzenlenmiş yapı (ayakları çıkarmaya gerek kalmaz).\nKaidenin alt kısmında montaj delikleri bulunmaktadır.\nÜrüne 1 adet tepsi destek ünitesi dahildir; ikinci ünite opsiyonel olarak eklenebilmektedir.\nTümüyle paslanmaz çelik konstruksiyon."
   },
   {
     "category": "dolaplar-ve-taban-raflari",
@@ -271,7 +285,8 @@
     ],
     "fiyat_havale_tl": 12507,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Ara tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma\n700 seri diğer ürünlerle birlikte kullanılabilir.\nDayanıklı şasesi sayesinde ağır ürünlerl"
   },
   {
     "category": "dolaplar-ve-taban-raflari",
@@ -335,7 +350,8 @@
     ],
     "fiyat_havale_tl": 18836,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Ara tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma\n700 seri diğer ürünlerle birlikte kullanılabilir.\nDayanıklı şasesi sayesinde ağır ürünlerle çalışma imkanı sağlar.\nÜniteler 70"
   },
   {
     "category": "dolaplar-ve-taban-raflari",
@@ -400,7 +416,8 @@
     ],
     "fiyat_havale_tl": 7715,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Ara tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma\n700 seri diğer ürünlerle birlikte kullanılabilir.\nDayanıklı şasesi sayesinde ağır ürünlerle çalışma imkanı sağlar.\nÜniteler 700 seri cihazların alt bölümü olarak kullanılır."
   },
   {
     "category": "dolaplar-ve-taban-raflari",
@@ -465,7 +482,8 @@
     ],
     "fiyat_havale_tl": 9319,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Dolaplar ve Taban Raﬂarı • Ara tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma\nAra tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma\n700 seri diğer ürünlerle birlikte kullanılabilir.\nDayanıklı şasesi sayesinde ağır ürünlerle çalışma imkanı sağlar.\nÜniteler 700 seri cihazların alt bölümü olarak kullanılır.\nGeniş iç hacimleri mutfakta kullanılan yardım"
   },
   {
     "category": "aratezgah-ve-dolaplar",
@@ -486,7 +504,7 @@
       "genislik_mm": 400,
       "derinlik_mm": 600,
       "yukseklik_mm": 260,
-      "guc_kw": "1.5"
+      "guc_kw": 1.5
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -541,7 +559,8 @@
     ],
     "fiyat_havale_tl": 6375,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "400×600×260 mm"
   },
   {
     "category": "aratezgah-ve-dolaplar",
@@ -562,7 +581,7 @@
       "genislik_mm": 600,
       "derinlik_mm": 600,
       "yukseklik_mm": 260,
-      "guc_kw": "1.5"
+      "guc_kw": 1.5
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -617,7 +636,8 @@
     ],
     "fiyat_havale_tl": 8856,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "600×600×260 mm"
   },
   {
     "category": "aratezgah-ve-dolaplar",
@@ -814,7 +834,8 @@
     "pdf_eslesme": false,
     "fiyat_havale_tl": 147878,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1705×1070×830 mm"
   },
   {
     "category": "mayalama-dolaplari",
@@ -835,7 +856,7 @@
       "genislik_mm": 982,
       "derinlik_mm": 987,
       "yukseklik_mm": 730,
-      "guc_kw": "2"
+      "guc_kw": 2
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -890,7 +911,8 @@
     ],
     "fiyat_havale_tl": 98953,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "982×987×730 mm"
   },
   {
     "category": "mayalama-dolaplari",
@@ -911,7 +933,7 @@
       "genislik_mm": 910,
       "derinlik_mm": 827,
       "yukseklik_mm": 1816,
-      "guc_kw": "2"
+      "guc_kw": 2
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -966,7 +988,8 @@
     ],
     "fiyat_havale_tl": 103705,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1816 mm"
   },
   {
     "category": "buzdolaplari-ve-derin-dondurucular",
@@ -1180,7 +1203,8 @@
     ],
     "fiyat_havale_tl": 92316,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NMV: Normal sıcaklıkta fanlı monoblok soğutma sistemi.\nLMV: LMV: Düşük sıcaklıkta fanlı monoblok soğutma sistemi.\nNot: Kapasite bilgiler brüt hacme göre verilmiştir."
   },
   {
     "category": "buzdolaplari-ve-derin-dondurucular",
@@ -1252,7 +1276,8 @@
     ],
     "fiyat_havale_tl": 146137,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NMV: Normal sıcaklıkta fanlı monoblok soğutma sistemi.\nLMV: LMV: Düşük sıcaklıkta fanlı monoblok soğutma sistemi.\nNot: Kapasite bilgiler brüt hacme göre verilmiştir."
   },
   {
     "category": "buzdolaplari-ve-derin-dondurucular",
@@ -1802,7 +1827,8 @@
     ],
     "fiyat_havale_tl": 372757,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "NMV: Normal sıcaklıkta fanlı monoblok soğutma sistemi.\nLMV: Düşük sıcaklıkta fanlı monoblok soğutma sistemi.\nNot: Kapasite bilgiler brüt hacme göre verilmiştir."
   },
   {
     "category": "slim-tip-buzdolaplari",
@@ -19300,7 +19326,8 @@
     ],
     "fiyat_havale_tl": 29496,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "ÇİFT EVYELİ, ÇIFT DAMLALIKLI, TABAN RAFLI"
   },
   {
     "category": "evyeli-tezgahlar-uc-evyeli-taban-rafli-perdeli-tezgahlar",
@@ -42821,7 +42848,8 @@
     ],
     "fiyat_havale_tl": 21891,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "500×500×850 mm"
   },
   {
     "category": "calisma-tezgahlari-polietilen-tablali-taban-rafsiz-calisma-tezgahi",
@@ -44603,7 +44631,8 @@
     ],
     "fiyat_havale_tl": 51630,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Ahşap tabla yüksekliği: 100 mm Polietilen tabla yüksekliği: 80 mm"
   },
   {
     "category": "calisma-tezgahlari-polietilen-tablali-taban-rafsiz-calisma-tezgahi",
@@ -50770,7 +50799,8 @@
     ],
     "fiyat_havale_tl": 21715,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "description": "Açıklama:\nBOMBE CAMLI SERVİS RAFI SERVİS RAFI"
   },
   {
     "category": "servis-raflari",
@@ -51799,7 +51829,8 @@
     "pdf_eslesme": false,
     "fiyat_havale_tl": 54592,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "6780×5680×6860 mm"
   },
   {
     "category": "teshir-dolaplari",
@@ -51815,9 +51846,9 @@
       "Barkod: 8696676461959"
     ],
     "olculer": {
-      "genislik_mm": 8560,
-      "derinlik_mm": 5680,
-      "yukseklik_mm": 6860
+      "genislik_mm": 856,
+      "derinlik_mm": 568,
+      "yukseklik_mm": 686
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -51868,6 +51899,7 @@
     "pdf_eslesme": false,
     "fiyat_havale_tl": 60390,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "856×568×686 mm"
   }
 ]
