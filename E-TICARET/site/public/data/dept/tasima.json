@@ -3347,7 +3347,10 @@
       "Katalog sayfası: 299"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1500,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3400,7 +3403,8 @@
     ],
     "fiyat_havale_tl": 56883,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1500×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3415,7 +3419,10 @@
       "Katalog sayfası: 299"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3468,7 +3475,8 @@
     ],
     "fiyat_havale_tl": 67697,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3483,7 +3491,10 @@
       "Katalog sayfası: 299"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3536,7 +3547,8 @@
     ],
     "fiyat_havale_tl": 33585,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3551,7 +3563,10 @@
       "Katalog sayfası: 299"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3604,7 +3619,8 @@
     ],
     "fiyat_havale_tl": 35343,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1400×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3617,7 +3633,11 @@
       "Barkod: 8696676053772",
       "Katalog sayfası: 299"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -3668,7 +3688,8 @@
     ],
     "fiyat_havale_tl": 39168,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3681,7 +3702,11 @@
       "Barkod: 8696676054656",
       "Katalog sayfası: 299"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -3733,7 +3758,8 @@
     "fiyat_havale_tl": 45343,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Açıklama:\nNÖTR SERVİS BANKOSU Servis Üniteleri"
+    "description": "Açıklama:\nNÖTR SERVİS BANKOSU Servis Üniteleri",
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3748,7 +3774,10 @@
       "Katalog sayfası: 300"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3802,7 +3831,8 @@
     "fiyat_havale_tl": 75257,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65",
+    "olcu_etiket": "1200×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3817,7 +3847,10 @@
       "Katalog sayfası: 300"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1500,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3871,7 +3904,8 @@
     "fiyat_havale_tl": 82402,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65",
+    "olcu_etiket": "1500×700×850 mm"
   },
   {
     "category": "servis-uniteleri",
@@ -3886,7 +3920,10 @@
       "Katalog sayfası: 300"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -3940,7 +3977,8 @@
     "fiyat_havale_tl": 108602,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "3.9 kW Trifaze 30-90°C\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65"
+    "description": "3.9 kW Trifaze 30-90°C\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                     Bağıl nem: %65",
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4016,7 +4054,10 @@
       "Katalog sayfası: 301"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4070,7 +4111,8 @@
     ],
     "fiyat_havale_tl": 53631,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4085,7 +4127,10 @@
       "Katalog sayfası: 301"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1500,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4139,7 +4184,8 @@
     ],
     "fiyat_havale_tl": 59169,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1500×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4154,7 +4200,10 @@
       "Katalog sayfası: 301"
     ],
     "olculer": {
-      "guc_kw": "3.9"
+      "guc_kw": "3.9",
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4209,7 +4258,8 @@
     "fiyat_havale_tl": 72335,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Açıklama:\nAHŞAP KAPLAMALI GN SICAK SERVİS BANKOSU"
+    "description": "Açıklama:\nAHŞAP KAPLAMALI GN SICAK SERVİS BANKOSU",
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4222,7 +4272,11 @@
       "Barkod: 8696676165109",
       "Katalog sayfası: 301"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -4274,7 +4328,8 @@
     ],
     "fiyat_havale_tl": 39695,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4287,7 +4342,11 @@
       "Barkod: 8696676191276",
       "Katalog sayfası: 301"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -4339,7 +4398,8 @@
     ],
     "fiyat_havale_tl": 43541,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1400×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4352,7 +4412,11 @@
       "Barkod: 8696676191269",
       "Katalog sayfası: 301"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -4404,7 +4468,8 @@
     ],
     "fiyat_havale_tl": 48552,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1600×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4417,7 +4482,11 @@
       "Barkod: 8696676165116",
       "Katalog sayfası: 301"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -4470,7 +4539,8 @@
     "fiyat_havale_tl": 56488,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "!GN küvetler ayrıca sipariş edilmelidir. !GN küvetler ayrıca sipariş edilmelidir."
+    "description": "!GN küvetler ayrıca sipariş edilmelidir. !GN küvetler ayrıca sipariş edilmelidir.",
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4485,7 +4555,10 @@
       "Katalog sayfası: 302"
     ],
     "olculer": {
-      "guc_kw": "6.9"
+      "guc_kw": "6.9",
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4539,7 +4612,8 @@
     ],
     "fiyat_havale_tl": 78093,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4554,7 +4628,10 @@
       "Katalog sayfası: 302"
     ],
     "olculer": {
-      "guc_kw": "6.9"
+      "guc_kw": "6.9",
+      "genislik_mm": 1500,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4608,7 +4685,8 @@
     ],
     "fiyat_havale_tl": 85017,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1500×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4620,10 +4698,14 @@
     "teknik_ozellikler": [
       "Güç: 6.9 kW",
       "Barkod: 8696676191238",
-      "Katalog sayfası: 302"
+      "Katalog sayfası: 302",
+      "Elektrik voltaj: 400V"
     ],
     "olculer": {
-      "guc_kw": "6.9"
+      "guc_kw": "6.9",
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -4677,7 +4759,8 @@
     ],
     "fiyat_havale_tl": 112382,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1900×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -4690,7 +4773,11 @@
       "Barkod: 8696676290979",
       "Katalog sayfası: 303"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -4743,7 +4830,8 @@
     "fiyat_havale_tl": 48552,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Açıklama:\nAHŞAP KAPLAMALI NÖTR SERVİS BANKOSU"
+    "description": "Açıklama:\nAHŞAP KAPLAMALI NÖTR SERVİS BANKOSU",
+    "olcu_etiket": "1500×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -5039,10 +5127,14 @@
     "teknik_ozellikler": [
       "Güç: 0.88 kW",
       "Barkod: 8696676223489",
-      "Katalog sayfası: 302"
+      "Katalog sayfası: 302",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "0.88"
+      "guc_kw": "0.88",
+      "genislik_mm": 1420,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5097,7 +5189,8 @@
     "fiyat_havale_tl": 97809,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65"
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65",
+    "olcu_etiket": "1420×700×850 mm"
   },
   {
     "category": "ahsap-granit-servis-uniteleri",
@@ -5109,10 +5202,14 @@
     "teknik_ozellikler": [
       "Güç: 0.88 kW",
       "Barkod: 8696676216054",
-      "Katalog sayfası: 302"
+      "Katalog sayfası: 302",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "0.88"
+      "guc_kw": "0.88",
+      "genislik_mm": 1880,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5167,7 +5264,8 @@
     "fiyat_havale_tl": 125261,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65"
+    "description": "NTV: Normal sıcaklıkta fanlı soğutma sistemi.\nNTV: Normal sıcaklıkta fanlı soğutma sistemi.\nDış ortam sıcaklığı: +32.2 C°                      Bağıl nem: %65",
+    "olcu_etiket": "1880×700×850 mm"
   },
   {
     "category": "servis-uniteleri-bazalari",
@@ -5692,10 +5790,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676437459",
-      "Katalog sayfası: 308"
+      "Katalog sayfası: 308",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 1517,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5749,7 +5851,8 @@
     "fiyat_havale_tl": 158385,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Açıklama:\nTel ray ve tepsiler opsiyoneldir."
+    "description": "Açıklama:\nTel ray ve tepsiler opsiyoneldir.",
+    "olcu_etiket": "910×1517×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -5761,10 +5864,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676431259",
-      "Katalog sayfası: 307"
+      "Katalog sayfası: 307",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5817,7 +5924,8 @@
     ],
     "fiyat_havale_tl": 101765,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -5829,10 +5937,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676440558",
-      "Katalog sayfası: 307"
+      "Katalog sayfası: 307",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5885,7 +5997,8 @@
     ],
     "fiyat_havale_tl": 88534,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -5897,10 +6010,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676446093",
-      "Katalog sayfası: 308"
+      "Katalog sayfası: 308",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 1517,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -5953,7 +6070,8 @@
     ],
     "fiyat_havale_tl": 150516,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×1517×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -5965,10 +6083,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676431266",
-      "Katalog sayfası: 307"
+      "Katalog sayfası: 307",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6021,7 +6143,8 @@
     ],
     "fiyat_havale_tl": 97941,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6033,10 +6156,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676445713",
-      "Katalog sayfası: 309"
+      "Katalog sayfası: 309",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1160
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6089,7 +6216,8 @@
     ],
     "fiyat_havale_tl": 79763,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1160 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6101,10 +6229,14 @@
     "teknik_ozellikler": [
       "Güç: 2 kW",
       "Barkod: 8696676439231",
-      "Katalog sayfası: 309"
+      "Katalog sayfası: 309",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
-      "guc_kw": "2"
+      "guc_kw": "2",
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1160
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6157,7 +6289,8 @@
     ],
     "fiyat_havale_tl": 80357,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1160 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6170,7 +6303,11 @@
       "Barkod: 8696676443115",
       "Katalog sayfası: 311"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1160
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -6221,7 +6358,8 @@
     ],
     "fiyat_havale_tl": 54377,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1160 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6234,7 +6372,11 @@
       "Barkod: 8696676445409",
       "Katalog sayfası: 311"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 910,
+      "derinlik_mm": 827,
+      "yukseklik_mm": 1816
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -6285,7 +6427,8 @@
     ],
     "fiyat_havale_tl": 62246,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×827×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6298,11 +6441,15 @@
       "Kapasite (kazan): 500 lt",
       "Güç: 0.31 kW",
       "Barkod: 8696676443610",
-      "Katalog sayfası: 310"
+      "Katalog sayfası: 310",
+      "Elektrik voltaj: 230V"
     ],
     "olculer": {
       "kapasite_lt": "500",
-      "guc_kw": "0.31"
+      "guc_kw": "0.31",
+      "genislik_mm": 910,
+      "derinlik_mm": 850,
+      "yukseklik_mm": 1816
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6356,7 +6503,8 @@
     ],
     "fiyat_havale_tl": 102130,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×850×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6368,7 +6516,11 @@
     "teknik_ozellikler": [
       "Katalog sayfası: 311"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 910,
+      "derinlik_mm": 1517,
+      "yukseklik_mm": 1816
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -6418,7 +6570,8 @@
     ],
     "fiyat_havale_tl": 463524,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "910×1517×1816 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6430,10 +6583,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676479695",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1114
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6486,7 +6643,8 @@
     ],
     "fiyat_havale_tl": 82863,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1114 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6498,10 +6656,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676475659",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1469
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6554,7 +6716,8 @@
     ],
     "fiyat_havale_tl": 89546,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1469 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6566,10 +6729,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676479657",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1824
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6622,7 +6789,8 @@
     ],
     "fiyat_havale_tl": 95874,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1824 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6634,10 +6802,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676479664",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 775,
+      "derinlik_mm": 999,
+      "yukseklik_mm": 1114
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6690,7 +6862,8 @@
     ],
     "fiyat_havale_tl": 91062,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "775×999×1114 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6702,10 +6875,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676479671",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 775,
+      "derinlik_mm": 999,
+      "yukseklik_mm": 1469
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6758,7 +6935,8 @@
     ],
     "fiyat_havale_tl": 101216,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "775×999×1469 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6770,10 +6948,14 @@
     "teknik_ozellikler": [
       "Güç: 3 kW",
       "Barkod: 8696676479688",
-      "Katalog sayfası: 312"
+      "Katalog sayfası: 312",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "3"
+      "guc_kw": "3",
+      "genislik_mm": 775,
+      "derinlik_mm": 999,
+      "yukseklik_mm": 1824
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6826,7 +7008,8 @@
     ],
     "fiyat_havale_tl": 114470,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "775×999×1824 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6838,10 +7021,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676481094",
-      "Katalog sayfası: 313"
+      "Katalog sayfası: 313",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1114
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6894,7 +7081,8 @@
     ],
     "fiyat_havale_tl": 78291,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1114 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6906,10 +7094,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676517359",
-      "Katalog sayfası: 313"
+      "Katalog sayfası: 313",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1469
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -6962,7 +7154,8 @@
     ],
     "fiyat_havale_tl": 85962,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1469 mm"
   },
   {
     "category": "banket-arabalari",
@@ -6977,7 +7170,10 @@
       "Katalog sayfası: 313"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 570,
+      "derinlik_mm": 879,
+      "yukseklik_mm": 1824
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7030,7 +7226,8 @@
     ],
     "fiyat_havale_tl": 92314,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×879×1824 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7042,10 +7239,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676517595",
-      "Katalog sayfası: 313"
+      "Katalog sayfası: 313",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 999,
+      "derinlik_mm": 775,
+      "yukseklik_mm": 1114
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7098,7 +7299,8 @@
     ],
     "fiyat_havale_tl": 85588,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "999×775×1114 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7110,10 +7312,14 @@
     "teknik_ozellikler": [
       "Güç: 1.5 kW",
       "Barkod: 8696676517618",
-      "Katalog sayfası: 313"
+      "Katalog sayfası: 313",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.5"
+      "guc_kw": "1.5",
+      "genislik_mm": 999,
+      "derinlik_mm": 775,
+      "yukseklik_mm": 1469
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7166,7 +7372,8 @@
     ],
     "fiyat_havale_tl": 95369,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "999×775×1469 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7181,7 +7388,10 @@
       "Katalog sayfası: 313"
     ],
     "olculer": {
-      "guc_kw": "3"
+      "guc_kw": "3",
+      "genislik_mm": 999,
+      "derinlik_mm": 775,
+      "yukseklik_mm": 1824
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7234,7 +7444,8 @@
     ],
     "fiyat_havale_tl": 109414,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "999×775×1824 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7245,10 +7456,14 @@
     "aciklama": "SOĞUK & SICAK BANKET ARABASI 1-1 15 RAFLI\n\nKategori: BANKET ARABALARI › BANKET ARABALARI",
     "teknik_ozellikler": [
       "Güç: 1.85 kW",
-      "Katalog sayfası: 314"
+      "Katalog sayfası: 314",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "1.85"
+      "guc_kw": "1.85",
+      "genislik_mm": 570,
+      "derinlik_mm": 893,
+      "yukseklik_mm": 1749
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7300,7 +7515,8 @@
     ],
     "fiyat_havale_tl": 526125,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×893×1749 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7312,10 +7528,14 @@
     "teknik_ozellikler": [
       "Güç: 0.23 kW",
       "Barkod: 8696676475666",
-      "Katalog sayfası: 315"
+      "Katalog sayfası: 315",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "0.23"
+      "guc_kw": "0.23",
+      "genislik_mm": 570,
+      "derinlik_mm": 880,
+      "yukseklik_mm": 1750
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7368,7 +7588,8 @@
     ],
     "fiyat_havale_tl": 115129,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "570×880×1750 mm"
   },
   {
     "category": "banket-arabalari",
@@ -7380,10 +7601,14 @@
     "teknik_ozellikler": [
       "Güç: 0.25 kW",
       "Barkod: 8696676478155",
-      "Katalog sayfası: 315"
+      "Katalog sayfası: 315",
+      "Elektrik voltaj: 230 V"
     ],
     "olculer": {
-      "guc_kw": "0.25"
+      "guc_kw": "0.25",
+      "genislik_mm": 775,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 1755
     },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
@@ -7436,7 +7661,8 @@
     ],
     "fiyat_havale_tl": 126602,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "775×1000×1755 mm"
   },
   {
     "category": "salad-barlar",
@@ -7648,12 +7874,16 @@
     "name": "TEPSİ TASIMA ARABASI 40*60 TEPSİ YE GÖRE 20 RAFLI DEM.",
     "price": "₺28.558,00 KDV dahil",
     "specs": "TEPSİ TASIMA ARABASI 40*60 TEPSİ YE GÖRE 20 RAFLI DEM.\n\nAçıklama:\n40x60 demonteli\n\nTEPSİ TASIMA ARABASI 40*60 TEPSİ YE GÖRE 20 RAFLI DEM.\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.46615.00\nListe fiyatı (EUR): 1011.725\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 354.1\nEqusto satış (EUR): 408.05 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺26.473,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676048266\nKatalog sayfası: 338",
-    "aciklama": "40x60 demonteli\n\nTEPSİ TASIMA ARABASI 40*60 TEPSİ YE GÖRE 20 RAFLI DEM.\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676048266",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 610,
+      "yukseklik_mm": 1780
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -7704,7 +7934,9 @@
     ],
     "fiyat_havale_tl": 27987,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×610×1780 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -7712,12 +7944,16 @@
     "name": "TEPSI TASIMA ARABASI - 40*60 TEPSI - 20 RAFLI - KAYNAKLI STOPER CUBUKLU",
     "price": "₺26.742,00 KDV dahil",
     "specs": "TEPSI TASIMA ARABASI - 40*60 TEPSI - 20 RAFLI - KAYNAKLI STOPER CUBUKLU\n\nAçıklama:\n40x60 kaynaklı\n\nTEPSI TASIMA ARABASI - 40*60 TEPSI - 20 RAFLI - KAYNAKLI STOPER CUBUKLU\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.46615.01\nListe fiyatı (EUR): 947.375\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 331.58\nEqusto satış (EUR): 382.1 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺24.790,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676145057\nKatalog sayfası: 338",
-    "aciklama": "40x60 kaynaklı\n\nTEPSI TASIMA ARABASI - 40*60 TEPSI - 20 RAFLI - KAYNAKLI STOPER CUBUKLU\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676145057",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 460,
+      "derinlik_mm": 610,
+      "yukseklik_mm": 1780
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -7768,7 +8004,9 @@
     ],
     "fiyat_havale_tl": 26207,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "460×610×1780 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -7776,12 +8014,16 @@
     "name": "TEPSİ TASIMA ARABASI 1/1 GN 17 RAFLI DEM.",
     "price": "₺23.411,00 KDV dahil",
     "specs": "TEPSİ TASIMA ARABASI 1/1 GN 17 RAFLI DEM.\n\nAçıklama:\nGN 1/1 demonteli\n\nTEPSİ TASIMA ARABASI 1/1 GN 17 RAFLI DEM.\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.40550.00\nListe fiyatı (EUR): 829.4\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 290.29\nEqusto satış (EUR): 334.52 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺21.703,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676048259\nKatalog sayfası: 338",
-    "aciklama": "GN 1/1 demonteli\n\nTEPSİ TASIMA ARABASI 1/1 GN 17 RAFLI DEM.\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676048259",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 382,
+      "derinlik_mm": 550,
+      "yukseklik_mm": 1660
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -7832,7 +8074,9 @@
     ],
     "fiyat_havale_tl": 22943,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "382×550×1660 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -7840,12 +8084,16 @@
     "name": "TEPSI TASIMA ARABASI 1/1 GN 17 RAFLI MONTE",
     "price": "₺21.797,00 KDV dahil",
     "specs": "TEPSI TASIMA ARABASI 1/1 GN 17 RAFLI MONTE\n\nAçıklama:\nGN 1/1 kaynaklı\n\nTEPSI TASIMA ARABASI 1/1 GN 17 RAFLI MONTE\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.40550.01\nListe fiyatı (EUR): 772.2\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 270.27\nEqusto satış (EUR): 311.45 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺20.207,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676145033\nKatalog sayfası: 338",
-    "aciklama": "GN 1/1 kaynaklı\n\nTEPSI TASIMA ARABASI 1/1 GN 17 RAFLI MONTE\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676145033",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 382,
+      "derinlik_mm": 550,
+      "yukseklik_mm": 1660
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -7896,7 +8144,9 @@
     ],
     "fiyat_havale_tl": 21361,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "382×550×1660 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -7904,12 +8154,16 @@
     "name": "TEPSİ TASIMA ARABASI 2/1 GN 17 RAFLI DEM.",
     "price": "₺24.521,00 KDV dahil",
     "specs": "TEPSİ TASIMA ARABASI 2/1 GN 17 RAFLI DEM.\n\nAçıklama:\nGN 1/1 demonteli\n\nTEPSİ TASIMA ARABASI 2/1 GN 17 RAFLI DEM.\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.58660.00\nListe fiyatı (EUR): 868.725\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 304.05\nEqusto satış (EUR): 350.38 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺22.732,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676048297\nKatalog sayfası: 338",
-    "aciklama": "GN 1/1 demonteli\n\nTEPSİ TASIMA ARABASI 2/1 GN 17 RAFLI DEM.\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676048297",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 590,
+      "derinlik_mm": 650,
+      "yukseklik_mm": 1660
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -7960,7 +8214,9 @@
     ],
     "fiyat_havale_tl": 24031,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "590×650×1660 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -7968,12 +8224,16 @@
     "name": "TEPSI TASIMA ARABASI 2/1 GN 17 RAFLI MONTE",
     "price": "₺22.906,00 KDV dahil",
     "specs": "TEPSI TASIMA ARABASI 2/1 GN 17 RAFLI MONTE\n\nAçıklama:\nGN 1/1 kaynaklı\n\nTEPSI TASIMA ARABASI 2/1 GN 17 RAFLI MONTE\n\nKategori: ARABALAR\n\nÜrün kodu: 7895.58660.01\nListe fiyatı (EUR): 811.525\nBayi iskonto: %65 (kalan oran 0.35)\nBayi net alış (EUR): 284.03\nEqusto satış (EUR): 327.3 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺21.235,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676145101\nKatalog sayfası: 338",
-    "aciklama": "GN 1/1 kaynaklı\n\nTEPSI TASIMA ARABASI 2/1 GN 17 RAFLI MONTE\n\nKategori: ARABALAR",
+    "aciklama": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir.",
     "teknik_ozellikler": [
       "Barkod: 8696676145101",
       "Katalog sayfası: 338"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 590,
+      "derinlik_mm": 650,
+      "yukseklik_mm": 1660
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8024,7 +8284,9 @@
     ],
     "fiyat_havale_tl": 22448,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "590×650×1660 mm",
+    "description": "Ürünün tamamı paslanmaz çelikten imal edilmiştir.\nGastronomik ölçülere göre imal edilmiştir.\nBoş ve dolu tepsi taşımak için imal edilmiştir.\nKullanıcılar tarafından sökülüp takılabilir."
   },
   {
     "category": "servis-arabalar",
@@ -8037,7 +8299,11 @@
       "Barkod: 8696676058210",
       "Katalog sayfası: 339"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 550,
+      "derinlik_mm": 650,
+      "yukseklik_mm": 900
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8088,7 +8354,8 @@
     ],
     "fiyat_havale_tl": 44675,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "550×650×900 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8101,7 +8368,11 @@
       "Barkod: 8696676018474",
       "Katalog sayfası: 339"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8152,7 +8423,8 @@
     ],
     "fiyat_havale_tl": 33518,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "600×800×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8240,7 +8512,11 @@
       "Barkod: 8696676955830",
       "Katalog sayfası: 339"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8291,7 +8567,8 @@
     ],
     "fiyat_havale_tl": 25513,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "600×800×850 mm"
   },
   {
     "category": "et-aski-arabasi",
@@ -8303,7 +8580,11 @@
     "teknik_ozellikler": [
       "Katalog sayfası: 340"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 1750
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8353,7 +8634,8 @@
     ],
     "fiyat_havale_tl": 31150,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1000×600×1750 mm"
   },
   {
     "category": "et-aski-arabasi",
@@ -8366,7 +8648,11 @@
       "Barkod: 8696676034962",
       "Katalog sayfası: 340"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 1750
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8417,7 +8703,8 @@
     ],
     "fiyat_havale_tl": 34118,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1400×600×1750 mm"
   },
   {
     "category": "et-aski-arabasi",
@@ -8430,7 +8717,11 @@
       "Barkod: 8696676034955",
       "Katalog sayfası: 340"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 1750
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8481,7 +8772,8 @@
     ],
     "fiyat_havale_tl": 31842,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1200×600×1750 mm"
   },
   {
     "category": "et-aski-arabasi",
@@ -8568,7 +8860,11 @@
       "Barkod: 8696676034986",
       "Katalog sayfası: 340"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 1750
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8620,7 +8916,8 @@
     "fiyat_havale_tl": 35601,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Et askıları ﬁyata dahil değildir. Et askıları ﬁyata dahil değildir."
+    "description": "Et askıları ﬁyata dahil değildir. Et askıları ﬁyata dahil değildir.",
+    "olcu_etiket": "1900×600×1750 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8633,7 +8930,11 @@
       "Barkod: 8696676066369",
       "Katalog sayfası: 340, 424"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8685,7 +8986,8 @@
     ],
     "fiyat_havale_tl": 376,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "600×800×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8762,7 +9064,11 @@
       "Barkod: 8696676058173",
       "Katalog sayfası: 340"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 980,
+      "derinlik_mm": 500,
+      "yukseklik_mm": 780
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8814,7 +9120,8 @@
     "fiyat_havale_tl": 27295,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Açıklama:\nTABAK TAŞIMA ARABASI YÜK TAŞIMA ARABASI"
+    "description": "Açıklama:\nTABAK TAŞIMA ARABASI YÜK TAŞIMA ARABASI",
+    "olcu_etiket": "980×500×780 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8827,7 +9134,11 @@
       "Barkod: 8696676058265",
       "Katalog sayfası: 341"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 800,
+      "derinlik_mm": 550,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8879,7 +9190,8 @@
     "fiyat_havale_tl": 21756,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir.",
+    "olcu_etiket": "800×550×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8892,7 +9204,11 @@
       "Barkod: 8696676033767",
       "Katalog sayfası: 341"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 550,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -8944,7 +9260,8 @@
     "fiyat_havale_tl": 12355,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir.",
+    "olcu_etiket": "550×800×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -8957,7 +9274,11 @@
       "Barkod: 8696676033774",
       "Katalog sayfası: 341"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 550,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9009,7 +9330,8 @@
     "fiyat_havale_tl": 15818,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Üniteler paslanmaz çelikten imal edilmiştir."
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir.",
+    "olcu_etiket": "550×800×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9022,7 +9344,11 @@
       "Barkod: 8696676801212",
       "Katalog sayfası: 341"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 650,
+      "derinlik_mm": 750,
+      "yukseklik_mm": 850
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9074,7 +9400,8 @@
     "fiyat_havale_tl": 43808,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "Üniteler paslanmaz çelikten imal edilmiştir. Arabalar\nÜniteler paslanmaz çelikten imal edilmiştir."
+    "description": "Üniteler paslanmaz çelikten imal edilmiştir. Arabalar\nÜniteler paslanmaz çelikten imal edilmiştir.",
+    "olcu_etiket": "650×750×850 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9162,7 +9489,11 @@
       "Barkod: 8696676035075",
       "Katalog sayfası: 342"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 500,
+      "derinlik_mm": 500,
+      "yukseklik_mm": 610
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9213,7 +9544,8 @@
     ],
     "fiyat_havale_tl": 21756,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "500×500×610 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9226,7 +9558,11 @@
       "Barkod: 8696676035112",
       "Katalog sayfası: 342"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 450,
+      "derinlik_mm": 650,
+      "yukseklik_mm": 660
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9277,7 +9613,8 @@
     ],
     "fiyat_havale_tl": 23833,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "450×650×660 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9354,7 +9691,11 @@
       "Barkod: 8696676473600",
       "Katalog sayfası: 342"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 870,
+      "derinlik_mm": 690,
+      "yukseklik_mm": 1760
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9405,7 +9746,8 @@
     ],
     "fiyat_havale_tl": 34711,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "870×690×1760 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9418,7 +9760,11 @@
       "Barkod: 8680211020084",
       "Katalog sayfası: 342"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 870,
+      "derinlik_mm": 690,
+      "yukseklik_mm": 1760
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9470,7 +9816,8 @@
     "fiyat_havale_tl": 2169,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "POLİETİLEN DEMONTE 37 X 53 TEPSİ TAŞIMA ARABASI"
+    "description": "POLİETİLEN DEMONTE 37 X 53 TEPSİ TAŞIMA ARABASI",
+    "olcu_etiket": "870×690×1760 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9478,12 +9825,16 @@
     "name": "TABAK DISPANSERI 6 BOLMELI TAA6",
     "price": "₺44.683,00 KDV dahil",
     "specs": "TABAK DISPANSERI 6 BOLMELI TAA6\n\nAçıklama:\n140-480 tabak\n\nTABAK DISPANSERI 6 BOLMELI TAA6\n\nKategori: ARABALAR › ÇOK AMAÇLI ARABALAR\n\nÜrün kodu: 8959.0TAA6.00\nListe fiyatı (EUR): 1319.175\nBayi iskonto: %58 (kalan oran 0.42)\nBayi net alış (EUR): 554.05\nEqusto satış (EUR): 638.47 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺41.423,00\nKur: 1 EUR = 56.1423 TRY (KDV %20)\nKategori: ÇOK AMAÇLI ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8696676074388\nKatalog sayfası: 343",
-    "aciklama": "140-480 tabak\n\nTABAK DISPANSERI 6 BOLMELI TAA6\n\nKategori: ARABALAR › ÇOK AMAÇLI ARABALAR",
+    "aciklama": "İki ürün arasında sadece montaj farkı vardır Çok Amaçlı Arabalar",
     "teknik_ozellikler": [
       "Barkod: 8696676074388",
       "Katalog sayfası: 343"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 1100,
+      "derinlik_mm": 730,
+      "yukseklik_mm": 815
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9535,7 +9886,9 @@
     ],
     "fiyat_havale_tl": 43789,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "1100×730×815 mm",
+    "description": "İki ürün arasında sadece montaj farkı vardır Çok Amaçlı Arabalar"
   },
   {
     "category": "servis-arabalar",
@@ -9543,12 +9896,16 @@
     "name": "FANTOM SERVİS ARABASI PROCART 220",
     "price": "₺15.974,00 KDV dahil",
     "specs": "FANTOM SERVİS ARABASI PROCART 220\n\nAçıklama:\nİki ürün arasında sadece montaj farkı vardır\n\nKategori: ARABALAR › ÇOK AMAÇLI ARABALAR\n\nÜrün kodu: 8959.PR220.00\nListe fiyatı (TL): 26476.45\nBayi iskonto: %58 (kalan oran 0.42)\nBayi net alış (TL): 11120.11\nEqusto satış (TL): 12814.37 (+%15.24 kar)\nHesap: liste × (1 − bayi iskonto); Equsto = bayi net × 1.15236\nEqusto satış (TL, KDV dahil): ₺15.377,00\nPara birimi: TL (kur çevrimi yok, KDV %20)\nKategori: ÇOK AMAÇLI ARABALAR\nKaynak: Öztiryakiler Fiyat Listesi 2025\n\nTeknik Özellikler\nBarkod: 8697435932901\nKatalog sayfası: 343",
-    "aciklama": "İki ürün arasında sadece montaj farkı vardır\n\nKategori: ARABALAR › ÇOK AMAÇLI ARABALAR",
+    "aciklama": "İki ürün arasında sadece montaj farkı vardır Çok Amaçlı Arabalar",
     "teknik_ozellikler": [
       "Barkod: 8697435932901",
       "Katalog sayfası: 343"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 530,
+      "derinlik_mm": 1080,
+      "yukseklik_mm": 990
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9601,7 +9958,8 @@
     "fiyat_havale_tl": 15655,
     "havale_iskonto_oran": 2,
     "equsto_site_markup": 0.0388,
-    "description": "İki ürün arasında sadece montaj farkı vardır"
+    "description": "İki ürün arasında sadece montaj farkı vardır Çok Amaçlı Arabalar",
+    "olcu_etiket": "530×1080×990 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9614,7 +9972,11 @@
       "Barkod: 8696676291334",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9667,7 +10029,8 @@
     ],
     "fiyat_havale_tl": 73759,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9680,7 +10043,11 @@
       "Barkod: 8696676844998",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9733,7 +10100,8 @@
     ],
     "fiyat_havale_tl": 52081,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9746,7 +10114,11 @@
       "Barkod: 8696676844981",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9799,7 +10171,8 @@
     ],
     "fiyat_havale_tl": 59153,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9812,7 +10185,11 @@
       "Barkod: 8696676278519",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9865,7 +10242,8 @@
     ],
     "fiyat_havale_tl": 74522,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9878,7 +10256,11 @@
       "Barkod: 8696676932145",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9931,7 +10313,8 @@
     ],
     "fiyat_havale_tl": 70438,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -9944,7 +10327,11 @@
       "Barkod: 8696676845018",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -9997,7 +10384,8 @@
     ],
     "fiyat_havale_tl": 77908,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10010,7 +10398,11 @@
       "Barkod: 8696676845025",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10063,7 +10455,8 @@
     ],
     "fiyat_havale_tl": 94373,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10076,7 +10469,11 @@
       "Barkod: 8696676848132",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 340,
+      "derinlik_mm": 470,
+      "yukseklik_mm": 890
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10129,7 +10526,8 @@
     ],
     "fiyat_havale_tl": 9892,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "340×470×890 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10142,7 +10540,11 @@
       "Barkod: 8696676480097",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10195,7 +10597,8 @@
     ],
     "fiyat_havale_tl": 43285,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10208,7 +10611,11 @@
       "Barkod: 8696676849368",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10261,7 +10668,8 @@
     ],
     "fiyat_havale_tl": 40631,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10274,7 +10682,11 @@
       "Barkod: 8696676849375",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10327,7 +10739,8 @@
     ],
     "fiyat_havale_tl": 38206,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   },
   {
     "category": "servis-arabalar",
@@ -10340,7 +10753,11 @@
       "Barkod: 8696676849382",
       "Katalog sayfası: 344"
     ],
-    "olculer": null,
+    "olculer": {
+      "genislik_mm": 720,
+      "derinlik_mm": 720,
+      "yukseklik_mm": 1820
+    },
     "keywords": [
       "Öztiryakiler Endüstriyel Mutfak",
       "Öztiryakiler",
@@ -10393,6 +10810,7 @@
     ],
     "fiyat_havale_tl": 33228,
     "havale_iskonto_oran": 2,
-    "equsto_site_markup": 0.0388
+    "equsto_site_markup": 0.0388,
+    "olcu_etiket": "720×720×1820 mm"
   }
 ]

@@ -421,20 +421,26 @@ function parseKw(text) {
   return null;
 }
 
+const VOLT_NUM = "(?:110|115|120|127|208|220|230|240|380|400|415|440|480)";
+const VOLT_RE = new RegExp(
+  `(?<![\\d.,])(${VOLT_NUM}(?:\\s*[-–/]\\s*${VOLT_NUM})?)\\s*(?:v|volt|vac)(?![a-zçğıöşü])`,
+  "i",
+);
+
 function parseVolt(text) {
-  const s = decodeCatalogText(text);
-  const m = s.match(/(\d{3}(?:\s*[-–/]\s*\d{3})?(?:\s*\/\s*\d)?(?:\s*ph)?(?:\s*\/\s*\d{2}\s*hz)?\s*v(?:\s*\/\s*\d{2}\s*hz)?|\d{3}\s*v\s*(?:\/|~)?\s*\d{2}\s*hz)/i);
-  if (!m) {
-    const simple = s.match(/\b(220|230|380|400)(?:\s*[-–]\s*(240|415))?\s*v\b/i);
-    if (!simple) return "";
-    return simple[0].replace(/\s+/g, " ").trim();
-  }
-  return m[1].replace(/\s+/g, " ").trim();
+  const m = decodeCatalogText(text).match(VOLT_RE);
+  return m ? m[1].replace(/\s+/g, "") + " V" : "";
 }
 
 function parseHz(text) {
-  const m = decodeCatalogText(text).match(/\b(50|60)\s*hz\b/i);
-  return m ? m[1] + " Hz" : "";
+  const m = decodeCatalogText(text).match(/(?<![\d.,])((?:50|60)(?:\s*[-–/]\s*(?:50|60)|\s+(?:50|60))?)\s*hz\b/i);
+  return m ? m[1].trim().replace(/\s*[-–/]\s*|\s+/g, "-") + " Hz" : "";
+}
+
+export function isPlausibleVoltLine(line) {
+  const m = String(line || "").match(/^elektrik voltaj:\s*(.+)$/i);
+  if (!m) return true;
+  return VOLT_RE.test(m[1]) || /monofaz|trifaz/i.test(m[1]);
 }
 
 function parseMbar(text) {
@@ -484,7 +490,7 @@ export function applyEnergyLines(row) {
     (Number(row.gaz_guc) > 0 ? Number(row.gaz_guc) : null) ||
     (Number(row.olculer && row.olculer.guc_kw) > 0 ? Number(row.olculer.guc_kw) : null);
   const kwLabel = kwText(kw);
-  const hasGuc = hasLine(lines, /g[uü][çc]\s*:/i);
+  const hasGuc = lines.some((l) => /g[uü][çc]|\bpower\b|\bkw\b/i.test(String(l).split(":")[0]));
   if (kwLabel && !hasGuc) {
     if (fuel.gas && !fuel.electric) added.push("Gaz gücü: " + kwLabel);
     else if (fuel.electric && !fuel.gas) added.push("Elektrik gücü: " + kwLabel);
@@ -493,11 +499,11 @@ export function applyEnergyLines(row) {
   }
 
   const volt = parseVolt(blob);
-  if (volt && !hasLine(lines, /voltaj|gerilim|elektrik volt/i)) {
+  if (volt && !lines.some((l) => VOLT_RE.test(String(l)) || /volt|gerilim/.test(String(l).split(":")[0].toLocaleLowerCase("tr-TR")))) {
     added.push("Elektrik voltaj: " + volt);
   }
   const hz = parseHz(blob);
-  if (hz && !hasLine(lines, /frekans|elektrik frekans/i)) {
+  if (hz && !lines.some((l) => /frekans|hz\b|elektrik (türü|turu|bağlant|baglant)/i.test(String(l)))) {
     added.push("Elektrik frekans: " + hz);
   }
   const mbar = parseMbar(blob);
