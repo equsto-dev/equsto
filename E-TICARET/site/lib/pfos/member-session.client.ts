@@ -29,7 +29,7 @@ export function memberLoggedInNow(): boolean {
 /** Giriş sonrası PFOS'a geri dönmek için login URL */
 export function pfosLoginHref(): string {
   if (typeof window === "undefined") return "/login";
-  const path = window.location.pathname + window.location.search;
+  const path = window.location.pathname + window.location.search + window.location.hash;
   return `/login?next=${encodeURIComponent(path)}`;
 }
 

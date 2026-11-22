@@ -137,12 +137,43 @@
     }
   }
 
+  function ordersHref() {
+    try {
+      if (/^\/en(\/|$)/.test(location.pathname)) return "/en/account#siparislerim";
+    } catch (_) {}
+    return "/hesabim#siparislerim";
+  }
+
+  function bindHdrOrders(node) {
+    if (!node || node.getAttribute("data-eq-hdr-orders-bound") === "1") return;
+    node.setAttribute("data-eq-hdr-orders-bound", "1");
+    var href = ordersHref();
+    if (String(node.tagName || "").toUpperCase() === "A") {
+      node.setAttribute("href", href);
+      return;
+    }
+    node.style.cursor = "pointer";
+    node.addEventListener("click", function () {
+      location.href = href;
+    });
+  }
+
   function ensureReturns(right) {
     if (!right) return;
+    var existing = right.querySelector(".eq-hdr-orders, [data-eq-hdr-returns]");
+    if (existing) {
+      bindHdrOrders(existing);
+      return;
+    }
     if (hasReturnsBlock(right)) return;
-    var box = el("div", { "data-eq-hdr-returns": "1", style: "display:flex;flex-direction:column;line-height:1.4;" });
+    var box = el("a", {
+      href: ordersHref(),
+      class: "eq-hdr-orders",
+      "data-eq-hdr-returns": "1",
+      style: "display:flex;flex-direction:column;line-height:1.4;color:inherit;text-decoration:none;cursor:pointer;",
+    });
     box.appendChild(el("span", { style: "font-size:10px;color:var(--eq-text-muted);", "data-i18n": "common.returns", text: "İadeler" }));
-    box.appendChild(el("span", { style: "font-size:12px;font-weight:600;cursor:pointer;color:var(--eq-text);", "data-i18n": "common.and_orders", text: "ve Siparişler" }));
+    box.appendChild(el("span", { style: "font-size:12px;font-weight:600;color:var(--eq-text);", "data-i18n": "common.and_orders", text: "ve Siparişler" }));
     right.appendChild(box);
   }
 

@@ -509,6 +509,13 @@ header.hdr .equsto-hdr-cart {
   line-height: 1.4;
 }
 
+header.hdr a.eq-hdr-orders {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header.hdr .eq-hdr-orders,
 header.hdr .eq-hdr-orders span:last-child {
   cursor: pointer;
 }
@@ -1041,7 +1048,12 @@ body.admin-app header.hdr > a.logo .eq-logo-img {
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column;
+    line-height: 1.4;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,
@@ -5750,7 +5762,12 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-upl
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column;
+    line-height: 1.4;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,

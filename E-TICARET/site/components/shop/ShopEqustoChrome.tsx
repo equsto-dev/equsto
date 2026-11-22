@@ -213,10 +213,13 @@ export default function ShopEqustoChrome({
                 <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1" strokeLinecap="round" />
               </svg>
             </a>
-            <div className="eq-hdr-orders">
+            <a
+              className="eq-hdr-orders"
+              href={pathname?.startsWith("/en") ? "/en/account#siparislerim" : "/hesabim#siparislerim"}
+            >
               <span data-i18n="common.returns">{h.returns}</span>
               <span data-i18n="common.and_orders">{h.and_orders}</span>
-            </div>
+            </a>
             <div
               id="equsto-hdr-cart"
               className="equsto-hdr-cart"

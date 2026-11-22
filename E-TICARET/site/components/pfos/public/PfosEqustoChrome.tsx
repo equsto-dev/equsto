@@ -119,14 +119,18 @@ export default function PfosEqustoChrome() {
               {h.account_projects}
             </span>
           </a>
-          <div className="eq-hdr-orders" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
+          <a
+            className="eq-hdr-orders"
+            href={pathname?.startsWith("/en") ? "/en/account#siparislerim" : "/hesabim#siparislerim"}
+            style={{ display: "flex", flexDirection: "column", lineHeight: 1.4, color: "inherit", textDecoration: "none", cursor: "pointer" }}
+          >
             <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.returns">
               {h.returns}
             </span>
-            <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }} data-i18n="common.and_orders">
+            <span style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.and_orders">
               {h.and_orders}
             </span>
-          </div>
+          </a>
           <div
             id="equsto-hdr-cart"
             className="equsto-hdr-cart"
