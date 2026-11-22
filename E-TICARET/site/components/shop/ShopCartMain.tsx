@@ -9,56 +9,37 @@ export default function ShopCartMain() {
       </nav>
       <main className="pg eq-cart-page" id="equsto-cart-page">
         <div className="pg-inner eq-cart-page__inner">
-          <header className="eq-cart-page__head">
-            <h1 className="eq-cart-page__title" data-i18n="common.cart">
-              Alışveriş Sepeti
-            </h1>
-            <p id="equsto-cart-summary" className="eq-cart-page__summary" hidden />
-            <p className="eq-cart-page__lead" data-i18n="cart.lead">
-              Sepetinizdeki ürünleri inceleyin; WhatsApp ile talep iletebilir veya sipariş oluşturabilirsiniz.
-            </p>
-          </header>
-          <div id="equsto-cart-scroll" className="eq-cart-page__list" aria-live="polite" />
-          <div className="eq-cart-page__actions">
-            <button
-              type="button"
-              id="equsto-cart-clear"
-              className="eq-cart-page__btn eq-cart-page__btn--muted"
-              data-i18n="cart.clear"
-            >
-              Sepeti temizle
-            </button>
-            <button
-              type="button"
-              id="equsto-cart-wa"
-              className="eq-cart-page__btn eq-cart-page__btn--outline"
-              data-i18n="cart.whatsapp"
-            >
-              WhatsApp ile gönder
-            </button>
-            <button
-              type="button"
-              id="equsto-cart-pay"
-              className="eq-cart-page__btn eq-cart-page__btn--primary"
-              data-i18n="cart.pay"
-              hidden
-            >
-              Ödeme Yap
-            </button>
-            <button
-              type="button"
-              id="equsto-cart-order"
-              className="eq-cart-page__btn eq-cart-page__btn--outline"
-              data-i18n="cart.order"
-            >
-              Sipariş talebi
-            </button>
+          <div className="eq-cart-layout">
+            <div className="eq-cart-layout__main">
+              <header className="eq-cart-page__head">
+                <h1 className="eq-cart-page__title" data-i18n="common.cart">
+                  Alışveriş Sepeti
+                </h1>
+                <p id="equsto-cart-summary" className="eq-cart-page__summary" hidden />
+              </header>
+              <div id="equsto-cart-scroll" className="eq-cart-page__list" aria-live="polite" />
+            </div>
+            <aside className="eq-cart-layout__aside" id="equsto-cart-aside">
+              <div className="eq-cart-summary">
+                <h2 className="eq-cart-summary__title">Sipariş özeti</h2>
+                <ul id="equsto-cart-summary-rows" className="eq-cart-summary-rows" />
+                <p className="eq-cart-summary__vat">KDV faturada ayrıca eklenir.</p>
+                <button
+                  type="button"
+                  id="equsto-cart-checkout"
+                  className="eq-cart-btn eq-cart-btn--primary"
+                >
+                  Alışverişi tamamla
+                </button>
+                <button type="button" id="equsto-cart-wa" className="eq-cart-btn eq-cart-btn--wa">
+                  WhatsApp ile gönder
+                </button>
+                <button type="button" id="equsto-cart-clear" className="eq-cart-btn eq-cart-btn--muted">
+                  Sepeti temizle
+                </button>
+              </div>
+            </aside>
           </div>
-          <p className="eq-cart-page__note" data-i18n="cart.note">
-            Ödeme Yap ile kart + 3D Secure güvenli ödeme alınır. Sipariş talebi havale /
-            satış mühendisliği içindir.
-          </p>
-          
         </div>
       </main>
       <footer className="footer">

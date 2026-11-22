@@ -16,6 +16,7 @@ function refreshCartUi() {
           syncBadge?: () => void;
           render?: () => void;
           bindPageActions?: () => void;
+          bindCheckoutPage?: () => void;
           prefillCheckout?: () => void;
           syncFromServer?: (opts?: { force?: boolean }) => Promise<boolean>;
           startPolling?: () => void;
@@ -23,12 +24,19 @@ function refreshCartUi() {
       }
     ).EqustoCart;
     cart?.syncBadge?.();
-    if (document.getElementById("equsto-cart-page")) {
+    const cartPage = !!document.getElementById("equsto-cart-page");
+    const checkoutPage = !!document.getElementById("equsto-checkout-page");
+    if (cartPage) {
       cart?.bindPageActions?.();
-      cart?.prefillCheckout?.();
       cart?.render?.();
       cart?.startPolling?.();
-      // Auto-pull from server on page mount to sync cart (like Amazon)
+    }
+    if (checkoutPage) {
+      cart?.bindCheckoutPage?.();
+      cart?.prefillCheckout?.();
+      cart?.render?.();
+    }
+    if (cartPage || checkoutPage) {
       cart?.syncFromServer?.({ force: true }).then(() => {
         cart?.render?.();
         cart?.prefillCheckout?.();

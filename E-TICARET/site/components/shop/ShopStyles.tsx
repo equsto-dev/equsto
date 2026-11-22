@@ -28,12 +28,12 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
           {/* eslint-disable-next-line @next/next/no-css-tags */}
           <link rel="stylesheet" href={`/eq-product-page.css?v=${pdpCssV}`} />
           {/* eslint-disable-next-line @next/next/no-css-tags */}
-          <link rel="stylesheet" href={`/eq-cart.css?v=${v}`} />
+          <link rel="stylesheet" href={`/eq-cart.css?v=${pdpCssV}`} />
         </>
       ) : null}
       {variant === "cart" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
-        <link rel="stylesheet" href={`/eq-cart.css?v=${v}`} />
+        <link rel="stylesheet" href={`/eq-cart.css?v=${pdpCssV}`} />
       ) : null}
       {/* Site geneli mobil katman — en son yüklensin */}
       {/* eslint-disable-next-line @next/next/no-css-tags */}

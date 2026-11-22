@@ -114,6 +114,7 @@
       c: c,
       p: p,
       img: resolveCartItemImg(String(x.img || '').trim()),
+      href: String(x.href || '').trim(),
       q: Math.max(1, Math.round(Number(x.q) || 1)),
       quote: quote,
     };
@@ -129,6 +130,7 @@
         map[it.id].q = Math.max(map[it.id].q, it.q);
         if (it.p) map[it.id].p = it.p;
         if (it.img && !map[it.id].img) map[it.id].img = it.img;
+        if (it.href && !map[it.id].href) map[it.id].href = it.href;
         if (it.quote) map[it.id].quote = true;
       } else {
         map[it.id] = it;
@@ -172,7 +174,7 @@
     if (cartOv && cartOv.classList.contains('is-open')) {
       renderPanelList();
     }
-    if (isCartPage()) renderPanelList();
+    if (isCartSurface()) renderPanelList();
   }
 
   function readMemberFromStorage() {
@@ -361,7 +363,7 @@
         if (opts.clear || (opts.replace && !(arr && arr.length))) {
           saveLocal(items);
           syncBadge();
-          if (isCartPage()) renderPanelList();
+          if (isCartSurface()) renderPanelList();
         }
         return { ok: true, items: items };
       })
@@ -389,7 +391,7 @@
     if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
     saveLocal(remoteNorm);
     syncBadge();
-    if (isCartPage()) renderPanelList();
+    if (isCartSurface()) renderPanelList();
   }
 
   function flushShopCartPush() {
@@ -614,7 +616,7 @@
     if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
     saveLocal(remoteNorm);
     syncBadge();
-    if (isCartPage()) renderPanelList();
+    if (isCartSurface()) renderPanelList();
   }
 
   function load() {
@@ -689,6 +691,51 @@
     return t;
   }
 
+  function hrefFromCartTrigger(el) {
+    var node = el;
+    var i;
+    for (i = 0; i < 6 && node; i++) {
+      if (node.tagName === 'A') {
+        var own = node.getAttribute('href') || '';
+        if (/\/shop\//.test(own)) return own;
+      }
+      if (node.querySelector) {
+        var a = node.querySelector('a[href*="/shop/"]');
+        if (a) return a.getAttribute('href') || '';
+      }
+      node = node.parentElement;
+    }
+    return '';
+  }
+
+  function hrefFromCatalogRow(row) {
+    if (!row || typeof window.eqProductSlug !== 'function' || typeof window.eqProductPath !== 'function') {
+      return '';
+    }
+    var slug = '';
+    try {
+      slug = window.eqProductSlug(row);
+    } catch (eSlug) {
+      slug = '';
+    }
+    if (!slug) return '';
+    var cat = row.category || row.kategori || row.c || '';
+    var dept = '';
+    if (typeof window.eqCategoryToUrunlerSeg === 'function') {
+      try {
+        dept = window.eqCategoryToUrunlerSeg(cat) || '';
+      } catch (eDept) {
+        dept = '';
+      }
+    }
+    if (!dept) dept = String(row.dept || 'pisirme');
+    try {
+      return window.eqProductPath(dept, slug);
+    } catch (ePath) {
+      return '';
+    }
+  }
+
   function parseItemFromEl(el) {
     if (!el) return null;
     var q = 1;
@@ -703,6 +750,7 @@
       c: el.getAttribute('data-eq-c') || '',
       p: el.getAttribute('data-eq-p') || '',
       img: el.getAttribute('data-eq-img') || '',
+      href: hrefFromCartTrigger(el),
       quote: el.getAttribute('data-eq-quote') === '1',
       q: q,
     };
@@ -1140,6 +1188,10 @@
       __cartT('cart.wa_line_types', 'Kalem çeşidi: {n}', { n: arr.length }) +
         (cartIsQuoteOnly(arr) ? '' : __cartT('cart.wa_total_qty', ' · Toplam adet: {q}', { q: totalQty(arr) }))
     );
+    var faturaLine = formatFaturaNote(readFaturaForm());
+    if (faturaLine) {
+      lines.push('', faturaLine);
+    }
     return lines.join('\n');
   }
 
@@ -1177,6 +1229,32 @@
 
   function isCartPage() {
     return !!document.getElementById('equsto-cart-page');
+  }
+
+  function isCheckoutPage() {
+    return !!document.getElementById('equsto-checkout-page');
+  }
+
+  function isCartSurface() {
+    return isCartPage() || isCheckoutPage();
+  }
+
+  function cartListRoot() {
+    return document.getElementById('equsto-cart-scroll') || document.getElementById('equsto-checkout-lines');
+  }
+
+  function checkoutPageHref() {
+    var path = String(location.pathname || '');
+    if (path.indexOf('/en/') === 0) return '/en/odeme';
+    return '/odeme';
+  }
+
+  function goToCheckout() {
+    if (!load().length) {
+      toast('Sepet boş.');
+      return;
+    }
+    location.href = checkoutPageHref();
   }
 
   function goToCartPage() {
@@ -1437,7 +1515,7 @@
     var changed = false;
     for (var li = 0; li < arr.length; li++) {
       var line = arr[li];
-      if (!line || !cartLineNeedsCatalog(line)) continue;
+      if (!line) continue;
       var hit = byId[line.id] || byNameBrand[normalizeNameBrandKey(line.n, line.b)];
       if (!hit) {
         var oz = oztiKodFromCartLine(line);
@@ -1450,6 +1528,14 @@
           }
         }
       }
+      if (hit && !line.href) {
+        var href = hrefFromCatalogRow(hit);
+        if (href) {
+          line.href = href;
+          changed = true;
+        }
+      }
+      if (!cartLineNeedsCatalog(line)) continue;
       if (!hit) continue;
       var imgUrl = cartImgFromCatalogRow(hit);
       if (imgUrl) {
@@ -1530,29 +1616,33 @@
     var unitLbl = isQuote
       ? ''
       : unit > 0
-        ? '₺' + formatMoneyTL(unit) + ' / adet · KDV dahil'
+        ? '₺' + formatMoneyTL(unit) + ' / adet'
         : 'Fiyat için teklif';
-    var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) + ' · KDV dahil' : '';
+    var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) : '';
     var totalBlock = isQuote
       ? '<div class="eq-cart-line__total eq-cart-line__total--quote">' +
         escHtml(__cartT('cart.quote_for_contact', 'Teklif için iletişim')) +
         '</div>'
       : '<div class="eq-cart-line__total">' + escHtml(totalLbl || '—') + '</div>';
     var qtyHtml = renderQtyControls(x, q);
+    var href = String(x.href || '').trim();
+    var nameInner = escHtml(x.n);
+    var nameHtml = href
+      ? '<a class="eq-cart-line__name" href="' + escAttr(href) + '">' + nameInner + '</a>'
+      : '<div class="eq-cart-line__name">' + nameInner + '</div>';
+    var mediaHtml = href
+      ? '<a class="eq-cart-line__media" href="' + escAttr(href) + '">' + media + '</a>'
+      : '<div class="eq-cart-line__media">' + media + '</div>';
     return (
       '<article class="eq-cart-line' +
       (isQuote ? ' eq-cart-line--quote' : '') +
       '" data-cart-id="' +
       escAttr(x.id) +
       '">' +
-      '<div class="eq-cart-line__media">' +
-      media +
-      '</div>' +
+      mediaHtml +
       '<div class="eq-cart-line__main">' +
       '<div class="eq-cart-line__row eq-cart-line__row--head">' +
-      '<div class="eq-cart-line__name">' +
-      escHtml(x.n) +
-      '</div>' +
+      nameHtml +
       totalBlock +
       '</div>' +
       '<div class="eq-cart-line__meta">' +
@@ -1567,45 +1657,63 @@
         : '') +
       '<div class="eq-cart-line__actions">' +
       qtyHtml +
+      '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
+      escAttr(x.id) +
+      '">Sil</button>' +
       '</div></div></div></article>'
     );
   }
 
   function renderSummaryRows() {
-    var rowsEl = document.getElementById('equsto-cart-summary-rows');
-    if (!rowsEl) return;
+    var nodes = [
+      document.getElementById('equsto-cart-summary-rows'),
+      document.getElementById('equsto-checkout-summary-rows'),
+    ].filter(Boolean);
+    if (!nodes.length) return;
     var arr = load();
-    if (!arr.length) {
-      rowsEl.innerHTML = '';
-      return;
+    var html = '';
+    if (arr.length) {
+      var sub = cartSubtotal(arr);
+      if (cartIsQuoteOnly(arr)) {
+        html =
+          '<li><span>' +
+          escHtml(__cartT('cart.quote_line_label', 'Teklif kalemi')) +
+          '</span><span>' +
+          escHtml(String(arr.length)) +
+          '</span></li>';
+      } else {
+        html =
+          '<li><span>' +
+          escHtml(__cartT('cart.subtotal_n', 'Ara toplam ({n} kalem)', { n: arr.length })) +
+          '</span><span>₺' +
+          escHtml(formatMoneyTL(sub)) +
+          '</span></li>' +
+          '<li><span>' +
+          escHtml(__cartT('cart.total_qty_label', 'Toplam adet')) +
+          '</span><span>' +
+          escHtml(String(totalQty(arr))) +
+          '</span></li>' +
+          '<li class="eq-cart-summary-rows__total"><span>' +
+          escHtml(__cartT('cart.grand_total', 'Genel toplam')) +
+          '</span><span>₺' +
+          escHtml(formatMoneyTL(sub)) +
+          '</span></li>';
+      }
     }
-    var sub = cartSubtotal(arr);
-    if (cartIsQuoteOnly(arr)) {
-      rowsEl.innerHTML =
-        '<li><span>' +
-        escHtml(__cartT('cart.quote_line_label', 'Teklif kalemi')) +
-        '</span><span>' +
-        escHtml(String(arr.length)) +
-        '</span></li>';
-      return;
-    }
-    var html =
-      '<li><span>' +
-      escHtml(__cartT('cart.subtotal_n', 'Ara toplam ({n} kalem)', { n: arr.length })) +
-      '</span><span>₺' +
-      escHtml(formatMoneyTL(sub)) +
-      '</span></li>' +
-      '<li><span>' +
-      escHtml(__cartT('cart.total_qty_label', 'Toplam adet')) +
-      '</span><span>' +
-      escHtml(String(totalQty(arr))) +
-      '</span></li>' +
-      '<li class="eq-cart-summary-rows__total"><span>' +
-      escHtml(__cartT('cart.grand_total', 'Genel toplam')) +
-      '</span><span>₺' +
-      escHtml(formatMoneyTL(sub)) +
-      '</span></li>';
-    rowsEl.innerHTML = html;
+    nodes.forEach(function (rowsEl) {
+      if (rowsEl.id === 'equsto-checkout-summary-rows' && arr.length && !cartIsQuoteOnly(arr)) {
+        var sum = cartSubtotal(arr);
+        rowsEl.innerHTML =
+          '<li><span>Ara toplam</span><span>₺' +
+          escHtml(formatMoneyTL(sum)) +
+          '</span></li>' +
+          '<li class="eq-cart-summary-rows__total"><span>Genel toplam</span><span>₺' +
+          escHtml(formatMoneyTL(sum)) +
+          '</span></li>';
+        return;
+      }
+      rowsEl.innerHTML = html;
+    });
   }
 
   function updateCartSummary() {
@@ -1644,6 +1752,11 @@
         changeLineQty(btn.getAttribute('data-id'), 1);
       });
     });
+    root.querySelectorAll('.equsto-cart-remove').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        removeLine(btn.getAttribute('data-id'));
+      });
+    });
     if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(root);
     root.querySelectorAll('.eq-cart-line__media img').forEach(function (imgEl) {
       if (imgEl.getAttribute('data-eq-cart-img-bound') === '1') return;
@@ -1663,7 +1776,7 @@
   }
 
   function renderPanelList() {
-    var sc = document.getElementById('equsto-cart-scroll');
+    var sc = cartListRoot();
     if (!sc) return;
     var arr = enrichCartLineImages(load());
     var needsCatalog = isCartPage();
@@ -1698,8 +1811,42 @@
     renderPanelListInner(arr);
   }
 
+  function renderCheckoutMiniHtml(x) {
+    var q = x.q > 0 ? x.q : 1;
+    var total = lineTotalNum(x);
+    var src = '';
+    try {
+      src = cartLineImageSrc(x) || '';
+    } catch (eImg) {
+      src = '';
+    }
+    var media = src
+      ? '<img src="' + escAttr(src) + '" alt="" />'
+      : '<span class="eq-pay-line__ph" aria-hidden="true"></span>';
+    var price = total > 0 ? formatMoneyTL(total) + ' TL' : 'Teklif';
+    return (
+      '<article class="eq-pay-line">' +
+      '<div class="eq-pay-line__media">' +
+      media +
+      '</div>' +
+      '<div class="eq-pay-line__body">' +
+      '<div class="eq-pay-line__name">' +
+      escHtml(x.n) +
+      '</div>' +
+      '<div class="eq-pay-line__meta">' +
+      escHtml(x.b || '') +
+      '</div>' +
+      '<div class="eq-pay-line__qty">' +
+      escHtml(String(q)) +
+      ' adet</div>' +
+      '<div class="eq-pay-line__price">' +
+      escHtml(price) +
+      '</div></div></article>'
+    );
+  }
+
   function renderPanelListInner(arr) {
-    var sc = document.getElementById('equsto-cart-scroll');
+    var sc = cartListRoot();
     if (!sc) return;
     if (!arr.length) {
       sc.innerHTML =
@@ -1719,9 +1866,11 @@
       updatePanelMode();
       return;
     }
-    sc.classList.add('eq-cart-lines');
-    sc.innerHTML = arr.map(renderCartLineHtml).join('');
-    bindCartLineEvents(sc);
+    var mini = sc.id === 'equsto-checkout-lines';
+    if (mini) sc.classList.remove('eq-cart-lines');
+    else sc.classList.add('eq-cart-lines');
+    sc.innerHTML = arr.map(mini ? renderCheckoutMiniHtml : renderCartLineHtml).join('');
+    if (!mini) bindCartLineEvents(sc);
     if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(sc);
     updateCartSummary();
     updatePanelMode();
@@ -1837,6 +1986,11 @@
     if (waBtn && waBtn.dataset.eqCartBound !== '1') {
       waBtn.dataset.eqCartBound = '1';
       waBtn.addEventListener('click', openWhatsApp);
+    }
+    var checkoutBtn = document.getElementById('equsto-cart-checkout');
+    if (checkoutBtn && checkoutBtn.dataset.eqCartBound !== '1') {
+      checkoutBtn.dataset.eqCartBound = '1';
+      checkoutBtn.addEventListener('click', goToCheckout);
     }
     var ordBtn = document.getElementById('equsto-cart-order');
     if (ordBtn && ordBtn.dataset.eqCartBound !== '1') {
@@ -1980,6 +2134,8 @@
     } catch (e) {}
   }
 
+  var faturaProvinces = [];
+
   function memberCheckoutDefaults() {
     var m = readMemberFromStorage();
     var saved = readCheckoutStorage() || {};
@@ -1999,9 +2155,716 @@
     return memberCheckoutDefaults();
   }
 
-  function bindCheckoutUi() {}
+  function faturaField(id) {
+    var el = document.getElementById(id);
+    return el ? String(el.value || '').trim() : '';
+  }
 
-  function prefillCheckoutForm() {}
+  function faturaTip() {
+    var sel = document.getElementById('eq-fatura-tur');
+    if (sel && sel.value) return sel.value === 'kurumsal' ? 'kurumsal' : 'bireysel';
+    var checked = document.querySelector('input[name="eq-fatura-tip"]:checked');
+    return checked && checked.value === 'kurumsal' ? 'kurumsal' : 'bireysel';
+  }
+
+  function readFaturaForm() {
+    var tip = faturaTip();
+    return {
+      tip: tip,
+      ad: faturaField('eq-fatura-ad'),
+      tckn: faturaField('eq-fatura-tckn').replace(/\D/g, ''),
+      unvan: faturaField('eq-fatura-unvan'),
+      vergi_dairesi: faturaField('eq-fatura-vd'),
+      vkn: faturaField('eq-fatura-vkn').replace(/\D/g, ''),
+      eposta: faturaField('eq-fatura-eposta'),
+      telefon: faturaField('eq-fatura-tel'),
+      il: faturaField('eq-fatura-il'),
+      ilce: faturaField('eq-fatura-ilce'),
+      adres: faturaField('eq-fatura-adres'),
+    };
+  }
+
+  function formatFaturaNote(f) {
+    if (!f) return '';
+    var head = '';
+    if (f.tip === 'kurumsal') {
+      if (!f.unvan && !f.vkn) return '';
+      head =
+        'Fatura (kurumsal): ' +
+        (f.unvan || '—') +
+        (f.vergi_dairesi ? ' · VD: ' + f.vergi_dairesi : '') +
+        (f.vkn ? ' · VN: ' + f.vkn : '');
+    } else {
+      if (!f.ad && !f.tckn) return '';
+      head = 'Fatura (bireysel): ' + (f.ad || '—') + (f.tckn ? ' · TCKN: ' + f.tckn : '');
+    }
+    var addr = [f.adres, f.ilce, f.il].filter(Boolean).join(', ');
+    return addr ? head + '\n' + addr : head;
+  }
+
+  function faturaError(msg) {
+    var el =
+      document.getElementById('equsto-checkout-error') ||
+      document.getElementById('equsto-cart-fatura-error');
+    if (!el) {
+      if (msg) toast(msg);
+      return;
+    }
+    if (!msg) {
+      el.hidden = true;
+      el.textContent = '';
+      return;
+    }
+    el.hidden = false;
+    el.textContent = msg;
+  }
+
+  function validateFatura(f) {
+    if (!f) return 'Fatura bilgileri gerekli.';
+    if (f.tip === 'kurumsal') {
+      if (!f.unvan) return 'Firma ünvanı gerekli.';
+      if (!f.vergi_dairesi) return 'Vergi dairesi gerekli.';
+      if (!/^\d{10}$/.test(f.vkn)) return 'Vergi numarası 10 haneli olmalı.';
+    } else {
+      var foreign = document.getElementById('eq-fatura-foreign');
+      if (!(foreign && foreign.checked) && !/^\d{11}$/.test(f.tckn)) {
+        return 'T.C. kimlik no 11 haneli olmalı.';
+      }
+    }
+    if (!f.eposta || f.eposta.indexOf('@') < 1) return 'Geçerli bir e-posta girin.';
+    if (String(f.telefon || '').replace(/\D/g, '').length < 10) return 'Telefon gerekli.';
+    if (!f.il || !f.ilce) return 'İl ve ilçe seçin.';
+    if (String(f.adres || '').length < 8) return 'Açık adresi yazın.';
+    return '';
+  }
+
+  function applyFaturaTip() {
+    var kurumsal = faturaTip() === 'kurumsal';
+    document.querySelectorAll('.eq-cart-fatura__bireysel').forEach(function (el) {
+      el.hidden = kurumsal;
+    });
+    document.querySelectorAll('.eq-cart-fatura__kurumsal').forEach(function (el) {
+      el.hidden = !kurumsal;
+    });
+  }
+
+  function faturaSameAsDelivery() {
+    var diff = document.getElementById('eq-fatura-different');
+    if (diff) return !diff.checked;
+    var el = document.getElementById('eq-fatura-same');
+    return !el || !!el.checked;
+  }
+
+  function applyFaturaSame() {
+    var same = faturaSameAsDelivery();
+    document.querySelectorAll('.eq-fatura-address').forEach(function (el) {
+      el.hidden = same;
+    });
+  }
+
+  function readDeliveryForm() {
+    return {
+      ad: faturaField('eq-teslimat-ad'),
+      telefon: faturaField('eq-teslimat-tel'),
+      eposta: faturaField('eq-teslimat-eposta'),
+      il: faturaField('eq-teslimat-il'),
+      ilce: faturaField('eq-teslimat-ilce'),
+      adres: faturaField('eq-teslimat-adres'),
+      baslik: faturaField('eq-teslimat-baslik'),
+      semt: faturaField('eq-teslimat-semt'),
+      posta: faturaField('eq-teslimat-posta'),
+    };
+  }
+
+  function fillFaturaSelect(sel, names, placeholder, selected) {
+    if (!sel) return;
+    var html = '<option value="">' + escHtml(placeholder) + '</option>';
+    (names || []).forEach(function (name) {
+      html +=
+        '<option value="' +
+        escAttr(name) +
+        '"' +
+        (name === selected ? ' selected' : '') +
+        '>' +
+        escHtml(name) +
+        '</option>';
+    });
+    sel.innerHTML = html;
+    sel.disabled = !names || !names.length;
+    if (selected) sel.value = selected;
+    syncSearchSelect(sel);
+  }
+
+  function trFold(s) {
+    return String(s || '')
+      .toLocaleLowerCase('tr')
+      .replace(/ğ/g, 'g')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ö/g, 'o')
+      .replace(/ç/g, 'c')
+      .replace(/ı/g, 'i');
+  }
+
+  function closeSearchSelects(except) {
+    document.querySelectorAll('.eq-pay-combo__pop').forEach(function (pop) {
+      if (except && pop === except) return;
+      pop.hidden = true;
+    });
+  }
+
+  function renderSearchSelect(wrap, sel, query) {
+    var label = wrap.querySelector('.eq-pay-combo__value');
+    var list = wrap.querySelector('.eq-pay-combo__list');
+    var btn = wrap.querySelector('.eq-pay-combo__btn');
+    if (!label || !list || !btn) return;
+    btn.disabled = !!sel.disabled;
+    var needle = trFold(String(query || '').trim());
+    var current = '';
+    var html = '';
+    [].forEach.call(sel.options, function (opt) {
+      if (!opt.value) return;
+      if (opt.value === sel.value) current = opt.textContent;
+      if (needle && trFold(opt.textContent).indexOf(needle) < 0) return;
+      html +=
+        '<li><button type="button" class="eq-pay-combo__opt" data-value="' +
+        escAttr(opt.value) +
+        '">' +
+        escHtml(opt.textContent) +
+        '</button></li>';
+    });
+    var emptyLabel = sel.options[0] ? sel.options[0].textContent : 'Seçin';
+    label.textContent = current || emptyLabel;
+    list.innerHTML = html || '<li class="eq-pay-combo__empty">Sonuç yok</li>';
+  }
+
+  function pickSearchSelect(sel, wrap, value) {
+    sel.value = value || '';
+    try {
+      sel.dispatchEvent(new Event('change', { bubbles: true }));
+    } catch (e) {
+      var ev = document.createEvent('Event');
+      ev.initEvent('change', true, true);
+      sel.dispatchEvent(ev);
+    }
+    var pop = wrap.querySelector('.eq-pay-combo__pop');
+    if (pop) pop.hidden = true;
+    renderSearchSelect(wrap, sel, '');
+  }
+
+  function syncSearchSelect(sel) {
+    if (!sel || !sel.id || !sel.parentElement) return;
+    var wrap = sel.parentElement.querySelector('.eq-pay-combo[data-for="' + sel.id + '"]');
+    if (!wrap) {
+      wrap = document.createElement('div');
+      wrap.className = 'eq-pay-combo';
+      wrap.setAttribute('data-for', sel.id);
+      var searchLabel = sel.id.indexOf('ilce') >= 0 ? 'İlçe ara' : 'İl ara';
+      wrap.innerHTML =
+        '<button type="button" class="eq-pay-combo__btn" aria-haspopup="listbox">' +
+        '<span class="eq-pay-combo__value"></span></button>' +
+        '<div class="eq-pay-combo__pop" hidden>' +
+        '<input class="eq-pay-combo__q" type="search" placeholder="' +
+        escAttr(searchLabel) +
+        '" aria-label="' +
+        escAttr(searchLabel) +
+        '" />' +
+        '<ul class="eq-pay-combo__list" role="listbox"></ul></div>';
+      sel.classList.add('eq-pay-combo-native');
+      sel.setAttribute('tabindex', '-1');
+      sel.setAttribute('aria-hidden', 'true');
+      sel.insertAdjacentElement('afterend', wrap);
+      var btn = wrap.querySelector('.eq-pay-combo__btn');
+      var pop = wrap.querySelector('.eq-pay-combo__pop');
+      var q = wrap.querySelector('.eq-pay-combo__q');
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (sel.disabled) return;
+        var willOpen = pop.hidden;
+        closeSearchSelects();
+        if (!willOpen) return;
+        pop.hidden = false;
+        q.value = '';
+        renderSearchSelect(wrap, sel, '');
+        q.focus();
+      });
+      q.addEventListener('input', function () {
+        renderSearchSelect(wrap, sel, q.value);
+      });
+      q.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          pop.hidden = true;
+          btn.focus();
+        }
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          var first = wrap.querySelector('.eq-pay-combo__opt');
+          if (first) pickSearchSelect(sel, wrap, first.getAttribute('data-value'));
+        }
+      });
+      wrap.addEventListener('click', function (e) {
+        var opt = e.target.closest ? e.target.closest('.eq-pay-combo__opt') : null;
+        if (!opt) return;
+        e.preventDefault();
+        pickSearchSelect(sel, wrap, opt.getAttribute('data-value'));
+      });
+      if (!document.documentElement.dataset.eqComboDoc) {
+        document.documentElement.dataset.eqComboDoc = '1';
+        document.addEventListener('click', function (e) {
+          if (e.target.closest && e.target.closest('.eq-pay-combo')) return;
+          closeSearchSelects();
+        });
+      }
+    }
+    renderSearchSelect(wrap, sel, '');
+  }
+
+  function faturaProvinceByName(name) {
+    var want = String(name || '').trim();
+    for (var i = 0; i < faturaProvinces.length; i++) {
+      if (faturaProvinces[i] && faturaProvinces[i].name === want) return faturaProvinces[i];
+    }
+    return null;
+  }
+
+  function fillDistrictSelect(ilceId, il, ilce) {
+    var sel = document.getElementById(ilceId);
+    var province = faturaProvinceByName(il);
+    var names = [];
+    if (province && province.districts) {
+      names = province.districts
+        .map(function (d) {
+          return d && d.name ? String(d.name) : '';
+        })
+        .filter(Boolean)
+        .sort(function (a, b) {
+          return a.localeCompare(b, 'tr');
+        });
+    }
+    fillFaturaSelect(sel, names, il ? 'İlçe seçin' : 'Önce il seçin', ilce || '');
+  }
+
+  function provinceNames() {
+    return faturaProvinces
+      .map(function (p) {
+        return p && p.name ? String(p.name) : '';
+      })
+      .filter(Boolean);
+  }
+
+  function fillProvincePair(ilId, ilceId, selectedIl, selectedIlce) {
+    fillFaturaSelect(document.getElementById(ilId), provinceNames(), 'Seçin', selectedIl || '');
+    fillDistrictSelect(ilceId, selectedIl || '', selectedIlce || '');
+  }
+
+  function fillFaturaDistricts(il, ilce) {
+    fillDistrictSelect('eq-fatura-ilce', il, ilce);
+  }
+
+  function fillFaturaProvinces(selectedIl, selectedIlce) {
+    fillProvincePair('eq-fatura-il', 'eq-fatura-ilce', selectedIl, selectedIlce);
+  }
+
+  function loadFaturaProvinces(done) {
+    if (faturaProvinces.length) {
+      if (done) done();
+      return;
+    }
+    fetch('/data/tr-adres.json', { cache: 'force-cache' })
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (j) {
+        faturaProvinces = (j && j.provinces) || [];
+        faturaProvinces.sort(function (a, b) {
+          return String(a.name || '').localeCompare(String(b.name || ''), 'tr');
+        });
+      })
+      .catch(function () {
+        faturaProvinces = [];
+      })
+      .finally(function () {
+        if (done) done();
+      });
+  }
+
+  function memberAddressDefaults() {
+    var m = readMemberFromStorage();
+    var raw = m && (m.teslimatAdres || m.teslimat_adres);
+    if (!raw || typeof raw !== 'object') return { il: '', ilce: '', adres: '' };
+    var addr = raw;
+    if (Array.isArray(raw.addresses)) {
+      var picked = null;
+      for (var i = 0; i < raw.addresses.length; i++) {
+        if (raw.addresses[i] && raw.addresses[i].id === raw.defaultAddressId) picked = raw.addresses[i];
+      }
+      addr = picked || raw.addresses[0] || {};
+    }
+    return {
+      il: String(addr.il || '').trim(),
+      ilce: String(addr.ilce || '').trim(),
+      adres: String(addr.acikAdres || addr.acik_adres || '').trim(),
+    };
+  }
+
+  function setFaturaField(id, value) {
+    var el = document.getElementById(id);
+    if (!el || value == null) return;
+    if (!String(el.value || '').trim()) el.value = value;
+  }
+
+  function setFieldValue(id, value) {
+    var el = document.getElementById(id);
+    if (!el || value == null) return;
+    el.value = value;
+  }
+
+  function persistFaturaForm() {
+    if (!document.getElementById('equsto-checkout-page')) return;
+    var d = readDeliveryForm();
+    var tip = faturaTip();
+    saveCheckoutStorage({
+      ad: d.ad,
+      telefon: d.telefon,
+      eposta: d.eposta,
+      teslimat: d,
+      faturaSame: faturaSameAsDelivery(),
+      fatura: {
+        tip: tip,
+        ad: faturaField('eq-fatura-ad'),
+        tckn: faturaField('eq-fatura-tckn').replace(/\D/g, ''),
+        unvan: faturaField('eq-fatura-unvan'),
+        vergi_dairesi: faturaField('eq-fatura-vd'),
+        vkn: faturaField('eq-fatura-vkn').replace(/\D/g, ''),
+        il: faturaField('eq-fatura-il'),
+        ilce: faturaField('eq-fatura-ilce'),
+        adres: faturaField('eq-fatura-adres'),
+      },
+    });
+  }
+
+  function bindCheckoutUi() {
+    var root = document.getElementById('equsto-checkout-page');
+    if (!root || root.dataset.eqFaturaBound === '1') return;
+    root.dataset.eqFaturaBound = '1';
+    root.querySelectorAll('input[name="eq-fatura-tip"]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        applyFaturaTip();
+        persistFaturaForm();
+      });
+    });
+    var turSel = document.getElementById('eq-fatura-tur');
+    if (turSel) {
+      turSel.addEventListener('change', function () {
+        applyFaturaTip();
+        persistFaturaForm();
+      });
+    }
+    var diff = document.getElementById('eq-fatura-different');
+    if (diff) {
+      diff.addEventListener('change', function () {
+        var sameBox = document.getElementById('eq-fatura-same');
+        if (sameBox) sameBox.checked = !diff.checked;
+        applyFaturaSame();
+        persistFaturaForm();
+      });
+    }
+    var same = document.getElementById('eq-fatura-same');
+    if (same) {
+      same.addEventListener('change', function () {
+        applyFaturaSame();
+        persistFaturaForm();
+      });
+    }
+    var il = document.getElementById('eq-fatura-il');
+    if (il) {
+      il.addEventListener('change', function () {
+        fillFaturaDistricts(il.value, '');
+        persistFaturaForm();
+      });
+    }
+    var teslimatIl = document.getElementById('eq-teslimat-il');
+    if (teslimatIl) {
+      teslimatIl.addEventListener('change', function () {
+        fillDistrictSelect('eq-teslimat-ilce', teslimatIl.value, '');
+        persistFaturaForm();
+      });
+    }
+    root.querySelectorAll('input[name="eq-odeme-yontem"]').forEach(function (inp) {
+      inp.addEventListener('change', updatePlaceLabel);
+    });
+    root.querySelectorAll('input, textarea, select').forEach(function (el) {
+      el.addEventListener('change', persistFaturaForm);
+      if (el.tagName !== 'SELECT') el.addEventListener('input', persistFaturaForm);
+    });
+    applyFaturaTip();
+    applyFaturaSame();
+  }
+
+  function applySavedAddress(addr) {
+    if (!addr) return;
+    loadFaturaProvinces(function () {
+      fillProvincePair('eq-teslimat-il', 'eq-teslimat-ilce', addr.il || '', addr.ilce || '');
+      setFieldValue('eq-teslimat-adres', addr.adres || addr.acikAdres || '');
+    });
+  }
+
+  function renderSavedAddress(addr) {
+    var box = document.getElementById('equsto-checkout-saved');
+    if (box) box.hidden = true;
+    if (addr && addr.il) applySavedAddress(addr);
+  }
+
+  function prefillCheckoutForm() {
+    if (!document.getElementById('equsto-checkout-page')) return;
+    var base = memberCheckoutDefaults();
+    var saved = readCheckoutStorage() || {};
+    var savedF = saved.fatura && typeof saved.fatura === 'object' ? saved.fatura : {};
+    var savedD = saved.teslimat && typeof saved.teslimat === 'object' ? saved.teslimat : {};
+    var addr = memberAddressDefaults();
+    var tip = savedF.tip === 'kurumsal' ? 'kurumsal' : 'bireysel';
+    var tur = document.getElementById('eq-fatura-tur');
+    if (tur) tur.value = tip;
+    var tipInput = document.querySelector('input[name="eq-fatura-tip"][value="' + tip + '"]');
+    if (tipInput) tipInput.checked = true;
+    var diffEl = document.getElementById('eq-fatura-different');
+    if (diffEl && saved.faturaSame === false) diffEl.checked = true;
+    var sameEl = document.getElementById('eq-fatura-same');
+    if (sameEl && saved.faturaSame === false) sameEl.checked = false;
+    applyFaturaTip();
+    applyFaturaSame();
+    setFaturaField('eq-teslimat-ad', savedD.ad || base.ad);
+    setFaturaField('eq-teslimat-tel', savedD.telefon || base.tel);
+    setFaturaField('eq-teslimat-eposta', savedD.eposta || base.eposta);
+    setFaturaField('eq-teslimat-adres', savedD.adres || addr.adres);
+    setFaturaField('eq-fatura-ad', savedF.ad || base.ad);
+    setFaturaField('eq-fatura-tckn', savedF.tckn || '');
+    setFaturaField('eq-fatura-unvan', savedF.unvan || '');
+    setFaturaField('eq-fatura-vd', savedF.vergi_dairesi || '');
+    setFaturaField('eq-fatura-vkn', savedF.vkn || '');
+    setFaturaField('eq-fatura-adres', savedF.adres || '');
+    var login = document.getElementById('equsto-checkout-login');
+    if (login) {
+      login.hidden = isLoggedIn();
+      var a = login.querySelector('a');
+      if (a) a.href = '/login?next=' + encodeURIComponent(checkoutPageHref());
+    }
+    loadFaturaProvinces(function () {
+      fillProvincePair(
+        'eq-teslimat-il',
+        'eq-teslimat-ilce',
+        savedD.il || addr.il || '',
+        savedD.ilce || addr.ilce || ''
+      );
+      fillProvincePair('eq-fatura-il', 'eq-fatura-ilce', savedF.il || '', savedF.ilce || '');
+    });
+    var token = authToken();
+    if (!token) return;
+    fetch('/api/auth/me', {
+      headers: {
+        Authorization: 'Bearer ' + token,
+        'X-Equsto-Authorization': token,
+      },
+      cache: 'no-store',
+    })
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (j) {
+        var user = j && j.user;
+        if (!user) return;
+        setFaturaField('eq-teslimat-ad', user.name || user.ad || '');
+        setFaturaField('eq-teslimat-eposta', user.email || '');
+        setFaturaField('eq-teslimat-tel', user.telefon || user.phone || '');
+        var book = user.teslimatAdres || {};
+        if (book.il) {
+          renderSavedAddress({
+            il: book.il,
+            ilce: book.ilce,
+            acikAdres: book.acikAdres || book.acik_adres || '',
+          });
+        }
+      })
+      .catch(function () {});
+  }
+
+  function collectCheckoutContact() {
+    if (!document.getElementById('equsto-checkout-page')) {
+      var legacy = readCheckoutForm();
+      if (!legacy.ad || !legacy.tel) {
+        toast(
+          !legacy.tel
+            ? __cartT('cart.phone_required_account', 'Telefon gerekli — Hesabım sayfasından ekleyin.')
+            : __cartT('cart.name_required', 'Ad soyad gerekli.')
+        );
+        return null;
+      }
+      return {
+        ad: legacy.ad,
+        tel: legacy.tel,
+        eposta: legacy.eposta,
+        not: legacy.not || '',
+        fatura: null,
+      };
+    }
+    var d = readDeliveryForm();
+    if (!d.ad) {
+      faturaError('Teslimat için ad soyad gerekli.');
+      return null;
+    }
+    var same = faturaSameAsDelivery();
+    var tip = faturaTip();
+    var fatura = {
+      tip: tip,
+      ad: same ? d.ad : faturaField('eq-fatura-ad') || d.ad,
+      telefon: d.telefon,
+      eposta: d.eposta,
+      il: same ? d.il : faturaField('eq-fatura-il'),
+      ilce: same ? d.ilce : faturaField('eq-fatura-ilce'),
+      adres: same ? d.adres : faturaField('eq-fatura-adres'),
+      tckn: tip === 'bireysel' ? faturaField('eq-fatura-tckn').replace(/\D/g, '') : '',
+      unvan: tip === 'kurumsal' ? faturaField('eq-fatura-unvan') : '',
+      vergi_dairesi: tip === 'kurumsal' ? faturaField('eq-fatura-vd') : '',
+      vkn: tip === 'kurumsal' ? faturaField('eq-fatura-vkn').replace(/\D/g, '') : '',
+      yabanci: !!(document.getElementById('eq-fatura-foreign') && document.getElementById('eq-fatura-foreign').checked),
+    };
+    var err = validateFatura(fatura);
+    if (err) {
+      faturaError(err);
+      showCheckoutStep('adres');
+      var box = document.getElementById('equsto-checkout-error');
+      if (box && box.scrollIntoView) {
+        try {
+          box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (_) {}
+      }
+      return null;
+    }
+    faturaError('');
+    persistFaturaForm();
+    var ad = fatura.tip === 'kurumsal' ? fatura.unvan : d.ad;
+    var note = formatFaturaNote(fatura);
+    var ship = [d.adres, d.semt, d.ilce, d.il, d.posta].filter(Boolean).join(', ');
+    if (d.baslik) note = 'Adres: ' + d.baslik + (note ? '\n' + note : '');
+    if (ship) note = 'Teslimat: ' + ship + (note ? '\n' + note : '');
+    return {
+      ad: ad,
+      tel: d.telefon,
+      eposta: d.eposta,
+      not: note,
+      fatura: fatura,
+      teslimat: d,
+    };
+  }
+
+  function attachFaturaPayload(payload, contact) {
+    if (!contact) return payload;
+    var ship = contact.teslimat || contact.fatura;
+    if (ship) {
+      var adres = [ship.adres, ship.ilce, ship.il].filter(Boolean).join(', ');
+      payload.adres = adres;
+      payload.teslimat_adres = adres;
+      payload.sehir = ship.il || '';
+      if (contact.teslimat) payload.teslimat = contact.teslimat;
+    }
+    if (contact.fatura) payload.fatura = contact.fatura;
+    return payload;
+  }
+
+  function placeButtonLabel() {
+    var kart = document.getElementById('eq-odeme-kart');
+    var wrap = document.getElementById('eq-odeme-kart-label');
+    if (kart && kart.checked && wrap && !wrap.hidden) return 'Ödemeye geç';
+    return 'Sipariş talebini gönder';
+  }
+
+  function updatePlaceLabel() {
+    var btn = document.getElementById('equsto-checkout-place');
+    if (btn && !btn.disabled) btn.textContent = placeButtonLabel();
+  }
+
+  function showCheckoutStep(step) {
+    ['ozet', 'adres', 'odeme'].forEach(function (name) {
+      var panel = document.getElementById('eq-step-' + name);
+      if (panel) panel.hidden = name !== step;
+      var btn = document.querySelector('.eq-pay-steps__btn[data-eq-step="' + name + '"]');
+      if (btn) btn.classList.toggle('is-on', name === step);
+    });
+    try {
+      var url = new URL(location.href);
+      if (step === 'odeme') url.searchParams.set('adim', 'odeme');
+      else url.searchParams.delete('adim');
+      history.replaceState({}, '', url.pathname + url.search + url.hash);
+    } catch (e) {}
+  }
+
+  function saveAddressAndContinue() {
+    if (!load().length) {
+      toast('Sepet boş.');
+      return;
+    }
+    if (!collectCheckoutContact()) return;
+    saveMemberDelivery();
+    showCheckoutStep('odeme');
+    var panel = document.getElementById('eq-step-odeme');
+    if (panel && panel.scrollIntoView) {
+      try {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (e) {}
+    }
+  }
+
+  function placeCheckout() {
+    if (!load().length) {
+      toast('Sepet boş.');
+      return;
+    }
+    var soz = document.getElementById('eq-sozlesme');
+    if (soz && !soz.checked) {
+      faturaError('Sipariş için şartlar ve koşullar onayı gerekli.');
+      showCheckoutStep('odeme');
+      return;
+    }
+    var kart = document.getElementById('eq-odeme-kart');
+    var wrap = document.getElementById('eq-odeme-kart-label');
+    if (kart && kart.checked && wrap && !wrap.hidden) submitPayOrder();
+    else submitOrder();
+  }
+
+  function bindCheckoutPage() {
+    if (!isCheckoutPage()) return;
+    bindCheckoutUi();
+    var saveBtn = document.getElementById('eq-adres-kaydet');
+    if (saveBtn && saveBtn.dataset.eqCartBound !== '1') {
+      saveBtn.dataset.eqCartBound = '1';
+      saveBtn.addEventListener('click', saveAddressAndContinue);
+    }
+    document.querySelectorAll('.eq-pay-steps__btn').forEach(function (btn) {
+      if (btn.dataset.eqStepBound === '1') return;
+      btn.dataset.eqStepBound = '1';
+      btn.addEventListener('click', function () {
+        var step = btn.getAttribute('data-eq-step') || 'adres';
+        if (step === 'odeme' && !collectCheckoutContact()) return;
+        showCheckoutStep(step);
+      });
+    });
+    var place = document.getElementById('equsto-checkout-place');
+    if (place && place.dataset.eqCartBound !== '1') {
+      place.dataset.eqCartBound = '1';
+      place.addEventListener('click', placeCheckout);
+    }
+    updatePlaceLabel();
+    refreshPayButton();
+    renderPanelList();
+    try {
+      if (new URLSearchParams(location.search).get('adim') === 'odeme') {
+        var d = readDeliveryForm();
+        if (d.ad && d.il && d.ilce && d.adres) showCheckoutStep('odeme');
+      }
+    } catch (e) {}
+  }
+
 
   function cartSubtotal(arr) {
     return arr.reduce(function (s, x) {
@@ -2056,44 +2919,60 @@
     });
   }
 
-  function submitOrder() {
-    var arr = load();
-    if (!arr.length) { toast('Sepet boş.'); return; }
-    if (!isLoggedIn()) {
-      toast(__cartT('cart.login_required', 'Sipariş için üye girişi gerekli.'));
-      try {
-        var loginHref =
-          typeof window.equstoUrl === 'function'
-            ? window.equstoUrl('login') + '?next=' + encodeURIComponent('/sepet')
-            : '/login?next=' + encodeURIComponent('/sepet');
-        location.href = loginHref;
-      } catch (_) {}
-      return;
+  function loginNextHref() {
+    var next = isCheckoutPage() ? checkoutPageHref() : '/sepet';
+    if (typeof window.equstoUrl === 'function') {
+      return window.equstoUrl('login') + '?next=' + encodeURIComponent(next);
     }
-    var f = readCheckoutForm();
-    var ad = f.ad;
-    var tel = f.tel;
-    var eposta = f.eposta;
-    var not = f.not || '';
-    if (!ad || !tel) {
-      toast(
-        !tel
-          ? __cartT('cart.phone_required_account', 'Telefon gerekli — Hesabım sayfasından ekleyin.')
-          : __cartT('cart.name_required', 'Ad soyad gerekli.')
-      );
-      if (!tel) {
-        try {
-          location.href = '/hesabim#guvenlik';
-        } catch (_) {}
-      }
-      return;
+    return '/login?next=' + encodeURIComponent(next);
+  }
+
+  function checkoutRequestId() {
+    var key = 'equsto_checkout_istek';
+    try {
+      var cur = sessionStorage.getItem(key);
+      if (cur) return cur;
+      var id = 'ck_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
+      sessionStorage.setItem(key, id);
+      return id;
+    } catch (e) {
+      return 'ck_' + Date.now();
     }
-    saveCheckoutStorage({ ad: ad, telefon: tel, eposta: eposta });
-    if (isLoggedIn() && typeof window.equstoSetMemberActive === 'function') {
-      window.equstoSetMemberActive({ ad: ad, telefon: tel, eposta: eposta });
-    }
-    var btn = document.getElementById('equsto-cart-order');
-    if (btn) { btn.disabled = true; btn.textContent = __cartT('cart.order_sending', 'Gönderiliyor…'); }
+  }
+
+  function clearCheckoutRequestId() {
+    try {
+      sessionStorage.removeItem('equsto_checkout_istek');
+    } catch (e) {}
+  }
+
+  function saveMemberDelivery() {
+    if (!isLoggedIn() || typeof window.equstoGetMemberToken !== 'function') return;
+    var token = window.equstoGetMemberToken();
+    if (!token) return;
+    var d = readDeliveryForm();
+    if (!d.il || !d.ilce) return;
+    fetch('/api/auth/profile', {
+      method: 'PUT',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+        'X-Equsto-Authorization': token,
+      },
+      body: JSON.stringify({
+        token: token,
+        teslimatAdres: {
+          title: d.baslik || 'Teslimat',
+          il: d.il,
+          ilce: d.ilce,
+          acikAdres: d.adres,
+        },
+      }),
+    }).catch(function () {});
+  }
+
+  function buildCheckoutPayload(contact, arr, finalToplam, kuponData, kaynak) {
     var kalemler = arr.map(function (x) {
       var birim = parsePriceNum(x.p);
       var adet = x.q > 0 ? x.q : 1;
@@ -2103,25 +2982,52 @@
         ad: x.n || '',
         birim_fiyat_tl: birim,
         adet: adet,
-        ara_toplam_tl: birim * adet
+        ara_toplam_tl: birim * adet,
       };
     });
-    var toplam = kalemler.reduce(function (s, k) { return s + (k.ara_toplam_tl || 0); }, 0);
+    var payload = {
+      musteri: { ad: contact.ad, telefon: contact.tel, eposta: contact.eposta },
+      not: contact.not || '',
+      kalemler: kalemler,
+      toplam_kalem: kalemler.length,
+      toplam_adet: totalQty(arr),
+      toplam_tl: finalToplam,
+      kaynak: kaynak,
+      sozlesme_onay: true,
+      istek_id: checkoutRequestId(),
+    };
+    if (kuponData && kuponData.kod) {
+      payload.kupon_kod = kuponData.kod;
+      payload.indirim_tl = kuponData.indirim_tl || 0;
+    }
+    attachFaturaPayload(payload, contact);
+    return payload;
+  }
+
+  function submitOrder() {
+    var arr = load();
+    if (!arr.length) { toast('Sepet boş.'); return; }
+    if (!isLoggedIn()) {
+      toast(__cartT('cart.login_required', 'Sipariş için üye girişi gerekli.'));
+      try {
+        location.href = loginNextHref();
+      } catch (_) {}
+      return;
+    }
+    var contact = collectCheckoutContact();
+    if (!contact) return;
+    var f = readCheckoutForm();
+    var ad = contact.ad;
+    var tel = contact.tel;
+    var eposta = contact.eposta;
+    if (isLoggedIn() && typeof window.equstoSetMemberActive === 'function') {
+      window.equstoSetMemberActive({ ad: ad, telefon: tel, eposta: eposta });
+    }
+    var btn = document.getElementById('equsto-checkout-place') || document.getElementById('equsto-cart-order');
+    if (btn) { btn.disabled = true; btn.textContent = __cartT('cart.order_sending', 'Gönderiliyor…'); }
 
     function sendOrder(finalToplam, kuponData) {
-      var payload = {
-        musteri: { ad: ad, telefon: tel, eposta: eposta },
-        not: not,
-        kalemler: kalemler,
-        toplam_kalem: kalemler.length,
-        toplam_adet: totalQty(arr),
-        toplam_tl: finalToplam,
-        kaynak: 'web-sepet'
-      };
-      if (kuponData && kuponData.kod) {
-        payload.kupon_kod = kuponData.kod;
-        payload.indirim_tl = kuponData.indirim_tl || 0;
-      }
+      var payload = buildCheckoutPayload(contact, arr, finalToplam, kuponData, 'web-sepet');
       fetch(eqApiBase() + '/siparisler', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -2129,7 +3035,7 @@
       }).then(function (r) {
         return r.json().then(function (j) { return { ok: r.ok, j: j }; });
       }).then(function (res) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
+        if (btn) { btn.disabled = false; btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.order', 'Sipariş talebi'); }
         if (!res.ok || !(res.j && res.j.success)) {
           var msg = (res.j && (res.j.error || res.j.message)) || ('HTTP hata');
           toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + msg);
@@ -2146,10 +3052,11 @@
           }
         } catch (_) {}
         toast(__cartT('cart.order_received', 'Sipariş alındı') + (no ? ' (' + no + ')' : ''));
+        clearCheckoutRequestId();
         clearAll();
         dismissCartUi();
       }).catch(function (e) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
+        if (btn) { btn.disabled = false; btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.order', 'Sipariş talebi'); }
         var em = e && e.message ? e.message : String(e);
         toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + em);
       });
@@ -2157,25 +3064,39 @@
 
     previewKupon(function (err, finalToplam, kuponData) {
       if (err && f.kupon) {
-        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Sipariş talebi'); }
+        if (btn) { btn.disabled = false; btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.order', 'Sipariş talebi'); }
         toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + err);
         return;
       }
-      sendOrder(finalToplam != null ? finalToplam : toplam, kuponData);
+      sendOrder(finalToplam != null ? finalToplam : cartSubtotal(arr), kuponData);
     });
   }
 
   function refreshPayButton() {
     var payBtn = document.getElementById('equsto-cart-pay');
-    if (!payBtn) return;
+    var kartLabel = document.getElementById('eq-odeme-kart-label');
+    if (!payBtn && !kartLabel) return;
     fetch(eqApiBase() + '/odeme/status', { cache: 'no-store' })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         var enabled = !!(res.ok && res.j && res.j.success && res.j.data && res.j.data.enabled);
-        payBtn.hidden = !enabled;
+        if (cartIsQuoteOnly(load())) enabled = false;
+        if (payBtn) payBtn.hidden = !enabled;
+        if (kartLabel) {
+          kartLabel.hidden = !enabled;
+          var kart = document.getElementById('eq-odeme-kart');
+          var havale = document.getElementById('eq-odeme-havale');
+          if (enabled && kart) kart.checked = true;
+          if (!enabled && havale) havale.checked = true;
+          updatePlaceLabel();
+        }
       })
       .catch(function () {
-        payBtn.hidden = true;
+        if (payBtn) payBtn.hidden = true;
+        if (kartLabel) kartLabel.hidden = true;
+        var havale = document.getElementById('eq-odeme-havale');
+        if (havale) havale.checked = true;
+        updatePlaceLabel();
       });
   }
 
@@ -2185,67 +3106,27 @@
     if (!isLoggedIn()) {
       toast(__cartT('cart.login_required', 'Sipariş için üye girişi gerekli.'));
       try {
-        var loginHref =
-          typeof window.equstoUrl === 'function'
-            ? window.equstoUrl('login') + '?next=' + encodeURIComponent('/sepet')
-            : '/login?next=' + encodeURIComponent('/sepet');
-        location.href = loginHref;
+        location.href = loginNextHref();
       } catch (_) {}
       return;
     }
+    var contact = collectCheckoutContact();
+    if (!contact) return;
     var f = readCheckoutForm();
-    var ad = f.ad;
-    var tel = f.tel;
-    var eposta = f.eposta;
-    var not = f.not || '';
-    if (!ad || !tel) {
-      toast(
-        !tel
-          ? __cartT('cart.phone_required_account', 'Telefon gerekli — Hesabım sayfasından ekleyin.')
-          : __cartT('cart.name_required', 'Ad soyad gerekli.')
-      );
-      if (!tel) {
-        try { location.href = '/hesabim#guvenlik'; } catch (_) {}
-      }
-      return;
-    }
-    saveCheckoutStorage({ ad: ad, telefon: tel, eposta: eposta });
+    var ad = contact.ad;
+    var tel = contact.tel;
+    var eposta = contact.eposta;
     if (isLoggedIn() && typeof window.equstoSetMemberActive === 'function') {
       window.equstoSetMemberActive({ ad: ad, telefon: tel, eposta: eposta });
     }
-    var btn = document.getElementById('equsto-cart-pay');
+    var btn = document.getElementById('equsto-checkout-place') || document.getElementById('equsto-cart-pay');
     if (btn) {
       btn.disabled = true;
       btn.textContent = __cartT('cart.pay_sending', 'Ödeme sayfasına yönlendiriliyor…');
     }
-    var kalemler = arr.map(function (x) {
-      var birim = parsePriceNum(x.p);
-      var adet = x.q > 0 ? x.q : 1;
-      return {
-        kategori: x.c || '',
-        marka: x.b || '',
-        ad: x.n || '',
-        birim_fiyat_tl: birim,
-        adet: adet,
-        ara_toplam_tl: birim * adet
-      };
-    });
-    var toplam = kalemler.reduce(function (s, k) { return s + (k.ara_toplam_tl || 0); }, 0);
 
     function sendPay(finalToplam, kuponData) {
-      var payload = {
-        musteri: { ad: ad, telefon: tel, eposta: eposta },
-        not: not,
-        kalemler: kalemler,
-        toplam_kalem: kalemler.length,
-        toplam_adet: totalQty(arr),
-        toplam_tl: finalToplam,
-        kaynak: 'web-sepet-kart'
-      };
-      if (kuponData && kuponData.kod) {
-        payload.kupon_kod = kuponData.kod;
-        payload.indirim_tl = kuponData.indirim_tl || 0;
-      }
+      var payload = buildCheckoutPayload(contact, arr, finalToplam, kuponData, 'web-sepet-kart');
       fetch(eqApiBase() + '/checkout/tepeplatform', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -2258,17 +3139,18 @@
         if (!res.ok || !(res.j && res.j.success) || !url) {
           if (btn) {
             btn.disabled = false;
-            btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+            btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.pay', 'Ödeme Yap');
           }
           var msg = (res.j && (res.j.error || res.j.message)) || 'HTTP hata';
           toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + msg);
           return;
         }
+        clearCheckoutRequestId();
         location.href = url;
       }).catch(function (e) {
         if (btn) {
           btn.disabled = false;
-          btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+          btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.pay', 'Ödeme Yap');
         }
         var em = e && e.message ? e.message : String(e);
         toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + em);
@@ -2279,12 +3161,12 @@
       if (err && f.kupon) {
         if (btn) {
           btn.disabled = false;
-          btn.textContent = __cartT('cart.pay', 'Ödeme Yap');
+          btn.textContent = document.getElementById('equsto-checkout-place') ? placeButtonLabel() : __cartT('cart.pay', 'Ödeme Yap');
         }
         toast(__cartT('cart.pay_failed', 'Ödeme başlatılamadı: ') + err);
         return;
       }
-      sendPay(finalToplam != null ? finalToplam : toplam, kuponData);
+      sendPay(finalToplam != null ? finalToplam : cartSubtotal(arr), kuponData);
     });
   }
 
@@ -2310,6 +3192,27 @@
     /* ShopChromePortal — üst sepet DOMContentLoaded sonrası gelir; delegasyon şart */
     if (e.target.closest('#equsto-hdr-cart')) {
       goToCartPage();
+      return;
+    }
+    if (e.target.closest('#equsto-cart-checkout')) {
+      e.preventDefault();
+      goToCheckout();
+      return;
+    }
+    if (e.target.closest('#eq-adres-kaydet')) {
+      e.preventDefault();
+      saveAddressAndContinue();
+      return;
+    }
+    if (e.target.closest('#equsto-checkout-place')) {
+      e.preventDefault();
+      placeCheckout();
+      return;
+    }
+    var removeBtn = e.target.closest('.equsto-cart-remove');
+    if (removeBtn) {
+      e.preventDefault();
+      removeLine(removeBtn.getAttribute('data-id'));
       return;
     }
     var trig = e.target.closest("[data-equsto-cart='1']");
@@ -2468,10 +3371,12 @@
     window.addEventListener('equsto-cart-changed', onCartChangedRemote);
     if (isCartPage()) {
       bindCartPageActions();
-      bindCheckoutUi();
       renderPanelList();
-      prefillCheckoutForm();
       startCartPagePolling();
+    }
+    if (isCheckoutPage()) {
+      bindCheckoutPage();
+      prefillCheckoutForm();
     }
     bootCartSync();
   }
@@ -2538,6 +3443,7 @@
     toastCartAdded: toastCartAdded,
     clear: clearAll,
     bindPageActions: bindCartPageActions,
+    bindCheckoutPage: bindCheckoutPage,
     prefillCheckout: prefillCheckoutForm,
     syncFromServer: syncFromServer,
     render: renderPanelList,

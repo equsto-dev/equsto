@@ -99,9 +99,11 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   const originErr = sameSiteBrowserError(req);
   if (originErr) return adminErr(originErr, 403);
 
-  const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+  let body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
 
   try {
+    const { assertWebCheckout } = await import("@/lib/odeme/checkout-guard");
+    body = assertWebCheckout(body);
     const row = await createSiparis(body);
     const kupon = String(body.kupon_kod ?? "").trim();
     if (kupon) {

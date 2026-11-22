@@ -85,6 +85,34 @@ function buildBasketItems(
   return items;
 }
 
+function invoiceRecord(body: Record<string, unknown>): Record<string, unknown> {
+  const fatura = body.fatura;
+  return fatura && typeof fatura === "object" && !Array.isArray(fatura)
+    ? (fatura as Record<string, unknown>)
+    : {};
+}
+
+function pickIdentity(body: Record<string, unknown>): string {
+  const fatura = invoiceRecord(body);
+  const raw = String(fatura.tckn || fatura.vkn || body.identityNumber || "").replace(/\D/g, "");
+  if (/^\d{10,11}$/.test(raw)) return raw;
+  return buyerIdentityFallback();
+}
+
+function pickBilling(body: Record<string, unknown>): { address: string; city: string } {
+  const fatura = invoiceRecord(body);
+  const il = String(fatura.il || body.sehir || "Istanbul").trim();
+  const ilce = String(fatura.ilce || "").trim();
+  const adres = String(
+    fatura.adres || body.adres || body.teslimat_adres || "Equsto online siparis",
+  ).trim();
+  const line = [adres, ilce, il].filter(Boolean).join(", ");
+  return {
+    address: (line || "Equsto online siparis").slice(0, 200),
+    city: (il || "Istanbul").slice(0, 64),
+  };
+}
+
 function buildBuyer(input: {
   id: string;
   ad: string;
@@ -93,13 +121,14 @@ function buildBuyer(input: {
   ip: string;
   address: string;
   city: string;
+  identityNumber?: string;
 }): OdemeBuyer {
   const { name, surname } = splitName(input.ad);
   return {
     id: input.id.slice(0, 64) || "guest",
     name,
     surname,
-    identityNumber: buyerIdentityFallback(),
+    identityNumber: input.identityNumber || buyerIdentityFallback(),
     email: input.mail || "siparis@equsto.com",
     gsmNumber: gsmToE164Like(input.tel),
     registrationAddress: input.address,
@@ -159,22 +188,18 @@ export async function initKartProvizyon(
 
   const kalemler = Array.isArray(siparis.kalemler) ? (siparis.kalemler as unknown[]) : [];
   const basketItems = buildBasketItems(kalemler, paid);
-  const addr = String(
-    (body.adres as string) ||
-      (body.teslimat_adres as string) ||
-      "Equsto online siparis",
-  ).slice(0, 200);
-  const city = String(body.sehir || "Istanbul").slice(0, 64);
+  const billing = pickBilling(body);
   const buyer = buildBuyer({
     id: siparis.musteriId || siparis.id,
     ad: siparis.musteriAd,
     mail: siparis.musteriMail,
     tel: siparis.musteriTel,
     ip: opts.ip,
-    address: addr,
-    city,
+    address: billing.address,
+    city: billing.city,
+    identityNumber: pickIdentity(body),
   });
-  const shipping = buildAddress(siparis.musteriAd, addr, city);
+  const shipping = buildAddress(siparis.musteriAd, billing.address, billing.city);
 
   let init: IyzicoResult;
   try {

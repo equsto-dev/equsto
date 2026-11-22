@@ -7,8 +7,13 @@ export const dynamic = "force-dynamic";
 
 /** Geriye uyum: /api/odeme/init → TepePlatform checkout */
 export async function POST(req: NextRequest) {
-  const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+  let body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
   try {
+    const { assertWebCheckout } = await import("@/lib/odeme/checkout-guard");
+    body = assertWebCheckout({
+      ...body,
+      kaynak: String(body.kaynak || "web-sepet-kart"),
+    });
     const result = await initTepeplatformCheckout(body);
     const kupon = String(body.kupon_kod ?? "").trim();
     if (kupon) {
