@@ -1117,9 +1117,10 @@ window.searchFilter = window.searchFilter || function () {};
         if (inoksanIsHeadingLine(t) || t.indexOf(" * ") >= 0) return;
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
         if (
-          /^g[uü][çc]$|^guc$|^elektrik|^gaz\s|toplam\s*g[uü][çc]|genişlik|derinlik|yükseklik|uzunluk|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|^genel\s|^teknik\s/.test(
+          /^g[uü][çc]$|^guc$|^g[uü][çc]\s*\(|^elektrik|^gaz\s|toplam\s*g[uü][çc]|genişlik|derinlik|yükseklik|uzunluk|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|^genel\s|^teknik\s|^stok$/.test(
             key
-          )
+          ) ||
+          (x.olculer && (x.olculer.genislik_mm || x.olculer.uzunluk_mm) && /ebat|boyut|^ölçü|^olcu|dış ölçü/.test(key))
         ) {
           return;
         }
@@ -4417,9 +4418,11 @@ window.searchFilter = window.searchFilter || function () {};
     function groupPdpSpecLines(lines) {
       var g = { temel: [], olcu: [], elektrik: [], gaz: [], sogutma: [], diger: [] };
       (lines || []).forEach(function (ln) {
-        var low = String(ln).toLowerCase();
+        var low = String(ln).toLocaleLowerCase("tr-TR");
         var key = low.split(":")[0].trim();
-        if (/^(genişlik|derinlik|yükseklik|uzunluk|ölçü|olcu|ebat|dış boyut|dis boyut)/.test(key)) g.olcu.push(ln);
+        if (key === "stok") return;
+        if (/paket|koli|ambalaj|kazan|sepet|tepsi|iç ölçü|ic olcu|kullanım alanı|pişirme alanı|çalışma alanı/.test(key)) g.diger.push(ln);
+        else if (/genişlik|derinlik|yükseklik|uzunluk|ölçü|olcu|ebat|boyut/.test(key)) g.olcu.push(ln);
         else if (/^gaz\b|gaz g|gaz bas|kcal|doğalgaz|dogalgaz|\blpg\b|mbar/.test(low)) g.gaz.push(ln);
         else if (/güç|guc|voltaj|elektrik|gerilim|frekans|\bkw\b|\bhz\b|amper|fiş/.test(low)) g.elektrik.push(ln);
         else if (/soğutma|sıcaklık|kapasite|°c|kompresör/.test(low)) g.sogutma.push(ln);
