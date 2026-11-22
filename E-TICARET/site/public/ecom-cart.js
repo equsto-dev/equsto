@@ -2203,20 +2203,28 @@
   }
 
   function faturaError(msg) {
-    var el =
-      document.getElementById('equsto-checkout-error') ||
-      document.getElementById('equsto-cart-fatura-error');
-    if (!el) {
+    var nodes = [
+      document.getElementById('equsto-checkout-error'),
+      document.getElementById('equsto-checkout-pay-error'),
+      document.getElementById('equsto-cart-fatura-error'),
+    ].filter(Boolean);
+    if (!nodes.length) {
       if (msg) toast(msg);
       return;
     }
-    if (!msg) {
-      el.hidden = true;
-      el.textContent = '';
-      return;
-    }
-    el.hidden = false;
-    el.textContent = msg;
+    var shown = false;
+    nodes.forEach(function (el) {
+      var panel = el.closest ? el.closest('.eq-pay-panel') : null;
+      if (!msg || (panel && panel.hidden)) {
+        el.hidden = true;
+        el.textContent = '';
+        return;
+      }
+      el.hidden = false;
+      el.textContent = msg;
+      shown = true;
+    });
+    if (msg && !shown) toast(msg);
   }
 
   function validateFatura(f) {

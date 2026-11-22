@@ -188,6 +188,7 @@ export default function ShopCheckoutMain() {
                     mesafeli satış kapsamında siparişi onaylıyorum.
                   </span>
                 </label>
+                <p className="eq-cart-fatura__error" id="equsto-checkout-pay-error" hidden />
                 <button type="button" id="equsto-checkout-place" className="eq-cart-btn eq-cart-btn--primary eq-pay-next">
                   Siparişi gönder
                 </button>
