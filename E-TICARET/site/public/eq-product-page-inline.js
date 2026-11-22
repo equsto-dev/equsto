@@ -4967,9 +4967,18 @@ window.searchFilter = window.searchFilter || function () {};
       }
       var olcuHtml = renderPdpOlcuSection(x, true);
       if (!olcuHtml && groups.olcu.length) {
+        var rawOlcu = "";
+        groups.olcu.some(function (l) {
+          var m = String(l).match(/(\d+(?:[.,]\d+)?)\s*[x×*]\s*(\d+(?:[.,]\d+)?)(?:\s*[x×*]\s*(\d+(?:[.,]\d+)?))?\s*(mm|cm|m)?\b/i);
+          if (!m) return false;
+          rawOlcu = [m[1], m[2], m[3]].filter(Boolean).join("*") + (m[4] ? " " + m[4].toLowerCase() : "");
+          return true;
+        });
         olcuHtml = renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_dims", "Ölçü"),
-          "<ul>" + groups.olcu.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
+          rawOlcu
+            ? "<ul><li>" + esc(rawOlcu) + "</li></ul>"
+            : "<ul>" + groups.olcu.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
           true
         );
       }
