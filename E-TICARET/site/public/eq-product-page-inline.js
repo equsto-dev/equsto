@@ -1235,6 +1235,8 @@ window.searchFilter = window.searchFilter || function () {};
 
     function formatOlculerLinePdp(raw) {
       if (!raw) return "";
+      var single = pdpOlcuLine(raw);
+      if (single) return single;
       if (raw.olcu_etiket) {
         return typeof window.eqStripDimUnitSuffix === "function"
           ? window.eqStripDimUnitSuffix(raw.olcu_etiket)
