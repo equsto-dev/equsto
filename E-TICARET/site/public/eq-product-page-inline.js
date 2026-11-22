@@ -4399,18 +4399,25 @@ window.searchFilter = window.searchFilter || function () {};
       return rows;
     }
 
-    function renderPdpOlcuSection(x, open) {
+    function pdpOlcuLine(x) {
       var rows = pdpOlcuRows(x);
       if (!rows.length) return "";
+      if (rows.length === 1 && rows[0][0] === "Ölçü") return String(rows[0][1]).replace(/\s*[×x]\s*/g, "*");
+      return (
+        rows
+          .map(function (r) {
+            return String(r[1]).replace(/\s*mm$/, "");
+          })
+          .join("*") + " mm"
+      );
+    }
+
+    function renderPdpOlcuSection(x, open) {
+      var line = pdpOlcuLine(x);
+      if (!line) return "";
       return renderEpdpFlatAccSection(
         __pdpT("pdp.spec_group_dims", "Ölçü"),
-        "<ul>" +
-          rows
-            .map(function (r) {
-              return "<li>" + esc(r[0] + ": " + r[1]) + "</li>";
-            })
-            .join("") +
-          "</ul>",
+        "<ul><li>" + esc(line) + "</li></ul>",
         !!open
       );
     }
@@ -5262,28 +5269,14 @@ window.searchFilter = window.searchFilter || function () {};
           inner +
           "</div></details>";
       });
-      if (x.olculer && (x.olculer.genislik_mm || x.olculer.yukseklik_mm)) {
-        var o = x.olculer;
+      var cagOlcu = pdpOlcuLine(x);
+      if (cagOlcu) {
         html +=
-          "<details><summary>" +
-          esc(__pdpT("pdp.variant_dims_summary", "Bu varyant ölçüleri")) +
-          '</summary><div class="eq-caglayan-acc__body"><ul>' +
-          (o.genislik_mm
-            ? "<li>" +
-              esc(__pdpT("pdp.dim_length", "Uzunluk") + ": " + o.genislik_mm) +
-              "</li>"
-            : "") +
-          (o.derinlik_mm
-            ? "<li>" +
-              esc(__pdpT("pdp.dim_depth", "Derinlik") + ": " + o.derinlik_mm) +
-              "</li>"
-            : "") +
-          (o.yukseklik_mm
-            ? "<li>" +
-              esc(__pdpT("pdp.dim_height", "Yükseklik") + ": " + o.yukseklik_mm) +
-              "</li>"
-            : "") +
-          "</ul></div></details>";
+          "<details open><summary>" +
+          esc(__pdpT("pdp.spec_group_dims", "Ölçü")) +
+          '</summary><div class="eq-caglayan-acc__body"><ul><li>' +
+          esc(cagOlcu) +
+          "</li></ul></div></details>";
       }
       if (!oz.length && !blocks.length) {
         html += '<p class="eq-caglayan-acc__body">' + esc(__pdpT("pdp.specs_use_catalog", "Teknik özellikler için katalog PDF veya teklif sürecini kullanın.")) + '</p>';
