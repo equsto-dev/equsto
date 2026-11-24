@@ -50,7 +50,7 @@ function siparisFormu(detail: SiparisAdminRow): AlanSection[] {
   const tel = String(detail.musteri_tel || "").trim();
   const mail = String(detail.musteri_mail || "").trim();
   const ad = detail.musteri_ad || "Müşteri";
-  const wa = waHref(tel, `Merhaba ${ad}, ${detail.siparis_no} numaralı siparişiniz için yazıyorum.`);
+  const wa = waHref(tel, "Merhaba equsto.com Adem ben, talebiniz için yazıyorum");
   const call = telHref(tel);
   const mailTo = mailHref(mail, detail.siparis_no);
   const musteri: AlanSection = {
