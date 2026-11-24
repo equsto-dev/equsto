@@ -83,7 +83,7 @@ function mesajFormu(row: MusteriAdminRow): AlanSection[] {
   const tel = String(row.tel || "").trim();
   const mail = String(row.mail || "").trim();
   const ad = row.yetkili || "Ziyaretçi";
-  const wa = waHref(tel, `Merhaba ${ad}, mesajınız için dönüş yapıyorum.`);
+  const wa = waHref(tel, "Merhaba equsto.com Adem ben, talebiniz için yazıyorum");
   const call = telHref(tel);
   const mailTo = mailHref(mail, "Equsto dönüş");
   const href = resolveSayfaHref(row);
