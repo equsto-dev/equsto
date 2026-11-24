@@ -8,6 +8,7 @@ export type IslemAksiyon = {
   href?: string;
   copyText?: string;
   tone: IslemTon;
+  onClick?: () => void;
 };
 
 export type IslemBilgi = {

@@ -126,6 +126,7 @@ function ActionButton({
         href={action.href}
         target={whatsapp || !externalHref(action.href) ? undefined : "_blank"}
         rel={whatsapp || !externalHref(action.href) ? undefined : "noreferrer"}
+        onClick={() => action.onClick?.()}
       >
         {label}
       </a>

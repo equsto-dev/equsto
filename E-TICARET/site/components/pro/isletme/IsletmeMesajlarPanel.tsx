@@ -7,6 +7,7 @@ import AdminAlanFormu, { type AlanSection } from "@/components/pro/isletme/Admin
 import { mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
 import { parseSiparisNot } from "@/lib/isletme/parse-siparis-not";
 import { siparisNotBolumleri } from "@/lib/isletme/siparis-not-alanlari";
+import { loadWaGirisState, markWaYazildi, waGirisMetni, type WaGirisState } from "@/lib/isletme/wa-giris";
 import { fetchMusteriler, type MusteriAdminRow } from "@/lib/pro-admin-client";
 import {
   extractSayfaUrlFromWhatsAppText,
@@ -27,10 +28,6 @@ function kaynakTag(kaynak: string | null) {
   const color =
     key === "whatsapp-modal" ? "green" : key === "iletisim-fab" ? "blue" : "default";
   return <Tag color={color}>{label}</Tag>;
-}
-
-function waLink(tel: string) {
-  return waHref(tel);
 }
 
 function formatTrDate(iso: string) {
@@ -79,11 +76,15 @@ function messageBody(row: MusteriAdminRow): string {
     .trim();
 }
 
-function mesajFormu(row: MusteriAdminRow): AlanSection[] {
+function mesajFormu(
+  row: MusteriAdminRow,
+  giris: string | undefined,
+  onWa: () => void,
+): AlanSection[] {
   const tel = String(row.tel || "").trim();
   const mail = String(row.mail || "").trim();
   const ad = row.yetkili || "Ziyaretçi";
-  const wa = waHref(tel, "Merhaba equsto.com Adem ben, talebiniz için yazıyorum");
+  const wa = waHref(tel, giris);
   const call = telHref(tel);
   const mailTo = mailHref(mail, "Equsto dönüş");
   const href = resolveSayfaHref(row);
@@ -103,7 +104,7 @@ function mesajFormu(row: MusteriAdminRow): AlanSection[] {
       },
     ],
     actions: [
-      ...(wa ? [{ label: "WhatsApp'ta yanıtla", href: wa, tone: "wa" as const }] : []),
+      ...(wa ? [{ label: "WhatsApp'ta yanıtla", href: wa, tone: "wa" as const, onClick: onWa }] : []),
       ...(call ? [{ label: "Ara", href: call, tone: "call" as const }] : []),
       ...(mailTo ? [{ label: "E-posta yaz", href: mailTo, tone: "mail" as const }] : []),
       ...(href ? [{ label: "Sayfayı aç", href, tone: "map" as const }] : []),
@@ -124,6 +125,7 @@ export default function IsletmeMesajlarPanel() {
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<MusteriAdminRow[]>([]);
   const [detail, setDetail] = useState<MusteriAdminRow | null>(null);
+  const [waGiris, setWaGiris] = useState<WaGirisState | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -140,6 +142,19 @@ export default function IsletmeMesajlarPanel() {
   useEffect(() => {
     load();
   }, [load]);
+
+  useEffect(() => {
+    setWaGiris(loadWaGirisState());
+  }, []);
+
+  function noteWa(id: string) {
+    markWaYazildi(id);
+    setWaGiris(loadWaGirisState());
+  }
+
+  function waFor(row: MusteriAdminRow) {
+    return waHref(row.tel, waGirisMetni(row.created_at, row.id, waGiris));
+  }
 
   const inboxRows = useMemo(
     () =>
@@ -211,14 +226,20 @@ export default function IsletmeMesajlarPanel() {
             title: "Telefon",
             dataIndex: "tel",
             width: 130,
-            render: (tel) => {
-              const link = waLink(String(tel || ""));
+            render: (_, r) => {
+              const link = waFor(r);
               return link ? (
-                <a href={link} onClick={(e) => e.stopPropagation()}>
-                  {tel}
+                <a
+                  href={link}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    noteWa(r.id);
+                  }}
+                >
+                  {r.tel}
                 </a>
               ) : (
-                tel || "—"
+                r.tel || "—"
               );
             },
           },
@@ -262,10 +283,17 @@ export default function IsletmeMesajlarPanel() {
             title: "İşlem",
             width: 110,
             render: (_, r) => {
-              const link = waLink(String(r.tel || ""));
+              const link = waFor(r);
               if (!link) return "—";
               return (
-                <Button size="small" href={link} onClick={(e) => e.stopPropagation()}>
+                <Button
+                  size="small"
+                  href={link}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    noteWa(r.id);
+                  }}
+                >
                   WhatsApp
                 </Button>
               );
@@ -281,7 +309,15 @@ export default function IsletmeMesajlarPanel() {
         width={640}
         extra={detail ? kaynakTag(detail.kaynak) : null}
       >
-        {detail && <AdminAlanFormu sections={mesajFormu(detail)} />}
+        {detail && (
+          <AdminAlanFormu
+            sections={mesajFormu(
+              detail,
+              waGirisMetni(detail.created_at, detail.id, waGiris),
+              () => noteWa(detail.id),
+            )}
+          />
+        )}
       </Drawer>
     </>
   );
