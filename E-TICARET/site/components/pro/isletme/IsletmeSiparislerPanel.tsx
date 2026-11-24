@@ -1,8 +1,12 @@
 "use client";
 
 import { ProTable } from "@ant-design/pro-components";
-import { App, Button, Drawer, Select, Space, Tag, Typography } from "antd";
+import { App, Button, Drawer, Select, Space, Table, Tag, Typography } from "antd";
 import { useCallback, useEffect, useState } from "react";
+import AdminAlanFormu, { type AlanSection } from "@/components/pro/isletme/AdminAlanFormu";
+import { mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
+import { parseSiparisNot } from "@/lib/isletme/parse-siparis-not";
+import { siparisNotBolumleri } from "@/lib/isletme/siparis-not-alanlari";
 import {
   captureSiparisOdeme,
   fetchSiparis,
@@ -40,6 +44,29 @@ function odemeTag(d?: string) {
   const key = d || "yok";
   const row = ODEME_LABEL[key] || { label: key, color: "default" };
   return <Tag color={row.color}>{row.label}</Tag>;
+}
+
+function siparisFormu(detail: SiparisAdminRow): AlanSection[] {
+  const tel = String(detail.musteri_tel || "").trim();
+  const mail = String(detail.musteri_mail || "").trim();
+  const ad = detail.musteri_ad || "Müşteri";
+  const wa = waHref(tel, `Merhaba ${ad}, ${detail.siparis_no} numaralı siparişiniz için yazıyorum.`);
+  const call = telHref(tel);
+  const mailTo = mailHref(mail, detail.siparis_no);
+  const musteri: AlanSection = {
+    title: "Müşteri",
+    headline: ad,
+    facts: [
+      ...(tel ? [{ label: "Telefon", value: tel, copyText: tel }] : []),
+      ...(mail ? [{ label: "E-posta", value: mail, copyText: mail }] : []),
+    ],
+    actions: [
+      ...(wa ? [{ label: "WhatsApp'ta yaz", href: wa, tone: "wa" as const }] : []),
+      ...(call ? [{ label: "Ara", href: call, tone: "call" as const }] : []),
+      ...(mailTo ? [{ label: "E-posta yaz", href: mailTo, tone: "mail" as const }] : []),
+    ],
+  };
+  return [musteri, ...siparisNotBolumleri(parseSiparisNot(detail.not_))];
 }
 
 export default function IsletmeSiparislerPanel() {
@@ -201,7 +228,7 @@ export default function IsletmeSiparislerPanel() {
         title={detail ? `Sipariş ${detail.siparis_no}` : "Detay"}
         open={!!detail}
         onClose={() => setDetail(null)}
-        width={560}
+        width={640}
       >
         {detail && (
           <Space direction="vertical" size="middle" style={{ width: "100%" }}>
@@ -226,35 +253,58 @@ export default function IsletmeSiparislerPanel() {
             {detail.odeme_durum === "tahsil" && (
               <Typography.Text type="success">Kart ödemesi alındı.</Typography.Text>
             )}
-            <Typography.Text>
-              <strong>{detail.musteri_ad}</strong>
-              <br />
-              {detail.musteri_tel} · {detail.musteri_mail || "—"}
-            </Typography.Text>
-            {detail.not_ && (
-              <Typography.Paragraph type="secondary">Not: {detail.not_}</Typography.Paragraph>
-            )}
             {detail.kupon_kod && (
               <Tag color="gold">
                 Kupon: {detail.kupon_kod}
                 {detail.indirim_tl ? ` (−${detail.indirim_tl} ₺)` : ""}
               </Tag>
             )}
-            <Typography.Title level={5}>Kalemler ({detail.toplam_kalem})</Typography.Title>
-            <ul style={{ paddingLeft: 18, margin: 0 }}>
-              {(detail.kalemler || []).map((k, i) => {
-                const row = k as Record<string, unknown>;
-                return (
-                  <li key={i} style={{ marginBottom: 6 }}>
-                    {String(row.ad ?? "—")} · {String(row.marka ?? "")} ·{" "}
-                    {Number(row.adet ?? 1)} × {Number(row.birim_fiyat_tl ?? 0).toLocaleString("tr-TR")} ₺
-                  </li>
-                );
-              })}
-            </ul>
-            <Typography.Text strong>
-              Toplam: {detail.toplam_tl.toLocaleString("tr-TR")} ₺ ({detail.toplam_adet} adet)
-            </Typography.Text>
+            <AdminAlanFormu sections={siparisFormu(detail)} />
+            <div>
+              <Typography.Title level={5} style={{ marginTop: 0 }}>
+                Kalemler ({detail.toplam_kalem})
+              </Typography.Title>
+              <Table
+                size="small"
+                pagination={false}
+                rowKey={(_, i) => String(i)}
+                dataSource={(detail.kalemler || []) as Record<string, unknown>[]}
+                columns={[
+                  {
+                    title: "Ürün",
+                    dataIndex: "ad",
+                    render: (ad, row) => (
+                      <span>
+                        {String(ad ?? "—")}
+                        {row.marka ? (
+                          <Typography.Text type="secondary"> · {String(row.marka)}</Typography.Text>
+                        ) : null}
+                      </span>
+                    ),
+                  },
+                  {
+                    title: "Adet",
+                    dataIndex: "adet",
+                    width: 64,
+                    render: (adet) => Number(adet ?? 1),
+                  },
+                  {
+                    title: "Tutar",
+                    dataIndex: "birim_fiyat_tl",
+                    width: 120,
+                    align: "right",
+                    render: (fiyat, row) => {
+                      const adet = Number(row.adet ?? 1);
+                      const birim = Number(fiyat ?? 0);
+                      return `${(adet * birim).toLocaleString("tr-TR")} ₺`;
+                    },
+                  },
+                ]}
+              />
+              <Typography.Text strong style={{ display: "block", marginTop: 10 }}>
+                Toplam: {detail.toplam_tl.toLocaleString("tr-TR")} ₺ ({detail.toplam_adet} adet)
+              </Typography.Text>
+            </div>
           </Space>
         )}
       </Drawer>

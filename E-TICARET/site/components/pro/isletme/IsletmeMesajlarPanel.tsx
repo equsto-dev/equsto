@@ -1,8 +1,12 @@
 "use client";
 
 import { ProTable } from "@ant-design/pro-components";
-import { App, Button, Space, Tag, Tooltip, Typography } from "antd";
+import { App, Button, Drawer, Space, Tag, Typography } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import AdminAlanFormu, { type AlanSection } from "@/components/pro/isletme/AdminAlanFormu";
+import { mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
+import { parseSiparisNot } from "@/lib/isletme/parse-siparis-not";
+import { siparisNotBolumleri } from "@/lib/isletme/siparis-not-alanlari";
 import { fetchMusteriler, type MusteriAdminRow } from "@/lib/pro-admin-client";
 import {
   extractSayfaUrlFromWhatsAppText,
@@ -67,6 +71,50 @@ function resolveSayfaHref(row: MusteriAdminRow): string | null {
   return normalizeSayfaHref(fromMsg);
 }
 
+function messageBody(row: MusteriAdminRow): string {
+  const mesaj = String(row.mesaj || "").trim();
+  if (mesaj) return mesaj;
+  return String(row.not || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line && !/^(kaynak|sayfa)\s*:/i.test(line))
+    .join("\n")
+    .trim();
+}
+
+function mesajFormu(row: MusteriAdminRow): AlanSection[] {
+  const tel = String(row.tel || "").trim();
+  const mail = String(row.mail || "").trim();
+  const ad = row.yetkili || "Ziyaretçi";
+  const wa = waHref(tel, `Merhaba ${ad}, mesajınız için dönüş yapıyorum.`);
+  const call = telHref(tel);
+  const mailTo = mailHref(mail, "Equsto dönüş");
+  const href = resolveSayfaHref(row);
+  const body = messageBody(row);
+  const parsed = parseSiparisNot(body);
+  const gonderen: AlanSection = {
+    title: "Gönderen",
+    headline: ad,
+    facts: [
+      ...(row.firma ? [{ label: "Firma", value: row.firma, copyText: row.firma }] : []),
+      ...(tel ? [{ label: "Telefon", value: tel, copyText: tel }] : []),
+      ...(mail ? [{ label: "E-posta", value: mail, copyText: mail }] : []),
+      { label: "Tarih", value: formatTrDate(row.created_at) },
+      {
+        label: "Kaynak",
+        value: KAYNAK_LABEL[String(row.kaynak || "web").trim()] || row.kaynak || "—",
+      },
+    ],
+    actions: [
+      ...(wa ? [{ label: "WhatsApp'ta yanıtla", href: wa, tone: "wa" as const }] : []),
+      ...(call ? [{ label: "Ara", href: call, tone: "call" as const }] : []),
+      ...(mailTo ? [{ label: "E-posta yaz", href: mailTo, tone: "mail" as const }] : []),
+      ...(href ? [{ label: "Sayfayı aç", href, tone: "map" as const }] : []),
+    ],
+  };
+  return [gonderen, ...siparisNotBolumleri(parsed, { mesajBaslik: "Mesaj" })];
+}
+
 function isInboxLead(row: MusteriAdminRow) {
   const kaynak = String(row.kaynak || "").trim();
   const mesaj = String(row.mesaj || row.not || "").trim();
@@ -78,6 +126,7 @@ export default function IsletmeMesajlarPanel() {
   const { message } = App.useApp();
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<MusteriAdminRow[]>([]);
+  const [detail, setDetail] = useState<MusteriAdminRow | null>(null);
   const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
@@ -109,8 +158,8 @@ export default function IsletmeMesajlarPanel() {
   return (
     <>
       <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-        Sitedeki WhatsApp chat ve iletişim formundan gelen mesajlar burada listelenir. Müşteriye
-        dönüş için telefon numarasına tıklayıp WhatsApp&apos;ta yazabilirsiniz.
+        Satıra tıklayınca mesaj form olarak açılır. Telefon, e-posta ve adres alanlarından
+        WhatsApp, arama veya haritaya geçebilir, metni kopyalayabilirsiniz.
       </Typography.Paragraph>
 
       <Space style={{ marginBottom: 16 }}>
@@ -129,6 +178,10 @@ export default function IsletmeMesajlarPanel() {
         options={false}
         pagination={tablePagination}
         dataSource={inboxRows}
+        onRow={(r) => ({
+          onClick: () => setDetail(r),
+          style: { cursor: "pointer" },
+        })}
         locale={{
           emptyText: loading
             ? "Yükleniyor…"
@@ -164,7 +217,7 @@ export default function IsletmeMesajlarPanel() {
             render: (tel) => {
               const link = waLink(String(tel || ""));
               return link ? (
-                <a href={link} target="_blank" rel="noreferrer">
+                <a href={link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
                   {tel}
                 </a>
               ) : (
@@ -178,12 +231,8 @@ export default function IsletmeMesajlarPanel() {
             dataIndex: "mesaj",
             ellipsis: true,
             render: (_, r) => {
-              const text = String(r.mesaj || r.not || "").trim() || "—";
-              return (
-                <Tooltip title={text}>
-                  <span>{text}</span>
-                </Tooltip>
-              );
+              const text = messageBody(r).replace(/\s+/g, " ").trim() || "—";
+              return <span>{text}</span>;
             },
           },
           {
@@ -195,11 +244,14 @@ export default function IsletmeMesajlarPanel() {
               const href = resolveSayfaHref(r);
               if (href) {
                 return (
-                  <Tooltip title={href}>
-                    <Typography.Link href={href} target="_blank" rel="noreferrer">
-                      {sayfaLabel(href)}
-                    </Typography.Link>
-                  </Tooltip>
+                  <Typography.Link
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {sayfaLabel(href)}
+                  </Typography.Link>
                 );
               }
               const raw = String(r.sayfa || "").trim();
@@ -216,7 +268,13 @@ export default function IsletmeMesajlarPanel() {
               const link = waLink(String(r.tel || ""));
               if (!link) return "—";
               return (
-                <Button size="small" href={link} target="_blank" rel="noreferrer">
+                <Button
+                  size="small"
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   WhatsApp
                 </Button>
               );
@@ -224,6 +282,16 @@ export default function IsletmeMesajlarPanel() {
           },
         ]}
       />
+
+      <Drawer
+        title={detail?.yetkili || "Mesaj"}
+        open={!!detail}
+        onClose={() => setDetail(null)}
+        width={640}
+        extra={detail ? kaynakTag(detail.kaynak) : null}
+      >
+        {detail && <AdminAlanFormu sections={mesajFormu(detail)} />}
+      </Drawer>
     </>
   );
 }

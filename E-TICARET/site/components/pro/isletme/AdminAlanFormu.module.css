@@ -1,0 +1,172 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+}
+
+.head {
+  margin: 0 0 8px;
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.headline {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.body {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.bubble {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border-radius: 14px 14px 14px 4px;
+  background: #f6ffed;
+  border: 1px solid #d9f7be;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background: #fafafa;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.factLive {
+  cursor: pointer;
+}
+
+.factLive:hover,
+.factLive:focus-visible {
+  border-color: #91caff;
+  background: #fff;
+  outline: none;
+}
+
+.factLabel {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+.factValue {
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.actions > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.wa {
+  background: #25d366;
+  color: #073b16;
+}
+
+.wa:hover {
+  background: #1ebe5a;
+  color: #073b16;
+}
+
+.call {
+  background: #1677ff;
+  color: #fff;
+}
+
+.call:hover {
+  background: #0958d9;
+  color: #fff;
+}
+
+.mail,
+.map {
+  background: #fff;
+  border-color: #d9d9d9;
+  color: #141414;
+}
+
+.mail:hover,
+.map:hover {
+  border-color: #1677ff;
+  color: #1677ff;
+}
+
+.copy {
+  background: #141414;
+  color: #fff;
+}
+
+.copy:hover {
+  background: #262626;
+  color: #fff;
+}
+
+.done {
+  background: #52c41a;
+  color: #fff;
+}

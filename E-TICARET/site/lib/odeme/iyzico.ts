@@ -1,4 +1,5 @@
-import Iyzipay from "iyzipay";
+import { createRequire } from "node:module";
+import path from "node:path";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 export type IyzicoResult = {
@@ -52,6 +53,26 @@ export type OdemeAddress = {
 
 type IyzicoCb = (err: Error | null, result: IyzicoResult) => void;
 
+type IyziClient = {
+  checkoutFormInitializePreAuth: {
+    create: (req: Record<string, unknown>, cb: IyzicoCb) => void;
+  };
+  checkoutForm: { retrieve: (req: Record<string, unknown>, cb: IyzicoCb) => void };
+  paymentPostAuth: { create: (req: Record<string, unknown>, cb: IyzicoCb) => void };
+  cancel: { create: (req: Record<string, unknown>, cb: IyzicoCb) => void };
+};
+
+type IyziCtor = new (config: { apiKey: string; secretKey: string; uri: string }) => IyziClient;
+
+const nodeRequire = createRequire(path.join(process.cwd(), "package.json"));
+
+/** Turbopack, iyzipay içindeki dinamik require'ı derleyemiyor. Çalışma anında Node yüklesin. */
+function loadIyzipay(): IyziCtor {
+  const spec = "iyzi" + "pay";
+  const mod = nodeRequire(spec) as IyziCtor & { default?: IyziCtor };
+  return mod.default ?? mod;
+}
+
 function env(name: string): string {
   return String(process.env[name] ?? "").trim();
 }
@@ -66,10 +87,11 @@ export function iyzicoBaseUri(): string {
   return "https://sandbox-api.iyzipay.com";
 }
 
-function client(): InstanceType<typeof Iyzipay> {
+function client(): IyziClient {
   if (!iyzicoConfigured()) {
     throw new Error("iyzico API anahtarları tanımlı değil (IYZICO_API_KEY / IYZICO_SECRET_KEY)");
   }
+  const Iyzipay = loadIyzipay();
   return new Iyzipay({
     apiKey: env("IYZICO_API_KEY"),
     secretKey: env("IYZICO_SECRET_KEY"),
@@ -122,13 +144,13 @@ export async function initializeCheckoutPreAuth(input: {
   return promisify((cb) =>
     iyzi.checkoutFormInitializePreAuth.create(
       {
-        locale: Iyzipay.LOCALE.TR,
+        locale: "tr",
         conversationId: input.conversationId,
         price: input.price,
         paidPrice: input.paidPrice,
-        currency: Iyzipay.CURRENCY.TRY,
+        currency: "TRY",
         basketId: input.basketId,
-        paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
+        paymentGroup: "PRODUCT",
         callbackUrl: input.callbackUrl,
         enabledInstallments: input.enabledInstallments ?? [1],
         buyer: input.buyer,
@@ -146,7 +168,7 @@ export async function retrieveCheckoutForm(token: string): Promise<IyzicoResult>
   return promisify((cb) =>
     iyzi.checkoutForm.retrieve(
       {
-        locale: Iyzipay.LOCALE.TR,
+        locale: "tr",
         token,
       },
       cb as (err: Error | null, result: Record<string, unknown>) => void,
@@ -164,7 +186,7 @@ export async function capturePostAuth(input: {
   return promisify((cb) =>
     iyzi.paymentPostAuth.create(
       {
-        locale: Iyzipay.LOCALE.TR,
+        locale: "tr",
         conversationId: input.conversationId,
         paymentId: input.paymentId,
         ip: input.ip,
@@ -184,7 +206,7 @@ export async function voidCancel(input: {
   return promisify((cb) =>
     iyzi.cancel.create(
       {
-        locale: Iyzipay.LOCALE.TR,
+        locale: "tr",
         conversationId: input.conversationId,
         paymentId: input.paymentId,
         ip: input.ip,
@@ -202,5 +224,3 @@ export function odemeSonucUrl(params: Record<string, string>): string {
   const q = new URLSearchParams(params);
   return `${getSiteOrigin()}/odeme/sonuc?${q.toString()}`;
 }
-
-export { Iyzipay };

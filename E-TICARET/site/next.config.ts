@@ -138,6 +138,7 @@ const nextConfig: NextConfig = {
     "@sparticuz/chromium-min",
     "pdf-parse",
     "exceljs",
+    "iyzipay",
   ],
   outputFileTracingExcludes: {
     "/**": apiTraceExcludes,
