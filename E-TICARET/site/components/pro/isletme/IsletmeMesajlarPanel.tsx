@@ -4,7 +4,7 @@ import { ProTable } from "@ant-design/pro-components";
 import { App, Button, Drawer, Space, Tag, Typography } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import AdminAlanFormu, { type AlanSection } from "@/components/pro/isletme/AdminAlanFormu";
-import { EQUSTO_WHATSAPP_TAB, mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
+import { mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
 import { parseSiparisNot } from "@/lib/isletme/parse-siparis-not";
 import { siparisNotBolumleri } from "@/lib/isletme/siparis-not-alanlari";
 import { fetchMusteriler, type MusteriAdminRow } from "@/lib/pro-admin-client";
@@ -214,11 +214,7 @@ export default function IsletmeMesajlarPanel() {
             render: (tel) => {
               const link = waLink(String(tel || ""));
               return link ? (
-                <a
-                  href={link}
-                  target={EQUSTO_WHATSAPP_TAB}
-                  onClick={(e) => e.stopPropagation()}
-                >
+                <a href={link} onClick={(e) => e.stopPropagation()}>
                   {tel}
                 </a>
               ) : (
@@ -269,12 +265,7 @@ export default function IsletmeMesajlarPanel() {
               const link = waLink(String(r.tel || ""));
               if (!link) return "—";
               return (
-                <Button
-                  size="small"
-                  href={link}
-                  target={EQUSTO_WHATSAPP_TAB}
-                  onClick={(e) => e.stopPropagation()}
-                >
+                <Button size="small" href={link} onClick={(e) => e.stopPropagation()}>
                   WhatsApp
                 </Button>
               );

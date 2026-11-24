@@ -1,11 +1,13 @@
-/** Panelden açılan WhatsApp Web sekmesinin adı. Tarayıcı bu adı hatırlar, sonraki tıklamalar aynı sekmeye gider. */
-export const EQUSTO_WHATSAPP_TAB = "equsto-whatsapp";
-
+/**
+ * WhatsApp Web `Cross-Origin-Opener-Policy: same-origin` gönderir.
+ * Bu yüzden target adı tutmaz; her tıklama yeni sekme açar ve sohbeti yeniden yükler.
+ * Uygulama protokolü tarayıcı sekmesi açmaz, yüklü WhatsApp penceresini öne alır.
+ */
 export function waHref(tel: string, text?: string): string | null {
   const d = String(tel || "").replace(/\D/g, "");
   if (d.length < 10) return null;
   const e164 = d.startsWith("90") ? d : `90${d.replace(/^0/, "")}`;
-  const base = `https://web.whatsapp.com/send?phone=${e164}`;
+  const base = `whatsapp://send?phone=${e164}`;
   const msg = String(text || "").trim();
   return msg ? `${base}&text=${encodeURIComponent(msg)}` : base;
 }

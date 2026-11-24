@@ -17,6 +17,7 @@ import {
   type MusteriAdminRow,
   saveMusteri,
 } from "@/lib/pro-admin-client";
+import { waHref } from "@/lib/isletme/iletisim-link";
 import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 export default function IsletmeMusterilerPanel() {
@@ -63,10 +64,7 @@ export default function IsletmeMusterilerPanel() {
   }, [load]);
 
   function waLink(tel: string) {
-    const d = tel.replace(/\D/g, "");
-    if (!d) return null;
-    const e164 = d.startsWith("90") ? d : `90${d.replace(/^0/, "")}`;
-    return `https://wa.me/${e164}`;
+    return waHref(tel);
   }
 
   function formatTrDate(iso: string) {
@@ -119,7 +117,7 @@ export default function IsletmeMusterilerPanel() {
             render: (tel) => {
               const link = waLink(String(tel || ""));
               return link ? (
-                <a href={link} target="_blank" rel="noreferrer">
+                <a href={link}>
                   {tel}
                 </a>
               ) : (

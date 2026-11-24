@@ -3,7 +3,6 @@
 import { App } from "antd";
 import { useState } from "react";
 import type { IslemAksiyon, IslemKarti, IslemTon } from "@/lib/isletme/siparis-not-alanlari";
-import { EQUSTO_WHATSAPP_TAB } from "@/lib/isletme/iletisim-link";
 import styles from "./AdminAlanFormu.module.css";
 
 export type AlanSection = IslemKarti;
@@ -101,7 +100,7 @@ export default function AdminAlanFormu({ sections }: { sections: AlanSection[] }
 }
 
 function isWhatsAppHref(href: string) {
-  return /web\.whatsapp\.com|wa\.me/i.test(href);
+  return /^whatsapp:/i.test(href);
 }
 
 function ActionButton({
@@ -125,7 +124,7 @@ function ActionButton({
       <a
         className={className}
         href={action.href}
-        target={whatsapp ? EQUSTO_WHATSAPP_TAB : externalHref(action.href) ? "_blank" : undefined}
+        target={whatsapp || !externalHref(action.href) ? undefined : "_blank"}
         rel={whatsapp || !externalHref(action.href) ? undefined : "noreferrer"}
       >
         {label}
