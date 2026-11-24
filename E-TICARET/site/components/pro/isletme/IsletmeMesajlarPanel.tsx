@@ -4,7 +4,7 @@ import { ProTable } from "@ant-design/pro-components";
 import { App, Button, Drawer, Space, Tag, Typography } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import AdminAlanFormu, { type AlanSection } from "@/components/pro/isletme/AdminAlanFormu";
-import { mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
+import { EQUSTO_WHATSAPP_TAB, mailHref, telHref, waHref } from "@/lib/isletme/iletisim-link";
 import { parseSiparisNot } from "@/lib/isletme/parse-siparis-not";
 import { siparisNotBolumleri } from "@/lib/isletme/siparis-not-alanlari";
 import { fetchMusteriler, type MusteriAdminRow } from "@/lib/pro-admin-client";
@@ -30,10 +30,7 @@ function kaynakTag(kaynak: string | null) {
 }
 
 function waLink(tel: string) {
-  const d = tel.replace(/\D/g, "");
-  if (!d) return null;
-  const e164 = d.startsWith("90") ? d : `90${d.replace(/^0/, "")}`;
-  return `https://wa.me/${e164}`;
+  return waHref(tel);
 }
 
 function formatTrDate(iso: string) {
@@ -217,7 +214,11 @@ export default function IsletmeMesajlarPanel() {
             render: (tel) => {
               const link = waLink(String(tel || ""));
               return link ? (
-                <a href={link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                <a
+                  href={link}
+                  target={EQUSTO_WHATSAPP_TAB}
+                  onClick={(e) => e.stopPropagation()}
+                >
                   {tel}
                 </a>
               ) : (
@@ -271,8 +272,7 @@ export default function IsletmeMesajlarPanel() {
                 <Button
                   size="small"
                   href={link}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={EQUSTO_WHATSAPP_TAB}
                   onClick={(e) => e.stopPropagation()}
                 >
                   WhatsApp
