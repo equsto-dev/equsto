@@ -53,6 +53,9 @@ export const metadata: Metadata = {
       "text/plain": [{ url: "/llms.txt", title: "Equsto — LLMs" }],
     },
   },
+  verification: {
+    google: "U6V-znPM9ZO2uT6Ceth6CQgV1D13E7BdBC-MZQsfiwA",
+  },
 };
 
 export default function RootLayout({
